@@ -101,7 +101,7 @@ function ScoreBoard({
   const learningRef = useRef<HTMLDivElement>(null);
   const strugglingRef = useRef<HTMLDivElement>(null);
 
-  // 学習プラン設定
+  // 学習プラン設定（和訳・スペル用）
   const [learningLimit, setLearningLimit] = useState<number | null>(() => {
     const saved = localStorage.getItem(`learning-limit-${mode}`);
     return saved ? parseInt(saved) : null;
@@ -109,6 +109,17 @@ function ScoreBoard({
 
   const [reviewLimit, setReviewLimit] = useState<number | null>(() => {
     const saved = localStorage.getItem(`review-limit-${mode}`);
+    return saved ? parseInt(saved) : null;
+  });
+
+  // 暗記タブ用の学習プラン設定
+  const [stillLearningLimit, setStillLearningLimit] = useState<number | null>(() => {
+    const saved = localStorage.getItem('memorization-still-learning-limit');
+    return saved ? parseInt(saved) : null;
+  });
+
+  const [incorrectLimit, setIncorrectLimit] = useState<number | null>(() => {
+    const saved = localStorage.getItem('memorization-incorrect-limit');
     return saved ? parseInt(saved) : null;
   });
 
@@ -346,32 +357,13 @@ function ScoreBoard({
                 <div className="flex-1 min-w-0">
                   <div className="text-sm text-gray-700 leading-snug break-words">
                     {aiComment
-                      .replace(/^[😃👹😼🤖🧙]「|」$/gu, '')
-                      .replace(/^[😃👹😼🤖🧙]|」$/gu, '')}
+                      .replace(/^[😃👹😼🤖🧙]+「?/gu, '')
+                      .replace(/」$/gu, '')
+                      .trim()}
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* 学習統計カード（暗記タブ専用） */}
-            {mode === 'memorization' && totalAnswered > 0 && (
-              <div className="mt-4">
-                <div className="flex flex-wrap gap-4 text-sm sm:text-base text-gray-700">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🟢</span>
-                    <span>覚えてる {sessionCorrect}語</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🟡</span>
-                    <span>まだまだ {sessionReview}語</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🔴</span>
-                    <span>分からない {sessionIncorrect}語</span>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       )}
@@ -397,6 +389,18 @@ function ScoreBoard({
                         ? '発展'
                         : difficulty}
               </span>
+              {(mode === 'translation' || mode === 'spelling' || mode === 'memorization') && (
+                <>
+                  <span className="stat-text-divider">｜</span>
+                  <button
+                    onClick={() => setShowPlanSettings(true)}
+                    className="stat-text-label cursor-pointer hover:text-primary transition-colors"
+                    title="出題繰り返し設定"
+                  >
+                    ⚙️ 上限設定
+                  </button>
+                </>
+              )}
               {wordPhraseFilter && (
                 <>
                   <span className="stat-text-divider">｜</span>
@@ -464,6 +468,61 @@ function ScoreBoard({
                 </div>
               </div>
             )}
+            {showPlanSettings && mode === 'memorization' && (
+              <div className="plan-settings-modal">
+                <div className="plan-settings-content">
+                  <h4>🎯 出題繰り返し設定</h4>
+                  <p className="plan-settings-description">未入力はどこまでも出題します</p>
+                  <div className="plan-setting-item">
+                    <label>まだまだの語数上限:</label>
+                    <input
+                      type="number"
+                      min="0"
+                      placeholder="未入力=無制限"
+                      value={stillLearningLimit || ''}
+                      onChange={(e) => {
+                        const value = e.target.value === '' ? null : parseInt(e.target.value);
+                        setStillLearningLimit(value);
+                        if (value === null) {
+                          localStorage.removeItem('memorization-still-learning-limit');
+                        } else {
+                          localStorage.setItem(
+                            'memorization-still-learning-limit',
+                            value.toString()
+                          );
+                        }
+                      }}
+                    />
+                    <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+                  </div>
+                  <div className="plan-setting-item">
+                    <label>分からないの語数上限:</label>
+                    <input
+                      type="number"
+                      min="0"
+                      placeholder="未入力=無制限"
+                      value={incorrectLimit || ''}
+                      onChange={(e) => {
+                        const value = e.target.value === '' ? null : parseInt(e.target.value);
+                        setIncorrectLimit(value);
+                        if (value === null) {
+                          localStorage.removeItem('memorization-incorrect-limit');
+                        } else {
+                          localStorage.setItem('memorization-incorrect-limit', value.toString());
+                        }
+                      }}
+                    />
+                    <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+                  </div>
+                  <button
+                    className="plan-settings-close"
+                    onClick={() => setShowPlanSettings(false)}
+                  >
+                    閉じる
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -482,6 +541,15 @@ function ScoreBoard({
                         {detailedStats.appearedWords}語確認： 🟢覚えてる{' '}
                         {detailedStats.masteredCount}語 🟡まだまだ {detailedStats.learningCount}語
                         🔴分からない {detailedStats.strugglingCount}語
+                        {onReviewFocus && (
+                          <span
+                            className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
+                            onClick={onReviewFocus}
+                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                          >
+                            🔥
+                          </span>
+                        )}
                       </>
                     ) : mode === 'grammar' ? (
                       <>

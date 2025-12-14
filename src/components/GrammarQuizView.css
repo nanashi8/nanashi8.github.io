@@ -227,6 +227,48 @@
   border: 2px solid var(--border-color);
 }
 
+/* 会話形式の英文表示 */
+.conversation-display {
+  font-size: 18px;
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+}
+
+.conversation-line {
+  color: var(--gray-text-unified);
+  line-height: 2;
+  font-weight: 500;
+  margin: 8px 0;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  text-align: left;
+}
+
+.conversation-line:first-child {
+  margin-top: 0;
+}
+
+.conversation-line:last-child {
+  margin-bottom: 0;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .conversation-display {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .conversation-line {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+}
+
 /* 穴埋め問題の下線部 */
 .fill-in-blank-space {
   display: inline-block;
