@@ -227,6 +227,26 @@
   border: 2px solid var(--border-color);
 }
 
+/* 穴埋め問題の下線部 */
+.fill-in-blank-space {
+  display: inline-block;
+  min-width: 80px;
+  border-bottom: 3px solid var(--primary-color);
+  margin: 0 4px;
+  text-align: center;
+  color: transparent;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* モバイルでも見やすく */
+@media (max-width: 768px) {
+  .fill-in-blank-space {
+    min-width: 60px;
+    border-bottom: 2px solid var(--primary-color);
+  }
+}
+
 /* 選択肢グリッド（和訳・スペルタブと統一） */
 .choices-area {
   margin: 20px 0;
