@@ -1052,6 +1052,28 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                         )
                       )}
                     </div>
+                  ) : (currentQuestion as any).targetSentence ? (
+                    /* 言い換え問題 (paraphrase) */
+                    <div className="paraphrase-display">
+                      <div className="paraphrase-label">📝 元の文:</div>
+                      <div className="sentence-display original">
+                        {currentQuestion.sentence}
+                      </div>
+                      <div className="paraphrase-arrow">↓ 言い換え</div>
+                      <div className="paraphrase-label">✏️ 書き換え後:</div>
+                      <div className="sentence-display target">
+                        {((currentQuestion as any).targetSentence as string)
+                          .split('____')
+                          .map((part, index, array) => (
+                            <span key={index}>
+                              {part}
+                              {index < array.length - 1 && (
+                                <span className="fill-in-blank-space">_______</span>
+                              )}
+                            </span>
+                          ))}
+                      </div>
+                    </div>
                   ) : (
                     /* 通常の1文問題 */
                     <div className="sentence-display">
