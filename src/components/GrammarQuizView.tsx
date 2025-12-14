@@ -1034,16 +1034,37 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 </div>
               ) : (
                 <div className="choices-area">
-                  <div className="sentence-display">
-                    {currentQuestion.sentence?.split('____').map((part, index, array) => (
-                      <span key={index}>
-                        {part}
-                        {index < array.length - 1 && (
-                          <span className="fill-in-blank-space">_______</span>
-                        )}
-                      </span>
-                    ))}
-                  </div>
+                  {/* 会話形式の問題 */}
+                  {(currentQuestion as any).conversation ? (
+                    <div className="conversation-display">
+                      {((currentQuestion as any).conversation as string[]).map(
+                        (line: string, idx: number) => (
+                          <div key={idx} className="conversation-line">
+                            {line.split('____').map((part, index, array) => (
+                              <span key={index}>
+                                {part}
+                                {index < array.length - 1 && (
+                                  <span className="fill-in-blank-space">_______</span>
+                                )}
+                              </span>
+                            ))}
+                          </div>
+                        )
+                      )}
+                    </div>
+                  ) : (
+                    /* 通常の1文問題 */
+                    <div className="sentence-display">
+                      {currentQuestion.sentence?.split('____').map((part, index, array) => (
+                        <span key={index}>
+                          {part}
+                          {index < array.length - 1 && (
+                            <span className="fill-in-blank-space">_______</span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <div className="choices-grid">
                     {/* 3択 + 分からない */}
                     {currentQuestion.choices?.map((choice: string, index: number) => {

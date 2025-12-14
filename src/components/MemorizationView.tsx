@@ -37,10 +37,16 @@ function MemorizationView({
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<string>('all');
 
-  // 学習中・復習中の上限設定を撤廃（無制限）
-  // ユーザーが数千回まわすことを想定
-  const learningLimit = Infinity;
-  const reviewLimit = Infinity;
+  // 学習上限設定（LocalStorageから読み込み）
+  const [stillLearningLimit, setStillLearningLimit] = useState<number | null>(() => {
+    const saved = localStorage.getItem('memorization-still-learning-limit');
+    return saved ? parseInt(saved) : null;
+  });
+
+  const [incorrectLimit, setIncorrectLimit] = useState<number | null>(() => {
+    const saved = localStorage.getItem('memorization-incorrect-limit');
+    return saved ? parseInt(saved) : null;
+  });
 
   // カード表示設定（永続化）
   const [cardState, setCardState] = useState<MemorizationCardState>({
@@ -66,6 +72,9 @@ function MemorizationView({
   // セッション管理
   const [sessionId] = useState(() => `session-${Date.now()}`);
   const [consecutiveViews, setConsecutiveViews] = useState(0);
+
+  // 復習モード
+  const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
 
   // セッション統計
   const [sessionStats, setSessionStats] = useState({
@@ -169,13 +178,12 @@ function MemorizationView({
         filtered = filtered.filter((q) => q.word.includes(' ') && q.word.split(' ').length > 2);
       }
 
-      // 上限を撤廃：フィルター済みの全問題を使用
-      const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-      const selected = shuffled; // 全問題を使用（上限なし）
+      // 適応的出題順序（Leitnerシステム + 間隔反復）
+      const sortedQuestions = sortQuestionsByPriority(filtered, stillLearningLimit, incorrectLimit);
 
-      setQuestions(selected);
-      if (selected.length > 0) {
-        setCurrentQuestion(selected[0]);
+      setQuestions(sortedQuestions);
+      if (sortedQuestions.length > 0) {
+        setCurrentQuestion(sortedQuestions[0]);
         setCurrentIndex(0);
         cardDisplayTimeRef.current = Date.now();
       }
@@ -189,10 +197,147 @@ function MemorizationView({
     selectedCategory,
     selectedWordPhraseFilter,
     allQuestions,
-    learningLimit,
-    reviewLimit,
+    stillLearningLimit,
+    incorrectLimit,
     isLoading,
+    isReviewFocusMode,
   ]);
+
+  // 復習モードトグル
+  const handleReviewFocus = () => {
+    setIsReviewFocusMode(!isReviewFocusMode);
+  };
+
+  // 適応的な出題順序を構築（Leitnerシステム + 間隔反復）
+  const sortQuestionsByPriority = (
+    questions: Question[],
+    stillLearningLimit: number | null,
+    incorrectLimit: number | null
+  ): Question[] => {
+    // progressStorageから暗記モードの統計情報を取得
+    const getWordStatus = (word: string) => {
+      const key = 'english-progress';
+      const stored = localStorage.getItem(key);
+      if (!stored) return null;
+
+      try {
+        const progress = JSON.parse(stored);
+        const wordProgress = progress.wordProgress?.[word];
+        if (!wordProgress) return null;
+
+        const attempts = wordProgress.memorizationAttempts || 0;
+        const correct = wordProgress.memorizationCorrect || 0;
+        const streak = wordProgress.memorizationStreak || 0;
+        const lastStudied = wordProgress.lastStudied || 0;
+
+        if (attempts === 0) {
+          return { category: 'new', priority: 3, lastStudied, attempts, correct, streak };
+        }
+
+        const accuracy = attempts > 0 ? (correct / attempts) * 100 : 0;
+
+        // 🟢 覚えてる: 連続3回以上 or 正答率80%以上で連続2回
+        if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
+          return { category: 'mastered', priority: 5, lastStudied, attempts, correct, streak };
+        }
+        // 🟡 まだまだ: 正答率50%以上
+        else if (accuracy >= 50) {
+          return {
+            category: 'still_learning',
+            priority: 2,
+            lastStudied,
+            attempts,
+            correct,
+            streak,
+          };
+        }
+        // 🔴 分からない: 正答率50%未満
+        else {
+          return { category: 'incorrect', priority: 1, lastStudied, attempts, correct, streak };
+        }
+      } catch (error) {
+        logger.error('統計情報の取得エラー:', error);
+        return null;
+      }
+    };
+
+    // 各語句の状態を取得
+    const questionsWithStatus = questions.map((q) => ({
+      question: q,
+      status: getWordStatus(q.word),
+    }));
+
+    // カテゴリ別にカウント
+    const counts = {
+      mastered: questionsWithStatus.filter((q) => q.status?.category === 'mastered').length,
+      still_learning: questionsWithStatus.filter((q) => q.status?.category === 'still_learning')
+        .length,
+      incorrect: questionsWithStatus.filter((q) => q.status?.category === 'incorrect').length,
+      new: questionsWithStatus.filter((q) => q.status?.category === 'new').length,
+    };
+
+    // 上限チェックと優先度調整
+    const shouldFocusOnStillLearning =
+      stillLearningLimit !== null && counts.still_learning >= stillLearningLimit;
+    const shouldFocusOnIncorrect = incorrectLimit !== null && counts.incorrect >= incorrectLimit;
+
+    // ソート: 優先度 > 最終学習時刻（古い順） > ランダム
+    const sorted = questionsWithStatus.sort((a, b) => {
+      const statusA = a.status;
+      const statusB = b.status;
+
+      // 上限に達した場合の優先度調整
+      let priorityA = statusA?.priority || 3;
+      let priorityB = statusB?.priority || 3;
+
+      // 🔥 復習モードが有効な場合: 分からないを主に、分からないとまだまだを優先
+      if (isReviewFocusMode) {
+        // 分からない（incorrect）を最優先
+        if (statusA?.category === 'incorrect') priorityA = 0;
+        if (statusB?.category === 'incorrect') priorityB = 0;
+
+        // まだまだ（still_learning）を次に優先
+        if (statusA?.category === 'still_learning' && priorityA !== 0) priorityA = 1;
+        if (statusB?.category === 'still_learning' && priorityB !== 0) priorityB = 1;
+
+        // 覚えてる（mastered）と新規は後回し
+        if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 5;
+        if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 5;
+        if (statusA?.category === 'new' && priorityA > 1) priorityA = 4;
+        if (statusB?.category === 'new' && priorityB > 1) priorityB = 4;
+      } else {
+        // 通常モード: 上限に達した場合の優先度調整
+        // 🔴 分からないが上限に達したら最優先
+        if (shouldFocusOnIncorrect) {
+          if (statusA?.category === 'incorrect') priorityA = 0;
+          if (statusB?.category === 'incorrect') priorityB = 0;
+        }
+
+        // 🟡 まだまだが上限に達したら次に優先
+        if (shouldFocusOnStillLearning) {
+          if (statusA?.category === 'still_learning') priorityA = 1;
+          if (statusB?.category === 'still_learning') priorityB = 1;
+        }
+      }
+
+      // 優先度順
+      if (priorityA !== priorityB) {
+        return priorityA - priorityB;
+      }
+
+      // 最終学習時刻順（古い方を優先）
+      const lastStudiedA = statusA?.lastStudied || 0;
+      const lastStudiedB = statusB?.lastStudied || 0;
+      if (lastStudiedA !== lastStudiedB) {
+        return lastStudiedA - lastStudiedB;
+      }
+
+      // ランダム（同じ優先度・同じ学習時刻の場合）
+      return Math.random() - 0.5;
+    });
+
+    return sorted.map((item) => item.question);
+  };
 
   // 音声読み上げ（カード表示時）
   useEffect(() => {
@@ -310,6 +455,29 @@ function MemorizationView({
       // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
       setLastAnswerTime(Date.now());
 
+      // 適応的な出題順序の動的更新（5問ごとまたは上限達成時）
+      const shouldResort =
+        sessionStats.total % 5 === 0 ||
+        (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
+        (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit);
+
+      if (shouldResort && questions.length > 1) {
+        // 残りの語句を再ソート（現在の語句は除外）
+        const remainingQuestions = questions.slice(currentIndex + 1);
+        const resorted = sortQuestionsByPriority(
+          remainingQuestions,
+          stillLearningLimit,
+          incorrectLimit
+        );
+
+        // 語句リストを更新
+        const updatedQuestions = [
+          ...questions.slice(0, currentIndex + 1), // 既に出題した語句
+          ...resorted, // 再ソートされた残りの語句
+        ];
+        setQuestions(updatedQuestions);
+      }
+
       // 次の語句へ
       const nextIndex = currentIndex + 1;
 
@@ -322,7 +490,16 @@ function MemorizationView({
         setCurrentQuestion(null);
       }
     },
-    [currentQuestion, currentIndex, questions, sessionId, consecutiveViews]
+    [
+      currentQuestion,
+      currentIndex,
+      questions,
+      sessionId,
+      consecutiveViews,
+      sessionStats,
+      stillLearningLimit,
+      incorrectLimit,
+    ]
   );
 
   // スワイプイベントリスナー追加（handleSwipeの後に配置）
@@ -610,6 +787,47 @@ function MemorizationView({
         </div>
       ) : (
         <>
+          {/* 上限達成通知 */}
+          {(stillLearningLimit !== null || incorrectLimit !== null) && (
+            <div className="mb-4 flex justify-center">
+              <div className="w-full max-w-4xl">
+                {stillLearningLimit !== null &&
+                  sessionStats.still_learning >= stillLearningLimit && (
+                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-2">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0">
+                          <span className="text-2xl">🟡</span>
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm text-yellow-700">
+                            <strong>まだまだが{stillLearningLimit}語に達しました！</strong>
+                            <br />
+                            集中復習モードに入ります。まだまだの語句を優先的に出題します。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                {incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit && (
+                  <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-2">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        <span className="text-2xl">🔴</span>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm text-red-700">
+                          <strong>分からないが{incorrectLimit}語に達しました！</strong>
+                          <br />
+                          最優先復習モードに入ります。分からない語句を最優先で出題します。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* スコアボード */}
           <div className="mb-4 flex justify-center">
             <div className="w-full max-w-4xl">
@@ -625,6 +843,8 @@ function MemorizationView({
                 category={selectedCategory === 'all' ? '全分野' : selectedCategory}
                 difficulty={selectedDifficulty}
                 wordPhraseFilter={selectedWordPhraseFilter}
+                onReviewFocus={handleReviewFocus}
+                isReviewFocusMode={isReviewFocusMode}
               />
             </div>
           </div>
@@ -722,6 +942,101 @@ function MemorizationView({
                     <option value="words">単語のみ</option>
                     <option value="phrases">熟語のみ</option>
                   </select>
+                </div>
+
+                {/* 出題上限設定 */}
+                <div className="border-t pt-4">
+                  <label className="block text-sm font-medium mb-3 text-gray-700">
+                    🎯 出題繰り返し設定:
+                  </label>
+                  <p className="text-xs text-gray-500 mb-3">
+                    未入力の場合は無制限に出題します（推奨：Leitnerシステム方式）
+                  </p>
+                  <div className="space-y-3">
+                    <div>
+                      <label className="flex items-center mb-2">
+                        <input
+                          type="checkbox"
+                          checked={stillLearningLimit !== null}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setStillLearningLimit(50);
+                              localStorage.setItem('memorization-still-learning-limit', '50');
+                            } else {
+                              setStillLearningLimit(null);
+                              localStorage.removeItem('memorization-still-learning-limit');
+                            }
+                          }}
+                          className="mr-2 w-4 h-4"
+                        />
+                        <span className="text-sm">🟡 まだまだの語数上限を設定</span>
+                      </label>
+                      {stillLearningLimit !== null && (
+                        <div className="ml-6">
+                          <input
+                            type="number"
+                            min="1"
+                            max="500"
+                            value={stillLearningLimit}
+                            onChange={(e) => {
+                              const value = parseInt(e.target.value) || 1;
+                              setStillLearningLimit(value);
+                              localStorage.setItem(
+                                'memorization-still-learning-limit',
+                                value.toString()
+                              );
+                            }}
+                            className="w-full px-3 py-2 border rounded-lg"
+                          />
+                          <p className="text-xs text-gray-500 mt-1">
+                            この数に達したら、まだまだの語句を集中復習します
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    <div>
+                      <label className="flex items-center mb-2">
+                        <input
+                          type="checkbox"
+                          checked={incorrectLimit !== null}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setIncorrectLimit(30);
+                              localStorage.setItem('memorization-incorrect-limit', '30');
+                            } else {
+                              setIncorrectLimit(null);
+                              localStorage.removeItem('memorization-incorrect-limit');
+                            }
+                          }}
+                          className="mr-2 w-4 h-4"
+                        />
+                        <span className="text-sm">🔴 分からないの語数上限を設定</span>
+                      </label>
+                      {incorrectLimit !== null && (
+                        <div className="ml-6">
+                          <input
+                            type="number"
+                            min="1"
+                            max="500"
+                            value={incorrectLimit}
+                            onChange={(e) => {
+                              const value = parseInt(e.target.value) || 1;
+                              setIncorrectLimit(value);
+                              localStorage.setItem(
+                                'memorization-incorrect-limit',
+                                value.toString()
+                              );
+                            }}
+                            className="w-full px-3 py-2 border rounded-lg"
+                          />
+                          <p className="text-xs text-gray-500 mt-1">
+                            この数に達したら、分からない語句を最優先で復習します
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="border-t pt-4">
