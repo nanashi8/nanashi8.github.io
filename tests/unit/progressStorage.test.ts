@@ -13,7 +13,7 @@ import {
   getWordsSortedByDifficulty,
   type UserProgress,
   type QuizResult,
-    // type WordProgress,
+  // type WordProgress,
 } from '@/storage/progress/progressStorage';
 
 describe('progressStorage', () => {
@@ -39,12 +39,16 @@ describe('progressStorage', () => {
       const mockProgress: UserProgress = {
         results: [
           {
+            id: 'test-1',
             date: Date.now(),
             score: 80,
             total: 10,
-            correct: 8,
+            percentage: 80,
+            timeSpent: 60,
+            incorrectWords: ['cat', 'dog'],
             questionSetId: 'test-set',
-            mode: 'normal',
+            questionSetName: 'Test Set',
+            mode: 'translation',
           } as QuizResult,
         ],
         statistics: {
@@ -144,9 +148,42 @@ describe('progressStorage', () => {
 
       const mockProgress: UserProgress = {
         results: [
-          { date: now, score: 90, total: 10, correct: 9 } as QuizResult,
-          { date: yesterday, score: 80, total: 10, correct: 8 } as QuizResult,
-          { date: twoDaysAgo, score: 70, total: 10, correct: 7 } as QuizResult,
+          {
+            id: 'test-1',
+            date: now,
+            score: 90,
+            total: 10,
+            percentage: 90,
+            timeSpent: 60,
+            incorrectWords: [],
+            questionSetId: 'test',
+            questionSetName: 'Test',
+            mode: 'translation',
+          } as QuizResult,
+          {
+            id: 'test-2',
+            date: yesterday,
+            score: 80,
+            total: 10,
+            percentage: 80,
+            timeSpent: 60,
+            incorrectWords: [],
+            questionSetId: 'test',
+            questionSetName: 'Test',
+            mode: 'translation',
+          } as QuizResult,
+          {
+            id: 'test-3',
+            date: twoDaysAgo,
+            score: 70,
+            total: 10,
+            percentage: 70,
+            timeSpent: 60,
+            incorrectWords: [],
+            questionSetId: 'test',
+            questionSetName: 'Test',
+            mode: 'translation',
+          } as QuizResult,
         ],
         statistics: {
           totalQuizzes: 0,
@@ -179,8 +216,30 @@ describe('progressStorage', () => {
 
       const mockProgress: UserProgress = {
         results: [
-          { date: now, score: 90, total: 10, correct: 9 } as QuizResult,
-          { date: oneHourAgo, score: 80, total: 10, correct: 8 } as QuizResult,
+          {
+            id: 'test-1',
+            date: now,
+            score: 90,
+            total: 10,
+            percentage: 90,
+            timeSpent: 60,
+            incorrectWords: [],
+            questionSetId: 'test',
+            questionSetName: 'Test',
+            mode: 'translation',
+          } as QuizResult,
+          {
+            id: 'test-2',
+            date: oneHourAgo,
+            score: 80,
+            total: 10,
+            percentage: 80,
+            timeSpent: 60,
+            incorrectWords: [],
+            questionSetId: 'test',
+            questionSetName: 'Test',
+            mode: 'translation',
+          } as QuizResult,
         ],
         statistics: {
           totalQuizzes: 0,
@@ -210,7 +269,20 @@ describe('progressStorage', () => {
   describe('exportProgress', () => {
     it('進捗データをJSON文字列としてエクスポートする', () => {
       const mockProgress: UserProgress = {
-        results: [{ date: Date.now(), score: 85, total: 10, correct: 8 } as QuizResult],
+        results: [
+          {
+            id: 'test-1',
+            date: Date.now(),
+            score: 85,
+            total: 10,
+            percentage: 85,
+            timeSpent: 60,
+            incorrectWords: [],
+            questionSetId: 'test',
+            questionSetName: 'Test',
+            mode: 'translation',
+          } as QuizResult,
+        ],
         statistics: {
           totalQuizzes: 1,
           totalQuestions: 10,
@@ -414,10 +486,15 @@ describe('progressStorage', () => {
         wordProgress: {
           dog: {
             word: 'dog',
-            correct: 5,
-            incorrect: 2,
             lastStudied: Date.now(),
             consecutiveCorrect: 2,
+            correctCount: 2,
+            incorrectCount: 0,
+            consecutiveIncorrect: 0,
+            totalResponseTime: 0,
+            averageResponseTime: 0,
+            difficultyScore: 0,
+            responseTimes: [],
             nextReviewDate: Date.now(),
             masteryLevel: 'learning',
           },
@@ -430,8 +507,8 @@ describe('progressStorage', () => {
 
       expect(progress).toBeDefined();
       expect(progress?.word).toBe('dog');
-      expect(progress?.correct).toBe(5);
-      expect(progress?.incorrect).toBe(2);
+      expect(progress?.correctCount).toBe(5);
+      expect(progress?.incorrectCount).toBe(2);
     });
 
     it('存在しない単語にnullを返す', () => {
@@ -481,17 +558,24 @@ describe('progressStorage', () => {
         wordProgress: {
           cat: {
             word: 'cat',
-            correct: 3,
-            incorrect: 1,
+            correctCount: 0,
+            incorrectCount: 2,
+            t: 1,
             lastStudied: Date.now(),
             consecutiveCorrect: 1,
+            consecutiveIncorrect: 0,
+            totalResponseTime: 0,
+            averageResponseTime: 0,
+            difficultyScore: 0,
+            responseTimes: [],
             nextReviewDate: Date.now(),
             masteryLevel: 'new',
           },
           dog: {
             word: 'dog',
-            correct: 7,
-            incorrect: 0,
+            correctCount: 7,
+            incorrectCount: 0,
+            t: 1,
             lastStudied: Date.now(),
             consecutiveCorrect: 7,
             nextReviewDate: Date.now(),
@@ -528,19 +612,19 @@ describe('progressStorage', () => {
         categoryStats: {},
         difficultyStats: {},
         wordProgress: {
-          new1: {
-            word: 'new1',
-            correct: 0,
-            incorrect: 0,
+          new: {
+            word: 'new',
+            correctCount: 2,
+            incorrectCount: 1,
             lastStudied: Date.now(),
             consecutiveCorrect: 0,
             nextReviewDate: Date.now(),
             masteryLevel: 'new',
           },
-          learning1: {
-            word: 'learning1',
-            correct: 3,
-            incorrect: 2,
+          learning: {
+            word: 'learning',
+            correctCount: 5,
+            incorrectCount: 3,
             lastStudied: Date.now(),
             consecutiveCorrect: 1,
             nextReviewDate: Date.now(),

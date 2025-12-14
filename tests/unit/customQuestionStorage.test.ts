@@ -574,7 +574,7 @@ describe('customQuestionStorage', () => {
         name: 'Test Set',
         words: [
           { word: 'apple', meaning: 'りんご', source: 'manual' as const },
-          { word: 'banana', meaning: 'バナナ', source: 'quiz' as const },
+          { word: 'banana', meaning: 'バナナ', source: 'reading' as const },
           { word: 'carrot', meaning: 'にんじん', source: 'memorization' as const },
         ],
         createdAt: '2025-01-01T00:00:00.000Z',
