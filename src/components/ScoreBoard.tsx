@@ -47,6 +47,9 @@ function ScoreBoard({
   mode = 'translation', // デフォルトは和訳モード
   currentScore = 0,
   totalAnswered = 0,
+  sessionCorrect = 0,
+  sessionIncorrect = 0,
+  sessionReview = 0,
   isReviewFocusMode = false,
   onReviewFocus,
   onShowSettings,
@@ -193,14 +196,11 @@ function ScoreBoard({
       );
     }
     if (learningRef.current) {
-      // 暗記タブでは learning + struggling の合算値を設定
-      const learningWidth =
-        mode === 'memorization'
-          ? Math.round(
-              detailedStatsData.learningPercentage + detailedStatsData.strugglingPercentage
-            )
-          : Math.round(detailedStatsData.learningPercentage);
-      learningRef.current.style.setProperty('--segment-width', String(learningWidth));
+      // 暗記タブでも個別に設定
+      learningRef.current.style.setProperty(
+        '--segment-width',
+        String(Math.round(detailedStatsData.learningPercentage))
+      );
     }
     if (strugglingRef.current) {
       strugglingRef.current.style.setProperty(
@@ -318,46 +318,52 @@ function ScoreBoard({
       {/* AIタブ */}
       {activeTab === 'ai' && (
         <div className="score-board-content">
-          <div className="ai-comment-container bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-lg p-4 sm:p-6 shadow-md">
-            <div className="flex items-start gap-3">
-              <div className="text-3xl sm:text-4xl flex-shrink-0">
-                {(() => {
-                  const personality = (localStorage.getItem('aiPersonality') ||
-                    'kind-teacher') as AIPersonality;
-                  const avatars = {
-                    'kind-teacher': '😃',
-                    'drill-sergeant': '😈',
-                    'enthusiastic-coach': '😼',
-                    analyst: '🤖',
-                    'wise-sage': '🧙',
-                  };
-                  return avatars[personality] || '😃';
-                })()}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-sm sm:text-base text-gray-800 dark:text-gray-200 leading-relaxed break-words">
-                  {aiComment}
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+            <div className="ai-comment-container">
+              <div className="flex items-center gap-2 w-full">
+                <div className="text-2xl flex-shrink-0">
+                  {(() => {
+                    const personality = (localStorage.getItem('aiPersonality') ||
+                      'kind-teacher') as AIPersonality;
+                    const avatars = {
+                      'kind-teacher': '😃',
+                      'drill-sergeant': '😈',
+                      'enthusiastic-coach': '😼',
+                      analyst: '🤖',
+                      'wise-sage': '🧙',
+                    };
+                    return avatars[personality] || '😃';
+                  })()}
                 </div>
-                <div className="mt-4 pt-3 border-t border-gray-300 dark:border-gray-600">
-                  <div className="flex flex-wrap gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                    <div className="flex items-center gap-1">
-                      <span>🔥</span>
-                      <span>連続{getConsecutiveDays()}日</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <span>📊</span>
-                      <span>今日{getTodayStudyStats().count}問</span>
-                    </div>
-                    {getTodayStudyStats().count > 0 && (
-                      <div className="flex items-center gap-1">
-                        <span>🎯</span>
-                        <span>正答率{Math.round(getTodayStudyStats().accuracy)}%</span>
-                      </div>
-                    )}
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm text-gray-700 dark:text-gray-300 leading-snug break-words">
+                    {aiComment
+                      .replace(/^[😃😈😼🤖🧙]「|」$/gu, '')
+                      .replace(/^[😃😈😼🤖🧙]|」$/gu, '')}
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* 学習統計カード（暗記タブ専用） */}
+            {mode === 'memorization' && totalAnswered > 0 && (
+              <div className="mt-4">
+                <div className="flex flex-wrap gap-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🟢</span>
+                    <span>覚えてる {sessionCorrect}語</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🟡</span>
+                    <span>まだまだ {sessionReview}語</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🔴</span>
+                    <span>分からない {sessionIncorrect}語</span>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -365,7 +371,7 @@ function ScoreBoard({
       {/* 学習プランタブ */}
       {activeTab === 'plan' && (
         <div className="score-board-content">
-          <div className="plan-tab-compact">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
             {/* 全モード共通のプラン詳細表示 */}
             <div className="plan-text-line">
               <span className="stat-text-label">📚 {dataSource || '全問題集'}</span>
@@ -457,132 +463,137 @@ function ScoreBoard({
       {/* 学習状況タブ（詳細な定着率の内訳） */}
       {activeTab === 'breakdown' && (
         <div className="score-board-content">
-          <div className="retention-breakdown-container">
-            <div className="retention-breakdown-header">
-              <div className="retention-title">📊 学習状況の内訳</div>
-              {detailedStats.appearedWords > 0 ? (
-                <div className="retention-subtitle">
-                  {mode === 'memorization' ? (
-                    <>
-                      {detailedStats.appearedWords}語確認： 🟢覚えた {detailedStats.masteredCount}語
-                      🟡覚えていない {detailedStats.learningCount + detailedStats.strugglingCount}語
-                    </>
-                  ) : mode === 'grammar' ? (
-                    <>
-                      {detailedStats.appearedWords}問出題： 🟢定着 {detailedStats.masteredCount}問
-                      🟡学習中 {detailedStats.learningCount}問 🔴要復習{' '}
-                      {detailedStats.strugglingCount}問
-                    </>
-                  ) : (
-                    <>
-                      {detailedStats.appearedWords}問出題： 🟢定着 {detailedStats.masteredCount}語
-                      🟡学習中 {detailedStats.learningCount}語 🔴要復習{' '}
-                      {detailedStats.strugglingCount}語
-                      {(mode === 'translation' || mode === 'spelling') && onReviewFocus && (
-                        <span
-                          className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
-                          onClick={onReviewFocus}
-                          title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
-                        >
-                          🔥
-                        </span>
-                      )}
-                    </>
-                  )}
-                </div>
-              ) : (
-                <div className="retention-subtitle">
-                  {mode === 'memorization'
-                    ? 'まだ語句を確認していません'
-                    : 'まだ問題に取り組んでいません'}
-                </div>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+            <div className="retention-breakdown-container">
+              <div className="retention-breakdown-header">
+                <div className="retention-title">📊 学習状況の内訳</div>
+                {detailedStats.appearedWords > 0 ? (
+                  <div className="retention-subtitle">
+                    {mode === 'memorization' ? (
+                      <>
+                        {detailedStats.appearedWords}語確認： 🟢覚えてる{' '}
+                        {detailedStats.masteredCount}語 🟡まだまだ {detailedStats.learningCount}語
+                        🔴分からない {detailedStats.strugglingCount}語
+                      </>
+                    ) : mode === 'grammar' ? (
+                      <>
+                        {detailedStats.appearedWords}問出題： 🟢定着 {detailedStats.masteredCount}問
+                        🟡学習中 {detailedStats.learningCount}問 🔴要復習{' '}
+                        {detailedStats.strugglingCount}問
+                      </>
+                    ) : (
+                      <>
+                        {detailedStats.appearedWords}問出題： 🟢定着 {detailedStats.masteredCount}語
+                        🟡学習中 {detailedStats.learningCount}語 🔴要復習{' '}
+                        {detailedStats.strugglingCount}語
+                        {(mode === 'translation' || mode === 'spelling') && onReviewFocus && (
+                          <span
+                            className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
+                            onClick={onReviewFocus}
+                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                          >
+                            🔥
+                          </span>
+                        )}
+                      </>
+                    )}
+                  </div>
+                ) : (
+                  <div className="retention-subtitle">
+                    {mode === 'memorization'
+                      ? 'まだ語句を確認していません'
+                      : 'まだ問題に取り組んでいません'}
+                  </div>
+                )}
+              </div>
+              {detailedStats.appearedWords > 0 && (
+                <>
+                  <div className="retention-progress-bar">
+                    {mode === 'memorization' ? (
+                      <>
+                        {/* 暗記タブ用: 覚えてる/まだまだ/分からない（3種類） */}
+                        {detailedStats.masteredPercentage > 0 && (
+                          <div
+                            ref={masteredRef}
+                            className="retention-segment retention-mastered"
+                            data-width={Math.round(detailedStats.masteredPercentage)}
+                            title={`🟢 覚えてる: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
+                          >
+                            {detailedStats.masteredPercentage >= 10 && (
+                              <span>{Math.round(detailedStats.masteredPercentage)}%</span>
+                            )}
+                          </div>
+                        )}
+                        {detailedStats.learningPercentage > 0 && (
+                          <div
+                            ref={learningRef}
+                            className="retention-segment retention-learning"
+                            data-width={Math.round(detailedStats.learningPercentage)}
+                            title={`🟡 まだまだ: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
+                          >
+                            {detailedStats.learningPercentage >= 10 && (
+                              <span>{Math.round(detailedStats.learningPercentage)}%</span>
+                            )}
+                          </div>
+                        )}
+                        {detailedStats.strugglingPercentage > 0 && (
+                          <div
+                            ref={strugglingRef}
+                            className="retention-segment retention-struggling"
+                            data-width={Math.round(detailedStats.strugglingPercentage)}
+                            title={`🔴 分からない: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
+                          >
+                            {detailedStats.strugglingPercentage >= 10 && (
+                              <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
+                            )}
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <>
+                        {/* 和訳・スペル・文法タブ用: 定着/学習中/要復習 */}
+                        {detailedStats.masteredPercentage > 0 && (
+                          <div
+                            ref={masteredRef}
+                            className="retention-segment retention-mastered"
+                            data-width={Math.round(detailedStats.masteredPercentage)}
+                            title={`🟢 定着: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
+                          >
+                            {detailedStats.masteredPercentage >= 10 && (
+                              <span>{Math.round(detailedStats.masteredPercentage)}%</span>
+                            )}
+                          </div>
+                        )}
+                        {detailedStats.learningPercentage > 0 && (
+                          <div
+                            ref={learningRef}
+                            className="retention-segment retention-learning"
+                            data-width={Math.round(detailedStats.learningPercentage)}
+                            title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
+                          >
+                            {detailedStats.learningPercentage >= 10 && (
+                              <span>{Math.round(detailedStats.learningPercentage)}%</span>
+                            )}
+                          </div>
+                        )}
+                        {detailedStats.strugglingPercentage > 0 && (
+                          <div
+                            ref={strugglingRef}
+                            className="retention-segment retention-struggling"
+                            data-width={Math.round(detailedStats.strugglingPercentage)}
+                            title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
+                          >
+                            {detailedStats.strugglingPercentage >= 10 && (
+                              <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
+                            )}
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                </>
               )}
             </div>
-            {detailedStats.appearedWords > 0 && (
-              <>
-                <div className="retention-progress-bar">
-                  {mode === 'memorization' ? (
-                    <>
-                      {/* 暗記タブ用: 覚えた/覚えていない（2種類のみ） */}
-                      {detailedStats.masteredPercentage > 0 && (
-                        <div
-                          ref={masteredRef}
-                          className="retention-segment retention-mastered"
-                          data-width={Math.round(detailedStats.masteredPercentage)}
-                          title={`🟢 覚えた: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
-                        >
-                          {detailedStats.masteredPercentage >= 10 && (
-                            <span>{Math.round(detailedStats.masteredPercentage)}%</span>
-                          )}
-                        </div>
-                      )}
-                      {detailedStats.learningPercentage + detailedStats.strugglingPercentage >
-                        0 && (
-                        <div
-                          ref={learningRef}
-                          className="retention-segment retention-learning"
-                          data-width={Math.round(
-                            detailedStats.learningPercentage + detailedStats.strugglingPercentage
-                          )}
-                          title={`🟡 覚えていない: ${detailedStats.learningCount + detailedStats.strugglingCount}語 (${Math.round(detailedStats.learningPercentage + detailedStats.strugglingPercentage)}%)`}
-                        >
-                          {detailedStats.learningPercentage + detailedStats.strugglingPercentage >=
-                            10 && (
-                            <span>
-                              {Math.round(
-                                detailedStats.learningPercentage +
-                                  detailedStats.strugglingPercentage
-                              )}
-                              %
-                            </span>
-                          )}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      {/* 和訳・スペル・文法タブ用: 定着/学習中/要復習 */}
-                      {detailedStats.masteredPercentage > 0 && (
-                        <div
-                          ref={masteredRef}
-                          className="retention-segment retention-mastered"
-                          data-width={Math.round(detailedStats.masteredPercentage)}
-                          title={`🟢 定着: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
-                        >
-                          {detailedStats.masteredPercentage >= 10 && (
-                            <span>{Math.round(detailedStats.masteredPercentage)}%</span>
-                          )}
-                        </div>
-                      )}
-                      {detailedStats.learningPercentage > 0 && (
-                        <div
-                          ref={learningRef}
-                          className="retention-segment retention-learning"
-                          data-width={Math.round(detailedStats.learningPercentage)}
-                          title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
-                        >
-                          {detailedStats.learningPercentage >= 10 && (
-                            <span>{Math.round(detailedStats.learningPercentage)}%</span>
-                          )}
-                        </div>
-                      )}
-                      {detailedStats.strugglingPercentage > 0 && (
-                        <div
-                          ref={strugglingRef}
-                          className="retention-segment retention-struggling"
-                          data-width={Math.round(detailedStats.strugglingPercentage)}
-                          title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
-                        >
-                          {detailedStats.strugglingPercentage >= 10 && (
-                            <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
-                          )}
-                        </div>
-                      )}
-                    </>
-                  )}
-                </div>
-              </>
-            )}
           </div>
         </div>
       )}
@@ -590,127 +601,131 @@ function ScoreBoard({
       {/* 履歴タブ */}
       {activeTab === 'history' && (
         <div className="score-board-content">
-          <div className="history-compact">
-            {mode === 'grammar' ? (
-              <div className="word-detail-container">
-                {grammarUnitStats.length > 0 ? (
-                  <div className="grammar-units-list">
-                    {grammarUnitStats.map((stat) => {
-                      const totalAttempts = stat.correctCount + stat.incorrectCount;
-                      const retentionRate =
-                        stat.answeredQuestions > 0
-                          ? Math.round((stat.masteredCount / stat.answeredQuestions) * 100)
-                          : 0;
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+            <div className="history-compact">
+              {mode === 'grammar' ? (
+                <div className="word-detail-container">
+                  {grammarUnitStats.length > 0 ? (
+                    <div className="grammar-units-list">
+                      {grammarUnitStats.map((stat) => {
+                        const totalAttempts = stat.correctCount + stat.incorrectCount;
+                        const retentionRate =
+                          stat.answeredQuestions > 0
+                            ? Math.round((stat.masteredCount / stat.answeredQuestions) * 100)
+                            : 0;
 
-                      // 履歴アイコン生成（最近の10回分）
-                      const historyIcons = Array(Math.min(totalAttempts, 10)).fill('🟩').join('');
+                        // 履歴アイコン生成（最近の10回分）
+                        const historyIcons = Array(Math.min(totalAttempts, 10)).fill('🟩').join('');
 
-                      // ステータス判定
-                      let statusIcon = '🟢';
-                      let statusLabel = '定着済';
-                      if (stat.masteredCount === 0 && stat.answeredQuestions > 0) {
-                        statusIcon = '🔴';
-                        statusLabel = '要復習';
-                      } else if (retentionRate < 80 && stat.answeredQuestions > 0) {
-                        statusIcon = '🟡';
-                        statusLabel = '学習中';
-                      }
+                        // ステータス判定
+                        let statusIcon = '🟢';
+                        let statusLabel = '定着済';
+                        if (stat.masteredCount === 0 && stat.answeredQuestions > 0) {
+                          statusIcon = '🔴';
+                          statusLabel = '要復習';
+                        } else if (retentionRate < 80 && stat.answeredQuestions > 0) {
+                          statusIcon = '🟡';
+                          statusLabel = '学習中';
+                        }
 
-                      // unit表示を「中1_Unit0_〜」から「1年_Unit0_〜」に変換
-                      const gradeMatch = stat.unit.match(/中(\d+)/);
-                      const gradeDisplay = gradeMatch ? `${gradeMatch[1]}年` : stat.unit;
-                      const unitMatch = stat.unit.match(/Unit(\d+)/);
-                      const unitDisplay = unitMatch ? `Unit${unitMatch[1]}` : '';
-                      const planDisplay = unitDisplay
-                        ? `${gradeDisplay}_${unitDisplay}_${stat.title}`
-                        : `${gradeDisplay}_${stat.title}`;
+                        // unit表示を「中1_Unit0_〜」から「1年_Unit0_〜」に変換
+                        const gradeMatch = stat.unit.match(/中(\d+)/);
+                        const gradeDisplay = gradeMatch ? `${gradeMatch[1]}年` : stat.unit;
+                        const unitMatch = stat.unit.match(/Unit(\d+)/);
+                        const unitDisplay = unitMatch ? `Unit${unitMatch[1]}` : '';
+                        const planDisplay = unitDisplay
+                          ? `${gradeDisplay}_${unitDisplay}_${stat.title}`
+                          : `${gradeDisplay}_${stat.title}`;
 
-                      return (
-                        <div key={stat.unit} className="grammar-unit-card">
-                          <div className="word-detail-title">
-                            📊 {planDisplay} の学習データ
-                            <span className="word-status-badge">
-                              {statusIcon} {statusLabel}
-                            </span>
+                        return (
+                          <div key={stat.unit} className="grammar-unit-card">
+                            <div className="word-detail-title">
+                              📊 {planDisplay} の学習データ
+                              <span className="word-status-badge">
+                                {statusIcon} {statusLabel}
+                              </span>
+                            </div>
+                            <div className="word-detail-stats">
+                              <span className="word-stat-label">正解:</span>
+                              <strong className="word-stat-value">
+                                {stat.correctCount}/{totalAttempts}回
+                              </strong>
+                              <span className="word-stat-divider">｜</span>
+                              {historyIcons && (
+                                <>
+                                  <span className="word-stat-label">履歴:</span>
+                                  <span className="word-history-icons">{historyIcons}</span>
+                                  <span className="word-stat-divider">｜</span>
+                                </>
+                              )}
+                              <span className="word-stat-label">定着率:</span>
+                              <strong className="word-stat-value word-retention-rate">
+                                {retentionRate}%
+                              </strong>
+                            </div>
                           </div>
-                          <div className="word-detail-stats">
-                            <span className="word-stat-label">正解:</span>
-                            <strong className="word-stat-value">
-                              {stat.correctCount}/{totalAttempts}回
-                            </strong>
-                            <span className="word-stat-divider">｜</span>
-                            {historyIcons && (
-                              <>
-                                <span className="word-stat-label">履歴:</span>
-                                <span className="word-history-icons">{historyIcons}</span>
-                                <span className="word-stat-divider">｜</span>
-                              </>
-                            )}
-                            <span className="word-stat-label">定着率:</span>
-                            <strong className="word-stat-value word-retention-rate">
-                              {retentionRate}%
-                            </strong>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <div className="word-detail-empty">
-                    <p>まだ文法問題の解答データがありません</p>
-                    <p className="stat-text-sub">問題を解くと単元ごとの成績が表示されます</p>
-                  </div>
-                )}
-              </div>
-            ) : currentWord && currentWordData ? (
-              <div className="word-detail-container">
-                <div className="word-detail-title">
-                  📊 {currentWord} の学習データ
-                  <span className="word-status-badge">
-                    {currentWordData.statusIcon} {currentWordData.statusLabel}
-                  </span>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="word-detail-empty">
+                      <p>まだ文法問題の解答データがありません</p>
+                      <p className="stat-text-sub">問題を解くと単元ごとの成績が表示されます</p>
+                    </div>
+                  )}
                 </div>
-                <div className="word-detail-stats">
-                  <span className="word-stat-label">正解:</span>
-                  <strong className="word-stat-value">
-                    {currentWordData.correctCount}/{currentWordData.totalCount}回
-                  </strong>
-                  <span className="word-stat-divider">｜</span>
-                  {currentWordData.accuracyHistory &&
-                    currentWordData.accuracyHistory.length > 0 && (
-                      <>
-                        <span className="word-stat-label">履歴:</span>
-                        <span className="word-history-icons">
-                          {currentWordData.accuracyHistory}
-                        </span>
-                        <span className="word-stat-divider">｜</span>
-                      </>
-                    )}
-                  <span className="word-stat-label">定着率:</span>
-                  <strong className="word-stat-value word-retention-rate">
-                    {currentWordData.retentionRate}%
-                  </strong>
+              ) : currentWord && currentWordData ? (
+                <div className="word-detail-container">
+                  <div className="word-detail-title">
+                    📊 {currentWord} の学習データ
+                    <span className="word-status-badge">
+                      {currentWordData.statusIcon} {currentWordData.statusLabel}
+                    </span>
+                  </div>
+                  <div className="word-detail-stats">
+                    <span className="word-stat-label">正解:</span>
+                    <strong className="word-stat-value">
+                      {currentWordData.correctCount}/{currentWordData.totalCount}回
+                    </strong>
+                    <span className="word-stat-divider">｜</span>
+                    {currentWordData.accuracyHistory &&
+                      currentWordData.accuracyHistory.length > 0 && (
+                        <>
+                          <span className="word-stat-label">履歴:</span>
+                          <span className="word-history-icons">
+                            {currentWordData.accuracyHistory}
+                          </span>
+                          <span className="word-stat-divider">｜</span>
+                        </>
+                      )}
+                    <span className="word-stat-label">定着率:</span>
+                    <strong className="word-stat-value word-retention-rate">
+                      {currentWordData.retentionRate}%
+                    </strong>
+                  </div>
                 </div>
-              </div>
-            ) : currentWord && !currentWordData ? (
-              <div className="word-detail-empty">
-                <p>この単語のデータがまだありません</p>
-              </div>
-            ) : (
-              <div className="word-detail-empty">
-                <p>問題を開始すると、現在の単語のデータが表示されます</p>
-              </div>
-            )}
+              ) : currentWord && !currentWordData ? (
+                <div className="word-detail-empty">
+                  <p>この単語のデータがまだありません</p>
+                </div>
+              ) : (
+                <div className="word-detail-empty">
+                  <p>問題を開始すると、現在の単語のデータが表示されます</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
 
-      {/* 設定タブ */}
+      {/* 学習設定タブ */}
       {activeTab === 'settings' && (
         <div className="score-board-content">
-          <div className="settings-tab-container">
-            <div className="word-detail-empty">
-              <p>このタブの設定は学習設定パネルから行えます</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+            <div className="settings-tab-container">
+              <div className="word-detail-empty">
+                <p>このタブの設定は学習設定パネルから行えます</p>
+              </div>
             </div>
           </div>
         </div>

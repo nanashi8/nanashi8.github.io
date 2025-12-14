@@ -182,14 +182,14 @@ function SettingsView({
         </div>
       </div>
 
-      {/* 
+      {/*
         ダークモード切り替え - 将来実装予定
         ---
         ダークモード機能は完璧な実装が完成するまで非表示にしています。
         ロジック（darkMode state, applyDarkMode, handleDarkModeChange）は
         src/components/SettingsView.tsx に残されており、将来の完全実装時に
         このセクションを復活させるだけで使用できます。
-        
+
         関連コード:
         - SettingsView.tsx (L71-115): darkMode state & logic
         - App.tsx (L273-287): applyDarkMode logic

@@ -11,7 +11,13 @@ import {
 import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
 import AddToCustomButton from './AddToCustomButton';
-import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory } from '../progressStorage';
+import {
+  addQuizResult,
+  updateWordProgress,
+  recordWordSkip,
+  loadProgress,
+  addSessionHistory,
+} from '../progressStorage';
 import {
   addToSkipGroup,
   handleSkippedWordIncorrect,
@@ -88,6 +94,7 @@ function SpellingView({
   const { sessionStats, resetStats, updateStats } = useSessionStats();
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -533,7 +540,23 @@ function SpellingView({
           )}
 
           {currentQuestion && (
-            <div className="question-card">
+            <div className="question-card relative">
+              {/* 全画面表示ボタン */}
+              <button
+                onClick={() => setIsFullscreen(true)}
+                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition shadow-md"
+                aria-label="全画面表示"
+                title="全画面表示"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </button>
               {/* 意味表示とナビゲーションボタンの行 */}
               <div className="question-nav-row meaning-row">
                 <button
