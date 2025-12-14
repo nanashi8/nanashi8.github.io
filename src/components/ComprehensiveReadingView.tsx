@@ -443,7 +443,7 @@ function ComprehensiveReadingView({
       if (stored) {
         savedProgress = JSON.parse(stored);
       }
-    } catch {
+    } catch (e) {
       logger.warn('[長文] 保存済み進捗の読み込みに失敗:', e);
     }
 
