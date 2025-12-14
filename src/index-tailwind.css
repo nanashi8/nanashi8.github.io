@@ -94,7 +94,6 @@
   /* カードスタイル */
   .card {
     @apply bg-white rounded-lg shadow-md p-6;
-    @apply;
     @apply transition-all duration-300;
   }
 
@@ -102,7 +101,6 @@
     @apply transition-all duration-300;
     @apply hover:shadow-lg hover:-translate-y-0.5;
     @apply hover:bg-gray-50;
-    @apply:bg-gray-700;
   }
 
   /* 選択肢ボタン */
@@ -117,17 +115,14 @@
 
   .choice-btn.selected {
     @apply border-primary bg-blue-50;
-    @apply;
   }
 
   .choice-btn.correct {
     @apply border-success bg-success-light;
-    @apply;
   }
 
   .choice-btn.incorrect {
     @apply border-error bg-error-light;
-    @apply;
   }
 
   .choice-btn:disabled {
@@ -137,7 +132,6 @@
   /* タブメニュー */
   .tab-menu {
     @apply flex gap-1 sm:gap-2 p-0.5 sm:p-1 bg-gray-100 rounded-lg;
-    @apply;
   }
 
   .tab-btn {
@@ -148,13 +142,11 @@
 
   .tab-btn.active {
     @apply bg-white text-primary shadow-sm;
-    @apply;
   }
 
   /* スコアボード */
   .score-board {
     @apply flex gap-2 sm:gap-4 p-2 sm:p-4 bg-white rounded-lg shadow-md;
-    @apply;
   }
 
   .score-item {
@@ -163,23 +155,19 @@
 
   .score-label {
     @apply text-sm text-gray-600;
-    @apply;
   }
 
   .score-value {
     @apply text-2xl font-bold text-gray-900;
-    @apply;
   }
 
   /* 質問カード */
   .question-card {
     @apply bg-white rounded-lg shadow-md p-6 mb-6;
-    @apply;
   }
 
   .question-text {
     @apply text-xl font-medium text-gray-900 mb-4;
-    @apply;
   }
 
   /* モーダル */
@@ -189,21 +177,18 @@
 
   .modal-content {
     @apply bg-white rounded-lg shadow-xl p-6 max-w-lg w-full mx-4;
-    @apply;
   }
 
   /* フォーム要素 */
   .input {
     @apply w-full px-4 py-2 border border-gray-300 rounded-lg;
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
-    @apply;
   }
 
   .select {
     @apply w-full px-4 py-2 border border-gray-300 rounded-lg;
     @apply bg-white cursor-pointer;
     @apply focus:outline-none focus:ring-2 focus:ring-primary;
-    @apply;
   }
 
   /* バッジ */

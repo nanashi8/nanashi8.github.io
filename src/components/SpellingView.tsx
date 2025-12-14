@@ -92,7 +92,7 @@ function SpellingView({
   const { sessionStats, resetStats, updateStats } = useSessionStats();
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [_isFullscreen, _setIsFullscreen] = useState(false);
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -541,7 +541,7 @@ function SpellingView({
             <div className="question-card relative">
               {/* 全画面表示ボタン */}
               <button
-                onClick={() => setIsFullscreen(true)}
+                onClick={() => _setIsFullscreen(true)}
                 className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300:bg-gray-600 transition shadow-md"
                 aria-label="全画面表示"
                 title="全画面表示"
