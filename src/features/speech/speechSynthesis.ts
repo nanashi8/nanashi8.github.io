@@ -89,36 +89,61 @@ function startSpeech(
   const savedRate = localStorage.getItem('speechRate');
   const savedGender = localStorage.getItem('voiceGender');
 
-  // オプションを設定
+  // オプションを設定（高校受験用に調整済み）
   utterance.lang = options.lang || 'en-US';
   utterance.rate = options.rate || (savedRate ? parseFloat(savedRate) : 0.85);
   utterance.pitch = options.pitch || 1.0;
   utterance.volume = options.volume || 1.0;
 
-  // 声の種類を設定
-  if (savedGender) {
-    const voices = window.speechSynthesis.getVoices();
-    const englishVoices = voices.filter((voice) => voice.lang.startsWith('en-'));
+  // 声の種類を設定 - より自然で流暢な音声を優先
+  const voices = window.speechSynthesis.getVoices();
+  const englishVoices = voices.filter((voice) => voice.lang.startsWith('en-'));
 
-    if (savedGender === 'female') {
-      const femaleVoice = englishVoices.find(
+  // 高品質な音声の優先順位（より自然で流暢）
+  const highQualityVoices = [
+    'Google US English',
+    'Google UK English Female',
+    'Google UK English Male',
+    'Samantha', // macOS
+    'Alex', // macOS
+    'Microsoft Aria Online',
+    'Microsoft Guy Online',
+    'Karen', // macOS
+    'Daniel', // macOS
+  ];
+
+  if (savedGender === 'female') {
+    // 高品質な女性音声を優先的に選択
+    const femaleVoice =
+      englishVoices.find((v) => highQualityVoices.some((hq) => v.name.includes(hq))) ||
+      englishVoices.find(
         (v) =>
           v.name.toLowerCase().includes('female') ||
           v.name.toLowerCase().includes('woman') ||
-          v.name.toLowerCase().includes('zira') ||
-          v.name.toLowerCase().includes('samantha')
+          v.name.toLowerCase().includes('samantha') ||
+          v.name.toLowerCase().includes('karen') ||
+          v.name.toLowerCase().includes('aria')
       );
-      if (femaleVoice) utterance.voice = femaleVoice;
-    } else if (savedGender === 'male') {
-      const maleVoice = englishVoices.find(
+    if (femaleVoice) utterance.voice = femaleVoice;
+  } else if (savedGender === 'male') {
+    // 高品質な男性音声を優先的に選択
+    const maleVoice =
+      englishVoices.find((v) => highQualityVoices.some((hq) => v.name.includes(hq))) ||
+      englishVoices.find(
         (v) =>
           v.name.toLowerCase().includes('male') ||
           v.name.toLowerCase().includes('man') ||
-          v.name.toLowerCase().includes('david') ||
-          v.name.toLowerCase().includes('alex')
+          v.name.toLowerCase().includes('alex') ||
+          v.name.toLowerCase().includes('daniel') ||
+          v.name.toLowerCase().includes('guy')
       );
-      if (maleVoice) utterance.voice = maleVoice;
-    }
+    if (maleVoice) utterance.voice = maleVoice;
+  } else {
+    // 性別指定がない場合は最も高品質な音声を選択
+    const bestVoice = englishVoices.find((v) =>
+      highQualityVoices.some((hq) => v.name.includes(hq))
+    );
+    if (bestVoice) utterance.voice = bestVoice;
   }
 
   // エラーハンドリング
