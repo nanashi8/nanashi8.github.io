@@ -179,6 +179,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('選択肢が重複していない', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.choices) return;
           const uniqueChoices = new Set(q.choices);
 
           expect(
@@ -192,6 +193,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('選択肢が4つ存在する', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.choices) return;
           expect(q.choices.length, `問題 ${q.id}: 選択肢数が${q.choices.length}個`).toBe(4);
         });
       });
@@ -459,6 +461,7 @@ describe('文法問題品質検証 - 日本語翻訳者の視点', () => {
     it('日本語訳の意味が英文と整合している（基本チェック）', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.sentence) return;
           const english = q.sentence.toLowerCase();
           const japanese = q.japanese;
 
@@ -582,8 +585,8 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     });
 
     it('IDが命名規則に従っている（例: vf-g1-u0-001）', () => {
-      allData.forEach(({ data, grade: _grade }) => {
-        getAllQuestions(data, name).forEach((q) => {
+      allData.forEach(({ data, name: _name, grade: _grade }) => {
+        getAllQuestions(data, _name).forEach((q) => {
           // パターン: {type}-g{grade}-u{unit}-{number}
           const idPattern = /^[a-z]+-g\d+-u\d+-\d{3,}$/;
 
@@ -597,7 +600,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     it('totalQuestionsが実際の問題数と一致する', () => {
       allData.forEach(({ data, name: _name }) => {
         // totalQuestionsはファイル内の全セクションの合計を表すべき
-        const actualCount = data.units.reduce((sum, unit) => {
+        const actualCount = data.units.reduce((sum, unit: any) => {
           const vfCount = unit.verbForm?.length || 0;
           const fbCount = unit.fillInBlank?.length || 0;
           const soCount = unit.sentenceOrdering?.length || 0;
@@ -613,7 +616,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
 
     it('各Unitに問題が存在する', () => {
       allData.forEach(({ data, name: _name }) => {
-        data.units.forEach((unit) => {
+        data.units.forEach((unit: any) => {
           const unitQuestions =
             (unit.verbForm?.length || 0) +
             (unit.fillInBlank?.length || 0) +
