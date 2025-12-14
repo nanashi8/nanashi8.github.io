@@ -94,6 +94,7 @@ function MemorizationView({
   // タッチ開始位置とカード要素のref
   const touchStartX = useRef<number>(0);
   const cardRef = useRef<HTMLDivElement>(null);
+  const previousQuestionId = useRef<string | null>(null); // 前回のカードID
 
   // 全画面表示モード
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -343,6 +344,12 @@ function MemorizationView({
   useEffect(() => {
     if (!currentQuestion || !autoVoice) return;
 
+    // カードが実際に変わった時だけ発音（設定変更時は発音しない）
+    if (previousQuestionId.current === currentQuestion.word) {
+      return;
+    }
+    previousQuestionId.current = currentQuestion.word;
+
     const speakCard = async () => {
       // 語句を読み上げ（設定がONの場合）
       if (voiceWord) {
@@ -362,7 +369,8 @@ function MemorizationView({
 
     speakCard();
     // voiceWord, voiceMeaning, voiceDelayを依存配列から除外（設定変更時の音声再生を防ぐ）
-  }, [currentQuestion, autoVoice]);
+    // autoVoiceも依存配列に含めるが、カードIDチェックで設定変更時の発音を防ぐ
+  }, [currentQuestion, autoVoice, voiceWord, voiceMeaning, voiceDelay]);
 
   // 全画面モードの切り替え
   const toggleFullscreen = () => {
