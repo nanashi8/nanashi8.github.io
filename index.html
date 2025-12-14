@@ -22,19 +22,21 @@
             });
             
             // アップデートチェック（起動時と5分ごと）
-            setInterval(() => registration.update(), 5 * 60 * 1000);
+            setInterval(() => registration.update().catch(() => {}), 5 * 60 * 1000);
             
             // 新しいサービスワーカーがready状態になったらアップデート通知
             registration.addEventListener('updatefound', () => {
               const newWorker = registration.installing;
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // 新版が利用可能
-                  window.dispatchEvent(new CustomEvent('sw-update-available', {
-                    detail: { registration }
-                  }));
-                }
-              });
+              if (newWorker) {
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // 新版が利用可能
+                    window.dispatchEvent(new CustomEvent('sw-update-available', {
+                      detail: { registration }
+                    }));
+                  }
+                });
+              }
             });
           } catch (error) {
             console.warn('Service Worker registration failed:', error);

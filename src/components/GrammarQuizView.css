@@ -332,7 +332,13 @@
   color: var(--primary-color);
   margin: 12px 0;
   padding: 8px;
-  background: linear-gradient(to bottom, transparent 45%, var(--blue-100) 45%, var(--blue-100) 55%, transparent 55%);
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    var(--blue-100) 45%,
+    var(--blue-100) 55%,
+    transparent 55%
+  );
 }
 
 .sentence-display.original {
