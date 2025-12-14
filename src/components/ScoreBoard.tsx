@@ -323,7 +323,7 @@ function ScoreBoard({
                       'kind-teacher') as AIPersonality;
                     const avatars = {
                       'kind-teacher': '😃',
-                      'drill-sergeant': '😈',
+                      'drill-sergeant': '👹',
                       'enthusiastic-coach': '😼',
                       analyst: '🤖',
                       'wise-sage': '🧙',
@@ -334,8 +334,8 @@ function ScoreBoard({
                 <div className="flex-1 min-w-0">
                   <div className="text-sm text-gray-700 leading-snug break-words">
                     {aiComment
-                      .replace(/^[😃😈😼🤖🧙]「|」$/gu, '')
-                      .replace(/^[😃😈😼🤖🧙]|」$/gu, '')}
+                      .replace(/^[😃👹😼🤖🧙]「|」$/gu, '')
+                      .replace(/^[😃👹😼🤖🧙]|」$/gu, '')}
                   </div>
                 </div>
               </div>
