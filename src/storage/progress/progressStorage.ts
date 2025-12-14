@@ -21,6 +21,8 @@ import type {
   DetailedRetentionStats,
   MasteryPrediction,
   DailyPlanInfo,
+  Statistics,
+  QuestionSetStats,
 } from './types';
 
 export type {
@@ -32,6 +34,8 @@ export type {
   DetailedRetentionStats,
   MasteryPrediction,
   DailyPlanInfo,
+  Statistics,
+  QuestionSetStats,
 };
 
 // 学習設定関連をre-export
@@ -82,9 +86,10 @@ export async function loadProgress(): Promise<UserProgress> {
     }
 
     // ProgressDataからUserProgressへの変換（Phase 3で型統合予定）
+    const rawData = data as Record<string, unknown>;
     const progress: UserProgress = {
-      results: (data.results || []) as unknown as QuizResult[],
-      statistics: data.statistics || {
+      results: (rawData.results || []) as unknown as QuizResult[],
+      statistics: (rawData.statistics || {
         totalQuizzes: 0,
         totalQuestions: 0,
         totalCorrect: 0,
@@ -93,11 +98,11 @@ export async function loadProgress(): Promise<UserProgress> {
         streakDays: 0,
         lastStudyDate: 0,
         studyDates: [],
-      },
-      questionSetStats: data.questionSetStats || {},
+      }) as Statistics,
+      questionSetStats: (rawData.questionSetStats || {}) as Record<string, QuestionSetStats>,
       categoryStats: {},
       difficultyStats: {},
-      wordProgress: (data.wordProgress || {}) as unknown as { [word: string]: WordProgress },
+      wordProgress: (rawData.wordProgress || {}) as unknown as { [word: string]: WordProgress },
     };
 
     // データ構造の完全性チェック

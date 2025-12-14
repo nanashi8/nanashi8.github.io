@@ -81,13 +81,11 @@ function SpellingView({
     selectedSequence,
     setSelectedSequence,
     phraseWords,
-    _currentWordIndex,
     completedWords,
     handleLetterClick: handleLetterClickCore,
     checkAnswer,
     moveToNextQuestion,
     updateScore,
-    _resetAnswer,
   } = useSpellingGame(questions);
 
   // セッション統計（カスタムフック）

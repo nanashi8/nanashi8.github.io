@@ -27,7 +27,7 @@ function setMigrationCompleted(): void {
   try {
     localStorage.setItem(MIGRATION_FLAG_KEY, MIGRATION_VERSION);
     logger.log('✅ Migration flag set');
-  } catch {
+  } catch (error) {
     logger.error('Failed to set migration flag:', error);
   }
 }

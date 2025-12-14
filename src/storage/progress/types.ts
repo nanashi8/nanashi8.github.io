@@ -85,26 +85,30 @@ export interface WordProgress {
   nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
 }
 
+export interface Statistics {
+  totalQuizzes: number;
+  totalQuestions: number;
+  totalCorrect: number;
+  averageScore: number;
+  bestScore: number;
+  streakDays: number;
+  lastStudyDate: number;
+  studyDates: number[]; // 学習した日付のタイムスタンプ配列
+}
+
+export interface QuestionSetStats {
+  attempts: number;
+  bestScore: number;
+  averageScore: number;
+  lastAttempt: number;
+  totalTimeSpent: number;
+}
+
 export interface UserProgress {
   results: QuizResult[];
-  statistics: {
-    totalQuizzes: number;
-    totalQuestions: number;
-    totalCorrect: number;
-    averageScore: number;
-    bestScore: number;
-    streakDays: number;
-    lastStudyDate: number;
-    studyDates: number[]; // 学習した日付のタイムスタンプ配列
-  };
+  statistics: Statistics;
   questionSetStats: {
-    [setId: string]: {
-      attempts: number;
-      bestScore: number;
-      averageScore: number;
-      lastAttempt: number;
-      totalTimeSpent: number;
-    };
+    [setId: string]: QuestionSetStats;
   };
   categoryStats: {
     [category: string]: {

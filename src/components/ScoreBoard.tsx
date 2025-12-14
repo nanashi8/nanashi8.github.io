@@ -13,11 +13,7 @@ import {
 } from '../progressStorage';
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { AIPersonality } from '../types';
-import {
-  generateTimeBasedGreeting,
-  getConsecutiveDays,
-  getTodayStudyStats,
-} from '../timeBasedGreeting';
+import { generateTimeBasedGreeting } from '../timeBasedGreeting';
 import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractions';
 import { getBreatherTrivia } from '../englishTrivia';
 

@@ -287,7 +287,7 @@ function MemorizationView({
           word: currentQuestion.word,
           timestamp: Date.now(),
           viewDuration,
-          swipeDirection: direction,
+          swipeDirection: direction === 'center' ? 'left' : direction,
           sessionId,
           consecutiveViews: consecutiveViews + 1,
         };
