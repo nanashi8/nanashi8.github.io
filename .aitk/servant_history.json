@@ -1,0 +1,328 @@
+{
+  "checks": [
+    {
+      "timestamp": "2025-12-14T06:38:32.215547",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 121,
+        "analyzed": true
+      }
+    },
+    {
+      "timestamp": "2025-12-14T06:39:17.466313",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 121,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T06:39:24.477543",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 121,
+        "analyzed": true
+      }
+    },
+    {
+      "timestamp": "2025-12-14T06:54:07.802043",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 113,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T06:56:57.720275",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 101,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T06:57:56.963806",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 95,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T06:58:53.361571",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:00:00.981760",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:01:38.977716",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:02:25.915284",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:02:39.462139",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:03:33.420183",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:04:39.251668",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:08:19.441239",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:08:30.183143",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:08:44.919553",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:11:48.281566",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 90,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:15:22.610005",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 0,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:25:10.052951",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 47,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:37:15.652517",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 34,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:39:28.429100",
+      "type": "problem_panel",
+      "result": {
+        "errors": 1,
+        "warnings": 24,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:40:47.778283",
+      "type": "problem_panel",
+      "result": {
+        "errors": 1,
+        "warnings": 24,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:55:33.181129",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 23,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:57:49.589758",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 22,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T07:58:55.022048",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 22,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:02:58.537196",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 16,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:44:38.439277",
+      "type": "problem_panel",
+      "result": {
+        "errors": 1,
+        "warnings": 14,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:45:33.339789",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 15,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:47:52.039516",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 10,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:49:57.460316",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 6,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:50:07.567408",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 6,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:51:50.993834",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 3,
+        "analyzed": false
+      }
+    },
+    {
+      "timestamp": "2025-12-14T08:58:00.071881",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 0,
+        "analyzed": false
+      }
+    }
+  ],
+  "improvements": [
+    {
+      "timestamp": "2025-12-14T06:59:18+09:00",
+      "category": "code_quality",
+      "before": 121,
+      "after": 90,
+      "reduction_rate": 25.6,
+      "details": "未使用変数削除、any型→unknown/具体型への置換（31件削減、25.6%改善）"
+    },
+    {
+      "timestamp": "2025-12-14T07:02:25.915291",
+      "category": "github_actions",
+      "before": 1,
+      "after": 0,
+      "reduction_rate": 100.0,
+      "details": "GitHub Actions self-healing.ymlのboolean型default値修正（エラー1件解消）"
+    },
+    {
+      "timestamp": "2025-12-14T07:08:30.183153",
+      "category": "github_actions",
+      "before": 2,
+      "after": 0,
+      "reduction_rate": 100.0,
+      "details": "GitHubシークレット参照警告を完全解消（LHCI_GITHUB_APP_TOKEN、SLACK_WEBHOOK_URLをオプショナル化）"
+    }
+  ],
+  "stats": {}
+}

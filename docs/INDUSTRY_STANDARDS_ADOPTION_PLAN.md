@@ -651,18 +651,18 @@ module.exports = {
 
 ### 今週（Phase 1）
 1. [ ] テストカバレッジ計測導入
-2. [ ] Prettier設定
-3. [ ] npm audit自動化
+1. [ ] Prettier設定
+1. [ ] npm audit自動化
 
 ### 来週（Phase 2）
-4. [ ] EditorConfig追加
-5. [ ] Commitlint導入
-6. [ ] Bundle Size監視
+1. [ ] EditorConfig追加
+1. [ ] Commitlint導入
+1. [ ] Bundle Size監視
 
 ### 今月末（Phase 3）
-7. [ ] .nvmrc作成
-8. [ ] PR/Issueテンプレート
-9. [ ] Lighthouse CI設定
+1. [ ] .nvmrc作成
+1. [ ] PR/Issueテンプレート
+1. [ ] Lighthouse CI設定
 
 ---
 

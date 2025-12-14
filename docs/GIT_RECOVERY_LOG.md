@@ -86,9 +86,9 @@ git push origin main --no-verify  # ✅ 成功
 
 ## 教訓
 1. **定期的なpushの重要性**: ローカルに溜めすぎない
-2. **ブランチバックアップ**: 作業中断時は即座にリモートブランチ作成
-3. **git fsckの限界**: packfile破損は修復不可 → 再クローンが最速
-4. **cherry-pickの活用**: 3コミットは自動マージ成功、効率的
+1. **ブランチバックアップ**: 作業中断時は即座にリモートブランチ作成
+1. **git fsckの限界**: packfile破損は修復不可 → 再クローンが最速
+1. **cherry-pickの活用**: 3コミットは自動マージ成功、効率的
 
 ## 破損リポジトリ
 `/Users/yuichinakamura/Documents/nanashi8-broken/`

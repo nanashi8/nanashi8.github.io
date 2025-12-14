@@ -42,7 +42,7 @@ export { addSessionHistory, getSessionHistory, clearSessionHistory } from './ses
 
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
-const MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数
+const _MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数（未使用のためプレフィックス）
 const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 300; // 保存する最大結果数（容量削減）
 const MAX_WORD_PROGRESS = 2000; // 単語進捗の最大保存数
@@ -282,7 +282,7 @@ function compressProgressData(progress: UserProgress): void {
 }
 
 // 緊急圧縮: より積極的にデータを削減
-function emergencyCompress(progress: UserProgress): void {
+function _emergencyCompress(progress: UserProgress): void {
   logger.log('緊急圧縮を開始...');
 
   // 1. クイズ結果を最新300件に削減
@@ -340,7 +340,7 @@ export async function addQuizResult(result: QuizResult): Promise<void> {
       const evt = new CustomEvent(QUIZ_RESULT_EVENT, { detail: { result } });
       window.dispatchEvent(evt);
     }
-  } catch (_) {
+  } catch {
     // SSR等でwindowが無い場合は無視
   }
 }
@@ -514,7 +514,7 @@ export function getOvercomeWeakWords(limit: number = 10): Array<{
     if (totalAttempts === 0) return;
 
     // 最近20回の正答率を計算（データがない場合は全体の正答率）
-    const recentAttempts = Math.min(totalAttempts, 20);
+    const _recentAttempts = Math.min(totalAttempts, 20);
     const accuracy = (wp.correctCount / totalAttempts) * 100;
 
     // 克服条件:
@@ -890,7 +890,7 @@ export async function updateWordProgress(
   isCorrect: boolean,
   responseTime: number, // ミリ秒
   userRating?: number, // 1-10のユーザー評価（オプション）
-  mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization' // モード情報
+  _mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization' // モード情報
 ): Promise<void> {
   const progress = await loadProgress();
 
@@ -912,6 +912,7 @@ export async function updateWordProgress(
   }
 
   // モード別統計を更新
+  const mode = _mode;
   if (mode === 'translation') {
     wordProgress.translationAttempts = (wordProgress.translationAttempts || 0) + 1;
     if (isCorrect) {
@@ -1062,7 +1063,7 @@ export async function updateWordProgress(
       });
       window.dispatchEvent(evt);
     }
-  } catch (_) {
+  } catch {
     // SSR等でwindowが無い場合は無視
   }
 }
@@ -1407,7 +1408,7 @@ export function getTotalAnsweredCount(
  * @param mode クイズモード（translation, spelling, reading）
  */
 export function getUniqueQuestionedWordsCount(
-  mode?: 'translation' | 'spelling' | 'reading'
+  _mode?: 'translation' | 'spelling' | 'reading'
 ): number {
   const progress = loadProgressSync();
   const uniqueWords = new Set<string>();
@@ -1719,7 +1720,7 @@ export function resetStatsByModeDifficulty(
   const affectedWords = new Set<string>();
   removedResults.forEach((result) => {
     // 正解した単語
-    const totalWords = result.total;
+    const _totalWords = result.total;
     const incorrectWords = result.incorrectWords || [];
 
     // すべての単語を収集（正解・不正解両方）
@@ -1818,7 +1819,7 @@ function recalculateStatistics(progress: UserProgress): void {
 }
 
 // 全ての問題を読み込む補助関数
-function loadAllQuestions(): Array<{ word: string; difficulty: string }> {
+function _loadAllQuestions(): Array<{ word: string; difficulty: string }> {
   try {
     const stored = localStorage.getItem('all-questions-cache');
     if (stored) {
@@ -2603,7 +2604,7 @@ export async function getGrammarUnitStatsWithTitles(): Promise<
               title: data.title || '',
             };
           }
-        } catch (_err) {
+        } catch {
           // fetch失敗時はnull
           return null;
         }

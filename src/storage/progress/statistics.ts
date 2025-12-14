@@ -8,7 +8,7 @@ import {
   checkFlexibleMastery,
   autoDetectWordDifficulty,
 } from './progressStorage';
-import type { QuizResult, DetailedRetentionStats, MasteryPrediction, WordProgress } from './types';
+import type { QuizResult, DetailedRetentionStats, WordProgress } from './types';
 
 // モードごとの統計を取得
 export function getStatsByMode(mode: 'translation' | 'spelling' | 'reading'): {

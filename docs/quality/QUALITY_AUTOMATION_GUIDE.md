@@ -314,11 +314,11 @@ python3 scripts/validate_all_content.py
 ### 新規長文パッセージ作成時
 
 1. **作成**: .txt ファイルを作成
-2. **index.json 更新**: メタデータ追加
-3. **品質検証**: `validate_passage_quality.py --file xxx.txt`
-4. **問題修正**: インデント、文構造を改善
-5. **再検証**: 80点以上を目指す
-6. **統合検証**: `validate_all_content.py`
+1. **index.json 更新**: メタデータ追加
+1. **品質検証**: `validate_passage_quality.py --file xxx.txt`
+1. **問題修正**: インデント、文構造を改善
+1. **再検証**: 80点以上を目指す
+1. **統合検証**: `validate_all_content.py`
 
 ### リリース前チェック
 

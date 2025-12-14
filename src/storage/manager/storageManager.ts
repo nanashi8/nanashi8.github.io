@@ -18,7 +18,7 @@ export function initStorageStrategy(): void {
 }
 
 // 進捗データの保存（統合インターフェース）
-export async function saveProgressData(data: any): Promise<boolean> {
+export async function saveProgressData(data: unknown): Promise<boolean> {
   try {
     if (useIndexedDB) {
       // IndexedDBに保存
@@ -42,7 +42,7 @@ export async function saveProgressData(data: any): Promise<boolean> {
 }
 
 // 進捗データの読み込み（統合インターフェース）
-export async function loadProgressData(): Promise<any | null> {
+export async function loadProgressData(): Promise<unknown | null> {
   try {
     if (useIndexedDB) {
       // IndexedDBから読み込み
@@ -64,7 +64,7 @@ export async function loadProgressData(): Promise<any | null> {
 }
 
 // 設定値の保存（統合インターフェース）
-export async function saveSetting(key: string, value: any): Promise<boolean> {
+export async function saveSetting(key: string, value: unknown): Promise<boolean> {
   try {
     if (useIndexedDB) {
       return await putToDB(STORES.SETTINGS, value, key);
@@ -85,7 +85,7 @@ export async function saveSetting(key: string, value: any): Promise<boolean> {
 }
 
 // 設定値の読み込み（統合インターフェース）
-export async function loadSetting(key: string): Promise<any | null> {
+export async function loadSetting(key: string): Promise<unknown | null> {
   try {
     if (useIndexedDB) {
       const data = await getFromDB(STORES.SETTINGS, key);
@@ -105,7 +105,7 @@ export async function loadSetting(key: string): Promise<any | null> {
 }
 
 // LocalStorageへの同期保存（後方互換性のため）
-export function saveToLocalStorage(key: string, value: any): boolean {
+export function saveToLocalStorage(key: string, value: unknown): boolean {
   try {
     localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
     return true;
@@ -116,7 +116,7 @@ export function saveToLocalStorage(key: string, value: any): boolean {
 }
 
 // LocalStorageからの読み込み（後方互換性のため）
-export function loadFromLocalStorage(key: string): any | null {
+export function loadFromLocalStorage(key: string): unknown | null {
   try {
     return localStorage.getItem(key);
   } catch (error) {

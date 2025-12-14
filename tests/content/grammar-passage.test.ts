@@ -11,12 +11,8 @@ const fill2 = JSON.parse(
 const fill3 = JSON.parse(
   readFileSync(join(dataDir, 'fill-in-blank-questions-grade3.json'), 'utf-8')
 );
-const sentence2 = JSON.parse(
-  readFileSync(join(dataDir, 'sentence-ordering-grade2.json'), 'utf-8')
-);
-const sentence3 = JSON.parse(
-  readFileSync(join(dataDir, 'sentence-ordering-grade3.json'), 'utf-8')
-);
+const sentence2 = JSON.parse(readFileSync(join(dataDir, 'sentence-ordering-grade2.json'), 'utf-8'));
+const sentence3 = JSON.parse(readFileSync(join(dataDir, 'sentence-ordering-grade3.json'), 'utf-8'));
 
 /**
  * パッセージ対応文法問題のテスト

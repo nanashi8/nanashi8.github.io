@@ -25,19 +25,19 @@ class ErrorLogger {
 
   // コンソールをインターセプト
   interceptConsole(): void {
-    console.error = (...args: any[]) => {
+    console.error = (...args: unknown[]) => {
       this.addLog('error', args);
       this.originalConsoleError(...args);
     };
 
-    console.warn = (...args: any[]) => {
+    console.warn = (...args: unknown[]) => {
       this.addLog('warn', args);
       this.originalConsoleWarn(...args);
     };
 
     // 重要なログのみキャプチャ
     const originalLog = console.log.bind(console);
-    console.log = (...args: any[]) => {
+    console.log = (...args: unknown[]) => {
       const message = args.join(' ');
       if (
         message.includes('❌') ||
@@ -51,7 +51,7 @@ class ErrorLogger {
     };
   }
 
-  private addLog(type: 'error' | 'warn' | 'info', args: any[]): void {
+  private addLog(type: 'error' | 'warn' | 'info', args: unknown[]): void {
     const message = args
       .map((arg) => {
         if (arg instanceof Error) {
@@ -100,7 +100,7 @@ class ErrorLogger {
     // LocalStorageに保存（診断用）
     try {
       localStorage.setItem('error-logs', JSON.stringify(this.logs.slice(-20)));
-    } catch (_e) {
+    } catch {
       // 保存失敗は無視
     }
   }
@@ -118,7 +118,7 @@ class ErrorLogger {
     });
 
     window.addEventListener('unhandledrejection', (event) => {
-      const reasonStr = `${(event as any).reason || ''}`;
+      const reasonStr = String(event.reason || '');
       if (this.ignorePatterns.some((p) => reasonStr.includes(p))) return;
       this.addLog('error', ['Unhandled Promise Rejection:', event.reason]);
     });
@@ -146,7 +146,7 @@ class ErrorLogger {
     this.logs = [];
     try {
       localStorage.removeItem('error-logs');
-    } catch (_e) {
+    } catch {
       // 削除失敗は無視
     }
   }

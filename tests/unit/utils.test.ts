@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import type { Question } from '@/types';
 import {
   shuffle,
   formatLocalYYYYMMDD,
@@ -148,8 +149,8 @@ describe('Utils - generateSpellingPuzzle', () => {
 
 describe('Utils - selectAdaptiveQuestions', () => {
   // モック用のヘルパー関数
-  const mockQuestions = (words: string[]) =>
-    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+  const mockQuestions = (words: string[]): Question[] =>
+    words.map((word) => ({ word, meaning: `意味${word}` }) as Question);
 
   it('空配列を渡すと空配列を返す', () => {
     const result = selectAdaptiveQuestions([], 10);
@@ -176,8 +177,8 @@ describe('Utils - selectAdaptiveQuestions', () => {
     const result2 = selectAdaptiveQuestions(questions, 5);
 
     // 2回の呼び出しで同じ順序になる可能性は低い
-    const words1 = result1.map((q: any) => q.word).join(',');
-    const words2 = result2.map((q: any) => q.word).join(',');
+    const words1 = result1.map((q: Question) => q.word).join(',');
+    const words2 = result2.map((q: Question) => q.word).join(',');
 
     // 完全一致しない確率が高い（稀に一致する可能性もあるが）
     expect(words1 === words2).toBe(false);
@@ -185,8 +186,8 @@ describe('Utils - selectAdaptiveQuestions', () => {
 });
 
 describe('Utils - selectWeakQuestions', () => {
-  const mockQuestions = (words: string[]) =>
-    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+  const mockQuestions = (words: string[]): Question[] =>
+    words.map((word) => ({ word, meaning: `意味${word}` }) as Question);
 
   it('空配列を渡すと空配列を返す', () => {
     const result = selectWeakQuestions([], 10);
@@ -210,8 +211,8 @@ describe('Utils - selectWeakQuestions', () => {
 });
 
 describe('Utils - selectReviewQuestions', () => {
-  const mockQuestions = (words: string[]) =>
-    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+  const mockQuestions = (words: string[]): Question[] =>
+    words.map((word) => ({ word, meaning: `意味${word}` }) as Question);
 
   it('空配列を渡すと空配列を返す', () => {
     const result = selectReviewQuestions([], 10);
@@ -242,8 +243,8 @@ describe('Utils - selectReviewQuestions', () => {
 });
 
 describe('Utils - selectQuestionsByMasteryLevel', () => {
-  const mockQuestions = (words: string[]) =>
-    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+  const mockQuestions = (words: string[]): Question[] =>
+    words.map((word) => ({ word, meaning: `意味${word}` }) as Question);
 
   it('習熟度別に問題をフィルタできる', () => {
     const questions = mockQuestions(['apple', 'banana', 'cherry']);

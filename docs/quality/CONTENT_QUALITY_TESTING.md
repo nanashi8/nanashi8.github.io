@@ -137,7 +137,7 @@ describe('Vocabulary品質検証 - IPA発音記号の妥当性', () => {
    }
    ```
 
-2. **IPA Validation**: カタカナを正当な要素として受け入れ
+1. **IPA Validation**: カタカナを正当な要素として受け入れ
    ```typescript
    // ❌ 誤った実装
    const validIPAChars = /^[a-z...]+$/i; // カタカナを拒否
@@ -146,7 +146,7 @@ describe('Vocabulary品質検証 - IPA発音記号の妥当性', () => {
    const validFormat = /^[IPA]+\s*\([カタカナ]+\)$/; // カタカナを要求
    ```
 
-3. **統計的閾値**: 実データ分布に基づく
+1. **統計的閾値**: 実データ分布に基づく
    ```typescript
    // 実データ: beginner 40% + intermediate 33.7% = 73.7%
    expect(appropriateRate).toBeGreaterThan(0.6); // ✅ 60%で妥当
@@ -424,7 +424,7 @@ git commit --no-verify -m "emergency fix"
    expect(entry.ipa).toMatch(/^[IPA]+\s*\([カタカナ]+\)$/);
    ```
 
-2. **非現実的な期待値**
+1. **非現実的な期待値**
    ```typescript
    // ❌ 理想的な分布を仮定
    expect(beginnerRate).toBeGreaterThan(0.8); // 80%以上
@@ -433,7 +433,7 @@ git commit --no-verify -m "emergency fix"
    expect(beginnerRate).toBeGreaterThan(0.6); // 60%以上
    ```
 
-3. **単純なCSV解析**
+1. **単純なCSV解析**
    ```typescript
    // ❌ 引用符を考慮しない
    const parts = line.split(',');
@@ -452,7 +452,7 @@ git commit --no-verify -m "emergency fix"
    - 最低3つのサンプルエントリーを目視確認
    - エッジケース(引用符、特殊文字)を見逃さない
 
-2. **仕様のコメント化**
+1. **仕様のコメント化**
    ```typescript
    // 仕様: IPA記号（カタカナ読み）形式
    // 例: "ˈeɪ.bl̩ (エ́イブル)"
@@ -460,13 +460,13 @@ git commit --no-verify -m "emergency fix"
    const validFormat = /^[IPA]+\s*\([カタカナ]+\)$/;
    ```
 
-3. **段階的な検証**
+1. **段階的な検証**
    - Phase 1: データ存在チェック(null/undefined/空文字)
    - Phase 2: フォーマット妥当性(正規表現)
    - Phase 3: 統計的妥当性(分布、比率)
    - Phase 4: API連携検証(翻訳精度、文法正確性)
 
-4. **誤検出率0%を目指す**
+1. **誤検出率0%を目指す**
    - 厳しすぎる条件は避ける
    - 実データの特性を尊重する
    - 警告とエラーを明確に分ける

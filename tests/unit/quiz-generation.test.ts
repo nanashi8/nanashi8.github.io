@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { generateChoices, generateChoicesWithQuestions } from '@/utils';
-import type { Question } from '@/types';
+import type { Question, Choice } from '@/types';
 
 /**
  * クイズ生成関数のテスト
@@ -83,7 +83,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const correctQuestion = sampleQuestions[0];
     const choices = generateChoicesWithQuestions(correctQuestion, sampleQuestions, 0);
 
-    const hasCorrect = choices.some((c: any) => c.text === correctQuestion.meaning);
+    const hasCorrect = choices.some((c: Choice) => c.text === correctQuestion.meaning);
     expect(hasCorrect).toBe(true);
   });
   it('「分からない」が最後に含まれる', () => {
@@ -93,38 +93,38 @@ describe('Utils - generateChoicesWithQuestions', () => {
     expect(choices[3].question).toBeNull();
   });
 
-  it('選択肢textに重複がない', () => {
+  it('選択肅textに重複がない', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
-    const uniqueTexts = [...new Set(choices.map((c: any) => c.text))];
+    const uniqueTexts = [...new Set(choices.map((c: Choice) => c.text))];
 
     expect(choices.length).toBe(uniqueTexts.length);
   });
 
-  it('問題数が少ない場合でも4つの選択肢を生成する', () => {
+  it('問題数が少ない場合でも4つの選択肅を生成する', () => {
     const fewQuestions = sampleQuestions.slice(0, 2);
     const choices = generateChoicesWithQuestions(fewQuestions[0], fewQuestions, 0);
 
     expect(choices.length).toBe(4);
-    expect(choices.some((c: any) => c.text === fewQuestions[0].meaning)).toBe(true);
+    expect(choices.some((c: Choice) => c.text === fewQuestions[0].meaning)).toBe(true);
   });
 
-  it('各選択肢がtext と questionプロパティを持つ', () => {
+  it('各選択肅がtext と questionプロパティを持つ', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
 
-    choices.forEach((choice: any) => {
+    choices.forEach((choice: Choice) => {
       expect(choice).toHaveProperty('text');
       expect(choice).toHaveProperty('question');
       expect(typeof choice.text).toBe('string');
     });
   });
 
-  it('正解以外の選択肢にQuestionオブジェクトが関連付けられている', () => {
+  it('正解以外の選択肅にQuestionオブジェクトが関連付けられている', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
 
-    // 「分からない」以外の選択肢
-    const nonDontKnow = choices.filter((c: any) => c.text !== '分からない');
+    // 「分からない」以外の選択肅
+    const nonDontKnow = choices.filter((c: Choice) => c.text !== '分からない');
 
-    nonDontKnow.forEach((choice: any) => {
+    nonDontKnow.forEach((choice: Choice) => {
       if (choice.question) {
         expect(choice.question).toHaveProperty('word');
         expect(choice.question).toHaveProperty('meaning');

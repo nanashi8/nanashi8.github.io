@@ -97,7 +97,7 @@ function SettingsView({
   };
 
   // ダークモード変更時にlocalStorageに保存
-  const handleDarkModeChange = (mode: 'light' | 'dark' | 'system') => {
+  const _handleDarkModeChange = (mode: 'light' | 'dark' | 'system') => {
     setDarkMode(mode);
     localStorage.setItem('darkMode', mode);
     applyDarkMode(mode);
@@ -119,8 +119,8 @@ function SettingsView({
     }
   }, [darkMode]);
 
-  const totalWords = allQuestions.length;
-  const estimatedDays = Math.ceil(totalWords / batchSize);
+  const _totalWords = allQuestions.length;
+  const estimatedDays = Math.ceil(_totalWords / batchSize);
   const _estimatedDaysText = `約${estimatedDays}日間`;
 
   return (

@@ -43,7 +43,7 @@ function getLemma(word: string): string {
 /**
  * 長い文を接続詞で分割（20単語超の場合）
  */
-function splitLongSentence(sentence: string): string[] {
+function _splitLongSentence(sentence: string): string[] {
   const words = sentence.trim().split(/\s+/);
 
   // 20単語以下ならそのまま返す
@@ -128,8 +128,8 @@ async function loadFullTranslation(passageId: string): Promise<string> {
       `[全訳] Successfully loaded ${content.length} characters from ${translationFilePath}`
     );
     return content;
-  } catch (error) {
-    console.error(`[全訳] Error loading full translation for ${passageId}:`, error);
+  } catch (_error) {
+    console.error(`[全訳] Error loading full translation for ${passageId}:`, _error);
     return '';
   }
 }
@@ -166,8 +166,8 @@ async function loadJapanesePhrases(passageId: string): Promise<string[]> {
 
     logger.log(`Loaded ${lines.length} Japanese phrases from ${jaFilePath}`);
     return lines;
-  } catch (error) {
-    logger.error(`Error loading Japanese phrases for ${passageId}:`, error);
+  } catch (_error) {
+    logger.error(`Error loading Japanese phrases for ${passageId}:`, _error);
     return [];
   }
 }
@@ -456,7 +456,7 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
     };
 
     return readingPassage;
-  } catch (error) {
+  } catch {
     // oldフォルダに移動したファイルや存在しないファイルのエラーは静かにスキップ
     // SyntaxErrorは無効なJSONファイル、404は存在しないファイル
     logger.log(

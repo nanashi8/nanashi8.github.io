@@ -4,9 +4,6 @@ import {
   saveCustomQuestionState,
   createCustomQuestionSet,
   addWordToSet,
-  removeWordFromSet,
-  deleteCustomQuestionSet,
-  updateCustomQuestionSet,
   isWordInSet,
   isWordInAnySets,
   getSetsContainingWord,
@@ -14,6 +11,8 @@ import {
   getAllUniqueWords,
   getSetStatistics,
 } from '../../src/utils/customQuestionStorage';
+// Unused in this test scope
+// import { removeWordFromSet, deleteCustomQuestionSet, updateCustomQuestionSet } from '@/storage/customQuestionStorage';
 import type { CustomQuestionState, CustomWord } from '../../src/types/customQuestions';
 
 /**

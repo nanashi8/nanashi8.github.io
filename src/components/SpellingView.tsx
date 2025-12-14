@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Question, SpellingState } from '../types';
+import { Question } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import {
   DifficultyLevel,
@@ -11,15 +11,7 @@ import {
 import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
 import AddToCustomButton from './AddToCustomButton';
-import {
-  addQuizResult,
-  updateWordProgress,
-  recordWordSkip,
-  loadProgress,
-  addSessionHistory,
-  getStudySettings,
-  updateStudySettings,
-} from '../progressStorage';
+import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory } from '../progressStorage';
 import {
   addToSkipGroup,
   handleSkippedWordIncorrect,
@@ -83,13 +75,13 @@ function SpellingView({
     selectedSequence,
     setSelectedSequence,
     phraseWords,
-    currentWordIndex,
+    _currentWordIndex,
     completedWords,
     handleLetterClick: handleLetterClickCore,
     checkAnswer,
     moveToNextQuestion,
     updateScore,
-    resetAnswer,
+    _resetAnswer,
   } = useSpellingGame(questions);
 
   // セッション統計（カスタムフック）
@@ -105,12 +97,12 @@ function SpellingView({
     useLearningLimits('spelling');
 
   // 自動次への設定
-  const [autoNext, setAutoNext] = useState<boolean>(() => {
+  const [_autoNext, _setAutoNext] = useState<boolean>(() => {
     const saved = localStorage.getItem('autoNext');
     return saved === 'true';
   });
 
-  const [autoNextDelay, setAutoNextDelay] = useState<number>(() => {
+  const [_autoNextDelay, _setAutoNextDelay] = useState<number>(() => {
     const saved = localStorage.getItem('autoNextDelay');
     return saved ? parseInt(saved, 10) : 1500;
   });

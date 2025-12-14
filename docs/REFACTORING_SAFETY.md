@@ -8,10 +8,10 @@
 ## 📋 目次
 
 1. [今回発生した事故](#今回発生した事故)
-2. [実装された防止システム](#実装された防止システム)
-3. [安全なリファクタリング手順](#安全なリファクタリング手順)
-4. [チェックポイントシステム](#チェックポイントシステム)
-5. [トラブルシューティング](#トラブルシューティング)
+1. [実装された防止システム](#実装された防止システム)
+1. [安全なリファクタリング手順](#安全なリファクタリング手順)
+1. [チェックポイントシステム](#チェックポイントシステム)
+1. [トラブルシューティング](#トラブルシューティング)
 
 ---
 
@@ -273,7 +273,7 @@ git push origin --tags
 
 **対処**:
 1. 削除ファイル一覧を確認: `git status`
-2. 意図的な削除なら以下を実行:
+1. 意図的な削除なら以下を実行:
    ```bash
    # pre-commitフックのみスキップ(非推奨)
    SKIP=pre-commit-refactor git commit -m "..."
@@ -283,7 +283,7 @@ git push origin --tags
    git commit -m "..."
    chmod +x .git/hooks/pre-commit-refactor
    ```
-3. **推奨**: 削除を複数のコミットに分割
+1. **推奨**: 削除を複数のコミットに分割
 
 ### 問題2: ビルドが失敗
 
@@ -303,13 +303,13 @@ git push origin --tags
    import { useQuizSettings } from '@/hooks/useQuizSettings'
    ```
 
-2. **型定義の未エクスポート**
+1. **型定義の未エクスポート**
    ```typescript
    // hooks/index.ts に追加
    export * from './useQuizSettings'
    ```
 
-3. **循環依存**
+1. **循環依存**
    ```typescript
    // A.ts imports B.ts
    // B.ts imports A.ts ← 循環

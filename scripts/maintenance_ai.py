@@ -250,7 +250,7 @@ class MaintenanceAI:
             self.log(f"依存関係チェックエラー: {e}", "WARNING")
 
     def check_code_quality(self):
-        """コード品質チェック (ESLint, Prettier, TypeScript)"""
+        """コード品質チェック (ESLint, Prettier, Stylelint, Markdownlint)"""
         self.log("=" * 60)
         self.log("コード品質チェック開始", "INFO")
         self.log("=" * 60)
@@ -309,6 +309,73 @@ class MaintenanceAI:
                 self.log("Prettierフォーマット: 問題なし", "SUCCESS")
         except Exception as e:
             self.log(f"Prettierチェックエラー: {e}", "WARNING")
+
+        # Stylelintチェック & 自動修正
+        try:
+            result = subprocess.run(
+                ["npx", "stylelint", "**/*.css", "--formatter", "json"],
+                cwd=self.base_dir,
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+
+            if result.stdout:
+                try:
+                    stylelint_results = json.loads(result.stdout)
+                    total_warnings = sum(len(r.get("warnings", [])) for r in stylelint_results)
+
+                    if total_warnings > 0:
+                        self.add_issue(
+                            "code_quality",
+                            "WARNING",
+                            f"Stylelintの問題: {total_warnings}件検出",
+                            auto_fix=True
+                        )
+                        self.auto_fixes.append({
+                            "type": "stylelint_fix",
+                            "command": "npx stylelint '**/*.css' --fix"
+                        })
+                    else:
+                        self.log("Stylelintチェック: 問題なし", "SUCCESS")
+                except json.JSONDecodeError:
+                    self.log("Stylelintチェック: 問題なし", "SUCCESS")
+        except Exception as e:
+            self.log(f"Stylelintチェックエラー: {e}", "WARNING")
+
+        # Markdownlintチェック & 自動修正
+        if (self.base_dir / ".markdownlint.json").exists():
+            try:
+                result = subprocess.run(
+                    ["npx", "markdownlint", "**/*.md", "--ignore", "node_modules", "--json"],
+                    cwd=self.base_dir,
+                    capture_output=True,
+                    text=True,
+                    timeout=60
+                )
+
+                if result.stdout:
+                    try:
+                        markdownlint_results = json.loads(result.stdout)
+                        total_errors = sum(len(errors) for errors in markdownlint_results.values())
+
+                        if total_errors > 0:
+                            self.add_issue(
+                                "documentation",
+                                "WARNING",
+                                f"Markdownlintの問題: {total_errors}件検出",
+                                auto_fix=True
+                            )
+                            self.auto_fixes.append({
+                                "type": "markdownlint_fix",
+                                "command": "npx markdownlint '**/*.md' --ignore node_modules --fix"
+                            })
+                        else:
+                            self.log("Markdownlintチェック: 問題なし", "SUCCESS")
+                    except json.JSONDecodeError:
+                        self.log("Markdownlintチェック: 問題なし", "SUCCESS")
+            except Exception as e:
+                self.log(f"Markdownlintチェックエラー: {e}", "WARNING")
 
     def check_file_sizes(self):
         """ファイルサイズチェック"""

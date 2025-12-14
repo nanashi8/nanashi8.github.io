@@ -13,9 +13,9 @@ Servant AIは、新機能追加や変更を行う際に、プロジェクトの*
 ### 主要機能
 
 1. **タスクタイプの自動識別** - 作業内容を分析し適切なワークフローを提案
-2. **品質状態の事前チェック** - 新作業前に既存問題を検出
-3. **段階的実装ガイド** - 包括的なチェックリストで抜け漏れ防止
-4. **プロジェクト標準の強制** - デザインシステム、テスト、ドキュメント要件を自動適用
+1. **品質状態の事前チェック** - 新作業前に既存問題を検出
+1. **段階的実装ガイド** - 包括的なチェックリストで抜け漏れ防止
+1. **プロジェクト標準の強制** - デザインシステム、テスト、ドキュメント要件を自動適用
 
 ---
 
@@ -28,7 +28,7 @@ Servant AIは、新機能追加や変更を行う際に、プロジェクトの*
 ### 1. タスク認識 (Task Recognition)
 
 ```bash
-$ python3 scripts/project_ai_servant.py --analyze "リスニング問題機能を新しく追加したい"
+python3 scripts/project_ai_servant.py --analyze "リスニング問題機能を新しく追加したい"
 ```
 
 **Servant AIの分析結果**:
@@ -59,7 +59,7 @@ $ python3 scripts/project_ai_servant.py --analyze "リスニング問題機能�
 ### 2. 品質状態チェック (Quality Gate)
 
 ```bash
-$ python3 scripts/project_ai_servant.py --suggest "リスニング問題機能を追加"
+python3 scripts/project_ai_servant.py --suggest "リスニング問題機能を追加"
 ```
 
 **Servant AIの警告**:
@@ -187,10 +187,10 @@ Servant AIが提供する**新機能追加ワークフロー**:
 ### データフロー
 
 1. **タスク入力** → Servant AIが分析
-2. **パターンマッチング** → Context DBから適切なワークフロー取得
-3. **品質ゲート** → Maintenance AIで現状確認
-4. **実装ガイド** → 包括的なチェックリスト提供
-5. **品質検証** → 実装後の自動検証
+1. **パターンマッチング** → Context DBから適切なワークフロー取得
+1. **品質ゲート** → Maintenance AIで現状確認
+1. **実装ガイド** → 包括的なチェックリスト提供
+1. **品質検証** → 実装後の自動検証
 
 ---
 
@@ -375,7 +375,7 @@ $ python3 scripts/project_ai_servant.py --suggest "リスニング機能追加"
 ### ケース2: スピーキング機能追加
 
 ```bash
-$ python3 scripts/project_ai_servant.py --analyze "スピーキング練習機能を実装したい" --json
+python3 scripts/project_ai_servant.py --analyze "スピーキング練習機能を実装したい" --json
 ```
 
 **出力**:
@@ -479,7 +479,7 @@ def _load_workflows(self) -> Dict:
     }
 ```
 
-2. **認識パターン追加**
+1. **認識パターン追加**
 
 ```python
 def _load_common_tasks(self) -> List[Dict]:
@@ -493,7 +493,7 @@ def _load_common_tasks(self) -> List[Dict]:
     ]
 ```
 
-3. **テスト追加**
+1. **テスト追加**
 
 ```python
 # scripts/test_context_database.py
@@ -509,7 +509,7 @@ def test_task_analysis_data_migration(self, db):
     assert result == "data_migration"
 ```
 
-4. **テスト実行**
+1. **テスト実行**
 
 ```bash
 $ python3 -m pytest scripts/test_context_database.py -v
@@ -527,16 +527,16 @@ $ python3 -m pytest scripts/test_context_database.py -v
    python3 scripts/project_ai_servant.py --suggest "機能名"
    ```
 
-2. **品質ゲートを尊重**
+1. **品質ゲートを尊重**
    - CRITICAL問題がある場合は必ず修正
    - WARNING問題も可能な限り対応
 
-3. **チェックリストを活用**
+1. **チェックリストを活用**
    - 実装前にチェックリスト確認
    - 各項目を順番に実施
    - 完了後に再検証
 
-4. **ドキュメント更新を忘れずに**
+1. **ドキュメント更新を忘れずに**
    - README.md
    - CHANGELOG.md
    - 関連ガイドライン
@@ -547,11 +547,11 @@ $ python3 -m pytest scripts/test_context_database.py -v
    - 3ヶ月ごとにワークフロー見直し
    - 実態に合わせて更新
 
-2. **品質基準の調整**
+1. **品質基準の調整**
    - プロジェクトの成熟度に応じて基準調整
    - カバレッジ目標の段階的引き上げ
 
-3. **チーム教育**
+1. **チーム教育**
    - Servant AIの使い方を全員に周知
    - ワークフローの意図を説明
 
@@ -580,9 +580,9 @@ $ python3 -m pytest scripts/test_context_database.py -v
 ### 主要な価値
 
 1. **自動品質保証** - 人間のミスを防止
-2. **一貫性の維持** - 全機能が同じ基準
-3. **効率的な開発** - 明確なガイドライン
-4. **技術的負債の防止** - 問題の早期発見
+1. **一貫性の維持** - 全機能が同じ基準
+1. **効率的な開発** - 明確なガイドライン
+1. **技術的負債の防止** - 問題の早期発見
 
 ### 実績
 

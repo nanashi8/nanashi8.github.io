@@ -1,7 +1,6 @@
 ---
 description: テスト実装時の必須確認事項と品質基準
 applyTo: 'tests/**'
-priority: critical
 ---
 
 # テスト実装ガイドライン（必須遵守）

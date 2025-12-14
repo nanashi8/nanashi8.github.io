@@ -51,8 +51,8 @@ export async function exportAllData(): Promise<string> {
             exportData.settings[key] = value;
           }
         }
-      } catch (error) {
-        logger.warn('IndexedDBデータの取得に失敗、LocalStorageから取得します:', error);
+      } catch {
+          logger.warn('IndexedDBデータの取得に失敗、LocalStorageから取得します:');
       }
     }
 
@@ -188,7 +188,7 @@ export async function getExportDataSize(): Promise<string> {
     const jsonString = await exportAllData();
     const bytes = new Blob([jsonString]).size;
     return formatBytes(bytes);
-  } catch (_error) {
+  } catch {
     return '不明';
   }
 }

@@ -52,7 +52,7 @@ if (import.meta.env.PROD) {
     integrations: [Sentry.browserTracingIntegration(), Sentry.replayIntegration()],
 
     // エラーフィルタリング（不要なエラーを除外）
-    beforeSend(event, hint) {
+    beforeSend(event, _hint) {
       // Sentry接続テスト用の擬似エラーは無視
       const msg = event.message || event.exception?.values?.[0]?.value || '';
       if (

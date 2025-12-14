@@ -105,35 +105,18 @@ jobs:
               });
             }
 
-      - name: Slackに通知（オプション）
-        if: always()
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          if [ -n "$SLACK_WEBHOOK_URL" ]; then
-            REPORT=$(cat maintenance_report.json)
-            CRITICAL=$(echo $REPORT | jq -r '.critical_issues')
-            WARNING=$(echo $REPORT | jq -r '.warning_issues')
-
-            if [ "$CRITICAL" -gt 0 ]; then
-              ICON=":rotating_light:"
-              COLOR="danger"
-            elif [ "$WARNING" -gt 0 ]; then
-              ICON=":warning:"
-              COLOR="warning"
-            else
-              ICON=":white_check_mark:"
-              COLOR="good"
-            fi
-
-            curl -X POST "$SLACK_WEBHOOK_URL" \
-              -H 'Content-Type: application/json' \
-              -d "{
-                \"attachments\": [{
-                  \"color\": \"$COLOR\",
-                  \"title\": \"$ICON 定期メンテナンスAI完了\",
-                  \"text\": \"CRITICAL: $CRITICAL, WARNING: $WARNING\",
-                  \"footer\": \"GitHub Actions\"
-                }]
-              }"
-          fi
+      # Slack通知（オプション機能）は一時的に無効化
+      # - name: Slackに通知（オプション）
+      #   if: always()
+      #   env:
+      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      #   run: |
+      #     # SLACK_WEBHOOK_URL が存在する場合のみ通知を実行
+      #     if [ -n "$SLACK_WEBHOOK_URL" ]; then
+      #       REPORT=$(cat maintenance_report.json)
+      #       CRITICAL=$(echo $REPORT | jq -r '.critical_issues')
+      #       WARNING=$(echo $REPORT | jq -r '.warning_issues')
+      #       curl -X POST "$SLACK_WEBHOOK_URL" \
+      #         -H 'Content-Type: application/json' \
+      #         -d "{\"text\": \"定期メンテナンスAI完了: CRITICAL=$CRITICAL, WARNING=$WARNING\"}"
+      #     fi
