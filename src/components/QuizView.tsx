@@ -85,6 +85,7 @@ function QuizView({
   const currentQuestion = hasQuestions ? questions[currentIndex] : null;
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -151,6 +152,57 @@ function QuizView({
     } catch (e) {
       logger.error('Failed to parse learning plan:', e);
     }
+  }
+
+  // 全画面モードの切り替え
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
+  };
+
+  // 全画面モード時はクイズカードのみ表示
+  if (isFullscreen && hasQuestions && currentQuestion) {
+    return (
+      <div className="fixed inset-0 z-50 bg-gray-50 dark:bg-black overflow-y-auto">
+        <div className="min-h-screen flex items-center justify-center py-8">
+          {/* 全画面終了ボタン */}
+          <button
+            onClick={toggleFullscreen}
+            className="fixed top-4 right-4 z-50 p-3 bg-gray-800 dark:bg-gray-700 text-white rounded-full shadow-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition"
+            aria-label="全画面終了"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <div className="w-full max-w-4xl px-4">
+            <QuestionCard
+              question={currentQuestion}
+              questionNumber={currentIndex + 1}
+              allQuestions={questions}
+              currentIndex={currentIndex}
+              answered={answered}
+              selectedAnswer={selectedAnswer}
+              onAnswer={handleAnswer}
+              onNext={onSkip ? (answered ? onNext : handleSkipWrapper) : onNext}
+              onPrevious={onPrevious}
+              onDifficultyRate={onDifficultyRate}
+              errorPrediction={errorPrediction}
+              customQuestionSets={customQuestionSets}
+              onAddWordToCustomSet={onAddWordToCustomSet}
+              onRemoveWordFromCustomSet={onRemoveWordFromCustomSet}
+              onOpenCustomSetManagement={onOpenCustomSetManagement}
+              onFullscreen={toggleFullscreen}
+            />
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -379,6 +431,7 @@ function QuizView({
                   onAddWordToCustomSet={onAddWordToCustomSet}
                   onRemoveWordFromCustomSet={onRemoveWordFromCustomSet}
                   onOpenCustomSetManagement={onOpenCustomSetManagement}
+                  onFullscreen={toggleFullscreen}
                 />
               </>
             )}

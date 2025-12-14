@@ -969,32 +969,32 @@ function ComprehensiveReadingView({
 
       {/* 6タブ構造（読解開始後に表示） */}
       {readingStarted && (
-        <div className="reading-sub-tabs grid grid-cols-6 gap-2">
+        <div className="reading-sub-tabs grid grid-cols-6 gap-1 sm:gap-2">
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               readingSubTab === 'reading'
-                ? 'bg-primary text-white border-2 border-primary shadow-md'
-                : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
             onClick={() => setReadingSubTab('reading')}
           >
             📖 読解
           </button>
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               readingSubTab === 'fullText'
-                ? 'bg-primary text-white border-2 border-primary shadow-md'
-                : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
             onClick={() => setReadingSubTab('fullText')}
           >
             📄 全文
           </button>
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               readingSubTab === 'fullTranslation'
-                ? 'bg-primary text-white border-2 border-primary shadow-md'
-                : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
             onClick={() => setReadingSubTab('fullTranslation')}
           >
@@ -1002,7 +1002,7 @@ function ComprehensiveReadingView({
           </button>
           <button
             onClick={handleSaveUnknownWords}
-            className="px-4 py-2 text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
+            className="px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium bg-success text-white rounded-t-lg border-b-2 border-success transition-all duration-200 hover:bg-success-hover disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
             disabled={unknownCount === 0}
             title="未知語を保存"
           >

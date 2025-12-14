@@ -52,7 +52,7 @@ export async function exportAllData(): Promise<string> {
           }
         }
       } catch {
-          logger.warn('IndexedDBデータの取得に失敗、LocalStorageから取得します:');
+        logger.warn('IndexedDBデータの取得に失敗、LocalStorageから取得します:');
       }
     }
 

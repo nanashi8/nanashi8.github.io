@@ -56,9 +56,32 @@ export function speakEnglish(
   // 会話形式のテキストから話者名と記号を除去
   const cleanedText = cleanDialogueText(text);
 
-  // 既存の発話を停止
-  window.speechSynthesis.cancel();
+  // 既存の発話を完全に停止してクリア
+  // 連打時に前の発音を確実に停止するため、speaking/pendingの両方をチェック
+  if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+    window.speechSynthesis.cancel();
+    // キャンセルの完了を待つために短い遅延を追加
+    setTimeout(() => {
+      startSpeech(cleanedText, options);
+    }, 50);
+    return;
+  }
 
+  startSpeech(cleanedText, options);
+}
+
+/**
+ * 音声合成を開始する（内部関数）
+ */
+function startSpeech(
+  cleanedText: string,
+  options: {
+    rate?: number;
+    pitch?: number;
+    volume?: number;
+    lang?: string;
+  }
+): void {
   // 発話オブジェクトを作成
   const utterance = new SpeechSynthesisUtterance(cleanedText);
 

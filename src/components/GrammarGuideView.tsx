@@ -9,43 +9,46 @@ export const GrammarGuideView: React.FC = () => {
   );
 
   return (
-    <div className="grammar-guide-view p-6 max-w-app mx-auto">
-      {/* タブ切り替え */}
-      <div className="flex gap-2 mb-6 border-b border-border-color">
+    <div className="grammar-guide-view p-4 max-w-app mx-auto">
+      {/* タブ切り替え - ScoreBoardスタイルに統一 */}
+      <div className="grammar-guide-tabs grid grid-cols-3 gap-1 sm:gap-2 mb-4">
         <button
           onClick={() => setActiveTab('prepositions')}
-          className={`px-4 py-2 font-semibold transition-colors ${
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'prepositions'
-              ? 'text-primary border-b-2 border-primary'
-              : 'text-text-secondary hover:text-text-color'
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
           }`}
         >
-          📍 前置詞のニュアンス
+          <span className="hidden sm:inline">📍 前置詞</span>
+          <span className="sm:hidden">📍</span>
         </button>
         <button
           onClick={() => setActiveTab('punctuation')}
-          className={`px-4 py-2 font-semibold transition-colors ${
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'punctuation'
-              ? 'text-primary border-b-2 border-primary'
-              : 'text-text-secondary hover:text-text-color'
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
           }`}
         >
-          ✏️ 英文記号の意味
+          <span className="hidden sm:inline">✏️ 記号</span>
+          <span className="sm:hidden">✏️</span>
         </button>
         <button
           onClick={() => setActiveTab('tips')}
-          className={`px-4 py-2 font-semibold transition-colors ${
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'tips'
-              ? 'text-primary border-b-2 border-primary'
-              : 'text-text-secondary hover:text-text-color'
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
           }`}
         >
-          💡 長文読解のコツ
+          <span className="hidden sm:inline">💡 読解コツ</span>
+          <span className="sm:hidden">💡</span>
         </button>
       </div>
 
-      {/* コンテンツ */}
-      <div className="content-area">
+      {/* コンテンツ - カード表示に統一 */}
+      <div className="content-area bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700">
         {activeTab === 'prepositions' && <PrepositionGuide />}
         {activeTab === 'punctuation' && <PunctuationGuide />}
         {activeTab === 'tips' && <ReadingTipsGuide />}

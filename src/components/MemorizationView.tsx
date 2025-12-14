@@ -70,6 +70,7 @@ function MemorizationView({
   // セッション統計
   const [sessionStats, setSessionStats] = useState({
     correct: 0,
+    still_learning: 0, // まだまだ
     incorrect: 0,
     total: 0,
   });
@@ -84,6 +85,9 @@ function MemorizationView({
   // タッチ開始位置とカード要素のref
   const touchStartX = useRef<number>(0);
   const cardRef = useRef<HTMLDivElement>(null);
+
+  // 全画面表示モード
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // 初期化: カード表示設定と音声設定を読み込み
   useEffect(() => {
@@ -215,6 +219,11 @@ function MemorizationView({
     // voiceWord, voiceMeaning, voiceDelayを依存配列から除外（設定変更時の音声再生を防ぐ）
   }, [currentQuestion, autoVoice]);
 
+  // 全画面モードの切り替え
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
+  };
+
   // カード表示設定の切り替え（永続化）
   const toggleCardField = async (field: keyof MemorizationCardState) => {
     if (field === 'showWord') return; // 単語は常に表示
@@ -252,20 +261,23 @@ function MemorizationView({
     });
   };
 
-  // スワイプ処理（useCallbackで最適化）
+  // スワイプ処理（useCallbackで最適化）- 3段階評価対応
   const handleSwipe = useCallback(
-    async (direction: 'left' | 'right') => {
+    async (direction: 'left' | 'center' | 'right') => {
       if (!currentQuestion) return;
 
       // 滞在時間を記録
       const viewDuration = (Date.now() - cardDisplayTimeRef.current) / 1000; // 秒単位
 
+      // right: 覚えてる(正解)、center: まだまだ(復習中)、left: 分からない(不正解)
       const isCorrect = direction === 'right';
+      const isStillLearning = direction === 'center';
 
-      // 統計を更新
+      // 統計を3段階で更新
       setSessionStats((prev) => ({
         correct: isCorrect ? prev.correct + 1 : prev.correct,
-        incorrect: isCorrect ? prev.incorrect : prev.incorrect + 1,
+        still_learning: isStillLearning ? prev.still_learning + 1 : prev.still_learning,
+        incorrect: !isCorrect && !isStillLearning ? prev.incorrect + 1 : prev.incorrect,
         total: prev.total + 1,
       }));
 
@@ -325,26 +337,30 @@ function MemorizationView({
       const touchEndX = e.changedTouches[0].clientX;
       const diff = touchEndX - touchStartX.current;
 
-      // 100px以上のスワイプで判定
+      // 100px以上のスワイプで判定（左右のみ、中央は上下スワイプやボタンクリックで対応）
       if (Math.abs(diff) > 100) {
         if (diff > 0) {
-          // 右スワイプ（覚えた）
+          // 右スワイプ（覚えてる）
           handleSwipe('right');
         } else {
-          // 左スワイプ（覚えていない）
+          // 左スワイプ（分からない）
           handleSwipe('left');
         }
       }
     };
 
-    // キーボードイベント追加（カーソルキー対応）
+    // キーボードイベント追加（カーソルキー対応：3つのボタンに対応）
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') {
-        // 左カーソルキー（覚えていない）
+      if (e.key === 'ArrowLeft' || e.key === '1') {
+        // 左カーソルキーまたは1キー（分からない）
         e.preventDefault();
         handleSwipe('left');
-      } else if (e.key === 'ArrowRight') {
-        // 右カーソルキー（覚えた）
+      } else if (e.key === 'ArrowDown' || e.key === '2') {
+        // 下カーソルキーまたは2キー（まだまだ）
+        e.preventDefault();
+        handleSwipe('center');
+      } else if (e.key === 'ArrowRight' || e.key === '3') {
+        // 右カーソルキーまたは3キー（覚えてる）
         e.preventDefault();
         handleSwipe('right');
       }
@@ -374,371 +390,632 @@ function MemorizationView({
   }
 
   return (
-    <div className="min-h-screen">
-      {/* スコアボード */}
-      <div className="mb-4">
-        <ScoreBoard
-          mode="memorization"
-          sessionCorrect={sessionStats.correct}
-          sessionIncorrect={sessionStats.incorrect}
-          totalAnswered={sessionStats.total}
-          onAnswerTime={lastAnswerTime}
-          onShowSettings={() => setShowSettings(true)}
-          dataSource={selectedDataSource}
-          category={selectedCategory === 'all' ? '全分野' : selectedCategory}
-          difficulty={selectedDifficulty}
-          wordPhraseFilter={selectedWordPhraseFilter}
-        />
-      </div>
-
-      {/* 学習設定パネル */}
-      {showSettings && (
-        <div className="mb-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-bold">📊 学習設定</h3>
+    <div className="min-h-screen flex flex-col">
+      {/* 全画面モード時は暗記カードのみ表示 */}
+      {isFullscreen ? (
+        <div className="fixed inset-0 z-50 bg-gray-50 dark:bg-black overflow-y-auto">
+          <div className="min-h-screen flex items-center justify-center py-8">
+            {/* 全画面終了ボタン */}
             <button
-              onClick={() => setShowSettings(false)}
-              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600"
+              onClick={toggleFullscreen}
+              className="fixed top-4 right-4 z-50 p-3 bg-gray-800 dark:bg-gray-700 text-white rounded-full shadow-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition"
+              aria-label="全画面終了"
             >
-              ✕ 閉じる
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </button>
-          </div>
 
-          <div className="space-y-4">
-            <div>
-              <label
-                htmlFor="memorization-datasource"
-                className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
-              >
-                📖 出題元:
-              </label>
-              <select
-                id="memorization-datasource"
-                value={selectedDataSource}
-                onChange={(e) => setSelectedDataSource(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
-              >
-                <option value="all">全問題集</option>
-                <option value="standard">高校受験標準</option>
-                <option value="advanced">高校受験上級</option>
-                <option value="comprehensive">高校受験総合</option>
-              </select>
-            </div>
-
-            <div>
-              <label
-                htmlFor="memorization-difficulty"
-                className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
-              >
-                📊 難易度:
-              </label>
-              <select
-                id="memorization-difficulty"
-                value={selectedDifficulty}
-                onChange={(e) => setSelectedDifficulty(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
-              >
-                <option value="all">全難易度</option>
-                <option value="beginner">初級</option>
-                <option value="intermediate">中級</option>
-                <option value="advanced">上級</option>
-              </select>
-            </div>
-
-            <div>
-              <label
-                htmlFor="memorization-category"
-                className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
-              >
-                🏷️ 関連分野:
-              </label>
-              <select
-                id="memorization-category"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
-              >
-                <option value="all">全分野</option>
-                {getAvailableCategories().map((category) => (
-                  <option key={category} value={category}>
-                    {category}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label
-                htmlFor="memorization-filter"
-                className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
-              >
-                📝 単語・熟語:
-              </label>
-              <select
-                id="memorization-filter"
-                value={selectedWordPhraseFilter}
-                onChange={(e) => setSelectedWordPhraseFilter(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
-              >
-                <option value="all">単語＋熟語</option>
-                <option value="words">単語のみ</option>
-                <option value="phrases">熟語のみ</option>
-              </select>
-            </div>
-
-            <div className="border-t pt-4 dark:border-gray-700">
-              <label className="block text-sm font-medium mb-3 text-gray-700 dark:text-gray-300">
-                🔊 自動発音設定:
-              </label>
-              <div className="space-y-2">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={autoVoice}
-                    onChange={(e) => updateVoiceSettings(e.target.checked, voiceWord, voiceMeaning)}
-                    className="mr-2 w-4 h-4"
-                  />
-                  <span>自動で発音する</span>
-                </label>
-                {autoVoice && (
-                  <div className="ml-6 space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={voiceWord}
-                        onChange={(e) =>
-                          updateVoiceSettings(autoVoice, e.target.checked, voiceMeaning)
-                        }
-                        className="mr-2 w-4 h-4"
-                      />
-                      <span>語句を読み上げ</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={voiceMeaning}
-                        onChange={(e) =>
-                          updateVoiceSettings(autoVoice, voiceWord, e.target.checked)
-                        }
-                        className="mr-2 w-4 h-4"
-                      />
-                      <span>意味を読み上げ</span>
-                    </label>
-                    {voiceMeaning && (
-                      <div className="ml-6 mt-2">
-                        <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">
-                          ⏱️ 語句と意味の間隔: {voiceDelay.toFixed(1)}秒
-                        </label>
-                        <input
-                          type="range"
-                          min="0.5"
-                          max="5.0"
-                          step="0.5"
-                          value={voiceDelay}
-                          onChange={(e) => {
-                            const newDelay = parseFloat(e.target.value);
-                            setVoiceDelay(newDelay);
-                            updateVoiceSettings(autoVoice, voiceWord, voiceMeaning, newDelay);
-                          }}
-                          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-                          aria-label="語句と意味の間隔"
-                        />
-                        <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-                          <span>0.5秒</span>
-                          <span>5.0秒</span>
+            {/* 暗記カード */}
+            <div className="w-full max-w-4xl px-4">
+              <div ref={cardRef} className="question-card">
+                {/* 語句表示部 */}
+                <div className="mb-8 py-8 flex flex-col items-center justify-center min-h-[200px]">
+                  <div
+                    className={`flex flex-col items-center ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
+                    onClick={(e) => {
+                      if (isSpeechSynthesisSupported()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        speakEnglish(currentQuestion.word, { rate: 0.85 });
+                      }
+                    }}
+                    onTouchEnd={(e) => {
+                      if (isSpeechSynthesisSupported()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        speakEnglish(currentQuestion.word, { rate: 0.85 });
+                      }
+                    }}
+                    title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
+                  >
+                    <div
+                      className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white break-words text-center px-4 ${currentQuestion.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
+                    >
+                      {currentQuestion.word}
+                      {isSpeechSynthesisSupported() && <span className="speaker-icon">🔊</span>}
+                    </div>
+                    {currentQuestion.reading && (
+                      <div className="question-reading text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 mt-3 text-center">
+                        【{currentQuestion.reading}】
+                      </div>
+                    )}
+                    {currentQuestion.difficulty && (
+                      <div className="flex justify-center mt-4">
+                        <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
+                          {currentQuestion.difficulty === 'beginner'
+                            ? '初級'
+                            : currentQuestion.difficulty === 'intermediate'
+                              ? '中級'
+                              : '上級'}
                         </div>
                       </div>
                     )}
                   </div>
+                </div>
+
+                {/* 3つの大きなボタン */}
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                  <button
+                    onClick={() => handleSwipe('left')}
+                    className="flex flex-col items-center justify-center py-6 px-2 bg-red-500 hover:bg-red-600 active:bg-red-700 text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+                    aria-label="分からない"
+                  >
+                    <span className="text-3xl mb-2">❌</span>
+                    <span className="text-sm sm:text-base">分からない</span>
+                  </button>
+                  <button
+                    onClick={() => handleSwipe('center')}
+                    className="flex flex-col items-center justify-center py-6 px-2 bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+                    aria-label="まだまだ"
+                  >
+                    <span className="text-3xl mb-2">🤔</span>
+                    <span className="text-sm sm:text-base">まだまだ</span>
+                  </button>
+                  <button
+                    onClick={() => handleSwipe('right')}
+                    className="flex flex-col items-center justify-center py-6 px-2 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+                    aria-label="覚えてる"
+                  >
+                    <span className="text-3xl mb-2">✅</span>
+                    <span className="text-sm sm:text-base">覚えてる</span>
+                  </button>
+                </div>
+
+                {/* カスタムセットに追加ボタン */}
+                {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
+                  <div className="mb-4 flex justify-center">
+                    <AddToCustomButton
+                      word={{
+                        word: currentQuestion.word,
+                        meaning: currentQuestion.meaning,
+                        ipa: currentQuestion.reading,
+                        source: 'memorization',
+                      }}
+                      sets={customQuestionSets}
+                      onAddWord={onAddWordToCustomSet}
+                      onRemoveWord={onRemoveWordFromCustomSet}
+                      onOpenManagement={onOpenCustomSetManagement}
+                      size="medium"
+                      variant="both"
+                    />
+                  </div>
                 )}
+
+                {/* 詳細情報 */}
+                <div className="space-y-3">
+                  {/* 意味 */}
+                  <button
+                    onClick={() => toggleCardField('showMeaning')}
+                    className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <div className="flex items-center gap-2 sm:gap-4">
+                        <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
+                          意味
+                        </span>
+                        <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                          {cardState.showMeaning ? '▼' : '▶'}
+                        </span>
+                      </div>
+                      {cardState.showMeaning && (
+                        <div className="flex-1 text-base sm:text-lg text-gray-900 dark:text-white break-words">
+                          {currentQuestion.meaning}
+                        </div>
+                      )}
+                    </div>
+                  </button>
+
+                  {/* 読み */}
+                  <button
+                    onClick={() => toggleCardField('showPronunciation')}
+                    className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <div className="flex items-center gap-2 sm:gap-4">
+                        <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
+                          読み
+                        </span>
+                        <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                          {cardState.showPronunciation ? '▼' : '▶'}
+                        </span>
+                      </div>
+                      {cardState.showPronunciation && (
+                        <div className="flex-1 text-sm sm:text-base text-gray-700 dark:text-gray-300 break-words">
+                          {currentQuestion.reading}
+                        </div>
+                      )}
+                    </div>
+                  </button>
+
+                  {/* 語源 */}
+                  {currentQuestion.etymology &&
+                    currentQuestion.etymology.trim() !== '' &&
+                    currentQuestion.etymology !== '中学英語で重要な単語です。' && (
+                      <button
+                        onClick={() => toggleCardField('showEtymology')}
+                        className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                      >
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                          <div className="flex items-center gap-2 sm:gap-4">
+                            <span className="font-semibold text-gray-700 dark:text-gray-300 w-20 sm:w-24 flex-shrink-0 text-sm sm:text-base">
+                              語源・解説
+                            </span>
+                            <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                              {cardState.showEtymology ? '▼' : '▶'}
+                            </span>
+                          </div>
+                          {cardState.showEtymology && (
+                            <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
+                              {currentQuestion.etymology}
+                            </div>
+                          )}
+                        </div>
+                      </button>
+                    )}
+
+                  {/* 関連語 */}
+                  {currentQuestion.relatedWords && currentQuestion.relatedWords.trim() !== '' && (
+                    <button
+                      onClick={() => toggleCardField('showRelated')}
+                      className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-4">
+                          <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
+                            関連語
+                          </span>
+                          <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                            {cardState.showRelated ? '▼' : '▶'}
+                          </span>
+                        </div>
+                        {cardState.showRelated && (
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
+                            {currentQuestion.relatedWords}
+                          </div>
+                        )}
+                      </div>
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      )}
-
-      {/* 暗記カード */}
-      <div>
-        <div ref={cardRef} className="question-card">
-          {/* 語句と左右ボタン */}
-          <div className="question-nav-row">
-            {/* 左ボタン - まだ覚えていない */}
-            <button
-              onClick={() => handleSwipe('left')}
-              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl"
-              aria-label="まだ覚えていない"
-            >
-              ←
-            </button>
-
-            {/* 単語（常に表示）*/}
-            <div
-              className={`question-content-inline ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
-              onClick={(e) => {
-                if (isSpeechSynthesisSupported()) {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  speakEnglish(currentQuestion.word, { rate: 0.85 });
-                }
-              }}
-              onTouchEnd={(e) => {
-                if (isSpeechSynthesisSupported()) {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  speakEnglish(currentQuestion.word, { rate: 0.85 });
-                }
-              }}
-              title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
-            >
-              <div
-                className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white break-words ${currentQuestion.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
-              >
-                {currentQuestion.word}
-                {isSpeechSynthesisSupported() && <span className="speaker-icon">🔊</span>}
-              </div>
-              {currentQuestion.reading && (
-                <div className="question-reading text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">
-                  【{currentQuestion.reading}】
-                </div>
-              )}
-              {currentQuestion.difficulty && (
-                <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
-                  {currentQuestion.difficulty === 'beginner'
-                    ? '初級'
-                    : currentQuestion.difficulty === 'intermediate'
-                      ? '中級'
-                      : '上級'}
-                </div>
-              )}
-              {/* カスタムセットに追加ボタン */}
-              {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
-                <div className="mt-3 flex justify-center">
-                  <AddToCustomButton
-                    word={{
-                      word: currentQuestion.word,
-                      meaning: currentQuestion.meaning,
-                      ipa: currentQuestion.reading,
-                      source: 'memorization',
-                    }}
-                    sets={customQuestionSets}
-                    onAddWord={onAddWordToCustomSet}
-                    onRemoveWord={onRemoveWordFromCustomSet}
-                    onOpenManagement={onOpenCustomSetManagement}
-                    size="medium"
-                    variant="both"
-                  />
-                </div>
-              )}
+      ) : (
+        <>
+          {/* スコアボード */}
+          <div className="mb-4 flex justify-center">
+            <div className="w-full max-w-4xl">
+              <ScoreBoard
+                mode="memorization"
+                sessionCorrect={sessionStats.correct}
+                sessionReview={sessionStats.still_learning}
+                sessionIncorrect={sessionStats.incorrect}
+                totalAnswered={sessionStats.total}
+                onAnswerTime={lastAnswerTime}
+                onShowSettings={() => setShowSettings(true)}
+                dataSource={selectedDataSource}
+                category={selectedCategory === 'all' ? '全分野' : selectedCategory}
+                difficulty={selectedDifficulty}
+                wordPhraseFilter={selectedWordPhraseFilter}
+              />
             </div>
-
-            {/* 右ボタン - 覚えた */}
-            <button
-              onClick={() => handleSwipe('right')}
-              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl"
-              aria-label="覚えた"
-            >
-              →
-            </button>
           </div>
 
-          {/* 詳細情報 */}
-          <div className="space-y-3">
-            {/* 意味 */}
-            <button
-              onClick={() => toggleCardField('showMeaning')}
-              className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                <div className="flex items-center gap-2 sm:gap-4">
-                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
-                    意味
-                  </span>
-                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                    {cardState.showMeaning ? '▼' : '▶'}
-                  </span>
-                </div>
-                {cardState.showMeaning && (
-                  <div className="flex-1 text-base sm:text-lg text-gray-900 dark:text-white break-words">
-                    {currentQuestion.meaning}
-                  </div>
-                )}
-              </div>
-            </button>
-
-            {/* 読み */}
-            <button
-              onClick={() => toggleCardField('showPronunciation')}
-              className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                <div className="flex items-center gap-2 sm:gap-4">
-                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
-                    読み
-                  </span>
-                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                    {cardState.showPronunciation ? '▼' : '▶'}
-                  </span>
-                </div>
-                {cardState.showPronunciation && (
-                  <div className="flex-1 text-sm sm:text-base text-gray-700 dark:text-gray-300 break-words">
-                    {currentQuestion.reading}
-                  </div>
-                )}
-              </div>
-            </button>
-
-            {/* 語源 */}
-            {currentQuestion.etymology &&
-              currentQuestion.etymology.trim() !== '' &&
-              currentQuestion.etymology !== '中学英語で重要な単語です。' && (
+          {/* 学習設定パネル */}
+          {showSettings && (
+            <div className="mb-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-bold">📊 学習設定</h3>
                 <button
-                  onClick={() => toggleCardField('showEtymology')}
-                  className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                  onClick={() => setShowSettings(false)}
+                  className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600"
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                    <div className="flex items-center gap-2 sm:gap-4">
-                      <span className="font-semibold text-gray-700 dark:text-gray-300 w-20 sm:w-24 flex-shrink-0 text-sm sm:text-base">
-                        語源・解説
-                      </span>
-                      <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                        {cardState.showEtymology ? '▼' : '▶'}
-                      </span>
-                    </div>
-                    {cardState.showEtymology && (
-                      <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
-                        {currentQuestion.etymology}
+                  ✕ 閉じる
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <label
+                    htmlFor="memorization-datasource"
+                    className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                  >
+                    📖 出題元:
+                  </label>
+                  <select
+                    id="memorization-datasource"
+                    value={selectedDataSource}
+                    onChange={(e) => setSelectedDataSource(e.target.value)}
+                    className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                  >
+                    <option value="all">全問題集</option>
+                    <option value="standard">高校受験標準</option>
+                    <option value="advanced">高校受験上級</option>
+                    <option value="comprehensive">高校受験総合</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="memorization-difficulty"
+                    className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                  >
+                    📊 難易度:
+                  </label>
+                  <select
+                    id="memorization-difficulty"
+                    value={selectedDifficulty}
+                    onChange={(e) => setSelectedDifficulty(e.target.value)}
+                    className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                  >
+                    <option value="all">全難易度</option>
+                    <option value="beginner">初級</option>
+                    <option value="intermediate">中級</option>
+                    <option value="advanced">上級</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="memorization-category"
+                    className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                  >
+                    🏷️ 関連分野:
+                  </label>
+                  <select
+                    id="memorization-category"
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                  >
+                    <option value="all">全分野</option>
+                    {getAvailableCategories().map((category) => (
+                      <option key={category} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="memorization-filter"
+                    className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                  >
+                    📝 単語・熟語:
+                  </label>
+                  <select
+                    id="memorization-filter"
+                    value={selectedWordPhraseFilter}
+                    onChange={(e) => setSelectedWordPhraseFilter(e.target.value)}
+                    className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                  >
+                    <option value="all">単語＋熟語</option>
+                    <option value="words">単語のみ</option>
+                    <option value="phrases">熟語のみ</option>
+                  </select>
+                </div>
+
+                <div className="border-t pt-4 dark:border-gray-700">
+                  <label className="block text-sm font-medium mb-3 text-gray-700 dark:text-gray-300">
+                    🔊 自動発音設定:
+                  </label>
+                  <div className="space-y-2">
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={autoVoice}
+                        onChange={(e) =>
+                          updateVoiceSettings(e.target.checked, voiceWord, voiceMeaning)
+                        }
+                        className="mr-2 w-4 h-4"
+                      />
+                      <span>自動で発音する</span>
+                    </label>
+                    {autoVoice && (
+                      <div className="ml-6 space-y-2">
+                        <label className="flex items-center">
+                          <input
+                            type="checkbox"
+                            checked={voiceWord}
+                            onChange={(e) =>
+                              updateVoiceSettings(autoVoice, e.target.checked, voiceMeaning)
+                            }
+                            className="mr-2 w-4 h-4"
+                          />
+                          <span>語句を読み上げ</span>
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="checkbox"
+                            checked={voiceMeaning}
+                            onChange={(e) =>
+                              updateVoiceSettings(autoVoice, voiceWord, e.target.checked)
+                            }
+                            className="mr-2 w-4 h-4"
+                          />
+                          <span>意味を読み上げ</span>
+                        </label>
+                        {voiceMeaning && (
+                          <div className="ml-6 mt-2">
+                            <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+                              ⏱️ 語句と意味の間隔: {voiceDelay.toFixed(1)}秒
+                            </label>
+                            <input
+                              type="range"
+                              min="0.5"
+                              max="5.0"
+                              step="0.5"
+                              value={voiceDelay}
+                              onChange={(e) => {
+                                const newDelay = parseFloat(e.target.value);
+                                setVoiceDelay(newDelay);
+                                updateVoiceSettings(autoVoice, voiceWord, voiceMeaning, newDelay);
+                              }}
+                              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                              aria-label="語句と意味の間隔"
+                            />
+                            <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                              <span>0.5秒</span>
+                              <span>5.0秒</span>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
-                </button>
-              )}
+                </div>
+              </div>
+            </div>
+          )}
 
-            {/* 関連語 */}
-            {currentQuestion.relatedWords && currentQuestion.relatedWords.trim() !== '' && (
+          {/* 暗記カード */}
+          <div className="flex-1 flex items-center justify-center">
+            <div className="relative w-full max-w-4xl">
+              {/* 全画面表示ボタン */}
               <button
-                onClick={() => toggleCardField('showRelated')}
-                className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                onClick={toggleFullscreen}
+                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition shadow-md"
+                aria-label="全画面表示"
+                title="全画面表示"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <div className="flex items-center gap-2 sm:gap-4">
-                    <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
-                      関連語
-                    </span>
-                    <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                      {cardState.showRelated ? '▼' : '▶'}
-                    </span>
-                  </div>
-                  {cardState.showRelated && (
-                    <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
-                      {currentQuestion.relatedWords}
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </button>
+
+              <div ref={cardRef} className="question-card w-full">
+                {/* 語句表示部 */}
+                <div className="mb-8 py-8 flex flex-col items-center justify-center min-h-[200px]">
+                  <div
+                    className={`flex flex-col items-center ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
+                    onClick={(e) => {
+                      if (isSpeechSynthesisSupported()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        speakEnglish(currentQuestion.word, { rate: 0.85 });
+                      }
+                    }}
+                    onTouchEnd={(e) => {
+                      if (isSpeechSynthesisSupported()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        speakEnglish(currentQuestion.word, { rate: 0.85 });
+                      }
+                    }}
+                    title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
+                  >
+                    <div
+                      className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white break-words text-center px-4 ${currentQuestion.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
+                    >
+                      {currentQuestion.word}
+                      {isSpeechSynthesisSupported() && <span className="speaker-icon">🔊</span>}
                     </div>
+                    {currentQuestion.reading && (
+                      <div className="question-reading text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 mt-3 text-center">
+                        【{currentQuestion.reading}】
+                      </div>
+                    )}
+                    {currentQuestion.difficulty && (
+                      <div className="flex justify-center mt-4">
+                        <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
+                          {currentQuestion.difficulty === 'beginner'
+                            ? '初級'
+                            : currentQuestion.difficulty === 'intermediate'
+                              ? '中級'
+                              : '上級'}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* 3つの大きなボタン */}
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                  {/* 分からないボタン */}
+                  <button
+                    onClick={() => handleSwipe('left')}
+                    className="flex flex-col items-center justify-center py-6 px-2 bg-red-500 hover:bg-red-600 active:bg-red-700 text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+                    aria-label="分からない"
+                  >
+                    <span className="text-3xl mb-2">❌</span>
+                    <span className="text-sm sm:text-base">分からない</span>
+                  </button>
+
+                  {/* まだまだボタン */}
+                  <button
+                    onClick={() => handleSwipe('center')}
+                    className="flex flex-col items-center justify-center py-6 px-2 bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+                    aria-label="まだまだ"
+                  >
+                    <span className="text-3xl mb-2">🤔</span>
+                    <span className="text-sm sm:text-base">まだまだ</span>
+                  </button>
+
+                  {/* 覚えてるボタン */}
+                  <button
+                    onClick={() => handleSwipe('right')}
+                    className="flex flex-col items-center justify-center py-6 px-2 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+                    aria-label="覚えてる"
+                  >
+                    <span className="text-3xl mb-2">✅</span>
+                    <span className="text-sm sm:text-base">覚えてる</span>
+                  </button>
+                </div>
+
+                {/* カスタムセットに追加ボタン */}
+                {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
+                  <div className="mb-4 flex justify-center">
+                    <AddToCustomButton
+                      word={{
+                        word: currentQuestion.word,
+                        meaning: currentQuestion.meaning,
+                        ipa: currentQuestion.reading,
+                        source: 'memorization',
+                      }}
+                      sets={customQuestionSets}
+                      onAddWord={onAddWordToCustomSet}
+                      onRemoveWord={onRemoveWordFromCustomSet}
+                      onOpenManagement={onOpenCustomSetManagement}
+                      size="medium"
+                      variant="both"
+                    />
+                  </div>
+                )}
+
+                {/* 詳細情報 */}
+                <div className="space-y-3">
+                  {/* 意味 */}
+                  <button
+                    onClick={() => toggleCardField('showMeaning')}
+                    className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <div className="flex items-center gap-2 sm:gap-4">
+                        <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
+                          意味
+                        </span>
+                        <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                          {cardState.showMeaning ? '▼' : '▶'}
+                        </span>
+                      </div>
+                      {cardState.showMeaning && (
+                        <div className="flex-1 text-base sm:text-lg text-gray-900 dark:text-white break-words">
+                          {currentQuestion.meaning}
+                        </div>
+                      )}
+                    </div>
+                  </button>
+
+                  {/* 読み */}
+                  <button
+                    onClick={() => toggleCardField('showPronunciation')}
+                    className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <div className="flex items-center gap-2 sm:gap-4">
+                        <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
+                          読み
+                        </span>
+                        <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                          {cardState.showPronunciation ? '▼' : '▶'}
+                        </span>
+                      </div>
+                      {cardState.showPronunciation && (
+                        <div className="flex-1 text-sm sm:text-base text-gray-700 dark:text-gray-300 break-words">
+                          {currentQuestion.reading}
+                        </div>
+                      )}
+                    </div>
+                  </button>
+
+                  {/* 語源 */}
+                  {currentQuestion.etymology &&
+                    currentQuestion.etymology.trim() !== '' &&
+                    currentQuestion.etymology !== '中学英語で重要な単語です。' && (
+                      <button
+                        onClick={() => toggleCardField('showEtymology')}
+                        className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                      >
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                          <div className="flex items-center gap-2 sm:gap-4">
+                            <span className="font-semibold text-gray-700 dark:text-gray-300 w-20 sm:w-24 flex-shrink-0 text-sm sm:text-base">
+                              語源・解説
+                            </span>
+                            <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                              {cardState.showEtymology ? '▼' : '▶'}
+                            </span>
+                          </div>
+                          {cardState.showEtymology && (
+                            <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
+                              {currentQuestion.etymology}
+                            </div>
+                          )}
+                        </div>
+                      </button>
+                    )}
+
+                  {/* 関連語 */}
+                  {currentQuestion.relatedWords && currentQuestion.relatedWords.trim() !== '' && (
+                    <button
+                      onClick={() => toggleCardField('showRelated')}
+                      className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-4">
+                          <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">
+                            関連語
+                          </span>
+                          <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                            {cardState.showRelated ? '▼' : '▶'}
+                          </span>
+                        </div>
+                        {cardState.showRelated && (
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
+                            {currentQuestion.relatedWords}
+                          </div>
+                        )}
+                      </div>
+                    </button>
                   )}
                 </div>
-              </button>
-            )}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 }

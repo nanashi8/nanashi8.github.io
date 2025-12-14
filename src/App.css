@@ -31,7 +31,7 @@
    ============================================
    JavaScriptでdata-width属性に応じてインラインstyleを設定する想定
    または、以下の個別ルールを使用
-   
+
    推奨実装:
    - JavaScript: element.style.width = `${percentage}%`;
    - または: <div class="xp-fill" style="width: 75%"></div>
@@ -800,11 +800,11 @@
   min-height: 180px;
 }
 
-/* タブコンテンツの固定高さ（プラン表示時の高さに統一） */
+/* タブコンテンツの高さ調整（スクロール不要） */
 .score-board-content {
-  min-height: 160px;
-  max-height: 160px;
-  overflow-y: auto;
+  min-height: fit-content;
+  max-height: none;
+  overflow-y: visible;
 }
 
 /* プランタブ */
@@ -828,7 +828,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   color: var(--text-color);
 }
@@ -868,21 +868,28 @@
   color: var(--gray-400);
 }
 
+/* 全タブコンテンツの高さを統一 */
+.ai-comment-container,
+.plan-text-line,
+.retention-breakdown-container,
+.history-compact,
+.settings-tab-container {
+  min-height: 110px;
+}
+
 /* 学習状況タブ - 進捗バー */
 .retention-breakdown-container {
-  padding: 20px;
-  min-height: 120px;
 }
 
 .retention-breakdown-header {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .retention-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--text-color);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .dark-mode .retention-title {
@@ -890,12 +897,13 @@
 }
 
 .retention-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--gray-600);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
+  line-height: 1.3;
 }
 
 .dark-mode .retention-subtitle {
@@ -948,7 +956,7 @@
 .retention-progress-bar {
   display: flex;
   width: 100%;
-  height: 24px;
+  height: 20px;
   background: var(--gray-200);
   border-radius: 6px;
   overflow: hidden;
@@ -965,7 +973,7 @@
   justify-content: center;
   color: white;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   transition: all 0.3s ease;
   cursor: help;
   flex-shrink: 0;
@@ -1039,19 +1047,9 @@
 }
 
 /* 履歴タブ */
-.history-compact,
-.word-detail-container,
-.word-detail-empty {
-  padding: 16px;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  min-height: 120px;
-}
-
 .dark-mode .history-compact,
 .dark-mode .word-detail-container,
 .dark-mode .word-detail-empty {
-  background: var(--gray-800);
   color: var(--gray-200);
 }
 
@@ -1136,14 +1134,6 @@
 .grammar-unit-card {
   padding: 0.75rem;
   margin-bottom: 0.5rem;
-  background-color: var(--card-bg, #fff);
-  border-radius: 8px;
-  border: 1px solid var(--border-color, #e0e0e0);
-}
-
-.dark-mode .grammar-unit-card {
-  background-color: var(--gray-700);
-  border-color: var(--gray-600);
 }
 
 .grammar-unit-header {
@@ -1216,8 +1206,7 @@
    設定タブスタイル
    ============================================ */
 .settings-tab-container {
-  padding: 20px;
-  min-height: 120px;
+  min-height: fit-content;
 }
 
 .settings-section {

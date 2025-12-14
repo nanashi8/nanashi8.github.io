@@ -1,11 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { QuestionSet, Question } from './types';
-import {
-  parseCSV,
-  saveQuestionSets,
-  generateId,
-  classifyPhraseType,
-} from './utils';
+import { parseCSV, saveQuestionSets, generateId, classifyPhraseType } from './utils';
 import { useQuizSettings } from './hooks/useQuizSettings';
 import { useQuizFilters } from './hooks/useQuizFilters';
 import { useQuizState } from './hooks/useQuizState';
@@ -827,10 +822,10 @@ function App() {
         filteredQuestions,
         Math.min(5, Math.floor(filteredQuestions.length * 0.3)) // 全体の30%程度を関連語にする
       );
-      
+
       if (relatedQuestions.length > 0) {
         // 関連語を優先的に配置(最初の方に)
-        const nonRelatedQuestions = filteredQuestions.filter(q => 
+        const nonRelatedQuestions = filteredQuestions.filter(q =>
           !relatedQuestions.some(rq => rq.word === q.word)
         );
         filteredQuestions = [...relatedQuestions, ...nonRelatedQuestions];

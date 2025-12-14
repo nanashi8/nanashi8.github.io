@@ -31,6 +31,7 @@ interface QuestionCardProps {
   onAddWordToCustomSet?: (setId: string, word: CustomWord) => void;
   onRemoveWordFromCustomSet?: (setId: string, word: CustomWord) => void;
   onOpenCustomSetManagement?: () => void;
+  onFullscreen?: () => void;
 }
 
 function QuestionCard({
@@ -47,6 +48,7 @@ function QuestionCard({
   onAddWordToCustomSet,
   onRemoveWordFromCustomSet,
   onOpenCustomSetManagement,
+  onFullscreen,
 }: QuestionCardProps) {
   // 選択肢をuseMemoで固定（currentIndexが変わった時だけ再生成）
   const choicesWithQuestions = useMemo(
@@ -367,10 +369,26 @@ function QuestionCard({
     return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600`;
   };
 
-  
-
   return (
     <div className="question-card" ref={cardRef}>
+      {/* 全画面表示ボタン */}
+      {onFullscreen && (
+        <button
+          onClick={onFullscreen}
+          className="absolute top-2 right-2 z-10 p-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition shadow-md"
+          aria-label="全画面表示"
+          title="全画面表示"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+            />
+          </svg>
+        </button>
+      )}
       <div className="question-nav-row">
         <button
           className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed"
