@@ -1036,25 +1036,57 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 <div className="choices-area">
                   {/* 会話形式の問題 */}
                   {(currentQuestion as any).conversation ? (
-                    <div className="conversation-display">
-                      {((currentQuestion as any).conversation as string[]).map(
-                        (line: string, idx: number) => (
-                          <div key={idx} className="conversation-line">
-                            {line.split('____').map((part, index, array) => (
-                              <span key={index}>
-                                {part}
-                                {index < array.length - 1 && (
-                                  <span className="fill-in-blank-space">_______</span>
-                                )}
-                              </span>
-                            ))}
+                    <>
+                      {/* 日本語の会話も分割表示 */}
+                      {currentQuestion.japanese &&
+                        currentQuestion.japanese.includes('A:') &&
+                        currentQuestion.japanese.includes('B:') && (
+                          <div className="japanese-conversation">
+                            {currentQuestion.japanese.split(/([AB]:)/).map((part, idx) => {
+                              if (part === 'A:' || part === 'B:') {
+                                return (
+                                  <span key={idx} className="conversation-speaker">
+                                    {part}
+                                  </span>
+                                );
+                              }
+                              if (part.trim()) {
+                                return (
+                                  <span key={idx} className="conversation-text">
+                                    {part.trim()}
+                                  </span>
+                                );
+                              }
+                              return null;
+                            })}
                           </div>
-                        )
-                      )}
-                    </div>
+                        )}
+                      <div className="conversation-display">
+                        {((currentQuestion as any).conversation as string[]).map(
+                          (line: string, idx: number) => (
+                            <div key={idx} className="conversation-line">
+                              {line.split('____').map((part, index, array) => (
+                                <span key={index}>
+                                  {part}
+                                  {index < array.length - 1 && (
+                                    <span className="fill-in-blank-space">_______</span>
+                                  )}
+                                </span>
+                              ))}
+                            </div>
+                          )
+                        )}
+                      </div>
+                    </>
                   ) : (currentQuestion as any).targetSentence ? (
                     /* 言い換え問題 (paraphrase) */
                     <div className="paraphrase-display">
+                      {/* 日本語の意味を追加 */}
+                      {currentQuestion.japanese && (
+                        <div className="paraphrase-meaning">
+                          💭 意味: {currentQuestion.japanese}
+                        </div>
+                      )}
                       <div className="paraphrase-label">📝 元の文:</div>
                       <div className="sentence-display original">
                         {currentQuestion.sentence}
