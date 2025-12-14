@@ -71,6 +71,32 @@ const DEFAULT_SPEED = 0.85;
 const VOICE_QUALITY_LEVELS = ['high', 'medium', 'low'];
 ```
 
+#### ケース4: レイアウトの無断変更・最適化
+```tsx
+// ❌ 禁止: ユーザーの指示なしにレイアウトを変更
+// Before
+<div className="flex flex-col gap-4">
+
+// After (無断変更)
+<div className="grid grid-cols-2 gap-6"> // ❌ 禁止！
+
+// ✅ 許可: ユーザーが「レイアウトを変更して」と明示的に指示した場合のみ
+```
+
+**レイアウト変更が特に危険な理由:**
+- ✅ 既存UIはユーザー体験のため調整済み
+- ✅ 無断の最適化は意図しない副作用を引き起こす
+- ✅ レスポンシブ対応（モバイル/タブレット/デスクトップ）に影響
+- ✅ アクセシビリティ（視認性、操作性）に影響
+- ✅ 他のコンポーネントとの整合性が崩れる
+
+**検出される変更:**
+- Flexbox/Grid レイアウト: `flex`, `grid`, `flex-col`, `grid-cols-*`, `gap-*`
+- Positioning: `relative`, `absolute`, `fixed`, `top-*`, `z-*`
+- Spacing: `m-*`, `p-*`, `space-*` (大幅な変更)
+- Width/Height: `w-*`, `h-*`, `max-w-*`, `min-h-*`
+- Display: `block`, `inline-block`, `hidden`
+
 ### 3. 質問の意図を正確に理解する
 
 | ユーザーの質問 | 真の意図 | 間違った解釈 |
@@ -78,6 +104,7 @@ const VOICE_QUALITY_LEVELS = ['high', 'medium', 'low'];
 | 「流暢にしゃべる音声はないですか？」 | 音声の品質向上 | 速度を上げる |
 | 「デザインを改善してください」 | 具体的指示待ち | 勝手に色を変える |
 | 「使いやすくしてください」 | 改善案の提示 | 勝手にUIを変更 |
+| 「レイアウトを最適化」（指示なし） | **禁止** | 勝手にflex/gridを変更 |
 
 **正しい対応フロー:**
 1. ユーザーの質問を分析
@@ -96,6 +123,7 @@ const VOICE_QUALITY_LEVELS = ['high', 'medium', 'low'];
 - [ ] ユーザーが明示的に変更を指示したか？
 - [ ] 既存のコメントで理由が説明されているか？
 - [ ] 「調整済み」「最適化済み」等の記述があるか？
+- [ ] レイアウト変更の場合、明確な指示があるか？
 
 ### レベル2: 仕様確認
 - [ ] CRITICAL_RULES.mdに違反していないか？

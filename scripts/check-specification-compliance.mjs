@@ -2,9 +2,9 @@
 
 /**
  * 仕様書遵守チェッカー
- * 
+ *
  * 目的: AIが勝手に仕様を変更していないかチェック
- * 
+ *
  * チェック項目:
  * 1. 音声速度の変更（0.85固定）
  * 2. CSS変数の値変更
@@ -41,30 +41,30 @@ try {
 // 仕様チェック1: 音声速度（0.85固定）
 if (changedFiles.includes('src/features/speech/speechSynthesis.ts')) {
   console.log(`${colors.blue}📢 音声設定ファイルの変更を検出${colors.reset}`);
-  
+
   try {
     const diff = execSync('git diff --cached src/features/speech/speechSynthesis.ts', {
       encoding: 'utf-8',
     });
-    
+
     // 速度の変更を検出
     const speedChangePattern = /[-+].*utterance\.rate.*=.*(?:parseFloat\(savedRate\)\s*:\s*)?(0\.\d+)/g;
     const matches = [...diff.matchAll(speedChangePattern)];
-    
+
     const removedSpeeds = [];
     const addedSpeeds = [];
-    
+
     matches.forEach(match => {
       const line = match[0];
       const speed = match[1];
-      
+
       if (line.startsWith('-')) {
         removedSpeeds.push(speed);
       } else if (line.startsWith('+')) {
         addedSpeeds.push(speed);
       }
     });
-    
+
     // 0.85から別の値に変更されている場合
     if (removedSpeeds.includes('0.85') && addedSpeeds.length > 0 && !addedSpeeds.includes('0.85')) {
       console.log(`${colors.red}❌ 音声速度の変更を検出しました${colors.reset}`);
@@ -96,16 +96,16 @@ if (changedFiles.includes('src/features/speech/speechSynthesis.ts')) {
 const cssFiles = changedFiles.filter(f => f.includes('variables.css'));
 if (cssFiles.length > 0) {
   console.log(`${colors.blue}🎨 CSS変数ファイルの変更を検出${colors.reset}`);
-  
+
   try {
     const diff = execSync(`git diff --cached ${cssFiles.join(' ')}`, {
       encoding: 'utf-8',
     });
-    
+
     // CSS変数の値変更を検出（コメントに「調整済み」等がある場合）
     const adjustedVarPattern = /[-+]\s*--[\w-]+:\s*[^;]+;\s*\/\*.*(?:調整済み|最適化済み|固定値)/g;
     const matches = [...diff.matchAll(adjustedVarPattern)];
-    
+
     if (matches.length > 0) {
       console.log(`${colors.red}❌ 調整済みCSS変数の変更を検出しました${colors.reset}`);
       console.log('');
@@ -134,11 +134,11 @@ if (tsFiles.length > 0) {
     const diff = execSync(`git diff --cached ${tsFiles.join(' ')}`, {
       encoding: 'utf-8',
     });
-    
+
     // 「調整済み」等のコメントがある行の変更を検出
     const adjustedValuePattern = /[-+].*(?:調整済み|最適化済み|高校受験用|固定値)/g;
     const matches = [...diff.matchAll(adjustedValuePattern)];
-    
+
     const suspiciousChanges = [];
     matches.forEach(match => {
       const line = match[0];
@@ -147,7 +147,7 @@ if (tsFiles.length > 0) {
         suspiciousChanges.push(line);
       }
     });
-    
+
     if (suspiciousChanges.length > 0) {
       console.log(`${colors.yellow}⚠️  調整済み設定の変更の可能性を検出${colors.reset}`);
       console.log('');
@@ -156,6 +156,109 @@ if (tsFiles.length > 0) {
       console.log('');
       console.log('📚 参照: .ai-instructions/SPECIFICATION_ENFORCEMENT.md');
       console.log('');
+    }
+  } catch (error) {
+    // 差分取得エラーは無視
+  }
+}
+
+// 仕様チェック4: レイアウトの無断変更を検出
+const layoutFiles = changedFiles.filter(f => f.match(/\.(tsx|jsx|html|css)$/));
+if (layoutFiles.length > 0) {
+  console.log(`${colors.blue}📐 レイアウトファイルの変更を検出${colors.reset}`);
+
+  try {
+    const diff = execSync(`git diff --cached ${layoutFiles.join(' ')}`, {
+      encoding: 'utf-8',
+    });
+
+    // レイアウト関連のクラス/プロパティの変更を検出
+    const layoutPatterns = [
+      // Flexbox/Grid レイアウト
+      /[-+].*className=["'][^"']*\b(flex|grid|inline-flex|inline-grid)\b/,
+      /[-+].*\b(flex-row|flex-col|flex-wrap|grid-cols|grid-rows|gap-\d+)\b/,
+      /[-+].*\b(justify-|items-|content-|place-)(start|end|center|between|around|evenly|stretch)/,
+
+      // Positioning
+      /[-+].*\b(relative|absolute|fixed|sticky)\b/,
+      /[-+].*\b(top-|right-|bottom-|left-|inset-)\d+/,
+      /[-+].*\b(z-\d+)\b/,
+
+      // Spacing (大幅な変更のみ)
+      /[-+].*\b(m|p|space)-(x|y|t|r|b|l|s|e)-(\d{2,}|auto)\b/,
+
+      // Width/Height (大幅な変更のみ)
+      /[-+].*\b(w|h|min-w|min-h|max-w|max-h)-(full|screen|1\/\d+|auto|\d{2,})\b/,
+
+      // Display
+      /[-+].*\b(block|inline-block|inline|hidden)\b/,
+
+      // CSS display/position/layout properties
+      /[-+].*\b(display|position|float|clear):\s*\w+/,
+    ];
+
+    let layoutChanges = [];
+    const diffLines = diff.split('\n');
+
+    diffLines.forEach((line, index) => {
+      // 削除行または追加行のみチェック
+      if (!line.startsWith('-') && !line.startsWith('+')) return;
+      if (line.startsWith('---') || line.startsWith('+++')) return;
+
+      layoutPatterns.forEach(pattern => {
+        if (pattern.test(line)) {
+          // コンテキストを含める（前後の行）
+          const context = diffLines.slice(Math.max(0, index - 1), index + 2).join('\n');
+          layoutChanges.push({
+            line: line.substring(0, 80),
+            context: context
+          });
+        }
+      });
+    });
+
+    // 重複除去
+    layoutChanges = layoutChanges.filter((change, index, self) =>
+      index === self.findIndex(c => c.line === change.line)
+    );
+
+    if (layoutChanges.length > 0) {
+      console.log(`${colors.red}❌ レイアウト変更を検出しました${colors.reset}`);
+      console.log('');
+      console.log(`${colors.yellow}検出された変更: ${layoutChanges.length}箇所${colors.reset}`);
+      console.log('');
+
+      // 最初の3件のみ表示
+      layoutChanges.slice(0, 3).forEach((change, i) => {
+        console.log(`${i + 1}. ${change.line.trim()}`);
+      });
+
+      if (layoutChanges.length > 3) {
+        console.log(`   ... 他 ${layoutChanges.length - 3}件`);
+      }
+
+      console.log('');
+      console.log(`${colors.red}🚨 仕様違反: レイアウトの無断変更は禁止されています${colors.reset}`);
+      console.log('');
+      console.log('📋 レイアウト変更が禁止される理由:');
+      console.log('   - 既存のUIはユーザー体験のため調整済み');
+      console.log('   - 無断の最適化は意図しない副作用を引き起こす');
+      console.log('   - レスポンシブ対応に影響を与える可能性');
+      console.log('');
+      console.log('💡 対応方法:');
+      console.log('   1. ユーザーに「レイアウトを変更してもよいか」明確に確認');
+      console.log('   2. 変更理由とbefore/afterを説明して承認を得る');
+      console.log('   3. 承認なしに変更した場合は元に戻す');
+      console.log('');
+      console.log('✅ 許可される場合:');
+      console.log('   - ユーザーが「レイアウトを改善して」と明示的に依頼');
+      console.log('   - ユーザーが具体的な変更内容を指示');
+      console.log('   - 新規作成のコンポーネント（既存の影響なし）');
+      console.log('');
+      console.log('📚 参照ドキュメント:');
+      console.log('   - .ai-instructions/SPECIFICATION_ENFORCEMENT.md');
+      console.log('');
+      hasViolations = true;
     }
   } catch (error) {
     // 差分取得エラーは無視

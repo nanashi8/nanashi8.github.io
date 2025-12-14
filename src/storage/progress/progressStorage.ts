@@ -895,7 +895,8 @@ export async function updateWordProgress(
   isCorrect: boolean,
   responseTime: number, // ミリ秒
   userRating?: number, // 1-10のユーザー評価（オプション）
-  _mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization' // モード情報
+  _mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization', // モード情報
+  isStillLearning?: boolean // 暗記タブ専用: まだまだ（学習中）フラグ
 ): Promise<void> {
   const progress = await loadProgress();
 
@@ -906,10 +907,17 @@ export async function updateWordProgress(
   const wordProgress = progress.wordProgress[word];
 
   // 基本統計を更新
+  // 暗記タブの「まだまだ」は学習中として扱い、incorrectCountに加算するが連続不正解にはしない
   if (isCorrect) {
     wordProgress.correctCount++;
     wordProgress.consecutiveCorrect++;
     wordProgress.consecutiveIncorrect = 0;
+  } else if (isStillLearning) {
+    // 「まだまだ」は部分的な正解として扱う（正答率50%相当）
+    // incorrectCountには加算するが、consecutiveIncorrectには加算しない
+    wordProgress.incorrectCount++;
+    wordProgress.consecutiveCorrect = 0;
+    wordProgress.consecutiveIncorrect = 0; // 連続不正解にはしない
   } else {
     wordProgress.incorrectCount++;
     wordProgress.consecutiveIncorrect++;
@@ -2641,6 +2649,7 @@ export {
   getCategoryDifficultyStats,
   getStatsByModeDifficulty,
   getGrammarDetailedRetentionStats,
+  getMemorizationDetailedRetentionStats,
   getGrammarUnitStats,
 } from './statistics';
 

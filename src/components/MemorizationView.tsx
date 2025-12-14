@@ -302,7 +302,8 @@ function MemorizationView({
           isCorrect,
           viewDuration * 1000, // ミリ秒に変換
           undefined,
-          'memorization' // 暗記タブは独立したモードとして記録
+          'memorization', // 暗記タブは独立したモードとして記録
+          isStillLearning // まだまだフラグを渡す
         );
       }
 

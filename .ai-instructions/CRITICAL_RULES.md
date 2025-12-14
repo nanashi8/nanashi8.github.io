@@ -36,16 +36,67 @@
 - 構文エラーやTypeScriptエラーの修正
 - 明らかなバグの修正
 
-### 3. CSS変数・スタイルの勝手な変更禁止
+### 3. レイアウトの無断変更・最適化の絶対禁止
+
+**🚫 最も重要: レイアウト変更はユーザーの明確な指示がない限り禁止**
+
+**禁止される変更（例）:**
+```tsx
+// ❌ ユーザーの指示なしにこれらを変更してはいけない
+
+// 1. Flexbox/Grid レイアウトの変更
+<div className="flex flex-col"> → <div className="grid grid-cols-2"> // ❌
+<div className="gap-4"> → <div className="gap-6"> // ❌
+
+// 2. Positioning の変更
+<div className="relative"> → <div className="absolute"> // ❌
+<div className="top-4"> → <div className="top-8"> // ❌
+
+// 3. Spacing の変更
+<div className="p-4"> → <div className="p-6"> // ❌
+<div className="space-y-2"> → <div className="space-y-4"> // ❌
+
+// 4. Width/Height の変更
+<div className="w-full"> → <div className="w-1/2"> // ❌
+<div className="h-auto"> → <div className="h-screen"> // ❌
+
+// 5. Display の変更
+<div className="block"> → <div className="inline-block"> // ❌
+```
+
+**許可される場合（限定的）:**
+- ✅ ユーザーが「レイアウトを変更してください」と明示的に指示
+- ✅ ユーザーが具体的な変更内容を指定（「flexをgridに変更」等）
+- ✅ 新規作成のコンポーネント（既存UIへの影響なし）
+
+**禁止される「最適化」の例:**
+```
+❌ 「レイアウトを最適化しました」
+❌ 「より効率的なグリッドレイアウトに変更」
+❌ 「レスポンシブ対応を改善しました」
+❌ 「スペーシングを調整しました」
+```
+
+**理由:**
+1. 既存UIはユーザー体験のため調整済み
+2. 無断の最適化は意図しない副作用を引き起こす
+3. レスポンシブ対応（モバイル/タブレット）に影響
+4. アクセシビリティ（視認性、操作性）が変わる
+5. 他のコンポーネントとの整合性が崩れる
+
+**違反時のペナルティ:**
+- 🚨 即座にrevert（変更を元に戻す）
+- ⛔ コミット拒否（pre-commitフックで検出）
+- 📋 ユーザーへの確認を求めるメッセージ
+
+### 4. CSS変数・スタイルの勝手な変更禁止
 
 **禁止:**
 ```css
 /* ❌ 指示なしにこれらを変更してはいけない */
-- padding, margin, gap
 - border-radius
 - font-size, line-height
-- flex, grid レイアウト
-- position, transform
+- color, background-color
 - animation, transition
 ```
 

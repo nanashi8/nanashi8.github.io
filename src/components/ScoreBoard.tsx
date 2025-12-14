@@ -7,6 +7,7 @@ import {
   getDetailedRetentionStats,
   getGrammarRetentionRateWithAI,
   getGrammarDetailedRetentionStats,
+  getMemorizationDetailedRetentionStats,
   getGrammarUnitStatsWithTitles,
   getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData,
@@ -124,9 +125,15 @@ function ScoreBoard({
     }
   });
 
-  const [detailedStatsData, setDetailedStatsData] = useState(() =>
-    mode === 'grammar' ? getGrammarDetailedRetentionStats() : getDetailedRetentionStats()
-  );
+  const [detailedStatsData, setDetailedStatsData] = useState(() => {
+    if (mode === 'grammar') {
+      return getGrammarDetailedRetentionStats();
+    } else if (mode === 'memorization') {
+      return getMemorizationDetailedRetentionStats();
+    } else {
+      return getDetailedRetentionStats();
+    }
+  });
 
   // 履歴タブ用の単語データ
   const [currentWordData, setCurrentWordData] =
@@ -167,6 +174,15 @@ function ScoreBoard({
       const { retentionRate, appearedCount } = getGrammarRetentionRateWithAI();
       setRetentionData({ retentionRate, appearedCount });
       setDetailedStatsData(getGrammarDetailedRetentionStats());
+    } else if (mode === 'memorization') {
+      // 暗記モードは専用の統計関数を使用
+      setDetailedStatsData(getMemorizationDetailedRetentionStats());
+      // retentionRateは詳細統計から取得
+      const stats = getMemorizationDetailedRetentionStats();
+      setRetentionData({
+        retentionRate: stats.basicRetentionRate,
+        appearedCount: stats.appearedWords,
+      });
     } else {
       const { retentionRate, appearedCount } = getRetentionRateWithAI();
       setRetentionData({ retentionRate, appearedCount });
@@ -183,26 +199,22 @@ function ScoreBoard({
     }
   }, [currentWord, onAnswerTime]); // currentWordまたはonAnswerTimeが変わったら更新
 
-  // Update progress bar widths using CSS variables
+  // Update progress bar widths using CSS variables and data attributes
   useEffect(() => {
     if (masteredRef.current) {
-      masteredRef.current.style.setProperty(
-        '--segment-width',
-        String(Math.round(detailedStatsData.masteredPercentage))
-      );
+      const masteredWidth = Math.round(detailedStatsData.masteredPercentage);
+      masteredRef.current.style.setProperty('--segment-width', String(masteredWidth));
+      masteredRef.current.setAttribute('data-width', String(masteredWidth));
     }
     if (learningRef.current) {
-      // 暗記タブでも個別に設定
-      learningRef.current.style.setProperty(
-        '--segment-width',
-        String(Math.round(detailedStatsData.learningPercentage))
-      );
+      const learningWidth = Math.round(detailedStatsData.learningPercentage);
+      learningRef.current.style.setProperty('--segment-width', String(learningWidth));
+      learningRef.current.setAttribute('data-width', String(learningWidth));
     }
     if (strugglingRef.current) {
-      strugglingRef.current.style.setProperty(
-        '--segment-width',
-        String(Math.round(detailedStatsData.strugglingPercentage))
-      );
+      const strugglingWidth = Math.round(detailedStatsData.strugglingPercentage);
+      strugglingRef.current.style.setProperty('--segment-width', String(strugglingWidth));
+      strugglingRef.current.setAttribute('data-width', String(strugglingWidth));
     }
   }, [detailedStatsData, activeTab, mode]); // modeも依存に追加
 
