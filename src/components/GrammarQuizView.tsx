@@ -1020,7 +1020,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 </div>
               ) : (
                 <div className="choices-area">
-                  <div className="sentence-display">{currentQuestion.sentence}</div>
+                  <div className="sentence-display">
+                    {currentQuestion.sentence?.split('____').map((part, index, array) => (
+                      <span key={index}>
+                        {part}
+                        {index < array.length - 1 && (
+                          <span className="fill-in-blank-space">_______</span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
                   <div className="choices-grid">
                     {/* 3択 + 分からない */}
                     {currentQuestion.choices?.map((choice: string, index: number) => {
