@@ -296,6 +296,14 @@
         "warnings": 0,
         "analyzed": false
       }
+    },
+    {
+      "timestamp": "2025-12-14T18:54:55.262448",
+      "type": "specification_compliance",
+      "result": {
+        "violations": 0,
+        "critical": 0
+      }
     }
   ],
   "improvements": [

@@ -790,6 +790,72 @@ export function getGrammarDetailedRetentionStats(): DetailedRetentionStats {
   };
 }
 
+// 暗記モード専用の詳細統計を計算
+export function getMemorizationDetailedRetentionStats(): DetailedRetentionStats {
+  const progress = loadProgressSync();
+  const allWords = Object.values(progress.wordProgress);
+
+  // 暗記モードで出題された単語のみフィルタリング
+  const memorizationWords = allWords.filter(
+    (wp) => wp.memorizationAttempts && wp.memorizationAttempts > 0
+  );
+
+  let masteredCount = 0;
+  let learningCount = 0;
+  let strugglingCount = 0;
+
+  memorizationWords.forEach((wp) => {
+    const totalAttempts = wp.memorizationAttempts || 0;
+    const correctCount = wp.memorizationCorrect || 0;
+    const consecutiveCorrect = wp.memorizationStreak || 0;
+
+    const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
+
+    // 🟢 完全定着判定（覚えてる）
+    const isDefinitelyMastered =
+      (totalAttempts === 1 && correctCount === 1) ||
+      consecutiveCorrect >= 3 ||
+      (consecutiveCorrect >= 2 && accuracy >= 80);
+
+    if (isDefinitelyMastered) {
+      masteredCount++;
+    } else if (accuracy >= 50) {
+      // 🟡 まだまだ（正答率50%以上だがまだ定着していない）
+      learningCount++;
+    } else {
+      // 🔴 分からない（正答率50%未満）
+      strugglingCount++;
+    }
+  });
+
+  const total = memorizationWords.length;
+  const weightedScore = masteredCount * 1.0 + learningCount * 0.5;
+
+  return {
+    totalWords: allWords.length,
+    appearedWords: total,
+
+    masteredCount,
+    learningCount,
+    strugglingCount,
+
+    basicRetentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    weightedRetentionRate: total > 0 ? Math.round((weightedScore / total) * 100) : 0,
+
+    masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
+    strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
+
+    masteredWords: masteredCount,
+    learningWords: learningCount,
+    newWords: allWords.length - total,
+    retentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    averageAttempts: 0,
+    categoryBreakdown: {},
+    difficultyBreakdown: {},
+  };
+}
+
 // 文法問題の単元ごとの成績を集計
 export function getGrammarUnitStats(): Array<{
   unit: string;
