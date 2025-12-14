@@ -1,0 +1,1010 @@
+{
+  "unit": "Unit 8",
+  "title": "過去形（規則動詞）",
+  "grammar": "動詞 + ed、-edの発音、過去の時制表現",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g1-u8-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私は昨日サッカーをしました。",
+      "sentence": "I ____ soccer yesterday.",
+      "choices": [
+        "played",
+        "play",
+        "plays"
+      ],
+      "correctAnswer": "played",
+      "difficulty": "beginner",
+      "explanation": "yesterdayがあるので過去形です。play + ed = playedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-002",
+      "type": "fillInBlank",
+      "japanese": "彼女は昨夜テレビを見ました。",
+      "sentence": "She ____ TV last night.",
+      "choices": [
+        "watched",
+        "watch",
+        "watches"
+      ],
+      "correctAnswer": "watched",
+      "difficulty": "beginner",
+      "explanation": "last nightは過去です。watch + ed = watchedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-003",
+      "type": "fillInBlank",
+      "japanese": "彼らは昨日英語を勉強しました。",
+      "sentence": "They ____ English yesterday.",
+      "choices": [
+        "studied",
+        "study",
+        "studies"
+      ],
+      "correctAnswer": "studied",
+      "difficulty": "beginner",
+      "explanation": "yesterdayは過去です。study → y を i に変えて ed = studiedです。",
+      "hint": "y→ied"
+    },
+    {
+      "id": "g1-u8-fib-004",
+      "type": "fillInBlank",
+      "japanese": "私たちは先週テニスをしました。",
+      "sentence": "We ____ tennis last week.",
+      "choices": [
+        "played",
+        "play",
+        "plays"
+      ],
+      "correctAnswer": "played",
+      "difficulty": "beginner",
+      "explanation": "last weekは過去です。play + ed = playedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-005",
+      "type": "fillInBlank",
+      "japanese": "彼は昨日部屋を掃除しました。",
+      "sentence": "He ____ his room yesterday.",
+      "choices": [
+        "cleaned",
+        "clean",
+        "cleans"
+      ],
+      "correctAnswer": "cleaned",
+      "difficulty": "beginner",
+      "explanation": "yesterdayは過去です。clean + ed = cleanedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-006",
+      "type": "fillInBlank",
+      "japanese": "私は先週の日曜日に手紙を受け取りました。",
+      "sentence": "I ____ a letter last Sunday.",
+      "choices": [
+        "received",
+        "receive",
+        "receives"
+      ],
+      "correctAnswer": "received",
+      "difficulty": "intermediate",
+      "explanation": "last Sundayは過去です。receive + d = received（eで終わる→d）です。",
+      "hint": "e→d"
+    },
+    {
+      "id": "g1-u8-fib-007",
+      "type": "fillInBlank",
+      "japanese": "彼女は昨日カバンを運びました。",
+      "sentence": "She ____ her bag yesterday.",
+      "choices": [
+        "carried",
+        "carry",
+        "carries"
+      ],
+      "correctAnswer": "carried",
+      "difficulty": "intermediate",
+      "explanation": "yesterdayは過去です。carry → y を i に変えて ed = carriedです。",
+      "hint": "y→ied"
+    },
+    {
+      "id": "g1-u8-fib-008",
+      "type": "fillInBlank",
+      "japanese": "私たちは先月一生懸命働きました。",
+      "sentence": "We ____ hard last month.",
+      "choices": [
+        "worked",
+        "work",
+        "works"
+      ],
+      "correctAnswer": "worked",
+      "difficulty": "intermediate",
+      "explanation": "last monthは過去です。work + ed = workedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-009",
+      "type": "fillInBlank",
+      "japanese": "彼らは先週の金曜日にパーティーを楽しみました。",
+      "sentence": "They ____ the party last Friday.",
+      "choices": [
+        "enjoyed",
+        "enjoy",
+        "enjoys"
+      ],
+      "correctAnswer": "enjoyed",
+      "difficulty": "intermediate",
+      "explanation": "last Fridayは過去です。enjoy + ed = enjoyedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は2時間前に宿題を終えました。",
+      "sentence": "He ____ his homework two hours ago.",
+      "choices": [
+        "finished",
+        "finish",
+        "finishes"
+      ],
+      "correctAnswer": "finished",
+      "difficulty": "intermediate",
+      "explanation": "two hours agoは過去です。finish + ed = finishedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-011",
+      "type": "fillInBlank",
+      "japanese": "私は昨日の朝に新しい本を始めました。",
+      "sentence": "I ____ a new book yesterday morning.",
+      "choices": [
+        "started",
+        "start",
+        "starts"
+      ],
+      "correctAnswer": "started",
+      "difficulty": "intermediate",
+      "explanation": "yesterday morningは過去です。start + ed = startedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼女は先週の土曜日に一日中料理をしました。",
+      "sentence": "She ____ all day last Saturday.",
+      "choices": [
+        "cooked",
+        "cook",
+        "cooks"
+      ],
+      "correctAnswer": "cooked",
+      "difficulty": "advanced",
+      "explanation": "last Saturdayは過去です。cook + ed = cookedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私たちは去年プロジェクトを完成しました。",
+      "sentence": "We ____ the project last year.",
+      "choices": [
+        "completed",
+        "complete",
+        "completes"
+      ],
+      "correctAnswer": "completed",
+      "difficulty": "advanced",
+      "explanation": "last yearは過去です。complete + d = completed（eで終わる→d）です。",
+      "hint": "e→d"
+    },
+    {
+      "id": "g1-u8-fib-014",
+      "type": "fillInBlank",
+      "japanese": "彼らは去年の夏に多くの国を訪れました。",
+      "sentence": "They ____ many countries last summer.",
+      "choices": [
+        "visited",
+        "visit",
+        "visits"
+      ],
+      "correctAnswer": "visited",
+      "difficulty": "advanced",
+      "explanation": "last summerは過去です。visit + ed = visitedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼は5分前にドアを開けました。",
+      "sentence": "He ____ the door five minutes ago.",
+      "choices": [
+        "opened",
+        "open",
+        "opens"
+      ],
+      "correctAnswer": "opened",
+      "difficulty": "advanced",
+      "explanation": "five minutes agoは過去です。open + ed = openedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私は昨日歩きました。",
+      "words": [
+        "I",
+        "walked",
+        "yesterday"
+      ],
+      "correctAnswer": "I walked yesterday.",
+      "difficulty": "beginner",
+      "explanation": "「私は昨日歩きました」です。walk + ed = walkedです。",
+      "hint": "主語 + 過去形",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u8-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は昨晩踊りました。",
+      "words": [
+        "she",
+        "danced",
+        "last",
+        "night"
+      ],
+      "correctAnswer": "She danced last night.",
+      "difficulty": "beginner",
+      "explanation": "「彼女は昨晩踊りました」です。dance + d = dancedです。",
+      "hint": "e→d",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u8-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは昨日跳びました。",
+      "words": [
+        "they",
+        "jumped",
+        "yesterday"
+      ],
+      "correctAnswer": "They jumped yesterday.",
+      "difficulty": "beginner",
+      "explanation": "「彼らは昨日跳びました」です。jump + ed = jumpedです。",
+      "hint": "過去形",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u8-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは音楽を聴きました。",
+      "words": [
+        "we",
+        "listened",
+        "to",
+        "music"
+      ],
+      "correctAnswer": "We listened to music.",
+      "difficulty": "beginner",
+      "explanation": "「私たちは音楽を聴きました」です。listen + ed = listenedです。",
+      "hint": "listened to",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u8-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "彼は昨日私を助けました。",
+      "words": [
+        "he",
+        "helped",
+        "me",
+        "yesterday"
+      ],
+      "correctAnswer": "He helped me yesterday.",
+      "difficulty": "beginner",
+      "explanation": "「彼は昨日私を助けました」です。help + ed = helpedです。",
+      "hint": "過去形",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u8-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は昨日このペンを使いました。",
+      "words": [
+        "I",
+        "used",
+        "this",
+        "pen",
+        "yesterday"
+      ],
+      "correctAnswer": "I used this pen yesterday.",
+      "difficulty": "intermediate",
+      "explanation": "「私は昨日このペンを使いました」です。use + d = usedです。",
+      "hint": "e→d",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u8-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は質問をしました。",
+      "words": [
+        "she",
+        "asked",
+        "a",
+        "question"
+      ],
+      "correctAnswer": "She asked a question.",
+      "difficulty": "intermediate",
+      "explanation": "「彼女は質問をしました」です。ask + ed = askedです。",
+      "hint": "過去形",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u8-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼らはスポーツについて話しました。",
+      "words": [
+        "they",
+        "talked",
+        "about",
+        "sports"
+      ],
+      "correctAnswer": "They talked about sports.",
+      "difficulty": "intermediate",
+      "explanation": "「彼らはスポーツについて話しました」です。talk + ed = talkedです。",
+      "hint": "talked about",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u8-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは昨日ピアノを練習しました。",
+      "words": [
+        "we",
+        "practiced",
+        "piano",
+        "yesterday"
+      ],
+      "correctAnswer": "We practiced piano yesterday.",
+      "difficulty": "intermediate",
+      "explanation": "「私たちは昨日ピアノを練習しました」です。practice + d = practicedです。",
+      "hint": "e→d",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u8-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼は新しい自転車が欲しかった。",
+      "words": [
+        "he",
+        "wanted",
+        "a",
+        "new",
+        "bike"
+      ],
+      "correctAnswer": "He wanted a new bike.",
+      "difficulty": "intermediate",
+      "explanation": "「彼は新しい自転車が欲しかった」です。want + ed = wantedです。",
+      "hint": "過去形",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u8-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "私は今朝歯を磨きました。",
+      "words": [
+        "I",
+        "brushed",
+        "my",
+        "teeth",
+        "this",
+        "morning"
+      ],
+      "correctAnswer": "I brushed my teeth this morning.",
+      "difficulty": "advanced",
+      "explanation": "「私は今朝歯を磨きました」です。brush + ed = brushedです。",
+      "hint": "brushed teeth",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u8-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は学校に早く着きました。",
+      "words": [
+        "she",
+        "arrived",
+        "at",
+        "school",
+        "early"
+      ],
+      "correctAnswer": "She arrived at school early.",
+      "difficulty": "advanced",
+      "explanation": "「彼女は学校に早く着きました」です。arrive + d = arrivedです。",
+      "hint": "arrived at",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u8-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは何度も挑戦しました。",
+      "words": [
+        "they",
+        "tried",
+        "many",
+        "times"
+      ],
+      "correctAnswer": "They tried many times.",
+      "difficulty": "advanced",
+      "explanation": "「彼らは何度も挑戦しました」です。try → y を i に変えて ed = triedです。",
+      "hint": "y→ied",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u8-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは注意深く通りを渡りました。",
+      "words": [
+        "we",
+        "crossed",
+        "the",
+        "street",
+        "carefully"
+      ],
+      "correctAnswer": "We crossed the street carefully.",
+      "difficulty": "advanced",
+      "explanation": "「私たちは注意深く通りを渡りました」です。cross + ed = crossedです。",
+      "hint": "crossed",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u8-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼はすぐに間違いに気づきました。",
+      "words": [
+        "he",
+        "noticed",
+        "the",
+        "mistake",
+        "immediately"
+      ],
+      "correctAnswer": "He noticed the mistake immediately.",
+      "difficulty": "advanced",
+      "explanation": "「彼はすぐに間違いに気づきました」です。notice + d = noticedです。",
+      "hint": "noticed",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u8-para-001",
+      "type": "paraphrase",
+      "japanese": "私はサッカーをしました。",
+      "originalSentence": "I play soccer.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "I played soccer.",
+        "I plays soccer.",
+        "I playing soccer."
+      ],
+      "correctAnswer": "I played soccer.",
+      "difficulty": "beginner",
+      "explanation": "play → playedです。「私はサッカーをしました」です。",
+      "hint": "played"
+    },
+    {
+      "id": "g1-u8-para-002",
+      "type": "paraphrase",
+      "japanese": "彼女はテレビを見ました。",
+      "originalSentence": "She watches TV.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "She watched TV.",
+        "She watch TV.",
+        "She watching TV."
+      ],
+      "correctAnswer": "She watched TV.",
+      "difficulty": "beginner",
+      "explanation": "watches → watchedです。「彼女はテレビを見ました」です。",
+      "hint": "watched"
+    },
+    {
+      "id": "g1-u8-para-003",
+      "type": "paraphrase",
+      "japanese": "彼らは一生懸命勉強しました。",
+      "originalSentence": "They study hard.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "They studied hard.",
+        "They studys hard.",
+        "They studying hard."
+      ],
+      "correctAnswer": "They studied hard.",
+      "difficulty": "beginner",
+      "explanation": "study → studiedです。「彼らは一生懸命勉強しました」です。",
+      "hint": "y→ied"
+    },
+    {
+      "id": "g1-u8-para-004",
+      "type": "paraphrase",
+      "japanese": "私たちは学校へ歩きました。",
+      "originalSentence": "We walk to school.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "We walked to school.",
+        "We walks to school.",
+        "We walking to school."
+      ],
+      "correctAnswer": "We walked to school.",
+      "difficulty": "beginner",
+      "explanation": "walk → walkedです。「私たちは学校へ歩きました」です。",
+      "hint": "walked"
+    },
+    {
+      "id": "g1-u8-para-005",
+      "type": "paraphrase",
+      "japanese": "彼は部屋を掃除しました。",
+      "originalSentence": "He cleans his room.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "He cleaned his room.",
+        "He clean his room.",
+        "He cleaning his room."
+      ],
+      "correctAnswer": "He cleaned his room.",
+      "difficulty": "beginner",
+      "explanation": "cleans → cleanedです。「彼は部屋を掃除しました」です。",
+      "hint": "cleaned"
+    },
+    {
+      "id": "g1-u8-para-006",
+      "type": "paraphrase",
+      "japanese": "私は友達を訪ねます。",
+      "originalSentence": "I visited my friend yesterday.",
+      "question": "現在形に書き換えなさい",
+      "choices": [
+        "I visit my friend.",
+        "I visits my friend.",
+        "I am visit my friend."
+      ],
+      "correctAnswer": "I visit my friend.",
+      "difficulty": "intermediate",
+      "explanation": "visited → visitです。yesterdayを取ります。「私は友達を訪ねます」です。",
+      "hint": "visit"
+    },
+    {
+      "id": "g1-u8-para-007",
+      "type": "paraphrase",
+      "japanese": "彼女は夕食を料理します。",
+      "originalSentence": "She cooked dinner last night.",
+      "question": "現在形に書き換えなさい",
+      "choices": [
+        "She cooks dinner.",
+        "She cook dinner.",
+        "She is cook dinner."
+      ],
+      "correctAnswer": "She cooks dinner.",
+      "difficulty": "intermediate",
+      "explanation": "cooked → cooks（三人称単数）です。「彼女は夕食を料理します」です。",
+      "hint": "cooks"
+    },
+    {
+      "id": "g1-u8-para-008",
+      "type": "paraphrase",
+      "japanese": "あなたは昨日テニスをしましたか。",
+      "originalSentence": "You played tennis yesterday.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Did you play tennis yesterday?",
+        "Do you play tennis yesterday?",
+        "Did you played tennis yesterday?"
+      ],
+      "correctAnswer": "Did you play tennis yesterday?",
+      "difficulty": "intermediate",
+      "explanation": "Did + 主語 + 原形です。「あなたは昨日テニスをしましたか」です。",
+      "hint": "Did"
+    },
+    {
+      "id": "g1-u8-para-009",
+      "type": "paraphrase",
+      "japanese": "私は昨晩テレビを見ませんでした。",
+      "originalSentence": "I watched TV last night.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "I didn't watch TV last night.",
+        "I don't watch TV last night.",
+        "I didn't watched TV last night."
+      ],
+      "correctAnswer": "I didn't watch TV last night.",
+      "difficulty": "intermediate",
+      "explanation": "didn't + 原形です。「私は昨晩テレビを見ませんでした」です。",
+      "hint": "didn't"
+    },
+    {
+      "id": "g1-u8-para-010",
+      "type": "paraphrase",
+      "japanese": "彼女は昨日英語を勉強しませんでした。",
+      "originalSentence": "She studied English yesterday.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "She didn't study English yesterday.",
+        "She don't study English yesterday.",
+        "She didn't studied English yesterday."
+      ],
+      "correctAnswer": "She didn't study English yesterday.",
+      "difficulty": "intermediate",
+      "explanation": "didn't + 原形です。「彼女は昨日英語を勉強しませんでした」です。",
+      "hint": "didn't"
+    },
+    {
+      "id": "g1-u8-para-011",
+      "type": "paraphrase",
+      "japanese": "はい、楽しみました。",
+      "originalSentence": "Did you enjoy the party?",
+      "question": "肯定で答えなさい",
+      "choices": [
+        "Yes, I did.",
+        "Yes, I do.",
+        "Yes, I enjoyed."
+      ],
+      "correctAnswer": "Yes, I did.",
+      "difficulty": "advanced",
+      "explanation": "Did～?への答えはdidを使います。「はい、楽しみました」です。",
+      "hint": "Yes, I did"
+    },
+    {
+      "id": "g1-u8-para-012",
+      "type": "paraphrase",
+      "japanese": "いいえ、終えていません。",
+      "originalSentence": "Did he finish his homework?",
+      "question": "否定で答えなさい",
+      "choices": [
+        "No, he didn't.",
+        "No, he doesn't.",
+        "No, he not."
+      ],
+      "correctAnswer": "No, he didn't.",
+      "difficulty": "advanced",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、終えていません」です。",
+      "hint": "No, he didn't"
+    },
+    {
+      "id": "g1-u8-para-013",
+      "type": "paraphrase",
+      "japanese": "私は昨日サッカーをしました。",
+      "originalSentence": "I play soccer every day.",
+      "question": "「昨日」の文に書き換えなさい",
+      "choices": [
+        "I played soccer yesterday.",
+        "I play soccer yesterday.",
+        "I played soccer every day."
+      ],
+      "correctAnswer": "I played soccer yesterday.",
+      "difficulty": "advanced",
+      "explanation": "every day → yesterdayです。playedです。「私は昨日サッカーをしました」です。",
+      "hint": "yesterday"
+    },
+    {
+      "id": "g1-u8-para-014",
+      "type": "paraphrase",
+      "japanese": "私は一生懸命働いたので疲れました。",
+      "originalSentence": "I was tired.",
+      "question": "「一生懸命働いたので」を追加",
+      "choices": [
+        "I was tired because I worked hard.",
+        "I was tired because I work hard.",
+        "I am tired because I worked hard."
+      ],
+      "correctAnswer": "I was tired because I worked hard.",
+      "difficulty": "advanced",
+      "explanation": "becauseで理由を続けります。「私は一生懸命働いたので疲れました」です。",
+      "hint": "because"
+    },
+    {
+      "id": "g1-u8-para-015",
+      "type": "paraphrase",
+      "japanese": "あなたは何をしましたか。",
+      "originalSentence": "You played tennis.",
+      "question": "Whatを使って疑問文に",
+      "choices": [
+        "What did you play?",
+        "What do you play?",
+        "What did you played?"
+      ],
+      "correctAnswer": "What did you play?",
+      "difficulty": "advanced",
+      "explanation": "What did + 主語 + 原形です。「あなたは何をしましたか」です。",
+      "hint": "What did"
+    },
+    {
+      "id": "g1-u8-vf-001",
+      "type": "verbForm",
+      "japanese": "私は昨日テレビを見ました。",
+      "sentence": "I ____ TV yesterday.",
+      "verb": "watch",
+      "choices": [
+        "watched",
+        "watch",
+        "watches"
+      ],
+      "correctAnswer": "watched",
+      "difficulty": "beginner",
+      "explanation": "yesterdayは過去です。watch + ed = watchedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-vf-002",
+      "type": "verbForm",
+      "japanese": "彼女は先週英語を勉強しました。",
+      "sentence": "She ____ English last week.",
+      "verb": "study",
+      "choices": [
+        "studied",
+        "study",
+        "studies"
+      ],
+      "correctAnswer": "studied",
+      "difficulty": "beginner",
+      "explanation": "last weekは過去です。study → studied（y→ied）です。",
+      "hint": "y→ied"
+    },
+    {
+      "id": "g1-u8-vf-003",
+      "type": "verbForm",
+      "japanese": "彼らは昨日サッカーをしました。",
+      "sentence": "They ____ soccer yesterday.",
+      "verb": "play",
+      "choices": [
+        "played",
+        "play",
+        "plays"
+      ],
+      "correctAnswer": "played",
+      "difficulty": "beginner",
+      "explanation": "yesterdayは過去です。play + ed = playedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-vf-004",
+      "type": "verbForm",
+      "japanese": "私たちは先週の日曜日に友人を訪ねました。",
+      "sentence": "We ____ our friends last Sunday.",
+      "verb": "visit",
+      "choices": [
+        "visited",
+        "visit",
+        "visits"
+      ],
+      "correctAnswer": "visited",
+      "difficulty": "beginner",
+      "explanation": "last Sundayは過去です。visit + ed = visitedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-vf-005",
+      "type": "verbForm",
+      "japanese": "彼は昨日ギターを練習しました。",
+      "sentence": "He ____ the guitar yesterday.",
+      "verb": "practice",
+      "choices": [
+        "practiced",
+        "practice",
+        "practices"
+      ],
+      "correctAnswer": "practiced",
+      "difficulty": "intermediate",
+      "explanation": "yesterdayは過去です。practice + d = practiced（eで終わる→d）です。",
+      "hint": "e→d"
+    },
+    {
+      "id": "g1-u8-vf-006",
+      "type": "verbForm",
+      "japanese": "私は昨夜映画を楽しみました。",
+      "sentence": "I ____ a movie last night.",
+      "verb": "enjoy",
+      "choices": [
+        "enjoyed",
+        "enjoy",
+        "enjoys"
+      ],
+      "correctAnswer": "enjoyed",
+      "difficulty": "intermediate",
+      "explanation": "last nightは過去です。enjoy + ed = enjoyedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-vf-007",
+      "type": "verbForm",
+      "japanese": "彼女は昨日母を手伝いました。",
+      "sentence": "She ____ her mother yesterday.",
+      "verb": "help",
+      "choices": [
+        "helped",
+        "help",
+        "helps"
+      ],
+      "correctAnswer": "helped",
+      "difficulty": "intermediate",
+      "explanation": "yesterdayは過去です。help + ed = helpedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-vf-008",
+      "type": "verbForm",
+      "japanese": "彼らは先月試合を終えました。",
+      "sentence": "They ____ the game last month.",
+      "verb": "finish",
+      "choices": [
+        "finished",
+        "finish",
+        "finishes"
+      ],
+      "correctAnswer": "finished",
+      "difficulty": "advanced",
+      "explanation": "last monthは過去です。finish + ed = finishedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-vf-009",
+      "type": "verbForm",
+      "japanese": "私たちは今朝早く到着しました。",
+      "sentence": "We ____ early this morning.",
+      "verb": "arrive",
+      "choices": [
+        "arrived",
+        "arrive",
+        "arrives"
+      ],
+      "correctAnswer": "arrived",
+      "difficulty": "advanced",
+      "explanation": "this morningは過去です。arrive + d = arrived（eで終わる→d）です。",
+      "hint": "e→d"
+    },
+    {
+      "id": "g1-u8-vf-010",
+      "type": "verbForm",
+      "japanese": "彼は昨日答えを思い出しました。",
+      "sentence": "He ____ the answer yesterday.",
+      "verb": "remember",
+      "choices": [
+        "remembered",
+        "remember",
+        "remembers"
+      ],
+      "correctAnswer": "remembered",
+      "difficulty": "advanced",
+      "explanation": "yesterdayは過去です。remember + ed = rememberedです。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-conv-001",
+      "type": "conversation",
+      "japanese": "過去の行動を尋ねる。",
+      "situation": "昨日したことを聞く場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What did you do yesterday?"
+        },
+        {
+          "speaker": "B",
+          "text": "I ____ soccer."
+        }
+      ],
+      "choices": [
+        "played",
+        "play",
+        "plays"
+      ],
+      "correctAnswer": "played",
+      "difficulty": "beginner",
+      "explanation": "Didで聞かれたら過去形で答えります。「私はサッカーをしました」です。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g1-u8-conv-002",
+      "type": "conversation",
+      "japanese": "過去の確認。",
+      "situation": "昨日の行動を確認する場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did you study last night?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "did",
+        "do",
+        "was"
+      ],
+      "correctAnswer": "did",
+      "difficulty": "beginner",
+      "explanation": "Did～?への答えはdidを使います。「はい、勉強しました」です。",
+      "hint": "did"
+    },
+    {
+      "id": "g1-u8-conv-003",
+      "type": "conversation",
+      "japanese": "過去の否定。",
+      "situation": "昨日していないことを言う場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did you watch TV yesterday?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, I ____."
+        }
+      ],
+      "choices": [
+        "didn't",
+        "don't",
+        "wasn't"
+      ],
+      "correctAnswer": "didn't",
+      "difficulty": "intermediate",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、見ませんでした」です。",
+      "hint": "didn't"
+    },
+    {
+      "id": "g1-u8-conv-004",
+      "type": "conversation",
+      "japanese": "過去の経験を語る。",
+      "situation": "週末の思い出を話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was your weekend?"
+        },
+        {
+          "speaker": "B",
+          "text": "I ____ a great time."
+        }
+      ],
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "correctAnswer": "had",
+      "difficulty": "intermediate",
+      "explanation": "週末は過去なのでhadです。「素晴らしい時間を過ごしました」です。",
+      "hint": "had"
+    },
+    {
+      "id": "g1-u8-conv-005",
+      "type": "conversation",
+      "japanese": "過去の詳細を尋ねる。",
+      "situation": "どこで勉強したか聞く場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Where did you ____ yesterday?"
+        },
+        {
+          "speaker": "B",
+          "text": "I studied at the library."
+        }
+      ],
+      "choices": [
+        "study",
+        "studied",
+        "studies"
+      ],
+      "correctAnswer": "study",
+      "difficulty": "advanced",
+      "explanation": "did の後ろは原形です。「あなたはどこで勉強しましたか」です。",
+      "hint": "原形"
+    }
+  ]
+}

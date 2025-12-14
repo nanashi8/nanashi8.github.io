@@ -1,0 +1,1549 @@
+{
+  "enabled": true,
+  "unit": "Unit 6",
+  "title": "接続詞",
+  "grammar": "when/if/because/that",
+  "totalQuestions": 80,
+  "questionTypes": {
+    "fillInBlank": 25,
+    "sentenceOrdering": 21,
+    "paraphrase": 17,
+    "verbForm": 10,
+    "conversation": 7
+  },
+  "questions": [
+    {
+      "id": "g2-u6-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私は疲れているとき、早く寝ます。",
+      "sentence": "I go to bed early ____ I am tired.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "beginner",
+      "explanation": "whenは「~するとき」という時を表す接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-002",
+      "type": "fillInBlank",
+      "japanese": "雨が降ったら、家にいます。",
+      "sentence": "I will stay home ____ it rains.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "beginner",
+      "explanation": "ifは「もし~ならば」という条件を表す接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-003",
+      "type": "fillInBlank",
+      "japanese": "私は忙しいので、行けません。",
+      "sentence": "I can't go ____ I am busy.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "beginner",
+      "explanation": "becauseは「~なので」という理由を表す接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-004",
+      "type": "fillInBlank",
+      "japanese": "彼女が来たとき、私は料理をしていました。",
+      "sentence": "I was cooking ____ she came.",
+      "choices": [
+        "when",
+        "if",
+        "that"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "beginner",
+      "explanation": "whenは「~したとき」という時を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-005",
+      "type": "fillInBlank",
+      "japanese": "晴れたら、公園に行きましょう。",
+      "sentence": "Let's go to the park ____ it is sunny.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "beginner",
+      "explanation": "ifは条件「もし~ならば」を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-006",
+      "type": "fillInBlank",
+      "japanese": "私は疲れているので、休みたいです。",
+      "sentence": "I want to rest ____ I am tired.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "beginner",
+      "explanation": "becauseは理由「~なので」を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-007",
+      "type": "fillInBlank",
+      "japanese": "私は彼が正しいと思います。",
+      "sentence": "I think ____ he is right.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "beginner",
+      "explanation": "thatは「~ということ」という名詞節を導く接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-008",
+      "type": "fillInBlank",
+      "japanese": "帰宅したら、宿題をします。",
+      "sentence": "I will do my homework ____ I get home.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "beginner",
+      "explanation": "whenは「~するとき」という時を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-009",
+      "type": "fillInBlank",
+      "japanese": "寒かったら、コートを着てください。",
+      "sentence": "Please wear a coat ____ it is cold.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "beginner",
+      "explanation": "ifは条件を表す接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-010",
+      "type": "fillInBlank",
+      "japanese": "私は病気なので、学校を休みました。",
+      "sentence": "I was absent from school ____ I was sick.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "beginner",
+      "explanation": "becauseは理由を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-011",
+      "type": "fillInBlank",
+      "japanese": "彼女が来るとき、私に教えてください。",
+      "sentence": "Please tell me ____ she comes.",
+      "choices": [
+        "when",
+        "if",
+        "that"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "beginner",
+      "explanation": "whenは「~するとき」という時を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-012",
+      "type": "fillInBlank",
+      "japanese": "時間があれば、手伝います。",
+      "sentence": "I will help you ____ I have time.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "beginner",
+      "explanation": "ifは「もし~ならば」という条件です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私は彼女が親切だと知っています。",
+      "sentence": "I know ____ she is kind.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "beginner",
+      "explanation": "thatは名詞節を導く接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-014",
+      "type": "fillInBlank",
+      "japanese": "私は若いとき、よく泳ぎました。",
+      "sentence": "I often swam ____ I was young.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "beginner",
+      "explanation": "whenは「~のとき」という時を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-015",
+      "type": "fillInBlank",
+      "japanese": "暑かったら、窓を開けてください。",
+      "sentence": "Please open the window ____ it is hot.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "beginner",
+      "explanation": "ifは条件を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-016",
+      "type": "fillInBlank",
+      "japanese": "私は眠いので、早く寝ます。",
+      "sentence": "I will go to bed early ____ I am sleepy.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "becauseは理由「~なので」です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-017",
+      "type": "fillInBlank",
+      "japanese": "私は彼が来ると思います。",
+      "sentence": "I think ____ he will come.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "thatは「~ということ」を表す接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-018",
+      "type": "fillInBlank",
+      "japanese": "学校が終わったら、遊びましょう。",
+      "sentence": "Let's play ____ school is over.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "whenは「~したら/~するとき」です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-019",
+      "type": "fillInBlank",
+      "japanese": "雨が降れば、試合は中止です。",
+      "sentence": "The game will be canceled ____ it rains.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "ifは条件「もし~ならば」を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-020",
+      "type": "fillInBlank",
+      "japanese": "私は頭が痛いので、薬を飲みました。",
+      "sentence": "I took medicine ____ I had a headache.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "becauseは理由を表す接続詞です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-021",
+      "type": "fillInBlank",
+      "japanese": "彼が帰ってきたとき、私は驚きました。",
+      "sentence": "I was surprised ____ he came back.",
+      "choices": [
+        "when",
+        "if",
+        "that"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "whenは「~したとき」という時を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-022",
+      "type": "fillInBlank",
+      "japanese": "明日晴れたら、ピクニックに行きます。",
+      "sentence": "We will go on a picnic ____ it is sunny tomorrow.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "ifは条件を表します。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-023",
+      "type": "fillInBlank",
+      "japanese": "私は彼が正直だと信じています。",
+      "sentence": "I believe ____ he is honest.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "thatは名詞節を導きます。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-024",
+      "type": "fillInBlank",
+      "japanese": "私は暇なとき、本を読みます。",
+      "sentence": "I read books ____ I am free.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "whenは「~のとき」です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-fib-025",
+      "type": "fillInBlank",
+      "japanese": "お金があれば、新しい自転車を買います。",
+      "sentence": "I will buy a new bike ____ I have money.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "ifは「もし~ならば」という条件です。",
+      "hint": "接続詞の意味を考えましょう"
+    },
+    {
+      "id": "g2-u6-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私は疲れているとき、早く寝ます。",
+      "words": [
+        "I",
+        "go",
+        "to",
+        "bed",
+        "early",
+        "when",
+        "I",
+        "am",
+        "tired",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "go",
+        "to",
+        "bed",
+        "early",
+        "when",
+        "I",
+        "am",
+        "tired",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "whenは「~するとき」という時を表す接続詞です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "雨が降ったら、家にいます。",
+      "words": [
+        "I",
+        "will",
+        "stay",
+        "home",
+        "if",
+        "it",
+        "rains",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "will",
+        "stay",
+        "home",
+        "if",
+        "it",
+        "rains",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "ifは条件「もし~ならば」を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "私は忙しいので、行けません。",
+      "words": [
+        "I",
+        "can't",
+        "go",
+        "because",
+        "I",
+        "am",
+        "busy",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "can't",
+        "go",
+        "because",
+        "I",
+        "am",
+        "busy",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "becauseは理由「~なので」を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "彼女が来たとき、私は料理をしていました。",
+      "words": [
+        "I",
+        "was",
+        "cooking",
+        "when",
+        "she",
+        "came",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "was",
+        "cooking",
+        "when",
+        "she",
+        "came",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "whenは「~したとき」という時を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "晴れたら、公園に行きましょう。",
+      "words": [
+        "Let's",
+        "go",
+        "to",
+        "the",
+        "park",
+        "if",
+        "it",
+        "is",
+        "sunny",
+        "."
+      ],
+      "correctOrder": [
+        "Let's",
+        "go",
+        "to",
+        "the",
+        "park",
+        "if",
+        "it",
+        "is",
+        "sunny",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "ifは条件を表す接続詞です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は疲れているので、休みたいです。",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "rest",
+        "because",
+        "I",
+        "am",
+        "tired",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "want",
+        "to",
+        "rest",
+        "because",
+        "I",
+        "am",
+        "tired",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "becauseは理由を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼が正しいと思います。",
+      "words": [
+        "I",
+        "think",
+        "that",
+        "he",
+        "is",
+        "right",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "think",
+        "that",
+        "he",
+        "is",
+        "right",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "thatは名詞節を導く接続詞です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "帰宅したら、宿題をします。",
+      "words": [
+        "I",
+        "will",
+        "do",
+        "my",
+        "homework",
+        "when",
+        "I",
+        "get",
+        "home",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "will",
+        "do",
+        "my",
+        "homework",
+        "when",
+        "I",
+        "get",
+        "home",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "whenは「~するとき」です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "寒かったら、コートを着てください。",
+      "words": [
+        "Please",
+        "wear",
+        "a",
+        "coat",
+        "if",
+        "it",
+        "is",
+        "cold",
+        "."
+      ],
+      "correctOrder": [
+        "Please",
+        "wear",
+        "a",
+        "coat",
+        "if",
+        "it",
+        "is",
+        "cold",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "ifは条件を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "私は病気なので、学校を休みました。",
+      "words": [
+        "I",
+        "was",
+        "absent",
+        "from",
+        "school",
+        "because",
+        "I",
+        "was",
+        "sick",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "was",
+        "absent",
+        "from",
+        "school",
+        "because",
+        "I",
+        "was",
+        "sick",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "becauseは理由「~なので」です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "彼女が来るとき、私に教えてください。",
+      "words": [
+        "Please",
+        "tell",
+        "me",
+        "when",
+        "she",
+        "comes",
+        "."
+      ],
+      "correctOrder": [
+        "Please",
+        "tell",
+        "me",
+        "when",
+        "she",
+        "comes",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "whenは時を表す接続詞です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "時間があれば、手伝います。",
+      "words": [
+        "I",
+        "will",
+        "help",
+        "you",
+        "if",
+        "I",
+        "have",
+        "time",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "will",
+        "help",
+        "you",
+        "if",
+        "I",
+        "have",
+        "time",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "ifは条件を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼女が親切だと知っています。",
+      "words": [
+        "I",
+        "know",
+        "that",
+        "she",
+        "is",
+        "kind",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "know",
+        "that",
+        "she",
+        "is",
+        "kind",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "thatは名詞節を導きます。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "私は若いとき、よく泳ぎました。",
+      "words": [
+        "I",
+        "often",
+        "swam",
+        "when",
+        "I",
+        "was",
+        "young",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "often",
+        "swam",
+        "when",
+        "I",
+        "was",
+        "young",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "whenは「~のとき」という時を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "暑かったら、窓を開けてください。",
+      "words": [
+        "Please",
+        "open",
+        "the",
+        "window",
+        "if",
+        "it",
+        "is",
+        "hot",
+        "."
+      ],
+      "correctOrder": [
+        "Please",
+        "open",
+        "the",
+        "window",
+        "if",
+        "it",
+        "is",
+        "hot",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "ifは条件を表す接続詞です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-016",
+      "type": "sentenceOrdering",
+      "japanese": "私は眠いので、早く寝ます。",
+      "words": [
+        "I",
+        "will",
+        "go",
+        "to",
+        "bed",
+        "early",
+        "because",
+        "I",
+        "am",
+        "sleepy",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "will",
+        "go",
+        "to",
+        "bed",
+        "early",
+        "because",
+        "I",
+        "am",
+        "sleepy",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "becauseは理由を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-017",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼が来ると思います。",
+      "words": [
+        "I",
+        "think",
+        "that",
+        "he",
+        "will",
+        "come",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "think",
+        "that",
+        "he",
+        "will",
+        "come",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "thatは「~ということ」を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-018",
+      "type": "sentenceOrdering",
+      "japanese": "学校が終わったら、遊びましょう。",
+      "words": [
+        "Let's",
+        "play",
+        "when",
+        "school",
+        "is",
+        "over",
+        "."
+      ],
+      "correctOrder": [
+        "Let's",
+        "play",
+        "when",
+        "school",
+        "is",
+        "over",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "whenは時を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-019",
+      "type": "sentenceOrdering",
+      "japanese": "雨が降れば、試合は中止です。",
+      "words": [
+        "The",
+        "game",
+        "will",
+        "be",
+        "canceled",
+        "if",
+        "it",
+        "rains",
+        "."
+      ],
+      "correctOrder": [
+        "The",
+        "game",
+        "will",
+        "be",
+        "canceled",
+        "if",
+        "it",
+        "rains",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "ifは条件を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-020",
+      "type": "sentenceOrdering",
+      "japanese": "私は頭が痛いので、薬を飲みました。",
+      "words": [
+        "I",
+        "took",
+        "medicine",
+        "because",
+        "I",
+        "had",
+        "a",
+        "headache",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "took",
+        "medicine",
+        "because",
+        "I",
+        "had",
+        "a",
+        "headache",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "becauseは理由を表す接続詞です。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "彼が帰ってきたとき、私は驚きました。",
+      "words": [
+        "I",
+        "was",
+        "surprised",
+        "when",
+        "he",
+        "came",
+        "back",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "was",
+        "surprised",
+        "when",
+        "he",
+        "came",
+        "back",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "whenは「~したとき」という時を表します。",
+      "hint": "接続詞の位置に注意"
+    },
+    {
+      "id": "g2-u6-pp-001",
+      "type": "paraphrase",
+      "japanese": "私は疲れているとき、早く寝ます。",
+      "sentence": "I go to bed early at the time I am tired.",
+      "targetSentence": "I go to bed early ____ I am tired.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "at the timeをwhenで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-002",
+      "type": "paraphrase",
+      "japanese": "雨が降ったら、家にいます。",
+      "sentence": "In case it rains, I will stay home.",
+      "targetSentence": "I will stay home ____ it rains.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "in caseをifで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-003",
+      "type": "paraphrase",
+      "japanese": "私は忙しいので、行けません。",
+      "sentence": "I can't go due to being busy.",
+      "targetSentence": "I can't go ____ I am busy.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "due toをbecauseで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-004",
+      "type": "paraphrase",
+      "japanese": "彼女が来たとき、私は料理をしていました。",
+      "sentence": "I was cooking at the time she came.",
+      "targetSentence": "I was cooking ____ she came.",
+      "choices": [
+        "when",
+        "if",
+        "that"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "at the timeをwhenで表現します。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-005",
+      "type": "paraphrase",
+      "japanese": "晴れたら、公園に行きましょう。",
+      "sentence": "Let's go to the park in case it is sunny.",
+      "targetSentence": "Let's go to the park ____ it is sunny.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "in caseをifで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-006",
+      "type": "paraphrase",
+      "japanese": "私は疲れているので、休みたいです。",
+      "sentence": "I want to rest due to being tired.",
+      "targetSentence": "I want to rest ____ I am tired.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "due toをbecauseで表現します。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-007",
+      "type": "paraphrase",
+      "japanese": "私は彼が正しいと思います。",
+      "sentence": "I think he is right.",
+      "targetSentence": "I think ____ he is right.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "名詞節を導くthatを補います。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-008",
+      "type": "paraphrase",
+      "japanese": "帰宅したら、宿題をします。",
+      "sentence": "I will do my homework after I get home.",
+      "targetSentence": "I will do my homework ____ I get home.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "afterをwhenで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-009",
+      "type": "paraphrase",
+      "japanese": "寒かったら、コートを着てください。",
+      "sentence": "Please wear a coat in case it is cold.",
+      "targetSentence": "Please wear a coat ____ it is cold.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "in caseをifで表現します。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-010",
+      "type": "paraphrase",
+      "japanese": "私は病気なので、学校を休みました。",
+      "sentence": "I was absent from school due to being sick.",
+      "targetSentence": "I was absent from school ____ I was sick.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "due toをbecauseで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-011",
+      "type": "paraphrase",
+      "japanese": "彼女が来るとき、私に教えてください。",
+      "sentence": "Please tell me at the time she comes.",
+      "targetSentence": "Please tell me ____ she comes.",
+      "choices": [
+        "when",
+        "if",
+        "that"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "at the timeをwhenで表現します。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-012",
+      "type": "paraphrase",
+      "japanese": "時間があれば、手伝います。",
+      "sentence": "I will help you in case I have time.",
+      "targetSentence": "I will help you ____ I have time.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "in caseをifで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-013",
+      "type": "paraphrase",
+      "japanese": "私は彼女が親切だと知っています。",
+      "sentence": "I know she is kind.",
+      "targetSentence": "I know ____ she is kind.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "名詞節を導くthatを補います。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-014",
+      "type": "paraphrase",
+      "japanese": "私は若いとき、よく泳ぎました。",
+      "sentence": "I often swam during the time I was young.",
+      "targetSentence": "I often swam ____ I was young.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "during the timeをwhenで表現します。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-015",
+      "type": "paraphrase",
+      "japanese": "暑かったら、窓を開けてください。",
+      "sentence": "Please open the window in case it is hot.",
+      "targetSentence": "Please open the window ____ it is hot.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "in caseをifで言い換えます。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-016",
+      "type": "paraphrase",
+      "japanese": "私は眠いので、早く寝ます。",
+      "sentence": "I will go to bed early due to being sleepy.",
+      "targetSentence": "I will go to bed early ____ I am sleepy.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "due toをbecauseで表現します。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-pp-017",
+      "type": "paraphrase",
+      "japanese": "私は彼が来ると思います。",
+      "sentence": "I think he will come.",
+      "targetSentence": "I think ____ he will come.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "名詞節を導くthatを補います。",
+      "hint": "接続詞で言い換え"
+    },
+    {
+      "id": "g2-u6-vf-001",
+      "type": "verbForm",
+      "japanese": "私は疲れている____、早く寝ます。",
+      "sentence": "I go to bed early ____ I am tired.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "「~とき」という時を表すwhenが適切です。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-002",
+      "type": "verbForm",
+      "japanese": "雨が降____、家にいます。",
+      "sentence": "I will stay home ____ it rains.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "条件「もし~ならば」を表すifです。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-003",
+      "type": "verbForm",
+      "japanese": "私は忙しい____、行けません。",
+      "sentence": "I can't go ____ I am busy.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "理由「~なので」を表すbecauseです。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-004",
+      "type": "verbForm",
+      "japanese": "私は彼が正しい____思います。",
+      "sentence": "I think ____ he is right.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "名詞節を導くthatが必要です。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-005",
+      "type": "verbForm",
+      "japanese": "晴れ____、公園に行きましょう。",
+      "sentence": "Let's go to the park ____ it is sunny.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "条件を表すifが適切です。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-006",
+      "type": "verbForm",
+      "japanese": "彼女が来____、私は料理をしていました。",
+      "sentence": "I was cooking ____ she came.",
+      "choices": [
+        "when",
+        "if",
+        "that"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "時を表すwhenです。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-007",
+      "type": "verbForm",
+      "japanese": "私は病気____、学校を休みました。",
+      "sentence": "I was absent from school ____ I was sick.",
+      "choices": [
+        "because",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "because",
+      "difficulty": "intermediate",
+      "explanation": "理由を表すbecauseが適切です。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-008",
+      "type": "verbForm",
+      "japanese": "私は彼女が親切____知っています。",
+      "sentence": "I know ____ she is kind.",
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "名詞節を導くthatです。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-009",
+      "type": "verbForm",
+      "japanese": "時間があ____、手伝います。",
+      "sentence": "I will help you ____ I have time.",
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "条件「もし~ならば」を表すifです。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-vf-010",
+      "type": "verbForm",
+      "japanese": "私は若い____、よく泳ぎました。",
+      "sentence": "I often swam ____ I was young.",
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "「~のとき」という時を表すwhenです。",
+      "hint": "適切な接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-conv-001",
+      "type": "conversation",
+      "japanese": "A: いつ宿題をしますか? B: 帰宅したら、します。",
+      "conversation": [
+        "A: When will you do your homework?",
+        "B: I will do it ____ I get home."
+      ],
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "beginner",
+      "explanation": "whenは「~するとき」を表します。",
+      "hint": "文脈に合った接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-conv-002",
+      "type": "conversation",
+      "japanese": "A: なぜ遅れたのですか? B: 渋滞していたからです。",
+      "conversation": [
+        "A: Why were you late?",
+        "B: ____ there was traffic."
+      ],
+      "choices": [
+        "Because",
+        "When",
+        "If"
+      ],
+      "correctAnswer": "Because",
+      "difficulty": "beginner",
+      "explanation": "becauseは理由を表す接続詞です。",
+      "hint": "文脈に合った接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-conv-003",
+      "type": "conversation",
+      "japanese": "A: 何を信じていますか? B: 努力は報われると信じています。",
+      "conversation": [
+        "A: What do you believe?",
+        "B: I believe ____ hard work pays off."
+      ],
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "beginner",
+      "explanation": "thatは名詞節を導きます。",
+      "hint": "文脈に合った接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-conv-004",
+      "type": "conversation",
+      "japanese": "A: 雨が降ったらどうしますか? B: 家にいます。",
+      "conversation": [
+        "A: What will you do if it rains?",
+        "B: I will stay home ____ it rains."
+      ],
+      "choices": [
+        "if",
+        "when",
+        "because"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "beginner",
+      "explanation": "ifは条件を表します。",
+      "hint": "文脈に合った接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-conv-005",
+      "type": "conversation",
+      "japanese": "A: いつ日本に来ましたか? B: 子供のときに来ました。",
+      "conversation": [
+        "A: When did you come to Japan?",
+        "B: I came here ____ I was a child."
+      ],
+      "choices": [
+        "when",
+        "if",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "whenは「~のとき」という時を表します。",
+      "hint": "文脈に合った接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-conv-006",
+      "type": "conversation",
+      "japanese": "A: なぜ英語を勉強しているのですか? B: 将来役立つと思うからです。",
+      "conversation": [
+        "A: Why are you studying English?",
+        "B: ____ I think it will be useful in the future."
+      ],
+      "choices": [
+        "Because",
+        "When",
+        "If"
+      ],
+      "correctAnswer": "Because",
+      "difficulty": "intermediate",
+      "explanation": "becauseは理由を表します。",
+      "hint": "文脈に合った接続詞を選びましょう"
+    },
+    {
+      "id": "g2-u6-conv-007",
+      "type": "conversation",
+      "japanese": "A: 何を思いますか? B: 彼は親切だと思います。",
+      "conversation": [
+        "A: What do you think?",
+        "B: I think ____ he is kind."
+      ],
+      "choices": [
+        "that",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "thatは名詞節を導く接続詞です。",
+      "hint": "文脈に合った接続詞を選びましょう"
+    }
+  ]
+}

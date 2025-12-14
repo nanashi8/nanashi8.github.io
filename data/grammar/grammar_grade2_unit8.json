@@ -1,0 +1,1129 @@
+{
+  "enabled": true,
+  "unit": "Unit 8",
+  "title": "There is/are",
+  "grammar": "存在を表す構文",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g2-u8-fib-001",
+      "type": "fillInBlank",
+      "japanese": "机の上に本があります。",
+      "sentence": "There ____ a book on the desk.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa bookなのでisを使います。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-002",
+      "type": "fillInBlank",
+      "japanese": "公園に子供たちがいます。",
+      "sentence": "There ____ children in the park.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のchildrenなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-003",
+      "type": "fillInBlank",
+      "japanese": "冷蔵庫に牛乳があります。",
+      "sentence": "There ____ milk in the fridge.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "数えられないmilkなのでisです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-004",
+      "type": "fillInBlank",
+      "japanese": "教室に生徒が一人います。",
+      "sentence": "There ____ a student in the classroom.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa studentなのでisです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-005",
+      "type": "fillInBlank",
+      "japanese": "庭に花がたくさんあります。",
+      "sentence": "There ____ many flowers in the garden.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のflowersなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-006",
+      "type": "fillInBlank",
+      "japanese": "机の上に猫がいます。",
+      "sentence": "There ____ a cat on the table.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa catなのでisです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-007",
+      "type": "fillInBlank",
+      "japanese": "箱の中にりんごがあります。",
+      "sentence": "There ____ apples in the box.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のapplesなのでareです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-008",
+      "type": "fillInBlank",
+      "japanese": "部屋に誰かいます。",
+      "sentence": "There ____ someone in the room.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "someoneは単数扱いなのでisです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-009",
+      "type": "fillInBlank",
+      "japanese": "壁に絵があります。",
+      "sentence": "There ____ a picture on the wall.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa pictureなのでisを使います。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-010",
+      "type": "fillInBlank",
+      "japanese": "カバンの中に本が3冊あります。",
+      "sentence": "There ____ three books in the bag.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のthree booksなのでareです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-011",
+      "type": "fillInBlank",
+      "japanese": "テーブルの上にコップがあります。",
+      "sentence": "There ____ a glass on the table.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa glassなのでisです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-012",
+      "type": "fillInBlank",
+      "japanese": "学校に先生がたくさんいます。",
+      "sentence": "There ____ many teachers at school.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のteachersなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-013",
+      "type": "fillInBlank",
+      "japanese": "冷蔵庫に卵があります。",
+      "sentence": "There ____ eggs in the fridge.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のeggsなのでareです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-014",
+      "type": "fillInBlank",
+      "japanese": "窓の近くに椅子があります。",
+      "sentence": "There ____ a chair near the window.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa chairなのでisです。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-fib-015",
+      "type": "fillInBlank",
+      "japanese": "空に星がたくさんあります。",
+      "sentence": "There ____ many stars in the sky.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のstarsなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
+    },
+    {
+      "id": "g2-u8-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "机の上に本があります。",
+      "words": [
+        "There",
+        "is",
+        "a",
+        "book",
+        "on",
+        "the",
+        "desk",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "book",
+        "on",
+        "the",
+        "desk",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is + 単数名詞の語順です。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "公園に子供たちがいます。",
+      "words": [
+        "There",
+        "are",
+        "children",
+        "in",
+        "the",
+        "park",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "are",
+        "children",
+        "in",
+        "the",
+        "park",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There are + 複数名詞の語順です。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "冷蔵庫に牛乳があります。",
+      "words": [
+        "There",
+        "is",
+        "milk",
+        "in",
+        "the",
+        "fridge",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "milk",
+        "in",
+        "the",
+        "fridge",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "数えられない名詞はisを使います。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "教室に生徒が一人います。",
+      "words": [
+        "There",
+        "is",
+        "a",
+        "student",
+        "in",
+        "the",
+        "classroom",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "student",
+        "in",
+        "the",
+        "classroom",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a studentの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "庭に花がたくさんあります。",
+      "words": [
+        "There",
+        "are",
+        "many",
+        "flowers",
+        "in",
+        "the",
+        "garden",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "are",
+        "many",
+        "flowers",
+        "in",
+        "the",
+        "garden",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There are many flowersです。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "机の上に猫がいます。",
+      "words": [
+        "There",
+        "is",
+        "a",
+        "cat",
+        "on",
+        "the",
+        "table",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "cat",
+        "on",
+        "the",
+        "table",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a catの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "箱の中にりんごがあります。",
+      "words": [
+        "There",
+        "are",
+        "apples",
+        "in",
+        "the",
+        "box",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "are",
+        "apples",
+        "in",
+        "the",
+        "box",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "複数形applesなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "部屋に誰かいます。",
+      "words": [
+        "There",
+        "is",
+        "someone",
+        "in",
+        "the",
+        "room",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "someone",
+        "in",
+        "the",
+        "room",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "someoneは単数なのでisです。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "壁に絵があります。",
+      "words": [
+        "There",
+        "is",
+        "a",
+        "picture",
+        "on",
+        "the",
+        "wall",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "picture",
+        "on",
+        "the",
+        "wall",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a pictureの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "カバンの中に本が3冊あります。",
+      "words": [
+        "There",
+        "are",
+        "three",
+        "books",
+        "in",
+        "the",
+        "bag",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "are",
+        "three",
+        "books",
+        "in",
+        "the",
+        "bag",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "three booksは複数なのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "テーブルの上にコップがあります。",
+      "words": [
+        "There",
+        "is",
+        "a",
+        "glass",
+        "on",
+        "the",
+        "table",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "glass",
+        "on",
+        "the",
+        "table",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a glassの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "学校に先生がたくさんいます。",
+      "words": [
+        "There",
+        "are",
+        "many",
+        "teachers",
+        "at",
+        "school",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "are",
+        "many",
+        "teachers",
+        "at",
+        "school",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "複数のteachersなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "冷蔵庫に卵があります。",
+      "words": [
+        "There",
+        "are",
+        "eggs",
+        "in",
+        "the",
+        "fridge",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "are",
+        "eggs",
+        "in",
+        "the",
+        "fridge",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "複数eggsなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "窓の近くに椅子があります。",
+      "words": [
+        "There",
+        "is",
+        "a",
+        "chair",
+        "near",
+        "the",
+        "window",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "chair",
+        "near",
+        "the",
+        "window",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a chairの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "空に星がたくさんあります。",
+      "words": [
+        "There",
+        "are",
+        "many",
+        "stars",
+        "in",
+        "the",
+        "sky",
+        "."
+      ],
+      "correctOrder": [
+        "There",
+        "are",
+        "many",
+        "stars",
+        "in",
+        "the",
+        "sky",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "複数starsなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
+    },
+    {
+      "id": "g2-u8-pp-001",
+      "type": "paraphrase",
+      "japanese": "机の上に本があります。",
+      "sentence": "A book exists on the desk.",
+      "targetSentence": "There ____ a book on the desk.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "存在を表すThere isで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-002",
+      "type": "paraphrase",
+      "japanese": "公園に子供たちがいます。",
+      "sentence": "Children exist in the park.",
+      "targetSentence": "There ____ children in the park.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There areで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-003",
+      "type": "paraphrase",
+      "japanese": "冷蔵庫に牛乳があります。",
+      "sentence": "Milk exists in the fridge.",
+      "targetSentence": "There ____ milk in the fridge.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There isで表現します。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-004",
+      "type": "paraphrase",
+      "japanese": "教室に生徒が一人います。",
+      "sentence": "A student exists in the classroom.",
+      "targetSentence": "There ____ a student in the classroom.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a studentで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-005",
+      "type": "paraphrase",
+      "japanese": "庭に花がたくさんあります。",
+      "sentence": "Many flowers exist in the garden.",
+      "targetSentence": "There ____ many flowers in the garden.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are flowersです。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-006",
+      "type": "paraphrase",
+      "japanese": "机の上に猫がいます。",
+      "sentence": "A cat exists on the table.",
+      "targetSentence": "There ____ a cat on the table.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a catで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-007",
+      "type": "paraphrase",
+      "japanese": "箱の中にりんごがあります。",
+      "sentence": "Apples exist in the box.",
+      "targetSentence": "There ____ apples in the box.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are applesです。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-008",
+      "type": "paraphrase",
+      "japanese": "部屋に誰かいます。",
+      "sentence": "Someone exists in the room.",
+      "targetSentence": "There ____ someone in the room.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is someoneで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-009",
+      "type": "paraphrase",
+      "japanese": "壁に絵があります。",
+      "sentence": "A picture exists on the wall.",
+      "targetSentence": "There ____ a picture on the wall.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a pictureです。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-010",
+      "type": "paraphrase",
+      "japanese": "カバンの中に本が3冊あります。",
+      "sentence": "Three books exist in the bag.",
+      "targetSentence": "There ____ three books in the bag.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are booksで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-011",
+      "type": "paraphrase",
+      "japanese": "テーブルの上にコップがあります。",
+      "sentence": "A glass exists on the table.",
+      "targetSentence": "There ____ a glass on the table.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a glassです。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-012",
+      "type": "paraphrase",
+      "japanese": "学校に先生がたくさんいます。",
+      "sentence": "Many teachers exist at school.",
+      "targetSentence": "There ____ many teachers at school.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are teachersで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-013",
+      "type": "paraphrase",
+      "japanese": "冷蔵庫に卵があります。",
+      "sentence": "Eggs exist in the fridge.",
+      "targetSentence": "There ____ eggs in the fridge.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are eggsです。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-014",
+      "type": "paraphrase",
+      "japanese": "窓の近くに椅子があります。",
+      "sentence": "A chair exists near the window.",
+      "targetSentence": "There ____ a chair near the window.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a chairで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-015",
+      "type": "paraphrase",
+      "japanese": "空に星がたくさんあります。",
+      "sentence": "Many stars exist in the sky.",
+      "targetSentence": "There ____ many stars in the sky.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are starsです。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-vf-001",
+      "type": "verbForm",
+      "japanese": "机の上に本があります。",
+      "sentence": "There ____ a book on the desk.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a bookは単数なのでisです。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-002",
+      "type": "verbForm",
+      "japanese": "公園に子供たちがいます。",
+      "sentence": "There ____ children in the park.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "childrenは複数なのでareです。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-003",
+      "type": "verbForm",
+      "japanese": "冷蔵庫に牛乳があります。",
+      "sentence": "There ____ milk in the fridge.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "milkは数えられないのでisです。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-004",
+      "type": "verbForm",
+      "japanese": "教室に生徒が一人います。",
+      "sentence": "There ____ a student in the classroom.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a studentは単数です。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-005",
+      "type": "verbForm",
+      "japanese": "庭に花がたくさんあります。",
+      "sentence": "There ____ many flowers in the garden.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "flowersは複数です。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-006",
+      "type": "verbForm",
+      "japanese": "机の上に猫がいます。",
+      "sentence": "There ____ a cat on the table.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a catは単数です。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-007",
+      "type": "verbForm",
+      "japanese": "箱の中にりんごがあります。",
+      "sentence": "There ____ apples in the box.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "applesは複数です。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-008",
+      "type": "verbForm",
+      "japanese": "部屋に誰かいます。",
+      "sentence": "There ____ someone in the room.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "someoneは単数扱いです。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-009",
+      "type": "verbForm",
+      "japanese": "壁に絵があります。",
+      "sentence": "There ____ a picture on the wall.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a pictureは単数です。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-vf-010",
+      "type": "verbForm",
+      "japanese": "カバンの中に本が3冊あります。",
+      "sentence": "There ____ three books in the bag.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "three booksは複数です。",
+      "hint": "名詞が単数か複数かで判断"
+    },
+    {
+      "id": "g2-u8-conv-001",
+      "type": "conversation",
+      "japanese": "A: 机の上に何がありますか? B: 本があります。",
+      "conversation": [
+        "A: What is on the desk?",
+        "B: There ____ a book."
+      ],
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a bookは単数なのでisです。",
+      "hint": "名詞の単複に注目"
+    },
+    {
+      "id": "g2-u8-conv-002",
+      "type": "conversation",
+      "japanese": "A: 公園に誰がいますか? B: 子供たちがいます。",
+      "conversation": [
+        "A: Who is in the park?",
+        "B: There ____ children."
+      ],
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "childrenは複数なのでareです。",
+      "hint": "名詞の単複に注目"
+    },
+    {
+      "id": "g2-u8-conv-003",
+      "type": "conversation",
+      "japanese": "A: 冷蔵庫に何かありますか? B: 牛乳があります。",
+      "conversation": [
+        "A: Is there anything in the fridge?",
+        "B: Yes, there ____ milk."
+      ],
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "milkは数えられないのでisです。",
+      "hint": "名詞の単複に注目"
+    },
+    {
+      "id": "g2-u8-conv-004",
+      "type": "conversation",
+      "japanese": "A: 教室に誰かいますか? B: はい、生徒が一人います。",
+      "conversation": [
+        "A: Is there anyone in the classroom?",
+        "B: Yes, there ____ a student."
+      ],
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a studentは単数です。",
+      "hint": "名詞の単複に注目"
+    },
+    {
+      "id": "g2-u8-conv-005",
+      "type": "conversation",
+      "japanese": "A: 庭に何がありますか? B: 花がたくさんあります。",
+      "conversation": [
+        "A: What is in the garden?",
+        "B: There ____ many flowers."
+      ],
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "flowersは複数です。",
+      "hint": "名詞の単複に注目"
+    }
+  ]
+}

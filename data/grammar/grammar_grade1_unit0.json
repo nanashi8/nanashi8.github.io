@@ -1,0 +1,1011 @@
+{
+  "unit": "Unit 0",
+  "title": "be動詞の導入",
+  "grammar": "am/is/are の使い分け",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g1-u0-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私は学生です。",
+      "sentence": "I ____ a student.",
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "beginner",
+      "explanation": "主語Iにはamです。×I is/areは誤りです。be動詞は主語によって決まります：I→am、he/she/it→is、you/we/they→areです。自己紹介の基本パターンです。",
+      "hint": "Iの後ろはam"
+    },
+    {
+      "id": "g1-u0-fib-002",
+      "type": "fillInBlank",
+      "japanese": "彼は私の兄です。",
+      "sentence": "He ____ my brother.",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "主語heはisを使います。家族紹介の基本表現です。my brother/sisterは「兄弟姉妹」を表します。",
+      "hint": "he/she/itはis"
+    },
+    {
+      "id": "g1-u0-fib-003",
+      "type": "fillInBlank",
+      "japanese": "あなたは学生です。",
+      "sentence": "You ____ a student.",
+      "choices": [
+        "are",
+        "am",
+        "is"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "主語youは単数でも複数でもareです。×You isは絶対に誤り。",
+      "hint": "youはいつもare"
+    },
+    {
+      "id": "g1-u0-fib-004",
+      "type": "fillInBlank",
+      "japanese": "私たちは日本人です。",
+      "sentence": "We ____ Japanese.",
+      "choices": [
+        "are",
+        "am",
+        "is"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数主語weはareです。Japaneseは「日本人/日本の」の両方の意味があります。",
+      "hint": "we/theyはare"
+    },
+    {
+      "id": "g1-u0-fib-005",
+      "type": "fillInBlank",
+      "japanese": "彼女は先生です。",
+      "sentence": "She ____ a teacher.",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "主語sheはisです。職業を表す基本パターンです。a teacher/a doctor/a studentなどです。",
+      "hint": "sheはis"
+    },
+    {
+      "id": "g1-u0-fib-006",
+      "type": "fillInBlank",
+      "japanese": "彼らは友達です。",
+      "sentence": "They ____ friends.",
+      "choices": [
+        "are",
+        "am",
+        "is"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数主語theyはareです。friendsは複数形（友達が複数いる）です。",
+      "hint": "theyはare"
+    },
+    {
+      "id": "g1-u0-fib-007",
+      "type": "fillInBlank",
+      "japanese": "これは私の本です。",
+      "sentence": "This ____ my book.",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "thisは単数なのでisです。物を指し示す基本表現です。×This areは誤りです。",
+      "hint": "this/thatはis"
+    },
+    {
+      "id": "g1-u0-fib-008",
+      "type": "fillInBlank",
+      "japanese": "私は13歳です。",
+      "sentence": "I ____ thirteen years old.",
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "intermediate",
+      "explanation": "年齢表現「be動詞 + 数字 + years old」です。自己紹介でよく使います。I'm 13.と短縮可能です。",
+      "hint": "年齢はbe動詞で表す"
+    },
+    {
+      "id": "g1-u0-fib-009",
+      "type": "fillInBlank",
+      "japanese": "私は日本出身です。",
+      "sentence": "I ____ from Japan.",
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "intermediate",
+      "explanation": "出身地「be from ～」は頻出です。from Tokyoのように都市名も可です。Where are you from?で出身地を尋ねります。",
+      "hint": "be from = ～出身"
+    },
+    {
+      "id": "g1-u0-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は今家にいます。",
+      "sentence": "He ____ at home now.",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "場所「be at/in + 場所」です。at homeは熟語で「家に」です。nowで現在の状況を表します。",
+      "hint": "場所を表すbe動詞"
+    },
+    {
+      "id": "g1-u0-fib-011",
+      "type": "fillInBlank",
+      "japanese": "私たちは同じクラスです。",
+      "sentence": "We ____ in the same class.",
+      "choices": [
+        "are",
+        "am",
+        "is"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "sameは「同じ」で必ずtheを付けます。in the same class/schoolは学校でよく使う表現です。",
+      "hint": "the sameの前にbe動詞"
+    },
+    {
+      "id": "g1-u0-fib-012",
+      "type": "fillInBlank",
+      "japanese": "あなたは正しいです。",
+      "sentence": "You ____ right.",
+      "choices": [
+        "are",
+        "am",
+        "is"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "You are right.は「あなたは正しい」という構文として覚えてください。反対はYou are wrong.（間違っている）です。",
+      "hint": "You are right"
+    },
+    {
+      "id": "g1-u0-fib-013",
+      "type": "fillInBlank",
+      "japanese": "彼は数学が得意です。",
+      "sentence": "He ____ good at math.",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "advanced",
+      "explanation": "熟語「be good at ～」=「～が得意」です。受験頻出です。atの後は科目名や活動（sports/English/playing pianoなど）です。",
+      "hint": "be good at = 得意"
+    },
+    {
+      "id": "g1-u0-fib-014",
+      "type": "fillInBlank",
+      "japanese": "私は英語に興味があります。",
+      "sentence": "I ____ interested in English.",
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "advanced",
+      "explanation": "熟語「be interested in ～」=「～に興味がある」です。likeよりフォーマルです。趣味や関心を表します。",
+      "hint": "be interested in"
+    },
+    {
+      "id": "g1-u0-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼女は有名な歌手です。",
+      "sentence": "She ____ a famous singer.",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "advanced",
+      "explanation": "「a + 形容詞 + 名詞」の語順です。famousは「有名な」です。He is a good student.のように形容詞が入りまします。",
+      "hint": "形容詞が入っても基本は同じ"
+    },
+    {
+      "id": "g1-u0-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私は学生です。",
+      "words": [
+        "student",
+        "I",
+        "a",
+        "am"
+      ],
+      "correctAnswer": "I am a student.",
+      "difficulty": "beginner",
+      "explanation": "基本語順：主語(I) + be動詞(am) + 補語(a student)です。英語は主語から始めります。",
+      "hint": "I am ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u0-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼は親切です。",
+      "words": [
+        "kind",
+        "is",
+        "he"
+      ],
+      "correctAnswer": "He is kind.",
+      "difficulty": "beginner",
+      "explanation": "主語 + be動詞 + 形容詞の基本パターンです。形容詞は補語として使います。",
+      "hint": "He is ～",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u0-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "あなたたちは友達です。",
+      "words": [
+        "friends",
+        "are",
+        "you"
+      ],
+      "correctAnswer": "You are friends.",
+      "difficulty": "beginner",
+      "explanation": "You are ～の語順です。friendsは複数形です。",
+      "hint": "You are ～",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u0-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "これは私のペンです。",
+      "words": [
+        "pen",
+        "my",
+        "is",
+        "this"
+      ],
+      "correctAnswer": "This is my pen.",
+      "difficulty": "beginner",
+      "explanation": "This is ～で物を指し示します。my + 名詞で所有を表します。",
+      "hint": "This is ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u0-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは日本人です。",
+      "words": [
+        "Japanese",
+        "are",
+        "we"
+      ],
+      "correctAnswer": "We are Japanese.",
+      "difficulty": "beginner",
+      "explanation": "We are ～の語順です。Japaneseは大文字で始める（国籍・言語は大文字）です。",
+      "hint": "We are ～",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u0-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は先生です。",
+      "words": [
+        "teacher",
+        "a",
+        "is",
+        "she"
+      ],
+      "correctAnswer": "She is a teacher.",
+      "difficulty": "beginner",
+      "explanation": "She is a ～の語順です。職業名にはaを付ける（a teacher/a doctor）です。",
+      "hint": "She is a ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u0-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは学生です。",
+      "words": [
+        "students",
+        "are",
+        "they"
+      ],
+      "correctAnswer": "They are students.",
+      "difficulty": "beginner",
+      "explanation": "They are ～の語順です。複数なのでstudentsと複数形にすります。",
+      "hint": "They are ～",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u0-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "私は13歳です。",
+      "words": [
+        "old",
+        "thirteen",
+        "am",
+        "years",
+        "I"
+      ],
+      "correctAnswer": "I am thirteen years old.",
+      "difficulty": "intermediate",
+      "explanation": "年齢表現は「be動詞 + 数字 + years old」の順です。thirteenは13です。",
+      "hint": "数字 + years old",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u0-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼は東京出身です。",
+      "words": [
+        "Tokyo",
+        "from",
+        "is",
+        "he"
+      ],
+      "correctAnswer": "He is from Tokyo.",
+      "difficulty": "intermediate",
+      "explanation": "「be from + 場所」で出身地です。Tokyoのような都市名も使えります。",
+      "hint": "be from ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u0-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "私は今学校にいます。",
+      "words": [
+        "school",
+        "at",
+        "now",
+        "am",
+        "I"
+      ],
+      "correctAnswer": "I am at school now.",
+      "difficulty": "intermediate",
+      "explanation": "「be at + 場所」で位置です。nowは文末に置くことが多いです。",
+      "hint": "be at ～ now",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u0-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "これらは私の本です。",
+      "words": [
+        "books",
+        "my",
+        "are",
+        "these"
+      ],
+      "correctAnswer": "These are my books.",
+      "difficulty": "intermediate",
+      "explanation": "Theseは複数なのでareです。booksも複数形です。my booksで「私の本たち」です。",
+      "hint": "These are ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u0-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは同じクラスです。",
+      "words": [
+        "class",
+        "same",
+        "the",
+        "in",
+        "are",
+        "we"
+      ],
+      "correctAnswer": "We are in the same class.",
+      "difficulty": "intermediate",
+      "explanation": "「in the same class」はひとまとまりです。sameの前には必ずtheを付けます。",
+      "hint": "in the same ～",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u0-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼は数学が得意です。",
+      "words": [
+        "math",
+        "at",
+        "good",
+        "is",
+        "he"
+      ],
+      "correctAnswer": "He is good at math.",
+      "difficulty": "advanced",
+      "explanation": "熟語「be good at ～」は語順を守りまします。good atの間に他の語は入らないです。",
+      "hint": "be good at ～",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u0-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "私は野球部員です。",
+      "words": [
+        "team",
+        "baseball",
+        "the",
+        "of",
+        "member",
+        "a",
+        "am",
+        "I"
+      ],
+      "correctAnswer": "I am a member of the baseball team.",
+      "difficulty": "advanced",
+      "explanation": "「a member of ～」=「～の一員」です。theは特定のチームを指すので必要です。",
+      "hint": "a member of ～",
+      "wordCount": 8
+    },
+    {
+      "id": "g1-u0-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は英語に興味があります。",
+      "words": [
+        "English",
+        "in",
+        "interested",
+        "is",
+        "she"
+      ],
+      "correctAnswer": "She is interested in English.",
+      "difficulty": "advanced",
+      "explanation": "熟語「be interested in ～」の語順です。interestedとinは必ずセットです。",
+      "hint": "be interested in ～",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u0-para-001",
+      "type": "paraphrase",
+      "japanese": "あなたは生徒ですか。",
+      "originalSentence": "You are a student.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Are you a student?",
+        "Is you a student?",
+        "Am you a student?"
+      ],
+      "correctAnswer": "Are you a student?",
+      "difficulty": "beginner",
+      "explanation": "疑問文はbe動詞を主語の前にです。You are → Are youです。文末に?を忘れずにです。",
+      "hint": "be動詞を前に"
+    },
+    {
+      "id": "g1-u0-para-002",
+      "type": "paraphrase",
+      "japanese": "彼は先生ではありません。",
+      "originalSentence": "He is a teacher.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "He is not a teacher.",
+        "He not is a teacher.",
+        "He isn't not a teacher."
+      ],
+      "correctAnswer": "He is not a teacher.",
+      "difficulty": "beginner",
+      "explanation": "否定文は「be動詞 + not」です。He is not = He isn't（短縮形）です。×don'tは一般動詞用。",
+      "hint": "be動詞 + not"
+    },
+    {
+      "id": "g1-u0-para-003",
+      "type": "paraphrase",
+      "japanese": "これは本です（this→it）。",
+      "originalSentence": "This is a book.",
+      "question": "Thisの代わりにItを使って書き換えなさい",
+      "choices": [
+        "It is a book.",
+        "It are a book.",
+        "It a book."
+      ],
+      "correctAnswer": "It is a book.",
+      "difficulty": "beginner",
+      "explanation": "thisもitも単数なのでisです。aを忘れずにです。×It areは誤りです。",
+      "hint": "ItもThis同様is"
+    },
+    {
+      "id": "g1-u0-para-004",
+      "type": "paraphrase",
+      "japanese": "私は日本人です（短縮形）。",
+      "originalSentence": "I am Japanese.",
+      "question": "短縮形に書き換えなさい",
+      "choices": [
+        "I'm Japanese.",
+        "I'am Japanese.",
+        "Im Japanese."
+      ],
+      "correctAnswer": "I'm Japanese.",
+      "difficulty": "beginner",
+      "explanation": "I am → I'mです。アポストロフィ(')の位置に注意してください。×I'amは誤りです。",
+      "hint": "I am = I'm"
+    },
+    {
+      "id": "g1-u0-para-005",
+      "type": "paraphrase",
+      "japanese": "彼らは生徒ですか。",
+      "originalSentence": "They are students.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Are they students?",
+        "Is they students?",
+        "They are students?"
+      ],
+      "correctAnswer": "Are they students?",
+      "difficulty": "beginner",
+      "explanation": "They are → Are theyです。複数でもareです。×Is theyは絶対誤り。",
+      "hint": "複数もare"
+    },
+    {
+      "id": "g1-u0-para-006",
+      "type": "paraphrase",
+      "japanese": "私は忙しいです（短縮否定形）。",
+      "originalSentence": "I am busy.",
+      "question": "短縮形の否定文に書き換えなさい",
+      "choices": [
+        "I'm not busy.",
+        "I amn't busy.",
+        "I not busy."
+      ],
+      "correctAnswer": "I'm not busy.",
+      "difficulty": "intermediate",
+      "explanation": "I am notは通常I'm notと短縮です。×amn'tは存在しない。ain'tは非標準的です。",
+      "hint": "I'm not"
+    },
+    {
+      "id": "g1-u0-para-007",
+      "type": "paraphrase",
+      "japanese": "彼女は親切ではないのですか。",
+      "originalSentence": "She is kind.",
+      "question": "否定疑問文「彼女は親切ではないのですか」に書き換えなさい",
+      "choices": [
+        "Isn't she kind?",
+        "Is she not kind?",
+        "She isn't kind?"
+      ],
+      "correctAnswer": "Isn't she kind?",
+      "difficulty": "intermediate",
+      "explanation": "否定疑問文は「Isn't/Aren't + 主語」です。驚きや確認で使います。Is she not kind?も可だが口語ではIsn'tです。",
+      "hint": "Isn't ～?"
+    },
+    {
+      "id": "g1-u0-para-008",
+      "type": "paraphrase",
+      "japanese": "あなたは正しい（You→He）。",
+      "originalSentence": "You are right.",
+      "question": "主語をHeに変えて書き換えなさい",
+      "choices": [
+        "He is right.",
+        "He are right.",
+        "He am right."
+      ],
+      "correctAnswer": "He is right.",
+      "difficulty": "intermediate",
+      "explanation": "主語が変わるとbe動詞も変わります。You are → He isです。×He areは誤りです。",
+      "hint": "Heはis"
+    },
+    {
+      "id": "g1-u0-para-009",
+      "type": "paraphrase",
+      "japanese": "私たちは友達です（短縮形）。",
+      "originalSentence": "We are friends.",
+      "question": "短縮形に書き換えなさい",
+      "choices": [
+        "We're friends.",
+        "We'are friends.",
+        "Wer friends."
+      ],
+      "correctAnswer": "We're friends.",
+      "difficulty": "intermediate",
+      "explanation": "We are → We'reです。They are → They'reです。アポストロフィの位置に注意してください。",
+      "hint": "We are = We're"
+    },
+    {
+      "id": "g1-u0-para-010",
+      "type": "paraphrase",
+      "japanese": "年齢表現の言い換え。",
+      "originalSentence": "I have thirteen years.",
+      "question": "正しい英語に直しなさい",
+      "choices": [
+        "I am thirteen years old.",
+        "I am thirteen.",
+        "I have thirteen years old."
+      ],
+      "correctAnswer": "I am thirteen years old.",
+      "difficulty": "intermediate",
+      "explanation": "年齢は×haveではなくbe動詞で表します。I am 13 years old.またはI'm 13.が正しいです。",
+      "hint": "年齢はbe動詞"
+    },
+    {
+      "id": "g1-u0-para-011",
+      "type": "paraphrase",
+      "japanese": "これらは本です（These→They）。",
+      "originalSentence": "These are books.",
+      "question": "Theseの代わりにTheyを使って書き換えなさい",
+      "choices": [
+        "They are books.",
+        "They is books.",
+        "They books."
+      ],
+      "correctAnswer": "They are books.",
+      "difficulty": "intermediate",
+      "explanation": "TheseもTheyも複数なのでareです。booksも複数形のままです。",
+      "hint": "複数はare"
+    },
+    {
+      "id": "g1-u0-para-012",
+      "type": "paraphrase",
+      "japanese": "彼は医者ですか。",
+      "originalSentence": "He is a doctor.",
+      "question": "疑問文とYesの答えを作りなさい（疑問文のみ選択）",
+      "choices": [
+        "Is he a doctor?",
+        "Are he a doctor?",
+        "He is a doctor?"
+      ],
+      "correctAnswer": "Is he a doctor?",
+      "difficulty": "intermediate",
+      "explanation": "He is → Is heです。答えはYes, he is. / No, he isn't.です。×Doesはbe動詞では使わない。",
+      "hint": "Is he ～?"
+    },
+    {
+      "id": "g1-u0-para-013",
+      "type": "paraphrase",
+      "japanese": "私は音楽に興味があります。",
+      "originalSentence": "I like music.",
+      "question": "be interested inを使って同じ意味に書き換えなさい",
+      "choices": [
+        "I am interested in music.",
+        "I interested in music.",
+        "I am interest in music."
+      ],
+      "correctAnswer": "I am interested in music.",
+      "difficulty": "advanced",
+      "explanation": "「like ～」≒「be interested in ～」です。interested(形容詞)を使います。×interestingは「面白い」の意味。",
+      "hint": "be interested in"
+    },
+    {
+      "id": "g1-u0-para-014",
+      "type": "paraphrase",
+      "japanese": "be good atを使った言い換え。",
+      "originalSentence": "She plays tennis well.",
+      "question": "be good atを使って同じ意味に書き換えなさい",
+      "choices": [
+        "She is good at playing tennis.",
+        "She is good at tennis.",
+        "She good at tennis."
+      ],
+      "correctAnswer": "She is good at playing tennis.",
+      "difficulty": "advanced",
+      "explanation": "「～するのが上手」=「be good at ～ing」です。She is good at tennis.も可です。×good inは誤りです。",
+      "hint": "be good at ～ing"
+    },
+    {
+      "id": "g1-u0-para-015",
+      "type": "paraphrase",
+      "japanese": "場所の前置詞の使い分け。",
+      "originalSentence": "He is in the library.",
+      "question": "「彼は図書館の中にいる」を強調する表現はどれ？",
+      "choices": [
+        "He is in the library.",
+        "He is at the library.",
+        "He is on the library."
+      ],
+      "correctAnswer": "He is in the library.",
+      "difficulty": "advanced",
+      "explanation": "in=中に、at=その場所にです。inは建物の内部を強調です。at the libraryは「図書館（という場所）に」です。",
+      "hint": "in = 中に"
+    },
+    {
+      "id": "g1-u0-vf-001",
+      "type": "verbForm",
+      "japanese": "私は学生です。",
+      "sentence": "I ____ a student.",
+      "verb": "be",
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "beginner",
+      "explanation": "主語Iにはamです。I am = I'mです。be動詞の原形beは助動詞canなどと一緒の時だけ使います。",
+      "hint": "I → am"
+    },
+    {
+      "id": "g1-u0-vf-002",
+      "type": "verbForm",
+      "japanese": "彼は親切です。",
+      "sentence": "He ____ kind.",
+      "verb": "be",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "主語he/she/itにはisです。性格を表す形容詞の前にbe動詞です。",
+      "hint": "he/she/it → is"
+    },
+    {
+      "id": "g1-u0-vf-003",
+      "type": "verbForm",
+      "japanese": "あなたたちは学生です。",
+      "sentence": "You ____ students.",
+      "verb": "be",
+      "choices": [
+        "are",
+        "am",
+        "is"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "主語you/we/theyにはareです。youは単数でも複数でもareです。",
+      "hint": "you/we/they → are"
+    },
+    {
+      "id": "g1-u0-vf-004",
+      "type": "verbForm",
+      "japanese": "私たちは友達です。",
+      "sentence": "We ____ friends.",
+      "verb": "be",
+      "choices": [
+        "are",
+        "am",
+        "is"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数主語weにはareです。friendsも複数形です。We are = We'reです。",
+      "hint": "we → are"
+    },
+    {
+      "id": "g1-u0-vf-005",
+      "type": "verbForm",
+      "japanese": "彼女は先生です。",
+      "sentence": "She ____ a teacher.",
+      "verb": "be",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "主語sheにはisです。職業を表す表現です。She is = She'sです。",
+      "hint": "she → is"
+    },
+    {
+      "id": "g1-u0-vf-006",
+      "type": "verbForm",
+      "japanese": "あなたは学生ですか。",
+      "sentence": "____ you a student?",
+      "verb": "be",
+      "choices": [
+        "Are",
+        "Am",
+        "Is"
+      ],
+      "correctAnswer": "Are",
+      "difficulty": "intermediate",
+      "explanation": "疑問文は「be動詞 + 主語」です。You are → Are youです。文頭は大文字です。",
+      "hint": "疑問文: Are you"
+    },
+    {
+      "id": "g1-u0-vf-007",
+      "type": "verbForm",
+      "japanese": "彼は先生ですか。",
+      "sentence": "____ he a teacher?",
+      "verb": "be",
+      "choices": [
+        "Is",
+        "Am",
+        "Are"
+      ],
+      "correctAnswer": "Is",
+      "difficulty": "intermediate",
+      "explanation": "He is → Is heです。答えはYes, he is. / No, he isn't.です。",
+      "hint": "疑問文: Is he"
+    },
+    {
+      "id": "g1-u0-vf-008",
+      "type": "verbForm",
+      "japanese": "彼らは学生ですか。",
+      "sentence": "____ they students?",
+      "verb": "be",
+      "choices": [
+        "Are",
+        "Am",
+        "Is"
+      ],
+      "correctAnswer": "Are",
+      "difficulty": "intermediate",
+      "explanation": "They are → Are theyです。複数でもareです。答えはYes, they are. / No, they aren't.です。",
+      "hint": "疑問文: Are they"
+    },
+    {
+      "id": "g1-u0-vf-009",
+      "type": "verbForm",
+      "japanese": "私は学生ではありません。",
+      "sentence": "I ____ not a student.",
+      "verb": "be",
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "intermediate",
+      "explanation": "否定文「be動詞 + not」です。I am not = I'm notです。×I amn'tは存在しない。",
+      "hint": "否定: am not"
+    },
+    {
+      "id": "g1-u0-vf-010",
+      "type": "verbForm",
+      "japanese": "彼は忙しくありません。",
+      "sentence": "He ____ not busy.",
+      "verb": "be",
+      "choices": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "He is not = He isn'tです。短縮形は口語でよく使います。",
+      "hint": "否定: is not"
+    },
+    {
+      "id": "g1-u0-conv-001",
+      "type": "conversation",
+      "japanese": "初対面の挨拶。",
+      "situation": "初めて会った人との会話",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Hi, I'm Tom. Nice to meet you."
+        },
+        {
+          "speaker": "B",
+          "text": "____"
+        }
+      ],
+      "choices": [
+        "Nice to meet you, too. I'm Yuki.",
+        "Yes, I am.",
+        "He is Tom."
+      ],
+      "correctAnswer": "Nice to meet you, too. I'm Yuki.",
+      "difficulty": "beginner",
+      "explanation": "初対面の挨拶には「Nice to meet you, too.」で返し、自己紹介を続けります。自己紹介の基本パターンです。",
+      "hint": "Nice to meet you, too"
+    },
+    {
+      "id": "g1-u0-conv-002",
+      "type": "conversation",
+      "japanese": "はい、私は学生です。",
+      "situation": "相手の質問に答える場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are you a student?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "beginner",
+      "explanation": "Are youで聞かれたらI amで答えります。主語が変わることに注意してください。Yes, I am. / No, I'm not.が基本です。",
+      "hint": "I am"
+    },
+    {
+      "id": "g1-u0-conv-003",
+      "type": "conversation",
+      "japanese": "出身地を尋ねる会話。",
+      "situation": "出身地について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Where are you from?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'm ____ Japan."
+        }
+      ],
+      "choices": [
+        "from",
+        "in",
+        "at"
+      ],
+      "correctAnswer": "from",
+      "difficulty": "intermediate",
+      "explanation": "出身地は「be from ～」で表します。Where are you from?は初対面でよく使う質問です。I'm from Tokyo.のように都市名も可です。",
+      "hint": "be from ～"
+    },
+    {
+      "id": "g1-u0-conv-004",
+      "type": "conversation",
+      "japanese": "準備確認の会話。",
+      "situation": "出発前の確認場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are you ready?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "intermediate",
+      "explanation": "「Are you ready?」=「準備はいい？」出発前や何かを始める前に使う決まり文句です。答えはYes, I am. / Not yet.などです。",
+      "hint": "Yes, I am"
+    },
+    {
+      "id": "g1-u0-conv-005",
+      "type": "conversation",
+      "japanese": "はい、そうです。",
+      "situation": "持ち物を確認する場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Is this your pen?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, ____ is."
+        }
+      ],
+      "choices": [
+        "it",
+        "this",
+        "that"
+      ],
+      "correctAnswer": "it",
+      "difficulty": "advanced",
+      "explanation": "Is this/that～?にはit isで答えります。×Yes, this is.は誤りです。物を指すときはitを使います。",
+      "hint": "it is"
+    }
+  ]
+}

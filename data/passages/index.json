@@ -1,0 +1,14 @@
+{
+  "passages": [
+    {
+      "id": "beginner_50_Morning-Routine",
+      "title": "My Morning Routine",
+      "level": "beginner",
+      "wordCount": 50,
+      "fileName": "beginner_50_Morning-Routine.txt",
+      "topics": ["daily life", "routine", "school"],
+      "grammarPoints": ["present simple", "time expressions", "sequencers"],
+      "createdAt": "2025-12-09"
+    }
+  ]
+}
