@@ -758,7 +758,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 <h3>📊 学習設定</h3>
                 <button
                   onClick={() => setShowSettings(false)}
-                  className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+                  className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300:bg-gray-600"
                 >
                   ✕ 閉じる
                 </button>
@@ -903,7 +903,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               {/* 全画面表示ボタン */}
               <button
                 onClick={() => setIsFullscreen(true)}
-                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition shadow-md"
+                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300:bg-gray-600 transition shadow-md"
                 aria-label="全画面表示"
                 title="全画面表示"
               >

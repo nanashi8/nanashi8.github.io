@@ -341,23 +341,23 @@ function QuestionCard({
     const baseClasses =
       'w-full min-h-11 sm:min-h-14 p-2 sm:p-4 text-sm sm:text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
     const hoverClasses =
-      'hover:border-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg';
-    const activeClasses = 'active:bg-gray-200 dark:active:bg-gray-700 active:translate-y-0';
+      'hover:border-blue-600 hover:bg-gray-100:bg-gray-800 hover:-translate-y-1 hover:shadow-lg';
+    const activeClasses = 'active:bg-gray-200:bg-gray-700 active:translate-y-0';
 
     // 「分からない」選択肢は特別なスタイル
     if (choice === '分からない') {
       if (!answered) {
-        return `${baseClasses} bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-400 dark:border-gray-500 ${hoverClasses} ${activeClasses}`;
+        return `${baseClasses} bg-gray-100 text-gray-600 border-gray-400 ${hoverClasses} ${activeClasses}`;
       }
       // 回答後に「分からない」を選択していた場合は不正解の色
       if (choice === selectedAnswer) {
         return `${baseClasses} bg-red-600 border-red-600 text-white`;
       }
-      return `${baseClasses} bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-400 dark:border-gray-500`;
+      return `${baseClasses} bg-gray-100 text-gray-600 border-gray-400`;
     }
 
     if (!answered) {
-      return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 ${hoverClasses} ${activeClasses}`;
+      return `${baseClasses} bg-gray-50 text-gray-900 border-gray-300 ${hoverClasses} ${activeClasses}`;
     }
 
     if (choice === question.meaning) {
@@ -366,7 +366,7 @@ function QuestionCard({
     if (choice === selectedAnswer && choice !== question.meaning) {
       return `${baseClasses} bg-red-600 border-red-600 text-white`;
     }
-    return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600`;
+    return `${baseClasses} bg-gray-50 text-gray-900 border-gray-300`;
   };
 
   return (
@@ -375,7 +375,7 @@ function QuestionCard({
       {onFullscreen && (
         <button
           onClick={onFullscreen}
-          className="absolute top-2 right-2 z-10 p-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition shadow-md"
+          className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300:bg-gray-600 transition shadow-md"
           aria-label="全画面表示"
           title="全画面表示"
         >
@@ -417,13 +417,13 @@ function QuestionCard({
           title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
         >
           <div
-            className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white break-words ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 break-words ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
           >
             {question.word}
             {isSpeechSynthesisSupported() && <span className="speaker-icon">🔊</span>}
           </div>
           {question.reading && (
-            <div className="question-reading text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">
+            <div className="question-reading text-sm sm:text-base text-gray-600 mt-1">
               【{question.reading}】
             </div>
           )}

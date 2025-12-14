@@ -927,7 +927,7 @@ function ComprehensiveReadingView({
             <h3>📊 学習設定</h3>
             <button
               onClick={() => setShowSettings(false)}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm:bg-gray-600"
             >
               ✕ 閉じる
             </button>
@@ -973,8 +973,8 @@ function ComprehensiveReadingView({
           <button
             className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               readingSubTab === 'reading'
-                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                ? 'bg-primary text-white border-primary'
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
             }`}
             onClick={() => setReadingSubTab('reading')}
           >
@@ -983,8 +983,8 @@ function ComprehensiveReadingView({
           <button
             className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               readingSubTab === 'fullText'
-                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                ? 'bg-primary text-white border-primary'
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
             }`}
             onClick={() => setReadingSubTab('fullText')}
           >
@@ -993,8 +993,8 @@ function ComprehensiveReadingView({
           <button
             className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               readingSubTab === 'fullTranslation'
-                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                ? 'bg-primary text-white border-primary'
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
             }`}
             onClick={() => setReadingSubTab('fullTranslation')}
           >
@@ -1002,7 +1002,7 @@ function ComprehensiveReadingView({
           </button>
           <button
             onClick={handleSaveUnknownWords}
-            className="px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium bg-success text-white rounded-t-lg border-b-2 border-success transition-all duration-200 hover:bg-success-hover disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
+            className="px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium bg-success text-white rounded-t-lg border-b-2 border-success transition-all duration-200 hover:bg-success-hover disabled:opacity-50 disabled:cursor-not-allowed:bg-success-hover"
             disabled={unknownCount === 0}
             title="未知語を保存"
           >
@@ -1010,13 +1010,13 @@ function ComprehensiveReadingView({
           </button>
           <button
             onClick={handleReset}
-            className="px-4 py-2 text-sm font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md dark:bg-warning dark:text-white dark:hover:bg-warning-hover"
+            className="px-4 py-2 text-sm font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md:bg-warning-hover"
             title="リセット"
           >
             🔄 リセット
           </button>
           <button
-            className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+            className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300:bg-gray-600"
             onClick={() => setShowSettings(!showSettings)}
             title="学習設定を開く"
           >
@@ -1032,7 +1032,7 @@ function ComprehensiveReadingView({
             <h3>📊 学習設定</h3>
             <button
               onClick={() => setShowSettings(false)}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm:bg-gray-600"
             >
               ✕ 閉じる
             </button>
@@ -1294,7 +1294,7 @@ function ComprehensiveReadingView({
                       <div className="flex justify-between items-center mb-2">
                         <h5 className="text-sm font-semibold m-0">🔤 文法構造:</h5>
                         <button
-                          className="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+                          className="px-2 py-1 text-xs bg-gray-200 rounded hover:bg-gray-300:bg-gray-600"
                           onClick={() => setShowGrammarLegend(!showGrammarLegend)}
                         >
                           {showGrammarLegend ? '凡例を隠す' : '凡例を表示'}
@@ -1303,11 +1303,11 @@ function ComprehensiveReadingView({
 
                       {/* 文法タグの凡例 */}
                       {showGrammarLegend && (
-                        <div className="grammar-legend mb-3 p-3 bg-gray-50 dark:bg-gray-800 rounded">
+                        <div className="grammar-legend mb-3 p-3 bg-gray-50 rounded">
                           <div className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center mb-2">
                             <h6 className="text-xs font-semibold m-0">📖 文法タグ一覧</h6>
                             <button
-                              className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded hover:bg-blue-200 dark:hover:bg-blue-800"
+                              className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200:bg-blue-800"
                               onClick={() => setShowDetailedExplanation(!showDetailedExplanation)}
                             >
                               {showDetailedExplanation ? '簡易表示' : '📚 さらに詳しく'}
@@ -1433,7 +1433,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>主語 (Subject)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>「誰が」「何が」</strong>を表す。文の主役。
                                     <br />
                                     例: <em>I</em> study English. / <em>The cat</em> is cute.
@@ -1449,7 +1449,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>動詞 (Verb)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>「〜する」「〜である」</strong>
                                     を表す。主語の動作や状態。
                                     <br />
@@ -1466,7 +1466,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>目的語 (Object)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>「何を」「誰を」</strong>を表す。動詞の対象。
                                     <br />
                                     例: I study <em>English</em>. / I like <em>cats</em>.
@@ -1482,7 +1482,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>補語 (Complement)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>「どうである」「何である」</strong>
                                     を表す。主語や目的語の状態・性質。
                                     <br />
@@ -1505,7 +1505,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>修飾語 (Modifier)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>「どんな」「どのように」「いつ」「どこで」</strong>
                                     を表す。文を豊かにする。
                                     <br />
@@ -1522,7 +1522,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>形容詞 (Adjective)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>名詞を詳しく説明</strong>する語。
                                     <br />
                                     例: a <em>beautiful</em> flower / <em>happy</em> students
@@ -1538,7 +1538,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>副詞 (Adverb)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>動詞・形容詞・副詞を詳しく説明</strong>する語。
                                     <br />
                                     例: run <em>quickly</em> / <em>very</em> happy / <em>always</em>{' '}
@@ -1561,7 +1561,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>前置詞 (Preposition)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>名詞の前に置いて場所・時間・方法</strong>などを示す。
                                     <br />
                                     例: <em>at</em> school / <em>in</em> the morning / <em>with</em>{' '}
@@ -1578,7 +1578,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>接続詞 (Conjunction)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>語・句・文をつなぐ</strong>語。
                                     <br />
                                     例: I <em>and</em> you / study <em>but</em> tired /{' '}
@@ -1595,7 +1595,7 @@ function ComprehensiveReadingView({
                                     </span>
                                     <strong>限定詞 (Determiner)</strong>
                                   </div>
-                                  <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                  <p className="ml-6 text-gray-600">
                                     <strong>名詞の範囲・数量を限定</strong>
                                     する語。冠詞・指示詞・数量詞など。
                                     <br />
@@ -1635,7 +1635,7 @@ function ComprehensiveReadingView({
                         /^[.,!?;:\-—–"'()]$/.test(a.word)
                       ) && (
                         <div className="mt-3">
-                          <h6 className="text-xs font-semibold mb-2 text-gray-600 dark:text-gray-400">
+                          <h6 className="text-xs font-semibold mb-2 text-gray-600">
                             📌 記号の意味:
                           </h6>
                           <div className="flex flex-wrap gap-2">
@@ -1648,7 +1648,7 @@ function ComprehensiveReadingView({
                                   title={analysis.description}
                                 >
                                   <span className="font-bold text-lg">{analysis.word}</span>
-                                  <span className="ml-2 text-xs text-gray-600 dark:text-gray-400">
+                                  <span className="ml-2 text-xs text-gray-600">
                                     {analysis.description}
                                   </span>
                                 </div>
@@ -1778,7 +1778,7 @@ function ComprehensiveReadingView({
                 <h3>📄 全文</h3>
                 <div className="full-text-controls">
                   <button
-                    className="px-6 py-3 text-base font-medium bg-primary text-white border-2 border-primary rounded-lg transition-all duration-200 hover:bg-primary-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-primary dark:hover:bg-primary-hover"
+                    className="px-6 py-3 text-base font-medium bg-primary text-white border-2 border-primary rounded-lg transition-all duration-200 hover:bg-primary-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed:bg-primary-hover"
                     onClick={() => {
                       // 話者部分（Student 1:, Mom:, etc.）と引用符を除外して発音
                       const fullText = currentPassage.phrases
@@ -1800,7 +1800,7 @@ function ComprehensiveReadingView({
                     🔊 発音
                   </button>
                   <button
-                    className="px-6 py-3 text-base font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-warning dark:text-white dark:hover:bg-warning-hover"
+                    className="px-6 py-3 text-base font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed:bg-warning-hover"
                     onClick={() => {
                       if (isFullTextPaused) {
                         resumeSpeaking();
@@ -1816,7 +1816,7 @@ function ComprehensiveReadingView({
                     {isFullTextPaused ? '▶️ 再開' : '⏸️ 一時停止'}
                   </button>
                   <button
-                    className="px-6 py-3 text-base font-medium bg-error text-white border-2 border-error rounded-lg transition-all duration-200 hover:bg-error-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-error dark:hover:bg-error-hover"
+                    className="px-6 py-3 text-base font-medium bg-error text-white border-2 border-error rounded-lg transition-all duration-200 hover:bg-error-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed:bg-error-hover"
                     onClick={() => {
                       stopSpeaking();
                       setIsFullTextSpeaking(false);

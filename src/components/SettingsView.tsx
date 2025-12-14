@@ -288,31 +288,31 @@ function SettingsView({
             <div className="grid grid-cols-4 gap-2 text-center text-xs">
               <button
                 onClick={() => handleSpeechRateChange(0.6)}
-                className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors cursor-pointer"
+                className="bg-gray-50/50 rounded-lg p-3 border border-gray-200 hover:bg-gray-100:bg-gray-700/50 transition-colors cursor-pointer"
               >
-                <div className="font-bold text-gray-600 dark:text-gray-400">90 WPM</div>
-                <div className="text-gray-500 dark:text-gray-400 mt-1">最低速度</div>
+                <div className="font-bold text-gray-600">90 WPM</div>
+                <div className="text-gray-500 mt-1">最低速度</div>
               </button>
               <button
                 onClick={() => handleSpeechRateChange(0.75)}
-                className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-200 dark:border-blue-700 hover:bg-blue-100 dark:hover:bg-blue-800/30 transition-colors cursor-pointer"
+                className="bg-blue-50/20 rounded-lg p-3 border border-blue-200 hover:bg-blue-100:bg-blue-800/30 transition-colors cursor-pointer"
               >
-                <div className="font-bold text-blue-600 dark:text-blue-400">113 WPM</div>
-                <div className="text-blue-500 dark:text-blue-300 mt-1">初学者向け</div>
+                <div className="font-bold text-blue-600">113 WPM</div>
+                <div className="text-blue-500 mt-1">初学者向け</div>
               </button>
               <button
                 onClick={() => handleSpeechRateChange(0.9)}
-                className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 border border-green-200 dark:border-green-700 hover:bg-green-100 dark:hover:bg-green-800/30 transition-colors cursor-pointer"
+                className="bg-green-50/20 rounded-lg p-3 border border-green-200 hover:bg-green-100:bg-green-800/30 transition-colors cursor-pointer"
               >
-                <div className="font-bold text-green-600 dark:text-green-400">135 WPM</div>
-                <div className="text-green-500 dark:text-green-300 mt-1">高校入試</div>
+                <div className="font-bold text-green-600">135 WPM</div>
+                <div className="text-green-500 mt-1">高校入試</div>
               </button>
               <button
                 onClick={() => handleSpeechRateChange(1.0)}
-                className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-3 border border-orange-200 dark:border-orange-700 hover:bg-orange-100 dark:hover:bg-orange-800/30 transition-colors cursor-pointer"
+                className="bg-orange-50/20 rounded-lg p-3 border border-orange-200 hover:bg-orange-100:bg-orange-800/30 transition-colors cursor-pointer"
               >
-                <div className="font-bold text-orange-600 dark:text-orange-400">150 WPM</div>
-                <div className="text-orange-500 dark:text-orange-300 mt-1">ネイティブ</div>
+                <div className="font-bold text-orange-600">150 WPM</div>
+                <div className="text-orange-500 mt-1">ネイティブ</div>
               </button>
             </div>
           </div>

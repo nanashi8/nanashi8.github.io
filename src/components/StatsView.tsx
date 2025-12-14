@@ -208,66 +208,56 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     <div className="stats-view">
       {/* 学習カレンダーヒートマップ */}
       <div className="w-full mb-4 px-2">
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
+        <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
           📆 学習カレンダー
-          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-            （過去12週間）
-          </span>
+          <span className="text-sm font-normal text-gray-500">（過去12週間）</span>
         </h3>
         <CalendarHeatmap data={calendarData} />
       </div>
 
       {/* 苦手単語トップ10 */}
       <div className="w-full mb-4 px-2">
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
+        <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
           😰 苦手単語トップ10
-          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">（要復習）</span>
+          <span className="text-sm font-normal text-gray-500">（要復習）</span>
         </h3>
         {weakWords.length > 0 ? (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-orange-200 dark:border-orange-700 p-6">
+          <div className="bg-white rounded-xl shadow-lg border-2 border-orange-200 p-6">
             <ul className="space-y-3">
               {weakWords.map((w, idx) => (
                 <li
                   key={idx}
-                  className="p-4 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg border border-orange-200 dark:border-orange-700 hover:shadow-md hover:scale-[1.02] transition-all duration-200"
+                  className="p-4 bg-gradient-to-r from-orange-50 to-red-50/30/30 rounded-lg border border-orange-200 hover:shadow-md hover:scale-[1.02] transition-all duration-200"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-4 flex-1">
-                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 dark:bg-orange-600 text-white font-bold rounded-full text-sm">
+                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 text-white font-bold rounded-full text-sm">
                         {idx + 1}
                       </span>
                       <div className="flex flex-col">
-                        <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                          {w.word}
-                        </span>
+                        <span className="text-lg font-semibold text-gray-800">{w.word}</span>
                         {w.meaning && (
-                          <span className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                            {w.meaning}
-                          </span>
+                          <span className="text-sm text-gray-600 mt-1">{w.meaning}</span>
                         )}
                         {w.reading && (
-                          <span className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
-                            {w.reading}
-                          </span>
+                          <span className="text-xs text-gray-500 mt-0.5">{w.reading}</span>
                         )}
                         {w.etymology && (
-                          <span className="text-xs text-blue-600 dark:text-blue-400 mt-1">
-                            📖 {w.etymology}
-                          </span>
+                          <span className="text-xs text-blue-600 mt-1">📖 {w.etymology}</span>
                         )}
                         {w.relatedWords && (
-                          <span className="text-xs text-purple-600 dark:text-purple-400 mt-0.5">
+                          <span className="text-xs text-purple-600 mt-0.5">
                             🔗 {w.relatedWords}
                           </span>
                         )}
                       </div>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
-                      <span className="px-3 py-1 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 rounded-full font-medium">
+                      <span className="px-3 py-1 bg-red-100/50 text-red-700 rounded-full font-medium">
                         ❌ {w.mistakes}回
                       </span>
                       {w.recentAccuracy > 0 && (
-                        <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full font-medium">
+                        <span className="px-3 py-1 bg-blue-100/50 text-blue-700 rounded-full font-medium">
                           正解率 {w.recentAccuracy}%
                         </span>
                       )}
@@ -351,32 +341,28 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
             </div>
           </div>
         ) : (
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border-2 border-dashed border-green-300 dark:border-green-700 p-8 text-center">
-            <p className="text-xl font-semibold text-green-700 dark:text-green-300">
-              苦手な単語はありません！🎉
-            </p>
-            <p className="text-sm text-green-600 dark:text-green-400 mt-2">
-              順調に学習が進んでいます
-            </p>
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50/20/20 rounded-xl border-2 border-dashed border-green-300 p-8 text-center">
+            <p className="text-xl font-semibold text-green-700">苦手な単語はありません！🎉</p>
+            <p className="text-sm text-green-600 mt-2">順調に学習が進んでいます</p>
           </div>
         )}
       </div>
 
       {/* 全体リセット */}
       <div className="w-full mb-4 px-2">
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-red-200 dark:border-red-700 p-6">
+        <div className="bg-white rounded-xl shadow-lg border-2 border-red-200 p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                 ⚠️ データのリセット
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-gray-600">
                 すべての学習記録を削除します。この操作は元に戻せません。
               </p>
             </div>
             <button
               onClick={handleResetAll}
-              className="px-8 py-3 bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-800 text-white font-bold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+              className="px-8 py-3 bg-red-600 hover:bg-red-700:bg-red-800 text-white font-bold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
             >
               🗑️ リセット実行
             </button>
@@ -387,25 +373,21 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       {/* ストレージ情報 */}
       {storageInfo && (
         <div className="w-full mb-4 px-2">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
+          <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
             💾 ストレージ使用量
           </h3>
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-purple-200 dark:border-purple-700 p-6">
+          <div className="bg-white rounded-xl shadow-lg border-2 border-purple-200 p-6">
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                  合計使用量
-                </span>
+                <span className="text-lg font-semibold text-gray-800">合計使用量</span>
                 <span
-                  className={`text-xl font-bold ${storageInfo.totalMB > 4 ? 'text-red-600 dark:text-red-400' : 'text-green-600 dark:text-green-400'}`}
+                  className={`text-xl font-bold ${storageInfo.totalMB > 4 ? 'text-red-600' : 'text-green-600'}`}
                 >
                   {storageInfo.totalMB.toFixed(2)} MB{' '}
-                  <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                    / 約 5-10 MB
-                  </span>
+                  <span className="text-sm font-normal text-gray-500">/ 約 5-10 MB</span>
                 </span>
               </div>
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative">
+              <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden relative">
                 <div
                   className={`h-full rounded-full transition-all duration-500 absolute left-0 top-0 ${
                     storageInfo.totalMB > 8
@@ -418,32 +400,30 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                 />
               </div>
               {storageInfo.totalMB > 4 && (
-                <p className="mt-2 text-sm font-medium text-red-600 dark:text-red-400 flex items-center gap-1">
+                <p className="mt-2 text-sm font-medium text-red-600 flex items-center gap-1">
                   ⚠️ 容量が不足しています
                 </p>
               )}
             </div>
             <details className="mt-4">
-              <summary className="cursor-pointer text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2">
+              <summary className="cursor-pointer text-blue-600 hover:text-blue-700:text-blue-300 font-medium flex items-center gap-2">
                 📊 詳細を表示
               </summary>
               <ul className="mt-4 space-y-2">
                 {storageInfo.details.map((item, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg"
+                    className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
                   >
-                    <code className="text-sm text-gray-700 dark:text-gray-300 font-mono">
-                      {item.key}
-                    </code>
-                    <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                    <code className="text-sm text-gray-700 font-mono">{item.key}</code>
+                    <span className="text-sm font-semibold text-gray-800">
                       {item.sizeMB.toFixed(2)} MB
                     </span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
-                <p className="text-sm text-blue-700 dark:text-blue-300 flex items-start gap-2">
+              <div className="mt-4 p-4 bg-blue-50/20 rounded-lg border border-blue-200">
+                <p className="text-sm text-blue-700 flex items-start gap-2">
                   <span className="text-lg">💡</span>
                   <span>
                     ヒント: データが大きくなりすぎた場合は、古い成績を削除すると容量を節約できます。
@@ -474,11 +454,9 @@ function CalendarHeatmap({
 
   if (data.length === 0) {
     return (
-      <div className="w-full p-8 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 text-center">
-        <p className="text-gray-500 dark:text-gray-400 text-lg">📊 データがありません</p>
-        <p className="text-gray-400 dark:text-gray-500 text-sm mt-2">
-          学習を開始するとヒートマップが表示されます
-        </p>
+      <div className="w-full p-8 bg-gray-50 rounded-xl border-2 border-dashed border-gray-300 text-center">
+        <p className="text-gray-500 text-lg">📊 データがありません</p>
+        <p className="text-gray-400 text-sm mt-2">学習を開始するとヒートマップが表示されます</p>
         <p className="text-xs text-red-500 mt-4">
           DEBUG: 今日={todayStr}, データ件数={data.length}, 今日のデータ=
           {todayData ? `${todayData.count}問` : 'なし'}
@@ -547,7 +525,7 @@ function CalendarHeatmap({
   const dayLabels = ['月', '火', '水', '木', '金', '土', '日'];
 
   return (
-    <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-blue-200 dark:border-gray-600">
+    <div className="w-full p-6 bg-white rounded-xl shadow-lg border-2 border-blue-200">
       {/* グリッドレイアウト */}
       <div className="overflow-x-auto">
         <div className="min-w-max mx-auto w-fit">
@@ -556,7 +534,7 @@ function CalendarHeatmap({
             {dayLabels.map((label, idx) => (
               <div
                 key={idx}
-                className="w-20 h-8 flex items-center justify-center text-sm font-bold text-gray-700 dark:text-gray-200"
+                className="w-20 h-8 flex items-center justify-center text-sm font-bold text-gray-700"
               >
                 {label}
               </div>
@@ -572,7 +550,7 @@ function CalendarHeatmap({
                     return (
                       <div
                         key={dayIdx}
-                        className="w-20 h-20 rounded bg-gray-100 dark:bg-gray-700 border border-dashed border-gray-300 dark:border-gray-600"
+                        className="w-20 h-20 rounded bg-gray-100 border border-dashed border-gray-300"
                       ></div>
                     );
                   }
@@ -581,13 +559,11 @@ function CalendarHeatmap({
                   const dayName = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
                   const isToday = day.date === todayStr;
                   const colorClasses = {
-                    'calendar-color-0':
-                      'bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400',
-                    'calendar-color-1':
-                      'bg-blue-300 dark:bg-blue-800 text-blue-900 dark:text-blue-100',
-                    'calendar-color-2': 'bg-blue-400 dark:bg-blue-700 text-white',
-                    'calendar-color-3': 'bg-blue-500 dark:bg-blue-600 text-white',
-                    'calendar-color-4': 'bg-blue-600 dark:bg-blue-500 text-white',
+                    'calendar-color-0': 'bg-gray-200 text-gray-500',
+                    'calendar-color-1': 'bg-blue-300 text-blue-900',
+                    'calendar-color-2': 'bg-blue-400 text-white',
+                    'calendar-color-3': 'bg-blue-500 text-white',
+                    'calendar-color-4': 'bg-blue-600 text-white',
                   };
 
                   return (
@@ -597,7 +573,7 @@ function CalendarHeatmap({
                         colorClasses[getColorClass(day.count) as keyof typeof colorClasses]
                       } ${
                         isToday
-                          ? 'ring-4 ring-yellow-400 ring-offset-2 ring-offset-white dark:ring-offset-gray-800 shadow-2xl border-yellow-400'
+                          ? 'ring-4 ring-yellow-400 ring-offset-2 ring-offset-white shadow-2xl border-yellow-400'
                           : 'border-transparent'
                       }`}
                       title={`${day.date} (${dayName})${isToday ? ' [今日]' : ''}: ${day.count}問 (正答率${day.accuracy.toFixed(0)}%, 正解${day.correct}問)`}
@@ -618,18 +594,18 @@ function CalendarHeatmap({
 
       {/* 凡例 */}
       <div className="flex flex-col gap-2 mt-6 text-sm">
-        <div className="flex items-center justify-center gap-3 text-gray-600 dark:text-gray-300">
+        <div className="flex items-center justify-center gap-3 text-gray-600">
           <span className="font-medium">学習量:</span>
           <span className="text-xs">少</span>
-          <div className="w-8 h-8 rounded bg-blue-300 dark:bg-blue-800 border border-gray-300"></div>
-          <div className="w-8 h-8 rounded bg-blue-400 dark:bg-blue-700 border border-gray-300"></div>
-          <div className="w-8 h-8 rounded bg-blue-500 dark:bg-blue-600 border border-gray-300"></div>
-          <div className="w-8 h-8 rounded bg-blue-600 dark:bg-blue-500 border border-gray-300"></div>
+          <div className="w-8 h-8 rounded bg-blue-300 border border-gray-300"></div>
+          <div className="w-8 h-8 rounded bg-blue-400 border border-gray-300"></div>
+          <div className="w-8 h-8 rounded bg-blue-500 border border-gray-300"></div>
+          <div className="w-8 h-8 rounded bg-blue-600 border border-gray-300"></div>
           <span className="text-xs">多</span>
         </div>
-        <div className="text-center text-xs text-gray-500 dark:text-gray-400">
+        <div className="text-center text-xs text-gray-500">
           <span className="font-semibold">表示:</span> 正解数/出題数 |
-          <span className="ml-2 inline-block w-6 h-6 rounded bg-gray-200 dark:bg-gray-600 border-2 border-yellow-400 align-middle"></span>
+          <span className="ml-2 inline-block w-6 h-6 rounded bg-gray-200 border-2 border-yellow-400 align-middle"></span>
           <span className="ml-1">= 今日</span>
         </div>
       </div>

@@ -392,7 +392,7 @@ function SpellingView({
         <div className="quiz-controls">
           <button
             onClick={onStartQuiz}
-            className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-xl dark:bg-primary dark:hover:bg-primary-hover"
+            className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-xl:bg-primary-hover"
           >
             🎯 クイズ開始
           </button>
@@ -437,7 +437,7 @@ function SpellingView({
                 <h3>📊 学習設定</h3>
                 <button
                   onClick={() => setShowSettings(false)}
-                  className="px-4 py-2 bg-gray-100 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-200 hover:border-gray-400 transition-all duration-200 text-sm shadow-sm dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:border-gray-500"
+                  className="px-4 py-2 bg-gray-100 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-200 hover:border-gray-400 transition-all duration-200 text-sm shadow-sm:bg-gray-600:border-gray-500"
                 >
                   ✕ 閉じる
                 </button>
@@ -544,7 +544,7 @@ function SpellingView({
               {/* 全画面表示ボタン */}
               <button
                 onClick={() => setIsFullscreen(true)}
-                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition shadow-md"
+                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300:bg-gray-600 transition shadow-md"
                 aria-label="全画面表示"
                 title="全画面表示"
               >
@@ -569,8 +569,8 @@ function SpellingView({
                 </button>
                 <div className="meaning-display">
                   <div className="meaning-line">
-                    <span className="text-xl text-gray-600 dark:text-gray-300">意味:</span>
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white ml-2">
+                    <span className="text-xl text-gray-600">意味:</span>
+                    <span className="text-4xl font-bold text-gray-900 ml-2">
                       {currentQuestion.meaning}
                     </span>
                   </div>

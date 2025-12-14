@@ -38,7 +38,7 @@ function DailyPlanBanner({ mode }: DailyPlanBannerProps) {
       <div className="daily-plan-collapsed">
         <button
           onClick={toggleVisibility}
-          className="w-full px-6 py-3 text-base font-medium bg-info text-white border-2 border-info rounded-xl transition-all duration-300 hover:bg-info-hover hover:shadow-lg dark:bg-info dark:hover:bg-info-hover"
+          className="w-full px-6 py-3 text-base font-medium bg-info text-white border-2 border-info rounded-xl transition-all duration-300 hover:bg-info-hover hover:shadow-lg:bg-info-hover"
         >
           📅 今日の学習プランを表示
         </button>
@@ -128,14 +128,14 @@ function DailyPlanBanner({ mode }: DailyPlanBannerProps) {
         </div>
         <div className="daily-plan-actions">
           <button
-            className="px-3 py-2 text-base font-medium bg-secondary text-secondary border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-secondary-hover hover:shadow-md dark:bg-secondary dark:text-secondary-text dark:hover:bg-secondary-hover"
+            className="px-3 py-2 text-base font-medium bg-secondary text-secondary border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-secondary-hover hover:shadow-md:bg-secondary-hover"
             onClick={() => setShowSettings(!showSettings)}
             aria-label="学習プラン設定"
           >
             ⚙️
           </button>
           <button
-            className="px-3 py-2 text-base font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+            className="px-3 py-2 text-base font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300:bg-gray-600"
             onClick={toggleVisibility}
             aria-label="閉じる"
           >

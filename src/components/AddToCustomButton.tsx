@@ -105,9 +105,9 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
       {showMenu && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setShowMenu(false)} />
-          <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 z-50 max-h-80 overflow-y-auto">
-            <div className="p-2 border-b border-gray-200 dark:border-gray-700">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">セットを選択</p>
+          <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 max-h-80 overflow-y-auto">
+            <div className="p-2 border-b border-gray-200">
+              <p className="text-sm font-medium text-gray-700">セットを選択</p>
             </div>
             <div className="p-2">
               {sets.map((set) => {
@@ -124,8 +124,8 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
                       flex items-center justify-between
                       ${
                         isInThisSet
-                          ? 'bg-green-50 dark:bg-green-900 dark:bg-opacity-20 text-green-700 dark:text-green-300'
-                          : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+                          ? 'bg-green-50 text-green-700'
+                          : 'hover:bg-gray-100:bg-gray-700 text-gray-700'
                       }
                     `}
                   >
@@ -133,9 +133,7 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
                       <span>{set.icon || '📖'}</span>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium truncate">{set.name}</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">
-                          {set.words.length}語
-                        </p>
+                        <p className="text-xs text-gray-500">{set.words.length}語</p>
                       </div>
                     </div>
                     <span className="text-lg ml-2">{isInThisSet ? '✓' : '+'}</span>
@@ -143,13 +141,13 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
                 );
               })}
             </div>
-            <div className="p-2 border-t border-gray-200 dark:border-gray-700">
+            <div className="p-2 border-t border-gray-200">
               <button
                 onClick={() => {
                   setShowMenu(false);
                   onOpenManagement();
                 }}
-                className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 text-sm font-medium"
+                className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-100:bg-gray-700 text-blue-600 text-sm font-medium"
               >
                 ➕ 新しいセットを作成
               </button>

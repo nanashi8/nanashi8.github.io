@@ -16,8 +16,8 @@ export const GrammarGuideView: React.FC = () => {
           onClick={() => setActiveTab('prepositions')}
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'prepositions'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
         >
           <span className="hidden sm:inline">📍 前置詞</span>
@@ -27,8 +27,8 @@ export const GrammarGuideView: React.FC = () => {
           onClick={() => setActiveTab('punctuation')}
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'punctuation'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
         >
           <span className="hidden sm:inline">✏️ 記号</span>
@@ -38,8 +38,8 @@ export const GrammarGuideView: React.FC = () => {
           onClick={() => setActiveTab('tips')}
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'tips'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
         >
           <span className="hidden sm:inline">💡 読解コツ</span>
@@ -48,7 +48,7 @@ export const GrammarGuideView: React.FC = () => {
       </div>
 
       {/* コンテンツ - カード表示に統一 */}
-      <div className="content-area bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700">
+      <div className="content-area bg-white rounded-lg p-4 shadow-md border border-gray-200">
         {activeTab === 'prepositions' && <PrepositionGuide />}
         {activeTab === 'punctuation' && <PunctuationGuide />}
         {activeTab === 'tips' && <ReadingTipsGuide />}
@@ -74,40 +74,38 @@ const PrepositionGuide: React.FC = () => {
         <h3 className="text-lg font-semibold mb-4 text-primary">🌟 最重要：時間・場所の基本3つ</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* IN */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-5 border-2 border-blue-500">
+          <div className="bg-blue-50/20 rounded-lg p-5 border-2 border-blue-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📦</span>
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mt-2">IN</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-                「囲まれた空間の中」
-              </div>
+              <div className="text-2xl font-bold text-blue-600 mt-2">IN</div>
+              <div className="text-sm text-blue-700 mt-1">「囲まれた空間の中」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-blue-600 dark:text-blue-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-blue-600">
                     📅 <strong>in 2024</strong> → 年という長い期間の中
                   </div>
-                  <div className="text-blue-600 dark:text-blue-300">
+                  <div className="text-blue-600">
                     🗓️ <strong>in May</strong> → 月という期間の中
                   </div>
-                  <div className="text-blue-600 dark:text-blue-300">
+                  <div className="text-blue-600">
                     🌅 <strong>in the morning</strong> → 午前という時間帯の中
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
                   <span>🗺️</span> 場所のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-blue-600 dark:text-blue-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-blue-600">
                     🌏 <strong>in Japan</strong> → 国という広い空間の中
                   </div>
-                  <div className="text-blue-600 dark:text-blue-300">
+                  <div className="text-blue-600">
                     🏠 <strong>in the room</strong> → 部屋という囲まれた空間の中
                   </div>
                 </div>
@@ -116,40 +114,38 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* ON */}
-          <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-5 border-2 border-green-500">
+          <div className="bg-green-50/20 rounded-lg p-5 border-2 border-green-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📄</span>
-              <div className="text-2xl font-bold text-green-600 dark:text-green-400 mt-2">ON</div>
-              <div className="text-sm text-green-700 dark:text-green-300 mt-1">
-                「接触・くっついている」
-              </div>
+              <div className="text-2xl font-bold text-green-600 mt-2">ON</div>
+              <div className="text-sm text-green-700 mt-1">「接触・くっついている」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-green-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-green-600 dark:text-green-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-green-600">
                     📆 <strong>on Monday</strong> → 曜日という特定の日に接触
                   </div>
-                  <div className="text-green-600 dark:text-green-300">
+                  <div className="text-green-600">
                     📅 <strong>on May 1st</strong> → 日付という特定の日に接触
                   </div>
-                  <div className="text-green-600 dark:text-green-300">
+                  <div className="text-green-600">
                     🎄 <strong>on Christmas</strong> → その日に接触
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-green-800 mb-2 flex items-center gap-2">
                   <span>🗺️</span> 場所のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-green-600 dark:text-green-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-green-600">
                     🪑 <strong>on the table</strong> → テーブル表面に接触
                   </div>
-                  <div className="text-green-600 dark:text-green-300">
+                  <div className="text-green-600">
                     🖼️ <strong>on the wall</strong> → 壁面に接触
                   </div>
                 </div>
@@ -158,40 +154,38 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* AT */}
-          <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-5 border-2 border-orange-500">
+          <div className="bg-orange-50/20 rounded-lg p-5 border-2 border-orange-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📍</span>
-              <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 mt-2">AT</div>
-              <div className="text-sm text-orange-700 dark:text-orange-300 mt-1">
-                「ピンポイント・地点」
-              </div>
+              <div className="text-2xl font-bold text-orange-600 mt-2">AT</div>
+              <div className="text-sm text-orange-700 mt-1">「ピンポイント・地点」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-orange-800 dark:text-orange-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-orange-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-orange-600 dark:text-orange-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-orange-600">
                     🕖 <strong>at 7:00</strong> → 7時という時刻の点
                   </div>
-                  <div className="text-orange-600 dark:text-orange-300">
+                  <div className="text-orange-600">
                     ☀️ <strong>at noon</strong> → 正午という瞬間の点
                   </div>
-                  <div className="text-orange-600 dark:text-orange-300">
+                  <div className="text-orange-600">
                     🌙 <strong>at night</strong> → 夜という時点
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-orange-800 dark:text-orange-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-orange-800 mb-2 flex items-center gap-2">
                   <span>🗺️</span> 場所のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-orange-600 dark:text-orange-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-orange-600">
                     🏫 <strong>at school</strong> → 学校という地点
                   </div>
-                  <div className="text-orange-600 dark:text-orange-300">
+                  <div className="text-orange-600">
                     🚪 <strong>at the door</strong> → ドアという地点
                   </div>
                 </div>
@@ -206,40 +200,38 @@ const PrepositionGuide: React.FC = () => {
         <h3 className="text-lg font-semibold mb-4 text-primary">⭐ その他の重要な前置詞</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* IN */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-5 border-2 border-blue-500">
+          <div className="bg-blue-50/20 rounded-lg p-5 border-2 border-blue-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📦</span>
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mt-2">IN</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-                「囲まれた空間の中」
-              </div>
+              <div className="text-2xl font-bold text-blue-600 mt-2">IN</div>
+              <div className="text-sm text-blue-700 mt-1">「囲まれた空間の中」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-blue-600 dark:text-blue-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-blue-600">
                     📅 <strong>in 2024</strong> → 年という長い期間の中
                   </div>
-                  <div className="text-blue-600 dark:text-blue-300">
+                  <div className="text-blue-600">
                     🗓️ <strong>in May</strong> → 月という期間の中
                   </div>
-                  <div className="text-blue-600 dark:text-blue-300">
+                  <div className="text-blue-600">
                     🌅 <strong>in the morning</strong> → 午前という時間帯の中
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
                   <span>🗺️</span> 場所のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-blue-600 dark:text-blue-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-blue-600">
                     🌏 <strong>in Japan</strong> → 国という広い空間の中
                   </div>
-                  <div className="text-blue-600 dark:text-blue-300">
+                  <div className="text-blue-600">
                     🏠 <strong>in the room</strong> → 部屋という囲まれた空間の中
                   </div>
                 </div>
@@ -248,40 +240,38 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* ON */}
-          <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-5 border-2 border-green-500">
+          <div className="bg-green-50/20 rounded-lg p-5 border-2 border-green-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📄</span>
-              <div className="text-2xl font-bold text-green-600 dark:text-green-400 mt-2">ON</div>
-              <div className="text-sm text-green-700 dark:text-green-300 mt-1">
-                「接触・くっついている」
-              </div>
+              <div className="text-2xl font-bold text-green-600 mt-2">ON</div>
+              <div className="text-sm text-green-700 mt-1">「接触・くっついている」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-green-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-green-600 dark:text-green-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-green-600">
                     📆 <strong>on Monday</strong> → 曜日という特定の日に接触
                   </div>
-                  <div className="text-green-600 dark:text-green-300">
+                  <div className="text-green-600">
                     📅 <strong>on May 1st</strong> → 日付という特定の日に接触
                   </div>
-                  <div className="text-green-600 dark:text-green-300">
+                  <div className="text-green-600">
                     🎄 <strong>on Christmas</strong> → その日に接触
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-green-800 mb-2 flex items-center gap-2">
                   <span>🗺️</span> 場所のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-green-600 dark:text-green-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-green-600">
                     🪑 <strong>on the table</strong> → テーブル表面に接触
                   </div>
-                  <div className="text-green-600 dark:text-green-300">
+                  <div className="text-green-600">
                     🖼️ <strong>on the wall</strong> → 壁面に接触
                   </div>
                 </div>
@@ -290,40 +280,38 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* AT */}
-          <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-5 border-2 border-orange-500">
+          <div className="bg-orange-50/20 rounded-lg p-5 border-2 border-orange-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📍</span>
-              <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 mt-2">AT</div>
-              <div className="text-sm text-orange-700 dark:text-orange-300 mt-1">
-                「ピンポイント・地点」
-              </div>
+              <div className="text-2xl font-bold text-orange-600 mt-2">AT</div>
+              <div className="text-sm text-orange-700 mt-1">「ピンポイント・地点」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-orange-800 dark:text-orange-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-orange-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-orange-600 dark:text-orange-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-orange-600">
                     🕖 <strong>at 7:00</strong> → 7時という時刻の点
                   </div>
-                  <div className="text-orange-600 dark:text-orange-300">
+                  <div className="text-orange-600">
                     ☀️ <strong>at noon</strong> → 正午という瞬間の点
                   </div>
-                  <div className="text-orange-600 dark:text-orange-300">
+                  <div className="text-orange-600">
                     🌙 <strong>at night</strong> → 夜という時点
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-orange-800 dark:text-orange-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-orange-800 mb-2 flex items-center gap-2">
                   <span>🗺️</span> 場所のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-orange-600 dark:text-orange-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-orange-600">
                     🏫 <strong>at school</strong> → 学校という地点
                   </div>
-                  <div className="text-orange-600 dark:text-orange-300">
+                  <div className="text-orange-600">
                     🚪 <strong>at the door</strong> → ドアという地点
                   </div>
                 </div>
@@ -338,35 +326,35 @@ const PrepositionGuide: React.FC = () => {
         <h3 className="text-lg font-semibold mb-4 text-primary">⭐ その他の重要な前置詞</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* TO */}
-          <div className="bg-pink-50 dark:bg-pink-900/20 rounded-lg p-5 border-2 border-pink-500">
+          <div className="bg-pink-50/20 rounded-lg p-5 border-2 border-pink-500">
             <div className="text-center mb-4">
               <span className="text-5xl">➡️</span>
-              <div className="text-2xl font-bold text-pink-600 dark:text-pink-400 mt-2">TO</div>
-              <div className="text-sm text-pink-700 dark:text-pink-300 mt-1">「方向・到達点」</div>
+              <div className="text-2xl font-bold text-pink-600 mt-2">TO</div>
+              <div className="text-sm text-pink-700 mt-1">「方向・到達点」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-pink-800 dark:text-pink-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-pink-800 mb-2 flex items-center gap-2">
                   <span>🧭</span> 方向のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-pink-600 dark:text-pink-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-pink-600">
                     🏫 <strong>to school</strong> → 学校へ（方向）
                   </div>
-                  <div className="text-pink-600 dark:text-pink-300">
+                  <div className="text-pink-600">
                     🗼 <strong>to Tokyo</strong> → 東京へ（目的地）
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-pink-800 dark:text-pink-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-pink-800 mb-2 flex items-center gap-2">
                   <span>🔄</span> 範囲のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-pink-600 dark:text-pink-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-pink-600">
                     📊 <strong>from A to B</strong> → AからBまで（範囲）
                   </div>
-                  <div className="text-pink-600 dark:text-pink-300">
+                  <div className="text-pink-600">
                     🕐 <strong>from 9 to 5</strong> → 9時から5時まで
                   </div>
                 </div>
@@ -375,39 +363,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* FOR */}
-          <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-5 border-2 border-purple-500">
+          <div className="bg-purple-50/20 rounded-lg p-5 border-2 border-purple-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🎯</span>
-              <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mt-2">
-                FOR
-              </div>
-              <div className="text-sm text-purple-700 dark:text-purple-300 mt-1">
-                「目的・対象・期間」
-              </div>
+              <div className="text-2xl font-bold text-purple-600 mt-2">FOR</div>
+              <div className="text-sm text-purple-700 mt-1">「目的・対象・期間」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-purple-800 dark:text-purple-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-purple-800 mb-2 flex items-center gap-2">
                   <span>💝</span> 目的・対象のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-purple-600 dark:text-purple-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-purple-600">
                     👤 <strong>for you</strong> → あなたのために（対象）
                   </div>
-                  <div className="text-purple-600 dark:text-purple-300">
+                  <div className="text-purple-600">
                     🍳 <strong>for breakfast</strong> → 朝食として（目的）
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-purple-800 dark:text-purple-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-purple-800 mb-2 flex items-center gap-2">
                   <span>⏱️</span> 期間のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-purple-600 dark:text-purple-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-purple-600">
                     ⏰ <strong>for 3 hours</strong> → 3時間（継続期間）
                   </div>
-                  <div className="text-purple-600 dark:text-purple-300">
+                  <div className="text-purple-600">
                     📅 <strong>for a week</strong> → 1週間（継続期間）
                   </div>
                 </div>
@@ -416,35 +400,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* FROM */}
-          <div className="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-5 border-2 border-teal-500">
+          <div className="bg-teal-50/20 rounded-lg p-5 border-2 border-teal-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🎬</span>
-              <div className="text-2xl font-bold text-teal-600 dark:text-teal-400 mt-2">FROM</div>
-              <div className="text-sm text-teal-700 dark:text-teal-300 mt-1">「起点・出発点」</div>
+              <div className="text-2xl font-bold text-teal-600 mt-2">FROM</div>
+              <div className="text-sm text-teal-700 mt-1">「起点・出発点」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-teal-800 dark:text-teal-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-teal-800 mb-2 flex items-center gap-2">
                   <span>📍</span> 起点のイメージ：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-teal-600 dark:text-teal-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-teal-600">
                     🏠 <strong>from home</strong> → 家から（出発点）
                   </div>
-                  <div className="text-teal-600 dark:text-teal-300">
+                  <div className="text-teal-600">
                     🇯🇵 <strong>from Japan</strong> → 日本から（出身）
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-teal-800 dark:text-teal-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-teal-800 mb-2 flex items-center gap-2">
                   <span>🕐</span> 時間の起点：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-teal-600 dark:text-teal-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-teal-600">
                     ⏰ <strong>from 9 am</strong> → 9時から（開始時刻）
                   </div>
-                  <div className="text-teal-600 dark:text-teal-300">
+                  <div className="text-teal-600">
                     📅 <strong>from Monday</strong> → 月曜日から
                   </div>
                 </div>
@@ -459,39 +443,35 @@ const PrepositionGuide: React.FC = () => {
         <h3 className="text-lg font-semibold mb-4 text-primary">📌 よく使う前置詞</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* WITH */}
-          <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-5 border-2 border-indigo-500">
+          <div className="bg-indigo-50/20 rounded-lg p-5 border-2 border-indigo-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🤝</span>
-              <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mt-2">
-                WITH
-              </div>
-              <div className="text-sm text-indigo-700 dark:text-indigo-300 mt-1">
-                「一緒に・使って」
-              </div>
+              <div className="text-2xl font-bold text-indigo-600 mt-2">WITH</div>
+              <div className="text-sm text-indigo-700 mt-1">「一緒に・使って」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-indigo-800 dark:text-indigo-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-indigo-800 mb-2 flex items-center gap-2">
                   <span>👥</span> 伴う相手：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-indigo-600 dark:text-indigo-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-indigo-600">
                     👨‍👩‍👧 <strong>with my family</strong> → 家族と一緒に
                   </div>
-                  <div className="text-indigo-600 dark:text-indigo-300">
+                  <div className="text-indigo-600">
                     🧑‍🤝‍🧑 <strong>with friends</strong> → 友達と
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-indigo-800 dark:text-indigo-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-indigo-800 mb-2 flex items-center gap-2">
                   <span>🛠️</span> 使う道具：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-indigo-600 dark:text-indigo-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-indigo-600">
                     ✏️ <strong>with a pen</strong> → ペンで（道具）
                   </div>
-                  <div className="text-indigo-600 dark:text-indigo-300">
+                  <div className="text-indigo-600">
                     🍴 <strong>with chopsticks</strong> → 箸で
                   </div>
                 </div>
@@ -500,37 +480,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* BY */}
-          <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-5 border-2 border-amber-500">
+          <div className="bg-amber-50/20 rounded-lg p-5 border-2 border-amber-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🚗</span>
-              <div className="text-2xl font-bold text-amber-600 dark:text-amber-400 mt-2">BY</div>
-              <div className="text-sm text-amber-700 dark:text-amber-300 mt-1">
-                「〜のそばに・手段」
-              </div>
+              <div className="text-2xl font-bold text-amber-600 mt-2">BY</div>
+              <div className="text-sm text-amber-700 mt-1">「〜のそばに・手段」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
                   <span>🚌</span> 手段・方法：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-amber-600 dark:text-amber-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-amber-600">
                     🚆 <strong>by train</strong> → 電車で（交通手段）
                   </div>
-                  <div className="text-amber-600 dark:text-amber-300">
+                  <div className="text-amber-600">
                     ✉️ <strong>by email</strong> → メールで（通信手段）
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
                   <span>📍</span> そばに：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-amber-600 dark:text-amber-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-amber-600">
                     🌊 <strong>by the sea</strong> → 海のそばに
                   </div>
-                  <div className="text-amber-600 dark:text-amber-300">
+                  <div className="text-amber-600">
                     🪟 <strong>by the window</strong> → 窓のそばに
                   </div>
                 </div>
@@ -539,37 +517,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* OF */}
-          <div className="bg-rose-50 dark:bg-rose-900/20 rounded-lg p-5 border-2 border-rose-500">
+          <div className="bg-rose-50/20 rounded-lg p-5 border-2 border-rose-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🔗</span>
-              <div className="text-2xl font-bold text-rose-600 dark:text-rose-400 mt-2">OF</div>
-              <div className="text-sm text-rose-700 dark:text-rose-300 mt-1">
-                「〜の（所属・部分）」
-              </div>
+              <div className="text-2xl font-bold text-rose-600 mt-2">OF</div>
+              <div className="text-sm text-rose-700 mt-1">「〜の（所属・部分）」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-rose-800 dark:text-rose-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-rose-800 mb-2 flex items-center gap-2">
                   <span>👑</span> 所属・所有：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-rose-600 dark:text-rose-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-rose-600">
                     📚 <strong>the book of mine</strong> → 私の本
                   </div>
-                  <div className="text-rose-600 dark:text-rose-300">
+                  <div className="text-rose-600">
                     🏛️ <strong>the capital of Japan</strong> → 日本の首都
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-rose-800 dark:text-rose-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-rose-800 mb-2 flex items-center gap-2">
                   <span>🧩</span> 部分：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-rose-600 dark:text-rose-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-rose-600">
                     🍰 <strong>a piece of cake</strong> → ケーキ一切れ
                   </div>
-                  <div className="text-rose-600 dark:text-rose-300">
+                  <div className="text-rose-600">
                     💧 <strong>a glass of water</strong> → コップ一杯の水
                   </div>
                 </div>
@@ -584,35 +560,35 @@ const PrepositionGuide: React.FC = () => {
         <h3 className="text-lg font-semibold mb-4 text-primary">💫 中頻度の前置詞</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* ABOUT */}
-          <div className="bg-cyan-50 dark:bg-cyan-900/20 rounded-lg p-5 border-2 border-cyan-500">
+          <div className="bg-cyan-50/20 rounded-lg p-5 border-2 border-cyan-500">
             <div className="text-center mb-4">
               <span className="text-5xl">💭</span>
-              <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mt-2">ABOUT</div>
-              <div className="text-sm text-cyan-700 dark:text-cyan-300 mt-1">「〜について」</div>
+              <div className="text-2xl font-bold text-cyan-600 mt-2">ABOUT</div>
+              <div className="text-sm text-cyan-700 mt-1">「〜について」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-cyan-800 dark:text-cyan-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-cyan-800 mb-2 flex items-center gap-2">
                   <span>📖</span> 話題・内容：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-cyan-600 dark:text-cyan-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-cyan-600">
                     📚 <strong>a book about history</strong> → 歴史についての本
                   </div>
-                  <div className="text-cyan-600 dark:text-cyan-300">
+                  <div className="text-cyan-600">
                     💬 <strong>talk about sports</strong> → スポーツについて話す
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-cyan-800 dark:text-cyan-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-cyan-800 mb-2 flex items-center gap-2">
                   <span>🔢</span> おおよその数：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-cyan-600 dark:text-cyan-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-cyan-600">
                     ⏰ <strong>about 10 minutes</strong> → 約10分
                   </div>
-                  <div className="text-cyan-600 dark:text-cyan-300">
+                  <div className="text-cyan-600">
                     👥 <strong>about 50 people</strong> → 約50人
                   </div>
                 </div>
@@ -621,35 +597,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* AFTER */}
-          <div className="bg-lime-50 dark:bg-lime-900/20 rounded-lg p-5 border-2 border-lime-500">
+          <div className="bg-lime-50/20 rounded-lg p-5 border-2 border-lime-500">
             <div className="text-center mb-4">
               <span className="text-5xl">⏭️</span>
-              <div className="text-2xl font-bold text-lime-600 dark:text-lime-400 mt-2">AFTER</div>
-              <div className="text-sm text-lime-700 dark:text-lime-300 mt-1">「〜の後に」</div>
+              <div className="text-2xl font-bold text-lime-600 mt-2">AFTER</div>
+              <div className="text-sm text-lime-700 mt-1">「〜の後に」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-lime-800 dark:text-lime-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-lime-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間の後：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-lime-600 dark:text-lime-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-lime-600">
                     🍽️ <strong>after dinner</strong> → 夕食の後
                   </div>
-                  <div className="text-lime-600 dark:text-lime-300">
+                  <div className="text-lime-600">
                     🏫 <strong>after school</strong> → 放課後
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-lime-800 dark:text-lime-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-lime-800 mb-2 flex items-center gap-2">
                   <span>📍</span> 順序：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-lime-600 dark:text-lime-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-lime-600">
                     🔤 <strong>after you</strong> → お先にどうぞ
                   </div>
-                  <div className="text-lime-600 dark:text-lime-300">
+                  <div className="text-lime-600">
                     📝 <strong>one after another</strong> → 次々に
                   </div>
                 </div>
@@ -658,35 +634,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* BEFORE */}
-          <div className="bg-sky-50 dark:bg-sky-900/20 rounded-lg p-5 border-2 border-sky-500">
+          <div className="bg-sky-50/20 rounded-lg p-5 border-2 border-sky-500">
             <div className="text-center mb-4">
               <span className="text-5xl">⏮️</span>
-              <div className="text-2xl font-bold text-sky-600 dark:text-sky-400 mt-2">BEFORE</div>
-              <div className="text-sm text-sky-700 dark:text-sky-300 mt-1">「〜の前に」</div>
+              <div className="text-2xl font-bold text-sky-600 mt-2">BEFORE</div>
+              <div className="text-sm text-sky-700 mt-1">「〜の前に」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-sky-800 dark:text-sky-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-sky-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 時間の前：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-sky-600 dark:text-sky-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-sky-600">
                     🍽️ <strong>before breakfast</strong> → 朝食前
                   </div>
-                  <div className="text-sky-600 dark:text-sky-300">
+                  <div className="text-sky-600">
                     🎄 <strong>before Christmas</strong> → クリスマスの前
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-sky-800 dark:text-sky-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-sky-800 mb-2 flex items-center gap-2">
                   <span>📍</span> 順序・位置：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-sky-600 dark:text-sky-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-sky-600">
                     🚪 <strong>before the door</strong> → ドアの前
                   </div>
-                  <div className="text-sky-600 dark:text-sky-300">
+                  <div className="text-sky-600">
                     👥 <strong>before everyone</strong> → みんなの前で
                   </div>
                 </div>
@@ -700,39 +676,35 @@ const PrepositionGuide: React.FC = () => {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* OVER */}
-          <div className="bg-violet-50 dark:bg-violet-900/20 rounded-lg p-5 border-2 border-violet-500">
+          <div className="bg-violet-50/20 rounded-lg p-5 border-2 border-violet-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🌉</span>
-              <div className="text-2xl font-bold text-violet-600 dark:text-violet-400 mt-2">
-                OVER
-              </div>
-              <div className="text-sm text-violet-700 dark:text-violet-300 mt-1">
-                「〜の上を越えて」
-              </div>
+              <div className="text-2xl font-bold text-violet-600 mt-2">OVER</div>
+              <div className="text-sm text-violet-700 mt-1">「〜の上を越えて」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-violet-800 dark:text-violet-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-violet-800 mb-2 flex items-center gap-2">
                   <span>🦅</span> 上方・越える：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-violet-600 dark:text-violet-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-violet-600">
                     🌉 <strong>over the bridge</strong> → 橋を越えて
                   </div>
-                  <div className="text-violet-600 dark:text-violet-300">
+                  <div className="text-violet-600">
                     🏔️ <strong>over the mountain</strong> → 山を越えて
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-violet-800 dark:text-violet-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-violet-800 mb-2 flex items-center gap-2">
                   <span>🔢</span> 以上・超過：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-violet-600 dark:text-violet-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-violet-600">
                     👥 <strong>over 100 people</strong> → 100人以上
                   </div>
-                  <div className="text-violet-600 dark:text-violet-300">
+                  <div className="text-violet-600">
                     💰 <strong>over $50</strong> → 50ドル以上
                   </div>
                 </div>
@@ -741,37 +713,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* UNDER */}
-          <div className="bg-slate-50 dark:bg-slate-900/20 rounded-lg p-5 border-2 border-slate-500">
+          <div className="bg-slate-50/20 rounded-lg p-5 border-2 border-slate-500">
             <div className="text-center mb-4">
               <span className="text-5xl">⬇️</span>
-              <div className="text-2xl font-bold text-slate-600 dark:text-slate-400 mt-2">
-                UNDER
-              </div>
-              <div className="text-sm text-slate-700 dark:text-slate-300 mt-1">「〜の下に」</div>
+              <div className="text-2xl font-bold text-slate-600 mt-2">UNDER</div>
+              <div className="text-sm text-slate-700 mt-1">「〜の下に」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-slate-800 dark:text-slate-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
                   <span>⬇️</span> 下方・下側：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-slate-600 dark:text-slate-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-slate-600">
                     🌳 <strong>under the tree</strong> → 木の下に
                   </div>
-                  <div className="text-slate-600 dark:text-slate-300">
+                  <div className="text-slate-600">
                     🌉 <strong>under the bridge</strong> → 橋の下に
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-slate-800 dark:text-slate-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
                   <span>🔢</span> 未満：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-slate-600 dark:text-slate-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-slate-600">
                     👶 <strong>under 18</strong> → 18歳未満
                   </div>
-                  <div className="text-slate-600 dark:text-slate-300">
+                  <div className="text-slate-600">
                     💰 <strong>under $10</strong> → 10ドル未満
                   </div>
                 </div>
@@ -780,39 +750,35 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* THROUGH */}
-          <div className="bg-fuchsia-50 dark:bg-fuchsia-900/20 rounded-lg p-5 border-2 border-fuchsia-500">
+          <div className="bg-fuchsia-50/20 rounded-lg p-5 border-2 border-fuchsia-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🚇</span>
-              <div className="text-2xl font-bold text-fuchsia-600 dark:text-fuchsia-400 mt-2">
-                THROUGH
-              </div>
-              <div className="text-sm text-fuchsia-700 dark:text-fuchsia-300 mt-1">
-                「〜を通って」
-              </div>
+              <div className="text-2xl font-bold text-fuchsia-600 mt-2">THROUGH</div>
+              <div className="text-sm text-fuchsia-700 mt-1">「〜を通って」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-fuchsia-800 dark:text-fuchsia-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-fuchsia-800 mb-2 flex items-center gap-2">
                   <span>🚪</span> 通過・貫通：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-fuchsia-600 dark:text-fuchsia-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-fuchsia-600">
                     🪟 <strong>through the window</strong> → 窓を通って
                   </div>
-                  <div className="text-fuchsia-600 dark:text-fuchsia-300">
+                  <div className="text-fuchsia-600">
                     🌲 <strong>through the forest</strong> → 森を抜けて
                   </div>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-fuchsia-800 dark:text-fuchsia-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-fuchsia-800 mb-2 flex items-center gap-2">
                   <span>⏰</span> 期間全体：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-fuchsia-600 dark:text-fuchsia-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-fuchsia-600">
                     🌙 <strong>through the night</strong> → 一晩中
                   </div>
-                  <div className="text-fuchsia-600 dark:text-fuchsia-300">
+                  <div className="text-fuchsia-600">
                     🌧️ <strong>through the winter</strong> → 冬の間ずっと
                   </div>
                 </div>
@@ -827,26 +793,22 @@ const PrepositionGuide: React.FC = () => {
         <h3 className="text-lg font-semibold mb-4 text-primary">✨ 知っておくと便利な前置詞</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* BETWEEN */}
-          <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-5 border-2 border-emerald-500">
+          <div className="bg-emerald-50/20 rounded-lg p-5 border-2 border-emerald-500">
             <div className="text-center mb-4">
               <span className="text-5xl">↔️</span>
-              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mt-2">
-                BETWEEN
-              </div>
-              <div className="text-sm text-emerald-700 dark:text-emerald-300 mt-1">
-                「〜の間に（2つ）」
-              </div>
+              <div className="text-2xl font-bold text-emerald-600 mt-2">BETWEEN</div>
+              <div className="text-sm text-emerald-700 mt-1">「〜の間に（2つ）」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-emerald-800 dark:text-emerald-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-emerald-800 mb-2 flex items-center gap-2">
                   <span>📍</span> 2つの間：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-emerald-600 dark:text-emerald-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-emerald-600">
                     🏫🏥 <strong>between the school and hospital</strong> → 学校と病院の間
                   </div>
-                  <div className="text-emerald-600 dark:text-emerald-300">
+                  <div className="text-emerald-600">
                     👥 <strong>between you and me</strong> → あなたと私の間で
                   </div>
                 </div>
@@ -855,26 +817,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* AMONG */}
-          <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-5 border-2 border-orange-500">
+          <div className="bg-orange-50/20 rounded-lg p-5 border-2 border-orange-500">
             <div className="text-center mb-4">
               <span className="text-5xl">👥</span>
-              <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 mt-2">
-                AMONG
-              </div>
-              <div className="text-sm text-orange-700 dark:text-orange-300 mt-1">
-                「〜の間に（3つ以上）」
-              </div>
+              <div className="text-2xl font-bold text-orange-600 mt-2">AMONG</div>
+              <div className="text-sm text-orange-700 mt-1">「〜の間に（3つ以上）」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-orange-800 dark:text-orange-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-orange-800 mb-2 flex items-center gap-2">
                   <span>👨‍👩‍👧‍👦</span> 複数の中：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-orange-600 dark:text-orange-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-orange-600">
                     🌸 <strong>among the flowers</strong> → 花々の中に
                   </div>
-                  <div className="text-orange-600 dark:text-orange-300">
+                  <div className="text-orange-600">
                     👥 <strong>among friends</strong> → 友人たちの間で
                   </div>
                 </div>
@@ -883,22 +841,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* WITHOUT */}
-          <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-5 border-2 border-red-500">
+          <div className="bg-red-50/20 rounded-lg p-5 border-2 border-red-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🚫</span>
-              <div className="text-2xl font-bold text-red-600 dark:text-red-400 mt-2">WITHOUT</div>
-              <div className="text-sm text-red-700 dark:text-red-300 mt-1">「〜なしで」</div>
+              <div className="text-2xl font-bold text-red-600 mt-2">WITHOUT</div>
+              <div className="text-sm text-red-700 mt-1">「〜なしで」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-red-800 dark:text-red-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-red-800 mb-2 flex items-center gap-2">
                   <span>❌</span> 欠如・不在：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-red-600 dark:text-red-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-red-600">
                     💧 <strong>without water</strong> → 水なしで
                   </div>
-                  <div className="text-red-600 dark:text-red-300">
+                  <div className="text-red-600">
                     👤 <strong>without you</strong> → あなたなしで
                   </div>
                 </div>
@@ -912,24 +870,22 @@ const PrepositionGuide: React.FC = () => {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* DURING */}
-          <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-5 border-2 border-yellow-500">
+          <div className="bg-yellow-50/20 rounded-lg p-5 border-2 border-yellow-500">
             <div className="text-center mb-4">
               <span className="text-5xl">⏳</span>
-              <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400 mt-2">
-                DURING
-              </div>
-              <div className="text-sm text-yellow-700 dark:text-yellow-300 mt-1">「〜の間に」</div>
+              <div className="text-2xl font-bold text-yellow-600 mt-2">DURING</div>
+              <div className="text-sm text-yellow-700 mt-1">「〜の間に」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-yellow-800 mb-2 flex items-center gap-2">
                   <span>📅</span> 期間中：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-yellow-600 dark:text-yellow-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-yellow-600">
                     🌴 <strong>during summer vacation</strong> → 夏休みの間
                   </div>
-                  <div className="text-yellow-600 dark:text-yellow-300">
+                  <div className="text-yellow-600">
                     🎥 <strong>during the movie</strong> → 映画の間
                   </div>
                 </div>
@@ -938,24 +894,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* UNTIL / TILL */}
-          <div className="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-5 border-2 border-teal-500">
+          <div className="bg-teal-50/20 rounded-lg p-5 border-2 border-teal-500">
             <div className="text-center mb-4">
               <span className="text-5xl">⏰</span>
-              <div className="text-2xl font-bold text-teal-600 dark:text-teal-400 mt-2">
-                UNTIL/TILL
-              </div>
-              <div className="text-sm text-teal-700 dark:text-teal-300 mt-1">「〜まで」</div>
+              <div className="text-2xl font-bold text-teal-600 mt-2">UNTIL/TILL</div>
+              <div className="text-sm text-teal-700 mt-1">「〜まで」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-teal-800 dark:text-teal-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-teal-800 mb-2 flex items-center gap-2">
                   <span>🕐</span> 継続の終点：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-teal-600 dark:text-teal-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-teal-600">
                     🌙 <strong>until midnight</strong> → 真夜中まで
                   </div>
-                  <div className="text-teal-600 dark:text-teal-300">
+                  <div className="text-teal-600">
                     📅 <strong>until next week</strong> → 来週まで
                   </div>
                 </div>
@@ -964,22 +918,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* SINCE */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-5 border-2 border-blue-500">
+          <div className="bg-blue-50/20 rounded-lg p-5 border-2 border-blue-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📆</span>
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mt-2">SINCE</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300 mt-1">「〜以来」</div>
+              <div className="text-2xl font-bold text-blue-600 mt-2">SINCE</div>
+              <div className="text-sm text-blue-700 mt-1">「〜以来」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
                   <span>📅</span> 起点から継続：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-blue-600 dark:text-blue-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-blue-600">
                     🎂 <strong>since last year</strong> → 去年から（ずっと）
                   </div>
-                  <div className="text-blue-600 dark:text-blue-300">
+                  <div className="text-blue-600">
                     👶 <strong>since childhood</strong> → 子供の頃から
                   </div>
                 </div>
@@ -994,26 +948,22 @@ const PrepositionGuide: React.FC = () => {
         <h3 className="text-lg font-semibold mb-4 text-primary">🏠 場所を表す前置詞</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* INSIDE */}
-          <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-5 border-2 border-purple-500">
+          <div className="bg-purple-50/20 rounded-lg p-5 border-2 border-purple-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🏢</span>
-              <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mt-2">
-                INSIDE
-              </div>
-              <div className="text-sm text-purple-700 dark:text-purple-300 mt-1">
-                「〜の内側に」
-              </div>
+              <div className="text-2xl font-bold text-purple-600 mt-2">INSIDE</div>
+              <div className="text-sm text-purple-700 mt-1">「〜の内側に」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-purple-800 dark:text-purple-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-purple-800 mb-2 flex items-center gap-2">
                   <span>📦</span> 内側・内部：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-purple-600 dark:text-purple-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-purple-600">
                     🏠 <strong>inside the house</strong> → 家の中に
                   </div>
-                  <div className="text-purple-600 dark:text-purple-300">
+                  <div className="text-purple-600">
                     📦 <strong>inside the box</strong> → 箱の中に
                   </div>
                 </div>
@@ -1022,24 +972,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* OUTSIDE */}
-          <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-5 border-2 border-green-500">
+          <div className="bg-green-50/20 rounded-lg p-5 border-2 border-green-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🌳</span>
-              <div className="text-2xl font-bold text-green-600 dark:text-green-400 mt-2">
-                OUTSIDE
-              </div>
-              <div className="text-sm text-green-700 dark:text-green-300 mt-1">「〜の外側に」</div>
+              <div className="text-2xl font-bold text-green-600 mt-2">OUTSIDE</div>
+              <div className="text-sm text-green-700 mt-1">「〜の外側に」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-green-800 mb-2 flex items-center gap-2">
                   <span>🌲</span> 外側・外部：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-green-600 dark:text-green-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-green-600">
                     🏡 <strong>outside the house</strong> → 家の外に
                   </div>
-                  <div className="text-green-600 dark:text-green-300">
+                  <div className="text-green-600">
                     🏫 <strong>outside the school</strong> → 学校の外に
                   </div>
                 </div>
@@ -1048,22 +996,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* NEAR */}
-          <div className="bg-cyan-50 dark:bg-cyan-900/20 rounded-lg p-5 border-2 border-cyan-500">
+          <div className="bg-cyan-50/20 rounded-lg p-5 border-2 border-cyan-500">
             <div className="text-center mb-4">
               <span className="text-5xl">📍</span>
-              <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mt-2">NEAR</div>
-              <div className="text-sm text-cyan-700 dark:text-cyan-300 mt-1">「〜の近くに」</div>
+              <div className="text-2xl font-bold text-cyan-600 mt-2">NEAR</div>
+              <div className="text-sm text-cyan-700 mt-1">「〜の近くに」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-cyan-800 dark:text-cyan-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-cyan-800 mb-2 flex items-center gap-2">
                   <span>🎯</span> 近接：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-cyan-600 dark:text-cyan-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-cyan-600">
                     🚉 <strong>near the station</strong> → 駅の近くに
                   </div>
-                  <div className="text-cyan-600 dark:text-cyan-300">
+                  <div className="text-cyan-600">
                     🌊 <strong>near the sea</strong> → 海の近くに
                   </div>
                 </div>
@@ -1077,26 +1025,22 @@ const PrepositionGuide: React.FC = () => {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* BEHIND */}
-          <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-5 border-2 border-indigo-500">
+          <div className="bg-indigo-50/20 rounded-lg p-5 border-2 border-indigo-500">
             <div className="text-center mb-4">
               <span className="text-5xl">👤</span>
-              <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mt-2">
-                BEHIND
-              </div>
-              <div className="text-sm text-indigo-700 dark:text-indigo-300 mt-1">
-                「〜の後ろに」
-              </div>
+              <div className="text-2xl font-bold text-indigo-600 mt-2">BEHIND</div>
+              <div className="text-sm text-indigo-700 mt-1">「〜の後ろに」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-indigo-800 dark:text-indigo-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-indigo-800 mb-2 flex items-center gap-2">
                   <span>⬅️</span> 後方：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-indigo-600 dark:text-indigo-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-indigo-600">
                     🚪 <strong>behind the door</strong> → ドアの後ろに
                   </div>
-                  <div className="text-indigo-600 dark:text-indigo-300">
+                  <div className="text-indigo-600">
                     🏠 <strong>behind the house</strong> → 家の裏に
                   </div>
                 </div>
@@ -1105,22 +1049,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* ACROSS */}
-          <div className="bg-pink-50 dark:bg-pink-900/20 rounded-lg p-5 border-2 border-pink-500">
+          <div className="bg-pink-50/20 rounded-lg p-5 border-2 border-pink-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🌉</span>
-              <div className="text-2xl font-bold text-pink-600 dark:text-pink-400 mt-2">ACROSS</div>
-              <div className="text-sm text-pink-700 dark:text-pink-300 mt-1">「〜を横切って」</div>
+              <div className="text-2xl font-bold text-pink-600 mt-2">ACROSS</div>
+              <div className="text-sm text-pink-700 mt-1">「〜を横切って」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-pink-800 dark:text-pink-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-pink-800 mb-2 flex items-center gap-2">
                   <span>↔️</span> 横断：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-pink-600 dark:text-pink-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-pink-600">
                     🛣️ <strong>across the street</strong> → 通りを横切って
                   </div>
-                  <div className="text-pink-600 dark:text-pink-300">
+                  <div className="text-pink-600">
                     🌊 <strong>across the river</strong> → 川を渡って
                   </div>
                 </div>
@@ -1129,22 +1073,22 @@ const PrepositionGuide: React.FC = () => {
           </div>
 
           {/* ALONG */}
-          <div className="bg-lime-50 dark:bg-lime-900/20 rounded-lg p-5 border-2 border-lime-500">
+          <div className="bg-lime-50/20 rounded-lg p-5 border-2 border-lime-500">
             <div className="text-center mb-4">
               <span className="text-5xl">🛤️</span>
-              <div className="text-2xl font-bold text-lime-600 dark:text-lime-400 mt-2">ALONG</div>
-              <div className="text-sm text-lime-700 dark:text-lime-300 mt-1">「〜に沿って」</div>
+              <div className="text-2xl font-bold text-lime-600 mt-2">ALONG</div>
+              <div className="text-sm text-lime-700 mt-1">「〜に沿って」</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="font-semibold text-lime-800 dark:text-lime-200 mb-2 flex items-center gap-2">
+                <div className="font-semibold text-lime-800 mb-2 flex items-center gap-2">
                   <span>➡️</span> 沿って進む：
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm space-y-1">
-                  <div className="text-lime-600 dark:text-lime-300">
+                <div className="bg-white rounded p-2 text-sm space-y-1">
+                  <div className="text-lime-600">
                     🛣️ <strong>along the street</strong> → 通りに沿って
                   </div>
-                  <div className="text-lime-600 dark:text-lime-300">
+                  <div className="text-lime-600">
                     🌊 <strong>along the river</strong> → 川沿いに
                   </div>
                 </div>
@@ -1238,10 +1182,8 @@ const PunctuationGuide: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-blue-50 dark:bg-blue-900/20 rounded p-3 mb-3">
-              <div className="font-mono text-sm text-blue-600 dark:text-blue-300">
-                {punc.example}
-              </div>
+            <div className="bg-blue-50/20 rounded p-3 mb-3">
+              <div className="font-mono text-sm text-blue-600">{punc.example}</div>
             </div>
 
             <p className="text-sm text-text-secondary">{punc.explanation}</p>
@@ -1354,22 +1296,18 @@ const ReadingTipsGuide: React.FC = () => {
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-text-color mb-4">長文読解のコツ</h2>
 
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border-l-4 border-yellow-500 mb-6">
+      <div className="bg-yellow-50/20 rounded-lg p-6 border-l-4 border-yellow-500 mb-6">
         <div className="flex items-start gap-3">
           <span className="text-2xl">💡</span>
           <div>
-            <h3 className="font-bold text-lg text-yellow-800 dark:text-yellow-200 mb-2">
-              基本戦略
-            </h3>
-            <p className="text-yellow-700 dark:text-yellow-300 mb-3">
+            <h3 className="font-bold text-lg text-yellow-800 mb-2">基本戦略</h3>
+            <p className="text-yellow-700 mb-3">
               長文読解は「完璧に理解する」のではなく「必要な情報を効率的に見つける」作業です。
               注釈と設問から手がかりを得て、全体の流れを掴みながら、解答に必要な部分を探していきましょう。
             </p>
-            <div className="bg-yellow-100 dark:bg-yellow-800/30 rounded p-3 text-sm">
-              <p className="font-semibold text-yellow-900 dark:text-yellow-100 mb-1">
-                ⚡ 最重要ポイント
-              </p>
-              <p className="text-yellow-800 dark:text-yellow-200">
+            <div className="bg-yellow-100/30 rounded p-3 text-sm">
+              <p className="font-semibold text-yellow-900 mb-1">⚡ 最重要ポイント</p>
+              <p className="text-yellow-800">
                 読む順番: ① 注釈 → ② 設問・選択肢 → ③ タイトル・第1段落 → ④ 各段落の第1文 → ⑤
                 必要箇所を精読
               </p>
@@ -1394,51 +1332,45 @@ const ReadingTipsGuide: React.FC = () => {
 
             {/* 具体例がある場合 */}
             {tip.example && (
-              <div className="ml-14 mb-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
+              <div className="ml-14 mb-4 bg-blue-50/20 rounded-lg p-4 border border-blue-200">
                 <div className="space-y-3">
                   {tip.example.title && (
                     <div>
-                      <div className="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-1">
-                        📌 タイトル例
-                      </div>
-                      <div className="bg-white dark:bg-gray-800 rounded p-2 font-mono text-sm text-blue-700 dark:text-blue-300">
+                      <div className="text-xs font-semibold text-blue-600 mb-1">📌 タイトル例</div>
+                      <div className="bg-white rounded p-2 font-mono text-sm text-blue-700">
                         {tip.example.title}
                       </div>
                     </div>
                   )}
                   {tip.example.para1 && (
                     <div>
-                      <div className="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-1">
-                        📄 第1段落例
-                      </div>
-                      <div className="bg-white dark:bg-gray-800 rounded p-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                      <div className="text-xs font-semibold text-blue-600 mb-1">📄 第1段落例</div>
+                      <div className="bg-white rounded p-2 text-sm text-gray-700 leading-relaxed">
                         {tip.example.para1}
                       </div>
                     </div>
                   )}
                   {tip.example.structure && (
                     <div>
-                      <div className="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-1">
-                        📊 段落の構造
-                      </div>
-                      <div className="bg-white dark:bg-gray-800 rounded p-3 text-sm font-mono whitespace-pre-line text-gray-700 dark:text-gray-300">
+                      <div className="text-xs font-semibold text-blue-600 mb-1">📊 段落の構造</div>
+                      <div className="bg-white rounded p-3 text-sm font-mono whitespace-pre-line text-gray-700">
                         {tip.example.structure}
                       </div>
                     </div>
                   )}
                   {tip.example.explanation && (
-                    <div className="bg-yellow-50 dark:bg-yellow-900/30 rounded p-3 border-l-2 border-yellow-500">
-                      <div className="text-xs font-semibold text-yellow-800 dark:text-yellow-200 mb-1">
+                    <div className="bg-yellow-50/30 rounded p-3 border-l-2 border-yellow-500">
+                      <div className="text-xs font-semibold text-yellow-800 mb-1">
                         💡 読み取れること
                       </div>
-                      <div className="text-sm text-yellow-700 dark:text-yellow-300 whitespace-pre-line">
+                      <div className="text-sm text-yellow-700 whitespace-pre-line">
                         {tip.example.explanation}
                       </div>
                     </div>
                   )}
                   {tip.example.tips && (
-                    <div className="bg-green-50 dark:bg-green-900/30 rounded p-3 border-l-2 border-green-500">
-                      <div className="text-sm font-semibold text-green-700 dark:text-green-300">
+                    <div className="bg-green-50/30 rounded p-3 border-l-2 border-green-500">
+                      <div className="text-sm font-semibold text-green-700">
                         ✨ {tip.example.tips}
                       </div>
                     </div>
@@ -1460,7 +1392,7 @@ const ReadingTipsGuide: React.FC = () => {
       </div>
 
       {/* 読み方の手順 */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 mt-8 border-2 border-blue-300 dark:border-blue-700">
+      <div className="bg-gradient-to-r from-blue-50 to-purple-50/20/20 rounded-lg p-6 mt-8 border-2 border-blue-300">
         <h3 className="text-xl font-bold text-text-color mb-4 flex items-center gap-2">
           <span>📖</span>
           <span>実践！効率的な読解手順</span>
@@ -1492,12 +1424,12 @@ const ReadingTipsGuide: React.FC = () => {
       </div>
 
       {/* 注釈活用のコツ */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border-l-4 border-green-500">
-        <h3 className="text-lg font-bold text-green-800 dark:text-green-200 mb-3 flex items-center gap-2">
+      <div className="bg-green-50/20 rounded-lg p-6 border-l-4 border-green-500">
+        <h3 className="text-lg font-bold text-green-800 mb-3 flex items-center gap-2">
           <span>📌</span>
           <span>注釈の効果的な活用法</span>
         </h3>
-        <div className="space-y-2 text-sm text-green-700 dark:text-green-300">
+        <div className="space-y-2 text-sm text-green-700">
           <p>
             ✓ <strong>注釈がある = その単語が内容理解に必須</strong>という出題者のメッセージ
           </p>

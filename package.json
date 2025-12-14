@@ -16,6 +16,7 @@
     "validate:grammar:explanations": "tsx tools/validate-grammar-explanations.ts",
     "check:data-quality": "bash scripts/check-data-quality.sh",
     "check:grammar-quality": "npm run validate:grammar && npm run validate:grammar:analyze && npm run validate:grammar:explanations",
+    "check:no-dark-mode": "node scripts/check-no-dark-mode.mjs",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "stylelint 'src/**/*.css' --fix",
     "typecheck": "tsc --noEmit",
