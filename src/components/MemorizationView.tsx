@@ -233,6 +233,7 @@ function MemorizationView({
 
         const attempts = wordProgress.memorizationAttempts || 0;
         const correct = wordProgress.memorizationCorrect || 0;
+        const stillLearning = wordProgress.memorizationStillLearning || 0;
         const streak = wordProgress.memorizationStreak || 0;
         const lastStudied = wordProgress.lastStudied || 0;
 
@@ -240,14 +241,16 @@ function MemorizationView({
           return { category: 'new', priority: 3, lastStudied, attempts, correct, streak };
         }
 
-        const accuracy = attempts > 0 ? (correct / attempts) * 100 : 0;
+        // まだまだを0.5回の正解として計算（正答率50%以上になるように）
+        const effectiveCorrect = correct + stillLearning * 0.5;
+        const accuracy = attempts > 0 ? (effectiveCorrect / attempts) * 100 : 0;
 
         // 🟢 覚えてる: 連続3回以上 or 正答率80%以上で連続2回
         if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
           return { category: 'mastered', priority: 5, lastStudied, attempts, correct, streak };
         }
-        // 🟡 まだまだ: 正答率50%以上
-        else if (accuracy >= 50) {
+        // 🟡 まだまだ: 正答率50%以上 or まだまだボタンを押したことがある
+        else if (accuracy >= 50 || stillLearning > 0) {
           return {
             category: 'still_learning',
             priority: 2,
@@ -257,7 +260,7 @@ function MemorizationView({
             streak,
           };
         }
-        // 🔴 分からない: 正答率50%未満
+        // 🔴 分からない: 正答率50%未満 and まだまだボタンを押したことがない
         else {
           return { category: 'incorrect', priority: 1, lastStudied, attempts, correct, streak };
         }
