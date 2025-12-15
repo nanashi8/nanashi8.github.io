@@ -332,9 +332,9 @@ function ScoreBoard({
 
   const [showPlanSettings, setShowPlanSettings] = useState(false);
 
-  // 和訳・スペルタブ用: 上限達成時に自動的に復習モードをオンにする
+  // 和訳・スペル・文法タブ用: 上限達成時に自動的に復習モードをオンにする
   useEffect(() => {
-    if ((mode === 'translation' || mode === 'spelling') && sessionStats && onReviewFocus) {
+    if ((mode === 'translation' || mode === 'spelling' || mode === 'grammar') && sessionStats && onReviewFocus) {
       const { incorrect, review } = sessionStats;
       const totalNeedReview = incorrect + review;
       
@@ -802,6 +802,15 @@ function ScoreBoard({
                         {detailedStats.appearedWords}問出題： 🟢定着 {detailedStats.masteredCount}問
                         🟡学習中 {detailedStats.learningCount}問 🔴要復習{' '}
                         {detailedStats.strugglingCount}問
+                        {onReviewFocus && (
+                          <span
+                            className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
+                            onClick={onReviewFocus}
+                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                          >
+                            🔥
+                          </span>
+                        )}
                       </>
                     ) : (
                       <>

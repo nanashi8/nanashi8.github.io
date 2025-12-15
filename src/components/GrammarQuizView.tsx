@@ -118,6 +118,14 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
     useLearningLimits('grammar');
 
+  // 復習モード
+  const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
+
+  // 復習モードトグル
+  const handleReviewFocus = () => {
+    setIsReviewFocusMode(!isReviewFocusMode);
+  };
+
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
     const saved = localStorage.getItem('autoNext-grammar');
@@ -758,6 +766,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 sessionIncorrect={sessionStats.incorrect}
                 sessionReview={sessionStats.review}
                 sessionMastered={sessionStats.mastered}
+                sessionStats={sessionStats}
+                onReviewFocus={handleReviewFocus}
+                isReviewFocusMode={isReviewFocusMode}
                 onShowSettings={() => setShowSettings(true)}
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
