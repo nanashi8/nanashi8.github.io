@@ -337,7 +337,7 @@ function ScoreBoard({
     if ((mode === 'translation' || mode === 'spelling' || mode === 'grammar') && sessionStats && onReviewFocus) {
       const { incorrect, review } = sessionStats;
       const totalNeedReview = incorrect + review;
-      
+
       if (
         (learningLimit !== null && totalNeedReview >= learningLimit) ||
         (reviewLimit !== null && review >= reviewLimit)
