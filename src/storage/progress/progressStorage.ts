@@ -958,8 +958,8 @@ export async function updateWordProgress(
       wordProgress.memorizationCorrect = (wordProgress.memorizationCorrect || 0) + 1;
       wordProgress.memorizationStreak = (wordProgress.memorizationStreak || 0) + 1;
     } else if (isStillLearning) {
-      // 「まだまだ」は正解にはカウントしないが、ストリークもリセットしない（中立）
-      // memorizationCorrectには加算しない
+      // 「まだまだ」は専用カウンターに記録
+      wordProgress.memorizationStillLearning = (wordProgress.memorizationStillLearning || 0) + 1;
       // memorizationStreakはそのまま維持
     } else {
       // 「分からない」の場合のみストリークをリセット

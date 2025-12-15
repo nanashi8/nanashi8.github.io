@@ -807,9 +807,12 @@ export function getMemorizationDetailedRetentionStats(): DetailedRetentionStats 
   memorizationWords.forEach((wp) => {
     const totalAttempts = wp.memorizationAttempts || 0;
     const correctCount = wp.memorizationCorrect || 0;
+    const stillLearningCount = wp.memorizationStillLearning || 0;
     const consecutiveCorrect = wp.memorizationStreak || 0;
 
-    const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
+    // まだまだを0.5回の正解として計算（正答率50%以上になるように）
+    const effectiveCorrect = correctCount + stillLearningCount * 0.5;
+    const accuracy = totalAttempts > 0 ? (effectiveCorrect / totalAttempts) * 100 : 0;
 
     // 🟢 完全定着判定（覚えてる）
     const isDefinitelyMastered =
@@ -819,11 +822,11 @@ export function getMemorizationDetailedRetentionStats(): DetailedRetentionStats 
 
     if (isDefinitelyMastered) {
       masteredCount++;
-    } else if (accuracy >= 50) {
-      // 🟡 まだまだ（正答率50%以上だがまだ定着していない）
+    } else if (accuracy >= 50 || stillLearningCount > 0) {
+      // 🟡 まだまだ（正答率50%以上 or まだまだボタンを押したことがある）
       learningCount++;
     } else {
-      // 🔴 分からない（正答率50%未満）
+      // 🔴 分からない（正答率50%未満 and まだまだボタンを押したことがない）
       strugglingCount++;
     }
   });

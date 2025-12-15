@@ -62,6 +62,7 @@ export interface WordProgress {
   grammarStreak?: number; // 文法モードの連続正解数
   memorizationAttempts?: number; // 暗記モードの試行回数
   memorizationCorrect?: number; // 暗記モードの正解回数
+  memorizationStillLearning?: number; // 暗記モードのまだまだ回数
   memorizationStreak?: number; // 暗記モードの連続正解数
 
   // 学習曲線AI用の詳細履歴
