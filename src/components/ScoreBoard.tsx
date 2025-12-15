@@ -816,33 +816,30 @@ function ScoreBoard({
                             data-width={Math.round(detailedStats.masteredPercentage)}
                             title={`🟢 覚えてる: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
                           >
-                            <span className="segment-label">{detailedStats.masteredCount}語</span>
                             {detailedStats.masteredPercentage >= 10 && (
                               <span>{Math.round(detailedStats.masteredPercentage)}%</span>
                             )}
                           </div>
                         )}
-                        {detailedStats.learningPercentage > 0 && (
+                        {detailedStats.learningCount > 0 && (
                           <div
                             ref={learningRef}
                             className="retention-segment retention-learning"
                             data-width={Math.round(detailedStats.learningPercentage)}
                             title={`🟡 まだまだ: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
                           >
-                            <span className="segment-label">{detailedStats.learningCount}語</span>
                             {detailedStats.learningPercentage >= 10 && (
                               <span>{Math.round(detailedStats.learningPercentage)}%</span>
                             )}
                           </div>
                         )}
-                        {detailedStats.strugglingPercentage > 0 && (
+                        {detailedStats.strugglingCount > 0 && (
                           <div
                             ref={strugglingRef}
                             className="retention-segment retention-struggling"
                             data-width={Math.round(detailedStats.strugglingPercentage)}
                             title={`🔴 分からない: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
                           >
-                            <span className="segment-label">{detailedStats.strugglingCount}語</span>
                             {detailedStats.strugglingPercentage >= 10 && (
                               <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
                             )}
