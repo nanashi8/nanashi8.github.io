@@ -123,10 +123,10 @@ function QuizView({
     // 回答結果を記録
     setLastAnswerCorrect(isCorrect);
     if (isCorrect) {
-      setCorrectStreak(prev => prev + 1);
+      setCorrectStreak((prev) => prev + 1);
       setIncorrectStreak(0);
     } else {
-      setIncorrectStreak(prev => prev + 1);
+      setIncorrectStreak((prev) => prev + 1);
       setCorrectStreak(0);
     }
 

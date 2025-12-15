@@ -86,7 +86,8 @@ function ScoreBoard({
   // 新しい問題が表示された時に、その問題の履歴情報を表示し、解答後コメントをクリア
   useEffect(() => {
     if (currentWord) {
-      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
+      const personality = (localStorage.getItem('aiPersonality') ||
+        'kind-teacher') as AIPersonality;
       const wordData = getWordDetailedData(currentWord);
 
       // 問題の履歴情報に基づいてコメントを生成
@@ -123,19 +124,27 @@ function ScoreBoard({
           const wasCorrect = correctCount === 1;
           switch (personality) {
             case 'drill-sergeant':
-              comment = wasCorrect ? '2回目だ！前回は正解したぞ。またやれ！' : '2回目だ！前回は間違えた。今度こそ決めろ！';
+              comment = wasCorrect
+                ? '2回目だ！前回は正解したぞ。またやれ！'
+                : '2回目だ！前回は間違えた。今度こそ決めろ！';
               break;
             case 'kind-teacher':
-              comment = wasCorrect ? '2回目の出題です。前回は正解できましたね' : '2回目の出題です。前回は間違えてしまいましたが、大丈夫です';
+              comment = wasCorrect
+                ? '2回目の出題です。前回は正解できましたね'
+                : '2回目の出題です。前回は間違えてしまいましたが、大丈夫です';
               break;
             case 'analyst':
               comment = `2回目の出題。前回: ${wasCorrect ? '正解' : '不正解'}`;
               break;
             case 'enthusiastic-coach':
-              comment = wasCorrect ? '2回目！前回は完璧だったな！' : '2回目のチャンス！前回のリベンジだ！';
+              comment = wasCorrect
+                ? '2回目！前回は完璧だったな！'
+                : '2回目のチャンス！前回のリベンジだ！';
               break;
             case 'wise-sage':
-              comment = wasCorrect ? '2度目の出会いじゃ。前回はうまくいったのう' : '2度目じゃな。前回の経験を活かそう';
+              comment = wasCorrect
+                ? '2度目の出会いじゃ。前回はうまくいったのう'
+                : '2度目じゃな。前回の経験を活かそう';
               break;
             default:
               comment = '2回目の出題です';
@@ -205,8 +214,7 @@ function ScoreBoard({
       return;
     }
 
-    const personality = (localStorage.getItem('aiPersonality') ||
-      'kind-teacher') as AIPersonality;
+    const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
 
     // 今日の統計を取得
     const todayStats = getTodayStats(mode || 'translation');
@@ -214,9 +222,7 @@ function ScoreBoard({
     const todayAccuracy = todayStats.todayAccuracy;
 
     // 全体の正答率を計算
-    const userAccuracy = totalAnswered > 0
-      ? ((sessionCorrect || 0) / totalAnswered) * 100
-      : 0;
+    const userAccuracy = totalAnswered > 0 ? ((sessionCorrect || 0) / totalAnswered) * 100 : 0;
 
     // カテゴリー正答率（簡易計算）
     const categoryAccuracy = userAccuracy; // 実際はカテゴリー別に集計する必要があるが、簡易版として全体を使用
@@ -225,7 +231,10 @@ function ScoreBoard({
     const context: CommentContext = {
       isCorrect: lastAnswerCorrect,
       word: lastAnswerWord,
-      difficulty: (lastAnswerDifficulty || difficulty || 'intermediate') as 'beginner' | 'intermediate' | 'advanced',
+      difficulty: (lastAnswerDifficulty || difficulty || 'intermediate') as
+        | 'beginner'
+        | 'intermediate'
+        | 'advanced',
       category: category || '全分野',
       attemptCount: 1, // スコアボードレベルでは試行回数は1として扱う
       responseTime: 0, // スコアボードでは応答時間は測定しない
@@ -272,7 +281,19 @@ function ScoreBoard({
     }
 
     setAnswerComment(comment);
-  }, [onAnswerTime, lastAnswerCorrect, lastAnswerWord, lastAnswerDifficulty, correctStreak, incorrectStreak, mode, totalAnswered, sessionCorrect, category, difficulty]);
+  }, [
+    onAnswerTime,
+    lastAnswerCorrect,
+    lastAnswerWord,
+    lastAnswerDifficulty,
+    correctStreak,
+    incorrectStreak,
+    mode,
+    totalAnswered,
+    sessionCorrect,
+    category,
+    difficulty,
+  ]);
 
   // Progress bar refs
   const masteredRef = useRef<HTMLDivElement>(null);
