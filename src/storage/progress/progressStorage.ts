@@ -987,6 +987,63 @@ export async function updateWordProgress(
   // 最終学習日時を更新
   wordProgress.lastStudied = Date.now();
 
+  // 間隔反復学習（Spaced Repetition）の更新 - 暗記モード専用
+  if (mode === 'memorization') {
+    // 難易度係数（EF: Easiness Factor）の初期化と更新
+    if (wordProgress.easinessFactor === undefined) {
+      wordProgress.easinessFactor = 2.5; // 初期値
+    }
+    
+    // 回答品質に基づいてEFを調整（個人の学習速度に適応）
+    if (isCorrect) {
+      // 完璧に覚えている → EF増加（次回の間隔が長くなる = 学習速度が速い）
+      wordProgress.easinessFactor = Math.min(2.5, wordProgress.easinessFactor + 0.1);
+    } else if (isStillLearning) {
+      // まだまだ → EF維持（現在の学習速度を保持）
+      // 何もしない
+    } else {
+      // 分からない → EF減少（次回の間隔が短くなる = より頻繁に復習）
+      wordProgress.easinessFactor = Math.max(1.3, wordProgress.easinessFactor - 0.2);
+    }
+
+    // 復習間隔の計算
+    const streak = wordProgress.memorizationStreak || 0;
+    const ef = wordProgress.easinessFactor;
+    
+    let newInterval = 0;
+    if (streak === 0) {
+      newInterval = 0; // 即座に再出題
+    } else if (streak === 1) {
+      newInterval = 1; // 1日後
+    } else if (streak === 2) {
+      newInterval = 3; // 3日後
+    } else if (streak === 3) {
+      newInterval = 7; // 7日後
+    } else {
+      // 4回目以降：前回の間隔 × EF（個人最適化）
+      const previousInterval = wordProgress.reviewInterval || 7;
+      newInterval = Math.round(previousInterval * ef);
+    }
+    
+    wordProgress.reviewInterval = newInterval;
+    wordProgress.lastReviewDate = Date.now();
+    wordProgress.totalReviews = (wordProgress.totalReviews || 0) + 1;
+    
+    // 平均応答速度を記録（学習速度の指標）
+    if (!wordProgress.avgResponseSpeed) {
+      wordProgress.avgResponseSpeed = responseTime;
+    } else {
+      // 移動平均で更新
+      wordProgress.avgResponseSpeed = (wordProgress.avgResponseSpeed * 0.8) + (responseTime * 0.2);
+    }
+    
+    // 学習サイクルが早い生徒への適応：応答が速い場合はEFをさらに増加
+    if (responseTime < 2000 && isCorrect) {
+      // 2秒未満で正解 → 学習速度が速い
+      wordProgress.easinessFactor = Math.min(2.5, wordProgress.easinessFactor + 0.05);
+    }
+  }
+
   // 学習履歴を記録（学習曲線AI用）最新20件を保持
   if (!wordProgress.learningHistory) {
     wordProgress.learningHistory = [];
