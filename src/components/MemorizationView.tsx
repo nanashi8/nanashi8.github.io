@@ -306,9 +306,9 @@ function MemorizationView({
     const totalStudied = counts.mastered + counts.still_learning + counts.incorrect;
     const needsReview = counts.still_learning + counts.incorrect;
     const reviewRatio = totalStudied > 0 ? needsReview / totalStudied : 0;
-    
-    // 復習が必要な語句が多い場合（30%以上）は新規出題を抑制
-    const shouldSuppressNew = reviewRatio >= 0.3;
+
+    // フラッシュカード学習の原則：復習が20%以上なら新規を大幅に抑制
+    const shouldSuppressNew = reviewRatio >= 0.2;
 
     // ソート: 優先度 > 最終学習時刻（古い順） > ランダム
     const sorted = questionsWithStatus.sort((a, b) => {
@@ -335,23 +335,23 @@ function MemorizationView({
         if (statusA?.category === 'new' && priorityA > 1) priorityA = 4;
         if (statusB?.category === 'new' && priorityB > 1) priorityB = 4;
       } else {
-        // 通常モード: 学習状況に応じた動的な優先度調整
-        
-        // 🔴 分からないは常に最優先（復習が最重要）
-        if (statusA?.category === 'incorrect') priorityA = 0.5;
-        if (statusB?.category === 'incorrect') priorityB = 0.5;
+        // 通常モード: フラッシュカード学習の原則に従い、復習を最優先
 
-        // 🟡 まだまだも高優先（定着させることが重要）
-        if (statusA?.category === 'still_learning') priorityA = 1.5;
-        if (statusB?.category === 'still_learning') priorityB = 1.5;
+        // 🔴 分からないは常に最優先（記憶の定着が最重要）
+        if (statusA?.category === 'incorrect') priorityA = 0.3;
+        if (statusB?.category === 'incorrect') priorityB = 0.3;
 
-        // 🆕 新規問題の優先度を動的に調整
-        // 復習が必要な語句が多い場合は新規を後回し、少ない場合は適度に出題
+        // 🟡 まだまだも最優先に近い（定着させることが重要）
+        if (statusA?.category === 'still_learning') priorityA = 0.8;
+        if (statusB?.category === 'still_learning') priorityB = 0.8;
+
+        // 🆕 新規問題は復習状況に応じて大幅に抑制
+        // フラッシュカード学習では、復習が優先で新規は少しずつ追加
         if (statusA?.category === 'new') {
-          priorityA = shouldSuppressNew ? 4 : 2.5; // 30%以上: 後回し、30%未満: 適度に出題
+          priorityA = shouldSuppressNew ? 5 : 3.5; // 20%以上: 最後尾、20%未満: 後回し
         }
         if (statusB?.category === 'new') {
-          priorityB = shouldSuppressNew ? 4 : 2.5;
+          priorityB = shouldSuppressNew ? 5 : 3.5;
         }
 
         // 上限に達した場合はさらに優先度を上げる
