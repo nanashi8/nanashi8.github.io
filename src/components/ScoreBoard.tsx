@@ -672,46 +672,67 @@ function ScoreBoard({
               <div className="plan-settings-modal">
                 <div className="plan-settings-content">
                   <h4>🎯 出題繰り返し設定</h4>
-                  <p className="plan-settings-description">未入力はどこまでも出題します</p>
+                  <p className="plan-settings-description">0を選択すると無制限に出題します</p>
                   <div className="plan-setting-item">
                     <label>まだまだの語数上限:</label>
-                    <input
-                      type="number"
-                      min="0"
-                      placeholder="未入力=無制限"
-                      value={stillLearningLimit || ''}
+                    <select
+                      value={stillLearningLimit || 0}
                       onChange={(e) => {
-                        const value = e.target.value === '' ? null : parseInt(e.target.value);
-                        setStillLearningLimit(value);
-                        if (value === null) {
+                        const value = parseInt(e.target.value);
+                        const finalValue = value === 0 ? null : value;
+                        setStillLearningLimit(finalValue);
+                        if (finalValue === null) {
                           localStorage.removeItem('memorization-still-learning-limit');
                         } else {
                           localStorage.setItem(
                             'memorization-still-learning-limit',
-                            value.toString()
+                            finalValue.toString()
                           );
                         }
                       }}
-                    />
+                      className="select-input"
+                    >
+                      <option value={0}>設定無し</option>
+                      <option value={5}>5</option>
+                      <option value={10}>10</option>
+                      <option value={20}>20</option>
+                      <option value={30}>30</option>
+                      <option value={50}>50</option>
+                      <option value={100}>100</option>
+                      <option value={150}>150</option>
+                      <option value={200}>200</option>
+                    </select>
                     <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
                   </div>
                   <div className="plan-setting-item">
                     <label>分からないの語数上限:</label>
-                    <input
-                      type="number"
-                      min="0"
-                      placeholder="未入力=無制限"
-                      value={incorrectLimit || ''}
+                    <select
+                      value={incorrectLimit || 0}
                       onChange={(e) => {
-                        const value = e.target.value === '' ? null : parseInt(e.target.value);
-                        setIncorrectLimit(value);
-                        if (value === null) {
+                        const value = parseInt(e.target.value);
+                        const finalValue = value === 0 ? null : value;
+                        setIncorrectLimit(finalValue);
+                        if (finalValue === null) {
                           localStorage.removeItem('memorization-incorrect-limit');
                         } else {
-                          localStorage.setItem('memorization-incorrect-limit', value.toString());
+                          localStorage.setItem(
+                            'memorization-incorrect-limit',
+                            finalValue.toString()
+                          );
                         }
                       }}
-                    />
+                      className="select-input"
+                    >
+                      <option value={0}>設定無し</option>
+                      <option value={5}>5</option>
+                      <option value={10}>10</option>
+                      <option value={20}>20</option>
+                      <option value={30}>30</option>
+                      <option value={50}>50</option>
+                      <option value={100}>100</option>
+                      <option value={150}>150</option>
+                      <option value={200}>200</option>
+                    </select>
                     <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
                   </div>
                   <button
