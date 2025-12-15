@@ -319,21 +319,21 @@ function MemorizationView({
       let priorityA = statusA?.priority || 3;
       let priorityB = statusB?.priority || 3;
 
-      // 🔥 復習モードが有効な場合: 分からないを主に、分からないとまだまだを優先
+      // 🔥 復習モードが有効な場合: 分からないとまだまだを集中的に出題
       if (isReviewFocusMode) {
-        // 分からない（incorrect）を最優先
+        // 分からない（incorrect）を最優先（約70%の出現率）
         if (statusA?.category === 'incorrect') priorityA = 0;
         if (statusB?.category === 'incorrect') priorityB = 0;
 
-        // まだまだ（still_learning）を次に優先
-        if (statusA?.category === 'still_learning' && priorityA !== 0) priorityA = 1;
-        if (statusB?.category === 'still_learning' && priorityB !== 0) priorityB = 1;
+        // まだまだ（still_learning）を次に優先（約25%の出現率）
+        if (statusA?.category === 'still_learning' && priorityA !== 0) priorityA = 0.5;
+        if (statusB?.category === 'still_learning' && priorityB !== 0) priorityB = 0.5;
 
-        // 覚えてる（mastered）と新規は後回し
-        if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 5;
-        if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 5;
-        if (statusA?.category === 'new' && priorityA > 1) priorityA = 4;
-        if (statusB?.category === 'new' && priorityB > 1) priorityB = 4;
+        // 覚えてる（mastered）と新規はほぼ出題しない（合計5%）
+        if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 10;
+        if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 10;
+        if (statusA?.category === 'new' && priorityA > 1) priorityA = 8;
+        if (statusB?.category === 'new' && priorityB > 1) priorityB = 8;
       } else {
         // 通常モード: フラッシュカード学習の原則に従い、復習を最優先
 
@@ -863,6 +863,7 @@ function MemorizationView({
                 sessionReview={sessionStats.still_learning}
                 sessionIncorrect={sessionStats.incorrect}
                 totalAnswered={sessionStats.total}
+                currentWord={currentQuestion?.word}
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
                 lastAnswerWord={currentQuestion?.word}
