@@ -738,6 +738,9 @@ function ScoreBoard({
                   <div className="retention-subtitle">
                     {mode === 'memorization' ? (
                       <>
+                        {detailedStats.appearedWords}語確認： 🟢覚えてる{' '}
+                        {detailedStats.masteredCount}語 🟡まだまだ {detailedStats.learningCount}語
+                        🔴分からない {detailedStats.strugglingCount}語
                         {onReviewFocus && (
                           <span
                             className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
