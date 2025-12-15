@@ -214,6 +214,18 @@ function MemorizationView({
     setIsReviewFocusMode(!isReviewFocusMode);
   };
 
+  // 上限達成時に自動的に復習モードをオンにする
+  useEffect(() => {
+    if (
+      (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
+      (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit)
+    ) {
+      if (!isReviewFocusMode) {
+        setIsReviewFocusMode(true);
+      }
+    }
+  }, [sessionStats, stillLearningLimit, incorrectLimit, isReviewFocusMode]);
+
   // 適応的な出題順序を構築（Leitnerシステム + 間隔反復）
   const sortQuestionsByPriority = (
     questions: Question[],
@@ -818,47 +830,6 @@ function MemorizationView({
         </div>
       ) : (
         <>
-          {/* 上限達成通知 */}
-          {(stillLearningLimit !== null || incorrectLimit !== null) && (
-            <div className="mb-4 flex justify-center">
-              <div className="w-full max-w-4xl">
-                {stillLearningLimit !== null &&
-                  sessionStats.still_learning >= stillLearningLimit && (
-                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-2">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                          <span className="text-2xl">🟡</span>
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm text-yellow-700">
-                            <strong>まだまだが{stillLearningLimit}語に達しました！</strong>
-                            <br />
-                            集中復習モードに入ります。まだまだの語句を優先的に出題します。
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                {incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit && (
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-2">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0">
-                        <span className="text-2xl">🔴</span>
-                      </div>
-                      <div className="ml-3">
-                        <p className="text-sm text-red-700">
-                          <strong>分からないが{incorrectLimit}語に達しました！</strong>
-                          <br />
-                          最優先復習モードに入ります。分からない語句を最優先で出題します。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
           {/* スコアボード */}
           <div className="mb-4 flex justify-center">
             <div className="w-full max-w-4xl">
@@ -1026,7 +997,7 @@ function MemorizationView({
                             className="w-full px-3 py-2 border rounded-lg"
                           />
                           <p className="text-xs text-gray-500 mt-1">
-                            この数に達したら、まだまだの語句を集中復習します
+                            この数に達したら、復習モードに自動で切り替わります
                           </p>
                         </div>
                       )}
@@ -1069,7 +1040,7 @@ function MemorizationView({
                             className="w-full px-3 py-2 border rounded-lg"
                           />
                           <p className="text-xs text-gray-500 mt-1">
-                            この数に達したら、分からない語句を最優先で復習します
+                            この数に達したら、復習モードに自動で切り替わります
                           </p>
                         </div>
                       )}
