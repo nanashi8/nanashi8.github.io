@@ -26,7 +26,7 @@ type VerbFormQuestion = {
   verb?: string;
   wordOrder?: string[];
   choices?: string[];
-  correctAnswer?: string;
+  correctAnswer?: string | string[];
   difficulty: string;
   explanation: string;
   hint: string;
@@ -158,7 +158,8 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
           if (!q.correctAnswer) return;
-          expect(q.correctAnswer.trim(), `問題 ${q.id}: 正答が空文字列`).not.toBe('');
+          const answer = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
+          expect(answer.trim(), `問題 ${q.id}: 正答が空文字列`).not.toBe('');
         });
       });
     });
@@ -166,10 +167,10 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('正答が選択肢に含まれている', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
-          expect(
-            q.choices,
-            `問題 ${q.id}: 正答 "${q.correctAnswer}" が選択肢に存在しない`
-          ).toContain(q.correctAnswer);
+          const answer = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
+          expect(q.choices, `問題 ${q.id}: 正答 "${answer}" が選択肢に存在しない`).toContain(
+            answer
+          );
         });
       });
     });
@@ -215,8 +216,9 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
           if (!q.choices || !q.correctAnswer) return;
+          const answer = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
           if (q.verb === 'be') {
-            const wrongChoices = q.choices.filter((c) => c !== q.correctAnswer);
+            const wrongChoices = q.choices.filter((c) => c !== answer);
 
             // 誤答が存在することを確認（正答以外の選択肢）
             expect(wrongChoices.length, `問題 ${q.id}: 誤答選択肢が存在しない`).toBeGreaterThan(0);
@@ -272,7 +274,10 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
 
           // blanksが文頭にある場合は、正答を埋めた後の文をチェック
           if (sentence.startsWith('____')) {
-            const completedSentence = sentence.replace('____', q.correctAnswer || '');
+            const answer = Array.isArray(q.correctAnswer)
+              ? q.correctAnswer[0]
+              : q.correctAnswer || '';
+            const completedSentence = sentence.replace('____', answer);
             const firstChar = completedSentence.trim()[0];
             const isUpperCase =
               firstChar === firstChar.toUpperCase() && firstChar !== firstChar.toLowerCase();
@@ -299,7 +304,8 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
           if (!q.sentence || !q.correctAnswer) return;
-          const completedSentence = q.sentence.replace(/____/g, q.correctAnswer);
+          const answer = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
+          const completedSentence = q.sentence.replace(/____/g, answer);
 
           // 基本的な文法チェック: 主語の存在
           // 大文字で始まる語(固有名詞、代名詞、一般名詞)を主語として認識
@@ -358,12 +364,13 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
           if (!q.correctAnswer) return;
+          const answer = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
           // 正答が解説文に含まれているか
-          const mentionsAnswer = q.explanation.includes(q.correctAnswer);
+          const mentionsAnswer = q.explanation.includes(answer);
 
           expect(
             mentionsAnswer,
-            `問題 ${q.id}: explanationに正答 "${q.correctAnswer}" が含まれていない`
+            `問題 ${q.id}: explanationに正答 "${answer}" が含まれていない`
           ).toBe(true);
         });
       });

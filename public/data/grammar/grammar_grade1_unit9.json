@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
-      "explanation": "goの過去形はwentです。「私は昨日東京へ行きました」です。",
+      "explanation": "goの過去形はwentです。「私は昨日東京へ行きました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "went"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "came",
       "difficulty": "beginner",
-      "explanation": "comeの過去形はcameです。「彼女は先週ここに来ました」です。",
+      "explanation": "comeの過去形はcameです。「彼女は先週ここに来ました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "came"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "saw",
       "difficulty": "beginner",
-      "explanation": "seeの過去形はsawです。「私たちは昨日映画を見ました」です。",
+      "explanation": "seeの過去形はsawです。「私たちは昨日映画を見ました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "saw"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "ate",
       "difficulty": "beginner",
-      "explanation": "eatの過去形はateです。「彼は今朝朝食を食べました」です。",
+      "explanation": "eatの過去形はateです。「彼は今朝朝食を食べました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "ate"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "made",
       "difficulty": "beginner",
-      "explanation": "makeの過去形はmadeです。「彼らは昨日ケーキを作りました」です。",
+      "explanation": "makeの過去形はmadeです。「彼らは昨日ケーキを作りました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "made"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "explanation": "haveの過去形はhadです。「私は昨晩楽しい時間を過ごしました」です。",
+      "explanation": "haveの過去形はhadです。「私は昨晩楽しい時間を過ごしました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "had"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "got",
       "difficulty": "intermediate",
-      "explanation": "getの過去形はgotです。「彼女は昨日プレゼントをもらいました」です。",
+      "explanation": "getの過去形はgotです。「彼女は昨日プレゼントをもらいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "got"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "took",
       "difficulty": "intermediate",
-      "explanation": "takeの過去形はtookです。「私たちは先週の日曜日に写真を撮りました」です。",
+      "explanation": "takeの過去形はtookです。「私たちは先週の日曜日に写真を撮りました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "took"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
-      "explanation": "buyの過去形はboughtです。「彼は昨日新しいパソコンを買いました」です。",
+      "explanation": "buyの過去形はboughtです。「彼は昨日新しいパソコンを買いました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "bought"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
-      "explanation": "readの過去形はread（発音が違う）です。「彼らは先月その本を読みました」です。",
+      "explanation": "readの過去形はread（発音が違う）です。「彼らは先月その本を読みました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "read"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "wrote",
       "difficulty": "intermediate",
-      "explanation": "writeの過去形はwroteです。「私は昨日手紙を書きました」です。",
+      "explanation": "writeの過去形はwroteです。「私は昨日手紙を書きました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "wrote"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "knew",
       "difficulty": "advanced",
-      "explanation": "knowの過去形はknewです。「彼女は昨日答えを知っていました」です。",
+      "explanation": "knowの過去形はknewです。「彼女は昨日答えを知っていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "knew"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "gave",
       "difficulty": "advanced",
-      "explanation": "giveの過去形はgaveです。「私たちは先週彼に贈り物をあげました」です。",
+      "explanation": "giveの過去形はgaveです。「私たちは先週彼に贈り物をあげました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "gave"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "ran",
       "difficulty": "advanced",
-      "explanation": "runの過去形はranです。「彼は昨日の朝公園で走りました」です。",
+      "explanation": "runの過去形はranです。「彼は昨日の朝公園で走りました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "ran"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "found",
       "difficulty": "advanced",
-      "explanation": "findの過去形はfoundです。「彼らは昨晩鍵を見つけました」です。",
+      "explanation": "findの過去形はfoundです。「彼らは昨晩鍵を見つけました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "found"
     },
     {
@@ -248,7 +248,7 @@
       ],
       "correctAnswer": "I went home yesterday.",
       "difficulty": "beginner",
-      "explanation": "「私は昨日家に帰りました」です。go → wentです。",
+      "explanation": "「私は昨日家に帰りました」です。go → wentです。\n\n「私は昨日家に帰りました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I went home yesterday.",
       "hint": "went",
       "wordCount": 4
     },
@@ -264,7 +264,7 @@
       ],
       "correctAnswer": "She came to Japan.",
       "difficulty": "beginner",
-      "explanation": "「彼女は日本に来ました」です。come → cameです。",
+      "explanation": "「彼女は日本に来ました」です。come → cameです。\n\n「彼女は日本に来ました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She came to Japan.",
       "hint": "came",
       "wordCount": 4
     },
@@ -280,7 +280,7 @@
       ],
       "correctAnswer": "We saw him yesterday.",
       "difficulty": "beginner",
-      "explanation": "「私たちは昨日彼に会いました」です。see → sawです。",
+      "explanation": "「私たちは昨日彼に会いました」です。see → sawです。\n\n「私たちは昨日彼に会いました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We saw him yesterday.",
       "hint": "saw",
       "wordCount": 4
     },
@@ -296,7 +296,7 @@
       ],
       "correctAnswer": "He had lunch yesterday.",
       "difficulty": "beginner",
-      "explanation": "「彼は昨日昼食を食べました」です。have → hadです。",
+      "explanation": "「彼は昨日昼食を食べました」です。have → hadです。\n\n「彼は昨日昼食を食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He had lunch yesterday.",
       "hint": "had",
       "wordCount": 4
     },
@@ -312,7 +312,7 @@
       ],
       "correctAnswer": "They made cookies yesterday.",
       "difficulty": "beginner",
-      "explanation": "「彼らは昨日クッキーを作りました」です。make → madeです。",
+      "explanation": "「彼らは昨日クッキーを作りました」です。make → madeです。\n\n「彼らは昨日クッキーを作りました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They made cookies yesterday.",
       "hint": "made",
       "wordCount": 4
     },
@@ -329,7 +329,7 @@
       ],
       "correctAnswer": "I took this picture yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「私は昨日この写真を撮りました」です。take → tookです。",
+      "explanation": "「私は昨日この写真を撮りました」です。take → tookです。\n\n「私は昨日この写真を撮りました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I took this picture yesterday.",
       "hint": "took",
       "wordCount": 5
     },
@@ -345,7 +345,7 @@
       ],
       "correctAnswer": "She bought a book.",
       "difficulty": "intermediate",
-      "explanation": "「彼女は本を買いました」です。buy → boughtです。",
+      "explanation": "「彼女は本を買いました」です。buy → boughtです。\n\n「彼女は本を買いました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She bought a book.",
       "hint": "bought",
       "wordCount": 4
     },
@@ -362,7 +362,7 @@
       ],
       "correctAnswer": "We ate pizza last night.",
       "difficulty": "intermediate",
-      "explanation": "「私たちは昨晩ピザを食べました」です。eat → ateです。",
+      "explanation": "「私たちは昨晩ピザを食べました」です。eat → ateです。\n\n「私たちは昨晩ピザを食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We ate pizza last night.",
       "hint": "ate",
       "wordCount": 5
     },
@@ -379,7 +379,7 @@
       ],
       "correctAnswer": "He got up early yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「彼は昨日早く起きました」です。get → gotです。",
+      "explanation": "「彼は昨日早く起きました」です。get → gotです。\n\n「彼は昨日早く起きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He got up early yesterday.",
       "hint": "got up",
       "wordCount": 5
     },
@@ -396,7 +396,7 @@
       ],
       "correctAnswer": "They read the story yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「彼らは昨日その物語を読みました」です。read → readです。",
+      "explanation": "「彼らは昨日その物語を読みました」です。read → readです。\n\n「彼らは昨日その物語を読みました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They read the story yesterday.",
       "hint": "read",
       "wordCount": 5
     },
@@ -414,7 +414,7 @@
       ],
       "correctAnswer": "I wrote an email this morning.",
       "difficulty": "advanced",
-      "explanation": "「私は今朝メールを書きました」です。write → wroteです。",
+      "explanation": "「私は今朝メールを書きました」です。write → wroteです。\n\n「私は今朝メールを書きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I wrote an email this morning.",
       "hint": "wrote",
       "wordCount": 6
     },
@@ -431,7 +431,7 @@
       ],
       "correctAnswer": "She gave me a present.",
       "difficulty": "advanced",
-      "explanation": "「彼女は私にプレゼントをくれました」です。give → gaveです。",
+      "explanation": "「彼女は私にプレゼントをくれました」です。give → gaveです。\n\n「彼女は私にプレゼントをくれました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She gave me a present.",
       "hint": "gave",
       "wordCount": 5
     },
@@ -449,7 +449,7 @@
       ],
       "correctAnswer": "We ran in the park yesterday.",
       "difficulty": "advanced",
-      "explanation": "「私たちは昨日公園で走りました」です。run → ranです。",
+      "explanation": "「私たちは昨日公園で走りました」です。run → ranです。\n\n「私たちは昨日公園で走りました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We ran in the park yesterday.",
       "hint": "ran",
       "wordCount": 6
     },
@@ -466,7 +466,7 @@
       ],
       "correctAnswer": "He knew the truth yesterday.",
       "difficulty": "advanced",
-      "explanation": "「彼は昨日真実を知っていました」です。know → knewです。",
+      "explanation": "「彼は昨日真実を知っていました」です。know → knewです。\n\n「彼は昨日真実を知っていました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He knew the truth yesterday.",
       "hint": "knew",
       "wordCount": 5
     },
@@ -483,7 +483,7 @@
       ],
       "correctAnswer": "They found a treasure yesterday.",
       "difficulty": "advanced",
-      "explanation": "「彼らは昨日宝物を見つけました」です。find → foundです。",
+      "explanation": "「彼らは昨日宝物を見つけました」です。find → foundです。\n\n「彼らは昨日宝物を見つけました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They found a treasure yesterday.",
       "hint": "found",
       "wordCount": 5
     },
@@ -500,7 +500,7 @@
       ],
       "correctAnswer": "I went to school.",
       "difficulty": "beginner",
-      "explanation": "go → wentです。「私は学校へ行きました」です。",
+      "explanation": "go → wentです。「私は学校へ行きました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "went"
     },
     {
@@ -516,7 +516,7 @@
       ],
       "correctAnswer": "She came home.",
       "difficulty": "beginner",
-      "explanation": "come → cameです。「彼女は家に帰りました」です。",
+      "explanation": "come → cameです。「彼女は家に帰りました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "came"
     },
     {
@@ -532,7 +532,7 @@
       ],
       "correctAnswer": "They saw the cat.",
       "difficulty": "beginner",
-      "explanation": "see → sawです。「彼らは猫を見ました」です。",
+      "explanation": "see → sawです。「彼らは猫を見ました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "saw"
     },
     {
@@ -548,7 +548,7 @@
       ],
       "correctAnswer": "We ate dinner.",
       "difficulty": "beginner",
-      "explanation": "eat → ateです。「私たちは夕食を食べました」です。",
+      "explanation": "eat → ateです。「私たちは夕食を食べました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "ate"
     },
     {
@@ -564,7 +564,7 @@
       ],
       "correctAnswer": "He made a plan.",
       "difficulty": "beginner",
-      "explanation": "make → madeです。「彼は計画を立てました」です。",
+      "explanation": "make → madeです。「彼は計画を立てました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "made"
     },
     {
@@ -580,7 +580,7 @@
       ],
       "correctAnswer": "I buy a pen.",
       "difficulty": "intermediate",
-      "explanation": "bought → buyです。yesterdayを取ります。「私はペンを買います」です。",
+      "explanation": "bought → buyです。yesterdayを取ります。「私はペンを買います」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "buy"
     },
     {
@@ -596,7 +596,7 @@
       ],
       "correctAnswer": "She has a dog.",
       "difficulty": "intermediate",
-      "explanation": "had → has（三人称単数）です。「彼女は犬を飼っています」です。",
+      "explanation": "had → has（三人称単数）です。「彼女は犬を飼っています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "has"
     },
     {
@@ -612,7 +612,7 @@
       ],
       "correctAnswer": "Did you go to Tokyo yesterday?",
       "difficulty": "intermediate",
-      "explanation": "Did + 主語 + 原形です。「あなたは昨日東京へ行きましたか」です。",
+      "explanation": "Did + 主語 + 原形です。「あなたは昨日東京へ行きましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Did"
     },
     {
@@ -628,7 +628,7 @@
       ],
       "correctAnswer": "I didn't see the movie last week.",
       "difficulty": "intermediate",
-      "explanation": "didn't + 原形です。「私は先週その映画を見ませんでした」です。",
+      "explanation": "didn't + 原形です。「私は先週その映画を見ませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "didn't"
     },
     {
@@ -644,7 +644,7 @@
       ],
       "correctAnswer": "She didn't come here yesterday.",
       "difficulty": "intermediate",
-      "explanation": "didn't + 原形です。「彼女は昨日ここに来ませんでした」です。",
+      "explanation": "didn't + 原形です。「彼女は昨日ここに来ませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "didn't"
     },
     {
@@ -660,7 +660,7 @@
       ],
       "correctAnswer": "Yes, I did.",
       "difficulty": "advanced",
-      "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。",
+      "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Yes, I did"
     },
     {
@@ -676,7 +676,7 @@
       ],
       "correctAnswer": "No, she didn't.",
       "difficulty": "advanced",
-      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、行きませんでした」です。",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、行きませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "No, she didn't"
     },
     {
@@ -692,7 +692,7 @@
       ],
       "correctAnswer": "I had lunch at school yesterday.",
       "difficulty": "advanced",
-      "explanation": "have → hadです。yesterdayを追加です。「私は昨日学校で昼食を食べました」です。",
+      "explanation": "have → hadです。yesterdayを追加です。「私は昨日学校で昼食を食べました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "yesterday"
     },
     {
@@ -708,7 +708,7 @@
       ],
       "correctAnswer": "What did you buy?",
       "difficulty": "advanced",
-      "explanation": "What did + 主語 + 原形です。「あなたは何を買いましたか」です。",
+      "explanation": "What did + 主語 + 原形です。「あなたは何を買いましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "What did"
     },
     {
@@ -724,7 +724,7 @@
       ],
       "correctAnswer": "Where did she go?",
       "difficulty": "advanced",
-      "explanation": "Where did + 主語 + 原形です。「彼女はどこへ行きましたか」です。",
+      "explanation": "Where did + 主語 + 原形です。「彼女はどこへ行きましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Where did"
     },
     {
@@ -740,7 +740,7 @@
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
-      "explanation": "goの過去形はwentです。「私は昨日大阪へ行きました」です。",
+      "explanation": "goの過去形はwentです。「私は昨日大阪へ行きました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "went"
     },
     {
@@ -756,7 +756,7 @@
       ],
       "correctAnswer": "came",
       "difficulty": "beginner",
-      "explanation": "comeの過去形はcameです。「彼女は先週私の家に来ました」です。",
+      "explanation": "comeの過去形はcameです。「彼女は先週私の家に来ました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "came"
     },
     {
@@ -772,7 +772,7 @@
       ],
       "correctAnswer": "saw",
       "difficulty": "beginner",
-      "explanation": "seeの過去形はsawです。「彼らは昨日鳥を見ました」です。",
+      "explanation": "seeの過去形はsawです。「彼らは昨日鳥を見ました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "saw"
     },
     {
@@ -788,7 +788,7 @@
       ],
       "correctAnswer": "ate",
       "difficulty": "beginner",
-      "explanation": "eatの過去形はateです。「私たちは昨晩寿司を食べました」です。",
+      "explanation": "eatの過去形はateです。「私たちは昨晩寿司を食べました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "ate"
     },
     {
@@ -804,7 +804,7 @@
       ],
       "correctAnswer": "made",
       "difficulty": "intermediate",
-      "explanation": "makeの過去形はmadeです。「彼は昨日ロボットを作りました」です。",
+      "explanation": "makeの過去形はmadeです。「彼は昨日ロボットを作りました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "made"
     },
     {
@@ -820,7 +820,7 @@
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "explanation": "haveの過去形はhadです。「私は昨晩夢を見ました」です。",
+      "explanation": "haveの過去形はhadです。「私は昨晩夢を見ました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "had"
     },
     {
@@ -836,7 +836,7 @@
       ],
       "correctAnswer": "took",
       "difficulty": "intermediate",
-      "explanation": "takeの過去形はtookです。「彼女は昨日写真を撮りました」です。",
+      "explanation": "takeの過去形はtookです。「彼女は昨日写真を撮りました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "took"
     },
     {
@@ -852,7 +852,7 @@
       ],
       "correctAnswer": "bought",
       "difficulty": "advanced",
-      "explanation": "buyの過去形はboughtです。「彼らは昨日新しい靴を買いました」です。",
+      "explanation": "buyの過去形はboughtです。「彼らは昨日新しい靴を買いました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "bought"
     },
     {
@@ -868,7 +868,7 @@
       ],
       "correctAnswer": "read",
       "difficulty": "advanced",
-      "explanation": "readの過去形はread（発音違い）です。「私たちは昨日物語を読みました」です。",
+      "explanation": "readの過去形はread（発音違い）です。「私たちは昨日物語を読みました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "read"
     },
     {
@@ -884,7 +884,7 @@
       ],
       "correctAnswer": "wrote",
       "difficulty": "advanced",
-      "explanation": "writeの過去形はwroteです。「彼は昨日歌を書きました」です。",
+      "explanation": "writeの過去形はwroteです。「彼は昨日歌を書きました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "wrote"
     },
     {
@@ -909,7 +909,7 @@
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
-      "explanation": "Didで聞かれたら過去形で答えります。「図書館へ行きました」です。",
+      "explanation": "Didで聞かれたら過去形で答えります。「図書館へ行きました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "went"
     },
     {
@@ -934,7 +934,7 @@
       ],
       "correctAnswer": "did",
       "difficulty": "beginner",
-      "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。",
+      "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "did"
     },
     {
@@ -959,7 +959,7 @@
       ],
       "correctAnswer": "didn't",
       "difficulty": "intermediate",
-      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、見ませんでした」です。",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、見ませんでした」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "didn't"
     },
     {
@@ -984,7 +984,7 @@
       ],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
-      "explanation": "Didで聞かれたら過去形で答えります。「新しいバッグを買いました」です。",
+      "explanation": "Didで聞かれたら過去形で答えります。「新しいバッグを買いました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "bought"
     },
     {
@@ -1009,7 +1009,7 @@
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",
-      "explanation": "didの後ろは原形です。「あなたはどこへ行きましたか」です。",
+      "explanation": "didの後ろは原形です。「あなたはどこへ行きましたか」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "原形"
     }
   ]

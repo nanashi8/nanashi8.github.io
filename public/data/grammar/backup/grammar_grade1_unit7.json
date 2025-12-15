@@ -1,0 +1,984 @@
+{
+  "unit": "Unit 7",
+  "title": "命令文",
+  "grammar": "動詞の原形、Don't～、Let's～",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g1-u7-fib-001",
+      "type": "fillInBlank",
+      "japanese": "ドアを開けなさい。",
+      "sentence": "____ the door.",
+      "choices": [
+        "Open",
+        "Opens",
+        "Opening"
+      ],
+      "correctAnswer": "Open",
+      "difficulty": "beginner",
+      "explanation": "命令文は動詞の原形で始まります。Open the door.で「ドアを開けなさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-fib-002",
+      "type": "fillInBlank",
+      "japanese": "静かにしなさい。",
+      "sentence": "____ quiet.",
+      "choices": [
+        "Be",
+        "Are",
+        "Is"
+      ],
+      "correctAnswer": "Be",
+      "difficulty": "beginner",
+      "explanation": "be動詞の命令形はBeです。Be quiet.で「静かにしなさい」です。",
+      "hint": "Be"
+    },
+    {
+      "id": "g1-u7-fib-003",
+      "type": "fillInBlank",
+      "japanese": "ここに来なさい。",
+      "sentence": "____ here.",
+      "choices": [
+        "Come",
+        "Comes",
+        "Coming"
+      ],
+      "correctAnswer": "Come",
+      "difficulty": "beginner",
+      "explanation": "命令文は動詞の原形です。Come here.で「ここに来なさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-fib-004",
+      "type": "fillInBlank",
+      "japanese": "走らないでください。",
+      "sentence": "____ run.",
+      "choices": [
+        "Don't",
+        "Doesn't",
+        "Not"
+      ],
+      "correctAnswer": "Don't",
+      "difficulty": "beginner",
+      "explanation": "否定の命令文はDon't + 原形です。Don't run.で「走らないで」です。",
+      "hint": "Don't"
+    },
+    {
+      "id": "g1-u7-fib-005",
+      "type": "fillInBlank",
+      "japanese": "一緒にサッカーをしましょう。",
+      "sentence": "____ play soccer.",
+      "choices": [
+        "Let's",
+        "Let",
+        "Lets"
+      ],
+      "correctAnswer": "Let's",
+      "difficulty": "beginner",
+      "explanation": "勧誘の命令文はLet's + 原形です。Let's play soccer.で「サッカーをしましょう」です。",
+      "hint": "Let's"
+    },
+    {
+      "id": "g1-u7-fib-006",
+      "type": "fillInBlank",
+      "japanese": "この本を読みなさい。",
+      "sentence": "____ this book.",
+      "choices": [
+        "Read",
+        "Reads",
+        "Reading"
+      ],
+      "correctAnswer": "Read",
+      "difficulty": "intermediate",
+      "explanation": "命令文は動詞の原形で始まります。Read this book.で「この本を読みなさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-fib-007",
+      "type": "fillInBlank",
+      "japanese": "遅れないでください。",
+      "sentence": "Don't ____ late.",
+      "choices": [
+        "be",
+        "are",
+        "is"
+      ],
+      "correctAnswer": "be",
+      "difficulty": "intermediate",
+      "explanation": "Don'tの後ろは動詞の原形です。Don't be late.で「遅れないで」です。",
+      "hint": "Don't + 原形"
+    },
+    {
+      "id": "g1-u7-fib-008",
+      "type": "fillInBlank",
+      "japanese": "窓を閉めなさい。",
+      "sentence": "____ the box.",
+      "choices": [
+        "Close",
+        "Closes",
+        "Closing"
+      ],
+      "correctAnswer": "Close",
+      "difficulty": "intermediate",
+      "explanation": "命令文は動詞の原形で始まります。Close the box.で「箱を閉めなさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-fib-009",
+      "type": "fillInBlank",
+      "japanese": "心配しないでください。",
+      "sentence": "____ worry.",
+      "choices": [
+        "Don't",
+        "Doesn't",
+        "Not"
+      ],
+      "correctAnswer": "Don't",
+      "difficulty": "intermediate",
+      "explanation": "否定の命令文です。Don't worry.で「心配しないで」です。",
+      "hint": "Don't"
+    },
+    {
+      "id": "g1-u7-fib-010",
+      "type": "fillInBlank",
+      "japanese": "一緒に勉強しましょう。",
+      "sentence": "Let's ____ together.",
+      "choices": [
+        "study",
+        "studies",
+        "studying"
+      ],
+      "correctAnswer": "study",
+      "difficulty": "intermediate",
+      "explanation": "Let'sの後ろは動詞の原形です。Let's study together.で「一緒に勉強しましょう」です。",
+      "hint": "Let's + 原形"
+    },
+    {
+      "id": "g1-u7-fib-011",
+      "type": "fillInBlank",
+      "japanese": "親切にしなさい。",
+      "sentence": "____ nice.",
+      "choices": [
+        "Be",
+        "Is",
+        "Are"
+      ],
+      "correctAnswer": "Be",
+      "difficulty": "intermediate",
+      "explanation": "be動詞の命令形はBeです。Be nice.で「いい子にしなさい」です。",
+      "hint": "Be"
+    },
+    {
+      "id": "g1-u7-fib-012",
+      "type": "fillInBlank",
+      "japanese": "ここで写真を撮らないでください。",
+      "sentence": "Don't ____ pictures here.",
+      "choices": [
+        "take",
+        "takes",
+        "taking"
+      ],
+      "correctAnswer": "take",
+      "difficulty": "advanced",
+      "explanation": "Don't + 原形です。Don't take pictures here.で「ここで写真を撮らないで」です。",
+      "hint": "Don't + 原形"
+    },
+    {
+      "id": "g1-u7-fib-013",
+      "type": "fillInBlank",
+      "japanese": "公園へ行きましょう。",
+      "sentence": "Let's ____ to the park.",
+      "choices": [
+        "go",
+        "goes",
+        "going"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "advanced",
+      "explanation": "Let's + 原形です。Let's go to the park.で「公園へ行きましょう」です。",
+      "hint": "Let's + 原形"
+    },
+    {
+      "id": "g1-u7-fib-014",
+      "type": "fillInBlank",
+      "japanese": "早く起きなさい。",
+      "sentence": "____ up early.",
+      "choices": [
+        "Get",
+        "Gets",
+        "Getting"
+      ],
+      "correctAnswer": "Get",
+      "difficulty": "advanced",
+      "explanation": "get upで「起きる」です。Get up early.で「早く起きなさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-fib-015",
+      "type": "fillInBlank",
+      "japanese": "あきらめないでください。",
+      "sentence": "Don't ____ up.",
+      "choices": [
+        "give",
+        "gives",
+        "giving"
+      ],
+      "correctAnswer": "give",
+      "difficulty": "advanced",
+      "explanation": "give upで「あきらめる」です。Don't give up.で「あきらめないで」です。",
+      "hint": "Don't + 原形"
+    },
+    {
+      "id": "g1-u7-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "座りなさい。",
+      "words": [
+        "sit",
+        "down"
+      ],
+      "correctAnswer": "Sit down.",
+      "difficulty": "beginner",
+      "explanation": "sit downで「座る」です。命令文は原形で始まります。",
+      "hint": "Sit down",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "立ちなさい。",
+      "words": [
+        "stand",
+        "up"
+      ],
+      "correctAnswer": "Stand up.",
+      "difficulty": "beginner",
+      "explanation": "stand upで「立つ」です。Stand up.で「立ちなさい」です。",
+      "hint": "Stand up",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "静かにしなさい。",
+      "words": [
+        "be",
+        "quiet"
+      ],
+      "correctAnswer": "Be quiet.",
+      "difficulty": "beginner",
+      "explanation": "be動詞の命令形です。Be quiet.で「静かにしなさい」です。",
+      "hint": "Be quiet",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "話さないでください。",
+      "words": [
+        "don't",
+        "talk"
+      ],
+      "correctAnswer": "Don't talk.",
+      "difficulty": "beginner",
+      "explanation": "否定の命令文です。Don't talk.で「話さないで」です。",
+      "hint": "Don't talk",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "一緒に行きましょう。",
+      "words": [
+        "let's",
+        "go"
+      ],
+      "correctAnswer": "Let's go.",
+      "difficulty": "beginner",
+      "explanation": "Let's goで「行きましょう」です。勧誘の表現です。",
+      "hint": "Let's go",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "この本を読みなさい。",
+      "words": [
+        "read",
+        "this",
+        "book"
+      ],
+      "correctAnswer": "Read this book.",
+      "difficulty": "intermediate",
+      "explanation": "命令文の語順です。Read this book.で「この本を読みなさい」です。",
+      "hint": "Read this",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u7-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "窓を開けなさい。",
+      "words": [
+        "don't",
+        "shout"
+      ],
+      "correctAnswer": "Don't shout.",
+      "difficulty": "intermediate",
+      "explanation": "shoutは「叫ぶ」です。Don't shout.で「叫ばないで」です。",
+      "hint": "Open the",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "遅れないでください。",
+      "words": [
+        "don't",
+        "be",
+        "late"
+      ],
+      "correctAnswer": "Don't be late.",
+      "difficulty": "intermediate",
+      "explanation": "Don't be late.で「遅れないで」です。Don't + be + 形容詞です。",
+      "hint": "Don't be",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u7-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "一緒に食べましょう。",
+      "words": [
+        "let's",
+        "eat",
+        "together"
+      ],
+      "correctAnswer": "Let's eat together.",
+      "difficulty": "intermediate",
+      "explanation": "Let's eat together.で「一緒に食べましょう」です。",
+      "hint": "Let's eat",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u7-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "ここで走らないでください。",
+      "words": [
+        "don't",
+        "run",
+        "here"
+      ],
+      "correctAnswer": "Don't run here.",
+      "difficulty": "intermediate",
+      "explanation": "Don't run here.で「ここで走らないで」です。",
+      "hint": "Don't run",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u7-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "英語を話しなさい。",
+      "words": [
+        "speak",
+        "English"
+      ],
+      "correctAnswer": "Speak English.",
+      "difficulty": "advanced",
+      "explanation": "Speak English.で「英語を話しなさい」です。",
+      "hint": "Speak English",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "心配しないでください。",
+      "words": [
+        "don't",
+        "worry"
+      ],
+      "correctAnswer": "Don't worry.",
+      "difficulty": "advanced",
+      "explanation": "Don't worry.で「心配しないで」です。よく使う表現です。",
+      "hint": "Don't worry",
+      "wordCount": 2
+    },
+    {
+      "id": "g1-u7-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "一緒にテニスをしましょう。",
+      "words": [
+        "let's",
+        "play",
+        "tennis"
+      ],
+      "correctAnswer": "Let's play tennis.",
+      "difficulty": "advanced",
+      "explanation": "Let's play tennis.で「テニスをしましょう」です。",
+      "hint": "Let's play",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u7-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "宿題を忘れないでください。",
+      "words": [
+        "don't",
+        "forget",
+        "your",
+        "homework"
+      ],
+      "correctAnswer": "Don't forget your homework.",
+      "difficulty": "advanced",
+      "explanation": "Don't forget your homework.で「宿題を忘れないで」です。",
+      "hint": "Don't forget",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u7-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "親切にしなさい。",
+      "words": [
+        "be",
+        "kind",
+        "to",
+        "others"
+      ],
+      "correctAnswer": "Be kind to others.",
+      "difficulty": "advanced",
+      "explanation": "Be kind to others.で「他の人に親切にしなさい」です。",
+      "hint": "Be kind",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u7-para-001",
+      "type": "paraphrase",
+      "japanese": "ドアを開けなさい。",
+      "originalSentence": "You open the door.",
+      "question": "命令文に書き換えなさい",
+      "choices": [
+        "Open the door.",
+        "Opens the door.",
+        "Opening the door."
+      ],
+      "correctAnswer": "Open the door.",
+      "difficulty": "beginner",
+      "explanation": "主語を取り、動詞を原形にです。Open the door.で「ドアを開けなさい」です。",
+      "hint": "原形で始める"
+    },
+    {
+      "id": "g1-u7-para-002",
+      "type": "paraphrase",
+      "japanese": "走らないでください。",
+      "originalSentence": "Run.",
+      "question": "否定の命令文に書き換えなさい",
+      "choices": [
+        "Don't run.",
+        "Not run.",
+        "No run."
+      ],
+      "correctAnswer": "Don't run.",
+      "difficulty": "beginner",
+      "explanation": "Don'tを文頭に付けます。Don't run.で「走らないで」です。",
+      "hint": "Don't"
+    },
+    {
+      "id": "g1-u7-para-003",
+      "type": "paraphrase",
+      "japanese": "寝なさい。",
+      "originalSentence": "Don't sleep.",
+      "question": "肯定の命令文に書き換えなさい",
+      "choices": [
+        "Sleep.",
+        "Sleeps.",
+        "Sleeping."
+      ],
+      "correctAnswer": "Sleep.",
+      "difficulty": "beginner",
+      "explanation": "Don'tを取ります。Sleep.で「寝なさい」です。",
+      "hint": "Don't を取る"
+    },
+    {
+      "id": "g1-u7-para-004",
+      "type": "paraphrase",
+      "japanese": "一緒にサッカーをしましょう。",
+      "originalSentence": "Play soccer.",
+      "question": "「一緒にサッカーをしましょう」に書き換えなさい",
+      "choices": [
+        "Let's play soccer.",
+        "Let play soccer.",
+        "Lets play soccer."
+      ],
+      "correctAnswer": "Let's play soccer.",
+      "difficulty": "beginner",
+      "explanation": "Let's + 原形で勧誘です。Let's play soccer.で「サッカーをしましょう」です。",
+      "hint": "Let's"
+    },
+    {
+      "id": "g1-u7-para-005",
+      "type": "paraphrase",
+      "japanese": "幸せでいなさい。",
+      "originalSentence": "You are happy.",
+      "question": "命令文に書き換えなさい",
+      "choices": [
+        "Be happy.",
+        "Are happy.",
+        "Is happy."
+      ],
+      "correctAnswer": "Be happy.",
+      "difficulty": "beginner",
+      "explanation": "be動詞の命令形はBeです。Be happy.で「楽しくやりなさい」です。",
+      "hint": "Be"
+    },
+    {
+      "id": "g1-u7-para-006",
+      "type": "paraphrase",
+      "japanese": "ここに座らないでください。",
+      "originalSentence": "You sit here.",
+      "question": "否定の命令文に書き換えなさい",
+      "choices": [
+        "Don't sit here.",
+        "Not sit here.",
+        "Doesn't sit here."
+      ],
+      "correctAnswer": "Don't sit here.",
+      "difficulty": "intermediate",
+      "explanation": "Don't + 原形です。Don't sit here.で「ここに座らないで」です。",
+      "hint": "Don't + 原形"
+    },
+    {
+      "id": "g1-u7-para-007",
+      "type": "paraphrase",
+      "japanese": "窓を閉めてください。",
+      "originalSentence": "Close the window.",
+      "question": "pleaseを使って丁寧な依頼に書き換えなさい",
+      "choices": [
+        "Please close the window.",
+        "Please closes the window.",
+        "Close the window please."
+      ],
+      "correctAnswer": "Please close the window.",
+      "difficulty": "intermediate",
+      "explanation": "Pleaseを文頭に付けて丁寧にです。Please close the window.で「窓を閉めてください」です。",
+      "hint": "Please"
+    },
+    {
+      "id": "g1-u7-para-008",
+      "type": "paraphrase",
+      "japanese": "バスケをしましょうか。",
+      "originalSentence": "Let's play basketball.",
+      "question": "Shall weを使って書き換えなさい",
+      "choices": [
+        "Shall we play basketball?",
+        "Shall we plays basketball?",
+        "Shall we playing basketball?"
+      ],
+      "correctAnswer": "Shall we play basketball?",
+      "difficulty": "intermediate",
+      "explanation": "Let's = Shall we～?です。Shall we play basketball?で「バスケをしましょうか」です。",
+      "hint": "Shall we"
+    },
+    {
+      "id": "g1-u7-para-009",
+      "type": "paraphrase",
+      "japanese": "ここで走ってはいけません。",
+      "originalSentence": "Do not cry.",
+      "question": "短縮形に書き換えなさい",
+      "choices": [
+        "Don't cry.",
+        "Doesn't cry.",
+        "Not cry."
+      ],
+      "correctAnswer": "Don't cry.",
+      "difficulty": "intermediate",
+      "explanation": "Do not = Don'tです。Don't cry.で「泣かないで」です。",
+      "hint": "Don't"
+    },
+    {
+      "id": "g1-u7-para-010",
+      "type": "paraphrase",
+      "japanese": "注意しなさい。",
+      "originalSentence": "You are careful.",
+      "question": "命令文に書き換えなさい",
+      "choices": [
+        "Be careful.",
+        "Are careful.",
+        "Is careful."
+      ],
+      "correctAnswer": "Be careful.",
+      "difficulty": "intermediate",
+      "explanation": "be動詞の命令形です。Be careful.で「注意しなさい」です。",
+      "hint": "Be"
+    },
+    {
+      "id": "g1-u7-para-011",
+      "type": "paraphrase",
+      "japanese": "早く来てください、遅れていますよ。",
+      "originalSentence": "Study hard.",
+      "question": "「明日テストがあるので」という理由を追加",
+      "choices": [
+        "Study hard because you have a test tomorrow.",
+        "Study hard because you has a test tomorrow.",
+        "Studies hard because you have a test tomorrow."
+      ],
+      "correctAnswer": "Study hard because you have a test tomorrow.",
+      "difficulty": "advanced",
+      "explanation": "becauseで理由を続けります。Study hard because you have a test tomorrow.です。",
+      "hint": "because"
+    },
+    {
+      "id": "g1-u7-para-012",
+      "type": "paraphrase",
+      "japanese": "うるさくしないでください。",
+      "originalSentence": "Be noisy.",
+      "question": "否定の命令文に書き換えなさい",
+      "choices": [
+        "Don't be noisy.",
+        "Not be noisy.",
+        "Doesn't be noisy."
+      ],
+      "correctAnswer": "Don't be noisy.",
+      "difficulty": "advanced",
+      "explanation": "Don't be + 形容詞です。Don't be noisy.で「うるさくしないで」です。",
+      "hint": "Don't be"
+    },
+    {
+      "id": "g1-u7-para-013",
+      "type": "paraphrase",
+      "japanese": "Let's not。",
+      "originalSentence": "Let's go there.",
+      "question": "否定の勧誘文に書き換えなさい",
+      "choices": [
+        "Let's not go there.",
+        "Don't let's go there.",
+        "Let's don't go there."
+      ],
+      "correctAnswer": "Let's not go there.",
+      "difficulty": "advanced",
+      "explanation": "Let's not + 原形です。Let's not go there.で「そこへ行くのはやめましょう」です。",
+      "hint": "Let's not"
+    },
+    {
+      "id": "g1-u7-para-014",
+      "type": "paraphrase",
+      "japanese": "必ず静かにしてください。",
+      "originalSentence": "Listen to me.",
+      "question": "Pleaseを使って丁寧にし、文末にも付ける",
+      "choices": [
+        "Please listen to me, please.",
+        "Please listens to me, please.",
+        "Listen to me please, please."
+      ],
+      "correctAnswer": "Please listen to me, please.",
+      "difficulty": "advanced",
+      "explanation": "文頭と文末にpleaseを付けて丁寧にです。Please listen to me, please.です。",
+      "hint": "Please ～, please"
+    },
+    {
+      "id": "g1-u7-para-015",
+      "type": "paraphrase",
+      "japanese": "休んだらどうですか。",
+      "originalSentence": "Take a rest.",
+      "question": "Why don't youを使って提案の形に",
+      "choices": [
+        "Why don't you take a rest?",
+        "Why don't you takes a rest?",
+        "Why you don't take a rest?"
+      ],
+      "correctAnswer": "Why don't you take a rest?",
+      "difficulty": "advanced",
+      "explanation": "Why don't you～?で提案です。Why don't you take a rest?で「休んだらどうですか」です。",
+      "hint": "Why don't you"
+    },
+    {
+      "id": "g1-u7-vf-001",
+      "type": "verbForm",
+      "japanese": "窓を開けなさい。",
+      "sentence": "____ the window.",
+      "verb": "open",
+      "choices": [
+        "Open",
+        "Opens",
+        "Opening"
+      ],
+      "correctAnswer": "Open",
+      "difficulty": "beginner",
+      "explanation": "命令文は動詞の原形です。Open the window.で「窓を開けなさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-vf-002",
+      "type": "verbForm",
+      "japanese": "英語を話しなさい。",
+      "sentence": "____ English.",
+      "verb": "speak",
+      "choices": [
+        "Speak",
+        "Speaks",
+        "Speaking"
+      ],
+      "correctAnswer": "Speak",
+      "difficulty": "beginner",
+      "explanation": "命令文は原形で始まります。Speak English.で「英語を話しなさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-vf-003",
+      "type": "verbForm",
+      "japanese": "親切にしなさい。",
+      "sentence": "____ kind.",
+      "verb": "be",
+      "choices": [
+        "Be",
+        "Are",
+        "Is"
+      ],
+      "correctAnswer": "Be",
+      "difficulty": "beginner",
+      "explanation": "be動詞の命令形はBeです。Be kind.で「親切にしなさい」です。",
+      "hint": "Be"
+    },
+    {
+      "id": "g1-u7-vf-004",
+      "type": "verbForm",
+      "japanese": "ここに座らないで。",
+      "sentence": "Don't ____ here.",
+      "verb": "sit",
+      "choices": [
+        "sit",
+        "sits",
+        "sitting"
+      ],
+      "correctAnswer": "sit",
+      "difficulty": "beginner",
+      "explanation": "Don'tの後ろは原形です。Don't sit here.で「ここに座らないで」です。",
+      "hint": "Don't + 原形"
+    },
+    {
+      "id": "g1-u7-vf-005",
+      "type": "verbForm",
+      "japanese": "サッカーをしましょう。",
+      "sentence": "Let's ____ soccer.",
+      "verb": "play",
+      "choices": [
+        "play",
+        "plays",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "Let'sの後ろは原形です。Let's play soccer.で「サッカーをしましょう」です。",
+      "hint": "Let's + 原形"
+    },
+    {
+      "id": "g1-u7-vf-006",
+      "type": "verbForm",
+      "japanese": "宿題をしなさい。",
+      "sentence": "____ your homework.",
+      "verb": "do",
+      "choices": [
+        "Do",
+        "Does",
+        "Doing"
+      ],
+      "correctAnswer": "Do",
+      "difficulty": "intermediate",
+      "explanation": "命令文は原形です。Do your homework.で「宿題をしなさい」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-vf-007",
+      "type": "verbForm",
+      "japanese": "遅れないでください。",
+      "sentence": "Don't ____ angry.",
+      "verb": "be",
+      "choices": [
+        "be",
+        "are",
+        "is"
+      ],
+      "correctAnswer": "be",
+      "difficulty": "intermediate",
+      "explanation": "Don'tの後ろも原形です。Don't be angry.で「怒らないで」です。",
+      "hint": "Don't + be"
+    },
+    {
+      "id": "g1-u7-vf-008",
+      "type": "verbForm",
+      "japanese": "遅く起きなさい。",
+      "sentence": "____ up late.",
+      "verb": "get",
+      "choices": [
+        "Get",
+        "Gets",
+        "Getting"
+      ],
+      "correctAnswer": "Get",
+      "difficulty": "advanced",
+      "explanation": "get upで「起きる」です。Get up late.で「遅く起きなさい（遅くまで寝ていなさい）」です。",
+      "hint": "原形"
+    },
+    {
+      "id": "g1-u7-vf-009",
+      "type": "verbForm",
+      "japanese": "学校へ行きましょう。",
+      "sentence": "Let's ____ to school.",
+      "verb": "go",
+      "choices": [
+        "go",
+        "goes",
+        "going"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "advanced",
+      "explanation": "Let's + 原形です。Let's go to school.で「学校へ行きましょう」です。",
+      "hint": "Let's + 原形"
+    },
+    {
+      "id": "g1-u7-vf-010",
+      "type": "verbForm",
+      "japanese": "座らないで。",
+      "sentence": "Don't ____ down.",
+      "verb": "sit",
+      "choices": [
+        "give",
+        "gives",
+        "giving"
+      ],
+      "correctAnswer": "give",
+      "difficulty": "advanced",
+      "explanation": "sit downで「座る」です。Don't sit down.で「座らないで」です。",
+      "hint": "Don't + 原形"
+    },
+    {
+      "id": "g1-u7-conv-001",
+      "type": "conversation",
+      "japanese": "依頼に応える。",
+      "situation": "何かを頼まれる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Open the window, please."
+        },
+        {
+          "speaker": "B",
+          "text": "____."
+        }
+      ],
+      "choices": [
+        "OK",
+        "Yes, I do",
+        "Yes, I am"
+      ],
+      "correctAnswer": "OK",
+      "difficulty": "beginner",
+      "explanation": "命令文への返答はOKやAll rightです。「わかりました」の意味です。",
+      "hint": "OK"
+    },
+    {
+      "id": "g1-u7-conv-002",
+      "type": "conversation",
+      "japanese": "勧誘に応える。",
+      "situation": "一緒に何かしようと誘われる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Let's play badminton."
+        },
+        {
+          "speaker": "B",
+          "text": "____, let's."
+        }
+      ],
+      "choices": [
+        "Yes",
+        "OK",
+        "Sure"
+      ],
+      "correctAnswer": "Yes",
+      "difficulty": "beginner",
+      "explanation": "Let's～への肯定の答えはYes, let's.です。「はい、そうしましょう」です。",
+      "hint": "Yes, let's"
+    },
+    {
+      "id": "g1-u7-conv-003",
+      "type": "conversation",
+      "japanese": "勧誘を断る。",
+      "situation": "誘いを断る場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Let's go swimming."
+        },
+        {
+          "speaker": "B",
+          "text": "____, let's not."
+        }
+      ],
+      "choices": [
+        "No",
+        "Not",
+        "Don't"
+      ],
+      "correctAnswer": "No",
+      "difficulty": "intermediate",
+      "explanation": "Let's～を断るときはNo, let's not.です。「いいえ、やめましょう」です。",
+      "hint": "No, let's not"
+    },
+    {
+      "id": "g1-u7-conv-004",
+      "type": "conversation",
+      "japanese": "注意を受ける。",
+      "situation": "先生からの注意",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Don't run in the classroom."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm ____."
+        }
+      ],
+      "choices": [
+        "sorry",
+        "OK",
+        "fine"
+      ],
+      "correctAnswer": "sorry",
+      "difficulty": "intermediate",
+      "explanation": "注意を受けたときはI'm sorry.で謝りまします。「すみません」です。",
+      "hint": "I'm sorry"
+    },
+    {
+      "id": "g1-u7-conv-005",
+      "type": "conversation",
+      "japanese": "丁寧な依頼。",
+      "situation": "丁寧にお願いする場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Please ____ me."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure."
+        }
+      ],
+      "choices": [
+        "help",
+        "helps",
+        "helping"
+      ],
+      "correctAnswer": "help",
+      "difficulty": "advanced",
+      "explanation": "Please + 原形で丁寧な依頼です。Please help me.で「手伝ってください」です。",
+      "hint": "Please + 原形"
+    }
+  ]
+}

@@ -92,6 +92,7 @@ function QuizView({
 
   // 回答結果を追跡（動的AIコメント用）
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
+  const [lastAnswerWord, setLastAnswerWord] = useState<string | undefined>(undefined);
   const [correctStreak, setCorrectStreak] = useState<number>(0);
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
 
@@ -122,6 +123,7 @@ function QuizView({
 
     // 回答結果を記録
     setLastAnswerCorrect(isCorrect);
+    setLastAnswerWord(currentQuestion?.word);
     if (isCorrect) {
       setCorrectStreak((prev) => prev + 1);
       setIncorrectStreak(0);
@@ -137,9 +139,17 @@ function QuizView({
     // 正解した場合、自動次へが有効なら次の問題に進む
     if (autoNext && isCorrect) {
       setTimeout(() => {
+        // 次の問題に移動する前にlastAnswerWordをリセット
+        setLastAnswerWord(undefined);
         onNext();
       }, autoNextDelay);
     }
+  };
+
+  // onNextをラップしてlastAnswerWordをリセット
+  const handleNextWrapper = () => {
+    setLastAnswerWord(undefined);
+    onNext();
   };
 
   // スキップ処理をラップ（回答時刻更新用）
@@ -206,7 +216,9 @@ function QuizView({
               answered={answered}
               selectedAnswer={selectedAnswer}
               onAnswer={handleAnswer}
-              onNext={onSkip ? (answered ? onNext : handleSkipWrapper) : onNext}
+              onNext={
+                onSkip ? (answered ? handleNextWrapper : handleSkipWrapper) : handleNextWrapper
+              }
               onPrevious={onPrevious}
               onDifficultyRate={onDifficultyRate}
               errorPrediction={errorPrediction}
@@ -260,7 +272,7 @@ function QuizView({
                 currentWord={currentQuestion?.word}
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
-                lastAnswerWord={currentQuestion?.word}
+                lastAnswerWord={lastAnswerWord}
                 lastAnswerDifficulty={currentQuestion?.difficulty}
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
@@ -451,7 +463,9 @@ function QuizView({
                   answered={answered}
                   selectedAnswer={selectedAnswer}
                   onAnswer={handleAnswer}
-                  onNext={onSkip ? (answered ? onNext : handleSkipWrapper) : onNext}
+                  onNext={
+                    onSkip ? (answered ? handleNextWrapper : handleSkipWrapper) : handleNextWrapper
+                  }
                   onPrevious={onPrevious}
                   onDifficultyRate={onDifficultyRate}
                   errorPrediction={errorPrediction}

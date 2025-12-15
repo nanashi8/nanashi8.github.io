@@ -269,7 +269,7 @@ function ScoreBoard({
 
       // 英語豆知識（5%）
       if (Math.random() < 0.33) {
-        const trivia = getBreatherTrivia(personality);
+        const trivia = getBreatherTrivia(personality, currentWord);
         if (trivia) additionalMessages.push(trivia);
       }
       // 特別な日の会話（5%）
@@ -334,7 +334,11 @@ function ScoreBoard({
 
   // 和訳・スペル・文法タブ用: 上限達成時に自動的に復習モードをオンにする
   useEffect(() => {
-    if ((mode === 'translation' || mode === 'spelling' || mode === 'grammar') && sessionStats && onReviewFocus) {
+    if (
+      (mode === 'translation' || mode === 'spelling' || mode === 'grammar') &&
+      sessionStats &&
+      onReviewFocus
+    ) {
       const { incorrect, review } = sessionStats;
       const totalNeedReview = incorrect + review;
 
@@ -939,34 +943,36 @@ function ScoreBoard({
                   {grammarUnitStats.length > 0 ? (
                     <div className="grammar-units-list">
                       {grammarUnitStats.map((stat) => {
-                        const totalAttempts = stat.correctCount + stat.incorrectCount;
+                        const totalAttempts = (stat.correctCount || 0) + (stat.incorrectCount || 0);
+                        const masteredCount = stat.masteredCount || 0;
+                        const answeredQuestions = stat.answeredQuestions || 0;
                         const retentionRate =
-                          stat.answeredQuestions > 0
-                            ? Math.round((stat.masteredCount / stat.answeredQuestions) * 100)
+                          answeredQuestions > 0
+                            ? Math.round((masteredCount / answeredQuestions) * 100)
                             : 0;
 
-                        // 履歴アイコン生成（最近の10回分）
-                        const historyIcons = Array(Math.min(totalAttempts, 10)).fill('🟩').join('');
+                        // 履歴アイコン生成（実際の正誤履歴から生成、重複なし）
+                        const historyIcons = stat.historyIcons || '';
 
                         // ステータス判定
                         let statusIcon = '🟢';
                         let statusLabel = '定着済';
-                        if (stat.masteredCount === 0 && stat.answeredQuestions > 0) {
+                        if (masteredCount === 0 && answeredQuestions > 0) {
                           statusIcon = '🔴';
                           statusLabel = '要復習';
-                        } else if (retentionRate < 80 && stat.answeredQuestions > 0) {
+                        } else if (retentionRate < 80 && answeredQuestions > 0) {
                           statusIcon = '🟡';
                           statusLabel = '学習中';
                         }
 
-                        // unit表示を「中1_Unit0_〜」から「1年_Unit0_〜」に変換
+                        // unit表示を「中1_Unit0_〜」から「1年 Unit0：〜」に変換
                         const gradeMatch = stat.unit.match(/中(\d+)/);
                         const gradeDisplay = gradeMatch ? `${gradeMatch[1]}年` : stat.unit;
                         const unitMatch = stat.unit.match(/Unit(\d+)/);
                         const unitDisplay = unitMatch ? `Unit${unitMatch[1]}` : '';
                         const planDisplay = unitDisplay
-                          ? `${gradeDisplay}_${unitDisplay}_${stat.title}`
-                          : `${gradeDisplay}_${stat.title}`;
+                          ? `${gradeDisplay} ${unitDisplay}：${stat.title}`
+                          : `${gradeDisplay}：${stat.title}`;
 
                         return (
                           <div key={stat.unit} className="grammar-unit-card">

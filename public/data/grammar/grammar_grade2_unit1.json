@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
-      "explanation": "主語がIなのでwas + -ingです。「私はその時本を読んでいました」です。",
+      "explanation": "主語がIなのでwas + -ingです。「私はその時本を読んでいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "was"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
-      "explanation": "主語がTheyなのでwere + -ingです。「彼らは昨日サッカーをしていました」です。",
+      "explanation": "主語がTheyなのでwere + -ingです。「彼らは昨日サッカーをしていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "were"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
-      "explanation": "主語がSheなのでwas + -ingです。「彼女はその時テレビを見ていました」です。",
+      "explanation": "主語がSheなのでwas + -ingです。「彼女はその時テレビを見ていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "was"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
-      "explanation": "主語がWeなのでwere + -ingです。「私たちは英語を勉強していました」です。",
+      "explanation": "主語がWeなのでwere + -ingです。「私たちは英語を勉強していました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "were"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
-      "explanation": "主語がHeなのでwas + -ingです。「彼はその時寝ていました」です。",
+      "explanation": "主語がHeなのでwas + -ingです。「彼はその時寝ていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "was"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
-      "explanation": "was not + -ing = wasn't + -ingです。「私はその時テレビを見ていませんでした」です。",
+      "explanation": "was not + -ing = wasn't + -ingです。「私はその時テレビを見ていませんでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "wasn't"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "weren't",
       "difficulty": "intermediate",
-      "explanation": "were not + -ing = weren't + -ingです。「彼らはテニスをしていませんでした」です。",
+      "explanation": "were not + -ing = weren't + -ingです。「彼らはテニスをしていませんでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "weren't"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "Were",
       "difficulty": "intermediate",
-      "explanation": "Were you + -ing?で過去進行形の疑問文です。「あなたはその時宿題をしていましたか」です。",
+      "explanation": "Were you + -ing?で過去進行形の疑問文です。「あなたはその時宿題をしていましたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "Were"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "Was",
       "difficulty": "intermediate",
-      "explanation": "Was she + -ing?で過去進行形の疑問文です。「彼女は夕食を作っていましたか」です。",
+      "explanation": "Was she + -ing?で過去進行形の疑問文です。「彼女は夕食を作っていましたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "Was"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "writing",
       "difficulty": "intermediate",
-      "explanation": "be動詞 + -ing形です。write → writingです。「彼は手紙を書いていました」です。",
+      "explanation": "be動詞 + -ing形です。write → writingです。「彼は手紙を書いていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "-ing"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "listening to",
       "difficulty": "intermediate",
-      "explanation": "be動詞 + -ing形です。listen → listeningです。「私たちは音楽を聴いていました」です。",
+      "explanation": "be動詞 + -ing形です。listen → listeningです。「私たちは音楽を聴いていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "listening"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "raining",
       "difficulty": "advanced",
-      "explanation": "be動詞 + -ing形です。rain → rainingです。「激しく雨が降っていました」です。",
+      "explanation": "be動詞 + -ing形です。rain → rainingです。「激しく雨が降っていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "raining"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "running",
       "difficulty": "advanced",
-      "explanation": "be動詞 + -ing形です。run → running（子音重ねる）です。「子供たちは公園で走っていました」です。",
+      "explanation": "be動詞 + -ing形です。run → running（子音重ねる）です。「子供たちは公園で走っていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "running"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "making",
       "difficulty": "advanced",
-      "explanation": "be動詞 + -ing形です。make → making（eを取る）です。「母は朝食を作っていました」です。",
+      "explanation": "be動詞 + -ing形です。make → making（eを取る）です。「母は朝食を作っていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "making"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "waiting",
       "difficulty": "advanced",
-      "explanation": "be動詞 + -ing形です。wait → waitingです。「彼らはバスを待っていました」です。",
+      "explanation": "be動詞 + -ing形です。wait → waitingです。「彼らはバスを待っていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "waiting"
     },
     {
@@ -248,7 +248,7 @@
       ],
       "correctAnswer": "I was reading then.",
       "difficulty": "beginner",
-      "explanation": "「私はその時読んでいました」です。was + -ingです。",
+      "explanation": "「私はその時読んでいました」です。was + -ingです。\n\n「私はその時読んでいました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I was reading then.",
       "hint": "was -ing",
       "wordCount": 4
     },
@@ -264,7 +264,7 @@
       ],
       "correctAnswer": "They were playing soccer.",
       "difficulty": "beginner",
-      "explanation": "「彼らはサッカーをしていました」です。were + -ingです。",
+      "explanation": "「彼らはサッカーをしていました」です。were + -ingです。\n\n「彼らはサッカーをしていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They were playing soccer.",
       "hint": "were -ing",
       "wordCount": 4
     },
@@ -280,7 +280,7 @@
       ],
       "correctAnswer": "She was cooking dinner.",
       "difficulty": "beginner",
-      "explanation": "「彼女は夕食を作っていました」です。was + -ingです。",
+      "explanation": "「彼女は夕食を作っていました」です。was + -ingです。\n\n「彼女は夕食を作っていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She was cooking dinner.",
       "hint": "was -ing",
       "wordCount": 4
     },
@@ -296,7 +296,7 @@
       ],
       "correctAnswer": "We were studying English.",
       "difficulty": "beginner",
-      "explanation": "「私たちは英語を勉強していました」です。were + -ingです。",
+      "explanation": "「私たちは英語を勉強していました」です。were + -ingです。\n\n「私たちは英語を勉強していました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We were studying English.",
       "hint": "were -ing",
       "wordCount": 4
     },
@@ -312,7 +312,7 @@
       ],
       "correctAnswer": "He was running fast.",
       "difficulty": "beginner",
-      "explanation": "「彼は速く走っていました」です。was + -ingです。",
+      "explanation": "「彼は速く走っていました」です。was + -ingです。\n\n「彼は速く走っていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He was running fast.",
       "hint": "was -ing",
       "wordCount": 4
     },
@@ -328,7 +328,7 @@
       ],
       "correctAnswer": "I wasn't sleeping then.",
       "difficulty": "intermediate",
-      "explanation": "「私はその時寝ていませんでした」です。wasn't + -ingです。",
+      "explanation": "「私はその時寝ていませんでした」です。wasn't + -ingです。\n\n「私はその時寝ていませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I wasn't sleeping then.",
       "hint": "wasn't",
       "wordCount": 4
     },
@@ -344,7 +344,7 @@
       ],
       "correctAnswer": "They weren't watching TV.",
       "difficulty": "intermediate",
-      "explanation": "「彼らはテレビを見ていませんでした」です。weren't + -ingです。",
+      "explanation": "「彼らはテレビを見ていませんでした」です。weren't + -ingです。\n\n「彼らはテレビを見ていませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They weren't watching TV.",
       "hint": "weren't",
       "wordCount": 4
     },
@@ -360,7 +360,7 @@
       ],
       "correctAnswer": "Was she talking then?",
       "difficulty": "intermediate",
-      "explanation": "「彼女はその時話していましたか」です。Was + 主語 + -ing?です。",
+      "explanation": "「彼女はその時話していましたか」です。Was + 主語 + -ing?です。\n\n「彼女はその時話していましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Was she talking then?",
       "hint": "Was",
       "wordCount": 4
     },
@@ -377,7 +377,7 @@
       ],
       "correctAnswer": "Were you listening to music?",
       "difficulty": "intermediate",
-      "explanation": "「あなたは音楽を聴いていましたか」です。Were + 主語 + -ing?です。",
+      "explanation": "「あなたは音楽を聴いていましたか」です。Were + 主語 + -ing?です。\n\n「あなたは音楽を聴いていましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Were you listening to music?",
       "hint": "Were",
       "wordCount": 5
     },
@@ -393,7 +393,7 @@
       ],
       "correctAnswer": "It was raining yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「昨日は雨が降っていました」です。was + -ingです。",
+      "explanation": "「昨日は雨が降っていました」です。was + -ingです。\n\n「昨日は雨が降っていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ It was raining yesterday.",
       "hint": "was -ing",
       "wordCount": 4
     },
@@ -411,7 +411,7 @@
       ],
       "correctAnswer": "I was writing a letter then.",
       "difficulty": "advanced",
-      "explanation": "「私はその時手紙を書いていました」です。was + -ingです。",
+      "explanation": "「私はその時手紙を書いていました」です。was + -ingです。\n\n「私はその時手紙を書いていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I was writing a letter then.",
       "hint": "was writing",
       "wordCount": 6
     },
@@ -428,7 +428,7 @@
       ],
       "correctAnswer": "They were playing video games.",
       "difficulty": "advanced",
-      "explanation": "「彼らはテレビゲームをしていました」です。were + -ingです。",
+      "explanation": "「彼らはテレビゲームをしていました」です。were + -ingです。\n\n「彼らはテレビゲームをしていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They were playing video games.",
       "hint": "were playing",
       "wordCount": 5
     },
@@ -445,7 +445,7 @@
       ],
       "correctAnswer": "Was he doing his homework?",
       "difficulty": "advanced",
-      "explanation": "「彼は宿題をしていましたか」です。Was + 主語 + -ing?です。",
+      "explanation": "「彼は宿題をしていましたか」です。Was + 主語 + -ing?です。\n\n「彼は宿題をしていましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Was he doing his homework?",
       "hint": "Was doing",
       "wordCount": 5
     },
@@ -462,7 +462,7 @@
       ],
       "correctAnswer": "We weren't playing outside then.",
       "difficulty": "advanced",
-      "explanation": "「私たちはその時外で遊んでいませんでした」です。weren't + -ingです。",
+      "explanation": "「私たちはその時外で遊んでいませんでした」です。weren't + -ingです。\n\n「私たちはその時外で遊んでいませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We weren't playing outside then.",
       "hint": "weren't",
       "wordCount": 5
     },
@@ -479,7 +479,7 @@
       ],
       "correctAnswer": "Were the students taking notes?",
       "difficulty": "advanced",
-      "explanation": "「生徒たちはノートを取っていましたか」です。Were + 主語 + -ing?です。",
+      "explanation": "「生徒たちはノートを取っていましたか」です。Were + 主語 + -ing?です。\n\n「生徒たちはノートを取っていましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Were the students taking notes?",
       "hint": "Were taking",
       "wordCount": 5
     },
@@ -496,7 +496,7 @@
       ],
       "correctAnswer": "I was studying.",
       "difficulty": "beginner",
-      "explanation": "am → wasです。「私は勉強していました」です。",
+      "explanation": "am → wasです。「私は勉強していました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "was"
     },
     {
@@ -512,7 +512,7 @@
       ],
       "correctAnswer": "They were playing.",
       "difficulty": "beginner",
-      "explanation": "are → wereです。「彼らは遊んでいました」です。",
+      "explanation": "are → wereです。「彼らは遊んでいました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "were"
     },
     {
@@ -528,7 +528,7 @@
       ],
       "correctAnswer": "She was reading.",
       "difficulty": "beginner",
-      "explanation": "is → wasです。「彼女は読んでいました」です。",
+      "explanation": "is → wasです。「彼女は読んでいました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "was"
     },
     {
@@ -544,7 +544,7 @@
       ],
       "correctAnswer": "I wasn't watching TV.",
       "difficulty": "beginner",
-      "explanation": "was → wasn'tです。「私はテレビを見ていませんでした」です。",
+      "explanation": "was → wasn'tです。「私はテレビを見ていませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "wasn't"
     },
     {
@@ -560,7 +560,7 @@
       ],
       "correctAnswer": "They weren't running.",
       "difficulty": "beginner",
-      "explanation": "were → weren'tです。「彼らは走っていませんでした」です。",
+      "explanation": "were → weren'tです。「彼らは走っていませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "weren't"
     },
     {
@@ -576,7 +576,7 @@
       ],
       "correctAnswer": "Was she singing?",
       "difficulty": "intermediate",
-      "explanation": "Was she～?の語順です。「彼女は歌っていましたか」です。",
+      "explanation": "Was she～?の語順です。「彼女は歌っていましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Was"
     },
     {
@@ -592,7 +592,7 @@
       ],
       "correctAnswer": "Were you sleeping?",
       "difficulty": "intermediate",
-      "explanation": "Were you～?の語順です。「あなたは寝ていましたか」です。",
+      "explanation": "Were you～?の語順です。「あなたは寝ていましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Were"
     },
     {
@@ -608,7 +608,7 @@
       ],
       "correctAnswer": "I ate lunch.",
       "difficulty": "intermediate",
-      "explanation": "過去進行形 → 過去形です。「私は昼食を食べました」です。",
+      "explanation": "過去進行形 → 過去形です。「私は昼食を食べました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "ate"
     },
     {
@@ -624,7 +624,7 @@
       ],
       "correctAnswer": "She was playing tennis.",
       "difficulty": "intermediate",
-      "explanation": "過去形 → 過去進行形です。「彼女はテニスをしていました」です。",
+      "explanation": "過去形 → 過去進行形です。「彼女はテニスをしていました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "was playing"
     },
     {
@@ -640,7 +640,7 @@
       ],
       "correctAnswer": "Yes, he was.",
       "difficulty": "intermediate",
-      "explanation": "Was～?への答えはwasを使います。「はい、読んでいました」です。",
+      "explanation": "Was～?への答えはwasを使います。「はい、読んでいました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Yes, he was"
     },
     {
@@ -656,7 +656,7 @@
       ],
       "correctAnswer": "No, they weren't.",
       "difficulty": "advanced",
-      "explanation": "Were～?への否定の答えはweren'tです。「いいえ、勉強していませんでした」です。",
+      "explanation": "Were～?への否定の答えはweren'tです。「いいえ、勉強していませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "No, they weren't"
     },
     {
@@ -672,7 +672,7 @@
       ],
       "correctAnswer": "What were you doing?",
       "difficulty": "advanced",
-      "explanation": "What were you + -ing?の語順です。「あなたは何をしていましたか」です。",
+      "explanation": "What were you + -ing?の語順です。「あなたは何をしていましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "What were"
     },
     {
@@ -688,7 +688,7 @@
       ],
       "correctAnswer": "What was she reading?",
       "difficulty": "advanced",
-      "explanation": "What was she + -ing?の語順です。「彼女は何を読んでいましたか」です。",
+      "explanation": "What was she + -ing?の語順です。「彼女は何を読んでいましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "What was"
     },
     {
@@ -704,7 +704,7 @@
       ],
       "correctAnswer": "I was studying then.",
       "difficulty": "advanced",
-      "explanation": "thenを文末に追加です。「私はその時勉強していました」です。",
+      "explanation": "thenを文末に追加です。「私はその時勉強していました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "then"
     },
     {
@@ -720,7 +720,7 @@
       ],
       "correctAnswer": "I was watching TV when she came home.",
       "difficulty": "advanced",
-      "explanation": "whenで2文をつなぐです。「彼女が帰宅した時、私はテレビを見ていました」です。",
+      "explanation": "whenで2文をつなぐです。「彼女が帰宅した時、私はテレビを見ていました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "when"
     },
     {
@@ -736,7 +736,7 @@
       ],
       "correctAnswer": "reading",
       "difficulty": "beginner",
-      "explanation": "be動詞 + -ing形です。read → readingです。",
+      "explanation": "be動詞 + -ing形です。read → readingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "reading"
     },
     {
@@ -752,7 +752,7 @@
       ],
       "correctAnswer": "playing",
       "difficulty": "beginner",
-      "explanation": "be動詞 + -ing形です。play → playingです。",
+      "explanation": "be動詞 + -ing形です。play → playingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "playing"
     },
     {
@@ -768,7 +768,7 @@
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
-      "explanation": "be動詞 + -ing形です。watch → watchingです。",
+      "explanation": "be動詞 + -ing形です。watch → watchingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "watching"
     },
     {
@@ -784,7 +784,7 @@
       ],
       "correctAnswer": "studying",
       "difficulty": "beginner",
-      "explanation": "be動詞 + -ing形です。study → studying（yそのまま）です。",
+      "explanation": "be動詞 + -ing形です。study → studying（yそのまま）です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "studying"
     },
     {
@@ -800,7 +800,7 @@
       ],
       "correctAnswer": "running",
       "difficulty": "intermediate",
-      "explanation": "be動詞 + -ing形です。run → running（子音重ねる）です。",
+      "explanation": "be動詞 + -ing形です。run → running（子音重ねる）です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "running"
     },
     {
@@ -816,7 +816,7 @@
       ],
       "correctAnswer": "writing",
       "difficulty": "intermediate",
-      "explanation": "be動詞 + -ing形です。write → writing（eを取る）です。",
+      "explanation": "be動詞 + -ing形です。write → writing（eを取る）です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "writing"
     },
     {
@@ -832,7 +832,7 @@
       ],
       "correctAnswer": "making",
       "difficulty": "intermediate",
-      "explanation": "be動詞 + -ing形です。make → making（eを取る）です。",
+      "explanation": "be動詞 + -ing形です。make → making（eを取る）です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "making"
     },
     {
@@ -848,7 +848,7 @@
       ],
       "correctAnswer": "raining",
       "difficulty": "advanced",
-      "explanation": "be動詞 + -ing形です。rain → rainingです。",
+      "explanation": "be動詞 + -ing形です。rain → rainingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "raining"
     },
     {
@@ -864,7 +864,7 @@
       ],
       "correctAnswer": "listening",
       "difficulty": "advanced",
-      "explanation": "be動詞 + -ing形です。listen → listeningです。",
+      "explanation": "be動詞 + -ing形です。listen → listeningです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "listening"
     },
     {
@@ -880,7 +880,7 @@
       ],
       "correctAnswer": "waiting",
       "difficulty": "advanced",
-      "explanation": "be動詞 + -ing形です。wait → waitingです。",
+      "explanation": "be動詞 + -ing形です。wait → waitingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "waiting"
     },
     {
@@ -905,7 +905,7 @@
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
-      "explanation": "過去進行形で答えります。was + -ingです。「テレビを見ていました」です。",
+      "explanation": "過去進行形で答えります。was + -ingです。「テレビを見ていました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "watching"
     },
     {
@@ -930,7 +930,7 @@
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
-      "explanation": "Were you～?への答えはI wasです。「はい、勉強していました」です。",
+      "explanation": "Were you～?への答えはI wasです。「はい、勉強していました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "was"
     },
     {
@@ -955,7 +955,7 @@
       ],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
-      "explanation": "Wasへの否定の答えはwasn'tです。「いいえ、寝ていませんでした」です。",
+      "explanation": "Wasへの否定の答えはwasn'tです。「いいえ、寝ていませんでした」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "wasn't"
     },
     {
@@ -980,7 +980,7 @@
       ],
       "correctAnswer": "playing",
       "difficulty": "intermediate",
-      "explanation": "過去進行形で答えります。were + -ingです。「サッカーをしていました」です。",
+      "explanation": "過去進行形で答えります。were + -ingです。「サッカーをしていました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "playing"
     },
     {
@@ -1005,7 +1005,7 @@
       ],
       "correctAnswer": "Was",
       "difficulty": "advanced",
-      "explanation": "主語がitなのでWasです。「その時雨が降っていましたか」です。",
+      "explanation": "主語がitなのでWasです。「その時雨が降っていましたか」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "Was"
     }
   ]

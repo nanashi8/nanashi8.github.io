@@ -1,0 +1,1181 @@
+{
+  "unit": "Unit 5",
+  "title": "助動詞can",
+  "grammar": "can + 原形、疑問文・否定文",
+  "totalQuestions": 70,
+  "questionTypes": {
+    "fillInBlank": 21,
+    "sentenceOrdering": 18,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 6
+  },
+  "questions": [
+    {
+      "id": "g1-u5-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私は泳げます。",
+      "sentence": "I ____ swim.",
+      "choices": [
+        "can",
+        "do",
+        "am"
+      ],
+      "correctAnswer": "can",
+      "difficulty": "beginner",
+      "explanation": "「～できる」はcanを使います。I can swim.で「私は泳げます」です。",
+      "hint": "できる → can"
+    },
+    {
+      "id": "g1-u5-fib-002",
+      "type": "fillInBlank",
+      "japanese": "彼女はピアノを弾けます。",
+      "sentence": "She ____ play the piano.",
+      "choices": [
+        "can",
+        "cans",
+        "is"
+      ],
+      "correctAnswer": "can",
+      "difficulty": "beginner",
+      "explanation": "canは主語に関わらず同じ形です。She can play the piano.で「彼女はピアノを弾けます」です。",
+      "hint": "can は変化しない"
+    },
+    {
+      "id": "g1-u5-fib-003",
+      "type": "fillInBlank",
+      "japanese": "私は英語を話せません。",
+      "sentence": "I ____ speak English.",
+      "choices": [
+        "cannot",
+        "can",
+        "am not"
+      ],
+      "correctAnswer": "cannot",
+      "difficulty": "beginner",
+      "explanation": "canの否定形はcannotまたはcan'tです。cannot speak Englishで「英語を話せません」です。",
+      "hint": "否定 → cannot"
+    },
+    {
+      "id": "g1-u5-fib-004",
+      "type": "fillInBlank",
+      "japanese": "あなたは走れますか。",
+      "sentence": "____ you run fast?",
+      "choices": [
+        "Can",
+        "Do",
+        "Are"
+      ],
+      "correctAnswer": "Can",
+      "difficulty": "beginner",
+      "explanation": "canの疑問文はCanを文頭にです。Can you～?で「～できますか」です。",
+      "hint": "疑問文 → Can"
+    },
+    {
+      "id": "g1-u5-fib-005",
+      "type": "fillInBlank",
+      "japanese": "彼は料理できます。",
+      "sentence": "He can ____.",
+      "choices": [
+        "cook",
+        "cooks",
+        "cooking"
+      ],
+      "correctAnswer": "cook",
+      "difficulty": "beginner",
+      "explanation": "canの後ろは動詞の原形です。He can cook.で「彼は料理できます」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-fib-006",
+      "type": "fillInBlank",
+      "japanese": "私たちはサッカーができます。",
+      "sentence": "We ____ play soccer.",
+      "choices": [
+        "can",
+        "cans",
+        "are"
+      ],
+      "correctAnswer": "can",
+      "difficulty": "intermediate",
+      "explanation": "canは人称・数に関係なく同じ形です。We can play soccer.で「私たちはサッカーができます」です。",
+      "hint": "can は変化なし"
+    },
+    {
+      "id": "g1-u5-fib-007",
+      "type": "fillInBlank",
+      "japanese": "彼女は歌えますか。",
+      "sentence": "____ she sing well?",
+      "choices": [
+        "Can",
+        "Does",
+        "Is"
+      ],
+      "correctAnswer": "Can",
+      "difficulty": "intermediate",
+      "explanation": "Can she～?で「彼女は～できますか」です。三人称でもdoesではなくCanです。",
+      "hint": "疑問文 → Can"
+    },
+    {
+      "id": "g1-u5-fib-008",
+      "type": "fillInBlank",
+      "japanese": "彼らは日本語を読めません。",
+      "sentence": "They ____ read Japanese.",
+      "choices": [
+        "cannot",
+        "can",
+        "are not"
+      ],
+      "correctAnswer": "cannot",
+      "difficulty": "intermediate",
+      "explanation": "cannot read Japaneseで「日本語を読めません」です。can'tも可です。",
+      "hint": "否定 → cannot"
+    },
+    {
+      "id": "g1-u5-fib-009",
+      "type": "fillInBlank",
+      "japanese": "彼は速く走れます。",
+      "sentence": "He can ____ fast.",
+      "choices": [
+        "run",
+        "runs",
+        "running"
+      ],
+      "correctAnswer": "run",
+      "difficulty": "intermediate",
+      "explanation": "canの後ろは必ず動詞の原形です。He can run fast.で「彼は速く走れます」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-fib-010",
+      "type": "fillInBlank",
+      "japanese": "私は中国語を話せません。",
+      "sentence": "I can't ____ Chinese.",
+      "choices": [
+        "speak",
+        "speaks",
+        "speaking"
+      ],
+      "correctAnswer": "speak",
+      "difficulty": "intermediate",
+      "explanation": "can'tの後ろも動詞の原形です。can't speak Chineseで「中国語を話せません」です。",
+      "hint": "can't + 原形"
+    },
+    {
+      "id": "g1-u5-fib-011",
+      "type": "fillInBlank",
+      "japanese": "あなたは自転車に乗れますか。",
+      "sentence": "Can you ____ a bike?",
+      "choices": [
+        "ride",
+        "rides",
+        "riding"
+      ],
+      "correctAnswer": "ride",
+      "difficulty": "intermediate",
+      "explanation": "Can you～?の後ろは動詞の原形です。ride a bikeで「自転車に乗る」です。",
+      "hint": "Can + 原形"
+    },
+    {
+      "id": "g1-u5-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼女はギターを弾けますか。",
+      "sentence": "____ she play the guitar?",
+      "choices": [
+        "Can",
+        "Does",
+        "Is"
+      ],
+      "correctAnswer": "Can",
+      "difficulty": "advanced",
+      "explanation": "Can she～?で「彼女は～できますか」です。play the guitarで「ギターを弾く」です。",
+      "hint": "Can + 原形"
+    },
+    {
+      "id": "g1-u5-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私たちはこの問題を解けません。",
+      "sentence": "We ____ solve this problem.",
+      "choices": [
+        "cannot",
+        "can",
+        "are not"
+      ],
+      "correctAnswer": "cannot",
+      "difficulty": "advanced",
+      "explanation": "cannot solveで「解けません」です。solve a problemで「問題を解く」です。",
+      "hint": "できない → cannot"
+    },
+    {
+      "id": "g1-u5-fib-014",
+      "type": "fillInBlank",
+      "japanese": "彼は上手にスケートできます。",
+      "sentence": "He can ____ very well.",
+      "choices": [
+        "skate",
+        "skates",
+        "skating"
+      ],
+      "correctAnswer": "skate",
+      "difficulty": "advanced",
+      "explanation": "canの後ろは必ず原形です。skate wellで「上手にスケートする」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-fib-015",
+      "type": "fillInBlank",
+      "japanese": "あなたは何ができますか。",
+      "sentence": "What ____ you do?",
+      "choices": [
+        "can",
+        "do",
+        "are"
+      ],
+      "correctAnswer": "can",
+      "difficulty": "advanced",
+      "explanation": "What can you do?で「何ができますか」です。疑問詞+can+主語+動詞原形です。",
+      "hint": "What can ～?"
+    },
+    {
+      "id": "g1-u5-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私は泳げます。",
+      "words": [
+        "swim",
+        "I",
+        "can"
+      ],
+      "correctAnswer": "I can swim.",
+      "difficulty": "beginner",
+      "explanation": "I can + 動詞原形の語順です。I can swim.で「私は泳げます」です。",
+      "hint": "I can ～",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u5-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はピアノを弾けます。",
+      "words": [
+        "the",
+        "piano",
+        "play",
+        "she",
+        "can"
+      ],
+      "correctAnswer": "She can play the piano.",
+      "difficulty": "beginner",
+      "explanation": "She can play the piano.で「彼女はピアノを弾けます」です。play the pianoは定冠詞が必要です。",
+      "hint": "She can ～",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "私は英語を話せません。",
+      "words": [
+        "English",
+        "speak",
+        "I",
+        "cannot"
+      ],
+      "correctAnswer": "I cannot speak English.",
+      "difficulty": "beginner",
+      "explanation": "I cannot + 動詞原形です。cannot speak Englishで「英語を話せません」です。",
+      "hint": "I cannot ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u5-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "あなたは走れますか。",
+      "words": [
+        "fast",
+        "you",
+        "run",
+        "can",
+        "?"
+      ],
+      "correctAnswer": "Can you run fast?",
+      "difficulty": "beginner",
+      "explanation": "Can you + 動詞原形?で疑問文です。run fastで「速く走る」です。",
+      "hint": "Can you ～?",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "彼は料理できます。",
+      "words": [
+        "cook",
+        "he",
+        "can"
+      ],
+      "correctAnswer": "He can cook.",
+      "difficulty": "beginner",
+      "explanation": "He can cook.で「彼は料理できます」です。cookは動詞の原形です。",
+      "hint": "He can ～",
+      "wordCount": 3
+    },
+    {
+      "id": "g1-u5-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は歌えますか。",
+      "words": [
+        "well",
+        "she",
+        "sing",
+        "can",
+        "?"
+      ],
+      "correctAnswer": "Can she sing well?",
+      "difficulty": "intermediate",
+      "explanation": "Can she + 動詞原形?で疑問文です。sing wellで「上手に歌う」です。",
+      "hint": "Can she ～?",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "私たちはサッカーができます。",
+      "words": [
+        "soccer",
+        "play",
+        "we",
+        "can"
+      ],
+      "correctAnswer": "We can play soccer.",
+      "difficulty": "intermediate",
+      "explanation": "We can play soccer.で「私たちはサッカーができます」です。",
+      "hint": "We can ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u5-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは日本語を読めません。",
+      "words": [
+        "Japanese",
+        "read",
+        "they",
+        "cannot"
+      ],
+      "correctAnswer": "They cannot read Japanese.",
+      "difficulty": "intermediate",
+      "explanation": "They cannot + 動詞原形です。cannot read Japaneseで「日本語を読めません」です。",
+      "hint": "They cannot ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u5-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼は速く走れます。",
+      "words": [
+        "fast",
+        "run",
+        "he",
+        "can"
+      ],
+      "correctAnswer": "He can run fast.",
+      "difficulty": "intermediate",
+      "explanation": "He can run fast.で「彼は速く走れます」です。fastは副詞です。",
+      "hint": "He can ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u5-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "あなたは自転車に乗れますか。",
+      "words": [
+        "bike",
+        "a",
+        "ride",
+        "you",
+        "can",
+        "?"
+      ],
+      "correctAnswer": "Can you ride a bike?",
+      "difficulty": "intermediate",
+      "explanation": "Can you + 動詞原形?で疑問文です。ride a bikeで「自転車に乗る」です。",
+      "hint": "Can you ～?",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u5-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はギターを弾けますか。",
+      "words": [
+        "the",
+        "guitar",
+        "play",
+        "she",
+        "can",
+        "?"
+      ],
+      "correctAnswer": "Can she play the guitar?",
+      "difficulty": "advanced",
+      "explanation": "Can she play the guitar?で「彼女はギターを弾けますか」です。楽器には定冠詞theです。",
+      "hint": "play the guitar",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u5-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "私は中国語を話せません。",
+      "words": [
+        "Chinese",
+        "speak",
+        "I",
+        "can't"
+      ],
+      "correctAnswer": "I can't speak Chinese.",
+      "difficulty": "advanced",
+      "explanation": "I can't speak Chinese.で「中国語を話せません」です。can'tはcannotの短縮形です。",
+      "hint": "I can't ～",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u5-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼は上手にスケートできます。",
+      "words": [
+        "well",
+        "very",
+        "skate",
+        "he",
+        "can"
+      ],
+      "correctAnswer": "He can skate very well.",
+      "difficulty": "advanced",
+      "explanation": "He can skate very well.で「彼は上手にスケートできます」です。very wellで「とても上手に」です。",
+      "hint": "very well",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "私たちはこの問題を解けません。",
+      "words": [
+        "problem",
+        "this",
+        "solve",
+        "we",
+        "cannot"
+      ],
+      "correctAnswer": "We cannot solve this problem.",
+      "difficulty": "advanced",
+      "explanation": "We cannot solve this problem.で「この問題を解けません」です。solve a problemで「問題を解く」です。",
+      "hint": "solve this problem",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "あなたは何ができますか。",
+      "words": [
+        "do",
+        "you",
+        "what",
+        "can",
+        "?"
+      ],
+      "correctAnswer": "What can you do?",
+      "difficulty": "advanced",
+      "explanation": "What can you do?で「何ができますか」です。疑問詞+can+主語+動詞原形です。",
+      "hint": "What can ～?",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-para-001",
+      "type": "paraphrase",
+      "japanese": "泳げますか。",
+      "originalSentence": "You can swim.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Can you swim?",
+        "Do you can swim?",
+        "You can swim?"
+      ],
+      "correctAnswer": "Can you swim?",
+      "difficulty": "beginner",
+      "explanation": "canの疑問文はCanを文頭にです。Can you swim?で「泳げますか」です。",
+      "hint": "Can を文頭に"
+    },
+    {
+      "id": "g1-u5-para-002",
+      "type": "paraphrase",
+      "japanese": "彼女はテニスができません。",
+      "originalSentence": "She can play tennis.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "She cannot play tennis.",
+        "She doesn't can play tennis.",
+        "She can't plays tennis."
+      ],
+      "correctAnswer": "She cannot play tennis.",
+      "difficulty": "beginner",
+      "explanation": "canの否定形はcannot（can't）です。She cannot play tennis.で「彼女はテニスができません」です。",
+      "hint": "cannot を使う"
+    },
+    {
+      "id": "g1-u5-para-003",
+      "type": "paraphrase",
+      "japanese": "フランス語を話せます。",
+      "originalSentence": "I cannot speak French.",
+      "question": "肯定文に書き換えなさい",
+      "choices": [
+        "I can speak French.",
+        "I do speak French.",
+        "I am speak French."
+      ],
+      "correctAnswer": "I can speak French.",
+      "difficulty": "beginner",
+      "explanation": "cannotを取ってcanにすります。I can speak French.で「フランス語を話せます」です。",
+      "hint": "cannot → can"
+    },
+    {
+      "id": "g1-u5-para-004",
+      "type": "paraphrase",
+      "japanese": "彼は料理できます。",
+      "originalSentence": "Can he cook?",
+      "question": "肯定文に書き換えなさい",
+      "choices": [
+        "He can cook.",
+        "He cooks.",
+        "He is cook."
+      ],
+      "correctAnswer": "He can cook.",
+      "difficulty": "beginner",
+      "explanation": "Canを主語の後ろに移動です。He can cook.で「彼は料理できます」です。",
+      "hint": "Can を後ろに"
+    },
+    {
+      "id": "g1-u5-para-005",
+      "type": "paraphrase",
+      "japanese": "高く跳べません。",
+      "originalSentence": "Can you jump high?",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "You cannot jump high.",
+        "You don't can jump high.",
+        "You can't jumps high."
+      ],
+      "correctAnswer": "You cannot jump high.",
+      "difficulty": "intermediate",
+      "explanation": "canの否定形はcannotです。You cannot jump high.で「高く跳べません」です。",
+      "hint": "cannot を使う"
+    },
+    {
+      "id": "g1-u5-para-006",
+      "type": "paraphrase",
+      "japanese": "ピアノを弾けます。",
+      "originalSentence": "I play the piano.",
+      "question": "「ピアノを弾けます」という意味に書き換えなさい",
+      "choices": [
+        "I can play the piano.",
+        "I can plays the piano.",
+        "I can to play the piano."
+      ],
+      "correctAnswer": "I can play the piano.",
+      "difficulty": "intermediate",
+      "explanation": "canを追加し、動詞は原形にです。I can play the piano.で「ピアノを弾けます」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-para-007",
+      "type": "paraphrase",
+      "japanese": "彼は踊れます。",
+      "originalSentence": "I can dance.",
+      "question": "主語を「彼」に変えて書き換えなさい",
+      "choices": [
+        "He can dance.",
+        "He cans dance.",
+        "He can dances."
+      ],
+      "correctAnswer": "He can dance.",
+      "difficulty": "intermediate",
+      "explanation": "canは主語が変わっても形は同じです。He can dance.で「彼は踊れます」です。",
+      "hint": "can は変化なし"
+    },
+    {
+      "id": "g1-u5-para-008",
+      "type": "paraphrase",
+      "japanese": "彼女は英語を話せません。",
+      "originalSentence": "She can't speak English.",
+      "question": "can'tをcannotに書き換えなさい",
+      "choices": [
+        "She cannot speak English.",
+        "She can not speak English.",
+        "She does not can speak English."
+      ],
+      "correctAnswer": "She cannot speak English.",
+      "difficulty": "intermediate",
+      "explanation": "can'tの正式形はcannot（1語）です。She cannot speak English.で「英語を話せません」です。",
+      "hint": "cannot は1語"
+    },
+    {
+      "id": "g1-u5-para-009",
+      "type": "paraphrase",
+      "japanese": "彼はサッカーができますか。",
+      "originalSentence": "He can play soccer.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Can he play soccer?",
+        "Does he can play soccer?",
+        "Can he plays soccer?"
+      ],
+      "correctAnswer": "Can he play soccer?",
+      "difficulty": "intermediate",
+      "explanation": "canの疑問文はCanを文頭にです。Can he play soccer?で「彼はサッカーができますか」です。",
+      "hint": "Can を文頭に"
+    },
+    {
+      "id": "g1-u5-para-010",
+      "type": "paraphrase",
+      "japanese": "中国語を書けますか。",
+      "originalSentence": "They cannot write Chinese.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Can they write Chinese?",
+        "Cannot they write Chinese?",
+        "Do they can write Chinese?"
+      ],
+      "correctAnswer": "Can they write Chinese?",
+      "difficulty": "advanced",
+      "explanation": "否定文cannotを疑問文にするときはCanを文頭にです。Can they write Chinese?で「中国語を書けますか」です。",
+      "hint": "Can を文頭に"
+    },
+    {
+      "id": "g1-u5-para-011",
+      "type": "paraphrase",
+      "japanese": "何を～できますか。",
+      "originalSentence": "I can play the guitar.",
+      "question": "「何ができますか」という疑問文に書き換えなさい",
+      "choices": [
+        "What can you play?",
+        "What do you can play?",
+        "What you can play?"
+      ],
+      "correctAnswer": "What can you play?",
+      "difficulty": "advanced",
+      "explanation": "What can you～?で「何を～できますか」です。疑問詞+can+主語+動詞原形です。",
+      "hint": "What can ～?"
+    },
+    {
+      "id": "g1-u5-para-012",
+      "type": "paraphrase",
+      "japanese": "私は英語を話せます。",
+      "originalSentence": "We can speak English.",
+      "question": "主語を「私」に変えて書き換えなさい",
+      "choices": [
+        "I can speak English.",
+        "I cans speak English.",
+        "I can speaks English."
+      ],
+      "correctAnswer": "I can speak English.",
+      "difficulty": "advanced",
+      "explanation": "canは人称・数に関係なく同じ形です。I can speak English.で「私は英語を話せます」です。",
+      "hint": "can は変化なし"
+    },
+    {
+      "id": "g1-u5-para-013",
+      "type": "paraphrase",
+      "japanese": "彼女は歌えます。",
+      "originalSentence": "She can.",
+      "question": "「歌う」を追加して完成させなさい",
+      "choices": [
+        "She can sing.",
+        "She can sings.",
+        "She can singing."
+      ],
+      "correctAnswer": "She can sing.",
+      "difficulty": "advanced",
+      "explanation": "canの後ろは必ず動詞の原形です。She can sing.で「彼女は歌えます」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-para-014",
+      "type": "paraphrase",
+      "japanese": "彼は速く走れます。",
+      "originalSentence": "He can run.",
+      "question": "「速く」を追加して書き換えなさい",
+      "choices": [
+        "He can run fast.",
+        "He can runs fast.",
+        "He can fast run."
+      ],
+      "correctAnswer": "He can run fast.",
+      "difficulty": "advanced",
+      "explanation": "副詞fastは動詞の後ろです。He can run fast.で「彼は速く走れます」です。",
+      "hint": "動詞 + fast"
+    },
+    {
+      "id": "g1-u5-para-015",
+      "type": "paraphrase",
+      "japanese": "ピアノを弾く。",
+      "originalSentence": "I can play.",
+      "question": "「ピアノ」を追加して完成させなさい",
+      "choices": [
+        "I can play the piano.",
+        "I can play piano.",
+        "I can plays the piano."
+      ],
+      "correctAnswer": "I can play the piano.",
+      "difficulty": "advanced",
+      "explanation": "楽器を演奏するときは定冠詞theを付けます。play the pianoで「ピアノを弾く」です。",
+      "hint": "play the piano"
+    },
+    {
+      "id": "g1-u5-vf-001",
+      "type": "verbForm",
+      "japanese": "私は英語を話せます。",
+      "sentence": "I can ____ English.",
+      "verb": "speak",
+      "choices": [
+        "speak",
+        "speaks",
+        "speaking"
+      ],
+      "correctAnswer": "speak",
+      "difficulty": "beginner",
+      "explanation": "canの後ろは必ず動詞の原形です。speak Englishで「英語を話す」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-vf-002",
+      "type": "verbForm",
+      "japanese": "彼女はピアノを弾けます。",
+      "sentence": "She can ____ the piano.",
+      "verb": "play",
+      "choices": [
+        "play",
+        "plays",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "beginner",
+      "explanation": "三人称単数でもcanの後ろは原形です。play the pianoで「ピアノを弾く」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-vf-003",
+      "type": "verbForm",
+      "japanese": "私は速く走れません。",
+      "sentence": "I can't ____ fast.",
+      "verb": "run",
+      "choices": [
+        "run",
+        "runs",
+        "running"
+      ],
+      "correctAnswer": "run",
+      "difficulty": "beginner",
+      "explanation": "can'tの後ろも動詞の原形です。run fastで「速く走る」です。",
+      "hint": "can't + 原形"
+    },
+    {
+      "id": "g1-u5-vf-004",
+      "type": "verbForm",
+      "japanese": "あなたは車を運転できますか。",
+      "sentence": "Can you ____ a car?",
+      "verb": "drive",
+      "choices": [
+        "drive",
+        "drives",
+        "driving"
+      ],
+      "correctAnswer": "drive",
+      "difficulty": "beginner",
+      "explanation": "疑問文でもcanの後ろは原形です。drive a carで「車を運転する」です。",
+      "hint": "Can + 原形"
+    },
+    {
+      "id": "g1-u5-vf-005",
+      "type": "verbForm",
+      "japanese": "彼は日本語を読めません。",
+      "sentence": "He cannot ____ Japanese.",
+      "verb": "read",
+      "choices": [
+        "read",
+        "reads",
+        "reading"
+      ],
+      "correctAnswer": "read",
+      "difficulty": "intermediate",
+      "explanation": "cannotの後ろも動詞の原形です。read Japaneseで「日本語を読む」です。",
+      "hint": "cannot + 原形"
+    },
+    {
+      "id": "g1-u5-vf-006",
+      "type": "verbForm",
+      "japanese": "彼らはサッカーをできます。",
+      "sentence": "They can ____ soccer.",
+      "verb": "play",
+      "choices": [
+        "play",
+        "plays",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "主語が複数でもcanの後ろは原形です。play soccerで「サッカーをする」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-vf-007",
+      "type": "verbForm",
+      "japanese": "彼女は上手に歌えますか。",
+      "sentence": "Can she ____ well?",
+      "verb": "sing",
+      "choices": [
+        "sing",
+        "sings",
+        "singing"
+      ],
+      "correctAnswer": "sing",
+      "difficulty": "intermediate",
+      "explanation": "三人称の疑問文でもcanの後ろは原形です。sing wellで「上手に歌う」です。",
+      "hint": "Can + 原形"
+    },
+    {
+      "id": "g1-u5-vf-008",
+      "type": "verbForm",
+      "japanese": "彼は中国語を話せません。",
+      "sentence": "He can't ____ Chinese.",
+      "verb": "speak",
+      "choices": [
+        "speak",
+        "speaks",
+        "speaking"
+      ],
+      "correctAnswer": "speak",
+      "difficulty": "advanced",
+      "explanation": "三人称でもcan'tの後ろは原形です。speak Chineseで「中国語を話す」です。",
+      "hint": "can't + 原形"
+    },
+    {
+      "id": "g1-u5-vf-009",
+      "type": "verbForm",
+      "japanese": "私たちは上手にスケートできます。",
+      "sentence": "We can ____ very well.",
+      "verb": "skate",
+      "choices": [
+        "skate",
+        "skates",
+        "skating"
+      ],
+      "correctAnswer": "skate",
+      "difficulty": "advanced",
+      "explanation": "canの後ろは必ず原形です。skate wellで「上手にスケートする」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-vf-010",
+      "type": "verbForm",
+      "japanese": "あなたはどこへ行けますか。",
+      "sentence": "Where can you ____?",
+      "verb": "go",
+      "choices": [
+        "go",
+        "goes",
+        "going"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "advanced",
+      "explanation": "Where can you～?の後ろも原形です。Where can you go?で「どこへ行けますか」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-conv-001",
+      "type": "conversation",
+      "japanese": "できることを答える。",
+      "situation": "できることについて話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you swim?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "can",
+        "do",
+        "am"
+      ],
+      "correctAnswer": "can",
+      "difficulty": "beginner",
+      "explanation": "Can you～?の答えはYes, I can.またはNo, I can't.です。",
+      "hint": "Yes, I can"
+    },
+    {
+      "id": "g1-u5-conv-002",
+      "type": "conversation",
+      "japanese": "できないことを答える。",
+      "situation": "できないことについて話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you speak French?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, I ____."
+        }
+      ],
+      "choices": [
+        "can't",
+        "don't",
+        "am not"
+      ],
+      "correctAnswer": "can't",
+      "difficulty": "beginner",
+      "explanation": "Can you～?の否定の答えはNo, I can't.（できません）です。",
+      "hint": "No, I can't"
+    },
+    {
+      "id": "g1-u5-conv-003",
+      "type": "conversation",
+      "japanese": "他人について尋ねる。",
+      "situation": "他の人のことを尋ねる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can she play the piano?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, she ____."
+        }
+      ],
+      "choices": [
+        "can",
+        "does",
+        "is"
+      ],
+      "correctAnswer": "can",
+      "difficulty": "intermediate",
+      "explanation": "Can she～?の答えはYes, she can.またはNo, she can't.です。",
+      "hint": "Yes, she can"
+    },
+    {
+      "id": "g1-u5-conv-004",
+      "type": "conversation",
+      "japanese": "能力を説明する。",
+      "situation": "楽器について尋ねる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What instrument can you play?"
+        },
+        {
+          "speaker": "B",
+          "text": "I can ____ the guitar."
+        }
+      ],
+      "choices": [
+        "play",
+        "plays",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "特定の楽器について尋ねられた場合、I can～の後ろは動詞の原形です。play the guitarで「ギターを弾く」です。",
+      "hint": "can + 原形"
+    },
+    {
+      "id": "g1-u5-conv-005",
+      "type": "conversation",
+      "japanese": "複数の人について答える。",
+      "situation": "複数の人について答える場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can they speak English?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, ____ can."
+        }
+      ],
+      "choices": [
+        "they",
+        "them",
+        "their"
+      ],
+      "correctAnswer": "they",
+      "difficulty": "advanced",
+      "explanation": "Can they～?の答えはYes, they can.です。主語はtheyを使います。",
+      "hint": "Yes, they can"
+    },
+    {
+      "id": "g1-u5-freq-001",
+      "type": "fillInBlank",
+      "japanese": "私はいつも朝食を食べます。",
+      "sentence": "I ____ eat breakfast.",
+      "choices": [
+        "always",
+        "never",
+        "sometimes"
+      ],
+      "correctAnswer": "always",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞alwaysは「いつも(100%)」という意味です。一般動詞の前に置く語順として覚えてください。I always eat breakfast.です。",
+      "hint": "100%の頻度"
+    },
+    {
+      "id": "g1-u5-freq-002",
+      "type": "fillInBlank",
+      "japanese": "彼は普通7時に起きます。",
+      "sentence": "He ____ gets up at 7.",
+      "choices": [
+        "usually",
+        "never",
+        "always"
+      ],
+      "correctAnswer": "usually",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞usuallyは「普通は、たいてい(80%)」という意味です。一般動詞の前に置く語順として覚えてください。",
+      "hint": "80%程度"
+    },
+    {
+      "id": "g1-u5-freq-003",
+      "type": "sentenceOrdering",
+      "japanese": "私はよく音楽を聞きます。",
+      "words": [
+        "I",
+        "often",
+        "listen",
+        "to",
+        "music"
+      ],
+      "correctAnswer": "I often listen to music.",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞oftenは「よく、しばしば(60%)」という意味です。主語 + 頻度副詞 + 一般動詞という語順として覚えてください。",
+      "hint": "I often",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-freq-004",
+      "type": "fillInBlank",
+      "japanese": "彼女は時々映画を見ます。",
+      "sentence": "She ____ watches movies.",
+      "choices": [
+        "sometimes",
+        "always",
+        "never"
+      ],
+      "correctAnswer": "sometimes",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞sometimesは「時々(40%)」という意味です。一般動詞の前に置く語順として覚えてください。",
+      "hint": "40%程度"
+    },
+    {
+      "id": "g1-u5-freq-005",
+      "type": "fillInBlank",
+      "japanese": "私は決して嘘をつきません。",
+      "sentence": "I ____ tell a lie.",
+      "choices": [
+        "never",
+        "always",
+        "usually"
+      ],
+      "correctAnswer": "never",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞neverは「決して~ない(0%)」という意味です。一般動詞の前に置きます。I never tell a lie.で否定文になります。",
+      "hint": "0%"
+    },
+    {
+      "id": "g1-u5-freq-006",
+      "type": "conversation",
+      "japanese": "いつも学校に遅刻します。",
+      "situation": "習慣について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are you late for school?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I'm ____ late."
+        }
+      ],
+      "choices": [
+        "always",
+        "never",
+        "sometimes"
+      ],
+      "correctAnswer": "always",
+      "difficulty": "intermediate",
+      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えてください。I'm always late.「いつも遅刻する」です。",
+      "hint": "be動詞の後"
+    },
+    {
+      "id": "g1-u5-freq-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼は決して宿題を忘れません。",
+      "words": [
+        "he",
+        "never",
+        "forgets",
+        "his",
+        "homework"
+      ],
+      "correctAnswer": "He never forgets his homework.",
+      "difficulty": "intermediate",
+      "explanation": "頻度副詞neverは一般動詞の前に置きます。He never forgets.でそれ自体が否定文になることを覚えてください。",
+      "hint": "never forgets",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-freq-008",
+      "type": "fillInBlank",
+      "japanese": "彼女はいつも親切です。",
+      "sentence": "She is ____ kind.",
+      "choices": [
+        "always",
+        "never",
+        "often"
+      ],
+      "correctAnswer": "always",
+      "difficulty": "beginner",
+      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えてください。She is always kind.です。",
+      "hint": "be動詞の後"
+    },
+    {
+      "id": "g1-u5-freq-009",
+      "type": "sentenceOrdering",
+      "japanese": "私は普通バスで学校に行きます。",
+      "words": [
+        "I",
+        "usually",
+        "go",
+        "to",
+        "school",
+        "by",
+        "bus"
+      ],
+      "correctAnswer": "I usually go to school by bus.",
+      "difficulty": "intermediate",
+      "explanation": "頻度副詞usuallyは一般動詞の前に置きます。主語 + usually + 動詞という語順として覚えてください。",
+      "hint": "I usually go",
+      "wordCount": 7
+    },
+    {
+      "id": "g1-u5-freq-010",
+      "type": "fillInBlank",
+      "japanese": "彼らはよくサッカーをします。",
+      "sentence": "They ____ play soccer.",
+      "choices": [
+        "often",
+        "never",
+        "always"
+      ],
+      "correctAnswer": "often",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞oftenは「よく」という意味で、一般動詞の前に置く語順として覚えてください。",
+      "hint": "60%程度"
+    }
+  ]
+}
