@@ -82,7 +82,7 @@ class MaintenanceAI:
             )
 
             # JSONレポートを読み込み
-            report_path = self.base_dir / "quality_nervous_system_report.json"
+            report_path = self.base_dir / "tools" / "data" / "quality_nervous_system_report.json"
             if report_path.exists():
                 try:
                     with open(report_path, "r", encoding="utf-8") as f:
@@ -670,7 +670,7 @@ class MaintenanceAI:
     def save_report(self, report: Dict[str, Any], output_path: Optional[Path] = None):
         """レポートを保存"""
         if output_path is None:
-            output_path = self.base_dir / "maintenance_report.json"
+            output_path = self.base_dir / "tools" / "data" / "maintenance_report.json"
 
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(report, f, ensure_ascii=False, indent=2)

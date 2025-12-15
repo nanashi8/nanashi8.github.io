@@ -215,7 +215,7 @@ git diff
 
 - `.ai-instructions/css-modification-rules.md` - CSS修正ルール
 - `.copilot-instructions.md` - 基本的な指示
-- `DARK_MODE_GUIDE.md` - ダークモード仕様（現在は使用しない）
+- `docs/design/DARK_MODE_GUIDE.md` - ダークモード仕様（現在は使用しない）
 
 ## 🎯 行動原則
 

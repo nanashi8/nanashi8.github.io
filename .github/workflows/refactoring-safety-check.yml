@@ -17,7 +17,7 @@ jobs:
   safety-check:
     runs-on: ubuntu-latest
     name: Validate code structure and integrity
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -38,13 +38,13 @@ jobs:
         run: |
           SRC_COUNT=$(find src -type f 2>/dev/null | wc -l | tr -d ' ')
           echo "src_files=$SRC_COUNT" >> $GITHUB_OUTPUT
-          
+
           if [ "$SRC_COUNT" -lt 100 ]; then
             echo "::error::⚠️ Only $SRC_COUNT files in src/ directory (expected: 100+)"
             echo "::error::This might indicate accidental file loss during refactoring"
             exit 1
           fi
-          
+
           echo "✅ src/ integrity check passed: $SRC_COUNT files"
 
       - name: Check for critical files
@@ -56,20 +56,20 @@ jobs:
             "package.json"
             "vite.config.ts"
           )
-          
+
           MISSING_FILES=()
           for file in "${CRITICAL_FILES[@]}"; do
             if [ ! -f "$file" ]; then
               MISSING_FILES+=("$file")
             fi
           done
-          
+
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
             echo "::error::❌ Critical files missing:"
             printf '%s\n' "${MISSING_FILES[@]}"
             exit 1
           fi
-          
+
           echo "✅ All critical files present"
 
       - name: Check for SimpleWord contamination
@@ -80,7 +80,7 @@ jobs:
             echo "::error::Please remove and add to .gitignore"
             exit 1
           fi
-          
+
           echo "✅ No SimpleWord contamination detected"
 
       - name: Verify TypeScript compilation
@@ -93,33 +93,33 @@ jobs:
         id: npm-audit
         run: |
           echo "🔍 Running npm audit for security vulnerabilities..."
-          
+
           # Run npm audit with JSON output
           npm audit --json > npm-audit.json 2>&1 || true
-          
+
           # Parse results
           CRITICAL=$(jq '.metadata.vulnerabilities.critical // 0' npm-audit.json)
           HIGH=$(jq '.metadata.vulnerabilities.high // 0' npm-audit.json)
           MODERATE=$(jq '.metadata.vulnerabilities.moderate // 0' npm-audit.json)
           LOW=$(jq '.metadata.vulnerabilities.low // 0' npm-audit.json)
-          
+
           echo "critical=$CRITICAL" >> $GITHUB_OUTPUT
           echo "high=$HIGH" >> $GITHUB_OUTPUT
           echo "moderate=$MODERATE" >> $GITHUB_OUTPUT
           echo "low=$LOW" >> $GITHUB_OUTPUT
-          
+
           echo "📊 Security Audit Results:"
           echo "  🔴 CRITICAL: $CRITICAL"
           echo "  🟠 HIGH: $HIGH"
           echo "  🟡 MODERATE: $MODERATE"
           echo "  🔵 LOW: $LOW"
-          
+
           # Check for critical vulnerabilities
           if [ "$CRITICAL" -gt 0 ]; then
             echo "::error::❌ CRITICAL security vulnerabilities found: $CRITICAL"
             exit 1
           fi
-          
+
           if [ "$HIGH" -gt 0 ]; then
             echo "::warning::⚠️ HIGH severity vulnerabilities found: $HIGH"
             echo "::warning::These should be fixed before production deployment"
@@ -129,7 +129,7 @@ jobs:
         id: secret-check
         run: |
           echo "🔐 Scanning for exposed secrets..."
-          
+
           # Check for common secret patterns
           PATTERNS=(
             'api[_-]?key'
@@ -139,14 +139,14 @@ jobs:
             'secret'
             'sentry[_-]?dsn'
           )
-          
+
           FOUND=0
           for PATTERN in "${PATTERNS[@]}"; do
             if git log --all -p | grep -i "\"$PATTERN\".*:.*\"" | grep -v "\.example\|\.template" | head -1; then
               FOUND=1
             fi
           done
-          
+
           if [ "$FOUND" -eq 1 ]; then
             echo "::warning::⚠️ Potential secret pattern detected in commit history"
             echo "::warning::Please verify no actual secrets are exposed"
@@ -164,7 +164,7 @@ jobs:
             echo "::error::❌ Build output directory 'dist' not found"
             exit 1
           fi
-          
+
           DIST_SIZE=$(du -sh dist | cut -f1)
           echo "✅ Build successful: $DIST_SIZE"
 
@@ -172,24 +172,24 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           echo "📊 Analyzing changes in this PR..."
-          
+
           # Get base branch file count
           git checkout ${{ github.event.pull_request.base.sha }}
           BASE_COUNT=$(find src -type f 2>/dev/null | wc -l | tr -d ' ')
-          
+
           # Get current file count
           git checkout ${{ github.event.pull_request.head.sha }}
           HEAD_COUNT=$(find src -type f 2>/dev/null | wc -l | tr -d ' ')
-          
+
           DIFF=$((HEAD_COUNT - BASE_COUNT))
-          
+
           echo "Base branch: $BASE_COUNT files"
           echo "This PR: $HEAD_COUNT files"
           echo "Difference: $DIFF files"
-          
+
           # Check for large file deletions
           DELETED_COUNT=$(git diff --diff-filter=D --name-only ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep "^src/" | wc -l | tr -d ' ')
-          
+
           if [ "$DELETED_COUNT" -gt 10 ]; then
             echo "::warning::⚠️ Large number of files deleted: $DELETED_COUNT"
             echo "::warning::Please verify this is intentional refactoring"
@@ -197,7 +197,7 @@ jobs:
             echo "Deleted files:"
             git diff --diff-filter=D --name-only ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep "^src/" | head -20
           fi
-          
+
           if [ "$DIFF" -lt -20 ]; then
             echo "::warning::⚠️ Significant file count decrease: $DIFF"
             echo "::warning::Ensure this is intentional consolidation, not accidental deletion"
@@ -222,7 +222,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Remind about checkpoints
     if: github.event_name == 'pull_request'
-    
+
     steps:
       - name: Check PR description for checkpoint
         uses: actions/github-script@v7
@@ -230,10 +230,10 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
             const body = pr.body || '';
-            
+
             // Check if PR mentions checkpoint
             const hasCheckpoint = /checkpoint|チェックポイント/i.test(body);
-            
+
             if (!hasCheckpoint && pr.changed_files > 5) {
               const message = [
                 '## 🔒 リファクタリング安全性チェック',
@@ -251,11 +251,11 @@ jobs:
                 '- [ ] チェックポイント作成済み',
                 '- [ ] ローカルでビルド成功',
                 '- [ ] 段階的にコミット（1機能 = 1コミット）',
-                '- [ ] `docs/REFACTORING_SAFETY.md` の手順を確認',
+                '- [ ] `docs/processes/REFACTORING_SAFETY.md` の手順を確認',
                 '',
-                '詳細: [REFACTORING_SAFETY.md](../blob/main/docs/REFACTORING_SAFETY.md)'
+                '詳細: [REFACTORING_SAFETY.md](../blob/main/docs/processes/REFACTORING_SAFETY.md)'
               ].join('\n');
-              
+
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,

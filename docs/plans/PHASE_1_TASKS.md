@@ -12,7 +12,7 @@
 
 #### タスク
 - [ ] `/tools/` ディレクトリ作成
-- [ ] `geometry-demo.html` を `/tools/geometry-editor/index.html` に移動
+- [x] `geometry-demo.html` を `/tools/demos/geometry-demo.html` に移動 ✅
 - [ ] `/tools/README.md` 作成
 - [ ] `/public/data/geometry/` ディレクトリ作成
 - [ ] `/public/data/english/` ディレクトリ作成

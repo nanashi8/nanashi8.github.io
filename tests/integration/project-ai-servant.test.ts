@@ -28,7 +28,7 @@ describe('プロジェクトAIサーバント統合', () => {
     });
 
     it('設計ドキュメントが存在する', () => {
-      const designPath = join(baseDir, 'docs/PROJECT_AI_SERVANT_DESIGN.md');
+      const designPath = join(baseDir, 'docs/design/PROJECT_AI_SERVANT_DESIGN.md');
       expect(existsSync(designPath), `${designPath} が見つかりません`).toBe(true);
     });
   });

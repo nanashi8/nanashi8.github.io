@@ -1,5 +1,451 @@
 # 統合品質パイプライン - 全タブコンテンツ対応
 
+このドキュメントは、プロダクト本体のドキュメント体系に統合しました。以下は最新の運用版です。
+
+```
+移設元: /docs/INTEGRATED_QUALITY_PIPELINE.md
+移設先: /nanashi8.github.io/docs/quality/INTEGRATED_QUALITY_PIPELINE.md
+意図    : 品質関連ドキュメントの体系化（quality/ 配下に集約）
+```
+
+---
+
+# 統合品質パイプライン - 全タブコンテンツ対応
+
+## 概要
+
+文法・和訳・スペル・長文の全4タブのコンテンツ品質を統合的に管理するパイプライン。
+
+## 統合検証スクリプト
+
+### `validate_all_content.py`
+
+**機能**:
+
+- 📝 **文法問題**: verb-form, fill-in-blank, sentence-ordering (1,800問)
+- 🈂️ **和訳問題**: 英文・日本語訳の重複検証
+- 🔤 **スペル問題**: 単語の重複検証
+- 📖 **長文読解**: パッセージ・質問の重複検証
+
+**使用方法**:
+
+```bash
+# 全タブを検証（ルートから実行）
+python3 scripts/validate_all_content.py
+
+# 特定タブのみ検証
+python3 scripts/validate_all_content.py --type grammar
+python3 scripts/validate_all_content.py --type translation
+python3 scripts/validate_all_content.py --type spelling
+python3 scripts/validate_all_content.py --type reading
+
+# JSON出力
+python3 scripts/validate_all_content.py --export quality_report.json
+```
+
+## タブ別検証仕様
+
+### 1. 文法問題 (Grammar)
+
+**対象ファイル**:
+
+- `verb-form-questions-grade{1,2,3}.json`
+- `fill-in-blank-questions-grade{1,2,3}.json`
+- `sentence-ordering-grade{1,2,3}.json`
+
+**検証項目**:
+
+- ✅ `sentence` フィールドの重複チェック
+- ✅ `correctOrder` フィールドの重複チェック (G3)
+- ✅ グレード別・ファイルタイプ別の品質率
+
+**品質目標**: 1,800/1,800 = **100%**
+
+---
+
+### 2. 和訳問題 (Translation)
+
+**対象ファイル**:
+
+- `translation-quiz-grade{1,2,3}.json`
+
+**検証項目**:
+
+- ✅ `english` フィールドの重複チェック
+- ✅ `japanese` フィールドの重複チェック
+- ✅ 英文と日本語訳の対応関係
+
+**品質目標**: 100% (英文・日本語訳ともに)
+
+**データ構造例**:
+
+```json
+{
+  "units": [
+    {
+      "unit": "Unit 1",
+      "questions": [
+        {
+          "id": "tq-g1-u1-001",
+          "english": "I play soccer every day.",
+          "japanese": "私は毎日サッカーをします。",
+          "choices": ["...", "...", "...", "..."],
+          "correctAnswer": "私は毎日サッカーをします。"
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+### 3. スペル問題 (Spelling)
+
+**対象ファイル**:
+
+- `spelling-quiz-grade{1,2,3}.json`
+
+**検証項目**:
+
+- ✅ `word` フィールドの重複チェック
+- ✅ グレード別の単語ユニーク度
+- ✅ 単語の難易度分布（今後追加予定）
+
+**品質目標**: 100%
+
+**データ構造例**:
+
+```json
+{
+  "units": [
+    {
+      "unit": "Unit 1",
+      "words": [
+        {
+          "id": "sp-g1-u1-001",
+          "word": "apple",
+          "meaning": "りんご",
+          "hint": "a-p-p-l-e",
+          "difficulty": 1
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+### 4. 長文読解 (Reading)
+
+**対象ファイル**:
+
+- `reading-passages-grade{1,2,3}.json`
+
+**検証項目**:
+
+- ✅ `title` フィールドの重複チェック (パッセージ)
+- ✅ `question` フィールドの重複チェック (質問)
+- ✅ パッセージと質問の対応関係
+- ✅ 質問の多様性（同じ質問文の使い回しを防ぐ）
+
+**品質目標**: 100% (パッセージ・質問ともに)
+
+**データ構造例**:
+
+```json
+{
+  "passages": [
+    {
+      "id": "rp-g1-u1-001",
+      "title": "My School Life",
+      "passage": "I am a junior high school student...",
+      "questions": [
+        {
+          "id": "rq-g1-u1-001-1",
+          "question": "What grade is the student in?",
+          "choices": ["...", "...", "...", "..."],
+          "correctAnswer": "First grade"
+        }
+      ]
+    }
+  ]
+}
+```
+
+## ワークフロー統合
+
+### 新規コンテンツ作成時
+
+```bash
+# 1. コンテンツ作成
+# (文法・和訳・スペル・長文のいずれか)
+
+# 2. 該当タブを検証
+python3 scripts/validate_all_content.py --type [grammar|translation|spelling|reading]
+
+# 3. 全体検証
+python3 scripts/validate_all_content.py
+
+# 4. 問題なければコミット
+git add .
+git commit -m "✨ 新規コンテンツ追加: [タブ名]"
+```
+
+### 既存コンテンツ編集時
+
+```bash
+# 1. 編集実施
+
+# 2. 即座に検証
+python3 scripts/validate_all_content.py --type [該当タブ]
+
+# 3. 重複があれば修正
+
+# 4. 再検証
+python3 scripts/validate_all_content.py
+
+# 5. 100%確認後コミット
+```
+
+## 品質メトリクス統合ダッシュボード
+
+### 出力例
+
+```text
+【全コンテンツ品質レポート】
+====================================================================
+
+【📝 文法問題】
+  Grade 1: ✅ 100.0% (600/600)
+  Grade 2: ✅ 100.0% (600/600)
+  Grade 3: ✅ 100.0% (600/600)
+  総計: 1,800/1,800 = 100.00%
+
+【🈂️ 和訳問題】
+  Grade 1: ✅ 100.0% (200/200)
+  Grade 2: ✅ 100.0% (200/200)
+  Grade 3: ✅ 100.0% (200/200)
+  総計: 600/600 = 100.00%
+
+【🔤 スペル問題】
+  Grade 1: ✅ 100.0% (300/300)
+  Grade 2: ✅ 100.0% (300/300)
+  Grade 3: ✅ 100.0% (300/300)
+  総計: 900/900 = 100.00%
+
+【📖 長文読解】
+  Grade 1: ✅ 100.0% パッセージ (30/30), 質問 (150/150)
+  Grade 2: ✅ 100.0% パッセージ (30/30), 質問 (150/150)
+  Grade 3: ✅ 100.0% パッセージ (30/30), 質問 (150/150)
+  総計: 90/90 パッセージ, 450/450 質問 = 100.00%
+
+【総合サマリー】
+  全コンテンツ合計: 3,840/3,840 = 100.00%
+====================================================================
+
+🎉🎉🎉 完璧! 全コンテンツが100%ユニーク! 🎉🎉🎉
+```
+
+## タブ別ベストプラクティス
+
+### 文法問題
+
+**重複を避けるテクニック**:
+
+- 主語を変える: I → He → She → They
+- 時制を変える: 現在 → 過去 → 未来
+- 文脈を変える: 場所・時間・状況
+
+詳細: [GRAMMAR_GENERATION_GUIDELINES.md](./GRAMMAR_GENERATION_GUIDELINES.md)
+
+---
+
+### 和訳問題
+
+**重複を避けるテクニック**:
+
+- 同じ文法項目でも異なる語彙を使用
+- 文の長さを変える（短文・中文・長文）
+- 肯定文・否定文・疑問文のバリエーション
+
+**悪い例**:
+
+```text
+英文1: I play soccer.
+英文2: I play soccer. (重複!)
+```
+
+**良い例**:
+
+```text
+英文1: I play soccer.
+英文2: I play tennis.
+英文3: He plays basketball.
+```
+
+---
+
+### スペル問題
+
+**重複を避けるテクニック**:
+
+- 同じカテゴリーでも異なる単語を選ぶ
+- 難易度の異なる単語を混ぜる
+- 複数形・過去形などの変化形は別単語として扱う
+
+**チェック項目**:
+
+- ✅ 単語の重複なし
+- ✅ 意味の重複も避ける（類義語は可）
+- ✅ スペルミスがないこと
+
+---
+
+### 長文読解
+
+**重複を避けるテクニック**:
+
+- 異なるトピック・ジャンルを扱う
+- 質問文のパターンを多様化
+- 同じ情報を聞く場合も表現を変える
+
+**パッセージの多様性**:
+
+- 物語文
+- 説明文
+- 会話文
+- 手紙・メール
+
+**質問の多様性**:
+
+- 事実確認型: What, When, Where, Who
+- 理解確認型: Why, How
+- 推測型: What will happen next?
+- 意見型: What do you think?
+
+## CI/CD統合（全タブ対応）
+
+### GitHub Actions設定例
+
+```yaml
+name: Content Quality Check
+
+on: [push, pull_request]
+
+jobs:
+  validate-all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      
+      - name: Validate All Content
+        run: |
+          python3 scripts/validate_all_content.py
+      
+      - name: Upload Report
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: quality-report
+          path: quality_report.json
+  
+  validate-grammar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate Grammar
+        run: python3 scripts/validate_all_content.py --type grammar
+  
+  validate-translation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate Translation
+        run: python3 scripts/validate_all_content.py --type translation
+  
+  validate-spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate Spelling
+        run: python3 scripts/validate_all_content.py --type spelling
+  
+  validate-reading:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate Reading
+        run: python3 scripts/validate_all_content.py --type reading
+```
+
+## 品質保証の仕組み
+
+### レイヤー1: ローカル開発
+
+```bash
+# コンテンツ作成後すぐに検証
+python3 scripts/validate_all_content.py --type [タブ名]
+```
+
+### レイヤー2: Pre-commit Hook
+
+```bash
+#!/bin/bash
+# .git/hooks/pre-commit
+python3 scripts/validate_all_content.py
+if [ $? -ne 0 ]; then
+    echo "❌ 品質チェック失敗"
+    exit 1
+fi
+```
+
+### レイヤー3: GitHub Actions
+
+自動的に全タブを検証し、問題があればPRをブロック
+
+### レイヤー4: 定期検証
+
+```yaml
+# 週次で全コンテンツを検証
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # 毎週日曜日
+```
+
+## まとめ
+
+### 構築した統合パイプライン
+
+1. ✅ **統合検証スクリプト**: 全4タブを一括検証
+2. ✅ **タブ別検証**: 個別タブのみを高速検証
+3. ✅ **統合レポート**: 全体の品質状況を可視化
+4. ✅ **CI/CD対応**: 自動化による品質保証
+
+### 利用可能な仕組み
+
+| タブ | 検証対象 | 品質目標 | ステータス |
+|------|---------|---------|----------|
+| 📝 文法 | 1,800問 | 100% | ✅ 達成済み |
+| 🈂️ 和訳 | 600問 (予定) | 100% | 準備完了 |
+| 🔤 スペル | 900単語 (予定) | 100% | 準備完了 |
+| 📖 長文 | 90パッセージ + 450質問 (予定) | 100% | 準備完了 |
+
+**これで和訳・スペル・長文の作成・編集時も、文法と同じように自動的に品質チェックが実行されます！**
+
+## 関連ドキュメント
+
+- [QUALITY_AUTOMATION_GUIDE.md](./QUALITY_AUTOMATION_GUIDE.md) - 文法問題の自動化
+- [GRAMMAR_QUALITY_PIPELINE.md](./GRAMMAR_QUALITY_PIPELINE.md) - 品質プロセス全体
+- [GRAMMAR_GENERATION_GUIDELINES.md](./GRAMMAR_GENERATION_GUIDELINES.md) - 問題作成ガイドライン
+# 統合品質パイプライン - 全タブコンテンツ対応
+
 ## 概要
 
 文法・和訳・スペル・長文の全4タブのコンテンツ品質を統合的に管理するパイプライン。

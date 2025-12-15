@@ -14,7 +14,7 @@ const ALLOWED_EXCEPTIONS = [
   // ドキュメント・ガイドファイルは除外
   '.md',
   '.json',
-  'DARK_MODE_GUIDE.md',
+  'docs/design/DARK_MODE_GUIDE.md',
   '.copilot-instructions.md',
   // このチェッカー自体
   'check-no-dark-mode.mjs',

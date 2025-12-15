@@ -452,7 +452,7 @@ git push origin main --tags
 ### 関連ドキュメント
 
 - [REFACTORING_PLAN.md](./REFACTORING_PLAN.md) - Phase 1-3の詳細計画
-- [EMERGENCY_RECOVERY.md](../EMERGENCY_RECOVERY.md) - 緊急復旧ガイド
+- [EMERGENCY_RECOVERY.md](./EMERGENCY_RECOVERY.md) - 緊急復旧ガイド
 - [Git Best Practices](https://git-scm.com/book/en/v2)
 
 ### フックファイルの場所

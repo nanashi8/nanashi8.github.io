@@ -13,10 +13,11 @@ import {
   getWordDetailedData,
 } from '../progressStorage';
 import { useState, useEffect, useMemo, useRef } from 'react';
-import { AIPersonality } from '../types';
+import { AIPersonality, CommentContext } from '../types';
 import { generateTimeBasedGreeting } from '../timeBasedGreeting';
 import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractions';
 import { getBreatherTrivia } from '../englishTrivia';
+import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'; // クイズモードを追加
@@ -24,13 +25,21 @@ interface ScoreBoardProps {
   totalAnswered?: number; // 現在の回答数
   sessionCorrect?: number; // セッション内の正解数
   sessionIncorrect?: number; // セッション内の不正解数
+  _sessionIncorrect?: number; // 未使用(互換性のため)
   sessionReview?: number; // セッション内の要復習数
+  _sessionReview?: number; // 未使用(互換性のため)
   sessionMastered?: number; // セッション内の定着数
   onReviewFocus?: () => void; // 要復習タップ時のコールバック
   isReviewFocusMode?: boolean; // 補修モード中かどうか
   onShowSettings?: () => void; // 学習設定を開くコールバック
   currentWord?: string; // 現在表示中の単語
   onAnswerTime?: number; // 回答時刻(更新トリガー用)
+  // 回答結果情報（動的AIコメント用）
+  lastAnswerCorrect?: boolean; // 最後の回答が正解だったか
+  lastAnswerWord?: string; // 最後に回答した単語
+  lastAnswerDifficulty?: string; // 最後に回答した単語の難易度
+  correctStreak?: number; // 現在の連続正解数
+  incorrectStreak?: number; // 現在の連続不正解数
   // 学習設定情報
   dataSource?: string; // 問題集
   category?: string; // 関連分野
@@ -45,13 +54,18 @@ function ScoreBoard({
   currentScore = 0,
   totalAnswered = 0,
   sessionCorrect = 0,
-  sessionIncorrect = 0,
-  sessionReview = 0,
+  _sessionIncorrect = 0,
+  _sessionReview = 0,
   isReviewFocusMode = false,
   onReviewFocus,
   onShowSettings,
   currentWord,
   onAnswerTime,
+  lastAnswerCorrect,
+  lastAnswerWord,
+  lastAnswerDifficulty,
+  correctStreak = 0,
+  incorrectStreak = 0,
   dataSource = '',
   category = '',
   difficulty = '',
@@ -62,39 +76,203 @@ function ScoreBoard({
     'ai'
   );
 
-  // AIコメント用のstate
-  const [aiComment, setAiComment] = useState<string>('');
+  // 出題時コメント（解答前）と解答後コメントを分離
+  const [questionComment, setQuestionComment] = useState<string>(() => {
+    const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
+    return generateTimeBasedGreeting(personality) || 'こんにちは！一緒に学習しましょう。';
+  });
+  const [answerComment, setAnswerComment] = useState<string>('');
 
+  // 新しい問題が表示された時に、その問題の履歴情報を表示し、解答後コメントをクリア
   useEffect(() => {
-    // AIコメントを生成
-    const generateComment = () => {
-      // 現在のAI人格を取得
-      const personality = (localStorage.getItem('aiPersonality') ||
-        'kind-teacher') as AIPersonality;
+    if (currentWord) {
+      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
+      const wordData = getWordDetailedData(currentWord);
 
-      // 3%の確率で英語豆知識を表示（AI人格に応じたメッセージ）
-      if (Math.random() < 0.03) {
-        return getBreatherTrivia(personality);
+      // 問題の履歴情報に基づいてコメントを生成
+      let comment = '';
+
+      if (wordData) {
+        const { totalCount, correctCount } = wordData;
+        const incorrectCount = totalCount - correctCount;
+        const accuracy = totalCount > 0 ? Math.round((correctCount / totalCount) * 100) : 0;
+
+        if (totalCount === 0) {
+          // 初出題
+          switch (personality) {
+            case 'drill-sergeant':
+              comment = '新しい単語だ！気合を入れて覚えろ！';
+              break;
+            case 'kind-teacher':
+              comment = '初めての単語ですね。じっくり考えてみましょう';
+              break;
+            case 'analyst':
+              comment = '新規単語。データなし。初回測定を開始します';
+              break;
+            case 'enthusiastic-coach':
+              comment = '新しいチャレンジだ！思い切って行こう！';
+              break;
+            case 'wise-sage':
+              comment = '初めて出会う単語じゃな。焦らず向き合おう';
+              break;
+            default:
+              comment = '初めての単語です';
+          }
+        } else if (totalCount === 1) {
+          // 2回目の出題
+          const wasCorrect = correctCount === 1;
+          switch (personality) {
+            case 'drill-sergeant':
+              comment = wasCorrect ? '2回目だ！前回は正解したぞ。またやれ！' : '2回目だ！前回は間違えた。今度こそ決めろ！';
+              break;
+            case 'kind-teacher':
+              comment = wasCorrect ? '2回目の出題です。前回は正解できましたね' : '2回目の出題です。前回は間違えてしまいましたが、大丈夫です';
+              break;
+            case 'analyst':
+              comment = `2回目の出題。前回: ${wasCorrect ? '正解' : '不正解'}`;
+              break;
+            case 'enthusiastic-coach':
+              comment = wasCorrect ? '2回目！前回は完璧だったな！' : '2回目のチャンス！前回のリベンジだ！';
+              break;
+            case 'wise-sage':
+              comment = wasCorrect ? '2度目の出会いじゃ。前回はうまくいったのう' : '2度目じゃな。前回の経験を活かそう';
+              break;
+            default:
+              comment = '2回目の出題です';
+          }
+        } else {
+          // 3回目以降
+          switch (personality) {
+            case 'drill-sergeant':
+              if (accuracy >= 80) {
+                comment = `${totalCount}回目だ。正答率${accuracy}%！いい調子だ！`;
+              } else if (accuracy >= 50) {
+                comment = `${totalCount}回目。正答率${accuracy}%。もっと上げろ！`;
+              } else {
+                comment = `${totalCount}回目。正答率${accuracy}%！覚えが悪いぞ！`;
+              }
+              break;
+            case 'kind-teacher':
+              if (accuracy >= 80) {
+                comment = `${totalCount}回目の出題です。正答率${accuracy}%、よく覚えていますね`;
+              } else if (accuracy >= 50) {
+                comment = `${totalCount}回目の出題です。正答率${accuracy}%、少しずつ覚えてきています`;
+              } else {
+                comment = `${totalCount}回目の出題です。正答率${accuracy}%、繰り返し練習しましょう`;
+              }
+              break;
+            case 'analyst':
+              comment = `${totalCount}回目の出題。正答率: ${accuracy}% (正解${correctCount}/不正解${incorrectCount})`;
+              break;
+            case 'enthusiastic-coach':
+              if (accuracy >= 80) {
+                comment = `${totalCount}回目！正答率${accuracy}%！完璧に近いぞ！`;
+              } else {
+                comment = `${totalCount}回目のチャレンジ！正答率${accuracy}%、まだ伸びるぞ！`;
+              }
+              break;
+            case 'wise-sage':
+              if (accuracy >= 80) {
+                comment = `${totalCount}回目じゃな。正答率${accuracy}%、よく定着しておる`;
+              } else {
+                comment = `${totalCount}回目じゃ。正答率${accuracy}%、焦らず着実にな`;
+              }
+              break;
+            default:
+              comment = `${totalCount}回目の出題です。正答率${accuracy}%`;
+          }
+        }
+      } else {
+        // データが取得できない場合は初出題として扱う
+        comment = '新しい問題です';
       }
 
-      // 特別な日の会話をチェック
-      const specialChat = getSpecialDayChat();
-      if (specialChat) {
-        return specialChat;
-      }
+      setQuestionComment(comment);
+      setAnswerComment('');
+    }
+  }, [currentWord]);
 
-      // 時間帯別の教師の会話をチェック
-      const teacherChat = getTimeBasedTeacherChat();
-      if (teacherChat) {
-        return teacherChat;
-      }
+  // 回答時に動的なAIコメントを生成
+  useEffect(() => {
+    // 回答情報がない場合はスキップ
+    if (lastAnswerCorrect === undefined || !lastAnswerWord) {
+      return;
+    }
 
-      // 挨拶メッセージを生成
-      return generateTimeBasedGreeting(personality) || 'こんにちは！一緒に学習しましょう。';
+    // 最も重要なチェック: 解答した問題と現在表示中の問題が一致する場合のみコメント生成
+    // これにより、前の問題の回答コメントが新しい問題に表示されることを防ぐ
+    if (!currentWord || lastAnswerWord !== currentWord) {
+      return;
+    }
+
+    const personality = (localStorage.getItem('aiPersonality') ||
+      'kind-teacher') as AIPersonality;
+
+    // 今日の統計を取得
+    const todayStats = getTodayStats(mode || 'translation');
+    const todayQuestions = todayStats.todayTotalAnswered;
+    const todayAccuracy = todayStats.todayAccuracy;
+
+    // 全体の正答率を計算
+    const userAccuracy = totalAnswered > 0
+      ? ((sessionCorrect || 0) / totalAnswered) * 100
+      : 0;
+
+    // カテゴリー正答率（簡易計算）
+    const categoryAccuracy = userAccuracy; // 実際はカテゴリー別に集計する必要があるが、簡易版として全体を使用
+
+    // 動的なAIコメントのコンテキストを作成
+    const context: CommentContext = {
+      isCorrect: lastAnswerCorrect,
+      word: lastAnswerWord,
+      difficulty: (lastAnswerDifficulty || difficulty || 'intermediate') as 'beginner' | 'intermediate' | 'advanced',
+      category: category || '全分野',
+      attemptCount: 1, // スコアボードレベルでは試行回数は1として扱う
+      responseTime: 0, // スコアボードでは応答時間は測定しない
+      correctStreak: correctStreak,
+      incorrectStreak: incorrectStreak,
+      userAccuracy: userAccuracy,
+      categoryAccuracy: categoryAccuracy,
+      isWeakCategory: false, // 簡易版では判定しない
+      hasSeenBefore: false, // 簡易版では判定しない
+      previousAttempts: 0,
+      todayQuestions: todayQuestions,
+      todayAccuracy: todayAccuracy,
+      planProgress: 0,
+      timeOfDay: getTimeOfDay(),
     };
 
-    setAiComment(generateComment());
-  }, []);
+    // 動的なAIコメントを生成
+    let comment = generateAIComment(personality, context);
+
+    // 時々、特別なメッセージを混ぜる
+    if (Math.random() < 0.15) {
+      // 15%の確率で追加メッセージ
+      const additionalMessages = [];
+
+      // 英語豆知識（5%）
+      if (Math.random() < 0.33) {
+        const trivia = getBreatherTrivia(personality);
+        if (trivia) additionalMessages.push(trivia);
+      }
+      // 特別な日の会話（5%）
+      else if (Math.random() < 0.5) {
+        const specialChat = getSpecialDayChat();
+        if (specialChat) additionalMessages.push(specialChat);
+      }
+      // 時間帯別の会話（5%）
+      else {
+        const teacherChat = getTimeBasedTeacherChat();
+        if (teacherChat) additionalMessages.push(teacherChat);
+      }
+
+      if (additionalMessages.length > 0) {
+        comment = `${comment}\n\n${additionalMessages[0]}`;
+      }
+    }
+
+    setAnswerComment(comment);
+  }, [onAnswerTime, lastAnswerCorrect, lastAnswerWord, lastAnswerDifficulty, correctStreak, incorrectStreak, mode, totalAnswered, sessionCorrect, category, difficulty]);
 
   // Progress bar refs
   const masteredRef = useRef<HTMLDivElement>(null);
@@ -356,9 +534,10 @@ function ScoreBoard({
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="text-sm text-gray-700 leading-snug break-words">
-                    {aiComment
+                    {(answerComment || questionComment)
                       .replace(/^[😃👹😼🤖🧙]+「?/gu, '')
                       .replace(/」$/gu, '')
+                      .replace(/[✨🌸😊🌱💪🔥📊🏆]/gu, '')
                       .trim()}
                   </div>
                 </div>

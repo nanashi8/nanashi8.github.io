@@ -90,6 +90,11 @@ function QuizView({
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
 
+  // 回答結果を追跡（動的AIコメント用）
+  const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
+  const [correctStreak, setCorrectStreak] = useState<number>(0);
+  const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
+
   // 学習中・要復習の上限設定（カスタムフック使用）
   const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
     useLearningLimits('translation');
@@ -113,12 +118,24 @@ function QuizView({
 
   // 回答処理をラップ（回答時刻更新用）
   const handleAnswer = async (answer: string, correct: string) => {
+    const isCorrect = answer === correct;
+
+    // 回答結果を記録
+    setLastAnswerCorrect(isCorrect);
+    if (isCorrect) {
+      setCorrectStreak(prev => prev + 1);
+      setIncorrectStreak(0);
+    } else {
+      setIncorrectStreak(prev => prev + 1);
+      setCorrectStreak(0);
+    }
+
     await onAnswer(answer, correct);
     // 回答処理完了後にタイムスタンプを更新（履歴表示用）
     setLastAnswerTime(Date.now());
 
     // 正解した場合、自動次へが有効なら次の問題に進む
-    if (autoNext && answer === correct) {
+    if (autoNext && isCorrect) {
       setTimeout(() => {
         onNext();
       }, autoNextDelay);
@@ -225,26 +242,36 @@ function QuizView({
 
       {hasQuestions && (
         <>
-          <ScoreBoard
-            mode="translation"
-            currentScore={quizState.score}
-            totalAnswered={quizState.totalAnswered}
-            sessionCorrect={sessionStats?.correct}
-            sessionIncorrect={sessionStats?.incorrect}
-            sessionReview={sessionStats?.review}
-            sessionMastered={sessionStats?.mastered}
-            onReviewFocus={onReviewFocus}
-            isReviewFocusMode={isReviewFocusMode}
-            onShowSettings={() => setShowSettings(true)}
-            currentWord={currentQuestion?.word}
-            onAnswerTime={lastAnswerTime}
-            dataSource={
-              questionSets?.find((qs) => qs.id === selectedDataSource)?.name || '全問題集'
-            }
-            category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
-            difficulty={selectedDifficulty}
-            wordPhraseFilter={selectedWordPhraseFilter}
-          />
+          {/* スコアボード */}
+          <div className="mb-4 flex justify-center">
+            <div className="w-full max-w-4xl">
+              <ScoreBoard
+                mode="translation"
+                currentScore={quizState.score}
+                totalAnswered={quizState.totalAnswered}
+                sessionCorrect={sessionStats?.correct}
+                sessionIncorrect={sessionStats?.incorrect}
+                sessionReview={sessionStats?.review}
+                sessionMastered={sessionStats?.mastered}
+                onReviewFocus={onReviewFocus}
+                isReviewFocusMode={isReviewFocusMode}
+                onShowSettings={() => setShowSettings(true)}
+                currentWord={currentQuestion?.word}
+                onAnswerTime={lastAnswerTime}
+                lastAnswerCorrect={lastAnswerCorrect}
+                lastAnswerWord={currentQuestion?.word}
+                lastAnswerDifficulty={currentQuestion?.difficulty}
+                correctStreak={correctStreak}
+                incorrectStreak={incorrectStreak}
+                dataSource={
+                  questionSets?.find((qs) => qs.id === selectedDataSource)?.name || '全問題集'
+                }
+                category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
+                difficulty={selectedDifficulty}
+                wordPhraseFilter={selectedWordPhraseFilter}
+              />
+            </div>
+          </div>
 
           {/* クイズ中の学習設定パネル */}
           {showSettings && (

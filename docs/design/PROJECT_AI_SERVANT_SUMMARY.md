@@ -264,8 +264,8 @@ $ python3 scripts/project_ai_servant.py --suggest "UIを改善したい"
 ## 📚 参考資料
 
 ### 実装ドキュメント
-- `docs/PROJECT_AI_SERVANT_DESIGN.md` - 設計書
-- `docs/PROJECT_AI_SERVANT_EVALUATION.md` - 評価レポート
+- `docs/design/PROJECT_AI_SERVANT_DESIGN.md` - 設計書
+- `docs/design/PROJECT_AI_SERVANT_EVALUATION.md` - 評価レポート
 - `scripts/context_database.py` - コンテキストDB実装
 - `scripts/project_ai_servant.py` - サーバントAI実装
 

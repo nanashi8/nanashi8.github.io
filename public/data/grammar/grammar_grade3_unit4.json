@@ -1128,13 +1128,14 @@
     },
     {
       "id": "g3-u4-tooto-004",
-      "type": "paraphrase",
-      "japanese": "とても暑かったので外出できませんでした（hot, go out）。",
-      "originalSentence": "It was so hot that I couldn't go out.",
-      "question": "It was too hot ____.",
-      "correctAnswer": "to go out",
+      "type": "fillInBlank",
+      "japanese": "とても暑かったので外出できませんでした。",
+      "sentence": "It was too hot ____ go out.",
+      "choices": ["to", "for", "that"],
+      "correctAnswer": "to",
       "difficulty": "intermediate",
-      "explanation": "so ~ that ... can't を too ~ to に書き換える構文です。It was too hot to go out.となります。"
+      "explanation": "too ~ to 構文です。「~すぎて…できない」という意味になります。",
+      "hint": "too ~ to"
     },
     {
       "id": "g3-u4-tooto-005",
@@ -1312,13 +1313,14 @@
     },
     {
       "id": "g3-u4-enough-005",
-      "type": "paraphrase",
-      "japanese": "とても親切だったので教えてくれました（kind, show）。",
-      "originalSentence": "He was so kind that he showed me the way.",
-      "question": "He was kind enough ____.",
-      "correctAnswer": "to show me the way",
+      "type": "fillInBlank",
+      "japanese": "彼は親切にも道を教えてくれました。",
+      "sentence": "He was kind enough ____ show me the way.",
+      "choices": ["to", "for", "that"],
+      "correctAnswer": "to",
       "difficulty": "advanced",
-      "explanation": "so ~ that を 形容詞 + enough + to に書き換える構文です。He was kind enough to show me the way.となります。"
+      "explanation": "形容詞 + enough + to 構文です。「…するのに十分~だ」という意味になります。",
+      "hint": "enough to"
     },
     {
       "id": "g3-u4-enough-006",
@@ -1482,13 +1484,14 @@
     },
     {
       "id": "g3-u4-forto-005",
-      "type": "paraphrase",
-      "japanese": "私が日本語を話すことは難しくありません（speak Japanese）。",
-      "originalSentence": "I can speak Japanese easily.",
-      "question": "It is not difficult for me ____.",
-      "correctAnswer": "to speak Japanese",
+      "type": "fillInBlank",
+      "japanese": "私が日本語を話すことは難しくありません。",
+      "sentence": "It is not difficult for me ____ speak Japanese.",
+      "choices": ["to", "for", "of"],
+      "correctAnswer": "to",
       "difficulty": "intermediate",
-      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文に書き換えます。It is not difficult for me to speak Japanese.となります。"
+      "explanation": "It is ~ for ... to 構文です。「…が~するのは…だ」という意味になります。",
+      "hint": "for ... to"
     },
     {
       "id": "g3-u4-forto-006",

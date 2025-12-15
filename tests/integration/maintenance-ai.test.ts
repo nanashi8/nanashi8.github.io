@@ -27,7 +27,7 @@ describe('メンテナンスAI統合', () => {
     });
 
     it('メンテナンスAIガイドが存在する', () => {
-      const guidePath = join(baseDir, 'docs/MAINTENANCE_AI_GUIDE.md');
+      const guidePath = join(baseDir, 'docs/maintenance/MAINTENANCE_AI_GUIDE.md');
       expect(existsSync(guidePath), `${guidePath} が見つかりません`).toBe(true);
     });
 
@@ -74,7 +74,7 @@ describe('メンテナンスAI統合', () => {
     });
 
     it('文法問題パッセージ機能ドキュメントが存在する', () => {
-      const docPath = join(baseDir, 'docs/GRAMMAR_PASSAGE_FEATURE.md');
+      const docPath = join(baseDir, 'docs/features/GRAMMAR_PASSAGE_FEATURE.md');
       expect(existsSync(docPath), `${docPath} が見つかりません`).toBe(true);
     });
   });
