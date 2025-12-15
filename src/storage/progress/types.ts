@@ -84,6 +84,13 @@ export interface WordProgress {
 
   // 定着済み単語の復習管理
   nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
+
+  // 間隔反復学習（Spaced Repetition）用フィールド
+  easinessFactor?: number; // 難易度係数（1.3-2.5、初期値2.5）個人の学習速度を反映
+  reviewInterval?: number; // 現在の復習間隔（日数）
+  lastReviewDate?: number; // 最終復習日時（タイムスタンプ）
+  totalReviews?: number; // 総復習回数
+  avgResponseSpeed?: number; // 平均応答速度（ms）- 学習速度の指標
 }
 
 export interface Statistics {

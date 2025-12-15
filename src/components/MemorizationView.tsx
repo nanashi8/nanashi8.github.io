@@ -226,7 +226,39 @@ function MemorizationView({
     }
   }, [sessionStats, stillLearningLimit, incorrectLimit, isReviewFocusMode]);
 
-  // 適応的な出題順序を構築（Leitnerシステム + 間隔反復）
+  // 適応型間隔反復学習：個人の学習速度に最適化
+  const calculateOptimalInterval = (streak: number, easinessFactor: number = 2.5): number => {
+    // 連続正解数に基づく基本間隔（日数）
+    if (streak === 0) return 0; // 即座に再出題
+    if (streak === 1) return 1; // 1日後
+    if (streak === 2) return 3; // 3日後
+    if (streak === 3) return 7; // 7日後
+    
+    // 4回目以降：前回の間隔 × 難易度係数（個人最適化）
+    const baseInterval = 7;
+    return Math.round(baseInterval * Math.pow(easinessFactor, streak - 3));
+  };
+
+  // 忘却リスクスコアの計算：今復習すべき度合い
+  const calculateForgettingRisk = (
+    lastStudied: number,
+    reviewInterval: number,
+    accuracy: number
+  ): number => {
+    const now = Date.now();
+    const daysSinceStudy = (now - lastStudied) / (1000 * 60 * 60 * 24);
+    const expectedInterval = reviewInterval || 1;
+    
+    // 時間リスク：経過時間 / 推奨間隔（100%を超えると忘却の危険）
+    const timeRisk = (daysSinceStudy / expectedInterval) * 100;
+    
+    // 正答率リスク：低いほど忘れやすい
+    const accuracyRisk = (1 - accuracy / 100) * 50;
+    
+    return timeRisk + accuracyRisk;
+  };
+
+  // 適応的な出題順序を構築（Leitnerシステム + 適応型間隔反復）
   const sortQuestionsByPriority = (
     questions: Question[],
     stillLearningLimit: number | null,
@@ -248,18 +280,44 @@ function MemorizationView({
         const stillLearning = wordProgress.memorizationStillLearning || 0;
         const streak = wordProgress.memorizationStreak || 0;
         const lastStudied = wordProgress.lastStudied || 0;
+        
+        // 間隔反復学習用データ
+        const easinessFactor = wordProgress.easinessFactor || 2.5;
+        const reviewInterval = wordProgress.reviewInterval || calculateOptimalInterval(streak, easinessFactor);
+        const avgResponseSpeed = wordProgress.avgResponseSpeed || 0;
 
         if (attempts === 0) {
-          return { category: 'new', priority: 3, lastStudied, attempts, correct, streak };
+          return { 
+            category: 'new', 
+            priority: 3, 
+            lastStudied, 
+            attempts, 
+            correct, 
+            streak,
+            forgettingRisk: 0,
+            reviewInterval: 0,
+          };
         }
 
         // まだまだを0.5回の正解として計算（正答率50%以上になるように）
         const effectiveCorrect = correct + stillLearning * 0.5;
         const accuracy = attempts > 0 ? (effectiveCorrect / attempts) * 100 : 0;
+        
+        // 忘却リスクを計算
+        const forgettingRisk = calculateForgettingRisk(lastStudied, reviewInterval, accuracy);
 
         // 🟢 覚えてる: 連続3回以上 or 正答率80%以上で連続2回
         if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
-          return { category: 'mastered', priority: 5, lastStudied, attempts, correct, streak };
+          return { 
+            category: 'mastered', 
+            priority: 5, 
+            lastStudied, 
+            attempts, 
+            correct, 
+            streak,
+            forgettingRisk,
+            reviewInterval,
+          };
         }
         // 🟡 まだまだ: 正答率50%以上 or まだまだボタンを押したことがある
         else if (accuracy >= 50 || stillLearning > 0) {
@@ -270,11 +328,22 @@ function MemorizationView({
             attempts,
             correct,
             streak,
+            forgettingRisk,
+            reviewInterval,
           };
         }
         // 🔴 分からない: 正答率50%未満 and まだまだボタンを押したことがない
         else {
-          return { category: 'incorrect', priority: 1, lastStudied, attempts, correct, streak };
+          return { 
+            category: 'incorrect', 
+            priority: 1, 
+            lastStudied, 
+            attempts, 
+            correct, 
+            streak,
+            forgettingRisk,
+            reviewInterval,
+          };
         }
       } catch (error) {
         logger.error('統計情報の取得エラー:', error);
@@ -335,22 +404,44 @@ function MemorizationView({
         if (statusA?.category === 'new' && priorityA > 1) priorityA = 8;
         if (statusB?.category === 'new' && priorityB > 1) priorityB = 8;
       } else {
-        // 通常モード: フラッシュカード学習の原則に従い、復習を最優先
+        // 通常モード: 適応型間隔反復 + 忘却リスクベースの優先度
 
-        // 🔴 分からないは常に最優先（記憶の定着が最重要）
-        if (statusA?.category === 'incorrect') priorityA = 0.3;
-        if (statusB?.category === 'incorrect') priorityB = 0.3;
+        // 忘却リスクによる緊急度判定
+        const riskA = statusA?.forgettingRisk || 0;
+        const riskB = statusB?.forgettingRisk || 0;
 
-        // 🟡 まだまだも最優先に近い（定着させることが重要）
-        if (statusA?.category === 'still_learning') priorityA = 0.8;
-        if (statusB?.category === 'still_learning') priorityB = 0.8;
+        // 🚨 忘却リスク150+: 緊急（忘れる直前）→ 最優先
+        if (riskA >= 150) priorityA = 0.1;
+        if (riskB >= 150) priorityB = 0.1;
+
+        // ⚠️ 忘却リスク100-149: 高リスク → 優先
+        if (riskA >= 100 && riskA < 150) priorityA = 0.2;
+        if (riskB >= 100 && riskB < 150) priorityB = 0.2;
+
+        // 🔴 分からないは常に高優先（記憶の定着が最重要）
+        if (statusA?.category === 'incorrect' && priorityA > 0.2) priorityA = 0.3;
+        if (statusB?.category === 'incorrect' && priorityB > 0.2) priorityB = 0.3;
+
+        // 🟡 まだまだも高優先（定着させることが重要）
+        if (statusA?.category === 'still_learning' && priorityA > 0.3) priorityA = 0.8;
+        if (statusB?.category === 'still_learning' && priorityB > 0.3) priorityB = 0.8;
+
+        // 🟢 覚えてる: 忘却リスクに応じて出題タイミングを調整
+        if (statusA?.category === 'mastered') {
+          if (riskA >= 50 && priorityA > 1) priorityA = 2.0; // 中リスク → 適度に復習
+          else if (priorityA > 2) priorityA = 4.5; // 低リスク → 後回し
+        }
+        if (statusB?.category === 'mastered') {
+          if (riskB >= 50 && priorityB > 1) priorityB = 2.0;
+          else if (priorityB > 2) priorityB = 4.5;
+        }
 
         // 🆕 新規問題は復習状況に応じて大幅に抑制
         // フラッシュカード学習では、復習が優先で新規は少しずつ追加
-        if (statusA?.category === 'new') {
+        if (statusA?.category === 'new' && priorityA > 3) {
           priorityA = shouldSuppressNew ? 5 : 3.5; // 20%以上: 最後尾、20%未満: 後回し
         }
-        if (statusB?.category === 'new') {
+        if (statusB?.category === 'new' && priorityB > 3) {
           priorityB = shouldSuppressNew ? 5 : 3.5;
         }
 
@@ -360,8 +451,8 @@ function MemorizationView({
           if (statusB?.category === 'incorrect') priorityB = 0;
         }
         if (shouldFocusOnStillLearning) {
-          if (statusA?.category === 'still_learning') priorityA = 1;
-          if (statusB?.category === 'still_learning') priorityB = 1;
+          if (statusA?.category === 'still_learning') priorityA = 0.05;
+          if (statusB?.category === 'still_learning') priorityB = 0.05;
         }
       }
 
