@@ -510,7 +510,7 @@ npm run test:unit:coverage
 cat tests/smoke.spec.ts
 
 # 業界標準の導入計画も参照
-cat docs/INDUSTRY_STANDARDS_ADOPTION_PLAN.md
+cat docs/design/INDUSTRY_STANDARDS_ADOPTION_PLAN.md
 ```
 
 ---

@@ -109,6 +109,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
 
+  // 回答結果を追跡（動的AIコメント用）
+  const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
+  const [correctStreak, setCorrectStreak] = useState<number>(0);
+  const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
+
   // 学習中・要復習の上限設定（カスタムフック使用）
   const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
     useLearningLimits('grammar');
@@ -138,6 +143,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [selectedWords, setSelectedWords] = useState<string[]>([]);
   const [remainingWords, setRemainingWords] = useState<string[]>([]);
+  const [textInput, setTextInput] = useState<string>(''); // テキスト入力用
   const [answered, setAnswered] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [score, setScore] = useState(0);
@@ -472,6 +478,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   // 問題が変わるたびにリセット
   useEffect(() => {
     setSelectedAnswer(null);
+    setTextInput('');
     setAnswered(false);
     setShowHint(false);
   }, [currentQuestionIndex]);
@@ -502,6 +509,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 「分からない」は不正解として扱い、要復習にカウント
     const isCorrect = answer === currentQuestion.correctAnswer;
     const isDontKnow = answer === '分からない';
+
+    // 回答結果を記録（動的AIコメント用）
+    setLastAnswerCorrect(isCorrect);
+    if (isCorrect) {
+      setCorrectStreak(prev => prev + 1);
+      setIncorrectStreak(0);
+    } else {
+      setIncorrectStreak(prev => prev + 1);
+      setCorrectStreak(0);
+    }
 
     // 自動読み上げが有効な場合、問題と正解の英文を読み上げ
     if (autoReadAloud && currentQuestion.sentence) {
@@ -730,26 +747,36 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
       {!error && quizStarted && currentQuestion && (
         <>
-          <ScoreBoard
-            mode="grammar"
-            currentScore={score}
-            totalAnswered={totalAnswered}
-            sessionCorrect={sessionStats.correct}
-            sessionIncorrect={sessionStats.incorrect}
-            sessionReview={sessionStats.review}
-            sessionMastered={sessionStats.mastered}
-            onShowSettings={() => setShowSettings(true)}
-            onAnswerTime={lastAnswerTime}
-            dataSource={
-              grade.startsWith('g') && grade.includes('-unit')
-                ? ` 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
-                : ` ${grade === 'all' ? '全学年' : `${grade}年`}`
-            }
-            category={`出題形式: ${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`}
-            difficulty=""
-            wordPhraseFilter="all"
-            grammarUnit={currentGrammarUnit}
-          />
+          {/* スコアボード */}
+          <div className="mb-4 flex justify-center">
+            <div className="w-full max-w-4xl">
+              <ScoreBoard
+                mode="grammar"
+                currentScore={score}
+                totalAnswered={totalAnswered}
+                sessionCorrect={sessionStats.correct}
+                sessionIncorrect={sessionStats.incorrect}
+                sessionReview={sessionStats.review}
+                sessionMastered={sessionStats.mastered}
+                onShowSettings={() => setShowSettings(true)}
+                onAnswerTime={lastAnswerTime}
+                lastAnswerCorrect={lastAnswerCorrect}
+                lastAnswerWord={currentQuestion?.question}
+                lastAnswerDifficulty={currentQuestion?.difficulty}
+                correctStreak={correctStreak}
+                incorrectStreak={incorrectStreak}
+                dataSource={
+                  grade.startsWith('g') && grade.includes('-unit')
+                    ? ` 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
+                    : ` ${grade === 'all' ? '全学年' : `${grade}年`}`
+                }
+                category={`出題形式: ${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`}
+                difficulty=""
+                wordPhraseFilter="all"
+                grammarUnit={currentGrammarUnit}
+              />
+            </div>
+          </div>
 
           {/* 文法クイズ中の学習設定パネル */}
           {showSettings && (
@@ -1085,7 +1112,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                         )}
                       </div>
                     </>
-                  ) : (currentQuestion as any).targetSentence ? (
+                  ) : (currentQuestion as any).originalSentence || (currentQuestion as any).targetSentence ? (
                     /* 言い換え問題 (paraphrase) */
                     <div className="paraphrase-display">
                       {/* 日本語の意味を追加 */}
@@ -1095,13 +1122,15 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                         </div>
                       )}
                       <div className="paraphrase-label">📝 元の文:</div>
-                      <div className="sentence-display original">{currentQuestion.sentence}</div>
+                      <div className="sentence-display original">
+                        {(currentQuestion as any).originalSentence || currentQuestion.sentence}
+                      </div>
                       <div className="paraphrase-arrow">↓ 言い換え</div>
                       <div className="paraphrase-label">✏️ 書き換え後:</div>
                       <div className="sentence-display target">
-                        {((currentQuestion as any).targetSentence as string)
-                          .split('____')
-                          .map((part, index, array) => (
+                        {((currentQuestion as any).question || (currentQuestion as any).targetSentence)
+                          ?.split('____')
+                          .map((part: string, index: number, array: string[]) => (
                             <span key={index}>
                               {part}
                               {index < array.length - 1 && (
@@ -1124,37 +1153,72 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                       ))}
                     </div>
                   )}
-                  <div className="choices-grid">
-                    {/* 3択 + 分からない */}
-                    {currentQuestion.choices?.map((choice: string, index: number) => {
-                      const isSelected = selectedAnswer === choice;
-                      const isCorrectChoice = choice === currentQuestion.correctAnswer;
-                      const showCorrect = answered && isCorrectChoice;
-                      const showIncorrect = answered && isSelected && !isCorrectChoice;
+                  {/* 選択肢がある場合 */}
+                  {currentQuestion.choices && currentQuestion.choices.length > 0 ? (
+                    <div className="choices-grid">
+                      {/* 3択 + 分からない */}
+                      {currentQuestion.choices.map((choice: string, index: number) => {
+                        const isSelected = selectedAnswer === choice;
+                        const isCorrectChoice = choice === currentQuestion.correctAnswer;
+                        const showCorrect = answered && isCorrectChoice;
+                        const showIncorrect = answered && isSelected && !isCorrectChoice;
 
-                      return (
-                        <button
-                          key={index}
-                          className={`choice-button ${isSelected ? 'selected' : ''} ${showCorrect ? 'correct' : ''} ${showIncorrect ? 'incorrect' : ''}`}
-                          onClick={() => handleAnswerSelect(choice)}
-                          disabled={answered}
-                        >
-                          {choice}
-                          {showCorrect && ' ✓'}
-                          {showIncorrect && ' ✗'}
-                        </button>
-                      );
-                    })}
-                    {/* 「分からない」ボタン */}
-                    <button
-                      className={`choice-button dont-know ${selectedAnswer === '分からない' ? 'selected' : ''} ${answered && selectedAnswer === '分からない' ? 'incorrect' : ''}`}
-                      onClick={() => handleAnswerSelect('分からない')}
-                      disabled={answered}
-                    >
-                      分からない
-                      {answered && selectedAnswer === '分からない' && ' ✗'}
-                    </button>
-                  </div>
+                        return (
+                          <button
+                            key={index}
+                            className={`choice-button ${isSelected ? 'selected' : ''} ${showCorrect ? 'correct' : ''} ${showIncorrect ? 'incorrect' : ''}`}
+                            onClick={() => handleAnswerSelect(choice)}
+                            disabled={answered}
+                          >
+                            {choice}
+                            {showCorrect && ' ✓'}
+                            {showIncorrect && ' ✗'}
+                          </button>
+                        );
+                      })}
+                      {/* 「分からない」ボタン */}
+                      <button
+                        className={`choice-button dont-know ${selectedAnswer === '分からない' ? 'selected' : ''} ${answered && selectedAnswer === '分からない' ? 'incorrect' : ''}`}
+                        onClick={() => handleAnswerSelect('分からない')}
+                        disabled={answered}
+                      >
+                        分からない
+                        {answered && selectedAnswer === '分からない' && ' ✗'}
+                      </button>
+                    </div>
+                  ) : (
+                    /* 選択肢がない場合：テキスト入力式 */
+                    <div className="text-input-container">
+                      <input
+                        type="text"
+                        className="text-answer-input"
+                        value={textInput}
+                        onChange={(e) => setTextInput(e.target.value)}
+                        onKeyPress={(e) => {
+                          if (e.key === 'Enter' && textInput.trim()) {
+                            handleAnswerSelect(textInput.trim());
+                          }
+                        }}
+                        placeholder="答えを入力してください..."
+                        disabled={answered}
+                        autoFocus
+                      />
+                      <button
+                        className="submit-answer-button"
+                        onClick={() => handleAnswerSelect(textInput.trim())}
+                        disabled={answered || !textInput.trim()}
+                      >
+                        回答する
+                      </button>
+                      <button
+                        className={`choice-button dont-know ${selectedAnswer === '分からない' ? 'selected' : ''}`}
+                        onClick={() => handleAnswerSelect('分からない')}
+                        disabled={answered}
+                      >
+                        分からない
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
 

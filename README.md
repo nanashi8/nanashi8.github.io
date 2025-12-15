@@ -41,7 +41,7 @@ npm run health-check
 - [開発ガイドライン](.github/DEVELOPMENT_GUIDELINES.md) - **必読** 二重記録などの問題を防ぐための重要なガイド
 - [コントリビューションガイド](.github/CONTRIBUTING.md) - Pull Requestを送る前に確認
 - [進捗記録パターン](.aitk/instructions/progress-tracking-patterns.instructions.md) - 実装パターンのクイックリファレンス
-- [自動化システムガイド](docs/AUTOMATION_GUIDE.md) - **AI自律実行** 自動承認・自動デプロイの仕組み
+- [自動化システムガイド](docs/processes/AUTOMATION_GUIDE.md) - **AI自律実行** 自動承認・自動デプロイの仕組み
 
 ### データ品質ガイドライン
 

@@ -339,9 +339,9 @@ truffleHog filesystem /path/to/repo \
 ## 📚 参考リソース
 
 ### ドキュメント
-- [REFACTORING_SAFETY.md](../../docs/REFACTORING_SAFETY.md) - 詳細な安全手順
-- [DEPLOYMENT_OPERATIONS.md](../../docs/DEPLOYMENT_OPERATIONS.md) - デプロイ運用ガイド
-- [STUDENT_DEPLOYMENT_GUIDE.md](../../docs/STUDENT_DEPLOYMENT_GUIDE.md) - 生徒向けガイド
+- [REFACTORING_SAFETY.md](../../docs/processes/REFACTORING_SAFETY.md) - 詳細な安全手順
+- [DEPLOYMENT_OPERATIONS.md](../../docs/processes/DEPLOYMENT_OPERATIONS.md) - デプロイ運用ガイド
+- [STUDENT_DEPLOYMENT_GUIDE.md](../../docs/processes/STUDENT_DEPLOYMENT_GUIDE.md) - 生徒向けガイド
 
 ### スクリプト＆ワークフロー
 - `scripts/refactor-checkpoint.sh` - チェックポイント管理

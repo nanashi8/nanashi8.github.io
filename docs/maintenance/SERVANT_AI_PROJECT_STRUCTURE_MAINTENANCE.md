@@ -596,9 +596,9 @@ $ python3 -m pytest scripts/test_context_database.py -v
 ---
 
 **関連ドキュメント**:
-- `docs/PROJECT_AI_SERVANT_EVALUATION.md` - 業界評価 (91/100点)
-- `docs/PYTHON_TEST_IMPLEMENTATION_SUMMARY.md` - Python テスト実装
-- `docs/COVERAGE_ANALYSIS_AND_IMPROVEMENTS.md` - カバレッジ改善計画
+- `docs/design/PROJECT_AI_SERVANT_EVALUATION.md` - 業界評価 (91/100点)
+- `docs/reports/PYTHON_TEST_IMPLEMENTATION_SUMMARY.md` - Python テスト実装
+- `docs/reports/COVERAGE_ANALYSIS_AND_IMPROVEMENTS.md` - カバレッジ改善計画
 - `scripts/context_database.py` - プロジェクト知識ベース
 - `scripts/project_ai_servant.py` - サーバント実装
 

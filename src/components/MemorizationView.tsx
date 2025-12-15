@@ -87,6 +87,11 @@ function MemorizationView({
   // 回答時刻（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(0);
 
+  // 回答結果を追跡（動的AIコメント用）
+  const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
+  const [correctStreak, setCorrectStreak] = useState<number>(0);
+  const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
+
   // 滞在時間計測
   const cardDisplayTimeRef = useRef<number>(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -425,6 +430,21 @@ function MemorizationView({
       // right: 覚えてる(正解)、center: まだまだ(復習中)、left: 分からない(不正解)
       const isCorrect = direction === 'right';
       const isStillLearning = direction === 'center';
+
+      // 回答結果を記録（動的AIコメント用）
+      setLastAnswerCorrect(isCorrect);
+      if (isCorrect) {
+        setCorrectStreak(prev => prev + 1);
+        setIncorrectStreak(0);
+      } else if (!isStillLearning) {
+        // 分からない場合のみincorrectStreak増加
+        setIncorrectStreak(prev => prev + 1);
+        setCorrectStreak(0);
+      } else {
+        // まだまだの場合はストリークをリセットしない（中立）
+        setCorrectStreak(0);
+        setIncorrectStreak(0);
+      }
 
       // 統計を3段階で更新
       setSessionStats((prev) => ({
@@ -846,6 +866,11 @@ function MemorizationView({
                 sessionIncorrect={sessionStats.incorrect}
                 totalAnswered={sessionStats.total}
                 onAnswerTime={lastAnswerTime}
+                lastAnswerCorrect={lastAnswerCorrect}
+                lastAnswerWord={currentQuestion?.word}
+                lastAnswerDifficulty={currentQuestion?.difficulty}
+                correctStreak={correctStreak}
+                incorrectStreak={incorrectStreak}
                 onShowSettings={() => setShowSettings(true)}
                 dataSource={selectedDataSource}
                 category={selectedCategory === 'all' ? '全分野' : selectedCategory}
@@ -986,6 +1011,7 @@ function MemorizationView({
                             min="1"
                             max="500"
                             value={stillLearningLimit}
+                            title="まだまだの語数上限"
                             onChange={(e) => {
                               const value = parseInt(e.target.value) || 1;
                               setStillLearningLimit(value);
@@ -1028,6 +1054,7 @@ function MemorizationView({
                             min="1"
                             max="500"
                             value={incorrectLimit}
+                            title="分からないの語数上限"
                             onChange={(e) => {
                               const value = parseInt(e.target.value) || 1;
                               setIncorrectLimit(value);

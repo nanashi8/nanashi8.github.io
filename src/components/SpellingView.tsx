@@ -97,6 +97,11 @@ function SpellingView({
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
 
+  // 回答結果を追跡（動的AIコメント用）
+  const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
+  const [correctStreak, setCorrectStreak] = useState<number>(0);
+  const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
+
   // 学習中・要復習の上限設定（カスタムフック使用）
   const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
     useLearningLimits('spelling');
@@ -172,6 +177,16 @@ function SpellingView({
   // 共通の答え合わせ処理
   const processAnswer = async (_userWord: string, isCorrect: boolean, responseTime: number) => {
     const currentQuestion = spellingState.questions[spellingState.currentIndex];
+
+    // 回答結果を記録（動的AIコメント用）
+    setLastAnswerCorrect(isCorrect);
+    if (isCorrect) {
+      setCorrectStreak(prev => prev + 1);
+      setIncorrectStreak(0);
+    } else {
+      setIncorrectStreak(prev => prev + 1);
+      setCorrectStreak(0);
+    }
 
     // 単語進捗を更新
     if (currentQuestion) {
@@ -403,30 +418,40 @@ function SpellingView({
         </div>
       ) : (
         <>
-          <ScoreBoard
-            mode="spelling"
-            currentScore={spellingState.score}
-            totalAnswered={spellingState.totalAnswered}
-            sessionCorrect={sessionStats.correct}
-            sessionIncorrect={sessionStats.incorrect}
-            sessionReview={sessionStats.review}
-            sessionMastered={sessionStats.mastered}
-            onReviewFocus={onReviewFocus}
-            isReviewFocusMode={isReviewFocusMode}
-            onShowSettings={() => setShowSettings(true)}
-            currentWord={spellingState.questions[spellingState.currentIndex]?.word}
-            onAnswerTime={lastAnswerTime}
-            dataSource={
-              selectedDataSource === 'all'
-                ? '全問題集'
-                : selectedDataSource === 'junior'
-                  ? '高校受験'
-                  : '高校受験標準'
-            }
-            category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
-            difficulty={selectedDifficulty}
-            wordPhraseFilter={selectedWordPhraseFilter}
-          />
+          {/* スコアボード */}
+          <div className="mb-4 flex justify-center">
+            <div className="w-full max-w-4xl">
+              <ScoreBoard
+                mode="spelling"
+                currentScore={spellingState.score}
+                totalAnswered={spellingState.totalAnswered}
+                sessionCorrect={sessionStats.correct}
+                sessionIncorrect={sessionStats.incorrect}
+                sessionReview={sessionStats.review}
+                sessionMastered={sessionStats.mastered}
+                onReviewFocus={onReviewFocus}
+                isReviewFocusMode={isReviewFocusMode}
+                onShowSettings={() => setShowSettings(true)}
+                currentWord={spellingState.questions[spellingState.currentIndex]?.word}
+                onAnswerTime={lastAnswerTime}
+                lastAnswerCorrect={lastAnswerCorrect}
+                lastAnswerWord={spellingState.questions[spellingState.currentIndex]?.word}
+                lastAnswerDifficulty={spellingState.questions[spellingState.currentIndex]?.difficulty}
+                correctStreak={correctStreak}
+                incorrectStreak={incorrectStreak}
+                dataSource={
+                  selectedDataSource === 'all'
+                    ? '全問題集'
+                    : selectedDataSource === 'junior'
+                      ? '高校受験'
+                      : '高校受験標準'
+                }
+                category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
+                difficulty={selectedDifficulty}
+                wordPhraseFilter={selectedWordPhraseFilter}
+              />
+            </div>
+          </div>
 
           {/* スペルクイズ中の学習設定パネル */}
           {showSettings && (

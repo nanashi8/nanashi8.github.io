@@ -207,7 +207,7 @@ grep -rE "color: #[0-9a-fA-F]{3,6}" src --include="*.css" | grep -v "var(--"
 
 ### 80色→22色マッピング
 
-詳細は `color-mapping.md` を参照
+詳細は [color-mapping.md](../design/color-mapping.md) を参照
 
 **主要な置き換え例:**
 

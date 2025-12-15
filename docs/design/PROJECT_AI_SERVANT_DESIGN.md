@@ -165,7 +165,7 @@ class ProjectContextDB:
             "maintenance": {
                 "name": "メンテナンス・品質改善",
                 "docs": [
-                    "docs/MAINTENANCE_AI_GUIDE.md",
+                    "docs/maintenance/MAINTENANCE_AI_GUIDE.md",
                     "docs/quality/QUALITY_SYSTEM.md"
                 ],
                 "steps": [

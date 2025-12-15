@@ -1123,13 +1123,14 @@
     },
     {
       "id": "g3-u3-omit-001",
-      "type": "paraphrase",
-      "japanese": "私が昨日読んだ本（the book, read yesterday）。",
-      "originalSentence": "The book which I read yesterday was interesting.",
-      "question": "The book ____ was interesting.",
-      "correctAnswer": "I read yesterday",
+      "type": "fillInBlank",
+      "japanese": "私が昨日読んだ本は面白かったです。",
+      "sentence": "The book ____ I read yesterday was interesting.",
+      "choices": ["which", "who", "where"],
+      "correctAnswer": "which",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞が目的格の時は省略できる構文として覚えてください。which I readをI readに省略可能です。"
+      "explanation": "関係代名詞whichは目的格として使われています。省略も可能です。",
+      "hint": "物にはwhich"
     },
     {
       "id": "g3-u3-omit-002",
@@ -1245,13 +1246,14 @@
     },
     {
       "id": "g3-u3-omit-009",
-      "type": "paraphrase",
-      "japanese": "私が聞いた音楽（the music, listened to）を省略形で。",
-      "originalSentence": "The music that I listened to was beautiful.",
-      "question": "The music ____ was beautiful.",
-      "correctAnswer": "I listened to",
+      "type": "fillInBlank",
+      "japanese": "私が聞いた音楽は美しかったです。",
+      "sentence": "The music ____ I listened to was beautiful.",
+      "choices": ["that", "who", "when"],
+      "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞の目的格を省略した形です。The music I listened to = The music that I listened toです。"
+      "explanation": "関係代名詞thatは目的格として使われています。省略も可能です。",
+      "hint": "物にはthat/which"
     },
     {
       "id": "g3-u3-omit-010",

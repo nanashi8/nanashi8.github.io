@@ -174,8 +174,8 @@ if (フック失敗) {
 
 ### 3. 包括的ドキュメント
 
-- **`docs/REFACTORING_SAFETY.md`**: ユーザー向け完全ガイド
-- **`docs/EMERGENCY_RECOVERY.md`**: 緊急復旧手順
+- **`docs/processes/REFACTORING_SAFETY.md`**: ユーザー向け完全ガイド
+- **`docs/processes/EMERGENCY_RECOVERY.md`**: 緊急復旧手順
 - **`docs/development/REFACTORING_PLAN.md`**: Phase 1-3計画
 
 ---
@@ -526,8 +526,8 @@ for (const hook of hooks) {
 ## 📚 参考ドキュメント
 
 ### ユーザー向け
-- **`docs/REFACTORING_SAFETY.md`**: 完全な安全ガイド
-- **`docs/EMERGENCY_RECOVERY.md`**: 緊急復旧手順
+- **`docs/processes/REFACTORING_SAFETY.md`**: 完全な安全ガイド
+- **`docs/processes/EMERGENCY_RECOVERY.md`**: 緊急復旧手順
 - **`docs/development/REFACTORING_PLAN.md`**: Phase 1-3詳細計画
 
 ### AI開発アシスタント向け

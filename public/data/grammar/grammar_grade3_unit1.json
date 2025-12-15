@@ -1140,13 +1140,15 @@
     },
     {
       "id": "g3-u1-howlong-008",
-      "type": "paraphrase",
-      "japanese": "3年間日本に住んでいます（live in Japan, three years）。",
-      "originalSentence": "I came to Japan three years ago and I still live here.",
-      "question": "How long ____?",
-      "correctAnswer": "have you lived in Japan",
+      "type": "sentenceOrdering",
+      "japanese": "3年間日本に住んでいます。",
+      "words": ["how", "long", "have", "you", "lived", "in", "Japan", "did", "live"],
+      "correctAnswer": "How long have you lived in Japan?",
       "difficulty": "advanced",
-      "explanation": "「3年前に来てまだ住んでいる」をHow long疑問文に書き換えます。How long have you lived in Japan?となります。"
+      "explanation": "How long + 現在完了で期間を尋ねます。不要な語: did, live（2語）",
+      "hint": "how long have",
+      "wordCount": 7,
+      "unusedWords": 2
     },
     {
       "id": "g3-u1-howlong-009",

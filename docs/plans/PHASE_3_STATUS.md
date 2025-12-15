@@ -28,7 +28,7 @@
 ### Step 3: progressStorage.ts分析
 - **完了日**: 2025-12-12
 - **コミット**: `ab193f84`
-- **成果物**: `docs/PHASE_3_STEP3_ANALYSIS.md`
+- **成果物**: `docs/plans/PHASE_3_STEP3_ANALYSIS.md`
 - **内容**:
   - 3,607行、78個のexport関数を分析
   - 4ファイル + 統合エントリーの分割計画策定
@@ -141,6 +141,6 @@ Phase 3の成功により、以下の改善が実現しました:
 - 後方互換性維持のため統合エントリーで全関数再エクスポート
 
 ### 参考ドキュメント
-- 分割計画詳細: `docs/PHASE_3_STEP3_ANALYSIS.md`
-- 実装ガイド: `docs/PHASE_3_IMPLEMENTATION_PLAN.md`
-- タスク一覧: `docs/PHASE_3_TASKS.md`
+- 分割計画詳細: `docs/plans/PHASE_3_STEP3_ANALYSIS.md`
+- 実装ガイド: `docs/plans/PHASE_3_IMPLEMENTATION_PLAN.md`
+- タスク一覧: `docs/plans/PHASE_3_TASKS.md`
