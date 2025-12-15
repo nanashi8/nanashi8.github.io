@@ -513,10 +513,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 回答結果を記録（動的AIコメント用）
     setLastAnswerCorrect(isCorrect);
     if (isCorrect) {
-      setCorrectStreak(prev => prev + 1);
+      setCorrectStreak((prev) => prev + 1);
       setIncorrectStreak(0);
     } else {
-      setIncorrectStreak(prev => prev + 1);
+      setIncorrectStreak((prev) => prev + 1);
       setCorrectStreak(0);
     }
 
@@ -1112,7 +1112,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                         )}
                       </div>
                     </>
-                  ) : (currentQuestion as any).originalSentence || (currentQuestion as any).targetSentence ? (
+                  ) : (currentQuestion as any).originalSentence ||
+                    (currentQuestion as any).targetSentence ? (
                     /* 言い換え問題 (paraphrase) */
                     <div className="paraphrase-display">
                       {/* 日本語の意味を追加 */}
@@ -1128,7 +1129,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                       <div className="paraphrase-arrow">↓ 言い換え</div>
                       <div className="paraphrase-label">✏️ 書き換え後:</div>
                       <div className="sentence-display target">
-                        {((currentQuestion as any).question || (currentQuestion as any).targetSentence)
+                        {(
+                          (currentQuestion as any).question ||
+                          (currentQuestion as any).targetSentence
+                        )
                           ?.split('____')
                           .map((part: string, index: number, array: string[]) => (
                             <span key={index}>

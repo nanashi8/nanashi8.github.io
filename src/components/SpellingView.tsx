@@ -181,10 +181,10 @@ function SpellingView({
     // 回答結果を記録（動的AIコメント用）
     setLastAnswerCorrect(isCorrect);
     if (isCorrect) {
-      setCorrectStreak(prev => prev + 1);
+      setCorrectStreak((prev) => prev + 1);
       setIncorrectStreak(0);
     } else {
-      setIncorrectStreak(prev => prev + 1);
+      setIncorrectStreak((prev) => prev + 1);
       setCorrectStreak(0);
     }
 
@@ -436,7 +436,9 @@ function SpellingView({
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
                 lastAnswerWord={spellingState.questions[spellingState.currentIndex]?.word}
-                lastAnswerDifficulty={spellingState.questions[spellingState.currentIndex]?.difficulty}
+                lastAnswerDifficulty={
+                  spellingState.questions[spellingState.currentIndex]?.difficulty
+                }
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
                 dataSource={

@@ -434,11 +434,11 @@ function MemorizationView({
       // 回答結果を記録（動的AIコメント用）
       setLastAnswerCorrect(isCorrect);
       if (isCorrect) {
-        setCorrectStreak(prev => prev + 1);
+        setCorrectStreak((prev) => prev + 1);
         setIncorrectStreak(0);
       } else if (!isStillLearning) {
         // 分からない場合のみincorrectStreak増加
-        setIncorrectStreak(prev => prev + 1);
+        setIncorrectStreak((prev) => prev + 1);
         setCorrectStreak(0);
       } else {
         // まだまだの場合はストリークをリセットしない（中立）

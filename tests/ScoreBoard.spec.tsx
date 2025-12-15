@@ -78,9 +78,7 @@ describe('ScoreBoard AI comments', () => {
   });
 
   it('shows question history comment on new question (first-time)', () => {
-    render(
-      <ScoreBoard mode="translation" currentWord="first-time" />
-    );
+    render(<ScoreBoard mode="translation" currentWord="first-time" />);
     // Should show pre-answer comment based on history (not empty)
     const text = getAIText();
     expect(text).toMatch(/初めて|新しい/);
@@ -95,14 +93,18 @@ describe('ScoreBoard AI comments', () => {
 
     // After answer for this same word
     rerender(
-      <ScoreBoard mode="translation" currentWord="second-time-correct" lastAnswerWord="second-time-correct" lastAnswerCorrect={true} onAnswerTime={Date.now()} />
+      <ScoreBoard
+        mode="translation"
+        currentWord="second-time-correct"
+        lastAnswerWord="second-time-correct"
+        lastAnswerCorrect={true}
+        onAnswerTime={Date.now()}
+      />
     );
     expect(getAIText()).toContain('正解です');
 
     // Move to next question: answer comment must clear and show new question comment
-    rerender(
-      <ScoreBoard mode="translation" currentWord="first-time" />
-    );
+    rerender(<ScoreBoard mode="translation" currentWord="first-time" />);
     const text = getAIText();
     expect(text).not.toContain('正解です');
     expect(text).toContain('初めて');
@@ -110,7 +112,13 @@ describe('ScoreBoard AI comments', () => {
 
   it('does not show answer comment if lastAnswerWord does not match currentWord', () => {
     render(
-      <ScoreBoard mode="translation" currentWord="many-times" lastAnswerWord="second-time-correct" lastAnswerCorrect={true} onAnswerTime={Date.now()} />
+      <ScoreBoard
+        mode="translation"
+        currentWord="many-times"
+        lastAnswerWord="second-time-correct"
+        lastAnswerCorrect={true}
+        onAnswerTime={Date.now()}
+      />
     );
     // Because words mismatch, should display question comment, not answer comment
     const text = getAIText();
@@ -121,19 +129,29 @@ describe('ScoreBoard AI comments', () => {
   it('shows correct answer comment only when answering current word', () => {
     const time = Date.now();
     render(
-      <ScoreBoard mode="translation" currentWord="second-time-incorrect" lastAnswerWord="second-time-incorrect" lastAnswerCorrect={false} onAnswerTime={time} />
+      <ScoreBoard
+        mode="translation"
+        currentWord="second-time-incorrect"
+        lastAnswerWord="second-time-incorrect"
+        lastAnswerCorrect={false}
+        onAnswerTime={time}
+      />
     );
     const text = getAIText();
     expect(text).toContain('惜しいです');
   });
 
   it('handles no history data gracefully', () => {
-    const { rerender } = render(
-      <ScoreBoard mode="translation" currentWord="unknown-word" />
-    );
+    const { rerender } = render(<ScoreBoard mode="translation" currentWord="unknown-word" />);
     expect(getAIText()).toMatch(/新しい問題|初めて|新規/);
     rerender(
-      <ScoreBoard mode="translation" currentWord="unknown-word" lastAnswerWord="unknown-word" lastAnswerCorrect={true} onAnswerTime={Date.now()} />
+      <ScoreBoard
+        mode="translation"
+        currentWord="unknown-word"
+        lastAnswerWord="unknown-word"
+        lastAnswerCorrect={true}
+        onAnswerTime={Date.now()}
+      />
     );
     expect(getAIText()).toContain('正解です');
   });
@@ -145,7 +163,13 @@ describe('ScoreBoard AI comments', () => {
     );
     expect(getAIText()).toContain('2回目');
     rerender(
-      <ScoreBoard mode="translation" currentWord="second-time-correct" lastAnswerWord="second-time-correct" lastAnswerCorrect={true} onAnswerTime={Date.now()} />
+      <ScoreBoard
+        mode="translation"
+        currentWord="second-time-correct"
+        lastAnswerWord="second-time-correct"
+        lastAnswerCorrect={true}
+        onAnswerTime={Date.now()}
+      />
     );
     const text = getAIText();
     expect(text).toContain('正解です');
