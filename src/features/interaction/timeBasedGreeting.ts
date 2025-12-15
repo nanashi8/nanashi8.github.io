@@ -118,9 +118,9 @@ function generateReturningGreeting(personality: AIPersonality, days: number): st
   switch (personality) {
     case 'drill-sergeant':
       if (days >= 7) {
-        return `😈 ${days}日も空けるとは何事だ！今すぐ復習を開始しろ！`;
+        return `${days}日も空けるとは何事だ！今すぐ復習を開始しろ！`;
       }
-      return `😈 ${days}日ぶりか。遅れを取り戻すぞ！`;
+      return `${days}日ぶりか。遅れを取り戻すぞ！`;
 
     case 'kind-teacher':
       if (days >= 7) {
@@ -155,7 +155,7 @@ function generateReturningGreeting(personality: AIPersonality, days: number): st
 function generateStreakGreeting(personality: AIPersonality, streak: number): string {
   switch (personality) {
     case 'drill-sergeant':
-      return `😈 ${streak}日連続！素晴らしい継続力だ！今日も油断するな！`;
+      return `${streak}日連続！素晴らしい継続力だ！今日も油断するな！`;
 
     case 'kind-teacher':
       return `😃 ${streak}日連続ログイン、素晴らしいですね！継続は力なりです。`;
@@ -208,42 +208,42 @@ function getDrillSergeantTimeGreeting(timeOfDay: string, count: number, _accurac
   switch (timeOfDay) {
     case 'morning':
       if (count === 0) {
-        return '😈 朝だぞ！脳が一番冴えてる時間だ！今すぐ学習を開始しろ！';
+        return '朝だぞ！脳が一番冴えてる時間だ！今すぐ学習を開始しろ！';
       }
       if (count >= 20) {
-        return '😈 朝から素晴らしいペースだ！この調子を維持しろ！';
+        return '朝から素晴らしいペースだ！この調子を維持しろ！';
       }
-      return '😈 朝の学習は効果的だ！もっとやれるはずだ！';
+      return '朝の学習は効果的だ！もっとやれるはずだ！';
 
     case 'afternoon':
       if (count === 0) {
-        return '😈 午後になったぞ！今日はまだ何もやってないのか？さっさと始めろ！';
+        return '午後になったぞ！今日はまだ何もやってないのか？さっさと始めろ！';
       }
       if (count >= 20) {
-        return '😈 午後も順調だな！午前中の勢いを落とすな！';
+        return '午後も順調だな！午前中の勢いを落とすな！';
       }
-      return '😈 午後は集中力が落ちやすい。気合を入れ直せ！';
+      return '午後は集中力が落ちやすい。気合を入れ直せ！';
 
     case 'evening':
       if (count === 0) {
-        return '😈 もう夕方だぞ！今日の分は今日中に終わらせろ！';
+        return 'もう夕方だぞ！今日の分は今日中に終わらせろ！';
       }
       if (count >= 30) {
-        return '😈 今日はよく頑張った！あと少しで完璧だ！';
+        return '今日はよく頑張った！あと少しで完璧だ！';
       }
-      return '😈 夕方は復習のゴールデンタイムだ！追い込みをかけろ！';
+      return '夕方は復習のゴールデンタイムだ！追い込みをかけろ！';
 
     case 'night':
       if (count === 0) {
-        return '😈 夜になってしまったぞ！少しでもいいから学習しろ！0より1だ！';
+        return '夜になってしまったぞ！少しでもいいから学習しろ！0より1だ！';
       }
       if (count >= 30) {
-        return '😈 夜遅くまでよく頑張った！早く休んで明日に備えろ！';
+        return '夜遅くまでよく頑張った！早く休んで明日に備えろ！';
       }
-      return '😈 夜は軽めの復習が効果的だ！無理はするな！';
+      return '夜は軽めの復習が効果的だ！無理はするな！';
 
     default:
-      return '😈 さあ、学習を開始するぞ！';
+      return 'さあ、学習を開始するぞ！';
   }
 }
 

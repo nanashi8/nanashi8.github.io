@@ -18,7 +18,7 @@ const ENGLISH_COMMON_MISTAKES: EnglishTrivia[] = [
   {
     type: 'common-mistake',
     message:
-      '😈「"I\'m boring"は「私は退屈な人間だ」という意味だぞ！"I\'m bored"が正解だ！間違えるな！」',
+      '「"I\'m boring"は「私は退屈な人間だ」という意味だぞ！"I\'m bored"が正解だ！間違えるな！」',
     teacher: 'drill-sergeant',
   },
   {
@@ -35,7 +35,7 @@ const ENGLISH_COMMON_MISTAKES: EnglishTrivia[] = [
   },
   {
     type: 'common-mistake',
-    message: '😈「"How do you think?"は間違いだ！"What do you think?"が正解！何度言わせる！」',
+    message: '「"How do you think?"は間違いだ！"What do you think?"が正解！何度言わせる！」',
     teacher: 'drill-sergeant',
   },
   {
@@ -62,7 +62,7 @@ const ENGLISH_COMMON_MISTAKES: EnglishTrivia[] = [
   },
   {
     type: 'common-mistake',
-    message: '😈「"I\'m agree"は間違いだ！"agree"は動詞だから"I agree"だ！基本を忘れるな！」',
+    message: '「"I\'m agree"は間違いだ！"agree"は動詞だから"I agree"だ！基本を忘れるな！」',
     teacher: 'drill-sergeant',
   },
 ];
@@ -113,7 +113,7 @@ const ENGLISH_FUN_FACTS: EnglishTrivia[] = [
   },
   {
     type: 'fun-fact',
-    message: '😈「"not only A but also B"（AだけでなくBも）は頻出構文だ！セットで覚えろ！」',
+    message: '「"not only A but also B"（AだけでなくBも）は頻出構文だ！セットで覚えろ！」',
     teacher: 'drill-sergeant',
   },
   {
@@ -141,7 +141,7 @@ const PRONUNCIATION_TIPS: EnglishTrivia[] = [
   {
     type: 'pronunciation',
     message:
-      '😈「同じスペルでも品詞で発音が変わる！record（名詞：レコード、動詞：記録する）に注意しろ！」',
+      '「同じスペルでも品詞で発音が変わる！record（名詞：レコード、動詞：記録する）に注意しろ！」',
     teacher: 'drill-sergeant',
   },
   {
@@ -210,7 +210,7 @@ const CULTURAL_TIPS: EnglishTrivia[] = [
   },
   {
     type: 'cultural',
-    message: '😈「受動態を使いこなせ！"The experiment was conducted"など、客観的な表現に必要だ！」',
+    message: '「受動態を使いこなせ！"The experiment was conducted"など、客観的な表現に必要だ！」',
     teacher: 'drill-sergeant',
   },
   {
@@ -284,7 +284,7 @@ const GRAMMAR_TIPS: EnglishTrivia[] = [
   {
     type: 'grammar-tip',
     message:
-      '😈「現在完了は「今に関係がある過去」だ！"I have lost my key"は今も見つかってないという意味だ！」',
+      '「現在完了は「今に関係がある過去」だ！"I have lost my key"は今も見つかってないという意味だ！」',
     teacher: 'drill-sergeant',
   },
   {
@@ -312,7 +312,7 @@ const GRAMMAR_TIPS: EnglishTrivia[] = [
   },
   {
     type: 'grammar-tip',
-    message: '😈「三単現のs！忘れるな！"He go"ではなく"He goes"だ！基本中の基本だぞ！」',
+    message: '「三単現のs！忘れるな！"He go"ではなく"He goes"だ！基本中の基本だぞ！」',
     teacher: 'drill-sergeant',
   },
 ];
@@ -362,19 +362,28 @@ export function getRelevantMistakeTip(isCorrect: boolean): string | null {
 }
 
 // 学習中の息抜き知識（受験に役立つ内容）
-export function getBreatherTrivia(_personality?: unknown): string {
+export function getBreatherTrivia(_personality?: unknown, currentWord?: string): string {
+  // 熟語かどうかを判定（スペースまたはハイフンを含む）
+  const isPhrase = currentWord && (currentWord.includes(' ') || currentWord.includes('-'));
+
   const breathers = [
     '😃💡 受験テク！同じ単語の繰り返しを避けるため、代名詞（it, they, this）や同義語に注目すると読解が楽になりますよ。',
-    '😼💡 覚え方！動詞+前置詞の熟語は、イメージで覚えるといいぞ！look up（上を見る→調べる）、give up（上げる→諦める）だ！',
     '🧙💡 長文のコツ：設問を先に読んでから本文を読むと、何を探せばいいか分かって効率的じゃ。',
     '🤖💡 統計データ：初級は約1,077語、中級は約1,616語、上級は約885語です。計画的に語彙を増やしましょう。',
-    '😈💡 時制の一致！主節が過去形なら従属節も過去形だ！"He said that he was tired"だぞ！',
+    '💡 時制の一致！主節が過去形なら従属節も過去形だ！"He said that he was tired"だぞ！',
     '😃💡 整序問題のコツ！まず主語と動詞を見つけて、修飾語を後から付け足すと解きやすいですよ。',
     '🧙💡 冠詞の使い分け："a/an"は初めて出る・特定できないもの、"the"は既出・特定できるものじゃ。',
     '😼💡 リスニング対策！消去法が有効だ！明らかに違う選択肢を消していくと正解率が上がるぞ！',
     '🤖💡 効率的学習法：単語は文脈の中で覚えると定着率が3倍以上高まります。例文ごと覚えましょう。',
     '😃💡 比較表現："as...as"（同等）、"-er than"（比較級）、"the -est"（最上級）の3パターンをマスターしましょう！',
   ];
+
+  // 熟語の場合のみ熟語アドバイスを追加
+  if (isPhrase) {
+    breathers.push(
+      '😼💡 覚え方！熟語は動詞と前置詞のイメージを組み合わせて覚えるといいぞ！視覚的にイメージすると忘れにくいぞ！'
+    );
+  }
 
   return breathers[Math.floor(Math.random() * breathers.length)];
 }

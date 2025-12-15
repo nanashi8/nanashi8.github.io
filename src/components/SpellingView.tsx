@@ -99,6 +99,7 @@ function SpellingView({
 
   // 回答結果を追跡（動的AIコメント用）
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
+  const [lastAnswerWord, setLastAnswerWord] = useState<string | undefined>(undefined);
   const [correctStreak, setCorrectStreak] = useState<number>(0);
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
 
@@ -180,6 +181,7 @@ function SpellingView({
 
     // 回答結果を記録（動的AIコメント用）
     setLastAnswerCorrect(isCorrect);
+    setLastAnswerWord(currentQuestion.word);
     if (isCorrect) {
       setCorrectStreak((prev) => prev + 1);
       setIncorrectStreak(0);
@@ -265,6 +267,8 @@ function SpellingView({
   };
 
   const handleNext = () => {
+    // 次の問題に移動する前にlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
+    setLastAnswerWord(undefined);
     // 次の問題へ移動（カスタムフック使用）
     moveToNextQuestion();
   };
@@ -273,8 +277,28 @@ function SpellingView({
     const currentQuestion = spellingState.questions[spellingState.currentIndex];
     if (!currentQuestion) return;
 
+    // 回答済みの場合はスキップできない
+    if (spellingState.answered) {
+      handleNext();
+      return;
+    }
+
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;
+
+    console.log('[SpellingView] Skip処理開始:', {
+      word: currentQuestion.word,
+      responseTime,
+      currentScore: spellingState.score,
+      totalAnswered: spellingState.totalAnswered,
+    });
+
+    // 回答結果を記録（動的AIコメント用）
+    // 翻訳タブと同様、スキップは正解扱い・定着寄りとして扱う
+    setLastAnswerCorrect(true);
+    setLastAnswerWord(currentQuestion.word);
+    setCorrectStreak((prev) => prev + 1);
+    setIncorrectStreak(0);
 
     // スキップ処理（30日間除外、AI学習アシスタントが後日検証）
     recordWordSkip(currentQuestion.word, 30);
@@ -288,20 +312,20 @@ function SpellingView({
     // 回答時刻を更新（ScoreBoard更新用）- updateWordProgressの完了後に更新
     setLastAnswerTime(Date.now());
 
-    // スコアに反映（正解扱い）
-    // 選択シーケンスをクリアして、正解を表示できるようにする
+    // スコアに反映（正解として加点）し、和訳タブ同様に即時次へ遷移
     setSelectedSequence([]);
     setSpellingState((prev) => ({
       ...prev,
       totalAnswered: prev.totalAnswered + 1,
-      score: prev.score + 1, // スキップは正解扱い
-      answered: true,
+      score: prev.score + 1,
+      answered: false,
     }));
 
-    // セッション統計を更新（正解扱い）
+    // セッション統計を更新（翻訳タブと同様に正解+定着をカウント）
     updateStats('correct');
+    updateStats('mastered');
 
-    // セッション履歴に記録（正解として）
+    // セッション履歴に記録（スキップ=正解として記録）
     addSessionHistory(
       {
         status: 'correct',
@@ -311,20 +335,29 @@ function SpellingView({
       'spelling'
     );
 
+    console.log('[SpellingView] Skip処理完了:', {
+      word: currentQuestion.word,
+      newScore: spellingState.score + 1,
+      newTotalAnswered: spellingState.totalAnswered + 1,
+    });
+
     // スコアボードのために回答を記録（正解として）
     addQuizResult({
       id: generateId(),
       questionSetId: 'spelling-quiz-single',
       questionSetName: 'スペルクイズ',
-      score: 1, // スキップは正解扱い
+      score: 1,
       total: 1,
       percentage: 100,
       date: Date.now(),
       timeSpent: Math.floor(responseTime / 1000),
-      incorrectWords: [], // スキップは正解扱いなので空配列
+      incorrectWords: [],
       mode: 'spelling',
       difficulty: currentQuestion.difficulty,
     });
+
+    // 和訳タブ同様、即時に次の問題へ
+    handleNext();
   };
 
   const handlePrevious = () => {
@@ -436,7 +469,7 @@ function SpellingView({
                 currentWord={spellingState.questions[spellingState.currentIndex]?.word}
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
-                lastAnswerWord={spellingState.questions[spellingState.currentIndex]?.word}
+                lastAnswerWord={lastAnswerWord}
                 lastAnswerDifficulty={
                   spellingState.questions[spellingState.currentIndex]?.difficulty
                 }
@@ -645,9 +678,9 @@ function SpellingView({
                 </div>
                 <button
                   className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed"
-                  onClick={handleNext}
+                  onClick={spellingState.answered ? handleNext : handleSkip}
                   disabled={spellingState.currentIndex >= spellingState.questions.length - 1}
-                  title="次へ"
+                  title={spellingState.answered ? '次へ' : 'スキップ'}
                 >
                   →
                 </button>
@@ -695,10 +728,9 @@ function SpellingView({
                     } else if (e.key === ' ') {
                       // スペースキー: 分からない（スキップ）
                       e.preventDefault();
-                      // スキップのみ実行、次へは自動遷移しない
                       handleSkip();
                     } else if (e.key === 'Enter') {
-                      // Enterキー: スキップ（正解扱い・定着済）
+                      // Enterキー: スキップ（正解扱い・定着済・即時遷移）
                       e.preventDefault();
                       handleSkip();
                     }

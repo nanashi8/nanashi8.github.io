@@ -1,0 +1,1121 @@
+{
+  "unit": "Unit 4",
+  "title": "疑問詞",
+  "grammar": "what/who/when/where/how, 疑問文の作り方",
+  "totalQuestions": 65,
+  "questionTypes": {
+    "fillInBlank": 17,
+    "sentenceOrdering": 17,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 6
+  },
+  "questions": [
+    {
+      "id": "g1-u4-fib-001",
+      "type": "fillInBlank",
+      "japanese": "これは何ですか。",
+      "sentence": "____ is this?",
+      "choices": [
+        "What",
+        "Who",
+        "When"
+      ],
+      "correctAnswer": "What",
+      "difficulty": "beginner",
+      "explanation": "「何」と尋ねるときはWhatを使います。What is this?で「これは何ですか」です。",
+      "hint": "何 → What"
+    },
+    {
+      "id": "g1-u4-fib-002",
+      "type": "fillInBlank",
+      "japanese": "あなたは誰ですか。",
+      "sentence": "____ are you?",
+      "choices": [
+        "Who",
+        "What",
+        "Where"
+      ],
+      "correctAnswer": "Who",
+      "difficulty": "beginner",
+      "explanation": "「誰」と尋ねるときはWhoを使います。Who are you?で「あなたは誰ですか」です。",
+      "hint": "誰 → Who"
+    },
+    {
+      "id": "g1-u4-fib-003",
+      "type": "fillInBlank",
+      "japanese": "あなたはどこの出身ですか。",
+      "sentence": "____ are you from?",
+      "choices": [
+        "Where",
+        "What",
+        "Who"
+      ],
+      "correctAnswer": "Where",
+      "difficulty": "beginner",
+      "explanation": "「どこ」と尋ねるときはWhereを使います。Where are you from?で「どこの出身ですか」です。",
+      "hint": "どこ → Where"
+    },
+    {
+      "id": "g1-u4-fib-004",
+      "type": "fillInBlank",
+      "japanese": "いつ学校に行きますか。",
+      "sentence": "____ do you go to school?",
+      "choices": [
+        "When",
+        "Where",
+        "What"
+      ],
+      "correctAnswer": "When",
+      "difficulty": "beginner",
+      "explanation": "「いつ」と尋ねるときはWhenを使います。When do you～?で「いつ～しますか」です。",
+      "hint": "いつ → When"
+    },
+    {
+      "id": "g1-u4-fib-005",
+      "type": "fillInBlank",
+      "japanese": "ご機嫌いかがですか。",
+      "sentence": "How ____ you?",
+      "choices": [
+        "are",
+        "is",
+        "do"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "「どう・どのように」と尋ねるときはHowを使います。How are you?で「元気ですか」です。",
+      "hint": "どう → How"
+    },
+    {
+      "id": "g1-u4-fib-006",
+      "type": "fillInBlank",
+      "japanese": "これは誰のペンですか。",
+      "sentence": "____ pen is this?",
+      "choices": [
+        "Whose",
+        "Who",
+        "What"
+      ],
+      "correctAnswer": "Whose",
+      "difficulty": "intermediate",
+      "explanation": "「誰の」と尋ねるときはWhoseを使います。Whose～is this?で「これは誰の～ですか」です。",
+      "hint": "誰の → Whose"
+    },
+    {
+      "id": "g1-u4-fib-007",
+      "type": "fillInBlank",
+      "japanese": "どちらの本が好きですか。",
+      "sentence": "____ book do you like?",
+      "choices": [
+        "Which",
+        "What",
+        "Who"
+      ],
+      "correctAnswer": "Which",
+      "difficulty": "intermediate",
+      "explanation": "「どちら」と尋ねるときはWhichを使います。Which～do you like?で「どの～が好きですか」です。",
+      "hint": "どちら → Which"
+    },
+    {
+      "id": "g1-u4-fib-008",
+      "type": "fillInBlank",
+      "japanese": "何時に起きますか。",
+      "sentence": "____ time do you get up?",
+      "choices": [
+        "What",
+        "When",
+        "Which"
+      ],
+      "correctAnswer": "What",
+      "difficulty": "intermediate",
+      "explanation": "「何時」はWhat timeで表します。What time do you～?で「何時に～しますか」です。",
+      "hint": "何時 → What time"
+    },
+    {
+      "id": "g1-u4-fib-009",
+      "type": "fillInBlank",
+      "japanese": "どこで昼食を食べますか。",
+      "sentence": "____ do you eat lunch?",
+      "choices": [
+        "Where",
+        "When",
+        "What"
+      ],
+      "correctAnswer": "Where",
+      "difficulty": "intermediate",
+      "explanation": "「どこで」はWhereで尋ねります。Where do you～?で「どこで～しますか」です。",
+      "hint": "どこで → Where"
+    },
+    {
+      "id": "g1-u4-fib-010",
+      "type": "fillInBlank",
+      "japanese": "何人の生徒がいますか。",
+      "sentence": "____ many students are there?",
+      "choices": [
+        "How",
+        "What",
+        "Who"
+      ],
+      "correctAnswer": "How",
+      "difficulty": "intermediate",
+      "explanation": "「いくつ・何人」はHow manyで尋ねります。How many～are there?で「何人いますか」です。",
+      "hint": "何人 → How many"
+    },
+    {
+      "id": "g1-u4-fib-011",
+      "type": "fillInBlank",
+      "japanese": "彼女は何色が好きですか。",
+      "sentence": "____ color does she like?",
+      "choices": [
+        "What",
+        "Which",
+        "How"
+      ],
+      "correctAnswer": "What",
+      "difficulty": "advanced",
+      "explanation": "「何色」はWhat colorで表します。What color does～?で「何色が好きですか」です。",
+      "hint": "何色 → What color"
+    },
+    {
+      "id": "g1-u4-fib-012",
+      "type": "fillInBlank",
+      "japanese": "学校までどのくらいかかりますか。",
+      "sentence": "____ long does it take to school?",
+      "choices": [
+        "How",
+        "What",
+        "When"
+      ],
+      "correctAnswer": "How",
+      "difficulty": "advanced",
+      "explanation": "「どのくらい」はHow longで尋ねります。How long does it take?で「どのくらいかかりますか」です。",
+      "hint": "どのくらい → How long"
+    },
+    {
+      "id": "g1-u4-fib-013",
+      "type": "fillInBlank",
+      "japanese": "彼は誰と話していますか。",
+      "sentence": "____ is he talking to?",
+      "choices": [
+        "Who",
+        "What",
+        "Where"
+      ],
+      "correctAnswer": "Who",
+      "difficulty": "advanced",
+      "explanation": "「誰と」はWhoで尋ねります。Who is～talking to?で「誰と話していますか」です。",
+      "hint": "誰と → Who"
+    },
+    {
+      "id": "g1-u4-fib-014",
+      "type": "fillInBlank",
+      "japanese": "いくらですか。",
+      "sentence": "____ much is it?",
+      "choices": [
+        "How",
+        "What",
+        "Which"
+      ],
+      "correctAnswer": "How",
+      "difficulty": "advanced",
+      "explanation": "「いくら」はHow muchで尋ねります。How much is it?で「いくらですか」です。",
+      "hint": "いくら → How much"
+    },
+    {
+      "id": "g1-u4-fib-015",
+      "type": "fillInBlank",
+      "japanese": "あなたの誕生日はいつですか。",
+      "sentence": "____ is your birthday?",
+      "choices": [
+        "When",
+        "What",
+        "Where"
+      ],
+      "correctAnswer": "When",
+      "difficulty": "advanced",
+      "explanation": "「いつ」と尋ねるときはWhenを使います。When is～?で「～はいつですか」です。",
+      "hint": "いつ → When"
+    },
+    {
+      "id": "g1-u4-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "これは何ですか。",
+      "words": [
+        "this",
+        "what",
+        "is",
+        "?"
+      ],
+      "correctAnswer": "What is this?",
+      "difficulty": "beginner",
+      "explanation": "What is this?で「これは何ですか」です。疑問詞Whatを文頭にです。",
+      "hint": "What is ～?",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u4-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "あなたは誰ですか。",
+      "words": [
+        "you",
+        "who",
+        "are",
+        "?"
+      ],
+      "correctAnswer": "Who are you?",
+      "difficulty": "beginner",
+      "explanation": "Who are you?で「あなたは誰ですか」です。疑問詞Whoを文頭にです。",
+      "hint": "Who are ～?",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u4-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "あなたはどこの出身ですか。",
+      "words": [
+        "from",
+        "you",
+        "where",
+        "are",
+        "?"
+      ],
+      "correctAnswer": "Where are you from?",
+      "difficulty": "beginner",
+      "explanation": "Where are you from?で「どこの出身ですか」です。fromは最後にです。",
+      "hint": "Where are you from?",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u4-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "いつテニスをしますか。",
+      "words": [
+        "play",
+        "you",
+        "when",
+        "do",
+        "tennis",
+        "?"
+      ],
+      "correctAnswer": "When do you play tennis?",
+      "difficulty": "beginner",
+      "explanation": "When do you～?で「いつ～しますか」です。一般動詞の疑問文です。",
+      "hint": "When do you ～?",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u4-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "ご機嫌いかがですか。",
+      "words": [
+        "you",
+        "how",
+        "are",
+        "?"
+      ],
+      "correctAnswer": "How are you?",
+      "difficulty": "beginner",
+      "explanation": "How are you?で「元気ですか・ご機嫌いかがですか」です。基本の挨拶です。",
+      "hint": "How are you?",
+      "wordCount": 4
+    },
+    {
+      "id": "g1-u4-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼は何が好きですか。",
+      "words": [
+        "like",
+        "he",
+        "what",
+        "does",
+        "?"
+      ],
+      "correctAnswer": "What does he like?",
+      "difficulty": "intermediate",
+      "explanation": "What does he～?で「彼は何を～しますか」です。三人称単数なのでdoesです。",
+      "hint": "What does he ～?",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u4-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "どこに住んでいますか。",
+      "words": [
+        "live",
+        "you",
+        "where",
+        "do",
+        "?"
+      ],
+      "correctAnswer": "Where do you live?",
+      "difficulty": "intermediate",
+      "explanation": "Where do you～?で「どこで～しますか」です。住んでいる場所を尋ねります。",
+      "hint": "Where do you ～?",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u4-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "何時に寝ますか。",
+      "words": [
+        "to",
+        "bed",
+        "you",
+        "what",
+        "time",
+        "do",
+        "go",
+        "?"
+      ],
+      "correctAnswer": "What time do you go to bed?",
+      "difficulty": "intermediate",
+      "explanation": "What time do you～?で「何時に～しますか」です。go to bedで「寝る」です。",
+      "hint": "What time do you ～?",
+      "wordCount": 8
+    },
+    {
+      "id": "g1-u4-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "これは誰のかばんですか。",
+      "words": [
+        "bag",
+        "whose",
+        "this",
+        "is",
+        "?"
+      ],
+      "correctAnswer": "Whose bag is this?",
+      "difficulty": "intermediate",
+      "explanation": "Whose～is this?で「これは誰の～ですか」です。所有を尋ねります。",
+      "hint": "Whose ～ is this?",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u4-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "何人の兄弟がいますか。",
+      "words": [
+        "brothers",
+        "many",
+        "you",
+        "how",
+        "do",
+        "have",
+        "?"
+      ],
+      "correctAnswer": "How many brothers do you have?",
+      "difficulty": "intermediate",
+      "explanation": "How many～do you have?で「何人～がいますか」です。数を尋ねります。",
+      "hint": "How many ～ do you have?",
+      "wordCount": 7
+    },
+    {
+      "id": "g1-u4-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は何色が好きですか。",
+      "words": [
+        "color",
+        "she",
+        "what",
+        "does",
+        "like",
+        "?"
+      ],
+      "correctAnswer": "What color does she like?",
+      "difficulty": "advanced",
+      "explanation": "What color does～?で「何色が好きですか」です。三人称単数なのでdoesです。",
+      "hint": "What color does ～?",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u4-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "どちらのスポーツが好きですか。",
+      "words": [
+        "sport",
+        "you",
+        "which",
+        "do",
+        "like",
+        "?"
+      ],
+      "correctAnswer": "Which sport do you like?",
+      "difficulty": "advanced",
+      "explanation": "Which～do you like?で「どちらの～が好きですか」です。選択を尋ねります。",
+      "hint": "Which ～ do you like?",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u4-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "駅までどのくらいかかりますか。",
+      "words": [
+        "long",
+        "it",
+        "how",
+        "does",
+        "take",
+        "to",
+        "the",
+        "station",
+        "?"
+      ],
+      "correctAnswer": "How long does it take to the station?",
+      "difficulty": "advanced",
+      "explanation": "How long does it take to～?で「～までどのくらいかかりますか」です。",
+      "hint": "How long does it take ～?",
+      "wordCount": 9
+    },
+    {
+      "id": "g1-u4-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "彼は誰と勉強しますか。",
+      "words": [
+        "study",
+        "he",
+        "who",
+        "does",
+        "with",
+        "?"
+      ],
+      "correctAnswer": "Who does he study with?",
+      "difficulty": "advanced",
+      "explanation": "Who does he～with?で「誰と～しますか」です。withは最後にです。",
+      "hint": "Who does he ～ with?",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u4-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "このペンはいくらですか。",
+      "words": [
+        "much",
+        "this",
+        "pen",
+        "how",
+        "is",
+        "?"
+      ],
+      "correctAnswer": "How much is this pen?",
+      "difficulty": "advanced",
+      "explanation": "How much is～?で「～はいくらですか」です。値段を尋ねります。",
+      "hint": "How much is ～?",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u4-para-001",
+      "type": "paraphrase",
+      "japanese": "これは何ですか。",
+      "originalSentence": "This is a pen.",
+      "question": "「これは何ですか」の疑問文に書き換えなさい",
+      "choices": [
+        "What is this?",
+        "This is what?",
+        "What this is?"
+      ],
+      "correctAnswer": "What is this?",
+      "difficulty": "beginner",
+      "explanation": "What is this?で「これは何ですか」です。疑問詞Whatを文頭にです。",
+      "hint": "What is ～?"
+    },
+    {
+      "id": "g1-u4-para-002",
+      "type": "paraphrase",
+      "japanese": "彼女は誰ですか。",
+      "originalSentence": "She is my teacher.",
+      "question": "「彼女は誰ですか」の疑問文に書き換えなさい",
+      "choices": [
+        "Who is she?",
+        "She is who?",
+        "Who she is?"
+      ],
+      "correctAnswer": "Who is she?",
+      "difficulty": "beginner",
+      "explanation": "Who is she?で「彼女は誰ですか」です。人を尋ねるときはWhoです。",
+      "hint": "Who is ～?"
+    },
+    {
+      "id": "g1-u4-para-003",
+      "type": "paraphrase",
+      "japanese": "彼はどこで～しますか。",
+      "originalSentence": "He lives in Tokyo.",
+      "question": "「どこに住んでいますか」の疑問文に書き換えなさい",
+      "choices": [
+        "Where does he live?",
+        "He lives where?",
+        "Where he lives?"
+      ],
+      "correctAnswer": "Where does he live?",
+      "difficulty": "beginner",
+      "explanation": "Where does he～?で「彼はどこで～しますか」です。場所を尋ねります。",
+      "hint": "Where does he ～?"
+    },
+    {
+      "id": "g1-u4-para-004",
+      "type": "paraphrase",
+      "japanese": "いつ～しますか。",
+      "originalSentence": "I study English every day.",
+      "question": "「いつ英語を勉強しますか」の疑問文に書き換えなさい",
+      "choices": [
+        "When do you study English?",
+        "You study English when?",
+        "When you study English?"
+      ],
+      "correctAnswer": "When do you study English?",
+      "difficulty": "beginner",
+      "explanation": "When do you～?で「いつ～しますか」です。時を尋ねります。",
+      "hint": "When do you ～?"
+    },
+    {
+      "id": "g1-u4-para-005",
+      "type": "paraphrase",
+      "japanese": "どうやって～しますか。",
+      "originalSentence": "I go to school by bus.",
+      "question": "「どうやって学校に行きますか」の疑問文に書き換えなさい",
+      "choices": [
+        "How do you go to school?",
+        "You go to school how?",
+        "How you go to school?"
+      ],
+      "correctAnswer": "How do you go to school?",
+      "difficulty": "intermediate",
+      "explanation": "How do you～?で「どうやって～しますか」です。方法を尋ねります。",
+      "hint": "How do you ～?"
+    },
+    {
+      "id": "g1-u4-para-006",
+      "type": "paraphrase",
+      "japanese": "What timeへの変換。",
+      "originalSentence": "She gets up at seven.",
+      "question": "「何時に起きますか」の疑問文に書き換えなさい",
+      "choices": [
+        "What time does she get up?",
+        "She gets up what time?",
+        "What time she gets up?"
+      ],
+      "correctAnswer": "What time does she get up?",
+      "difficulty": "intermediate",
+      "explanation": "What time does～?で「何時に～しますか」です。時刻を尋ねります。",
+      "hint": "What time does ～?"
+    },
+    {
+      "id": "g1-u4-para-007",
+      "type": "paraphrase",
+      "japanese": "これは誰の～ですか。",
+      "originalSentence": "This is Tom's book.",
+      "question": "「これは誰の本ですか」の疑問文に書き換えなさい",
+      "choices": [
+        "Whose book is this?",
+        "This is whose book?",
+        "Whose this book is?"
+      ],
+      "correctAnswer": "Whose book is this?",
+      "difficulty": "intermediate",
+      "explanation": "Whose～is this?で「これは誰の～ですか」です。所有を尋ねります。",
+      "hint": "Whose ～ is this?"
+    },
+    {
+      "id": "g1-u4-para-008",
+      "type": "paraphrase",
+      "japanese": "どちらが好きですか。",
+      "originalSentence": "I like the red one.",
+      "question": "「どちらが好きですか」の疑問文に書き換えなさい",
+      "choices": [
+        "Which do you like?",
+        "You like which?",
+        "Which you like?"
+      ],
+      "correctAnswer": "Which do you like?",
+      "difficulty": "intermediate",
+      "explanation": "Which do you like?で「どちらが好きですか」です。選択を尋ねります。",
+      "hint": "Which do you ～?"
+    },
+    {
+      "id": "g1-u4-para-009",
+      "type": "paraphrase",
+      "japanese": "How manyへの変換。",
+      "originalSentence": "I have three dogs.",
+      "question": "「何匹犬がいますか」の疑問文に書き換えなさい",
+      "choices": [
+        "How many dogs do you have?",
+        "You have how many dogs?",
+        "How many dogs you have?"
+      ],
+      "correctAnswer": "How many dogs do you have?",
+      "difficulty": "intermediate",
+      "explanation": "How many～do you have?で「何匹～がいますか」です。数を尋ねります。",
+      "hint": "How many ～ do you have?"
+    },
+    {
+      "id": "g1-u4-para-010",
+      "type": "paraphrase",
+      "japanese": "What colorへの変換。",
+      "originalSentence": "I like blue.",
+      "question": "「何色が好きですか」の疑問文に書き換えなさい",
+      "choices": [
+        "What color do you like?",
+        "You like what color?",
+        "What color you like?"
+      ],
+      "correctAnswer": "What color do you like?",
+      "difficulty": "advanced",
+      "explanation": "What color do you like?で「何色が好きですか」です。色を尋ねります。",
+      "hint": "What color do you ～?"
+    },
+    {
+      "id": "g1-u4-para-011",
+      "type": "paraphrase",
+      "japanese": "How muchへの変換。",
+      "originalSentence": "This book is 500 yen.",
+      "question": "「いくらですか」の疑問文に書き換えなさい",
+      "choices": [
+        "How much is this book?",
+        "This book is how much?",
+        "How much this book is?"
+      ],
+      "correctAnswer": "How much is this book?",
+      "difficulty": "advanced",
+      "explanation": "How much is～?で「～はいくらですか」です。値段を尋ねります。",
+      "hint": "How much is ～?"
+    },
+    {
+      "id": "g1-u4-para-012",
+      "type": "paraphrase",
+      "japanese": "How longへの変換。",
+      "originalSentence": "It takes ten minutes.",
+      "question": "「どのくらいかかりますか」の疑問文に書き換えなさい",
+      "choices": [
+        "How long does it take?",
+        "It takes how long?",
+        "How long it takes?"
+      ],
+      "correctAnswer": "How long does it take?",
+      "difficulty": "advanced",
+      "explanation": "How long does it take?で「どのくらいかかりますか」です。時間を尋ねります。",
+      "hint": "How long does it ～?"
+    },
+    {
+      "id": "g1-u4-para-013",
+      "type": "paraphrase",
+      "japanese": "Who+withへの変換。",
+      "originalSentence": "I play tennis with Tom.",
+      "question": "「誰とテニスをしますか」の疑問文に書き換えなさい",
+      "choices": [
+        "Who do you play tennis with?",
+        "You play tennis with who?",
+        "Who you play tennis with?"
+      ],
+      "correctAnswer": "Who do you play tennis with?",
+      "difficulty": "advanced",
+      "explanation": "Who do you～with?で「誰と～しますか」です。withは最後にです。",
+      "hint": "Who do you ～ with?"
+    },
+    {
+      "id": "g1-u4-para-014",
+      "type": "paraphrase",
+      "japanese": "What subjectへの変換。",
+      "originalSentence": "He studies math.",
+      "question": "「何の教科を勉強しますか」の疑問文に書き換えなさい",
+      "choices": [
+        "What subject does he study?",
+        "He studies what subject?",
+        "What subject he studies?"
+      ],
+      "correctAnswer": "What subject does he study?",
+      "difficulty": "advanced",
+      "explanation": "What subject does～?で「何の教科を～しますか」です。科目を尋ねります。",
+      "hint": "What subject does ～?"
+    },
+    {
+      "id": "g1-u4-para-015",
+      "type": "paraphrase",
+      "japanese": "How oldへの変換。",
+      "originalSentence": "She is twelve years old.",
+      "question": "「何歳ですか」の疑問文に書き換えなさい",
+      "choices": [
+        "How old is she?",
+        "She is how old?",
+        "How old she is?"
+      ],
+      "correctAnswer": "How old is she?",
+      "difficulty": "advanced",
+      "explanation": "How old is～?で「～は何歳ですか」です。年齢を尋ねります。",
+      "hint": "How old is ～?"
+    },
+    {
+      "id": "g1-u4-vf-001",
+      "type": "verbForm",
+      "japanese": "あなたは何が好きですか。",
+      "sentence": "What ____ you like?",
+      "verb": "do",
+      "choices": [
+        "do",
+        "does",
+        "are"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "beginner",
+      "explanation": "一般動詞の疑問文はdo/doesを使います。youなのでdoです。",
+      "hint": "you → do"
+    },
+    {
+      "id": "g1-u4-vf-002",
+      "type": "verbForm",
+      "japanese": "彼女はどこに住んでいますか。",
+      "sentence": "Where ____ she live?",
+      "verb": "does",
+      "choices": [
+        "does",
+        "do",
+        "is"
+      ],
+      "correctAnswer": "does",
+      "difficulty": "beginner",
+      "explanation": "三人称単数の疑問文はdoesを使います。sheなのでdoesです。",
+      "hint": "she → does"
+    },
+    {
+      "id": "g1-u4-vf-003",
+      "type": "verbForm",
+      "japanese": "あの男性は誰ですか。",
+      "sentence": "Who ____ that man?",
+      "verb": "is",
+      "choices": [
+        "is",
+        "are",
+        "do"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "be動詞の疑問文はbe動詞をそのまま使います。that manは単数なのでisです。",
+      "hint": "that man → is"
+    },
+    {
+      "id": "g1-u4-vf-004",
+      "type": "verbForm",
+      "japanese": "彼らは何を欲しがっていますか。",
+      "sentence": "What ____ these?",
+      "verb": "are",
+      "choices": [
+        "are",
+        "is",
+        "do"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "theseは複数なのでbe動詞はareです。What are these?で「これらは何ですか」です。",
+      "hint": "these → are"
+    },
+    {
+      "id": "g1-u4-vf-005",
+      "type": "verbForm",
+      "japanese": "彼はいつ起きますか。",
+      "sentence": "When ____ he play soccer?",
+      "verb": "does",
+      "choices": [
+        "does",
+        "do",
+        "is"
+      ],
+      "correctAnswer": "does",
+      "difficulty": "intermediate",
+      "explanation": "三人称単数の疑問文はdoesを使います。heなのでdoesです。",
+      "hint": "he → does"
+    },
+    {
+      "id": "g1-u4-vf-006",
+      "type": "verbForm",
+      "japanese": "あなたはどうやって学校へ行きますか。",
+      "sentence": "How ____ you go to school?",
+      "verb": "do",
+      "choices": [
+        "do",
+        "does",
+        "are"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "intermediate",
+      "explanation": "一般動詞の疑問文です。youなのでdoです。How do you～?で「どうやって～しますか」です。",
+      "hint": "you → do"
+    },
+    {
+      "id": "g1-u4-vf-007",
+      "type": "verbForm",
+      "japanese": "あなたの友達はどこ出身ですか。",
+      "sentence": "Where ____ your friends from?",
+      "verb": "are",
+      "choices": [
+        "are",
+        "is",
+        "do"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "friendsは複数なのでareです。Where are～from?で「～はどこ出身ですか」です。",
+      "hint": "friends → are"
+    },
+    {
+      "id": "g1-u4-vf-008",
+      "type": "verbForm",
+      "japanese": "彼女は何時に起きますか。",
+      "sentence": "What time ____ she get up?",
+      "verb": "does",
+      "choices": [
+        "does",
+        "do",
+        "is"
+      ],
+      "correctAnswer": "does",
+      "difficulty": "advanced",
+      "explanation": "三人称単数の疑問文です。sheなのでdoesです。What time does～?で「何時に～しますか」です。",
+      "hint": "she → does"
+    },
+    {
+      "id": "g1-u4-vf-009",
+      "type": "verbForm",
+      "japanese": "あなたは何冊の本を持っていますか。",
+      "sentence": "How many ____ there in your family?",
+      "verb": "are",
+      "choices": [
+        "are",
+        "is",
+        "do"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "advanced",
+      "explanation": "How many～are there?で「何人いますか」です。複数なのでareです。",
+      "hint": "How many → are"
+    },
+    {
+      "id": "g1-u4-vf-010",
+      "type": "verbForm",
+      "japanese": "あなたはどちらのスポーツが好きですか。",
+      "sentence": "Which sport ____ you like?",
+      "verb": "do",
+      "choices": [
+        "do",
+        "does",
+        "are"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "advanced",
+      "explanation": "一般動詞の疑問文です。youなのでdoです。Which～do you like?で「どちらが好きですか」です。",
+      "hint": "you → do"
+    },
+    {
+      "id": "g1-u4-conv-001",
+      "type": "conversation",
+      "japanese": "Whatで尋ねる。",
+      "situation": "持っているものについて尋ねる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What do you have?"
+        },
+        {
+          "speaker": "B",
+          "text": "I have ____ notebook."
+        }
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "correctAnswer": "a",
+      "difficulty": "beginner",
+      "explanation": "What do you have?（何を持っていますか）に対する答えです。notebookは子音で始まるのでaです。",
+      "hint": "notebook → a"
+    },
+    {
+      "id": "g1-u4-conv-002",
+      "type": "conversation",
+      "japanese": "Whereで答える。",
+      "situation": "出身地について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Where are you from?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'm ____ Japan."
+        }
+      ],
+      "choices": [
+        "from",
+        "in",
+        "at"
+      ],
+      "correctAnswer": "from",
+      "difficulty": "beginner",
+      "explanation": "Where are you from?（どこ出身ですか）にはI'm from～で答えります。",
+      "hint": "出身 → from"
+    },
+    {
+      "id": "g1-u4-conv-003",
+      "type": "conversation",
+      "japanese": "Whenで答える。",
+      "situation": "誕生日について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "When is your birthday?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's ____ May."
+        }
+      ],
+      "choices": [
+        "in",
+        "on",
+        "at"
+      ],
+      "correctAnswer": "in",
+      "difficulty": "intermediate",
+      "explanation": "月を表すときは前置詞inを使います。in Mayで「5月に」です。",
+      "hint": "月 → in"
+    },
+    {
+      "id": "g1-u4-conv-004",
+      "type": "conversation",
+      "japanese": "How manyで答える。",
+      "situation": "数を答える場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How many books do you have?"
+        },
+        {
+          "speaker": "B",
+          "text": "I have ____."
+        }
+      ],
+      "choices": [
+        "five",
+        "a five",
+        "the five"
+      ],
+      "correctAnswer": "five",
+      "difficulty": "intermediate",
+      "explanation": "How many～?（いくつ）には数で答えります。fiveで「5冊」です。",
+      "hint": "数で答える"
+    },
+    {
+      "id": "g1-u4-conv-005",
+      "type": "conversation",
+      "japanese": "How muchで答える。",
+      "situation": "値段を答える場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How much is this?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's ____ yen."
+        }
+      ],
+      "choices": [
+        "500",
+        "a 500",
+        "the 500"
+      ],
+      "correctAnswer": "500",
+      "difficulty": "advanced",
+      "explanation": "How much is～?（いくらですか）には値段で答えります。500 yenで「500円」です。",
+      "hint": "数字のみ"
+    },
+    {
+      "id": "g1-u4-howadj-001",
+      "type": "fillInBlank",
+      "japanese": "あなたは何歳ですか。",
+      "sentence": "____ ____ are you?",
+      "choices": [
+        "How old",
+        "What old",
+        "How age"
+      ],
+      "correctAnswer": "How old",
+      "difficulty": "beginner",
+      "explanation": "How + 形容詞で「どのくらい~」と程度を尋ねる疑問文として覚えてください。How old = 「何歳」です。",
+      "hint": "年齢を尋ねる"
+    },
+    {
+      "id": "g1-u4-howadj-002",
+      "type": "fillInBlank",
+      "japanese": "あなたの背はどのくらいですか。",
+      "sentence": "____ ____ are you?",
+      "choices": [
+        "How tall",
+        "What tall",
+        "How height"
+      ],
+      "correctAnswer": "How tall",
+      "difficulty": "beginner",
+      "explanation": "How + 形容詞という疑問文の形として覚えてください。How tall = 「身長はどのくらい」です。",
+      "hint": "身長を尋ねる"
+    },
+    {
+      "id": "g1-u4-howadj-003",
+      "type": "sentenceOrdering",
+      "japanese": "東京までどのくらい遠いですか。",
+      "words": [
+        "how",
+        "far",
+        "is",
+        "it",
+        "to",
+        "Tokyo"
+      ],
+      "correctAnswer": "How far is it to Tokyo?",
+      "difficulty": "intermediate",
+      "explanation": "How + 形容詞という疑問文として覚えてください。How far = 「どのくらい遠い」で距離を尋ねります。",
+      "hint": "How far",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u4-howadj-004",
+      "type": "conversation",
+      "japanese": "この車はどのくらい速いですか。",
+      "situation": "車について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "____ ____ is this car?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's very fast."
+        }
+      ],
+      "choices": [
+        "How fast",
+        "What fast",
+        "How speed"
+      ],
+      "correctAnswer": "How fast",
+      "difficulty": "intermediate",
+      "explanation": "How + 形容詞で程度を尋ねる疑問文として覚えてください。How fast = 「どのくらい速い」です。",
+      "hint": "速度を尋ねる"
+    },
+    {
+      "id": "g1-u4-howadj-005",
+      "type": "sentenceOrdering",
+      "japanese": "この建物はどのくらい高いですか。",
+      "words": [
+        "how",
+        "high",
+        "is",
+        "this",
+        "building"
+      ],
+      "correctAnswer": "How high is this building?",
+      "difficulty": "intermediate",
+      "explanation": "How + 形容詞という疑問文として覚えてください。How high = 「どのくらい高い」で高さを尋ねります。",
+      "hint": "How high",
+      "wordCount": 5
+    }
+  ]
+}

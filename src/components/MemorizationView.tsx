@@ -89,6 +89,7 @@ function MemorizationView({
 
   // 回答結果を追跡（動的AIコメント用）
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
+  const [lastAnswerWord, setLastAnswerWord] = useState<string | undefined>(undefined);
   const [correctStreak, setCorrectStreak] = useState<number>(0);
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
 
@@ -233,7 +234,7 @@ function MemorizationView({
     if (streak === 1) return 1; // 1日後
     if (streak === 2) return 3; // 3日後
     if (streak === 3) return 7; // 7日後
-    
+
     // 4回目以降：前回の間隔 × 難易度係数（個人最適化）
     const baseInterval = 7;
     return Math.round(baseInterval * Math.pow(easinessFactor, streak - 3));
@@ -248,13 +249,13 @@ function MemorizationView({
     const now = Date.now();
     const daysSinceStudy = (now - lastStudied) / (1000 * 60 * 60 * 24);
     const expectedInterval = reviewInterval || 1;
-    
+
     // 時間リスク：経過時間 / 推奨間隔（100%を超えると忘却の危険）
     const timeRisk = (daysSinceStudy / expectedInterval) * 100;
-    
+
     // 正答率リスク：低いほど忘れやすい
     const accuracyRisk = (1 - accuracy / 100) * 50;
-    
+
     return timeRisk + accuracyRisk;
   };
 
@@ -280,19 +281,20 @@ function MemorizationView({
         const stillLearning = wordProgress.memorizationStillLearning || 0;
         const streak = wordProgress.memorizationStreak || 0;
         const lastStudied = wordProgress.lastStudied || 0;
-        
+
         // 間隔反復学習用データ
         const easinessFactor = wordProgress.easinessFactor || 2.5;
-        const reviewInterval = wordProgress.reviewInterval || calculateOptimalInterval(streak, easinessFactor);
+        const reviewInterval =
+          wordProgress.reviewInterval || calculateOptimalInterval(streak, easinessFactor);
         const avgResponseSpeed = wordProgress.avgResponseSpeed || 0;
 
         if (attempts === 0) {
-          return { 
-            category: 'new', 
-            priority: 3, 
-            lastStudied, 
-            attempts, 
-            correct, 
+          return {
+            category: 'new',
+            priority: 3,
+            lastStudied,
+            attempts,
+            correct,
             streak,
             forgettingRisk: 0,
             reviewInterval: 0,
@@ -302,18 +304,18 @@ function MemorizationView({
         // まだまだを0.5回の正解として計算（正答率50%以上になるように）
         const effectiveCorrect = correct + stillLearning * 0.5;
         const accuracy = attempts > 0 ? (effectiveCorrect / attempts) * 100 : 0;
-        
+
         // 忘却リスクを計算
         const forgettingRisk = calculateForgettingRisk(lastStudied, reviewInterval, accuracy);
 
         // 🟢 覚えてる: 連続3回以上 or 正答率80%以上で連続2回
         if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
-          return { 
-            category: 'mastered', 
-            priority: 5, 
-            lastStudied, 
-            attempts, 
-            correct, 
+          return {
+            category: 'mastered',
+            priority: 5,
+            lastStudied,
+            attempts,
+            correct,
             streak,
             forgettingRisk,
             reviewInterval,
@@ -334,12 +336,12 @@ function MemorizationView({
         }
         // 🔴 分からない: 正答率50%未満 and まだまだボタンを押したことがない
         else {
-          return { 
-            category: 'incorrect', 
-            priority: 1, 
-            lastStudied, 
-            attempts, 
-            correct, 
+          return {
+            category: 'incorrect',
+            priority: 1,
+            lastStudied,
+            attempts,
+            correct,
             streak,
             forgettingRisk,
             reviewInterval,
@@ -428,7 +430,8 @@ function MemorizationView({
 
         // 🟢 覚えてる: 忘却リスクに応じて出題タイミングを調整
         if (statusA?.category === 'mastered') {
-          if (riskA >= 50 && priorityA > 1) priorityA = 2.0; // 中リスク → 適度に復習
+          if (riskA >= 50 && priorityA > 1)
+            priorityA = 2.0; // 中リスク → 適度に復習
           else if (priorityA > 2) priorityA = 4.5; // 低リスク → 後回し
         }
         if (statusB?.category === 'mastered') {
@@ -563,6 +566,7 @@ function MemorizationView({
 
       // 回答結果を記録（動的AIコメント用）
       setLastAnswerCorrect(isCorrect);
+      setLastAnswerWord(currentQuestion.word);
       if (isCorrect) {
         setCorrectStreak((prev) => prev + 1);
         setIncorrectStreak(0);
@@ -643,9 +647,12 @@ function MemorizationView({
         setCurrentQuestion(questions[nextIndex]);
         setCurrentIndex(nextIndex);
         cardDisplayTimeRef.current = Date.now();
+        // 次の問題に移動したのlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
+        setLastAnswerWord(undefined);
       } else {
         // 全て終了
         setCurrentQuestion(null);
+        setLastAnswerWord(undefined);
       }
     },
     [
@@ -957,7 +964,7 @@ function MemorizationView({
                 currentWord={currentQuestion?.word}
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
-                lastAnswerWord={currentQuestion?.word}
+                lastAnswerWord={lastAnswerWord}
                 lastAnswerDifficulty={currentQuestion?.difficulty}
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}

@@ -869,6 +869,7 @@ export function getGrammarUnitStats(): Array<{
   masteredCount: number;
   accuracy: number;
   progress: number;
+  historyIcons: string;
 }> {
   const progress = loadProgressSync();
 
@@ -886,12 +887,20 @@ export function getGrammarUnitStats(): Array<{
       correct: number;
       incorrect: number;
       mastered: number;
+      allHistory: Array<{ timestamp: number; wasCorrect: boolean }>; // 全問の履歴を統合
     }
   >();
 
   grammarQuestions.forEach(([word, wp]) => {
-    const match = word.match(/grammar_g(\d+)-u(\d+)/);
-    if (!match) return;
+    // IDフォーマット: grammar_vf-g3-u1-001 または grammar_g3-u1-q1 などに対応
+    const match = word.match(/grammar_(?:\w+-)?g(\d+)-u(\d+)/);
+    if (!match) {
+      // マッチしないIDをログ出力（デバッグ用）
+      if (word.startsWith('grammar_') && !word.includes('unknown')) {
+        console.warn(`⚠️ 文法問題IDがパターンにマッチしません: ${word}`);
+      }
+      return;
+    }
 
     const grade = match[1];
     const unit = match[2];
@@ -904,6 +913,7 @@ export function getGrammarUnitStats(): Array<{
         correct: 0,
         incorrect: 0,
         mastered: 0,
+        allHistory: [],
       });
     }
 
@@ -913,13 +923,19 @@ export function getGrammarUnitStats(): Array<{
     const totalAttempts = wp.grammarAttempts || wp.correctCount + wp.incorrectCount;
     if (totalAttempts > 0) {
       unitData.answered.push([word, wp]);
-      const correctCount = wp.grammarCorrect || wp.correctCount;
+      const correctCount = wp.grammarCorrect || wp.correctCount || 0;
       const incorrectCount = totalAttempts - correctCount;
       unitData.correct += correctCount;
       unitData.incorrect += incorrectCount;
 
+      // learningHistoryから履歴を統合（各問題ごとに最新10件）
+      if (wp.learningHistory && wp.learningHistory.length > 0) {
+        const recentHistory = wp.learningHistory.slice(-10);
+        unitData.allHistory.push(...recentHistory);
+      }
+
       // 定着判定
-      const consecutiveCorrect = wp.grammarStreak || wp.consecutiveCorrect;
+      const consecutiveCorrect = wp.grammarStreak || wp.consecutiveCorrect || 0;
       const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
       const isMarkedAsMastered = wp.masteryLevel === 'mastered';
       const isOneShot = totalAttempts === 1 && correctCount === 1;
@@ -938,6 +954,10 @@ export function getGrammarUnitStats(): Array<{
     const progress =
       data.questions.length > 0 ? (data.answered.length / data.questions.length) * 100 : 0;
 
+    // 履歴を時系列でソートして最新10件を取得
+    const sortedHistory = data.allHistory.sort((a, b) => a.timestamp - b.timestamp).slice(-10);
+    const historyIcons = sortedHistory.map((h) => (h.wasCorrect ? '🟩' : '🟥')).join('');
+
     return {
       unit,
       totalQuestions: data.questions.length,
@@ -947,6 +967,7 @@ export function getGrammarUnitStats(): Array<{
       masteredCount: data.mastered,
       accuracy: Math.round(accuracy),
       progress: Math.round(progress),
+      historyIcons,
     };
   });
 

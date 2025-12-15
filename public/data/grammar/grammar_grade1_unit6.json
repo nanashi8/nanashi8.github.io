@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "studying",
       "difficulty": "beginner",
-      "explanation": "現在進行形はbe動詞 + 動詞-ingです。I am studying now.で「今勉強しています」です。",
+      "explanation": "現在進行形はbe動詞 + 動詞-ingです。I am studying now.で「今勉強しています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "am + -ing"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "reading",
       "difficulty": "beginner",
-      "explanation": "現在進行形はbe + -ingです。She is reading a book.で「本を読んでいます」です。",
+      "explanation": "現在進行形はbe + -ingです。She is reading a book.で「本を読んでいます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "is + -ing"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
-      "explanation": "複数主語でもbe動詞の後ろは-ing形です。They are watching TV.で「テレビを見ています」です。",
+      "explanation": "複数主語でもbe動詞の後ろは-ing形です。They are watching TV.で「テレビを見ています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "are + -ing"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "主語がweのときはareです。We are listening to music.で「音楽を聞いています」です。",
+      "explanation": "主語がweのときはareです。We are listening to music.で「音楽を聞いています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "We are"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "三人称単数のbe動詞はisです。He is running.で「走っています」です。",
+      "explanation": "三人称単数のbe動詞はisです。He is running.で「走っています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "He is"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "doing",
       "difficulty": "intermediate",
-      "explanation": "現在進行形の疑問文でも-ing形です。What are you doing?で「何をしていますか」です。",
+      "explanation": "現在進行形の疑問文でも-ing形です。What are you doing?で「何をしていますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "are + -ing"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "swimming",
       "difficulty": "intermediate",
-      "explanation": "swimはmを重ねてswimmingです。短母音+単子音字は最後の文字を重ねります。",
+      "explanation": "swimはmを重ねてswimmingです。短母音+単子音字は最後の文字を重ねります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "mm"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "doing",
       "difficulty": "intermediate",
-      "explanation": "否定文でもbe + -ing形です。I am not doing my homework.で「宿題をしていません」です。",
+      "explanation": "否定文でもbe + -ing形です。I am not doing my homework.で「宿題をしていません」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "not + -ing"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "Are",
       "difficulty": "intermediate",
-      "explanation": "複数主語の疑問文はAreを文頭にです。Are they running?で「走っていますか」です。",
+      "explanation": "複数主語の疑問文はAreを文頭にです。Are they running?で「走っていますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "Are they"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "cooking",
       "difficulty": "intermediate",
-      "explanation": "cookは-ingを付けるだけです。He is cooking.で「料理をしています」です。",
+      "explanation": "cookは-ingを付けるだけです。He is cooking.で「料理をしています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "cook + ing"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "shopping",
       "difficulty": "intermediate",
-      "explanation": "shopはpを重ねてshoppingです。短母音+単子音字のルールです。",
+      "explanation": "shopはpを重ねてshoppingです。短母音+単子音字のルールです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "pp"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "writing",
       "difficulty": "advanced",
-      "explanation": "writeはeを取ってwritingです。語末のeは取ってから-ingです。",
+      "explanation": "writeはeを取ってwritingです。語末のeは取ってから-ingです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "e を取る"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "playing",
       "difficulty": "advanced",
-      "explanation": "現在進行形で場所を示します。They are playing in the park.で「公園で遊んでいます」です。",
+      "explanation": "現在進行形で場所を示します。They are playing in the park.で「公園で遊んでいます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "are + -ing"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "singing",
       "difficulty": "advanced",
-      "explanation": "否定文はbe not + -ingです。She is not singing a song.で「歌を歌っていません」です。",
+      "explanation": "否定文はbe not + -ingです。She is not singing a song.で「歌を歌っていません」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "not + -ing"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "having",
       "difficulty": "advanced",
-      "explanation": "haveはeを取ってhavingです。We are having lunch.で「昼食を食べています」です。",
+      "explanation": "haveはeを取ってhavingです。We are having lunch.で「昼食を食べています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "e を取る"
     },
     {
@@ -247,7 +247,7 @@
       ],
       "correctAnswer": "I am running.",
       "difficulty": "beginner",
-      "explanation": "現在進行形の基本文です。I am running.で「走っています」です。",
+      "explanation": "現在進行形の基本文です。I am running.で「走っています」です。\n\n「私は走っています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am running.",
       "hint": "I am",
       "wordCount": 3
     },
@@ -262,7 +262,7 @@
       ],
       "correctAnswer": "She is reading.",
       "difficulty": "beginner",
-      "explanation": "三人称単数はisです。She is reading.で「読んでいます」です。",
+      "explanation": "三人称単数はisです。She is reading.で「読んでいます」です。\n\n「彼女は読んでいます。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is reading.",
       "hint": "She is",
       "wordCount": 3
     },
@@ -277,7 +277,7 @@
       ],
       "correctAnswer": "They are eating.",
       "difficulty": "beginner",
-      "explanation": "複数主語はareです。They are eating.で「食べています」です。",
+      "explanation": "複数主語はareです。They are eating.で「食べています」です。\n\n「彼らは食べています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They are eating.",
       "hint": "They are",
       "wordCount": 3
     },
@@ -292,7 +292,7 @@
       ],
       "correctAnswer": "We are talking.",
       "difficulty": "beginner",
-      "explanation": "weもareです。We are talking.で「話しています」です。",
+      "explanation": "weもareです。We are talking.で「話しています」です。\n\n「私たちは話しています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We are talking.",
       "hint": "We are",
       "wordCount": 3
     },
@@ -307,7 +307,7 @@
       ],
       "correctAnswer": "He is writing.",
       "difficulty": "beginner",
-      "explanation": "He is writing.で「書いています」です。writeはeを取ってwritingです。",
+      "explanation": "He is writing.で「書いています」です。writeはeを取ってwritingです。\n\n「彼は書いています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He is writing.",
       "hint": "He is",
       "wordCount": 3
     },
@@ -323,7 +323,7 @@
       ],
       "correctAnswer": "Are you studying?",
       "difficulty": "intermediate",
-      "explanation": "疑問文はAreを文頭にです。Are you studying?で「勉強していますか」です。",
+      "explanation": "疑問文はAreを文頭にです。Are you studying?で「勉強していますか」です。\n\n「あなたは勉強していますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Are you studying?",
       "hint": "Are you",
       "wordCount": 4
     },
@@ -338,7 +338,7 @@
       ],
       "correctAnswer": "She is swimming.",
       "difficulty": "intermediate",
-      "explanation": "swimはmを重ねります。She is swimming.で「泳いでいます」です。",
+      "explanation": "swimはmを重ねります。She is swimming.で「泳いでいます」です。\n\n「彼女は泳いでいます。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is swimming.",
       "hint": "is swimming",
       "wordCount": 3
     },
@@ -355,7 +355,7 @@
       ],
       "correctAnswer": "I am listening to music.",
       "difficulty": "intermediate",
-      "explanation": "listen to musicで「音楽を聞く」です。I am listening to music.です。",
+      "explanation": "listen to musicで「音楽を聞く」です。I am listening to music.です。\n\n「私は音楽を聞いています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am listening to music.",
       "hint": "listening to",
       "wordCount": 5
     },
@@ -371,7 +371,7 @@
       ],
       "correctAnswer": "They are playing soccer.",
       "difficulty": "intermediate",
-      "explanation": "play soccerで「サッカーをする」です。They are playing soccer.です。",
+      "explanation": "play soccerで「サッカーをする」です。They are playing soccer.です。\n\n「彼らはサッカーをしています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They are playing soccer.",
       "hint": "playing soccer",
       "wordCount": 4
     },
@@ -389,7 +389,7 @@
       ],
       "correctAnswer": "I am not reading a book.",
       "difficulty": "intermediate",
-      "explanation": "否定文はbe not + -ingです。I am not reading a book.で「本を読んでいません」です。",
+      "explanation": "否定文はbe not + -ingです。I am not reading a book.で「本を読んでいません」です。\n\n「私は本を読んでいません。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am not reading a book.",
       "hint": "am not",
       "wordCount": 6
     },
@@ -407,7 +407,7 @@
       ],
       "correctAnswer": "Is he watching TV now?",
       "difficulty": "advanced",
-      "explanation": "疑問文はIsを文頭にです。Is he watching TV now?で「今テレビを見ていますか」です。",
+      "explanation": "疑問文はIsを文頭にです。Is he watching TV now?で「今テレビを見ていますか」です。\n\n「彼は今、テレビを見ていますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Is he watching TV now?",
       "hint": "Is he",
       "wordCount": 6
     },
@@ -424,7 +424,7 @@
       ],
       "correctAnswer": "She is writing a letter.",
       "difficulty": "advanced",
-      "explanation": "write a letterで「手紙を書く」です。She is writing a letter.です。",
+      "explanation": "write a letterで「手紙を書く」です。She is writing a letter.です。\n\n「彼女は手紙を書いています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is writing a letter.",
       "hint": "writing a",
       "wordCount": 5
     },
@@ -442,7 +442,7 @@
       ],
       "correctAnswer": "We are running in the park.",
       "difficulty": "advanced",
-      "explanation": "in the parkで「公園で」です。We are running in the park.です。",
+      "explanation": "in the parkで「公園で」です。We are running in the park.です。\n\n「私たちは公園で走っています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We are running in the park.",
       "hint": "in the park",
       "wordCount": 6
     },
@@ -459,7 +459,7 @@
       ],
       "correctAnswer": "What are you doing?",
       "difficulty": "advanced",
-      "explanation": "疑問詞 + be動詞 + 主語 + -ingです。What are you doing?で「何をしていますか」です。",
+      "explanation": "疑問詞 + be動詞 + 主語 + -ingです。What are you doing?で「何をしていますか」です。\n\n「あなたは何をしていますか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What are you doing?",
       "hint": "What are",
       "wordCount": 5
     },
@@ -476,7 +476,7 @@
       ],
       "correctAnswer": "They are not eating breakfast.",
       "difficulty": "advanced",
-      "explanation": "複数の否定文です。They are not eating breakfast.で「朝食を食べていません」です。",
+      "explanation": "複数の否定文です。They are not eating breakfast.で「朝食を食べていません」です。\n\n「彼らは朝食を食べていません。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They are not eating breakfast.",
       "hint": "are not",
       "wordCount": 5
     },
@@ -493,7 +493,7 @@
       ],
       "correctAnswer": "Are you studying?",
       "difficulty": "beginner",
-      "explanation": "現在進行形の疑問文はbe動詞を文頭にです。Are you studying?で「勉強していますか」です。",
+      "explanation": "現在進行形の疑問文はbe動詞を文頭にです。Are you studying?で「勉強していますか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Are you"
     },
     {
@@ -509,7 +509,7 @@
       ],
       "correctAnswer": "She is not singing.",
       "difficulty": "beginner",
-      "explanation": "現在進行形の否定文はbe not + -ingです。She is not singing.で「歌っていません」です。",
+      "explanation": "現在進行形の否定文はbe not + -ingです。She is not singing.で「歌っていません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "is not"
     },
     {
@@ -525,7 +525,7 @@
       ],
       "correctAnswer": "I am watching TV.",
       "difficulty": "beginner",
-      "explanation": "notを取ります。I am watching TV.で「テレビを見ています」です。",
+      "explanation": "notを取ります。I am watching TV.で「テレビを見ています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "am watching"
     },
     {
@@ -541,7 +541,7 @@
       ],
       "correctAnswer": "He is running.",
       "difficulty": "beginner",
-      "explanation": "Isを主語の後ろにです。He is running.で「走っています」です。",
+      "explanation": "Isを主語の後ろにです。He is running.で「走っています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "He is"
     },
     {
@@ -557,7 +557,7 @@
       ],
       "correctAnswer": "They are not playing soccer.",
       "difficulty": "beginner",
-      "explanation": "疑問文を否定文にです。They are not playing soccer.で「サッカーをしていません」です。",
+      "explanation": "疑問文を否定文にです。They are not playing soccer.で「サッカーをしていません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "are not"
     },
     {
@@ -573,7 +573,7 @@
       ],
       "correctAnswer": "I am studying English.",
       "difficulty": "intermediate",
-      "explanation": "一般動詞を現在進行形にです。I am studying English.で「英語を勉強しています」です。",
+      "explanation": "一般動詞を現在進行形にです。I am studying English.で「英語を勉強しています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "am + -ing"
     },
     {
@@ -589,7 +589,7 @@
       ],
       "correctAnswer": "He is eating.",
       "difficulty": "intermediate",
-      "explanation": "主語が変わるとbe動詞も変わります。He is eating.で「彼は食べています」です。",
+      "explanation": "主語が変わるとbe動詞も変わります。He is eating.で「彼は食べています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "He is"
     },
     {
@@ -605,7 +605,7 @@
       ],
       "correctAnswer": "She is swimming.",
       "difficulty": "intermediate",
-      "explanation": "複数から単数へです。She is swimming.で「彼女は泳いでいます」です。",
+      "explanation": "複数から単数へです。She is swimming.で「彼女は泳いでいます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "She is"
     },
     {
@@ -621,7 +621,7 @@
       ],
       "correctAnswer": "I'm not running.",
       "difficulty": "intermediate",
-      "explanation": "I am → I'mです。I'm not running.で「走っていません」です。",
+      "explanation": "I am → I'mです。I'm not running.で「走っていません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "I'm"
     },
     {
@@ -637,7 +637,7 @@
       ],
       "correctAnswer": "What is he reading?",
       "difficulty": "intermediate",
-      "explanation": "What + be動詞 + 主語 + -ingです。What is he reading?で「何を読んでいますか」です。",
+      "explanation": "What + be動詞 + 主語 + -ingです。What is he reading?で「何を読んでいますか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "What is"
     },
     {
@@ -653,7 +653,7 @@
       ],
       "correctAnswer": "Where are they playing?",
       "difficulty": "advanced",
-      "explanation": "Where + be動詞 + 主語 + -ingです。Where are they playing?で「どこで遊んでいますか」です。",
+      "explanation": "Where + be動詞 + 主語 + -ingです。Where are they playing?で「どこで遊んでいますか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "Where are"
     },
     {
@@ -669,7 +669,7 @@
       ],
       "correctAnswer": "She is reading a book in the library.",
       "difficulty": "advanced",
-      "explanation": "be動詞の後ろに-ing形です。She is reading a book in the library.で「図書館で本を読んでいます」です。",
+      "explanation": "be動詞の後ろに-ing形です。She is reading a book in the library.で「図書館で本を読んでいます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "is reading"
     },
     {
@@ -685,7 +685,7 @@
       ],
       "correctAnswer": "I am watching TV now.",
       "difficulty": "advanced",
-      "explanation": "習慣（現在形）→今（進行形）です。I am watching TV now.で「今テレビを見ています」です。",
+      "explanation": "習慣（現在形）→今（進行形）です。I am watching TV now.で「今テレビを見ています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "am watching now"
     },
     {
@@ -701,7 +701,7 @@
       ],
       "correctAnswer": "He is not sleeping.",
       "difficulty": "advanced",
-      "explanation": "isn't → is notです。He is not sleeping.で「寝ていません」です。",
+      "explanation": "isn't → is notです。He is not sleeping.で「寝ていません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "is not"
     },
     {
@@ -717,7 +717,7 @@
       ],
       "correctAnswer": "We are studying hard.",
       "difficulty": "advanced",
-      "explanation": "副詞hardは動詞の後ろです。We are studying hard.で「一生懸命勉強しています」です。",
+      "explanation": "副詞hardは動詞の後ろです。We are studying hard.で「一生懸命勉強しています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
       "hint": "studying hard"
     },
     {
@@ -733,7 +733,7 @@
       ],
       "correctAnswer": "reading",
       "difficulty": "beginner",
-      "explanation": "readは-ingを付けるだけです。I am reading a book.で「本を読んでいます」です。",
+      "explanation": "readは-ingを付けるだけです。I am reading a book.で「本を読んでいます」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "read + ing"
     },
     {
@@ -749,7 +749,7 @@
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
-      "explanation": "watchも-ingを付けるだけです。She is watching TV.で「テレビを見ています」です。",
+      "explanation": "watchも-ingを付けるだけです。She is watching TV.で「テレビを見ています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "watch + ing"
     },
     {
@@ -765,7 +765,7 @@
       ],
       "correctAnswer": "writing",
       "difficulty": "beginner",
-      "explanation": "writeはeを取ってwritingです。語末のeは取ってから-ingです。",
+      "explanation": "writeはeを取ってwritingです。語末のeは取ってから-ingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "e を取る"
     },
     {
@@ -781,7 +781,7 @@
       ],
       "correctAnswer": "running",
       "difficulty": "beginner",
-      "explanation": "runはnを重ねてrunningです。短母音+単子音字は最後の文字を重ねります。",
+      "explanation": "runはnを重ねてrunningです。短母音+単子音字は最後の文字を重ねります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "nn"
     },
     {
@@ -797,7 +797,7 @@
       ],
       "correctAnswer": "swimming",
       "difficulty": "intermediate",
-      "explanation": "swimはmを重ねてswimmingです。短母音+単子音字のルールです。",
+      "explanation": "swimはmを重ねてswimmingです。短母音+単子音字のルールです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "mm"
     },
     {
@@ -813,7 +813,7 @@
       ],
       "correctAnswer": "having",
       "difficulty": "intermediate",
-      "explanation": "haveはeを取ってhavingです。I am having lunch.で「昼食を食べています」です。",
+      "explanation": "haveはeを取ってhavingです。I am having lunch.で「昼食を食べています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "e を取る"
     },
     {
@@ -829,7 +829,7 @@
       ],
       "correctAnswer": "lying",
       "difficulty": "intermediate",
-      "explanation": "lieはieをyに変えてlyingです。He is lying down.で「横になっています」です。",
+      "explanation": "lieはieをyに変えてlyingです。He is lying down.で「横になっています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "ie → y"
     },
     {
@@ -845,7 +845,7 @@
       ],
       "correctAnswer": "shopping",
       "difficulty": "advanced",
-      "explanation": "shopはpを重ねてshoppingです。She is shopping.で「買い物をしています」です。",
+      "explanation": "shopはpを重ねてshoppingです。She is shopping.で「買い物をしています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "pp"
     },
     {
@@ -861,7 +861,7 @@
       ],
       "correctAnswer": "making",
       "difficulty": "advanced",
-      "explanation": "makeはeを取ってmakingです。They are making a cake.で「ケーキを作っています」です。",
+      "explanation": "makeはeを取ってmakingです。They are making a cake.で「ケーキを作っています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "e を取る"
     },
     {
@@ -877,7 +877,7 @@
       ],
       "correctAnswer": "sitting",
       "difficulty": "advanced",
-      "explanation": "sitはtを重ねてsittingです。We are sitting on the bench.で「ベンチに座っています」です。",
+      "explanation": "sitはtを重ねてsittingです。We are sitting on the bench.で「ベンチに座っています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "tt"
     },
     {
@@ -902,7 +902,7 @@
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
-      "explanation": "現在進行形で答えります。I am watching TV.で「テレビを見ています」です。",
+      "explanation": "現在進行形で答えります。I am watching TV.で「テレビを見ています」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "am + -ing"
     },
     {
@@ -927,7 +927,7 @@
       ],
       "correctAnswer": "not",
       "difficulty": "beginner",
-      "explanation": "be動詞の否定はnotです。No, I am not.で「いいえ、していません」です。",
+      "explanation": "be動詞の否定はnotです。No, I am not.で「いいえ、していません」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "am not"
     },
     {
@@ -952,7 +952,7 @@
       ],
       "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "Is he～?の答えはYes, he is.です。「はい、勉強しています」です。",
+      "explanation": "Is he～?の答えはYes, he is.です。「はい、勉強しています」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "Yes, he is"
     },
     {
@@ -977,7 +977,7 @@
       ],
       "correctAnswer": "reading",
       "difficulty": "intermediate",
-      "explanation": "場所+現在進行形で具体的に説明です。She is reading in the library.で「図書館で本を読んでいます」です。",
+      "explanation": "場所+現在進行形で具体的に説明です。She is reading in the library.で「図書館で本を読んでいます」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "is + -ing"
     },
     {
@@ -1002,7 +1002,7 @@
       ],
       "correctAnswer": "playing",
       "difficulty": "advanced",
-      "explanation": "They are～の形で答えります。They are playing soccer.で「サッカーをしています」です。",
+      "explanation": "They are～の形で答えります。They are playing soccer.で「サッカーをしています」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
       "hint": "are + -ing"
     }
   ]

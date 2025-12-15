@@ -505,7 +505,10 @@ export function getRelevantMistakeTip(
 }
 
 // 学習中の息抜き知識（受験に役立つ内容）- AI人格対応版
-export function getBreatherTrivia(personality?: AIPersonality): string {
+export function getBreatherTrivia(personality?: AIPersonality, currentWord?: string): string {
+  // 熟語かどうかを判定（スペースまたはハイフンを含む）
+  const isPhrase = currentWord && (currentWord.includes(' ') || currentWord.includes('-'));
+
   // 全AI人格対応の豆知識データ
   const triviaData = [
     {
@@ -521,21 +524,6 @@ export function getBreatherTrivia(personality?: AIPersonality): string {
           '😼💡 受験の裏ワザだ！同じ単語の繰り返しをチェックしろ！代名詞や同義語を見つければ読解が超楽になるぞ！',
         'wise-sage':
           '🧙💡 読解の知恵じゃが、代名詞（it, they, this）や同義語の参照先を意識すると、文章の流れが見えてくるぞ。',
-      },
-    },
-    {
-      content: '動詞+前置詞の熟語は、イメージで覚える',
-      messages: {
-        'drill-sergeant':
-          '😈💡 熟語の覚え方だ！動詞+前置詞はイメージで叩き込め！look up（上を見る→調べる）、give up（上げる→諦める）だぞ！',
-        'kind-teacher':
-          '😃💡 覚え方のコツ！動詞+前置詞の熟語は、イメージで覚えると忘れにくいですよ。look up（調べる）、give up（諦める）のように！',
-        analyst:
-          '🤖💡 記憶定着法：動詞+前置詞熟語は視覚的イメージと結びつけることで長期記憶化率が向上します。',
-        'enthusiastic-coach':
-          '😼💡 熟語暗記のコツだ！動詞+前置詞はイメージで覚えろ！look up（上見る→調べる）、give up（上げる→諦める）だ！',
-        'wise-sage':
-          '🧙💡 熟語の知恵じゃが、動詞+前置詞はイメージで理解すると良いぞ。look up（調べる）は「上を見る」から来ておるのじゃ。',
       },
     },
     {
@@ -584,6 +572,25 @@ export function getBreatherTrivia(personality?: AIPersonality): string {
       },
     },
   ];
+
+  // 熟語の場合のみ熟語アドバイスを追加
+  if (isPhrase) {
+    triviaData.push({
+      content: '動詞+前置詞の熟語は、イメージで覚える',
+      messages: {
+        'drill-sergeant':
+          '😈💡 熟語の覚え方だ！動詞と前置詞の意味を組み合わせてイメージで叩き込め！視覚的に想像すると忘れないぞ！',
+        'kind-teacher':
+          '😃💡 覚え方のコツ！熟語は動詞と前置詞の意味を組み合わせて、イメージで覚えると忘れにくいですよ！',
+        analyst:
+          '🤖💡 記憶定着法：動詞+前置詞熟語は視覚的イメージと結びつけることで長期記憶化率が向上します。',
+        'enthusiastic-coach':
+          '😼💡 熟語暗記のコツだ！動詞と前置詞の意味を組み合わせてイメージで覚えろ！視覚的に想像すると定着するぞ！',
+        'wise-sage':
+          '🧙💡 熟語の知恵じゃが、動詞と前置詞の意味を組み合わせてイメージで理解すると、忘れにくくなるぞ。',
+      },
+    });
+  }
 
   const selected = triviaData[Math.floor(Math.random() * triviaData.length)];
 

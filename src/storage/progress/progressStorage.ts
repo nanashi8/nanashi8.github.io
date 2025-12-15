@@ -49,7 +49,6 @@ const STORAGE_KEY = 'progress-data';
 const _MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数（未使用のためプレフィックス）
 const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 300; // 保存する最大結果数（容量削減）
-const MAX_WORD_PROGRESS = 2000; // 単語進捗の最大保存数
 const MAX_RESPONSE_TIMES = 3; // 応答時間履歴の最大保存数（容量削減）
 
 // 初期化
@@ -270,13 +269,8 @@ function compressProgressData(progress: UserProgress): void {
     progress.results = progress.results.slice(0, MAX_RESULTS);
   }
 
-  // 2. 単語進捗データを最適化
-  const wordEntries = Object.entries(progress.wordProgress);
-  if (wordEntries.length > MAX_WORD_PROGRESS) {
-    // 最終学習日が古い順にソート
-    wordEntries.sort((a, b) => b[1].lastStudied - a[1].lastStudied);
-    progress.wordProgress = Object.fromEntries(wordEntries.slice(0, MAX_WORD_PROGRESS));
-  }
+  // 2. 単語進捗データ - 制限なし（繰り返し学習を考慮）
+  // 単語進捗は上限を設けず、すべての学習履歴を保持
 
   // 3. 応答時間履歴を圧縮
   Object.values(progress.wordProgress).forEach((wp) => {
@@ -871,18 +865,27 @@ function determineMasteryLevel(wordProgress: WordProgress): 'new' | 'learning' |
 
   // より柔軟な定着判定:
   // 1. 初出で正解 → 即座に定着
-  // 2. 5回以上学習して正解率85%以上 → 安定した定着
-  // 3. 3回以上学習して正解率90%以上 → 高い定着
-  // 4. 連続5回以上正解 → 強い定着
-  // 5. 10回以上学習して正解率75%以上かつ直近2回が正解 → 長期学習による定着
+  // 2. 2回連続正解（100%正答率） → スキップ2回で定着
+  // 3. 5回以上学習して正解率85%以上 → 安定した定着
+  // 4. 3回以上学習して正解率90%以上 → 高い定着
+  // 5. 連続5回以上正解 → 強い定着
+  // 6. 10回以上学習して正解率75%以上かつ直近2回が正解 → 長期学習による定着
   const isOneShot = total === 1 && wordProgress.correctCount === 1;
+  const isTwoShotPerfect = total === 2 && accuracy === 1.0; // 2回連続100%
   const isStableAccuracy = total >= 5 && accuracy >= 0.85;
   const isHighAccuracy = total >= 3 && accuracy >= 0.9;
   const isStrongStreak = wordProgress.consecutiveCorrect >= 5;
   const isLongTermLearning =
     total >= 10 && accuracy >= 0.75 && wordProgress.consecutiveCorrect >= 2;
 
-  if (isOneShot || isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
+  if (
+    isOneShot ||
+    isTwoShotPerfect ||
+    isStableAccuracy ||
+    isHighAccuracy ||
+    isStrongStreak ||
+    isLongTermLearning
+  ) {
     return 'mastered';
   }
 
@@ -993,7 +996,7 @@ export async function updateWordProgress(
     if (wordProgress.easinessFactor === undefined) {
       wordProgress.easinessFactor = 2.5; // 初期値
     }
-    
+
     // 回答品質に基づいてEFを調整（個人の学習速度に適応）
     if (isCorrect) {
       // 完璧に覚えている → EF増加（次回の間隔が長くなる = 学習速度が速い）
@@ -1009,7 +1012,7 @@ export async function updateWordProgress(
     // 復習間隔の計算
     const streak = wordProgress.memorizationStreak || 0;
     const ef = wordProgress.easinessFactor;
-    
+
     let newInterval = 0;
     if (streak === 0) {
       newInterval = 0; // 即座に再出題
@@ -1024,19 +1027,19 @@ export async function updateWordProgress(
       const previousInterval = wordProgress.reviewInterval || 7;
       newInterval = Math.round(previousInterval * ef);
     }
-    
+
     wordProgress.reviewInterval = newInterval;
     wordProgress.lastReviewDate = Date.now();
     wordProgress.totalReviews = (wordProgress.totalReviews || 0) + 1;
-    
+
     // 平均応答速度を記録（学習速度の指標）
     if (!wordProgress.avgResponseSpeed) {
       wordProgress.avgResponseSpeed = responseTime;
     } else {
       // 移動平均で更新
-      wordProgress.avgResponseSpeed = (wordProgress.avgResponseSpeed * 0.8) + (responseTime * 0.2);
+      wordProgress.avgResponseSpeed = wordProgress.avgResponseSpeed * 0.8 + responseTime * 0.2;
     }
-    
+
     // 学習サイクルが早い生徒への適応：応答が速い場合はEFをさらに増加
     if (responseTime < 2000 && isCorrect) {
       // 2秒未満で正解 → 学習速度が速い
@@ -1207,11 +1210,8 @@ export function recordWordSkip(
 
   const wordProgress = progress.wordProgress[word];
 
-  // スキップを記録（後日検証するため、暫定的に定着扱い）
-  wordProgress.consecutiveCorrect = 3; // 暫定定着
-  wordProgress.masteryLevel = 'mastered';
-  // wordProgress.lastReviewed = Date.now(); // プロパティが型定義に存在しないためコメントアウト
-  // wordProgress.nextReviewDate = Date.now() + (excludeDays * 24 * 60 * 60 * 1000); // プロパティが型定義に存在しないためコメントアウト
+  // スキップを記録（後日検証のための除外設定のみ。定着扱いにしない）
+  // ここでは習熟や連続正解は変更しない
 
   // スキップ情報を記録
   wordProgress.skippedCount = (wordProgress.skippedCount || 0) + 1;
@@ -2640,6 +2640,7 @@ export async function getGrammarUnitStatsWithTitles(): Promise<
     masteredCount: number;
     accuracy: number;
     progress: number;
+    historyIcons: string;
   }>
 > {
   const baseStats = getGrammarUnitStats();
@@ -2656,6 +2657,7 @@ export async function getGrammarUnitStatsWithTitles(): Promise<
         masteredCount: number;
         accuracy: number;
         progress: number;
+        historyIcons: string;
       }) => {
         // 中1_Unit1 → grade=1, unit=1
         const match = stat.unit.match(/中(\d+)_Unit(\d+)/);
