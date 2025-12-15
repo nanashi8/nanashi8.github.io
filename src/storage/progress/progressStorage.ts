@@ -952,12 +952,17 @@ export async function updateWordProgress(
       wordProgress.grammarStreak = 0;
     }
   } else if (mode === 'memorization') {
-    // 暗記モードの統計（将来的に拡張可能）
+    // 暗記モードの統計
     wordProgress.memorizationAttempts = (wordProgress.memorizationAttempts || 0) + 1;
     if (isCorrect) {
       wordProgress.memorizationCorrect = (wordProgress.memorizationCorrect || 0) + 1;
       wordProgress.memorizationStreak = (wordProgress.memorizationStreak || 0) + 1;
+    } else if (isStillLearning) {
+      // 「まだまだ」は正解にはカウントしないが、ストリークもリセットしない（中立）
+      // memorizationCorrectには加算しない
+      // memorizationStreakはそのまま維持
     } else {
+      // 「分からない」の場合のみストリークをリセット
       wordProgress.memorizationStreak = 0;
     }
   }
