@@ -32,6 +32,13 @@ interface ScoreBoardProps {
   onReviewFocus?: () => void; // 要復習タップ時のコールバック
   isReviewFocusMode?: boolean; // 補修モード中かどうか
   onShowSettings?: () => void; // 学習設定を開くコールバック
+  // 和訳・スペルタブ用のセッション統計（上限達成時の自動復習モード用）
+  sessionStats?: {
+    correct: number;
+    incorrect: number;
+    review: number;
+    mastered: number;
+  };
   currentWord?: string; // 現在表示中の単語
   onAnswerTime?: number; // 回答時刻(更新トリガー用)
   // 回答結果情報（動的AIコメント用）
@@ -71,6 +78,7 @@ function ScoreBoard({
   difficulty = '',
   wordPhraseFilter = '',
   grammarUnit,
+  sessionStats,
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'>(
     'ai'
@@ -323,6 +331,23 @@ function ScoreBoard({
   });
 
   const [showPlanSettings, setShowPlanSettings] = useState(false);
+
+  // 和訳・スペルタブ用: 上限達成時に自動的に復習モードをオンにする
+  useEffect(() => {
+    if ((mode === 'translation' || mode === 'spelling') && sessionStats && onReviewFocus) {
+      const { incorrect, review } = sessionStats;
+      const totalNeedReview = incorrect + review;
+      
+      if (
+        (learningLimit !== null && totalNeedReview >= learningLimit) ||
+        (reviewLimit !== null && review >= reviewLimit)
+      ) {
+        if (!isReviewFocusMode) {
+          onReviewFocus();
+        }
+      }
+    }
+  }, [sessionStats, learningLimit, reviewLimit, isReviewFocusMode, mode, onReviewFocus]);
 
   // 定着率と統計データをstateで管理
   const [retentionData, setRetentionData] = useState(() => {
