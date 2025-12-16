@@ -73,6 +73,11 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
     const offset = Math.max(1, Math.min(5, prevCount === 0 ? 2 : 1));
     const insertPosition = Math.min(currentIndex + 1 + offset, questions.length);
 
+    // KPI: 再追加を記録（開発用）
+    try {
+      sessionKpi.onReAdd(String(qid));
+    } catch {}
+
     return [
       ...questions.slice(0, insertPosition),
       reAddedQuestion,

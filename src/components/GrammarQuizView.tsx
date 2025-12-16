@@ -418,6 +418,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         questionStartTimeRef.current = Date.now();
       } else {
         // 末尾の場合はそのまま終了状態を維持
+        // 開発時のみKPIサマリを出力
+        if (!window.location.hostname.includes('github.io')) {
+          try {
+            const summary = sessionKpi.summarize();
+            logger.log('🧪 KPI Summary (grammar):', summary);
+          } catch {}
+        }
         setAnswered(false);
       }
     } else {
