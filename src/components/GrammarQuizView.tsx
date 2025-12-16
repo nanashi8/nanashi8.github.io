@@ -7,6 +7,7 @@ import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
+import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 
 interface VerbFormQuestion {
@@ -209,7 +210,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
       // セッション優先フラグのクリーン処理：5問経過したらクリア
       const cleanedQuestions = clearExpiredFlags(currentQuestions, nextIndex - 1);
-      
+
       if (cleanedQuestions !== currentQuestions) {
         setCurrentQuestions(cleanedQuestions);
       }
@@ -345,10 +346,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setShowHint(false);
       setScore(0);
       setTotalAnswered(0);
-      setSessionStats({ 
-        correct: 0, 
-        incorrect: 0, 
-        review: 0, 
+      setSessionStats({
+        correct: 0,
+        incorrect: 0,
+        review: 0,
         mastered: 0,
         newQuestions: 0,
         reviewQuestions: 0,
@@ -675,12 +676,17 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
     // 不正解時に問題を再追加（次の3-5問内）
     if (!isCorrect && !isReviewFocusMode) {
-      setCurrentQuestions((prev) => 
+      setCurrentQuestions((prev) =>
         reAddQuestion(currentQuestion, prev, currentQuestionIndex)
       );
     }
 
-    // 新規/復習の統計を更新
+    // KPIロギング + 新規/復習の統計を更新
+    {
+      const qid = String((currentQuestion as any).word);
+      sessionKpi.onShown(qid);
+      sessionKpi.onAnswer(qid, isCorrect);
+    }
     updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
   };
 

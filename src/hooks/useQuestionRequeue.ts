@@ -1,15 +1,16 @@
 /**
  * useQuestionRequeue.ts
- * 
+ *
  * 問題の再出題管理フック
  * 不正解・「まだまだ」の問題を即座に次の数問内で再出題する
- * 
+ *
  * @author AI Assistant
  * @version 2.0
  * @since 2025-12-16
  */
 
 import { useState, useCallback } from 'react';
+import { sessionKpi } from '../metrics/sessionKpi';
 
 export interface RequeuableQuestion {
   sessionPriority?: number;
@@ -21,13 +22,13 @@ export interface RequeuableQuestion {
 interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
   // 再追加処理
   reAddQuestion: (question: T, questions: T[], currentIndex: number) => T[];
-  
+
   // フラグクリア処理
   clearExpiredFlags: (questions: T[], currentIndex: number) => T[];
-  
+
   // 新規/復習判定
   isReviewQuestion: (question: T) => boolean;
-  
+
   // 統計更新（ジェネリック型）
   updateRequeueStats: (
     question: T,
@@ -49,15 +50,29 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
     questions: T[],
     currentIndex: number
   ): T[] => {
+    const qid = (question as any).id ?? (question as any).word ?? String((question as any).japanese ?? '');
     const reAddedQuestion = {
       ...question,
       sessionPriority: Date.now(),
       reAddedCount: (question.reAddedCount || 0) + 1,
     } as T;
 
-    // 現在位置の直後3-5問以内に挿入（最優先化）
-    const insertPosition = Math.min(currentIndex + 1 + 3, questions.length);
-    
+    // 直近ウィンドウ(次の5問)に同一IDがあれば重複再追加しない
+    const windowEnd = Math.min(currentIndex + 6, questions.length);
+    const upcoming = questions.slice(currentIndex + 1, windowEnd);
+    const existsNearby = upcoming.some((q: any) => {
+      const id = q?.id ?? q?.word ?? String(q?.japanese ?? '');
+      return id === qid;
+    });
+    if (existsNearby) {
+      return questions;
+    }
+
+    // 可変レイテンシ（挿入距離）：誤答が重なるほど短くする
+    const prevCount = question.reAddedCount || 0;
+    const offset = Math.max(1, Math.min(5, prevCount === 0 ? 2 : 1));
+    const insertPosition = Math.min(currentIndex + 1 + offset, questions.length);
+
     return [
       ...questions.slice(0, insertPosition),
       reAddedQuestion,
@@ -101,7 +116,7 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
     setter: (updater: (prev: TStats) => TStats) => void
   ) => {
     const isReview = (question.reAddedCount || 0) > 0;
-    
+
     setter((prev: any) => ({
       ...prev,
       newQuestions: isReview ? prev.newQuestions : (prev.newQuestions || 0) + 1,

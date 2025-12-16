@@ -713,12 +713,13 @@ function MemorizationView({
 
       // 「覚えていない」「まだまだ」の場合は問題を即座に再追加（次の3問内）
       if (!isCorrect || isStillLearning) {
-        setQuestions((prevQuestions) => 
+        setQuestions((prevQuestions) =>
           reAddQuestion(currentQuestion, prevQuestions, currentIndex)
         );
       }
 
-      // 新規/復習の統計を更新
+      // KPIロギング + 新規/復習の統計を更新
+      
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
 
       // 次の語句へ
@@ -815,8 +816,13 @@ function MemorizationView({
     );
   }
 
+  // currentQuestionが未設定の場合は待機表示
   if (!currentQuestion) {
-    return null; // 上限メッセージを廃止
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-xl">読み込み中...</div>
+      </div>
+    );
   }
 
   return (

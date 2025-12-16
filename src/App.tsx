@@ -32,6 +32,7 @@ import {
 import { logger } from '@/utils/logger';
 import { sortQuestionsByPriority } from './utils/questionPrioritySorter';
 import { useQuestionRequeue } from './hooks/useQuestionRequeue';
+import { sessionKpi } from './metrics/sessionKpi';
 import {
   addToSkipGroup,
   handleSkippedWordIncorrect,
@@ -1349,6 +1350,9 @@ function App() {
 
     // 新規/復習の統計を更新
     if (currentQuestion) {
+      const qid = String((currentQuestion as any).word);
+      sessionKpi.onShown(qid);
+      sessionKpi.onAnswer(qid, isCorrect);
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
     }
 
