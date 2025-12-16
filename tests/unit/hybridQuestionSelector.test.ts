@@ -1,13 +1,12 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import {
   HybridQuestionSelector,
-  DEFAULT_HYBRID_STRATEGY,
   getDefaultSelector,
   resetDefaultSelector,
   type QuestionCandidate,
-  type HybridStrategy,
-  type PriorityResult
+  type HybridStrategy
 } from '../../src/strategies/hybridQuestionSelector';
+import { QuestionCategory } from '../../src/strategies/memoryAcquisitionAlgorithm';
 import { LearningPhase } from '../../src/strategies/learningPhaseDetector';
 import { QueueType } from '../../src/strategies/memoryAcquisitionAlgorithm';
 import { DEFAULT_PERSONAL_PARAMETERS } from '../../src/strategies/personalParameterEstimator';
@@ -56,7 +55,7 @@ describe('HybridQuestionSelector', () => {
       const candidates: QuestionCandidate[] = [{
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.ENCODING,
         reviewCount: 0,
         correctCount: 0,
@@ -73,7 +72,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -82,7 +81,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word2',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.INITIAL_CONSOLIDATION,
           reviewCount: 1,
           correctCount: 1,
@@ -102,7 +101,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'new1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -111,7 +110,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'review1',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 3,
           correctCount: 2,
@@ -139,7 +138,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.INITIAL_CONSOLIDATION,
         reviewCount: 1,
         correctCount: 1,
@@ -156,7 +155,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.INITIAL_CONSOLIDATION,
         reviewCount: 2,
         correctCount: 2,
@@ -174,7 +173,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.INTRADAY_REVIEW,
         reviewCount: 3,
         correctCount: 3,
@@ -192,7 +191,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.ENCODING,
         reviewCount: 0,
         correctCount: 0,
@@ -207,7 +206,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.INITIAL_CONSOLIDATION,
         reviewCount: 1,
         correctCount: 1,
@@ -222,7 +221,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.LONG_TERM,
         reviewCount: 10,
         correctCount: 9,
@@ -237,7 +236,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.ENCODING,
         reviewCount: 0,
         correctCount: 0,
@@ -253,7 +252,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.SHORT_TERM,
         reviewCount: 2,
         correctCount: 2,
@@ -270,7 +269,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.SHORT_TERM,
         reviewCount: 2,
         correctCount: 2,
@@ -293,7 +292,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.ENCODING,
         reviewCount: 0,
         correctCount: 0,
@@ -313,7 +312,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.ENCODING,
         reviewCount: 0,
         correctCount: 0,
@@ -333,7 +332,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.SHORT_TERM,
         reviewCount: 3,
         correctCount: 2,
@@ -353,7 +352,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.SHORT_TERM,
         reviewCount: 3,
         correctCount: 2,
@@ -377,7 +376,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'new1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -386,7 +385,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'review1',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 2,
           correctCount: 2,
@@ -421,7 +420,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'new1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -430,7 +429,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'review1',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 2,
           correctCount: 2,
@@ -465,7 +464,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'new1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -474,7 +473,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'review1',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 2,
           correctCount: 2,
@@ -506,7 +505,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'immediate',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.INITIAL_CONSOLIDATION,
           reviewCount: 1,
           correctCount: 1,
@@ -517,7 +516,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'early',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.INITIAL_CONSOLIDATION,
           reviewCount: 2,
           correctCount: 2,
@@ -528,7 +527,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'mid',
           word: 'cherry',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.INTRADAY_REVIEW,
           reviewCount: 3,
           correctCount: 3,
@@ -548,7 +547,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 3,
           correctCount: 2,
@@ -558,7 +557,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word2',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 2,
           correctCount: 2,
@@ -568,7 +567,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word3',
           word: 'cherry',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 4,
           correctCount: 3,
@@ -587,7 +586,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -596,7 +595,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word2',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -617,7 +616,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word1',
           word: 'apple',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.ENCODING,
           reviewCount: 0,
           correctCount: 0,
@@ -626,7 +625,7 @@ describe('HybridQuestionSelector', () => {
         {
           id: 'word2',
           word: 'banana',
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: LearningPhase.SHORT_TERM,
           reviewCount: 2,
           correctCount: 2,
@@ -644,7 +643,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.INITIAL_CONSOLIDATION,
         reviewCount: 1,
         correctCount: 1,
@@ -664,7 +663,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.INITIAL_CONSOLIDATION,
         reviewCount: 1,
         correctCount: 1,
@@ -705,7 +704,7 @@ describe('HybridQuestionSelector', () => {
         candidates.push({
           id: `word${i}`,
           word: `word${i}`,
-          category: 'MEMORIZATION',
+          category: QuestionCategory.MEMORIZATION,
           phase: i % 2 === 0 ? LearningPhase.ENCODING : LearningPhase.SHORT_TERM,
           reviewCount: i % 2 === 0 ? 0 : Math.floor(i / 10),
           correctCount: i % 2 === 0 ? 0 : Math.floor(i / 15),
@@ -726,7 +725,7 @@ describe('HybridQuestionSelector', () => {
       const candidate: QuestionCandidate = {
         id: 'word1',
         word: 'apple',
-        category: 'MEMORIZATION',
+        category: QuestionCategory.MEMORIZATION,
         phase: LearningPhase.ENCODING,
         reviewCount: 0,
         correctCount: 0,

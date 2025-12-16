@@ -353,7 +353,7 @@ export class HybridQuestionSelector {
    */
   private generatePriorityReason(
     candidate: QuestionCandidate,
-    breakdown: PriorityResult['breakdown']
+    _breakdown: PriorityResult['breakdown']
   ): string {
     const reasons: string[] = [];
     
