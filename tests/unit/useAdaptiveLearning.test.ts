@@ -85,8 +85,12 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('カテゴリーごとに独立して初期化される', () => {
-      const { result: result1 } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
-      const { result: result2 } = renderHook(() => useAdaptiveLearning(QuestionCategory.TRANSLATION));
+      const { result: result1 } = renderHook(() =>
+        useAdaptiveLearning(QuestionCategory.MEMORIZATION)
+      );
+      const { result: result2 } = renderHook(() =>
+        useAdaptiveLearning(QuestionCategory.TRANSLATION)
+      );
 
       expect(result1.current).toBeDefined();
       expect(result2.current).toBeDefined();
@@ -239,14 +243,18 @@ describe('useAdaptiveLearning', () => {
 
     it('localStorageからキューを復元できる', () => {
       // まず保存
-      const { result: result1 } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
+      const { result: result1 } = renderHook(() =>
+        useAdaptiveLearning(QuestionCategory.MEMORIZATION)
+      );
 
       act(() => {
         result1.current.recordAnswer('apple', true, 2000);
       });
 
       // 新しいインスタンスで復元
-      const { result: result2 } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
+      const { result: result2 } = renderHook(() =>
+        useAdaptiveLearning(QuestionCategory.MEMORIZATION)
+      );
 
       // 復元されたデータが存在することを確認
       expect(result2.current.state).toBeDefined();
@@ -433,7 +441,7 @@ describe('useAdaptiveLearning', () => {
   describe('セッションID', () => {
     it('セッションIDを指定できる', () => {
       const { result } = renderHook(() =>
-        useAdaptiveLearning(QuestionCategory.MEMORIZATION, 'test-session-123'),
+        useAdaptiveLearning(QuestionCategory.MEMORIZATION, 'test-session-123')
       );
 
       expect(result.current).toBeDefined();
