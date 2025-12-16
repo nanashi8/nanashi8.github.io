@@ -699,6 +699,12 @@ function MemorizationView({
         setQuestions(updatedQuestions);
       }
 
+      // 「覚えていない」「まだまだ」の場合は問題を再度リストに追加（最後尾）
+      if (!isCorrect || isStillLearning) {
+        // 間違えた問題を最後尾に追加（繰り返し学習）
+        setQuestions((prevQuestions) => [...prevQuestions, currentQuestion]);
+      }
+
       // 次の語句へ
       const nextIndex = currentIndex + 1;
 
