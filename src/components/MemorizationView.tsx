@@ -85,6 +85,10 @@ function MemorizationView({
     still_learning: 0, // まだまだ
     incorrect: 0,
     total: 0,
+    newQuestions: 0, // 新規問題の出題数
+    reviewQuestions: 0, // 復習問題の出題数
+    consecutiveNew: 0, // 連続新規出題カウント
+    consecutiveReview: 0, // 連続復習出題カウント
   });
 
   // 回答時刻（ScoreBoard更新用）
@@ -636,6 +640,10 @@ function MemorizationView({
         still_learning: isStillLearning ? prev.still_learning + 1 : prev.still_learning,
         incorrect: !isCorrect && !isStillLearning ? prev.incorrect + 1 : prev.incorrect,
         total: prev.total + 1,
+        newQuestions: prev.newQuestions,
+        reviewQuestions: prev.reviewQuestions,
+        consecutiveNew: prev.consecutiveNew,
+        consecutiveReview: prev.consecutiveReview,
       }));
 
       // 16秒以上は放置とみなしてカウントしない
@@ -702,13 +710,44 @@ function MemorizationView({
       // 「覚えていない」「まだまだ」の場合は問題を再度リストに追加（最後尾）
       if (!isCorrect || isStillLearning) {
         // 間違えた問題を最後尾に追加（繰り返し学習）
-        setQuestions((prevQuestions) => [...prevQuestions, currentQuestion]);
+        // セッション優先度を設定（次の3問の中で最優先）
+        const reAddedQuestion = {
+          ...currentQuestion,
+          sessionPriority: Date.now(), // タイムスタンプで優先度管理
+          reAddedCount: (currentQuestion.reAddedCount || 0) + 1,
+        };
+        setQuestions((prevQuestions) => [...prevQuestions, reAddedQuestion]);
       }
+
+      // 新規/復習の統計を更新
+      const isReviewQuestion = (currentQuestion.reAddedCount || 0) > 0;
+      setSessionStats((prev) => ({
+        ...prev,
+        newQuestions: isReviewQuestion ? prev.newQuestions : prev.newQuestions + 1,
+        reviewQuestions: isReviewQuestion ? prev.reviewQuestions + 1 : prev.reviewQuestions,
+        consecutiveNew: isReviewQuestion ? 0 : prev.consecutiveNew + 1,
+        consecutiveReview: isReviewQuestion ? prev.consecutiveReview + 1 : 0,
+      }));
 
       // 次の語句へ
       const nextIndex = currentIndex + 1;
 
       if (nextIndex < questions.length) {
+        // セッション優先フラグのクリーン処理：3問経過したらクリア
+        const upcomingQuestions = questions.slice(nextIndex).map((q, idx) => {
+          if (q.sessionPriority && idx >= 3) {
+            // 3問以上先の問題からsessionPriorityを削除
+            const { sessionPriority, ...rest } = q;
+            return rest;
+          }
+          return q;
+        });
+        
+        if (upcomingQuestions.some(q => q !== questions[nextIndex + upcomingQuestions.indexOf(q)])) {
+          // フラグをクリアした問題があれば、リストを更新
+          setQuestions([...questions.slice(0, nextIndex), ...upcomingQuestions]);
+        }
+
         setCurrentQuestion(questions[nextIndex]);
         setCurrentIndex(nextIndex);
         cardDisplayTimeRef.current = Date.now();
