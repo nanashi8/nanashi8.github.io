@@ -92,7 +92,7 @@ function SpellingView({
   } = useSpellingGame(questions);
 
   // セッション統計（カスタムフック）
-  const { sessionStats, resetStats, updateStats } = useSessionStats();
+  const { sessionStats, setSessionStats, resetStats, updateStats } = useSessionStats();
 
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.SPELLING);
@@ -286,6 +286,31 @@ function SpellingView({
       }
     }
 
+    // 不正解時に問題を最後尾に再追加（繰り返し学習）
+    if (!isCorrect && currentQuestion) {
+      const reAddedQuestion = {
+        ...currentQuestion,
+        sessionPriority: Date.now(),
+        reAddedCount: (currentQuestion.reAddedCount || 0) + 1,
+      };
+      setSpellingState((prev) => ({
+        ...prev,
+        questions: [...prev.questions, reAddedQuestion],
+      }));
+    }
+
+    // 新規/復習の統計を更新
+    if (currentQuestion) {
+      const isReviewQuestion = (currentQuestion.reAddedCount || 0) > 0;
+      setSessionStats((prev) => ({
+        ...prev,
+        newQuestions: isReviewQuestion ? prev.newQuestions : prev.newQuestions + 1,
+        reviewQuestions: isReviewQuestion ? prev.reviewQuestions + 1 : prev.reviewQuestions,
+        consecutiveNew: isReviewQuestion ? 0 : prev.consecutiveNew + 1,
+        consecutiveReview: isReviewQuestion ? prev.consecutiveReview + 1 : 0,
+      }));
+    }
+
     // スコア更新（カスタムフック使用）
     updateScore(isCorrect);
 
@@ -306,7 +331,24 @@ function SpellingView({
     }
   };
 
-  const handleNext = () => {
+  const handleNext = () => {    // セッション優先フラグのクリーン処理：3問経過したらクリア
+    const nextIndex = spellingState.currentIndex + 1;
+    if (nextIndex < spellingState.questions.length) {
+      const upcomingQuestions = spellingState.questions.slice(nextIndex).map((q, idx) => {
+        if (q.sessionPriority && idx >= 3) {
+          const { sessionPriority, ...rest } = q;
+          return rest;
+        }
+        return q;
+      });
+      
+      if (upcomingQuestions.some((q, idx) => q !== spellingState.questions[nextIndex + idx])) {
+        setSpellingState((prev) => ({
+          ...prev,
+          questions: [...prev.questions.slice(0, nextIndex), ...upcomingQuestions],
+        }));
+      }
+    }
     // 次の問題に移動する前にlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
     setLastAnswerWord(undefined);
     // 次の問題へ移動（カスタムフック使用）

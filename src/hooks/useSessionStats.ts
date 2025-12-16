@@ -8,6 +8,10 @@ export interface SessionStats {
   incorrect: number;
   review: number;
   mastered: number;
+  newQuestions: number;      // 新規問題の出題数
+  reviewQuestions: number;   // 復習問題の出題数
+  consecutiveNew: number;    // 連続新規出題カウント
+  consecutiveReview: number; // 連続復習出題カウント
 }
 
 /**
@@ -21,6 +25,10 @@ export function useSessionStats() {
     incorrect: 0,
     review: 0,
     mastered: 0,
+    newQuestions: 0,
+    reviewQuestions: 0,
+    consecutiveNew: 0,
+    consecutiveReview: 0,
   });
 
   /**
@@ -32,6 +40,10 @@ export function useSessionStats() {
       incorrect: 0,
       review: 0,
       mastered: 0,
+      newQuestions: 0,
+      reviewQuestions: 0,
+      consecutiveNew: 0,
+      consecutiveReview: 0,
     });
   };
 
