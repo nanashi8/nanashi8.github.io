@@ -1120,22 +1120,25 @@ function MemorizationView({
                       </label>
                       {stillLearningLimit !== null && (
                         <div className="ml-6">
-                          <input
-                            type="number"
-                            min="1"
-                            max="500"
+                          <select
                             value={stillLearningLimit}
                             title="まだまだの語数上限"
                             onChange={(e) => {
-                              const value = parseInt(e.target.value) || 1;
+                              const value = parseInt(e.target.value);
                               setStillLearningLimit(value);
                               localStorage.setItem(
                                 'memorization-still-learning-limit',
                                 value.toString()
                               );
                             }}
-                            className="w-full px-3 py-2 border rounded-lg"
-                          />
+                            className="w-full px-3 py-2 border rounded-lg bg-white"
+                          >
+                            {[5, 10, 20, 30, 50, 100, 150, 200].map((num) => (
+                              <option key={num} value={num}>
+                                {num}
+                              </option>
+                            ))}
+                          </select>
                           <p className="text-xs text-gray-500 mt-1">
                             この数に達したら、復習モードに自動で切り替わります
                           </p>
@@ -1163,22 +1166,25 @@ function MemorizationView({
                       </label>
                       {incorrectLimit !== null && (
                         <div className="ml-6">
-                          <input
-                            type="number"
-                            min="1"
-                            max="500"
+                          <select
                             value={incorrectLimit}
                             title="分からないの語数上限"
                             onChange={(e) => {
-                              const value = parseInt(e.target.value) || 1;
+                              const value = parseInt(e.target.value);
                               setIncorrectLimit(value);
                               localStorage.setItem(
                                 'memorization-incorrect-limit',
                                 value.toString()
                               );
                             }}
-                            className="w-full px-3 py-2 border rounded-lg"
-                          />
+                            className="w-full px-3 py-2 border rounded-lg bg-white"
+                          >
+                            {[5, 10, 20, 30, 50, 100, 150, 200].map((num) => (
+                              <option key={num} value={num}>
+                                {num}
+                              </option>
+                            ))}
+                          </select>
                           <p className="text-xs text-gray-500 mt-1">
                             この数に達したら、復習モードに自動で切り替わります
                           </p>
