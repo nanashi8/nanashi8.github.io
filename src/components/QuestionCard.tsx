@@ -375,7 +375,7 @@ function QuestionCard({
       {onFullscreen && (
         <button
           onClick={onFullscreen}
-          className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300:bg-gray-600 transition shadow-md"
+          className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition shadow-md"
           aria-label="全画面表示"
           title="全画面表示"
         >
