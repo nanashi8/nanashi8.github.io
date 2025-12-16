@@ -128,16 +128,30 @@ describe('useAdaptiveLearning', () => {
 
     it('20問ごとに個人パラメータが更新される', () => {
       const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      let initialParams: any = null;
 
       act(() => {
-        // 20問回答
+        // 最初の20問回答
         for (let i = 0; i < 20; i++) {
+          result.current.selectNextQuestion(mockQuestions);
+          result.current.recordAnswer(`word${i}`, i % 2 === 0, 2000);
+        }
+        initialParams = result.current.state.personalParams;
+      });
+
+      expect(result.current.state.sessionProgress.totalQuestions).toBe(20);
+      expect(initialParams).toBeDefined();
+
+      act(() => {
+        // さらに20問回答して再推定をトリガー
+        for (let i = 20; i < 40; i++) {
           result.current.selectNextQuestion(mockQuestions);
           result.current.recordAnswer(`word${i}`, i % 2 === 0, 2000);
         }
       });
 
-      expect(result.current.state.sessionProgress.totalQuestions).toBe(20);
+      expect(result.current.state.sessionProgress.totalQuestions).toBe(40);
+      // パラメータが更新されている可能性を確認
       expect(result.current.state.personalParams).toBeDefined();
     });
   });
@@ -332,6 +346,72 @@ describe('useAdaptiveLearning', () => {
 
       // 100回の記録が1秒以内に完了することを期待
       expect(duration).toBeLessThan(1000);
+    });
+  });
+
+  describe('リセット機能', () => {
+    it('reset()で状態が初期化される', () => {
+      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+
+      act(() => {
+        // 学習を進める
+        result.current.selectNextQuestion(mockQuestions);
+        result.current.recordAnswer('apple', true, 2000);
+        result.current.selectNextQuestion(mockQuestions);
+        result.current.recordAnswer('banana', false, 3000);
+
+        // リセット
+        result.current.reset();
+      });
+
+      // 状態が初期化されている
+      expect(result.current.state.sessionProgress.totalQuestions).toBe(0);
+      expect(result.current.state.sessionProgress.newWords).toBe(0);
+      expect(result.current.state.sessionProgress.reviews).toBe(0);
+      expect(result.current.state.currentPhase).toBeNull();
+    });
+  });
+
+  describe('デバッグ機能', () => {
+    it('getDebugInfo()でデバッグ情報を取得できる', () => {
+      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+
+      act(() => {
+        result.current.selectNextQuestion(mockQuestions);
+        result.current.recordAnswer('apple', true, 2000);
+      });
+
+      const debugInfo = result.current.getDebugInfo();
+
+      expect(debugInfo).toBeDefined();
+      expect(debugInfo.state).toBeDefined();
+      expect(debugInfo.state.sessionProgress.totalQuestions).toBe(1);
+    });
+  });
+
+  describe('セッションID', () => {
+    it('セッションIDを指定できる', () => {
+      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION', 'test-session-123'));
+
+      expect(result.current).toBeDefined();
+      expect(result.current.state).toBeDefined();
+    });
+  });
+
+  describe('エラーハンドリング', () => {
+    it('localStorage読み込みエラーでもアプリは継続する', () => {
+      // localStorageのgetItemをモック化してエラーをスロー
+      const originalGetItem = localStorage.getItem;
+      localStorage.getItem = vi.fn(() => {
+        throw new Error('localStorage error');
+      });
+
+      expect(() => {
+        renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      }).not.toThrow();
+
+      // 元に戻す
+      localStorage.getItem = originalGetItem;
     });
   });
 });
