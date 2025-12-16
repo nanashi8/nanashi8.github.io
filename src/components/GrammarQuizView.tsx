@@ -7,6 +7,7 @@ import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
+import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 
 interface VerbFormQuestion {
   id: string;
@@ -115,6 +116,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
+  // 問題再出題管理フック
+  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<GrammarQuestion>();
+
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
 
@@ -203,17 +207,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     if (currentQuestionIndex < currentQuestions.length - 1) {
       const nextIndex = currentQuestionIndex + 1;
 
-      // セッション優先フラグのクリーン処理：3問経過したらクリア
-      const upcomingQuestions = currentQuestions.slice(nextIndex).map((q, idx) => {
-        if (q.sessionPriority && idx >= 3) {
-          const { sessionPriority, ...rest } = q;
-          return rest;
-        }
-        return q;
-      });
+      // セッション優先フラグのクリーン処理：5問経過したらクリア
+      const cleanedQuestions = clearExpiredFlags(currentQuestions, nextIndex - 1);
       
-      if (upcomingQuestions.some((q, idx) => q !== currentQuestions[nextIndex + idx])) {
-        setCurrentQuestions([...currentQuestions.slice(0, nextIndex), ...upcomingQuestions]);
+      if (cleanedQuestions !== currentQuestions) {
+        setCurrentQuestions(cleanedQuestions);
       }
 
       setCurrentQuestionIndex(nextIndex);
@@ -675,25 +673,15 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       }
     }
 
-    // 不正解時に問題を最後尾に再追加（繰り返し学習）
+    // 不正解時に問題を再追加（次の3-5問内）
     if (!isCorrect && !isReviewFocusMode) {
-      const reAddedQuestion = {
-        ...currentQuestion,
-        sessionPriority: Date.now(),
-        reAddedCount: (currentQuestion.reAddedCount || 0) + 1,
-      };
-      setCurrentQuestions((prev) => [...prev, reAddedQuestion]);
+      setCurrentQuestions((prev) => 
+        reAddQuestion(currentQuestion, prev, currentQuestionIndex)
+      );
     }
 
     // 新規/復習の統計を更新
-    const isReviewQuestion = (currentQuestion.reAddedCount || 0) > 0;
-    setSessionStats((prev) => ({
-      ...prev,
-      newQuestions: isReviewQuestion ? prev.newQuestions : prev.newQuestions + 1,
-      reviewQuestions: isReviewQuestion ? prev.reviewQuestions + 1 : prev.reviewQuestions,
-      consecutiveNew: isReviewQuestion ? 0 : prev.consecutiveNew + 1,
-      consecutiveReview: isReviewQuestion ? prev.consecutiveReview + 1 : 0,
-    }));
+    updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
   };
 
   const handleWordClick = (word: string, fromRemaining: boolean) => {

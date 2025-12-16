@@ -32,6 +32,7 @@ import { useSessionStats } from '../hooks/useSessionStats';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
+import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -96,6 +97,9 @@ function SpellingView({
 
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.SPELLING);
+
+  // 問題再出題管理フック
+  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
@@ -286,29 +290,17 @@ function SpellingView({
       }
     }
 
-    // 不正解時に問題を最後尾に再追加（繰り返し学習）
+    // 不正解時に問題を再追加（次の3-5問内）
     if (!isCorrect && currentQuestion) {
-      const reAddedQuestion = {
-        ...currentQuestion,
-        sessionPriority: Date.now(),
-        reAddedCount: (currentQuestion.reAddedCount || 0) + 1,
-      };
       setSpellingState((prev) => ({
         ...prev,
-        questions: [...prev.questions, reAddedQuestion],
+        questions: reAddQuestion(currentQuestion, prev.questions, prev.currentIndex),
       }));
     }
 
     // 新規/復習の統計を更新
     if (currentQuestion) {
-      const isReviewQuestion = (currentQuestion.reAddedCount || 0) > 0;
-      setSessionStats((prev) => ({
-        ...prev,
-        newQuestions: isReviewQuestion ? prev.newQuestions : prev.newQuestions + 1,
-        reviewQuestions: isReviewQuestion ? prev.reviewQuestions + 1 : prev.reviewQuestions,
-        consecutiveNew: isReviewQuestion ? 0 : prev.consecutiveNew + 1,
-        consecutiveReview: isReviewQuestion ? prev.consecutiveReview + 1 : 0,
-      }));
+      updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
     }
 
     // スコア更新（カスタムフック使用）
@@ -331,21 +323,15 @@ function SpellingView({
     }
   };
 
-  const handleNext = () => {    // セッション優先フラグのクリーン処理：3問経過したらクリア
+  const handleNext = () => {
+    // セッション優先フラグのクリーン処理：5問経過したらクリア
     const nextIndex = spellingState.currentIndex + 1;
     if (nextIndex < spellingState.questions.length) {
-      const upcomingQuestions = spellingState.questions.slice(nextIndex).map((q, idx) => {
-        if (q.sessionPriority && idx >= 3) {
-          const { sessionPriority, ...rest } = q;
-          return rest;
-        }
-        return q;
-      });
-      
-      if (upcomingQuestions.some((q, idx) => q !== spellingState.questions[nextIndex + idx])) {
+      const cleanedQuestions = clearExpiredFlags(spellingState.questions, nextIndex - 1);
+      if (cleanedQuestions !== spellingState.questions) {
         setSpellingState((prev) => ({
           ...prev,
-          questions: [...prev.questions.slice(0, nextIndex), ...upcomingQuestions],
+          questions: cleanedQuestions,
         }));
       }
     }
