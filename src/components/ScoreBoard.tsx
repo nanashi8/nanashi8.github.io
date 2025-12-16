@@ -11,6 +11,7 @@ import {
   getGrammarUnitStatsWithTitles,
   getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData,
+  loadProgressSync,
 } from '../progressStorage';
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { AIPersonality, CommentContext } from '../types';
@@ -387,6 +388,32 @@ function ScoreBoard({
   // 履歴タブ用の単語データ
   const [currentWordData, setCurrentWordData] =
     useState<ReturnType<typeof getWordDetailedData>>(null);
+
+  // 出題回数別の統計
+  const attemptCounts = useMemo(() => {
+    const progress = loadProgressSync();
+    const wordProgress = progress.wordProgress || {};
+    const counts = {
+      once: 0,
+      twice: 0,
+      three: 0,
+      four: 0,
+      five: 0,
+      sixOrMore: 0,
+    };
+
+    Object.values(wordProgress).forEach((wp) => {
+      const attempts = wp.totalAttempts || 0;
+      if (attempts === 1) counts.once++;
+      else if (attempts === 2) counts.twice++;
+      else if (attempts === 3) counts.three++;
+      else if (attempts === 4) counts.four++;
+      else if (attempts === 5) counts.five++;
+      else if (attempts >= 6) counts.sixOrMore++;
+    });
+
+    return counts;
+  }, [onAnswerTime]);
 
   // 文法モード用の単元別統計（タイトル付き）
   const [grammarUnitStats, setGrammarUnitStats] = useState<
@@ -815,7 +842,11 @@ function ScoreBoard({
           <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="retention-breakdown-container">
               <div className="retention-breakdown-header">
-                <div className="retention-title">📊 学習状況の内訳</div>
+                <div style={{ marginBottom: '8px', fontSize: '14px', color: '#666' }}>
+                  出題数：1回 {attemptCounts.once}問 2回 {attemptCounts.twice}問 3回{' '}
+                  {attemptCounts.three}問 4回 {attemptCounts.four}問 5回 {attemptCounts.five}問
+                  6回以上 {attemptCounts.sixOrMore}問
+                </div>
                 {detailedStats.appearedWords > 0 ? (
                   <div className="retention-subtitle">
                     {mode === 'memorization' ? (
