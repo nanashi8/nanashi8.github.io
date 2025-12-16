@@ -1394,6 +1394,13 @@ function App() {
 
       // セッション終了を検出（最終問題の後）
       if (!reviewFocusMode && nextIndex >= currentQuestions.length) {
+        // 開発時のみKPIサマリを出力
+        if (!window.location.hostname.includes('github.io')) {
+          try {
+            const summary = sessionKpi.summarize();
+            logger.log('🧪 KPI Summary (translation):', summary);
+          } catch {}
+        }
         // 学習スタイルAI: セッション統計を記録
         const sessionEndTime = Date.now();
         const totalResponseTime = sessionResponsesRef.current.reduce(
