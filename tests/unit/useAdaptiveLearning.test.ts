@@ -1,15 +1,56 @@
 import { renderHook, act } from '@testing-library/react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { useAdaptiveLearning } from '../../src/hooks/useAdaptiveLearning';
+import { QuestionCategory } from '../../src/strategies/memoryAcquisitionAlgorithm';
 import type { Question } from '../../src/types';
 
 // モックデータ
 const mockQuestions: Question[] = [
-  { word: 'apple', meaning: 'りんご', difficulty: '1' },
-  { word: 'banana', meaning: 'バナナ', difficulty: '2' },
-  { word: 'cherry', meaning: 'さくらんぼ', difficulty: '3' },
-  { word: 'date', meaning: 'ナツメヤシ', difficulty: '1' },
-  { word: 'elderberry', meaning: 'ニワトコの実', difficulty: '3' },
+  {
+    word: 'apple',
+    meaning: 'りんご',
+    difficulty: '1',
+    reading: 'apple',
+    etymology: 'test',
+    relatedWords: 'fruit',
+    relatedFields: 'food',
+  },
+  {
+    word: 'banana',
+    meaning: 'バナナ',
+    difficulty: '2',
+    reading: 'banana',
+    etymology: 'test',
+    relatedWords: 'fruit',
+    relatedFields: 'food',
+  },
+  {
+    word: 'cherry',
+    meaning: 'さくらんぼ',
+    difficulty: '3',
+    reading: 'cherry',
+    etymology: 'test',
+    relatedWords: 'fruit',
+    relatedFields: 'food',
+  },
+  {
+    word: 'date',
+    meaning: 'ナツメヤシ',
+    difficulty: '1',
+    reading: 'date',
+    etymology: 'test',
+    relatedWords: 'fruit',
+    relatedFields: 'food',
+  },
+  {
+    word: 'elderberry',
+    meaning: 'ニワトコの実',
+    difficulty: '3',
+    reading: 'elderberry',
+    etymology: 'test',
+    relatedWords: 'fruit',
+    relatedFields: 'food',
+  },
 ];
 
 // progressStorageのモック
@@ -37,15 +78,15 @@ describe('useAdaptiveLearning', () => {
 
   describe('初期化', () => {
     it('正しく初期化される', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       expect(result.current.state).toBeDefined();
       expect(result.current.state.sessionProgress.totalQuestions).toBe(0);
     });
 
     it('カテゴリーごとに独立して初期化される', () => {
-      const { result: result1 } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
-      const { result: result2 } = renderHook(() => useAdaptiveLearning('TRANSLATION'));
+      const { result: result1 } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
+      const { result: result2 } = renderHook(() => useAdaptiveLearning(QuestionCategory.TRANSLATION));
 
       expect(result1.current).toBeDefined();
       expect(result2.current).toBeDefined();
@@ -55,7 +96,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('問題選択', () => {
     it('候補から問題を選択できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         const selected = result.current.selectNextQuestion(mockQuestions);
@@ -65,7 +106,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('空配列の場合nullを返す', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         const selected = result.current.selectNextQuestion([]);
@@ -74,7 +115,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('複数回呼び出しても問題を返す', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         const selected1 = result.current.selectNextQuestion(mockQuestions);
@@ -90,7 +131,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('回答記録', () => {
     it('正解を記録できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         result.current.selectNextQuestion(mockQuestions);
@@ -101,7 +142,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('不正解を記録できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         result.current.selectNextQuestion(mockQuestions);
@@ -112,7 +153,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('複数の回答を記録できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         result.current.selectNextQuestion(mockQuestions);
@@ -127,7 +168,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('20問ごとに個人パラメータが更新される', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
       let initialParams: any = null;
 
       act(() => {
@@ -158,7 +199,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('セッション状態', () => {
     it('キューサイズが取得できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       expect(result.current.state.queueSizes).toBeDefined();
       expect(result.current.state.queueSizes.immediate).toBe(0);
@@ -168,7 +209,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('進行状況が取得できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       expect(result.current.state.sessionProgress).toBeDefined();
       expect(result.current.state.sessionProgress.newWords).toBe(0);
@@ -176,7 +217,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('個人パラメータが初期値を持つ', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       // 初期状態ではnullまたはデフォルト値
       expect(result.current.state.personalParams).toBeDefined();
@@ -185,7 +226,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('localStorage連携', () => {
     it('キューをlocalStorageに保存できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         result.current.recordAnswer('apple', true, 2000);
@@ -198,14 +239,14 @@ describe('useAdaptiveLearning', () => {
 
     it('localStorageからキューを復元できる', () => {
       // まず保存
-      const { result: result1 } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result: result1 } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         result1.current.recordAnswer('apple', true, 2000);
       });
 
       // 新しいインスタンスで復元
-      const { result: result2 } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result: result2 } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       // 復元されたデータが存在することを確認
       expect(result2.current.state).toBeDefined();
@@ -214,7 +255,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('エラーハンドリング', () => {
     it('不正な単語名でもエラーにならない', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         expect(() => {
@@ -224,7 +265,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('負の応答時間でもエラーにならない', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         expect(() => {
@@ -234,7 +275,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('非常に大きな応答時間でもエラーにならない', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         expect(() => {
@@ -246,7 +287,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('統合シナリオ', () => {
     it('典型的な学習フローが動作する', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         // 1. 問題選択
@@ -277,7 +318,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('長時間セッションでも安定動作する', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         // 50問の学習セッションをシミュレート
@@ -298,8 +339,8 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('異なるカテゴリーは独立して動作する', () => {
-      const { result: mem } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
-      const { result: trans } = renderHook(() => useAdaptiveLearning('TRANSLATION'));
+      const { result: mem } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
+      const { result: trans } = renderHook(() => useAdaptiveLearning(QuestionCategory.TRANSLATION));
 
       act(() => {
         mem.current.selectNextQuestion(mockQuestions);
@@ -315,7 +356,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('パフォーマンス', () => {
     it('大量の問題選択でも高速に動作する', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
       const startTime = performance.now();
 
       act(() => {
@@ -332,7 +373,7 @@ describe('useAdaptiveLearning', () => {
     });
 
     it('大量の記録処理でも高速に動作する', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
       const startTime = performance.now();
 
       act(() => {
@@ -351,7 +392,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('リセット機能', () => {
     it('reset()で状態が初期化される', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         // 学習を進める
@@ -374,7 +415,7 @@ describe('useAdaptiveLearning', () => {
 
   describe('デバッグ機能', () => {
     it('getDebugInfo()でデバッグ情報を取得できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+      const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 
       act(() => {
         result.current.selectNextQuestion(mockQuestions);
@@ -391,7 +432,9 @@ describe('useAdaptiveLearning', () => {
 
   describe('セッションID', () => {
     it('セッションIDを指定できる', () => {
-      const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION', 'test-session-123'));
+      const { result } = renderHook(() =>
+        useAdaptiveLearning(QuestionCategory.MEMORIZATION, 'test-session-123'),
+      );
 
       expect(result.current).toBeDefined();
       expect(result.current.state).toBeDefined();
@@ -407,7 +450,7 @@ describe('useAdaptiveLearning', () => {
       });
 
       expect(() => {
-        renderHook(() => useAdaptiveLearning('MEMORIZATION'));
+        renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
       }).not.toThrow();
 
       // 元に戻す

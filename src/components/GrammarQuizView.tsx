@@ -5,6 +5,7 @@ import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
+import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 
 interface VerbFormQuestion {
   id: string;
@@ -108,7 +109,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [_isFullscreen, _setIsFullscreen] = useState(false);
 
   // 適応型学習フック（問題選択と記録に使用）
-  const adaptiveLearning = useAdaptiveLearning('GRAMMAR');
+  const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -780,9 +781,15 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 lastAnswerDifficulty={currentQuestion?.difficulty}
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
-                learningPhase={adaptiveLearning.state.currentPhase}
-                estimatedSpeed={adaptiveLearning.state.personalParameters?.learningSpeed}
-                forgettingRate={adaptiveLearning.state.personalParameters?.forgettingRate}
+                learningPhase={
+                  (adaptiveLearning.state.currentPhase as unknown as
+                    | 'ENCODING'
+                    | 'INITIAL_CONSOLIDATION'
+                    | 'LONG_TERM_RETENTION'
+                    | 'MASTERED'
+                    | undefined) ?? undefined
+                }
+                estimatedSpeed={adaptiveLearning.state.personalParams?.learningSpeed}
                 dataSource={
                   grade.startsWith('g') && grade.includes('-unit')
                     ? ` 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`

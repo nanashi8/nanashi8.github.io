@@ -13,6 +13,7 @@ import { logger } from '@/utils/logger';
 import ScoreBoard from './ScoreBoard';
 import AddToCustomButton from './AddToCustomButton';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
+import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -107,7 +108,7 @@ function MemorizationView({
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   // 適応型学習フック（問題選択と記録に使用）
-  const adaptiveLearning = useAdaptiveLearning('MEMORIZATION');
+  const adaptiveLearning = useAdaptiveLearning(QuestionCategory.MEMORIZATION);
 
   // 初期化: カード表示設定と音声設定を読み込み
   useEffect(() => {
@@ -975,9 +976,15 @@ function MemorizationView({
                 lastAnswerDifficulty={currentQuestion?.difficulty}
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
-                learningPhase={adaptiveLearning.state.currentPhase}
-                estimatedSpeed={adaptiveLearning.state.personalParameters?.learningSpeed}
-                forgettingRate={adaptiveLearning.state.personalParameters?.forgettingRate}
+                learningPhase={
+                  (adaptiveLearning.state.currentPhase as unknown as
+                    | 'ENCODING'
+                    | 'INITIAL_CONSOLIDATION'
+                    | 'LONG_TERM_RETENTION'
+                    | 'MASTERED'
+                    | undefined) ?? undefined
+                }
+                estimatedSpeed={adaptiveLearning.state.personalParams?.learningSpeed}
                 onShowSettings={() => setShowSettings(true)}
                 dataSource={selectedDataSource}
                 category={selectedCategory === 'all' ? '全分野' : selectedCategory}
