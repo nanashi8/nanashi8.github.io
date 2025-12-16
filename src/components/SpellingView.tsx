@@ -31,6 +31,7 @@ import { useSpellingGame } from '../hooks/useSpellingGame';
 import { useSessionStats } from '../hooks/useSessionStats';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
+import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -252,6 +253,37 @@ function SpellingView({
     // 間違えた単語を記録
     if (!isCorrect && currentQuestion) {
       incorrectWordsRef.current.push(currentQuestion.word);
+
+      // 動的再ソート: 不正解時は即座に、それ以外は3問ごとに再ソート
+      const shouldResortImmediately = true;
+      const totalAnswered = sessionStats.correct + sessionStats.incorrect;
+      const shouldResortPeriodically = totalAnswered % 3 === 0;
+
+      if (shouldResortImmediately || shouldResortPeriodically) {
+        const remainingQuestions = spellingState.questions.slice(spellingState.currentIndex + 1);
+
+        if (remainingQuestions.length > 1) {
+          // localStorage から上限設定を取得
+          const savedLearningLimit = localStorage.getItem('learning-limit-spelling');
+          const savedReviewLimit = localStorage.getItem('review-limit-spelling');
+          const learningLimit = savedLearningLimit ? parseInt(savedLearningLimit) : null;
+          const reviewLimit = savedReviewLimit ? parseInt(savedReviewLimit) : null;
+
+          // 共通ソート関数で残りの問題を再ソート
+          const resorted = sortQuestionsByPriority(remainingQuestions, {
+            isReviewFocusMode: isReviewFocusMode || false,
+            learningLimit,
+            reviewLimit,
+            mode: 'spelling',
+          });
+
+          // 問題リストを更新
+          setSpellingState((prev) => ({
+            ...prev,
+            questions: [...prev.questions.slice(0, prev.currentIndex + 1), ...resorted],
+          }));
+        }
+      }
     }
 
     // スコア更新（カスタムフック使用）
