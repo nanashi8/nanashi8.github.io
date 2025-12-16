@@ -10,7 +10,7 @@ import { logger } from '@/utils/logger';
  * @param streak 連続正解数
  * @param easinessFactor 難易度係数（デフォルト: 2.5）
  * @returns 次回復習までの推奨間隔（日数）
- * 
+ *
  * @example
  * calculateOptimalInterval(0) // => 0 (即座に再出題)
  * calculateOptimalInterval(1) // => 1 (1日後)
@@ -18,10 +18,7 @@ import { logger } from '@/utils/logger';
  * calculateOptimalInterval(3) // => 7 (7日後)
  * calculateOptimalInterval(4, 2.5) // => 18 (7 × 2.5^1)
  */
-export function calculateOptimalInterval(
-  streak: number,
-  easinessFactor: number = 2.5
-): number {
+export function calculateOptimalInterval(streak: number, easinessFactor: number = 2.5): number {
   // 連続正解数に基づく基本間隔（日数）
   if (streak === 0) return 0; // 即座に再出題
   if (streak === 1) return 1; // 1日後
@@ -37,7 +34,7 @@ export function calculateOptimalInterval(
 /**
  * 忘却リスクスコアの計算：今復習すべき度合い
  * エビングハウスの忘却曲線を考慮した計算
- * 
+ *
  * @param lastStudied 最終学習時刻（Unixタイムスタンプ）
  * @param reviewInterval 推奨復習間隔（日数）
  * @param accuracy 正答率（0-100）
@@ -46,11 +43,11 @@ export function calculateOptimalInterval(
  *   - 50-100: 中リスク
  *   - 100-150: 高リスク
  *   - 150+: 緊急（忘れる直前）
- * 
+ *
  * @example
  * // 1日前に学習、推奨1日後復習、正答率80%
  * calculateForgettingRisk(Date.now() - 86400000, 1, 80) // => 110 (高リスク)
- * 
+ *
  * // 3日前に学習、推奨1日後復習、正答率50%
  * calculateForgettingRisk(Date.now() - 259200000, 1, 50) // => 325 (緊急)
  */
@@ -79,25 +76,22 @@ export function calculateForgettingRisk(
 /**
  * 段階的な学習を促す効果的な上限を計算
  * 急激に上限に達しないように、現在の進捗に応じて調整
- * 
+ *
  * @param targetLimit 目標とする上限値
  * @param currentCount 現在のカウント
  * @returns 効果的な上限値
- * 
+ *
  * @example
  * // 目標30、現在10個（前半50%未満）
  * calculateEffectiveLimit(30, 10) // => 23 (30 × 0.75)
- * 
+ *
  * // 目標30、現在20個（50-75%）
  * calculateEffectiveLimit(30, 20) // => 26 (30 × 0.85)
- * 
+ *
  * // 目標30、現在25個（75%以降）
  * calculateEffectiveLimit(30, 25) // => 30 (厳密に管理)
  */
-export function calculateEffectiveLimit(
-  targetLimit: number,
-  currentCount: number
-): number {
+export function calculateEffectiveLimit(targetLimit: number, currentCount: number): number {
   if (targetLimit === 0) return 0; // 設定無しの場合
 
   // 現在の進捗に基づいて段階的な目標を設定
@@ -134,7 +128,7 @@ export interface QuestionStatus {
 
 /**
  * localStorageから問題の状態を取得
- * 
+ *
  * @param word 単語
  * @param mode 学習モード
  * @returns 問題の状態情報（存在しない場合はnull）
@@ -157,10 +151,10 @@ export function getQuestionStatus(
       mode === 'memorization'
         ? 'memorization'
         : mode === 'translation'
-        ? 'quiz'
-        : mode === 'spelling'
-        ? 'spelling'
-        : 'grammar';
+          ? 'quiz'
+          : mode === 'spelling'
+            ? 'spelling'
+            : 'grammar';
 
     const attempts = wordProgress[`${modeKey}Attempts`] || 0;
     const correct = wordProgress[`${modeKey}Correct`] || 0;
@@ -249,7 +243,7 @@ export function getQuestionStatus(
 
 /**
  * 問題の進捗を更新
- * 
+ *
  * @param word 単語
  * @param mode 学習モード
  * @param result 結果（'correct' | 'incorrect' | 'still_learning'）
@@ -263,7 +257,7 @@ export function updateQuestionProgress(
 ): void {
   const key = 'english-progress';
   const stored = localStorage.getItem(key);
-  
+
   let progress: any = {};
   if (stored) {
     try {
@@ -289,10 +283,10 @@ export function updateQuestionProgress(
     mode === 'memorization'
       ? 'memorization'
       : mode === 'translation'
-      ? 'quiz'
-      : mode === 'spelling'
-      ? 'spelling'
-      : 'grammar';
+        ? 'quiz'
+        : mode === 'spelling'
+          ? 'spelling'
+          : 'grammar';
 
   // 試行回数を増やす
   wordProgress[`${modeKey}Attempts`] = (wordProgress[`${modeKey}Attempts`] || 0) + 1;
@@ -302,8 +296,7 @@ export function updateQuestionProgress(
     wordProgress[`${modeKey}Correct`] = (wordProgress[`${modeKey}Correct`] || 0) + 1;
     wordProgress[`${modeKey}Streak`] = (wordProgress[`${modeKey}Streak`] || 0) + 1;
   } else if (result === 'still_learning') {
-    wordProgress[`${modeKey}StillLearning`] =
-      (wordProgress[`${modeKey}StillLearning`] || 0) + 1;
+    wordProgress[`${modeKey}StillLearning`] = (wordProgress[`${modeKey}StillLearning`] || 0) + 1;
     // 連続正解はリセットしない（まだまだは部分的正解として扱う）
   } else {
     // incorrect
@@ -328,10 +321,10 @@ export function updateQuestionProgress(
   if (mode === 'memorization') {
     const streak = wordProgress[`${modeKey}Streak`] || 0;
     const easinessFactor = wordProgress.easinessFactor || 2.5;
-    
+
     // 次回復習間隔を計算
     wordProgress.reviewInterval = calculateOptimalInterval(streak, easinessFactor);
-    
+
     // 難易度係数を調整（正解で上昇、不正解で下降）
     if (result === 'correct') {
       wordProgress.easinessFactor = Math.min(easinessFactor + 0.1, 3.0);
@@ -350,7 +343,7 @@ export function updateQuestionProgress(
 
 /**
  * 復習が必要な問題をフィルタリング
- * 
+ *
  * @param words 単語リスト
  * @param mode 学習モード
  * @returns 復習が必要な単語リスト

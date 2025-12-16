@@ -31,13 +31,13 @@ export interface UseQuestionStrategyResult<T = Question> {
 
 /**
  * 問題選択戦略を使用するカスタムフック
- * 
+ *
  * @param questions 問題リスト
  * @param strategy 使用する戦略
  * @param limits 学習上限設定
  * @param stats セッション統計（オプション）
  * @returns ソート済み問題リストと関連情報
- * 
+ *
  * @example
  * const strategy = new MemorizationStrategy();
  * const { sortedQuestions, shouldReview, effectiveLimits } = useQuestionStrategy(
@@ -88,14 +88,8 @@ export function useQuestionStrategy<T = Question>(
 
     try {
       return {
-        learning: strategy.calculateEffectiveLimit(
-          limits.learningLimit,
-          stats.still_learning
-        ),
-        review: strategy.calculateEffectiveLimit(
-          limits.reviewLimit,
-          stats.incorrect
-        ),
+        learning: strategy.calculateEffectiveLimit(limits.learningLimit, stats.still_learning),
+        review: strategy.calculateEffectiveLimit(limits.reviewLimit, stats.incorrect),
       };
     } catch (error) {
       logger.error('効果的な上限の計算中にエラーが発生しました:', error);
@@ -123,14 +117,14 @@ export function useQuestionStrategy<T = Question>(
 
 /**
  * 上限設定変更時に問題リストを再ソートするエフェクトフック
- * 
+ *
  * @param questions 問題リスト
  * @param currentIndex 現在の問題インデックス
  * @param limits 学習上限設定
  * @param strategy 使用する戦略
  * @param onQuestionsUpdate 問題リスト更新時のコールバック
  * @param stats セッション統計（オプション）
- * 
+ *
  * @example
  * useQuestionResort(
  *   questions,
@@ -174,12 +168,12 @@ export function useQuestionResort<T = Question>(
 
 /**
  * セッション統計を計算するヘルパーフック
- * 
+ *
  * @param questions 問題リスト
  * @param getWordFromQuestion 問題から単語を取得する関数
  * @param mode 学習モード
  * @returns セッション統計
- * 
+ *
  * @example
  * const sessionStats = useSessionStats(
  *   questions,

@@ -10,15 +10,12 @@ import {
   LearningLimits,
   QuestionStatus,
 } from './QuestionSelectionStrategy';
-import {
-  calculateOptimalInterval,
-  calculateForgettingRisk,
-} from './learningUtils';
+import { calculateOptimalInterval, calculateForgettingRisk } from './learningUtils';
 import { logger } from '@/utils/logger';
 
 /**
  * 暗記タブ用の問題選択戦略クラス
- * 
+ *
  * 特徴:
  * - 忘却リスクベースの優先度（エビングハウスの忘却曲線）
  * - SuperMemo SM-2ベースの間隔反復学習
@@ -84,11 +81,7 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
    * @param _stats セッション統計（未使用、内部で計算）
    * @returns ソート済み問題リスト
    */
-  sortQuestions(
-    questions: Question[],
-    limits: LearningLimits,
-    _stats?: SessionStats
-  ): Question[] {
+  sortQuestions(questions: Question[], limits: LearningLimits, _stats?: SessionStats): Question[] {
     if (questions.length === 0) return [];
 
     try {
@@ -101,9 +94,8 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
       // カテゴリ別にカウント
       const counts = {
         mastered: questionsWithStatus.filter((q) => q.status?.category === 'mastered').length,
-        still_learning: questionsWithStatus.filter(
-          (q) => q.status?.category === 'still_learning'
-        ).length,
+        still_learning: questionsWithStatus.filter((q) => q.status?.category === 'still_learning')
+          .length,
         incorrect: questionsWithStatus.filter((q) => q.status?.category === 'incorrect').length,
         new: questionsWithStatus.filter((q) => q.status?.category === 'new').length,
       };
