@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "can",
       "difficulty": "beginner",
-      "explanation": "「～できる」はcanを使います。I can swim.で「私は泳げます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "「～できる」はcanを使います。I can swim.で「私は泳げます」です。",
       "hint": "できる → can"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "can",
       "difficulty": "beginner",
-      "explanation": "canは主語に関わらず同じ形です。She can play the piano.で「彼女はピアノを弾けます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "canは主語に関わらず同じ形です。She can play the piano.で「彼女はピアノを弾けます」です。",
       "hint": "can は変化しない"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "cannot",
       "difficulty": "beginner",
-      "explanation": "canの否定形はcannotまたはcan'tです。cannot speak Englishで「英語を話せません」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "canの否定形はcannotまたはcan'tです。cannot speak Englishで「英語を話せません」です。",
       "hint": "否定 → cannot"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "Can",
       "difficulty": "beginner",
-      "explanation": "canの疑問文はCanを文頭にです。Can you～?で「～できますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "canの疑問文はCanを文頭にです。Can you～?で「～できますか」です。",
       "hint": "疑問文 → Can"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "cook",
       "difficulty": "beginner",
-      "explanation": "canの後ろは動詞の原形です。He can cook.で「彼は料理できます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "canの後ろは動詞の原形です。He can cook.で「彼は料理できます」です。",
       "hint": "can + 原形"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "can",
       "difficulty": "intermediate",
-      "explanation": "canは人称・数に関係なく同じ形です。We can play soccer.で「私たちはサッカーができます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "canは人称・数に関係なく同じ形です。We can play soccer.で「私たちはサッカーができます」です。",
       "hint": "can は変化なし"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "Can",
       "difficulty": "intermediate",
-      "explanation": "Can she～?で「彼女は～できますか」です。三人称でもdoesではなくCanです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "Can she～?で「彼女は～できますか」です。三人称でもdoesではなくCanです。",
       "hint": "疑問文 → Can"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "cannot",
       "difficulty": "intermediate",
-      "explanation": "cannot read Japaneseで「日本語を読めません」です。can'tも可です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "cannot read Japaneseで「日本語を読めません」です。can'tも可です。",
       "hint": "否定 → cannot"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "run",
       "difficulty": "intermediate",
-      "explanation": "canの後ろは必ず動詞の原形です。He can run fast.で「彼は速く走れます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "canの後ろは必ず動詞の原形です。He can run fast.で「彼は速く走れます」です。",
       "hint": "can + 原形"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "speak",
       "difficulty": "intermediate",
-      "explanation": "can'tの後ろも動詞の原形です。can't speak Chineseで「中国語を話せません」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "can'tの後ろも動詞の原形です。can't speak Chineseで「中国語を話せません」です。",
       "hint": "can't + 原形"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "ride",
       "difficulty": "intermediate",
-      "explanation": "Can you～?の後ろは動詞の原形です。ride a bikeで「自転車に乗る」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "Can you～?の後ろは動詞の原形です。ride a bikeで「自転車に乗る」です。",
       "hint": "Can + 原形"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "Can",
       "difficulty": "advanced",
-      "explanation": "Can she～?で「彼女は～できますか」です。play the guitarで「ギターを弾く」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "Can she～?で「彼女は～できますか」です。play the guitarで「ギターを弾く」です。",
       "hint": "Can + 原形"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "cannot",
       "difficulty": "advanced",
-      "explanation": "cannot solveで「解けません」です。solve a problemで「問題を解く」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "cannot solveで「解けません」です。solve a problemで「問題を解く」です。",
       "hint": "できない → cannot"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "skate",
       "difficulty": "advanced",
-      "explanation": "canの後ろは必ず原形です。skate wellで「上手にスケートする」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "canの後ろは必ず原形です。skate wellで「上手にスケートする」です。",
       "hint": "can + 原形"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "can",
       "difficulty": "advanced",
-      "explanation": "What can you do?で「何ができますか」です。疑問詞+can+主語+動詞原形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "What can you do?で「何ができますか」です。疑問詞+can+主語+動詞原形です。",
       "hint": "What can ～?"
     },
     {
@@ -247,7 +247,7 @@
       ],
       "correctAnswer": "I can swim.",
       "difficulty": "beginner",
-      "explanation": "I can + 動詞原形の語順です。I can swim.で「私は泳げます」です。\n\n「私は泳げます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I can swim.",
+      "explanation": "I can + 動詞原形の語順です。I can swim.で「私は泳げます」です。",
       "hint": "I can ～",
       "wordCount": 3
     },
@@ -264,7 +264,7 @@
       ],
       "correctAnswer": "She can play the piano.",
       "difficulty": "beginner",
-      "explanation": "She can play the piano.で「彼女はピアノを弾けます」です。play the pianoは定冠詞が必要です。\n\n「彼女はピアノを弾けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She can play the piano.",
+      "explanation": "She can play the piano.で「彼女はピアノを弾けます」です。play the pianoは定冠詞が必要です。",
       "hint": "She can ～",
       "wordCount": 5
     },
@@ -280,7 +280,7 @@
       ],
       "correctAnswer": "I cannot speak English.",
       "difficulty": "beginner",
-      "explanation": "I cannot + 動詞原形です。cannot speak Englishで「英語を話せません」です。\n\n「私は英語を話せません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I cannot speak English.",
+      "explanation": "I cannot + 動詞原形です。cannot speak Englishで「英語を話せません」です。",
       "hint": "I cannot ～",
       "wordCount": 4
     },
@@ -297,7 +297,7 @@
       ],
       "correctAnswer": "Can you run fast?",
       "difficulty": "beginner",
-      "explanation": "Can you + 動詞原形?で疑問文です。run fastで「速く走る」です。\n\n「あなたは走れますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Can you run fast?",
+      "explanation": "Can you + 動詞原形?で疑問文です。run fastで「速く走る」です。",
       "hint": "Can you ～?",
       "wordCount": 5
     },
@@ -312,7 +312,7 @@
       ],
       "correctAnswer": "He can cook.",
       "difficulty": "beginner",
-      "explanation": "He can cook.で「彼は料理できます」です。cookは動詞の原形です。\n\n「彼は料理できます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He can cook.",
+      "explanation": "He can cook.で「彼は料理できます」です。cookは動詞の原形です。",
       "hint": "He can ～",
       "wordCount": 3
     },
@@ -329,7 +329,7 @@
       ],
       "correctAnswer": "Can she sing well?",
       "difficulty": "intermediate",
-      "explanation": "Can she + 動詞原形?で疑問文です。sing wellで「上手に歌う」です。\n\n「彼女は歌えますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Can she sing well?",
+      "explanation": "Can she + 動詞原形?で疑問文です。sing wellで「上手に歌う」です。",
       "hint": "Can she ～?",
       "wordCount": 5
     },
@@ -345,7 +345,7 @@
       ],
       "correctAnswer": "We can play soccer.",
       "difficulty": "intermediate",
-      "explanation": "We can play soccer.で「私たちはサッカーができます」です。\n\n「私たちはサッカーができます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We can play soccer.",
+      "explanation": "We can play soccer.で「私たちはサッカーができます」です。",
       "hint": "We can ～",
       "wordCount": 4
     },
@@ -361,7 +361,7 @@
       ],
       "correctAnswer": "They cannot read Japanese.",
       "difficulty": "intermediate",
-      "explanation": "They cannot + 動詞原形です。cannot read Japaneseで「日本語を読めません」です。\n\n「彼らは日本語を読めません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They cannot read Japanese.",
+      "explanation": "They cannot + 動詞原形です。cannot read Japaneseで「日本語を読めません」です。",
       "hint": "They cannot ～",
       "wordCount": 4
     },
@@ -377,7 +377,7 @@
       ],
       "correctAnswer": "He can run fast.",
       "difficulty": "intermediate",
-      "explanation": "He can run fast.で「彼は速く走れます」です。fastは副詞です。\n\n「彼は速く走れます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He can run fast.",
+      "explanation": "He can run fast.で「彼は速く走れます」です。fastは副詞です。",
       "hint": "He can ～",
       "wordCount": 4
     },
@@ -395,7 +395,7 @@
       ],
       "correctAnswer": "Can you ride a bike?",
       "difficulty": "intermediate",
-      "explanation": "Can you + 動詞原形?で疑問文です。ride a bikeで「自転車に乗る」です。\n\n「あなたは自転車に乗れますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Can you ride a bike?",
+      "explanation": "Can you + 動詞原形?で疑問文です。ride a bikeで「自転車に乗る」です。",
       "hint": "Can you ～?",
       "wordCount": 6
     },
@@ -413,7 +413,7 @@
       ],
       "correctAnswer": "Can she play the guitar?",
       "difficulty": "advanced",
-      "explanation": "Can she play the guitar?で「彼女はギターを弾けますか」です。楽器には定冠詞theです。\n\n「彼女はギターを弾けますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Can she play the guitar?",
+      "explanation": "Can she play the guitar?で「彼女はギターを弾けますか」です。楽器には定冠詞theです。",
       "hint": "play the guitar",
       "wordCount": 6
     },
@@ -429,7 +429,7 @@
       ],
       "correctAnswer": "I can't speak Chinese.",
       "difficulty": "advanced",
-      "explanation": "I can't speak Chinese.で「中国語を話せません」です。can'tはcannotの短縮形です。\n\n「私は中国語を話せません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I can't speak Chinese.",
+      "explanation": "I can't speak Chinese.で「中国語を話せません」です。can'tはcannotの短縮形です。",
       "hint": "I can't ～",
       "wordCount": 4
     },
@@ -446,7 +446,7 @@
       ],
       "correctAnswer": "He can skate very well.",
       "difficulty": "advanced",
-      "explanation": "He can skate very well.で「彼は上手にスケートできます」です。very wellで「とても上手に」です。\n\n「彼は上手にスケートできます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He can skate very well.",
+      "explanation": "He can skate very well.で「彼は上手にスケートできます」です。very wellで「とても上手に」です。",
       "hint": "very well",
       "wordCount": 5
     },
@@ -463,7 +463,7 @@
       ],
       "correctAnswer": "We cannot solve this problem.",
       "difficulty": "advanced",
-      "explanation": "We cannot solve this problem.で「この問題を解けません」です。solve a problemで「問題を解く」です。\n\n「私たちはこの問題を解けません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We cannot solve this problem.",
+      "explanation": "We cannot solve this problem.で「この問題を解けません」です。solve a problemで「問題を解く」です。",
       "hint": "solve this problem",
       "wordCount": 5
     },
@@ -480,7 +480,7 @@
       ],
       "correctAnswer": "What can you do?",
       "difficulty": "advanced",
-      "explanation": "What can you do?で「何ができますか」です。疑問詞+can+主語+動詞原形です。\n\n「あなたは何ができますか。」です。\n\n【文法ポイント】\n助動詞の使用、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What can you do?",
+      "explanation": "What can you do?で「何ができますか」です。疑問詞+can+主語+動詞原形です。",
       "hint": "What can ～?",
       "wordCount": 5
     },
@@ -497,7 +497,7 @@
       ],
       "correctAnswer": "Can you swim?",
       "difficulty": "beginner",
-      "explanation": "canの疑問文はCanを文頭にです。Can you swim?で「泳げますか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canの疑問文はCanを文頭にです。Can you swim?で「泳げますか」です。",
       "hint": "Can を文頭に"
     },
     {
@@ -513,7 +513,7 @@
       ],
       "correctAnswer": "She cannot play tennis.",
       "difficulty": "beginner",
-      "explanation": "canの否定形はcannot（can't）です。She cannot play tennis.で「彼女はテニスができません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canの否定形はcannot（can't）です。She cannot play tennis.で「彼女はテニスができません」です。",
       "hint": "cannot を使う"
     },
     {
@@ -529,7 +529,7 @@
       ],
       "correctAnswer": "I can speak French.",
       "difficulty": "beginner",
-      "explanation": "cannotを取ってcanにすります。I can speak French.で「フランス語を話せます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "cannotを取ってcanにすります。I can speak French.で「フランス語を話せます」です。",
       "hint": "cannot → can"
     },
     {
@@ -545,7 +545,7 @@
       ],
       "correctAnswer": "He can cook.",
       "difficulty": "beginner",
-      "explanation": "Canを主語の後ろに移動です。He can cook.で「彼は料理できます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "Canを主語の後ろに移動です。He can cook.で「彼は料理できます」です。",
       "hint": "Can を後ろに"
     },
     {
@@ -561,7 +561,7 @@
       ],
       "correctAnswer": "You cannot jump high.",
       "difficulty": "intermediate",
-      "explanation": "canの否定形はcannotです。You cannot jump high.で「高く跳べません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canの否定形はcannotです。You cannot jump high.で「高く跳べません」です。",
       "hint": "cannot を使う"
     },
     {
@@ -577,7 +577,7 @@
       ],
       "correctAnswer": "I can play the piano.",
       "difficulty": "intermediate",
-      "explanation": "canを追加し、動詞は原形にです。I can play the piano.で「ピアノを弾けます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canを追加し、動詞は原形にです。I can play the piano.で「ピアノを弾けます」です。",
       "hint": "can + 原形"
     },
     {
@@ -593,7 +593,7 @@
       ],
       "correctAnswer": "He can dance.",
       "difficulty": "intermediate",
-      "explanation": "canは主語が変わっても形は同じです。He can dance.で「彼は踊れます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canは主語が変わっても形は同じです。He can dance.で「彼は踊れます」です。",
       "hint": "can は変化なし"
     },
     {
@@ -609,7 +609,7 @@
       ],
       "correctAnswer": "She cannot speak English.",
       "difficulty": "intermediate",
-      "explanation": "can'tの正式形はcannot（1語）です。She cannot speak English.で「英語を話せません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "can'tの正式形はcannot（1語）です。She cannot speak English.で「英語を話せません」です。",
       "hint": "cannot は1語"
     },
     {
@@ -625,7 +625,7 @@
       ],
       "correctAnswer": "Can he play soccer?",
       "difficulty": "intermediate",
-      "explanation": "canの疑問文はCanを文頭にです。Can he play soccer?で「彼はサッカーができますか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canの疑問文はCanを文頭にです。Can he play soccer?で「彼はサッカーができますか」です。",
       "hint": "Can を文頭に"
     },
     {
@@ -641,7 +641,7 @@
       ],
       "correctAnswer": "Can they write Chinese?",
       "difficulty": "advanced",
-      "explanation": "否定文cannotを疑問文にするときはCanを文頭にです。Can they write Chinese?で「中国語を書けますか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "否定文cannotを疑問文にするときはCanを文頭にです。Can they write Chinese?で「中国語を書けますか」です。",
       "hint": "Can を文頭に"
     },
     {
@@ -657,7 +657,7 @@
       ],
       "correctAnswer": "What can you play?",
       "difficulty": "advanced",
-      "explanation": "What can you～?で「何を～できますか」です。疑問詞+can+主語+動詞原形です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "What can you～?で「何を～できますか」です。疑問詞+can+主語+動詞原形です。",
       "hint": "What can ～?"
     },
     {
@@ -673,7 +673,7 @@
       ],
       "correctAnswer": "I can speak English.",
       "difficulty": "advanced",
-      "explanation": "canは人称・数に関係なく同じ形です。I can speak English.で「私は英語を話せます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canは人称・数に関係なく同じ形です。I can speak English.で「私は英語を話せます」です。",
       "hint": "can は変化なし"
     },
     {
@@ -689,7 +689,7 @@
       ],
       "correctAnswer": "She can sing.",
       "difficulty": "advanced",
-      "explanation": "canの後ろは必ず動詞の原形です。She can sing.で「彼女は歌えます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "canの後ろは必ず動詞の原形です。She can sing.で「彼女は歌えます」です。",
       "hint": "can + 原形"
     },
     {
@@ -705,7 +705,7 @@
       ],
       "correctAnswer": "He can run fast.",
       "difficulty": "advanced",
-      "explanation": "副詞fastは動詞の後ろです。He can run fast.で「彼は速く走れます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "副詞fastは動詞の後ろです。He can run fast.で「彼は速く走れます」です。",
       "hint": "動詞 + fast"
     },
     {
@@ -721,7 +721,7 @@
       ],
       "correctAnswer": "I can play the piano.",
       "difficulty": "advanced",
-      "explanation": "楽器を演奏するときは定冠詞theを付けます。play the pianoで「ピアノを弾く」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "楽器を演奏するときは定冠詞theを付けます。play the pianoで「ピアノを弾く」です。",
       "hint": "play the piano"
     },
     {
@@ -737,7 +737,7 @@
       ],
       "correctAnswer": "speak",
       "difficulty": "beginner",
-      "explanation": "canの後ろは必ず動詞の原形です。speak Englishで「英語を話す」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "canの後ろは必ず動詞の原形です。speak Englishで「英語を話す」です。",
       "hint": "can + 原形"
     },
     {
@@ -753,7 +753,7 @@
       ],
       "correctAnswer": "play",
       "difficulty": "beginner",
-      "explanation": "三人称単数でもcanの後ろは原形です。play the pianoで「ピアノを弾く」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "三人称単数でもcanの後ろは原形です。play the pianoで「ピアノを弾く」です。",
       "hint": "can + 原形"
     },
     {
@@ -769,7 +769,7 @@
       ],
       "correctAnswer": "run",
       "difficulty": "beginner",
-      "explanation": "can'tの後ろも動詞の原形です。run fastで「速く走る」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "can'tの後ろも動詞の原形です。run fastで「速く走る」です。",
       "hint": "can't + 原形"
     },
     {
@@ -785,7 +785,7 @@
       ],
       "correctAnswer": "drive",
       "difficulty": "beginner",
-      "explanation": "疑問文でもcanの後ろは原形です。drive a carで「車を運転する」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "疑問文でもcanの後ろは原形です。drive a carで「車を運転する」です。",
       "hint": "Can + 原形"
     },
     {
@@ -801,7 +801,7 @@
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
-      "explanation": "cannotの後ろも動詞の原形です。read Japaneseで「日本語を読む」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "cannotの後ろも動詞の原形です。read Japaneseで「日本語を読む」です。",
       "hint": "cannot + 原形"
     },
     {
@@ -817,7 +817,7 @@
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
-      "explanation": "主語が複数でもcanの後ろは原形です。play soccerで「サッカーをする」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "主語が複数でもcanの後ろは原形です。play soccerで「サッカーをする」です。",
       "hint": "can + 原形"
     },
     {
@@ -833,7 +833,7 @@
       ],
       "correctAnswer": "sing",
       "difficulty": "intermediate",
-      "explanation": "三人称の疑問文でもcanの後ろは原形です。sing wellで「上手に歌う」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "三人称の疑問文でもcanの後ろは原形です。sing wellで「上手に歌う」です。",
       "hint": "Can + 原形"
     },
     {
@@ -849,7 +849,7 @@
       ],
       "correctAnswer": "speak",
       "difficulty": "advanced",
-      "explanation": "三人称でもcan'tの後ろは原形です。speak Chineseで「中国語を話す」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "三人称でもcan'tの後ろは原形です。speak Chineseで「中国語を話す」です。",
       "hint": "can't + 原形"
     },
     {
@@ -865,7 +865,7 @@
       ],
       "correctAnswer": "skate",
       "difficulty": "advanced",
-      "explanation": "canの後ろは必ず原形です。skate wellで「上手にスケートする」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "canの後ろは必ず原形です。skate wellで「上手にスケートする」です。",
       "hint": "can + 原形"
     },
     {
@@ -881,7 +881,7 @@
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",
-      "explanation": "Where can you～?の後ろも原形です。Where can you go?で「どこへ行けますか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "Where can you～?の後ろも原形です。Where can you go?で「どこへ行けますか」です。",
       "hint": "can + 原形"
     },
     {
@@ -906,7 +906,7 @@
       ],
       "correctAnswer": "can",
       "difficulty": "beginner",
-      "explanation": "Can you～?の答えはYes, I can.またはNo, I can't.です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "Can you～?の答えはYes, I can.またはNo, I can't.です。",
       "hint": "Yes, I can"
     },
     {
@@ -931,7 +931,7 @@
       ],
       "correctAnswer": "can't",
       "difficulty": "beginner",
-      "explanation": "Can you～?の否定の答えはNo, I can't.（できません）です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "Can you～?の否定の答えはNo, I can't.（できません）です。",
       "hint": "No, I can't"
     },
     {
@@ -956,7 +956,7 @@
       ],
       "correctAnswer": "can",
       "difficulty": "intermediate",
-      "explanation": "Can she～?の答えはYes, she can.またはNo, she can't.です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "Can she～?の答えはYes, she can.またはNo, she can't.です。",
       "hint": "Yes, she can"
     },
     {
@@ -981,7 +981,7 @@
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
-      "explanation": "特定の楽器について尋ねられた場合、I can～の後ろは動詞の原形です。play the guitarで「ギターを弾く」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "特定の楽器について尋ねられた場合、I can～の後ろは動詞の原形です。play the guitarで「ギターを弾く」です。",
       "hint": "can + 原形"
     },
     {
@@ -1006,7 +1006,7 @@
       ],
       "correctAnswer": "they",
       "difficulty": "advanced",
-      "explanation": "Can they～?の答えはYes, they can.です。主語はtheyを使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "Can they～?の答えはYes, they can.です。主語はtheyを使います。",
       "hint": "Yes, they can"
     },
     {
@@ -1021,7 +1021,7 @@
       ],
       "correctAnswer": "always",
       "difficulty": "beginner",
-      "explanation": "頻度副詞alwaysは「いつも(100%)」という意味です。一般動詞の前に置く語順として覚えてください。I always eat breakfast.です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "頻度副詞alwaysは「いつも(100%)」という意味です。一般動詞の前に置く語順として覚えてください。I always eat breakfast.です。",
       "hint": "100%の頻度"
     },
     {
@@ -1036,7 +1036,7 @@
       ],
       "correctAnswer": "usually",
       "difficulty": "beginner",
-      "explanation": "頻度副詞usuallyは「普通は、たいてい(80%)」という意味です。一般動詞の前に置く語順として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "頻度副詞usuallyは「普通は、たいてい(80%)」という意味です。一般動詞の前に置く語順として覚えてください。",
       "hint": "80%程度"
     },
     {
@@ -1052,7 +1052,7 @@
       ],
       "correctAnswer": "I often listen to music.",
       "difficulty": "beginner",
-      "explanation": "頻度副詞oftenは「よく、しばしば(60%)」という意味です。主語 + 頻度副詞 + 一般動詞という語順として覚えてください。\n\n「私はよく音楽を聞きます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I often listen to music.",
+      "explanation": "頻度副詞oftenは「よく、しばしば(60%)」という意味です。主語 + 頻度副詞 + 一般動詞という語順として覚えてください。",
       "hint": "I often",
       "wordCount": 5
     },
@@ -1068,7 +1068,7 @@
       ],
       "correctAnswer": "sometimes",
       "difficulty": "beginner",
-      "explanation": "頻度副詞sometimesは「時々(40%)」という意味です。一般動詞の前に置く語順として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "頻度副詞sometimesは「時々(40%)」という意味です。一般動詞の前に置く語順として覚えてください。",
       "hint": "40%程度"
     },
     {
@@ -1083,7 +1083,7 @@
       ],
       "correctAnswer": "never",
       "difficulty": "beginner",
-      "explanation": "頻度副詞neverは「決して~ない(0%)」という意味です。一般動詞の前に置きます。I never tell a lie.で否定文になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "頻度副詞neverは「決して~ない(0%)」という意味です。一般動詞の前に置きます。I never tell a lie.で否定文になります。",
       "hint": "0%"
     },
     {
@@ -1108,7 +1108,7 @@
       ],
       "correctAnswer": "always",
       "difficulty": "intermediate",
-      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えてください。I'm always late.「いつも遅刻する」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えてください。I'm always late.「いつも遅刻する」です。",
       "hint": "be動詞の後"
     },
     {
@@ -1124,7 +1124,7 @@
       ],
       "correctAnswer": "He never forgets his homework.",
       "difficulty": "intermediate",
-      "explanation": "頻度副詞neverは一般動詞の前に置きます。He never forgets.でそれ自体が否定文になることを覚えてください。\n\n「彼は決して宿題を忘れません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He never forgets his homework.",
+      "explanation": "頻度副詞neverは一般動詞の前に置きます。He never forgets.でそれ自体が否定文になることを覚えてください。",
       "hint": "never forgets",
       "wordCount": 5
     },
@@ -1140,7 +1140,7 @@
       ],
       "correctAnswer": "always",
       "difficulty": "beginner",
-      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えてください。She is always kind.です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えてください。She is always kind.です。",
       "hint": "be動詞の後"
     },
     {
@@ -1158,7 +1158,7 @@
       ],
       "correctAnswer": "I usually go to school by bus.",
       "difficulty": "intermediate",
-      "explanation": "頻度副詞usuallyは一般動詞の前に置きます。主語 + usually + 動詞という語順として覚えてください。\n\n「私は普通バスで学校に行きます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I usually go to school by bus.",
+      "explanation": "頻度副詞usuallyは一般動詞の前に置きます。主語 + usually + 動詞という語順として覚えてください。",
       "hint": "I usually go",
       "wordCount": 7
     },
@@ -1174,7 +1174,7 @@
       ],
       "correctAnswer": "often",
       "difficulty": "beginner",
-      "explanation": "頻度副詞oftenは「よく」という意味で、一般動詞の前に置く語順として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "頻度副詞oftenは「よく」という意味で、一般動詞の前に置く語順として覚えてください。",
       "hint": "60%程度"
     }
   ]

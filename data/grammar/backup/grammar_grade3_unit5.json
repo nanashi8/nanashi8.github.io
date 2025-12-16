@@ -1,6 +1,6 @@
 {
-  "unit": "Unit 8",
-  "title": "間接疑問文",
+  "unit": "Unit 5",
+  "title": "間接疑問文・付加疑問文",
   "grammar": "疑問詞 + 主語 + 動詞",
   "totalQuestions": 70,
   "questionTypes": {
@@ -1110,13 +1110,27 @@
     },
     {
       "id": "g3-u8-ifwhether-004",
-      "type": "paraphrase",
+      "type": "sentenceOrdering",
       "japanese": "私は彼が来るかどうか知りません。",
-      "originalSentence": "Does he come to the party?",
-      "question": "I don't know ____.",
-      "correctAnswer": "if he comes to the party",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "if",
+        "he",
+        "comes",
+        "to",
+        "the",
+        "party",
+        "does",
+        "come"
+      ],
+      "correctAnswer": "I don't know if he comes to the party.",
       "difficulty": "advanced",
-      "explanation": "直接疑問文を間接疑問文に変換です。Does he come? → if he comes という語順になります。"
+      "explanation": "間接疑問文では、if + 主語 + 動詞の語順になります。不要な語: does, come（2語）",
+      "hint": "if he comes",
+      "wordCount": 9,
+      "unusedWords": 2
     },
     {
       "id": "g3-u8-ifwhether-005",
@@ -1194,13 +1208,24 @@
     },
     {
       "id": "g3-u8-ifwhether-009",
-      "type": "paraphrase",
+      "type": "sentenceOrdering",
       "japanese": "私は彼女が幸せかどうかわかりません。",
-      "originalSentence": "Is she happy?",
-      "question": "I wonder ____.",
-      "correctAnswer": "if she is happy",
+      "words": [
+        "I",
+        "wonder",
+        "if",
+        "she",
+        "is",
+        "happy",
+        "does",
+        "be"
+      ],
+      "correctAnswer": "I wonder if she is happy.",
       "difficulty": "intermediate",
-      "explanation": "直接疑問文を間接疑問文に変換です。Is she happy? → if she is happy という語順になります。"
+      "explanation": "間接疑問文では、if + 主語 + be動詞の語順になります。不要な語: does, be（2語）",
+      "hint": "if she is",
+      "wordCount": 6,
+      "unusedWords": 2
     },
     {
       "id": "g3-u8-ifwhether-010",

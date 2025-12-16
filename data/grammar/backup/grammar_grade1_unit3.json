@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "This",
       "difficulty": "beginner",
-      "explanation": "近くのもの（単数）を指すときはthisを使います。遠くはthat、複数はthese/thoseです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "近くのもの（単数）を指すときはthisを使います。遠くはthat、複数はthese/thoseです。",
       "hint": "近く・単数 → this"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "That",
       "difficulty": "beginner",
-      "explanation": "遠くのもの（単数）を指すときはthatを使います。近くはthisです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "遠くのもの（単数）を指すときはthatを使います。近くはthisです。",
       "hint": "遠く・単数 → that"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "These",
       "difficulty": "beginner",
-      "explanation": "近くのもの（複数）を指すときはtheseを使います。be動詞もareになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "近くのもの（複数）を指すときはtheseを使います。be動詞もareになります。",
       "hint": "近く・複数 → these"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "Those",
       "difficulty": "beginner",
-      "explanation": "遠くのもの（複数）を指すときはthoseを使います。be動詞もareになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "遠くのもの（複数）を指すときはthoseを使います。be動詞もareになります。",
       "hint": "遠く・複数 → those"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "books",
       "difficulty": "beginner",
-      "explanation": "複数を表すときは名詞に-sを付けます。threeは複数なので必ず-sです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "複数を表すときは名詞に-sを付けます。threeは複数なので必ず-sです。",
       "hint": "複数 → -s"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "What is this?で「これは何ですか」です。thisは単数なのでisです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "What is this?で「これは何ですか」です。thisは単数なのでisです。",
       "hint": "this → is"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "brothers",
       "difficulty": "intermediate",
-      "explanation": "twoは複数なので-sを付けます。brother→brothersです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "twoは複数なので-sを付けます。brother→brothersです。",
       "hint": "two → 複数形"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "those",
       "difficulty": "intermediate",
-      "explanation": "areと使うのはthese/thoseです。遠くを指すのでthoseです。What are those?で「あれらは何ですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "areと使うのはthese/thoseです。遠くを指すのでthoseです。What are those?で「あれらは何ですか」です。",
       "hint": "are + 遠く → those"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "friends",
       "difficulty": "intermediate",
-      "explanation": "manyは「たくさんの」で必ず複数形と使います。friend→friendsです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "manyは「たくさんの」で必ず複数形と使います。friend→friendsです。",
       "hint": "many → 複数形"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "dogs",
       "difficulty": "intermediate",
-      "explanation": "threeは複数を表します。dog→dogsです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "threeは複数を表します。dog→dogsです。",
       "hint": "three → 複数形"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "tomatoes",
       "difficulty": "advanced",
-      "explanation": "-oで終わる名詞は-esを付けます。tomato→tomatoesです。potato→potatoesも同様です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "-oで終わる名詞は-esを付けます。tomato→tomatoesです。potato→potatoesも同様です。",
       "hint": "-o → -es"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "watches",
       "difficulty": "advanced",
-      "explanation": "-chで終わる名詞は-esを付けます。watch→watchesです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "-chで終わる名詞は-esを付けます。watch→watchesです。",
       "hint": "-ch → -es"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "boxes",
       "difficulty": "advanced",
-      "explanation": "-xで終わる名詞は-esを付けます。box→boxesです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "-xで終わる名詞は-esを付けます。box→boxesです。",
       "hint": "-x → -es"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "children",
       "difficulty": "advanced",
-      "explanation": "child（子供）の複数形はchildren（不規則変化）です。×childsは誤りです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "child（子供）の複数形はchildren（不規則変化）です。×childsは誤りです。",
       "hint": "child → children"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "photos",
       "difficulty": "advanced",
-      "explanation": "photoの複数形はphotosです。-oで終わるが例外で-sのみです。piano→pianosも同様です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "photoの複数形はphotosです。-oで終わるが例外で-sのみです。piano→pianosも同様です。",
       "hint": "photo → photos"
     },
     {
@@ -248,7 +248,7 @@
       ],
       "correctAnswer": "This is my pen.",
       "difficulty": "beginner",
-      "explanation": "This is ～の基本語順です。近くの単数を指します。\n\n「これは私のペンです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is my pen.",
+      "explanation": "This is ～の基本語順です。近くの単数を指します。",
       "hint": "This is ～",
       "wordCount": 4
     },
@@ -264,7 +264,7 @@
       ],
       "correctAnswer": "That is a school.",
       "difficulty": "beginner",
-      "explanation": "That is ～の基本語順です。遠くの単数を指します。\n\n「あれは学校です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is a school.",
+      "explanation": "That is ～の基本語順です。遠くの単数を指します。",
       "hint": "That is ～",
       "wordCount": 4
     },
@@ -280,7 +280,7 @@
       ],
       "correctAnswer": "These are my books.",
       "difficulty": "beginner",
-      "explanation": "These are ～の語順です。近くの複数を指します。be動詞はareです。\n\n「これらは私の本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are my books.",
+      "explanation": "These are ～の語順です。近くの複数を指します。be動詞はareです。",
       "hint": "These are ～",
       "wordCount": 4
     },
@@ -296,7 +296,7 @@
       ],
       "correctAnswer": "Those are new cars.",
       "difficulty": "beginner",
-      "explanation": "Those are ～の語順です。遠くの複数を指します。be動詞はareです。\n\n「あれらは新しい車です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Those are new cars.",
+      "explanation": "Those are ～の語順です。遠くの複数を指します。be動詞はareです。",
       "hint": "Those are ～",
       "wordCount": 4
     },
@@ -312,7 +312,7 @@
       ],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
-      "explanation": "疑問詞What + is + this?の語順です。「これは何？」です。\n\n「これは何ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What is this?",
+      "explanation": "疑問詞What + is + this?の語順です。「これは何？」です。",
       "hint": "What is ～?",
       "wordCount": 4
     },
@@ -328,7 +328,7 @@
       ],
       "correctAnswer": "I have four pens.",
       "difficulty": "intermediate",
-      "explanation": "I have + 数 + 複数形の語順です。three booksで「3冊の本」です。\n\n「私は4本のペンを持っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have four pens.",
+      "explanation": "I have + 数 + 複数形の語順です。three booksで「3冊の本」です。",
       "hint": "I have three ～",
       "wordCount": 4
     },
@@ -344,7 +344,7 @@
       ],
       "correctAnswer": "What are these?",
       "difficulty": "intermediate",
-      "explanation": "What are ～?の語順です。複数を尋ねるときはareです。\n\n「これらは何ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What are these?",
+      "explanation": "What are ～?の語順です。複数を尋ねるときはareです。",
       "hint": "What are ～?",
       "wordCount": 4
     },
@@ -360,7 +360,7 @@
       ],
       "correctAnswer": "She has two brothers.",
       "difficulty": "intermediate",
-      "explanation": "She has + 数 + 複数形です。two brothersで「2人の兄弟」です。\n\n「彼女は2人の兄弟がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has two brothers.",
+      "explanation": "She has + 数 + 複数形です。two brothersで「2人の兄弟」です。",
       "hint": "She has two ～",
       "wordCount": 4
     },
@@ -375,7 +375,7 @@
       ],
       "correctAnswer": "These are apples.",
       "difficulty": "intermediate",
-      "explanation": "These are ～の語順です。apple→applesの複数形です。\n\n「これらはりんごです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are apples.",
+      "explanation": "These are ～の語順です。apple→applesの複数形です。",
       "hint": "These are ～",
       "wordCount": 3
     },
@@ -391,7 +391,7 @@
       ],
       "correctAnswer": "She has many friends.",
       "difficulty": "intermediate",
-      "explanation": "I have many ～の語順です。manyは必ず複数形と使います。\n\n「彼女は多くの友達がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has many friends.",
+      "explanation": "I have many ～の語順です。manyは必ず複数形と使います。",
       "hint": "I have many ～",
       "wordCount": 4
     },
@@ -407,7 +407,7 @@
       ],
       "correctAnswer": "That is my school.",
       "difficulty": "intermediate",
-      "explanation": "That is my ～の語順です。所有格myを使います。\n\n「あれは私の学校です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is my school.",
+      "explanation": "That is my ～の語順です。所有格myを使います。",
       "hint": "That is my ～",
       "wordCount": 4
     },
@@ -423,7 +423,7 @@
       ],
       "correctAnswer": "These are red tomatoes.",
       "difficulty": "advanced",
-      "explanation": "tomato→tomatoesの複数形（-o→-es）です。\n\n「これらは赤いトマトです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are red tomatoes.",
+      "explanation": "tomato→tomatoesの複数形（-o→-es）です。",
       "hint": "tomato → tomatoes",
       "wordCount": 4
     },
@@ -439,7 +439,7 @@
       ],
       "correctAnswer": "He has two children.",
       "difficulty": "advanced",
-      "explanation": "child→childrenの不規則複数形です。\n\n「彼は2人の子供がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has two children.",
+      "explanation": "child→childrenの不規則複数形です。",
       "hint": "child → children",
       "wordCount": 4
     },
@@ -455,7 +455,7 @@
       ],
       "correctAnswer": "She has three boxes.",
       "difficulty": "advanced",
-      "explanation": "box→boxesの複数形（-x→-es）です。\n\n「彼女は3つの箱を持っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has three boxes.",
+      "explanation": "box→boxesの複数形（-x→-es）です。",
       "hint": "box → boxes",
       "wordCount": 4
     },
@@ -471,7 +471,7 @@
       ],
       "correctAnswer": "Those are her watches.",
       "difficulty": "advanced",
-      "explanation": "watch→watchesの複数形（-ch→-es）です。所有格herを使います。\n\n「あれらは彼女の時計です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Those are her watches.",
+      "explanation": "watch→watchesの複数形（-ch→-es）です。所有格herを使います。",
       "hint": "watch → watches",
       "wordCount": 4
     },
@@ -488,7 +488,7 @@
       ],
       "correctAnswer": "These are books.",
       "difficulty": "beginner",
-      "explanation": "this→these、is→are、a book→booksのすべてを複数形に変えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "this→these、is→are、a book→booksのすべてを複数形に変えます。",
       "hint": "this → these, is → are"
     },
     {
@@ -504,7 +504,7 @@
       ],
       "correctAnswer": "Those are cars.",
       "difficulty": "beginner",
-      "explanation": "that→those、is→are、a car→carsのすべてを複数形に変えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "that→those、is→are、a car→carsのすべてを複数形に変えます。",
       "hint": "that → those, is → are"
     },
     {
@@ -520,7 +520,7 @@
       ],
       "correctAnswer": "This is a pen.",
       "difficulty": "beginner",
-      "explanation": "these→this、are→is、pens→a penのすべてを単数形に変えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "these→this、are→is、pens→a penのすべてを単数形に変えます。",
       "hint": "these → this, are → is"
     },
     {
@@ -536,7 +536,7 @@
       ],
       "correctAnswer": "That is my bag.",
       "difficulty": "intermediate",
-      "explanation": "this（これ）→that（あれ）に変えます。単数なのでisです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "this（これ）→that（あれ）に変えます。単数なのでisです。",
       "hint": "this → that"
     },
     {
@@ -552,7 +552,7 @@
       ],
       "correctAnswer": "What are these?",
       "difficulty": "intermediate",
-      "explanation": "What are these?で「これらは何ですか」です。疑問詞Whatを文頭に、複数なのでareです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "What are these?で「これらは何ですか」です。疑問詞Whatを文頭に、複数なのでareです。",
       "hint": "What are these?"
     },
     {
@@ -568,7 +568,7 @@
       ],
       "correctAnswer": "What are those?",
       "difficulty": "intermediate",
-      "explanation": "What are those?で「あれらは何ですか」です。複数なのでareです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "What are those?で「あれらは何ですか」です。複数なのでareです。",
       "hint": "What are those?"
     },
     {
@@ -584,7 +584,7 @@
       ],
       "correctAnswer": "These are my pens.",
       "difficulty": "intermediate",
-      "explanation": "所有格myは名詞の前に置きます。These are my pens.で「これらは私のペンです」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "所有格myは名詞の前に置きます。These are my pens.で「これらは私のペンです」です。",
       "hint": "my + 名詞"
     },
     {
@@ -600,7 +600,7 @@
       ],
       "correctAnswer": "I have three books.",
       "difficulty": "intermediate",
-      "explanation": "数詞は名詞の前に置きます。I have three books.で「私は3冊の本を持っています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "数詞は名詞の前に置きます。I have three books.で「私は3冊の本を持っています」です。",
       "hint": "数 + 名詞"
     },
     {
@@ -616,7 +616,7 @@
       ],
       "correctAnswer": "Those are my friends.",
       "difficulty": "advanced",
-      "explanation": "these（これら）→those（あれら）に変えます。複数なのでareです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "these（これら）→those（あれら）に変えます。複数なのでareです。",
       "hint": "these → those"
     },
     {
@@ -632,7 +632,7 @@
       ],
       "correctAnswer": "I have two boxes.",
       "difficulty": "advanced",
-      "explanation": "box→boxes（-x→-es）です。twoは複数形と使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "box→boxes（-x→-es）です。twoは複数形と使います。",
       "hint": "box → boxes"
     },
     {
@@ -648,7 +648,7 @@
       ],
       "correctAnswer": "He has three children.",
       "difficulty": "advanced",
-      "explanation": "child→children（不規則変化）です。×childsは誤りです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "child→children（不規則変化）です。×childsは誤りです。",
       "hint": "child → children"
     },
     {
@@ -664,7 +664,7 @@
       ],
       "correctAnswer": "These are tomatoes.",
       "difficulty": "advanced",
-      "explanation": "this→these、is→are、tomato→tomatoes（-o→-es）です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "this→these、is→are、tomato→tomatoes（-o→-es）です。",
       "hint": "tomato → tomatoes"
     },
     {
@@ -680,7 +680,7 @@
       ],
       "correctAnswer": "I have many friends.",
       "difficulty": "advanced",
-      "explanation": "manyは複数形の前に置きます。I have many friends.で「私はたくさんの友達がいます」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "manyは複数形の前に置きます。I have many friends.で「私はたくさんの友達がいます」です。",
       "hint": "many + 複数形"
     },
     {
@@ -696,7 +696,7 @@
       ],
       "correctAnswer": "She has two watches.",
       "difficulty": "advanced",
-      "explanation": "watch→watches（-ch→-es）です。twoは複数形と使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "watch→watches（-ch→-es）です。twoは複数形と使います。",
       "hint": "watch → watches"
     },
     {
@@ -712,7 +712,7 @@
       ],
       "correctAnswer": "I have two pianos.",
       "difficulty": "advanced",
-      "explanation": "piano→pianos（-oで終わるが例外で-sのみ）です。photo→photosも同様です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "explanation": "piano→pianos（-oで終わるが例外で-sのみ）です。photo→photosも同様です。",
       "hint": "piano → pianos"
     },
     {
@@ -728,7 +728,7 @@
       ],
       "correctAnswer": "books",
       "difficulty": "beginner",
-      "explanation": "通常の名詞は-sを付けて複数形にすります。book→booksです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "通常の名詞は-sを付けて複数形にすります。book→booksです。",
       "hint": "通常 → -s"
     },
     {
@@ -744,7 +744,7 @@
       ],
       "correctAnswer": "cars",
       "difficulty": "beginner",
-      "explanation": "car→carsの規則変化です。-sを付けるだけです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "car→carsの規則変化です。-sを付けるだけです。",
       "hint": "通常 → -s"
     },
     {
@@ -760,7 +760,7 @@
       ],
       "correctAnswer": "boxes",
       "difficulty": "intermediate",
-      "explanation": "-xで終わる名詞は-esを付けます。box→boxesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "-xで終わる名詞は-esを付けます。box→boxesです。",
       "hint": "-x → -es"
     },
     {
@@ -776,7 +776,7 @@
       ],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
-      "explanation": "-chで終わる名詞は-esを付けます。watch→watchesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "-chで終わる名詞は-esを付けます。watch→watchesです。",
       "hint": "-ch → -es"
     },
     {
@@ -792,7 +792,7 @@
       ],
       "correctAnswer": "tomatoes",
       "difficulty": "intermediate",
-      "explanation": "-oで終わる名詞は-esを付けます。tomato→tomatoesです。potato→potatoesも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "-oで終わる名詞は-esを付けます。tomato→tomatoesです。potato→potatoesも同様です。",
       "hint": "-o → -es"
     },
     {
@@ -808,7 +808,7 @@
       ],
       "correctAnswer": "cities",
       "difficulty": "intermediate",
-      "explanation": "子音+yで終わる名詞はyをiに変えて-esを付けます。city→citiesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "子音+yで終わる名詞はyをiに変えて-esを付けます。city→citiesです。",
       "hint": "子音+y → -ies"
     },
     {
@@ -824,7 +824,7 @@
       ],
       "correctAnswer": "children",
       "difficulty": "advanced",
-      "explanation": "child→children（不規則変化）です。最重要の不規則複数形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "child→children（不規則変化）です。最重要の不規則複数形です。",
       "hint": "child → children"
     },
     {
@@ -840,7 +840,7 @@
       ],
       "correctAnswer": "pianos",
       "difficulty": "advanced",
-      "explanation": "piano→pianos（-oで終わるが例外で-sのみ）です。photo→photosも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "piano→pianos（-oで終わるが例外で-sのみ）です。photo→photosも同様です。",
       "hint": "piano → pianos"
     },
     {
@@ -856,7 +856,7 @@
       ],
       "correctAnswer": "dishes",
       "difficulty": "advanced",
-      "explanation": "-shで終わる名詞は-esを付けます。dish→dishesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "-shで終わる名詞は-esを付けます。dish→dishesです。",
       "hint": "-sh → -es"
     },
     {
@@ -872,7 +872,7 @@
       ],
       "correctAnswer": "leaves",
       "difficulty": "advanced",
-      "explanation": "-fで終わる名詞はfをvに変えて-esを付けます。leaf→leavesです。knife→knivesも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "-fで終わる名詞はfをvに変えて-esを付けます。leaf→leavesです。knife→knivesも同様です。",
       "hint": "-f → -ves"
     },
     {
@@ -897,7 +897,7 @@
       ],
       "correctAnswer": "This",
       "difficulty": "beginner",
-      "explanation": "What is this?（これは何？）に対する答えです。近くの単数なのでThisです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "What is this?（これは何？）に対する答えです。近くの単数なのでThisです。",
       "hint": "近く・単数 → This"
     },
     {
@@ -922,7 +922,7 @@
       ],
       "correctAnswer": "Those",
       "difficulty": "beginner",
-      "explanation": "What are those?（あれらは何？）に対する答えです。遠くの複数なのでThoseです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "What are those?（あれらは何？）に対する答えです。遠くの複数なのでThoseです。",
       "hint": "遠く・複数 → Those"
     },
     {
@@ -947,7 +947,7 @@
       ],
       "correctAnswer": "five",
       "difficulty": "intermediate",
-      "explanation": "How many～?（いくつ？）に数で答えります。数詞は複数形の前に置きます。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "How many～?（いくつ？）に数で答えります。数詞は複数形の前に置きます。",
       "hint": "数 + 複数形"
     },
     {
@@ -972,7 +972,7 @@
       ],
       "correctAnswer": "they",
       "difficulty": "intermediate",
-      "explanation": "Are these～?に対する答えです。these/thoseはtheyで受けります。Yes, they are.で答えります。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "Are these～?に対する答えです。these/thoseはtheyで受けります。Yes, they are.で答えります。",
       "hint": "these/those → they"
     },
     {
@@ -997,7 +997,7 @@
       ],
       "correctAnswer": "children",
       "difficulty": "advanced",
-      "explanation": "child（子供）の複数形はchildren（不規則）です。twoは複数形と使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "child（子供）の複数形はchildren（不規則）です。twoは複数形と使います。",
       "hint": "child → children"
     },
     {
@@ -1012,7 +1012,7 @@
       ],
       "correctAnswer": "How many",
       "difficulty": "beginner",
-      "explanation": "How many + 複数名詞で「いくつの~」と数を尋ねる疑問文として覚えてください。可算名詞の数を聞く時に使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "How many + 複数名詞で「いくつの~」と数を尋ねる疑問文として覚えてください。可算名詞の数を聞く時に使います。",
       "hint": "数を尋ねる"
     },
     {
@@ -1029,7 +1029,7 @@
       ],
       "correctAnswer": "How many brothers do you have?",
       "difficulty": "beginner",
-      "explanation": "How many + 複数名詞という疑問文の語順として覚えてください。「何人の兄弟」です。\n\n「あなたには何人の兄弟がいますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How many brothers do you have?",
+      "explanation": "How many + 複数名詞という疑問文の語順として覚えてください。「何人の兄弟」です。",
       "hint": "How many brothers",
       "wordCount": 6
     },
@@ -1045,7 +1045,7 @@
       ],
       "correctAnswer": "students",
       "difficulty": "beginner",
-      "explanation": "How manyの後は必ず複数形の名詞を使うことを覚えてください。studentsが正解です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "How manyの後は必ず複数形の名詞を使うことを覚えてください。studentsが正解です。",
       "hint": "複数形"
     },
     {
@@ -1070,7 +1070,7 @@
       ],
       "correctAnswer": "How many",
       "difficulty": "beginner",
-      "explanation": "How many + 複数名詞で数を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "How many + 複数名詞で数を尋ねる疑問文として覚えてください。",
       "hint": "数を尋ねる"
     },
     {
@@ -1089,7 +1089,7 @@
       ],
       "correctAnswer": "How many pens are there on the table?",
       "difficulty": "intermediate",
-      "explanation": "How many + 複数名詞 + are there で「~がいくつありますか」という疑問文として覚えてください。\n\n「テーブルの上に何本のペンがありますか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How many pens are there on the table?",
+      "explanation": "How many + 複数名詞 + are there で「~がいくつありますか」という疑問文として覚えてください。",
       "hint": "How many pens are there",
       "wordCount": 8
     }

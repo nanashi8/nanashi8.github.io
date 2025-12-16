@@ -1,1375 +1,1249 @@
 {
   "unit": "Unit 5",
-  "title": "動名詞",
-  "grammar": "動詞ing（名詞として）",
-  "totalQuestions": 80,
+  "title": "間接疑問文・付加疑問文",
+  "grammar": "疑問詞 + 主語 + 動詞",
+  "totalQuestions": 70,
   "questionTypes": {
-    "fillInBlank": 30,
-    "sentenceOrdering": 26,
+    "fillInBlank": 24,
+    "sentenceOrdering": 23,
     "paraphrase": 2,
     "verbForm": 20,
-    "conversation": 2
+    "conversation": 1
   },
   "questions": [
     {
-      "id": "vf-g3-u5-001",
-      "japanese": "泳ぐことは良い運動です。",
-      "sentence": "____ is good exercise.",
-      "verb": "Swimm",
+      "id": "vf-g3-u8-001",
+      "japanese": "私は彼がどこに住んでいるか知りません。",
+      "sentence": "I don't know where he ____.",
+      "verb": "indirect",
       "choices": [
-        "Swimming",
-        "Swimmed",
-        "Swimms"
+        "lives",
+        "live",
+        "living"
       ],
-      "correctAnswer": "Swimming",
+      "correctAnswer": "lives",
       "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
+      "explanation": "間接疑問文: where + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "where he lives",
       "type": "verbForm"
     },
     {
-      "id": "vf-g3-u5-002",
-      "japanese": "ランニングは健康に良いです。",
-      "sentence": "____ is good for health.",
-      "verb": "Runn",
+      "id": "vf-g3-u8-002",
+      "japanese": "彼女は何が起こったか知っています。",
+      "sentence": "She knows what ____.",
+      "verb": "indirect",
       "choices": [
-        "Running",
-        "Runned",
-        "Runns"
+        "happened",
+        "happen",
+        "happens"
       ],
-      "correctAnswer": "Running",
+      "correctAnswer": "happened",
       "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
+      "explanation": "間接疑問文: what + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "what happened",
       "type": "verbForm"
     },
     {
-      "id": "vf-g3-u5-003",
-      "japanese": "ダンスは楽しい活動です。",
-      "sentence": "____ is an enjoyable activity.",
-      "verb": "Danc",
+      "id": "vf-g3-u8-003",
+      "japanese": "私はいつ彼が来るか分かりません。",
+      "sentence": "I don't know when he will ____.",
+      "verb": "indirect",
       "choices": [
-        "Dancing",
-        "Danced",
-        "Dancs"
-      ],
-      "correctAnswer": "Dancing",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-004",
-      "japanese": "釣りは私の趣味です。",
-      "sentence": "____ is my hobby.",
-      "verb": "Fish",
-      "choices": [
-        "Fishing",
-        "Fished",
-        "Fishs"
-      ],
-      "correctAnswer": "Fishing",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-005",
-      "japanese": "私は歌うことが好きです。",
-      "sentence": "I like ____.",
-      "verb": "sing",
-      "choices": [
-        "singing",
-        "singed",
-        "sings"
-      ],
-      "correctAnswer": "singing",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-006",
-      "japanese": "彼女は絵を描くことが好きです。",
-      "sentence": "She likes ____.",
-      "verb": "paint",
-      "choices": [
-        "painting",
-        "painted",
-        "paints"
-      ],
-      "correctAnswer": "painting",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-007",
-      "japanese": "私たちは旅行することが好きです。",
-      "sentence": "We like ____.",
-      "verb": "travel",
-      "choices": [
-        "traveling",
-        "traveled",
-        "travels"
-      ],
-      "correctAnswer": "traveling",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-008",
-      "japanese": "彼は料理することを楽しんでいます。",
-      "sentence": "He enjoys ____.",
-      "verb": "cook",
-      "choices": [
-        "cooking",
-        "cooked",
-        "cooks"
-      ],
-      "correctAnswer": "cooking",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-009",
-      "japanese": "彼はサッカーをすることが得意です。",
-      "sentence": "He is good at ____ soccer.",
-      "verb": "play",
-      "choices": [
-        "playing",
-        "played",
-        "plays"
-      ],
-      "correctAnswer": "playing",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-010",
-      "japanese": "彼女はピアノを弾くことが得意です。",
-      "sentence": "She is good at ____ the piano.",
-      "verb": "play",
-      "choices": [
-        "playing",
-        "played",
-        "plays"
-      ],
-      "correctAnswer": "playing",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-011",
-      "japanese": "私は早起きが得意です。",
-      "sentence": "I am good at ____ up early.",
-      "verb": "gett",
-      "choices": [
-        "getting",
-        "getted",
-        "getts"
-      ],
-      "correctAnswer": "getting",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-012",
-      "japanese": "彼らは問題を解くことが得意です。",
-      "sentence": "They are good at ____ problems.",
-      "verb": "solv",
-      "choices": [
-        "solving",
-        "solved",
-        "solvs"
-      ],
-      "correctAnswer": "solving",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-013",
-      "japanese": "読書は知識を増やすのに役立ちます。",
-      "sentence": "____ helps increase knowledge.",
-      "verb": "Read",
-      "choices": [
-        "Reading",
-        "Readed",
-        "Reads"
-      ],
-      "correctAnswer": "Reading",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-014",
-      "japanese": "書くことは考えをまとめるのに役立ちます。",
-      "sentence": "____ helps organize thoughts.",
-      "verb": "Writ",
-      "choices": [
-        "Writing",
-        "Writed",
-        "Writs"
-      ],
-      "correctAnswer": "Writing",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-015",
-      "japanese": "話すことはコミュニケーションに不可欠です。",
-      "sentence": "____ is essential for communication.",
-      "verb": "Speak",
-      "choices": [
-        "Speaking",
-        "Speaked",
-        "Speaks"
-      ],
-      "correctAnswer": "Speaking",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-016",
-      "japanese": "聞くことは理解の第一歩です。",
-      "sentence": "____ is the first step to understanding.",
-      "verb": "Listen",
-      "choices": [
-        "Listening",
-        "Listened",
-        "Listens"
-      ],
-      "correctAnswer": "Listening",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-017",
-      "japanese": "ショッピングは彼女の趣味です。",
-      "sentence": "____ is her hobby.",
-      "verb": "Shopp",
-      "choices": [
-        "Shopping",
-        "Shopped",
-        "Shopps"
-      ],
-      "correctAnswer": "Shopping",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-018",
-      "japanese": "掃除は毎日の仕事です。",
-      "sentence": "____ is a daily task.",
-      "verb": "Clean",
-      "choices": [
-        "Cleaning",
-        "Cleaned",
-        "Cleans"
-      ],
-      "correctAnswer": "Cleaning",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-019",
-      "japanese": "勉強することは成功への鍵です。",
-      "sentence": "____ is the key to success.",
-      "verb": "Study",
-      "choices": [
-        "Studying",
-        "Studyed",
-        "Studys"
-      ],
-      "correctAnswer": "Studying",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u5-020",
-      "japanese": "働くことは生活の一部です。",
-      "sentence": "____ is part of life.",
-      "verb": "Work",
-      "choices": [
-        "Working",
-        "Worked",
-        "Works"
-      ],
-      "correctAnswer": "Working",
-      "difficulty": "intermediate",
-      "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "grammarPoint": "動名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "fb-g3-u5-001",
-      "japanese": "泳ぐことは良い運動です。",
-      "sentence": "____ is good exercise.",
-      "wordCount": 4,
-      "choices": [
-        "Swimming",
-        "Swimmed",
-        "Swimms"
-      ],
-      "correctAnswer": "Swimming",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "泳ぐことは良い運動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-002",
-      "japanese": "ランニングは健康に良いです。",
-      "sentence": "____ is good for health.",
-      "wordCount": 5,
-      "choices": [
-        "Running",
-        "Runned",
-        "Runns"
-      ],
-      "correctAnswer": "Running",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "ランニングは健康に良いです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-003",
-      "japanese": "ダンスは楽しい活動です。",
-      "sentence": "____ is an enjoyable activity.",
-      "wordCount": 5,
-      "choices": [
-        "Dancing",
-        "Danced",
-        "Dancs"
-      ],
-      "correctAnswer": "Dancing",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "ダンスは楽しい活動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-004",
-      "japanese": "釣りは私の趣味です。",
-      "sentence": "____ is my hobby.",
-      "wordCount": 4,
-      "choices": [
-        "Fishing",
-        "Fished",
-        "Fishs"
-      ],
-      "correctAnswer": "Fishing",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "釣りは私の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-005",
-      "japanese": "私は歌うことが好きです。",
-      "sentence": "I like ____.",
-      "wordCount": 3,
-      "choices": [
-        "singing",
-        "singed",
-        "sings"
-      ],
-      "correctAnswer": "singing",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "私は歌うことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-006",
-      "japanese": "彼女は絵を描くことが好きです。",
-      "sentence": "She likes ____.",
-      "wordCount": 3,
-      "choices": [
-        "painting",
-        "painted",
-        "paints"
-      ],
-      "correctAnswer": "painting",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "彼女は絵を描くことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-007",
-      "japanese": "私たちは旅行することが好きです。",
-      "sentence": "We like ____.",
-      "wordCount": 3,
-      "choices": [
-        "traveling",
-        "traveled",
-        "travels"
-      ],
-      "correctAnswer": "traveling",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "私たちは旅行することが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-008",
-      "japanese": "彼は料理することを楽しんでいます。",
-      "sentence": "He enjoys ____.",
-      "wordCount": 3,
-      "choices": [
-        "cooking",
-        "cooked",
-        "cooks"
-      ],
-      "correctAnswer": "cooking",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "彼は料理することを楽しんでいます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-009",
-      "japanese": "彼はサッカーをすることが得意です。",
-      "sentence": "He is good at ____ soccer.",
-      "wordCount": 6,
-      "choices": [
-        "playing",
-        "played",
-        "plays"
-      ],
-      "correctAnswer": "playing",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "彼はサッカーをすることが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-010",
-      "japanese": "彼女はピアノを弾くことが得意です。",
-      "sentence": "She is good at ____ the piano.",
-      "wordCount": 7,
-      "choices": [
-        "playing",
-        "played",
-        "plays"
-      ],
-      "correctAnswer": "playing",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "彼女はピアノを弾くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-011",
-      "japanese": "私は早起きが得意です。",
-      "sentence": "I am good at ____ up early.",
-      "wordCount": 7,
-      "choices": [
-        "getting",
-        "getted",
-        "getts"
-      ],
-      "correctAnswer": "getting",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "私は早起きが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-012",
-      "japanese": "彼らは問題を解くことが得意です。",
-      "sentence": "They are good at ____ problems.",
-      "wordCount": 6,
-      "choices": [
-        "solving",
-        "solved",
-        "solvs"
-      ],
-      "correctAnswer": "solving",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "彼らは問題を解くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-013",
-      "japanese": "読書は知識を増やすのに役立ちます。",
-      "sentence": "____ helps increase knowledge.",
-      "wordCount": 4,
-      "choices": [
-        "Reading",
-        "Readed",
-        "Reads"
-      ],
-      "correctAnswer": "Reading",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "読書は知識を増やすのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-014",
-      "japanese": "書くことは考えをまとめるのに役立ちます。",
-      "sentence": "____ helps organize thoughts.",
-      "wordCount": 4,
-      "choices": [
-        "Writing",
-        "Writed",
-        "Writs"
-      ],
-      "correctAnswer": "Writing",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "書くことは考えをまとめるのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-015",
-      "japanese": "話すことはコミュニケーションに不可欠です。",
-      "sentence": "____ is essential for communication.",
-      "wordCount": 5,
-      "choices": [
-        "Speaking",
-        "Speaked",
-        "Speaks"
-      ],
-      "correctAnswer": "Speaking",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "話すことはコミュニケーションに不可欠です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-016",
-      "japanese": "聞くことは理解の第一歩です。",
-      "sentence": "____ is the first step to understanding.",
-      "wordCount": 7,
-      "choices": [
-        "Listening",
-        "Listened",
-        "Listens"
-      ],
-      "correctAnswer": "Listening",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "聞くことは理解の第一歩です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-017",
-      "japanese": "ショッピングは彼女の趣味です。",
-      "sentence": "____ is her hobby.",
-      "wordCount": 4,
-      "choices": [
-        "Shopping",
-        "Shopped",
-        "Shopps"
-      ],
-      "correctAnswer": "Shopping",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "ショッピングは彼女の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-018",
-      "japanese": "掃除は毎日の仕事です。",
-      "sentence": "____ is a daily task.",
-      "wordCount": 5,
-      "choices": [
-        "Cleaning",
-        "Cleaned",
-        "Cleans"
-      ],
-      "correctAnswer": "Cleaning",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "掃除は毎日の仕事です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-019",
-      "japanese": "勉強することは成功への鍵です。",
-      "sentence": "____ is the key to success.",
-      "wordCount": 6,
-      "choices": [
-        "Studying",
-        "Studyed",
-        "Studys"
-      ],
-      "correctAnswer": "Studying",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "勉強することは成功への鍵です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "fb-g3-u5-020",
-      "japanese": "働くことは生活の一部です。",
-      "sentence": "____ is part of life.",
-      "wordCount": 5,
-      "choices": [
-        "Working",
-        "Worked",
-        "Works"
-      ],
-      "correctAnswer": "Working",
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank",
-      "explanation": "働くことは生活の一部です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-001",
-      "japanese": "泳ぐことは良い運動です。",
-      "sentence": "Swimming is good exercise.",
-      "words": [
-        "Swimming",
-        "is",
-        "good",
-        "exercise."
-      ],
-      "correctAnswer": "Swimming is good exercise.",
-      "wordCount": 4,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "泳ぐことは良い運動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-002",
-      "japanese": "ランニングは健康に良いです。",
-      "sentence": "Running is good for health.",
-      "words": [
-        "Running",
-        "is",
-        "good",
-        "for",
-        "health."
-      ],
-      "correctAnswer": "Running is good for health.",
-      "wordCount": 5,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "ランニングは健康に良いです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-003",
-      "japanese": "ダンスは楽しい活動です。",
-      "sentence": "Dancing is an enjoyable activity.",
-      "words": [
-        "Dancing",
-        "is",
-        "an",
-        "enjoyable",
-        "activity."
-      ],
-      "correctAnswer": "Dancing is an enjoyable activity.",
-      "wordCount": 5,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "ダンスは楽しい活動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-004",
-      "japanese": "釣りは私の趣味です。",
-      "sentence": "Fishing is my hobby.",
-      "words": [
-        "Fishing",
-        "is",
-        "my",
-        "hobby."
-      ],
-      "correctAnswer": "Fishing is my hobby.",
-      "wordCount": 4,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "釣りは私の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-005",
-      "japanese": "私は歌うことが好きです。",
-      "sentence": "I like singing.",
-      "words": [
-        "I",
-        "like",
-        "singing."
-      ],
-      "correctAnswer": "I like singing.",
-      "wordCount": 3,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "私は歌うことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-006",
-      "japanese": "彼女は絵を描くことが好きです。",
-      "sentence": "She likes painting.",
-      "words": [
-        "She",
-        "likes",
-        "painting."
-      ],
-      "correctAnswer": "She likes painting.",
-      "wordCount": 3,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "彼女は絵を描くことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-007",
-      "japanese": "私たちは旅行することが好きです。",
-      "sentence": "We like traveling.",
-      "words": [
-        "We",
-        "like",
-        "traveling."
-      ],
-      "correctAnswer": "We like traveling.",
-      "wordCount": 3,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "私たちは旅行することが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-008",
-      "japanese": "彼は料理することを楽しんでいます。",
-      "sentence": "He enjoys cooking.",
-      "words": [
-        "He",
-        "enjoys",
-        "cooking."
-      ],
-      "correctAnswer": "He enjoys cooking.",
-      "wordCount": 3,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "彼は料理することを楽しんでいます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-009",
-      "japanese": "彼はサッカーをすることが得意です。",
-      "sentence": "He is good at playing soccer.",
-      "words": [
-        "He",
-        "is",
-        "good",
-        "at",
-        "playing",
-        "soccer."
-      ],
-      "correctAnswer": "He is good at playing soccer.",
-      "wordCount": 6,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "彼はサッカーをすることが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-010",
-      "japanese": "彼女はピアノを弾くことが得意です。",
-      "sentence": "She is good at playing the piano.",
-      "words": [
-        "She",
-        "is",
-        "good",
-        "at",
-        "playing",
-        "the",
-        "piano."
-      ],
-      "correctAnswer": "She is good at playing the piano.",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "彼女はピアノを弾くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-011",
-      "japanese": "私は早起きが得意です。",
-      "sentence": "I am good at getting up early.",
-      "words": [
-        "I",
-        "am",
-        "good",
-        "at",
-        "getting",
-        "up",
-        "early."
-      ],
-      "correctAnswer": "I am good at getting up early.",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "私は早起きが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-012",
-      "japanese": "彼らは問題を解くことが得意です。",
-      "sentence": "They are good at solving problems.",
-      "words": [
-        "They",
-        "are",
-        "good",
-        "at",
-        "solving",
-        "problems."
-      ],
-      "correctAnswer": "They are good at solving problems.",
-      "wordCount": 6,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "彼らは問題を解くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-013",
-      "japanese": "読書は知識を増やすのに役立ちます。",
-      "sentence": "Reading helps increase knowledge.",
-      "words": [
-        "Reading",
-        "helps",
-        "increase",
-        "knowledge."
-      ],
-      "correctAnswer": "Reading helps increase knowledge.",
-      "wordCount": 4,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "読書は知識を増やすのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-014",
-      "japanese": "書くことは考えをまとめるのに役立ちます。",
-      "sentence": "Writing helps organize thoughts.",
-      "words": [
-        "Writing",
-        "helps",
-        "organize",
-        "thoughts."
-      ],
-      "correctAnswer": "Writing helps organize thoughts.",
-      "wordCount": 4,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "書くことは考えをまとめるのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-015",
-      "japanese": "話すことはコミュニケーションに不可欠です。",
-      "sentence": "Speaking is essential for communication.",
-      "words": [
-        "Speaking",
-        "is",
-        "essential",
-        "for",
-        "communication."
-      ],
-      "correctAnswer": "Speaking is essential for communication.",
-      "wordCount": 5,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "話すことはコミュニケーションに不可欠です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-016",
-      "japanese": "聞くことは理解の第一歩です。",
-      "sentence": "Listening is the first step to understanding.",
-      "words": [
-        "Listening",
-        "is",
-        "the",
-        "first",
-        "step",
-        "to",
-        "understanding."
-      ],
-      "correctAnswer": "Listening is the first step to understanding.",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "聞くことは理解の第一歩です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-017",
-      "japanese": "ショッピングは彼女の趣味です。",
-      "sentence": "Shopping is her hobby.",
-      "words": [
-        "Shopping",
-        "is",
-        "her",
-        "hobby."
-      ],
-      "correctAnswer": "Shopping is her hobby.",
-      "wordCount": 4,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "ショッピングは彼女の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-018",
-      "japanese": "掃除は毎日の仕事です。",
-      "sentence": "Cleaning is a daily task.",
-      "words": [
-        "Cleaning",
-        "is",
-        "a",
-        "daily",
-        "task."
-      ],
-      "correctAnswer": "Cleaning is a daily task.",
-      "wordCount": 5,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "掃除は毎日の仕事です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-019",
-      "japanese": "勉強することは成功への鍵です。",
-      "sentence": "Studying is the key to success.",
-      "words": [
-        "Studying",
-        "is",
-        "the",
-        "key",
-        "to",
-        "success."
-      ],
-      "correctAnswer": "Studying is the key to success.",
-      "wordCount": 6,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "勉強することは成功への鍵です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "so-g3-u5-020",
-      "japanese": "働くことは生活の一部です。",
-      "sentence": "Working is part of life.",
-      "words": [
-        "Working",
-        "is",
-        "part",
-        "of",
-        "life."
-      ],
-      "correctAnswer": "Working is part of life.",
-      "wordCount": 5,
-      "difficulty": "intermediate",
-      "grammarPoint": "動名詞",
-      "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering",
-      "explanation": "働くことは生活の一部です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意してください。"
-    },
-    {
-      "id": "g3-u5-prep-001",
-      "type": "fillInBlank",
-      "japanese": "私は彼に会うのを楽しみにしています。",
-      "sentence": "I'm looking forward to ____ him.",
-      "choices": [
-        "seeing",
-        "see",
-        "seen"
-      ],
-      "correctAnswer": "seeing",
-      "difficulty": "intermediate",
-      "explanation": "look forward to + doingで「~を楽しみにする」という熟語として覚えてください。toの後は動名詞(~ing)を使います。I'm looking forward to seeing him.で「彼に会うのを楽しみにしている」です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-002",
-      "type": "sentenceOrdering",
-      "japanese": "私たちは旅行するのを楽しみにしています。",
-      "words": [
-        "we",
-        "are",
-        "looking",
-        "forward",
-        "to",
-        "traveling"
-      ],
-      "correctAnswer": "We are looking forward to traveling.",
-      "difficulty": "intermediate",
-      "explanation": "look forward to + doingという熟語として覚えてください。toの後は動名詞です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "to traveling",
-      "wordCount": 6
-    },
-    {
-      "id": "g3-u5-prep-003",
-      "type": "conversation",
-      "japanese": "私はあなたの返事を楽しみにしています。",
-      "situation": "期待",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "I'll write back soon."
-        },
-        {
-          "speaker": "B",
-          "text": "I'm looking forward to ____ from you."
-        }
-      ],
-      "choices": [
-        "hearing",
-        "hear",
-        "heard"
-      ],
-      "correctAnswer": "hearing",
-      "difficulty": "intermediate",
-      "explanation": "look forward to + doingという熟語として覚えてください。hear from~で「~から便りをもらう」です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-004",
-      "type": "fillInBlank",
-      "japanese": "彼女は試験に合格するのを楽しみにしています。",
-      "sentence": "She is looking forward to ____ the exam.",
-      "choices": [
-        "passing",
-        "pass",
-        "passed"
-      ],
-      "correctAnswer": "passing",
-      "difficulty": "intermediate",
-      "explanation": "look forward to + doingという熟語として覚えてください。toの後は動名詞です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-005",
-      "type": "fillInBlank",
-      "japanese": "私は早起きに慣れています。",
-      "sentence": "I'm used to ____ up early.",
-      "choices": [
-        "getting",
-        "get",
-        "got"
-      ],
-      "correctAnswer": "getting",
-      "difficulty": "intermediate",
-      "explanation": "be used to + doingで「~に慣れている」という熟語として覚えてください。toの後は動名詞です。I'm used to getting up early.で「早起きに慣れている」です。used to + 動詞原形(~したものだった)と区別することです。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-006",
-      "type": "sentenceOrdering",
-      "japanese": "彼は一人で暮らすのに慣れています。",
-      "words": [
-        "he",
-        "is",
-        "used",
-        "to",
-        "living",
-        "alone"
-      ],
-      "correctAnswer": "He is used to living alone.",
-      "difficulty": "intermediate",
-      "explanation": "be used to + doingで「~に慣れている」という熟語として覚えてください。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "to living",
-      "wordCount": 6
-    },
-    {
-      "id": "g3-u5-prep-007",
-      "type": "paraphrase",
-      "japanese": "彼女は英語を話すことに慣れました（speaking）。",
-      "originalSentence": "She got accustomed to speaking English.",
-      "question": "She got used to ____ English.",
-      "correctAnswer": "speaking",
-      "difficulty": "intermediate",
-      "explanation": "get used to + doingで「~に慣れる」という熟語として覚えてください。get accustomed toと同じ意味です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。"
-    },
-    {
-      "id": "g3-u5-prep-008",
-      "type": "fillInBlank",
-      "japanese": "私たちは暑い天気に慣れています。",
-      "sentence": "We are used to ____ hot weather.",
-      "choices": [
-        "having",
-        "have",
-        "had"
-      ],
-      "correctAnswer": "having",
-      "difficulty": "intermediate",
-      "explanation": "be used to + doingという熟語として覚えてください。toの後は動名詞です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-009",
-      "type": "fillInBlank",
-      "japanese": "手伝ってくれてありがとう。",
-      "sentence": "Thank you for ____ me.",
-      "choices": [
-        "helping",
-        "help",
-        "helped"
-      ],
-      "correctAnswer": "helping",
-      "difficulty": "beginner",
-      "explanation": "Thank you for + doingで「~してくれてありがとう」という熟語として覚えてください。forの後は動名詞です。Thank you for helping me.で「手伝ってくれてありがとう」です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-010",
-      "type": "sentenceOrdering",
-      "japanese": "来てくれてありがとう。",
-      "words": [
-        "thank",
-        "you",
-        "for",
+        "come",
+        "comes",
         "coming"
       ],
-      "correctAnswer": "Thank you for coming.",
-      "difficulty": "beginner",
-      "explanation": "Thank you for + doingという熟語として覚えてください。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "for coming",
-      "wordCount": 4
+      "correctAnswer": "come",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: when + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "when he will come",
+      "type": "verbForm"
     },
     {
-      "id": "g3-u5-prep-011",
+      "id": "vf-g3-u8-004",
+      "japanese": "彼はなぜ彼女が泣いているか知っています。",
+      "sentence": "He knows why she is ____.",
+      "verb": "indirect",
+      "choices": [
+        "crying",
+        "cry",
+        "cries"
+      ],
+      "correctAnswer": "crying",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: why + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "why she is crying",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-005",
+      "japanese": "私は誰がこれを作ったか知っています。",
+      "sentence": "I know who ____ this.",
+      "verb": "indirect",
+      "choices": [
+        "made",
+        "make",
+        "makes"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: who + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "who made",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-006",
+      "japanese": "彼女はどうやってそこに行くか分かりません。",
+      "sentence": "She doesn't know how to ____ there.",
+      "verb": "indirect",
+      "choices": [
+        "get",
+        "gets",
+        "getting"
+      ],
+      "correctAnswer": "get",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: how to + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "how to get",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-007",
+      "japanese": "私はどの本が一番良いか分かりません。",
+      "sentence": "I don't know which book ____ the best.",
+      "verb": "indirect",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: which + N + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "which book is",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-008",
+      "japanese": "彼は何時に店が開くか知っています。",
+      "sentence": "He knows what time the store ____.",
+      "verb": "indirect",
+      "choices": [
+        "opens",
+        "open",
+        "opening"
+      ],
+      "correctAnswer": "opens",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: what time + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "what time it opens",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-009",
+      "japanese": "私たちはどこで彼女に会えるか知りません。",
+      "sentence": "We don't know where we can ____ her.",
+      "verb": "indirect",
+      "choices": [
+        "meet",
+        "meets",
+        "meeting"
+      ],
+      "correctAnswer": "meet",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: where + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "where we can meet",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-010",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています。",
+      "sentence": "She understands why he is ____.",
+      "verb": "indirect",
+      "choices": [
+        "angry",
+        "anger",
+        "angrily"
+      ],
+      "correctAnswer": "angry",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: why + S + beです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "why he is angry",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-011",
+      "japanese": "私はいつバスが出発するか知りたいです。",
+      "sentence": "I want to know when the bus ____.",
+      "verb": "indirect",
+      "choices": [
+        "leaves",
+        "leave",
+        "leaving"
+      ],
+      "correctAnswer": "leaves",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: when + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "when the bus leaves",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-012",
+      "japanese": "彼は誰が勝つか予測できます。",
+      "sentence": "He can predict who will ____.",
+      "verb": "indirect",
+      "choices": [
+        "win",
+        "wins",
+        "winning"
+      ],
+      "correctAnswer": "win",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: who + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "who will win",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-013",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました。",
+      "sentence": "We discussed how to ____ the problem.",
+      "verb": "indirect",
+      "choices": [
+        "solve",
+        "solves",
+        "solving"
+      ],
+      "correctAnswer": "solve",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: how to + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "how to solve",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-014",
+      "japanese": "彼女は何が必要か教えてくれました。",
+      "sentence": "She told me what I ____.",
+      "verb": "indirect",
+      "choices": [
+        "need",
+        "needs",
+        "needing"
+      ],
+      "correctAnswer": "need",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: what + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "what I need",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-015",
+      "japanese": "私はどこで鍵を置いたか忘れました。",
+      "sentence": "I forgot where I ____ the key.",
+      "verb": "indirect",
+      "choices": [
+        "put",
+        "puts",
+        "putting"
+      ],
+      "correctAnswer": "put",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: where + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "where I put",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-016",
+      "japanese": "彼はなぜそれが重要か説明しました。",
+      "sentence": "He explained why it ____ important.",
+      "verb": "indirect",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: why + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "why it is",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-017",
+      "japanese": "私たちはいつ会議が始まるか確認しました。",
+      "sentence": "We checked when the meeting ____.",
+      "verb": "indirect",
+      "choices": [
+        "starts",
+        "start",
+        "starting"
+      ],
+      "correctAnswer": "starts",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: when + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "when it starts",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-018",
+      "japanese": "彼女はどの道が最短か知っています。",
+      "sentence": "She knows which route ____ the shortest.",
+      "verb": "indirect",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: which + N + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "which route is",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-019",
+      "japanese": "私は何が彼を幸せにするか知っています。",
+      "sentence": "I know what ____ him happy.",
+      "verb": "indirect",
+      "choices": [
+        "makes",
+        "make",
+        "making"
+      ],
+      "correctAnswer": "makes",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: what + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "what makes",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-020",
+      "japanese": "彼はどうやって成功したか語りました。",
+      "sentence": "He told us how he ____.",
+      "verb": "indirect",
+      "choices": [
+        "succeeded",
+        "succeed",
+        "succeeds"
+      ],
+      "correctAnswer": "succeeded",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: how + S + Vです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "how he succeeded",
+      "type": "verbForm"
+    },
+    {
+      "id": "fb-g3-u8-001",
+      "japanese": "私は彼がどこに住んでいるか知りません。",
+      "sentence": "I don't know where he ____.",
+      "wordCount": 6,
+      "choices": [
+        "lives",
+        "live",
+        "living"
+      ],
+      "correctAnswer": "lives",
+      "difficulty": "intermediate",
+      "hint": "where he lives",
+      "type": "fillInBlank",
+      "explanation": "私は彼がどこに住んでいるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-002",
+      "japanese": "彼女は何が起こったか知っています。",
+      "sentence": "She knows what ____.",
+      "wordCount": 4,
+      "choices": [
+        "happened",
+        "happen",
+        "happens"
+      ],
+      "correctAnswer": "happened",
+      "difficulty": "intermediate",
+      "hint": "what happened",
+      "type": "fillInBlank",
+      "explanation": "彼女は何が起こったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-003",
+      "japanese": "私はいつ彼が来るか分かりません。",
+      "sentence": "I don't know when he will ____.",
+      "wordCount": 7,
+      "choices": [
+        "come",
+        "comes",
+        "coming"
+      ],
+      "correctAnswer": "come",
+      "difficulty": "intermediate",
+      "hint": "when he will come",
+      "type": "fillInBlank",
+      "explanation": "私はいつ彼が来るか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-004",
+      "japanese": "彼はなぜ彼女が泣いているか知っています。",
+      "sentence": "He knows why she is ____.",
+      "wordCount": 6,
+      "choices": [
+        "crying",
+        "cry",
+        "cries"
+      ],
+      "correctAnswer": "crying",
+      "difficulty": "intermediate",
+      "hint": "why she is crying",
+      "type": "fillInBlank",
+      "explanation": "彼はなぜ彼女が泣いているか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-005",
+      "japanese": "私は誰がこれを作ったか知っています。",
+      "sentence": "I know who ____ this.",
+      "wordCount": 5,
+      "choices": [
+        "made",
+        "make",
+        "makes"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "hint": "who made",
+      "type": "fillInBlank",
+      "explanation": "私は誰がこれを作ったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-006",
+      "japanese": "彼女はどうやってそこに行くか分かりません。",
+      "sentence": "She doesn't know how to ____ there.",
+      "wordCount": 7,
+      "choices": [
+        "get",
+        "gets",
+        "getting"
+      ],
+      "correctAnswer": "get",
+      "difficulty": "intermediate",
+      "hint": "how to get",
+      "type": "fillInBlank",
+      "explanation": "彼女はどうやってそこに行くか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-007",
+      "japanese": "私はどの本が一番良いか分かりません。",
+      "sentence": "I don't know which book ____ the best.",
+      "wordCount": 8,
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "hint": "which book is",
+      "type": "fillInBlank",
+      "explanation": "私はどの本が一番良いか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-008",
+      "japanese": "彼は何時に店が開くか知っています。",
+      "sentence": "He knows what time the store ____.",
+      "wordCount": 7,
+      "choices": [
+        "opens",
+        "open",
+        "opening"
+      ],
+      "correctAnswer": "opens",
+      "difficulty": "intermediate",
+      "hint": "what time it opens",
+      "type": "fillInBlank",
+      "explanation": "彼は何時に店が開くか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-009",
+      "japanese": "私たちはどこで彼女に会えるか知りません。",
+      "sentence": "We don't know where we can ____ her.",
+      "wordCount": 8,
+      "choices": [
+        "meet",
+        "meets",
+        "meeting"
+      ],
+      "correctAnswer": "meet",
+      "difficulty": "intermediate",
+      "hint": "where we can meet",
+      "type": "fillInBlank",
+      "explanation": "私たちはどこで彼女に会えるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-010",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています。",
+      "sentence": "She understands why he is ____.",
+      "wordCount": 6,
+      "choices": [
+        "angry",
+        "anger",
+        "angrily"
+      ],
+      "correctAnswer": "angry",
+      "difficulty": "intermediate",
+      "hint": "why he is angry",
+      "type": "fillInBlank",
+      "explanation": "彼女はなぜ彼が怒っているか理解しています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-011",
+      "japanese": "私はいつバスが出発するか知りたいです。",
+      "sentence": "I want to know when the bus ____.",
+      "wordCount": 8,
+      "choices": [
+        "leaves",
+        "leave",
+        "leaving"
+      ],
+      "correctAnswer": "leaves",
+      "difficulty": "intermediate",
+      "hint": "when the bus leaves",
+      "type": "fillInBlank",
+      "explanation": "私はいつバスが出発するか知りたいです。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-012",
+      "japanese": "彼は誰が勝つか予測できます。",
+      "sentence": "He can predict who will ____.",
+      "wordCount": 6,
+      "choices": [
+        "win",
+        "wins",
+        "winning"
+      ],
+      "correctAnswer": "win",
+      "difficulty": "intermediate",
+      "hint": "who will win",
+      "type": "fillInBlank",
+      "explanation": "彼は誰が勝つか予測できます。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-013",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました。",
+      "sentence": "We discussed how to ____ the problem.",
+      "wordCount": 7,
+      "choices": [
+        "solve",
+        "solves",
+        "solving"
+      ],
+      "correctAnswer": "solve",
+      "difficulty": "intermediate",
+      "hint": "how to solve",
+      "type": "fillInBlank",
+      "explanation": "私たちはどうやって問題を解決するか話し合いました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-014",
+      "japanese": "彼女は何が必要か教えてくれました。",
+      "sentence": "She told me what I ____.",
+      "wordCount": 6,
+      "choices": [
+        "need",
+        "needs",
+        "needing"
+      ],
+      "correctAnswer": "need",
+      "difficulty": "intermediate",
+      "hint": "what I need",
+      "type": "fillInBlank",
+      "explanation": "彼女は何が必要か教えてくれました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-015",
+      "japanese": "私はどこで鍵を置いたか忘れました。",
+      "sentence": "I forgot where I ____ the key.",
+      "wordCount": 7,
+      "choices": [
+        "put",
+        "puts",
+        "putting"
+      ],
+      "correctAnswer": "put",
+      "difficulty": "intermediate",
+      "hint": "where I put",
+      "type": "fillInBlank",
+      "explanation": "私はどこで鍵を置いたか忘れました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-016",
+      "japanese": "彼はなぜそれが重要か説明しました。",
+      "sentence": "He explained why it ____ important.",
+      "wordCount": 6,
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "hint": "why it is",
+      "type": "fillInBlank",
+      "explanation": "彼はなぜそれが重要か説明しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-017",
+      "japanese": "私たちはいつ会議が始まるか確認しました。",
+      "sentence": "We checked when the meeting ____.",
+      "wordCount": 6,
+      "choices": [
+        "starts",
+        "start",
+        "starting"
+      ],
+      "correctAnswer": "starts",
+      "difficulty": "intermediate",
+      "hint": "when it starts",
+      "type": "fillInBlank",
+      "explanation": "私たちはいつ会議が始まるか確認しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-018",
+      "japanese": "彼女はどの道が最短か知っています。",
+      "sentence": "She knows which route ____ the shortest.",
+      "wordCount": 7,
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "hint": "which route is",
+      "type": "fillInBlank",
+      "explanation": "彼女はどの道が最短か知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-019",
+      "japanese": "私は何が彼を幸せにするか知っています。",
+      "sentence": "I know what ____ him happy.",
+      "wordCount": 6,
+      "choices": [
+        "makes",
+        "make",
+        "making"
+      ],
+      "correctAnswer": "makes",
+      "difficulty": "intermediate",
+      "hint": "what makes",
+      "type": "fillInBlank",
+      "explanation": "私は何が彼を幸せにするか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "fb-g3-u8-020",
+      "japanese": "彼はどうやって成功したか語りました。",
+      "sentence": "He told us how he ____.",
+      "wordCount": 6,
+      "choices": [
+        "succeeded",
+        "succeed",
+        "succeeds"
+      ],
+      "correctAnswer": "succeeded",
+      "difficulty": "intermediate",
+      "hint": "how he succeeded",
+      "type": "fillInBlank",
+      "explanation": "彼はどうやって成功したか語りました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+    },
+    {
+      "id": "so-g3-u8-001",
+      "japanese": "私は彼がどこに住んでいるか知りません。",
+      "sentence": "I don't know where he lives.",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "where",
+        "he",
+        "lives"
+      ],
+      "correctAnswer": "I don't know where he lives",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "where he lives",
+      "type": "sentenceOrdering",
+      "explanation": "私は彼がどこに住んでいるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私は彼がどこに住んでいるか知りません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n場所の副詞 → 時の副詞の順序\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I don't know where he lives"
+    },
+    {
+      "id": "so-g3-u8-002",
+      "japanese": "彼女は何が起こったか知っています。",
+      "sentence": "She knows what happened.",
+      "words": [
+        "She",
+        "knows",
+        "what",
+        "happened"
+      ],
+      "correctAnswer": "She knows what happened",
+      "wordCount": 4,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what happened",
+      "type": "sentenceOrdering",
+      "explanation": "彼女は何が起こったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼女は何が起こったか知っています。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She knows what happened"
+    },
+    {
+      "id": "so-g3-u8-003",
+      "japanese": "私はいつ彼が来るか分かりません。",
+      "sentence": "I don't know when he will come.",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "when",
+        "he",
+        "will",
+        "come"
+      ],
+      "correctAnswer": "I don't know when he will come",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "when he will come",
+      "type": "sentenceOrdering",
+      "explanation": "私はいつ彼が来るか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私はいつ彼が来るか分かりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I don't know when he will come"
+    },
+    {
+      "id": "so-g3-u8-004",
+      "japanese": "彼はなぜ彼女が泣いているか知っています。",
+      "sentence": "He knows why she is crying.",
+      "words": [
+        "He",
+        "knows",
+        "why",
+        "she",
+        "is",
+        "crying"
+      ],
+      "correctAnswer": "He knows why she is crying",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "why she is crying",
+      "type": "sentenceOrdering",
+      "explanation": "彼はなぜ彼女が泣いているか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼はなぜ彼女が泣いているか知っています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He knows why she is crying"
+    },
+    {
+      "id": "so-g3-u8-005",
+      "japanese": "私は誰がこれを作ったか知っています。",
+      "sentence": "I know who made this.",
+      "words": [
+        "I",
+        "know",
+        "who",
+        "made",
+        "this"
+      ],
+      "correctAnswer": "I know who made this",
+      "wordCount": 5,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "who made",
+      "type": "sentenceOrdering",
+      "explanation": "私は誰がこれを作ったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私は誰がこれを作ったか知っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I know who made this"
+    },
+    {
+      "id": "so-g3-u8-006",
+      "japanese": "彼女はどうやってそこに行くか分かりません。",
+      "sentence": "She doesn't know how to get there.",
+      "words": [
+        "She",
+        "doesn't",
+        "know",
+        "how",
+        "to",
+        "get",
+        "there"
+      ],
+      "correctAnswer": "She doesn't know how to get there",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "how to get",
+      "type": "sentenceOrdering",
+      "explanation": "彼女はどうやってそこに行くか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼女はどうやってそこに行くか分かりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n場所の副詞 → 時の副詞の順序\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She doesn't know how to get there"
+    },
+    {
+      "id": "so-g3-u8-007",
+      "japanese": "私はどの本が一番良いか分かりません。",
+      "sentence": "I don't know which book is the best.",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "which",
+        "book",
+        "is",
+        "the",
+        "best"
+      ],
+      "correctAnswer": "I don't know which book is the best",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "which book is",
+      "type": "sentenceOrdering",
+      "explanation": "私はどの本が一番良いか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私はどの本が一番良いか分かりません。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I don't know which book is the best"
+    },
+    {
+      "id": "so-g3-u8-008",
+      "japanese": "彼は何時に店が開くか知っています。",
+      "sentence": "He knows what time the store opens.",
+      "words": [
+        "He",
+        "knows",
+        "what",
+        "time",
+        "the",
+        "store",
+        "opens"
+      ],
+      "correctAnswer": "He knows what time the store opens",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what time",
+      "type": "sentenceOrdering",
+      "explanation": "彼は何時に店が開くか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼は何時に店が開くか知っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He knows what time the store opens"
+    },
+    {
+      "id": "so-g3-u8-009",
+      "japanese": "私たちはどこで彼女に会えるか知りません。",
+      "sentence": "We don't know where we can meet her.",
+      "words": [
+        "We",
+        "don't",
+        "know",
+        "where",
+        "we",
+        "can",
+        "meet",
+        "her"
+      ],
+      "correctAnswer": "We don't know where we can meet her",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "where we can",
+      "type": "sentenceOrdering",
+      "explanation": "私たちはどこで彼女に会えるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私たちはどこで彼女に会えるか知りません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【語順ルール】\n場所の副詞 → 時の副詞の順序\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We don't know where we can meet her"
+    },
+    {
+      "id": "so-g3-u8-010",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています。",
+      "sentence": "She understands why he is angry.",
+      "words": [
+        "She",
+        "understands",
+        "why",
+        "he",
+        "is",
+        "angry"
+      ],
+      "correctAnswer": "She understands why he is angry",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "why he is",
+      "type": "sentenceOrdering",
+      "explanation": "彼女はなぜ彼が怒っているか理解しています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼女はなぜ彼が怒っているか理解しています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She understands why he is angry"
+    },
+    {
+      "id": "so-g3-u8-011",
+      "japanese": "私はいつバスが出発するか知りたいです。",
+      "sentence": "I want to know when the bus leaves.",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "know",
+        "when",
+        "the",
+        "bus",
+        "leaves"
+      ],
+      "correctAnswer": "I want to know when the bus leaves",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "when the bus leaves",
+      "type": "sentenceOrdering",
+      "explanation": "私はいつバスが出発するか知りたいです。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私はいつバスが出発するか知りたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I want to know when the bus leaves"
+    },
+    {
+      "id": "so-g3-u8-012",
+      "japanese": "彼は誰が勝つか予測できます。",
+      "sentence": "He can predict who will win.",
+      "words": [
+        "He",
+        "can",
+        "predict",
+        "who",
+        "will",
+        "win"
+      ],
+      "correctAnswer": "He can predict who will win",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "who will win",
+      "type": "sentenceOrdering",
+      "explanation": "彼は誰が勝つか予測できます。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼は誰が勝つか予測できます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He can predict who will win"
+    },
+    {
+      "id": "so-g3-u8-013",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました。",
+      "sentence": "We discussed how to solve the problem.",
+      "words": [
+        "We",
+        "discussed",
+        "how",
+        "to",
+        "solve",
+        "the",
+        "problem"
+      ],
+      "correctAnswer": "We discussed how to solve the problem",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "how to solve",
+      "type": "sentenceOrdering",
+      "explanation": "私たちはどうやって問題を解決するか話し合いました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私たちはどうやって問題を解決するか話し合いました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We discussed how to solve the problem"
+    },
+    {
+      "id": "so-g3-u8-014",
+      "japanese": "彼女は何が必要か教えてくれました。",
+      "sentence": "She told me what I need.",
+      "words": [
+        "She",
+        "told",
+        "me",
+        "what",
+        "I",
+        "need"
+      ],
+      "correctAnswer": "She told me what I need",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what I need",
+      "type": "sentenceOrdering",
+      "explanation": "彼女は何が必要か教えてくれました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼女は何が必要か教えてくれました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She told me what I need"
+    },
+    {
+      "id": "so-g3-u8-015",
+      "japanese": "私はどこで鍵を置いたか忘れました。",
+      "sentence": "I forgot where I put the key.",
+      "words": [
+        "I",
+        "forgot",
+        "where",
+        "I",
+        "put",
+        "the",
+        "key"
+      ],
+      "correctAnswer": "I forgot where I put the key",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "where I put",
+      "type": "sentenceOrdering",
+      "explanation": "私はどこで鍵を置いたか忘れました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私はどこで鍵を置いたか忘れました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I forgot where I put the key"
+    },
+    {
+      "id": "so-g3-u8-016",
+      "japanese": "彼はなぜそれが重要か説明しました。",
+      "sentence": "He explained why it is important.",
+      "words": [
+        "He",
+        "explained",
+        "why",
+        "it",
+        "is",
+        "important"
+      ],
+      "correctAnswer": "He explained why it is important",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "why it is",
+      "type": "sentenceOrdering",
+      "explanation": "彼はなぜそれが重要か説明しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼はなぜそれが重要か説明しました。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He explained why it is important"
+    },
+    {
+      "id": "so-g3-u8-017",
+      "japanese": "私たちはいつ会議が始まるか確認しました。",
+      "sentence": "We checked when the meeting starts.",
+      "words": [
+        "We",
+        "checked",
+        "when",
+        "the",
+        "meeting",
+        "starts"
+      ],
+      "correctAnswer": "We checked when the meeting starts",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "when it starts",
+      "type": "sentenceOrdering",
+      "explanation": "私たちはいつ会議が始まるか確認しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私たちはいつ会議が始まるか確認しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We checked when the meeting starts"
+    },
+    {
+      "id": "so-g3-u8-018",
+      "japanese": "彼女はどの道が最短か知っています。",
+      "sentence": "She knows which route is the shortest.",
+      "words": [
+        "She",
+        "knows",
+        "which",
+        "route",
+        "is",
+        "the",
+        "shortest"
+      ],
+      "correctAnswer": "She knows which route is the shortest",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "which route is",
+      "type": "sentenceOrdering",
+      "explanation": "彼女はどの道が最短か知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼女はどの道が最短か知っています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She knows which route is the shortest"
+    },
+    {
+      "id": "so-g3-u8-019",
+      "japanese": "私は何が彼を幸せにするか知っています。",
+      "sentence": "I know what makes him happy.",
+      "words": [
+        "I",
+        "know",
+        "what",
+        "makes",
+        "him",
+        "happy"
+      ],
+      "correctAnswer": "I know what makes him happy",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what makes",
+      "type": "sentenceOrdering",
+      "explanation": "私は何が彼を幸せにするか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「私は何が彼を幸せにするか知っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I know what makes him happy"
+    },
+    {
+      "id": "so-g3-u8-020",
+      "japanese": "彼はどうやって成功したか語りました。",
+      "sentence": "He told us how he succeeded.",
+      "words": [
+        "He",
+        "told",
+        "us",
+        "how",
+        "he",
+        "succeeded"
+      ],
+      "correctAnswer": "He told us how he succeeded",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "how he succeeded",
+      "type": "sentenceOrdering",
+      "explanation": "彼はどうやって成功したか語りました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。\n\n「彼はどうやって成功したか語りました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He told us how he succeeded"
+    },
+    {
+      "id": "g3-u8-ifwhether-001",
+      "type": "fillInBlank",
+      "japanese": "彼が来るかどうか分かりません。",
+      "sentence": "I don't know ____ he will come.",
+      "choices": [
+        "if",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "if/whetherで「~かどうか」という間接疑問文として覚えてください。I don't know if he will come.「彼が来るかどうか分からない」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女が忙しいかどうか聞いてください。",
+      "words": [
+        "please",
+        "ask",
+        "if",
+        "she",
+        "is",
+        "busy"
+      ],
+      "correctAnswer": "Please ask if she is busy.",
+      "difficulty": "intermediate",
+      "explanation": "if/whether + 主語 + 動詞という間接疑問文の語順として覚えてください。「~かどうか」です。\n\n「彼女が忙しいかどうか聞いてください。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Please ask if she is busy.",
+      "hint": "ask if",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u8-ifwhether-003",
+      "type": "fillInBlank",
+      "japanese": "彼女がそれを知っているかどうか分かりません。",
+      "sentence": "I don't know ____ she knows it.",
+      "choices": [
+        "whether",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "whether",
+      "difficulty": "intermediate",
+      "explanation": "whether/ifで「~かどうか」という間接疑問文として覚えてください。whetherはifと同じ意味だが、より formalです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-004",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼が来るかどうか知りません。",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "if",
+        "he",
+        "comes",
+        "to",
+        "the",
+        "party",
+        "does",
+        "come"
+      ],
+      "correctAnswer": "I don't know if he comes to the party.",
+      "difficulty": "advanced",
+      "explanation": "間接疑問文では、if + 主語 + 動詞の語順になります。不要な語: does, come（2語）\n\n「私は彼が来るかどうか知りません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I don't know if he comes to the party.",
+      "hint": "if he comes",
+      "wordCount": 9,
+      "unusedWords": 2
+    },
+    {
+      "id": "g3-u8-ifwhether-005",
+      "type": "fillInBlank",
+      "japanese": "雨が降るかどうか確認しましょう。",
+      "sentence": "Let's check ____ it will rain.",
+      "choices": [
+        "if",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "ifで「~かどうか」という間接疑問文として覚えてください。Let's check if it will rain.「雨が降るかどうか確認しよう」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-006",
       "type": "conversation",
-      "japanese": "教えてくれてありがとう。",
-      "situation": "感謝",
+      "japanese": "彼が正しいかどうか分かりません。",
+      "situation": "意見について",
       "dialogue": [
         {
           "speaker": "A",
-          "text": "Here's how to do it."
+          "text": "Is he right?"
         },
         {
           "speaker": "B",
-          "text": "Thank you for ____ me."
+          "text": "I don't know ____ he is right."
         }
       ],
       "choices": [
-        "teaching",
-        "teach",
-        "taught"
+        "if",
+        "that",
+        "what"
       ],
-      "correctAnswer": "teaching",
-      "difficulty": "beginner",
-      "explanation": "Thank you for + doingという熟語として覚えてください。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-012",
-      "type": "fillInBlank",
-      "japanese": "彼は何も言わずに出て行きました。",
-      "sentence": "He left without ____ anything.",
-      "choices": [
-        "saying",
-        "say",
-        "said"
-      ],
-      "correctAnswer": "saying",
+      "correctAnswer": "if",
       "difficulty": "intermediate",
-      "explanation": "without + doingで「~せずに」という構文として覚えてください。withoutの後は動名詞です。He left without saying anything.で「何も言わずに出て行った」です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
+      "explanation": "if/whetherで「~かどうか」という間接疑問文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "~かどうか"
     },
     {
-      "id": "g3-u5-prep-013",
+      "id": "g3-u8-ifwhether-007",
       "type": "sentenceOrdering",
-      "japanese": "彼女は朝食を食べずに出かけました。",
+      "japanese": "彼女が来られるかどうか教えてください。",
       "words": [
+        "please",
+        "tell",
+        "me",
+        "whether",
         "she",
-        "left",
-        "without",
-        "eating",
-        "breakfast"
-      ],
-      "correctAnswer": "She left without eating breakfast.",
-      "difficulty": "intermediate",
-      "explanation": "without + doingで「~せずに」という構文として覚えてください。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "without eating",
-      "wordCount": 5
-    },
-    {
-      "id": "g3-u5-prep-014",
-      "type": "fillInBlank",
-      "japanese": "休まずに働き続けました。",
-      "sentence": "I kept working without ____.",
-      "choices": [
-        "resting",
-        "rest",
-        "rested"
-      ],
-      "correctAnswer": "resting",
-      "difficulty": "intermediate",
-      "explanation": "without + doingで「~せずに」という構文として覚えてください。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-015",
-      "type": "fillInBlank",
-      "japanese": "一生懸命勉強することで合格しました。",
-      "sentence": "I passed the exam by ____ hard.",
-      "choices": [
-        "studying",
-        "study",
-        "studied"
-      ],
-      "correctAnswer": "studying",
-      "difficulty": "intermediate",
-      "explanation": "by + doingで「~することによって」という構文として覚えてください。byの後は動名詞です。I passed by studying hard.で「一生懸命勉強することで合格した」です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-016",
-      "type": "sentenceOrdering",
-      "japanese": "練習することで上達できます。",
-      "sentence": "あなたは練習することで上達できます",
-      "words": [
-        "you",
         "can",
-        "improve",
-        "by",
-        "practicing"
+        "come"
       ],
-      "correctAnswer": "You can improve by practicing.",
+      "correctAnswer": "Please tell me whether she can come.",
       "difficulty": "intermediate",
-      "explanation": "by + doingで「~することによって」という構文として覚えてください。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "by practicing",
-      "wordCount": 5
+      "explanation": "whether + 主語 + 動詞という間接疑問文の語順として覚えてください。\n\n「彼女が来られるかどうか教えてください。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Please tell me whether she can come.",
+      "hint": "tell me whether",
+      "wordCount": 7
     },
     {
-      "id": "g3-u5-prep-017",
-      "type": "paraphrase",
-      "japanese": "彼は走ることで健康を保ちます（running）。",
-      "originalSentence": "He stays healthy when he runs.",
-      "question": "He stays healthy by ____.",
-      "correctAnswer": "running",
-      "difficulty": "intermediate",
-      "explanation": "when構文をby + doingに書き換えます。by running「走ることによって」となります。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。"
-    },
-    {
-      "id": "g3-u5-prep-018",
+      "id": "g3-u8-ifwhether-008",
       "type": "fillInBlank",
-      "japanese": "彼女は歌うのが得意です。",
-      "sentence": "She is good at ____.",
+      "japanese": "それが本当かどうか分かりません。",
+      "sentence": "I'm not sure ____ it is true.",
       "choices": [
-        "singing",
-        "sing",
-        "sung"
+        "if",
+        "that",
+        "what"
       ],
-      "correctAnswer": "singing",
+      "correctAnswer": "if",
       "difficulty": "beginner",
-      "explanation": "be good at + doingで「~が得意だ」という熟語として覚えてください。atの後は動名詞です。",
-      "hint": "動名詞"
+      "explanation": "ifで「~かどうか」という間接疑問文として覚えてください。I'm not sure if it is true.「それが本当かどうか確信がない」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "~かどうか"
     },
     {
-      "id": "g3-u5-prep-019",
-      "type": "fillInBlank",
-      "japanese": "私は失敗することを恐れています。",
-      "sentence": "I'm afraid of ____.",
-      "choices": [
-        "failing",
-        "fail",
-        "failed"
-      ],
-      "correctAnswer": "failing",
-      "difficulty": "intermediate",
-      "explanation": "be afraid of + doingで「~することを恐れる」という熟語として覚えてください。ofの後は動名詞です。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "動名詞"
-    },
-    {
-      "id": "g3-u5-prep-020",
+      "id": "g3-u8-ifwhether-009",
       "type": "sentenceOrdering",
-      "japanese": "彼は遅刻したことを謝りました。",
+      "japanese": "私は彼女が幸せかどうかわかりません。",
       "words": [
-        "he",
-        "apologized",
-        "for",
-        "being",
-        "late"
+        "I",
+        "wonder",
+        "if",
+        "she",
+        "is",
+        "happy",
+        "does",
+        "be"
       ],
-      "correctAnswer": "He apologized for being late.",
+      "correctAnswer": "I wonder if she is happy.",
       "difficulty": "intermediate",
-      "explanation": "apologize for + doingで「~したことを謝る」という熟語として覚えてください。他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?などです。",
-      "hint": "for being",
-      "wordCount": 5
+      "explanation": "間接疑問文では、if + 主語 + be動詞の語順になります。不要な語: does, be（2語）\n\n「私は彼女が幸せかどうかわかりません。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I wonder if she is happy.",
+      "hint": "if she is",
+      "wordCount": 6,
+      "unusedWords": 2
+    },
+    {
+      "id": "g3-u8-ifwhether-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼がそれを理解しているかどうか確認してください。",
+      "words": [
+        "please",
+        "check",
+        "if",
+        "he",
+        "understands",
+        "it"
+      ],
+      "correctAnswer": "Please check if he understands it.",
+      "difficulty": "intermediate",
+      "explanation": "if + 主語 + 動詞という間接疑問文の語順として覚えてください。「~かどうか」です。\n\n「彼がそれを理解しているかどうか確認してください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Please check if he understands it.",
+      "hint": "check if",
+      "wordCount": 6
     }
   ]
 }
