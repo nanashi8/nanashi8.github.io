@@ -6,6 +6,7 @@ import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
+import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
 
 interface VerbFormQuestion {
   id: string;
@@ -610,6 +611,38 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
     // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
     setLastAnswerTime(Date.now());
+
+    // 動的再ソート: 不正解時は即座に、それ以外は3問ごとに再ソート
+    if (!isCorrect && !isReviewFocusMode) {
+      const shouldResortImmediately = true;
+      const shouldResortPeriodically = totalAnswered % 3 === 0;
+
+      if (shouldResortImmediately || shouldResortPeriodically) {
+        const remainingQuestions = currentQuestions.slice(currentQuestionIndex + 1);
+
+        if (remainingQuestions.length > 1) {
+          // localStorage から上限設定を取得
+          const savedLearningLimit = localStorage.getItem('learning-limit-grammar');
+          const savedReviewLimit = localStorage.getItem('review-limit-grammar');
+          const learningLimit = savedLearningLimit ? parseInt(savedLearningLimit) : null;
+          const reviewLimit = savedReviewLimit ? parseInt(savedReviewLimit) : null;
+
+          // 共通ソート関数で残りの問題を再ソート
+          const resorted = sortQuestionsByPriority(remainingQuestions as any[], {
+            isReviewFocusMode: false,
+            learningLimit,
+            reviewLimit,
+            mode: 'grammar',
+          });
+
+          // 問題リストを更新
+          setCurrentQuestions([
+            ...currentQuestions.slice(0, currentQuestionIndex + 1),
+            ...(resorted as unknown as GrammarQuestion[]),
+          ]);
+        }
+      }
+    }
   };
 
   const handleWordClick = (word: string, fromRemaining: boolean) => {
