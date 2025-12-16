@@ -156,9 +156,10 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
   const { isReviewFocusMode = false, learningLimit, reviewLimit, mode } = options;
 
   // 各語句の状態を取得
-  const questionsWithStatus = questions.map((q) => ({
+  const questionsWithStatus = questions.map((q, index) => ({
     question: q,
     status: getWordStatus(q.word, mode),
+    index,
   }));
 
   // カテゴリ別にカウント
@@ -206,7 +207,7 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
     // セッション優先フラグ：再追加された問題を最優先（次の3問の中で）
     const hasSessionPriorityA = a.question.sessionPriority !== undefined;
     const hasSessionPriorityB = b.question.sessionPriority !== undefined;
-    
+
     if (hasSessionPriorityA && !hasSessionPriorityB) return -1;
     if (!hasSessionPriorityA && hasSessionPriorityB) return 1;
     if (hasSessionPriorityA && hasSessionPriorityB) {
@@ -312,21 +313,21 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       return lastStudiedA - lastStudiedB;
     }
 
-    // ランダム
-    return Math.random() - 0.5;
+    // 安定タイブレーク（元の順序を維持）
+    return (a as any).index - (b as any).index;
   });
 
   // 枠取りロジック：新規/復習のバランスを制御
   const sortedQuestions = sorted.map((item) => item.question);
-  
+
   // セッション優先フラグを持つ問題（再追加問題）を最初に抽出
   const sessionPriorityQuestions = sortedQuestions.filter(q => q.sessionPriority !== undefined);
   const otherQuestions = sortedQuestions.filter(q => q.sessionPriority === undefined);
-  
+
   // 新規問題と復習問題を分類（sessionPriority以外で）
   const reviewQuestions: Question[] = [];
   const newQuestions: Question[] = [];
-  
+
   otherQuestions.forEach(q => {
     // 既に学習したことがある問題（incorrect, still_learning, mastered）は復習扱い
     const status = getWordStatus(q.word, mode);
@@ -336,15 +337,15 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       newQuestions.push(q);
     }
   });
-  
+
   // 枠取り：復習7割、新規3割の比率で混ぜる
   const result: Question[] = [];
   let reviewIndex = 0;
   let newIndex = 0;
-  
+
   // まずセッション優先問題を追加（最優先）
   result.push(...sessionPriorityQuestions);
-  
+
   // 復習と新規を比率7:3で混ぜる
   while (reviewIndex < reviewQuestions.length || newIndex < newQuestions.length) {
     // 復習7問
@@ -356,6 +357,6 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       result.push(newQuestions[newIndex++]);
     }
   }
-  
+
   return result;
 }

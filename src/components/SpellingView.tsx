@@ -32,6 +32,7 @@ import { useSessionStats } from '../hooks/useSessionStats';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
+import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 
 interface SpellingViewProps {
@@ -300,6 +301,9 @@ function SpellingView({
 
     // 新規/復習の統計を更新
     if (currentQuestion) {
+      const qid = String((currentQuestion as any).word);
+      sessionKpi.onShown(qid);
+      sessionKpi.onAnswer(qid, isCorrect);
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
     }
 
