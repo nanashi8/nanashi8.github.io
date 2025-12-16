@@ -318,11 +318,12 @@ describe('LearningPhaseDetector', () => {
       expect(result.phase).toBe(LearningPhase.LONG_TERM);
     });
 
-    test('TC4.10: デフォルト判定でSHORT_TERM', () => {
+    test('TC4.10: 12時間前はINTRADAY_REVIEW判定', () => {
       const status = createStatus(5, 3, 2, now - 43200000); // 12時間前
       const result = detector.detectPhaseWithReason('word', status);
       
-      expect(result.phase).toBe(LearningPhase.SHORT_TERM);
+      // 24時間以内なのでINTRADAY_REVIEW（当日復習）フェーズ
+      expect(result.phase).toBe(LearningPhase.INTRADAY_REVIEW);
     });
   });
 

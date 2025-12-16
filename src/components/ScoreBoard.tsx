@@ -715,6 +715,7 @@ function ScoreBoard({
                   <div className="plan-setting-item">
                     <label>まだまだの語数上限:</label>
                     <select
+                      aria-label="まだまだの語数上限"
                       value={stillLearningLimit || 0}
                       onChange={(e) => {
                         const value = parseInt(e.target.value);
@@ -746,6 +747,7 @@ function ScoreBoard({
                   <div className="plan-setting-item">
                     <label>分からないの語数上限:</label>
                     <select
+                      aria-label="分からないの語数上限"
                       value={incorrectLimit || 0}
                       onChange={(e) => {
                         const value = parseInt(e.target.value);
