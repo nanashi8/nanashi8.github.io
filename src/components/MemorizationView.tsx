@@ -209,8 +209,6 @@ function MemorizationView({
     selectedCategory,
     selectedWordPhraseFilter,
     allQuestions,
-    stillLearningLimit,
-    incorrectLimit,
     isLoading,
     isReviewFocusMode,
   ]);
