@@ -384,6 +384,12 @@ function MemorizationView({
     // フラッシュカード学習の原則：復習が20%以上なら新規を大幅に抑制
     const shouldSuppressNew = reviewRatio >= 0.2;
 
+    // 大量の「覚えていない」がある場合の段階的解消戦略
+    // 50個を超えたら集中モード：最近間違えた語句を優先的に繰り返し出題
+    const hasLargeIncorrectBacklog = counts.incorrect > 50;
+    // 30個以下になったら新規を少しずつ導入（モチベーション維持）
+    const canIntroduceNewQuestions = counts.incorrect <= 30;
+
     // ソート: 優先度 > 最終学習時刻（古い順） > ランダム
     const sorted = questionsWithStatus.sort((a, b) => {
       const statusA = a.status;
@@ -424,8 +430,24 @@ function MemorizationView({
         if (riskB >= 100 && riskB < 150) priorityB = 0.2;
 
         // 🔴 分からないは常に高優先（記憶の定着が最重要）
-        if (statusA?.category === 'incorrect' && priorityA > 0.2) priorityA = 0.3;
-        if (statusB?.category === 'incorrect' && priorityB > 0.2) priorityB = 0.3;
+        // 大量の覚えていない語句がある場合：最近間違えた語句を最優先
+        if (statusA?.category === 'incorrect' && priorityA > 0.2) {
+          if (hasLargeIncorrectBacklog) {
+            // 最近間違えた語句（1日以内）を超優先
+            const isRecentA = statusA.lastStudied && Date.now() - statusA.lastStudied < 86400000;
+            priorityA = isRecentA ? 0.1 : 0.3;
+          } else {
+            priorityA = 0.3;
+          }
+        }
+        if (statusB?.category === 'incorrect' && priorityB > 0.2) {
+          if (hasLargeIncorrectBacklog) {
+            const isRecentB = statusB.lastStudied && Date.now() - statusB.lastStudied < 86400000;
+            priorityB = isRecentB ? 0.1 : 0.3;
+          } else {
+            priorityB = 0.3;
+          }
+        }
 
         // 🟡 まだまだも高優先（定着させることが重要）
         if (statusA?.category === 'still_learning' && priorityA > 0.3) priorityA = 0.8;
@@ -442,13 +464,28 @@ function MemorizationView({
           else if (priorityB > 2) priorityB = 4.5;
         }
 
-        // 🆕 新規問題は復習状況に応じて大幅に抑制
+        // 🆕 新規問題は復習状況に応じて段階的に導入
         // フラッシュカード学習では、復習が優先で新規は少しずつ追加
         if (statusA?.category === 'new' && priorityA > 3) {
-          priorityA = shouldSuppressNew ? 5 : 3.5; // 20%以上: 最後尾、20%未満: 後回し
+          if (hasLargeIncorrectBacklog) {
+            // 覚えていない語句が50個超：新規は完全に停止
+            priorityA = 10;
+          } else if (canIntroduceNewQuestions) {
+            // 覚えていない語句が30個以下：新規を適度に導入（10%程度）
+            priorityA = 3.5;
+          } else {
+            // 中間状態（31-50個）：新規は後回し
+            priorityA = shouldSuppressNew ? 5 : 3.5;
+          }
         }
         if (statusB?.category === 'new' && priorityB > 3) {
-          priorityB = shouldSuppressNew ? 5 : 3.5;
+          if (hasLargeIncorrectBacklog) {
+            priorityB = 10;
+          } else if (canIntroduceNewQuestions) {
+            priorityB = 3.5;
+          } else {
+            priorityB = shouldSuppressNew ? 5 : 3.5;
+          }
         }
 
         // 上限に達した場合はさらに優先度を上げる
@@ -623,13 +660,16 @@ function MemorizationView({
       // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
       setLastAnswerTime(Date.now());
 
-      // 適応的な出題順序の動的更新（5問ごとまたは上限達成時）
-      const shouldResort =
-        sessionStats.total % 5 === 0 ||
+      // 適応的な出題順序の動的更新
+      // 「まだまだ」または「覚えていない」を選択した場合、即座に再ソート
+      // それ以外は3問ごとに再ソート（パフォーマンスとのバランス）
+      const shouldResortImmediately = !isCorrect; // まだまだor覚えていないの場合
+      const shouldResortPeriodically =
+        sessionStats.total % 3 === 0 ||
         (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
         (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit);
 
-      if (shouldResort && questions.length > 1) {
+      if ((shouldResortImmediately || shouldResortPeriodically) && questions.length > 1) {
         // 残りの語句を再ソート（現在の語句は除外）
         const remainingQuestions = questions.slice(currentIndex + 1);
         const resorted = sortQuestionsByPriority(
