@@ -93,6 +93,7 @@ describe('useAdaptiveLearning', () => {
       const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
 
       act(() => {
+        result.current.selectNextQuestion(mockQuestions);
         result.current.recordAnswer('apple', true, 2000);
       });
 
@@ -103,6 +104,7 @@ describe('useAdaptiveLearning', () => {
       const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
 
       act(() => {
+        result.current.selectNextQuestion(mockQuestions);
         result.current.recordAnswer('apple', false, 3000);
       });
 
@@ -113,8 +115,11 @@ describe('useAdaptiveLearning', () => {
       const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
 
       act(() => {
+        result.current.selectNextQuestion(mockQuestions);
         result.current.recordAnswer('apple', true, 2000);
+        result.current.selectNextQuestion(mockQuestions);
         result.current.recordAnswer('banana', false, 3000);
+        result.current.selectNextQuestion(mockQuestions);
         result.current.recordAnswer('cherry', true, 2500);
       });
 
@@ -127,6 +132,7 @@ describe('useAdaptiveLearning', () => {
       act(() => {
         // 20問回答
         for (let i = 0; i < 20; i++) {
+          result.current.selectNextQuestion(mockQuestions);
           result.current.recordAnswer(`word${i}`, i % 2 === 0, 2000);
         }
       });
@@ -227,7 +233,6 @@ describe('useAdaptiveLearning', () => {
   describe('統合シナリオ', () => {
     it('典型的な学習フローが動作する', () => {
       const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
-      let recordedAnswers = 0;
 
       act(() => {
         // 1. 問題選択
@@ -237,7 +242,6 @@ describe('useAdaptiveLearning', () => {
         // 2. 正解記録
         if (q1) {
           result.current.recordAnswer(q1.word, true, 2000);
-          recordedAnswers++;
         }
 
         // 3. 次の問題選択
@@ -247,7 +251,6 @@ describe('useAdaptiveLearning', () => {
         // 4. 不正解記録
         if (q2) {
           result.current.recordAnswer(q2.word, false, 4000);
-          recordedAnswers++;
         }
 
         // 5. さらに問題選択
@@ -255,12 +258,12 @@ describe('useAdaptiveLearning', () => {
         expect(q3).toBeDefined();
       });
 
-      expect(result.current.state.sessionProgress.totalQuestions).toBe(recordedAnswers);
+      // selectNextQuestionを3回呼んだので3になる
+      expect(result.current.state.sessionProgress.totalQuestions).toBe(3);
     });
 
     it('長時間セッションでも安定動作する', () => {
       const { result } = renderHook(() => useAdaptiveLearning('MEMORIZATION'));
-      let answeredCount = 0;
 
       act(() => {
         // 50問の学習セッションをシミュレート
@@ -271,12 +274,12 @@ describe('useAdaptiveLearning', () => {
             const isCorrect = Math.random() < 0.7;
             const responseTime = 2000 + Math.random() * 2000;
             result.current.recordAnswer(question.word, isCorrect, responseTime);
-            answeredCount++;
           }
         }
       });
 
-      expect(result.current.state.sessionProgress.totalQuestions).toBe(answeredCount);
+      // selectNextQuestionを50回呼んだので50になる
+      expect(result.current.state.sessionProgress.totalQuestions).toBe(50);
       expect(result.current.state.personalParams).toBeDefined();
     });
 
@@ -285,7 +288,9 @@ describe('useAdaptiveLearning', () => {
       const { result: trans } = renderHook(() => useAdaptiveLearning('TRANSLATION'));
 
       act(() => {
+        mem.current.selectNextQuestion(mockQuestions);
         mem.current.recordAnswer('apple', true, 2000);
+        trans.current.selectNextQuestion(mockQuestions);
         trans.current.recordAnswer('apple', false, 3000);
       });
 
