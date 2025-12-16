@@ -30,6 +30,7 @@ import {
   updateCustomQuestionSet,
 } from './utils/customQuestionStorage';
 import { logger } from '@/utils/logger';
+import { sortQuestionsByPriority } from './utils/questionPrioritySorter';
 import {
   addToSkipGroup,
   handleSkippedWordIncorrect,
@@ -1293,6 +1294,41 @@ function App() {
         }
         setReviewCorrectStreak(newStreak);
       }
+    }
+
+    // 不正解時の動的な再ソート（暗記タブと同様の仕組み）
+    if (!isCorrect && !reviewFocusMode) {
+      setQuizState((prev) => {
+        const shouldResortImmediately = true; // 不正解の場合は即座に再ソート
+        const shouldResortPeriodically = prev.totalAnswered % 3 === 0;
+
+        if (shouldResortImmediately || shouldResortPeriodically) {
+          const remainingQuestions = prev.questions.slice(prev.currentIndex + 1);
+
+          if (remainingQuestions.length > 1) {
+            // 学習上限を取得
+            const savedLearningLimit = localStorage.getItem('learning-limit-translation');
+            const savedReviewLimit = localStorage.getItem('review-limit-translation');
+            const learningLimit = savedLearningLimit ? parseInt(savedLearningLimit) : null;
+            const reviewLimit = savedReviewLimit ? parseInt(savedReviewLimit) : null;
+
+            // 共通のソート関数を使用
+            const resorted = sortQuestionsByPriority(remainingQuestions, {
+              isReviewFocusMode: false,
+              learningLimit,
+              reviewLimit,
+              mode: 'translation',
+            });
+
+            return {
+              ...prev,
+              questions: [...prev.questions.slice(0, prev.currentIndex + 1), ...resorted],
+            };
+          }
+        }
+
+        return prev;
+      });
     }
 
     setQuizState((prev) => {
