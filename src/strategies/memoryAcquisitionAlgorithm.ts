@@ -551,6 +551,67 @@ export class AcquisitionQueueManager {
     this.acquisitionProgress.clear();
   }
 
+  /**
+   * キュー情報を取得
+   */
+  getQueueInfo(word: string): { queueType: QueueType; questionNumber: number } | null {
+    const entry = this.findWordInQueues(word);
+    if (!entry) return null;
+    
+    return {
+      queueType: entry.queueType,
+      questionNumber: entry.targetQuestionNumber
+    };
+  }
+
+  /**
+   * キューサイズを取得
+   */
+  getQueueSizes(): { immediate: number; early: number; mid: number; end: number } {
+    return {
+      immediate: this.queues.immediate.length,
+      early: this.queues.early.length,
+      mid: this.queues.mid.length,
+      end: this.queues.end.length
+    };
+  }
+
+  /**
+   * キューをエクスポート
+   */
+  exportQueues(): { immediate: QueueEntry[]; early: QueueEntry[]; mid: QueueEntry[]; end: QueueEntry[] } {
+    return {
+      immediate: [...this.queues.immediate],
+      early: [...this.queues.early],
+      mid: [...this.queues.mid],
+      end: [...this.queues.end]
+    };
+  }
+
+  /**
+   * 全キューをクリア
+   */
+  clearQueues(): void {
+    this.queues.immediate = [];
+    this.queues.early = [];
+    this.queues.mid = [];
+    this.queues.end = [];
+  }
+
+  /**
+   * 回答を記録（シンプルなインターフェース）
+   */
+  recordAnswer(word: string, isCorrect: boolean, responseTime: number): void {
+    const progress = this.getAcquisitionProgress(word);
+    const currentQueue = progress.currentQueue || QueueType.IMMEDIATE;
+    
+    if (isCorrect) {
+      this.handleCorrectAnswer(word, currentQueue, responseTime);
+    } else {
+      this.handleWrongAnswer(word, currentQueue, responseTime);
+    }
+  }
+
   // ========================================
   // プライベートメソッド
   // ========================================

@@ -11,12 +11,44 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Question } from '../types';
-import { LearningPhaseDetector, LearningPhase } from '../strategies/learningPhaseDetector';
-import { MemoryAcquisitionAlgorithm, QueueType, QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
-import { MemoryRetentionAlgorithm } from '../strategies/memoryRetentionAlgorithm';
+import { LearningPhaseDetector, LearningPhase, type QuestionStatus } from '../strategies/learningPhaseDetector';
+import { AcquisitionQueueManager, QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
+import { MemoryRetentionManager } from '../strategies/memoryRetentionAlgorithm';
 import { PersonalParameterEstimator, type PersonalParameters } from '../strategies/personalParameterEstimator';
 import { HybridQuestionSelector, type QuestionCandidate, DEFAULT_HYBRID_STRATEGY } from '../strategies/hybridQuestionSelector';
 import { logger } from '@/utils/logger';
+import { getWordProgress } from '../progressStorage';
+
+/**
+ * WordProgressをQuestionStatusに変換
+ */
+function convertToQuestionStatus(word: string, wordProgress: ReturnType<typeof getWordProgress>): QuestionStatus {
+  if (!wordProgress) {
+    return {
+      word,
+      reviewCount: 0,
+      correctCount: 0,
+      wrongCount: 0,
+      lastReviewTime: 0,
+      lastCorrectTime: 0,
+      averageResponseTime: 0,
+      consecutiveCorrect: 0,
+      consecutiveWrong: 0
+    };
+  }
+
+  return {
+    word,
+    reviewCount: wordProgress.correctCount + wordProgress.incorrectCount,
+    correctCount: wordProgress.correctCount,
+    wrongCount: wordProgress.incorrectCount,
+    lastReviewTime: wordProgress.lastStudied || 0,
+    lastCorrectTime: wordProgress.consecutiveCorrect > 0 ? wordProgress.lastStudied : 0,
+    averageResponseTime: wordProgress.averageResponseTime || 0,
+    consecutiveCorrect: wordProgress.consecutiveCorrect,
+    consecutiveWrong: wordProgress.consecutiveIncorrect
+  };
+}
 
 /**
  * 適応型学習の状態
@@ -86,8 +118,8 @@ export function useAdaptiveLearning(
 ): UseAdaptiveLearningResult {
   // アルゴリズムインスタンス（Ref で保持）
   const phaseDetectorRef = useRef<LearningPhaseDetector | null>(null);
-  const acquisitionAlgoRef = useRef<MemoryAcquisitionAlgorithm | null>(null);
-  const retentionAlgoRef = useRef<MemoryRetentionAlgorithm | null>(null);
+  const acquisitionAlgoRef = useRef<AcquisitionQueueManager | null>(null);
+  const retentionAlgoRef = useRef<MemoryRetentionManager | null>(null);
   const paramEstimatorRef = useRef<PersonalParameterEstimator | null>(null);
   const questionSelectorRef = useRef<HybridQuestionSelector | null>(null);
   
@@ -115,8 +147,8 @@ export function useAdaptiveLearning(
     
     // アルゴリズムインスタンスを作成
     phaseDetectorRef.current = new LearningPhaseDetector();
-    acquisitionAlgoRef.current = new MemoryAcquisitionAlgorithm(category);
-    retentionAlgoRef.current = new MemoryRetentionAlgorithm();
+    acquisitionAlgoRef.current = new AcquisitionQueueManager();
+    retentionAlgoRef.current = new MemoryRetentionManager();
     paramEstimatorRef.current = new PersonalParameterEstimator();
     questionSelectorRef.current = new HybridQuestionSelector({
       ...DEFAULT_HYBRID_STRATEGY,
@@ -177,7 +209,9 @@ export function useAdaptiveLearning(
     try {
       // 問題候補をQuestionCandidateに変換
       const questionCandidates: QuestionCandidate[] = candidates.map(q => {
-        const phase = phaseDetectorRef.current!.detectPhase(q.word);
+        const wordProgress = getWordProgress(q.word);
+        const status = convertToQuestionStatus(q.word, wordProgress);
+        const phase = phaseDetectorRef.current!.detectPhase(q.word, status);
         const queueInfo = acquisitionAlgoRef.current!.getQueueInfo(q.word);
         
         return {
@@ -185,12 +219,12 @@ export function useAdaptiveLearning(
           word: q.word,
           category,
           phase,
-          reviewCount: 0, // TODO: 実際の復習回数を取得
-          correctCount: 0, // TODO: 実際の正答回数を取得
-          lastReviewTime: Date.now(),
+          reviewCount: status.reviewCount,
+          correctCount: status.correctCount,
+          lastReviewTime: status.lastReviewTime || Date.now(),
           queueType: queueInfo?.queueType,
           questionNumber: queueInfo?.questionNumber,
-          difficulty: q.difficulty
+          difficulty: parseInt(q.difficulty) || 3
         };
       });
       
@@ -239,7 +273,9 @@ export function useAdaptiveLearning(
     try {
       // フェーズ判定
       if (phaseDetectorRef.current) {
-        const phase = phaseDetectorRef.current.detectPhase(word);
+        const wordProgress = getWordProgress(word);
+        const status = convertToQuestionStatus(word, wordProgress);
+        const phase = phaseDetectorRef.current.detectPhase(word, status);
         setState(prev => ({ ...prev, currentPhase: phase }));
       }
       
@@ -254,7 +290,12 @@ export function useAdaptiveLearning(
       
       // 記憶保持アルゴリズムに記録
       if (retentionAlgoRef.current) {
-        retentionAlgoRef.current.recordReview(word, isCorrect, responseTime);
+        retentionAlgoRef.current.recordReview(word, {
+          isCorrect,
+          confidence: isCorrect ? 3 : 0, // 正解時は中程度の自信、不正解時は0
+          responseTime,
+          timestamp: Date.now()
+        });
       }
       
       // 個人パラメータ推定に履歴を追加

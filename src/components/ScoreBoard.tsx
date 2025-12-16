@@ -47,6 +47,10 @@ interface ScoreBoardProps {
   lastAnswerDifficulty?: string; // 最後に回答した単語の難易度
   correctStreak?: number; // 現在の連続正解数
   incorrectStreak?: number; // 現在の連続不正解数
+  // 適応型学習情報（AIコメント用）
+  learningPhase?: 'ENCODING' | 'INITIAL_CONSOLIDATION' | 'LONG_TERM_RETENTION' | 'MASTERED';
+  estimatedSpeed?: number; // 学習速度パラメータ
+  forgettingRate?: number; // 忘却率パラメータ
   // 学習設定情報
   dataSource?: string; // 問題集
   category?: string; // 関連分野
@@ -73,6 +77,9 @@ function ScoreBoard({
   lastAnswerDifficulty,
   correctStreak = 0,
   incorrectStreak = 0,
+  learningPhase,
+  estimatedSpeed,
+  forgettingRate,
   dataSource = '',
   category = '',
   difficulty = '',
@@ -257,6 +264,9 @@ function ScoreBoard({
       todayAccuracy: todayAccuracy,
       planProgress: 0,
       timeOfDay: getTimeOfDay(),
+      learningPhase: learningPhase,
+      estimatedSpeed: estimatedSpeed,
+      forgettingRate: forgettingRate,
     };
 
     // 動的なAIコメントを生成

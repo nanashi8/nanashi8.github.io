@@ -75,6 +75,17 @@ class DrillSergeantCommentGenerator {
       parts.push('ようやく覚えたな！');
     }
 
+    // 適応型学習フェーズのコメント
+    if (ctx.learningPhase === 'ENCODING') {
+      parts.push('新規記憶を脳に刻み込んでるぞ！');
+    } else if (ctx.learningPhase === 'INITIAL_CONSOLIDATION') {
+      parts.push('記憶が定着してきてるな！');
+    } else if (ctx.learningPhase === 'LONG_TERM_RETENTION') {
+      parts.push('長期記憶に移行中だ！');
+    } else if (ctx.learningPhase === 'MASTERED') {
+      parts.push('完全にマスターしたな！');
+    }
+
     // 締めの言葉
     parts.push('この調子だ！💪');
 
@@ -180,6 +191,17 @@ class KindTeacherCommentGenerator {
     if (ctx.todayQuestions >= 50) {
       parts.push(`今日はもう${ctx.todayQuestions}問も頑張っていますね`);
       parts.push('無理しすぎないようにしてくださいね');
+    }
+
+    // 適応型学習フェーズのコメント
+    if (ctx.learningPhase === 'ENCODING') {
+      parts.push('記憶の符号化が進んでいます 📝');
+    } else if (ctx.learningPhase === 'INITIAL_CONSOLIDATION') {
+      parts.push('記憶が定着してきていますね ✨');
+    } else if (ctx.learningPhase === 'LONG_TERM_RETENTION') {
+      parts.push('長期記憶に移行できています 🌟');
+    } else if (ctx.learningPhase === 'MASTERED') {
+      parts.push('完全にマスターしましたね 🎉');
     }
 
     return parts.join(' ');

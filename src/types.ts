@@ -216,6 +216,12 @@ export interface CommentContext {
 
   // 時間帯
   timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
+
+  // 適応型学習情報（オプション）
+  learningPhase?: 'ENCODING' | 'INITIAL_CONSOLIDATION' | 'LONG_TERM_RETENTION' | 'MASTERED';
+  queueType?: 'IMMEDIATE' | 'EARLY' | 'MID' | 'END';
+  estimatedSpeed?: number; // 学習速度パラメータ
+  forgettingRate?: number; // 忘却率パラメータ
 }
 
 // ユーザーの学習プロファイル
