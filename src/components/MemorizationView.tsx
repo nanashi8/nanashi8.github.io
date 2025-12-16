@@ -15,6 +15,7 @@ import AddToCustomButton from './AddToCustomButton';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sortQuestionsByPriority as sortByPriorityCommon } from '../utils/questionPrioritySorter';
+import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -114,6 +115,9 @@ function MemorizationView({
 
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.MEMORIZATION);
+
+  // 問題再出題管理フック
+  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
 
   // 初期化: カード表示設定と音声設定を読み込み
   useEffect(() => {
@@ -707,45 +711,24 @@ function MemorizationView({
         setQuestions(updatedQuestions);
       }
 
-      // 「覚えていない」「まだまだ」の場合は問題を再度リストに追加（最後尾）
+      // 「覚えていない」「まだまだ」の場合は問題を即座に再追加（次の3問内）
       if (!isCorrect || isStillLearning) {
-        // 間違えた問題を最後尾に追加（繰り返し学習）
-        // セッション優先度を設定（次の3問の中で最優先）
-        const reAddedQuestion = {
-          ...currentQuestion,
-          sessionPriority: Date.now(), // タイムスタンプで優先度管理
-          reAddedCount: (currentQuestion.reAddedCount || 0) + 1,
-        };
-        setQuestions((prevQuestions) => [...prevQuestions, reAddedQuestion]);
+        setQuestions((prevQuestions) => 
+          reAddQuestion(currentQuestion, prevQuestions, currentIndex)
+        );
       }
 
       // 新規/復習の統計を更新
-      const isReviewQuestion = (currentQuestion.reAddedCount || 0) > 0;
-      setSessionStats((prev) => ({
-        ...prev,
-        newQuestions: isReviewQuestion ? prev.newQuestions : prev.newQuestions + 1,
-        reviewQuestions: isReviewQuestion ? prev.reviewQuestions + 1 : prev.reviewQuestions,
-        consecutiveNew: isReviewQuestion ? 0 : prev.consecutiveNew + 1,
-        consecutiveReview: isReviewQuestion ? prev.consecutiveReview + 1 : 0,
-      }));
+      updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
 
       // 次の語句へ
       const nextIndex = currentIndex + 1;
 
       if (nextIndex < questions.length) {
-        // セッション優先フラグのクリーン処理：3問経過したらクリア
-        const upcomingQuestions = questions.slice(nextIndex).map((q, idx) => {
-          if (q.sessionPriority && idx >= 3) {
-            // 3問以上先の問題からsessionPriorityを削除
-            const { sessionPriority, ...rest } = q;
-            return rest;
-          }
-          return q;
-        });
-        
-        if (upcomingQuestions.some(q => q !== questions[nextIndex + upcomingQuestions.indexOf(q)])) {
-          // フラグをクリアした問題があれば、リストを更新
-          setQuestions([...questions.slice(0, nextIndex), ...upcomingQuestions]);
+        // セッション優先フラグのクリーン処理：5問経過後にクリア
+        const clearedQuestions = clearExpiredFlags(questions, currentIndex);
+        if (clearedQuestions !== questions) {
+          setQuestions(clearedQuestions);
         }
 
         setCurrentQuestion(questions[nextIndex]);
