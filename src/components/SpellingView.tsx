@@ -29,6 +29,7 @@ import { logger } from '@/utils/logger';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { useSpellingGame } from '../hooks/useSpellingGame';
 import { useSessionStats } from '../hooks/useSessionStats';
+import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -90,6 +91,9 @@ function SpellingView({
 
   // セッション統計（カスタムフック）
   const { sessionStats, resetStats, updateStats } = useSessionStats();
+
+  // 適応型学習フック（問題選択と記録に使用）
+  const adaptiveLearning = useAdaptiveLearning('SPELLING');
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
@@ -202,6 +206,9 @@ function SpellingView({
 
       // 回答時刻を更新（ScoreBoard更新用）- updateWordProgressの完了後に更新
       setLastAnswerTime(Date.now());
+
+      // 適応型学習への記録
+      adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, responseTime);
 
       // AI学習アシスタント: スキップした単語の検証
       const progress = await loadProgress();
@@ -475,6 +482,9 @@ function SpellingView({
                 }
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
+                learningPhase={adaptiveLearning.state.currentPhase}
+                estimatedSpeed={adaptiveLearning.state.personalParameters?.learningSpeed}
+                forgettingRate={adaptiveLearning.state.personalParameters?.forgettingRate}
                 dataSource={
                   selectedDataSource === 'all'
                     ? '全問題集'
