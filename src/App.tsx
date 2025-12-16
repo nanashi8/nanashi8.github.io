@@ -1016,6 +1016,10 @@ function App() {
       incorrect: 0,
       review: 0,
       mastered: 0,
+      newQuestions: 0,
+      reviewQuestions: 0,
+      consecutiveNew: 0,
+      consecutiveReview: 0,
     });
 
     // クイズ開始時刻を記録
@@ -1331,6 +1335,31 @@ function App() {
       });
     }
 
+    // 不正解時に問題を最後尾に再追加（繰り返し学習）
+    if (!isCorrect && !reviewFocusMode && currentQuestion) {
+      const reAddedQuestion = {
+        ...currentQuestion,
+        sessionPriority: Date.now(),
+        reAddedCount: (currentQuestion.reAddedCount || 0) + 1,
+      };
+      setQuizState((prev) => ({
+        ...prev,
+        questions: [...prev.questions, reAddedQuestion],
+      }));
+    }
+
+    // 新規/復習の統計を更新
+    if (currentQuestion) {
+      const isReviewQuestion = (currentQuestion.reAddedCount || 0) > 0;
+      setSessionStats((prev) => ({
+        ...prev,
+        newQuestions: isReviewQuestion ? prev.newQuestions : prev.newQuestions + 1,
+        reviewQuestions: isReviewQuestion ? prev.reviewQuestions + 1 : prev.reviewQuestions,
+        consecutiveNew: isReviewQuestion ? 0 : prev.consecutiveNew + 1,
+        consecutiveReview: isReviewQuestion ? prev.consecutiveReview + 1 : 0,
+      }));
+    }
+
     setQuizState((prev) => {
       const newState = {
         ...prev,
@@ -1352,6 +1381,27 @@ function App() {
       // 補修モードの場合、問題プールを使用
       const currentQuestions = reviewFocusMode ? reviewQuestionPool : prev.questions;
       const nextIndex = prev.currentIndex + 1;
+
+      // セッション優先フラグのクリーン処理：3問経過したらクリア
+      if (!reviewFocusMode && nextIndex < currentQuestions.length) {
+        const upcomingQuestions = currentQuestions.slice(nextIndex).map((q, idx) => {
+          if (q.sessionPriority && idx >= 3) {
+            const { sessionPriority, ...rest } = q;
+            return rest;
+          }
+          return q;
+        });
+        
+        if (upcomingQuestions.some((q, idx) => q !== currentQuestions[nextIndex + idx])) {
+          return {
+            ...prev,
+            questions: [...currentQuestions.slice(0, nextIndex), ...upcomingQuestions],
+            currentIndex: nextIndex,
+            answered: false,
+            selectedAnswer: null,
+          };
+        }
+      }
 
       // セッション終了を検出（最終問題の後）
       if (!reviewFocusMode && nextIndex >= currentQuestions.length) {
