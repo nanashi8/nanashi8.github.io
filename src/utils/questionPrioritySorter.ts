@@ -321,14 +321,14 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
   const sortedQuestions = sorted.map((item) => item.question);
 
   // セッション優先フラグを持つ問題（再追加問題）を最初に抽出
-  const sessionPriorityQuestions = sortedQuestions.filter(q => q.sessionPriority !== undefined);
-  const otherQuestions = sortedQuestions.filter(q => q.sessionPriority === undefined);
+  const sessionPriorityQuestions = sortedQuestions.filter((q) => q.sessionPriority !== undefined);
+  const otherQuestions = sortedQuestions.filter((q) => q.sessionPriority === undefined);
 
   // 新規問題と復習問題を分類（sessionPriority以外で）
   const reviewQuestions: Question[] = [];
   const newQuestions: Question[] = [];
 
-  otherQuestions.forEach(q => {
+  otherQuestions.forEach((q) => {
     // 既に学習したことがある問題（incorrect, still_learning, mastered）は復習扱い
     const status = getWordStatus(q.word, mode);
     if (status && status.category !== 'new') {

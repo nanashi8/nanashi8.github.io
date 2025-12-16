@@ -719,7 +719,7 @@ function MemorizationView({
       }
 
       // KPIロギング + 新規/復習の統計を更新
-      
+
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
 
       // 次の語句へ

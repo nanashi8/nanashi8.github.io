@@ -54,6 +54,9 @@
     "lighthouse": "lhci autorun",
     "prepare": "husky"
   },
+  "overrides": {
+    "tmp": "^0.2.4"
+  },
   "size-limit": [
     {
       "name": "Main Bundle",
@@ -116,7 +119,7 @@
     "tsx": "^4.21.0",
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.48.0",
-    "vite": "^5.0.8",
+    "vite": "^7.3.0",
     "vitest": "^4.0.15"
   }
 }

@@ -40,17 +40,17 @@ interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
 /**
  * 問題の再出題管理フック
  */
-export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>(): UseQuestionRequeueResult<T, TStats> {
+export function useQuestionRequeue<
+  T extends RequeuableQuestion,
+  TStats = any,
+>(): UseQuestionRequeueResult<T, TStats> {
   /**
    * 問題を再追加（最優先キューに追加）
    * 次の3-5問の中で必ず再出題されるように配置
    */
-  const reAddQuestion = useCallback((
-    question: T,
-    questions: T[],
-    currentIndex: number
-  ): T[] => {
-    const qid = (question as any).id ?? (question as any).word ?? String((question as any).japanese ?? '');
+  const reAddQuestion = useCallback((question: T, questions: T[], currentIndex: number): T[] => {
+    const qid =
+      (question as any).id ?? (question as any).word ?? String((question as any).japanese ?? '');
     const reAddedQuestion = {
       ...question,
       sessionPriority: Date.now(),
@@ -76,7 +76,9 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
     // KPI: 再追加を記録（開発用）
     try {
       sessionKpi.onReAdd(String(qid));
-    } catch {}
+    } catch {
+      // KPI recording is optional, silently ignore errors
+    }
 
     return [
       ...questions.slice(0, insertPosition),
@@ -89,10 +91,7 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
    * 期限切れのsessionPriorityフラグをクリア
    * 5問経過した問題からフラグを削除
    */
-  const clearExpiredFlags = useCallback((
-    questions: T[],
-    currentIndex: number
-  ): T[] => {
+  const clearExpiredFlags = useCallback((questions: T[], currentIndex: number): T[] => {
     if (currentIndex >= questions.length - 1) return questions;
 
     return questions.map((q, idx) => {
@@ -115,21 +114,20 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
   /**
    * 再出題統計を更新
    */
-  const updateRequeueStats = useCallback((
-    question: T,
-    currentStats: TStats,
-    setter: (updater: (prev: TStats) => TStats) => void
-  ) => {
-    const isReview = (question.reAddedCount || 0) > 0;
+  const updateRequeueStats = useCallback(
+    (question: T, currentStats: TStats, setter: (updater: (prev: TStats) => TStats) => void) => {
+      const isReview = (question.reAddedCount || 0) > 0;
 
-    setter((prev: any) => ({
-      ...prev,
-      newQuestions: isReview ? prev.newQuestions : (prev.newQuestions || 0) + 1,
-      reviewQuestions: isReview ? (prev.reviewQuestions || 0) + 1 : prev.reviewQuestions || 0,
-      consecutiveNew: isReview ? 0 : (prev.consecutiveNew || 0) + 1,
-      consecutiveReview: isReview ? (prev.consecutiveReview || 0) + 1 : 0,
-    }));
-  }, []);
+      setter((prev: any) => ({
+        ...prev,
+        newQuestions: isReview ? prev.newQuestions : (prev.newQuestions || 0) + 1,
+        reviewQuestions: isReview ? (prev.reviewQuestions || 0) + 1 : prev.reviewQuestions || 0,
+        consecutiveNew: isReview ? 0 : (prev.consecutiveNew || 0) + 1,
+        consecutiveReview: isReview ? (prev.consecutiveReview || 0) + 1 : 0,
+      }));
+    },
+    []
+  );
 
   return {
     reAddQuestion,
