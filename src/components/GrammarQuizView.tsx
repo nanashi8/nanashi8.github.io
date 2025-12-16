@@ -90,6 +90,9 @@ interface GrammarQuestion {
   // その他
   type?: string;
   question?: string;
+  // セッション優先度管理
+  sessionPriority?: number; // 再追加時の優先度
+  reAddedCount?: number;    // 再追加回数
 }
 
 interface GrammarQuizViewProps {
@@ -168,6 +171,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     incorrect: 0,
     review: 0,
     mastered: 0,
+    newQuestions: 0,
+    reviewQuestions: 0,
+    consecutiveNew: 0,
+    consecutiveReview: 0,
   });
   const [error, setError] = useState<string | null>(null);
 
@@ -194,7 +201,22 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   // ハンドラー関数（useEffect前に定義）
   const handleNext = useCallback(() => {
     if (currentQuestionIndex < currentQuestions.length - 1) {
-      setCurrentQuestionIndex((prev) => prev + 1);
+      const nextIndex = currentQuestionIndex + 1;
+
+      // セッション優先フラグのクリーン処理：3問経過したらクリア
+      const upcomingQuestions = currentQuestions.slice(nextIndex).map((q, idx) => {
+        if (q.sessionPriority && idx >= 3) {
+          const { sessionPriority, ...rest } = q;
+          return rest;
+        }
+        return q;
+      });
+      
+      if (upcomingQuestions.some((q, idx) => q !== currentQuestions[nextIndex + idx])) {
+        setCurrentQuestions([...currentQuestions.slice(0, nextIndex), ...upcomingQuestions]);
+      }
+
+      setCurrentQuestionIndex(nextIndex);
       setSelectedAnswer(null);
       setSelectedWords([]);
       setAnswered(false);
@@ -203,7 +225,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       // 次の問題に移動したのlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
       setLastAnswerWord(undefined);
     }
-  }, [currentQuestionIndex, currentQuestions.length]);
+  }, [currentQuestionIndex, currentQuestions]);
 
   const handleStartQuiz = useCallback(async () => {
     setLoading(true);
@@ -325,7 +347,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setShowHint(false);
       setScore(0);
       setTotalAnswered(0);
-      setSessionStats({ correct: 0, incorrect: 0, review: 0, mastered: 0 });
+      setSessionStats({ 
+        correct: 0, 
+        incorrect: 0, 
+        review: 0, 
+        mastered: 0,
+        newQuestions: 0,
+        reviewQuestions: 0,
+        consecutiveNew: 0,
+        consecutiveReview: 0,
+      });
       setQuizStarted(true);
       setLoading(false);
     } catch (err) {
@@ -643,6 +674,26 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         }
       }
     }
+
+    // 不正解時に問題を最後尾に再追加（繰り返し学習）
+    if (!isCorrect && !isReviewFocusMode) {
+      const reAddedQuestion = {
+        ...currentQuestion,
+        sessionPriority: Date.now(),
+        reAddedCount: (currentQuestion.reAddedCount || 0) + 1,
+      };
+      setCurrentQuestions((prev) => [...prev, reAddedQuestion]);
+    }
+
+    // 新規/復習の統計を更新
+    const isReviewQuestion = (currentQuestion.reAddedCount || 0) > 0;
+    setSessionStats((prev) => ({
+      ...prev,
+      newQuestions: isReviewQuestion ? prev.newQuestions : prev.newQuestions + 1,
+      reviewQuestions: isReviewQuestion ? prev.reviewQuestions + 1 : prev.reviewQuestions,
+      consecutiveNew: isReviewQuestion ? 0 : prev.consecutiveNew + 1,
+      consecutiveReview: isReviewQuestion ? prev.consecutiveReview + 1 : 0,
+    }));
   };
 
   const handleWordClick = (word: string, fromRemaining: boolean) => {
