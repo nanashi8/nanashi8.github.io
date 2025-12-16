@@ -298,6 +298,15 @@ export function useAdaptiveLearning(
         });
       }
       
+      // セッション進行状況を更新
+      setState(prev => ({
+        ...prev,
+        sessionProgress: {
+          ...prev.sessionProgress,
+          totalQuestions: prev.sessionProgress.totalQuestions + 1
+        }
+      }));
+      
       // 個人パラメータ推定に履歴を追加
       if (paramEstimatorRef.current) {
         paramEstimatorRef.current.addHistory({
