@@ -14,6 +14,7 @@ import ScoreBoard from './ScoreBoard';
 import AddToCustomButton from './AddToCustomButton';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
+import { sortQuestionsByPriority as sortByPriorityCommon } from '../utils/questionPrioritySorter';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -681,11 +682,14 @@ function MemorizationView({
       if ((shouldResortImmediately || shouldResortPeriodically) && questions.length > 1) {
         // 残りの語句を再ソート（現在の語句は除外）
         const remainingQuestions = questions.slice(currentIndex + 1);
-        const resorted = sortQuestionsByPriority(
-          remainingQuestions,
-          stillLearningLimit,
-          incorrectLimit
-        );
+
+        // 共通のソート関数を使用（暗記モードの上限設定を渡す）
+        const resorted = sortByPriorityCommon(remainingQuestions, {
+          isReviewFocusMode: false,
+          learningLimit: stillLearningLimit,
+          reviewLimit: incorrectLimit,
+          mode: 'memorization',
+        });
 
         // 語句リストを更新
         const updatedQuestions = [
