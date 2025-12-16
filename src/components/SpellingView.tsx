@@ -30,6 +30,7 @@ import { useLearningLimits } from '../hooks/useLearningLimits';
 import { useSpellingGame } from '../hooks/useSpellingGame';
 import { useSessionStats } from '../hooks/useSessionStats';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
+import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -93,7 +94,7 @@ function SpellingView({
   const { sessionStats, resetStats, updateStats } = useSessionStats();
 
   // 適応型学習フック（問題選択と記録に使用）
-  const adaptiveLearning = useAdaptiveLearning('SPELLING');
+  const adaptiveLearning = useAdaptiveLearning(QuestionCategory.SPELLING);
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
@@ -482,9 +483,15 @@ function SpellingView({
                 }
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
-                learningPhase={adaptiveLearning.state.currentPhase}
-                estimatedSpeed={adaptiveLearning.state.personalParameters?.learningSpeed}
-                forgettingRate={adaptiveLearning.state.personalParameters?.forgettingRate}
+                learningPhase={
+                  (adaptiveLearning.state.currentPhase as unknown as
+                    | 'ENCODING'
+                    | 'INITIAL_CONSOLIDATION'
+                    | 'LONG_TERM_RETENTION'
+                    | 'MASTERED'
+                    | undefined) ?? undefined
+                }
+                estimatedSpeed={adaptiveLearning.state.personalParams?.learningSpeed}
                 dataSource={
                   selectedDataSource === 'all'
                     ? '全問題集'
