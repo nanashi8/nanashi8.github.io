@@ -15,6 +15,7 @@ import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
 import { TranslationStrategy } from '../strategies/TranslationStrategy';
+import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 
 interface QuizViewProps {
   quizState: QuizState;
@@ -97,6 +98,9 @@ function QuizView({
   const [correctStreak, setCorrectStreak] = useState<number>(0);
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
 
+  // 適応型学習フック（問題選択と記録に使用）
+  const adaptiveLearning = useAdaptiveLearning('TRANSLATION');
+
   // 学習中・要復習の上限設定（カスタムフック使用）
   const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
     useLearningLimits('translation');
@@ -136,6 +140,11 @@ function QuizView({
     await onAnswer(answer, correct);
     // 回答処理完了後にタイムスタンプを更新（履歴表示用）
     setLastAnswerTime(Date.now());
+
+    // 適応型学習への記録
+    if (currentQuestion?.word) {
+      adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, 3000); // 応答時間は3秒と仮定
+    }
 
     // 正解した場合、自動次へが有効なら次の問題に進む
     if (autoNext && isCorrect) {
@@ -277,6 +286,9 @@ function QuizView({
                 lastAnswerDifficulty={currentQuestion?.difficulty}
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
+                learningPhase={adaptiveLearning.state.currentPhase}
+                estimatedSpeed={adaptiveLearning.state.personalParameters?.learningSpeed}
+                forgettingRate={adaptiveLearning.state.personalParameters?.forgettingRate}
                 dataSource={
                   questionSets?.find((qs) => qs.id === selectedDataSource)?.name || '全問題集'
                 }

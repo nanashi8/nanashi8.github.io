@@ -4,6 +4,7 @@ import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
+import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 
 interface VerbFormQuestion {
   id: string;
@@ -105,6 +106,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [availableUnits, setAvailableUnits] = useState<{ value: string; label: string }[]>([]);
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
+
+  // 適応型学習フック（問題選択と記録に使用）
+  const adaptiveLearning = useAdaptiveLearning('GRAMMAR');
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -576,6 +580,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
     await updateWordProgress(questionId, isCorrect, responseTime, undefined, 'grammar');
 
+    // 適応型学習への記録
+    adaptiveLearning.recordAnswer(questionId, isCorrect, responseTime);
+
     // セッション履歴に追加
     const progress = await loadProgress();
     const wordProgress = progress.wordProgress?.[questionId];
@@ -773,6 +780,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 lastAnswerDifficulty={currentQuestion?.difficulty}
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
+                learningPhase={adaptiveLearning.state.currentPhase}
+                estimatedSpeed={adaptiveLearning.state.personalParameters?.learningSpeed}
+                forgettingRate={adaptiveLearning.state.personalParameters?.forgettingRate}
                 dataSource={
                   grade.startsWith('g') && grade.includes('-unit')
                     ? ` 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
