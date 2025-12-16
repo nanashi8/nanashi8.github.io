@@ -384,11 +384,20 @@ function MemorizationView({
     // フラッシュカード学習の原則：復習が20%以上なら新規を大幅に抑制
     const shouldSuppressNew = reviewRatio >= 0.2;
 
-    // 大量の「覚えていない」がある場合の段階的解消戦略
-    // 50個を超えたら集中モード：最近間違えた語句を優先的に繰り返し出題
-    const hasLargeIncorrectBacklog = counts.incorrect > 50;
-    // 30個以下になったら新規を少しずつ導入（モチベーション維持）
-    const canIntroduceNewQuestions = counts.incorrect <= 30;
+    // 段階的解消戦略：上限設定に応じて動的に閾値を調整
+    // 上限が設定されている場合はそれを基準に、未設定の場合は固定値を使用
+    const effectiveLimit = incorrectLimit !== null ? incorrectLimit : 50;
+
+    // 集中モード閾値：上限の60%を超えたら集中モード
+    // 例：上限10 → 6個超で集中、上限50 → 30個超で集中、上限200 → 120個超で集中
+    const concentrationThreshold = Math.max(3, Math.floor(effectiveLimit * 0.6));
+
+    // 新規導入閾値：上限の30%以下になったら新規導入再開
+    // 例：上限10 → 3個以下、上限50 → 15個以下、上限200 → 60個以下
+    const newQuestionThreshold = Math.max(2, Math.floor(effectiveLimit * 0.3));
+
+    const hasLargeIncorrectBacklog = counts.incorrect > concentrationThreshold;
+    const canIntroduceNewQuestions = counts.incorrect <= newQuestionThreshold;
 
     // ソート: 優先度 > 最終学習時刻（古い順） > ランダム
     const sorted = questionsWithStatus.sort((a, b) => {
