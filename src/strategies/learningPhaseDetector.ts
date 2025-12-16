@@ -1,6 +1,6 @@
 /**
  * 学習フェーズ判定エンジン
- * 
+ *
  * 5段階の学習フェーズを神経科学的根拠に基づいて判定する。
  * - ENCODING: 初見単語、作業記憶段階（0-30秒）
  * - INITIAL_CONSOLIDATION: 海馬の初期統合（初回正答後1時間）
@@ -14,28 +14,28 @@ export enum LearningPhase {
   INITIAL_CONSOLIDATION = 'initial',
   INTRADAY_REVIEW = 'intraday',
   SHORT_TERM = 'short_term',
-  LONG_TERM = 'long_term'
+  LONG_TERM = 'long_term',
 }
 
 export interface PhaseThresholds {
-  encodingTime: number;           // 作業記憶の持続時間（デフォルト30秒）
-  initialConsolidation: number;   // 初期統合期間（デフォルト1時間）
-  intradayWindow: number;         // 同日内ウィンドウ（デフォルト24時間）
-  shortTermWindow: number;        // 短期記憶期間（デフォルト7日）
-  longTermThreshold: number;      // 長期記憶判定閾値（デフォルト7日）
-  correctRateThreshold: number;   // 正答率閾値（デフォルト0.8）
-  responseTimeThreshold: number;  // 応答時間閾値（デフォルト1500ms）
+  encodingTime: number; // 作業記憶の持続時間（デフォルト30秒）
+  initialConsolidation: number; // 初期統合期間（デフォルト1時間）
+  intradayWindow: number; // 同日内ウィンドウ（デフォルト24時間）
+  shortTermWindow: number; // 短期記憶期間（デフォルト7日）
+  longTermThreshold: number; // 長期記憶判定閾値（デフォルト7日）
+  correctRateThreshold: number; // 正答率閾値（デフォルト0.8）
+  responseTimeThreshold: number; // 応答時間閾値（デフォルト1500ms）
 }
 
 export interface PersonalParameters {
-  learningSpeed: number;          // 学習速度（1.0=標準、2.0=速い、0.5=遅い）
-  forgettingSpeed: number;        // 忘却速度
+  learningSpeed: number; // 学習速度（1.0=標準、2.0=速い、0.5=遅い）
+  forgettingSpeed: number; // 忘却速度
   consolidationThreshold: number; // 定着に必要な正答回数
-  optimalInterval: number;        // 最適な復習間隔（日数）
-  sampleSize: number;             // 推定に使用したサンプル数
-  confidence: number;             // 推定の信頼度（0-1）
-  lastUpdated: number;            // 最終更新日時
-  nextUpdateAt: number;           // 次回更新日時
+  optimalInterval: number; // 最適な復習間隔（日数）
+  sampleSize: number; // 推定に使用したサンプル数
+  confidence: number; // 推定の信頼度（0-1）
+  lastUpdated: number; // 最終更新日時
+  nextUpdateAt: number; // 次回更新日時
 }
 
 export interface QuestionStatus {
@@ -66,13 +66,13 @@ export interface PhaseDetectionResult {
 
 // デフォルト閾値（神経科学的根拠に基づく）
 export const DEFAULT_PHASE_THRESHOLDS: PhaseThresholds = {
-  encodingTime: 30000,              // 30秒（作業記憶の持続時間）
-  initialConsolidation: 3600000,    // 1時間（海馬の初期統合）
-  intradayWindow: 86400000,         // 24時間
-  shortTermWindow: 604800000,       // 7日（システム統合期間）
-  longTermThreshold: 604800000,     // 7日
-  correctRateThreshold: 0.8,        // 80%（長期記憶の基準）
-  responseTimeThreshold: 1500       // 1.5秒（自動化された記憶）
+  encodingTime: 30000, // 30秒（作業記憶の持続時間）
+  initialConsolidation: 3600000, // 1時間（海馬の初期統合）
+  intradayWindow: 86400000, // 24時間
+  shortTermWindow: 604800000, // 7日（システム統合期間）
+  longTermThreshold: 604800000, // 7日
+  correctRateThreshold: 0.8, // 80%（長期記憶の基準）
+  responseTimeThreshold: 1500, // 1.5秒（自動化された記憶）
 };
 
 // デフォルト個人パラメータ
@@ -84,16 +84,16 @@ export const DEFAULT_PERSONAL_PARAMETERS: PersonalParameters = {
   sampleSize: 0,
   confidence: 0.5,
   lastUpdated: Date.now(),
-  nextUpdateAt: Date.now() + 86400000
+  nextUpdateAt: Date.now() + 86400000,
 };
 
 // 定数
-const MAX_DAYS_THRESHOLD = 1000;        // 超長期放置の閾値
-const MASTERY_THRESHOLD = 100;          // 完全習得の閾値
-const RESET_THRESHOLD = 100;            // リセットの閾値
-const MIN_RESPONSE_TIME = 0;            // 応答時間の最小値
-const MAX_RESPONSE_TIME = 60000;        // 応答時間の最大値（60秒）
-const DEFAULT_RESPONSE_TIME = 1000;     // デフォルト応答時間（1秒）
+const MAX_DAYS_THRESHOLD = 1000; // 超長期放置の閾値
+const MASTERY_THRESHOLD = 100; // 完全習得の閾値
+const RESET_THRESHOLD = 100; // リセットの閾値
+const MIN_RESPONSE_TIME = 0; // 応答時間の最小値
+const MAX_RESPONSE_TIME = 60000; // 応答時間の最大値（60秒）
+const DEFAULT_RESPONSE_TIME = 1000; // デフォルト応答時間（1秒）
 
 /**
  * 学習フェーズ判定クラス
@@ -103,18 +103,15 @@ export class LearningPhaseDetector {
   private cache: Map<string, { phase: LearningPhase; timestamp: number }>;
   private readonly CACHE_DURATION = 5000; // 5秒
 
-  constructor(
-    personalParams?: PersonalParameters,
-    customThresholds?: Partial<PhaseThresholds>
-  ) {
+  constructor(personalParams?: PersonalParameters, customThresholds?: Partial<PhaseThresholds>) {
     const baseThresholds = { ...DEFAULT_PHASE_THRESHOLDS, ...customThresholds };
-    
+
     if (personalParams) {
       this.thresholds = this.adjustThresholds(baseThresholds, personalParams);
     } else {
       this.thresholds = baseThresholds;
     }
-    
+
     this.cache = new Map();
   }
 
@@ -132,7 +129,7 @@ export class LearningPhaseDetector {
       shortTermWindow: baseThresholds.shortTermWindow / personalParams.learningSpeed,
       longTermThreshold: baseThresholds.longTermThreshold / personalParams.learningSpeed,
       correctRateThreshold: baseThresholds.correctRateThreshold,
-      responseTimeThreshold: baseThresholds.responseTimeThreshold * personalParams.learningSpeed
+      responseTimeThreshold: baseThresholds.responseTimeThreshold * personalParams.learningSpeed,
     };
   }
 
@@ -142,14 +139,14 @@ export class LearningPhaseDetector {
   detectPhase(word: string, status: QuestionStatus): LearningPhase {
     const now = Date.now();
     const cached = this.cache.get(word);
-    
+
     if (cached && now - cached.timestamp < this.CACHE_DURATION) {
       return cached.phase;
     }
-    
+
     const result = this.detectPhaseWithReason(word, status);
     this.cache.set(word, { phase: result.phase, timestamp: now });
-    
+
     return result.phase;
   }
 
@@ -158,28 +155,26 @@ export class LearningPhaseDetector {
    */
   detectPhaseWithReason(word: string, status: QuestionStatus): PhaseDetectionResult {
     const now = Date.now();
-    
+
     // タイムスタンプの異常値処理
     const lastReviewTime = this.sanitizeTimestamp(status.lastReviewTime, now);
     const lastCorrectTime = this.sanitizeTimestamp(status.lastCorrectTime, now);
-    
+
     // 応答時間の異常値処理
     const averageResponseTime = this.sanitizeResponseTime(status.averageResponseTime);
-    
+
     // 基本メトリクスの計算
     const timeSinceLastReview = now - lastReviewTime;
     const daysSinceLastReview = timeSinceLastReview / 86400000;
-    const correctRate = status.reviewCount > 0 
-      ? status.correctCount / status.reviewCount 
-      : 0;
-    
+    const correctRate = status.reviewCount > 0 ? status.correctCount / status.reviewCount : 0;
+
     const metrics = {
       reviewCount: status.reviewCount,
       correctCount: status.correctCount,
       correctRate,
       daysSinceLastReview,
       timeSinceLastReview,
-      averageResponseTime
+      averageResponseTime,
     };
 
     // 条件1: 初見単語
@@ -188,7 +183,7 @@ export class LearningPhaseDetector {
         phase: LearningPhase.ENCODING,
         reason: '初見単語（reviewCount=0）',
         matchedCondition: 1,
-        metrics
+        metrics,
       };
     }
 
@@ -198,7 +193,7 @@ export class LearningPhaseDetector {
         phase: LearningPhase.ENCODING,
         reason: `作業記憶段階（${Math.round(timeSinceLastReview / 1000)}秒前）`,
         matchedCondition: 2,
-        metrics
+        metrics,
       };
     }
 
@@ -208,7 +203,7 @@ export class LearningPhaseDetector {
         phase: LearningPhase.ENCODING,
         reason: '一度も正答していない',
         matchedCondition: 3,
-        metrics
+        metrics,
       };
     }
 
@@ -218,7 +213,7 @@ export class LearningPhaseDetector {
         phase: LearningPhase.ENCODING,
         reason: `超長期放置（${Math.round(daysSinceLastReview)}日前）`,
         matchedCondition: 101,
-        metrics
+        metrics,
       };
     }
 
@@ -228,7 +223,7 @@ export class LearningPhaseDetector {
         phase: LearningPhase.LONG_TERM,
         reason: `完全習得（${status.consecutiveCorrect}回連続正答）`,
         matchedCondition: 102,
-        metrics
+        metrics,
       };
     }
 
@@ -238,19 +233,18 @@ export class LearningPhaseDetector {
         phase: LearningPhase.ENCODING,
         reason: `学習方法要見直し（${status.consecutiveWrong}回連続誤答）`,
         matchedCondition: 103,
-        metrics
+        metrics,
       };
     }
 
     // 条件4: 初期統合段階（1回正答、1時間以内）
     const hoursSinceCorrect = (now - lastCorrectTime) / 3600000;
-    if (status.correctCount === 1 && 
-        (now - lastCorrectTime) < this.thresholds.initialConsolidation) {
+    if (status.correctCount === 1 && now - lastCorrectTime < this.thresholds.initialConsolidation) {
       return {
         phase: LearningPhase.INITIAL_CONSOLIDATION,
         reason: `初期統合段階（初回正答後${Math.round(hoursSinceCorrect * 60)}分）`,
         matchedCondition: 4,
-        metrics
+        metrics,
       };
     }
 
@@ -260,7 +254,7 @@ export class LearningPhaseDetector {
         phase: LearningPhase.INTRADAY_REVIEW,
         reason: `同日復習段階（今日${status.correctCount}回正答）`,
         matchedCondition: 5,
-        metrics
+        metrics,
       };
     }
 
@@ -271,41 +265,43 @@ export class LearningPhaseDetector {
           phase: LearningPhase.SHORT_TERM,
           reason: `短期記憶段階（${Math.round(daysSinceLastReview)}日前、正答率${Math.round(correctRate * 100)}%）`,
           matchedCondition: 6,
-          metrics
+          metrics,
         };
       } else if (correctRate < 0.5) {
         return {
           phase: LearningPhase.ENCODING,
           reason: `忘却によりリセット（正答率${Math.round(correctRate * 100)}%）`,
           matchedCondition: 6,
-          metrics
+          metrics,
         };
       }
     }
 
     // 条件7: 長期記憶段階（7日以上）
     if (daysSinceLastReview > 7) {
-      if (correctRate >= this.thresholds.correctRateThreshold && 
-          averageResponseTime < this.thresholds.responseTimeThreshold) {
+      if (
+        correctRate >= this.thresholds.correctRateThreshold &&
+        averageResponseTime < this.thresholds.responseTimeThreshold
+      ) {
         return {
           phase: LearningPhase.LONG_TERM,
           reason: `長期記憶確立（${Math.round(daysSinceLastReview)}日前、正答率${Math.round(correctRate * 100)}%、応答${Math.round(averageResponseTime)}ms）`,
           matchedCondition: 7,
-          metrics
+          metrics,
         };
       } else if (correctRate >= 0.5 && correctRate < this.thresholds.correctRateThreshold) {
         return {
           phase: LearningPhase.SHORT_TERM,
           reason: `まだ不安定（正答率${Math.round(correctRate * 100)}%）`,
           matchedCondition: 7,
-          metrics
+          metrics,
         };
       } else {
         return {
           phase: LearningPhase.ENCODING,
           reason: `完全忘却（正答率${Math.round(correctRate * 100)}%）`,
           matchedCondition: 7,
-          metrics
+          metrics,
         };
       }
     }
@@ -315,7 +311,7 @@ export class LearningPhaseDetector {
       phase: LearningPhase.SHORT_TERM,
       reason: 'デフォルト判定',
       matchedCondition: 0,
-      metrics
+      metrics,
     };
   }
 
@@ -324,29 +320,29 @@ export class LearningPhaseDetector {
    */
   canTransition(word: string, status: QuestionStatus, targetPhase: LearningPhase): boolean {
     const currentPhase = this.detectPhase(word, status);
-    
+
     // 同じフェーズへの遷移は常に可能
     if (currentPhase === targetPhase) {
       return true;
     }
-    
+
     // フェーズの順序
     const phaseOrder = [
       LearningPhase.ENCODING,
       LearningPhase.INITIAL_CONSOLIDATION,
       LearningPhase.INTRADAY_REVIEW,
       LearningPhase.SHORT_TERM,
-      LearningPhase.LONG_TERM
+      LearningPhase.LONG_TERM,
     ];
-    
+
     const currentIndex = phaseOrder.indexOf(currentPhase);
     const targetIndex = phaseOrder.indexOf(targetPhase);
-    
+
     // 前進は1段階ずつのみ可能（忘却による退行は自由）
     if (targetIndex > currentIndex) {
       return targetIndex - currentIndex === 1;
     }
-    
+
     // 退行は常に可能
     return true;
   }
@@ -368,7 +364,11 @@ export class LearningPhaseDetector {
    * 応答時間の異常値処理
    */
   private sanitizeResponseTime(responseTime: number): number {
-    if (responseTime <= MIN_RESPONSE_TIME || responseTime > MAX_RESPONSE_TIME || isNaN(responseTime)) {
+    if (
+      responseTime <= MIN_RESPONSE_TIME ||
+      responseTime > MAX_RESPONSE_TIME ||
+      isNaN(responseTime)
+    ) {
       return DEFAULT_RESPONSE_TIME;
     }
     return responseTime;
@@ -416,7 +416,7 @@ export function analyzePhaseDistribution(
     [LearningPhase.INITIAL_CONSOLIDATION]: 0,
     [LearningPhase.INTRADAY_REVIEW]: 0,
     [LearningPhase.SHORT_TERM]: 0,
-    [LearningPhase.LONG_TERM]: 0
+    [LearningPhase.LONG_TERM]: 0,
   };
 
   for (const { word, status } of words) {

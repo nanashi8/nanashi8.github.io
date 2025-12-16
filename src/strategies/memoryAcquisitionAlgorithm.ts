@@ -1,32 +1,32 @@
 /**
  * 記憶獲得アルゴリズム
- * 
+ *
  * 「その日のうちに一旦100％記憶を定着させる」ための同日集中復習システム。
  * 4段階の復習タイミング（即時→早期→中期→終了時）で記憶統合を促進。
  */
 
 export enum QueueType {
-  IMMEDIATE = 'immediate',  // 即時復習（1-3問後、約1分）
-  EARLY = 'early',          // 早期復習（5-10問後、約10分）
-  MID = 'mid',              // 中期復習（20-30問後、約1時間）
-  END = 'end'               // 終了時復習（セッション終了時）
+  IMMEDIATE = 'immediate', // 即時復習（1-3問後、約1分）
+  EARLY = 'early', // 早期復習（5-10問後、約10分）
+  MID = 'mid', // 中期復習（20-30問後、約1時間）
+  END = 'end', // 終了時復習（セッション終了時）
 }
 
 export enum QuestionCategory {
   MEMORIZATION = 'memorization',
   TRANSLATION = 'translation',
   SPELLING = 'spelling',
-  GRAMMAR = 'grammar'
+  GRAMMAR = 'grammar',
 }
 
 export interface AcquisitionProgress {
-  todayFirstSeen: number;           // 今日初めて見た時刻
-  todayCorrectCount: number;        // 今日の正答回数
-  todayWrongCount: number;          // 今日の誤答回数
-  isAcquisitionComplete: boolean;   // 記憶獲得完了フラグ
-  currentQueue: QueueType | null;   // 現在のキュー
-  queuedAt: number;                 // キューに追加された時刻
-  todayReviews: ReviewRecord[];     // 今日の復習記録
+  todayFirstSeen: number; // 今日初めて見た時刻
+  todayCorrectCount: number; // 今日の正答回数
+  todayWrongCount: number; // 今日の誤答回数
+  isAcquisitionComplete: boolean; // 記憶獲得完了フラグ
+  currentQueue: QueueType | null; // 現在のキュー
+  queuedAt: number; // キューに追加された時刻
+  todayReviews: ReviewRecord[]; // 今日の復習記録
 }
 
 export interface ReviewRecord {
@@ -39,22 +39,22 @@ export interface ReviewRecord {
 export interface QueueEntry {
   word: string;
   queueType: QueueType;
-  enqueuedAt: number;               // エンキュー時刻
-  enqueuedQuestionNumber: number;   // エンキュー時の問題番号
-  targetQuestionNumber: number;     // 目標問題番号
-  targetTime: number;               // 目標時刻
-  priority: number;                 // 優先度
-  difficulty: number;               // 難易度
+  enqueuedAt: number; // エンキュー時刻
+  enqueuedQuestionNumber: number; // エンキュー時の問題番号
+  targetQuestionNumber: number; // 目標問題番号
+  targetTime: number; // 目標時刻
+  priority: number; // 優先度
+  difficulty: number; // 難易度
   category: QuestionCategory;
 }
 
 export interface TabConfig {
-  consolidationThreshold: number;   // 定着に必要な正答回数
+  consolidationThreshold: number; // 定着に必要な正答回数
   enableImmediateReview: boolean;
   enableEarlyReview: boolean;
   enableMidReview: boolean;
   enableEndReview: boolean;
-  newQuestionRatio: number;         // 新規問題の割合
+  newQuestionRatio: number; // 新規問題の割合
 }
 
 export interface AcquisitionReport {
@@ -80,7 +80,7 @@ export const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
     enableEarlyReview: true,
     enableMidReview: true,
     enableEndReview: true,
-    newQuestionRatio: 0.6
+    newQuestionRatio: 0.6,
   },
   [QuestionCategory.TRANSLATION]: {
     consolidationThreshold: 2,
@@ -88,7 +88,7 @@ export const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
     enableEarlyReview: false,
     enableMidReview: false,
     enableEndReview: true,
-    newQuestionRatio: 0.7
+    newQuestionRatio: 0.7,
   },
   [QuestionCategory.SPELLING]: {
     consolidationThreshold: 4,
@@ -96,7 +96,7 @@ export const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
     enableEarlyReview: true,
     enableMidReview: true,
     enableEndReview: true,
-    newQuestionRatio: 0.5
+    newQuestionRatio: 0.5,
   },
   [QuestionCategory.GRAMMAR]: {
     consolidationThreshold: 3,
@@ -104,8 +104,8 @@ export const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
     enableEarlyReview: true,
     enableMidReview: false,
     enableEndReview: true,
-    newQuestionRatio: 0.6
-  }
+    newQuestionRatio: 0.6,
+  },
 };
 
 // キューサイズ制限
@@ -113,7 +113,7 @@ const MAX_QUEUE_SIZE = {
   immediate: 10,
   early: 20,
   mid: 30,
-  end: 50
+  end: 50,
 };
 
 const QUEUE_EXPIRY_TIME = 7200000; // 2時間
@@ -141,7 +141,7 @@ export class AcquisitionQueueManager {
       immediate: [],
       early: [],
       mid: [],
-      end: []
+      end: [],
     };
 
     // カスタム設定のマージ
@@ -150,7 +150,7 @@ export class AcquisitionQueueManager {
       for (const [category, config] of Object.entries(customConfigs)) {
         this.tabConfigs[category as QuestionCategory] = {
           ...this.tabConfigs[category as QuestionCategory],
-          ...config
+          ...config,
         };
       }
     }
@@ -173,7 +173,7 @@ export class AcquisitionQueueManager {
         isAcquisitionComplete: false,
         currentQueue: null,
         queuedAt: 0,
-        todayReviews: []
+        todayReviews: [],
       });
     }
 
@@ -194,7 +194,7 @@ export class AcquisitionQueueManager {
     gap: number
   ): void {
     const now = Date.now();
-    
+
     if (this.isDuplicateInQueue(word, QueueType.IMMEDIATE)) {
       return;
     }
@@ -208,11 +208,11 @@ export class AcquisitionQueueManager {
       targetTime: now + 60000, // 1分後
       priority: 100,
       difficulty,
-      category
+      category,
     };
 
     this.enqueueWithLimit(this.queues.immediate, entry, MAX_QUEUE_SIZE.immediate);
-    
+
     const progress = this.acquisitionProgress.get(word)!;
     progress.currentQueue = QueueType.IMMEDIATE;
     progress.queuedAt = now;
@@ -224,7 +224,7 @@ export class AcquisitionQueueManager {
   private enqueueToEarly(word: string, difficulty: number, category: QuestionCategory): void {
     const now = Date.now();
     const config = this.tabConfigs[category];
-    
+
     if (!config.enableEarlyReview || this.isDuplicateInQueue(word, QueueType.EARLY)) {
       return;
     }
@@ -239,11 +239,11 @@ export class AcquisitionQueueManager {
       targetTime: now + 600000, // 10分後
       priority: 80,
       difficulty,
-      category
+      category,
     };
 
     this.enqueueWithLimit(this.queues.early, entry, MAX_QUEUE_SIZE.early);
-    
+
     const progress = this.acquisitionProgress.get(word)!;
     progress.currentQueue = QueueType.EARLY;
     progress.queuedAt = now;
@@ -255,7 +255,7 @@ export class AcquisitionQueueManager {
   private enqueueToMid(word: string, difficulty: number, category: QuestionCategory): void {
     const now = Date.now();
     const config = this.tabConfigs[category];
-    
+
     if (!config.enableMidReview || this.isDuplicateInQueue(word, QueueType.MID)) {
       return;
     }
@@ -270,11 +270,11 @@ export class AcquisitionQueueManager {
       targetTime: now + 3600000, // 1時間後
       priority: 60,
       difficulty,
-      category
+      category,
     };
 
     this.enqueueWithLimit(this.queues.mid, entry, MAX_QUEUE_SIZE.mid);
-    
+
     const progress = this.acquisitionProgress.get(word)!;
     progress.currentQueue = QueueType.MID;
     progress.queuedAt = now;
@@ -286,7 +286,7 @@ export class AcquisitionQueueManager {
   private enqueueToEnd(word: string, difficulty: number, category: QuestionCategory): void {
     const now = Date.now();
     const config = this.tabConfigs[category];
-    
+
     if (!config.enableEndReview || this.isDuplicateInQueue(word, QueueType.END)) {
       return;
     }
@@ -300,11 +300,11 @@ export class AcquisitionQueueManager {
       targetTime: Infinity,
       priority: 40,
       difficulty,
-      category
+      category,
     };
 
     this.enqueueWithLimit(this.queues.end, entry, MAX_QUEUE_SIZE.end);
-    
+
     const progress = this.acquisitionProgress.get(word)!;
     progress.currentQueue = QueueType.END;
     progress.queuedAt = now;
@@ -315,7 +315,7 @@ export class AcquisitionQueueManager {
    */
   getNextReviewQuestion(): QueueEntry | null {
     this.cleanupExpiredEntries();
-    
+
     const now = Date.now();
     const currentQ = this.currentQuestionNumber;
     const candidates: QueueEntry[] = [];
@@ -354,7 +354,13 @@ export class AcquisitionQueueManager {
   /**
    * 正答時の処理
    */
-  handleCorrectAnswer(word: string, currentQueue: QueueType, responseTime?: number, difficulty?: number, category?: QuestionCategory): void {
+  handleCorrectAnswer(
+    word: string,
+    currentQueue: QueueType,
+    responseTime?: number,
+    difficulty?: number,
+    category?: QuestionCategory
+  ): void {
     if (!this.trackWordAttempts(word)) {
       return;
     }
@@ -365,14 +371,14 @@ export class AcquisitionQueueManager {
       timestamp: Date.now(),
       queueType: currentQueue,
       isCorrect: true,
-      responseTime
+      responseTime,
     });
 
     // 次のキューへ自動昇格
     // difficultyとcategoryが渡されない場合はentryから取得
     let finalDifficulty = difficulty;
     let finalCategory = category;
-    
+
     if (finalDifficulty === undefined || finalCategory === undefined) {
       const entry = this.findWordInQueues(word);
       if (entry) {
@@ -380,7 +386,7 @@ export class AcquisitionQueueManager {
         finalCategory = entry.category;
       }
     }
-    
+
     if (finalDifficulty !== undefined && finalCategory !== undefined) {
       if (currentQueue === QueueType.IMMEDIATE && this.shouldEnqueueEarly(word, progress)) {
         this.enqueueToEarly(word, finalDifficulty, finalCategory);
@@ -401,7 +407,13 @@ export class AcquisitionQueueManager {
   /**
    * 誤答時の処理
    */
-  handleWrongAnswer(word: string, currentQueue: QueueType, responseTime?: number, difficulty?: number, category?: QuestionCategory): void {
+  handleWrongAnswer(
+    word: string,
+    currentQueue: QueueType,
+    responseTime?: number,
+    difficulty?: number,
+    category?: QuestionCategory
+  ): void {
     if (!this.trackWordAttempts(word)) {
       return;
     }
@@ -412,14 +424,14 @@ export class AcquisitionQueueManager {
       timestamp: Date.now(),
       queueType: currentQueue,
       isCorrect: false,
-      responseTime
+      responseTime,
     });
 
     // 即時復習キューに再追加（リセット）
     // difficultyとcategoryが渡されない場合はentryから取得
     let finalDifficulty = difficulty;
     let finalCategory = category;
-    
+
     if (finalDifficulty === undefined || finalCategory === undefined) {
       const entry = this.findWordInQueues(word);
       if (entry) {
@@ -427,15 +439,15 @@ export class AcquisitionQueueManager {
         finalCategory = entry.category;
       }
     }
-    
+
     if (finalDifficulty !== undefined && finalCategory !== undefined) {
       // 誤答したら現在のキューから削除して即時復習キューに戻す
       this.removeFromAllQueues(word);
-      
+
       if (currentQueue !== QueueType.IMMEDIATE) {
         console.log(`❌ 誤答により即時復習キューに戻します: ${word}`);
       }
-      
+
       // 難易度を上げて即時復習キューに追加
       this.enqueueToImmediate(word, Math.min(finalDifficulty + 1, 5), finalCategory, 1);
     }
@@ -446,12 +458,12 @@ export class AcquisitionQueueManager {
    */
   startSessionEndReview(): QueueEntry[] {
     const endQueue = [...this.queues.end];
-    
+
     if (endQueue.length === 0) {
       console.log('終了時復習なし');
       return [];
     }
-    
+
     console.log(`終了時復習を開始します（${endQueue.length}語）`);
     return endQueue;
   }
@@ -478,7 +490,7 @@ export class AcquisitionQueueManager {
       completed: completed.length,
       incomplete: incomplete.length,
       completionRate: allWords.length > 0 ? completed.length / allWords.length : 0,
-      incompleteWords: incomplete
+      incompleteWords: incomplete,
     };
   }
 
@@ -490,23 +502,23 @@ export class AcquisitionQueueManager {
       immediate: {
         size: this.queues.immediate.length,
         oldestEntry: this.queues.immediate[0]?.enqueuedAt,
-        averageWaitTime: this.calculateAverageWaitTime(this.queues.immediate)
+        averageWaitTime: this.calculateAverageWaitTime(this.queues.immediate),
       },
       early: {
         size: this.queues.early.length,
         oldestEntry: this.queues.early[0]?.enqueuedAt,
-        averageWaitTime: this.calculateAverageWaitTime(this.queues.early)
+        averageWaitTime: this.calculateAverageWaitTime(this.queues.early),
       },
       mid: {
         size: this.queues.mid.length,
         oldestEntry: this.queues.mid[0]?.enqueuedAt,
-        averageWaitTime: this.calculateAverageWaitTime(this.queues.mid)
+        averageWaitTime: this.calculateAverageWaitTime(this.queues.mid),
       },
       end: {
         size: this.queues.end.length,
         oldestEntry: this.queues.end[0]?.enqueuedAt,
-        averageWaitTime: 0
-      }
+        averageWaitTime: 0,
+      },
     };
   }
 
@@ -522,7 +534,7 @@ export class AcquisitionQueueManager {
         isAcquisitionComplete: false,
         currentQueue: null,
         queuedAt: 0,
-        todayReviews: []
+        todayReviews: [],
       });
     }
     return this.acquisitionProgress.get(word)!;
@@ -543,7 +555,7 @@ export class AcquisitionQueueManager {
       immediate: [],
       early: [],
       mid: [],
-      end: []
+      end: [],
     };
     this.currentQuestionNumber = 0;
     this.sessionStartTime = Date.now();
@@ -557,10 +569,10 @@ export class AcquisitionQueueManager {
   getQueueInfo(word: string): { queueType: QueueType; questionNumber: number } | null {
     const entry = this.findWordInQueues(word);
     if (!entry) return null;
-    
+
     return {
       queueType: entry.queueType,
-      questionNumber: entry.targetQuestionNumber
+      questionNumber: entry.targetQuestionNumber,
     };
   }
 
@@ -572,19 +584,24 @@ export class AcquisitionQueueManager {
       immediate: this.queues.immediate.length,
       early: this.queues.early.length,
       mid: this.queues.mid.length,
-      end: this.queues.end.length
+      end: this.queues.end.length,
     };
   }
 
   /**
    * キューをエクスポート
    */
-  exportQueues(): { immediate: QueueEntry[]; early: QueueEntry[]; mid: QueueEntry[]; end: QueueEntry[] } {
+  exportQueues(): {
+    immediate: QueueEntry[];
+    early: QueueEntry[];
+    mid: QueueEntry[];
+    end: QueueEntry[];
+  } {
     return {
       immediate: [...this.queues.immediate],
       early: [...this.queues.early],
       mid: [...this.queues.mid],
-      end: [...this.queues.end]
+      end: [...this.queues.end],
     };
   }
 
@@ -604,7 +621,7 @@ export class AcquisitionQueueManager {
   recordAnswer(word: string, isCorrect: boolean, responseTime: number): void {
     const progress = this.getAcquisitionProgress(word);
     const currentQueue = progress.currentQueue || QueueType.IMMEDIATE;
-    
+
     if (isCorrect) {
       this.handleCorrectAnswer(word, currentQueue, responseTime);
     } else {
@@ -664,9 +681,7 @@ export class AcquisitionQueueManager {
 
     // 条件2: 最低でも2つのキューを通過
     const uniqueQueues = new Set(
-      progress.todayReviews
-        .filter(r => r.isCorrect)
-        .map(r => r.queueType)
+      progress.todayReviews.filter((r) => r.isCorrect).map((r) => r.queueType)
     );
     if (uniqueQueues.size < 2) {
       return false;
@@ -674,7 +689,7 @@ export class AcquisitionQueueManager {
 
     // 条件3: 最後の2回が連続正答
     const recentReviews = progress.todayReviews.slice(-2);
-    if (recentReviews.length < 2 || !recentReviews.every(r => r.isCorrect)) {
+    if (recentReviews.length < 2 || !recentReviews.every((r) => r.isCorrect)) {
       return false;
     }
 
@@ -682,7 +697,7 @@ export class AcquisitionQueueManager {
   }
 
   private isDuplicateInQueue(word: string, queueType: QueueType): boolean {
-    return this.queues[queueType].some(entry => entry.word === word);
+    return this.queues[queueType].some((entry) => entry.word === word);
   }
 
   private enqueueWithLimit(queue: QueueEntry[], entry: QueueEntry, maxSize: number): void {
@@ -696,7 +711,7 @@ export class AcquisitionQueueManager {
   private removeFromQueue(entry: QueueEntry): void {
     const queueName = entry.queueType;
     const queue = this.queues[queueName];
-    const index = queue.findIndex(e => e.word === entry.word);
+    const index = queue.findIndex((e) => e.word === entry.word);
     if (index !== -1) {
       queue.splice(index, 1);
     }
@@ -704,13 +719,13 @@ export class AcquisitionQueueManager {
 
   private removeFromAllQueues(word: string): void {
     for (const queueType of Object.keys(this.queues) as QueueType[]) {
-      this.queues[queueType] = this.queues[queueType].filter(e => e.word !== word);
+      this.queues[queueType] = this.queues[queueType].filter((e) => e.word !== word);
     }
   }
 
   private findWordInQueues(word: string): QueueEntry | null {
     for (const queueType of Object.keys(this.queues) as QueueType[]) {
-      const entry = this.queues[queueType].find(e => e.word === word);
+      const entry = this.queues[queueType].find((e) => e.word === word);
       if (entry) return entry;
     }
     return null;
@@ -718,9 +733,9 @@ export class AcquisitionQueueManager {
 
   private cleanupExpiredEntries(): void {
     const now = Date.now();
-    
+
     for (const queueType of Object.keys(this.queues) as QueueType[]) {
-      this.queues[queueType] = this.queues[queueType].filter(entry => {
+      this.queues[queueType] = this.queues[queueType].filter((entry) => {
         const age = now - entry.enqueuedAt;
         if (age > QUEUE_EXPIRY_TIME) {
           console.warn(`期限切れエントリを削除: ${entry.word}`);
@@ -735,27 +750,27 @@ export class AcquisitionQueueManager {
     if (!this.wordAttempts.has(word)) {
       this.wordAttempts.set(word, 0);
     }
-    
+
     const attempts = this.wordAttempts.get(word)! + 1;
     this.wordAttempts.set(word, attempts);
-    
+
     if (attempts >= MAX_SAME_WORD_ATTEMPTS) {
       console.error(`同じ単語の試行回数が上限に達しました: ${word}`);
       this.removeFromAllQueues(word);
       return false;
     }
-    
+
     return true;
   }
 
   private calculateAverageWaitTime(queue: QueueEntry[]): number {
     if (queue.length === 0) return 0;
-    
+
     const now = Date.now();
     const totalWaitTime = queue.reduce((sum, entry) => {
       return sum + (now - entry.enqueuedAt);
     }, 0);
-    
+
     return totalWaitTime / queue.length;
   }
 }
@@ -763,11 +778,9 @@ export class AcquisitionQueueManager {
 /**
  * 復習効率の計算
  */
-export function calculateAcquisitionEfficiency(
-  manager: AcquisitionQueueManager
-): number {
+export function calculateAcquisitionEfficiency(manager: AcquisitionQueueManager): number {
   const report = manager.generateAcquisitionReport();
-  
+
   if (report.completed === 0) {
     return 0;
   }
@@ -781,9 +794,9 @@ export function calculateAcquisitionEfficiency(
 
   // 平均復習回数 = 総復習回数 / 完了単語数
   const avgReviewsPerWord = totalReviewCount / report.completed;
-  
+
   // 効率 = 理想回数(3) / 実際の平均回数
   const efficiency = 3.0 / avgReviewsPerWord;
-  
+
   return Math.min(efficiency, 1.0); // 最大1.0
 }

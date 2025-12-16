@@ -4,16 +4,12 @@
  */
 
 import { Question } from '../types';
-import {
-  BaseQuestionStrategy,
-  SessionStats,
-  LearningLimits,
-} from './QuestionSelectionStrategy';
+import { BaseQuestionStrategy, SessionStats, LearningLimits } from './QuestionSelectionStrategy';
 import { logger } from '@/utils/logger';
 
 /**
  * 文法タブ用の問題選択戦略クラス
- * 
+ *
  * 特徴:
  * - 正答率ベースの優先度
  * - 文法パターン認識（将来拡張用）
@@ -53,11 +49,7 @@ export class GrammarStrategy extends BaseQuestionStrategy<Question> {
    * @param stats セッション統計（オプション）
    * @returns ソート済み問題リスト
    */
-  sortQuestions(
-    questions: Question[],
-    limits: LearningLimits,
-    stats?: SessionStats
-  ): Question[] {
+  sortQuestions(questions: Question[], limits: LearningLimits, stats?: SessionStats): Question[] {
     if (questions.length === 0) return [];
 
     try {

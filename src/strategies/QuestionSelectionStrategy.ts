@@ -4,11 +4,7 @@
  */
 
 import { Question } from '../types';
-import {
-  calculateEffectiveLimit,
-  getQuestionStatus,
-  QuestionStatus,
-} from './learningUtils';
+import { calculateEffectiveLimit, getQuestionStatus, QuestionStatus } from './learningUtils';
 
 /**
  * セッション統計情報
@@ -50,11 +46,7 @@ export interface QuestionSelectionStrategy<T = Question> {
    * @param stats セッション統計（オプション）
    * @returns ソート済み問題リスト
    */
-  sortQuestions(
-    questions: T[],
-    limits: LearningLimits,
-    stats?: SessionStats
-  ): T[];
+  sortQuestions(questions: T[], limits: LearningLimits, stats?: SessionStats): T[];
 
   /**
    * 復習モードに入るべきかを判定
@@ -76,9 +68,7 @@ export interface QuestionSelectionStrategy<T = Question> {
  * 問題選択戦略の基底クラス
  * 共通ロジックを実装し、各タブで継承して使用
  */
-export abstract class BaseQuestionStrategy<T = Question>
-  implements QuestionSelectionStrategy<T>
-{
+export abstract class BaseQuestionStrategy<T = Question> implements QuestionSelectionStrategy<T> {
   protected mode: 'memorization' | 'translation' | 'spelling' | 'grammar';
 
   constructor(mode: 'memorization' | 'translation' | 'spelling' | 'grammar') {
@@ -101,14 +91,10 @@ export abstract class BaseQuestionStrategy<T = Question>
       limits.learningLimit,
       stats.still_learning
     );
-    const effectiveReviewLimit = this.calculateEffectiveLimit(
-      limits.reviewLimit,
-      stats.incorrect
-    );
+    const effectiveReviewLimit = this.calculateEffectiveLimit(limits.reviewLimit, stats.incorrect);
 
     return (
-      (effectiveLearningLimit > 0 &&
-        stats.still_learning >= effectiveLearningLimit) ||
+      (effectiveLearningLimit > 0 && stats.still_learning >= effectiveLearningLimit) ||
       (effectiveReviewLimit > 0 && stats.incorrect >= effectiveReviewLimit)
     );
   }
@@ -124,11 +110,7 @@ export abstract class BaseQuestionStrategy<T = Question>
   /**
    * 問題リストをソート（各タブで実装）
    */
-  abstract sortQuestions(
-    questions: T[],
-    limits: LearningLimits,
-    stats?: SessionStats
-  ): T[];
+  abstract sortQuestions(questions: T[], limits: LearningLimits, stats?: SessionStats): T[];
 
   /**
    * 問題の優先度を取得（各タブで実装）

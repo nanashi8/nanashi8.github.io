@@ -4,16 +4,12 @@
  */
 
 import { Question } from '../types';
-import {
-  BaseQuestionStrategy,
-  SessionStats,
-  LearningLimits,
-} from './QuestionSelectionStrategy';
+import { BaseQuestionStrategy, SessionStats, LearningLimits } from './QuestionSelectionStrategy';
 import { logger } from '@/utils/logger';
 
 /**
  * スペルタブ用の問題選択戦略クラス
- * 
+ *
  * 特徴:
  * - 正答率ベースの優先度
  * - タイピング速度の考慮（将来拡張用）
@@ -53,11 +49,7 @@ export class SpellingStrategy extends BaseQuestionStrategy<Question> {
    * @param stats セッション統計（オプション）
    * @returns ソート済み問題リスト
    */
-  sortQuestions(
-    questions: Question[],
-    limits: LearningLimits,
-    stats?: SessionStats
-  ): Question[] {
+  sortQuestions(questions: Question[], limits: LearningLimits, stats?: SessionStats): Question[] {
     if (questions.length === 0) return [];
 
     try {
