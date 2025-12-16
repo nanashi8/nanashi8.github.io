@@ -34,6 +34,8 @@ export interface Question {
   source?: 'junior' | 'intermediate'; // データソース（高校受験 or 中級1800）
   type?: 'word' | 'phrase'; // 単語か熟語か（オプショナル、将来の拡張用）
   isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）
+  sessionPriority?: number; // セッション内優先度（再追加時に設定、次の3問で最優先）
+  reAddedCount?: number; // 再追加回数（セッション内で何回再追加されたか）
 }
 
 // バリデーション用のヘルパー関数

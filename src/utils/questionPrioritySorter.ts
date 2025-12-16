@@ -203,6 +203,17 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
     let priorityA = statusA?.priority || 3;
     let priorityB = statusB?.priority || 3;
 
+    // セッション優先フラグ：再追加された問題を最優先（次の3問の中で）
+    const hasSessionPriorityA = a.question.sessionPriority !== undefined;
+    const hasSessionPriorityB = b.question.sessionPriority !== undefined;
+    
+    if (hasSessionPriorityA && !hasSessionPriorityB) return -1;
+    if (!hasSessionPriorityA && hasSessionPriorityB) return 1;
+    if (hasSessionPriorityA && hasSessionPriorityB) {
+      // 両方とも再追加されている場合は、タイムスタンプで比較（古い方を優先）
+      return (a.question.sessionPriority || 0) - (b.question.sessionPriority || 0);
+    }
+
     // 復習モード
     if (isReviewFocusMode) {
       if (statusA?.category === 'incorrect') priorityA = 0;
@@ -305,5 +316,46 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
     return Math.random() - 0.5;
   });
 
-  return sorted.map((item) => item.question);
+  // 枠取りロジック：新規/復習のバランスを制御
+  const sortedQuestions = sorted.map((item) => item.question);
+  
+  // セッション優先フラグを持つ問題（再追加問題）を最初に抽出
+  const sessionPriorityQuestions = sortedQuestions.filter(q => q.sessionPriority !== undefined);
+  const otherQuestions = sortedQuestions.filter(q => q.sessionPriority === undefined);
+  
+  // 新規問題と復習問題を分類（sessionPriority以外で）
+  const reviewQuestions: Question[] = [];
+  const newQuestions: Question[] = [];
+  
+  otherQuestions.forEach(q => {
+    // 既に学習したことがある問題（incorrect, still_learning, mastered）は復習扱い
+    const status = getWordStatus(q.word, mode);
+    if (status && status.category !== 'new') {
+      reviewQuestions.push(q);
+    } else {
+      newQuestions.push(q);
+    }
+  });
+  
+  // 枠取り：復習7割、新規3割の比率で混ぜる
+  const result: Question[] = [];
+  let reviewIndex = 0;
+  let newIndex = 0;
+  
+  // まずセッション優先問題を追加（最優先）
+  result.push(...sessionPriorityQuestions);
+  
+  // 復習と新規を比率7:3で混ぜる
+  while (reviewIndex < reviewQuestions.length || newIndex < newQuestions.length) {
+    // 復習7問
+    for (let i = 0; i < 7 && reviewIndex < reviewQuestions.length; i++) {
+      result.push(reviewQuestions[reviewIndex++]);
+    }
+    // 新規3問
+    for (let i = 0; i < 3 && newIndex < newQuestions.length; i++) {
+      result.push(newQuestions[newIndex++]);
+    }
+  }
+  
+  return result;
 }
