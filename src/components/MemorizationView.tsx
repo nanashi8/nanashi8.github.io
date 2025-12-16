@@ -12,6 +12,7 @@ import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/spee
 import { logger } from '@/utils/logger';
 import ScoreBoard from './ScoreBoard';
 import AddToCustomButton from './AddToCustomButton';
+import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -104,6 +105,9 @@ function MemorizationView({
 
   // 全画面表示モード
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // 適応型学習フック（問題選択と記録に使用）
+  const adaptiveLearning = useAdaptiveLearning('MEMORIZATION');
 
   // 初期化: カード表示設定と音声設定を読み込み
   useEffect(() => {
@@ -612,6 +616,9 @@ function MemorizationView({
           'memorization', // 暗記タブは独立したモードとして記録
           isStillLearning // まだまだフラグを渡す
         );
+
+        // 適応型学習への記録
+        adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, viewDuration * 1000);
       }
 
       // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
@@ -968,6 +975,9 @@ function MemorizationView({
                 lastAnswerDifficulty={currentQuestion?.difficulty}
                 correctStreak={correctStreak}
                 incorrectStreak={incorrectStreak}
+                learningPhase={adaptiveLearning.state.currentPhase}
+                estimatedSpeed={adaptiveLearning.state.personalParameters?.learningSpeed}
+                forgettingRate={adaptiveLearning.state.personalParameters?.forgettingRate}
                 onShowSettings={() => setShowSettings(true)}
                 dataSource={selectedDataSource}
                 category={selectedCategory === 'all' ? '全分野' : selectedCategory}
