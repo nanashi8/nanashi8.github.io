@@ -6,6 +6,7 @@
     "color-function-notation": "legacy",
     "alpha-value-notation": "number",
     "import-notation": "string",
+    "color-function-alias-notation": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {

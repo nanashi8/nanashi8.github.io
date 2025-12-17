@@ -49,6 +49,11 @@ export interface TimeOfDayPerformance {
 }
 
 /**
+ * 時間帯の型定義
+ */
+export type TimeOfDay = 'morning' | 'afternoon' | 'evening' | 'night';
+
+/**
  * セッション長分析結果
  */
 export interface SessionLengthAnalysis {

@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import {
   PersonalParameterEstimator,
-  DEFAULT_ESTIMATION_CONFIG,
   DEFAULT_PERSONAL_PARAMETERS,
   isParameterReliable,
   calculateParameterApplicability,

@@ -14,6 +14,7 @@ import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teach
 import { getRelevantMistakeTip } from '../englishTrivia';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import AddToCustomButton from './AddToCustomButton';
+import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 
 interface QuestionCardProps {
   question: Question;
@@ -64,6 +65,69 @@ function QuestionCard({
     const saved = sessionStorage.getItem('currentCorrectStreak');
     return saved ? parseInt(saved, 10) : 0;
   });
+
+  // 適応的AIネットワーク
+  const {
+    enabled: adaptiveEnabled,
+    processQuestion: processAdaptiveQuestion,
+    currentStrategy,
+  } = useAdaptiveNetwork();
+
+  // メタAI分析ヘルパー関数
+  const processWithAdaptiveAI = async (word: string, isCorrect: boolean) => {
+    if (!adaptiveEnabled) return;
+
+    try {
+      // コンテキスト情報を収集
+      const calculateDifficulty = (q: Question): number => {
+        const gradeWeight = (q.grade || 1) / 9;
+        return Math.min(Math.max(gradeWeight, 0), 1);
+      };
+
+      const getRecentErrors = (): number => {
+        const recentAnswers = JSON.parse(sessionStorage.getItem('recentAnswers') || '[]');
+        return recentAnswers.filter((a: any) => !a.correct).length;
+      };
+
+      const getSessionLength = (): number => {
+        const startTime = sessionStorage.getItem('sessionStartTime');
+        if (!startTime) return 0;
+        return Math.floor((Date.now() - parseInt(startTime)) / 60000);
+      };
+
+      const getConsecutiveCorrect = (): number => {
+        return parseInt(sessionStorage.getItem('currentCorrectStreak') || '0');
+      };
+
+      const getTimeOfDay = (): 'morning' | 'afternoon' | 'evening' | 'night' => {
+        const hour = new Date().getHours();
+        if (hour < 12) return 'morning';
+        if (hour < 18) return 'afternoon';
+        if (hour < 22) return 'evening';
+        return 'night';
+      };
+
+      const recommendation = await processAdaptiveQuestion(
+        word,
+        isCorrect ? 'correct' : 'incorrect',
+        {
+          currentDifficulty: calculateDifficulty(question),
+          timeOfDay: getTimeOfDay(),
+          recentErrors: getRecentErrors(),
+          sessionLength: getSessionLength(),
+          consecutiveCorrect: getConsecutiveCorrect(),
+        }
+      );
+
+      // デバッグログ
+      console.log('[AdaptiveAI]', recommendation.reason, {
+        strategy: recommendation.strategy,
+        confidence: recommendation.confidence,
+      });
+    } catch (error) {
+      console.error('[QuestionCard] Adaptive AI error:', error);
+    }
+  };
 
   // スワイプジェスチャー用
   const touchStartX = useRef<number>(0);
@@ -312,6 +376,9 @@ function QuestionCard({
             setAttemptCount((prev) => prev + 1);
           }
           onAnswer(choice, question.meaning, choiceQuestion);
+
+          // 適応的AI分析
+          processWithAdaptiveAI(question.word, isCorrect);
         }
       }
       // スペースキー: スキップ（回答前のみ）
@@ -437,6 +504,11 @@ function QuestionCard({
             </div>
           )}
 
+          {/* 適応的AI戦略バッジ */}
+          {adaptiveEnabled && currentStrategy && (
+            <div className="adaptive-strategy-badge">🧠 適応中</div>
+          )}
+
           {/* カスタムセットに追加ボタン */}
           {onAddWordToCustomSet &&
             onRemoveWordFromCustomSet &&
@@ -494,6 +566,9 @@ function QuestionCard({
                     setAttemptCount((prev) => prev + 1);
                   }
                   onAnswer(choice.text, question.meaning, choiceQuestion);
+
+                  // 適応的AI分析
+                  processWithAdaptiveAI(question.word, isCorrect);
                 }}
                 disabled={false}
               >

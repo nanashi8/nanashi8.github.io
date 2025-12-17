@@ -867,6 +867,12 @@
   margin-bottom: 12px;
 }
 
+.attempt-counts-summary {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
 .retention-title {
   font-size: 1rem;
   font-weight: bold;

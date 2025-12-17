@@ -1,4 +1,4 @@
-name: Auto Deploy
+name: Build and Test (Manual Deploy)
 on:
   push:
     branches: ['main']
@@ -40,8 +40,8 @@ jobs:
       - name: CSS lint
         run: npm run lint:css
 
-  # ビルドとデプロイ
-  build-and-deploy:
+  # ビルド（デプロイは手動承認が必要）
+  build:
     needs: quality-check
     runs-on: ubuntu-latest
     steps:
@@ -56,26 +56,40 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify build
+        run: |
+          echo "✅ ビルド成功"
+          echo "📦 ビルドサイズ: $(du -sh dist | cut -f1)"
+          ls -lh dist/
+
       - uses: actions/configure-pages@v4
 
       - uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
+  # 手動承認が必要なデプロイ
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://nanashi8.github.io
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
   # デプロイ後の通知
   notify:
-    needs: build-and-deploy
+    needs: deploy
     runs-on: ubuntu-latest
     if: always()
     steps:
       - name: Notify success
-        if: needs.build-and-deploy.result == 'success'
+        if: needs.deploy.result == 'success'
         run: echo "✅ デプロイ成功！"
 
       - name: Notify failure
-        if: needs.build-and-deploy.result == 'failure'
+        if: needs.deploy.result == 'failure'
         run: echo "❌ デプロイ失敗"

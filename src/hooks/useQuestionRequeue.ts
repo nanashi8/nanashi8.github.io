@@ -9,7 +9,7 @@
  * @since 2025-12-16
  */
 
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { sessionKpi } from '../metrics/sessionKpi';
 
 export interface RequeuableQuestion {
@@ -40,17 +40,17 @@ interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
 /**
  * 問題の再出題管理フック
  */
-export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>(): UseQuestionRequeueResult<T, TStats> {
+export function useQuestionRequeue<
+  T extends RequeuableQuestion,
+  TStats = any,
+>(): UseQuestionRequeueResult<T, TStats> {
   /**
    * 問題を再追加（最優先キューに追加）
    * 次の3-5問の中で必ず再出題されるように配置
    */
-  const reAddQuestion = useCallback((
-    question: T,
-    questions: T[],
-    currentIndex: number
-  ): T[] => {
-    const qid = (question as any).id ?? (question as any).word ?? String((question as any).japanese ?? '');
+  const reAddQuestion = useCallback((question: T, questions: T[], currentIndex: number): T[] => {
+    const qid =
+      (question as any).id ?? (question as any).word ?? String((question as any).japanese ?? '');
     const reAddedQuestion = {
       ...question,
       sessionPriority: Date.now(),
@@ -68,15 +68,16 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
       return questions;
     }
 
-    // 可変レイテンシ（挿入距離）：誤答が重なるほど短くする
-    const prevCount = question.reAddedCount || 0;
-    const offset = Math.max(1, Math.min(5, prevCount === 0 ? 2 : 1));
+    // 即座に再出題（次の1問後）：スキップ連打で高速消化を実現
+    const offset = 1; // 常に次の問題として再出題
     const insertPosition = Math.min(currentIndex + 1 + offset, questions.length);
 
     // KPI: 再追加を記録（開発用）
     try {
       sessionKpi.onReAdd(String(qid));
-    } catch {}
+    } catch {
+      // KPI記録失敗は無視（開発用機能のため本番動作に影響なし）
+    }
 
     return [
       ...questions.slice(0, insertPosition),
@@ -89,16 +90,13 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
    * 期限切れのsessionPriorityフラグをクリア
    * 5問経過した問題からフラグを削除
    */
-  const clearExpiredFlags = useCallback((
-    questions: T[],
-    currentIndex: number
-  ): T[] => {
+  const clearExpiredFlags = useCallback((questions: T[], currentIndex: number): T[] => {
     if (currentIndex >= questions.length - 1) return questions;
 
     return questions.map((q, idx) => {
       // 現在位置より5問以上先の問題からフラグをクリア
       if (q.sessionPriority && idx > currentIndex && idx - currentIndex > 5) {
-        const { sessionPriority, ...rest } = q;
+        const { sessionPriority: _sessionPriority, ...rest } = q;
         return rest as T;
       }
       return q;
@@ -115,21 +113,20 @@ export function useQuestionRequeue<T extends RequeuableQuestion, TStats = any>()
   /**
    * 再出題統計を更新
    */
-  const updateRequeueStats = useCallback((
-    question: T,
-    currentStats: TStats,
-    setter: (updater: (prev: TStats) => TStats) => void
-  ) => {
-    const isReview = (question.reAddedCount || 0) > 0;
+  const updateRequeueStats = useCallback(
+    (question: T, currentStats: TStats, setter: (updater: (prev: TStats) => TStats) => void) => {
+      const isReview = (question.reAddedCount || 0) > 0;
 
-    setter((prev: any) => ({
-      ...prev,
-      newQuestions: isReview ? prev.newQuestions : (prev.newQuestions || 0) + 1,
-      reviewQuestions: isReview ? (prev.reviewQuestions || 0) + 1 : prev.reviewQuestions || 0,
-      consecutiveNew: isReview ? 0 : (prev.consecutiveNew || 0) + 1,
-      consecutiveReview: isReview ? (prev.consecutiveReview || 0) + 1 : 0,
-    }));
-  }, []);
+      setter((prev: any) => ({
+        ...prev,
+        newQuestions: isReview ? prev.newQuestions : (prev.newQuestions || 0) + 1,
+        reviewQuestions: isReview ? (prev.reviewQuestions || 0) + 1 : prev.reviewQuestions || 0,
+        consecutiveNew: isReview ? 0 : (prev.consecutiveNew || 0) + 1,
+        consecutiveReview: isReview ? (prev.consecutiveReview || 0) + 1 : 0,
+      }));
+    },
+    []
+  );
 
   return {
     reAddQuestion,

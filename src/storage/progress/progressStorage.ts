@@ -622,6 +622,7 @@ function initializeWordProgress(word: string): WordProgress {
     incorrectCount: 0,
     consecutiveCorrect: 0,
     consecutiveIncorrect: 0,
+    firstAttempted: Date.now(), // 時間ベース優先度AI: 初出題時刻を記録
     lastStudied: 0,
     totalResponseTime: 0,
     averageResponseTime: 0,

@@ -10,7 +10,6 @@ import {
   LearningPhaseDetector,
   LearningPhase,
   QuestionStatus,
-  DEFAULT_PHASE_THRESHOLDS,
   DEFAULT_PERSONAL_PARAMETERS,
   analyzePhaseDistribution,
   type PersonalParameters,

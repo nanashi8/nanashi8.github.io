@@ -1339,3 +1339,15 @@
     padding: 15px;
   }
 }
+
+/* 適応的AI戦略バッジ */
+.adaptive-strategy-badge {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}

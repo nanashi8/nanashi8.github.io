@@ -13,6 +13,7 @@ import { logger } from '@/utils/logger';
 import ScoreBoard from './ScoreBoard';
 import AddToCustomButton from './AddToCustomButton';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
+import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sortQuestionsByPriority as sortByPriorityCommon } from '../utils/questionPrioritySorter';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
@@ -115,6 +116,13 @@ function MemorizationView({
 
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.MEMORIZATION);
+
+  // 適応的学習AIネットワーク
+  const {
+    enabled: adaptiveEnabled,
+    processQuestion: processAdaptiveQuestion,
+    currentStrategy,
+  } = useAdaptiveNetwork();
 
   // 問題再出題管理フック
   const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
@@ -219,12 +227,44 @@ function MemorizationView({
     selectedWordPhraseFilter,
     allQuestions,
     isLoading,
-    isReviewFocusMode,
+    // isReviewFocusMode を削除：復習モード切り替え時に問題をリセットしない
   ]);
 
   // 復習モードトグル
   const handleReviewFocus = () => {
     setIsReviewFocusMode(!isReviewFocusMode);
+  };
+
+  // 適応的AI分析ヘルパー関数
+  const processWithAdaptiveAI = async (word: string, isCorrect: boolean) => {
+    if (!adaptiveEnabled) return;
+
+    try {
+      const calculateDifficulty = (q: Question): number => {
+        const gradeWeight = (q.grade || 1) / 9;
+        return Math.min(Math.max(gradeWeight, 0), 1);
+      };
+
+      const getTimeOfDay = (): 'morning' | 'afternoon' | 'evening' | 'night' => {
+        const hour = new Date().getHours();
+        if (hour < 12) return 'morning';
+        if (hour < 18) return 'afternoon';
+        if (hour < 22) return 'evening';
+        return 'night';
+      };
+
+      if (currentQuestion) {
+        await processAdaptiveQuestion(word, isCorrect ? 'correct' : 'incorrect', {
+          currentDifficulty: calculateDifficulty(currentQuestion),
+          timeOfDay: getTimeOfDay(),
+          recentErrors: sessionStats.incorrect,
+          sessionLength: Math.floor((Date.now() - cardDisplayTimeRef.current) / 60000),
+          consecutiveCorrect: correctStreak,
+        });
+      }
+    } catch (error) {
+      console.error('[MemorizationView] Adaptive AI error:', error);
+    }
   };
 
   // 上限達成時に自動的に復習モードをオンにする
@@ -298,7 +338,7 @@ function MemorizationView({
         const easinessFactor = wordProgress.easinessFactor || 2.5;
         const reviewInterval =
           wordProgress.reviewInterval || calculateOptimalInterval(streak, easinessFactor);
-        const avgResponseSpeed = wordProgress.avgResponseSpeed || 0;
+        const _avgResponseSpeed = wordProgress.avgResponseSpeed || 0;
 
         if (attempts === 0) {
           return {
@@ -393,20 +433,24 @@ function MemorizationView({
     // フラッシュカード学習の原則：復習が20%以上なら新規を大幅に抑制
     const shouldSuppressNew = reviewRatio >= 0.2;
 
-    // 段階的解消戦略：上限設定に応じて動的に閾値を調整
-    // 上限が設定されている場合はそれを基準に、未設定の場合は固定値を使用
+    // 段階的解消戦略：分からない問題を早期に解消
+    // 10語溜まったら即座に集中モード、5語以下で新規再開
     const effectiveLimit = incorrectLimit !== null ? incorrectLimit : 50;
 
-    // 集中モード閾値：上限の60%を超えたら集中モード
-    // 例：上限10 → 6個超で集中、上限50 → 30個超で集中、上限200 → 120個超で集中
-    const concentrationThreshold = Math.max(3, Math.floor(effectiveLimit * 0.6));
+    // 集中モード閾値：10語で発動（放置しない）
+    const concentrationThreshold = 10;
 
-    // 新規導入閾値：上限の30%以下になったら新規導入再開
-    // 例：上限10 → 3個以下、上限50 → 15個以下、上限200 → 60個以下
-    const newQuestionThreshold = Math.max(2, Math.floor(effectiveLimit * 0.3));
+    // 新規導入閾値：5語以下で再開
+    const newQuestionThreshold = 5;
 
     const hasLargeIncorrectBacklog = counts.incorrect > concentrationThreshold;
     const canIntroduceNewQuestions = counts.incorrect <= newQuestionThreshold;
+
+    // 上限の80%を超えたら自動的に復習モード発動
+    const autoReviewMode =
+      (stillLearningLimit !== null && counts.still_learning >= stillLearningLimit * 0.8) ||
+      (incorrectLimit !== null && counts.incorrect >= incorrectLimit * 0.8);
+    const effectiveReviewMode = isReviewFocusMode || autoReviewMode;
 
     // ソート: 優先度 > 最終学習時刻（古い順） > ランダム
     const sorted = questionsWithStatus.sort((a, b) => {
@@ -417,8 +461,8 @@ function MemorizationView({
       let priorityA = statusA?.priority || 3;
       let priorityB = statusB?.priority || 3;
 
-      // 🔥 復習モードが有効な場合: 分からないとまだまだを集中的に出題
-      if (isReviewFocusMode) {
+      // 🔥 復習モード（手動or自動）が有効な場合: 分からないとまだまだを集中的に出題
+      if (effectiveReviewMode) {
         // 分からない（incorrect）を最優先（約70%の出現率）
         if (statusA?.category === 'incorrect') priorityA = 0;
         if (statusB?.category === 'incorrect') priorityB = 0;
@@ -427,11 +471,11 @@ function MemorizationView({
         if (statusA?.category === 'still_learning' && priorityA !== 0) priorityA = 0.5;
         if (statusB?.category === 'still_learning' && priorityB !== 0) priorityB = 0.5;
 
-        // 覚えてる（mastered）と新規はほぼ出題しない（合計5%）
-        if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 10;
-        if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 10;
-        if (statusA?.category === 'new' && priorityA > 1) priorityA = 8;
-        if (statusB?.category === 'new' && priorityB > 1) priorityB = 8;
+        // 覚えてる（mastered）と新規は完全に出題しない
+        if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 999;
+        if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 999;
+        if (statusA?.category === 'new' && priorityA > 1) priorityA = 999;
+        if (statusB?.category === 'new' && priorityB > 1) priorityB = 999;
       } else {
         // 通常モード: 適応型間隔反復 + 忘却リスクベースの優先度
 
@@ -677,49 +721,47 @@ function MemorizationView({
 
         // 適応型学習への記録
         adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, viewDuration * 1000);
+
+        // 適応的学習AIネットワークによる分析
+        await processWithAdaptiveAI(currentQuestion.word, isCorrect);
       }
 
       // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
       setLastAnswerTime(Date.now());
 
-      // 適応的な出題順序の動的更新
-      // 「まだまだ」または「覚えていない」を選択した場合、即座に再ソート
-      // それ以外は3問ごとに再ソート（パフォーマンスとのバランス）
-      const shouldResortImmediately = !isCorrect; // まだまだor覚えていないの場合
-      const shouldResortPeriodically =
-        sessionStats.total % 3 === 0 ||
-        (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
-        (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit);
-
-      if ((shouldResortImmediately || shouldResortPeriodically) && questions.length > 1) {
-        // 残りの語句を再ソート（現在の語句は除外）
-        const remainingQuestions = questions.slice(currentIndex + 1);
-
-        // 共通のソート関数を使用（暗記モードの上限設定を渡す）
-        const resorted = sortByPriorityCommon(remainingQuestions, {
-          isReviewFocusMode: false,
-          learningLimit: stillLearningLimit,
-          reviewLimit: incorrectLimit,
-          mode: 'memorization',
-        });
-
-        // 語句リストを更新
-        const updatedQuestions = [
-          ...questions.slice(0, currentIndex + 1), // 既に出題した語句
-          ...resorted, // 再ソートされた残りの語句
-        ];
-        setQuestions(updatedQuestions);
-      }
-
-      // 「覚えていない」「まだまだ」の場合は問題を即座に再追加（次の3問内）
+      // 不正解・まだまだの処理: 再追加→再ソートの順で単一の状態更新にまとめる
       if (!isCorrect || isStillLearning) {
-        setQuestions((prevQuestions) =>
-          reAddQuestion(currentQuestion, prevQuestions, currentIndex)
-        );
+        setQuestions((prevQuestions) => {
+          // ステップ1: 問題を再追加（次の3-5問内）
+          const questionsWithReAdd = reAddQuestion(currentQuestion, prevQuestions, currentIndex);
+
+          // ステップ2: 定期的な再ソート（3問ごとまたは上限到達時）
+          const shouldResort =
+            sessionStats.total % 3 === 0 ||
+            (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
+            (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit);
+
+          if (shouldResort && questionsWithReAdd.length > 1) {
+            const remainingQuestions = questionsWithReAdd.slice(currentIndex + 1);
+
+            if (remainingQuestions.length > 1) {
+              const resorted = sortByPriorityCommon(remainingQuestions, {
+                isReviewFocusMode: false,
+                learningLimit: stillLearningLimit,
+                reviewLimit: incorrectLimit,
+                mode: 'memorization',
+              });
+
+              return [...questionsWithReAdd.slice(0, currentIndex + 1), ...resorted];
+            }
+          }
+
+          return questionsWithReAdd;
+        });
       }
 
       // KPIロギング + 新規/復習の統計を更新
-      
+
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
 
       // 次の語句へ
@@ -890,6 +932,12 @@ function MemorizationView({
                               ? '中級'
                               : '上級'}
                         </div>
+                      </div>
+                    )}
+                    {/* 適応的AI戦略バッジ */}
+                    {adaptiveEnabled && currentStrategy && (
+                      <div className="flex justify-center mt-2">
+                        <div className="adaptive-strategy-badge">🧠 適応中</div>
                       </div>
                     )}
                   </div>
@@ -1413,6 +1461,12 @@ function MemorizationView({
                               ? '中級'
                               : '上級'}
                         </div>
+                      </div>
+                    )}
+                    {/* 適応的AI戦略バッジ */}
+                    {adaptiveEnabled && currentStrategy && (
+                      <div className="flex justify-center mt-2">
+                        <div className="adaptive-strategy-badge">🧠 適応中</div>
                       </div>
                     )}
                   </div>
