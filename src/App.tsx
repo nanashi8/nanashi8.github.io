@@ -1368,7 +1368,9 @@ function App() {
           });
 
           if (payload.question) {
-            const selectedIndex = cleanedQuestions.findIndex((q) => q.word === payload.question!.word);
+            const selectedIndex = cleanedQuestions.findIndex(
+              (q) => q.word === payload.question!.word
+            );
             const actualNextIndex = selectedIndex !== -1 ? selectedIndex : nextIndex;
 
             return {
@@ -1407,7 +1409,9 @@ function App() {
         });
 
         if (payload.question) {
-          const selectedIndex = currentQuestions.findIndex((q) => q.word === payload.question!.word);
+          const selectedIndex = currentQuestions.findIndex(
+            (q) => q.word === payload.question!.word
+          );
           const actualNextIndex = selectedIndex !== -1 ? selectedIndex : nextIndex;
 
           return {
@@ -1590,13 +1594,7 @@ function App() {
       // 応答時間を再計算（評価時点での時間）
       const responseTime = Date.now() - questionStartTimeRef.current;
       const isCorrect = quizState.selectedAnswer === currentQuestion.meaning;
-      updateWordProgress(
-        currentQuestion.word,
-        isCorrect,
-        responseTime,
-        rating,
-        'translation'
-      );
+      updateWordProgress(currentQuestion.word, isCorrect, responseTime, rating, 'translation');
     }
   };
 

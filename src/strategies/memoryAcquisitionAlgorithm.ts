@@ -447,7 +447,9 @@ export class AcquisitionQueueManager {
       finalCategory = entry.category;
     } else if (difficulty === undefined || category === undefined) {
       // 初回正解時：デフォルト値を使用
-      console.log(`🆕 初回正解：キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`);
+      console.log(
+        `🆕 初回正解：キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`
+      );
     }
 
     if (currentQueue === QueueType.IMMEDIATE && this.shouldEnqueueEarly(word, progress)) {
@@ -527,7 +529,9 @@ export class AcquisitionQueueManager {
       finalCategory = entry.category;
     } else if (difficulty === undefined || category === undefined) {
       // 初回不正解時：デフォルト値を使用してキューに追加
-      console.log(`🆕 初回不正解：即時復習キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`);
+      console.log(
+        `🆕 初回不正解：即時復習キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`
+      );
     }
 
     // 誤答したら現在のキューから削除して即時復習キューに戻す
