@@ -35,5 +35,10 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src", "tests"],
+  "exclude": [
+    "scripts/learning-simulation.ts",
+    "scripts/specific-pattern-simulation.ts",
+    "scripts/visual-random-simulation.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

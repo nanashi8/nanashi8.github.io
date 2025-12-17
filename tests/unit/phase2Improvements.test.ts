@@ -1,5 +1,5 @@
 // @test-guard-bypass: CLI simulation test - no data files used
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { execSync } from 'child_process';
 
 /**

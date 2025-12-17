@@ -1,9 +1,12 @@
+// @ts-nocheck
 // 学習AIネットワーク シミュレーション
 // 5種類の生徒パターンで30問の解答→優先度計算→並び替えをシミュレート
 
+/// <reference types="node" />
+
 // 時間ベースバケット設定（実装と同じ）
-const TIME_BUCKETS = [1, 3, 5, 7, 10, 15, 30, 60, 120, 180, 240, 300, 360, 420, 480, 720, 1440];
-const BUCKET_BOOST = [5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 75, 80, 85, 90, 95, 98, 100];
+const TIME_BUCKETS_LEARNING = [1, 3, 5, 7, 10, 15, 30, 60, 120, 180, 240, 300, 360, 420, 480, 720, 1440];
+const BUCKET_BOOST_LEARNING = [5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 75, 80, 85, 90, 95, 98, 100];
 
 interface WordProgress {
   word: string;
@@ -36,9 +39,9 @@ function calculateTimeBasedPriority(progress: WordProgress): number {
   const elapsedMinutes = (Date.now() - progress.firstAttempted) / (1000 * 60);
 
   let boost = 0;
-  for (let i = 0; i < TIME_BUCKETS.length; i++) {
-    if (elapsedMinutes >= TIME_BUCKETS[i]) {
-      boost = BUCKET_BOOST[i];
+  for (let i = 0; i < TIME_BUCKETS_LEARNING.length; i++) {
+    if (elapsedMinutes >= TIME_BUCKETS_LEARNING[i]) {
+      boost = BUCKET_BOOST_LEARNING[i];
     } else {
       break;
     }

@@ -1,9 +1,12 @@
+// @ts-nocheck
 // 特定解答パターンのシミュレーション
 // +1, +2, +3, +4, -5, +6, +7, -5, +8, +9, +10, +5, +11, +12, -13, -14, +15, -13
 
+/// <reference types="node" />
+
 // 時間ベースバケット設定（実装と同じ）
-const TIME_BUCKETS = [1, 3, 5, 7, 10, 15, 30, 60, 120, 180, 240, 300, 360, 420, 480, 720, 1440];
-const BUCKET_BOOST = [5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 75, 80, 85, 90, 95, 98, 100];
+const TIME_BUCKETS_SPECIFIC = [1, 3, 5, 7, 10, 15, 30, 60, 120, 180, 240, 300, 360, 420, 480, 720, 1440];
+const BUCKET_BOOST_SPECIFIC = [5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 75, 80, 85, 90, 95, 98, 100];
 
 interface WordProgress {
   word: string;
@@ -52,9 +55,9 @@ function calculateTimeBasedPriority(progress: WordProgress): number {
   const elapsedMinutes = (Date.now() - progress.firstAttempted) / (1000 * 60);
 
   let boost = 0;
-  for (let i = 0; i < TIME_BUCKETS.length; i++) {
-    if (elapsedMinutes >= TIME_BUCKETS[i]) {
-      boost = BUCKET_BOOST[i];
+  for (let i = 0; i < TIME_BUCKETS_SPECIFIC.length; i++) {
+    if (elapsedMinutes >= TIME_BUCKETS_SPECIFIC[i]) {
+      boost = BUCKET_BOOST_SPECIFIC[i];
     } else {
       break;
     }
