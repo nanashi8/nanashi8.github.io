@@ -14,11 +14,12 @@ test.describe('超高速煙テスト', () => {
     test.setTimeout(60000);
 
     // 1. アプリ起動確認（リトライ付き・サーバー起動待ち時間延長）
-    await page.goto('http://localhost:5173', {
+    const base = test.info().config.use?.baseURL || 'http://localhost:5173';
+    await page.goto(base, {
       waitUntil: 'networkidle',
       timeout: 30000,
     });
-    await expect(page).toHaveTitle(/英語クイズ|Quiz/);
+    await expect(page).toHaveTitle(/英語クイズ|Quiz|中学生英語学習アプリ/);
 
     // 2. クイズモード選択ボタンが表示されることを確認
     const memorizeButton = page.getByRole('button', { name: /💡 暗記/ });

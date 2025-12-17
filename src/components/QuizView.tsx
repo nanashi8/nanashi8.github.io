@@ -472,6 +472,24 @@ function QuizView({
           )}
 
           <div className="question-container">
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-4xl">
+                {/* 全画面表示ボタン */}
+                <button
+                  onClick={toggleFullscreen}
+                  className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition shadow-md"
+                  aria-label="全画面表示"
+                  title="全画面表示"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                    />
+                  </svg>
+                </button>
             {currentQuestion && (
               <>
                 <QuestionCard
@@ -492,10 +510,11 @@ function QuizView({
                   onAddWordToCustomSet={onAddWordToCustomSet}
                   onRemoveWordFromCustomSet={onRemoveWordFromCustomSet}
                   onOpenCustomSetManagement={onOpenCustomSetManagement}
-                  onFullscreen={toggleFullscreen}
                 />
               </>
             )}
+              </div>
+            </div>
           </div>
         </>
       )}
