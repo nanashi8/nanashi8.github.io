@@ -2,6 +2,52 @@
 
 このディレクトリには、パッセージファイルの品質管理と保守のためのスクリプトが含まれています。
 
+## 🤖 project_ai_servant.py
+
+プロジェクト専用AIサーバント - メインAIの作業を支援するアシスタント
+
+### 用語辞書機能（新機能）
+
+プロジェクト固有の変数名、関数名、パラメータの意味を検索できます。
+
+```bash
+# 用語の意味を問い合わせ
+python3 scripts/project_ai_servant.py --query-term isSkipped
+
+# 登録されている全用語をリスト
+python3 scripts/project_ai_servant.py --list-terms
+
+# JSON形式で出力
+python3 scripts/project_ai_servant.py --query-term processAnswerAndGetNext --json
+```
+
+**現在登録されている用語：**
+- `isSkipped` - スキップボタン用パラメータ（初回問題判定には使わない！）
+- `lastAnswerCorrectRef` - Tell, Don't Askパターンで前回の正誤を記憶
+- `processAnswerAndGetNext` - 解答記録と次問選定を一括処理
+- `lastQuestionIdRef` - 2語振動防止用
+- `QuestionCategory` - 学習モード分類
+- `LearningPhase` - 記憶定着段階
+
+### その他の機能
+
+```bash
+# タスク分析
+python3 scripts/project_ai_servant.py --analyze "文法問題を追加"
+
+# 品質状態確認
+python3 scripts/project_ai_servant.py --status
+
+# 次のアクション提案
+python3 scripts/project_ai_servant.py --suggest "UIを改善したい"
+
+# 問題パネルの確認
+python3 scripts/project_ai_servant.py --check-panel
+
+# 警告の詳細分析
+python3 scripts/project_ai_servant.py --analyze-warnings
+```
+
 ## 📋 validate_passage.py
 
 新しいパッセージや既存のパッセージの品質を検査するスクリプト。

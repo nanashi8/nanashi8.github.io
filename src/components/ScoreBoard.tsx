@@ -403,7 +403,21 @@ function ScoreBoard({
     };
 
     Object.values(wordProgress).forEach((wp) => {
-      const attempts = wp.totalAttempts || 0;
+      // モード別の試行回数を取得（各モード専用の統計）
+      let attempts = 0;
+      if (mode === 'memorization') {
+        attempts = wp.memorizationAttempts || 0;
+      } else if (mode === 'translation') {
+        attempts = wp.translationAttempts || 0;
+      } else if (mode === 'spelling') {
+        attempts = wp.spellingAttempts || 0;
+      } else if (mode === 'grammar') {
+        attempts = wp.grammarAttempts || 0;
+      } else {
+        // モード指定がない場合は全モード合計
+        attempts = wp.totalAttempts || 0;
+      }
+
       if (attempts === 1) counts.once++;
       else if (attempts === 2) counts.twice++;
       else if (attempts === 3) counts.three++;
@@ -413,7 +427,7 @@ function ScoreBoard({
     });
 
     return counts;
-  }, [onAnswerTime]);
+  }, [onAnswerTime, mode]);
 
   // 文法モード用の単元別統計（タイトル付き）
   const [grammarUnitStats, setGrammarUnitStats] = useState<
