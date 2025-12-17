@@ -15,5 +15,14 @@
   "css.lint.compatibleVendorPrefixes": "ignore",
   "css.lint.vendorPrefix": "ignore",
   "css.lint.unknownProperties": "ignore",
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "eslint.options": {
+    "ignorePattern": [
+      "scripts/**/*.ts"
+    ]
+  },
+  "eslint.rules.customizations": [
+    { "rule": "@typescript-eslint/ban-ts-comment", "severity": "off" }
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

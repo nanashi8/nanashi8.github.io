@@ -155,7 +155,7 @@ function updateWordProgress(
  */
 function calculatePriority(
   progress: WordProgress,
-  now: number
+  _now: number
 ): {
   priority: number;
   timeBoost: number;

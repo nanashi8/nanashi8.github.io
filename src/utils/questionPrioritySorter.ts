@@ -42,7 +42,7 @@ interface SortOptions {
 // メタAIネットワークのシングルトンインスタンス
 let metaAINetwork: AdaptiveEducationalAINetwork | null = null;
 
-function getMetaAINetwork(): AdaptiveEducationalAINetwork {
+function _getMetaAINetwork(): AdaptiveEducationalAINetwork {
   if (!metaAINetwork) {
     metaAINetwork = new AdaptiveEducationalAINetwork({
       enabled: true,
@@ -192,7 +192,8 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
   // 14AI統合: メタAIネットワークを使用する場合
   if (useMetaAI) {
     logger.info('🤖 14AI統合システム起動');
-    const metaAI = getMetaAINetwork();
+    // メタAIネットワークを初期化（将来の拡張用）
+    // const metaAI = getMetaAINetwork();
 
     // QuestionContextを構築
     const now = new Date();
