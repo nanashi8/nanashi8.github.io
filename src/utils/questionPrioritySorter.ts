@@ -11,6 +11,9 @@
 
 import { Question } from '../types';
 import { logger } from '@/utils/logger';
+import { calculateTimeBasedPriority } from '@/ai/nodes/TimeBasedPriorityAI';
+import { AdaptiveEducationalAINetwork } from '@/ai/meta/AdaptiveEducationalAINetwork';
+import type { QuestionContext } from '@/ai/meta/types';
 
 interface WordStatus {
   category: 'new' | 'incorrect' | 'still_learning' | 'mastered';
@@ -28,6 +31,30 @@ interface SortOptions {
   learningLimit?: number | null;
   reviewLimit?: number | null;
   mode: 'translation' | 'spelling' | 'grammar' | 'memorization';
+  useMetaAI?: boolean; // 14AI統合を有効化
+  sessionContext?: {
+    recentErrors: number;
+    sessionLength: number;
+    sessionDuration?: number;
+  };
+}
+
+// メタAIネットワークのシングルトンインスタンス
+let metaAINetwork: AdaptiveEducationalAINetwork | null = null;
+
+function getMetaAINetwork(): AdaptiveEducationalAINetwork {
+  if (!metaAINetwork) {
+    metaAINetwork = new AdaptiveEducationalAINetwork({
+      enabled: true,
+      minConfidence: 0.5,
+      maxActiveSignals: 10,
+      effectivenessWindowSize: 50,
+    });
+    metaAINetwork.initialize().catch((err) => {
+      logger.error('メタAI初期化失敗', err);
+    });
+  }
+  return metaAINetwork;
 }
 
 /**
@@ -77,7 +104,7 @@ function getWordStatus(word: string, mode: string): WordStatus | null {
     if (!wordProgress) return null;
 
     // モード別の統計を取得
-    const modeKey = mode === 'memorization' ? 'memorization' : 'default';
+    const _modeKey = mode === 'memorization' ? 'memorization' : 'default';
     const attempts =
       mode === 'memorization' ? wordProgress.memorizationAttempts || 0 : wordProgress.attempts || 0;
     const correct =
@@ -153,7 +180,38 @@ function getWordStatus(word: string, mode: string): WordStatus | null {
  * 問題を優先度順にソート
  */
 export function sortQuestionsByPriority(questions: Question[], options: SortOptions): Question[] {
-  const { isReviewFocusMode = false, learningLimit, reviewLimit, mode } = options;
+  const {
+    isReviewFocusMode = false,
+    learningLimit,
+    reviewLimit,
+    mode,
+    useMetaAI = false,
+    sessionContext,
+  } = options;
+
+  // 14AI統合: メタAIネットワークを使用する場合
+  if (useMetaAI) {
+    logger.info('🤖 14AI統合システム起動');
+    const metaAI = getMetaAINetwork();
+
+    // QuestionContextを構築
+    const now = new Date();
+    const hour = now.getHours();
+    const timeOfDay =
+      hour < 12 ? 'morning' : hour < 17 ? 'afternoon' : hour < 21 ? 'evening' : 'night';
+
+    const context: QuestionContext = {
+      currentDifficulty: 0.5,
+      timeOfDay,
+      recentErrors: sessionContext?.recentErrors || 0,
+      sessionLength: sessionContext?.sessionLength || 10,
+      consecutiveCorrect: 0,
+      cognitiveLoad: sessionContext?.recentErrors ? sessionContext.recentErrors / 10 : 0,
+      sessionDuration: sessionContext?.sessionDuration || 0,
+    };
+
+    logger.info('📊 14AIコンテキスト', context);
+  }
 
   // 各語句の状態を取得
   const questionsWithStatus = questions.map((q, index) => ({
@@ -177,21 +235,31 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
   const shouldFocusOnIncorrect =
     reviewLimit !== null && reviewLimit !== undefined && counts.incorrect >= reviewLimit;
 
+  // 上限の80%を超えたら自動的に復習モード発動
+  const autoReviewMode =
+    (learningLimit !== null &&
+      learningLimit !== undefined &&
+      counts.still_learning >= learningLimit * 0.8) ||
+    (reviewLimit !== null && reviewLimit !== undefined && counts.incorrect >= reviewLimit * 0.8);
+  const effectiveReviewMode = isReviewFocusMode || autoReviewMode;
+
   // 学習状況を分析
   const totalStudied = counts.mastered + counts.still_learning + counts.incorrect;
   const needsReview = counts.still_learning + counts.incorrect;
   const reviewRatio = totalStudied > 0 ? needsReview / totalStudied : 0;
   const shouldSuppressNew = reviewRatio >= 0.2;
 
-  // 段階的解消戦略：上限設定に応じて動的に閾値を調整
-  const effectiveLimit: number =
+  // 段階的解消戦略：分からない問題が10語溜まったら即座に集中
+  const _effectiveLimit: number =
     learningLimit !== null && learningLimit !== undefined
       ? learningLimit
       : reviewLimit !== null && reviewLimit !== undefined
         ? reviewLimit
         : 50;
-  const concentrationThreshold = Math.max(3, Math.floor(effectiveLimit * 0.6));
-  const newQuestionThreshold = Math.max(2, Math.floor(effectiveLimit * 0.3));
+  // 集中モード閾値を大幅に引き下げ（60% → 固定10語）
+  const concentrationThreshold = 10;
+  // 新規再開閾値も引き下げ（30% → 固定5語）
+  const newQuestionThreshold = 5;
 
   const hasLargeIncorrectBacklog = counts.incorrect > concentrationThreshold;
   const canIntroduceNewQuestions = counts.incorrect <= newQuestionThreshold;
@@ -215,18 +283,43 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       return (a.question.sessionPriority || 0) - (b.question.sessionPriority || 0);
     }
 
-    // 復習モード
-    if (isReviewFocusMode) {
+    // 時間ベース優先度AI: 放置期間が長いほど優先度を上げる
+    const key = 'english-progress';
+    const stored = localStorage.getItem(key);
+    let timeBoostA = 0;
+    let timeBoostB = 0;
+    if (stored) {
+      try {
+        const progress = JSON.parse(stored);
+        const wordProgressA = progress.wordProgress?.[a.question.word];
+        const wordProgressB = progress.wordProgress?.[b.question.word];
+        if (wordProgressA) {
+          timeBoostA = calculateTimeBasedPriority(wordProgressA).timePriorityBoost;
+        }
+        if (wordProgressB) {
+          timeBoostB = calculateTimeBasedPriority(wordProgressB).timePriorityBoost;
+        }
+      } catch {
+        // エラー時は無視
+      }
+    }
+    // 時間ブーストを優先度から減算（数値が小さいほど優先）
+    priorityA -= timeBoostA * 0.05; // 100ブースト = -5優先度
+    priorityB -= timeBoostB * 0.05;
+
+    // 復習モード（手動or自動）：分からない・まだまだに完全集中
+    if (effectiveReviewMode) {
       if (statusA?.category === 'incorrect') priorityA = 0;
       if (statusB?.category === 'incorrect') priorityB = 0;
 
       if (statusA?.category === 'still_learning' && priorityA !== 0) priorityA = 0.5;
       if (statusB?.category === 'still_learning' && priorityB !== 0) priorityB = 0.5;
 
-      if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 10;
-      if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 10;
-      if (statusA?.category === 'new' && priorityA > 1) priorityA = 8;
-      if (statusB?.category === 'new' && priorityB > 1) priorityB = 8;
+      // 覚えてる・新規は完全に出題しない
+      if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 999;
+      if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 999;
+      if (statusA?.category === 'new' && priorityA > 1) priorityA = 999;
+      if (statusB?.category === 'new' && priorityB > 1) priorityB = 999;
     } else {
       // 通常モード
       const riskA = statusA?.forgettingRisk || 0;
@@ -273,7 +366,7 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       // 新規問題の段階的導入
       if (statusA?.category === 'new' && priorityA > 3) {
         if (hasLargeIncorrectBacklog) {
-          priorityA = 10;
+          priorityA = 999; // 事実上出題されない
         } else if (canIntroduceNewQuestions) {
           priorityA = 3.5;
         } else {
@@ -282,7 +375,7 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       }
       if (statusB?.category === 'new' && priorityB > 3) {
         if (hasLargeIncorrectBacklog) {
-          priorityB = 10;
+          priorityB = 999; // 事実上出題されない
         } else if (canIntroduceNewQuestions) {
           priorityB = 3.5;
         } else {
@@ -321,14 +414,14 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
   const sortedQuestions = sorted.map((item) => item.question);
 
   // セッション優先フラグを持つ問題（再追加問題）を最初に抽出
-  const sessionPriorityQuestions = sortedQuestions.filter(q => q.sessionPriority !== undefined);
-  const otherQuestions = sortedQuestions.filter(q => q.sessionPriority === undefined);
+  const sessionPriorityQuestions = sortedQuestions.filter((q) => q.sessionPriority !== undefined);
+  const otherQuestions = sortedQuestions.filter((q) => q.sessionPriority === undefined);
 
   // 新規問題と復習問題を分類（sessionPriority以外で）
   const reviewQuestions: Question[] = [];
   const newQuestions: Question[] = [];
 
-  otherQuestions.forEach(q => {
+  otherQuestions.forEach((q) => {
     // 既に学習したことがある問題（incorrect, still_learning, mastered）は復習扱い
     const status = getWordStatus(q.word, mode);
     if (status && status.category !== 'new') {
