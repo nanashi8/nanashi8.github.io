@@ -510,7 +510,7 @@ export function useAdaptiveLearning(
         questionId,
         isCorrect,
         responseTime,
-        difficultyRating,
+        difficultyRating: _difficultyRating,
         isSkipped = false,
         candidates,
         timestamp = Date.now(),
@@ -533,7 +533,7 @@ export function useAdaptiveLearning(
       let reason = '';
       let priority = 0;
       let phase: LearningPhase | null = null;
-      let hints: NextQuestionPayload['hints'] = {};
+      const hints: NextQuestionPayload['hints'] = {};
 
       try {
         // 1. 解答を記録（isCorrectが渡された場合のみ）

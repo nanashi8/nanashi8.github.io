@@ -883,7 +883,7 @@ function MemorizationView({
 
             {/* 暗記カード */}
             <div className="w-full max-w-4xl px-4">
-              <div ref={cardRef} className="question-card" style={{ display: 'flex', flexDirection: 'column' }}>
+              <div ref={cardRef} className="question-card flex flex-col">
                 {/* 語句表示部 */}
                 <div className="mb-8 py-8 flex flex-col items-center justify-center min-h-[200px]">
                   <div
@@ -984,7 +984,7 @@ function MemorizationView({
                 )}
 
                 {/* 詳細情報 */}
-                <div className="space-y-3 overflow-y-auto" style={{ minHeight: '300px', maxHeight: '400px' }}>
+                <div className="space-y-3 overflow-y-auto min-h-[300px] max-h-[400px]">
                   {/* 意味 */}
                   <button
                     onClick={() => toggleCardField('showMeaning')}
@@ -1518,7 +1518,7 @@ function MemorizationView({
                 )}
 
                 {/* 詳細情報 */}
-                <div className="space-y-3 overflow-y-auto" style={{ minHeight: '300px', maxHeight: '400px' }}>
+                <div className="space-y-3 overflow-y-auto min-h-[300px] max-h-[400px]">
                   {/* 意味 */}
                   <button
                     onClick={() => toggleCardField('showMeaning')}
