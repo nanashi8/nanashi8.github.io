@@ -466,7 +466,7 @@ describe('useAdaptiveLearning', () => {
     });
   });
 
-  describe('processAnswerAndGetNext (Tell, Don\'t Ask パターン)', () => {
+  describe("processAnswerAndGetNext (Tell, Don't Ask パターン)", () => {
     it('解答を記録して次の問題を選定できる', () => {
       const { result } = renderHook(() => useAdaptiveLearning(QuestionCategory.MEMORIZATION));
 

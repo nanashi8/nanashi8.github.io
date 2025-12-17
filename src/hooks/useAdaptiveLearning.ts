@@ -299,7 +299,9 @@ export function useAdaptiveLearning(
         // 現在の問題を除外（連続出題を防止）
         // wordまたは(q as any).idで比較（GrammarQuestionにも対応）
         const filteredCandidates = currentQuestionId
-          ? candidates.filter((q) => q.word !== currentQuestionId && (q as any).id !== currentQuestionId)
+          ? candidates.filter(
+              (q) => q.word !== currentQuestionId && (q as any).id !== currentQuestionId
+            )
           : candidates;
 
         if (filteredCandidates.length === 0) {
@@ -378,7 +380,9 @@ export function useAdaptiveLearning(
       } catch (error) {
         logger.error('[useAdaptiveLearning] Error selecting question:', error);
         const filteredCandidates = currentQuestionId
-          ? candidates.filter((q) => q.word !== currentQuestionId && (q as any).id !== currentQuestionId)
+          ? candidates.filter(
+              (q) => q.word !== currentQuestionId && (q as any).id !== currentQuestionId
+            )
           : candidates;
         return filteredCandidates.length > 0 ? filteredCandidates[0] : null;
       }

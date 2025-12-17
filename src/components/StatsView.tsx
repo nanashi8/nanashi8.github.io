@@ -490,12 +490,12 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
 
       {/* 曜日ラベル */}
       <div className="grid grid-cols-7 gap-1 sm:gap-2 mb-2">
-        {['月', '火', '水', '木', '金', '土', '日'].map((label, idx) => {
-          // 最新日（配列の最後）の曜日を基準に曜日を割り当て
-          const lastDay = new Date(last7Days[last7Days.length - 1]?.date || new Date());
-          const lastDayOfWeek = lastDay.getDay(); // 0=日, 1=月, ...
-          const dayIndex = (idx - (6 - lastDayOfWeek) + 7) % 7;
-          const actualDay = last7Days[dayIndex];
+        {last7Days.map((day, idx) => {
+          // 各日付の実際の曜日を計算
+          const date = new Date(day.date);
+          const dayOfWeek = date.getDay(); // 0=日, 1=月, 2=火, 3=水, 4=木, 5=金, 6=土
+          const dayLabels = ['日', '月', '火', '水', '木', '金', '土'];
+          const label = dayLabels[dayOfWeek];
 
           return (
             <div key={idx} className="text-center">
@@ -525,9 +525,8 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
           const tooltipContent = modes
             .filter((m) => m.data.count > 0)
             .map((m) => {
-              const accuracy = m.data.count > 0
-                ? Math.round((m.data.correct / m.data.count) * 100)
-                : 0;
+              const accuracy =
+                m.data.count > 0 ? Math.round((m.data.correct / m.data.count) * 100) : 0;
               return `${modeColors[m.key].text}: ${m.data.correct}/${m.data.count}問 (${accuracy}%)`;
             })
             .join('\n');
@@ -541,7 +540,11 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
                     ? 'border-orange-400 ring-2 ring-orange-300 ring-offset-1'
                     : 'border-gray-300'
                 }`}
-                title={totalCount > 0 ? `${day.date}${isToday ? ' [今日]' : ''}\n${tooltipContent}` : `${day.date}: 未学習`}
+                title={
+                  totalCount > 0
+                    ? `${day.date}${isToday ? ' [今日]' : ''}\n${tooltipContent}`
+                    : `${day.date}: 未学習`
+                }
               >
                 {totalCorrect === 0 ? (
                   <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
@@ -577,7 +580,9 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
                           return (
                             <div key={m.key} className="mb-1">
                               <div className="font-bold">{modeColors[m.key].text}</div>
-                              <div>{m.data.correct}/{m.data.count}問 ({accuracy}%)</div>
+                              <div>
+                                {m.data.correct}/{m.data.count}問 ({accuracy}%)
+                              </div>
                             </div>
                           );
                         })}
@@ -587,8 +592,11 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
               </div>
               {/* 日付と合計 */}
               <div className="mt-1 sm:mt-2 text-center">
-                <div className={`text-[10px] sm:text-xs ${isToday ? 'text-orange-600 font-bold' : 'text-gray-500'}`}>
-                  {dayLabel}{isToday && ' 🎯'}
+                <div
+                  className={`text-[10px] sm:text-xs ${isToday ? 'text-orange-600 font-bold' : 'text-gray-500'}`}
+                >
+                  {dayLabel}
+                  {isToday && ' 🎯'}
                 </div>
                 <div className="text-xs sm:text-sm font-bold text-gray-800">{totalCorrect}問</div>
               </div>
@@ -608,7 +616,7 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
             opacity: 1;
           }
         }
-        
+
         .mode-progress-bar {
           height: calc(var(--height-percent, 0) * 1%);
           animation: slideUp 0.6s ease-out calc(var(--animation-delay, 0) * 1s) both;
