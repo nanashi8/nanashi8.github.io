@@ -437,26 +437,28 @@ export class AcquisitionQueueManager {
     }
 
     // 次のキューへ自動昇格
-    // difficultyとcategoryが渡されない場合はentryから取得
-    let finalDifficulty = difficulty;
-    let finalCategory = category;
+    // difficultyとcategoryが渡されない場合はentryから取得、それでもなければデフォルト値を使用
+    let finalDifficulty: number = difficulty ?? 3;
+    let finalCategory: QuestionCategory = category ?? QuestionCategory.MEMORIZATION;
 
-    if (finalDifficulty === undefined || finalCategory === undefined) {
-      const entry = this.findWordInQueues(word);
-      if (entry) {
-        finalDifficulty = entry.difficulty;
-        finalCategory = entry.category;
-      }
+    const entry = this.findWordInQueues(word);
+    if (entry) {
+      finalDifficulty = entry.difficulty;
+      finalCategory = entry.category;
+    } else if (difficulty === undefined || category === undefined) {
+      // 初回正解時：デフォルト値を使用
+      console.log(`🆕 初回正解：キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`);
     }
 
-    if (finalDifficulty !== undefined && finalCategory !== undefined) {
-      if (currentQueue === QueueType.IMMEDIATE && this.shouldEnqueueEarly(word, progress)) {
-        this.enqueueToEarly(word, finalDifficulty, finalCategory);
-      } else if (currentQueue === QueueType.EARLY && this.shouldEnqueueMid(word, progress)) {
-        this.enqueueToMid(word, finalDifficulty, finalCategory);
-      } else if (currentQueue === QueueType.MID && this.shouldEnqueueEnd(word, progress)) {
-        this.enqueueToEnd(word, finalDifficulty, finalCategory);
-      }
+    if (currentQueue === QueueType.IMMEDIATE && this.shouldEnqueueEarly(word, progress)) {
+      this.enqueueToEarly(word, finalDifficulty, finalCategory);
+    } else if (currentQueue === QueueType.EARLY && this.shouldEnqueueMid(word, progress)) {
+      this.enqueueToMid(word, finalDifficulty, finalCategory);
+    } else if (currentQueue === QueueType.MID && this.shouldEnqueueEnd(word, progress)) {
+      this.enqueueToEnd(word, finalDifficulty, finalCategory);
+    } else if (progress.todayCorrectCount === 1 && currentQueue === QueueType.IMMEDIATE) {
+      // 初回正解時は即時復習キューに追加
+      this.enqueueToImmediate(word, finalDifficulty, finalCategory, 1);
     }
 
     // 記憶獲得完了判定
@@ -515,29 +517,28 @@ export class AcquisitionQueueManager {
     }
 
     // 即時復習キューに再追加（リセット）
-    // difficultyとcategoryが渡されない場合はentryから取得
-    let finalDifficulty = difficulty;
-    let finalCategory = category;
+    // difficultyとcategoryが渡されない場合はentryから取得、それでもなければデフォルト値を使用
+    let finalDifficulty: number = difficulty ?? 3;
+    let finalCategory: QuestionCategory = category ?? QuestionCategory.MEMORIZATION;
 
-    if (finalDifficulty === undefined || finalCategory === undefined) {
-      const entry = this.findWordInQueues(word);
-      if (entry) {
-        finalDifficulty = entry.difficulty;
-        finalCategory = entry.category;
-      }
+    const entry = this.findWordInQueues(word);
+    if (entry) {
+      finalDifficulty = entry.difficulty;
+      finalCategory = entry.category;
+    } else if (difficulty === undefined || category === undefined) {
+      // 初回不正解時：デフォルト値を使用してキューに追加
+      console.log(`🆕 初回不正解：即時復習キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`);
     }
 
-    if (finalDifficulty !== undefined && finalCategory !== undefined) {
-      // 誤答したら現在のキューから削除して即時復習キューに戻す
-      this.removeFromAllQueues(word);
+    // 誤答したら現在のキューから削除して即時復習キューに戻す
+    this.removeFromAllQueues(word);
 
-      if (currentQueue !== QueueType.IMMEDIATE) {
-        console.log(`❌ 誤答により即時復習キューに戻します: ${word}`);
-      }
-
-      // 難易度を上げて即時復習キューに追加
-      this.enqueueToImmediate(word, Math.min(finalDifficulty + 1, 5), finalCategory, 1);
+    if (currentQueue !== QueueType.IMMEDIATE) {
+      console.log(`❌ 誤答により即時復習キューに戻します: ${word}`);
     }
+
+    // 難易度を上げて即時復習キューに追加
+    this.enqueueToImmediate(word, Math.min(finalDifficulty + 1, 5), finalCategory, 1);
   }
 
   /**

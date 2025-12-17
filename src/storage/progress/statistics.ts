@@ -815,10 +815,11 @@ export function getMemorizationDetailedRetentionStats(): DetailedRetentionStats 
     const accuracy = totalAttempts > 0 ? (effectiveCorrect / totalAttempts) * 100 : 0;
 
     // 🟢 完全定着判定（覚えてる）
+    // 最後の解答が正解なら「覚えてる」にカウント
     const isDefinitelyMastered =
       (totalAttempts === 1 && correctCount === 1) ||
-      consecutiveCorrect >= 3 ||
-      (consecutiveCorrect >= 2 && accuracy >= 80);
+      consecutiveCorrect >= 1 || // 連続正解が1回以上（最後が正解）
+      accuracy >= 80; // または正答率80%以上
 
     if (isDefinitelyMastered) {
       masteredCount++;

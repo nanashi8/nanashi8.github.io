@@ -263,16 +263,44 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         setCurrentQuestions(cleanedQuestions);
       }
 
-      setCurrentQuestionIndex(nextIndex);
+      // 適応型学習AIに解答を渡して次の問題を取得（Tell, Don't Ask パターン）
+      const currentId = currentQuestions[currentQuestionIndex]?.id;
+      const payload = adaptiveLearning.processAnswerAndGetNext({
+        questionId: currentId,
+        isCorrect: lastAnswerCorrect,
+        responseTime: Date.now() - questionStartTimeRef.current,
+        candidates: currentQuestions as any,
+      });
+
+      logger.info('[GrammarQuizView] Next question selected:', {
+        reason: payload.reason,
+        priority: payload.priority,
+        phase: payload.phase,
+      });
+
+      // 次の問題に移動する前にlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
+      setLastAnswerWord(undefined);
+
+      if (payload.question) {
+        // 選ばれた問題のインデックスを見つける
+        const selectedIndex = currentQuestions.findIndex(
+          (q) => q.id === (payload.question as any).id
+        );
+        const actualNextIndex = selectedIndex !== -1 ? selectedIndex : nextIndex;
+
+        setCurrentQuestionIndex(actualNextIndex);
+      } else {
+        // フォールバック: 適応型AI選択失敗時は従来のインデックス増加
+        setCurrentQuestionIndex(nextIndex);
+      }
+
       setSelectedAnswer(null);
       setSelectedWords([]);
       setAnswered(false);
       setShowHint(false);
       questionStartTimeRef.current = Date.now(); // 次の問題の開始時刻を記録
-      // 次の問題に移動したのlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
-      setLastAnswerWord(undefined);
     }
-  }, [currentQuestionIndex, currentQuestions]);
+  }, [currentQuestionIndex, currentQuestions, adaptiveLearning]);
 
   const handleStartQuiz = useCallback(async () => {
     setLoading(true);
@@ -668,9 +696,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     });
 
     await updateWordProgress(questionId, isCorrect, responseTime, undefined, 'grammar');
-
-    // 適応型学習への記録
-    adaptiveLearning.recordAnswer(questionId, isCorrect, responseTime);
 
     // 適応的学習AIネットワークによる分析
     await processWithAdaptiveAI(questionId, isCorrect);

@@ -2019,6 +2019,111 @@ export function getStudyCalendarData(days: number = 90): Array<{
 }
 
 /**
+ * モード別学習カレンダー用のデータを取得（過去N日分）
+ */
+export function getStudyCalendarByMode(days: number = 14): Array<{
+  date: string; // YYYY-MM-DD形式
+  memorization: { count: number; correct: number }; // 暗記モード
+  translation: { count: number; correct: number }; // 和訳モード
+  spelling: { count: number; correct: number }; // スペルモード
+  grammar: { count: number; correct: number }; // 文法モード
+  total: number; // 総問題数
+}> {
+  const progress = loadProgressSync();
+  const now = new Date();
+  const calendarData: Array<{
+    date: string;
+    memorization: { count: number; correct: number };
+    translation: { count: number; correct: number };
+    spelling: { count: number; correct: number };
+    grammar: { count: number; correct: number };
+    total: number;
+  }> = [];
+
+  logger.log('📊 getStudyCalendarByMode呼び出し - progress.results件数:', progress.results.length);
+
+  // 過去N日分の日付を生成
+  for (let i = days - 1; i >= 0; i--) {
+    const date = new Date(now);
+    date.setDate(date.getDate() - i);
+    const dateStr = formatLocalYYYYMMDD(date);
+
+    // その日の結果を集計
+    const dayStart = new Date(date).setHours(0, 0, 0, 0);
+    const dayEnd = new Date(date).setHours(23, 59, 59, 999);
+    const dayResults = progress.results.filter((r) => r.date >= dayStart && r.date <= dayEnd);
+
+    // モード別に集計
+    const memorization = { count: 0, correct: 0 };
+    const translation = { count: 0, correct: 0 };
+    const spelling = { count: 0, correct: 0 };
+    const grammar = { count: 0, correct: 0 };
+
+    dayResults.forEach((r) => {
+      const mode = r.mode?.toLowerCase() || '';
+      if (mode.includes('memorization') || mode.includes('暗記')) {
+        memorization.count += r.total;
+        memorization.correct += r.score;
+      } else if (mode.includes('translation') || mode.includes('和訳')) {
+        translation.count += r.total;
+        translation.correct += r.score;
+      } else if (mode.includes('spelling') || mode.includes('スペル')) {
+        spelling.count += r.total;
+        spelling.correct += r.score;
+      } else if (mode.includes('grammar') || mode.includes('文法')) {
+        grammar.count += r.total;
+        grammar.correct += r.score;
+      }
+    });
+
+    const total = memorization.count + translation.count + spelling.count + grammar.count;
+
+    calendarData.push({
+      date: dateStr,
+      memorization,
+      translation,
+      spelling,
+      grammar,
+      total,
+    });
+  }
+
+  return calendarData;
+}
+
+/**
+ * 連続学習日数を取得
+ */
+export function getStreakDays(): number {
+  const progress = loadProgressSync();
+  const now = new Date();
+  let streak = 0;
+
+  // 今日から遡って連続学習日数をカウント
+  for (let i = 0; i < 365; i++) {
+    const date = new Date(now);
+    date.setDate(date.getDate() - i);
+    const dateStr = formatLocalYYYYMMDD(date);
+
+    // その日の結果を集計
+    const dayStart = new Date(date).setHours(0, 0, 0, 0);
+    const dayEnd = new Date(date).setHours(23, 59, 59, 999);
+    const dayResults = progress.results.filter((r) => r.date >= dayStart && r.date <= dayEnd);
+
+    const totalAnswered = dayResults.reduce((sum, r) => sum + r.total, 0);
+
+    if (totalAnswered > 0) {
+      streak++;
+    } else if (i > 0) {
+      // 今日以外で0問の日があったら終了
+      break;
+    }
+  }
+
+  return streak;
+}
+
+/**
  * 累積進捗データを取得（週別集計）
  */
 export function getCumulativeProgressData(weeks: number = 12): Array<{

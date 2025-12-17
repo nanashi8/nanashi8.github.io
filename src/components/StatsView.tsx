@@ -4,7 +4,7 @@ import {
   resetStatsByModeDifficulty,
   resetAllProgress,
   loadProgressSync,
-  getStudyCalendarData,
+  getStudyCalendarByMode,
   getWeeklyStats,
   getMonthlyStats,
   getCumulativeProgressData,
@@ -49,9 +49,6 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
   const [hasWeakWordsSet, setHasWeakWordsSet] = useState<boolean>(false);
 
   // 新しい統計データ
-  const [calendarData, setCalendarData] = useState<
-    Array<{ date: string; count: number; accuracy: number }>
-  >([]);
   const [_weeklyStats, setWeeklyStats] = useState<Record<string, unknown> | null>(null);
   const [_monthlyStats, setMonthlyStats] = useState<Record<string, unknown> | null>(null);
   const [_cumulativeData, setCumulativeData] = useState<Record<string, unknown>[]>([]);
@@ -88,9 +85,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 
   // データ読み込み
   const loadData = useCallback(() => {
-    // 新しい統計データを読み込み（2週間分）
-    const calData = getStudyCalendarData(14);
-    setCalendarData(calData);
+    // 新しい統計データを読み込み
     setWeeklyStats(getWeeklyStats());
     setMonthlyStats(getMonthlyStats());
     setCumulativeData(getCumulativeProgressData(12));
@@ -184,7 +179,6 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       resetAllProgress();
 
       // UIを即座に更新
-      setCalendarData([]);
       setWeeklyStats(null);
       setMonthlyStats(null);
       setCumulativeData([]);
@@ -206,13 +200,13 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 
   return (
     <div className="stats-view">
-      {/* 学習カレンダーヒートマップ */}
+      {/* 学習カレンダー */}
       <div className="w-full mb-4 px-2">
         <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
           📆 学習カレンダー
-          <span className="text-sm font-normal text-gray-500">（過去12週間）</span>
+          <span className="text-sm font-normal text-gray-500">（過去7日間）</span>
         </h3>
-        <CalendarHeatmap data={calendarData} />
+        <LearningCalendarProgress streakDays={_streakDays} />
       </div>
 
       {/* 苦手単語トップ10 */}
@@ -439,174 +433,190 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 }
 
 // カレンダーヒートマップコンポーネント（過去2週間）
-function CalendarHeatmap({
-  data,
-}: {
-  data: Array<{ date: string; count: number; accuracy: number }>;
-}) {
-  // 今日の日付を取得(YYYY-MM-DD形式)
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const todayStr = formatLocalYYYYMMDD(today);
+// モード別の1日分データ型定義
+interface DayProgressByMode {
+  date: string;
+  memorization: { count: number; correct: number };
+  translation: { count: number; correct: number };
+  spelling: { count: number; correct: number };
+  grammar: { count: number; correct: number };
+  total: number;
+}
 
-  // 今日のデータを取得
-  const todayData = data.find((d) => d.date === todayStr);
+// スタック型プログレスバーコンポーネント
+function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
+  const [modeCalendarData, setModeCalendarData] = useState<DayProgressByMode[]>([]);
 
-  if (data.length === 0) {
+  useEffect(() => {
+    // モード別データを14日分取得
+    const data = getStudyCalendarByMode(14);
+    setModeCalendarData(data);
+  }, []);
+
+  if (modeCalendarData.length === 0) {
     return (
       <div className="w-full p-8 bg-gray-50 rounded-xl border-2 border-dashed border-gray-300 text-center">
         <p className="text-gray-500 text-lg">📊 データがありません</p>
-        <p className="text-gray-400 text-sm mt-2">学習を開始するとヒートマップが表示されます</p>
-        <p className="text-xs text-red-500 mt-4">
-          DEBUG: 今日={todayStr}, データ件数={data.length}, 今日のデータ=
-          {todayData ? `${todayData.count}問` : 'なし'}
-        </p>
+        <p className="text-gray-400 text-sm mt-2">学習を開始すると進捗が表示されます</p>
       </div>
     );
   }
 
-  // 過去2週間(14日間)の日付を生成
-  const twoWeeksAgo = new Date(today);
-  twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 13); // 今日を含む14日間
+  // 過去7日分を取得（最新7日）
+  const last7Days = modeCalendarData.slice(-7);
 
-  // データをマップに変換（日付がキー）
-  const dataMap = new Map(data.map((d) => [d.date, d]));
-
-  // 2週間分のデータを曜日ごとに整理（月〜日の7列 × 2行）
-  const weeks: Array<
-    Array<{ date: string; count: number; accuracy: number; correct: number } | null>
-  > = [[], []];
-
-  // 表示開始日を決定（先週の月曜日）→ 今週分に必ず今日を含める
-  const mondayThisWeek = new Date(today);
-  const dow = mondayThisWeek.getDay();
-  const diffToMonday2 = dow === 0 ? 6 : dow - 1; // 日曜(0)は6、他は月曜日までの差
-  mondayThisWeek.setDate(mondayThisWeek.getDate() - diffToMonday2);
-  // 2週表示のため開始日は「先週の月曜日」
-  const firstDate = new Date(mondayThisWeek);
-  firstDate.setDate(firstDate.getDate() - 7);
-
-  const currentDate = new Date(firstDate);
-
-  // 2週間分のデータを配置
-  for (let week = 0; week < 2; week++) {
-    for (let day = 0; day < 7; day++) {
-      const dateStr = formatLocalYYYYMMDD(currentDate);
-      const dayData = dataMap.get(dateStr);
-
-      // currentDateを正規化してから比較
-      const normalizedCurrentDate = new Date(currentDate);
-      normalizedCurrentDate.setHours(0, 0, 0, 0);
-
-      // 今日より未来の日付はnullにする
-      if (normalizedCurrentDate.getTime() > today.getTime()) {
-        weeks[week].push(null);
-      } else {
-        // 正解数を計算(count * accuracy / 100)
-        const correct = dayData ? Math.round((dayData.count * dayData.accuracy) / 100) : 0;
-        const cellData = dayData
-          ? { ...dayData, correct }
-          : { date: dateStr, count: 0, accuracy: 0, correct: 0 };
-        weeks[week].push(cellData);
-      }
-      currentDate.setDate(currentDate.getDate() + 1);
-    }
-  }
-
-  // 色の濃さを決定
-  const getColorClass = (count: number) => {
-    if (count === 0) return 'calendar-color-0';
-    if (count < 10) return 'calendar-color-1';
-    if (count < 20) return 'calendar-color-2';
-    if (count < 30) return 'calendar-color-3';
-    return 'calendar-color-4';
+  // モード別の色定義
+  const modeColors = {
+    memorization: { bg: 'bg-green-500', text: '🟢 暗記' },
+    translation: { bg: 'bg-blue-500', text: '🔵 和訳' },
+    spelling: { bg: 'bg-yellow-500', text: '🟡 スペル' },
+    grammar: { bg: 'bg-red-500', text: '🔴 文法' },
   };
 
-  const dayLabels = ['月', '火', '水', '木', '金', '土', '日'];
-
   return (
-    <div className="w-full p-6 bg-white rounded-xl shadow-lg border-2 border-blue-200">
-      {/* グリッドレイアウト */}
-      <div className="overflow-x-auto">
-        <div className="min-w-max mx-auto w-fit">
-          {/* 曜日ラベル */}
-          <div className="flex gap-2 mb-2">
-            {dayLabels.map((label, idx) => (
-              <div
-                key={idx}
-                className="w-20 h-8 flex items-center justify-center text-sm font-bold text-gray-700"
-              >
-                {label}
-              </div>
-            ))}
-          </div>
-
-          {/* カレンダーグリッド - 2週間 */}
-          <div className="flex flex-col gap-2">
-            {weeks.map((week, weekIdx) => (
-              <div key={weekIdx} className="flex gap-2">
-                {week.map((day, dayIdx) => {
-                  if (!day) {
-                    return (
-                      <div
-                        key={dayIdx}
-                        className="w-20 h-20 rounded bg-gray-100 border border-dashed border-gray-300"
-                      ></div>
-                    );
-                  }
-
-                  const date = new Date(day.date);
-                  const dayName = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
-                  const isToday = day.date === todayStr;
-                  const colorClasses = {
-                    'calendar-color-0': 'bg-gray-200 text-gray-500',
-                    'calendar-color-1': 'bg-blue-300 text-blue-900',
-                    'calendar-color-2': 'bg-blue-400 text-white',
-                    'calendar-color-3': 'bg-blue-500 text-white',
-                    'calendar-color-4': 'bg-blue-600 text-white',
-                  };
-
-                  return (
-                    <div
-                      key={dayIdx}
-                      className={`w-20 h-20 rounded-lg flex items-center justify-center text-xs font-bold transition-all duration-200 hover:scale-105 hover:shadow-xl cursor-pointer border-2 ${
-                        colorClasses[getColorClass(day.count) as keyof typeof colorClasses]
-                      } ${
-                        isToday
-                          ? 'ring-4 ring-yellow-400 ring-offset-2 ring-offset-white shadow-2xl border-yellow-400'
-                          : 'border-transparent'
-                      }`}
-                      title={`${day.date} (${dayName})${isToday ? ' [今日]' : ''}: ${day.count}問 (正答率${day.accuracy.toFixed(0)}%, 正解${day.correct}問)`}
-                    >
-                      <div className="flex items-center gap-1">
-                        <span className="text-base">{day.correct}</span>
-                        <span className="text-[10px] opacity-80">/</span>
-                        <span className="text-sm">{day.count}</span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            ))}
-          </div>
+    <div className="w-full p-3 sm:p-6 bg-white rounded-xl shadow-lg border-2 border-blue-200">
+      {/* ストリーク表示 */}
+      <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg border-2 border-orange-300 text-center">
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-2xl sm:text-3xl">🔥</span>
+          <span className="text-lg sm:text-2xl font-bold text-orange-600">
+            {streakDays}日連続学習中！
+          </span>
         </div>
+        {streakDays > 0 && (
+          <p className="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2">この調子で頑張ろう！</p>
+        )}
       </div>
 
+      {/* 曜日ラベル */}
+      <div className="grid grid-cols-7 gap-1 sm:gap-2 mb-2">
+        {['月', '火', '水', '木', '金', '土', '日'].map((label, idx) => {
+          // 最新日（配列の最後）の曜日を基準に曜日を割り当て
+          const lastDay = new Date(last7Days[last7Days.length - 1]?.date || new Date());
+          const lastDayOfWeek = lastDay.getDay(); // 0=日, 1=月, ...
+          const dayIndex = (idx - (6 - lastDayOfWeek) + 7) % 7;
+          const actualDay = last7Days[dayIndex];
+
+          return (
+            <div key={idx} className="text-center">
+              <div className="text-xs sm:text-sm font-bold text-gray-700 mb-1">{label}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* プログレスバー */}
+      <div className="grid grid-cols-7 gap-1 sm:gap-2">
+        {last7Days.map((day, idx) => {
+          const modes = [
+            { key: 'memorization' as const, data: day.memorization },
+            { key: 'translation' as const, data: day.translation },
+            { key: 'spelling' as const, data: day.spelling },
+            { key: 'grammar' as const, data: day.grammar },
+          ];
+
+          const totalCorrect = modes.reduce((sum, m) => sum + m.data.correct, 0);
+          const totalCount = modes.reduce((sum, m) => sum + m.data.count, 0);
+          const date = new Date(day.date);
+          const dayLabel = `${date.getMonth() + 1}/${date.getDate()}`;
+          const isToday = day.date === formatLocalYYYYMMDD(new Date());
+
+          // ホバー詳細情報を生成
+          const tooltipContent = modes
+            .filter((m) => m.data.count > 0)
+            .map((m) => {
+              const accuracy = m.data.count > 0
+                ? Math.round((m.data.correct / m.data.count) * 100)
+                : 0;
+              return `${modeColors[m.key].text}: ${m.data.correct}/${m.data.count}問 (${accuracy}%)`;
+            })
+            .join('\n');
+
+          return (
+            <div key={idx} className="flex flex-col items-center group">
+              {/* スタック型バー */}
+              <div
+                className={`relative w-full h-24 sm:h-32 bg-gray-200 rounded-lg overflow-hidden flex flex-col-reverse border-2 shadow-sm hover:shadow-xl hover:scale-105 transition-all duration-300 ${
+                  isToday
+                    ? 'border-orange-400 ring-2 ring-orange-300 ring-offset-1'
+                    : 'border-gray-300'
+                }`}
+                title={totalCount > 0 ? `${day.date}${isToday ? ' [今日]' : ''}\n${tooltipContent}` : `${day.date}: 未学習`}
+              >
+                {totalCorrect === 0 ? (
+                  <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
+                    未学習
+                  </div>
+                ) : (
+                  <>
+                    {modes.map(
+                      (mode) =>
+                        mode.data.correct > 0 && (
+                          <div
+                            key={mode.key}
+                            className={`w-full ${modeColors[mode.key].bg} flex items-center justify-center text-white text-xs font-bold transition-all duration-500 ease-out hover:brightness-110`}
+                            style={{
+                              height: `${(mode.data.correct / totalCorrect) * 100}%`,
+                              animation: `slideUp 0.6s ease-out ${idx * 0.1}s both`,
+                            }}
+                          >
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              {mode.data.correct}
+                            </span>
+                          </div>
+                        )
+                    )}
+                    {/* ホバー時の詳細オーバーレイ（デスクトップのみ） */}
+                    <div className="hidden sm:flex absolute inset-0 bg-black/80 text-white p-2 text-[10px] leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex-col justify-center">
+                      {modes
+                        .filter((m) => m.data.count > 0)
+                        .map((m) => {
+                          const accuracy = Math.round((m.data.correct / m.data.count) * 100);
+                          return (
+                            <div key={m.key} className="mb-1">
+                              <div className="font-bold">{modeColors[m.key].text}</div>
+                              <div>{m.data.correct}/{m.data.count}問 ({accuracy}%)</div>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  </>
+                )}
+              </div>
+              {/* 日付と合計 */}
+              <div className="mt-1 sm:mt-2 text-center">
+                <div className={`text-[10px] sm:text-xs ${isToday ? 'text-orange-600 font-bold' : 'text-gray-500'}`}>
+                  {dayLabel}{isToday && ' 🎯'}
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-gray-800">{totalCorrect}問</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* アニメーション定義 */}
+      <style>{`
+        @keyframes slideUp {
+          from {
+            height: 0%;
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `}</style>
+
       {/* 凡例 */}
-      <div className="flex flex-col gap-2 mt-6 text-sm">
-        <div className="flex items-center justify-center gap-3 text-gray-600">
-          <span className="font-medium">学習量:</span>
-          <span className="text-xs">少</span>
-          <div className="w-8 h-8 rounded bg-blue-300 border border-gray-300"></div>
-          <div className="w-8 h-8 rounded bg-blue-400 border border-gray-300"></div>
-          <div className="w-8 h-8 rounded bg-blue-500 border border-gray-300"></div>
-          <div className="w-8 h-8 rounded bg-blue-600 border border-gray-300"></div>
-          <span className="text-xs">多</span>
-        </div>
-        <div className="text-center text-xs text-gray-500">
-          <span className="font-semibold">表示:</span> 正解数/出題数 |
-          <span className="ml-2 inline-block w-6 h-6 rounded bg-gray-200 border-2 border-yellow-400 align-middle"></span>
-          <span className="ml-1">= 今日</span>
+      <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t-2 border-gray-200">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm">
+          {Object.entries(modeColors).map(([key, value]) => (
+            <div key={key} className="flex items-center gap-1 sm:gap-2">
+              <div className={`w-3 h-3 sm:w-4 sm:h-4 ${value.bg} rounded`}></div>
+              <span className="text-gray-700">{value.text}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
