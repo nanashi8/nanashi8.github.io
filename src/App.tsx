@@ -4,8 +4,6 @@ import { parseCSV, saveQuestionSets, generateId, classifyPhraseType } from './ut
 import { useQuizSettings } from './hooks/useQuizSettings';
 import { useQuizFilters } from './hooks/useQuizFilters';
 import { useQuizState } from './hooks/useQuizState';
-import { useAdaptiveLearning } from './hooks/useAdaptiveLearning';
-import { QuestionCategory } from './strategies/memoryAcquisitionAlgorithm';
 
 // セッション管理用
 import {
@@ -255,9 +253,6 @@ function App() {
     return saved ? JSON.parse(saved) : false;
   });
 
-  // 適応型学習フック（和訳モード用）
-  const adaptiveLearning = useAdaptiveLearning(QuestionCategory.TRANSLATION);
-
   // クイズ状態管理（カスタムフック）
   const {
     sessionStats,
@@ -283,7 +278,6 @@ function App() {
   const quizStartTimeRef = useRef<number>(0);
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
   const incorrectWordsRef = useRef<string[]>([]);
-  const lastAnswerCorrectRef = useRef<boolean>(false); // 最後の回答の正誤（Tell, Don't Ask用）
 
   // 学習曲線 AI: セッション内の進捗を追跡
   const sessionQuestionIndexRef = useRef<number>(0);
@@ -1146,9 +1140,6 @@ function App() {
     const isCorrect = !isDontKnow && normalizedAnswer === normalizedCorrect;
     const currentQuestion = quizState.questions[quizState.currentIndex];
 
-    // 適応型学習AI用に保存（Tell, Don't Ask パターン）
-    lastAnswerCorrectRef.current = isCorrect;
-
     // 不正解時、選択した選択肢の単語を「混同した単語」として記録
     if (!isCorrect && selectedQuestion && selectedQuestion.word) {
       await recordConfusion(selectedQuestion.word, currentQuestion.word);
@@ -1352,71 +1343,10 @@ function App() {
       if (!reviewFocusMode && nextIndex < currentQuestions.length) {
         const cleanedQuestions = clearExpiredFlags(currentQuestions, nextIndex - 1);
         if (cleanedQuestions !== currentQuestions) {
-          // 適応型学習AIに解答を渡して次の問題を取得（Tell, Don't Ask パターン）
-          const currentWord = currentQuestions[prev.currentIndex]?.word;
-          const payload = adaptiveLearning.processAnswerAndGetNext({
-            questionId: currentWord,
-            isCorrect: lastAnswerCorrectRef.current,
-            responseTime: Date.now() - questionStartTimeRef.current,
-            candidates: cleanedQuestions,
-          });
-
-          logger.info('[App/Translation] Next question selected (after flag cleanup):', {
-            reason: payload.reason,
-            priority: payload.priority,
-            phase: payload.phase,
-          });
-
-          if (payload.question) {
-            const selectedIndex = cleanedQuestions.findIndex(
-              (q) => q.word === payload.question!.word
-            );
-            const actualNextIndex = selectedIndex !== -1 ? selectedIndex : nextIndex;
-
-            return {
-              ...prev,
-              questions: cleanedQuestions,
-              currentIndex: actualNextIndex,
-              answered: false,
-              selectedAnswer: null,
-            };
-          }
-
           return {
             ...prev,
             questions: cleanedQuestions,
             currentIndex: nextIndex,
-            answered: false,
-            selectedAnswer: null,
-          };
-        }
-      }
-
-      // 適応型学習AIに解答を渡して次の問題を取得（Tell, Don't Ask パターン）
-      if (!reviewFocusMode && nextIndex < currentQuestions.length) {
-        const currentWord = currentQuestions[prev.currentIndex]?.word;
-        const payload = adaptiveLearning.processAnswerAndGetNext({
-          questionId: currentWord,
-          isCorrect: lastAnswerCorrectRef.current,
-          responseTime: Date.now() - questionStartTimeRef.current,
-          candidates: currentQuestions,
-        });
-
-        logger.info('[App/Translation] Next question selected:', {
-          reason: payload.reason,
-          priority: payload.priority,
-          phase: payload.phase,
-        });
-
-        if (payload.question) {
-          const selectedIndex = currentQuestions.findIndex(
-            (q) => q.word === payload.question!.word
-          );
-          const actualNextIndex = selectedIndex !== -1 ? selectedIndex : nextIndex;
-
-          return {
-            ...prev,
-            currentIndex: actualNextIndex,
             answered: false,
             selectedAnswer: null,
           };
@@ -1593,8 +1523,13 @@ function App() {
     if (currentQuestion) {
       // 応答時間を再計算（評価時点での時間）
       const responseTime = Date.now() - questionStartTimeRef.current;
-      const isCorrect = quizState.selectedAnswer === currentQuestion.meaning;
-      updateWordProgress(currentQuestion.word, isCorrect, responseTime, rating, 'translation');
+      updateWordProgress(
+        currentQuestion.word,
+        quizState.selectedAnswer === currentQuestion.meaning,
+        responseTime,
+        rating,
+        'translation'
+      );
     }
   };
 

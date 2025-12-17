@@ -38,6 +38,9 @@ export interface QuestionCandidate {
   /** 最終復習時刻 */
   lastReviewTime: number;
 
+  /** 初回出題時刻（新規単語用、短時間SM-2で使用） */
+  firstSeenTime?: number;
+
   /** 次回復習予定時刻 */
   nextReviewTime?: number;
 
@@ -223,11 +226,25 @@ export class HybridQuestionSelector {
 
   /**
    * タイミング優先度の計算（0-20）
+   * 短時間SM-2: 秒・分単位での時間経過を優先度に反映
    */
   private calculateTimingPriority(candidate: QuestionCandidate): number {
     const now = Date.now();
 
-    // 次回復習予定時刻がない場合（新規単語）
+    // 新規単語の場合: 初回出題からの経過時間を優先度に反映（短時間SM-2）
+    if (candidate.reviewCount === 0 && candidate.firstSeenTime) {
+      const secondsSinceFirstSeen = (now - candidate.firstSeenTime) / 1000;
+
+      // 時間経過に応じて優先度を上げる（振動防止）
+      // 1分経過 = +5点、2分 = +7点、5分 = +10点、10分以上 = +15点
+      if (secondsSinceFirstSeen >= 600) return 15; // 10分以上
+      if (secondsSinceFirstSeen >= 300) return 10; // 5分以上
+      if (secondsSinceFirstSeen >= 120) return 7;  // 2分以上
+      if (secondsSinceFirstSeen >= 60) return 5;   // 1分以上
+      return 0; // 1分未満は基本優先度のみ
+    }
+
+    // 復習予定時刻がない場合（古い新規単語）
     if (!candidate.nextReviewTime) {
       return 15; // 中程度の優先度
     }
@@ -288,64 +305,117 @@ export class HybridQuestionSelector {
   }
 
   /**
-   * 混合戦略に基づく選択
+   * 混合戦略に基づく決定的選択（業界標準: Anki/FSRS準拠）
+   *
+   * バケット分類 + タイブレーカーによる決定論的選択。
+   * 1. 優先度を3段階のバケットに分類
+   * 2. 上位バケットから選択
+   * 3. バケット内では優先度→最終復習時刻でソート
    */
   private selectByStrategy(priorities: PriorityResult[]): QuestionCandidate | null {
     if (priorities.length === 0) {
       return null;
     }
 
-    // 新規単語と復習単語に分類
-    const newWords = priorities.filter((p) => p.candidate.reviewCount === 0);
-    const reviewWords = priorities.filter((p) => p.candidate.reviewCount > 0);
+    // セッション進行に応じたバイアスを計算
+    const acquisitionBias = this.calculateAdaptiveBias();
 
-    // どちらか一方しかない場合は、それを返す
-    if (newWords.length === 0) {
-      return reviewWords[0]?.candidate || null;
-    }
-    if (reviewWords.length === 0) {
-      return newWords[0]?.candidate || null;
+    // 新規単語にバイアスを適用
+    const adjustedPriorities = priorities.map((p) => ({
+      ...p,
+      adjustedPriority:
+        p.candidate.reviewCount === 0
+          ? p.priority + acquisitionBias
+          : p.priority,
+    }));
+
+    // バケット分類（高: 60+, 中: 30-59, 低: 0-29）
+    const highPriority = adjustedPriorities.filter((p) => p.adjustedPriority >= 60);
+    const midPriority = adjustedPriorities.filter(
+      (p) => p.adjustedPriority >= 30 && p.adjustedPriority < 60
+    );
+    const lowPriority = adjustedPriorities.filter((p) => p.adjustedPriority < 30);
+
+    // 上位バケットから選択
+    const bucket =
+      highPriority.length > 0
+        ? highPriority
+        : midPriority.length > 0
+        ? midPriority
+        : lowPriority;
+
+    if (bucket.length === 0) {
+      return null;
     }
 
-    // 動的調整が有効な場合
-    let acquisitionRatio = this.strategy.acquisitionRatio;
-    if (this.strategy.adaptiveAdjustment && this.strategy.sessionQuestionNumber !== undefined) {
-      acquisitionRatio = this.calculateAdaptiveRatio(this.strategy.sessionQuestionNumber);
-    }
+    // バケット内でソート:
+    // 1. 優先度が5点以上離れていれば優先度順
+    // 2. 5点以内なら最終復習時刻が古い方を優先（FSRS準拠）
+    bucket.sort((a, b) => {
+      const priorityDiff = b.adjustedPriority - a.adjustedPriority;
 
-    // 混合比率に基づく確率的選択
-    const random = Math.random();
+      // 優先度が明確に異なる場合
+      if (Math.abs(priorityDiff) >= 5) {
+        return priorityDiff;
+      }
 
-    if (random < acquisitionRatio) {
-      // 新規単語を選択
-      return newWords[0].candidate;
-    } else {
-      // 復習単語を選択
-      return reviewWords[0].candidate;
-    }
+      // 優先度が近い場合、時刻でタイブレーク（短時間SM-2）
+      // 初回出題時刻も考慮し、古い方を優先
+      const timeA = a.candidate.lastReviewTime || a.candidate.firstSeenTime || 0;
+      const timeB = b.candidate.lastReviewTime || b.candidate.firstSeenTime || 0;
+
+      // 両方とも時刻記録がない場合のみ辞書順
+      if (timeA === 0 && timeB === 0) {
+        return a.candidate.word.localeCompare(b.candidate.word);
+      }
+
+      return timeA - timeB;
+    });
+
+    return bucket[0].candidate;
   }
 
   /**
-   * セッション進行に応じた動的な混合比率計算
+   * 文字列のシンプルなハッシュ関数（安定ソート用）
    */
-  private calculateAdaptiveRatio(questionNumber: number): number {
-    // 序盤（1-10問）: 新規70%, 復習30%
+  private hashString(str: string): number {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash; // 32ビット整数に変換
+    }
+    return Math.abs(hash);
+  }
+
+  /**
+   * セッション進行に応じた決定的バイアススコア計算
+   * （業界標準: 確率ではなく優先度調整として実装）
+   */
+  private calculateAdaptiveBias(): number {
+    if (!this.strategy.adaptiveAdjustment || this.strategy.sessionQuestionNumber === undefined) {
+      return 0; // デフォルト: バイアスなし
+    }
+
+    const questionNumber = this.strategy.sessionQuestionNumber;
+
+    // 序盤（1-10問）: 新規に+15点のバイアス
     if (questionNumber <= 10) {
-      return 0.7;
+      return 15;
     }
 
-    // 中盤（11-20問）: 新規60%, 復習40%
+    // 中盤（11-20問）: 新規に+10点のバイアス
     if (questionNumber <= 20) {
-      return 0.6;
+      return 10;
     }
 
-    // 終盤（21-30問）: 新規50%, 復習50%
+    // 終盤（21-30問）: 新規に+5点のバイアス
     if (questionNumber <= 30) {
-      return 0.5;
+      return 5;
     }
 
-    // それ以降: 新規40%, 復習60%（復習重視）
-    return 0.4;
+    // それ以降: バイアスなし（復習が自然に優先される）
+    return 0;
   }
 
   /**

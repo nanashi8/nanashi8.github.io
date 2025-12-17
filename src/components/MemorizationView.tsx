@@ -212,9 +212,7 @@ function MemorizationView({
 
       setQuestions(sortedQuestions);
       if (sortedQuestions.length > 0) {
-        // 適応型学習AIに最初の問題を選択させる
-        const firstQuestion = adaptiveLearning.selectNextQuestion(sortedQuestions);
-        setCurrentQuestion(firstQuestion || sortedQuestions[0]);
+        setCurrentQuestion(sortedQuestions[0]);
         setCurrentIndex(0);
         cardDisplayTimeRef.current = Date.now();
       }
@@ -721,6 +719,9 @@ function MemorizationView({
           isStillLearning // まだまだフラグを渡す
         );
 
+        // 適応型学習への記録
+        adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, viewDuration * 1000);
+
         // 適応的学習AIネットワークによる分析
         await processWithAdaptiveAI(currentQuestion.word, isCorrect);
       }
@@ -728,11 +729,33 @@ function MemorizationView({
       // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
       setLastAnswerTime(Date.now());
 
-      // 不正解・まだまだの処理: 再追加のみ（ソートは適応型AIに任せる）
+      // 不正解・まだまだの処理: 再追加→再ソートの順で単一の状態更新にまとめる
       if (!isCorrect || isStillLearning) {
         setQuestions((prevQuestions) => {
-          // 問題を再追加（次の3-5問内）
+          // ステップ1: 問題を再追加（次の3-5問内）
           const questionsWithReAdd = reAddQuestion(currentQuestion, prevQuestions, currentIndex);
+
+          // ステップ2: 定期的な再ソート（3問ごとまたは上限到達時）
+          const shouldResort =
+            sessionStats.total % 3 === 0 ||
+            (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
+            (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit);
+
+          if (shouldResort && questionsWithReAdd.length > 1) {
+            const remainingQuestions = questionsWithReAdd.slice(currentIndex + 1);
+
+            if (remainingQuestions.length > 1) {
+              const resorted = sortByPriorityCommon(remainingQuestions, {
+                isReviewFocusMode: false,
+                learningLimit: stillLearningLimit,
+                reviewLimit: incorrectLimit,
+                mode: 'memorization',
+              });
+
+              return [...questionsWithReAdd.slice(0, currentIndex + 1), ...resorted];
+            }
+          }
+
           return questionsWithReAdd;
         });
       }
@@ -741,35 +764,20 @@ function MemorizationView({
 
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
 
-      // 適応型学習AIに解答を渡して次の問題を取得（Tell, Don't Ask パターン）
-      const payload = adaptiveLearning.processAnswerAndGetNext({
-        questionId: currentQuestion.word,
-        isCorrect,
-        responseTime: Date.now() - cardDisplayTimeRef.current,
-        candidates: questions,
-      });
+      // 次の語句へ
+      const nextIndex = currentIndex + 1;
 
-      logger.info('[MemorizationView] Next question selected:', {
-        reason: payload.reason,
-        priority: payload.priority,
-        phase: payload.phase,
-      });
-
-      if (payload.question) {
-        // 選ばれた問題のインデックスを見つける
-        const selectedIndex = questions.findIndex((q) => q.word === payload.question!.word);
-        const nextIndex = selectedIndex !== -1 ? selectedIndex : currentIndex + 1;
-
+      if (nextIndex < questions.length) {
         // セッション優先フラグのクリーン処理：5問経過後にクリア
         const clearedQuestions = clearExpiredFlags(questions, currentIndex);
         if (clearedQuestions !== questions) {
           setQuestions(clearedQuestions);
         }
 
-        setCurrentQuestion(payload.question);
+        setCurrentQuestion(questions[nextIndex]);
         setCurrentIndex(nextIndex);
         cardDisplayTimeRef.current = Date.now();
-        // 次の問題に移動したのでlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
+        // 次の問題に移動したのlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
         setLastAnswerWord(undefined);
       } else {
         // 全て終了
@@ -882,10 +890,10 @@ function MemorizationView({
             </button>
 
             {/* 暗記カード */}
-            <div className="w-full max-w-4xl px-4">
-              <div ref={cardRef} className="question-card flex flex-col">
+            <div className="w-full max-w-4xl px-4 h-[90vh] flex items-center">
+              <div ref={cardRef} className="question-card h-[600px] sm:h-[650px] md:h-[700px] flex flex-col w-full">
                 {/* 語句表示部 */}
-                <div className="mb-8 py-8 flex flex-col items-center justify-center min-h-[200px]">
+                <div className="py-8 flex flex-col items-center justify-center h-[200px] flex-shrink-0">
                   <div
                     className={`flex flex-col items-center ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
                     onClick={(e) => {
@@ -936,7 +944,7 @@ function MemorizationView({
                 </div>
 
                 {/* 3つの大きなボタン */}
-                <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="grid grid-cols-3 gap-3 mb-4 flex-shrink-0">
                   <button
                     onClick={() => handleSwipe('left')}
                     className="flex flex-col items-center justify-center py-6 px-2 bg-red-500 hover:bg-red-600 active:bg-red-700 text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -965,7 +973,7 @@ function MemorizationView({
 
                 {/* カスタムセットに追加ボタン */}
                 {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
-                  <div className="mb-4 flex justify-center">
+                  <div className="mb-2 flex justify-center flex-shrink-0">
                     <AddToCustomButton
                       word={{
                         word: currentQuestion.word,
@@ -984,7 +992,7 @@ function MemorizationView({
                 )}
 
                 {/* 詳細情報 */}
-                <div className="space-y-3 overflow-y-auto min-h-[300px] max-h-[400px]">
+                <div className="space-y-3 overflow-y-auto flex-1 min-h-0">
                   {/* 意味 */}
                   <button
                     onClick={() => toggleCardField('showMeaning')}
@@ -1393,7 +1401,7 @@ function MemorizationView({
           )}
 
           {/* 暗記カード */}
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex justify-center">
             <div className="relative w-full max-w-4xl">
               {/* 全画面表示ボタン */}
               <button
@@ -1412,9 +1420,9 @@ function MemorizationView({
                 </svg>
               </button>
 
-              <div ref={cardRef} className="question-card w-full">
+              <div ref={cardRef} className="question-card w-full h-[600px] sm:h-[650px] md:h-[700px] flex flex-col">
                 {/* 語句表示部 */}
-                <div className="mb-8 py-8 flex flex-col items-center justify-center min-h-[200px]">
+                <div className="py-8 flex flex-col items-center justify-center h-[200px] flex-shrink-0">
                   <div
                     className={`flex flex-col items-center ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
                     onClick={(e) => {
@@ -1518,7 +1526,7 @@ function MemorizationView({
                 )}
 
                 {/* 詳細情報 */}
-                <div className="space-y-3 overflow-y-auto min-h-[300px] max-h-[400px]">
+                <div className="space-y-3">
                   {/* 意味 */}
                   <button
                     onClick={() => toggleCardField('showMeaning')}

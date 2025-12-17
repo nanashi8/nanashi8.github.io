@@ -287,6 +287,9 @@ function SpellingView({
       // 回答時刻を更新（ScoreBoard更新用）- updateWordProgressの完了後に更新
       setLastAnswerTime(Date.now());
 
+      // 適応型学習への記録
+      adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, responseTime);
+
       // 適応的学習AIネットワークによる分析
       await processWithAdaptiveAI(currentQuestion.word, isCorrect);
 
@@ -380,10 +383,8 @@ function SpellingView({
   };
 
   const handleNext = () => {
-    const currentIndex = spellingState.currentIndex;
-
     // セッション優先フラグのクリーン処理：5問経過したらクリア
-    const nextIndex = currentIndex + 1;
+    const nextIndex = spellingState.currentIndex + 1;
     if (nextIndex < spellingState.questions.length) {
       const cleanedQuestions = clearExpiredFlags(spellingState.questions, nextIndex - 1);
       if (cleanedQuestions !== spellingState.questions) {
@@ -393,7 +394,6 @@ function SpellingView({
         }));
       }
     }
-
     // セッション終了（最終問題の後）を検出してKPIサマリを出力（開発時のみ）
     if (nextIndex >= spellingState.questions.length) {
       if (!window.location.hostname.includes('github.io')) {
@@ -404,49 +404,18 @@ function SpellingView({
           // Ignore KPI summarization errors
         }
       }
+    }
+    // 次の問題に移動する前にlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
+    setLastAnswerWord(undefined);
+    // 次の問題へ移動（カスタムフック使用）: 末尾を超えないようにガード
+    if (nextIndex < spellingState.questions.length) {
+      moveToNextQuestion();
+    } else {
       // セッション終了時はそのまま終了状態に留める（パネルが空になるのを防止）
       setSpellingState((prev) => ({
         ...prev,
         answered: false,
       }));
-      setLastAnswerWord(undefined);
-      return;
-    }
-
-    // 適応型学習AIに解答を渡して次の問題を取得（Tell, Don't Ask パターン）
-    const currentWord = spellingState.questions[spellingState.currentIndex]?.word;
-    const payload = adaptiveLearning.processAnswerAndGetNext({
-      questionId: currentWord,
-      isCorrect: lastAnswerCorrect,
-      responseTime: Date.now() - questionStartTimeRef.current,
-      candidates: spellingState.questions,
-    });
-
-    logger.info('[SpellingView] Next question selected:', {
-      reason: payload.reason,
-      priority: payload.priority,
-      phase: payload.phase,
-    });
-
-    // 次の問題に移動する前にlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
-    setLastAnswerWord(undefined);
-
-    if (payload.question) {
-      // 選ばれた問題のインデックスを見つける
-      const selectedIndex = spellingState.questions.findIndex(
-        (q) => q.word === payload.question!.word
-      );
-      const actualNextIndex = selectedIndex !== -1 ? selectedIndex : nextIndex;
-
-      // 問題インデックスを更新
-      setSpellingState((prev) => ({
-        ...prev,
-        currentIndex: actualNextIndex,
-        answered: false,
-      }));
-    } else {
-      // フォールバック: 適応型AI選択失敗時は従来のインデックス増加
-      moveToNextQuestion();
     }
   };
 
