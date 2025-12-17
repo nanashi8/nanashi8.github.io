@@ -1,7 +1,6 @@
 ---
-description: プロジェクト固有の用語・変数・関数名を扱う際の事前確認ルール
+description: プロジェクト固有の用語・変数・関数名を扱う際の事前確認ルール（重要度：critical）
 applyTo: '**'
-priority: critical
 ---
 
 # 用語確認必須ルール

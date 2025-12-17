@@ -554,10 +554,12 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
                         mode.data.correct > 0 && (
                           <div
                             key={mode.key}
-                            className={`w-full ${modeColors[mode.key].bg} flex items-center justify-center text-white text-xs font-bold transition-all duration-500 ease-out hover:brightness-110`}
-                            style={{
-                              height: `${(mode.data.correct / totalCorrect) * 100}%`,
-                              animation: `slideUp 0.6s ease-out ${idx * 0.1}s both`,
+                            className={`mode-progress-bar w-full ${modeColors[mode.key].bg} flex items-center justify-center text-white text-xs font-bold transition-all duration-500 ease-out hover:brightness-110`}
+                            {...{
+                              style: {
+                                '--height-percent': (mode.data.correct / totalCorrect) * 100,
+                                '--animation-delay': idx * 0.1,
+                              } as React.CSSProperties,
                             }}
                           >
                             <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -595,7 +597,7 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
         })}
       </div>
 
-      {/* アニメーション定義 */}
+      {/* アニメーション定義とスタイル */}
       <style>{`
         @keyframes slideUp {
           from {
@@ -605,6 +607,11 @@ function LearningCalendarProgress({ streakDays }: { streakDays: number }) {
           to {
             opacity: 1;
           }
+        }
+        
+        .mode-progress-bar {
+          height: calc(var(--height-percent, 0) * 1%);
+          animation: slideUp 0.6s ease-out calc(var(--animation-delay, 0) * 1s) both;
         }
       `}</style>
 
