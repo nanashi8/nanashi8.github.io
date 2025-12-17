@@ -94,7 +94,7 @@ interface GrammarQuestion {
   question?: string;
   // セッション優先度管理
   sessionPriority?: number; // 再追加時の優先度
-  reAddedCount?: number;    // 再追加回数
+  reAddedCount?: number; // 再追加回数
 }
 
 interface GrammarQuizViewProps {
@@ -118,7 +118,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
   // 問題再出題管理フック
-  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<GrammarQuestion>();
+  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } =
+    useQuestionRequeue<GrammarQuestion>();
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -423,7 +424,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           try {
             const summary = sessionKpi.summarize();
             logger.log('🧪 KPI Summary (grammar):', summary);
-          } catch {}
+          } catch {
+            // KPI summarization is optional, silently ignore errors
+          }
         }
         setAnswered(false);
       }
@@ -683,9 +686,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
     // 不正解時に問題を再追加（次の3-5問内）
     if (!isCorrect && !isReviewFocusMode) {
-      setCurrentQuestions((prev) =>
-        reAddQuestion(currentQuestion, prev, currentQuestionIndex)
-      );
+      setCurrentQuestions((prev) => reAddQuestion(currentQuestion, prev, currentQuestionIndex));
     }
 
     // KPIロギング + 新規/復習の統計を更新

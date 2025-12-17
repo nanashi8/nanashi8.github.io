@@ -1399,7 +1399,9 @@ function App() {
           try {
             const summary = sessionKpi.summarize();
             logger.log('🧪 KPI Summary (translation):', summary);
-          } catch {}
+          } catch {
+            // KPI summarization is optional, silently ignore errors
+          }
         }
         // 学習スタイルAI: セッション統計を記録
         const sessionEndTime = Date.now();
