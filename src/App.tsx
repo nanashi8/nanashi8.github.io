@@ -30,7 +30,7 @@ import {
   updateCustomQuestionSet,
 } from './utils/customQuestionStorage';
 import { logger } from '@/utils/logger';
-import { sortQuestionsByPriority } from './utils/questionPrioritySorter';
+import { sortQuestionsByPriority as _sortQuestionsByPriority } from './utils/questionPrioritySorter';
 import { useQuestionRequeue } from './hooks/useQuestionRequeue';
 import { sessionKpi } from './metrics/sessionKpi';
 import {
@@ -268,7 +268,11 @@ function App() {
   } = useQuizState();
 
   // 問題再出題管理フック
-  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
+  const {
+    reAddQuestion: _reAddQuestion,
+    clearExpiredFlags,
+    updateRequeueStats,
+  } = useQuestionRequeue<Question>();
 
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
@@ -1078,7 +1082,7 @@ function App() {
       setReviewFocusMode(true);
       setReviewCorrectStreak(new Map()); // 連続正解数をリセット
     }
-    handleStartQuiz();
+    // handleStartQuiz()を削除：現在の問題を維持するため
   };
 
   // スペルタブ用の補修モードハンドラー
@@ -1093,7 +1097,7 @@ function App() {
       setReviewFocusMode(true);
       setReviewCorrectStreak(new Map()); // 連続正解数をリセット
     }
-    handleStartQuiz();
+    // handleStartQuiz()を削除：現在の問題を維持するため
   };
 
   // 関連分野変更ハンドラー
@@ -1305,49 +1309,6 @@ function App() {
       }
     }
 
-    // 不正解時の動的な再ソート（暗記タブと同様の仕組み）
-    if (!isCorrect && !reviewFocusMode) {
-      setQuizState((prev) => {
-        const shouldResortImmediately = true; // 不正解の場合は即座に再ソート
-        const shouldResortPeriodically = prev.totalAnswered % 3 === 0;
-
-        if (shouldResortImmediately || shouldResortPeriodically) {
-          const remainingQuestions = prev.questions.slice(prev.currentIndex + 1);
-
-          if (remainingQuestions.length > 1) {
-            // 学習上限を取得
-            const savedLearningLimit = localStorage.getItem('learning-limit-translation');
-            const savedReviewLimit = localStorage.getItem('review-limit-translation');
-            const learningLimit = savedLearningLimit ? parseInt(savedLearningLimit) : null;
-            const reviewLimit = savedReviewLimit ? parseInt(savedReviewLimit) : null;
-
-            // 共通のソート関数を使用
-            const resorted = sortQuestionsByPriority(remainingQuestions, {
-              isReviewFocusMode: false,
-              learningLimit,
-              reviewLimit,
-              mode: 'translation',
-            });
-
-            return {
-              ...prev,
-              questions: [...prev.questions.slice(0, prev.currentIndex + 1), ...resorted],
-            };
-          }
-        }
-
-        return prev;
-      });
-    }
-
-    // 不正解時に問題を再追加（次の3-5問内）
-    if (!isCorrect && !reviewFocusMode && currentQuestion) {
-      setQuizState((prev) => ({
-        ...prev,
-        questions: reAddQuestion(currentQuestion, prev.questions, prev.currentIndex),
-      }));
-    }
-
     // 新規/復習の統計を更新
     if (currentQuestion) {
       const qid = String((currentQuestion as any).word);
@@ -1399,7 +1360,9 @@ function App() {
           try {
             const summary = sessionKpi.summarize();
             logger.log('🧪 KPI Summary (translation):', summary);
-          } catch {}
+          } catch {
+            // Ignore KPI summarization errors
+          }
         }
         // 学習スタイルAI: セッション統計を記録
         const sessionEndTime = Date.now();

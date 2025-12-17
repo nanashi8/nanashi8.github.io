@@ -1,0 +1,163 @@
+name: Scheduled Night Deploy
+
+on:
+  # 毎日午前2時（JST = UTC+9、つまりUTC 17:00）に実行
+  schedule:
+    - cron: '0 17 * * *'  # UTC 17:00 = JST 2:00
+
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      force_deploy:
+        description: '強制デプロイ（変更がなくても実行）'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  deployments: write
+
+concurrency:
+  group: 'scheduled-pages'
+  cancel-in-progress: true
+
+jobs:
+  check-changes:
+    name: 変更確認
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.check.outputs.has_changes }}
+      last_deploy_sha: ${{ steps.check.outputs.last_deploy_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
+
+      - name: 前回のデプロイからの変更を確認
+        id: check
+        run: |
+          # 前回のデプロイタグを取得
+          LAST_TAG=$(git tag --sort=-creatordate | grep -E '^deploy-' | head -n 1)
+
+          if [ -z "$LAST_TAG" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ 初回デプロイ"
+          else
+            echo "last_deploy_sha=$(git rev-list -n 1 $LAST_TAG)" >> $GITHUB_OUTPUT
+
+            # mainブランチの最新と比較
+            CHANGES=$(git diff --name-only $LAST_TAG..HEAD -- ':!**.md' ':!docs/**' ':!.github/**' | wc -l)
+
+            if [ "$CHANGES" -gt 0 ] || [ "${{ inputs.force_deploy }}" = "true" ]; then
+              echo "has_changes=true" >> $GITHUB_OUTPUT
+              echo "✅ デプロイが必要: $CHANGES ファイル変更"
+              git diff --name-only $LAST_TAG..HEAD -- ':!**.md' ':!docs/**' ':!.github/**'
+            else
+              echo "has_changes=false" >> $GITHUB_OUTPUT
+              echo "ℹ️  変更なし - デプロイスキップ"
+            fi
+          fi
+
+  quality-check:
+    name: 品質チェック
+    needs: check-changes
+    if: needs.check-changes.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Lint check
+        run: npm run lint:errors-only
+
+      - name: CSS lint
+        run: npm run lint:css
+
+  build-and-deploy:
+    name: ビルド＆デプロイ
+    needs: quality-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: ビルド検証
+        run: |
+          if [ ! -d "dist" ] || [ ! -f "dist/index.html" ]; then
+            echo "❌ ビルド失敗"
+            exit 1
+          fi
+
+          SIZE=$(du -sh dist | cut -f1)
+          echo "✅ ビルド成功: $SIZE"
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: デプロイタグ作成
+        run: |
+          TAG_NAME="deploy-$(date +%Y%m%d-%H%M%S)"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git tag -a "$TAG_NAME" -m "Deep night deployment at $(date '+%Y-%m-%d %H:%M:%S JST')"
+          git push origin "$TAG_NAME"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  notify:
+    name: 通知
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: デプロイ成功通知
+        if: needs.build-and-deploy.result == 'success'
+        run: |
+          echo "🌙 深夜デプロイ完了"
+          echo "⏰ 時刻: $(date '+%Y年%m月%d日 %H:%M JST')"
+          echo "✅ 本番環境更新済み"
+
+      - name: デプロイ失敗通知
+        if: needs.build-and-deploy.result == 'failure'
+        run: |
+          echo "❌ 深夜デプロイ失敗"
+          echo "⚠️  手動で確認が必要です"
+
+  skip-notification:
+    name: スキップ通知
+    needs: check-changes
+    if: needs.check-changes.outputs.has_changes != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 変更なし通知
+        run: |
+          echo "ℹ️  前回デプロイから変更なし"
+          echo "⏭️  デプロイスキップ"

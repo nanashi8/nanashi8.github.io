@@ -39,7 +39,7 @@ test.describe('スペルタブ - スキップ機能', () => {
     await page.waitForTimeout(500);
 
     // 回答済み状態になることを確認
-    const answeredState = page.locator('.answered, [class*="answered"]');
+    const _answeredState = page.locator('.answered, [class*="answered"]');
     // 回答後は次の問題に移動できる状態になる
     const nextButton = page.locator('button:has-text("→"), button[title="次へ"]');
     await expect(nextButton).toBeEnabled({ timeout: 3000 });

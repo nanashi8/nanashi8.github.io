@@ -5,10 +5,11 @@ import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
+import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
-import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
 import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
+import { useLearningEngine } from '../hooks/useLearningEngine';
 
 interface VerbFormQuestion {
   id: string;
@@ -94,7 +95,7 @@ interface GrammarQuestion {
   question?: string;
   // セッション優先度管理
   sessionPriority?: number; // 再追加時の優先度
-  reAddedCount?: number;    // 再追加回数
+  reAddedCount?: number; // 再追加回数
 }
 
 interface GrammarQuizViewProps {
@@ -117,8 +118,15 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
+  // 適応的学習AIネットワーク
+  const {
+    enabled: adaptiveEnabled,
+    processQuestion: processAdaptiveQuestion,
+    currentStrategy,
+  } = useAdaptiveNetwork();
+
   // 問題再出題管理フック
-  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<GrammarQuestion>();
+  const { clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<GrammarQuestion>();
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -136,9 +144,49 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   // 復習モード
   const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
 
+  // 統一学習エンジン（isReviewFocusModeの後に初期化）
+  const learningEngine = useLearningEngine<GrammarQuestion>({
+    mode: 'grammar',
+    learningLimit: null,
+    reviewLimit: null,
+    isReviewFocusMode: isReviewFocusMode,
+  });
+
   // 復習モードトグル
   const handleReviewFocus = () => {
     setIsReviewFocusMode(!isReviewFocusMode);
+  };
+
+  // 適応的AI分析ヘルパー関数
+  const processWithAdaptiveAI = async (questionId: string, isCorrect: boolean) => {
+    if (!adaptiveEnabled) return;
+
+    try {
+      const calculateDifficulty = (q: GrammarQuestion): number => {
+        if (q.difficulty === 'beginner') return 0.3;
+        if (q.difficulty === 'intermediate') return 0.6;
+        if (q.difficulty === 'advanced') return 0.9;
+        return 0.5;
+      };
+
+      const getTimeOfDay = (): 'morning' | 'afternoon' | 'evening' | 'night' => {
+        const hour = new Date().getHours();
+        if (hour < 12) return 'morning';
+        if (hour < 18) return 'afternoon';
+        if (hour < 22) return 'evening';
+        return 'night';
+      };
+
+      await processAdaptiveQuestion(questionId, isCorrect ? 'correct' : 'incorrect', {
+        currentDifficulty: calculateDifficulty(currentQuestion),
+        timeOfDay: getTimeOfDay(),
+        recentErrors: sessionStats.incorrect,
+        sessionLength: Math.floor((Date.now() - questionStartTimeRef.current) / 60000),
+        consecutiveCorrect: correctStreak,
+      });
+    } catch (error) {
+      console.error('[GrammarQuizView] Adaptive AI error:', error);
+    }
   };
 
   // 自動次への設定
@@ -417,13 +465,15 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         setShowHint(false);
         questionStartTimeRef.current = Date.now();
       } else {
-        // 末尾の場合はそのまま終了状態を維持
+        // 末尾の場合はそのまま終了状態を維持（本番UIは最終画面のまま）
         // 開発時のみKPIサマリを出力
         if (!window.location.hostname.includes('github.io')) {
           try {
             const summary = sessionKpi.summarize();
             logger.log('🧪 KPI Summary (grammar):', summary);
-          } catch {}
+          } catch {
+            // KPI集計失敗は無視（開発用機能のため）
+          }
         }
         setAnswered(false);
       }
@@ -622,6 +672,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 適応型学習への記録
     adaptiveLearning.recordAnswer(questionId, isCorrect, responseTime);
 
+    // 適応的学習AIネットワークによる分析
+    await processWithAdaptiveAI(questionId, isCorrect);
+
     // セッション履歴に追加
     const progress = await loadProgress();
     const wordProgress = progress.wordProgress?.[questionId];
@@ -649,43 +702,17 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
     setLastAnswerTime(Date.now());
 
-    // 動的再ソート: 不正解時は即座に、それ以外は3問ごとに再ソート
+    // 統一学習エンジンによる出題最適化
     if (!isCorrect && !isReviewFocusMode) {
-      const shouldResortImmediately = true;
-      const shouldResortPeriodically = totalAnswered % 3 === 0;
-
-      if (shouldResortImmediately || shouldResortPeriodically) {
-        const remainingQuestions = currentQuestions.slice(currentQuestionIndex + 1);
-
-        if (remainingQuestions.length > 1) {
-          // localStorage から上限設定を取得
-          const savedLearningLimit = localStorage.getItem('learning-limit-grammar');
-          const savedReviewLimit = localStorage.getItem('review-limit-grammar');
-          const learningLimit = savedLearningLimit ? parseInt(savedLearningLimit) : null;
-          const reviewLimit = savedReviewLimit ? parseInt(savedReviewLimit) : null;
-
-          // 共通ソート関数で残りの問題を再ソート
-          const resorted = sortQuestionsByPriority(remainingQuestions as any[], {
-            isReviewFocusMode: false,
-            learningLimit,
-            reviewLimit,
-            mode: 'grammar',
-          });
-
-          // 問題リストを更新
-          setCurrentQuestions([
-            ...currentQuestions.slice(0, currentQuestionIndex + 1),
-            ...(resorted as unknown as GrammarQuestion[]),
-          ]);
-        }
-      }
-    }
-
-    // 不正解時に問題を再追加（次の3-5問内）
-    if (!isCorrect && !isReviewFocusMode) {
-      setCurrentQuestions((prev) =>
-        reAddQuestion(currentQuestion, prev, currentQuestionIndex)
-      );
+      setCurrentQuestions((prev) => {
+        const updatedQuestions = learningEngine.updateQuestionsAfterAnswer(
+          prev,
+          currentQuestion,
+          currentQuestionIndex,
+          { isCorrect, totalAnswered }
+        );
+        return updatedQuestions;
+      });
     }
 
     // KPIロギング + 新規/復習の統計を更新
@@ -785,6 +812,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               },
               'grammar'
             );
+
+            // 適応的学習AIネットワークによる分析
+            await processWithAdaptiveAI(questionId, isCorrect);
 
             // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
             setLastAnswerTime(Date.now());
@@ -1026,7 +1056,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               {/* 全画面表示ボタン */}
               <button
                 onClick={() => _setIsFullscreen(true)}
-                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300:bg-gray-600 transition shadow-md"
+                className="absolute top-2 right-2 z-10 p-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition shadow-md"
                 aria-label="全画面表示"
                 title="全画面表示"
               >
@@ -1039,9 +1069,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                   />
                 </svg>
               </button>
-              {/* コメントバーエリア（固定高さ） */}
-              <div className="comment-bar-container">{/* 将来的にAIコメント等を追加可能 */}</div>
-
               {/* インラインナビゲーション */}
               <div className="question-nav-row">
                 <button
@@ -1069,6 +1096,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                           ? '中級'
                           : '上級'}
                     </div>
+                  )}
+                  {/* 適応的AI戦略バッジ */}
+                  {adaptiveEnabled && currentStrategy && (
+                    <div className="adaptive-strategy-badge">🧠 適応中</div>
                   )}
                 </div>
                 <button

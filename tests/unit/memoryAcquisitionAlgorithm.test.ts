@@ -205,7 +205,7 @@ describe('AcquisitionQueueManager', () => {
       manager.enqueueNewWord('word', 4, QuestionCategory.MEMORIZATION);
       manager.incrementQuestionNumber();
 
-      const immediate = manager.getNextReviewQuestion();
+      const _immediate = manager.getNextReviewQuestion();
       manager.handleCorrectAnswer('word', QueueType.IMMEDIATE, 850);
 
       const progress = manager.getAcquisitionProgress('word');
@@ -295,7 +295,7 @@ describe('AcquisitionQueueManager', () => {
       manager.enqueueNewWord('word', 4, QuestionCategory.MEMORIZATION);
       manager.incrementQuestionNumber();
 
-      const immediate = manager.getNextReviewQuestion();
+      const _immediate = manager.getNextReviewQuestion();
       manager.handleWrongAnswer('word', QueueType.IMMEDIATE, 1800);
 
       const progress = manager.getAcquisitionProgress('word');

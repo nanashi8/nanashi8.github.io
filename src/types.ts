@@ -36,6 +36,7 @@ export interface Question {
   isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）
   sessionPriority?: number; // セッション内優先度（再追加時に設定、次の3問で最優先）
   reAddedCount?: number; // 再追加回数（セッション内で何回再追加されたか）
+  grade?: number; // 学年情報（オプショナル、AI分析用）
 }
 
 // バリデーション用のヘルパー関数

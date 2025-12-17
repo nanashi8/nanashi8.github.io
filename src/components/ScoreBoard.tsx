@@ -842,7 +842,7 @@ function ScoreBoard({
           <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="retention-breakdown-container">
               <div className="retention-breakdown-header">
-                <div style={{ marginBottom: '8px', fontSize: '14px', color: '#666' }}>
+                <div className="attempt-counts-summary">
                   出題数：1回 {attemptCounts.once}問 2回 {attemptCounts.twice}問 3回{' '}
                   {attemptCounts.three}問 4回 {attemptCounts.four}問 5回 {attemptCounts.five}問
                   6回以上 {attemptCounts.sixOrMore}問

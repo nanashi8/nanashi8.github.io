@@ -30,10 +30,12 @@ import { useLearningLimits } from '../hooks/useLearningLimits';
 import { useSpellingGame } from '../hooks/useSpellingGame';
 import { useSessionStats } from '../hooks/useSessionStats';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
+import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
-import { sortQuestionsByPriority } from '../utils/questionPrioritySorter';
+import { sortQuestionsByPriority as _sortQuestionsByPriority } from '../utils/questionPrioritySorter';
 import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
+import { useLearningEngine } from '../hooks/useLearningEngine';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -78,6 +80,10 @@ function SpellingView({
   onRemoveWordFromCustomSet,
   onOpenCustomSetManagement,
 }: SpellingViewProps) {
+  // 学習中・要復習の上限設定（カスタムフック使用） - 最初に呼び出す
+  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
+    useLearningLimits('spelling');
+
   // スペリングゲームのコアロジック（カスタムフック）
   const {
     spellingState,
@@ -99,8 +105,79 @@ function SpellingView({
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.SPELLING);
 
+  // 適応的教育AIネットワーク
+  const {
+    enabled: adaptiveEnabled,
+    processQuestion: processAdaptiveQuestion,
+    currentStrategy,
+  } = useAdaptiveNetwork();
+
+  // メタAI分析ヘルパー関数
+  const processWithAdaptiveAI = async (word: string, isCorrect: boolean) => {
+    if (!adaptiveEnabled) return;
+
+    try {
+      const getTimeOfDay = (): 'morning' | 'afternoon' | 'evening' | 'night' => {
+        const hour = new Date().getHours();
+        if (hour < 12) return 'morning';
+        if (hour < 18) return 'afternoon';
+        if (hour < 22) return 'evening';
+        return 'night';
+      };
+
+      const calculateDifficulty = (): number => {
+        const currentQuestion = spellingState.questions[spellingState.currentIndex];
+        if (!currentQuestion) return 0.5;
+        const gradeWeight = (currentQuestion.grade || 1) / 9;
+        return Math.min(Math.max(gradeWeight, 0), 1);
+      };
+
+      const getRecentErrors = (): number => {
+        const recentAnswers = JSON.parse(sessionStorage.getItem('recentAnswers') || '[]');
+        return recentAnswers.filter((a: any) => !a.correct).length;
+      };
+
+      const getSessionLength = (): number => {
+        const startTime = sessionStorage.getItem('sessionStartTime');
+        if (!startTime) return 0;
+        return Math.floor((Date.now() - parseInt(startTime)) / 60000);
+      };
+
+      const getConsecutiveCorrect = (): number => {
+        return correctStreak;
+      };
+
+      const recommendation = await processAdaptiveQuestion(
+        word,
+        isCorrect ? 'correct' : 'incorrect',
+        {
+          currentDifficulty: calculateDifficulty(),
+          timeOfDay: getTimeOfDay(),
+          recentErrors: getRecentErrors(),
+          sessionLength: getSessionLength(),
+          consecutiveCorrect: getConsecutiveCorrect(),
+        }
+      );
+
+      console.log('[AdaptiveAI]', recommendation.reason, {
+        strategy: recommendation.strategy,
+        confidence: recommendation.confidence,
+      });
+    } catch (error) {
+      console.error('[SpellingView] Adaptive AI error:', error);
+    }
+  };
+
   // 問題再出題管理フック
-  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
+  const { clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
+
+  // 統一学習エンジン
+  const learningEngine = useLearningEngine<Question>({
+    mode: 'spelling',
+    learningLimit: learningLimit,
+    reviewLimit: reviewLimit,
+    isReviewFocusMode: isReviewFocusMode || false,
+  });
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
@@ -113,10 +190,6 @@ function SpellingView({
   const [lastAnswerWord, setLastAnswerWord] = useState<string | undefined>(undefined);
   const [correctStreak, setCorrectStreak] = useState<number>(0);
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
-
-  // 学習中・要復習の上限設定（カスタムフック使用）
-  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
-    useLearningLimits('spelling');
 
   // 自動次への設定
   const [_autoNext, _setAutoNext] = useState<boolean>(() => {
@@ -217,6 +290,9 @@ function SpellingView({
       // 適応型学習への記録
       adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, responseTime);
 
+      // 適応的学習AIネットワークによる分析
+      await processWithAdaptiveAI(currentQuestion.word, isCorrect);
+
       // AI学習アシスタント: スキップした単語の検証
       const progress = await loadProgress();
       const wordProgress = progress.wordProgress?.[currentQuestion.word];
@@ -258,45 +334,24 @@ function SpellingView({
     // 間違えた単語を記録
     if (!isCorrect && currentQuestion) {
       incorrectWordsRef.current.push(currentQuestion.word);
-
-      // 動的再ソート: 不正解時は即座に、それ以外は3問ごとに再ソート
-      const shouldResortImmediately = true;
-      const totalAnswered = sessionStats.correct + sessionStats.incorrect;
-      const shouldResortPeriodically = totalAnswered % 3 === 0;
-
-      if (shouldResortImmediately || shouldResortPeriodically) {
-        const remainingQuestions = spellingState.questions.slice(spellingState.currentIndex + 1);
-
-        if (remainingQuestions.length > 1) {
-          // localStorage から上限設定を取得
-          const savedLearningLimit = localStorage.getItem('learning-limit-spelling');
-          const savedReviewLimit = localStorage.getItem('review-limit-spelling');
-          const learningLimit = savedLearningLimit ? parseInt(savedLearningLimit) : null;
-          const reviewLimit = savedReviewLimit ? parseInt(savedReviewLimit) : null;
-
-          // 共通ソート関数で残りの問題を再ソート
-          const resorted = sortQuestionsByPriority(remainingQuestions, {
-            isReviewFocusMode: isReviewFocusMode || false,
-            learningLimit,
-            reviewLimit,
-            mode: 'spelling',
-          });
-
-          // 問題リストを更新
-          setSpellingState((prev) => ({
-            ...prev,
-            questions: [...prev.questions.slice(0, prev.currentIndex + 1), ...resorted],
-          }));
-        }
-      }
     }
 
-    // 不正解時に問題を再追加（次の3-5問内）
+    // 統一学習エンジンによる出題最適化（不正解時のみ）
     if (!isCorrect && currentQuestion) {
-      setSpellingState((prev) => ({
-        ...prev,
-        questions: reAddQuestion(currentQuestion, prev.questions, prev.currentIndex),
-      }));
+      const totalAnswered = sessionStats.correct + sessionStats.incorrect;
+      const updatedQuestions = learningEngine.updateQuestionsAfterAnswer(
+        spellingState.questions,
+        currentQuestion,
+        spellingState.currentIndex,
+        { isCorrect, totalAnswered }
+      );
+
+      if (updatedQuestions !== spellingState.questions) {
+        setSpellingState((prev) => ({
+          ...prev,
+          questions: updatedQuestions,
+        }));
+      }
     }
 
     // 新規/復習の統計を更新
@@ -339,10 +394,29 @@ function SpellingView({
         }));
       }
     }
+    // セッション終了（最終問題の後）を検出してKPIサマリを出力（開発時のみ）
+    if (nextIndex >= spellingState.questions.length) {
+      if (!window.location.hostname.includes('github.io')) {
+        try {
+          const summary = sessionKpi.summarize();
+          logger.log('🧪 KPI Summary (spelling):', summary);
+        } catch {
+          // Ignore KPI summarization errors
+        }
+      }
+    }
     // 次の問題に移動する前にlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
     setLastAnswerWord(undefined);
-    // 次の問題へ移動（カスタムフック使用）
-    moveToNextQuestion();
+    // 次の問題へ移動（カスタムフック使用）: 末尾を超えないようにガード
+    if (nextIndex < spellingState.questions.length) {
+      moveToNextQuestion();
+    } else {
+      // セッション終了時はそのまま終了状態に留める（パネルが空になるのを防止）
+      setSpellingState((prev) => ({
+        ...prev,
+        answered: false,
+      }));
+    }
   };
 
   const handleSkip = async () => {
@@ -744,6 +818,10 @@ function SpellingView({
                             : '上級'}
                       </div>
                     )}
+                    {/* 適応的AI戦略バッジ */}
+                    {adaptiveEnabled && currentStrategy && (
+                      <div className="adaptive-strategy-badge">🧠 適応中</div>
+                    )}
                     {currentQuestion.word.includes(' ') && (
                       <div className="phrase-hint">
                         💡 熟語({phraseWords.length}語): 単語ごとに入力してください
@@ -945,6 +1023,13 @@ function SpellingView({
                               ? '中級'
                               : '上級'}
                         </div>
+                      </div>
+                    )}
+                    {/* 適応的AI戦略バッジ */}
+                    {adaptiveEnabled && currentStrategy && (
+                      <div className="detail-row">
+                        <span className="detail-label">🧠 AI:</span>
+                        <div className="adaptive-strategy-badge">適応中</div>
                       </div>
                     )}
                   </div>

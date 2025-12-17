@@ -32,6 +32,7 @@ export interface WordProgress {
   incorrectCount: number; // 不正解回数
   consecutiveCorrect: number; // 連続正解回数
   consecutiveIncorrect: number; // 連続不正解回数
+  firstAttempted?: number; // 初出題日時（タイムスタンプ）- 時間ベース優先度AI用
   lastStudied: number; // 最終学習日時（タイムスタンプ）
   totalResponseTime: number; // 累計応答時間（ミリ秒）
   averageResponseTime: number; // 平均応答時間（ミリ秒）

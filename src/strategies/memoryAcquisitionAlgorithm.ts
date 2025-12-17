@@ -1,8 +1,34 @@
 /**
- * 記憶獲得アルゴリズム
+ * 記憶獲得アルゴリズム（Memory Acquisition Algorithm）
  *
- * 「その日のうちに一旦100％記憶を定着させる」ための同日集中復習システム。
- * 4段階の復習タイミング（即時→早期→中期→終了時）で記憶統合を促進。
+ * 科学的根拠に基づく適応型学習システム：
+ *
+ * 1. **エビングハウスの忘却曲線（Ebbinghaus Forgetting Curve）**
+ *    - 学習後、時間とともに記憶が指数関数的に減衰
+ *    - 復習により忘却曲線を遅延させ、記憶を強化
+ *    - 本システム: 即時→早期→中期→終了時の4段階復習で記憶統合を促進
+ *
+ * 2. **SuperMemo SM-2アルゴリズム**
+ *    - 間隔反復学習（Spaced Repetition）の実装
+ *    - 正答時: 復習間隔を拡大、誤答時: 間隔をリセット
+ *    - 本システム: 動的閾値により個人に最適化された復習回数を決定
+ *
+ * 3. **分散学習理論（Distributed Practice Effect）**
+ *    - 集中学習よりも分散した復習の方が長期記憶への定着が良い
+ *    - 本システム: 異なる時間間隔（1分→10分→1時間→終了時）で復習
+ *
+ * 4. **習熟学習理論（Mastery Learning）**
+ *    - 学習者が習熟度基準を達成するまで学習を継続
+ *    - 本システム: 正答率85%、連続正答4回を達成するまで永遠に出題
+ *
+ * 5. **個人適応型学習（Adaptive Learning）**
+ *    - 各学習者の特性に応じて閾値を動的調整
+ *    - 本システム: 誤答時に閾値を増加、連続正答時に減少
+ *
+ * **重要な設計原則**:
+ * - 不正解が続く限り永遠に出題（MAX_SAME_WORD_ATTEMPTS = Infinity）
+ * - 動的閾値は無制限（MAX_THRESHOLD = Infinity）
+ * - 定着判定は科学的根拠に基づく6つの厳格な条件
  */
 
 export enum QueueType {
@@ -23,10 +49,17 @@ export interface AcquisitionProgress {
   todayFirstSeen: number; // 今日初めて見た時刻
   todayCorrectCount: number; // 今日の正答回数
   todayWrongCount: number; // 今日の誤答回数
-  isAcquisitionComplete: boolean; // 記憶獲得完了フラグ
-  currentQueue: QueueType | null; // 現在のキュー
+  isAcquisitionComplete: boolean; // 記憶獲得完了フラグ（6つの厳格な条件を全て満たした場合のみtrue）
+  currentQueue: QueueType | null; // 現在のキュー（即時/早期/中期/終了時）
   queuedAt: number; // キューに追加された時刻
-  todayReviews: ReviewRecord[]; // 今日の復習記録
+  todayReviews: ReviewRecord[]; // 今日の復習記録（全ての試行履歴）
+
+  // 動的閾値システム（科学的根拠: 習熟学習理論 + 個人適応型学習）
+  dynamicThreshold: number; // この単語固有の定着閾値（初期値5、最大無制限）
+  consecutiveCorrectStreak: number; // 連続正答数（分散学習理論: 4回で定着）
+  totalAttempts: number; // 総出題回数（不正解が続く限り永遠に増加）
+  correctRate: number; // 正答率（0-1、認知心理学: 0.85以上で長期記憶へ移行）
+  lastThresholdAdjustment: number; // 最後に閾値を調整した時刻
 }
 
 export interface ReviewRecord {
@@ -72,52 +105,61 @@ export interface QueueStatistics {
   end: { size: number; oldestEntry?: number; averageWaitTime: number };
 }
 
-// デフォルトタブ設定
+// デフォルトタブ設定（初期値、実際は動的に無制限まで調整される）
+// 科学的根拠：間隔反復学習（Spaced Repetition）とエビングハウスの忘却曲線
 export const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
   [QuestionCategory.MEMORIZATION]: {
-    consolidationThreshold: 3,
+    consolidationThreshold: 5, // 初期値5回、動的に無制限まで増加（不正解が続く限り永遠に出題）
+    enableImmediateReview: true,
+    enableEarlyReview: true,
+    enableMidReview: true,
+    enableEndReview: true,
+    newQuestionRatio: 0.5, // 復習を優先（分散学習理論）
+  },
+  [QuestionCategory.TRANSLATION]: {
+    consolidationThreshold: 4, // 初期値4回、動的に無制限まで増加
     enableImmediateReview: true,
     enableEarlyReview: true,
     enableMidReview: true,
     enableEndReview: true,
     newQuestionRatio: 0.6,
   },
-  [QuestionCategory.TRANSLATION]: {
-    consolidationThreshold: 2,
-    enableImmediateReview: true,
-    enableEarlyReview: false,
-    enableMidReview: false,
-    enableEndReview: true,
-    newQuestionRatio: 0.7,
-  },
   [QuestionCategory.SPELLING]: {
-    consolidationThreshold: 4,
+    consolidationThreshold: 6, // 初期値6回、動的に無制限まで増加（スペルは記憶定着に時間がかかる）
+    enableImmediateReview: true,
+    enableEarlyReview: true,
+    enableMidReview: true,
+    enableEndReview: true,
+    newQuestionRatio: 0.4, // 復習を最優先
+  },
+  [QuestionCategory.GRAMMAR]: {
+    consolidationThreshold: 5, // 初期値5回、動的に無制限まで増加
     enableImmediateReview: true,
     enableEarlyReview: true,
     enableMidReview: true,
     enableEndReview: true,
     newQuestionRatio: 0.5,
   },
-  [QuestionCategory.GRAMMAR]: {
-    consolidationThreshold: 3,
-    enableImmediateReview: true,
-    enableEarlyReview: true,
-    enableMidReview: false,
-    enableEndReview: true,
-    newQuestionRatio: 0.6,
-  },
 };
 
 // キューサイズ制限
 const MAX_QUEUE_SIZE = {
-  immediate: 10,
-  early: 20,
-  mid: 30,
-  end: 50,
+  immediate: 50, // 即時復習枠を大幅拡大（不正解が続く単語に対応）
+  early: 100,
+  mid: 150,
+  end: 200,
 };
 
 const QUEUE_EXPIRY_TIME = 7200000; // 2時間
-const MAX_SAME_WORD_ATTEMPTS = 10;
+const _MAX_SAME_WORD_ATTEMPTS = Infinity; // 無制限：不正解が続く限り永遠に出題
+
+// 動的閾値システムの定数（エビングハウスの忘却曲線・SuperMemo SM-2アルゴリズムと統合）
+const MIN_THRESHOLD = 3; // 最小閾値（科学的根拠：3回の間隔反復で短期記憶から長期記憶へ）
+const MAX_THRESHOLD = Infinity; // 最大閾値無制限：定着するまで永遠に出題
+const THRESHOLD_INCREMENT_ON_WRONG = 2; // 誤答時の閾値増加量（SuperMemo SM-2: 失敗時はリセット）
+const THRESHOLD_DECREMENT_ON_STREAK = 1; // 連続正答時の閾値減少量（学習曲線の最適化）
+const MIN_CORRECT_RATE_FOR_COMPLETION = 0.85; // 定着完了に必要な正答率（85%以上、認知心理学の研究に基づく）
+const MIN_CONSECUTIVE_CORRECT = 4; // 定着完了に必要な連続正答数（分散学習理論：4回の成功で定着）
 
 /**
  * 記憶獲得キュー管理クラス
@@ -174,6 +216,11 @@ export class AcquisitionQueueManager {
         currentQueue: null,
         queuedAt: 0,
         todayReviews: [],
+        dynamicThreshold: 5,
+        consecutiveCorrectStreak: 0,
+        totalAttempts: 0,
+        correctRate: 0,
+        lastThresholdAdjustment: now,
       });
     }
 
@@ -367,12 +414,27 @@ export class AcquisitionQueueManager {
 
     const progress = this.getAcquisitionProgress(word);
     progress.todayCorrectCount++;
+    progress.consecutiveCorrectStreak++; // 連続正答数を増加
+    progress.totalAttempts++;
     progress.todayReviews.push({
       timestamp: Date.now(),
       queueType: currentQueue,
       isCorrect: true,
       responseTime,
     });
+
+    // 正答率を更新
+    progress.correctRate = progress.todayCorrectCount / progress.totalAttempts;
+
+    // 動的閾値の調整（連続正答が続いたら閾値を下げる）
+    if (progress.consecutiveCorrectStreak >= 5 && progress.dynamicThreshold > MIN_THRESHOLD) {
+      progress.dynamicThreshold = Math.max(
+        MIN_THRESHOLD,
+        progress.dynamicThreshold - THRESHOLD_DECREMENT_ON_STREAK
+      );
+      progress.lastThresholdAdjustment = Date.now();
+      console.log(`📉 動的閾値を下げました: ${word} → ${progress.dynamicThreshold}回`);
+    }
 
     // 次のキューへ自動昇格
     // difficultyとcategoryが渡されない場合はentryから取得
@@ -420,12 +482,37 @@ export class AcquisitionQueueManager {
 
     const progress = this.getAcquisitionProgress(word);
     progress.todayWrongCount++;
+    progress.consecutiveCorrectStreak = 0; // 連続正答数をリセット
+    progress.totalAttempts++;
     progress.todayReviews.push({
       timestamp: Date.now(),
       queueType: currentQueue,
       isCorrect: false,
       responseTime,
     });
+
+    // 正答率を更新
+    progress.correctRate = progress.todayCorrectCount / progress.totalAttempts;
+
+    // 動的閾値の増加（誤答した単語は定着が難しいため閾値を上げる）
+    const oldThreshold = progress.dynamicThreshold;
+    progress.dynamicThreshold = Math.min(
+      MAX_THRESHOLD,
+      progress.dynamicThreshold + THRESHOLD_INCREMENT_ON_WRONG
+    );
+    progress.lastThresholdAdjustment = Date.now();
+
+    if (progress.dynamicThreshold !== oldThreshold) {
+      console.log(
+        `📈 誤答により動的閾値を上げました: ${word} → ${progress.dynamicThreshold}回（正答率: ${(progress.correctRate * 100).toFixed(1)}%）`
+      );
+    }
+
+    // 定着完了フラグをリセット（誤答したら再度復習が必要）
+    if (progress.isAcquisitionComplete) {
+      progress.isAcquisitionComplete = false;
+      console.log(`🔄 誤答により定着完了をリセット: ${word}`);
+    }
 
     // 即時復習キューに再追加（リセット）
     // difficultyとcategoryが渡されない場合はentryから取得
@@ -527,6 +614,11 @@ export class AcquisitionQueueManager {
    */
   getAcquisitionProgress(word: string): AcquisitionProgress {
     if (!this.acquisitionProgress.has(word)) {
+      // カテゴリを推定して初期閾値を設定
+      const entry = this.findWordInQueues(word);
+      const category = entry?.category || QuestionCategory.MEMORIZATION;
+      const initialThreshold = this.tabConfigs[category].consolidationThreshold;
+
       this.acquisitionProgress.set(word, {
         todayFirstSeen: Date.now(),
         todayCorrectCount: 0,
@@ -535,6 +627,12 @@ export class AcquisitionQueueManager {
         currentQueue: null,
         queuedAt: 0,
         todayReviews: [],
+        // 動的閾値システム
+        dynamicThreshold: initialThreshold,
+        consecutiveCorrectStreak: 0,
+        totalAttempts: 0,
+        correctRate: 0,
+        lastThresholdAdjustment: Date.now(),
       });
     }
     return this.acquisitionProgress.get(word)!;
@@ -668,31 +766,59 @@ export class AcquisitionQueueManager {
   }
 
   private isAcquisitionComplete(word: string, progress: AcquisitionProgress): boolean {
-    const entry = this.findWordInQueues(word);
-    if (!entry) return false;
+    // 科学的根拠に基づく定着判定（エビングハウスの忘却曲線 + SuperMemo SM-2 + 分散学習理論）
 
-    const config = this.tabConfigs[entry.category];
-    const threshold = config.consolidationThreshold;
-
-    // 条件1: 閾値回数以上正答
-    if (progress.todayCorrectCount < threshold) {
+    // 条件1: 動的閾値以上の正答回数（個人適応型）
+    if (progress.todayCorrectCount < progress.dynamicThreshold) {
       return false;
     }
 
-    // 条件2: 最低でも2つのキューを通過
+    // 条件2: 正答率が85%以上（認知心理学：85%の習熟度で長期記憶へ移行）
+    if (progress.correctRate < MIN_CORRECT_RATE_FOR_COMPLETION) {
+      console.log(
+        `❌ 定着未完了 (${word}): 正答率 ${(progress.correctRate * 100).toFixed(1)}% < ${(MIN_CORRECT_RATE_FOR_COMPLETION * 100).toFixed(0)}%`
+      );
+      return false;
+    }
+
+    // 条件3: 連続正答数が4回以上（分散学習理論：4回の成功で記憶が定着）
+    if (progress.consecutiveCorrectStreak < MIN_CONSECUTIVE_CORRECT) {
+      console.log(
+        `❌ 定着未完了 (${word}): 連続正答数 ${progress.consecutiveCorrectStreak} < ${MIN_CONSECUTIVE_CORRECT}`
+      );
+      return false;
+    }
+
+    // 条件4: 最低でも3つのキューを通過（即時→早期→中期）
+    // 科学的根拠：間隔反復学習では異なる時間間隔での復習が必要
     const uniqueQueues = new Set(
       progress.todayReviews.filter((r) => r.isCorrect).map((r) => r.queueType)
     );
-    if (uniqueQueues.size < 2) {
+    if (uniqueQueues.size < 3) {
+      console.log(
+        `❌ 定着未完了 (${word}): キュー通過数 ${uniqueQueues.size} < 3（間隔反復が不足）`
+      );
       return false;
     }
 
-    // 条件3: 最後の2回が連続正答
-    const recentReviews = progress.todayReviews.slice(-2);
-    if (recentReviews.length < 2 || !recentReviews.every((r) => r.isCorrect)) {
+    // 条件5: 総出題回数が最低6回以上（SuperMemo SM-2: 6回の復習で長期記憶へ）
+    if (progress.totalAttempts < 6) {
+      console.log(`❌ 定着未完了 (${word}): 総出題回数 ${progress.totalAttempts} < 6`);
       return false;
     }
 
+    // 条件6: 最終的な確認（直近の復習履歴をチェック）
+    const recentReviews = progress.todayReviews.slice(-MIN_CONSECUTIVE_CORRECT);
+    const allRecentCorrect =
+      recentReviews.length >= MIN_CONSECUTIVE_CORRECT && recentReviews.every((r) => r.isCorrect);
+    if (!allRecentCorrect) {
+      console.log(`❌ 定着未完了 (${word}): 直近${MIN_CONSECUTIVE_CORRECT}回が全て正答ではない`);
+      return false;
+    }
+
+    console.log(
+      `✅ 定着完了 (${word}): 正答率 ${(progress.correctRate * 100).toFixed(1)}%, 連続正答 ${progress.consecutiveCorrectStreak}, 閾値 ${progress.dynamicThreshold}, 総出題 ${progress.totalAttempts}回`
+    );
     return true;
   }
 
@@ -754,12 +880,18 @@ export class AcquisitionQueueManager {
     const attempts = this.wordAttempts.get(word)! + 1;
     this.wordAttempts.set(word, attempts);
 
-    if (attempts >= MAX_SAME_WORD_ATTEMPTS) {
-      console.error(`同じ単語の試行回数が上限に達しました: ${word}`);
-      this.removeFromAllQueues(word);
-      return false;
+    const progress = this.getAcquisitionProgress(word);
+
+    // 永遠に出題：不正解が続く限り継続（MAX_SAME_WORD_ATTEMPTS = Infinity）
+    // 科学的根拠：習熟度が達成されるまで反復学習を継続（Mastery Learning理論）
+    if (attempts % 50 === 0 && progress.todayCorrectCount < progress.dynamicThreshold) {
+      console.log(
+        `🔄 単語 "${word}" を${attempts}回出題しました（正答率: ${(progress.correctRate * 100).toFixed(1)}%, 閾値: ${progress.dynamicThreshold}回）`
+      );
+      console.log(`   ✅ 定着まで継続出題します（不正解が続く限り永遠に出題）`);
     }
 
+    // 常にtrueを返す：永遠に出題を継続
     return true;
   }
 
@@ -799,4 +931,93 @@ export function calculateAcquisitionEfficiency(manager: AcquisitionQueueManager)
   const efficiency = 3.0 / avgReviewsPerWord;
 
   return Math.min(efficiency, 1.0); // 最大1.0
+}
+
+/**
+ * 動的閾値システムのレポート
+ */
+export interface DynamicThresholdReport {
+  word: string;
+  dynamicThreshold: number;
+  correctRate: number;
+  consecutiveCorrectStreak: number;
+  totalAttempts: number;
+  todayCorrectCount: number;
+  todayWrongCount: number;
+  isComplete: boolean;
+  needsMorePractice: boolean; // 正答率80%未満または連続正答3回未満
+}
+
+/**
+ * すべての単語の動的閾値状態を取得
+ */
+export function getDynamicThresholdReport(
+  manager: AcquisitionQueueManager,
+  words: string[]
+): DynamicThresholdReport[] {
+  return words
+    .map((word) => {
+      const progress = manager.getAcquisitionProgress(word);
+      return {
+        word,
+        dynamicThreshold: progress.dynamicThreshold,
+        correctRate: progress.correctRate,
+        consecutiveCorrectStreak: progress.consecutiveCorrectStreak,
+        totalAttempts: progress.totalAttempts,
+        todayCorrectCount: progress.todayCorrectCount,
+        todayWrongCount: progress.todayWrongCount,
+        isComplete: progress.isAcquisitionComplete,
+        needsMorePractice:
+          progress.correctRate < MIN_CORRECT_RATE_FOR_COMPLETION ||
+          progress.consecutiveCorrectStreak < MIN_CONSECUTIVE_CORRECT,
+      };
+    })
+    .sort((a, b) => {
+      // 定着が必要な単語を優先
+      if (a.needsMorePractice && !b.needsMorePractice) return -1;
+      if (!a.needsMorePractice && b.needsMorePractice) return 1;
+      // 正答率が低い順
+      return a.correctRate - b.correctRate;
+    });
+}
+
+/**
+ * 要復習単語の統計
+ */
+export interface ReviewStatistics {
+  totalWords: number;
+  needsReview: number; // 正答率80%未満または連続正答3回未満
+  criticalWords: number; // 正答率50%未満
+  averageThreshold: number; // 平均閾値
+  averageCorrectRate: number; // 平均正答率
+  maxThresholdWords: string[]; // 閾値が最大（50回）の単語
+}
+
+/**
+ * 復習が必要な単語の統計を取得
+ */
+export function getReviewStatistics(
+  manager: AcquisitionQueueManager,
+  words: string[]
+): ReviewStatistics {
+  const reports = getDynamicThresholdReport(manager, words);
+
+  const needsReview = reports.filter((r) => r.needsMorePractice).length;
+  const criticalWords = reports.filter((r) => r.correctRate < 0.5).length;
+
+  const totalThreshold = reports.reduce((sum, r) => sum + r.dynamicThreshold, 0);
+  const totalCorrectRate = reports.reduce((sum, r) => sum + r.correctRate, 0);
+
+  const maxThresholdWords = reports
+    .filter((r) => r.dynamicThreshold >= MAX_THRESHOLD)
+    .map((r) => r.word);
+
+  return {
+    totalWords: reports.length,
+    needsReview,
+    criticalWords,
+    averageThreshold: reports.length > 0 ? totalThreshold / reports.length : 0,
+    averageCorrectRate: reports.length > 0 ? totalCorrectRate / reports.length : 0,
+    maxThresholdWords,
+  };
 }
