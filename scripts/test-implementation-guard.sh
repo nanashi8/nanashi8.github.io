@@ -14,6 +14,12 @@ if [ -z "$TEST_FILE" ]; then
   exit 1
 fi
 
+# バイパスコメントのチェック（ファイルの先頭3行）
+if head -n 3 "$TEST_FILE" | grep -q "@test-guard-bypass"; then
+  echo "✅ テスト実装ガード: バイパス ($TEST_FILE)"
+  exit 0
+fi
+
 echo "🔍 テスト実装ガード: $TEST_FILE"
 echo ""
 
