@@ -86,6 +86,7 @@ import DictionaryView from './components/DictionaryView';
 import FloatingPanel from './components/FloatingPanel';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
+import { AISimulator } from './components/AISimulator';
 import LoadingIndicator from './components/LoadingIndicator';
 import './App.css';
 
@@ -104,6 +105,7 @@ type Tab =
   | 'reading'
   | 'grammar-guide'
   | 'dictionary'
+  | 'ai-simulator'
   | 'stats'
   | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
@@ -1683,6 +1685,16 @@ function App() {
         </button>
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'ai-simulator'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          }`}
+          onClick={() => setActiveTab('ai-simulator')}
+        >
+          🤖 AI
+        </button>
+        <button
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'stats'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1834,6 +1846,8 @@ function App() {
             <GrammarGuideView />
           ) : activeTab === 'dictionary' ? (
             <DictionaryView />
+          ) : activeTab === 'ai-simulator' ? (
+            <AISimulator />
           ) : activeTab === 'stats' ? (
             <StatsView
               questionSets={questionSets}
