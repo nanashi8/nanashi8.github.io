@@ -1,4 +1,37 @@
+---
+canonical: docs/guidelines/grammar/NEW_HORIZON_GRAMMAR_GUIDELINES.md
+status: stable
+lastUpdated: 2025-12-19
+diataxisCategory: reference
+references:
+  - .aitk/instructions/grammar-data-quality.instructions.md
+  - docs/references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md
+  - scripts/README.md
+doNotMove: true
+---
+
 # NEW HORIZON準拠 文法問題作成ガイドライン
+
+## ⚠️ 🚨 必読：単元構成の確認（作業開始前）
+
+**このガイドラインを使用する前に必ず以下を確認してください:**
+
+1. **公式単元構成マスタードキュメント**
+   - 📄 [`docs/references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md`](../../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md)
+   - 東京書籍公式の年間指導計画から抽出した正確な単元構成
+
+2. **重要な制約**
+   - ❌ Grade 2にUnit 8, 9は**存在しません**（Unit 0-7のみ）
+   - ❌ Grade 3にUnit 7, 8, 9は**存在しません**（Unit 0-6のみ）
+
+3. **検証スクリプトの実行**
+   ```bash
+   ./scripts/validate-unit-structure.sh
+   ```
+
+**誤った単元での作業は教育内容の崩壊を招きます。必ず確認してください。**
+
+---
 
 ## 📚 概要
 

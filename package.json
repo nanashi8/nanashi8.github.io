@@ -49,6 +49,8 @@
     "test:python:fast": "python3 -m pytest scripts/test_*.py -q --tb=no -x",
     "test:all:fast": "npm run test:python:fast && npm run test:unit:critical",
     "test:all:full": "npm run test:python && npm run test:unit:fast",
+    "simulate": "tsx tests/simulation/runAllSimulations.ts",
+    "simulate:help": "cat tests/simulation/README.md",
     "size": "size-limit",
     "size:why": "size-limit --why",
     "lighthouse": "lhci autorun",

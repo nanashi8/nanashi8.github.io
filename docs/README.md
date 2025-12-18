@@ -1,6 +1,61 @@
 # 高校受験英語学習アプリ - ドキュメント目次
 
-## 📚 目次
+## 📚 ドキュメント体系（Diátaxis）
+
+このドキュメント群は [Diátaxis フレームワーク](https://diataxis.fr/) に基づいて整理されています：
+
+### 🎓 Tutorials（学び始める）
+初めての方向け・学習順序ガイド
+- [プロジェクト概要](./specifications/01-project-overview.md)
+
+### 🔧 How-to（実践する）
+具体的な手順書・トラブルシューティング
+- **メタAI（QuestionScheduler）** ⭐ **最優先**
+  - [5分クイックガイド](./guidelines/QUESTION_SCHEDULER_QUICK_GUIDE.md)
+  - [トラブルシューティング完全版](./guidelines/META_AI_TROUBLESHOOTING.md)
+- **デプロイ**
+  - [本番デプロイ手順](./processes/DEPLOYMENT_OPERATIONS.md)
+  - [生徒向けデプロイ](./processes/STUDENT_DEPLOYMENT_GUIDE.md)
+  - [緊急復旧手順](./processes/EMERGENCY_RECOVERY.md)
+- **リファクタリング**
+  - [リファクタリング安全手順](./processes/REFACTORING_SAFETY.md)
+
+### 📖 Explanation（理解を深める）
+概念・背景・設計思想
+- [アダプティブネットワークアーキテクチャ](./design/ADAPTIVE_NETWORK_ARCHITECTURE.md)
+- [学習フェーズアーキテクチャ](./design/LEARNING_PHASE_ARCHITECTURE.md)
+- [品質原則](./quality/CONTENT_QUALITY_PRINCIPLES.md)
+- [技術ビジョン](./quality/TECHNICAL_VISION.md)
+
+### 📋 Reference（調べる）
+仕様・API・固定情報・品質基準
+- **メタAI** ⭐
+  - [QuestionScheduler詳細仕様](./specifications/QUESTION_SCHEDULER_SPEC.md)
+  - [品質保証パイプライン](./quality/QUESTION_SCHEDULER_QA_PIPELINE.md)
+- **品質管理**
+  - [品質保証システム統合ガイド](./quality/QUALITY_SYSTEM.md)
+  - [統合品質パイプライン](./quality/INTEGRATED_QUALITY_PIPELINE.md)
+- **文法データ**
+  - [NEW HORIZON公式単元構成](./references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md)
+  - [文法データ品質ガイドライン](./guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md)
+- **機能仕様**
+  - [specifications/](./specifications/) - 全機能仕様（28ファイル）
+
+---
+
+## 🗂️ ディレクトリ構成
+
+- **[guidelines/](./guidelines/)** - ガイドライン・実践原則（18ファイル + grammar/, passage/）
+- **[specifications/](./specifications/)** - 機能仕様・データ構造（28ファイル）
+- **[quality/](./quality/)** - 品質管理・QA（25ファイル）
+- **[processes/](./processes/)** - 作業プロセス・運用ガイド（9ファイル）
+- **[design/](./design/)** - 設計ドキュメント
+- **[references/](./references/)** - 参照資料・公式資料
+- その他12ディレクトリ
+
+各ディレクトリに README.md があります。
+
+---
 
 ## 🗓️ プロジェクト計画・ロードマップ
 

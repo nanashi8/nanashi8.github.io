@@ -307,8 +307,7 @@
       "words": [
         "this",
         "what",
-        "is",
-        "?"
+        "is"
       ],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
@@ -339,8 +338,7 @@
       "words": [
         "are",
         "what",
-        "these",
-        "?"
+        "these"
       ],
       "correctAnswer": "What are these?",
       "difficulty": "intermediate",

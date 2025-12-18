@@ -1,0 +1,1118 @@
+{
+  "unit": "Unit 6",
+  "title": "仮定法",
+  "grammar": "I wish I could/had、If + 主語 + were/過去形",
+  "enabled": true,
+  "totalQuestions": 70,
+  "questionTypes": {
+    "fillInBlank": 25,
+    "sentenceOrdering": 23,
+    "paraphrase": 7,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g3-u6-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私が鳥だったらなあ。",
+      "sentence": "I wish I ____ a bird.",
+      "choices": [
+        "were",
+        "was",
+        "am"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去です。I wish + 主語 + 過去形で「～だったらなあ」を表します。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\n私が鳥だったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish + 過去形（be動詞 = were）"
+    },
+    {
+      "id": "g3-u6-fib-002",
+      "type": "fillInBlank",
+      "japanese": "私が飛べたらなあ。",
+      "sentence": "I wish I ____ fly.",
+      "choices": [
+        "could",
+        "can",
+        "will"
+      ],
+      "correctAnswer": "could",
+      "difficulty": "beginner",
+      "explanation": "I wish I couldで「～できたらなあ」という願望を表します。\n\n正解は「could」です。\n\n【日本語】\n私が飛べたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish I could"
+    },
+    {
+      "id": "g3-u6-fib-003",
+      "type": "fillInBlank",
+      "japanese": "もし私が金持ちなら、新しい車を買うのに。",
+      "sentence": "If I ____ rich, I would buy a new car.",
+      "choices": [
+        "were",
+        "was",
+        "am"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去です。If + 主語 + 過去形, 主語 + would + 動詞の原形。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\nもし私が金持ちなら、新しい車を買うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "If + were"
+    },
+    {
+      "id": "g3-u6-fib-004",
+      "type": "fillInBlank",
+      "japanese": "もし時間があれば、あなたを手伝うのに。",
+      "sentence": "If I had time, I ____ help you.",
+      "choices": [
+        "would",
+        "will",
+        "can"
+      ],
+      "correctAnswer": "would",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去の帰結節です。would + 動詞の原形を使います。\n\n正解は「would」です。\n\n【日本語】\nもし時間があれば、あなたを手伝うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-fib-005",
+      "type": "fillInBlank",
+      "japanese": "私が英語を話せたらなあ。",
+      "sentence": "I wish I ____ speak English.",
+      "choices": [
+        "could",
+        "can",
+        "will"
+      ],
+      "correctAnswer": "could",
+      "difficulty": "beginner",
+      "explanation": "I wish I couldで「～できたらなあ」という願望を表します。\n\n正解は「could」です。\n\n【日本語】\n私が英語を話せたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish I could"
+    },
+    {
+      "id": "g3-u6-fib-006",
+      "type": "fillInBlank",
+      "japanese": "私がもっとお金を持っていたらなあ。",
+      "sentence": "I wish I ____ more money.",
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "correctAnswer": "had",
+      "difficulty": "beginner",
+      "explanation": "I wish I hadで「～を持っていたらなあ」という願望を表します。\n\n正解は「had」です。\n\n【日本語】\n私がもっとお金を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I had"
+    },
+    {
+      "id": "g3-u6-fib-007",
+      "type": "fillInBlank",
+      "japanese": "もし彼が学生なら、割引が受けられるのに。",
+      "sentence": "If he ____ a student, he would get a discount.",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去です。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\nもし彼が学生なら、割引が受けられるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "If + were"
+    },
+    {
+      "id": "g3-u6-fib-008",
+      "type": "fillInBlank",
+      "japanese": "もし私があなただったら、それをしないでしょう。",
+      "sentence": "If I were you, I ____ not do it.",
+      "choices": [
+        "would",
+        "will",
+        "can"
+      ],
+      "correctAnswer": "would",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去の帰結節です。would + 動詞の原形を使います。\n\n正解は「would」です。\n\n【日本語】\nもし私があなただったら、それをしないでしょう。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-fib-009",
+      "type": "fillInBlank",
+      "japanese": "私がピアノを弾けたらなあ。",
+      "sentence": "I wish I could ____ the piano.",
+      "choices": [
+        "play",
+        "plays",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "beginner",
+      "explanation": "couldの後は動詞の原形を使います。\n\n正解は「play」です。\n\n【日本語】\n私がピアノを弾けたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-fib-010",
+      "type": "fillInBlank",
+      "japanese": "もし雨が降らなければ、ピクニックに行くのに。",
+      "sentence": "If it ____ rain, we would go on a picnic.",
+      "choices": [
+        "didn't",
+        "don't",
+        "doesn't"
+      ],
+      "correctAnswer": "didn't",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去の否定形です。didn'tを使います。\n\n正解は「didn't」です。\n\n【日本語】\nもし雨が降らなければ、ピクニックに行くのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + didn't"
+    },
+    {
+      "id": "g3-u6-fib-011",
+      "type": "fillInBlank",
+      "japanese": "私が車を持っていたらなあ。",
+      "sentence": "I wish I ____ a car.",
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "correctAnswer": "had",
+      "difficulty": "beginner",
+      "explanation": "I wish I hadで「～を持っていたらなあ」です。\n\n正解は「had」です。\n\n【日本語】\n私が車を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I had"
+    },
+    {
+      "id": "g3-u6-fib-012",
+      "type": "fillInBlank",
+      "japanese": "もし彼女がここにいたら、幸せなのに。",
+      "sentence": "If she ____ here, I would be happy.",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去です。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\nもし彼女がここにいたら、幸せなのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "If + were"
+    },
+    {
+      "id": "g3-u6-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私がもっと若かったらなあ。",
+      "sentence": "I wish I ____ younger.",
+      "choices": [
+        "were",
+        "was",
+        "am"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "I wish + 主語 + 過去形です。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\n私がもっと若かったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish + were"
+    },
+    {
+      "id": "g3-u6-fib-014",
+      "type": "fillInBlank",
+      "japanese": "もし私が彼の電話番号を知っていたら、電話するのに。",
+      "sentence": "If I ____ his phone number, I would call him.",
+      "choices": [
+        "knew",
+        "know",
+        "knows"
+      ],
+      "correctAnswer": "knew",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去です。動詞は過去形を使います。\n\n正解は「knew」です。\n\n【日本語】\nもし私が彼の電話番号を知っていたら、電話するのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形"
+    },
+    {
+      "id": "g3-u6-fib-015",
+      "type": "fillInBlank",
+      "japanese": "私が泳げたらなあ。",
+      "sentence": "I wish I ____ swim.",
+      "choices": [
+        "could",
+        "can",
+        "will"
+      ],
+      "correctAnswer": "could",
+      "difficulty": "beginner",
+      "explanation": "I wish I couldで「～できたらなあ」です。\n\n正解は「could」です。\n\n【日本語】\n私が泳げたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish I could"
+    },
+    {
+      "id": "g3-u6-fib-016",
+      "type": "fillInBlank",
+      "japanese": "もし明日晴れなら、ビーチに行くのに。",
+      "sentence": "If it ____ sunny tomorrow, we would go to the beach.",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去です。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\nもし明日晴れなら、ビーチに行くのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "If + were"
+    },
+    {
+      "id": "g3-u6-fib-017",
+      "type": "fillInBlank",
+      "japanese": "私が背が高かったらなあ。",
+      "sentence": "I wish I ____ taller.",
+      "choices": [
+        "were",
+        "was",
+        "am"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "I wish + 主語 + 過去形です。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\n私が背が高かったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish + were"
+    },
+    {
+      "id": "g3-u6-fib-018",
+      "type": "fillInBlank",
+      "japanese": "もし彼が来たら、楽しいのに。",
+      "sentence": "If he ____, we would have fun.",
+      "choices": [
+        "came",
+        "come",
+        "comes"
+      ],
+      "correctAnswer": "came",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去です。動詞は過去形を使います。\n\n正解は「came」です。\n\n【日本語】\nもし彼が来たら、楽しいのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形"
+    },
+    {
+      "id": "g3-u6-fib-019",
+      "type": "fillInBlank",
+      "japanese": "私がもっと時間があったらなあ。",
+      "sentence": "I wish I ____ more time.",
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "correctAnswer": "had",
+      "difficulty": "intermediate",
+      "explanation": "I wish I hadで「～があったらなあ」です。\n\n正解は「had」です。\n\n【日本語】\n私がもっと時間があったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I had"
+    },
+    {
+      "id": "g3-u6-fib-020",
+      "type": "fillInBlank",
+      "japanese": "もし彼女が医者なら、助けてくれるのに。",
+      "sentence": "If she ____ a doctor, she would help us.",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去です。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\nもし彼女が医者なら、助けてくれるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "If + were"
+    },
+    {
+      "id": "g3-u6-fib-021",
+      "type": "fillInBlank",
+      "japanese": "私が歌えたらなあ。",
+      "sentence": "I wish I could ____ well.",
+      "choices": [
+        "sing",
+        "sings",
+        "singing"
+      ],
+      "correctAnswer": "sing",
+      "difficulty": "intermediate",
+      "explanation": "couldの後は動詞の原形を使います。\n\n正解は「sing」です。\n\n【日本語】\n私が歌えたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-fib-022",
+      "type": "fillInBlank",
+      "japanese": "もし私が彼に会えたら、謝るのに。",
+      "sentence": "If I ____ see him, I would apologize.",
+      "choices": [
+        "could",
+        "can",
+        "will"
+      ],
+      "correctAnswer": "could",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去です。couldを使って「会えたら」を表します。\n\n正解は「could」です。\n\n【日本語】\nもし私が彼に会えたら、謝るのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "If I could"
+    },
+    {
+      "id": "g3-u6-fib-023",
+      "type": "fillInBlank",
+      "japanese": "私が彼の住所を知っていたらなあ。",
+      "sentence": "I wish I ____ his address.",
+      "choices": [
+        "knew",
+        "know",
+        "knows"
+      ],
+      "correctAnswer": "knew",
+      "difficulty": "intermediate",
+      "explanation": "I wish + 主語 + 過去形です。knowの過去形はknewです。\n\n正解は「knew」です。\n\n【日本語】\n私が彼の住所を知っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish + 過去形"
+    },
+    {
+      "id": "g3-u6-fib-024",
+      "type": "fillInBlank",
+      "japanese": "もし私が有名人なら、たくさんのファンがいるのに。",
+      "sentence": "If I were famous, I ____ have many fans.",
+      "choices": [
+        "would",
+        "will",
+        "can"
+      ],
+      "correctAnswer": "would",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去の帰結節です。would + 動詞の原形を使います。\n\n正解は「would」です。\n\n【日本語】\nもし私が有名人なら、たくさんのファンがいるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-fib-025",
+      "type": "fillInBlank",
+      "japanese": "私がもっと勇敢だったらなあ。",
+      "sentence": "I wish I ____ braver.",
+      "choices": [
+        "were",
+        "was",
+        "am"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "I wish + 主語 + 過去形です。be動詞はwereを使います。\n\n正解は「were」です。\n\n【日本語】\n私がもっと勇敢だったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish + were"
+    },
+    {
+      "id": "g3-u6-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私が鳥だったらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "were",
+        "a",
+        "bird"
+      ],
+      "correctAnswer": "I wish I were a bird.",
+      "difficulty": "intermediate",
+      "explanation": "I wish + 主語 + 過去形の語順です。\n\n【日本語】\n私が鳥だったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish + 主語 + 過去形"
+    },
+    {
+      "id": "g3-u6-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "私が飛べたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "could",
+        "fly"
+      ],
+      "correctAnswer": "I wish I could fly.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私が飛べたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I could + 動詞"
+    },
+    {
+      "id": "g3-u6-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "もし私が金持ちなら、新しい車を買うのに。",
+      "words": [
+        "If",
+        "I",
+        "were",
+        "rich",
+        "I",
+        "would",
+        "buy",
+        "a",
+        "new",
+        "car"
+      ],
+      "correctAnswer": "If I were rich, I would buy a new car.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし私が金持ちなら、新しい車を買うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "もし時間があれば、あなたを手伝うのに。",
+      "words": [
+        "If",
+        "I",
+        "had",
+        "time",
+        "I",
+        "would",
+        "help",
+        "you"
+      ],
+      "correctAnswer": "If I had time, I would help you.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし時間があれば、あなたを手伝うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "私が英語を話せたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "could",
+        "speak",
+        "English"
+      ],
+      "correctAnswer": "I wish I could speak English.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私が英語を話せたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I could + 動詞"
+    },
+    {
+      "id": "g3-u6-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "私がもっとお金を持っていたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "had",
+        "more",
+        "money"
+      ],
+      "correctAnswer": "I wish I had more money.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I had + 名詞の語順です。\n\n【日本語】\n私がもっとお金を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I had + 名詞"
+    },
+    {
+      "id": "g3-u6-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "もし彼が学生なら、割引が受けられるのに。",
+      "words": [
+        "If",
+        "he",
+        "were",
+        "a",
+        "student",
+        "he",
+        "would",
+        "get",
+        "a",
+        "discount"
+      ],
+      "correctAnswer": "If he were a student, he would get a discount.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼が学生なら、割引が受けられるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "もし私があなただったら、それをしないでしょう。",
+      "words": [
+        "If",
+        "I",
+        "were",
+        "you",
+        "I",
+        "would",
+        "not",
+        "do",
+        "it"
+      ],
+      "correctAnswer": "If I were you, I would not do it.",
+      "difficulty": "intermediate",
+      "explanation": "If I were you, I would + 動詞の原形の語順です。\n\n【日本語】\nもし私があなただったら、それをしないでしょう。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If I were you, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "私がピアノを弾けたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "could",
+        "play",
+        "the",
+        "piano"
+      ],
+      "correctAnswer": "I wish I could play the piano.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私がピアノを弾けたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I could + 動詞"
+    },
+    {
+      "id": "g3-u6-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "もし雨が降らなければ、ピクニックに行くのに。",
+      "words": [
+        "If",
+        "it",
+        "didn't",
+        "rain",
+        "we",
+        "would",
+        "go",
+        "on",
+        "a",
+        "picnic"
+      ],
+      "correctAnswer": "If it didn't rain, we would go on a picnic.",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去の否定形です。If + didn't + 動詞の原形を使います。\n\n【日本語】\nもし雨が降らなければ、ピクニックに行くのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + didn't + 動詞"
+    },
+    {
+      "id": "g3-u6-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "私が車を持っていたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "had",
+        "a",
+        "car"
+      ],
+      "correctAnswer": "I wish I had a car.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I had + 名詞の語順です。\n\n【日本語】\n私が車を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I had + 名詞"
+    },
+    {
+      "id": "g3-u6-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "もし彼女がここにいたら、幸せなのに。",
+      "words": [
+        "If",
+        "she",
+        "were",
+        "here",
+        "I",
+        "would",
+        "be",
+        "happy"
+      ],
+      "correctAnswer": "If she were here, I would be happy.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼女がここにいたら、幸せなのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "私がもっと若かったらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "were",
+        "younger"
+      ],
+      "correctAnswer": "I wish I were younger.",
+      "difficulty": "intermediate",
+      "explanation": "I wish + 主語 + 過去形の語順です。\n\n【日本語】\n私がもっと若かったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish + 主語 + 過去形"
+    },
+    {
+      "id": "g3-u6-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "もし私が彼の電話番号を知っていたら、電話するのに。",
+      "words": [
+        "If",
+        "I",
+        "knew",
+        "his",
+        "phone",
+        "number",
+        "I",
+        "would",
+        "call",
+        "him"
+      ],
+      "correctAnswer": "If I knew his phone number, I would call him.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし私が彼の電話番号を知っていたら、電話するのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "私が泳げたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "could",
+        "swim"
+      ],
+      "correctAnswer": "I wish I could swim.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私が泳げたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I could + 動詞"
+    },
+    {
+      "id": "g3-u6-so-016",
+      "type": "sentenceOrdering",
+      "japanese": "もし明日晴れなら、ビーチに行くのに。",
+      "words": [
+        "If",
+        "it",
+        "were",
+        "sunny",
+        "tomorrow",
+        "we",
+        "would",
+        "go",
+        "to",
+        "the",
+        "beach"
+      ],
+      "correctAnswer": "If it were sunny tomorrow, we would go to the beach.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし明日晴れなら、ビーチに行くのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-017",
+      "type": "sentenceOrdering",
+      "japanese": "私が背が高かったらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "were",
+        "taller"
+      ],
+      "correctAnswer": "I wish I were taller.",
+      "difficulty": "intermediate",
+      "explanation": "I wish + 主語 + 過去形の語順です。\n\n【日本語】\n私が背が高かったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish + 主語 + 過去形"
+    },
+    {
+      "id": "g3-u6-so-018",
+      "type": "sentenceOrdering",
+      "japanese": "もし彼が来たら、楽しいのに。",
+      "words": [
+        "If",
+        "he",
+        "came",
+        "we",
+        "would",
+        "have",
+        "fun"
+      ],
+      "correctAnswer": "If he came, we would have fun.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼が来たら、楽しいのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-019",
+      "type": "sentenceOrdering",
+      "japanese": "私がもっと時間があったらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "had",
+        "more",
+        "time"
+      ],
+      "correctAnswer": "I wish I had more time.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I had + 名詞の語順です。\n\n【日本語】\n私がもっと時間があったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I had + 名詞"
+    },
+    {
+      "id": "g3-u6-so-020",
+      "type": "sentenceOrdering",
+      "japanese": "もし彼女が医者なら、助けてくれるのに。",
+      "words": [
+        "If",
+        "she",
+        "were",
+        "a",
+        "doctor",
+        "she",
+        "would",
+        "help",
+        "us"
+      ],
+      "correctAnswer": "If she were a doctor, she would help us.",
+      "difficulty": "intermediate",
+      "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼女が医者なら、助けてくれるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If + 過去形, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "私が歌えたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "could",
+        "sing",
+        "well"
+      ],
+      "correctAnswer": "I wish I could sing well.",
+      "difficulty": "intermediate",
+      "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私が歌えたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I could + 動詞"
+    },
+    {
+      "id": "g3-u6-so-022",
+      "type": "sentenceOrdering",
+      "japanese": "もし私が彼に会えたら、謝るのに。",
+      "words": [
+        "If",
+        "I",
+        "could",
+        "see",
+        "him",
+        "I",
+        "would",
+        "apologize"
+      ],
+      "correctAnswer": "If I could see him, I would apologize.",
+      "difficulty": "advanced",
+      "explanation": "If I could + 動詞の原形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし私が彼に会えたら、謝るのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "If I could + 動詞, would + 動詞"
+    },
+    {
+      "id": "g3-u6-so-023",
+      "type": "sentenceOrdering",
+      "japanese": "私が彼の住所を知っていたらなあ。",
+      "words": [
+        "I",
+        "wish",
+        "I",
+        "knew",
+        "his",
+        "address"
+      ],
+      "correctAnswer": "I wish I knew his address.",
+      "difficulty": "intermediate",
+      "explanation": "I wish + 主語 + 過去形の語順です。\n\n【日本語】\n私が彼の住所を知っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish + 主語 + 過去形"
+    },
+    {
+      "id": "g3-u6-para-001",
+      "type": "paraphrase",
+      "japanese": "私が鳥だったらなあ。",
+      "original": "I wish I was a bird.",
+      "correctAnswer": "I wish I were a bird.",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去ではbe動詞はwereを使います。\n\n【日本語】\n私が鳥だったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "be動詞 = were"
+    },
+    {
+      "id": "g3-u6-para-002",
+      "type": "paraphrase",
+      "japanese": "もし私が金持ちなら、新しい車を買うのに。",
+      "original": "If I was rich, I would buy a new car.",
+      "correctAnswer": "If I were rich, I would buy a new car.",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去ではbe動詞はwereを使います。\n\n【日本語】\nもし私が金持ちなら、新しい車を買うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "be動詞 = were"
+    },
+    {
+      "id": "g3-u6-para-003",
+      "type": "paraphrase",
+      "japanese": "私が飛べたらなあ。",
+      "original": "I wish I can fly.",
+      "correctAnswer": "I wish I could fly.",
+      "difficulty": "intermediate",
+      "explanation": "I wishの後は過去形を使います。canの過去形はcouldです。\n\n【日本語】\n私が飛べたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "can → could"
+    },
+    {
+      "id": "g3-u6-para-004",
+      "type": "paraphrase",
+      "japanese": "もし時間があれば、あなたを手伝うのに。",
+      "original": "If I had time, I will help you.",
+      "correctAnswer": "If I had time, I would help you.",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去の帰結節ではwouldを使います。willではありません。\n\n【日本語】\nもし時間があれば、あなたを手伝うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "will → would"
+    },
+    {
+      "id": "g3-u6-para-005",
+      "type": "paraphrase",
+      "japanese": "私がもっとお金を持っていたらなあ。",
+      "original": "I wish I have more money.",
+      "correctAnswer": "I wish I had more money.",
+      "difficulty": "intermediate",
+      "explanation": "I wishの後は過去形を使います。haveの過去形はhadです。\n\n【日本語】\n私がもっとお金を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "have → had"
+    },
+    {
+      "id": "g3-u6-para-006",
+      "type": "paraphrase",
+      "japanese": "もし彼が学生なら、割引が受けられるのに。",
+      "original": "If he was a student, he would get a discount.",
+      "correctAnswer": "If he were a student, he would get a discount.",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去ではbe動詞はwereを使います。\n\n【日本語】\nもし彼が学生なら、割引が受けられるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "be動詞 = were"
+    },
+    {
+      "id": "g3-u6-para-007",
+      "type": "paraphrase",
+      "japanese": "私がもっと若かったらなあ。",
+      "original": "I wish I am younger.",
+      "correctAnswer": "I wish I were younger.",
+      "difficulty": "intermediate",
+      "explanation": "I wishの後は過去形を使います。be動詞はwereです。\n\n【日本語】\n私がもっと若かったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "am → were"
+    },
+    {
+      "id": "g3-u6-vf-001",
+      "type": "verbForm",
+      "japanese": "私が飛べたらなあ。",
+      "verb": "fly",
+      "sentence": "I wish I could ____.",
+      "correctAnswer": "fly",
+      "difficulty": "intermediate",
+      "explanation": "couldの後は動詞の原形を使います。\n\n【日本語】\n私が飛べたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-002",
+      "type": "verbForm",
+      "japanese": "私が泳げたらなあ。",
+      "verb": "swim",
+      "sentence": "I wish I could ____.",
+      "correctAnswer": "swim",
+      "difficulty": "intermediate",
+      "explanation": "couldの後は動詞の原形を使います。\n\n【日本語】\n私が泳げたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-003",
+      "type": "verbForm",
+      "japanese": "もし時間があれば、あなたを手伝うのに。",
+      "verb": "help",
+      "sentence": "If I had time, I would ____ you.",
+      "correctAnswer": "help",
+      "difficulty": "intermediate",
+      "explanation": "wouldの後は動詞の原形を使います。\n\n【日本語】\nもし時間があれば、あなたを手伝うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-004",
+      "type": "verbForm",
+      "japanese": "私がピアノを弾けたらなあ。",
+      "verb": "play",
+      "sentence": "I wish I could ____ the piano.",
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "couldの後は動詞の原形を使います。\n\n【日本語】\n私がピアノを弾けたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-005",
+      "type": "verbForm",
+      "japanese": "もし私が金持ちなら、新しい車を買うのに。",
+      "verb": "buy",
+      "sentence": "If I were rich, I would ____ a new car.",
+      "correctAnswer": "buy",
+      "difficulty": "intermediate",
+      "explanation": "wouldの後は動詞の原形を使います。\n\n【日本語】\nもし私が金持ちなら、新しい車を買うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-006",
+      "type": "verbForm",
+      "japanese": "私が歌えたらなあ。",
+      "verb": "sing",
+      "sentence": "I wish I could ____ well.",
+      "correctAnswer": "sing",
+      "difficulty": "intermediate",
+      "explanation": "couldの後は動詞の原形を使います。\n\n【日本語】\n私が歌えたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-007",
+      "type": "verbForm",
+      "japanese": "もし彼が来たら、楽しいのに。",
+      "verb": "have",
+      "sentence": "If he came, we would ____ fun.",
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "wouldの後は動詞の原形を使います。\n\n【日本語】\nもし彼が来たら、楽しいのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-008",
+      "type": "verbForm",
+      "japanese": "私が踊れたらなあ。",
+      "verb": "dance",
+      "sentence": "I wish I could ____.",
+      "correctAnswer": "dance",
+      "difficulty": "intermediate",
+      "explanation": "couldの後は動詞の原形を使います。\n\n【日本語】\n私が踊れたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-009",
+      "type": "verbForm",
+      "japanese": "もし私があなただったら、それをしないでしょう。",
+      "verb": "do",
+      "sentence": "If I were you, I would not ____ it.",
+      "correctAnswer": "do",
+      "difficulty": "intermediate",
+      "explanation": "wouldの後は動詞の原形を使います。\n\n【日本語】\nもし私があなただったら、それをしないでしょう。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-vf-010",
+      "type": "verbForm",
+      "japanese": "私が料理できたらなあ。",
+      "verb": "cook",
+      "sentence": "I wish I could ____.",
+      "correctAnswer": "cook",
+      "difficulty": "intermediate",
+      "explanation": "couldの後は動詞の原形を使います。\n\n【日本語】\n私が料理できたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "could + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-conv-001",
+      "type": "conversation",
+      "japanese": "私が鳥だったらなあ。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What do you wish?"
+        },
+        {
+          "speaker": "B",
+          "text": "I wish I ____ a bird.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "were",
+        "was",
+        "am"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去です。be動詞はwereを使います。\n\n【日本語】\n私が鳥だったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "be動詞 = were"
+    },
+    {
+      "id": "g3-u6-conv-002",
+      "type": "conversation",
+      "japanese": "私が飛べたらなあ。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What is your dream?"
+        },
+        {
+          "speaker": "B",
+          "text": "I wish I ____ fly.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "could",
+        "can",
+        "will"
+      ],
+      "correctAnswer": "could",
+      "difficulty": "intermediate",
+      "explanation": "I wish I couldで「～できたらなあ」です。\n\n【日本語】\n私が飛べたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "I wish I could"
+    },
+    {
+      "id": "g3-u6-conv-003",
+      "type": "conversation",
+      "japanese": "もし時間があれば、手伝うのに。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you help me?"
+        },
+        {
+          "speaker": "B",
+          "text": "If I had time, I ____ help you.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "would",
+        "will",
+        "can"
+      ],
+      "correctAnswer": "would",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去の帰結節です。wouldを使います。\n\n【日本語】\nもし時間があれば、手伝うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "would + 動詞の原形"
+    },
+    {
+      "id": "g3-u6-conv-004",
+      "type": "conversation",
+      "japanese": "私がもっとお金を持っていたらなあ。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Do you have enough money?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, I wish I ____ more money.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "correctAnswer": "had",
+      "difficulty": "intermediate",
+      "explanation": "I wish I hadで「～があったらなあ」です。\n\n【日本語】\n私がもっとお金を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形",
+      "hint": "I wish I had"
+    },
+    {
+      "id": "g3-u6-conv-005",
+      "type": "conversation",
+      "japanese": "もし私があなただったら、それをしないでしょう。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Should I do it?"
+        },
+        {
+          "speaker": "B",
+          "text": "If I ____ you, I would not do it.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "were",
+        "was",
+        "am"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "If I were youで「もし私があなただったら」です。\n\n【日本語】\nもし私があなただったら、それをしないでしょう。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n【注意】\n仮定法では動詞の形が変わります。",
+      "hint": "If I were you"
+    }
+  ]
+}

@@ -48,7 +48,7 @@ export { addSessionHistory, getSessionHistory, clearSessionHistory } from './ses
 const STORAGE_KEY = 'progress-data';
 const _MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数（未使用のためプレフィックス）
 const PROGRESS_KEY = 'quiz-app-user-progress';
-const MAX_RESULTS = 300; // 保存する最大結果数（容量削減）
+const MAX_RESULTS = 9999; // 保存する最大結果数（容量削減）
 const MAX_RESPONSE_TIMES = 3; // 応答時間履歴の最大保存数（容量削減）
 
 // 初期化
@@ -129,6 +129,34 @@ export async function loadProgress(): Promise<UserProgress> {
 
     // 起動時に自動圧縮を実行
     compressProgressData(progress);
+
+    // カテゴリー修復処理（既存データにcategoryがない場合）
+    let repairedCount = 0;
+    Object.values(progress.wordProgress).forEach(wp => {
+      if (!wp.category) {
+        const totalAttempts = (wp.correctCount || 0) + (wp.incorrectCount || 0);
+        const consecutiveIncorrect = wp.consecutiveIncorrect || 0;
+
+        if (totalAttempts === 0) {
+          wp.category = 'new';
+        } else if (consecutiveIncorrect >= 2) {
+          wp.category = 'incorrect';
+        } else if (wp.incorrectCount && wp.incorrectCount > 0) {
+          wp.category = 'still_learning';
+        } else if (wp.masteryLevel === 'mastered') {
+          wp.category = 'mastered';
+        } else {
+          wp.category = 'still_learning';
+        }
+        repairedCount++;
+      }
+    });
+
+    // 修復が実行された場合はログ出力して保存
+    if (repairedCount > 0) {
+      logger.info(`[Category Repair] ${repairedCount}個の単語にcategoryを追加しました`);
+      await saveProgressData(progress as ProgressData);
+    }
 
     // キャッシュを更新
     updateProgressCache(progress);
@@ -629,6 +657,7 @@ function initializeWordProgress(word: string): WordProgress {
     difficultyScore: 50, // 初期値は中間
     masteryLevel: 'new',
     responseTimes: [], // 応答時間の履歴
+    category: 'new', // QuestionScheduler用: 初期値は新規
   };
 }
 
@@ -1094,6 +1123,52 @@ export async function updateWordProgress(
     }
   }
 
+  // カテゴリーを更新（QuestionScheduler用）
+  // 🎯 用語定義：
+  //   - 「分からない」(incorrect) = 要学習（最優先で復習が必要）
+  //   - 「まだまだ」(still_learning) = 学習中（復習が必要だが改善傾向）
+  //   - 「覚えてる」(mastered) = 定着済み（復習頻度を下げる）
+  //   - 「新規」(new) = 未出題
+  //
+  // 🔥 判定優先順位（修正版: 今回の回答を最優先）：
+  //   1. 定着判定が最優先（システムが定着と判断したら即座にmastered）
+  //   2. 今回の回答内容を最優先（過去の履歴より現在の状態）
+  //   3. 累積正解2回以上で定着判定（連続でなくても可）
+  //   4. 連続不正解は、今回も不正解の場合のみ適用
+
+  if (masteryResult.isMastered) {
+    // 定着判定システムが定着と判断 → 即座に定着扱い
+    wordProgress.category = 'mastered';
+  } else if (isCorrect && wordProgress.correctCount >= 2) {
+    // ✅ 今回正解 & 累積2回以上正解 → 定着（過去に不正解があっても可）
+    wordProgress.category = 'mastered';
+  } else if (isCorrect && wordProgress.correctCount >= 1) {
+    // ✅ 今回正解 & 累積1回以上正解 → 学習中（改善傾向）
+    wordProgress.category = 'still_learning';
+  } else if (isStillLearning) {
+    // 今回「まだまだ」を選択 → 「学習中」（明示的な学習継続の意思表示）
+    wordProgress.category = 'still_learning';
+  } else if (!isCorrect && !isStillLearning && wordProgress.consecutiveIncorrect >= 2) {
+    // 今回「分からない」& 2回以上連続不正解 → 「要学習」（最優先復習）
+    wordProgress.category = 'incorrect';
+  } else if (!isCorrect && !isStillLearning) {
+    // 今回「分からない」を選択 → 「要学習」（即座に優先復習）
+    wordProgress.category = 'incorrect';
+  } else if (wordProgress.totalAttempts === 0) {
+    // 初回 → 新規
+    wordProgress.category = 'new';
+  } else {
+    // デフォルト：学習中
+    wordProgress.category = 'still_learning';
+  }
+
+  // デバッグ: カテゴリー変更をログ出力（直近の行動も表示）
+  const actionLabel = isCorrect ? '✅正解' : isStillLearning ? '🟡まだまだ' : '❌分からない';
+  console.log(`📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`);
+
+  // ✅ 保存前の確認: メモリ上のカテゴリー値
+  console.log(`💾 [保存前] ${word}のカテゴリー（メモリ）: ${wordProgress.category}`);
+
   // results配列に記録（ScoreBoard統計用）
   if (mode) {
     const questionSetName =
@@ -1128,6 +1203,21 @@ export async function updateWordProgress(
   }
 
   await saveProgress(progress);
+
+  // ✅ 保存後の確認: localStorage から読み取り
+  try {
+    const savedData = localStorage.getItem('english-progress');
+    if (savedData) {
+      const parsed = JSON.parse(savedData);
+      const savedCategory = parsed.wordProgress?.[word]?.category;
+      console.log(`✅ [保存後] ${word}のカテゴリー（localStorage）: ${savedCategory}`);
+      if (savedCategory !== wordProgress.category) {
+        console.error(`🚨 [保存エラー] ${word}: メモリ=${wordProgress.category}, localStorage=${savedCategory}`);
+      }
+    }
+  } catch (e) {
+    console.error('[保存確認エラー]', e);
+  }
 
   // 解答直後イベントを通知（StatsViewなどが購読）
   try {

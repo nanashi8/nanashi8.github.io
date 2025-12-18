@@ -1,0 +1,96 @@
+# 移動禁止ドキュメントリスト
+
+このリストのファイルは、多数の重要な依存関係があるため移動してはいけません。
+移動する場合は、事前に全参照箇所を調査し、90日間のリダイレクト期間を設けてください。
+
+## 🚨 絶対移動禁止（メタAIトライアド）
+
+**理由**: .aitk/instructions から直接参照。出題機能の最優先トラブルシューティング導線。
+
+- `guidelines/META_AI_TROUBLESHOOTING.md`
+- `guidelines/QUESTION_SCHEDULER_QUICK_GUIDE.md`
+- `specifications/QUESTION_SCHEDULER_SPEC.md`
+- `quality/QUESTION_SCHEDULER_QA_PIPELINE.md`
+
+**参照元**（30+ 箇所）:
+- `.aitk/instructions/meta-ai-priority.instructions.md`
+- `.aitk/instructions/tools.instructions.md`
+- `tests/simulation/README.md`
+- `tests/simulation/IMPLEMENTATION_SUMMARY.md`
+- その他多数のガイドライン・テンプレート
+
+---
+
+## 🔴 移動禁止（文法品質システム中核）
+
+**理由**: NEW HORIZON準拠の教材品質を保証する中核システム。PRテンプレート、scriptsから参照。
+
+- `guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md`
+- `guidelines/AI_GRAMMAR_QUESTION_CREATION.md`
+- `guidelines/GRAMMAR_QUESTION_VALIDATION.md`
+- `guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md`
+- `guidelines/grammar/NEW_HORIZON_GRAMMAR_GUIDELINES.md`
+- `guidelines/grammar/NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md`
+- `guidelines/grammar/NEW_HORIZON_VERB_FORM_GUIDELINES.md`
+- `quality/grammar_quality_report.md`
+
+**参照元**（20+ 箇所）:
+- `.aitk/instructions/grammar-data-quality.instructions.md`
+- `.aitk/instructions/grammar-question-validation.instructions.md`
+- `.github/PULL_REQUEST_TEMPLATE.md`
+- `scripts/README.md`
+- `docs/README.md`
+
+---
+
+## 🟠 移動注意（品質管理中核）
+
+**理由**: プロジェクト全体の品質保証プロセスの中心。開発/保守ガイドから広く参照。
+
+- `quality/QUALITY_SYSTEM.md`
+- `quality/INTEGRATED_QUALITY_PIPELINE.md`
+- `quality/QUALITY_AUTOMATION_GUIDE.md`
+
+**参照元**（10+ 箇所）:
+- `.aitk/instructions/code-quality.instructions.md`
+- `README.md`
+- `docs/maintenance/SELF_MANAGING_PROJECT.md`
+- `docs/design/PROJECT_STRUCTURE_VALIDATION.md`
+
+---
+
+## 🟡 移動注意（公式資料正本）
+
+**理由**: NEW HORIZON教科書の単元構成の正本。誤データ投入を防ぐ最後の砦。
+
+- `references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md`
+
+**参照元**:
+- `.aitk/instructions/tools.instructions.md`
+- `scripts/validate-unit-structure.sh`
+
+---
+
+## ✅ 移動可能な領域
+
+以下のディレクトリは比較的安全に移動できます（段階的実施＋リンク更新が必要）:
+
+- `processes/` → `how-to/` への移動（Phase 3で実施）
+- `archive/` （履歴参照少ない）
+- `reports/` （時系列記録）
+
+---
+
+## 📋 移動手順（移動可能領域のみ）
+
+1. **事前調査**: `grep -r "ファイル名" . --include="*.md" --include="*.ts"`
+2. **影響範囲確認**: 10箇所以上の参照がある場合は要注意
+3. **シムファイル作成**: 旧パスに「Moved to [新パス]」を90日間残す
+4. **一括リンク更新**: find + sed で全参照箇所を更新
+5. **CI検証**: リンクチェッカー通過を確認
+6. **手動検証**: README、instructions、tests の主要導線を確認
+
+---
+
+**最終更新**: 2025-12-19
+**レビュー**: Phase 0完了時

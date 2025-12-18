@@ -1,0 +1,1062 @@
+{
+  "unit": "Unit 2",
+  "title": "未来表現",
+  "grammar": "will/be going to",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g2-u2-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私は明日東京へ行きます。",
+      "sentence": "I ____ go to Tokyo tomorrow.",
+      "choices": [
+        "will",
+        "am",
+        "was"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "beginner",
+      "explanation": "未来のことを表すにはwillを使います。tomorrow（明日）があるので未来形willが正解です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "未来を表す助動詞"
+    },
+    {
+      "id": "g2-u2-fib-002",
+      "type": "fillInBlank",
+      "japanese": "彼女は来週京都を訪れる予定です。",
+      "sentence": "She ____ visit Kyoto next week.",
+      "choices": [
+        "is going to",
+        "goes",
+        "went"
+      ],
+      "correctAnswer": "is going to",
+      "difficulty": "beginner",
+      "explanation": "予定を表すにはbe going toを使います。next week（来週）があるので未来形です。主語がsheなのでisを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予定を表す表現"
+    },
+    {
+      "id": "g2-u2-fib-003",
+      "type": "fillInBlank",
+      "japanese": "明日は雨が降るでしょう。",
+      "sentence": "It ____ rain tomorrow.",
+      "choices": [
+        "will",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "beginner",
+      "explanation": "天気の予測など、その場で判断した未来のことにはwillを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予測を表す"
+    },
+    {
+      "id": "g2-u2-fib-004",
+      "type": "fillInBlank",
+      "japanese": "私たちは今年の夏に沖縄へ行く予定です。",
+      "sentence": "We ____ go to Okinawa this summer.",
+      "choices": [
+        "are going to",
+        "go",
+        "went"
+      ],
+      "correctAnswer": "are going to",
+      "difficulty": "intermediate",
+      "explanation": "事前に決めていた計画にはbe going toを使います。主語がweなのでareを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "計画を表す"
+    },
+    {
+      "id": "g2-u2-fib-005",
+      "type": "fillInBlank",
+      "japanese": "彼は今夜テレビを見るつもりです。",
+      "sentence": "He ____ watch TV tonight.",
+      "choices": [
+        "is going to",
+        "watches",
+        "watched"
+      ],
+      "correctAnswer": "is going to",
+      "difficulty": "beginner",
+      "explanation": "tonight（今夜）という未来の予定を表すにはbe going toを使います。主語がheなのでisを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予定を表す"
+    },
+    {
+      "id": "g2-u2-fib-006",
+      "type": "fillInBlank",
+      "japanese": "彼らは来月新しい家に引っ越します。",
+      "sentence": "They ____ move to a new house next month.",
+      "choices": [
+        "will",
+        "are",
+        "moved"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "intermediate",
+      "explanation": "next month（来月）という未来のことを表すにはwillを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "未来の行動"
+    },
+    {
+      "id": "g2-u2-fib-007",
+      "type": "fillInBlank",
+      "japanese": "私は週末に友達と会う予定です。",
+      "sentence": "I ____ meet my friends this weekend.",
+      "choices": [
+        "am going to",
+        "meet",
+        "met"
+      ],
+      "correctAnswer": "am going to",
+      "difficulty": "beginner",
+      "explanation": "週末の予定を表すにはbe going toを使います。主語がIなのでamを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予定を表す"
+    },
+    {
+      "id": "g2-u2-fib-008",
+      "type": "fillInBlank",
+      "japanese": "彼女は来年大学生になります。",
+      "sentence": "She ____ be a university student next year.",
+      "choices": [
+        "will",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "intermediate",
+      "explanation": "next year（来年）という未来のことにはwillを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "未来の状態"
+    },
+    {
+      "id": "g2-u2-fib-009",
+      "type": "fillInBlank",
+      "japanese": "私たちは今日の午後サッカーをする予定です。",
+      "sentence": "We ____ play soccer this afternoon.",
+      "choices": [
+        "are going to",
+        "play",
+        "played"
+      ],
+      "correctAnswer": "are going to",
+      "difficulty": "beginner",
+      "explanation": "午後の予定を表すにはbe going toを使います。主語がweなのでareを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予定を表す"
+    },
+    {
+      "id": "g2-u2-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は将来医者になるでしょう。",
+      "sentence": "He ____ be a doctor in the future.",
+      "choices": [
+        "will",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "intermediate",
+      "explanation": "in the future（将来）という未来の予測にはwillを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "将来の予測"
+    },
+    {
+      "id": "g2-u2-fib-011",
+      "type": "fillInBlank",
+      "japanese": "私は明日早く起きるつもりです。",
+      "sentence": "I ____ get up early tomorrow.",
+      "choices": [
+        "am going to",
+        "get",
+        "got"
+      ],
+      "correctAnswer": "am going to",
+      "difficulty": "beginner",
+      "explanation": "明日の予定を表すにはbe going toを使います。主語がIなのでamを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予定を表す"
+    },
+    {
+      "id": "g2-u2-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼女たちは来週コンサートに行きます。",
+      "sentence": "They ____ go to a concert next week.",
+      "choices": [
+        "will",
+        "are",
+        "went"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "intermediate",
+      "explanation": "next week（来週）という未来のことにはwillを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "未来の行動"
+    },
+    {
+      "id": "g2-u2-fib-013",
+      "type": "fillInBlank",
+      "japanese": "彼は今晩宿題をする予定です。",
+      "sentence": "He ____ do his homework tonight.",
+      "choices": [
+        "is going to",
+        "does",
+        "did"
+      ],
+      "correctAnswer": "is going to",
+      "difficulty": "beginner",
+      "explanation": "tonight（今晩）の予定を表すにはbe going toを使います。主語がheなのでisを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予定を表す"
+    },
+    {
+      "id": "g2-u2-fib-014",
+      "type": "fillInBlank",
+      "japanese": "私たちは来月試験があります。",
+      "sentence": "We ____ have an exam next month.",
+      "choices": [
+        "will",
+        "are",
+        "had"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "intermediate",
+      "explanation": "next month（来月）の予定を表すにはwillを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "未来の予定"
+    },
+    {
+      "id": "g2-u2-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼女は明日新しいドレスを買う予定です。",
+      "sentence": "She ____ buy a new dress tomorrow.",
+      "choices": [
+        "is going to",
+        "buys",
+        "bought"
+      ],
+      "correctAnswer": "is going to",
+      "difficulty": "intermediate",
+      "explanation": "明日の予定を表すにはbe going toを使います。主語がsheなのでisを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "予定を表す"
+    },
+    {
+      "id": "g2-u2-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私は明日映画を見に行きます。",
+      "words": [
+        "I",
+        "will",
+        "go",
+        "to",
+        "see",
+        "a",
+        "movie",
+        "tomorrow"
+      ],
+      "correctAnswer": "I will go to see a movie tomorrow.",
+      "difficulty": "beginner",
+      "grammarPoint": "will + 動詞の原形",
+      "hint": "will の語順",
+      "explanation": "未来の予定を表すwillは主語の後に置き、その後に動詞の原形を続けます。\n\n「私は明日映画を見に行きます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I will go to see a movie tomorrow."
+    },
+    {
+      "id": "g2-u2-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は来週京都を訪れる予定です。",
+      "words": [
+        "she",
+        "is",
+        "going",
+        "to",
+        "visit",
+        "Kyoto",
+        "next",
+        "week"
+      ],
+      "correctAnswer": "She is going to visit Kyoto next week.",
+      "difficulty": "intermediate",
+      "grammarPoint": "be going to + 動詞の原形",
+      "hint": "be going to の語順",
+      "explanation": "be going toは「be動詞 + going + to + 動詞の原形」の順で使います。\n\n「彼女は来週京都を訪れる予定です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is going to visit Kyoto next week."
+    },
+    {
+      "id": "g2-u2-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは今晩パーティーを開きます。",
+      "words": [
+        "they",
+        "will",
+        "have",
+        "a",
+        "party",
+        "tonight"
+      ],
+      "correctAnswer": "They will have a party tonight.",
+      "difficulty": "beginner",
+      "grammarPoint": "will + 動詞の原形",
+      "hint": "未来を表す文",
+      "explanation": "willの後は必ず動詞の原形を使います。\n\n「彼らは今晩パーティーを開きます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They will have a party tonight."
+    },
+    {
+      "id": "g2-u2-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは来月旅行に行く予定です。",
+      "words": [
+        "we",
+        "are",
+        "going",
+        "to",
+        "go",
+        "on",
+        "a",
+        "trip",
+        "next",
+        "month"
+      ],
+      "correctAnswer": "We are going to go on a trip next month.",
+      "difficulty": "intermediate",
+      "grammarPoint": "be going to + 動詞の原形",
+      "hint": "be going to の語順",
+      "explanation": "主語がweなのでbe動詞はareを使います。\n\n「私たちは来月旅行に行く予定です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We are going to go on a trip next month."
+    },
+    {
+      "id": "g2-u2-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "彼は来年高校生になります。",
+      "words": [
+        "he",
+        "will",
+        "be",
+        "a",
+        "high",
+        "school",
+        "student",
+        "next",
+        "year"
+      ],
+      "correctAnswer": "He will be a high school student next year.",
+      "difficulty": "intermediate",
+      "grammarPoint": "will + be",
+      "hint": "未来の状態",
+      "explanation": "未来の状態を表すときは will be を使います。\n\n「彼は来年高校生になります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will be a high school student next year."
+    },
+    {
+      "id": "g2-u2-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は明日早く起きるつもりです。",
+      "words": [
+        "I",
+        "am",
+        "going",
+        "to",
+        "get",
+        "up",
+        "early",
+        "tomorrow"
+      ],
+      "correctAnswer": "I am going to get up early tomorrow.",
+      "difficulty": "beginner",
+      "grammarPoint": "be going to + 動詞の原形",
+      "hint": "予定を表す",
+      "explanation": "主語がIなのでbe動詞はamを使います。\n\n「私は明日早く起きるつもりです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am going to get up early tomorrow."
+    },
+    {
+      "id": "g2-u2-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は週末に買い物に行きます。",
+      "words": [
+        "she",
+        "will",
+        "go",
+        "shopping",
+        "this",
+        "weekend"
+      ],
+      "correctAnswer": "She will go shopping this weekend.",
+      "difficulty": "beginner",
+      "grammarPoint": "will + go shopping",
+      "hint": "未来の行動",
+      "explanation": "go shoppingで「買い物に行く」という意味になります。\n\n「彼女は週末に買い物に行きます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will go shopping this weekend."
+    },
+    {
+      "id": "g2-u2-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは今日の午後公園で遊ぶ予定です。",
+      "words": [
+        "we",
+        "are",
+        "going",
+        "to",
+        "play",
+        "in",
+        "the",
+        "park",
+        "this",
+        "afternoon"
+      ],
+      "correctAnswer": "We are going to play in the park this afternoon.",
+      "difficulty": "intermediate",
+      "grammarPoint": "be going to + 動詞の原形",
+      "hint": "be going to の語順",
+      "explanation": "場所を表す前置詞句（in the park）は動詞の後に置きます。\n\n「私たちは今日の午後公園で遊ぶ予定です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We are going to play in the park this afternoon."
+    },
+    {
+      "id": "g2-u2-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼は明日テストを受けます。",
+      "words": [
+        "he",
+        "will",
+        "take",
+        "a",
+        "test",
+        "tomorrow"
+      ],
+      "correctAnswer": "He will take a test tomorrow.",
+      "difficulty": "beginner",
+      "grammarPoint": "will + 動詞の原形",
+      "hint": "未来の予定",
+      "explanation": "take a testで「テストを受ける」という意味です。\n\n「彼は明日テストを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will take a test tomorrow."
+    },
+    {
+      "id": "g2-u2-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "私は来週友達に会う予定です。",
+      "words": [
+        "I",
+        "am",
+        "going",
+        "to",
+        "meet",
+        "my",
+        "friend",
+        "next",
+        "week"
+      ],
+      "correctAnswer": "I am going to meet my friend next week.",
+      "difficulty": "intermediate",
+      "grammarPoint": "be going to + 動詞の原形",
+      "hint": "予定を表す",
+      "explanation": "事前に決めていた予定にはbe going toを使います。\n\n「私は来週友達に会う予定です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am going to meet my friend next week."
+    },
+    {
+      "id": "g2-u2-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は今晩夕食を作ります。",
+      "words": [
+        "she",
+        "will",
+        "cook",
+        "dinner",
+        "tonight"
+      ],
+      "correctAnswer": "She will cook dinner tonight.",
+      "difficulty": "beginner",
+      "grammarPoint": "will + 動詞の原形",
+      "hint": "未来の行動",
+      "explanation": "その場で決めたことにはwillを使います。\n\n「彼女は今晩夕食を作ります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will cook dinner tonight."
+    },
+    {
+      "id": "g2-u2-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは来月東京に引っ越す予定です。",
+      "words": [
+        "we",
+        "are",
+        "going",
+        "to",
+        "move",
+        "to",
+        "Tokyo",
+        "next",
+        "month"
+      ],
+      "correctAnswer": "We are going to move to Tokyo next month.",
+      "difficulty": "intermediate",
+      "grammarPoint": "be going to + 動詞の原形",
+      "hint": "be going to の語順",
+      "explanation": "move toで「～に引っ越す」という意味になります。\n\n「私たちは来月東京に引っ越す予定です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We are going to move to Tokyo next month."
+    },
+    {
+      "id": "g2-u2-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼は来年海外に行きます。",
+      "words": [
+        "he",
+        "will",
+        "go",
+        "abroad",
+        "next",
+        "year"
+      ],
+      "correctAnswer": "He will go abroad next year.",
+      "difficulty": "intermediate",
+      "grammarPoint": "will + 動詞の原形",
+      "hint": "未来の予定",
+      "explanation": "abroadは「海外に」という意味の副詞です。\n\n「彼は来年海外に行きます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will go abroad next year."
+    },
+    {
+      "id": "g2-u2-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "私は明日図書館で勉強する予定です。",
+      "words": [
+        "I",
+        "am",
+        "going",
+        "to",
+        "study",
+        "at",
+        "the",
+        "library",
+        "tomorrow"
+      ],
+      "correctAnswer": "I am going to study at the library tomorrow.",
+      "difficulty": "intermediate",
+      "grammarPoint": "be going to + 動詞の原形",
+      "hint": "予定を表す",
+      "explanation": "at the libraryで「図書館で」という場所を表します。\n\n「私は明日図書館で勉強する予定です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am going to study at the library tomorrow."
+    },
+    {
+      "id": "g2-u2-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は来週ピアノのレッスンを受けます。",
+      "words": [
+        "she",
+        "will",
+        "have",
+        "a",
+        "piano",
+        "lesson",
+        "next",
+        "week"
+      ],
+      "correctAnswer": "She will have a piano lesson next week.",
+      "difficulty": "intermediate",
+      "grammarPoint": "will + 動詞の原形",
+      "hint": "未来の予定",
+      "explanation": "have a lessonで「レッスンを受ける」という意味です。\n\n「彼女は来週ピアノのレッスンを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will have a piano lesson next week."
+    },
+    {
+      "id": "g2-u2-para-001",
+      "type": "paraphrase",
+      "japanese": "私は明日サッカーをします。",
+      "originalSentence": "I will play soccer tomorrow.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "I am going to play soccer tomorrow.",
+        "I am play soccer tomorrow.",
+        "I going to play soccer tomorrow."
+      ],
+      "correctAnswer": "I am going to play soccer tomorrow.",
+      "difficulty": "beginner",
+      "explanation": "willをbe going toに書き換えるとき、主語がIなのでam going toを使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "be動詞を忘れずに"
+    },
+    {
+      "id": "g2-u2-para-002",
+      "type": "paraphrase",
+      "japanese": "彼女は来週東京を訪れる予定です。",
+      "originalSentence": "She is going to visit Tokyo next week.",
+      "question": "willを使って書き換えなさい。",
+      "choices": [
+        "She will visit Tokyo next week.",
+        "She will visits Tokyo next week.",
+        "She will to visit Tokyo next week."
+      ],
+      "correctAnswer": "She will visit Tokyo next week.",
+      "difficulty": "beginner",
+      "explanation": "be going toをwillに書き換えるとき、willの後は必ず動詞の原形を使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-para-003",
+      "type": "paraphrase",
+      "japanese": "私たちは今夜映画を見ます。",
+      "originalSentence": "We will watch a movie tonight.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "We are going to watch a movie tonight.",
+        "We is going to watch a movie tonight.",
+        "We going to watch a movie tonight."
+      ],
+      "correctAnswer": "We are going to watch a movie tonight.",
+      "difficulty": "beginner",
+      "explanation": "主語がweなので、be動詞はareを使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "主語に合わせたbe動詞"
+    },
+    {
+      "id": "g2-u2-para-004",
+      "type": "paraphrase",
+      "japanese": "彼は明日早く起きる予定です。",
+      "originalSentence": "He is going to get up early tomorrow.",
+      "question": "willを使って書き換えなさい。",
+      "choices": [
+        "He will get up early tomorrow.",
+        "He will gets up early tomorrow.",
+        "He will getting up early tomorrow."
+      ],
+      "correctAnswer": "He will get up early tomorrow.",
+      "difficulty": "beginner",
+      "explanation": "willの後は動詞の原形get upを使います。三人称単数のsは不要です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "willの後は原形"
+    },
+    {
+      "id": "g2-u2-para-005",
+      "type": "paraphrase",
+      "japanese": "私は来月日本に行きます。",
+      "originalSentence": "I will go to Japan next month.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "I am going to go to Japan next month.",
+        "I am going go to Japan next month.",
+        "I will going to go to Japan next month."
+      ],
+      "correctAnswer": "I am going to go to Japan next month.",
+      "difficulty": "intermediate",
+      "explanation": "willをbe going toに書き換えます。going toの後のgoも必要です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "going to の後も動詞の原形"
+    },
+    {
+      "id": "g2-u2-para-006",
+      "type": "paraphrase",
+      "japanese": "彼女は今晩宿題をする予定です。",
+      "originalSentence": "She is going to do her homework tonight.",
+      "question": "willを使って書き換えなさい。",
+      "choices": [
+        "She will do her homework tonight.",
+        "She will does her homework tonight.",
+        "She will doing her homework tonight."
+      ],
+      "correctAnswer": "She will do her homework tonight.",
+      "difficulty": "intermediate",
+      "explanation": "be going toをwillに書き換えるとき、動詞は原形のdoを使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-para-007",
+      "type": "paraphrase",
+      "japanese": "私たちは週末に公園に行きます。",
+      "originalSentence": "We will go to the park this weekend.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "We are going to go to the park this weekend.",
+        "We is going to go to the park this weekend.",
+        "We are go to the park this weekend."
+      ],
+      "correctAnswer": "We are going to go to the park this weekend.",
+      "difficulty": "intermediate",
+      "explanation": "主語がweなのでbe動詞はareを使い、going to go to...となります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "areを使う"
+    },
+    {
+      "id": "g2-u2-para-008",
+      "type": "paraphrase",
+      "japanese": "彼らは来年結婚する予定です。",
+      "originalSentence": "They are going to get married next year.",
+      "question": "willを使って書き換えなさい。",
+      "choices": [
+        "They will get married next year.",
+        "They will gets married next year.",
+        "They will to get married next year."
+      ],
+      "correctAnswer": "They will get married next year.",
+      "difficulty": "intermediate",
+      "explanation": "be going toをwillに書き換えます。get marriedで「結婚する」という意味です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-para-009",
+      "type": "paraphrase",
+      "japanese": "私は明日友達に会います。",
+      "originalSentence": "I will meet my friend tomorrow.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "I am going to meet my friend tomorrow.",
+        "I am meet my friend tomorrow.",
+        "I going to meet my friend tomorrow."
+      ],
+      "correctAnswer": "I am going to meet my friend tomorrow.",
+      "difficulty": "intermediate",
+      "explanation": "主語がIなので、am going toを使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "amを使う"
+    },
+    {
+      "id": "g2-u2-para-010",
+      "type": "paraphrase",
+      "japanese": "彼は来週試験を受ける予定です。",
+      "originalSentence": "He is going to take a test next week.",
+      "question": "willを使って書き換えなさい。",
+      "choices": [
+        "He will take a test next week.",
+        "He will takes a test next week.",
+        "He will taking a test next week."
+      ],
+      "correctAnswer": "He will take a test next week.",
+      "difficulty": "intermediate",
+      "explanation": "be going toをwillに書き換えます。willの後は動詞の原形takeです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-para-011",
+      "type": "paraphrase",
+      "japanese": "私たちは来月引っ越します。",
+      "originalSentence": "We will move next month.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "We are going to move next month.",
+        "We is going to move next month.",
+        "We are moving to move next month."
+      ],
+      "correctAnswer": "We are going to move next month.",
+      "difficulty": "advanced",
+      "explanation": "主語がweなので、are going toを使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "areを使う"
+    },
+    {
+      "id": "g2-u2-para-012",
+      "type": "paraphrase",
+      "japanese": "彼女は明日料理をする予定です。",
+      "originalSentence": "She is going to cook tomorrow.",
+      "question": "willを使って書き換えなさい。",
+      "choices": [
+        "She will cook tomorrow.",
+        "She will cooks tomorrow.",
+        "She will to cook tomorrow."
+      ],
+      "correctAnswer": "She will cook tomorrow.",
+      "difficulty": "advanced",
+      "explanation": "be going toをwillに書き換えます。willの後は動詞の原形cookです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-para-013",
+      "type": "paraphrase",
+      "japanese": "私は来年大学生になります。",
+      "originalSentence": "I will be a university student next year.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "I am going to be a university student next year.",
+        "I am be a university student next year.",
+        "I going to be a university student next year."
+      ],
+      "correctAnswer": "I am going to be a university student next year.",
+      "difficulty": "advanced",
+      "explanation": "will beをam going to beに書き換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "am going to be"
+    },
+    {
+      "id": "g2-u2-para-014",
+      "type": "paraphrase",
+      "japanese": "彼らは今晩パーティーを開く予定です。",
+      "originalSentence": "They are going to have a party tonight.",
+      "question": "willを使って書き換えなさい。",
+      "choices": [
+        "They will have a party tonight.",
+        "They will has a party tonight.",
+        "They will having a party tonight."
+      ],
+      "correctAnswer": "They will have a party tonight.",
+      "difficulty": "advanced",
+      "explanation": "be going toをwillに書き換えます。willの後は動詞の原形haveです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-para-015",
+      "type": "paraphrase",
+      "japanese": "私は明日図書館で勉強します。",
+      "originalSentence": "I will study at the library tomorrow.",
+      "question": "be going toを使って書き換えなさい。",
+      "choices": [
+        "I am going to study at the library tomorrow.",
+        "I am study at the library tomorrow.",
+        "I will going to study at the library tomorrow."
+      ],
+      "correctAnswer": "I am going to study at the library tomorrow.",
+      "difficulty": "advanced",
+      "explanation": "willをam going toに書き換えます。主語がIなのでamです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "am going to"
+    },
+    {
+      "id": "g2-u2-vf-001",
+      "type": "verbForm",
+      "japanese": "私は明日テニスをします。",
+      "sentence": "I will ____ tennis tomorrow.",
+      "verb": "play",
+      "choices": [
+        "play",
+        "plays",
+        "played"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "beginner",
+      "explanation": "willの後は必ず動詞の原形を使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-002",
+      "type": "verbForm",
+      "japanese": "彼女は来週東京を訪れる予定です。",
+      "sentence": "She is going to ____ Tokyo next week.",
+      "verb": "visit",
+      "choices": [
+        "visit",
+        "visits",
+        "visited"
+      ],
+      "correctAnswer": "visit",
+      "difficulty": "beginner",
+      "explanation": "be going toの後も動詞の原形を使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-003",
+      "type": "verbForm",
+      "japanese": "私たちは今夜映画を見ます。",
+      "sentence": "We will ____ a movie tonight.",
+      "verb": "watch",
+      "choices": [
+        "watch",
+        "watches",
+        "watched"
+      ],
+      "correctAnswer": "watch",
+      "difficulty": "beginner",
+      "explanation": "willの後は動詞の原形watchを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-004",
+      "type": "verbForm",
+      "japanese": "彼は明日早く起きる予定です。",
+      "sentence": "He is going to ____ up early tomorrow.",
+      "verb": "get",
+      "choices": [
+        "get",
+        "gets",
+        "got"
+      ],
+      "correctAnswer": "get",
+      "difficulty": "beginner",
+      "explanation": "be going toの後は動詞の原形getを使います。三人称単数のsは不要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-005",
+      "type": "verbForm",
+      "japanese": "私は来月日本に行きます。",
+      "sentence": "I will ____ to Japan next month.",
+      "verb": "go",
+      "choices": [
+        "go",
+        "goes",
+        "went"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "intermediate",
+      "explanation": "willの後は動詞の原形goを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-006",
+      "type": "verbForm",
+      "japanese": "彼女は今晩宿題をする予定です。",
+      "sentence": "She is going to ____ her homework tonight.",
+      "verb": "do",
+      "choices": [
+        "do",
+        "does",
+        "did"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "intermediate",
+      "explanation": "be going toの後は動詞の原形doを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-007",
+      "type": "verbForm",
+      "japanese": "私たちは週末に買い物に行きます。",
+      "sentence": "We will ____ shopping this weekend.",
+      "verb": "go",
+      "choices": [
+        "go",
+        "goes",
+        "went"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "intermediate",
+      "explanation": "willの後は動詞の原形goを使います。go shoppingで「買い物に行く」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-008",
+      "type": "verbForm",
+      "japanese": "彼は来年医者になります。",
+      "sentence": "He will ____ a doctor next year.",
+      "verb": "be",
+      "choices": [
+        "be",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "be",
+      "difficulty": "advanced",
+      "explanation": "willの後はbe動詞も原形beを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "be動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-009",
+      "type": "verbForm",
+      "japanese": "私は明日友達に会う予定です。",
+      "sentence": "I am going to ____ my friend tomorrow.",
+      "verb": "meet",
+      "choices": [
+        "meet",
+        "meets",
+        "met"
+      ],
+      "correctAnswer": "meet",
+      "difficulty": "advanced",
+      "explanation": "be going toの後は動詞の原形meetを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-vf-010",
+      "type": "verbForm",
+      "japanese": "彼女は来週試験を受けます。",
+      "sentence": "She will ____ a test next week.",
+      "verb": "take",
+      "choices": [
+        "take",
+        "takes",
+        "took"
+      ],
+      "correctAnswer": "take",
+      "difficulty": "advanced",
+      "explanation": "willの後は動詞の原形takeを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g2-u2-conv-001",
+      "type": "conversation",
+      "japanese": "明日の予定について話しています。",
+      "situation": "友達との会話",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What will you do tomorrow?"
+        },
+        {
+          "speaker": "B",
+          "text": "I ____ go shopping."
+        }
+      ],
+      "choices": [
+        "will",
+        "am",
+        "was"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "beginner",
+      "explanation": "未来の予定を答えるときはwillを使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "未来を表す"
+    },
+    {
+      "id": "g2-u2-conv-002",
+      "type": "conversation",
+      "japanese": "週末の計画について話しています。",
+      "situation": "家族との会話",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are you going to visit your grandparents this weekend?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "am",
+        "will",
+        "do"
+      ],
+      "correctAnswer": "am",
+      "difficulty": "beginner",
+      "explanation": "be going toの疑問文にはbe動詞で答えます。主語がIなのでamです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "be動詞で答える"
+    },
+    {
+      "id": "g2-u2-conv-003",
+      "type": "conversation",
+      "japanese": "今晩の予定について話しています。",
+      "situation": "友達との会話",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What are you going to do tonight?"
+        },
+        {
+          "speaker": "B",
+          "text": "I ____ watch a movie."
+        }
+      ],
+      "choices": [
+        "am going to",
+        "will",
+        "was"
+      ],
+      "correctAnswer": "am going to",
+      "difficulty": "intermediate",
+      "explanation": "be going toの疑問文には同じ形で答えます。主語がIなのでam going toです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "同じ形で答える"
+    },
+    {
+      "id": "g2-u2-conv-004",
+      "type": "conversation",
+      "japanese": "来週の予定について話しています。",
+      "situation": "クラスメートとの会話",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Will you come to the party next week?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "will",
+        "am",
+        "do"
+      ],
+      "correctAnswer": "will",
+      "difficulty": "intermediate",
+      "explanation": "willの疑問文にはwillを使って答えます。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "willで答える"
+    },
+    {
+      "id": "g2-u2-conv-005",
+      "type": "conversation",
+      "japanese": "明日の天気について話しています。",
+      "situation": "天気の会話",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Do you think it will rain tomorrow?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, it ____ rain."
+        }
+      ],
+      "choices": [
+        "will probably",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "will probably",
+      "difficulty": "advanced",
+      "explanation": "天気の予測にはwillを使います。probablyで「おそらく」という意味を加えます。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "予測を表す"
+    }
+  ]
+}

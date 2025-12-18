@@ -833,7 +833,12 @@ export class AcquisitionQueueManager {
 
   private enqueueWithLimit(queue: QueueEntry[], entry: QueueEntry, maxSize: number): void {
     if (queue.length >= maxSize) {
-      console.warn(`キューが満杯です（${maxSize}語）。古いエントリを削除します。`);
+      // キューが満杯の場合は古いエントリを削除（これは正常動作）
+      // 警告レベルを下げてコンソールの乱雑さを防ぐ
+      if (queue.length % 50 === 0) {
+        // 50件ごとに1回だけログ出力
+        console.info(`[MemoryAI] キュー管理: ${maxSize}語制限に達しました（古いエントリを自動削除）`);
+      }
       queue.shift();
     }
     queue.push(entry);

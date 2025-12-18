@@ -1,0 +1,57 @@
+name: Documentation Link Check
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+      - 'docs/**'
+      - '.aitk/instructions/**'
+  push:
+    branches:
+      - main
+    paths:
+      - '**.md'
+      - 'docs/**'
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check Markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
+          config-file: '.github/markdown-link-check-config.json'
+          check-modified-files-only: 'yes'
+
+      - name: Check docs integrity
+        run: |
+          echo "Checking for broken internal links..."
+          # 移動禁止ファイルの存在確認
+          CRITICAL_FILES=(
+            "docs/guidelines/META_AI_TROUBLESHOOTING.md"
+            "docs/guidelines/QUESTION_SCHEDULER_QUICK_GUIDE.md"
+            "docs/specifications/QUESTION_SCHEDULER_SPEC.md"
+            "docs/quality/QUESTION_SCHEDULER_QA_PIPELINE.md"
+            "docs/references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md"
+          )
+
+          MISSING_FILES=()
+          for file in "${CRITICAL_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              MISSING_FILES+=("$file")
+            fi
+          done
+
+          if [ ${#MISSING_FILES[@]} -gt 0 ]; then
+            echo "❌ Critical files are missing:"
+            printf '%s\n' "${MISSING_FILES[@]}"
+            echo "These files are listed in docs/.donotmove and must not be moved."
+            exit 1
+          fi
+
+          echo "✅ All critical files exist"

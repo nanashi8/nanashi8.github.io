@@ -10,6 +10,7 @@ import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { useLearningEngine } from '../hooks/useLearningEngine';
+import { QuestionScheduler } from '@/ai/scheduler';
 
 interface VerbFormQuestion {
   id: string;
@@ -124,6 +125,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     processQuestion: processAdaptiveQuestion,
     currentStrategy,
   } = useAdaptiveNetwork();
+
+  // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
+  const [scheduler] = useState(() => new QuestionScheduler());
 
   // 問題再出題管理フック
   const { clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<GrammarQuestion>();
@@ -347,7 +351,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       }
 
       // 全ての問題を収集
-      let questions: GrammarQuestion[] = [];
+      const questions: GrammarQuestion[] = [];
 
       // 新しいgrammar形式から問題を収集
       allGrammarFiles.forEach((grammarFile) => {
@@ -382,10 +386,56 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         throw new Error(`問題データが見つかりません`);
       }
 
-      // シャッフル
-      questions = questions.sort(() => Math.random() - 0.5);
+      // QuestionSchedulerで出題順序を決定（シャッフルは内部で実施）
+      // 🔥 重要: 前回セッションの統計データも引き継ぐ（より良い初期出題順序）
+      const scheduleResult = await scheduler.schedule({
+        questions: questions.map(q => ({
+          word: q.id || q.japanese || 'unknown',
+          meaning: q.japanese || '',
+          reading: '',
+          grade: 1,
+          category: 'grammar',
+          etymology: '',
+          relatedWords: '',
+          relatedFields: '',
+          difficulty: q.difficulty || 'beginner',
+        })),
+        mode: 'grammar',
+        limits: {
+          learningLimit: learningLimit,
+          reviewLimit: reviewLimit,
+        },
+        sessionStats: {
+          correct: sessionStats.correct,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.review || 0,
+          mastered: sessionStats.mastered || 0,
+          duration: 0,
+        },
+        useMetaAI: adaptiveEnabled,
+        isReviewFocusMode: isReviewFocusMode,
+      });
 
-      setCurrentQuestions(questions);
+      // スケジュールされたID順序にGrammarQuestionを並べ替え
+      const wordToQuestion = new Map(questions.map(q => [q.id || q.japanese || 'unknown', q]));
+      const scheduledQuestions = scheduleResult.scheduledQuestions
+        .map(q => wordToQuestion.get(q.word))
+        .filter((q): q is GrammarQuestion => q !== undefined);
+
+      // 振動スコア監視
+      if (scheduleResult.vibrationScore > 50) {
+        logger.warn('[GrammarQuizView] 高い振動スコア検出', {
+          score: scheduleResult.vibrationScore,
+          processingTime: scheduleResult.processingTime,
+        });
+      }
+
+      logger.log('[GrammarQuizView] QuestionScheduler適用完了', {
+        total: scheduledQuestions.length,
+        vibrationScore: scheduleResult.vibrationScore,
+      });
+
+      setCurrentQuestions(scheduledQuestions);
       setCurrentQuestionIndex(0);
       setSelectedAnswer(null);
       setSelectedWords([]);
@@ -907,10 +957,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 estimatedSpeed={adaptiveLearning.state.personalParams?.learningSpeed}
                 dataSource={
                   grade.startsWith('g') && grade.includes('-unit')
-                    ? ` 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
-                    : ` ${grade === 'all' ? '全学年' : `${grade}年`}`
+                    ? `文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
+                    : grade === 'all'
+                      ? '全学年の内容'
+                      : `${grade}年の内容`
                 }
-                category={`出題形式: ${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`}
+                category={quizType === 'all' ? '全ての種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全ての種類'}
                 difficulty=""
                 wordPhraseFilter="all"
                 grammarUnit={currentGrammarUnit}

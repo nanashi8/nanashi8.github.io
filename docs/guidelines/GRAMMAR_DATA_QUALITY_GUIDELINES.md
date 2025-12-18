@@ -1,3 +1,18 @@
+---
+canonical: docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md
+status: stable
+lastUpdated: 2025-12-19
+diataxisCategory: reference
+references:
+  - .aitk/instructions/grammar-data-quality.instructions.md
+  - .github/PULL_REQUEST_TEMPLATE.md
+  - scripts/README.md
+  - docs/README.md
+  - docs/quality/grammar_quality_report.md
+dataPath: public/data/grammar/*.json
+doNotMove: true
+---
+
 # 文法問題データ品質ガイドライン
 
 ## 概要

@@ -1,6 +1,20 @@
+---
+canonical: docs/quality/QUALITY_SYSTEM.md
+status: stable
+lastUpdated: 2025-12-19
+diataxisCategory: reference
+references:
+  - .aitk/instructions/code-quality.instructions.md
+  - README.md
+  - docs/maintenance/SELF_MANAGING_PROJECT.md
+  - docs/design/PROJECT_STRUCTURE_VALIDATION.md
+  - docs/quality/INTEGRATED_QUALITY_PIPELINE.md
+doNotMove: true
+---
+
 # 品質保証システム - 統合ガイド
 
-**最終更新**: 2025年12月11日  
+**最終更新**: 2025-12-19  
 **対象**: 英語学習アプリ (nanashi8.github.io)  
 **Phase**: Phase 1-2リファクタリング完了
 

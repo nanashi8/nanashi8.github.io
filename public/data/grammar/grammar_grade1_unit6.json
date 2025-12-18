@@ -318,8 +318,7 @@
       "words": [
         "you",
         "are",
-        "studying",
-        "?"
+        "studying"
       ],
       "correctAnswer": "Are you studying?",
       "difficulty": "intermediate",
@@ -402,8 +401,7 @@
         "is",
         "watching",
         "TV",
-        "now",
-        "?"
+        "now"
       ],
       "correctAnswer": "Is he watching TV now?",
       "difficulty": "advanced",
@@ -454,8 +452,7 @@
         "what",
         "you",
         "are",
-        "doing",
-        "?"
+        "doing"
       ],
       "correctAnswer": "What are you doing?",
       "difficulty": "advanced",

@@ -465,10 +465,9 @@ function ScoreBoard({
       setRetentionData({ retentionRate, appearedCount });
       setDetailedStatsData(getGrammarDetailedRetentionStats());
     } else if (mode === 'memorization') {
-      // 暗記モードは専用の統計関数を使用
-      setDetailedStatsData(getMemorizationDetailedRetentionStats());
-      // retentionRateは詳細統計から取得
+      // ✅ 暗記モードは専用の統計関数を1回だけ呼び出す
       const stats = getMemorizationDetailedRetentionStats();
+      setDetailedStatsData(stats);
       setRetentionData({
         retentionRate: stats.basicRetentionRate,
         appearedCount: stats.appearedWords,

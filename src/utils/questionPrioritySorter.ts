@@ -31,7 +31,7 @@ interface SortOptions {
   learningLimit?: number | null;
   reviewLimit?: number | null;
   mode: 'translation' | 'spelling' | 'grammar' | 'memorization';
-  useMetaAI?: boolean; // 14AI統合を有効化
+  useMetaAI?: boolean; // メタAI統合を有効化
   sessionContext?: {
     recentErrors: number;
     sessionLength: number;
@@ -189,9 +189,9 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
     sessionContext,
   } = options;
 
-  // 14AI統合: メタAIネットワークを使用する場合
+  // メタAI統合: QuestionSchedulerを使用する場合
   if (useMetaAI) {
-    logger.info('🤖 14AI統合システム起動');
+    logger.info('🤖 メタAI統合システム起動');
     // メタAIネットワークを初期化（将来の拡張用）
     // const metaAI = getMetaAINetwork();
 
@@ -211,7 +211,7 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       sessionDuration: sessionContext?.sessionDuration || 0,
     };
 
-    logger.info('📊 14AIコンテキスト', context);
+    logger.info('📊 メタAI統合コンテキスト', context);
   }
 
   // 各語句の状態を取得

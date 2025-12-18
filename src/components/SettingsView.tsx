@@ -4,8 +4,6 @@ import type { DataSource } from '../App';
 import type { CustomQuestionSet } from '../types/customQuestions';
 import LearningPlanView from './LearningPlanView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
-import { AdaptiveNetworkControl } from './AdaptiveNetworkControl';
-import './AdaptiveNetworkControl.css';
 
 interface SettingsViewProps {
   allQuestions: Question[];
@@ -319,20 +317,6 @@ function SettingsView({
             </div>
           </div>
         </div>
-      </div>
-
-      {/* 適応的学習AI設定 */}
-      <div className="bg-card-bg rounded-xl p-6 shadow-md border-2 border-card-border">
-        <h3 className="text-xl font-bold text-text-color mb-4 flex items-center gap-2">
-          <span>🧠</span>
-          <span>適応的学習AI</span>
-        </h3>
-        <div className="mb-4">
-          <p className="text-sm text-text-secondary mb-3">
-            あなたの学習パターンを分析し、最適な学習戦略を自動選択します。
-          </p>
-        </div>
-        <AdaptiveNetworkControl />
       </div>
 
       {/* プライバシーポリシー */}

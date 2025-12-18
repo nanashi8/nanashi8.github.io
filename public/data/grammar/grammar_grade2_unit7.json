@@ -1,1561 +1,1972 @@
 {
-  "enabled": true,
   "unit": "Unit 7",
-  "title": "比較級・最上級",
-  "grammar": "-er/-est、more/most",
-  "totalQuestions": 85,
+  "title": "受動態",
+  "grammar": "be動詞 + 過去分詞（受け身）",
+  "totalQuestions": 120,
   "questionTypes": {
-    "fillInBlank": 27,
-    "sentenceOrdering": 22,
-    "paraphrase": 18,
-    "verbForm": 10,
-    "conversation": 8
+    "verbForm": 30,
+    "fillInBlank": 35,
+    "sentenceOrdering": 35,
+    "paraphrase": 15,
+    "conversation": 5
   },
   "questions": [
     {
-      "id": "g2-u7-fib-001",
-      "type": "fillInBlank",
-      "japanese": "彼は私より背が高いです。",
-      "sentence": "He is ____ than me.",
+      "id": "vf-g3-u0-001",
+      "japanese": "英語は世界中で話されています。",
+      "sentence": "English ____ spoken around the world.",
+      "verb": "passive",
       "choices": [
-        "taller",
-        "tall",
-        "tallest"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "taller",
-      "difficulty": "beginner",
-      "explanation": "比較級: tall → taller。thanがあるので比較級を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
     },
     {
-      "id": "g2-u7-fib-002",
-      "type": "fillInBlank",
-      "japanese": "これはあれより大きいです。",
-      "sentence": "This is ____ than that.",
+      "id": "vf-g3-u0-002",
+      "japanese": "この本は多くの人に読まれています。",
+      "sentence": "This book ____ read by many people.",
+      "verb": "passive",
       "choices": [
-        "bigger",
-        "big",
-        "biggest"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "bigger",
-      "difficulty": "beginner",
-      "explanation": "比較級: big → bigger。短い形容詞はerをつけます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
     },
     {
-      "id": "g2-u7-fib-003",
-      "type": "fillInBlank",
-      "japanese": "彼女は私より速く走ります。",
-      "sentence": "She runs ____ than me.",
+      "id": "vf-g3-u0-003",
+      "japanese": "その手紙は彼女によって書かれました。",
+      "sentence": "The letter ____ written by her.",
+      "verb": "passive",
       "choices": [
-        "faster",
-        "fast",
-        "fastest"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "faster",
-      "difficulty": "beginner",
-      "explanation": "比較級: fast → faster\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
     },
     {
-      "id": "g2-u7-fib-004",
-      "type": "fillInBlank",
-      "japanese": "この本はあの本よりおもしろいです。",
-      "sentence": "This book is ____ interesting than that one.",
+      "id": "vf-g3-u0-004",
+      "japanese": "この橋は1990年に建てられました。",
+      "sentence": "This bridge ____ built in 1990.",
+      "verb": "passive",
       "choices": [
-        "more",
-        "most",
-        "much"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "more",
-      "difficulty": "beginner",
-      "explanation": "長い形容詞にはmoreを使います。more interesting\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
     },
     {
-      "id": "g2-u7-fib-005",
-      "type": "fillInBlank",
-      "japanese": "これはクラスで最も大きいです。",
-      "sentence": "This is the ____ in the class.",
+      "id": "vf-g3-u0-005",
+      "japanese": "これらの車は日本で作られています。",
+      "sentence": "These cars ____ made in Japan.",
+      "verb": "passive",
       "choices": [
-        "biggest",
-        "big",
-        "bigger"
+        "are",
+        "is",
+        "was"
       ],
-      "correctAnswer": "biggest",
-      "difficulty": "beginner",
-      "explanation": "最上級: big → biggest。theとinがあるので最上級です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
     },
     {
-      "id": "g2-u7-fib-006",
-      "type": "fillInBlank",
-      "japanese": "彼は3人の中で最も背が高いです。",
-      "sentence": "He is the ____ of the three.",
+      "id": "vf-g3-u0-006",
+      "japanese": "その問題は昨日解かれました。",
+      "sentence": "The problem ____ solved yesterday.",
+      "verb": "passive",
       "choices": [
-        "tallest",
-        "tall",
-        "taller"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "tallest",
-      "difficulty": "beginner",
-      "explanation": "最上級: tall → tallest。of the threeなので最上級を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
     },
     {
-      "id": "g2-u7-fib-007",
-      "type": "fillInBlank",
-      "japanese": "これは最もおもしろい本です。",
-      "sentence": "This is the ____ interesting book.",
+      "id": "vf-g3-u0-007",
+      "japanese": "この歌は若者に愛されています。",
+      "sentence": "This song ____ loved by young people.",
+      "verb": "passive",
       "choices": [
-        "most",
-        "more",
-        "much"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "most",
-      "difficulty": "beginner",
-      "explanation": "長い形容詞の最上級にはmostを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
     },
     {
-      "id": "g2-u7-fib-008",
-      "type": "fillInBlank",
-      "japanese": "彼女は私より若いです。",
-      "sentence": "She is ____ than me.",
+      "id": "vf-g3-u0-008",
+      "japanese": "彼の名前はよく知られています。",
+      "sentence": "His name ____ well known.",
+      "verb": "passive",
       "choices": [
-        "younger",
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-009",
+      "japanese": "その窓は彼によって壊されました。",
+      "sentence": "The window ____ broken by him.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-010",
+      "japanese": "これらの写真は去年撮られました。",
+      "sentence": "These photos ____ taken last year.",
+      "verb": "passive",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-011",
+      "japanese": "その扉は開けられています。",
+      "sentence": "The door ____ opened.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-012",
+      "japanese": "このコンピューターは使われていません。",
+      "sentence": "This computer ____ not used.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-013",
+      "japanese": "その建物は1950年に建てられました。",
+      "sentence": "The building ____ constructed in 1950.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-014",
+      "japanese": "多くの木が植えられました。",
+      "sentence": "Many trees ____ planted.",
+      "verb": "passive",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-015",
+      "japanese": "その映画は世界中で見られています。",
+      "sentence": "The movie ____ watched worldwide.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-016",
+      "japanese": "この部屋は毎日掃除されます。",
+      "sentence": "This room ____ cleaned every day.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-017",
+      "japanese": "その手紙は英語で書かれました。",
+      "sentence": "The letter ____ written in English.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-018",
+      "japanese": "これらの製品は中国で製造されています。",
+      "sentence": "These products ____ manufactured in China.",
+      "verb": "passive",
+      "choices": [
+        "are",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-019",
+      "japanese": "その絵は有名な画家によって描かれました。",
+      "sentence": "The painting ____ painted by a famous artist.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-020",
+      "japanese": "この規則は守られるべきです。",
+      "sentence": "This rule should ____ followed.",
+      "verb": "passive",
+      "choices": [
+        "be",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "be",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "fb-g3-u0-001",
+      "japanese": "英語は世界中で話されています。",
+      "sentence": "English is ____ around the world.",
+      "choices": [
+        "spoken",
+        "speak",
+        "spoke"
+      ],
+      "correctAnswer": "spoken",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-002",
+      "japanese": "この本は多くの人に読まれています。",
+      "sentence": "This book is ____ by many people.",
+      "choices": [
+        "read",
+        "reads",
+        "reading"
+      ],
+      "correctAnswer": "read",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-003",
+      "japanese": "その手紙は彼女によって書かれました。",
+      "sentence": "The letter was ____ by her.",
+      "choices": [
+        "written",
+        "write",
+        "wrote"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-004",
+      "japanese": "この橋は1990年に建てられました。",
+      "sentence": "This bridge was ____ in 1990.",
+      "choices": [
+        "built",
+        "build",
+        "builds"
+      ],
+      "correctAnswer": "built",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-005",
+      "japanese": "これらの車は日本で作られています。",
+      "sentence": "These cars are ____ in Japan.",
+      "choices": [
+        "made",
+        "make",
+        "makes"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-006",
+      "japanese": "その問題は昨日解かれました。",
+      "sentence": "The problem was ____ yesterday.",
+      "choices": [
+        "solved",
+        "solve",
+        "solves"
+      ],
+      "correctAnswer": "solved",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-007",
+      "japanese": "この歌は若者に愛されています。",
+      "sentence": "This song is ____ by young people.",
+      "choices": [
+        "loved",
+        "lov",
+        "lovs"
+      ],
+      "correctAnswer": "loved",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-008",
+      "japanese": "彼の名前はよく知られています。",
+      "sentence": "His name is well ____.",
+      "choices": [
+        "known",
+        "know",
+        "knew"
+      ],
+      "correctAnswer": "known",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-009",
+      "japanese": "その窓は彼によって壊されました。",
+      "sentence": "The window was ____ by him.",
+      "choices": [
+        "broken",
+        "break",
+        "broke"
+      ],
+      "correctAnswer": "broken",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-010",
+      "japanese": "これらの写真は去年撮られました。",
+      "sentence": "These photos were ____ last year.",
+      "choices": [
+        "taken",
+        "take",
+        "took"
+      ],
+      "correctAnswer": "taken",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-011",
+      "japanese": "その扉は開けられています。",
+      "sentence": "The door is ____.",
+      "choices": [
+        "opened",
+        "open",
+        "opens"
+      ],
+      "correctAnswer": "opened",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-012",
+      "japanese": "このコンピューターは使われていません。",
+      "sentence": "This computer is not ____.",
+      "choices": [
+        "used",
+        "us",
+        "uss"
+      ],
+      "correctAnswer": "used",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-013",
+      "japanese": "その建物は1950年に建てられました。",
+      "sentence": "The building was ____ in 1950.",
+      "choices": [
+        "constructed",
+        "construct",
+        "constructs"
+      ],
+      "correctAnswer": "constructed",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-014",
+      "japanese": "多くの木が植えられました。",
+      "sentence": "Many trees were ____.",
+      "choices": [
+        "planted",
+        "plant",
+        "plants"
+      ],
+      "correctAnswer": "planted",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-015",
+      "japanese": "その映画は世界中で見られています。",
+      "sentence": "The movie is ____ worldwide.",
+      "choices": [
+        "watched",
+        "watch",
+        "watchs"
+      ],
+      "correctAnswer": "watched",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-016",
+      "japanese": "この部屋は毎日掃除されます。",
+      "sentence": "This room is ____ every day.",
+      "choices": [
+        "cleaned",
+        "clean",
+        "cleans"
+      ],
+      "correctAnswer": "cleaned",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-017",
+      "japanese": "その手紙は英語で書かれました。",
+      "sentence": "The letter was ____ in English.",
+      "choices": [
+        "written",
+        "write",
+        "wrote"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-018",
+      "japanese": "これらの製品は中国で製造されています。",
+      "sentence": "These products are ____ in China.",
+      "choices": [
+        "manufactured",
+        "manufactur",
+        "manufacturs"
+      ],
+      "correctAnswer": "manufactured",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-019",
+      "japanese": "その絵は有名な画家によって描かれました。",
+      "sentence": "The painting was ____ by a famous artist.",
+      "choices": [
+        "painted",
+        "paint",
+        "paints"
+      ],
+      "correctAnswer": "painted",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-020",
+      "japanese": "この本は1999年に出版されました。",
+      "sentence": "This book was ____ in 1999.",
+      "choices": [
+        "published",
+        "publish",
+        "publishs"
+      ],
+      "correctAnswer": "published",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "so-g3-u0-001",
+      "japanese": "英語は世界中で話されています。",
+      "words": [
+        "English",
+        "is",
+        "spoken",
+        "around",
+        "the",
+        "world"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「英語は世界中で話されています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ English is spoken around the world.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "English is spoken around the world."
+    },
+    {
+      "id": "so-g3-u0-002",
+      "japanese": "この本は多くの人に読まれています。",
+      "words": [
+        "This",
+        "book",
+        "is",
+        "read",
+        "by",
+        "many",
+        "people"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「この本は多くの人に読まれています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This book is read by many people.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 7,
+      "type": "sentenceOrdering",
+      "correctAnswer": "This book is read by many people."
+    },
+    {
+      "id": "so-g3-u0-003",
+      "japanese": "その手紙は彼女によって書かれました。",
+      "words": [
+        "The",
+        "letter",
+        "was",
+        "written",
+        "by",
+        "her"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その手紙は彼女によって書かれました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The letter was written by her.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "The letter was written by her."
+    },
+    {
+      "id": "so-g3-u0-004",
+      "japanese": "この橋は1990年に建てられました。",
+      "words": [
+        "This",
+        "bridge",
+        "was",
+        "built",
+        "in",
+        "1990"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「この橋は1990年に建てられました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This bridge was built in 1990.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "This bridge was built in 1990."
+    },
+    {
+      "id": "so-g3-u0-005",
+      "japanese": "これらの車は日本で作られています。",
+      "words": [
+        "These",
+        "cars",
+        "are",
+        "made",
+        "in",
+        "Japan"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「これらの車は日本で作られています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These cars are made in Japan.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "These cars are made in Japan."
+    },
+    {
+      "id": "so-g3-u0-006",
+      "japanese": "その問題は昨日解かれました。",
+      "words": [
+        "The",
+        "problem",
+        "was",
+        "solved",
+        "yesterday"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その問題は昨日解かれました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The problem was solved yesterday.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "The problem was solved yesterday."
+    },
+    {
+      "id": "so-g3-u0-007",
+      "japanese": "この歌は若者に愛されています。",
+      "words": [
+        "This",
+        "song",
+        "is",
+        "loved",
+        "by",
         "young",
-        "youngest"
+        "people"
       ],
-      "correctAnswer": "younger",
-      "difficulty": "beginner",
-      "explanation": "比較級: young → younger\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-009",
-      "type": "fillInBlank",
-      "japanese": "これはあれより安いです。",
-      "sentence": "This is ____ than that.",
-      "choices": [
-        "cheaper",
-        "cheap",
-        "cheapest"
-      ],
-      "correctAnswer": "cheaper",
-      "difficulty": "beginner",
-      "explanation": "比較級: cheap → cheaper\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-010",
-      "type": "fillInBlank",
-      "japanese": "彼は最も速く走ります。",
-      "sentence": "He runs the ____.",
-      "choices": [
-        "fastest",
-        "fast",
-        "faster"
-      ],
-      "correctAnswer": "fastest",
-      "difficulty": "beginner",
-      "explanation": "最上級: fast → fastest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-011",
-      "type": "fillInBlank",
-      "japanese": "この問題はあれより難しいです。",
-      "sentence": "This problem is ____ difficult than that one.",
-      "choices": [
-        "more",
-        "most",
-        "much"
-      ],
-      "correctAnswer": "more",
-      "difficulty": "beginner",
-      "explanation": "difficultは長い形容詞なのでmoreを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-012",
-      "type": "fillInBlank",
-      "japanese": "彼女はクラスで最も人気があります。",
-      "sentence": "She is the ____ popular in the class.",
-      "choices": [
-        "most",
-        "more",
-        "much"
-      ],
-      "correctAnswer": "most",
-      "difficulty": "beginner",
-      "explanation": "popularは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-013",
-      "type": "fillInBlank",
-      "japanese": "私は彼より年上です。",
-      "sentence": "I am ____ than him.",
-      "choices": [
-        "older",
-        "old",
-        "oldest"
-      ],
-      "correctAnswer": "older",
-      "difficulty": "beginner",
-      "explanation": "比較級: old → older\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-014",
-      "type": "fillInBlank",
-      "japanese": "これは最も高価な車です。",
-      "sentence": "This is the ____ expensive car.",
-      "choices": [
-        "most",
-        "more",
-        "much"
-      ],
-      "correctAnswer": "most",
-      "difficulty": "beginner",
-      "explanation": "expensiveは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-015",
-      "type": "fillInBlank",
-      "japanese": "彼は私より強いです。",
-      "sentence": "He is ____ than me.",
-      "choices": [
-        "stronger",
-        "strong",
-        "strongest"
-      ],
-      "correctAnswer": "stronger",
-      "difficulty": "beginner",
-      "explanation": "比較級: strong → stronger\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-016",
-      "type": "fillInBlank",
-      "japanese": "これは最も小さい箱です。",
-      "sentence": "This is the ____ box.",
-      "choices": [
-        "smallest",
-        "small",
-        "smaller"
-      ],
-      "correctAnswer": "smallest",
       "difficulty": "intermediate",
-      "explanation": "最上級: small → smallest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-017",
-      "type": "fillInBlank",
-      "japanese": "彼女は私より親切です。",
-      "sentence": "She is ____ than me.",
-      "choices": [
-        "kinder",
-        "kind",
-        "kindest"
-      ],
-      "correctAnswer": "kinder",
-      "difficulty": "intermediate",
-      "explanation": "比較級: kind → kinder\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-018",
-      "type": "fillInBlank",
-      "japanese": "これはより美しい花です。",
-      "sentence": "This is a ____ beautiful flower.",
-      "choices": [
-        "more",
-        "most",
-        "much"
-      ],
-      "correctAnswer": "more",
-      "difficulty": "intermediate",
-      "explanation": "beautifulは長い形容詞なのでmoreを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-019",
-      "type": "fillInBlank",
-      "japanese": "彼は最も賢い生徒です。",
-      "sentence": "He is the ____ student.",
-      "choices": [
-        "smartest",
-        "smart",
-        "smarter"
-      ],
-      "correctAnswer": "smartest",
-      "difficulty": "intermediate",
-      "explanation": "最上級: smart → smartest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-020",
-      "type": "fillInBlank",
-      "japanese": "これはあれより新しいです。",
-      "sentence": "This is ____ than that.",
-      "choices": [
-        "newer",
-        "new",
-        "newest"
-      ],
-      "correctAnswer": "newer",
-      "difficulty": "intermediate",
-      "explanation": "比較級: new → newer\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-021",
-      "type": "fillInBlank",
-      "japanese": "彼女は最も美しいです。",
-      "sentence": "She is the ____ beautiful.",
-      "choices": [
-        "most",
-        "more",
-        "much"
-      ],
-      "correctAnswer": "most",
-      "difficulty": "intermediate",
-      "explanation": "beautifulの最上級はmostを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-022",
-      "type": "fillInBlank",
-      "japanese": "私は彼より忙しいです。",
-      "sentence": "I am ____ than him.",
-      "choices": [
-        "busier",
-        "busy",
-        "busiest"
-      ],
-      "correctAnswer": "busier",
-      "difficulty": "intermediate",
-      "explanation": "比較級: busy → busier (yをiに変えてer)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-023",
-      "type": "fillInBlank",
-      "japanese": "これは最も重要な問題です。",
-      "sentence": "This is the ____ important problem.",
-      "choices": [
-        "most",
-        "more",
-        "much"
-      ],
-      "correctAnswer": "most",
-      "difficulty": "intermediate",
-      "explanation": "importantは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-024",
-      "type": "fillInBlank",
-      "japanese": "彼は私より幸せです。",
-      "sentence": "He is ____ than me.",
-      "choices": [
-        "happier",
-        "happy",
-        "happiest"
-      ],
-      "correctAnswer": "happier",
-      "difficulty": "intermediate",
-      "explanation": "比較級: happy → happier (yをiに変えてer)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-025",
-      "type": "fillInBlank",
-      "japanese": "これは最も簡単な方法です。",
-      "sentence": "This is the ____ easy way.",
-      "choices": [
-        "easiest",
-        "easy",
-        "easier"
-      ],
-      "correctAnswer": "easiest",
-      "difficulty": "intermediate",
-      "explanation": "最上級: easy → easiest (yをiに変えてest)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-026",
-      "type": "fillInBlank",
-      "japanese": "彼女は私より上手に歌います。",
-      "sentence": "She sings ____ than me.",
-      "choices": [
-        "better",
-        "good",
-        "best"
-      ],
-      "correctAnswer": "better",
-      "difficulty": "intermediate",
-      "explanation": "不規則変化: good → better → best\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-fib-027",
-      "type": "fillInBlank",
-      "japanese": "これは最も良い選択です。",
-      "sentence": "This is the ____ choice.",
-      "choices": [
-        "best",
-        "good",
-        "better"
-      ],
-      "correctAnswer": "best",
-      "difficulty": "intermediate",
-      "explanation": "不規則変化の最上級: good → best\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "比較級か最上級かを判断しましょう"
-    },
-    {
-      "id": "g2-u7-so-001",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「この歌は若者に愛されています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This song is loved by young people.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 7,
       "type": "sentenceOrdering",
-      "japanese": "彼は私より背が高いです。",
+      "correctAnswer": "This song is loved by young people."
+    },
+    {
+      "id": "so-g3-u0-008",
+      "japanese": "彼の名前はよく知られています。",
       "words": [
-        "He",
+        "His",
+        "name",
         "is",
-        "taller",
-        "than",
-        "me",
-        "."
+        "well",
+        "known"
       ],
-      "correctOrder": [
-        "He",
-        "is",
-        "taller",
-        "than",
-        "me",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "比較級tallerとthanを使います。\n\n「彼は私より背が高いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「彼の名前はよく知られています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ His name is well known.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "His name is well known."
     },
     {
-      "id": "g2-u7-so-002",
+      "id": "so-g3-u0-009",
+      "japanese": "その窓は彼によって壊されました。",
+      "words": [
+        "The",
+        "window",
+        "was",
+        "broken",
+        "by",
+        "him"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その窓は彼によって壊されました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The window was broken by him.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
       "type": "sentenceOrdering",
-      "japanese": "これはあれより大きいです。",
+      "correctAnswer": "The window was broken by him."
+    },
+    {
+      "id": "so-g3-u0-010",
+      "japanese": "これらの写真は去年撮られました。",
+      "words": [
+        "These",
+        "photos",
+        "were",
+        "taken",
+        "last",
+        "year"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「これらの写真は去年撮られました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These photos were taken last year.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "These photos were taken last year."
+    },
+    {
+      "id": "so-g3-u0-011",
+      "japanese": "その扉は開けられています。",
+      "words": [
+        "The",
+        "door",
+        "is",
+        "opened"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その扉は開けられています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The door is opened.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 4,
+      "type": "sentenceOrdering",
+      "correctAnswer": "The door is opened."
+    },
+    {
+      "id": "so-g3-u0-012",
+      "japanese": "このコンピューターは使われていません。",
       "words": [
         "This",
+        "computer",
         "is",
-        "bigger",
-        "than",
-        "that",
-        "."
+        "not",
+        "used"
       ],
-      "correctOrder": [
-        "This",
-        "is",
-        "bigger",
-        "than",
-        "that",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "比較級biggerとthanです。\n\n「これはあれより大きいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「このコンピューターは使われていません。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This computer is not used.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "This computer is not used."
     },
     {
-      "id": "g2-u7-so-003",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は私より速く走ります。",
+      "id": "so-g3-u0-013",
+      "japanese": "その建物は1950年に建てられました。",
       "words": [
-        "She",
-        "runs",
-        "faster",
-        "than",
-        "me",
-        "."
+        "The",
+        "building",
+        "was",
+        "constructed",
+        "in",
+        "1950"
       ],
-      "correctOrder": [
-        "She",
-        "runs",
-        "faster",
-        "than",
-        "me",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "比較級fasterを使います。\n\n「彼女は私より速く走ります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その建物は1950年に建てられました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The building was constructed in 1950.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "The building was constructed in 1950."
     },
     {
-      "id": "g2-u7-so-004",
+      "id": "so-g3-u0-014",
+      "japanese": "多くの木が植えられました。",
+      "words": [
+        "Many",
+        "trees",
+        "were",
+        "planted"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「多くの木が植えられました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Many trees were planted.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 4,
       "type": "sentenceOrdering",
-      "japanese": "この本はあの本よりおもしろいです。",
+      "correctAnswer": "Many trees were planted."
+    },
+    {
+      "id": "so-g3-u0-015",
+      "japanese": "その映画は世界中で見られています。",
+      "words": [
+        "The",
+        "movie",
+        "is",
+        "watched",
+        "worldwide"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その映画は世界中で見られています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The movie is watched worldwide.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "The movie is watched worldwide."
+    },
+    {
+      "id": "so-g3-u0-016",
+      "japanese": "この部屋は毎日掃除されます。",
+      "words": [
+        "This",
+        "room",
+        "is",
+        "cleaned",
+        "every",
+        "day"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「この部屋は毎日掃除されます。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This room is cleaned every day.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "This room is cleaned every day."
+    },
+    {
+      "id": "so-g3-u0-017",
+      "japanese": "その手紙は英語で書かれました。",
+      "words": [
+        "The",
+        "letter",
+        "was",
+        "written",
+        "in",
+        "English"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その手紙は英語で書かれました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The letter was written in English.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "The letter was written in English."
+    },
+    {
+      "id": "so-g3-u0-018",
+      "japanese": "これらの製品は中国で製造されています。",
+      "words": [
+        "These",
+        "products",
+        "are",
+        "manufactured",
+        "in",
+        "China"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「これらの製品は中国で製造されています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These products are manufactured in China.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "These products are manufactured in China."
+    },
+    {
+      "id": "so-g3-u0-019",
+      "japanese": "その絵は有名な画家によって描かれました。",
+      "words": [
+        "The",
+        "painting",
+        "was",
+        "painted",
+        "by",
+        "a",
+        "famous",
+        "artist"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「その絵は有名な画家によって描かれました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The painting was painted by a famous artist.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 8,
+      "type": "sentenceOrdering",
+      "correctAnswer": "The painting was painted by a famous artist."
+    },
+    {
+      "id": "so-g3-u0-020",
+      "japanese": "この本は1999年に出版されました。",
+      "words": [
+        "This",
+        "book",
+        "was",
+        "published",
+        "in",
+        "1999"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)です。\n\n「この本は1999年に出版されました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This book was published in 1999.",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "This book was published in 1999."
+    },
+    {
+      "id": "g2-u9-fib-001",
+      "type": "fillInBlank",
+      "japanese": "この本は多くの人に読まれています。",
+      "sentence": "This book ____ read by many people.",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "受動態: be動詞 + 過去分詞。現在形なのでisを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-002",
+      "type": "fillInBlank",
+      "japanese": "これらの手紙は昨日書かれました。",
+      "sentence": "These letters ____ written yesterday.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "過去形の受動態。複数なのでwereです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-003",
+      "type": "fillInBlank",
+      "japanese": "英語は世界中で話されています。",
+      "sentence": "English ____ spoken all over the world.",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "現在形の受動態。Englishは単数扱いです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-004",
+      "type": "fillInBlank",
+      "japanese": "この写真は彼によって撮られました。",
+      "sentence": "This picture ____ taken by him.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "過去形の受動態。単数なのでwasです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-005",
+      "type": "fillInBlank",
+      "japanese": "これらの車は日本で作られています。",
+      "sentence": "These cars ____ made in Japan.",
+      "choices": [
+        "are",
+        "is",
+        "were"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "現在形の受動態。複数なのでareです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-006",
+      "type": "fillInBlank",
+      "japanese": "この歌は多くの人に愛されています。",
+      "sentence": "This song ____ loved by many people.",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "現在形の受動態。単数なのでisです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-007",
+      "type": "fillInBlank",
+      "japanese": "彼は皆に尊敬されています。",
+      "sentence": "He ____ respected by everyone.",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "受動態の現在形。Heは単数です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-008",
+      "type": "fillInBlank",
+      "japanese": "その建物は1900年に建てられました。",
+      "sentence": "The building ____ built in 1900.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "過去形の受動態。単数なのでwasです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-009",
+      "type": "fillInBlank",
+      "japanese": "これらの花は庭で育てられています。",
+      "sentence": "These flowers ____ grown in the garden.",
+      "choices": [
+        "are",
+        "is",
+        "were"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "現在形の受動態。複数です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-010",
+      "type": "fillInBlank",
+      "japanese": "この手紙は彼女によって書かれました。",
+      "sentence": "This letter ____ written by her.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "過去形の受動態。単数です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-011",
+      "type": "fillInBlank",
+      "japanese": "この問題は簡単に解決されました。",
+      "sentence": "This problem ____ solved easily.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "過去形の受動態です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-012",
+      "type": "fillInBlank",
+      "japanese": "これらの本は図書館で借りられます。",
+      "sentence": "These books ____ borrowed from the library.",
+      "choices": [
+        "are",
+        "is",
+        "were"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "現在形の受動態。複数です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-013",
+      "type": "fillInBlank",
+      "japanese": "彼女は皆に好かれています。",
+      "sentence": "She ____ liked by everyone.",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "現在形の受動態。単数です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-014",
+      "type": "fillInBlank",
+      "japanese": "この部屋は毎日掃除されています。",
+      "sentence": "This room ____ cleaned every day.",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "現在形の受動態。単数です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-fib-015",
+      "type": "fillInBlank",
+      "japanese": "その映画は先月公開されました。",
+      "sentence": "The movie ____ released last month.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "過去形の受動態です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞 + 過去分詞"
+    },
+    {
+      "id": "g2-u9-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "この本は多くの人に読まれています。",
       "words": [
         "This",
         "book",
         "is",
-        "more",
-        "interesting",
-        "than",
-        "that",
-        "one",
-        "."
-      ],
-      "correctOrder": [
-        "This",
-        "book",
-        "is",
-        "more",
-        "interesting",
-        "than",
-        "that",
-        "one",
-        "."
+        "read",
+        "by",
+        "many",
+        "people"
       ],
       "difficulty": "beginner",
-      "explanation": "more interesting thanの語順です。\n\n「この本はあの本よりおもしろいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "be動詞 + 過去分詞の語順です。\n\n「この本は多くの人に読まれています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "This book is read by many people ."
     },
     {
-      "id": "g2-u7-so-005",
+      "id": "g2-u9-so-002",
       "type": "sentenceOrdering",
-      "japanese": "これはクラスで最も大きいです。",
+      "japanese": "これらの手紙は昨日書かれました。",
       "words": [
-        "This",
+        "These",
+        "letters",
+        "were",
+        "written",
+        "yesterday"
+      ],
+      "difficulty": "beginner",
+      "explanation": "過去形の受動態です。\n\n「これらの手紙は昨日書かれました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "These letters were written yesterday ."
+    },
+    {
+      "id": "g2-u9-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "英語は世界中で話されています。",
+      "words": [
+        "English",
         "is",
+        "spoken",
+        "all",
+        "over",
         "the",
-        "biggest",
+        "world"
+      ],
+      "difficulty": "beginner",
+      "explanation": "is + 過去分詞spokenです。\n\n「英語は世界中で話されています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "English is spoken all over the world ."
+    },
+    {
+      "id": "g2-u9-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "この写真は彼によって撮られました。",
+      "words": [
+        "This",
+        "picture",
+        "was",
+        "taken",
+        "by",
+        "him"
+      ],
+      "difficulty": "beginner",
+      "explanation": "was + 過去分詞takenの語順です。\n\n「この写真は彼によって撮られました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "This picture was taken by him ."
+    },
+    {
+      "id": "g2-u9-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "これらの車は日本で作られています。",
+      "words": [
+        "These",
+        "cars",
+        "are",
+        "made",
+        "in",
+        "Japan"
+      ],
+      "difficulty": "beginner",
+      "explanation": "are + 過去分詞madeです。\n\n「これらの車は日本で作られています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "These cars are made in Japan ."
+    },
+    {
+      "id": "g2-u9-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "この歌は多くの人に愛されています。",
+      "words": [
+        "This",
+        "song",
+        "is",
+        "loved",
+        "by",
+        "many",
+        "people"
+      ],
+      "difficulty": "beginner",
+      "explanation": "is + 過去分詞lovedの語順です。\n\n「この歌は多くの人に愛されています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "This song is loved by many people ."
+    },
+    {
+      "id": "g2-u9-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼は皆に尊敬されています。",
+      "words": [
+        "He",
+        "is",
+        "respected",
+        "by",
+        "everyone"
+      ],
+      "difficulty": "beginner",
+      "explanation": "is + 過去分詞respectedです。\n\n「彼は皆に尊敬されています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "He is respected by everyone ."
+    },
+    {
+      "id": "g2-u9-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "その建物は1900年に建てられました。",
+      "words": [
+        "The",
+        "building",
+        "was",
+        "built",
+        "in",
+        "1900"
+      ],
+      "difficulty": "beginner",
+      "explanation": "was + 過去分詞builtの語順です。\n\n「その建物は1900年に建てられました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "The building was built in 1900 ."
+    },
+    {
+      "id": "g2-u9-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "これらの花は庭で育てられています。",
+      "words": [
+        "These",
+        "flowers",
+        "are",
+        "grown",
         "in",
         "the",
-        "class",
-        "."
-      ],
-      "correctOrder": [
-        "This",
-        "is",
-        "the",
-        "biggest",
-        "in",
-        "the",
-        "class",
-        "."
+        "garden"
       ],
       "difficulty": "beginner",
-      "explanation": "最上級the biggestとin the classです。\n\n「これはクラスで最も大きいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "are + 過去分詞grownです。\n\n「これらの花は庭で育てられています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "These flowers are grown in the garden ."
     },
     {
-      "id": "g2-u7-so-006",
+      "id": "g2-u9-so-010",
       "type": "sentenceOrdering",
-      "japanese": "彼は3人の中で最も背が高いです。",
-      "words": [
-        "He",
-        "is",
-        "the",
-        "tallest",
-        "of",
-        "the",
-        "three",
-        "."
-      ],
-      "correctOrder": [
-        "He",
-        "is",
-        "the",
-        "tallest",
-        "of",
-        "the",
-        "three",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "最上級the tallestとof the threeです。\n\n「彼は3人の中で最も背が高いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-so-007",
-      "type": "sentenceOrdering",
-      "japanese": "これは最もおもしろい本です。",
+      "japanese": "この手紙は彼女によって書かれました。",
       "words": [
         "This",
-        "is",
-        "the",
-        "most",
-        "interesting",
-        "book",
-        "."
-      ],
-      "correctOrder": [
-        "This",
-        "is",
-        "the",
-        "most",
-        "interesting",
-        "book",
-        "."
+        "letter",
+        "was",
+        "written",
+        "by",
+        "her"
       ],
       "difficulty": "beginner",
-      "explanation": "最上級the most interestingです。\n\n「これは最もおもしろい本です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "was + 過去分詞writtenの語順です。\n\n「この手紙は彼女によって書かれました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "This letter was written by her ."
     },
     {
-      "id": "g2-u7-so-008",
+      "id": "g2-u9-so-011",
       "type": "sentenceOrdering",
-      "japanese": "彼女は私より若いです。",
-      "words": [
-        "She",
-        "is",
-        "younger",
-        "than",
-        "me",
-        "."
-      ],
-      "correctOrder": [
-        "She",
-        "is",
-        "younger",
-        "than",
-        "me",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "比較級youngerとthanを使います。\n\n「彼女は私より若いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-so-009",
-      "type": "sentenceOrdering",
-      "japanese": "これはあれより安いです。",
-      "words": [
-        "This",
-        "is",
-        "cheaper",
-        "than",
-        "that",
-        "."
-      ],
-      "correctOrder": [
-        "This",
-        "is",
-        "cheaper",
-        "than",
-        "that",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "比較級cheaperです。\n\n「これはあれより安いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-so-010",
-      "type": "sentenceOrdering",
-      "japanese": "彼は最も速く走ります。",
-      "words": [
-        "He",
-        "runs",
-        "the",
-        "fastest",
-        "."
-      ],
-      "correctOrder": [
-        "He",
-        "runs",
-        "the",
-        "fastest",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "最上級the fastestを使います。\n\n「彼は最も速く走ります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-so-011",
-      "type": "sentenceOrdering",
-      "japanese": "この問題はあれより難しいです。",
+      "japanese": "この問題は簡単に解決されました。",
       "words": [
         "This",
         "problem",
-        "is",
-        "more",
-        "difficult",
-        "than",
-        "that",
-        "one",
-        "."
+        "was",
+        "solved",
+        "easily"
       ],
-      "correctOrder": [
-        "This",
-        "problem",
-        "is",
-        "more",
-        "difficult",
-        "than",
-        "that",
-        "one",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "more difficult thanの語順です。\n\n「この問題はあれより難しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "difficulty": "intermediate",
+      "explanation": "was + 過去分詞solvedです。\n\n「この問題は簡単に解決されました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "This problem was solved easily ."
     },
     {
-      "id": "g2-u7-so-012",
+      "id": "g2-u9-so-012",
       "type": "sentenceOrdering",
-      "japanese": "彼女はクラスで最も人気があります。",
+      "japanese": "これらの本は図書館で借りられます。",
+      "words": [
+        "These",
+        "books",
+        "are",
+        "borrowed",
+        "from",
+        "the",
+        "library"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "are + 過去分詞borrowedの語順です。\n\n「これらの本は図書館で借りられます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "These books are borrowed from the library ."
+    },
+    {
+      "id": "g2-u9-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は皆に好かれています。",
       "words": [
         "She",
         "is",
-        "the",
-        "most",
-        "popular",
-        "in",
-        "the",
-        "class",
-        "."
-      ],
-      "correctOrder": [
-        "She",
-        "is",
-        "the",
-        "most",
-        "popular",
-        "in",
-        "the",
-        "class",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "最上級the most popularです。\n\n「彼女はクラスで最も人気があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-so-013",
-      "type": "sentenceOrdering",
-      "japanese": "私は彼より年上です。",
-      "words": [
-        "I",
-        "am",
-        "older",
-        "than",
-        "him",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "am",
-        "older",
-        "than",
-        "him",
-        "."
+        "liked",
+        "by",
+        "everyone"
       ],
       "difficulty": "intermediate",
-      "explanation": "比較級olderとthanです。\n\n「私は彼より年上です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "is + 過去分詞likedです。\n\n「彼女は皆に好かれています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "She is liked by everyone ."
     },
     {
-      "id": "g2-u7-so-014",
+      "id": "g2-u9-so-014",
       "type": "sentenceOrdering",
-      "japanese": "これは最も高価な車です。",
+      "japanese": "この部屋は毎日掃除されています。",
       "words": [
         "This",
+        "room",
         "is",
-        "the",
-        "most",
-        "expensive",
-        "car",
-        "."
-      ],
-      "correctOrder": [
-        "This",
-        "is",
-        "the",
-        "most",
-        "expensive",
-        "car",
-        "."
+        "cleaned",
+        "every",
+        "day"
       ],
       "difficulty": "intermediate",
-      "explanation": "最上級the most expensiveです。\n\n「これは最も高価な車です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "is + 過去分詞cleanedの語順です。\n\n「この部屋は毎日掃除されています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "This room is cleaned every day ."
     },
     {
-      "id": "g2-u7-so-015",
+      "id": "g2-u9-so-015",
       "type": "sentenceOrdering",
-      "japanese": "彼は私より強いです。",
+      "japanese": "その映画は先月公開されました。",
       "words": [
-        "He",
+        "The",
+        "movie",
+        "was",
+        "released",
+        "last",
+        "month"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "was + 過去分詞releasedです。\n\n「その映画は先月公開されました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "be動詞 + 過去分詞 + by ~",
+      "correctAnswer": "The movie was released last month ."
+    },
+    {
+      "id": "g2-u9-pp-001",
+      "type": "paraphrase",
+      "japanese": "この本は多くの人に読まれています。",
+      "sentence": "Many people read this book.",
+      "targetSentence": "This book ____ read by many people.",
+      "choices": [
         "is",
-        "stronger",
-        "than",
-        "me",
-        "."
+        "are",
+        "was"
       ],
-      "correctOrder": [
-        "He",
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "能動態を受動態に言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-002",
+      "type": "paraphrase",
+      "japanese": "これらの手紙は昨日書かれました。",
+      "sentence": "Someone wrote these letters yesterday.",
+      "targetSentence": "These letters ____ written yesterday.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "過去の受動態で言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-003",
+      "type": "paraphrase",
+      "japanese": "英語は世界中で話されています。",
+      "sentence": "People speak English all over the world.",
+      "targetSentence": "English ____ spoken all over the world.",
+      "choices": [
         "is",
-        "stronger",
-        "than",
-        "me",
-        "."
+        "are",
+        "was"
       ],
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "比較級strongerを使います。\n\n「彼は私より強いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "受動態で言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
     },
     {
-      "id": "g2-u7-so-016",
-      "type": "sentenceOrdering",
-      "japanese": "これは最も小さい箱です。",
-      "words": [
-        "This",
+      "id": "g2-u9-pp-004",
+      "type": "paraphrase",
+      "japanese": "この写真は彼によって撮られました。",
+      "sentence": "He took this picture.",
+      "targetSentence": "This picture ____ taken by him.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "能動態を受動態に変換します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-005",
+      "type": "paraphrase",
+      "japanese": "これらの車は日本で作られています。",
+      "sentence": "They make these cars in Japan.",
+      "targetSentence": "These cars ____ made in Japan.",
+      "choices": [
+        "are",
         "is",
-        "the",
-        "smallest",
-        "box",
-        "."
+        "were"
       ],
-      "correctOrder": [
-        "This",
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "受動態で表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-006",
+      "type": "paraphrase",
+      "japanese": "この歌は多くの人に愛されています。",
+      "sentence": "Many people love this song.",
+      "targetSentence": "This song ____ loved by many people.",
+      "choices": [
         "is",
-        "the",
-        "smallest",
-        "box",
-        "."
+        "are",
+        "was"
       ],
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "最上級the smallestです。\n\n「これは最も小さい箱です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "受動態に言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
     },
     {
-      "id": "g2-u7-so-017",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は私より親切です。",
-      "words": [
-        "She",
+      "id": "g2-u9-pp-007",
+      "type": "paraphrase",
+      "japanese": "彼は皆に尊敬されています。",
+      "sentence": "Everyone respects him.",
+      "targetSentence": "He ____ respected by everyone.",
+      "choices": [
         "is",
-        "kinder",
-        "than",
-        "me",
-        "."
+        "are",
+        "was"
       ],
-      "correctOrder": [
-        "She",
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "能動態を受動態に変換します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-008",
+      "type": "paraphrase",
+      "japanese": "その建物は1900年に建てられました。",
+      "sentence": "They built the building in 1900.",
+      "targetSentence": "The building ____ built in 1900.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "過去の受動態です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-009",
+      "type": "paraphrase",
+      "japanese": "これらの花は庭で育てられています。",
+      "sentence": "They grow these flowers in the garden.",
+      "targetSentence": "These flowers ____ grown in the garden.",
+      "choices": [
+        "are",
         "is",
-        "kinder",
-        "than",
-        "me",
-        "."
+        "were"
       ],
+      "correctAnswer": "are",
       "difficulty": "intermediate",
-      "explanation": "比較級kinderとthanです。\n\n「彼女は私より親切です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "受動態で言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
     },
     {
-      "id": "g2-u7-so-018",
-      "type": "sentenceOrdering",
-      "japanese": "これはより美しい花です。",
-      "words": [
-        "This",
+      "id": "g2-u9-pp-010",
+      "type": "paraphrase",
+      "japanese": "この手紙は彼女によって書かれました。",
+      "sentence": "She wrote this letter.",
+      "targetSentence": "This letter ____ written by her.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "能動態を受動態に変換します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-011",
+      "type": "paraphrase",
+      "japanese": "この問題は簡単に解決されました。",
+      "sentence": "They solved this problem easily.",
+      "targetSentence": "This problem ____ solved easily.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態で表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-012",
+      "type": "paraphrase",
+      "japanese": "これらの本は図書館で借りられます。",
+      "sentence": "People borrow these books from the library.",
+      "targetSentence": "These books ____ borrowed from the library.",
+      "choices": [
+        "are",
         "is",
-        "a",
-        "more",
-        "beautiful",
-        "flower",
-        "."
+        "were"
       ],
-      "correctOrder": [
-        "This",
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "受動態に言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
+    },
+    {
+      "id": "g2-u9-pp-013",
+      "type": "paraphrase",
+      "japanese": "彼女は皆に好かれています。",
+      "sentence": "Everyone likes her.",
+      "targetSentence": "She ____ liked by everyone.",
+      "choices": [
         "is",
-        "a",
-        "more",
-        "beautiful",
-        "flower",
-        "."
+        "are",
+        "was"
       ],
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "more beautifulの語順です。\n\n「これはより美しい花です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "能動態を受動態に変換します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
     },
     {
-      "id": "g2-u7-so-019",
-      "type": "sentenceOrdering",
-      "japanese": "彼は最も賢い生徒です。",
-      "words": [
-        "He",
+      "id": "g2-u9-pp-014",
+      "type": "paraphrase",
+      "japanese": "この部屋は毎日掃除されています。",
+      "sentence": "They clean this room every day.",
+      "targetSentence": "This room ____ cleaned every day.",
+      "choices": [
         "is",
-        "the",
-        "smartest",
-        "student",
-        "."
+        "are",
+        "was"
       ],
-      "correctOrder": [
-        "He",
-        "is",
-        "the",
-        "smartest",
-        "student",
-        "."
-      ],
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "最上級the smartestを使います。\n\n「彼は最も賢い生徒です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
+      "explanation": "受動態で表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
     },
     {
-      "id": "g2-u7-so-020",
-      "type": "sentenceOrdering",
-      "japanese": "これはあれより新しいです。",
-      "words": [
-        "This",
-        "is",
-        "newer",
-        "than",
-        "that",
-        "."
-      ],
-      "correctOrder": [
-        "This",
-        "is",
-        "newer",
-        "than",
-        "that",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "比較級newerとthanです。\n\n「これはあれより新しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-so-021",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は最も美しいです。",
-      "words": [
-        "She",
-        "is",
-        "the",
-        "most",
-        "beautiful",
-        "."
-      ],
-      "correctOrder": [
-        "She",
-        "is",
-        "the",
-        "most",
-        "beautiful",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "最上級the most beautifulです。\n\n「彼女は最も美しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-so-022",
-      "type": "sentenceOrdering",
-      "japanese": "私は彼より忙しいです。",
-      "words": [
-        "I",
-        "am",
-        "busier",
-        "than",
-        "him",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "am",
-        "busier",
-        "than",
-        "him",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "比較級busierを使います。\n\n「私は彼より忙しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "比較級・最上級の語順に注意"
-    },
-    {
-      "id": "g2-u7-pp-001",
+      "id": "g2-u9-pp-015",
       "type": "paraphrase",
-      "japanese": "彼は私より背が高いです。",
-      "sentence": "He has more height than me.",
-      "targetSentence": "He is ____ than me.",
+      "japanese": "その映画は先月公開されました。",
+      "sentence": "They released the movie last month.",
+      "targetSentence": "The movie ____ released last month.",
       "choices": [
-        "taller",
-        "tall",
-        "tallest"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "taller",
+      "correctAnswer": "was",
       "difficulty": "intermediate",
-      "explanation": "比較級tallerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
+      "explanation": "過去の受動態です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "能動態を受動態に"
     },
     {
-      "id": "g2-u7-pp-002",
-      "type": "paraphrase",
-      "japanese": "これはあれより大きいです。",
-      "sentence": "This has more size than that.",
-      "targetSentence": "This is ____ than that.",
-      "choices": [
-        "bigger",
-        "big",
-        "biggest"
-      ],
-      "correctAnswer": "bigger",
-      "difficulty": "intermediate",
-      "explanation": "比較級biggerで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-003",
-      "type": "paraphrase",
-      "japanese": "この本はあの本よりおもしろいです。",
-      "sentence": "This book has more interest than that one.",
-      "targetSentence": "This book is ____ interesting than that one.",
-      "choices": [
-        "more",
-        "most",
-        "much"
-      ],
-      "correctAnswer": "more",
-      "difficulty": "intermediate",
-      "explanation": "more interestingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-004",
-      "type": "paraphrase",
-      "japanese": "これはクラスで最も大きいです。",
-      "sentence": "This has the most size in the class.",
-      "targetSentence": "This is the ____ in the class.",
-      "choices": [
-        "biggest",
-        "big",
-        "bigger"
-      ],
-      "correctAnswer": "biggest",
-      "difficulty": "intermediate",
-      "explanation": "最上級biggestで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-005",
-      "type": "paraphrase",
-      "japanese": "彼は3人の中で最も背が高いです。",
-      "sentence": "He has the most height of the three.",
-      "targetSentence": "He is the ____ of the three.",
-      "choices": [
-        "tallest",
-        "tall",
-        "taller"
-      ],
-      "correctAnswer": "tallest",
-      "difficulty": "intermediate",
-      "explanation": "最上級tallestです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-006",
-      "type": "paraphrase",
-      "japanese": "これは最もおもしろい本です。",
-      "sentence": "This book has the most interest.",
-      "targetSentence": "This is the ____ interesting book.",
-      "choices": [
-        "most",
-        "more",
-        "much"
-      ],
-      "correctAnswer": "most",
-      "difficulty": "intermediate",
-      "explanation": "最上級most interestingです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-007",
-      "type": "paraphrase",
-      "japanese": "彼女は私より若いです。",
-      "sentence": "She has less age than me.",
-      "targetSentence": "She is ____ than me.",
-      "choices": [
-        "younger",
-        "young",
-        "youngest"
-      ],
-      "correctAnswer": "younger",
-      "difficulty": "intermediate",
-      "explanation": "比較級youngerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-008",
-      "type": "paraphrase",
-      "japanese": "これはあれより安いです。",
-      "sentence": "This has a lower price than that.",
-      "targetSentence": "This is ____ than that.",
-      "choices": [
-        "cheaper",
-        "cheap",
-        "cheapest"
-      ],
-      "correctAnswer": "cheaper",
-      "difficulty": "intermediate",
-      "explanation": "比較級cheaperです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-009",
-      "type": "paraphrase",
-      "japanese": "彼は最も速く走ります。",
-      "sentence": "He has the highest speed.",
-      "targetSentence": "He runs the ____.",
-      "choices": [
-        "fastest",
-        "fast",
-        "faster"
-      ],
-      "correctAnswer": "fastest",
-      "difficulty": "intermediate",
-      "explanation": "最上級fastestで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-010",
-      "type": "paraphrase",
-      "japanese": "この問題はあれより難しいです。",
-      "sentence": "This problem has more difficulty than that one.",
-      "targetSentence": "This problem is ____ difficult than that one.",
-      "choices": [
-        "more",
-        "most",
-        "much"
-      ],
-      "correctAnswer": "more",
-      "difficulty": "intermediate",
-      "explanation": "more difficultで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-011",
-      "type": "paraphrase",
-      "japanese": "彼女はクラスで最も人気があります。",
-      "sentence": "She has the most popularity in the class.",
-      "targetSentence": "She is the ____ popular in the class.",
-      "choices": [
-        "most",
-        "more",
-        "much"
-      ],
-      "correctAnswer": "most",
-      "difficulty": "intermediate",
-      "explanation": "最上級most popularです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-012",
-      "type": "paraphrase",
-      "japanese": "私は彼より年上です。",
-      "sentence": "I have more age than him.",
-      "targetSentence": "I am ____ than him.",
-      "choices": [
-        "older",
-        "old",
-        "oldest"
-      ],
-      "correctAnswer": "older",
-      "difficulty": "intermediate",
-      "explanation": "比較級olderで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-013",
-      "type": "paraphrase",
-      "japanese": "これは最も高価な車です。",
-      "sentence": "This car has the highest price.",
-      "targetSentence": "This is the ____ expensive car.",
-      "choices": [
-        "most",
-        "more",
-        "much"
-      ],
-      "correctAnswer": "most",
-      "difficulty": "intermediate",
-      "explanation": "最上級most expensiveです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-014",
-      "type": "paraphrase",
-      "japanese": "彼は私より強いです。",
-      "sentence": "He has more strength than me.",
-      "targetSentence": "He is ____ than me.",
-      "choices": [
-        "stronger",
-        "strong",
-        "strongest"
-      ],
-      "correctAnswer": "stronger",
-      "difficulty": "intermediate",
-      "explanation": "比較級strongerです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-015",
-      "type": "paraphrase",
-      "japanese": "これは最も小さい箱です。",
-      "sentence": "This box has the least size.",
-      "targetSentence": "This is the ____ box.",
-      "choices": [
-        "smallest",
-        "small",
-        "smaller"
-      ],
-      "correctAnswer": "smallest",
-      "difficulty": "intermediate",
-      "explanation": "最上級smallestで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-016",
-      "type": "paraphrase",
-      "japanese": "彼女は私より親切です。",
-      "sentence": "She has more kindness than me.",
-      "targetSentence": "She is ____ than me.",
-      "choices": [
-        "kinder",
-        "kind",
-        "kindest"
-      ],
-      "correctAnswer": "kinder",
-      "difficulty": "intermediate",
-      "explanation": "比較級kinderです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-017",
-      "type": "paraphrase",
-      "japanese": "これはより美しい花です。",
-      "sentence": "This flower has more beauty.",
-      "targetSentence": "This is a ____ beautiful flower.",
-      "choices": [
-        "more",
-        "most",
-        "much"
-      ],
-      "correctAnswer": "more",
-      "difficulty": "intermediate",
-      "explanation": "more beautifulで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-pp-018",
-      "type": "paraphrase",
-      "japanese": "彼は最も賢い生徒です。",
-      "sentence": "He has the most intelligence.",
-      "targetSentence": "He is the ____ student.",
-      "choices": [
-        "smartest",
-        "smart",
-        "smarter"
-      ],
-      "correctAnswer": "smartest",
-      "difficulty": "intermediate",
-      "explanation": "最上級smartestです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "比較級・最上級で言い換え"
-    },
-    {
-      "id": "g2-u7-vf-001",
+      "id": "g2-u9-vf-001",
       "type": "verbForm",
-      "japanese": "彼は私より背が____です。",
-      "sentence": "He is ____ than me.",
+      "japanese": "この本は多くの人に読まれています。",
+      "sentence": "This book ____ read by many people.",
       "choices": [
-        "taller",
-        "tall",
-        "tallest"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "taller",
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "thanがあるので比較級tallerが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "現在形の受動態。単数なのでisです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-002",
+      "id": "g2-u9-vf-002",
       "type": "verbForm",
-      "japanese": "これはクラスで最も大き____です。",
-      "sentence": "This is the ____ in the class.",
+      "japanese": "これらの手紙は昨日書かれました。",
+      "sentence": "These letters ____ written yesterday.",
       "choices": [
-        "biggest",
-        "big",
-        "bigger"
+        "were",
+        "was",
+        "are"
       ],
-      "correctAnswer": "biggest",
+      "correctAnswer": "were",
       "difficulty": "intermediate",
-      "explanation": "theとinがあるので最上級biggestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "過去形の受動態。複数なのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-003",
+      "id": "g2-u9-vf-003",
       "type": "verbForm",
-      "japanese": "この本はあの本よりおもしろ____です。",
-      "sentence": "This book is ____ interesting than that one.",
+      "japanese": "英語は世界中で話されています。",
+      "sentence": "English ____ spoken all over the world.",
       "choices": [
-        "more",
-        "most",
-        "much"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "more",
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "thanがあるので比較級moreです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "現在形の受動態です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-004",
+      "id": "g2-u9-vf-004",
       "type": "verbForm",
-      "japanese": "彼は3人の中で最も背が高____です。",
-      "sentence": "He is the ____ of the three.",
+      "japanese": "この写真は彼によって撮られました。",
+      "sentence": "This picture ____ taken by him.",
       "choices": [
-        "tallest",
-        "tall",
-        "taller"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "tallest",
+      "correctAnswer": "was",
       "difficulty": "intermediate",
-      "explanation": "of the threeなので最上級tallestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "過去形の受動態。単数です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-005",
+      "id": "g2-u9-vf-005",
       "type": "verbForm",
-      "japanese": "これは最もおもしろ____本です。",
-      "sentence": "This is the ____ interesting book.",
+      "japanese": "これらの車は日本で作られています。",
+      "sentence": "These cars ____ made in Japan.",
       "choices": [
-        "most",
-        "more",
-        "much"
+        "are",
+        "is",
+        "were"
       ],
-      "correctAnswer": "most",
+      "correctAnswer": "are",
       "difficulty": "intermediate",
-      "explanation": "theがあるので最上級mostです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "現在形の受動態。複数です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-006",
+      "id": "g2-u9-vf-006",
       "type": "verbForm",
-      "japanese": "彼女は私より若____です。",
-      "sentence": "She is ____ than me.",
+      "japanese": "この歌は多くの人に愛されています。",
+      "sentence": "This song ____ loved by many people.",
       "choices": [
-        "younger",
-        "young",
-        "youngest"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "younger",
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "比較級youngerが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "現在形の受動態です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-007",
+      "id": "g2-u9-vf-007",
       "type": "verbForm",
-      "japanese": "彼は最も速く走り____。",
-      "sentence": "He runs the ____.",
+      "japanese": "彼は皆に尊敬されています。",
+      "sentence": "He ____ respected by everyone.",
       "choices": [
-        "fastest",
-        "fast",
-        "faster"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "fastest",
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "theがあるので最上級fastestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "現在形の受動態。単数です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-008",
+      "id": "g2-u9-vf-008",
       "type": "verbForm",
-      "japanese": "この問題はあれより難し____です。",
-      "sentence": "This problem is ____ difficult than that one.",
+      "japanese": "その建物は1900年に建てられました。",
+      "sentence": "The building ____ built in 1900.",
       "choices": [
-        "more",
-        "most",
-        "much"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "more",
+      "correctAnswer": "was",
       "difficulty": "intermediate",
-      "explanation": "thanがあるので比較級moreです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "過去形の受動態です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-009",
+      "id": "g2-u9-vf-009",
       "type": "verbForm",
-      "japanese": "彼女はクラスで最も人気が____ます。",
-      "sentence": "She is the ____ popular in the class.",
+      "japanese": "これらの花は庭で育てられています。",
+      "sentence": "These flowers ____ grown in the garden.",
       "choices": [
-        "most",
-        "more",
-        "much"
+        "are",
+        "is",
+        "were"
       ],
-      "correctAnswer": "most",
+      "correctAnswer": "are",
       "difficulty": "intermediate",
-      "explanation": "theとin the classがあるので最上級mostです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "現在形の受動態。複数です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-vf-010",
+      "id": "g2-u9-vf-010",
       "type": "verbForm",
-      "japanese": "私は彼より年____です。",
-      "sentence": "I am ____ than him.",
+      "japanese": "この手紙は彼女によって書かれました。",
+      "sentence": "This letter ____ written by her.",
       "choices": [
-        "older",
-        "old",
-        "oldest"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "older",
+      "correctAnswer": "was",
       "difficulty": "intermediate",
-      "explanation": "thanがあるので比較級olderです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "文脈から比較級か最上級かを判断"
+      "explanation": "過去形の受動態。単数です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "時制と単複で判断"
     },
     {
-      "id": "g2-u7-conv-001",
+      "id": "g2-u9-conv-001",
       "type": "conversation",
-      "japanese": "A: 彼とあなたはどちらが背が高いですか? B: 彼の方が背が高いです。",
-      "conversation": [
-        "A: Who is taller, he or you?",
-        "B: He is ____ than me."
-      ],
+      "japanese": "A: この本は誰に読まれていますか? B: 多くの人に読まれています。",
       "choices": [
-        "taller",
-        "tall",
-        "tallest"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "taller",
-      "difficulty": "beginner",
-      "explanation": "比較級tallerを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is taller, he or you?",
-      "hint": "質問から比較級か最上級かを判断"
-    },
-    {
-      "id": "g2-u7-conv-002",
-      "type": "conversation",
-      "japanese": "A: これとあれはどちらが大きいですか? B: これの方が大きいです。",
-      "conversation": [
-        "A: Which is bigger, this or that?",
-        "B: This is ____ than that."
-      ],
-      "choices": [
-        "bigger",
-        "big",
-        "biggest"
-      ],
-      "correctAnswer": "bigger",
-      "difficulty": "beginner",
-      "explanation": "比較級biggerです。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is bigger, this or that?",
-      "hint": "質問から比較級か最上級かを判断"
-    },
-    {
-      "id": "g2-u7-conv-003",
-      "type": "conversation",
-      "japanese": "A: クラスで誰が最も背が高いですか? B: 田中君が最も背が高いです。",
-      "conversation": [
-        "A: Who is the tallest in the class?",
-        "B: Tanaka is the ____."
-      ],
-      "choices": [
-        "tallest",
-        "tall",
-        "taller"
-      ],
-      "correctAnswer": "tallest",
-      "difficulty": "beginner",
-      "explanation": "最上級tallestを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is the tallest in the class?",
-      "hint": "質問から比較級か最上級かを判断"
-    },
-    {
-      "id": "g2-u7-conv-004",
-      "type": "conversation",
-      "japanese": "A: これとあれはどちらがおもしろいですか? B: これの方がおもしろいです。",
-      "conversation": [
-        "A: Which is more interesting, this or that?",
-        "B: This is ____ interesting than that."
-      ],
-      "choices": [
-        "more",
-        "most",
-        "much"
-      ],
-      "correctAnswer": "more",
-      "difficulty": "beginner",
-      "explanation": "比較級moreを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is more interesting, this or that?",
-      "hint": "質問から比較級か最上級かを判断"
-    },
-    {
-      "id": "g2-u7-conv-005",
-      "type": "conversation",
-      "japanese": "A: 3つの中でどれが最も小さいですか? B: これが最も小さいです。",
-      "conversation": [
-        "A: Which is the smallest of the three?",
-        "B: This is the ____."
-      ],
-      "choices": [
-        "smallest",
-        "small",
-        "smaller"
-      ],
-      "correctAnswer": "smallest",
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "最上級smallestです。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is the smallest of the three?",
-      "hint": "質問から比較級か最上級かを判断"
+      "explanation": "現在形の受動態です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who reads this book?",
+      "hint": "受動態で答える",
+      "dialogue": [
+        "A: Who reads this book?",
+        "B: It ____ read by many people."
+      ]
     },
     {
-      "id": "g2-u7-conv-006",
+      "id": "g2-u9-conv-002",
       "type": "conversation",
-      "japanese": "A: 彼女とあなたはどちらが若いですか? B: 彼女の方が若いです。",
-      "conversation": [
-        "A: Who is younger, she or you?",
-        "B: She is ____ than me."
-      ],
+      "japanese": "A: これらの手紙はいつ書かれましたか? B: 昨日書かれました。",
       "choices": [
-        "younger",
-        "young",
-        "youngest"
+        "were",
+        "was",
+        "are"
       ],
-      "correctAnswer": "younger",
+      "correctAnswer": "were",
       "difficulty": "intermediate",
-      "explanation": "比較級youngerを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is younger, she or you?",
-      "hint": "質問から比較級か最上級かを判断"
+      "explanation": "過去形の受動態です。\n\nが正解です。\n\n【文脈理解】\n場面: A: When were these letters written?",
+      "hint": "受動態で答える",
+      "dialogue": [
+        "A: When were these letters written?",
+        "B: They ____ written yesterday."
+      ]
     },
     {
-      "id": "g2-u7-conv-007",
+      "id": "g2-u9-conv-003",
       "type": "conversation",
-      "japanese": "A: 世界で最も高い山は何ですか? B: エベレストが最も高いです。",
-      "conversation": [
-        "A: What is the highest mountain in the world?",
-        "B: Mt. Everest is the ____."
-      ],
+      "japanese": "A: 英語はどこで話されていますか? B: 世界中で話されています。",
       "choices": [
-        "highest",
-        "high",
-        "higher"
+        "is",
+        "are",
+        "was"
       ],
-      "correctAnswer": "highest",
+      "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "最上級highestです。\n\nが正解です。\n\n【文脈理解】\n場面: A: What is the highest mountain in the world?",
-      "hint": "質問から比較級か最上級かを判断"
+      "explanation": "現在形の受動態です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Where is English spoken?",
+      "hint": "受動態で答える",
+      "dialogue": [
+        "A: Where is English spoken?",
+        "B: It ____ spoken all over the world."
+      ]
     },
     {
-      "id": "g2-u7-conv-008",
+      "id": "g2-u9-conv-004",
       "type": "conversation",
-      "japanese": "A: これとあれはどちらが安いですか? B: あれの方が安いです。",
-      "conversation": [
-        "A: Which is cheaper, this or that?",
-        "B: That is ____ than this."
-      ],
+      "japanese": "A: この写真は誰によって撮られましたか? B: 彼によって撮られました。",
       "choices": [
-        "cheaper",
-        "cheap",
-        "cheapest"
+        "was",
+        "were",
+        "is"
       ],
-      "correctAnswer": "cheaper",
+      "correctAnswer": "was",
       "difficulty": "intermediate",
-      "explanation": "比較級cheaperを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is cheaper, this or that?",
-      "hint": "質問から比較級か最上級かを判断"
+      "explanation": "過去形の受動態です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who took this picture?",
+      "hint": "受動態で答える",
+      "dialogue": [
+        "A: Who took this picture?",
+        "B: It ____ taken by him."
+      ]
+    },
+    {
+      "id": "g2-u9-conv-005",
+      "type": "conversation",
+      "japanese": "A: これらの車はどこで作られていますか? B: 日本で作られています。",
+      "choices": [
+        "are",
+        "is",
+        "were"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "現在形の受動態です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Where are these cars made?",
+      "hint": "受動態で答える",
+      "dialogue": [
+        "A: Where are these cars made?",
+        "B: They ____ made in Japan."
+      ]
     }
   ]
 }

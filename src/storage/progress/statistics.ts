@@ -804,36 +804,81 @@ export function getMemorizationDetailedRetentionStats(): DetailedRetentionStats 
   let learningCount = 0;
   let strugglingCount = 0;
 
+  // デバッグ: カテゴリー別カウント
+  const categoryDebug = {
+    mastered: 0,
+    still_learning: 0,
+    incorrect: 0,
+    new: 0,
+    undefined: 0,
+  };
+
   memorizationWords.forEach((wp) => {
-    const totalAttempts = wp.memorizationAttempts || 0;
-    const correctCount = wp.memorizationCorrect || 0;
-    const stillLearningCount = wp.memorizationStillLearning || 0;
-    const consecutiveCorrect = wp.memorizationStreak || 0;
+    const cat = wp.category;
+    if (cat === 'mastered') categoryDebug.mastered++;
+    else if (cat === 'still_learning') categoryDebug.still_learning++;
+    else if (cat === 'incorrect') categoryDebug.incorrect++;
+    else if (cat === 'new') categoryDebug.new++;
+    else categoryDebug.undefined++;
+  });
 
-    // まだまだを0.5回の正解として計算（正答率50%以上になるように）
-    const effectiveCorrect = correctCount + stillLearningCount * 0.5;
-    const accuracy = totalAttempts > 0 ? (effectiveCorrect / totalAttempts) * 100 : 0;
+  console.log('📊 [Statistics] カテゴリー別内訳:', {
+    total: memorizationWords.length,
+    categories: categoryDebug,
+    willRecalculate: categoryDebug.new + categoryDebug.undefined,
+  });
 
-    // 🟢 完全定着判定（覚えてる）
-    // 最後の解答が正解なら「覚えてる」にカウント
-    const isDefinitelyMastered =
-      (totalAttempts === 1 && correctCount === 1) ||
-      consecutiveCorrect >= 1 || // 連続正解が1回以上（最後が正解）
-      accuracy >= 80; // または正答率80%以上
+  memorizationWords.forEach((wp) => {
+    // ✅ categoryフィールドを優先的に使用（QuestionSchedulerと同じロジック）
+    const category = wp.category;
 
-    if (isDefinitelyMastered) {
+    // カテゴリーベースのカウント（categoryが明示的に設定されている場合）
+    if (category === 'mastered') {
       masteredCount++;
-    } else if (accuracy >= 50 || stillLearningCount > 0) {
-      // 🟡 まだまだ（正答率50%以上 or まだまだボタンを押したことがある）
+    } else if (category === 'still_learning') {
       learningCount++;
-    } else {
-      // 🔴 分からない（正答率50%未満 and まだまだボタンを押したことがない）
+    } else if (category === 'incorrect') {
       strugglingCount++;
+    } else if (!category || category === 'new') {
+      // categoryが未設定または'new'の場合は統計から推定（後方互換性）
+      const totalAttempts = wp.memorizationAttempts || 0;
+      const correctCount = wp.memorizationCorrect || 0;
+      const stillLearningCount = wp.memorizationStillLearning || 0;
+      const consecutiveCorrect = wp.memorizationStreak || 0;
+
+      // まだまだを0.5回の正解として計算（正答率50%以上になるように）
+      const effectiveCorrect = correctCount + stillLearningCount * 0.5;
+      const accuracy = totalAttempts > 0 ? (effectiveCorrect / totalAttempts) * 100 : 0;
+
+      // 🟢 完全定着判定（覚えてる）
+      const isDefinitelyMastered =
+        (totalAttempts === 1 && correctCount === 1) ||
+        consecutiveCorrect >= 1 || // 連続正解が1回以上（最後が正解）
+        accuracy >= 80; // または正答率80%以上
+
+      if (isDefinitelyMastered) {
+        masteredCount++;
+      } else if (accuracy >= 50 || stillLearningCount > 0) {
+        // 🟡 まだまだ
+        learningCount++;
+      } else {
+        // 🔴 分からない
+        strugglingCount++;
+      }
     }
+    // それ以外のカテゴリー（存在しないはず）は無視
   });
 
   const total = memorizationWords.length;
   const weightedScore = masteredCount * 1.0 + learningCount * 0.5;
+
+  console.log('✅ [Statistics] 最終カウント結果:', {
+    masteredCount,
+    learningCount,
+    strugglingCount,
+    合計: masteredCount + learningCount + strugglingCount,
+    出題済み単語総数: total,
+  });
 
   return {
     totalWords: allWords.length,
