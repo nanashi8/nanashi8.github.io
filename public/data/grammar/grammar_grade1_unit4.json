@@ -243,8 +243,7 @@
       "words": [
         "this",
         "what",
-        "is",
-        "?"
+        "is"
       ],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
@@ -259,8 +258,7 @@
       "words": [
         "you",
         "who",
-        "are",
-        "?"
+        "are"
       ],
       "correctAnswer": "Who are you?",
       "difficulty": "beginner",
@@ -276,8 +274,7 @@
         "from",
         "you",
         "where",
-        "are",
-        "?"
+        "are"
       ],
       "correctAnswer": "Where are you from?",
       "difficulty": "beginner",
@@ -294,8 +291,7 @@
         "you",
         "when",
         "do",
-        "tennis",
-        "?"
+        "tennis"
       ],
       "correctAnswer": "When do you play tennis?",
       "difficulty": "beginner",
@@ -310,8 +306,7 @@
       "words": [
         "you",
         "how",
-        "are",
-        "?"
+        "are"
       ],
       "correctAnswer": "How are you?",
       "difficulty": "beginner",
@@ -327,8 +322,7 @@
         "like",
         "he",
         "what",
-        "does",
-        "?"
+        "does"
       ],
       "correctAnswer": "What does he like?",
       "difficulty": "intermediate",
@@ -344,8 +338,7 @@
         "live",
         "you",
         "where",
-        "do",
-        "?"
+        "do"
       ],
       "correctAnswer": "Where do you live?",
       "difficulty": "intermediate",
@@ -364,8 +357,7 @@
         "what",
         "time",
         "do",
-        "go",
-        "?"
+        "go"
       ],
       "correctAnswer": "What time do you go to bed?",
       "difficulty": "intermediate",
@@ -381,8 +373,7 @@
         "bag",
         "whose",
         "this",
-        "is",
-        "?"
+        "is"
       ],
       "correctAnswer": "Whose bag is this?",
       "difficulty": "intermediate",
@@ -400,8 +391,7 @@
         "you",
         "how",
         "do",
-        "have",
-        "?"
+        "have"
       ],
       "correctAnswer": "How many brothers do you have?",
       "difficulty": "intermediate",
@@ -418,8 +408,7 @@
         "she",
         "what",
         "does",
-        "like",
-        "?"
+        "like"
       ],
       "correctAnswer": "What color does she like?",
       "difficulty": "advanced",
@@ -436,8 +425,7 @@
         "you",
         "which",
         "do",
-        "like",
-        "?"
+        "like"
       ],
       "correctAnswer": "Which sport do you like?",
       "difficulty": "advanced",
@@ -457,8 +445,7 @@
         "take",
         "to",
         "the",
-        "station",
-        "?"
+        "station"
       ],
       "correctAnswer": "How long does it take to the station?",
       "difficulty": "advanced",
@@ -475,8 +462,7 @@
         "he",
         "who",
         "does",
-        "with",
-        "?"
+        "with"
       ],
       "correctAnswer": "Who does he study with?",
       "difficulty": "advanced",
@@ -493,8 +479,7 @@
         "this",
         "pen",
         "how",
-        "is",
-        "?"
+        "is"
       ],
       "correctAnswer": "How much is this pen?",
       "difficulty": "advanced",

@@ -4,9 +4,10 @@
  * メタAIネットワークの有効/無効、現在の戦略、効果指標を表示
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 import { StrategyType } from '../ai/meta';
+import { AISimulator } from './AISimulator';
 
 const STRATEGY_DISPLAY_NAMES: Record<StrategyType, string> = {
   [StrategyType.IMMEDIATE_REPETITION]: '即時反復',
@@ -34,6 +35,8 @@ export const AdaptiveNetworkControl: React.FC = () => {
     error,
     isInitialized,
   } = useAdaptiveNetwork();
+
+  const [showSimulator, setShowSimulator] = useState(false);
 
   if (!isInitialized) {
     return (
@@ -111,6 +114,22 @@ export const AdaptiveNetworkControl: React.FC = () => {
           適応的AIを有効にすると、あなたの学習パターンに基づいて最適な学習戦略が自動的に選択されます。
         </p>
       )}
+
+      {/* シミュレーターセクション */}
+      <div className="simulator-section">
+        <button
+          className="simulator-toggle-button"
+          onClick={() => setShowSimulator(!showSimulator)}
+        >
+          <span>{showSimulator ? '🔼' : '🔽'}</span>
+          <span>学習AIシミュレーター</span>
+        </button>
+        {showSimulator && (
+          <div className="simulator-content">
+            <AISimulator />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

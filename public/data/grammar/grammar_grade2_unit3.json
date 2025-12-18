@@ -1,1035 +1,2021 @@
 {
+  "enabled": true,
   "unit": "Unit 3",
-  "title": "助動詞must/have to",
-  "grammar": "義務・必要性の表現",
-  "totalQuestions": 60,
+  "title": "不定詞",
+  "grammar": "to + 動詞の原形（3用法）、It is ... to",
+  "totalQuestions": 125,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
-    "paraphrase": 15,
-    "verbForm": 10,
-    "conversation": 5
+    "fillInBlank": 55,
+    "sentenceOrdering": 32,
+    "paraphrase": 24,
+    "verbForm": 0,
+    "conversation": 14
   },
   "questions": [
     {
-      "id": "g2-u3-fib-001",
+      "id": "g2-u4-fib-001",
       "type": "fillInBlank",
-      "japanese": "私は毎日宿題をしなければなりません。",
-      "sentence": "I ____ do my homework every day.",
+      "japanese": "私は本を読むのが好きです。",
+      "sentence": "I like ____ read books.",
       "choices": [
-        "must",
-        "can",
-        "may"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "義務を表すにはmustを使います。「~しなければならない」という強い義務を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "義務を表す助動詞"
-    },
-    {
-      "id": "g2-u3-fib-002",
-      "type": "fillInBlank",
-      "japanese": "あなたは早く起きなければなりません。",
-      "sentence": "You ____ get up early.",
-      "choices": [
-        "have to",
-        "want to",
-        "like to"
-      ],
-      "correctAnswer": "have to",
-      "difficulty": "beginner",
-      "explanation": "have toは外的な義務を表します。「~しなければならない」という意味です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "義務を表す表現"
-    },
-    {
-      "id": "g2-u3-fib-003",
-      "type": "fillInBlank",
-      "japanese": "彼は今日働かなければなりません。",
-      "sentence": "He ____ work today.",
-      "choices": [
-        "must",
-        "can",
-        "will"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "mustは話し手の強い義務感を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "強い義務"
-    },
-    {
-      "id": "g2-u3-fib-004",
-      "type": "fillInBlank",
-      "japanese": "私たちは図書館で静かにしなければなりません。",
-      "sentence": "We ____ be quiet in the library.",
-      "choices": [
-        "must",
-        "should",
-        "would"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "intermediate",
-      "explanation": "規則や決まりごとを表すときにmustを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "規則"
-    },
-    {
-      "id": "g2-u3-fib-005",
-      "type": "fillInBlank",
-      "japanese": "彼女は薬を飲まなければなりません。",
-      "sentence": "She ____ take medicine.",
-      "choices": [
-        "has to",
-        "wants to",
-        "needs"
-      ],
-      "correctAnswer": "has to",
-      "difficulty": "beginner",
-      "explanation": "三人称単数(she)の場合、have toはhas toになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "三人称単数"
-    },
-    {
-      "id": "g2-u3-fib-006",
-      "type": "fillInBlank",
-      "japanese": "私は明日早く学校に行かなければなりません。",
-      "sentence": "I ____ go to school early tomorrow.",
-      "choices": [
-        "have to",
-        "want to",
-        "can"
-      ],
-      "correctAnswer": "have to",
-      "difficulty": "intermediate",
-      "explanation": "外的な必要性や義務にはhave toを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "外的な義務"
-    },
-    {
-      "id": "g2-u3-fib-007",
-      "type": "fillInBlank",
-      "japanese": "あなたたちは規則に従わなければなりません。",
-      "sentence": "You ____ follow the rules.",
-      "choices": [
-        "must",
-        "may",
-        "can"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "規則や法律などの義務を表すときはmustを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "規則への従順"
-    },
-    {
-      "id": "g2-u3-fib-008",
-      "type": "fillInBlank",
-      "japanese": "彼は毎朝運動しなければなりません。",
-      "sentence": "He ____ exercise every morning.",
-      "choices": [
-        "has to",
-        "wants to",
-        "likes to"
-      ],
-      "correctAnswer": "has to",
-      "difficulty": "intermediate",
-      "explanation": "主語がheなので、have toはhas toになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "三人称単数の形"
-    },
-    {
-      "id": "g2-u3-fib-009",
-      "type": "fillInBlank",
-      "japanese": "私たちは時間を守らなければなりません。",
-      "sentence": "We ____ be on time.",
-      "choices": [
-        "must",
-        "should",
-        "could"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "強い義務や必要性を表すにはmustを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "強い義務"
-    },
-    {
-      "id": "g2-u3-fib-010",
-      "type": "fillInBlank",
-      "japanese": "彼女は今日病院に行かなければなりません。",
-      "sentence": "She ____ go to the hospital today.",
-      "choices": [
-        "has to",
-        "can",
-        "may"
-      ],
-      "correctAnswer": "has to",
-      "difficulty": "intermediate",
-      "explanation": "外的な必要性を表すhas toを使います。主語がsheなので三人称単数形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "必要性"
-    },
-    {
-      "id": "g2-u3-fib-011",
-      "type": "fillInBlank",
-      "japanese": "私は試験勉強をしなければなりません。",
-      "sentence": "I ____ study for the exam.",
-      "choices": [
-        "must",
-        "can",
-        "will"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "自分自身に課す義務や決意を表すときはmustを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "自分への義務"
-    },
-    {
-      "id": "g2-u3-fib-012",
-      "type": "fillInBlank",
-      "japanese": "あなたは宿題を提出しなければなりません。",
-      "sentence": "You ____ submit your homework.",
-      "choices": [
-        "have to",
-        "want to",
-        "try to"
-      ],
-      "correctAnswer": "have to",
-      "difficulty": "intermediate",
-      "explanation": "外的な義務(学校の規則など)にはhave toを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "外的な義務"
-    },
-    {
-      "id": "g2-u3-fib-013",
-      "type": "fillInBlank",
-      "japanese": "彼は英語を勉強しなければなりません。",
-      "sentence": "He ____ study English.",
-      "choices": [
-        "must",
-        "may",
-        "can"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "強い義務や必要性を表すmustを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "義務"
-    },
-    {
-      "id": "g2-u3-fib-014",
-      "type": "fillInBlank",
-      "japanese": "私たちは健康に気をつけなければなりません。",
-      "sentence": "We ____ take care of our health.",
-      "choices": [
-        "must",
-        "should",
-        "would"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "intermediate",
-      "explanation": "強い義務や重要性を強調するときはmustを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "重要性の強調"
-    },
-    {
-      "id": "g2-u3-fib-015",
-      "type": "fillInBlank",
-      "japanese": "彼女は毎日練習しなければなりません。",
-      "sentence": "She ____ practice every day.",
-      "choices": [
-        "has to",
-        "wants to",
-        "tries to"
-      ],
-      "correctAnswer": "has to",
-      "difficulty": "intermediate",
-      "explanation": "外的な必要性を表すhas toを使います。主語がsheなので三人称単数形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "外的な必要性"
-    },
-    {
-      "id": "g2-u3-so-001",
-      "type": "sentenceOrdering",
-      "japanese": "私は毎日宿題をしなければなりません。",
-      "words": [
-        "I",
-        "must",
-        "do",
-        "my",
-        "homework",
-        "every",
-        "day"
-      ],
-      "correctAnswer": "I must do my homework every day.",
-      "difficulty": "beginner",
-      "grammarPoint": "must + 動詞の原形",
-      "hint": "mustの語順",
-      "explanation": "mustは助動詞で、主語の後に置き、その後に動詞の原形を続けます。\n\n「私は毎日宿題をしなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I must do my homework every day."
-    },
-    {
-      "id": "g2-u3-so-002",
-      "type": "sentenceOrdering",
-      "japanese": "あなたは早く起きなければなりません。",
-      "words": [
-        "you",
-        "have",
         "to",
-        "get",
-        "up",
-        "early"
-      ],
-      "correctAnswer": "You have to get up early.",
-      "difficulty": "intermediate",
-      "grammarPoint": "have to + 動詞の原形",
-      "hint": "have toの語順",
-      "explanation": "have toの後は動詞の原形を続けます。\n\n「あなたは早く起きなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ You have to get up early."
-    },
-    {
-      "id": "g2-u3-so-003",
-      "type": "sentenceOrdering",
-      "japanese": "彼は今日働かなければなりません。",
-      "words": [
-        "he",
-        "must",
-        "work",
-        "today"
-      ],
-      "correctAnswer": "He must work today.",
-      "difficulty": "beginner",
-      "grammarPoint": "must + 動詞の原形",
-      "hint": "mustの後",
-      "explanation": "mustの後は必ず動詞の原形を使います。\n\n「彼は今日働かなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He must work today."
-    },
-    {
-      "id": "g2-u3-so-004",
-      "type": "sentenceOrdering",
-      "japanese": "私たちは図書館で静かにしなければなりません。",
-      "words": [
-        "we",
-        "must",
-        "be",
-        "quiet",
-        "in",
-        "the",
-        "library"
-      ],
-      "correctAnswer": "We must be quiet in the library.",
-      "difficulty": "intermediate",
-      "grammarPoint": "must be + 形容詞",
-      "hint": "must beの語順",
-      "explanation": "must beの後に形容詞quietを続けます。\n\n「私たちは図書館で静かにしなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We must be quiet in the library."
-    },
-    {
-      "id": "g2-u3-so-005",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は薬を飲まなければなりません。",
-      "words": [
-        "she",
-        "has",
-        "to",
-        "take",
-        "medicine"
-      ],
-      "correctAnswer": "She has to take medicine.",
-      "difficulty": "intermediate",
-      "grammarPoint": "has to + 動詞の原形",
-      "hint": "三人称単数",
-      "explanation": "主語がsheなので、have toはhas toになります。\n\n「彼女は薬を飲まなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has to take medicine."
-    },
-    {
-      "id": "g2-u3-so-006",
-      "type": "sentenceOrdering",
-      "japanese": "私は明日早く学校に行かなければなりません。",
-      "words": [
-        "I",
-        "have",
-        "to",
-        "go",
-        "to",
-        "school",
-        "early",
-        "tomorrow"
-      ],
-      "correctAnswer": "I have to go to school early tomorrow.",
-      "difficulty": "beginner",
-      "grammarPoint": "have to + 動詞の原形",
-      "hint": "have toの語順",
-      "explanation": "have toの後に動詞の原形goを続けます。\n\n「私は明日早く学校に行かなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have to go to school early tomorrow."
-    },
-    {
-      "id": "g2-u3-so-007",
-      "type": "sentenceOrdering",
-      "japanese": "あなたたちは規則に従わなければなりません。",
-      "words": [
-        "you",
-        "must",
-        "follow",
-        "the",
-        "rules"
-      ],
-      "correctAnswer": "You must follow the rules.",
-      "difficulty": "beginner",
-      "grammarPoint": "must + 動詞の原形",
-      "hint": "mustの語順",
-      "explanation": "mustの後は動詞の原形followを使います。\n\n「あなたたちは規則に従わなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ You must follow the rules."
-    },
-    {
-      "id": "g2-u3-so-008",
-      "type": "sentenceOrdering",
-      "japanese": "彼は毎朝運動しなければなりません。",
-      "words": [
-        "he",
-        "has",
-        "to",
-        "exercise",
-        "every",
-        "morning"
-      ],
-      "correctAnswer": "He has to exercise every morning.",
-      "difficulty": "intermediate",
-      "grammarPoint": "has to + 動詞の原形",
-      "hint": "三人称単数",
-      "explanation": "主語がheなので、have toはhas toになります。\n\n「彼は毎朝運動しなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has to exercise every morning."
-    },
-    {
-      "id": "g2-u3-so-009",
-      "type": "sentenceOrdering",
-      "japanese": "私たちは時間を守らなければなりません。",
-      "words": [
-        "we",
-        "must",
-        "be",
-        "on",
-        "time"
-      ],
-      "correctAnswer": "We must be on time.",
-      "difficulty": "beginner",
-      "grammarPoint": "must be",
-      "hint": "be on time",
-      "explanation": "be on timeで「時間を守る」という意味です。\n\n「私たちは時間を守らなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We must be on time."
-    },
-    {
-      "id": "g2-u3-so-010",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は今日病院に行かなければなりません。",
-      "words": [
-        "she",
-        "has",
-        "to",
-        "go",
-        "to",
-        "the",
-        "hospital",
-        "today"
-      ],
-      "correctAnswer": "She has to go to the hospital today.",
-      "difficulty": "intermediate",
-      "grammarPoint": "has to + 動詞の原形",
-      "hint": "has toの語順",
-      "explanation": "主語がsheなのでhas toを使います。\n\n「彼女は今日病院に行かなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has to go to the hospital today."
-    },
-    {
-      "id": "g2-u3-so-011",
-      "type": "sentenceOrdering",
-      "japanese": "私は試験勉強をしなければなりません。",
-      "words": [
-        "I",
-        "must",
-        "study",
         "for",
-        "the",
-        "exam"
+        "of"
       ],
-      "correctAnswer": "I must study for the exam.",
+      "correctAnswer": "to",
       "difficulty": "beginner",
-      "grammarPoint": "must + 動詞の原形",
-      "hint": "study for",
-      "explanation": "study forで「~のために勉強する」という意味です。\n\n「私は試験勉強をしなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I must study for the exam."
+      "explanation": "「~すること」を表す不定詞の名詞的用法です。likeの後ろにto + 動詞の原形を置きます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すること」という意味になります"
     },
     {
-      "id": "g2-u3-so-012",
-      "type": "sentenceOrdering",
-      "japanese": "あなたは宿題を提出しなければなりません。",
-      "words": [
-        "you",
-        "have",
+      "id": "g2-u4-fib-002",
+      "type": "fillInBlank",
+      "japanese": "私は音楽を聴くのが好きです。",
+      "sentence": "I like ____ listen to music.",
+      "choices": [
         "to",
-        "submit",
-        "your",
-        "homework"
+        "for",
+        "at"
       ],
-      "correctAnswer": "You have to submit your homework.",
-      "difficulty": "intermediate",
-      "grammarPoint": "have to + 動詞の原形",
-      "hint": "have toの語順",
-      "explanation": "submitは「提出する」という意味の動詞です。\n\n「あなたは宿題を提出しなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ You have to submit your homework."
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "不定詞の名詞的用法で「音楽を聴くこと」を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "likeの後ろには「to + 動詞」"
     },
     {
-      "id": "g2-u3-so-013",
+      "id": "g2-u4-fib-003",
+      "type": "fillInBlank",
+      "japanese": "彼女は泳ぐのが好きです。",
+      "sentence": "She likes ____ swim.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "三人称単数なのでlikesとなり、その後ろにto + 動詞の原形が続きます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "主語がsheなのでlikesになります"
+    },
+    {
+      "id": "g2-u4-fib-004",
+      "type": "fillInBlank",
+      "japanese": "私は料理をすることが好きです。",
+      "sentence": "I like ____ cook.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "「料理をすること」という名詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すること」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-005",
+      "type": "fillInBlank",
+      "japanese": "彼は走るのが好きです。",
+      "sentence": "He likes ____ run.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "三人称単数主語でlikesとなり、不定詞to runが続きます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "heなのでlikesです"
+    },
+    {
+      "id": "g2-u4-fib-006",
+      "type": "fillInBlank",
+      "japanese": "私は英語を勉強したいです。",
+      "sentence": "I want ____ study English.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to + 動詞の原形で「~したい」という意味になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-007",
+      "type": "fillInBlank",
+      "japanese": "彼女は歌手になりたいです。",
+      "sentence": "She wants ____ be a singer.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "「歌手になりたい」= want to be a singerとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-008",
+      "type": "fillInBlank",
+      "japanese": "私は医者になりたいです。",
+      "sentence": "I want ____ be a doctor.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to + 動詞の原形で「医者になりたい」と表現します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~になりたい」= want to be"
+    },
+    {
+      "id": "g2-u4-fib-009",
+      "type": "fillInBlank",
+      "japanese": "彼は教師になりたいです。",
+      "sentence": "He wants ____ be a teacher.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to be ~で「~になりたい」という希望を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to be「~になりたい」"
+    },
+    {
+      "id": "g2-u4-fib-010",
+      "type": "fillInBlank",
+      "japanese": "私は日本を訪れたいです。",
+      "sentence": "I want ____ visit Japan.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to visitで「訪れたい」という意味です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~したい」= want to ~"
+    },
+    {
+      "id": "g2-u4-fib-011",
+      "type": "fillInBlank",
+      "japanese": "私には読むべき本があります。",
+      "sentence": "I have a book ____ read.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "不定詞の形容詞的用法です。a book to readで「読むべき本」という意味になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するための」という意味の形容詞的用法"
+    },
+    {
+      "id": "g2-u4-fib-012",
+      "type": "fillInBlank",
+      "japanese": "私には書くべき手紙があります。",
+      "sentence": "I have a letter ____ write.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a letter to writeで「書くべき手紙」となる形容詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "名詞を修飾する不定詞"
+    },
+    {
+      "id": "g2-u4-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私には会うべき友達がいます。",
+      "sentence": "I have a friend ____ meet.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a friend to meetで「会うべき友達」という形容詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するための」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-014",
+      "type": "fillInBlank",
+      "japanese": "彼女には訪れるべき場所があります。",
+      "sentence": "She has a place ____ visit.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a place to visitで「訪れるべき場所」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "形容詞的用法の不定詞"
+    },
+    {
+      "id": "g2-u4-fib-015",
+      "type": "fillInBlank",
+      "japanese": "私にはすべき仕事があります。",
+      "sentence": "I have work ____ do.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "work to doで「すべき仕事」という意味の形容詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すべき」という意味"
+    },
+    {
+      "id": "g2-u4-fib-016",
+      "type": "fillInBlank",
+      "japanese": "私は健康でいるために運動します。",
+      "sentence": "I exercise ____ be healthy.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "不定詞の副詞的用法(目的)です。「健康でいるために」という目的を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するために」という目的を表す"
+    },
+    {
+      "id": "g2-u4-fib-017",
+      "type": "fillInBlank",
+      "japanese": "彼女は英語を学ぶために日本に来ました。",
+      "sentence": "She came to Japan ____ learn English.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "「英語を学ぶために」という目的を表す副詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "目的を表す「~するために」"
+    },
+    {
+      "id": "g2-u4-fib-018",
+      "type": "fillInBlank",
+      "japanese": "私は友達に会うために公園に行きました。",
+      "sentence": "I went to the park ____ meet my friend.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "「友達に会うために」という目的を表す不定詞の副詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するために」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-019",
+      "type": "fillInBlank",
+      "japanese": "彼は音楽を聴くために部屋に行きました。",
+      "sentence": "He went to his room ____ listen to music.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "「音楽を聴くために」という目的の副詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "目的「~するために」"
+    },
+    {
+      "id": "g2-u4-fib-020",
+      "type": "fillInBlank",
+      "japanese": "私は買い物をするために街に行きました。",
+      "sentence": "I went to town ____ shop.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "to shopで「買い物をするために」という目的を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するために」という目的"
+    },
+    {
+      "id": "g2-u4-fib-021",
+      "type": "fillInBlank",
+      "japanese": "彼女は歌うのが好きです。",
+      "sentence": "She loves ____ sing.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "love to + 動詞で「~するのが大好き」という意味になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "love to ~「~するのが大好き」"
+    },
+    {
+      "id": "g2-u4-fib-022",
+      "type": "fillInBlank",
+      "japanese": "私は踊るのが大好きです。",
+      "sentence": "I love ____ dance.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "「踊ること」を表す名詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すること」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-023",
+      "type": "fillInBlank",
+      "japanese": "彼は絵を描くのが大好きです。",
+      "sentence": "He loves ____ draw pictures.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "love to draw picturesで「絵を描くのが大好き」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "love to ~「~するのが大好き」"
+    },
+    {
+      "id": "g2-u4-fib-024",
+      "type": "fillInBlank",
+      "japanese": "私たちはサッカーをするのが好きです。",
+      "sentence": "We like ____ play soccer.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to play soccerで「サッカーをするのが好き」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すること」を表す不定詞"
+    },
+    {
+      "id": "g2-u4-fib-025",
+      "type": "fillInBlank",
+      "japanese": "彼らは旅行するのが好きです。",
+      "sentence": "They like ____ travel.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "「旅行すること」という名詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "like to ~「~するのが好き」"
+    },
+    {
+      "id": "g2-u4-fib-026",
+      "type": "fillInBlank",
+      "japanese": "私は新しい友達を作りたいです。",
+      "sentence": "I want ____ make new friends.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to make friendsで「友達を作りたい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-027",
+      "type": "fillInBlank",
+      "japanese": "彼女は写真を撮りたいです。",
+      "sentence": "She wants ____ take pictures.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to take picturesで「写真を撮りたい」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~したい」= want to ~"
+    },
+    {
+      "id": "g2-u4-fib-028",
+      "type": "fillInBlank",
+      "japanese": "私は上手に英語を話したいです。",
+      "sentence": "I want ____ speak English well.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to speak English wellで「上手に英語を話したい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-029",
+      "type": "fillInBlank",
+      "japanese": "彼は有名になりたいです。",
+      "sentence": "He wants ____ be famous.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to be famousで「有名になりたい」という意味です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~になりたい」= want to be"
+    },
+    {
+      "id": "g2-u4-fib-030",
+      "type": "fillInBlank",
+      "japanese": "私は世界中を旅したいです。",
+      "sentence": "I want ____ travel around the world.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "want to travel around the worldで「世界中を旅したい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-031",
+      "type": "fillInBlank",
+      "japanese": "私には助けるべき人がいます。",
+      "sentence": "I have someone ____ help.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "someone to helpで「助けるべき人」という形容詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すべき」という意味の形容詞的用法"
+    },
+    {
+      "id": "g2-u4-fib-032",
+      "type": "fillInBlank",
+      "japanese": "彼女には言うべきことがあります。",
+      "sentence": "She has something ____ say.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "something to sayで「言うべきこと」となる形容詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "名詞を修飾する不定詞"
+    },
+    {
+      "id": "g2-u4-fib-033",
+      "type": "fillInBlank",
+      "japanese": "私には食べるべき食べ物があります。",
+      "sentence": "I have some food ____ eat.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "food to eatで「食べるべき食べ物」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "形容詞的用法「~すべき」"
+    },
+    {
+      "id": "g2-u4-fib-034",
+      "type": "fillInBlank",
+      "japanese": "彼には聞くべき質問があります。",
+      "sentence": "He has a question ____ ask.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a question to askで「聞くべき質問」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すべき」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-035",
+      "type": "fillInBlank",
+      "japanese": "私には見るべき映画があります。",
+      "sentence": "I have a movie ____ watch.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a movie to watchで「見るべき映画」という形容詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "形容詞的用法の不定詞"
+    },
+    {
+      "id": "g2-u4-fib-036",
+      "type": "fillInBlank",
+      "japanese": "私は試験に合格するために一生懸命勉強しました。",
+      "sentence": "I studied hard ____ pass the exam.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "「試験に合格するために」という目的を表す副詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するために」という目的"
+    },
+    {
+      "id": "g2-u4-fib-037",
+      "type": "fillInBlank",
+      "japanese": "彼女は先生になるために大学に行きました。",
+      "sentence": "She went to university ____ become a teacher.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "「先生になるために」という目的の副詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "目的「~するために」"
+    },
+    {
+      "id": "g2-u4-fib-038",
+      "type": "fillInBlank",
+      "japanese": "私は家族と一緒にいるために家に帰りました。",
+      "sentence": "I went home ____ be with my family.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "to be with my familyで「家族と一緒にいるために」という目的を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するために」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-039",
+      "type": "fillInBlank",
+      "japanese": "彼は健康を維持するために毎日走ります。",
+      "sentence": "He runs every day ____ stay healthy.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "「健康を維持するために」という目的を表す副詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "目的「~するために」"
+    },
+    {
+      "id": "g2-u4-fib-040",
+      "type": "fillInBlank",
+      "japanese": "私は日本語を学ぶために日本に行きたいです。",
+      "sentence": "I want to go to Japan ____ learn Japanese.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "「日本語を学ぶために」という目的の副詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~するために」という目的"
+    },
+    {
+      "id": "g2-u4-fib-041",
+      "type": "fillInBlank",
+      "japanese": "私は早起きすることが好きです。",
+      "sentence": "I like ____ get up early.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to get up earlyで「早起きするのが好き」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すること」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-042",
+      "type": "fillInBlank",
+      "japanese": "彼女は散歩するのが好きです。",
+      "sentence": "She likes ____ take a walk.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to take a walkで「散歩するのが好き」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "like to ~「~するのが好き」"
+    },
+    {
+      "id": "g2-u4-fib-043",
+      "type": "fillInBlank",
+      "japanese": "私はギターを弾くのが好きです。",
+      "sentence": "I like ____ play the guitar.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "「ギターを弾くこと」という名詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すること」を表す不定詞"
+    },
+    {
+      "id": "g2-u4-fib-044",
+      "type": "fillInBlank",
+      "japanese": "彼はピアノを弾くのが好きです。",
+      "sentence": "He likes ____ play the piano.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to play the pianoで「ピアノを弾くのが好き」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "like to ~「~するのが好き」"
+    },
+    {
+      "id": "g2-u4-fib-045",
+      "type": "fillInBlank",
+      "japanese": "私たちは外で遊ぶのが好きです。",
+      "sentence": "We like ____ play outside.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to play outsideで「外で遊ぶのが好き」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すること」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-046",
+      "type": "fillInBlank",
+      "japanese": "私は新しい言語を学びたいです。",
+      "sentence": "I want ____ learn a new language.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to learn a new languageで「新しい言語を学びたい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-047",
+      "type": "fillInBlank",
+      "japanese": "彼女は新しい車を買いたいです。",
+      "sentence": "She wants ____ buy a new car.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to buy a new carで「新しい車を買いたい」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~したい」= want to ~"
+    },
+    {
+      "id": "g2-u4-fib-048",
+      "type": "fillInBlank",
+      "japanese": "私は海外で働きたいです。",
+      "sentence": "I want ____ work abroad.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "want to work abroadで「海外で働きたい」という意味です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-049",
+      "type": "fillInBlank",
+      "japanese": "彼は成功したいです。",
+      "sentence": "He wants ____ succeed.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "want to succeedで「成功したい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~したい」= want to ~"
+    },
+    {
+      "id": "g2-u4-fib-050",
+      "type": "fillInBlank",
+      "japanese": "私は健康でいたいです。",
+      "sentence": "I want ____ stay healthy.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "want to stay healthyで「健康でいたい」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "want to ~「~したい」"
+    },
+    {
+      "id": "g2-u4-fib-051",
+      "type": "fillInBlank",
+      "japanese": "私には座るべき椅子があります。",
+      "sentence": "I have a chair ____ sit on.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a chair to sit onで「座るべき椅子」という形容詞的用法です。onは前置詞として必要です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すべき」という意味"
+    },
+    {
+      "id": "g2-u4-fib-052",
+      "type": "fillInBlank",
+      "japanese": "彼女には住むべき場所があります。",
+      "sentence": "She has a place ____ live in.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a place to live inで「住むべき場所」となる形容詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "形容詞的用法の不定詞"
+    },
+    {
+      "id": "g2-u4-fib-053",
+      "type": "fillInBlank",
+      "japanese": "私には書くべきペンがあります。",
+      "sentence": "I have a pen ____ write with.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a pen to write withで「書くべきペン」という形容詞的用法です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すべき」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-fib-054",
+      "type": "fillInBlank",
+      "japanese": "彼には話すべき人がいます。",
+      "sentence": "He has someone ____ talk to.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "someone to talk toで「話すべき人」となります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "形容詞的用法「~すべき」"
+    },
+    {
+      "id": "g2-u4-fib-055",
+      "type": "fillInBlank",
+      "japanese": "私には遊ぶべき時間があります。",
+      "sentence": "I have time ____ play.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "time to playで「遊ぶべき時間」という形容詞的用法の不定詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "「~すべき」という意味の形容詞的用法"
+    },
+    {
+      "id": "g2-u4-so-001",
       "type": "sentenceOrdering",
-      "japanese": "彼は英語を勉強しなければなりません。",
+      "japanese": "私は本を読むのが好きです。",
       "words": [
-        "he",
-        "must",
+        "I",
+        "like",
+        "to",
+        "read",
+        "books"
+      ],
+      "difficulty": "beginner",
+      "explanation": "like to + 動詞の原形で「~するのが好き」という意味になります。\n\n「私は本を読むのが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「I like to ~」の語順",
+      "correctAnswer": "I like to read books ."
+    },
+    {
+      "id": "g2-u4-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は音楽を聴くのが好きです。",
+      "words": [
+        "She",
+        "likes",
+        "to",
+        "listen",
+        "to",
+        "music"
+      ],
+      "difficulty": "beginner",
+      "explanation": "三人称単数なのでlikesとなり、to listen to musicと続きます。\n\n「彼女は音楽を聴くのが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "She likes to ~",
+      "correctAnswer": "She likes to listen to music ."
+    },
+    {
+      "id": "g2-u4-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "私は泳ぐのが好きです。",
+      "words": [
+        "I",
+        "like",
+        "to",
+        "swim"
+      ],
+      "difficulty": "beginner",
+      "explanation": "like to swimで「泳ぐのが好き」です。\n\n「私は泳ぐのが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~すること」= to + 動詞",
+      "correctAnswer": "I like to swim ."
+    },
+    {
+      "id": "g2-u4-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "私は英語を勉強したいです。",
+      "words": [
+        "I",
+        "want",
+        "to",
         "study",
         "English"
       ],
-      "correctAnswer": "He must study English.",
       "difficulty": "beginner",
-      "grammarPoint": "must + 動詞の原形",
-      "hint": "mustの語順",
-      "explanation": "シンプルな義務の文です。\n\n「彼は英語を勉強しなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He must study English."
+      "explanation": "want to + 動詞の原形で「~したい」です。\n\n「私は英語を勉強したいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "want to ~「~したい」",
+      "correctAnswer": "I want to study English ."
     },
     {
-      "id": "g2-u3-so-014",
+      "id": "g2-u4-so-005",
       "type": "sentenceOrdering",
-      "japanese": "私たちは健康に気をつけなければなりません。",
+      "japanese": "彼女は歌手になりたいです。",
       "words": [
-        "we",
-        "must",
-        "take",
-        "care",
-        "of",
-        "our",
-        "health"
-      ],
-      "correctAnswer": "We must take care of our health.",
-      "difficulty": "intermediate",
-      "grammarPoint": "must + 動詞の原形",
-      "hint": "take care of",
-      "explanation": "take care ofで「~の世話をする、~に気をつける」という意味です。\n\n「私たちは健康に気をつけなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We must take care of our health."
-    },
-    {
-      "id": "g2-u3-so-015",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は毎日練習しなければなりません。",
-      "words": [
-        "she",
-        "has",
+        "She",
+        "wants",
         "to",
-        "practice",
-        "every",
-        "day"
-      ],
-      "correctAnswer": "She has to practice every day.",
-      "difficulty": "intermediate",
-      "grammarPoint": "has to + 動詞の原形",
-      "hint": "三人称単数",
-      "explanation": "主語がsheなのでhas toを使います。\n\n「彼女は毎日練習しなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has to practice every day."
-    },
-    {
-      "id": "g2-u3-para-001",
-      "type": "paraphrase",
-      "japanese": "私は宿題をしなければなりません。",
-      "originalSentence": "I must do my homework.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "I have to do my homework.",
-        "I has to do my homework.",
-        "I having to do my homework."
-      ],
-      "correctAnswer": "I have to do my homework.",
-      "difficulty": "beginner",
-      "explanation": "mustをhave toに書き換えることができます。意味はほぼ同じです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "have toで書き換え"
-    },
-    {
-      "id": "g2-u3-para-002",
-      "type": "paraphrase",
-      "japanese": "彼女は早く起きなければなりません。",
-      "originalSentence": "She has to get up early.",
-      "question": "mustを使って書き換えなさい。",
-      "choices": [
-        "She must get up early.",
-        "She musts get up early.",
-        "She must gets up early."
-      ],
-      "correctAnswer": "She must get up early.",
-      "difficulty": "beginner",
-      "explanation": "have toをmustに書き換えます。mustには三人称単数のsは付きません。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "mustで書き換え"
-    },
-    {
-      "id": "g2-u3-para-003",
-      "type": "paraphrase",
-      "japanese": "私たちは静かにしなければなりません。",
-      "originalSentence": "We must be quiet.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "We have to be quiet.",
-        "We has to be quiet.",
-        "We must to be quiet."
-      ],
-      "correctAnswer": "We have to be quiet.",
-      "difficulty": "beginner",
-      "explanation": "mustをhave toに書き換えます。主語がweなのでhave toです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "主語に注意"
-    },
-    {
-      "id": "g2-u3-para-004",
-      "type": "paraphrase",
-      "japanese": "彼は働かなければなりません。",
-      "originalSentence": "He has to work.",
-      "question": "mustを使って書き換えなさい。",
-      "choices": [
-        "He must work.",
-        "He musts work.",
-        "He must to work."
-      ],
-      "correctAnswer": "He must work.",
-      "difficulty": "beginner",
-      "explanation": "has toをmustに書き換えます。mustの後はtoは不要です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "toは不要"
-    },
-    {
-      "id": "g2-u3-para-005",
-      "type": "paraphrase",
-      "japanese": "私は薬を飲まなければなりません。",
-      "originalSentence": "I must take medicine.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "I have to take medicine.",
-        "I has to take medicine.",
-        "I must to take medicine."
-      ],
-      "correctAnswer": "I have to take medicine.",
-      "difficulty": "intermediate",
-      "explanation": "mustをhave toに書き換えます。主語がIなのでhave toです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "have toで書き換え"
-    },
-    {
-      "id": "g2-u3-para-006",
-      "type": "paraphrase",
-      "japanese": "あなたは規則に従わなければなりません。",
-      "originalSentence": "You have to follow the rules.",
-      "question": "mustを使って書き換えなさい。",
-      "choices": [
-        "You must follow the rules.",
-        "You musts follow the rules.",
-        "You must to follow the rules."
-      ],
-      "correctAnswer": "You must follow the rules.",
-      "difficulty": "intermediate",
-      "explanation": "have toをmustに書き換えます。mustの後は動詞の原形です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動詞の原形"
-    },
-    {
-      "id": "g2-u3-para-007",
-      "type": "paraphrase",
-      "japanese": "彼女は練習しなければなりません。",
-      "originalSentence": "She must practice.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "She has to practice.",
-        "She have to practice.",
-        "She must to practice."
-      ],
-      "correctAnswer": "She has to practice.",
-      "difficulty": "intermediate",
-      "explanation": "mustをhas toに書き換えます。主語がsheなので三人称単数形です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "三人称単数"
-    },
-    {
-      "id": "g2-u3-para-008",
-      "type": "paraphrase",
-      "japanese": "私たちは時間を守らなければなりません。",
-      "originalSentence": "We have to be on time.",
-      "question": "mustを使って書き換えなさい。",
-      "choices": [
-        "We must be on time.",
-        "We musts be on time.",
-        "We must to be on time."
-      ],
-      "correctAnswer": "We must be on time.",
-      "difficulty": "intermediate",
-      "explanation": "have toをmustに書き換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "mustで書き換え"
-    },
-    {
-      "id": "g2-u3-para-009",
-      "type": "paraphrase",
-      "japanese": "彼は勉強しなければなりません。",
-      "originalSentence": "He must study.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "He has to study.",
-        "He have to study.",
-        "He must to study."
-      ],
-      "correctAnswer": "He has to study.",
-      "difficulty": "intermediate",
-      "explanation": "mustをhas toに書き換えます。主語がheなので三人称単数形です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "三人称単数"
-    },
-    {
-      "id": "g2-u3-para-010",
-      "type": "paraphrase",
-      "japanese": "私は宿題を提出しなければなりません。",
-      "originalSentence": "I have to submit my homework.",
-      "question": "mustを使って書き換えなさい。",
-      "choices": [
-        "I must submit my homework.",
-        "I musts submit my homework.",
-        "I must to submit my homework."
-      ],
-      "correctAnswer": "I must submit my homework.",
-      "difficulty": "intermediate",
-      "explanation": "have toをmustに書き換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "mustで書き換え"
-    },
-    {
-      "id": "g2-u3-para-011",
-      "type": "paraphrase",
-      "japanese": "彼女は病院に行かなければなりません。",
-      "originalSentence": "She must go to the hospital.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "She has to go to the hospital.",
-        "She have to go to the hospital.",
-        "She must to go to the hospital."
-      ],
-      "correctAnswer": "She has to go to the hospital.",
-      "difficulty": "advanced",
-      "explanation": "mustをhas toに書き換えます。主語がsheなので三人称単数形です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "三人称単数"
-    },
-    {
-      "id": "g2-u3-para-012",
-      "type": "paraphrase",
-      "japanese": "私たちは健康に気をつけなければなりません。",
-      "originalSentence": "We have to take care of our health.",
-      "question": "mustを使って書き換えなさい。",
-      "choices": [
-        "We must take care of our health.",
-        "We musts take care of our health.",
-        "We must to take care of our health."
-      ],
-      "correctAnswer": "We must take care of our health.",
-      "difficulty": "advanced",
-      "explanation": "have toをmustに書き換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "mustで書き換え"
-    },
-    {
-      "id": "g2-u3-para-013",
-      "type": "paraphrase",
-      "japanese": "彼は毎朝運動しなければなりません。",
-      "originalSentence": "He must exercise every morning.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "He has to exercise every morning.",
-        "He have to exercise every morning.",
-        "He must to exercise every morning."
-      ],
-      "correctAnswer": "He has to exercise every morning.",
-      "difficulty": "advanced",
-      "explanation": "mustをhas toに書き換えます。主語がheなので三人称単数形です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "三人称単数"
-    },
-    {
-      "id": "g2-u3-para-014",
-      "type": "paraphrase",
-      "japanese": "私は早く学校に行かなければなりません。",
-      "originalSentence": "I have to go to school early.",
-      "question": "mustを使って書き換えなさい。",
-      "choices": [
-        "I must go to school early.",
-        "I musts go to school early.",
-        "I must to go to school early."
-      ],
-      "correctAnswer": "I must go to school early.",
-      "difficulty": "advanced",
-      "explanation": "have toをmustに書き換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "mustで書き換え"
-    },
-    {
-      "id": "g2-u3-para-015",
-      "type": "paraphrase",
-      "japanese": "彼女は英語を勉強しなければなりません。",
-      "originalSentence": "She must study English.",
-      "question": "have toを使って書き換えなさい。",
-      "choices": [
-        "She has to study English.",
-        "She have to study English.",
-        "She must to study English."
-      ],
-      "correctAnswer": "She has to study English.",
-      "difficulty": "advanced",
-      "explanation": "mustをhas toに書き換えます。主語がsheなので三人称単数形です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "三人称単数"
-    },
-    {
-      "id": "g2-u3-vf-001",
-      "type": "verbForm",
-      "japanese": "私は宿題をしなければなりません。",
-      "sentence": "I must ____ my homework.",
-      "verb": "do",
-      "choices": [
-        "do",
-        "does",
-        "did"
-      ],
-      "correctAnswer": "do",
-      "difficulty": "beginner",
-      "explanation": "mustの後は必ず動詞の原形を使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
-    },
-    {
-      "id": "g2-u3-vf-002",
-      "type": "verbForm",
-      "japanese": "彼女は早く起きなければなりません。",
-      "sentence": "She has to ____ up early.",
-      "verb": "get",
-      "choices": [
-        "get",
-        "gets",
-        "got"
-      ],
-      "correctAnswer": "get",
-      "difficulty": "beginner",
-      "explanation": "have toの後も動詞の原形を使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
-    },
-    {
-      "id": "g2-u3-vf-003",
-      "type": "verbForm",
-      "japanese": "私たちは静かにしなければなりません。",
-      "sentence": "We must ____ quiet.",
-      "verb": "be",
-      "choices": [
         "be",
-        "are",
-        "is"
+        "a",
+        "singer"
       ],
-      "correctAnswer": "be",
       "difficulty": "beginner",
-      "explanation": "mustの後はbe動詞も原形beを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "be動詞の原形"
+      "explanation": "want to be a singerで「歌手になりたい」となります。\n\n「彼女は歌手になりたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "want to be「~になりたい」",
+      "correctAnswer": "She wants to be a singer ."
     },
     {
-      "id": "g2-u3-vf-004",
-      "type": "verbForm",
-      "japanese": "彼は働かなければなりません。",
-      "sentence": "He has to ____.",
-      "verb": "work",
-      "choices": [
-        "work",
-        "works",
-        "worked"
+      "id": "g2-u4-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は医者になりたいです。",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "be",
+        "a",
+        "doctor"
       ],
-      "correctAnswer": "work",
       "difficulty": "beginner",
-      "explanation": "has toの後は動詞の原形workを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
+      "explanation": "want to be a doctorで「医者になりたい」です。\n\n「私は医者になりたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~になりたい」= want to be",
+      "correctAnswer": "I want to be a doctor ."
     },
     {
-      "id": "g2-u3-vf-005",
-      "type": "verbForm",
-      "japanese": "私は薬を飲まなければなりません。",
-      "sentence": "I must ____ medicine.",
-      "verb": "take",
-      "choices": [
+      "id": "g2-u4-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "私には読むべき本があります。",
+      "words": [
+        "I",
+        "have",
+        "a",
+        "book",
+        "to",
+        "read"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "a book to readで「読むべき本」という形容詞的用法です。\n\n「私には読むべき本があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "名詞の後ろに to + 動詞",
+      "correctAnswer": "I have a book to read ."
+    },
+    {
+      "id": "g2-u4-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "私には書くべき手紙があります。",
+      "words": [
+        "I",
+        "have",
+        "a",
+        "letter",
+        "to",
+        "write"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "a letter to writeで「書くべき手紙」となる形容詞的用法です。\n\n「私には書くべき手紙があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "形容詞的用法の不定詞",
+      "correctAnswer": "I have a letter to write ."
+    },
+    {
+      "id": "g2-u4-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "私には会うべき友達がいます。",
+      "words": [
+        "I",
+        "have",
+        "a",
+        "friend",
+        "to",
+        "meet"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "a friend to meetで「会うべき友達」です。\n\n「私には会うべき友達がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~すべき」= to + 動詞",
+      "correctAnswer": "I have a friend to meet ."
+    },
+    {
+      "id": "g2-u4-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼女には訪れるべき場所があります。",
+      "words": [
+        "She",
+        "has",
+        "a",
+        "place",
+        "to",
+        "visit"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "a place to visitで「訪れるべき場所」という形容詞的用法です。\n\n「彼女には訪れるべき場所があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "形容詞的用法「~すべき」",
+      "correctAnswer": "She has a place to visit ."
+    },
+    {
+      "id": "g2-u4-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "私は健康でいるために運動します。",
+      "words": [
+        "I",
+        "exercise",
+        "to",
+        "be",
+        "healthy"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to be healthyで「健康でいるために」という目的を表す副詞的用法です。\n\n「私は健康でいるために運動します。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~するために」という目的",
+      "correctAnswer": "I exercise to be healthy ."
+    },
+    {
+      "id": "g2-u4-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は英語を学ぶために日本に来ました。",
+      "words": [
+        "She",
+        "came",
+        "to",
+        "Japan",
+        "to",
+        "learn",
+        "English"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to learn Englishで「英語を学ぶために」という目的の副詞的用法です。\n\n「彼女は英語を学ぶために日本に来ました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "目的「~するために」",
+      "correctAnswer": "She came to Japan to learn English ."
+    },
+    {
+      "id": "g2-u4-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "私は友達に会うために公園に行きました。",
+      "words": [
+        "I",
+        "went",
+        "to",
+        "the",
+        "park",
+        "to",
+        "meet",
+        "my",
+        "friend"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to meet my friendで「友達に会うために」という目的を表します。\n\n「私は友達に会うために公園に行きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~するために」= to + 動詞",
+      "correctAnswer": "I went to the park to meet my friend ."
+    },
+    {
+      "id": "g2-u4-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "彼は音楽を聴くために部屋に行きました。",
+      "words": [
+        "He",
+        "went",
+        "to",
+        "his",
+        "room",
+        "to",
+        "listen",
+        "to",
+        "music"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to listen to musicで「音楽を聴くために」という目的の副詞的用法です。\n\n「彼は音楽を聴くために部屋に行きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "目的を表す不定詞",
+      "correctAnswer": "He went to his room to listen to music ."
+    },
+    {
+      "id": "g2-u4-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "私は買い物をするために街に行きました。",
+      "words": [
+        "I",
+        "went",
+        "to",
+        "town",
+        "to",
+        "shop"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to shopで「買い物をするために」という目的を表します。\n\n「私は買い物をするために街に行きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~するために」",
+      "correctAnswer": "I went to town to shop ."
+    },
+    {
+      "id": "g2-u4-so-016",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は歌うのが大好きです。",
+      "words": [
+        "She",
+        "loves",
+        "to",
+        "sing"
+      ],
+      "difficulty": "beginner",
+      "explanation": "love to singで「歌うのが大好き」です。\n\n「彼女は歌うのが大好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "love to ~「~するのが大好き」",
+      "correctAnswer": "She loves to sing ."
+    },
+    {
+      "id": "g2-u4-so-017",
+      "type": "sentenceOrdering",
+      "japanese": "私は踊るのが大好きです。",
+      "words": [
+        "I",
+        "love",
+        "to",
+        "dance"
+      ],
+      "difficulty": "beginner",
+      "explanation": "love to danceで「踊るのが大好き」となります。\n\n「私は踊るのが大好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~すること」= to + 動詞",
+      "correctAnswer": "I love to dance ."
+    },
+    {
+      "id": "g2-u4-so-018",
+      "type": "sentenceOrdering",
+      "japanese": "彼は絵を描くのが大好きです。",
+      "words": [
+        "He",
+        "loves",
+        "to",
+        "draw",
+        "pictures"
+      ],
+      "difficulty": "beginner",
+      "explanation": "love to draw picturesで「絵を描くのが大好き」です。\n\n「彼は絵を描くのが大好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "love to ~",
+      "correctAnswer": "He loves to draw pictures ."
+    },
+    {
+      "id": "g2-u4-so-019",
+      "type": "sentenceOrdering",
+      "japanese": "私たちはサッカーをするのが好きです。",
+      "words": [
+        "We",
+        "like",
+        "to",
+        "play",
+        "soccer"
+      ],
+      "difficulty": "beginner",
+      "explanation": "like to play soccerで「サッカーをするのが好き」です。\n\n「私たちはサッカーをするのが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "like to ~「~するのが好き」",
+      "correctAnswer": "We like to play soccer ."
+    },
+    {
+      "id": "g2-u4-so-020",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは旅行するのが好きです。",
+      "words": [
+        "They",
+        "like",
+        "to",
+        "travel"
+      ],
+      "difficulty": "beginner",
+      "explanation": "like to travelで「旅行するのが好き」となります。\n\n「彼らは旅行するのが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~すること」を表す不定詞",
+      "correctAnswer": "They like to travel ."
+    },
+    {
+      "id": "g2-u4-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "私は新しい友達を作りたいです。",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "make",
+        "new",
+        "friends"
+      ],
+      "difficulty": "beginner",
+      "explanation": "want to make new friendsで「新しい友達を作りたい」です。\n\n「私は新しい友達を作りたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "want to ~「~したい」",
+      "correctAnswer": "I want to make new friends ."
+    },
+    {
+      "id": "g2-u4-so-022",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は写真を撮りたいです。",
+      "words": [
+        "She",
+        "wants",
+        "to",
         "take",
-        "takes",
-        "took"
+        "pictures"
       ],
-      "correctAnswer": "take",
-      "difficulty": "intermediate",
-      "explanation": "mustの後は動詞の原形takeを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
+      "difficulty": "beginner",
+      "explanation": "want to take picturesで「写真を撮りたい」です。\n\n「彼女は写真を撮りたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~したい」= want to ~",
+      "correctAnswer": "She wants to take pictures ."
     },
     {
-      "id": "g2-u3-vf-006",
-      "type": "verbForm",
-      "japanese": "あなたは規則に従わなければなりません。",
-      "sentence": "You have to ____ the rules.",
-      "verb": "follow",
-      "choices": [
-        "follow",
-        "follows",
-        "followed"
+      "id": "g2-u4-so-023",
+      "type": "sentenceOrdering",
+      "japanese": "私は上手に英語を話したいです。",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "speak",
+        "English",
+        "well"
       ],
-      "correctAnswer": "follow",
-      "difficulty": "intermediate",
-      "explanation": "have toの後は動詞の原形followを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
+      "difficulty": "beginner",
+      "explanation": "want to speak English wellで「上手に英語を話したい」となります。\n\n「私は上手に英語を話したいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "want to ~「~したい」",
+      "correctAnswer": "I want to speak English well ."
     },
     {
-      "id": "g2-u3-vf-007",
-      "type": "verbForm",
-      "japanese": "彼女は練習しなければなりません。",
-      "sentence": "She must ____.",
-      "verb": "practice",
-      "choices": [
-        "practice",
-        "practices",
-        "practiced"
-      ],
-      "correctAnswer": "practice",
-      "difficulty": "intermediate",
-      "explanation": "mustの後は動詞の原形practiceを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
-    },
-    {
-      "id": "g2-u3-vf-008",
-      "type": "verbForm",
-      "japanese": "私たちは時間を守らなければなりません。",
-      "sentence": "We must ____ on time.",
-      "verb": "be",
-      "choices": [
+      "id": "g2-u4-so-024",
+      "type": "sentenceOrdering",
+      "japanese": "彼は有名になりたいです。",
+      "words": [
+        "He",
+        "wants",
+        "to",
         "be",
-        "are",
-        "is"
+        "famous"
       ],
-      "correctAnswer": "be",
-      "difficulty": "advanced",
-      "explanation": "mustの後はbe動詞も原形beを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "be動詞の原形"
-    },
-    {
-      "id": "g2-u3-vf-009",
-      "type": "verbForm",
-      "japanese": "彼は勉強しなければなりません。",
-      "sentence": "He has to ____.",
-      "verb": "study",
-      "choices": [
-        "study",
-        "studies",
-        "studied"
-      ],
-      "correctAnswer": "study",
-      "difficulty": "advanced",
-      "explanation": "has toの後は動詞の原形studyを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
-    },
-    {
-      "id": "g2-u3-vf-010",
-      "type": "verbForm",
-      "japanese": "私は宿題を提出しなければなりません。",
-      "sentence": "I must ____ my homework.",
-      "verb": "submit",
-      "choices": [
-        "submit",
-        "submits",
-        "submitted"
-      ],
-      "correctAnswer": "submit",
-      "difficulty": "advanced",
-      "explanation": "mustの後は動詞の原形submitを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動詞の原形"
-    },
-    {
-      "id": "g2-u3-conv-001",
-      "type": "conversation",
-      "japanese": "学校の規則について話しています。",
-      "situation": "先生との会話",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Do I have to wear a uniform?"
-        },
-        {
-          "speaker": "B",
-          "text": "Yes, you ____."
-        }
-      ],
-      "choices": [
-        "must",
-        "can",
-        "may"
-      ],
-      "correctAnswer": "must",
       "difficulty": "beginner",
-      "explanation": "have toの疑問文には、mustまたはhave toで答えることができます。ここではmustが適切です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
-      "hint": "義務を表す"
+      "explanation": "want to be famousで「有名になりたい」です。\n\n「彼は有名になりたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "want to be「~になりたい」",
+      "correctAnswer": "He wants to be famous ."
     },
     {
-      "id": "g2-u3-conv-002",
-      "type": "conversation",
-      "japanese": "宿題について話しています。",
-      "situation": "友達との会話",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "When do you have to finish your homework?"
-        },
-        {
-          "speaker": "B",
-          "text": "I ____ finish it by tomorrow."
-        }
+      "id": "g2-u4-so-025",
+      "type": "sentenceOrdering",
+      "japanese": "私は世界中を旅したいです。",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "travel",
+        "around",
+        "the",
+        "world"
       ],
+      "difficulty": "intermediate",
+      "explanation": "want to travel around the worldで「世界中を旅したい」です。\n\n「私は世界中を旅したいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "want to ~「~したい」",
+      "correctAnswer": "I want to travel around the world ."
+    },
+    {
+      "id": "g2-u4-so-026",
+      "type": "sentenceOrdering",
+      "japanese": "私には助けるべき人がいます。",
+      "words": [
+        "I",
+        "have",
+        "someone",
+        "to",
+        "help"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "someone to helpで「助けるべき人」という形容詞的用法です。\n\n「私には助けるべき人がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "形容詞的用法「~すべき」",
+      "correctAnswer": "I have someone to help ."
+    },
+    {
+      "id": "g2-u4-so-027",
+      "type": "sentenceOrdering",
+      "japanese": "彼女には言うべきことがあります。",
+      "words": [
+        "She",
+        "has",
+        "something",
+        "to",
+        "say"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "something to sayで「言うべきこと」という形容詞的用法です。\n\n「彼女には言うべきことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "名詞を修飾する不定詞",
+      "correctAnswer": "She has something to say ."
+    },
+    {
+      "id": "g2-u4-so-028",
+      "type": "sentenceOrdering",
+      "japanese": "私は試験に合格するために一生懸命勉強しました。",
+      "words": [
+        "I",
+        "studied",
+        "hard",
+        "to",
+        "pass",
+        "the",
+        "exam"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to pass the examで「試験に合格するために」という目的を表します。\n\n「私は試験に合格するために一生懸命勉強しました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~するために」という目的",
+      "correctAnswer": "I studied hard to pass the exam ."
+    },
+    {
+      "id": "g2-u4-so-029",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は先生になるために大学に行きました。",
+      "words": [
+        "She",
+        "went",
+        "to",
+        "university",
+        "to",
+        "become",
+        "a",
+        "teacher"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to become a teacherで「先生になるために」という目的の副詞的用法です。\n\n「彼女は先生になるために大学に行きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "目的「~するために」",
+      "correctAnswer": "She went to university to become a teacher ."
+    },
+    {
+      "id": "g2-u4-so-030",
+      "type": "sentenceOrdering",
+      "japanese": "私は家族と一緒にいるために家に帰りました。",
+      "words": [
+        "I",
+        "went",
+        "home",
+        "to",
+        "be",
+        "with",
+        "my",
+        "family"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to be with my familyで「家族と一緒にいるために」という目的を表します。\n\n「私は家族と一緒にいるために家に帰りました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~するために」= to + 動詞",
+      "correctAnswer": "I went home to be with my family ."
+    },
+    {
+      "id": "g2-u4-so-031",
+      "type": "sentenceOrdering",
+      "japanese": "彼は健康を維持するために毎日走ります。",
+      "words": [
+        "He",
+        "runs",
+        "every",
+        "day",
+        "to",
+        "stay",
+        "healthy"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to stay healthyで「健康を維持するために」という目的の副詞的用法です。\n\n「彼は健康を維持するために毎日走ります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "目的「~するために」",
+      "correctAnswer": "He runs every day to stay healthy ."
+    },
+    {
+      "id": "g2-u4-so-032",
+      "type": "sentenceOrdering",
+      "japanese": "私は日本語を学ぶために日本に行きたいです。",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "go",
+        "to",
+        "Japan",
+        "to",
+        "learn",
+        "Japanese"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "to learn Japaneseで「日本語を学ぶために」という目的を表す副詞的用法です。\n\n「私は日本語を学ぶために日本に行きたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "「~するために」という目的",
+      "correctAnswer": "I want to go to Japan to learn Japanese ."
+    },
+    {
+      "id": "g2-u4-pp-001",
+      "type": "paraphrase",
+      "japanese": "私は本を読むのが好きです。",
+      "sentence": "I enjoy reading books.",
+      "targetSentence": "I like ____ read books.",
       "choices": [
-        "have to",
-        "can",
-        "want to"
+        "to",
+        "for",
+        "of"
       ],
-      "correctAnswer": "have to",
+      "correctAnswer": "to",
       "difficulty": "beginner",
-      "explanation": "締め切りなどの外的な義務を表すときはhave toを使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
-      "hint": "外的な義務"
+      "explanation": "enjoyは動名詞(reading)を取りますが、likeは不定詞(to read)も動名詞も取れます。ここでは不定詞を使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "like to ~「~するのが好き」"
     },
     {
-      "id": "g2-u3-conv-003",
-      "type": "conversation",
-      "japanese": "病院の予約について話しています。",
-      "situation": "医師との会話",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "How often must I take this medicine?"
-        },
-        {
-          "speaker": "B",
-          "text": "You ____ take it three times a day."
-        }
-      ],
+      "id": "g2-u4-pp-002",
+      "type": "paraphrase",
+      "japanese": "彼女は音楽を聴くのが好きです。",
+      "sentence": "She enjoys listening to music.",
+      "targetSentence": "She likes ____ listen to music.",
       "choices": [
-        "must",
-        "can",
-        "may"
+        "to",
+        "for",
+        "at"
       ],
-      "correctAnswer": "must",
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "enjoyは動名詞を取りますが、likeは不定詞to listenを使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "like to ~で言い換え"
+    },
+    {
+      "id": "g2-u4-pp-003",
+      "type": "paraphrase",
+      "japanese": "私は英語を勉強したいです。",
+      "sentence": "I would like to study English.",
+      "targetSentence": "I want ____ study English.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "would like to ~は want to ~の丁寧な表現です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "would like to = want to"
+    },
+    {
+      "id": "g2-u4-pp-004",
+      "type": "paraphrase",
+      "japanese": "彼女は歌手になりたいです。",
+      "sentence": "She wishes to be a singer.",
+      "targetSentence": "She wants ____ be a singer.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "wish to ~は want to ~と同じ意味です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "wish to = want to"
+    },
+    {
+      "id": "g2-u4-pp-005",
+      "type": "paraphrase",
+      "japanese": "私は医者になりたいです。",
+      "sentence": "I hope to be a doctor.",
+      "targetSentence": "I want ____ be a doctor.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "hope to ~も want to ~と似た意味で使えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "hope to = want to"
+    },
+    {
+      "id": "g2-u4-pp-006",
+      "type": "paraphrase",
+      "japanese": "私には読むべき本があります。",
+      "sentence": "I have a book for reading.",
+      "targetSentence": "I have a book ____ read.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
       "difficulty": "intermediate",
-      "explanation": "医師の指示など、強い義務を表すときはmustを使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
-      "hint": "強い義務"
+      "explanation": "for readingは目的を表しますが、to readは形容詞的用法で「読むべき本」となります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "形容詞的用法の不定詞"
     },
     {
-      "id": "g2-u3-conv-004",
-      "type": "conversation",
-      "japanese": "図書館の規則について話しています。",
-      "situation": "司書との会話",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "What are the library rules?"
-        },
-        {
-          "speaker": "B",
-          "text": "You ____ be quiet and ____ return books on time."
-        }
-      ],
+      "id": "g2-u4-pp-007",
+      "type": "paraphrase",
+      "japanese": "私には書くべき手紙があります。",
+      "sentence": "I have a letter that I must write.",
+      "targetSentence": "I have a letter ____ write.",
       "choices": [
-        "must / must",
-        "can / can",
-        "may / may"
+        "to",
+        "for",
+        "of"
       ],
-      "correctAnswer": "must / must",
+      "correctAnswer": "to",
       "difficulty": "intermediate",
-      "explanation": "図書館の規則という義務を表すためmustを2回使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
-      "hint": "規則"
+      "explanation": "that I must writeという関係代名詞節を、不定詞to writeで簡潔に表現できます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "「~すべき」= to + 動詞"
     },
     {
-      "id": "g2-u3-conv-005",
-      "type": "conversation",
-      "japanese": "試験について話しています。",
-      "situation": "先生との会話",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Do we have to study all chapters?"
-        },
-        {
-          "speaker": "B",
-          "text": "Yes, you ____ study all of them."
-        }
-      ],
+      "id": "g2-u4-pp-008",
+      "type": "paraphrase",
+      "japanese": "私は健康でいるために運動します。",
+      "sentence": "I exercise for staying healthy.",
+      "targetSentence": "I exercise ____ be healthy.",
       "choices": [
-        "must",
-        "can",
-        "should"
+        "to",
+        "for",
+        "at"
       ],
-      "correctAnswer": "must",
-      "difficulty": "advanced",
-      "explanation": "have toの疑問文にmustで答えています。試験範囲という義務を表します。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
-      "hint": "義務"
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "for + 動名詞も目的を表せますが、to + 動詞の原形の方が一般的です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "「~するために」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-pp-009",
+      "type": "paraphrase",
+      "japanese": "彼女は英語を学ぶために日本に来ました。",
+      "sentence": "She came to Japan for learning English.",
+      "targetSentence": "She came to Japan ____ learn English.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "目的を表すには不定詞to learnを使う方が自然です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "目的「~するために」"
+    },
+    {
+      "id": "g2-u4-pp-010",
+      "type": "paraphrase",
+      "japanese": "私は友達に会うために公園に行きました。",
+      "sentence": "I went to the park for meeting my friend.",
+      "targetSentence": "I went to the park ____ meet my friend.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "目的を表す副詞的用法の不定詞to meetが適切です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "「~するために」"
+    },
+    {
+      "id": "g2-u4-pp-011",
+      "type": "paraphrase",
+      "japanese": "私は本を読むのが好きです。",
+      "sentence": "Reading books is my favorite activity.",
+      "targetSentence": "I like ____ read books.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "Reading is my favorite activityを、like to readという不定詞を使って表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "like to ~で言い換え"
+    },
+    {
+      "id": "g2-u4-pp-012",
+      "type": "paraphrase",
+      "japanese": "彼女は歌うのが大好きです。",
+      "sentence": "Singing is what she loves.",
+      "targetSentence": "She loves ____ sing.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "Singing is what she lovesを、love to singという不定詞で表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "love to ~「~するのが大好き」"
+    },
+    {
+      "id": "g2-u4-pp-013",
+      "type": "paraphrase",
+      "japanese": "私は踊るのが大好きです。",
+      "sentence": "Dancing is something I love.",
+      "targetSentence": "I love ____ dance.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "love + 不定詞で「~するのが大好き」と表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "love to ~"
+    },
+    {
+      "id": "g2-u4-pp-014",
+      "type": "paraphrase",
+      "japanese": "私は新しい友達を作りたいです。",
+      "sentence": "I would like to make new friends.",
+      "targetSentence": "I want ____ make new friends.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "would like to ~は want to ~の丁寧な表現です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "would like to = want to"
+    },
+    {
+      "id": "g2-u4-pp-015",
+      "type": "paraphrase",
+      "japanese": "彼女は写真を撮りたいです。",
+      "sentence": "She wishes to take pictures.",
+      "targetSentence": "She wants ____ take pictures.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "wish to ~は want to ~と同じ意味です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "wish to = want to"
+    },
+    {
+      "id": "g2-u4-pp-016",
+      "type": "paraphrase",
+      "japanese": "私には助けるべき人がいます。",
+      "sentence": "I have someone that I must help.",
+      "targetSentence": "I have someone ____ help.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞節that I must helpを、不定詞to helpで簡潔に表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "形容詞的用法の不定詞"
+    },
+    {
+      "id": "g2-u4-pp-017",
+      "type": "paraphrase",
+      "japanese": "彼女には言うべきことがあります。",
+      "sentence": "She has something that she should say.",
+      "targetSentence": "She has something ____ say.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "that she should sayを、不定詞to sayで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "「~すべき」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-pp-018",
+      "type": "paraphrase",
+      "japanese": "私は試験に合格するために一生懸命勉強しました。",
+      "sentence": "I studied hard so that I could pass the exam.",
+      "targetSentence": "I studied hard ____ pass the exam.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "so that I could passという節を、不定詞to passで簡潔に表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "「~するために」= to + 動詞"
+    },
+    {
+      "id": "g2-u4-pp-019",
+      "type": "paraphrase",
+      "japanese": "彼女は先生になるために大学に行きました。",
+      "sentence": "She went to university so that she could become a teacher.",
+      "targetSentence": "She went to university ____ become a teacher.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "so that she could becomeを、不定詞to becomeで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "目的「~するために」"
+    },
+    {
+      "id": "g2-u4-pp-020",
+      "type": "paraphrase",
+      "japanese": "私は家族と一緒にいるために家に帰りました。",
+      "sentence": "I went home so that I could be with my family.",
+      "targetSentence": "I went home ____ be with my family.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "目的を表す節を、不定詞to beで簡潔に表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "「~するために」"
+    },
+    {
+      "id": "g2-u4-pp-021",
+      "type": "paraphrase",
+      "japanese": "私は早起きするのが好きです。",
+      "sentence": "Getting up early is something I like.",
+      "targetSentence": "I like ____ get up early.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "動名詞Getting up earlyを、不定詞to get up earlyで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "like to ~「~するのが好き」"
+    },
+    {
+      "id": "g2-u4-pp-022",
+      "type": "paraphrase",
+      "japanese": "彼女は散歩するのが好きです。",
+      "sentence": "Taking a walk is something she likes.",
+      "targetSentence": "She likes ____ take a walk.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "動名詞Taking a walkを、不定詞to take a walkで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "like to ~"
+    },
+    {
+      "id": "g2-u4-pp-023",
+      "type": "paraphrase",
+      "japanese": "私は新しい言語を学びたいです。",
+      "sentence": "I would like to learn a new language.",
+      "targetSentence": "I want ____ learn a new language.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "would like to ~は want to ~の丁寧な言い方です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "would like to = want to"
+    },
+    {
+      "id": "g2-u4-pp-024",
+      "type": "paraphrase",
+      "japanese": "彼女は新しい車を買いたいです。",
+      "sentence": "She wishes to buy a new car.",
+      "targetSentence": "She wants ____ buy a new car.",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "wish to ~は want to ~と同じ意味です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "wish to = want to"
+    },
+    {
+      "id": "g2-u4-conv-001",
+      "type": "conversation",
+      "japanese": "A: 週末は何をしたいですか? B: 映画を見に行きたいです。",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to + 動詞の原形で「~したい」という意味になります。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you want to do this weekend?",
+      "hint": "want to ~「~したい」",
+      "dialogue": [
+        "A: What do you want to do this weekend?",
+        "B: I want ____ see a movie."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-002",
+      "type": "conversation",
+      "japanese": "A: 趣味は何ですか? B: 音楽を聴くのが好きです。",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to + 動詞の原形で「~するのが好き」です。\n\nが正解です。\n\n【文脈理解】\n場面: A: What is your hobby?",
+      "hint": "like to ~「~するのが好き」",
+      "dialogue": [
+        "A: What is your hobby?",
+        "B: I like ____ listen to music."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-003",
+      "type": "conversation",
+      "japanese": "A: 将来何になりたいですか? B: 先生になりたいです。",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to be ~で「~になりたい」という希望を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you want to be in the future?",
+      "hint": "want to be「~になりたい」",
+      "dialogue": [
+        "A: What do you want to be in the future?",
+        "B: I want ____ be a teacher."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-004",
+      "type": "conversation",
+      "japanese": "A: なぜ図書館に行くのですか? B: 本を借りるために行きます。",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "to borrow booksで「本を借りるために」という目的を表す副詞的用法です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Why are you going to the library?",
+      "hint": "「~するために」という目的",
+      "dialogue": [
+        "A: Why are you going to the library?",
+        "B: I'm going there ____ borrow some books."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-005",
+      "type": "conversation",
+      "japanese": "A: 何かすべきことはありますか? B: はい、宿題をすべきことがあります。",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "homework to doで「すべき宿題」という形容詞的用法の不定詞です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Do you have anything to do?",
+      "hint": "形容詞的用法「~すべき」",
+      "dialogue": [
+        "A: Do you have anything to do?",
+        "B: Yes, I have homework ____ do."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-006",
+      "type": "conversation",
+      "japanese": "A: 自由時間には何をしますか? B: 本を読むのが好きです。",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to readで「本を読むのが好き」という名詞的用法です。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you do in your free time?",
+      "hint": "like to ~「~するのが好き」",
+      "dialogue": [
+        "A: What do you do in your free time?",
+        "B: I like ____ read books."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-007",
+      "type": "conversation",
+      "japanese": "A: 今日の午後は何をしたいですか? B: 公園で遊びたいです。",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to playで「遊びたい」という意味になります。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you want to do this afternoon?",
+      "hint": "want to ~「~したい」",
+      "dialogue": [
+        "A: What do you want to do this afternoon?",
+        "B: I want ____ play in the park."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-008",
+      "type": "conversation",
+      "japanese": "A: なぜ英語を勉強しているのですか? B: 海外旅行をするためです。",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "to travel abroadで「海外旅行をするために」という目的を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: Why are you studying English?",
+      "hint": "「~するために」という目的",
+      "dialogue": [
+        "A: Why are you studying English?",
+        "B: I'm studying ____ travel abroad."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-009",
+      "type": "conversation",
+      "japanese": "A: 彼女は何が好きですか? B: 彼女は歌うのが大好きです。",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "love to singで「歌うのが大好き」という意味です。\n\nが正解です。\n\n【文脈理解】\n場面: A: What does she like?",
+      "hint": "love to ~「~するのが大好き」",
+      "dialogue": [
+        "A: What does she like?",
+        "B: She loves ____ sing."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-010",
+      "type": "conversation",
+      "japanese": "A: 何か飲み物はありますか? B: はい、飲むべき水があります。",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "water to drinkで「飲むべき水」という形容詞的用法です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Do you have anything to drink?",
+      "hint": "形容詞的用法の不定詞",
+      "dialogue": [
+        "A: Do you have anything to drink?",
+        "B: Yes, I have some water ____ drink."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-011",
+      "type": "conversation",
+      "japanese": "A: 夏休みに何をしたいですか? B: 海に行きたいです。",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "want to go to the beachで「海に行きたい」です。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you want to do during summer vacation?",
+      "hint": "want to ~「~したい」",
+      "dialogue": [
+        "A: What do you want to do during summer vacation?",
+        "B: I want ____ go to the beach."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-012",
+      "type": "conversation",
+      "japanese": "A: なぜ早く起きたのですか? B: バスに乗るためです。",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "to catch the busで「バスに乗るために」という目的の副詞的用法です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Why did you get up early?",
+      "hint": "「~するために」という目的",
+      "dialogue": [
+        "A: Why did you get up early?",
+        "B: I got up early ____ catch the bus."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-013",
+      "type": "conversation",
+      "japanese": "A: 彼は何をするのが好きですか? B: 彼はサッカーをするのが好きです。",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "like to playで「サッカーをするのが好き」です。三人称単数なのでlikesとなります。\n\nが正解です。\n\n【文脈理解】\n場面: A: What does he like to do?",
+      "hint": "like to ~「~するのが好き」",
+      "dialogue": [
+        "A: What does he like to do?",
+        "B: He likes ____ play soccer."
+      ]
+    },
+    {
+      "id": "g2-u4-conv-014",
+      "type": "conversation",
+      "japanese": "A: 今日は何かすべきことがありますか? B: はい、訪れるべき場所があります。",
+      "choices": [
+        "to",
+        "for",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "a place to visitで「訪れるべき場所」という形容詞的用法の不定詞です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Do you have anything to do today?",
+      "hint": "形容詞的用法「~すべき」",
+      "dialogue": [
+        "A: Do you have anything to do today?",
+        "B: Yes, I have a place ____ visit."
+      ]
     }
   ]
 }

@@ -1,3 +1,14 @@
+---
+canonical: docs/processes/DEPLOYMENT_OPERATIONS.md
+status: stable
+lastUpdated: 2025-12-19
+diataxisCategory: how-to
+references:
+  - .aitk/instructions/security-best-practices.instructions.md
+  - README.md
+  - docs/processes/STUDENT_DEPLOYMENT_GUIDE.md
+---
+
 # 🚀 デプロイメント運用ガイド
 
 **開発者・運用者向け** - 生徒が学習を中断しないデプロイメント手順

@@ -1,14 +1,14 @@
 {
   "unit": "Unit 1",
-  "title": "現在完了",
-  "grammar": "have/has + 過去分詞",
-  "totalQuestions": 70,
+  "title": "現在完了形（経験用法）",
+  "grammar": "have/has + 過去分詞（経験）、SVOC、SVOO",
+  "totalQuestions": 100,
   "questionTypes": {
-    "fillInBlank": 25,
-    "sentenceOrdering": 23,
-    "paraphrase": 1,
+    "fillInBlank": 35,
+    "sentenceOrdering": 34,
+    "paraphrase": 5,
     "verbForm": 20,
-    "conversation": 1
+    "conversation": 6
   },
   "questions": [
     {
@@ -22,7 +22,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -38,7 +38,7 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -54,7 +54,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -70,7 +70,7 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -86,7 +86,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -102,7 +102,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -118,7 +118,7 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -134,7 +134,7 @@
         "Do"
       ],
       "correctAnswer": "Have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -150,7 +150,7 @@
         "Do"
       ],
       "correctAnswer": "Has",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -166,7 +166,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -182,7 +182,7 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -198,7 +198,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -214,7 +214,7 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -230,7 +230,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -246,7 +246,7 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
@@ -1192,6 +1192,489 @@
       "difficulty": "advanced",
       "explanation": "How long + has + been + 動詞ing で動作の継続期間を尋ねる現在完了進行形の疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
       "hint": "現在完了進行形"
+    },
+    {
+      "id": "g3-u1-fib-026",
+      "type": "fillInBlank",
+      "japanese": "彼女は私を幸せにしました。",
+      "sentence": "She made me ____.",
+      "choices": [
+        "happy",
+        "happily",
+        "happiness"
+      ],
+      "correctAnswer": "happy",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。make + O + C（形容詞）で「OをCにする」という意味です。",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-fib-027",
+      "type": "fillInBlank",
+      "japanese": "その知らせは彼女を悲しくさせました。",
+      "sentence": "The news made her ____.",
+      "choices": [
+        "sad",
+        "sadly",
+        "sadness"
+      ],
+      "correctAnswer": "sad",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。make + O + C（形容詞）で「OをCにする」という意味です。",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-fib-028",
+      "type": "fillInBlank",
+      "japanese": "私たちは彼をトムと呼びます。",
+      "sentence": "We call him ____.",
+      "choices": [
+        "Tom",
+        "to Tom",
+        "Toming"
+      ],
+      "correctAnswer": "Tom",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。call + O + C（名詞）で「OをCと呼ぶ」という意味です。",
+      "hint": "call + 人 + 名前"
+    },
+    {
+      "id": "g3-u1-fib-029",
+      "type": "fillInBlank",
+      "japanese": "彼は私に本をくれました。",
+      "sentence": "He gave me a ____.",
+      "choices": [
+        "book",
+        "to book",
+        "books"
+      ],
+      "correctAnswer": "book",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。give + 人 + 物で「人に物を与える」という意味です。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-030",
+      "type": "fillInBlank",
+      "japanese": "彼女は私に手紙を送りました。",
+      "sentence": "She sent me a ____.",
+      "choices": [
+        "letter",
+        "to letter",
+        "letters"
+      ],
+      "correctAnswer": "letter",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。send + 人 + 物で「人に物を送る」という意味です。",
+      "hint": "send + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-031",
+      "type": "fillInBlank",
+      "japanese": "彼は私たちに面白い話を教えてくれました。",
+      "sentence": "He told us an interesting ____.",
+      "choices": [
+        "story",
+        "to story",
+        "stories"
+      ],
+      "correctAnswer": "story",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。tell + 人 + 物で「人に物を話す」という意味です。",
+      "hint": "tell + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-032",
+      "type": "fillInBlank",
+      "japanese": "私は彼女に誕生日プレゼントを買いました。",
+      "sentence": "I bought her a birthday ____.",
+      "choices": [
+        "present",
+        "to present",
+        "presents"
+      ],
+      "correctAnswer": "present",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。buy + 人 + 物で「人に物を買う」という意味です。",
+      "hint": "buy + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-033",
+      "type": "fillInBlank",
+      "japanese": "彼女は私に秘密を教えてくれました。",
+      "sentence": "She showed me her ____.",
+      "choices": [
+        "secret",
+        "to secret",
+        "secrets"
+      ],
+      "correctAnswer": "secret",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。show + 人 + 物で「人に物を見せる」という意味です。",
+      "hint": "show + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-034",
+      "type": "fillInBlank",
+      "japanese": "その映画は私たちを興奮させました。",
+      "sentence": "The movie made us ____.",
+      "choices": [
+        "excited",
+        "exciting",
+        "excite"
+      ],
+      "correctAnswer": "excited",
+      "difficulty": "advanced",
+      "explanation": "SVOC構文です。感情を表す動詞の過去分詞（excited）を使い、「興奮した状態にさせる」を表します。",
+      "hint": "make + 人 + 過去分詞"
+    },
+    {
+      "id": "g3-u1-fib-035",
+      "type": "fillInBlank",
+      "japanese": "先生は私たちに宿題を与えました。",
+      "sentence": "The teacher gave us ____.",
+      "choices": [
+        "homework",
+        "to homework",
+        "homeworks"
+      ],
+      "correctAnswer": "homework",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。give + 人 + 物で「人に物を与える」という意味です。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-024",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私を幸せにしました。",
+      "words": [
+        "She",
+        "made",
+        "me",
+        "happy"
+      ],
+      "correctAnswer": "She made me happy.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文：主語 + 動詞 + 目的語 + 補語の語順です。",
+      "hint": "S + V + O + C"
+    },
+    {
+      "id": "g3-u1-so-025",
+      "type": "sentenceOrdering",
+      "japanese": "その知らせは彼を悲しくさせました。",
+      "words": [
+        "The",
+        "news",
+        "made",
+        "him",
+        "sad"
+      ],
+      "correctAnswer": "The news made him sad.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文：make + O + C（形容詞）で「OをCにする」です。",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-so-026",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは彼をボブと呼びます。",
+      "words": [
+        "We",
+        "call",
+        "him",
+        "Bob"
+      ],
+      "correctAnswer": "We call him Bob.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文：call + O + C（名詞）で「OをCと呼ぶ」です。",
+      "hint": "call + 人 + 名前"
+    },
+    {
+      "id": "g3-u1-so-027",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私に本をくれました。",
+      "words": [
+        "He",
+        "gave",
+        "me",
+        "a",
+        "book"
+      ],
+      "correctAnswer": "He gave me a book.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文：give + 人 + 物の語順です。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-028",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私に手紙を送りました。",
+      "words": [
+        "She",
+        "sent",
+        "me",
+        "a",
+        "letter"
+      ],
+      "correctAnswer": "She sent me a letter.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文：send + 人 + 物の語順です。",
+      "hint": "send + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-029",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私たちに物語を話してくれました。",
+      "words": [
+        "He",
+        "told",
+        "us",
+        "a",
+        "story"
+      ],
+      "correctAnswer": "He told us a story.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文：tell + 人 + 物の語順です。",
+      "hint": "tell + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-030",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼女にプレゼントを買いました。",
+      "words": [
+        "I",
+        "bought",
+        "her",
+        "a",
+        "present"
+      ],
+      "correctAnswer": "I bought her a present.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文：buy + 人 + 物の語順です。",
+      "hint": "buy + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-031",
+      "type": "sentenceOrdering",
+      "japanese": "先生は私たちに宿題を与えました。",
+      "words": [
+        "The",
+        "teacher",
+        "gave",
+        "us",
+        "homework"
+      ],
+      "correctAnswer": "The teacher gave us homework.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文：give + 人 + 物の語順です。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-032",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私に写真を見せてくれました。",
+      "words": [
+        "She",
+        "showed",
+        "me",
+        "her",
+        "photos"
+      ],
+      "correctAnswer": "She showed me her photos.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文：show + 人 + 物の語順です。",
+      "hint": "show + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-033",
+      "type": "sentenceOrdering",
+      "japanese": "その知らせは私たちを驚かせました。",
+      "words": [
+        "The",
+        "news",
+        "made",
+        "us",
+        "surprised"
+      ],
+      "correctAnswer": "The news made us surprised.",
+      "difficulty": "advanced",
+      "explanation": "SVOC構文：make + O + 過去分詞で「Oを驚いた状態にする」です。",
+      "hint": "make + 人 + 過去分詞"
+    },
+    {
+      "id": "g3-u1-para-002",
+      "type": "paraphrase",
+      "japanese": "彼は私を幸せにしました。",
+      "original": "He made I happy.",
+      "correctAnswer": "He made me happy.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。目的語の位置には目的格（me）を使います。",
+      "hint": "I → me（目的格）"
+    },
+    {
+      "id": "g3-u1-para-003",
+      "type": "paraphrase",
+      "japanese": "その話は私たちを悲しくさせました。",
+      "original": "The story made we sad.",
+      "correctAnswer": "The story made us sad.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。目的語の位置には目的格（us）を使います。",
+      "hint": "we → us（目的格）"
+    },
+    {
+      "id": "g3-u1-para-004",
+      "type": "paraphrase",
+      "japanese": "彼女は私に本をくれました。",
+      "original": "She gave I a book.",
+      "correctAnswer": "She gave me a book.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。目的語の位置には目的格（me）を使います。",
+      "hint": "I → me（目的格）"
+    },
+    {
+      "id": "g3-u1-para-005",
+      "type": "paraphrase",
+      "japanese": "私は彼に手紙を送りました。",
+      "original": "I sent he a letter.",
+      "correctAnswer": "I sent him a letter.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。目的語の位置には目的格（him）を使います。",
+      "hint": "he → him（目的格）"
+    },
+    {
+      "id": "g3-u1-para-006",
+      "type": "paraphrase",
+      "japanese": "彼は私たちに物語を話してくれました。",
+      "original": "He told we a story.",
+      "correctAnswer": "He told us a story.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。目的語の位置には目的格（us）を使います。",
+      "hint": "we → us（目的格）"
+    },
+    {
+      "id": "g3-u1-conv-002",
+      "type": "conversation",
+      "japanese": "その音楽は私を幸せにしました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was the concert?"
+        },
+        {
+          "speaker": "B",
+          "text": "It made me ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "happy",
+        "happily",
+        "happiness"
+      ],
+      "correctAnswer": "happy",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。make + O + C（形容詞）を使います。",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-conv-003",
+      "type": "conversation",
+      "japanese": "彼は私にプレゼントをくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What did he give you?"
+        },
+        {
+          "speaker": "B",
+          "text": "He gave me a ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "present",
+        "to present",
+        "presents"
+      ],
+      "correctAnswer": "present",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。give + 人 + 物の形です。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-conv-004",
+      "type": "conversation",
+      "japanese": "先生は私に助言をくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did the teacher help you?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, she gave me some ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "advice",
+        "to advice",
+        "advices"
+      ],
+      "correctAnswer": "advice",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。adviceは不可算名詞なのでsをつけません。",
+      "hint": "give + 人 + 物（advice = 不可算名詞）"
+    },
+    {
+      "id": "g3-u1-conv-005",
+      "type": "conversation",
+      "japanese": "その本は私を退屈にさせました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was the book?"
+        },
+        {
+          "speaker": "B",
+          "text": "It made me ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "bored",
+        "boring",
+        "bore"
+      ],
+      "correctAnswer": "bored",
+      "difficulty": "advanced",
+      "explanation": "SVOC構文です。感情を表す過去分詞（bored）を使い、「退屈な状態にした」を表します。",
+      "hint": "make + 人 + 過去分詞"
+    },
+    {
+      "id": "g3-u1-conv-006",
+      "type": "conversation",
+      "japanese": "彼女は私に真実を教えてくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What did she tell you?"
+        },
+        {
+          "speaker": "B",
+          "text": "She told me the ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "truth",
+        "to truth",
+        "truths"
+      ],
+      "correctAnswer": "truth",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。tell + 人 + 物の形です。truthは不可算名詞です。",
+      "hint": "tell + 人 + 物"
     }
   ]
 }

@@ -292,8 +292,7 @@
         "fast",
         "you",
         "run",
-        "can",
-        "?"
+        "can"
       ],
       "correctAnswer": "Can you run fast?",
       "difficulty": "beginner",
@@ -324,8 +323,7 @@
         "well",
         "she",
         "sing",
-        "can",
-        "?"
+        "can"
       ],
       "correctAnswer": "Can she sing well?",
       "difficulty": "intermediate",
@@ -390,8 +388,7 @@
         "a",
         "ride",
         "you",
-        "can",
-        "?"
+        "can"
       ],
       "correctAnswer": "Can you ride a bike?",
       "difficulty": "intermediate",
@@ -408,8 +405,7 @@
         "guitar",
         "play",
         "she",
-        "can",
-        "?"
+        "can"
       ],
       "correctAnswer": "Can she play the guitar?",
       "difficulty": "advanced",
@@ -475,8 +471,7 @@
         "do",
         "you",
         "what",
-        "can",
-        "?"
+        "can"
       ],
       "correctAnswer": "What can you do?",
       "difficulty": "advanced",

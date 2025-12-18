@@ -17,7 +17,7 @@ import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 
-interface QuizViewProps {
+interface TranslationViewProps {
   quizState: QuizState;
   _categoryList: string[];
   selectedCategory: string;
@@ -52,7 +52,7 @@ interface QuizViewProps {
   onOpenCustomSetManagement?: () => void;
 }
 
-function QuizView({
+function TranslationView({
   quizState,
   _categoryList,
   selectedCategory,
@@ -80,7 +80,7 @@ function QuizView({
   onAddWordToCustomSet,
   onRemoveWordFromCustomSet,
   onOpenCustomSetManagement,
-}: QuizViewProps) {
+}: TranslationViewProps) {
   const { questions, currentIndex, answered, selectedAnswer } = quizState;
 
   const hasQuestions = questions.length > 0;
@@ -522,4 +522,4 @@ function QuizView({
   );
 }
 
-export default QuizView;
+export default TranslationView;

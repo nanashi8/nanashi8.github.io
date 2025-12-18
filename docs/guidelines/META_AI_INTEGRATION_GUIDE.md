@@ -1,16 +1,90 @@
-# メタAI統合ガイド - QuestionCardへの組み込み例
+# メタAI統合ガイド - QuestionScheduler中心アーキテクチャ
 
-## 概要
+**カテゴリー**: Tutorial（チュートリアル）  
+**対象者**: フロントエンド開発者、AI統合担当者  
+**最終更新**: 2025-12-19  
+**バージョン**: 3.0.0（QuestionScheduler統合版）
 
-このドキュメントでは、`QuestionCard`コンポーネントに適応的教育AIネットワークを統合する方法を説明します。
+---
 
-## 統合手順
+## 📋 概要
 
-### 1. useAdaptiveNetworkフックをインポート
+このドキュメントでは、**QuestionScheduler（メタAI）**と**7つの専門AI**の統合アーキテクチャを説明します。
+
+### アーキテクチャの変更点（v2 → v3）
+
+**旧アーキテクチャ（v2）**:
+- ❌ QuestionCardが直接7つのAIを呼び出す
+- ❌ 各タブが独立したスケジューリングロジック
+- ❌ AI間の調整なし
+
+**新アーキテクチャ（v3）**:
+- ✅ **QuestionScheduler（メタAI）**が7つのAIを統合
+- ✅ 4タブ共通のスケジューリングロジック
+- ✅ DetectedSignalによるAI間調整
+
+---
+
+## 🏗️ システム構成
+
+### 8つのAI構成
+
+```
+┌─────────────────────────────────────────────────────────┐
+│         QuestionScheduler（メタAI - 第8のAI）          │
+│  -Step 2: QuestionSchedulerの初期化
 
 ```tsx
-import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
-import { StrategyType } from '../ai/meta';
+function MemorizationTab() {
+  const [scheduler] = useState(() => new QuestionScheduler());
+  const [scheduledQuestions, setScheduledQuestions] = useState<Question[]>([]);
+  const [recentAnswers, setRecentAnswers] = useState<RecentAnswer[]>([]);
+  
+  // sessionStatsの追跡
+  const [sessionStats, setSessionStats] = useState({
+    correct: 0,
+    incorrect: 0,
+    still_learning: 0,
+    consecutiveCorrect: 0,
+    duration: 0,
+  });
+  
+  // セッション開始時刻
+  const sessionStartTime = useRef(Date.now());
+  
+  //   │ Load AI  │  │Prediction│  │ Style AI │
+└──────────┘  └──────────┘  └──────────┘  └──────────┘
+┌──────────┐  ┌──────────┐  ┌──────────┐
+│Linguistic│  │Contextual│  │Gamifica- │
+│   AI     │  │Relevance │  │  tion AI │
+└──────────┘  └──────────┘  └──────────┘
+```
+
+### 7つの専門AI（現在は未使用、将来統合予定）
+
+| AI | 役割 | 出力 | 状態 |
+|----|------|------|------|
+| MemoryAI | 記憶定着支援 | 復習タイミング | 🔄 統合予定 |
+| CognitiveLoadAI | 認知負荷管理 | 難易度調整 | 🔄 統合予定 |
+| ErrorPredictionAI | エラー予測 | 間違えやすい問題 | 🔄 統合予定 |
+| LearningStyleAI | 学習スタイル分析 | 個別最適化 | 🔄 統合予定 |
+| LinguisticAI | 言語パターン分析 | 混同ペア検出 | 🔄 統合予定 |
+| ContextualRelevanceAI | 文脈関連性 | テーマ別学習 | 🔄 統合予定 |
+| GamificationAI | ゲーミフィケーション | モチベーション | 🔄 統合予定 |
+
+**現状（v3.0）**: QuestionSchedulerが独自にシグナル検出を実装  
+**将来（v4.0）**: 7つのAIの出力をQuestionSchedulerが統合
+
+---
+
+## 🚀 統合手順（4タブ共通）
+
+### Step 1: QuestionSchedulerのインポート
+
+```tsx
+// 例: MemorizationTab.tsx
+import { QuestionScheduler } from '@/ai/scheduler/QuestionScheduler';
+import type { ScheduleParams, ScheduleResult } from '@/ai/scheduler/types';
 ```
 
 ### 2. フックを初期化
@@ -19,46 +93,85 @@ import { StrategyType } from '../ai/meta';
 function QuestionCard({ question, onAnswer, ... }: QuestionCardProps) {
   const {
     enabled: adaptiveEnabled,
-    processQuestion,
-    currentStrategy,
-    isLoading: adaptiveLoading,
-  } = useAdaptiveNetwork();
-
-  // 既存のステート...
-}
-```
-
-### 3. 回答処理時にメタAIを呼び出す
-
-既存の`onAnswer`の直前または直後に以下のコードを追加:
+    Step 3: スケジューリング実行（出題順序決定）
 
 ```tsx
-// 回答処理（例: 選択肢クリック時）
-const handleChoiceClick = async (choice: string, choiceQuestion: Question | null) => {
-  const isCorrect = choice === question.meaning;
-  
-  // 既存の処理
-  if (!isCorrect) {
-    setAttemptCount((prev) => prev + 1);
-  }
-  onAnswer(choice, question.meaning, choiceQuestion);
-  
-  // メタAIネットワークによる分析と戦略推奨
-  if (adaptiveEnabled) {
+useEffect(() => {
+  const scheduleQuestions = async () => {
     try {
-      const context = {
-        currentDifficulty: calculateDifficulty(question),
-        timeOfDay: getTimeOfDay(),
-        recentErrors: getRecentErrors(),
-        sessionLength: getSessionLength(),
-        consecutiveCorrect: getConsecutiveCorrect(),
+      // 1. スケジューリングパラメータ準備
+      const params: ScheduleParams = {
+        questions: allQuestions,  // フィルター済みの全問題
+        recentAnswers: recentAnswers.slice(0, 100),  // 直近100回答
+        mode: 'memorization',  // タブ種別
+        sessionStats: {
+          correct: sessionStats.correct,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.still_learning,
+          consecutiveCorrect: sessionStats.consecutiveCorrect,
+          duration: Date.now() - sessionStartTime.current,
+        },
+        useMetaAI: true,  // ⭐ QuestionSchedulerを有効化
+        hybridMode: false,  // 旧ロジックとの併用OFF
+        timeOfDay: getTimeOfDay(),  // 'morning' | 'afternoon' | 'evening' | 'night'
+        cognitiveLoad: calculateCognitiveLoad(),  // 0.0-1.0
       };
       
-      const recommendation = await processQuestion(
-        question.word,
-        isCorrect ? 'correct' : 'incorrect',
-        context
-      );
+      // 2. スケジューリング実行
+      const result: ScheduleResult = scheduler.schedule(params);
+      
+      // 3. スケジュール済み問題をセット
+      setScheduledQuestions(result.scheduledQuestions);
+      
+      // 4. メタデータをログ出力（デバッグ用）
+      console.log('✅ [Scheduling] 完了', {
+        totalCandidates: params.questions.length,
+        scheduledCount: result.scheduledQuestions.length,
+        vibrationScore: result.vibrationScore,
+        signalCounts: result.metadata?.signalCounts,
+        top10: result.scheduledQuestions.slice(0, 10).map(q => q.word),
+      });
+      
+    } catch (error) {
+      console.error('[Scheduling] エラー', error);
+      // フォールバック: 元の順序を使用
+      setScheduledQuestions(allQuestions);
+    }
+  };
+  
+  // 初回 + 問題リスト変更時にスケジューリング
+  scheduleQuestions();
+}, [allQuestions, recentAnswers]);
+```
+
+### Step 4: 回答処理とrecentAnswersの更新
+
+```tsx
+const handleAnswer = (choice: string, correctAnswer: string) => {
+  const isCorrect = choice === correctAnswer;
+  const now = Date.now();
+  
+  // 1. sessionStatsを更新
+  setSessionStats(prev => ({
+    correct: prev.correct + (isCorrect ? 1 : 0),
+    incorrect: prev.incorrect + (isCorrect ? 0 : 1),
+    still_learning: prev.still_learning,
+    consecutiveCorrect: isCorrect ? prev.consecutiveCorrect + 1 : 0,
+    duration: now - sessionStartTime.current,
+  }));
+  
+  // 2. recentAnswersに追加
+  const newAnswer: RecentAnswer = {
+    word: currentQuestion.word,
+    correct: isCorrect,
+    timestamp: now,
+    consecutiveCorrect: isCorrect ? sessionStats.consecutiveCorrect + 1 : 0,
+  };
+  
+  setRecentAnswers(prev => [newAnswer, ...prev].slice(0, 100));  // 最新100件保持
+  
+  // 3. 次の問題に進む（スケジュール順）
+  setCurrentQuestionIndex(prev => prev + 1);   );
       
       // 推奨された戦略に応じてアクションを実行
       handleStrategyRecommendation(recommendation);

@@ -32,10 +32,11 @@ import { useSessionStats } from '../hooks/useSessionStats';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
-import { sortQuestionsByPriority as _sortQuestionsByPriority } from '../utils/questionPrioritySorter';
+// import { sortQuestionsByPriority as _sortQuestionsByPriority } from '../utils/questionPrioritySorter'; // QuestionSchedulerに統合済み
 import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { useLearningEngine } from '../hooks/useLearningEngine';
+import { QuestionScheduler } from '@/ai/scheduler';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -84,6 +85,9 @@ function SpellingView({
   const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
     useLearningLimits('spelling');
 
+  // ソート済み問題（QuestionSchedulerによる出題順序管理）
+  const [sortedQuestions, setSortedQuestions] = useState<Question[]>([]);
+
   // スペリングゲームのコアロジック（カスタムフック）
   const {
     spellingState,
@@ -97,7 +101,7 @@ function SpellingView({
     checkAnswer,
     moveToNextQuestion,
     updateScore,
-  } = useSpellingGame(questions);
+  } = useSpellingGame(sortedQuestions);
 
   // セッション統計（カスタムフック）
   const { sessionStats, setSessionStats, resetStats, updateStats } = useSessionStats();
@@ -168,6 +172,9 @@ function SpellingView({
     }
   };
 
+  // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
+  const [scheduler] = useState(() => new QuestionScheduler());
+
   // 問題再出題管理フック
   const { clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
 
@@ -210,17 +217,60 @@ function SpellingView({
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
   const incorrectWordsRef = useRef<string[]>([]);
 
-  // questionsが変更されたらクイズ開始時刻とセッション統計をリセット
+  // questionsが変更されたらQuestionSchedulerで出題順序を決定
   useEffect(() => {
-    if (questions.length > 0) {
+    const initializeQuestions = async () => {
+      if (questions.length === 0) {
+        setSortedQuestions([]);
+        return;
+      }
+
       // クイズ開始時刻を記録
       quizStartTimeRef.current = Date.now();
       incorrectWordsRef.current = [];
 
       // セッション統計をリセット
       resetStats();
-    }
-  }, [questions, resetStats]);
+
+      // QuestionSchedulerで出題順序を決定
+      // 🔥 sessionStatsをリセット後の値として渡す（QuestionSchedulerが初回から正確な統計を受け取る）
+      const scheduleResult = await scheduler.schedule({
+        questions: questions,
+        mode: 'spelling',
+        limits: {
+          learningLimit: learningLimit,
+          reviewLimit: reviewLimit,
+        },
+        sessionStats: {
+          correct: sessionStats.correct,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.still_learning || 0,
+          mastered: sessionStats.mastered || 0,
+          duration: Date.now() - quizStartTimeRef.current,
+        },
+        useMetaAI: adaptiveEnabled,
+        isReviewFocusMode: isReviewFocusMode || false,
+      });
+
+      const scheduled = scheduleResult.scheduledQuestions;
+
+      // 振動スコア監視
+      if (scheduleResult.vibrationScore > 50) {
+        logger.warn('[SpellingView] 高い振動スコア検出', {
+          score: scheduleResult.vibrationScore,
+          processingTime: scheduleResult.processingTime,
+        });
+      }
+
+      setSortedQuestions(scheduled);
+      logger.log('[SpellingView] QuestionScheduler適用完了', {
+        total: scheduled.length,
+        vibrationScore: scheduleResult.vibrationScore,
+      });
+    };
+
+    initializeQuestions();
+  }, [questions, learningLimit, reviewLimit, isReviewFocusMode, adaptiveEnabled, scheduler]);
 
   // letter-cardsに自動フォーカス
   useEffect(() => {

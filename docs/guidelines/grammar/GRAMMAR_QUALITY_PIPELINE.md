@@ -1,3 +1,15 @@
+---
+canonical: docs/guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md
+status: stable
+lastUpdated: 2025-12-19
+diataxisCategory: reference
+references:
+  - docs/README.md
+  - docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md
+  - docs/quality/grammar_quality_report.md
+doNotMove: true
+---
+
 # 文法問題作成 品質保証パイプライン
 
 ## 概要

@@ -280,3 +280,35 @@
     color: #93c5fd;
   }
 }
+
+/* シミュレーターセクション */
+.simulator-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.simulator-toggle-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.simulator-toggle-button:hover {
+  opacity: 0.9;
+}
+
+.simulator-content {
+  margin-top: 1rem;
+}

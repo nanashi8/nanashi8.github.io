@@ -1,5 +1,17 @@
 # NEW HORIZON準拠 穴埋め問題作成ガイドライン
 
+## ⚠️ 🚨 必読：単元構成の確認（作業開始前）
+
+**このガイドラインを使用する前に必ず確認:**
+
+📄 [`docs/references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md`](../../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md)
+
+- ❌ Grade 2: Unit 8, 9は存在しません（Unit 0-7のみ）
+- ❌ Grade 3: Unit 7, 8, 9は存在しません（Unit 0-6のみ）
+- ✅ 検証: `./scripts/validate-unit-structure.sh`
+
+---
+
 ## 📚 概要
 
 このドキュメントは、東京書籍『NEW HORIZON English Course』（令和3年度版/令和7年度対応）に準拠した穴埋め問題を作成するための標準ガイドラインです。

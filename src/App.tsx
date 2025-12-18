@@ -75,7 +75,8 @@ import {
   getTimeOfDay as getTimeOfDayStyle,
 } from './ai/adaptation/learningStyleAI';
 import { processSessionEnd, getMotivationalMessage } from './ai/engagement/gamificationAI';
-import QuizView from './components/QuizView';
+import { QuestionScheduler } from '@/ai/scheduler';
+import TranslationView from './components/TranslationView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
 import GrammarQuizView from './components/GrammarQuizView';
@@ -266,6 +267,9 @@ function App() {
     reviewCorrectStreak,
     setReviewCorrectStreak,
   } = useQuizState();
+
+  // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
+  const [translationScheduler] = useState(() => new QuestionScheduler());
 
   // 問題再出題管理フック
   const {
@@ -1001,8 +1005,59 @@ function App() {
         logger.log(`  例: ${sample.from} → ${sample.to} (${sample.reason})`);
       }
     }
-    // NOTE: 学習曲線AI+文脈学習AIが上記のifブロックで実行されるため、
+    // NOTE: 8個のAIシステム（7つの専門AI + メタAI統合層）
     // 従来の適応的学習(selectAdaptiveQuestions)は使用されない
+    // 【7つの専門AI】
+    // 1. 記憶AI: 記憶獲得・定着判定
+    // 2. 認知負荷AI: 疲労検出・休憩推奨
+    // 3. エラー予測AI: 混同検出・誤答リスク予測
+    // 4. 学習スタイルAI: 個人最適化・時間帯調整
+    // 5. 言語関連AI: 語源・関連語ネットワーク
+    // 6. 文脈AI: 意味的クラスタリング
+    // 7. ゲーミフィケーションAI: モチベーション管理
+    // 【メタAI統合層】
+    // 8. QuestionScheduler: 7AIのシグナル統合、DTA、振動防止
+
+    // 🔥 メタAI統合層: QuestionSchedulerで7AIのシグナルを統合
+    // 7つの専門AIの判断を尊重しつつ、DTAと振動防止を適用
+    // シグナル検出（疲労、苦戦、過学習、最適状態）により優先度を最大30%調整
+    if (activeTab === 'translation' && filteredQuestions.length > 0) {
+      const progress = await loadProgress();
+      const hybridResult = await translationScheduler.schedule({
+        questions: filteredQuestions,
+        mode: 'translation',
+        limits: {
+          learningLimit: null, // 和訳タブは上限なし
+          reviewLimit: null,
+        },
+        sessionStats: {
+          correct: sessionStats.correct,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.review || 0,
+          mastered: sessionStats.mastered || 0,
+          duration: 0,
+        },
+        useMetaAI: true,
+        isReviewFocusMode: reviewFocusMode,
+        hybridMode: true, // 既存AI優先度を尊重
+      });
+
+      filteredQuestions = hybridResult.scheduledQuestions;
+
+      // 振動スコア監視
+      if (hybridResult.vibrationScore > 50) {
+        logger.warn('[Translation Hybrid] 高い振動スコア検出', {
+          score: hybridResult.vibrationScore,
+          processingTime: hybridResult.processingTime,
+        });
+      }
+
+      logger.log('🧠 メタAI統合層: ハイブリッド調整完了', {
+        total: filteredQuestions.length,
+        vibrationScore: hybridResult.vibrationScore,
+        adjustmentRange: '±20%',
+      });
+    }
 
     if (reviewFocusMode) {
       logger.log(`🎯 補修モード: ${filteredQuestions.length}問を繰り返し出題中`);
@@ -1672,7 +1727,7 @@ function App() {
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             />
           ) : activeTab === 'translation' ? (
-            <QuizView
+            <TranslationView
               quizState={quizState}
               _categoryList={categoryList}
               selectedCategory={selectedCategory}

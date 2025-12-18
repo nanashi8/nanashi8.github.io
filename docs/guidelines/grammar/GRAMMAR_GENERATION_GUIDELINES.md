@@ -1,5 +1,15 @@
 # 文法問題生成ガイドライン
+## ⚠️ 🚨 必読：単元構成の確認（作業開始前）
 
+**このガイドラインを使用する前に必ず確認:**
+
+📄 [`docs/references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md`](../../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md)
+
+- ❌ Grade 2: Unit 8, 9は存在しません（Unit 0-7のみ）
+- ❌ Grade 3: Unit 7, 8, 9は存在しません（Unit 0-6のみ）
+- ✅ 検証: `./scripts/validate-unit-structure.sh`
+
+---
 ## 目的
 高品質な英文法問題を効率的に生成するための標準化されたガイドライン。
 

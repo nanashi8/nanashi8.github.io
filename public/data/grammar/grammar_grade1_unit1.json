@@ -259,8 +259,7 @@
         "soccer",
         "like",
         "you",
-        "do",
-        "?"
+        "do"
       ],
       "correctAnswer": "Do you like soccer?",
       "difficulty": "beginner",
@@ -326,8 +325,7 @@
         "day",
         "you",
         "read",
-        "do",
-        "?"
+        "do"
       ],
       "correctAnswer": "Do you read books every day?",
       "difficulty": "intermediate",
@@ -359,8 +357,7 @@
         "English",
         "speak",
         "you",
-        "do",
-        "?"
+        "do"
       ],
       "correctAnswer": "Do you speak English?",
       "difficulty": "intermediate",
@@ -415,8 +412,7 @@
         "you",
         "do",
         "what",
-        "do",
-        "?"
+        "do"
       ],
       "correctAnswer": "What do you do after school?",
       "difficulty": "advanced",
@@ -453,8 +449,7 @@
         "library",
         "study",
         "you",
-        "do",
-        "?"
+        "do"
       ],
       "correctAnswer": "Do you study in the library?",
       "difficulty": "advanced",
@@ -492,8 +487,7 @@
         "morning",
         "they",
         "run",
-        "do",
-        "?"
+        "do"
       ],
       "correctAnswer": "Do they run in the park every morning?",
       "difficulty": "advanced",

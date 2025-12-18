@@ -1,0 +1,1197 @@
+{
+  "unit": "Unit 1",
+  "title": "現在完了",
+  "grammar": "have/has + 過去分詞",
+  "totalQuestions": 70,
+  "questionTypes": {
+    "fillInBlank": 25,
+    "sentenceOrdering": 23,
+    "paraphrase": 1,
+    "verbForm": 20,
+    "conversation": 1
+  },
+  "questions": [
+    {
+      "id": "vf-g3-u1-001",
+      "japanese": "私は彼に会ったことがあります。",
+      "sentence": "I ____ met him.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-002",
+      "japanese": "彼女は東京に行ったことがあります。",
+      "sentence": "She ____ been to Tokyo.",
+      "verb": "present-perfect",
+      "choices": [
+        "has",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-003",
+      "japanese": "私たちはその映画を見たことがあります。",
+      "sentence": "We ____ seen that movie.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-004",
+      "japanese": "彼は宿題を終えました。",
+      "sentence": "He ____ finished his homework.",
+      "verb": "present-perfect",
+      "choices": [
+        "has",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-005",
+      "japanese": "彼らはもう昼食を食べました。",
+      "sentence": "They ____ already eaten lunch.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-006",
+      "japanese": "私はこの本を読んだことがありません。",
+      "sentence": "I ____ never read this book.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-007",
+      "japanese": "彼女はまだ来ていません。",
+      "sentence": "She ____ not come yet.",
+      "verb": "present-perfect",
+      "choices": [
+        "has",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-008",
+      "japanese": "あなたは日本に行ったことがありますか。",
+      "sentence": "____ you been to Japan?",
+      "verb": "present-perfect",
+      "choices": [
+        "Have",
+        "Has",
+        "Do"
+      ],
+      "correctAnswer": "Have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-009",
+      "japanese": "彼はその知らせを聞きましたか。",
+      "sentence": "____ he heard the news?",
+      "verb": "present-perfect",
+      "choices": [
+        "Has",
+        "Have",
+        "Do"
+      ],
+      "correctAnswer": "Has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-010",
+      "japanese": "私は3年間英語を勉強しています。",
+      "sentence": "I ____ studied English for three years.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-011",
+      "japanese": "彼女は2時間待っています。",
+      "sentence": "She ____ waited for two hours.",
+      "verb": "present-perfect",
+      "choices": [
+        "has",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-012",
+      "japanese": "私たちはちょうど到着しました。",
+      "sentence": "We ____ just arrived.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-013",
+      "japanese": "彼はすでに出発しました。",
+      "sentence": "He ____ already left.",
+      "verb": "present-perfect",
+      "choices": [
+        "has",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-014",
+      "japanese": "彼らは京都を訪れたことがあります。",
+      "sentence": "They ____ visited Kyoto.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-015",
+      "japanese": "私は彼女に会ったことがありません。",
+      "sentence": "I ____ never met her.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-016",
+      "japanese": "あなたは昼食を食べましたか。",
+      "sentence": "____ you eaten lunch?",
+      "verb": "present-perfect",
+      "choices": [
+        "Have",
+        "Has",
+        "Do"
+      ],
+      "correctAnswer": "Have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-017",
+      "japanese": "彼女は手紙を書き終えました。",
+      "sentence": "She ____ finished writing the letter.",
+      "verb": "present-perfect",
+      "choices": [
+        "has",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-018",
+      "japanese": "私たちは長い間ここに住んでいます。",
+      "sentence": "We ____ lived here for a long time.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-019",
+      "japanese": "彼は何度も失敗しました。",
+      "sentence": "He ____ failed many times.",
+      "verb": "present-perfect",
+      "choices": [
+        "has",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u1-020",
+      "japanese": "彼らはまだ決めていません。",
+      "sentence": "They ____ not decided yet.",
+      "verb": "present-perfect",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I/you/we/they→have, he/she/it→has",
+      "type": "verbForm"
+    },
+    {
+      "id": "fb-g3-u1-001",
+      "japanese": "私は彼に会ったことがあります。",
+      "sentence": "I have ____ him.",
+      "choices": [
+        "met",
+        "meet",
+        "meets"
+      ],
+      "correctAnswer": "met",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-002",
+      "japanese": "彼女は東京に行ったことがあります。",
+      "sentence": "She has ____ to Tokyo.",
+      "choices": [
+        "been",
+        "be",
+        "was"
+      ],
+      "correctAnswer": "been",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-003",
+      "japanese": "私たちはその映画を見たことがあります。",
+      "sentence": "We have ____ that movie.",
+      "choices": [
+        "seen",
+        "see",
+        "saw"
+      ],
+      "correctAnswer": "seen",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-004",
+      "japanese": "彼は宿題を終えました。",
+      "sentence": "He has ____ his homework.",
+      "choices": [
+        "finished",
+        "finish",
+        "finishs"
+      ],
+      "correctAnswer": "finished",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-005",
+      "japanese": "彼らはもう昼食を食べました。",
+      "sentence": "They have already ____ lunch.",
+      "choices": [
+        "eaten",
+        "eat",
+        "ate"
+      ],
+      "correctAnswer": "eaten",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-006",
+      "japanese": "私はこの本を読んだことがありません。",
+      "sentence": "I have never ____ this book.",
+      "choices": [
+        "read",
+        "reads",
+        "reading"
+      ],
+      "correctAnswer": "read",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-007",
+      "japanese": "あなたは日本に行ったことがありますか。",
+      "sentence": "Have you ____ to Japan?",
+      "choices": [
+        "been",
+        "be",
+        "was"
+      ],
+      "correctAnswer": "been",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-008",
+      "japanese": "彼はその知らせを聞きましたか。",
+      "sentence": "Has he ____ the news?",
+      "choices": [
+        "heard",
+        "hear",
+        "hears"
+      ],
+      "correctAnswer": "heard",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-009",
+      "japanese": "私は3年間英語を勉強しています。",
+      "sentence": "I have ____ English for three years.",
+      "choices": [
+        "studied",
+        "studi",
+        "studis"
+      ],
+      "correctAnswer": "studied",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-010",
+      "japanese": "彼女は2時間待っています。",
+      "sentence": "She has ____ for two hours.",
+      "choices": [
+        "waited",
+        "wait",
+        "waits"
+      ],
+      "correctAnswer": "waited",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-011",
+      "japanese": "私たちはちょうど到着しました。",
+      "sentence": "We have just ____.",
+      "choices": [
+        "arrived",
+        "arriv",
+        "arrivs"
+      ],
+      "correctAnswer": "arrived",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-012",
+      "japanese": "彼はすでに出発しました。",
+      "sentence": "He has already ____.",
+      "choices": [
+        "left",
+        "leave",
+        "leaves"
+      ],
+      "correctAnswer": "left",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-013",
+      "japanese": "彼らは京都を訪れたことがあります。",
+      "sentence": "They have ____ Kyoto.",
+      "choices": [
+        "visited",
+        "visit",
+        "visits"
+      ],
+      "correctAnswer": "visited",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-014",
+      "japanese": "私は彼女に会ったことがありません。",
+      "sentence": "I have never ____ her.",
+      "choices": [
+        "met",
+        "meet",
+        "meets"
+      ],
+      "correctAnswer": "met",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-015",
+      "japanese": "あなたは昼食を食べましたか。",
+      "sentence": "Have you ____ lunch?",
+      "choices": [
+        "eaten",
+        "eat",
+        "ate"
+      ],
+      "correctAnswer": "eaten",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-016",
+      "japanese": "彼女は手紙を書き終えました。",
+      "sentence": "She has finished ____ the letter.",
+      "choices": [
+        "writing",
+        "writings",
+        "writinging"
+      ],
+      "correctAnswer": "writing",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-017",
+      "japanese": "私たちは長い間ここに住んでいます。",
+      "sentence": "We have ____ here for a long time.",
+      "choices": [
+        "lived",
+        "liv",
+        "livs"
+      ],
+      "correctAnswer": "lived",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-018",
+      "japanese": "彼は何度も失敗しました。",
+      "sentence": "He has ____ many times.",
+      "choices": [
+        "failed",
+        "fail",
+        "fails"
+      ],
+      "correctAnswer": "failed",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-019",
+      "japanese": "私は彼の名前を忘れました。",
+      "sentence": "I have ____ his name.",
+      "choices": [
+        "forgotten",
+        "forget",
+        "forgot"
+      ],
+      "correctAnswer": "forgotten",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u1-020",
+      "japanese": "彼女はその鍵を失くしました。",
+      "sentence": "She has ____ the key.",
+      "choices": [
+        "lost",
+        "lose",
+        "loses"
+      ],
+      "correctAnswer": "lost",
+      "difficulty": "intermediate",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "have/has + 過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "so-g3-u1-001",
+      "japanese": "私は彼に会ったことがあります。",
+      "words": [
+        "I",
+        "have",
+        "met",
+        "him"
+      ],
+      "correctOrder": "I have met him",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は彼に会ったことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have met him.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 4,
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have met him."
+    },
+    {
+      "id": "so-g3-u1-002",
+      "japanese": "彼女は東京に行ったことがあります。",
+      "words": [
+        "She",
+        "has",
+        "been",
+        "to",
+        "Tokyo"
+      ],
+      "correctOrder": "She has been to Tokyo",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は東京に行ったことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been to Tokyo.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has been to Tokyo."
+    },
+    {
+      "id": "so-g3-u1-003",
+      "japanese": "私たちはその映画を見たことがあります。",
+      "words": [
+        "We",
+        "have",
+        "seen",
+        "that",
+        "movie"
+      ],
+      "correctOrder": "We have seen that movie",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちはその映画を見たことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have seen that movie.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "We have seen that movie."
+    },
+    {
+      "id": "so-g3-u1-004",
+      "japanese": "彼は宿題を終えました。",
+      "words": [
+        "He",
+        "has",
+        "finished",
+        "his",
+        "homework"
+      ],
+      "correctOrder": "He has finished his homework",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼は宿題を終えました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has finished his homework.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "He has finished his homework."
+    },
+    {
+      "id": "so-g3-u1-005",
+      "japanese": "彼らはもう昼食を食べました。",
+      "words": [
+        "They",
+        "have",
+        "already",
+        "eaten",
+        "lunch"
+      ],
+      "correctOrder": "They have already eaten lunch",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らはもう昼食を食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have already eaten lunch.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "They have already eaten lunch."
+    },
+    {
+      "id": "so-g3-u1-006",
+      "japanese": "私はこの本を読んだことがありません。",
+      "words": [
+        "I",
+        "have",
+        "never",
+        "read",
+        "this",
+        "book"
+      ],
+      "correctOrder": "I have never read this book",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私はこの本を読んだことがありません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have never read this book.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have never read this book."
+    },
+    {
+      "id": "so-g3-u1-007",
+      "japanese": "彼女はまだ来ていません。",
+      "words": [
+        "She",
+        "has",
+        "not",
+        "come",
+        "yet"
+      ],
+      "correctOrder": "She has not come yet",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女はまだ来ていません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has not come yet.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has not come yet."
+    },
+    {
+      "id": "so-g3-u1-008",
+      "japanese": "あなたは日本に行ったことがありますか。",
+      "words": [
+        "Have",
+        "you",
+        "been",
+        "to",
+        "Japan"
+      ],
+      "correctOrder": "Have you been to Japan",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「あなたは日本に行ったことがありますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Have you been to Japan?",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "Have you been to Japan?"
+    },
+    {
+      "id": "so-g3-u1-009",
+      "japanese": "彼はその知らせを聞きましたか。",
+      "words": [
+        "Has",
+        "he",
+        "heard",
+        "the",
+        "news"
+      ],
+      "correctOrder": "Has he heard the news",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼はその知らせを聞きましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Has he heard the news?",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "Has he heard the news?"
+    },
+    {
+      "id": "so-g3-u1-010",
+      "japanese": "私は3年間英語を勉強しています。",
+      "words": [
+        "I",
+        "have",
+        "studied",
+        "English",
+        "for",
+        "three",
+        "years"
+      ],
+      "correctOrder": "I have studied English for three years",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は3年間英語を勉強しています。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have studied English for three years.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 7,
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have studied English for three years."
+    },
+    {
+      "id": "so-g3-u1-011",
+      "japanese": "彼女は2時間待っています。",
+      "words": [
+        "She",
+        "has",
+        "waited",
+        "for",
+        "two",
+        "hours"
+      ],
+      "correctOrder": "She has waited for two hours",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は2時間待っています。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has waited for two hours.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has waited for two hours."
+    },
+    {
+      "id": "so-g3-u1-012",
+      "japanese": "私たちはちょうど到着しました。",
+      "words": [
+        "We",
+        "have",
+        "just",
+        "arrived"
+      ],
+      "correctOrder": "We have just arrived",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちはちょうど到着しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have just arrived.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 4,
+      "type": "sentenceOrdering",
+      "correctAnswer": "We have just arrived."
+    },
+    {
+      "id": "so-g3-u1-013",
+      "japanese": "彼はすでに出発しました。",
+      "words": [
+        "He",
+        "has",
+        "already",
+        "left"
+      ],
+      "correctOrder": "He has already left",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼はすでに出発しました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has already left.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 4,
+      "type": "sentenceOrdering",
+      "correctAnswer": "He has already left."
+    },
+    {
+      "id": "so-g3-u1-014",
+      "japanese": "彼らは京都を訪れたことがあります。",
+      "words": [
+        "They",
+        "have",
+        "visited",
+        "Kyoto"
+      ],
+      "correctOrder": "They have visited Kyoto",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らは京都を訪れたことがあります。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have visited Kyoto.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 4,
+      "type": "sentenceOrdering",
+      "correctAnswer": "They have visited Kyoto."
+    },
+    {
+      "id": "so-g3-u1-015",
+      "japanese": "私は彼女に会ったことがありません。",
+      "words": [
+        "I",
+        "have",
+        "never",
+        "met",
+        "her"
+      ],
+      "correctOrder": "I have never met her",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は彼女に会ったことがありません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have never met her.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have never met her."
+    },
+    {
+      "id": "so-g3-u1-016",
+      "japanese": "あなたは昼食を食べましたか。",
+      "words": [
+        "Have",
+        "you",
+        "eaten",
+        "lunch"
+      ],
+      "correctOrder": "Have you eaten lunch",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「あなたは昼食を食べましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Have you eaten lunch?",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 4,
+      "type": "sentenceOrdering",
+      "correctAnswer": "Have you eaten lunch?"
+    },
+    {
+      "id": "so-g3-u1-017",
+      "japanese": "彼女は手紙を書き終えました。",
+      "words": [
+        "She",
+        "has",
+        "finished",
+        "writing",
+        "the",
+        "letter"
+      ],
+      "correctOrder": "She has finished writing the letter",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は手紙を書き終えました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has finished writing the letter.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 6,
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has finished writing the letter."
+    },
+    {
+      "id": "so-g3-u1-018",
+      "japanese": "私たちは長い間ここに住んでいます。",
+      "words": [
+        "We",
+        "have",
+        "lived",
+        "here",
+        "for",
+        "a",
+        "long",
+        "time"
+      ],
+      "correctOrder": "We have lived here for a long time",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちは長い間ここに住んでいます。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have lived here for a long time.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 8,
+      "type": "sentenceOrdering",
+      "correctAnswer": "We have lived here for a long time."
+    },
+    {
+      "id": "so-g3-u1-019",
+      "japanese": "彼は何度も失敗しました。",
+      "words": [
+        "He",
+        "has",
+        "failed",
+        "many",
+        "times"
+      ],
+      "correctOrder": "He has failed many times",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼は何度も失敗しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has failed many times.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "He has failed many times."
+    },
+    {
+      "id": "so-g3-u1-020",
+      "japanese": "彼らはまだ決めていません。",
+      "words": [
+        "They",
+        "have",
+        "not",
+        "decided",
+        "yet"
+      ],
+      "correctOrder": "They have not decided yet",
+      "difficulty": "intermediate",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らはまだ決めていません。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have not decided yet.",
+      "hint": "have/has + p.p.",
+      "grammarPoint": "現在完了",
+      "wordCount": 5,
+      "type": "sentenceOrdering",
+      "correctAnswer": "They have not decided yet."
+    },
+    {
+      "id": "g3-u1-howlong-001",
+      "type": "fillInBlank",
+      "japanese": "あなたはどのくらいの間東京に住んでいますか。",
+      "sentence": "____ ____ have you lived in Tokyo?",
+      "choices": [
+        "How long",
+        "How many",
+        "How much"
+      ],
+      "correctAnswer": "How long",
+      "difficulty": "intermediate",
+      "explanation": "How long + 現在完了形で「どのくらいの期間~していますか」と継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "期間を尋ねる"
+    },
+    {
+      "id": "g3-u1-howlong-002",
+      "type": "sentenceOrdering",
+      "japanese": "あなたはどのくらいの間英語を勉強していますか。",
+      "words": [
+        "how",
+        "long",
+        "have",
+        "you",
+        "studied",
+        "English"
+      ],
+      "correctAnswer": "How long have you studied English?",
+      "difficulty": "intermediate",
+      "explanation": "How long + have/has + 過去分詞という疑問文として覚えてください。継続期間を尋ねります。\n\n「あなたはどのくらいの間英語を勉強していますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you studied English?",
+      "hint": "How long have",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u1-howlong-003",
+      "type": "fillInBlank",
+      "japanese": "彼はどのくらいの間ここで働いていますか。",
+      "sentence": "How long ____ he worked here?",
+      "choices": [
+        "has",
+        "have",
+        "is"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "How longの疑問文で三人称単数の主語の時はhasを使うことです。How long has he worked here?です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "三人称単数"
+    },
+    {
+      "id": "g3-u1-howlong-004",
+      "type": "conversation",
+      "japanese": "どのくらいの間彼女を知っていますか。",
+      "situation": "友人について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "____ ____ have you known her?"
+        },
+        {
+          "speaker": "B",
+          "text": "For three years."
+        }
+      ],
+      "choices": [
+        "How long",
+        "How many",
+        "When"
+      ],
+      "correctAnswer": "How long",
+      "difficulty": "intermediate",
+      "explanation": "How long + 現在完了形で継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "期間を尋ねる"
+    },
+    {
+      "id": "g3-u1-howlong-005",
+      "type": "sentenceOrdering",
+      "japanese": "あなたのお父さんはどのくらいの間この会社で働いていますか。",
+      "words": [
+        "how",
+        "long",
+        "has",
+        "your",
+        "father",
+        "worked",
+        "for",
+        "this",
+        "company"
+      ],
+      "correctAnswer": "How long has your father worked for this company?",
+      "difficulty": "advanced",
+      "explanation": "How long + has + 主語 + 過去分詞という疑問文として覚えてください。\n\n「あなたのお父さんはどのくらいの間この会社で働いていますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long has your father worked for this company?",
+      "hint": "How long has",
+      "wordCount": 9
+    },
+    {
+      "id": "g3-u1-howlong-006",
+      "type": "fillInBlank",
+      "japanese": "彼らはどのくらいの間結婚していますか。",
+      "sentence": "How long have they ____ married?",
+      "choices": [
+        "been",
+        "be",
+        "are"
+      ],
+      "correctAnswer": "been",
+      "difficulty": "intermediate",
+      "explanation": "How long + have/has + been で状態の継続を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "be動詞の過去分詞"
+    },
+    {
+      "id": "g3-u1-howlong-007",
+      "type": "fillInBlank",
+      "japanese": "あなたはどのくらいの間ここにいますか。",
+      "sentence": "____ ____ have you been here?",
+      "choices": [
+        "How long",
+        "How many",
+        "How much"
+      ],
+      "correctAnswer": "How long",
+      "difficulty": "beginner",
+      "explanation": "How long + have been で「どのくらいの間~にいますか」という疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "期間を尋ねる"
+    },
+    {
+      "id": "g3-u1-howlong-008",
+      "type": "sentenceOrdering",
+      "japanese": "3年間日本に住んでいます。",
+      "words": [
+        "how",
+        "long",
+        "have",
+        "you",
+        "lived",
+        "in",
+        "Japan",
+        "did",
+        "live"
+      ],
+      "correctAnswer": "How long have you lived in Japan?",
+      "difficulty": "advanced",
+      "explanation": "How long + 現在完了で期間を尋ねます。不要な語: did, live（2語）\n\n「3年間日本に住んでいます。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you lived in Japan?",
+      "hint": "how long have",
+      "wordCount": 7,
+      "unusedWords": 2
+    },
+    {
+      "id": "g3-u1-howlong-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はどのくらいの間病気ですか。",
+      "words": [
+        "how",
+        "long",
+        "has",
+        "she",
+        "been",
+        "sick"
+      ],
+      "correctAnswer": "How long has she been sick?",
+      "difficulty": "intermediate",
+      "explanation": "How long + has + been + 形容詞で状態の継続を尋ねる疑問文として覚えてください。\n\n「彼女はどのくらいの間病気ですか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long has she been sick?",
+      "hint": "How long has been",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u1-howlong-010",
+      "type": "fillInBlank",
+      "japanese": "どのくらいの間雨が降っていますか。",
+      "sentence": "How long ____ it been raining?",
+      "choices": [
+        "has",
+        "have",
+        "is"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "advanced",
+      "explanation": "How long + has + been + 動詞ing で動作の継続期間を尋ねる現在完了進行形の疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "現在完了進行形"
+    }
+  ]
+}

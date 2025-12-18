@@ -1,6 +1,17 @@
+---
+canonical: docs/processes/REFACTORING_SAFETY.md
+status: stable
+lastUpdated: 2025-12-19
+diataxisCategory: how-to
+references:
+  - .aitk/instructions/refactoring-safety.instructions.md
+  - .aitk/instructions/security-best-practices.instructions.md
+  - docs/processes/EMERGENCY_RECOVERY.md
+---
+
 # 🔒 リファクタリング安全ガイド
 
-**作成日**: 2025年12月11日  
+**作成日**: 2025-12-11  
 **対象**: Phase 2リファクタリング以降
 
 ---

@@ -1,0 +1,153 @@
+name: QuestionScheduler Documentation Quality Check
+
+on:
+  pull_request:
+    paths:
+      - 'docs/specifications/QUESTION_SCHEDULER_SPEC.md'
+      - 'docs/references/QUESTION_SCHEDULER_*.md'
+      - 'docs/how-to/QUESTION_SCHEDULER_*.md'
+      - 'docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md'
+      - 'docs/guidelines/META_AI_INTEGRATION_GUIDE.md'
+      - 'src/ai/scheduler/**'
+      - 'scripts/validate-question-scheduler-docs.sh'
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/specifications/QUESTION_SCHEDULER_SPEC.md'
+      - 'docs/references/QUESTION_SCHEDULER_*.md'
+      - 'docs/how-to/QUESTION_SCHEDULER_*.md'
+      - 'docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md'
+      - 'docs/guidelines/META_AI_INTEGRATION_GUIDE.md'
+      - 'src/ai/scheduler/**'
+      - 'scripts/validate-question-scheduler-docs.sh'
+  workflow_dispatch:
+
+jobs:
+  validate-documentation:
+    name: Validate QuestionScheduler Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Make validation script executable
+        run: chmod +x scripts/validate-question-scheduler-docs.sh
+
+      - name: Run validation script
+        id: validate
+        run: |
+          set +e
+          output=$(bash scripts/validate-question-scheduler-docs.sh 2>&1)
+          exit_code=$?
+          echo "$output"
+
+          # Extract score
+          score=$(echo "$output" | grep "整合性スコア:" | grep -oE '[0-9]+' | head -1)
+          echo "score=$score" >> $GITHUB_OUTPUT
+
+          # Extract counts
+          success=$(echo "$output" | grep "✓ 成功:" | grep -oE '[0-9]+' | head -1)
+          failure=$(echo "$output" | grep "✗ 失敗:" | grep -oE '[0-9]+' | head -1)
+          warning=$(echo "$output" | grep "⚠ 警告:" | grep -oE '[0-9]+' | head -1)
+
+          echo "success=$success" >> $GITHUB_OUTPUT
+          echo "failure=$failure" >> $GITHUB_OUTPUT
+          echo "warning=$warning" >> $GITHUB_OUTPUT
+
+          exit $exit_code
+
+      - name: Create status badge
+        if: always()
+        run: |
+          score=${{ steps.validate.outputs.score }}
+          if [ "$score" -ge 95 ]; then
+            color="brightgreen"
+            status="excellent"
+          elif [ "$score" -ge 85 ]; then
+            color="green"
+            status="good"
+          elif [ "$score" -ge 70 ]; then
+            color="yellow"
+            status="needs-improvement"
+          else
+            color="red"
+            status="poor"
+          fi
+          echo "BADGE_COLOR=$color" >> $GITHUB_ENV
+          echo "BADGE_STATUS=$status" >> $GITHUB_ENV
+
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const score = '${{ steps.validate.outputs.score }}';
+            const success = '${{ steps.validate.outputs.success }}';
+            const failure = '${{ steps.validate.outputs.failure }}';
+            const warning = '${{ steps.validate.outputs.warning }}';
+
+            let statusEmoji = '✅';
+            let statusText = 'Excellent';
+            if (score < 95) {
+              statusEmoji = '✓';
+              statusText = 'Good';
+            }
+            if (score < 85) {
+              statusEmoji = '⚠️';
+              statusText = 'Needs Improvement';
+            }
+            if (score < 70) {
+              statusEmoji = '❌';
+              statusText = 'Poor';
+            }
+
+            const body = `## ${statusEmoji} QuestionScheduler Documentation Quality Check
+
+            **Consistency Score: ${score}/100** - ${statusText}
+
+            | Metric | Count |
+            |--------|-------|
+            | ✓ Passed | ${success} |
+            | ✗ Failed | ${failure} |
+            | ⚠ Warnings | ${warning} |
+
+            ${failure > 0 ? '⚠️ **Action Required**: Please fix the failed checks before merging.' : ''}
+            ${score == 100 ? '🎉 **Perfect Score!** Documentation and implementation are fully aligned.' : ''}
+
+            <details>
+            <summary>About this check</summary>
+
+            This automated check validates the consistency between QuestionScheduler documentation and implementation:
+            - ✅ Document existence (6 files)
+            - ✅ Implementation file integrity (2 files)
+            - ✅ Type definition consistency (5 interfaces)
+            - ✅ Method signature validation (5 methods)
+            - ✅ Documentation content accuracy (4 checks)
+            - ✅ Category priority validation (2 checks)
+            - ✅ Anti-vibration mechanism (2 checks)
+            - ✅ Instructions file sync (4 checks)
+
+            **Total: 30 validation checks**
+
+            For more details, see the [validation script](../blob/main/scripts/validate-question-scheduler-docs.sh).
+            </details>`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Fail workflow if score is below threshold
+        if: always()
+        run: |
+          score=${{ steps.validate.outputs.score }}
+          if [ "$score" -lt 85 ]; then
+            echo "❌ Consistency score ($score) is below threshold (85)"
+            exit 1
+          else
+            echo "✅ Consistency score ($score) meets threshold (85+)"
+          fi

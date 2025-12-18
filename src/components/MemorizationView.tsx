@@ -15,8 +15,9 @@ import AddToCustomButton from './AddToCustomButton';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
-import { sortQuestionsByPriority as sortByPriorityCommon } from '../utils/questionPrioritySorter';
+// import { sortQuestionsByPriority as sortByPriorityCommon } from '../utils/questionPrioritySorter'; // QuestionSchedulerに統合済み
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
+import { QuestionScheduler } from '@/ai/scheduler';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -86,6 +87,7 @@ function MemorizationView({
     correct: 0,
     still_learning: 0, // まだまだ
     incorrect: 0,
+    mastered: 0, // 定着済み（覚えてる）
     total: 0,
     newQuestions: 0, // 新規問題の出題数
     reviewQuestions: 0, // 復習問題の出題数
@@ -95,6 +97,9 @@ function MemorizationView({
 
   // 回答時刻（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(0);
+
+  // 再スケジューリングトリガー（カテゴリ変化時に更新）
+  const [rescheduleCounter, setRescheduleCounter] = useState(0);
 
   // 回答結果を追跡（動的AIコメント用）
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
@@ -123,6 +128,9 @@ function MemorizationView({
     processQuestion: processAdaptiveQuestion,
     currentStrategy,
   } = useAdaptiveNetwork();
+
+  // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
+  const [scheduler] = useState(() => new QuestionScheduler());
 
   // 問題再出題管理フック
   const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
@@ -207,8 +215,64 @@ function MemorizationView({
         filtered = filtered.filter((q) => q.word.includes(' ') && q.word.split(' ').length > 2);
       }
 
-      // 適応的出題順序（Leitnerシステム + 間隔反復）
-      const sortedQuestions = sortQuestionsByPriority(filtered, stillLearningLimit, incorrectLimit);
+      // デバッグ: フィルター後の単語数を確認
+      logger.info('[MemorizationView] フィルター後の単語数', {
+        totalFiltered: filtered.length,
+        sessionStats: {
+          correct: sessionStats.correct,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.still_learning || 0,
+        },
+      });
+
+      // 適応的出題順序（統一スケジューラー: DTA + 振動防止 + メタAI統合）
+      console.log('🚀🚀🚀 [MemorizationView] スケジューラー呼び出し開始', {
+        filteredCount: filtered.length,
+        adaptiveEnabled,
+      });
+
+      const scheduleResult = scheduler.schedule({
+        questions: filtered,
+        mode: 'memorization',
+        limits: {
+          learningLimit: stillLearningLimit,
+          reviewLimit: incorrectLimit,
+        },
+        sessionStats: {
+          correct: sessionStats.correct,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.still_learning || 0,
+          mastered: sessionStats.mastered || 0, // 定着済みも反映
+          duration: Date.now() - cardDisplayTimeRef.current,
+        },
+        useMetaAI: true, // ✅ 学習AIは常に有効（カテゴリー別優先順位）
+        isReviewFocusMode: false,
+      });
+      const sortedQuestions = scheduleResult.scheduledQuestions;
+
+      // デバッグ: スケジュール後の単語を確認
+      const debugInfo = {
+        totalScheduled: sortedQuestions.length,
+        top10Words: sortedQuestions.slice(0, 10).map(q => q.word),
+        timestamp: new Date().toISOString(),
+      };
+
+      console.log('📝📝📝 [MemorizationView] スケジュール後の単語', debugInfo);
+
+      // localStorage に保存（デバッグ用）
+      try {
+        localStorage.setItem('debug_memorization_latest', JSON.stringify(debugInfo));
+      } catch (e) {
+        // ignore
+      }
+
+      // 振動スコア監視
+      if (scheduleResult.vibrationScore > 50) {
+        logger.warn('[MemorizationView] 高い振動スコア検出', {
+          score: scheduleResult.vibrationScore,
+          processingTime: scheduleResult.processingTime,
+        });
+      }
 
       setQuestions(sortedQuestions);
       if (sortedQuestions.length > 0) {
@@ -227,6 +291,7 @@ function MemorizationView({
     selectedWordPhraseFilter,
     allQuestions,
     isLoading,
+    rescheduleCounter, // ✅ カテゴリ変化時に再スケジューリング
     // isReviewFocusMode を削除：復習モード切り替え時に問題をリセットしない
   ]);
 
@@ -279,306 +344,9 @@ function MemorizationView({
     }
   }, [sessionStats, stillLearningLimit, incorrectLimit, isReviewFocusMode]);
 
-  // 適応型間隔反復学習：個人の学習速度に最適化
-  const calculateOptimalInterval = (streak: number, easinessFactor: number = 2.5): number => {
-    // 連続正解数に基づく基本間隔（日数）
-    if (streak === 0) return 0; // 即座に再出題
-    if (streak === 1) return 1; // 1日後
-    if (streak === 2) return 3; // 3日後
-    if (streak === 3) return 7; // 7日後
+  // calculateOptimalInterval, calculateForgettingRisk: QuestionSchedulerに統合済み
 
-    // 4回目以降：前回の間隔 × 難易度係数（個人最適化）
-    const baseInterval = 7;
-    return Math.round(baseInterval * Math.pow(easinessFactor, streak - 3));
-  };
-
-  // 忘却リスクスコアの計算：今復習すべき度合い
-  const calculateForgettingRisk = (
-    lastStudied: number,
-    reviewInterval: number,
-    accuracy: number
-  ): number => {
-    const now = Date.now();
-    const daysSinceStudy = (now - lastStudied) / (1000 * 60 * 60 * 24);
-    const expectedInterval = reviewInterval || 1;
-
-    // 時間リスク：経過時間 / 推奨間隔（100%を超えると忘却の危険）
-    const timeRisk = (daysSinceStudy / expectedInterval) * 100;
-
-    // 正答率リスク：低いほど忘れやすい
-    const accuracyRisk = (1 - accuracy / 100) * 50;
-
-    return timeRisk + accuracyRisk;
-  };
-
-  // 適応的な出題順序を構築（Leitnerシステム + 適応型間隔反復）
-  const sortQuestionsByPriority = (
-    questions: Question[],
-    stillLearningLimit: number | null,
-    incorrectLimit: number | null
-  ): Question[] => {
-    // progressStorageから暗記モードの統計情報を取得
-    const getWordStatus = (word: string) => {
-      const key = 'english-progress';
-      const stored = localStorage.getItem(key);
-      if (!stored) return null;
-
-      try {
-        const progress = JSON.parse(stored);
-        const wordProgress = progress.wordProgress?.[word];
-        if (!wordProgress) return null;
-
-        const attempts = wordProgress.memorizationAttempts || 0;
-        const correct = wordProgress.memorizationCorrect || 0;
-        const stillLearning = wordProgress.memorizationStillLearning || 0;
-        const streak = wordProgress.memorizationStreak || 0;
-        const lastStudied = wordProgress.lastStudied || 0;
-
-        // 間隔反復学習用データ
-        const easinessFactor = wordProgress.easinessFactor || 2.5;
-        const reviewInterval =
-          wordProgress.reviewInterval || calculateOptimalInterval(streak, easinessFactor);
-        const _avgResponseSpeed = wordProgress.avgResponseSpeed || 0;
-
-        if (attempts === 0) {
-          return {
-            category: 'new',
-            priority: 3,
-            lastStudied,
-            attempts,
-            correct,
-            streak,
-            forgettingRisk: 0,
-            reviewInterval: 0,
-          };
-        }
-
-        // まだまだを0.5回の正解として計算（正答率50%以上になるように）
-        const effectiveCorrect = correct + stillLearning * 0.5;
-        const accuracy = attempts > 0 ? (effectiveCorrect / attempts) * 100 : 0;
-
-        // 忘却リスクを計算
-        const forgettingRisk = calculateForgettingRisk(lastStudied, reviewInterval, accuracy);
-
-        // 🟢 覚えてる: 連続3回以上 or 正答率80%以上で連続2回
-        if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
-          return {
-            category: 'mastered',
-            priority: 5,
-            lastStudied,
-            attempts,
-            correct,
-            streak,
-            forgettingRisk,
-            reviewInterval,
-          };
-        }
-        // 🟡 まだまだ: 正答率50%以上 or まだまだボタンを押したことがある
-        else if (accuracy >= 50 || stillLearning > 0) {
-          return {
-            category: 'still_learning',
-            priority: 2,
-            lastStudied,
-            attempts,
-            correct,
-            streak,
-            forgettingRisk,
-            reviewInterval,
-          };
-        }
-        // 🔴 分からない: 正答率50%未満 and まだまだボタンを押したことがない
-        else {
-          return {
-            category: 'incorrect',
-            priority: 1,
-            lastStudied,
-            attempts,
-            correct,
-            streak,
-            forgettingRisk,
-            reviewInterval,
-          };
-        }
-      } catch (error) {
-        logger.error('統計情報の取得エラー:', error);
-        return null;
-      }
-    };
-
-    // 各語句の状態を取得
-    const questionsWithStatus = questions.map((q) => ({
-      question: q,
-      status: getWordStatus(q.word),
-    }));
-
-    // カテゴリ別にカウント
-    const counts = {
-      mastered: questionsWithStatus.filter((q) => q.status?.category === 'mastered').length,
-      still_learning: questionsWithStatus.filter((q) => q.status?.category === 'still_learning')
-        .length,
-      incorrect: questionsWithStatus.filter((q) => q.status?.category === 'incorrect').length,
-      new: questionsWithStatus.filter((q) => q.status?.category === 'new').length,
-    };
-
-    // 上限チェックと優先度調整
-    const shouldFocusOnStillLearning =
-      stillLearningLimit !== null && counts.still_learning >= stillLearningLimit;
-    const shouldFocusOnIncorrect = incorrectLimit !== null && counts.incorrect >= incorrectLimit;
-
-    // 学習状況を分析：まだまだ+分からないの割合を計算
-    const totalStudied = counts.mastered + counts.still_learning + counts.incorrect;
-    const needsReview = counts.still_learning + counts.incorrect;
-    const reviewRatio = totalStudied > 0 ? needsReview / totalStudied : 0;
-
-    // フラッシュカード学習の原則：復習が20%以上なら新規を大幅に抑制
-    const shouldSuppressNew = reviewRatio >= 0.2;
-
-    // 段階的解消戦略：分からない問題を早期に解消
-    // 10語溜まったら即座に集中モード、5語以下で新規再開
-    const effectiveLimit = incorrectLimit !== null ? incorrectLimit : 50;
-
-    // 集中モード閾値：10語で発動（放置しない）
-    const concentrationThreshold = 10;
-
-    // 新規導入閾値：5語以下で再開
-    const newQuestionThreshold = 5;
-
-    const hasLargeIncorrectBacklog = counts.incorrect > concentrationThreshold;
-    const canIntroduceNewQuestions = counts.incorrect <= newQuestionThreshold;
-
-    // 上限の80%を超えたら自動的に復習モード発動
-    const autoReviewMode =
-      (stillLearningLimit !== null && counts.still_learning >= stillLearningLimit * 0.8) ||
-      (incorrectLimit !== null && counts.incorrect >= incorrectLimit * 0.8);
-    const effectiveReviewMode = isReviewFocusMode || autoReviewMode;
-
-    // ソート: 優先度 > 最終学習時刻（古い順） > ランダム
-    const sorted = questionsWithStatus.sort((a, b) => {
-      const statusA = a.status;
-      const statusB = b.status;
-
-      // 上限に達した場合の優先度調整
-      let priorityA = statusA?.priority || 3;
-      let priorityB = statusB?.priority || 3;
-
-      // 🔥 復習モード（手動or自動）が有効な場合: 分からないとまだまだを集中的に出題
-      if (effectiveReviewMode) {
-        // 分からない（incorrect）を最優先（約70%の出現率）
-        if (statusA?.category === 'incorrect') priorityA = 0;
-        if (statusB?.category === 'incorrect') priorityB = 0;
-
-        // まだまだ（still_learning）を次に優先（約25%の出現率）
-        if (statusA?.category === 'still_learning' && priorityA !== 0) priorityA = 0.5;
-        if (statusB?.category === 'still_learning' && priorityB !== 0) priorityB = 0.5;
-
-        // 覚えてる（mastered）と新規は完全に出題しない
-        if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 999;
-        if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 999;
-        if (statusA?.category === 'new' && priorityA > 1) priorityA = 999;
-        if (statusB?.category === 'new' && priorityB > 1) priorityB = 999;
-      } else {
-        // 通常モード: 適応型間隔反復 + 忘却リスクベースの優先度
-
-        // 忘却リスクによる緊急度判定
-        const riskA = statusA?.forgettingRisk || 0;
-        const riskB = statusB?.forgettingRisk || 0;
-
-        // 🚨 忘却リスク150+: 緊急（忘れる直前）→ 最優先
-        if (riskA >= 150) priorityA = 0.1;
-        if (riskB >= 150) priorityB = 0.1;
-
-        // ⚠️ 忘却リスク100-149: 高リスク → 優先
-        if (riskA >= 100 && riskA < 150) priorityA = 0.2;
-        if (riskB >= 100 && riskB < 150) priorityB = 0.2;
-
-        // 🔴 分からないは常に高優先（記憶の定着が最重要）
-        // 大量の覚えていない語句がある場合：最近間違えた語句を最優先
-        if (statusA?.category === 'incorrect' && priorityA > 0.2) {
-          if (hasLargeIncorrectBacklog) {
-            // 最近間違えた語句（1日以内）を超優先
-            const isRecentA = statusA.lastStudied && Date.now() - statusA.lastStudied < 86400000;
-            priorityA = isRecentA ? 0.1 : 0.3;
-          } else {
-            priorityA = 0.3;
-          }
-        }
-        if (statusB?.category === 'incorrect' && priorityB > 0.2) {
-          if (hasLargeIncorrectBacklog) {
-            const isRecentB = statusB.lastStudied && Date.now() - statusB.lastStudied < 86400000;
-            priorityB = isRecentB ? 0.1 : 0.3;
-          } else {
-            priorityB = 0.3;
-          }
-        }
-
-        // 🟡 まだまだも高優先（定着させることが重要）
-        if (statusA?.category === 'still_learning' && priorityA > 0.3) priorityA = 0.8;
-        if (statusB?.category === 'still_learning' && priorityB > 0.3) priorityB = 0.8;
-
-        // 🟢 覚えてる: 忘却リスクに応じて出題タイミングを調整
-        if (statusA?.category === 'mastered') {
-          if (riskA >= 50 && priorityA > 1)
-            priorityA = 2.0; // 中リスク → 適度に復習
-          else if (priorityA > 2) priorityA = 4.5; // 低リスク → 後回し
-        }
-        if (statusB?.category === 'mastered') {
-          if (riskB >= 50 && priorityB > 1) priorityB = 2.0;
-          else if (priorityB > 2) priorityB = 4.5;
-        }
-
-        // 🆕 新規問題は復習状況に応じて段階的に導入
-        // フラッシュカード学習では、復習が優先で新規は少しずつ追加
-        if (statusA?.category === 'new' && priorityA > 3) {
-          if (hasLargeIncorrectBacklog) {
-            // 覚えていない語句が50個超：新規は完全に停止
-            priorityA = 10;
-          } else if (canIntroduceNewQuestions) {
-            // 覚えていない語句が30個以下：新規を適度に導入（10%程度）
-            priorityA = 3.5;
-          } else {
-            // 中間状態（31-50個）：新規は後回し
-            priorityA = shouldSuppressNew ? 5 : 3.5;
-          }
-        }
-        if (statusB?.category === 'new' && priorityB > 3) {
-          if (hasLargeIncorrectBacklog) {
-            priorityB = 10;
-          } else if (canIntroduceNewQuestions) {
-            priorityB = 3.5;
-          } else {
-            priorityB = shouldSuppressNew ? 5 : 3.5;
-          }
-        }
-
-        // 上限に達した場合はさらに優先度を上げる
-        if (shouldFocusOnIncorrect) {
-          if (statusA?.category === 'incorrect') priorityA = 0;
-          if (statusB?.category === 'incorrect') priorityB = 0;
-        }
-        if (shouldFocusOnStillLearning) {
-          if (statusA?.category === 'still_learning') priorityA = 0.05;
-          if (statusB?.category === 'still_learning') priorityB = 0.05;
-        }
-      }
-
-      // 優先度順
-      if (priorityA !== priorityB) {
-        return priorityA - priorityB;
-      }
-
-      // 最終学習時刻順（古い方を優先）
-      const lastStudiedA = statusA?.lastStudied || 0;
-      const lastStudiedB = statusB?.lastStudied || 0;
-      if (lastStudiedA !== lastStudiedB) {
-        return lastStudiedA - lastStudiedB;
-      }
-
-      // ランダム（同じ優先度・同じ学習時刻の場合）
-      return Math.random() - 0.5;
-    });
-
-    return sorted.map((item) => item.question);
-  };
+  // ローカルソート関数は削除: QuestionSchedulerに統合済み
 
   // 音声読み上げ（カード表示時）
   useEffect(() => {
@@ -687,6 +455,7 @@ function MemorizationView({
         correct: isCorrect ? prev.correct + 1 : prev.correct,
         still_learning: isStillLearning ? prev.still_learning + 1 : prev.still_learning,
         incorrect: !isCorrect && !isStillLearning ? prev.incorrect + 1 : prev.incorrect,
+        mastered: isCorrect ? prev.mastered + 1 : prev.mastered, // 覚えてる=mastered
         total: prev.total + 1,
         newQuestions: prev.newQuestions,
         reviewQuestions: prev.reviewQuestions,
@@ -708,7 +477,7 @@ function MemorizationView({
         await recordMemorizationBehavior(behavior);
         setConsecutiveViews((prev) => prev + 1);
 
-        // 暗記タブ専用の進捗データを記録（和訳・スペルとは分離）
+        // ✅ メインの学習データ記録（QuestionSchedulerが使用するcategoryを保存）
         const { updateWordProgress } = await import('../progressStorage');
         await updateWordProgress(
           currentQuestion.word,
@@ -719,46 +488,32 @@ function MemorizationView({
           isStillLearning // まだまだフラグを渡す
         );
 
-        // 適応型学習への記録
+        // 📊 追加の統計記録のみ（出題には影響しない）
         adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, viewDuration * 1000);
 
-        // 適応的学習AIネットワークによる分析
-        await processWithAdaptiveAI(currentQuestion.word, isCorrect);
+        // 🔬 メタAI分析（adaptiveEnabled時のみ、出題には影響しない）
+        if (adaptiveEnabled) {
+          await processWithAdaptiveAI(currentQuestion.word, isCorrect);
+        }
       }
 
       // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
       setLastAnswerTime(Date.now());
 
-      // 不正解・まだまだの処理: 再追加→再ソートの順で単一の状態更新にまとめる
-      if (!isCorrect || isStillLearning) {
-        setQuestions((prevQuestions) => {
-          // ステップ1: 問題を再追加（次の3-5問内）
-          const questionsWithReAdd = reAddQuestion(currentQuestion, prevQuestions, currentIndex);
+      // ✅ QuestionScheduler の順序を信頼: 不正解時の再追加処理を削除
+      // → QuestionScheduler が incorrect を最優先に並べるため、UI側での再配置は不要
+      // → カテゴリ変化時は rescheduleCounter により再スケジューリングされる
 
-          // ステップ2: 定期的な再ソート（3問ごとまたは上限到達時）
-          const shouldResort =
-            sessionStats.total % 3 === 0 ||
-            (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
-            (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit);
-
-          if (shouldResort && questionsWithReAdd.length > 1) {
-            const remainingQuestions = questionsWithReAdd.slice(currentIndex + 1);
-
-            if (remainingQuestions.length > 1) {
-              const resorted = sortByPriorityCommon(remainingQuestions, {
-                isReviewFocusMode: false,
-                learningLimit: stillLearningLimit,
-                reviewLimit: incorrectLimit,
-                mode: 'memorization',
-              });
-
-              return [...questionsWithReAdd.slice(0, currentIndex + 1), ...resorted];
-            }
-          }
-
-          return questionsWithReAdd;
-        });
-      }
+      // 📊 カテゴリ変化時の再スケジューリングトリガー（全解答で実行）
+      // ✅ 改善: カテゴリ変化を即座に反映するため、毎回再スケジューリング
+      setRescheduleCounter(prev => prev + 1);
+      console.log('🔄 [MemorizationView] 再スケジューリングトリガー発動', {
+        word: currentQuestion.word,
+        result: isCorrect ? '覚えてる' : isStillLearning ? 'まだまだ' : '分からない',
+        incorrect: sessionStats.incorrect,
+        still_learning: sessionStats.still_learning,
+        mastered: sessionStats.mastered,
+      });
 
       // KPIロギング + 新規/復習の統計を更新
 
