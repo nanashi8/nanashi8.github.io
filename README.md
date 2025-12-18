@@ -5,7 +5,7 @@
 [![文法データ品質](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml)
 [![QuestionScheduler品質](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/validate-question-scheduler-docs.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/validate-question-scheduler-docs.yml)
 
-TypeScript + React で構築された、8個のAIシステムを統合した革新的な英語学習アプリケーションです。
+TypeScript + React で構築された、8個のAIシステムを統合した英語学習アプリケーションです。
 
 ### 💡 このアプリの特徴は？
 
@@ -17,17 +17,17 @@ TypeScript + React で構築された、8個のAIシステムを統合した革�
 - ⏰ **忘れる前に復習通知**: 忘却曲線に基づいて「そろそろ復習すべき単語」を自動浮上
 - 🎮 **飽きないインタリーブ学習**: 難易度を意図的に混ぜて単調さを回避
 
-**技術的な革新性**: 世界初？7つの専門AIからの信号を統合し、1つのメタAI（QuestionScheduler）が最終的な出題順序を決定する「8-AIアーキテクチャ」を採用。ドキュメント-実装整合性スコア100/100を達成しています。
+7つの専門AIからの信号を統合し、1つのメタAI（QuestionScheduler）が最終的な出題順序を決定する「8-AIアーキテクチャ」を採用しています。ドキュメント-実装整合性スコア100/100を達成しています。
 
 ---
 
 ## 📑 目次
 
 - [特徴](#特徴)
-- [🚀 革新的な8-AIシステム統合アーキテクチャ](#-革新的な8-aiシステム統合アーキテクチャ) ⭐ **世界初？**
-  - [QuestionScheduler - メタAI統合層](#-questionscheduler---メタai統合層) - **整合性スコア 100/100**
+- [🚀 8-AIシステム統合アーキテクチャ](#-8-aiシステム統合アーキテクチャ)
+  - [QuestionScheduler - メタAI統合層](#-questionscheduler---メタai統合層)
 - [🧠 適応型学習AI（記憶AI）](#-適応型学習ai記憶ai)
-- [コンテンツ品質テストシステム](#コンテンツ品質テストシステム-️) - **誤検出率 0%**
+- [コンテンツ品質テストシステム](#コンテンツ品質テストシステム-️)
 - [開発](#開発)
 - [技術スタック](#技術スタック)
 
@@ -43,17 +43,17 @@ TypeScript + React で構築された、8個のAIシステムを統合した革�
 - 🧠 **8-AI統合システム**: 7つの専門AI + 1つのメタAI統合層による高度な学習最適化
 - 🔄 **QuestionScheduler**: 100/100スコアのドキュメント-実装整合性を持つ統一出題エンジン
 
-## 🚀 革新的な8-AIシステム統合アーキテクチャ
+## 🚀 8-AIシステム統合アーキテクチャ
 
 **簡単に言うと**: あなたが単語を学習すると、7つの専門AIがそれぞれの視点から「次はこの単語を出すべき」と提案します。そして1つのメタAI（QuestionScheduler）が全ての提案を統合して、**あなたにとって最適な出題順序**を決定します。
 
-**技術的詳細**: 世界初？全タブ統一型の出題順序決定システム。7つの専門AIからの信号を統合し、1つのメタAI（QuestionScheduler）が最適な出題順序を決定します。
+**技術的詳細**: 全タブ統一型の出題順序決定システム。7つの専門AIからの信号を統合し、1つのメタAI（QuestionScheduler）が最適な出題順序を決定します。
 
 ### 🎯 QuestionScheduler - メタAI統合層
 
-**整合性スコア 100/100** を達成した、ドキュメント-実装完全整合システム：
+整合性スコア 100/100 を達成した、ドキュメント-実装完全整合システムです。
 
-#### 革新的な特徴
+#### 主な特徴
 
 **💬 分かりやすく解説**: 従来のアプリは「暗記」「和訳」「スペル」などのモードごとに別々のロジックで出題していました。このアプリは全モードで同じAIが出題順序を決定するため、**あなたの学習履歴が全モードで共有**され、どのモードでも最適な学習が可能です。
 
@@ -120,7 +120,7 @@ TypeScript + React で構築された、8個のAIシステムを統合した革�
 
 ### 📚 QuestionScheduler完全ドキュメント（Phase 1-6完了）
 
-**整合性スコア**: 100/100 ✅ **完璧**
+整合性スコア: 100/100
 
 | ドキュメント | 行数 | 目的 |
 |------------|------|------|
