@@ -4,6 +4,7 @@ import type { DataSource } from '../App';
 import type { CustomQuestionSet } from '../types/customQuestions';
 import LearningPlanView from './LearningPlanView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
+import { AISimulator } from './AISimulator';
 
 interface SettingsViewProps {
   allQuestions: Question[];
@@ -12,7 +13,6 @@ interface SettingsViewProps {
   _onDataSourceChange?: (source: DataSource) => void;
   customQuestionSets: CustomQuestionSet[];
   onOpenCustomSetManagement: () => void;
-  onOpenAISimulator?: () => void;
 }
 
 function SettingsView({
@@ -22,7 +22,6 @@ function SettingsView({
   _onDataSourceChange,
   customQuestionSets,
   onOpenCustomSetManagement,
-  onOpenAISimulator,
 }: SettingsViewProps) {
   // localStorageからバッチサイズを読み込み
   const [batchSize, setBatchSize] = useState<number>(() => {
@@ -327,17 +326,10 @@ function SettingsView({
           <span>🤖</span>
           <span>学習AIシミュレーター</span>
         </h3>
-        <div className="space-y-3">
-          <button
-            onClick={onOpenAISimulator}
-            className="block w-full px-4 py-3 bg-blue-600 text-white text-center rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md"
-          >
-            📊 AIスケジューラーをテスト
-          </button>
-          <p className="text-sm text-text-secondary bg-bg-secondary px-4 py-3 rounded-lg text-center">
-            問題出題アルゴリズムをシミュレーションで検証できます。
-          </p>
-        </div>
+        <p className="text-sm text-text-secondary bg-bg-secondary px-4 py-3 rounded-lg mb-4">
+          問題出題アルゴリズムをシミュレーションで検証できます。初期状態を設定して、5つの異なる生徒プロファイルでシミュレーションを実行します。
+        </p>
+        <AISimulator />
       </div>
 
       {/* プライバシーポリシー */}

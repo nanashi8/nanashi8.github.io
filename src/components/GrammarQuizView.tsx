@@ -127,7 +127,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   } = useAdaptiveNetwork();
 
   // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
-  const [scheduler] = useState(() => new QuestionScheduler());
+  const [scheduler] = useState(() => {
+    const s = new QuestionScheduler();
+    // 🤖 Phase 2: AI統合を有効化（オプトイン）
+    const enableAI = process.env.NODE_ENV === 'development' || localStorage.getItem('enable-ai-coordination') === 'true';
+    if (enableAI) {
+      s.enableAICoordination(true);
+      logger.info('🤖 [GrammarQuizView] AI統合が有効化されました');
+    }
+    return s;
+  });
 
   // 問題再出題管理フック
   const { clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<GrammarQuestion>();

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { QuestionScheduler } from '@/ai/scheduler/QuestionScheduler';
-import type { Question } from '@/ai/scheduler/types';
+import type { Question } from '@/types';
 
 describe('QuestionScheduler - 統合テスト', () => {
   let scheduler: QuestionScheduler;
@@ -10,10 +10,10 @@ describe('QuestionScheduler - 統合テスト', () => {
     scheduler = new QuestionScheduler();
 
     sampleQuestions = [
-      { word: 'apple', meaning: 'りんご', reading: 'アップル', difficulty: 1, relatedWords: [], relatedFields: [] },
-      { word: 'book', meaning: '本', reading: 'ブック', difficulty: 1, relatedWords: [], relatedFields: [] },
-      { word: 'computer', meaning: 'コンピューター', reading: 'コンピューター', difficulty: 2, relatedWords: [], relatedFields: [] },
-    ];
+      { word: 'apple', meaning: 'りんご', reading: 'アップル', difficulty: '', relatedWords: '', relatedFields: '', type: 'word', etymology: '' },
+      { word: 'book', meaning: '本', reading: 'ブック', difficulty: '', relatedWords: '', relatedFields: '', type: 'word', etymology: '' },
+      { word: 'computer', meaning: 'コンピューター', reading: 'コンピューター', difficulty: '', relatedWords: '', relatedFields: '', type: 'word', etymology: '' },
+    ] as Question[];
   });
 
   describe('基本機能', () => {
@@ -77,9 +77,11 @@ describe('QuestionScheduler - 統合テスト', () => {
         word: `word${i}`,
         meaning: `意味${i}`,
         reading: `読み${i}`,
-        difficulty: (i % 3) + 1,
-        relatedWords: [],
-        relatedFields: [],
+        difficulty: '',
+        relatedWords: '',
+        relatedFields: '',
+        type: 'word',
+        etymology: '',
       }));
 
       const startTime = performance.now();

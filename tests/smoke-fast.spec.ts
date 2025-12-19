@@ -14,7 +14,7 @@ test.describe('超高速煙テスト', () => {
     test.setTimeout(60000);
 
     // 1. アプリ起動確認（リトライ付き・サーバー起動待ち時間延長）
-    const base = test.info().config.use?.baseURL || 'http://localhost:5173';
+    const base = (test.info().config as any).use?.baseURL || 'http://localhost:5173';
     await page.goto(base, {
       waitUntil: 'networkidle',
       timeout: 30000,

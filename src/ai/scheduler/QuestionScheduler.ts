@@ -35,13 +35,29 @@ import type {
 } from './types';
 import { AntiVibrationFilter } from './AntiVibrationFilter';
 import { logger } from '@/utils/logger';
+import { AICoordinator } from '../AICoordinator';
+import type { AIAnalysisInput, SessionStats as AISessionStats } from '../types';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;
   private recentAnswersCache: Map<string, RecentAnswer[]> = new Map();
+  private aiCoordinator: AICoordinator | null = null;
+  private useAICoordinator: boolean = false;
 
   constructor() {
     this.antiVibration = new AntiVibrationFilter();
+  }
+
+  /**
+   * AI統合機能を有効化（オプトイン）
+   */
+  enableAICoordination(enable: boolean = true): void {
+    this.useAICoordinator = enable;
+    if (enable && !this.aiCoordinator) {
+      this.aiCoordinator = new AICoordinator({
+        debugMode: process.env.NODE_ENV === 'development',
+      });
+    }
   }
 
   /**
@@ -354,12 +370,49 @@ export class QuestionScheduler {
       // 時間ブースト
       priority = this.applyTimeBoost(priority, status);
 
-      // デバッグログ: 最初の10単語の優先度を出力
-      if (index < 10) {
-        console.log(`🎯 [QuestionScheduler] 優先度計算: ${q.word}`, {
-          category: status?.category || 'null',
+      // 🤖 AI統合: AICoordinatorによる優先度調整（オプトイン）
+      if (this.useAICoordinator && this.aiCoordinator && index < 100) {
+        try {
+          const aiInput: AIAnalysisInput = {
+            word: q.word,
+            progress: this.getWordProgress(q.word),
+            sessionStats: this.convertToAISessionStats(context.sessionStats),
+            currentTab: context.mode as any,
+            allProgress: this.getAllProgress(),
+          };
+
+          this.aiCoordinator.analyzeAndCoordinate(aiInput, priority).then((result) => {
+            if (result.urgentFlag) {
+              priority = 0.1; // 緊急フラグ
+            } else {
+              priority = result.finalPriority;
+            }
+
+            if (index < 5) {
+              this.aiCoordinator?.logCoordinationResult(result);
+            }
+          }).catch((error) => {
+            logger.error('[AICoordinator] エラー:', error);
+          });
+        } catch (error) {
+          logger.error('[AICoordinator] 分析エラー:', error);
+        }
+      }
+
+      // 💤 認知負荷AI領域: 優先度計算プロセスを可視化
+      if (index < 20) {
+        const minutesSinceLastStudy = status?.lastStudied ?
+          Math.round((Date.now() - status.lastStudied) / 60000) : 0;
+
+        console.log(`💤 [CognitiveLoadAI] 優先度計算: ${q.word}`, {
+          category: status?.category || 'new',
           basePriority,
-          finalPriority: priority,
+          timeBoost: priority !== basePriority ?
+            `+${((1 - priority/basePriority) * 100).toFixed(0)}%` : 'なし',
+          minutesSinceLastStudy: minutesSinceLastStudy > 0 ?
+            `${minutesSinceLastStudy}分前` : '未学習',
+          finalPriority: priority.toFixed(2),
+          aiEnabled: this.useAICoordinator,
         });
       }
 
@@ -469,17 +522,24 @@ export class QuestionScheduler {
 
   /**
    * 時間ブーストを適用
+   * 🧠 記憶AI領域: エビングハウスの忘却曲線に基づく優先度調整
+   * 暗記タブに最適化するため分単位で計算
    */
   private applyTimeBoost(priority: number, status: WordStatus | null): number {
     if (!status || status.lastStudied === 0) return priority;
 
-    const daysSinceLastStudy = (Date.now() - status.lastStudied) / (1000 * 60 * 60 * 24);
+    // 🧠 記憶AIの忘却曲線モデル: 分単位の時間減衰
+    const minutesSinceLastStudy = (Date.now() - status.lastStudied) / (1000 * 60);
 
-    // 7日以上放置されている場合、優先度を上げる
-    if (daysSinceLastStudy >= 7) {
-      return priority * 0.8; // 20%優先度アップ
-    } else if (daysSinceLastStudy >= 3) {
-      return priority * 0.9; // 10%優先度アップ
+    // 暗記タブに最適化: 分単位の時間ブースト
+    if (minutesSinceLastStudy >= 30) {
+      return priority * 0.4; // 60%優先度アップ（強力）
+    } else if (minutesSinceLastStudy >= 15) {
+      return priority * 0.5; // 50%優先度アップ
+    } else if (minutesSinceLastStudy >= 5) {
+      return priority * 0.7; // 30%優先度アップ
+    } else if (minutesSinceLastStudy >= 2) {
+      return priority * 0.85; // 15%優先度アップ
     }
 
     return priority;
@@ -505,22 +565,35 @@ export class QuestionScheduler {
       console.log(`🔍 [QuestionScheduler] ${word}: localStorage.category = ${category || '未設定'}`);
 
       // 既存データにcategoryがない場合は推測
+      // 🧠 記憶AI領域: カテゴリー遷移ルールの明確化
       if (!category) {
         const totalAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0);
+        const consecutiveCorrect = wordProgress.consecutiveCorrect || 0;
         const consecutiveIncorrect = wordProgress.consecutiveIncorrect || 0;
+        const accuracy = totalAttempts > 0 ? (wordProgress.correctCount || 0) / totalAttempts : 0;
 
         if (totalAttempts === 0) {
           category = 'new';
-        } else if (consecutiveIncorrect >= 2) {
+        }
+        // 🔴 連続不正解2回以上、または正答率30%未満 → incorrect
+        else if (consecutiveIncorrect >= 2 || (totalAttempts >= 3 && accuracy < 0.3)) {
           category = 'incorrect';
-        } else if (wordProgress.incorrectCount && wordProgress.incorrectCount > 0) {
-          category = 'still_learning';
-        } else if (wordProgress.masteryLevel === 'mastered') {
+        }
+        // 🟢 連続正解3回以上、かつ正答率80%以上 → mastered
+        else if (consecutiveCorrect >= 3 && accuracy >= 0.8) {
           category = 'mastered';
-        } else {
+        }
+        // 🟡 それ以外 → still_learning
+        else {
           category = 'still_learning';
         }
-        console.log(`🔍 [QuestionScheduler] ${word}: category未設定のため推測 → ${category}`);
+
+        console.log(`🧠 [MemoryAI] ${word}: カテゴリー判定 → ${category}`, {
+          totalAttempts,
+          accuracy: (accuracy * 100).toFixed(0) + '%',
+          consecutiveCorrect,
+          consecutiveIncorrect,
+        });
       }
 
       const status = {
@@ -713,6 +786,7 @@ export class QuestionScheduler {
       vibrationScore,
       incorrectCount: incorrectQuestions.length,
       stillLearningCount: stillLearningQuestions.length,
+      aiEnabled: this.useAICoordinator,
       totalCount: questions.length,
     });
 
@@ -740,5 +814,48 @@ export class QuestionScheduler {
   clearCache(): void {
     this.recentAnswersCache.clear();
     logger.info('[QuestionScheduler] キャッシュクリア完了');
+  }
+
+  /**
+   * AI統合用: 単語の進捗データを取得
+   */
+  private getWordProgress(word: string): any | null {
+    try {
+      const progress = JSON.parse(localStorage.getItem('english-progress') || '{}');
+      return progress[word] || null;
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * AI統合用: すべての単語進捗データを取得
+   */
+  private getAllProgress(): Record<string, any> {
+    try {
+      return JSON.parse(localStorage.getItem('english-progress') || '{}');
+    } catch {
+      return {};
+    }
+  }
+
+  /**
+   * AI統合用: セッション統計を変換
+   */
+  private convertToAISessionStats(stats: any): AISessionStats {
+    return {
+      totalAttempts: stats.correct + stats.incorrect + stats.still_learning,
+      correctAnswers: stats.correct || 0,
+      incorrectAnswers: stats.incorrect || 0,
+      stillLearningAnswers: stats.still_learning || 0,
+      sessionStartTime: Date.now() - (stats.duration || 0),
+      sessionDuration: stats.duration || 0,
+      avgResponseTime: stats.avgResponseTime,
+      consecutiveIncorrect: stats.consecutiveIncorrect || 0,
+      masteredCount: stats.masteredCount || 0,
+      stillLearningCount: stats.still_learningCount || 0,
+      incorrectCount: stats.incorrectCount || 0,
+      newCount: stats.newCount || 0,
+    };
   }
 }
