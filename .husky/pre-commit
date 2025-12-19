@@ -97,15 +97,26 @@ fi
 # 1. ステージされたファイルのみをチェック
 echo "📝 変更ファイルを確認中..."
 
-# 1.5. Prettierチェック（コード整形）
-if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css|json|md)$' > /dev/null; then
-  echo "✨ Prettierコード整形チェック中..."
-  npm run format:check || {
+# 1.5. Prettierチェック（コード整形）- ステージング済みファイルのみ
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(tsx?|jsx?|css|json|md)$' || true)
+
+if [ -n "$STAGED_FILES" ]; then
+  echo "✨ Prettierコード整形チェック中（ステージング済みファイルのみ）..."
+  
+  # ステージング済みファイルのみチェック
+  echo "$STAGED_FILES" | xargs npx prettier --check > /dev/null 2>&1 || {
     echo ""
     echo "⚠️  コード整形が必要なファイルがあります"
-    echo "💡 自動修正: npm run format"
-    echo "💡 手動確認後にコミットしてください"
-    exit 1
+    echo "💡 自動整形を実行中..."
+    
+    # ステージング済みファイルのみ整形
+    echo "$STAGED_FILES" | xargs npx prettier --write
+    
+    # 整形後に自動で再ステージング
+    echo "$STAGED_FILES" | xargs git add
+    
+    echo "✅ 整形完了（自動的に再ステージングしました）"
+    echo ""
   }
 fi
 
