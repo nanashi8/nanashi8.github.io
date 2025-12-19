@@ -13,7 +13,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { allProfiles, validateAllProfiles } from './studentProfiles';
-// @ts-expect-error - シミュレーションエンジンは実行時に利用可能
 import { runSimulation } from './simulationEngine';
 import { generateSimulationHTML, displaySimulationProgress } from './visualizeProgress';
 

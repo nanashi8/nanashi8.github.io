@@ -1,10 +1,9 @@
 /**
  * プログレスバー可視化機能
  *
- * シミュレーション結果をプログレスバーとグラフで可視化します。
+ * シミュレーション結果をプログラスバーとグラフで可視化します。
  */
 
-// @ts-expect-error - シミュレーションエンジンは実行時に利用可能
 import type { SimulationResult, SimulationSnapshot } from './simulationEngine';
 
 /**

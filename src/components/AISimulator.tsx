@@ -236,21 +236,39 @@ export const AISimulator: React.FC = () => {
   ) => {
     const newState = { ...state };
 
-    // incorrect → still_learning (エラー率に基づく)
+    // 🤖 メタAI領域: 双方向状態遷移モデル
+    // incorrect ⇄ still_learning ⇄ mastered の双方向遷移を実装
+
+    // 🔴→🟡 incorrect → still_learning (改善)
     if (newState.incorrect > 0) {
-      const toTransition = Math.max(1, Math.floor(newState.incorrect * (1 - errorRate) * 0.2));
-      newState.incorrect = Math.max(0, newState.incorrect - toTransition);
-      newState.still_learning += toTransition;
+      const successRate = Math.max(0.1, 1 - errorRate);
+      const toImprove = Math.max(1, Math.floor(newState.incorrect * successRate * 0.25));
+      newState.incorrect = Math.max(0, newState.incorrect - toImprove);
+      newState.still_learning += toImprove;
     }
 
-    // still_learning → mastered (定着への移行)
-    if (newState.still_learning > 0) {
-      const toMaster = Math.max(1, Math.floor(newState.still_learning * 0.15));
+    // 🟡→🔴 still_learning → incorrect (逆戻り: エラー率高い場合)
+    if (errorRate > 0.4 && newState.still_learning > 0) {
+      const toRegress = Math.max(1, Math.floor(newState.still_learning * errorRate * 0.3));
+      newState.still_learning = Math.max(0, newState.still_learning - toRegress);
+      newState.incorrect += toRegress;
+    }
+
+    // 🟡→🟢 still_learning → mastered (定着)
+    if (newState.still_learning > 0 && errorRate < 0.3) {
+      const toMaster = Math.max(1, Math.floor(newState.still_learning * (1 - errorRate) * 0.15));
       newState.still_learning = Math.max(0, newState.still_learning - toMaster);
       newState.mastered += toMaster;
     }
 
-    // new → still_learning (新規学習)
+    // 🟢→🟡 mastered → still_learning (忘却による逆戻り)
+    if (newState.mastered > 0 && errorRate > 0.25) {
+      const toForget = Math.floor(newState.mastered * errorRate * 0.05);
+      newState.mastered = Math.max(0, newState.mastered - toForget);
+      newState.still_learning += toForget;
+    }
+
+    // 🆕→🟡 new → still_learning (新規学習: incorrect<10の時のみ)
     if (newState.new > 0 && newState.incorrect < 10) {
       const toLearn = Math.min(newState.new, 2);
       newState.new -= toLearn;

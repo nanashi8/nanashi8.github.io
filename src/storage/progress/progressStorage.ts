@@ -155,7 +155,7 @@ export async function loadProgress(): Promise<UserProgress> {
     // 修復が実行された場合はログ出力して保存
     if (repairedCount > 0) {
       logger.info(`[Category Repair] ${repairedCount}個の単語にcategoryを追加しました`);
-      await saveProgressData(progress as ProgressData);
+      await saveProgressData(progress as UserProgress);
     }
 
     // キャッシュを更新

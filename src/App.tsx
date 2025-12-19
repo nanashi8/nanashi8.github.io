@@ -86,7 +86,6 @@ import DictionaryView from './components/DictionaryView';
 import FloatingPanel from './components/FloatingPanel';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
-import { AISimulator } from './components/AISimulator';
 import LoadingIndicator from './components/LoadingIndicator';
 import './App.css';
 
@@ -169,7 +168,6 @@ function checkLocalStorageSize() {
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
   const [isLoadingTab, setIsLoadingTab] = useState(false);
-  const [showAISimulator, setShowAISimulator] = useState(false);
 
   // 全問題データ（high-school-entrance-words.csvから読み込み）
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
@@ -1851,7 +1849,6 @@ function App() {
               _onDataSourceChange={setSelectedDataSource}
               customQuestionSets={customQuestionState.sets}
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
-              onOpenAISimulator={() => setShowAISimulator(true)}
               onStartSession={(_mode, questions) => {
                 // セッションの単語でクイズを開始
                 setQuizState({
@@ -1871,23 +1868,6 @@ function App() {
           )}
         </div>
       </div>
-
-      {/* 学習AIシミュレーター（モーダル表示） */}
-      {showAISimulator && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-y-auto relative">
-            <button
-              onClick={() => setShowAISimulator(false)}
-              className="sticky top-0 right-0 float-right m-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors font-semibold shadow-lg z-10"
-            >
-              ✕ 閉じる
-            </button>
-            <div className="clear-both">
-              <AISimulator />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
