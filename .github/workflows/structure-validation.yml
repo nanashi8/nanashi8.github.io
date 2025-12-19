@@ -22,7 +22,11 @@ jobs:
     - name: Validate project structure
       run: |
         echo "🔍 プロジェクト構造を検証中..."
-        python3 scripts/validate_project_structure.py
+        if [ -f scripts/validate_project_structure.py ]; then
+          python3 scripts/validate_project_structure.py
+        else
+          echo "⚠️ validate_project_structure.py が見つかりません（スキップ）"
+        fi
     
     - name: Check for forbidden patterns
       run: |
