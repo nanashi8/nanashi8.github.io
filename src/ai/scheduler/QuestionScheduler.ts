@@ -613,9 +613,39 @@ export class QuestionScheduler {
         });
       }
 
+      // ✅ 【保存済み優先度を使用】解答直後に計算された優先度を取得
+      let calculatedPriority = wordProgress.calculatedPriority;
+
+      // フォールバック: 優先度が未計算の場合はその場で計算
+      if (calculatedPriority === undefined) {
+        const totalAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0);
+        const accuracy = totalAttempts > 0 ? (wordProgress.correctCount || 0) / totalAttempts : 0;
+
+        const basePriority: Record<string, number> = {
+          incorrect: 100,
+          still_learning: 75,
+          new: 50,
+          mastered: 10,
+        };
+
+        const daysSinceLastStudy =
+          (Date.now() - (wordProgress.lastStudied || 0)) / (1000 * 60 * 60 * 24);
+        const timeBoost = Math.min(daysSinceLastStudy * 2, 20);
+
+        calculatedPriority = (basePriority[category || 'new'] || 50) + timeBoost;
+
+        console.log(
+          `⚠️ [Priority Fallback] ${word}: 優先度を計算 (${calculatedPriority.toFixed(1)}, accuracy=${(accuracy * 100).toFixed(0)}%)`
+        );
+      } else {
+        console.log(
+          `✅ [Priority Loaded] ${word}: 保存済み優先度を使用 (${calculatedPriority.toFixed(1)})`
+        );
+      }
+
       const status = {
         category,
-        priority: wordProgress.priority || 3,
+        priority: calculatedPriority, // 保存済み優先度を使用
         lastStudied: wordProgress.lastStudied || 0,
         attempts: wordProgress.attempts || 0,
         correct: wordProgress.correct || 0,
