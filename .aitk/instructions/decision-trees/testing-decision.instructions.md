@@ -1,10 +1,6 @@
 ---
 description: テスト戦略の判断と実装手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**/*.test.{ts,tsx}'
-priority: high
-phase: 1
 ---
 
 # テスト意思決定ツリー

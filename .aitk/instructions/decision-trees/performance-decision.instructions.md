@@ -1,10 +1,6 @@
 ---
 description: パフォーマンス最適化の判断と実施手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: medium
-phase: 1
 ---
 
 # パフォーマンス最適化意思決定ツリー

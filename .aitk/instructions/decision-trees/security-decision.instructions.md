@@ -1,10 +1,6 @@
 ---
 description: セキュリティ問題の検出と対応手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # セキュリティ意思決定ツリー

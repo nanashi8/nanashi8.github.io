@@ -1,10 +1,6 @@
 ---
 description: ドキュメント更新の判断と実行手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**/*.md,**/docs/**'
-priority: medium
-phase: 1
 ---
 
 # ドキュメント更新意思決定ツリー
@@ -400,8 +396,6 @@ IF 新機能が追加された
 
 [ ] 関連ドキュメント
     ## 関連ドキュメント
-    - [リンク1](path/to/doc1.md)
-    - [リンク2](path/to/doc2.md)
 
 [ ] 更新履歴
     **最終更新**: 2025-12-19
@@ -630,9 +624,6 @@ npm test -- myNewAI.test.ts
 [よくある問題と解決策]
 
 ## 関連ドキュメント
-- [AI Architecture](../architecture/AI_SYSTEM.md)
-- [Testing Guide](../testing/TESTING_GUIDE.md)
-```
 
 **検証**:
 - [ ] 手順を実際に実行

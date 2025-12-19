@@ -1,10 +1,6 @@
 ---
 description: プロジェクト状態の完全な理解と追跡
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # プロジェクト状態認識システム

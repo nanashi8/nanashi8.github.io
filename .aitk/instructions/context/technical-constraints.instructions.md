@@ -1,10 +1,6 @@
 ---
 description: 技術的制約の完全な定義と判断基準
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # 技術的制約認識システム

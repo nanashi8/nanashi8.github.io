@@ -1,10 +1,6 @@
 ---
 description: デプロイの判断と実行手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: high
-phase: 1
 ---
 
 # デプロイ意思決定ツリー

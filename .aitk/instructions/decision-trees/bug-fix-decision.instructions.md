@@ -1,10 +1,6 @@
 ---
 description: バグ修正の判断と実行手順の自動決定
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**/*fix*,**/*bug*'
-priority: high
-phase: 1
 ---
 
 # バグ修正意思決定ツリー

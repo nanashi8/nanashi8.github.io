@@ -1,7 +1,6 @@
 ---
 description: 作業管理とタスク制限ルール - 15分ルール、段階的実施、進捗記録の徹底
 applyTo: '**'
-priority: CRITICAL
 ---
 
 # 作業管理ルール（強制適用）

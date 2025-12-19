@@ -1,7 +1,6 @@
 ---
 description: AI用語集 - 14AIネットワークと7つの専門AIの標準呼称
 applyTo: '**'
-priority: high
 ---
 
 # AI用語集・標準呼称ガイドライン

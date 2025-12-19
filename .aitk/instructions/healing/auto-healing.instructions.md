@@ -1,10 +1,6 @@
 ---
 description: 自動修復システムのロジックと手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # 自動修復システム (Self-Healing System)

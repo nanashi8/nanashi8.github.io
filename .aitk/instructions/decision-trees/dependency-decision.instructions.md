@@ -1,10 +1,6 @@
 ---
 description: 依存関係の更新判断と手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: 'package.json'
-priority: medium
-phase: 1
 ---
 
 # 依存関係管理意思決定ツリー

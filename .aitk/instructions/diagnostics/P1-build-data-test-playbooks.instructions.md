@@ -1,10 +1,6 @@
 ---
 description: P1（高優先度）Build/Data/Test問題の診断プレイブック
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: high
-phase: 1
 ---
 
 # P1診断プレイブック (Build, Data, Test)

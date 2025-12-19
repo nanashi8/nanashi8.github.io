@@ -1,10 +1,6 @@
 ---
 description: メンテナンスタスクの優先度判断と実行手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**/*maintenance*'
-priority: critical
-phase: 1
 ---
 
 # メンテナンス意思決定ツリー

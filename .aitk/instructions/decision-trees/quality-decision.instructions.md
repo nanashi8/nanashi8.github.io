@@ -1,10 +1,6 @@
 ---
 description: 品質チェックの自動判断と実行手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # 品質チェック意思決定ツリー
