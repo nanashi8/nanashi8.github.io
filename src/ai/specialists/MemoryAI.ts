@@ -52,7 +52,7 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
 
   /**
    * カテゴリー判定
-   * Phase 1で修正したロジックを適用
+   * progressStorage.tsと統一したロジックを適用
    */
   private determineCategory(progress: WordProgress): WordCategory {
     const attempts = progress.memorizationAttempts || 0;
@@ -64,20 +64,21 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
 
     // まだまだを0.5回の正解として計算
     const effectiveCorrect = correct + stillLearning * 0.5;
-    const accuracy = attempts > 0 ? (effectiveCorrect / attempts) * 100 : 0;
+    const totalAttempts = attempts;
     const incorrectCount = attempts - correct - stillLearning;
+    const accuracy = totalAttempts > 0 ? effectiveCorrect / totalAttempts : 0;
 
-    // 🟢 覚えてる: 連続3回以上 OR (連続2回 AND 正答率80%以上)
-    if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
+    // 🟢 定着済み: 正答率80%以上 & 連続3回正解 OR 正答率70%以上 & 5回以上挑戦
+    if ((accuracy >= 0.8 && streak >= 3) || (accuracy >= 0.7 && totalAttempts >= 5)) {
       return 'mastered';
     }
 
-    // 🔴 分からない: 連続2回不正解 OR 正答率30%未満
-    if (incorrectCount >= 2 || accuracy < 30) {
+    // 🔴 要復習: 正答率30%未満 OR 連続2回不正解
+    if (accuracy < 0.3 || incorrectCount >= 2) {
       return 'incorrect';
     }
 
-    // 🟡 まだまだ: それ以外
+    // 🟡 学習中: それ以外
     return 'still_learning';
   }
 
@@ -127,18 +128,18 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
 
     // 暗記タブでは分単位のブースト
     if (currentTab === 'memorization') {
-      if (minutesSince >= 30) return 0.60; // 30分以上: 60%ブースト
-      if (minutesSince >= 15) return 0.50; // 15分以上: 50%ブースト
-      if (minutesSince >= 5) return 0.30;  // 5分以上: 30%ブースト
-      if (minutesSince >= 2) return 0.15;  // 2分以上: 15%ブースト
+      if (minutesSince >= 30) return 0.6; // 30分以上: 60%ブースト
+      if (minutesSince >= 15) return 0.5; // 15分以上: 50%ブースト
+      if (minutesSince >= 5) return 0.3; // 5分以上: 30%ブースト
+      if (minutesSince >= 2) return 0.15; // 2分以上: 15%ブースト
       return 0;
     }
 
     // 他のタブでは日単位のブースト
     const daysSince = timeSince / (1000 * 60 * 60 * 24);
-    if (daysSince >= 7) return 0.50;   // 7日以上: 50%ブースト
-    if (daysSince >= 3) return 0.30;   // 3日以上: 30%ブースト
-    if (daysSince >= 1) return 0.15;   // 1日以上: 15%ブースト
+    if (daysSince >= 7) return 0.5; // 7日以上: 50%ブースト
+    if (daysSince >= 3) return 0.3; // 3日以上: 30%ブースト
+    if (daysSince >= 1) return 0.15; // 1日以上: 15%ブースト
     return 0;
   }
 

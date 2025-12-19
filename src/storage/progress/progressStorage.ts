@@ -132,7 +132,7 @@ export async function loadProgress(): Promise<UserProgress> {
 
     // カテゴリー修復処理（既存データにcategoryがない場合）
     let repairedCount = 0;
-    Object.values(progress.wordProgress).forEach(wp => {
+    Object.values(progress.wordProgress).forEach((wp) => {
       if (!wp.category) {
         const totalAttempts = (wp.correctCount || 0) + (wp.incorrectCount || 0);
         const consecutiveIncorrect = wp.consecutiveIncorrect || 0;
@@ -1130,41 +1130,37 @@ export async function updateWordProgress(
   //   - 「覚えてる」(mastered) = 定着済み（復習頻度を下げる）
   //   - 「新規」(new) = 未出題
   //
-  // 🔥 判定優先順位（修正版: 今回の回答を最優先）：
-  //   1. 定着判定が最優先（システムが定着と判断したら即座にmastered）
-  //   2. 今回の回答内容を最優先（過去の履歴より現在の状態）
-  //   3. 累積正解2回以上で定着判定（連続でなくても可）
-  //   4. 連続不正解は、今回も不正解の場合のみ適用
+  // 🔥 判定ルール（正答率ベース）：
+  //   1. 定着判定システムが定着と判断 → mastered
+  //   2. 正答率80%以上 & 連続3回以上正解 → mastered（高精度安定）
+  //   3. 正答率70%以上 & 試行5回以上 → mastered（長期安定）
+  //   4. 正答率30%未満 OR 連続2回不正解 → incorrect（要復習）
+  //   5. それ以外 → still_learning（学習中）
+
+  const accuracy = totalAttempts > 0 ? wordProgress.correctCount / totalAttempts : 0;
 
   if (masteryResult.isMastered) {
     // 定着判定システムが定着と判断 → 即座に定着扱い
     wordProgress.category = 'mastered';
-  } else if (isCorrect && wordProgress.correctCount >= 2) {
-    // ✅ 今回正解 & 累積2回以上正解 → 定着（過去に不正解があっても可）
+  } else if (accuracy >= 0.8 && wordProgress.consecutiveCorrect >= 3) {
+    // 🟢 高精度安定型：正答率80%以上 & 連続3回正解
     wordProgress.category = 'mastered';
-  } else if (isCorrect && wordProgress.correctCount >= 1) {
-    // ✅ 今回正解 & 累積1回以上正解 → 学習中（改善傾向）
-    wordProgress.category = 'still_learning';
-  } else if (isStillLearning) {
-    // 今回「まだまだ」を選択 → 「学習中」（明示的な学習継続の意思表示）
-    wordProgress.category = 'still_learning';
-  } else if (!isCorrect && !isStillLearning && wordProgress.consecutiveIncorrect >= 2) {
-    // 今回「分からない」& 2回以上連続不正解 → 「要学習」（最優先復習）
+  } else if (accuracy >= 0.7 && totalAttempts >= 5) {
+    // 🟢 長期安定型：正答率70%以上 & 5回以上挑戦
+    wordProgress.category = 'mastered';
+  } else if (accuracy < 0.3 || (!isStillLearning && wordProgress.consecutiveIncorrect >= 2)) {
+    // 🔴 要復習：正答率30%未満 OR 連続2回不正解
     wordProgress.category = 'incorrect';
-  } else if (!isCorrect && !isStillLearning) {
-    // 今回「分からない」を選択 → 「要学習」（即座に優先復習）
-    wordProgress.category = 'incorrect';
-  } else if (wordProgress.totalAttempts === 0) {
-    // 初回 → 新規
-    wordProgress.category = 'new';
   } else {
-    // デフォルト：学習中
+    // 🟡 学習中：それ以外
     wordProgress.category = 'still_learning';
   }
 
   // デバッグ: カテゴリー変更をログ出力（直近の行動も表示）
   const actionLabel = isCorrect ? '✅正解' : isStillLearning ? '🟡まだまだ' : '❌分からない';
-  console.log(`📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`);
+  console.log(
+    `📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`
+  );
 
   // ✅ 保存前の確認: メモリ上のカテゴリー値
   console.log(`💾 [保存前] ${word}のカテゴリー（メモリ）: ${wordProgress.category}`);
@@ -1212,7 +1208,9 @@ export async function updateWordProgress(
       const savedCategory = parsed.wordProgress?.[word]?.category;
       console.log(`✅ [保存後] ${word}のカテゴリー（localStorage）: ${savedCategory}`);
       if (savedCategory !== wordProgress.category) {
-        console.error(`🚨 [保存エラー] ${word}: メモリ=${wordProgress.category}, localStorage=${savedCategory}`);
+        console.error(
+          `🚨 [保存エラー] ${word}: メモリ=${wordProgress.category}, localStorage=${savedCategory}`
+        );
       }
     }
   } catch (e) {

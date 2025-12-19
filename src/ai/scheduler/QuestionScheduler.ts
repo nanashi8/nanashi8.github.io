@@ -75,7 +75,7 @@ export class QuestionScheduler {
       questionCount: params.questions.length,
       useMetaAI: params.useMetaAI,
       hybridMode: params.hybridMode || false,
-      firstQuestions: params.questions.slice(0, 10).map(q => q.word),
+      firstQuestions: params.questions.slice(0, 10).map((q) => q.word),
     };
 
     console.log('🔥🔥🔥 [QuestionScheduler] スケジューリング開始', debugInfo);
@@ -123,8 +123,10 @@ export class QuestionScheduler {
     const processingTime = performance.now() - startTime;
 
     const resultDebug = {
-      top10Words: questions.slice(0, 10).map(q => q.word),
-      top10Priorities: sorted.slice(0, 10).map(pq => ({ word: pq.question.word, priority: pq.priority })),
+      top10Words: questions.slice(0, 10).map((q) => q.word),
+      top10Priorities: sorted
+        .slice(0, 10)
+        .map((pq) => ({ word: pq.question.word, priority: pq.priority })),
     };
 
     logger.info(`[QuestionScheduler] スケジューリング完了`, {
@@ -153,8 +155,8 @@ export class QuestionScheduler {
       processingTime,
       signalCount: signals.length,
       debug: {
-        dtaApplied: sorted.filter(pq => pq.status?.category === 'mastered').length,
-        antiVibrationApplied: sorted.filter(pq => pq.antiVibrationApplied).length,
+        dtaApplied: sorted.filter((pq) => pq.status?.category === 'mastered').length,
+        antiVibrationApplied: sorted.filter((pq) => pq.antiVibrationApplied).length,
         signalsDetected: signals,
       },
     };
@@ -188,14 +190,13 @@ export class QuestionScheduler {
    * 認知負荷を計算（0-1）
    */
   private calculateCognitiveLoad(stats: ScheduleParams['sessionStats']): number {
-    const errorRate = stats.correct + stats.incorrect > 0
-      ? stats.incorrect / (stats.correct + stats.incorrect)
-      : 0;
+    const errorRate =
+      stats.correct + stats.incorrect > 0 ? stats.incorrect / (stats.correct + stats.incorrect) : 0;
 
     const sessionMinutes = (stats.duration || 0) / 60000;
     const timeLoad = Math.min(sessionMinutes / 30, 1); // 30分で最大
 
-    return Math.min((errorRate * 0.7) + (timeLoad * 0.3), 1);
+    return Math.min(errorRate * 0.7 + timeLoad * 0.3, 1);
   }
 
   /**
@@ -277,7 +278,9 @@ export class QuestionScheduler {
           confidence,
           action: 'review',
         });
-        logger.debug(`[Signal] 苦戦検出: ${(confidence * 100).toFixed(0)}% (エラー率${(errorRate * 100).toFixed(0)}%)`);
+        logger.debug(
+          `[Signal] 苦戦検出: ${(confidence * 100).toFixed(0)}% (エラー率${(errorRate * 100).toFixed(0)}%)`
+        );
       }
 
       // 3. 過学習シグナル検出（連続正解が多すぎる）
@@ -289,7 +292,9 @@ export class QuestionScheduler {
           confidence,
           action: 'harder',
         });
-        logger.debug(`[Signal] 過学習検出: ${(confidence * 100).toFixed(0)}% (連続${consecutiveCorrect}回正解)`);
+        logger.debug(
+          `[Signal] 過学習検出: ${(confidence * 100).toFixed(0)}% (連続${consecutiveCorrect}回正解)`
+        );
       }
 
       // 4. 最適状態検出
@@ -328,7 +333,7 @@ export class QuestionScheduler {
 
       // ハイブリッドモード: 元の順序を保持（indexベース）
       if (hybridMode) {
-        const priority = index / questions.length * 100; // 0-100の範囲
+        const priority = (index / questions.length) * 100; // 0-100の範囲
         return {
           question: q,
           priority,
@@ -347,7 +352,7 @@ export class QuestionScheduler {
         const risk = this.calculateForgettingRisk({
           lastStudied: status.lastStudied,
           reviewInterval: status.reviewInterval,
-          accuracy: status.correct / Math.max(status.attempts, 1) * 100,
+          accuracy: (status.correct / Math.max(status.attempts, 1)) * 100,
         });
 
         // 忘却リスク < 30: 優先度5（後回し）
@@ -381,19 +386,22 @@ export class QuestionScheduler {
             allProgress: this.getAllProgress(),
           };
 
-          this.aiCoordinator.analyzeAndCoordinate(aiInput, priority).then((result) => {
-            if (result.urgentFlag) {
-              priority = 0.1; // 緊急フラグ
-            } else {
-              priority = result.finalPriority;
-            }
+          this.aiCoordinator
+            .analyzeAndCoordinate(aiInput, priority)
+            .then((result) => {
+              if (result.urgentFlag) {
+                priority = 0.1; // 緊急フラグ
+              } else {
+                priority = result.finalPriority;
+              }
 
-            if (index < 5) {
-              this.aiCoordinator?.logCoordinationResult(result);
-            }
-          }).catch((error) => {
-            logger.error('[AICoordinator] エラー:', error);
-          });
+              if (index < 5) {
+                this.aiCoordinator?.logCoordinationResult(result);
+              }
+            })
+            .catch((error) => {
+              logger.error('[AICoordinator] エラー:', error);
+            });
         } catch (error) {
           logger.error('[AICoordinator] 分析エラー:', error);
         }
@@ -401,16 +409,19 @@ export class QuestionScheduler {
 
       // 💤 認知負荷AI領域: 優先度計算プロセスを可視化
       if (index < 20) {
-        const minutesSinceLastStudy = status?.lastStudied ?
-          Math.round((Date.now() - status.lastStudied) / 60000) : 0;
+        const minutesSinceLastStudy = status?.lastStudied
+          ? Math.round((Date.now() - status.lastStudied) / 60000)
+          : 0;
 
         console.log(`💤 [CognitiveLoadAI] 優先度計算: ${q.word}`, {
           category: status?.category || 'new',
           basePriority,
-          timeBoost: priority !== basePriority ?
-            `+${((1 - priority/basePriority) * 100).toFixed(0)}%` : 'なし',
-          minutesSinceLastStudy: minutesSinceLastStudy > 0 ?
-            `${minutesSinceLastStudy}分前` : '未学習',
+          timeBoost:
+            priority !== basePriority
+              ? `+${((1 - priority / basePriority) * 100).toFixed(0)}%`
+              : 'なし',
+          minutesSinceLastStudy:
+            minutesSinceLastStudy > 0 ? `${minutesSinceLastStudy}分前` : '未学習',
           finalPriority: priority.toFixed(2),
           aiEnabled: this.useAICoordinator,
         });
@@ -452,7 +463,8 @@ export class QuestionScheduler {
     if (params.lastStudied === 0) return 0;
 
     const daysSinceLastStudy = (Date.now() - params.lastStudied) / (1000 * 60 * 60 * 24);
-    const intervalRatio = params.reviewInterval > 0 ? daysSinceLastStudy / params.reviewInterval : 0;
+    const intervalRatio =
+      params.reviewInterval > 0 ? daysSinceLastStudy / params.reviewInterval : 0;
 
     let risk = intervalRatio * 100;
 
@@ -493,21 +505,21 @@ export class QuestionScheduler {
         case 'fatigue':
           // 疲労時: mastered問題を少し優先（復習しやすい）
           if (priority > 8) {
-            adjustedPriority *= (1 - signal.confidence * 0.2); // 最大20%優先度アップ
+            adjustedPriority *= 1 - signal.confidence * 0.2; // 最大20%優先度アップ
           }
           break;
 
         case 'struggling':
           // 苦戦時: incorrect/still_learningの優先度を大きく下げる（優先出題）
           if (priority < 2) {
-            adjustedPriority *= (1 - signal.confidence * 0.3); // 最大30%優先度アップ
+            adjustedPriority *= 1 - signal.confidence * 0.3; // 最大30%優先度アップ
           }
           break;
 
         case 'overlearning':
           // 過学習時: 新しい問題や難しい問題を優先
           if (priority >= 3 && priority <= 5) {
-            adjustedPriority *= (1 - signal.confidence * 0.15); // 最大15%優先度アップ
+            adjustedPriority *= 1 - signal.confidence * 0.15; // 最大15%優先度アップ
           }
           break;
 
@@ -562,10 +574,12 @@ export class QuestionScheduler {
       let category = wordProgress.category;
 
       // ✅ デバッグ: localStorageから読み取ったカテゴリー
-      console.log(`🔍 [QuestionScheduler] ${word}: localStorage.category = ${category || '未設定'}`);
+      console.log(
+        `🔍 [QuestionScheduler] ${word}: localStorage.category = ${category || '未設定'}`
+      );
 
       // 既存データにcategoryがない場合は推測
-      // 🧠 記憶AI領域: カテゴリー遷移ルールの明確化
+      // 🧠 記憶AI領域: progressStorage.tsと統一したカテゴリー判定
       if (!category) {
         const totalAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0);
         const consecutiveCorrect = wordProgress.consecutiveCorrect || 0;
@@ -575,15 +589,18 @@ export class QuestionScheduler {
         if (totalAttempts === 0) {
           category = 'new';
         }
-        // 🔴 連続不正解2回以上、または正答率30%未満 → incorrect
-        else if (consecutiveIncorrect >= 2 || (totalAttempts >= 3 && accuracy < 0.3)) {
-          category = 'incorrect';
-        }
-        // 🟢 連続正解3回以上、かつ正答率80%以上 → mastered
-        else if (consecutiveCorrect >= 3 && accuracy >= 0.8) {
+        // 🟢 定着済み: 正答率80%以上 & 連続3回正解 OR 正答率70%以上 & 5回以上挑戦
+        else if (
+          (accuracy >= 0.8 && consecutiveCorrect >= 3) ||
+          (accuracy >= 0.7 && totalAttempts >= 5)
+        ) {
           category = 'mastered';
         }
-        // 🟡 それ以外 → still_learning
+        // 🔴 要復習: 正答率30%未満 OR 連続2回不正解
+        else if (accuracy < 0.3 || consecutiveIncorrect >= 2) {
+          category = 'incorrect';
+        }
+        // 🟡 学習中: それ以外
         else {
           category = 'still_learning';
         }
@@ -609,7 +626,9 @@ export class QuestionScheduler {
 
       // デバッグ: incorrect/still_learningの単語のみログ出力
       if (status.category === 'incorrect' || status.category === 'still_learning') {
-        logger.debug(`[WordStatus] ${word}: ${status.category} (attempts=${status.attempts}, correct=${status.correct}, consecutiveIncorrect=${wordProgress.consecutiveIncorrect || 0})`);
+        logger.debug(
+          `[WordStatus] ${word}: ${status.category} (attempts=${status.attempts}, correct=${status.correct}, consecutiveIncorrect=${wordProgress.consecutiveIncorrect || 0})`
+        );
       }
 
       return status;
@@ -641,36 +660,46 @@ export class QuestionScheduler {
     _params: ScheduleParams
   ): PrioritizedQuestion[] {
     // カテゴリ別に分類（強制優先）
-    const incorrectQuestions = questions.filter(pq => pq.status?.category === 'incorrect');
-    const stillLearningQuestions = questions.filter(pq => pq.status?.category === 'still_learning');
-    const otherQuestions = questions.filter(pq =>
-      pq.status?.category !== 'incorrect' && pq.status?.category !== 'still_learning'
+    const incorrectQuestions = questions.filter((pq) => pq.status?.category === 'incorrect');
+    const stillLearningQuestions = questions.filter(
+      (pq) => pq.status?.category === 'still_learning'
+    );
+    const otherQuestions = questions.filter(
+      (pq) => pq.status?.category !== 'incorrect' && pq.status?.category !== 'still_learning'
     );
 
     // デバッグ: 全カテゴリの統計
-    const categoryStats = questions.reduce((acc, pq) => {
-      const cat = pq.status?.category || 'null';
-      acc[cat] = (acc[cat] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const categoryStats = questions.reduce(
+      (acc, pq) => {
+        const cat = pq.status?.category || 'null';
+        acc[cat] = (acc[cat] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>
+    );
 
     console.log('📊📊📊 [QuestionScheduler] カテゴリ統計', {
       total: questions.length,
       categories: categoryStats,
-      incorrectSample: incorrectQuestions.slice(0, 3).map(pq => pq.question.word),
-      stillLearningSample: stillLearningQuestions.slice(0, 3).map(pq => pq.question.word),
-      nullCategorySample: questions.filter(pq => !pq.status?.category).slice(0, 5).map(pq => pq.question.word),
+      incorrectSample: incorrectQuestions.slice(0, 3).map((pq) => pq.question.word),
+      stillLearningSample: stillLearningQuestions.slice(0, 3).map((pq) => pq.question.word),
+      nullCategorySample: questions
+        .filter((pq) => !pq.status?.category)
+        .slice(0, 5)
+        .map((pq) => pq.question.word),
     });
 
     // 🚨 警告: すべての単語がnullカテゴリーの場合、学習履歴が読み取れていない
     if (categoryStats['null'] === questions.length) {
-      console.error('🚨🚨🚨 [QuestionScheduler] 全単語のカテゴリーがnull - localStorageから学習履歴を読み取れていません！');
+      console.error(
+        '🚨🚨🚨 [QuestionScheduler] 全単語のカテゴリーがnull - localStorageから学習履歴を読み取れていません！'
+      );
     }
 
     // 各カテゴリ内で優先度順ソート（降順: 優先度が高い順）
     const sortByPriority = (a: PrioritizedQuestion, b: PrioritizedQuestion) => {
       if (a.priority !== b.priority) {
-        return b.priority - a.priority;  // ✅ 降順（優先度が高い順）
+        return b.priority - a.priority; // ✅ 降順（優先度が高い順）
       }
 
       // 🎲 ABC順排除: 学習履歴のない単語（null/new）はランダムソート
@@ -678,7 +707,7 @@ export class QuestionScheduler {
       const bIsNew = !b.status?.category || b.status?.category === 'new';
 
       if (aIsNew && bIsNew) {
-        return Math.random() - 0.5;  // 両方とも新出単語はランダム
+        return Math.random() - 0.5; // 両方とも新出単語はランダム
       }
 
       return (a.originalIndex || 0) - (b.originalIndex || 0);
@@ -706,8 +735,8 @@ export class QuestionScheduler {
     } else if (reviewNeeded > 0) {
       // 復習単語の最小保証: 上位20%に必ず含める
       const guaranteedTop = sorted.slice(0, top20PercentCount);
-      const reviewInTop = guaranteedTop.filter(pq =>
-        pq.status?.category === 'incorrect' || pq.status?.category === 'still_learning'
+      const reviewInTop = guaranteedTop.filter(
+        (pq) => pq.status?.category === 'incorrect' || pq.status?.category === 'still_learning'
       ).length;
 
       if (reviewInTop < reviewNeeded) {
@@ -725,8 +754,16 @@ export class QuestionScheduler {
       incorrectCount: incorrectQuestions.length,
       stillLearningCount: stillLearningQuestions.length,
       otherCount: otherQuestions.length,
-      top10: sorted.slice(0, 10).map(pq => `${pq.question.word}(${pq.status?.category || 'unknown'}/${pq.priority.toFixed(1)})`),
-      guaranteeRatio: reviewNeeded > 0 ? `${((reviewNeeded / Math.min(top20PercentCount, totalQuestions)) * 100).toFixed(0)}%` : 'N/A',
+      top10: sorted
+        .slice(0, 10)
+        .map(
+          (pq) =>
+            `${pq.question.word}(${pq.status?.category || 'unknown'}/${pq.priority.toFixed(1)})`
+        ),
+      guaranteeRatio:
+        reviewNeeded > 0
+          ? `${((reviewNeeded / Math.min(top20PercentCount, totalQuestions)) * 100).toFixed(0)}%`
+          : 'N/A',
     });
 
     return sorted;
@@ -746,10 +783,12 @@ export class QuestionScheduler {
     const filtered = this.applyAntiVibration(prioritized, context);
 
     // カテゴリ別に分類
-    const incorrectQuestions = filtered.filter(pq => pq.status?.category === 'incorrect');
-    const stillLearningQuestions = filtered.filter(pq => pq.status?.category === 'still_learning');
-    const otherQuestions = filtered.filter(pq =>
-      pq.status?.category !== 'incorrect' && pq.status?.category !== 'still_learning'
+    const incorrectQuestions = filtered.filter((pq) => pq.status?.category === 'incorrect');
+    const stillLearningQuestions = filtered.filter(
+      (pq) => pq.status?.category === 'still_learning'
+    );
+    const otherQuestions = filtered.filter(
+      (pq) => pq.status?.category !== 'incorrect' && pq.status?.category !== 'still_learning'
     );
 
     // 優先順序: incorrect → still_learning → その他
@@ -760,13 +799,14 @@ export class QuestionScheduler {
     const totalQuestions = sorted.length;
 
     logger.info('[QuestionScheduler Hybrid] 優先単語配置完了', {
-      incorrectWords: incorrectQuestions.slice(0, 5).map(pq => pq.question.word),
-      stillLearningWords: stillLearningQuestions.slice(0, 5).map(pq => pq.question.word),
+      incorrectWords: incorrectQuestions.slice(0, 5).map((pq) => pq.question.word),
+      stillLearningWords: stillLearningQuestions.slice(0, 5).map((pq) => pq.question.word),
       incorrectCount: incorrectQuestions.length,
       stillLearningCount: stillLearningQuestions.length,
       otherCount: otherQuestions.length,
-      reviewRatio: totalQuestions > 0 ? `${((reviewNeeded / totalQuestions) * 100).toFixed(0)}%` : '0%',
-      top5: sorted.slice(0, 5).map(pq => `${pq.question.word}(${pq.status?.category})`),
+      reviewRatio:
+        totalQuestions > 0 ? `${((reviewNeeded / totalQuestions) * 100).toFixed(0)}%` : '0%',
+      top5: sorted.slice(0, 5).map((pq) => `${pq.question.word}(${pq.status?.category})`),
     });
 
     // 後処理
@@ -801,11 +841,8 @@ export class QuestionScheduler {
   /**
    * 後処理
    */
-  private postProcess(
-    questions: PrioritizedQuestion[],
-    _context: ScheduleContext
-  ): Question[] {
-    return questions.map(pq => pq.question);
+  private postProcess(questions: PrioritizedQuestion[], _context: ScheduleContext): Question[] {
+    return questions.map((pq) => pq.question);
   }
 
   /**
