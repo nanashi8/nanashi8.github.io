@@ -933,11 +933,12 @@ export async function updateWordProgress(
 ): Promise<void> {
   const progress = await loadProgress();
 
-  if (!progress.wordProgress[word]) {
-    progress.wordProgress[word] = initializeWordProgress(word);
+  // 既存のwordProgressを取得または新規作成
+  let wordProgress = progress.wordProgress[word];
+  if (!wordProgress) {
+    wordProgress = initializeWordProgress(word);
+    progress.wordProgress[word] = wordProgress; // ✅ 新規作成時は必ず代入
   }
-
-  const wordProgress = progress.wordProgress[word];
 
   // 基本統計を更新
   // 暗記タブの「まだまだ」は学習中として扱い、incorrectCountに加算するが連続不正解にはしない
