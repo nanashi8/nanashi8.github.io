@@ -1,10 +1,6 @@
 ---
 description: タスクのスコープ逸脱を防止し、意図しない変更を監視
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # スコープ制御・変更監視システム

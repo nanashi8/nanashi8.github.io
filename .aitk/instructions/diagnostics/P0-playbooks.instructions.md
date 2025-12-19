@@ -1,10 +1,6 @@
 ---
 description: P0（クリティカル）問題の診断プレイブック
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # P0 診断プレイブック

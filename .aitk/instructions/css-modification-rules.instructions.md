@@ -1,7 +1,6 @@
 ---
 description: CSS修正ルール - レイアウト・デザイン変更の厳格な制限
 applyTo: '**/*.css,**/*.tsx,**/*.jsx'
-priority: HIGH
 ---
 
 # CSS修正ルール

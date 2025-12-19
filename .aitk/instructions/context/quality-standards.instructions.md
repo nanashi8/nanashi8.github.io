@@ -1,10 +1,6 @@
 ---
 description: プロジェクトの品質基準と遵守すべき基準
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: critical
-phase: 1
 ---
 
 # 品質基準認識システム
@@ -306,8 +302,6 @@ const example = true;
 1. メタデータ
 ---
 description: ドキュメントの目的
-version: 1.0.0
-created: 2025-12-19
 ---
 
 2. 目的セクション
@@ -324,8 +318,6 @@ created: 2025-12-19
 
 5. 関連ドキュメント
 ## 関連ドキュメント
-- [リンク1](path/to/doc1.md)
-- [リンク2](path/to/doc2.md)
 
 6. 更新履歴
 **最終更新**: 2025-12-19

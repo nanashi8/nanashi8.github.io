@@ -1,10 +1,6 @@
 ---
 description: P2（中優先度）問題の診断プレイブック
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: medium
-phase: 1
 ---
 
 # P2診断プレイブック

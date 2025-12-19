@@ -1,10 +1,6 @@
 ---
 description: 機能実装の優先度判断と実装手順
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: high
-phase: 1
 ---
 
 # 機能実装意思決定ツリー

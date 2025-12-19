@@ -1,10 +1,6 @@
 ---
 description: 既知の問題パターン一覧と分類
-version: 1.0.0
-created: 2025-12-19
 applyTo: '**'
-priority: high
-phase: 1
 ---
 
 # 既知の問題パターン一覧
