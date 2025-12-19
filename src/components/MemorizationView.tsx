@@ -134,7 +134,9 @@ function MemorizationView({
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     // 開発環境でAI統合をテストする場合はtrueに設定
-    const enableAI = process.env.NODE_ENV === 'development' || localStorage.getItem('enable-ai-coordination') === 'true';
+    const enableAI =
+      process.env.NODE_ENV === 'development' ||
+      localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
       logger.info('🤖 [MemorizationView] AI統合が有効化されました');
@@ -263,7 +265,7 @@ function MemorizationView({
       // デバッグ: スケジュール後の単語を確認
       const debugInfo = {
         totalScheduled: sortedQuestions.length,
-        top10Words: sortedQuestions.slice(0, 10).map(q => q.word),
+        top10Words: sortedQuestions.slice(0, 10).map((q) => q.word),
         timestamp: new Date().toISOString(),
       };
 
@@ -514,16 +516,18 @@ function MemorizationView({
       // → QuestionScheduler が incorrect を最優先に並べるため、UI側での再配置は不要
       // → カテゴリ変化時は rescheduleCounter により再スケジューリングされる
 
-      // 📊 カテゴリ変化時の再スケジューリングトリガー（全解答で実行）
-      // ✅ 改善: カテゴリ変化を即座に反映するため、毎回再スケジューリング
-      setRescheduleCounter(prev => prev + 1);
-      console.log('🔄 [MemorizationView] 再スケジューリングトリガー発動', {
-        word: currentQuestion.word,
-        result: isCorrect ? '覚えてる' : isStillLearning ? 'まだまだ' : '分からない',
-        incorrect: sessionStats.incorrect,
-        still_learning: sessionStats.still_learning,
-        mastered: sessionStats.mastered,
-      });
+      // 📊 10問ごとに再スケジューリング（パフォーマンス最適化）
+      const totalAnswered =
+        sessionStats.correct + sessionStats.still_learning + sessionStats.incorrect;
+      if (totalAnswered % 10 === 0) {
+        setRescheduleCounter((prev) => prev + 1);
+        console.log('🔄 [MemorizationView] 10問ごとの再スケジューリング', {
+          totalAnswered,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.still_learning,
+          mastered: sessionStats.mastered,
+        });
+      }
 
       // KPIロギング + 新規/復習の統計を更新
 
@@ -656,7 +660,10 @@ function MemorizationView({
 
             {/* 暗記カード */}
             <div className="w-full max-w-4xl px-4 h-[90vh] flex items-center">
-              <div ref={cardRef} className="question-card h-[600px] sm:h-[650px] md:h-[700px] flex flex-col w-full">
+              <div
+                ref={cardRef}
+                className="question-card h-[600px] sm:h-[650px] md:h-[700px] flex flex-col w-full"
+              >
                 {/* 語句表示部 */}
                 <div className="py-8 flex flex-col items-center justify-center h-[200px] flex-shrink-0">
                   <div
@@ -1185,7 +1192,10 @@ function MemorizationView({
                 </svg>
               </button>
 
-              <div ref={cardRef} className="question-card w-full h-[600px] sm:h-[650px] md:h-[700px] flex flex-col">
+              <div
+                ref={cardRef}
+                className="question-card w-full h-[600px] sm:h-[650px] md:h-[700px] flex flex-col"
+              >
                 {/* 語句表示部 */}
                 <div className="py-8 flex flex-col items-center justify-center h-[200px] flex-shrink-0">
                   <div
