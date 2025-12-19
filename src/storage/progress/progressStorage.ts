@@ -45,7 +45,7 @@ export { getStudySettings, saveStudySettings, updateStudySettings } from './sett
 export { addSessionHistory, getSessionHistory, clearSessionHistory } from './sessionHistory';
 
 // LocalStorage容量制限対策
-const STORAGE_KEY = 'progress-data';
+const STORAGE_KEY = 'english-progress'; // ✅ 統一: QuestionSchedulerも同じキーを使用
 const _MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数（未使用のためプレフィックス）
 const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 9999; // 保存する最大結果数（容量削減）
