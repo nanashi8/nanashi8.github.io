@@ -1162,6 +1162,29 @@ export async function updateWordProgress(
     `📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`
   );
 
+  // ✅ 【解答直後に優先度を計算・保存】
+  // カテゴリー別のベース優先度
+  const basePriority: Record<string, number> = {
+    incorrect: 100, // 要復習: 最優先
+    still_learning: 75, // 学習中: 高優先度
+    new: 50, // 未学習: 中優先度
+    mastered: 10, // 定着済: 低優先度
+  };
+
+  // 時間経過によるブースト（最終学習から時間が経つほど優先度上昇）
+  const daysSinceLastStudy = (Date.now() - wordProgress.lastStudied) / (1000 * 60 * 60 * 24);
+  const timeBoost = Math.min(daysSinceLastStudy * 2, 20); // 最大+20
+
+  // 最終優先度 = ベース優先度 + 時間ブースト
+  wordProgress.calculatedPriority =
+    (basePriority[wordProgress.category || 'new'] || 50) + timeBoost;
+  wordProgress.accuracyRate = accuracy;
+  wordProgress.lastPriorityUpdate = Date.now();
+
+  console.log(
+    `🎯 [Priority] ${word}: ${wordProgress.calculatedPriority.toFixed(1)} (base=${basePriority[wordProgress.category || 'new']}, time=+${timeBoost.toFixed(1)}, accuracy=${(accuracy * 100).toFixed(0)}%)`
+  );
+
   // ✅ 保存前の確認: メモリ上のカテゴリー値
   console.log(`💾 [保存前] ${word}のカテゴリー（メモリ）: ${wordProgress.category}`);
 

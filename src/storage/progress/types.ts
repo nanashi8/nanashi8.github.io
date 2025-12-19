@@ -41,6 +41,11 @@ export interface WordProgress {
   masteryLevel: 'new' | 'learning' | 'mastered'; // 習熟レベル
   responseTimes: number[]; // 応答時間の履歴（最新10件）
   category?: string; // カテゴリー
+
+  // 出題優先度（解答直後に計算・保存）
+  calculatedPriority?: number; // 出題優先度（0-100、高いほど優先）
+  accuracyRate?: number; // 正答率（0-1）
+  lastPriorityUpdate?: number; // 優先度最終更新日時
   difficulty?: string; // 難易度レベル
   skippedCount?: number; // スキップ回数
   lastSkipped?: number; // 最終スキップ日時（タイムスタンプ）
