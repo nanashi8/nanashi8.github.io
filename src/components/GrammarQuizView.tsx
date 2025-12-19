@@ -130,7 +130,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [scheduler] = useState(() => {
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
-    const enableAI = process.env.NODE_ENV === 'development' || localStorage.getItem('enable-ai-coordination') === 'true';
+    const enableAI =
+      process.env.NODE_ENV === 'development' ||
+      localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
       logger.info('🤖 [GrammarQuizView] AI統合が有効化されました');
@@ -288,6 +290,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   }, [currentQuestionIndex, currentQuestions]);
 
   const handleStartQuiz = useCallback(async () => {
+    // 🚨 パフォーマンス改善: 既に問題がロード済みの場合はスキップ
+    if (loading) {
+      console.log('[GrammarQuizView] Already loading, skip duplicate call');
+      return;
+    }
+
     setLoading(true);
     setError(null);
 
@@ -398,7 +406,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       // QuestionSchedulerで出題順序を決定（シャッフルは内部で実施）
       // 🔥 重要: 前回セッションの統計データも引き継ぐ（より良い初期出題順序）
       const scheduleResult = await scheduler.schedule({
-        questions: questions.map(q => ({
+        questions: questions.map((q) => ({
           word: q.id || q.japanese || 'unknown',
           meaning: q.japanese || '',
           reading: '',
@@ -426,9 +434,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       });
 
       // スケジュールされたID順序にGrammarQuestionを並べ替え
-      const wordToQuestion = new Map(questions.map(q => [q.id || q.japanese || 'unknown', q]));
+      const wordToQuestion = new Map(questions.map((q) => [q.id || q.japanese || 'unknown', q]));
       const scheduledQuestions = scheduleResult.scheduledQuestions
-        .map(q => wordToQuestion.get(q.word))
+        .map((q) => wordToQuestion.get(q.word))
         .filter((q): q is GrammarQuestion => q !== undefined);
 
       // 振動スコア監視
@@ -594,6 +602,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   }, [grade, quizType]);
 
   // 設定が変更されたらクイズをリロード（クイズ開始中のみ）
+  // 🚨 パフォーマンス改善: handleStartQuizを依存配列から削除して無限ループを防ぐ
   useEffect(() => {
     const prevSettings = prevSettingsRef.current;
     const settingsChanged = prevSettings.quizType !== quizType || prevSettings.grade !== grade;
@@ -604,7 +613,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     }
 
     prevSettingsRef.current = { quizType, grade };
-  }, [quizType, grade, handleStartQuiz, quizStarted]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quizType, grade, quizStarted]);
 
   // 問題が変わるたびに並べ替え用の単語をシャッフル
   useEffect(() => {
@@ -912,11 +922,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   };
 
   // コンポーネントマウント時に自動でクイズ開始
+  // 🚨 パフォーマンス改善: handleStartQuizを依存配列から削除
   useEffect(() => {
     if (!quizStarted) {
       handleStartQuiz();
     }
-  }, [quizType, grade, handleStartQuiz, quizStarted]); // 設定変更時に再開始
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quizStarted]); // マウント時のみ実行
 
   return (
     <div className="quiz-view">
@@ -971,7 +983,17 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                       ? '全学年の内容'
                       : `${grade}年の内容`
                 }
-                category={quizType === 'all' ? '全ての種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全ての種類'}
+                category={
+                  quizType === 'all'
+                    ? '全ての種類'
+                    : quizType === 'verb-form'
+                      ? '動詞変化'
+                      : quizType === 'fill-in-blank'
+                        ? '穴埋め'
+                        : quizType === 'sentence-ordering'
+                          ? '並び替え'
+                          : '全ての種類'
+                }
                 difficulty=""
                 wordPhraseFilter="all"
                 grammarUnit={currentGrammarUnit}
