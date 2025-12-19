@@ -134,7 +134,9 @@ function MemorizationView({
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     // 開発環境でAI統合をテストする場合はtrueに設定
-    const enableAI = process.env.NODE_ENV === 'development' || localStorage.getItem('enable-ai-coordination') === 'true';
+    const enableAI =
+      process.env.NODE_ENV === 'development' ||
+      localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
       logger.info('🤖 [MemorizationView] AI統合が有効化されました');
@@ -263,7 +265,7 @@ function MemorizationView({
       // デバッグ: スケジュール後の単語を確認
       const debugInfo = {
         totalScheduled: sortedQuestions.length,
-        top10Words: sortedQuestions.slice(0, 10).map(q => q.word),
+        top10Words: sortedQuestions.slice(0, 10).map((q) => q.word),
         timestamp: new Date().toISOString(),
       };
 
@@ -510,20 +512,41 @@ function MemorizationView({
       // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
       setLastAnswerTime(Date.now());
 
-      // ✅ QuestionScheduler の順序を信頼: 不正解時の再追加処理を削除
-      // → QuestionScheduler が incorrect を最優先に並べるため、UI側での再配置は不要
-      // → カテゴリ変化時は rescheduleCounter により再スケジューリングされる
-
-      // 📊 カテゴリ変化時の再スケジューリングトリガー（全解答で実行）
-      // ✅ 改善: カテゴリ変化を即座に反映するため、毎回再スケジューリング
-      setRescheduleCounter(prev => prev + 1);
-      console.log('🔄 [MemorizationView] 再スケジューリングトリガー発動', {
-        word: currentQuestion.word,
-        result: isCorrect ? '覚えてる' : isStillLearning ? 'まだまだ' : '分からない',
-        incorrect: sessionStats.incorrect,
-        still_learning: sessionStats.still_learning,
-        mastered: sessionStats.mastered,
-      });
+      // 🚀 ハイブリッドスケジューリング（業界標準アプローチ）
+      // 1. incorrect増加時 → 即座に問題リストに再挿入（Anki/Duolingo方式）
+      // 2. 10問ごと → 全体を再ソート（優先度の変化を反映）
+      
+      const totalAnswered = sessionStats.correct + sessionStats.incorrect + (sessionStats.still_learning || 0);
+      
+      if (!isCorrect && !isStillLearning) {
+        // ❌ 分からない → 3~10問後に再出題（即座）
+        setQuestions((prevQuestions) => {
+          const newQuestions = [...prevQuestions];
+          // 現在位置から3~10問後に挿入（ランダム性を持たせる）
+          const insertPosition = Math.min(
+            currentIndex + Math.floor(Math.random() * 8) + 3, // 3~10問後
+            newQuestions.length
+          );
+          newQuestions.splice(insertPosition, 0, currentQuestion);
+          console.log('⚡ [MemorizationView] incorrect単語を即座に再挿入', {
+            word: currentQuestion.word,
+            insertPosition,
+            totalQuestions: newQuestions.length,
+          });
+          return newQuestions;
+        });
+      }
+      
+      // 10問ごとに全体を再ソート（優先度の変化を反映）
+      if (totalAnswered % 10 === 0) {
+        setRescheduleCounter((prev) => prev + 1);
+        console.log('🔄 [MemorizationView] 定期再スケジューリング', {
+          totalAnswered,
+          incorrect: sessionStats.incorrect,
+          still_learning: sessionStats.still_learning,
+          mastered: sessionStats.mastered,
+        });
+      }
 
       // KPIロギング + 新規/復習の統計を更新
 
@@ -656,7 +679,10 @@ function MemorizationView({
 
             {/* 暗記カード */}
             <div className="w-full max-w-4xl px-4 h-[90vh] flex items-center">
-              <div ref={cardRef} className="question-card h-[600px] sm:h-[650px] md:h-[700px] flex flex-col w-full">
+              <div
+                ref={cardRef}
+                className="question-card h-[600px] sm:h-[650px] md:h-[700px] flex flex-col w-full"
+              >
                 {/* 語句表示部 */}
                 <div className="py-8 flex flex-col items-center justify-center h-[200px] flex-shrink-0">
                   <div
@@ -1185,7 +1211,10 @@ function MemorizationView({
                 </svg>
               </button>
 
-              <div ref={cardRef} className="question-card w-full h-[600px] sm:h-[650px] md:h-[700px] flex flex-col">
+              <div
+                ref={cardRef}
+                className="question-card w-full h-[600px] sm:h-[650px] md:h-[700px] flex flex-col"
+              >
                 {/* 語句表示部 */}
                 <div className="py-8 flex flex-col items-center justify-center h-[200px] flex-shrink-0">
                   <div
