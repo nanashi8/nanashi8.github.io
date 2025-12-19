@@ -29,7 +29,10 @@ src/
 ├── types/           # 型定義（ドメイン、UI、AI等）
 ├── constants/       # 定数定義
 ├── hooks/           # カスタムフック（ロジックの再利用）
-├── ai/              # AI機能モジュール
+├── ai/              # AI機能モジュール（8-AIシステム）
+│   ├── scheduler/   # QuestionScheduler（メタAI統合層）
+│   ├── coordinator/ # AICoordinator（7AI信号統合）
+│   └── specialists/ # 7つの専門AI
 ├── storage/         # ストレージ管理
 ├── features/        # 機能モジュール
 ├── components/      # UIコンポーネント
@@ -41,6 +44,45 @@ src/
 - 依存関係が明確になる
 - テストが容易になる
 - コードレビューが効率化
+- AI機能の責任分離が明確
+
+### 1.1 8-AIシステムアーキテクチャ
+
+**原則**: 7つの専門AIとメタAI統合層による階層アーキテクチャ
+
+```
+┌─────────────────────────────────────────────────────────┐
+│         QuestionScheduler（メタAI - 第8のAI）          │
+│  - 7つの専門AIのシグナル統合                              │
+│  - DTA（Dynamic Time-based Adjustment）                 │
+│  - 振動防止（直近正解の除外）                              │
+│  - category優先制御（incorrect > still_learning > new）  │
+└─────────────────────────────────────────────────────────┘
+          ↑ シグナル統合（AICoordinator経由）
+┌──────────┬──────────┬──────────┬──────────┐
+│ Memory   │Cognitive │  Error   │ Learning │
+│   AI     │ Load AI  │Prediction│ Style AI │
+└──────────┴──────────┴──────────┴──────────┘
+┌──────────┬──────────┬──────────┐
+│Linguistic│Contextual│Gamifica- │
+│   AI     │   AI     │ tion AI  │
+└──────────┴──────────┴──────────┘
+```
+
+**実装ファイル**:
+- `src/ai/scheduler/QuestionScheduler.ts` - メタAI（第8のAI）
+- `src/ai/coordinator/AICoordinator.ts` - 7AIシグナル統合
+- `src/ai/specialists/*.ts` - 7つの専門AI
+
+**設計原則**:
+- **単一責任**: 各AIは1つの専門領域のみ担当
+- **疎結合**: AICoordinator経由でのみ通信
+- **並列処理**: Promise.allで7AIを同時実行
+- **オプトイン**: localStorage経由で有効化（`enable-ai-coordination`）
+
+**参照**:
+- [メタAI優先指示](./meta-ai-priority.instructions.md)
+- [QuestionScheduler仕様書](../../docs/specifications/QUESTION_SCHEDULER_SPEC.md)
 
 ### 2. 関心事の分離
 
@@ -336,5 +378,5 @@ const apiKey = 'sk-1234567890abcdef';
 
 ---
 
-**Last Updated**: 2025年12月11日  
-**Version**: 2.0.0（Phase 1-2完了）
+**Last Updated**: 2025年12月19日  
+**Version**: 3.0.0（8-AIシステム統合完了、Phase 1-4完了）

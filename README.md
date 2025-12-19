@@ -27,6 +27,7 @@ TypeScript + React で構築された、8個のAIシステムを統合した英�
 - [🚀 8-AIシステム統合アーキテクチャ](#-8-aiシステム統合アーキテクチャ)
   - [QuestionScheduler - メタAI統合層](#-questionscheduler---メタai統合層)
 - [🧠 適応型学習AI（記憶AI）](#-適応型学習ai記憶ai)
+- [🔧 学習AIメンテナンス](#-学習aiメンテナンス)
 - [コンテンツ品質テストシステム](#コンテンツ品質テストシステム-️)
 - [開発](#開発)
 - [技術スタック](#技術スタック)
@@ -49,50 +50,65 @@ TypeScript + React で構築された、8個のAIシステムを統合した英�
 
 **技術的詳細**: 全タブ統一型の出題順序決定システム。7つの専門AIからの信号を統合し、1つのメタAI（QuestionScheduler）が最適な出題順序を決定します。
 
-### 🆕 Phase 2-3完了: 7AI+メタAI完全統合（2025年12月）
+### 🆕 Phase 2-4完了: 7AI+メタAI完全統合（2025年12月）
 
-**新機能**: 7つの専門AIが実装され、暗記・文法・スペリングタブで利用可能になりました！
+**実装完了**: 7つの専門AIとメタAI統合層が完全実装され、暗記・文法・スペリングタブで利用可能！
 
 #### 有効化方法
 
 ブラウザのコンソール（F12）で以下を実行：
 
 ```javascript
-// AI統合を有効化
+// AI統合を有効化（推奨）
 localStorage.setItem('enable-ai-coordination', 'true');
 location.reload();
 
-// 無効化
+// 無効化（従来モード）
 localStorage.removeItem('enable-ai-coordination');
 location.reload();
 ```
 
-開発環境（`npm run dev`）では自動的に有効化されます。
+**注意**: 開発環境（`npm run dev`）では自動的に有効化されます。本番環境では手動で有効化してください。
 
-#### 7つの専門AI
+#### 7つの専門AI（実装済み）
 
-1. **🧠 Memory AI** - 記憶・忘却リスク評価（2/5/15/30分単位）
-2. **💤 Cognitive Load AI** - 認知負荷・疲労検出
-3. **🔮 Error Prediction AI** - 過去の間違いパターンから誤答予測
-4. **🎯 Learning Style AI** - 学習スタイルプロファイリング
-5. **📚 Linguistic AI** - 言語学的難易度評価
-6. **🌍 Contextual AI** - 時間帯・環境最適化
-7. **🎮 Gamification AI** - 動機付け・達成感管理
+1. **🧠 Memory AI** - 記憶・忘却リスク評価（2/5/15/30分単位）[`src/ai/specialists/MemoryAI.ts`]
+2. **💤 Cognitive Load AI** - 認知負荷・疲労検出（連続誤答検出）[`src/ai/specialists/CognitiveLoadAI.ts`]
+3. **🔮 Error Prediction AI** - 過去の間違いパターンから誤答予測（混同ペア検出）[`src/ai/specialists/ErrorPredictionAI.ts`]
+4. **🎯 Learning Style AI** - 学習スタイルプロファイリング（時間帯・セッション長分析）[`src/ai/specialists/LearningStyleAI.ts`]
+5. **📚 Linguistic AI** - 言語学的難易度評価（単語長・頻度分析）[`src/ai/specialists/LinguisticAI.ts`]
+6. **🌍 Contextual AI** - 時間帯・環境最適化（朝型/夜型検出）[`src/ai/specialists/ContextualAI.ts`]
+7. **🎮 Gamification AI** - 動機付け・達成感管理（連続正解ボーナス）[`src/ai/specialists/GamificationAI.ts`]
+
+**統合層**: [`src/ai/coordinator/AICoordinator.ts`] が7つのAIシグナルを統合し、QuestionSchedulerに提供
 
 コンソールに以下のような詳細ログが表示されます：
 
-```
+```text
 🤖 [MemorizationView] AI統合が有効化されました
-🧠 Memory AI: forgettingRisk=120 (優先度+35)
-💤 Cognitive Load AI: fatigueScore=0.3 (優先度+15)
-🔮 Error Prediction AI: errorProbability=0.65 (優先度+40)
+🧠 Memory AI Signal for question_id=123:
+  - forgettingRisk: 120 (優先度調整: +35)
+  - timeSinceLastReview: 300 seconds
+💤 Cognitive Load AI Signal:
+  - fatigueScore: 0.3 (連続誤答: 3回)
+  - recommendation: REDUCE_DIFFICULTY
+🔮 Error Prediction AI Signal:
+  - errorProbability: 0.65 (過去の誤答率: 65%)
+  - confusionPairs: ["apple", "orange"]
 🤖 Meta AI: Final Priority=260 (HIGH PRIORITY)
+  - Base Priority: 150
+  - AI Adjustments: +110
+  - Final Decision: PRIORITIZE_NOW
 ```
 
 📚 **詳細ドキュメント**:
-- [AI統合ガイド](docs/AI_INTEGRATION_GUIDE.md) - 技術詳細
-- [有効化ガイド](docs/HOW_TO_ENABLE_AI.md) - 使い方
-- [完了レポート](docs/FINAL_PROJECT_REPORT.md) - プロジェクト総括
+
+- [AI統合ガイド](docs/AI_INTEGRATION_GUIDE.md) - 技術詳細・実装手順
+- [有効化ガイド](docs/HOW_TO_ENABLE_AI.md) - ユーザー向け使い方
+- [プロジェクト完了レポート](docs/AI_PROJECT_COMPLETE.md) - Phase 1-4総括（407行）
+- [Phase 3完了レポート](../docs/PHASE3_COMPLETION_REPORT.md) - AI統合詳細
+- [最終プロジェクトレポート](../docs/FINAL_PROJECT_REPORT.md) - 全体サマリー
+- [トラブルシューティング](.aitk/instructions/meta-ai-priority.instructions.md) - 問題解決手順
 
 ### 🎯 QuestionScheduler - メタAI統合層
 
@@ -155,6 +171,7 @@ location.reload();
 **QuestionScheduler（メタAI）**: これら7つの提案を統合し、「appleを出題するが、その前に易しい問題を1つ挟み、その後orangeも出題する」という最終決定を下します。
 
 **技術的詳細**:
+
 1. **記憶AI**: 記憶獲得・定着判定
 2. **認知負荷AI**: 疲労検出・休憩推奨
 3. **エラー予測AI**: 混同検出・誤答リスク予測
@@ -167,21 +184,23 @@ location.reload();
 
 整合性スコア: 100/100
 
-| ドキュメント | 行数 | 目的 |
-|------------|------|------|
-| [完全仕様書](docs/specifications/QUESTION_SCHEDULER_SPEC.md) | 1,669行 | アルゴリズム完全解説 |
-| [型定義リファレンス](docs/references/QUESTION_SCHEDULER_TYPES.md) | 901行 | 11個の型定義 |
-| [復旧手順書](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md) | 1,080行 | 7.5時間で復旧可能 |
-| [APIリファレンス](docs/references/QUESTION_SCHEDULER_API.md) | 594行 | 実装者向けガイド |
-| [統合ガイド](docs/guidelines/META_AI_INTEGRATION_GUIDE.md) | v3.0 | 4タブ統合手順 |
-| [シグナル活用](docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md) | 653行 | UI/UXパターン |
+| ドキュメント                                                      | 行数    | 目的                 |
+| ----------------------------------------------------------------- | ------- | -------------------- |
+| [完全仕様書](docs/specifications/QUESTION_SCHEDULER_SPEC.md)      | 1,669行 | アルゴリズム完全解説 |
+| [型定義リファレンス](docs/references/QUESTION_SCHEDULER_TYPES.md) | 901行   | 11個の型定義         |
+| [復旧手順書](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)          | 1,080行 | 7.5時間で復旧可能    |
+| [APIリファレンス](docs/references/QUESTION_SCHEDULER_API.md)      | 594行   | 実装者向けガイド     |
+| [統合ガイド](docs/guidelines/META_AI_INTEGRATION_GUIDE.md)        | v3.0    | 4タブ統合手順        |
+| [シグナル活用](docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md)        | 653行   | UI/UXパターン        |
 
-**検証システム**: 
+**検証システム**:
+
 - 自動検証スクリプト（30チェック、30秒）
 - GitHub Actions CI/CD統合
 - PR時の自動品質チェック
 
 **完了レポート**:
+
 - [Phase 1-4総括](docs/reports/PHASE_1_4_FINAL_REPORT.md) - 整合性89点達成
 - [Phase 5完了](docs/reports/PHASE_5_COMPLETION_REPORT.md) - 100点達成
 - [Phase 6完了](docs/reports/PHASE_6_COMPLETION_REPORT.md) - CI/CD統合
@@ -335,6 +354,154 @@ npx tsx scripts/visual-random-simulation.ts \
 - ✅ **30項目自動検証** - CI/CDで継続監視
 - ✅ **8,800+行ドキュメント** - 機械復旧可能レベル
 - ✅ **7.5時間復旧保証** - 完全な復旧手順書
+
+---
+
+## 🔧 学習AIメンテナンス
+
+### メンテナンス指示を受けた時の対応フロー
+
+学習AI関連のメンテナンス・不具合対応が必要になった場合、以下の順序で確認してください：
+
+#### 1. 問題の分類（1分）
+
+まず症状を分類し、対応優先度を判定：
+
+| 症状                     | 優先度           | 初期診断先                                    |
+| ------------------------ | ---------------- | --------------------------------------------- |
+| 問題が全く出題されない   | **P0（最優先）** | [QuestionScheduler復旧](#緊急復旧)            |
+| 復習単語が出題されない   | **P0（最優先）** | [category管理診断](#メンテナンスパイプライン) |
+| 優先度がおかしい         | P1（高）         | [優先度計算診断](#メンテナンスパイプライン)   |
+| AIシグナルが反映されない | P2（中）         | [AI統合診断](#メンテナンスパイプライン)       |
+| パフォーマンス低下       | P3（低）         | [最適化診断](#メンテナンスパイプライン)       |
+
+#### 2. メンテナンスパイプラインの確認（5分）
+
+問題に応じて、該当するパイプラインを実行：
+
+**QuestionScheduler品質保証パイプライン**（最優先）:
+
+```bash
+# TypeScriptエラーチェック
+npx tsc --noEmit
+
+# ユニットテスト
+npm run test -- QuestionScheduler.test.ts
+
+# 統合テスト
+npm run test:integration
+```
+
+📚 **詳細**: [QUESTION_SCHEDULER_QA_PIPELINE.md](docs/quality/QUESTION_SCHEDULER_QA_PIPELINE.md)
+
+**AI統合品質パイプライン**:
+
+```bash
+# AI統合テスト
+npm run test:ai-integration
+
+# 個別AIテスト
+npm run test -- src/ai/specialists/*.test.ts
+```
+
+📚 **詳細**: [AI_INTEGRATION_GUIDE.md](docs/AI_INTEGRATION_GUIDE.md)
+
+**データ品質パイプライン**:
+
+```bash
+# 全タブデータ検証
+python3 scripts/validate_all_content.py
+```
+
+📚 **詳細**: [INTEGRATED_QUALITY_PIPELINE.md](docs/quality/INTEGRATED_QUALITY_PIPELINE.md)
+
+#### 3. デバッグログの確認（3分）
+
+ブラウザのコンソール（F12）で以下を確認：
+
+```text
+必須ログ（これらが表示されない場合は異常）:
+✅ [QuestionScheduler] カテゴリー統計: ...
+✅ [QuestionScheduler] 振動防止除外: ...
+✅ [QuestionScheduler] スケジューリング完了: ...
+
+AI統合が有効の場合:
+✅ 🤖 [MemorizationView] AI統合が有効化されました
+✅ 🧠 Memory AI Signal: ...
+✅ 💤 Cognitive Load AI Signal: ...
+```
+
+### 📖 メンテナンスガイド
+
+詳細な診断手順・対応方法は以下のドキュメントを参照してください：
+
+#### 包括ガイド（必読）
+
+**[AI_MAINTENANCE_GUIDE.md](docs/maintenance/AI_MAINTENANCE_GUIDE.md)** - 学習AIシステム包括的メンテナンスガイド
+
+- 問題分類マトリクス
+- 診断フローチャート
+- コンポーネント別メンテナンス手順
+- パイプライン確認チェックリスト
+- 予防保守ガイド
+
+#### トラブルシューティング
+
+1. **[meta-ai-priority.instructions.md](.aitk/instructions/meta-ai-priority.instructions.md)** - トラブルシューティング優先指示
+   - よくある問題と解決策（P0/P1）
+   - デバッグコマンド集
+
+2. **[META_AI_TROUBLESHOOTING.md](docs/guidelines/META_AI_TROUBLESHOOTING.md)** - 症状別診断手順
+   - デバッグログの読み方
+   - 確実性保証メカニズムの検証
+
+#### 緊急復旧
+
+**[QUESTION_SCHEDULER_RECOVERY.md](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)** - 7.5時間復旧手順
+
+- 緊急度判定チェックリスト
+- バックアップ・ロールバック方法
+
+推定復旧時間: 7.5時間（QuestionScheduler完全削除時）
+
+#### 品質保証パイプライン
+
+**[QUESTION_SCHEDULER_QA_PIPELINE.md](docs/quality/QUESTION_SCHEDULER_QA_PIPELINE.md)**
+
+- テストケース一覧
+- パイプライン実行手順
+- リグレッション防止策
+
+### 🚨 緊急対応の動線
+
+**問題が全く出題されない場合**:
+
+1. → [QUESTION_SCHEDULER_RECOVERY.md](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)
+2. → 緊急度判定を実施
+3. → 復旧チェックリストに従う
+
+**復習単語が出題されない場合**:
+
+1. → [META_AI_TROUBLESHOOTING.md](docs/guidelines/META_AI_TROUBLESHOOTING.md)
+2. → Step 1: デバッグログの確認
+3. → "復習単語が出題されない"セクション
+
+**その他の不具合**:
+
+1. → [AI_MAINTENANCE_GUIDE.md](docs/maintenance/AI_MAINTENANCE_GUIDE.md)
+2. → 問題分類マトリクスで症状を特定
+3. → 該当するメンテナンス手順を実施
+
+### 定期メンテナンススケジュール
+
+| 頻度         | 内容                                  | 所要時間 |
+| ------------ | ------------------------------------- | -------- |
+| 毎週         | TypeScriptエラーチェック + ビルド確認 | 5分      |
+| 毎週         | QuestionSchedulerテスト実行           | 10分     |
+| 毎月         | 全テストスイート + 長期動作テスト     | 1時間    |
+| コード変更時 | 該当パイプライン実行（必須）          | 5-30分   |
+
+---
 
 ### 使い方
 
