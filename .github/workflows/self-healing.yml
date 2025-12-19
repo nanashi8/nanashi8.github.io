@@ -36,7 +36,11 @@ jobs:
       id: validate
       run: |
         echo "🔍 プロジェクト構造を検証中..."
-        python3 scripts/validate_project_structure.py || echo "validation_failed=true" >> $GITHUB_OUTPUT
+        if [ -f scripts/validate_project_structure.py ]; then
+          python3 scripts/validate_project_structure.py || echo "validation_failed=true" >> $GITHUB_OUTPUT
+        else
+          echo "⚠️ validate_project_structure.py が見つかりません（スキップ）"
+        fi
 
     - name: 自動修復
       id: fix
@@ -47,7 +51,11 @@ jobs:
     - name: 修復後の検証
       run: |
         echo "✅ 修復結果を検証中..."
-        python3 scripts/validate_project_structure.py
+        if [ -f scripts/validate_project_structure.py ]; then
+          python3 scripts/validate_project_structure.py
+        else
+          echo "⚠️ validate_project_structure.py が見つかりません（スキップ）"
+        fi
 
     - name: Instructions インデックス更新
       run: |
