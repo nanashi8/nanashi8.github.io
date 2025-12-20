@@ -8,12 +8,7 @@
  * - 予防的復習の推奨
  */
 
-import type {
-  SpecialistAI,
-  ErrorPredictionSignal,
-  AIAnalysisInput,
-  WordProgress,
-} from '../types';
+import type { SpecialistAI, ErrorPredictionSignal, AIAnalysisInput, WordProgress } from '../types';
 
 export class ErrorPredictionAI implements SpecialistAI<ErrorPredictionSignal> {
   readonly id = 'errorPrediction';

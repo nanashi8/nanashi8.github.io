@@ -97,6 +97,16 @@ export interface WordProgress {
   lastReviewDate?: number; // 最終復習日時（タイムスタンプ）
   totalReviews?: number; // 総復習回数
   avgResponseSpeed?: number; // 平均応答速度（ms）- 学習速度の指標
+
+  // 🧠 個別忘却曲線モデル（Half-Life Regression風）
+  memoryStrength?: number; // 記憶強度（0-100、個人適応）初期値50
+  halfLife?: number; // 記憶半減期（日数）- この単語をこのユーザーが半分忘れるまでの時間
+  lastRetentionRate?: number; // 最終記憶保持率予測（0-1）
+  forgettingCurveParams?: {
+    decayRate: number; // 減衰率（個人固有）0.1-0.5
+    recoveryRate: number; // 回復率（正解時の記憶強化）0.5-2.0
+    baseRetention: number; // 基礎保持率（個人の記憶力）0.3-0.9
+  };
 }
 
 export interface Statistics {

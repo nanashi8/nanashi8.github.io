@@ -203,9 +203,16 @@ describe('学習AI E2Eテスト', () => {
 
       // 10単語を作成: mastered=3, still_learning=4, incorrect=3
       const categories = [
-        'mastered', 'mastered', 'mastered',
-        'still_learning', 'still_learning', 'still_learning', 'still_learning',
-        'incorrect', 'incorrect', 'incorrect',
+        'mastered',
+        'mastered',
+        'mastered',
+        'still_learning',
+        'still_learning',
+        'still_learning',
+        'still_learning',
+        'incorrect',
+        'incorrect',
+        'incorrect',
       ];
 
       categories.forEach((category, index) => {

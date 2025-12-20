@@ -107,6 +107,9 @@ function MemorizationView({
   const [correctStreak, setCorrectStreak] = useState<number>(0);
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
 
+  // 直前に回答した問題（連続出題防止用）
+  const [lastAnsweredQuestionId, setLastAnsweredQuestionId] = useState<string | null>(null);
+
   // 滞在時間計測
   const cardDisplayTimeRef = useRef<number>(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -238,10 +241,12 @@ function MemorizationView({
       });
 
       // 適応的出題順序（統一スケジューラー: DTA + 振動防止 + メタAI統合）
-      console.log('🚀🚀🚀 [MemorizationView] スケジューラー呼び出し開始', {
-        filteredCount: filtered.length,
-        adaptiveEnabled,
-      });
+      if (import.meta.env.DEV) {
+        console.log('🚀🚀🚀 [MemorizationView] スケジューラー呼び出し開始', {
+          filteredCount: filtered.length,
+          adaptiveEnabled,
+        });
+      }
 
       const scheduleResult = scheduler.schedule({
         questions: filtered,
@@ -269,7 +274,9 @@ function MemorizationView({
         timestamp: new Date().toISOString(),
       };
 
-      console.log('📝📝📝 [MemorizationView] スケジュール後の単語', debugInfo);
+      if (import.meta.env.DEV) {
+        console.log('📝📝📝 [MemorizationView] スケジュール後の単語', debugInfo);
+      }
 
       // localStorage に保存（デバッグ用）
       try {
@@ -435,6 +442,7 @@ function MemorizationView({
   };
 
   // スワイプ処理（useCallbackで最適化）- 3段階評価対応
+  // 🎯 UI/UX第一原則: 生徒の学習を妨げない即座のレスポンス
   const handleSwipe = useCallback(
     async (direction: 'left' | 'center' | 'right') => {
       if (!currentQuestion) return;
@@ -445,6 +453,14 @@ function MemorizationView({
       // right: 覚えてる(正解)、center: まだまだ(復習中)、left: 分からない(不正解)
       const isCorrect = direction === 'right';
       const isStillLearning = direction === 'center';
+
+      // 現在の問題を保存（非同期処理で使用）
+      const answeredQuestion = currentQuestion;
+      const answeredViewDuration = viewDuration;
+
+      // ═══════════════════════════════════════════════════════════
+      // 🚀 即座のUI更新（ステップ1: 同期処理のみ）
+      // ═══════════════════════════════════════════════════════════
 
       // 回答結果を記録（動的AIコメント用）
       setLastAnswerCorrect(isCorrect);
@@ -475,57 +491,92 @@ function MemorizationView({
         consecutiveReview: prev.consecutiveReview,
       }));
 
-      // 16秒以上は放置とみなしてカウントしない
-      if (viewDuration < 16) {
-        const behavior: MemorizationBehavior = {
-          word: currentQuestion.word,
-          timestamp: Date.now(),
-          viewDuration,
-          swipeDirection: direction === 'center' ? 'left' : direction,
-          sessionId,
-          consecutiveViews: consecutiveViews + 1,
-        };
-
-        await recordMemorizationBehavior(behavior);
-        setConsecutiveViews((prev) => prev + 1);
-
-        // ✅ メインの学習データ記録（QuestionSchedulerが使用するcategoryを保存）
-        const { updateWordProgress } = await import('../progressStorage');
-        await updateWordProgress(
-          currentQuestion.word,
-          isCorrect,
-          viewDuration * 1000, // ミリ秒に変換
-          undefined,
-          'memorization', // 暗記タブは独立したモードとして記録
-          isStillLearning // まだまだフラグを渡す
-        );
-
-        // 📊 追加の統計記録のみ（出題には影響しない）
-        adaptiveLearning.recordAnswer(currentQuestion.word, isCorrect, viewDuration * 1000);
-
-        // 🔬 メタAI分析（adaptiveEnabled時のみ、出題には影響しない）
-        if (adaptiveEnabled) {
-          await processWithAdaptiveAI(currentQuestion.word, isCorrect);
-        }
-      }
-
-      // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
+      // 回答時刻を即座に更新（ScoreBoard再計算のトリガー）
       setLastAnswerTime(Date.now());
 
-      // ✅ QuestionScheduler の順序を信頼: 不正解時の再追加処理を削除
-      // → QuestionScheduler が incorrect を最優先に並べるため、UI側での再配置は不要
-      // → カテゴリ変化時は rescheduleCounter により再スケジューリングされる
-
-      // 📊 10問ごとに再スケジューリング（パフォーマンス最適化）
-      const totalAnswered =
-        sessionStats.correct + sessionStats.still_learning + sessionStats.incorrect;
-      if (totalAnswered % 10 === 0) {
+      // 📊 カテゴリ変化時のみ再スケジューリング（パフォーマンス最適化）
+      // incorrect または still_learning が発生した時のみ再計算
+      if (!isCorrect) {
         setRescheduleCounter((prev) => prev + 1);
-        console.log('🔄 [MemorizationView] 10問ごとの再スケジューリング', {
-          totalAnswered,
-          incorrect: sessionStats.incorrect,
-          still_learning: sessionStats.still_learning,
-          mastered: sessionStats.mastered,
+        console.log('🔄 [MemorizationView] カテゴリ変化による再スケジューリング', {
+          word: currentQuestion.word,
+          category: isStillLearning ? 'still_learning' : 'incorrect',
+          incorrect: sessionStats.incorrect + (!isStillLearning ? 1 : 0),
+          still_learning: sessionStats.still_learning + (isStillLearning ? 1 : 0),
+        });
+      }
+
+      // ═══════════════════════════════════════════════════════════
+      // 🎨 バックグラウンド処理（ステップ2: 非同期・非ブロッキング）
+      // ═══════════════════════════════════════════════════════════
+      // 💡 UI更新を待たずに即座にバックグラウンド実行
+      // 💡 データ保存の完了を待たない = 学習体験を妨げない
+
+      // 16秒以上は放置とみなしてカウントしない
+      if (answeredViewDuration < 16) {
+        // 🔥 重要: await を削除してバックグラウンド実行
+        Promise.all([
+          // 行動記録の保存
+          (async () => {
+            try {
+              const behavior: MemorizationBehavior = {
+                word: answeredQuestion.word,
+                timestamp: Date.now(),
+                viewDuration: answeredViewDuration,
+                swipeDirection: direction === 'center' ? 'left' : direction,
+                sessionId,
+                consecutiveViews: consecutiveViews + 1,
+              };
+              await recordMemorizationBehavior(behavior);
+              setConsecutiveViews((prev) => prev + 1);
+            } catch (error) {
+              logger.error('[MemorizationView] 行動記録エラー:', error);
+            }
+          })(),
+
+          // メインの学習データ記録
+          (async () => {
+            try {
+              const { updateWordProgress } = await import('../progressStorage');
+              await updateWordProgress(
+                answeredQuestion.word,
+                isCorrect,
+                answeredViewDuration * 1000, // ミリ秒に変換
+                undefined,
+                'memorization', // 暗記タブは独立したモードとして記録
+                isStillLearning // まだまだフラグを渡す
+              );
+            } catch (error) {
+              logger.error('[MemorizationView] 学習データ記録エラー:', error);
+            }
+          })(),
+
+          // 追加の統計記録
+          (async () => {
+            try {
+              adaptiveLearning.recordAnswer(
+                answeredQuestion.word,
+                isCorrect,
+                answeredViewDuration * 1000
+              );
+            } catch (error) {
+              logger.error('[MemorizationView] 統計記録エラー:', error);
+            }
+          })(),
+
+          // メタAI分析（adaptiveEnabled時のみ）
+          adaptiveEnabled
+            ? (async () => {
+                try {
+                  await processWithAdaptiveAI(answeredQuestion.word, isCorrect);
+                } catch (error) {
+                  logger.error('[MemorizationView] AI分析エラー:', error);
+                }
+              })()
+            : Promise.resolve(),
+        ]).catch((error) => {
+          // 全体のエラーハンドリング（個別エラーは既にキャッチ済み）
+          logger.error('[MemorizationView] バックグラウンド処理エラー:', error);
         });
       }
 
@@ -533,8 +584,20 @@ function MemorizationView({
 
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
 
+      // 直前に回答した問題IDを記録（連続出題防止）
+      setLastAnsweredQuestionId(currentQuestion.word);
+
       // 次の語句へ
-      const nextIndex = currentIndex + 1;
+      let nextIndex = currentIndex + 1;
+
+      // 🚫 連続出題防止: 直前に回答した問題をスキップ
+      while (nextIndex < questions.length && questions[nextIndex].word === currentQuestion.word) {
+        logger.warn('[MemorizationView] 連続出題を検出、スキップ', {
+          word: questions[nextIndex].word,
+          nextIndex,
+        });
+        nextIndex++;
+      }
 
       if (nextIndex < questions.length) {
         // セッション優先フラグのクリーン処理：5問経過後にクリア

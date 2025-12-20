@@ -8,7 +8,7 @@
  * 4. カテゴリー更新（incorrect/still_learning/mastered）が正しく動作すること
  */
 
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { QuestionScheduler } from '../../src/ai/scheduler/QuestionScheduler';
 import type { Question } from '../../src/types';
 
@@ -48,17 +48,67 @@ describe('学習AI統合テスト', () => {
 
   // テスト用の問題セット
   const testQuestions: Question[] = [
-    { word: 'apple', meaning: 'りんご', reading: 'apple', grade: 1, type: 'word', difficulty: 'beginner', etymology: '', relatedWords: '', relatedFields: '' },
-    { word: 'book', meaning: '本', reading: 'book', grade: 1, type: 'word', difficulty: 'beginner', etymology: '', relatedWords: '', relatedFields: '' },
-    { word: 'cat', meaning: '猫', reading: 'cat', grade: 1, type: 'word', difficulty: 'beginner', etymology: '', relatedWords: '', relatedFields: '' },
-    { word: 'dog', meaning: '犬', reading: 'dog', grade: 1, type: 'word', difficulty: 'beginner', etymology: '', relatedWords: '', relatedFields: '' },
-    { word: 'elephant', meaning: '象', reading: 'elephant', grade: 2, type: 'word', difficulty: 'intermediate', etymology: '', relatedWords: '', relatedFields: '' },
+    {
+      word: 'apple',
+      meaning: 'りんご',
+      reading: 'apple',
+      grade: 1,
+      type: 'word',
+      difficulty: 'beginner',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+    },
+    {
+      word: 'book',
+      meaning: '本',
+      reading: 'book',
+      grade: 1,
+      type: 'word',
+      difficulty: 'beginner',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+    },
+    {
+      word: 'cat',
+      meaning: '猫',
+      reading: 'cat',
+      grade: 1,
+      type: 'word',
+      difficulty: 'beginner',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+    },
+    {
+      word: 'dog',
+      meaning: '犬',
+      reading: 'dog',
+      grade: 1,
+      type: 'word',
+      difficulty: 'beginner',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+    },
+    {
+      word: 'elephant',
+      meaning: '象',
+      reading: 'elephant',
+      grade: 2,
+      type: 'word',
+      difficulty: 'intermediate',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+    },
   ];
 
   beforeEach(() => {
-    // localStorageをモック
+    // localStorageをモック（vi.stubGlobalを使用）
     mockLocalStorage = new LocalStorageMock();
-    global.localStorage = mockLocalStorage as any;
+    vi.stubGlobal('localStorage', mockLocalStorage);
 
     // 初期データを設定
     const initialProgress = {
@@ -215,7 +265,7 @@ describe('学習AI統合テスト', () => {
       });
 
       // incorrectカテゴリーの単語が上位に来ること
-      const topWords = result.scheduledQuestions.slice(0, 2).map(q => q.word);
+      const topWords = result.scheduledQuestions.slice(0, 2).map((q) => q.word);
       expect(topWords).toContain('cat');
       expect(topWords).toContain('dog');
     });
@@ -277,7 +327,7 @@ describe('学習AI統合テスト', () => {
       });
 
       // still_learningが上位に来ること
-      const topWords = result.scheduledQuestions.slice(0, 2).map(q => q.word);
+      const topWords = result.scheduledQuestions.slice(0, 2).map((q) => q.word);
       expect(topWords).toContain('book');
       expect(topWords).toContain('cat');
     });
@@ -328,7 +378,7 @@ describe('学習AI統合テスト', () => {
       expect(result.scheduledQuestions[0].word).toBe('book');
 
       // masteredは後方に配置されること
-      const appleIndex = result.scheduledQuestions.findIndex(q => q.word === 'apple');
+      const appleIndex = result.scheduledQuestions.findIndex((q) => q.word === 'apple');
       expect(appleIndex).toBeGreaterThan(0);
     });
   });
@@ -452,7 +502,7 @@ describe('学習AI統合テスト', () => {
       // incorrectカテゴリーが上位に配置されること
       const topCategories = result.scheduledQuestions
         .slice(0, 3)
-        .filter(q => ['apple', 'book', 'cat'].includes(q.word));
+        .filter((q) => ['apple', 'book', 'cat'].includes(q.word));
 
       expect(topCategories.length).toBeGreaterThan(0);
     });

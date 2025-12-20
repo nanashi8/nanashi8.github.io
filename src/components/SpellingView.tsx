@@ -176,7 +176,9 @@ function SpellingView({
   const [scheduler] = useState(() => {
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
-    const enableAI = process.env.NODE_ENV === 'development' || localStorage.getItem('enable-ai-coordination') === 'true';
+    const enableAI =
+      process.env.NODE_ENV === 'development' ||
+      localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
       logger.info('🤖 [SpellingView] AI統合が有効化されました');

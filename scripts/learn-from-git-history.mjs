@@ -2,7 +2,7 @@
 
 /**
  * Git履歴学習スクリプト
- * 
+ *
  * コミット履歴から失敗パターンを自動抽出し、
  * サーバントのfailure-patterns.jsonに学習させる
  */
@@ -27,11 +27,11 @@ function detectLearningAIStartDate() {
       'git log --all --grep="学習AI\\|Memory AI\\|AdaptiveEducationalAI" --reverse --format="%ad" --date=iso | head -1',
       { encoding: 'utf-8', cwd: path.join(__dirname, '..') }
     ).trim();
-    
+
     if (result) {
       return new Date(result);
     }
-    
+
     // fallback: 6ヶ月前
     const sixMonthsAgo = new Date();
     sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
@@ -49,15 +49,15 @@ function detectLearningAIStartDate() {
  */
 function detectFixCommits(sinceDate) {
   const dateStr = sinceDate.toISOString().split('T')[0];
-  
+
   try {
     const result = execSync(
       `git log --since="${dateStr}" --grep="fix\\|修正\\|バグ\\|エラー\\|typo\\|誤り" -i --format="%H|%s|%ad|%an" --date=iso`,
       { encoding: 'utf-8', cwd: path.join(__dirname, '..') }
     ).trim();
-    
+
     if (!result) return [];
-    
+
     return result.split('\n').map(line => {
       const [hash, subject, date, author] = line.split('|');
       return { hash, subject, date, author };
@@ -77,9 +77,9 @@ function extractFixPatterns(commit) {
       `git show ${commit.hash} --format="" --unified=0`,
       { encoding: 'utf-8', cwd: path.join(__dirname, '..') }
     );
-    
+
     const patterns = [];
-    
+
     // パターン1: プロパティ名の修正
     const propertyFix = diff.match(/[-].*\.(correctCount|incorrectCount|attemptCount)[^a-zA-Z]/g);
     const propertyCorrect = diff.match(/[+].*\.(memorizationCorrect|memorizationAttempts|translationCorrect)/g);
@@ -91,7 +91,7 @@ function extractFixPatterns(commit) {
         files: extractFilesFromDiff(diff)
       });
     }
-    
+
     // パターン2: 型エラーの修正
     if (commit.subject.match(/型|type|Type/i)) {
       patterns.push({
@@ -100,7 +100,7 @@ function extractFixPatterns(commit) {
         files: extractFilesFromDiff(diff)
       });
     }
-    
+
     // パターン3: ロジックの修正
     if (commit.subject.match(/ロジック|logic|修正|fix/i)) {
       patterns.push({
@@ -109,7 +109,7 @@ function extractFixPatterns(commit) {
         files: extractFilesFromDiff(diff)
       });
     }
-    
+
     // パターン4: テスト修正
     if (commit.subject.match(/テスト|test/i) && diff.includes('test')) {
       patterns.push({
@@ -118,7 +118,7 @@ function extractFixPatterns(commit) {
         files: extractFilesFromDiff(diff)
       });
     }
-    
+
     return patterns;
   } catch (error) {
     console.error(`⚠️  コミット ${commit.hash} の解析に失敗:`, error.message);
@@ -133,11 +133,11 @@ function extractFilesFromDiff(diff) {
   const filePattern = /diff --git a\/(.*?) b\//g;
   const files = [];
   let match;
-  
+
   while ((match = filePattern.exec(diff)) !== null) {
     files.push(match[1]);
   }
-  
+
   return files;
 }
 
@@ -146,15 +146,15 @@ function extractFilesFromDiff(diff) {
  */
 function detectHotspots(sinceDate) {
   const dateStr = sinceDate.toISOString().split('T')[0];
-  
+
   try {
     const result = execSync(
       `git log --since="${dateStr}" --name-only --format="" | grep -E "\\.(ts|tsx|js|jsx)$" | sort | uniq -c | sort -rn | head -20`,
       { encoding: 'utf-8', cwd: path.join(__dirname, '..') }
     ).trim();
-    
+
     if (!result) return [];
-    
+
     return result.split('\n').map(line => {
       const match = line.trim().match(/(\d+)\s+(.+)/);
       if (match) {
@@ -174,20 +174,20 @@ function detectHotspots(sinceDate) {
 function integratePatterns(extractedPatterns, hotspots) {
   const data = fs.readFileSync(FAILURE_PATTERNS_PATH, 'utf-8');
   const patterns = JSON.parse(data);
-  
+
   let newPatternsCount = 0;
   let updatedPatternsCount = 0;
-  
+
   // 抽出されたパターンを統合
   for (const extracted of extractedPatterns) {
     const patternId = extracted.type;
-    
+
     if (patterns.failurePatterns[patternId]) {
       // 既存パターンを更新
       const pattern = patterns.failurePatterns[patternId];
       pattern.occurrences += 1;
       pattern.weight = Math.min(1.0, pattern.weight + 0.05); // Git履歴から学習したので控えめに増加
-      
+
       if (extracted.before && extracted.after) {
         pattern.examples.push({
           date: new Date().toISOString().split('T')[0],
@@ -196,13 +196,13 @@ function integratePatterns(extractedPatterns, hotspots) {
           testsFailed: 0,
           source: 'git-history'
         });
-        
+
         // 最大10件まで保持
         if (pattern.examples.length > 10) {
           pattern.examples.shift();
         }
       }
-      
+
       updatedPatternsCount++;
     } else {
       // 新しいパターンを追加
@@ -238,27 +238,27 @@ function integratePatterns(extractedPatterns, hotspots) {
           preventionEffectiveness: 0.5
         }
       };
-      
+
       newPatternsCount++;
     }
   }
-  
+
   // ホットスポット情報を追加
   patterns.hotspots = hotspots.slice(0, 10).map(h => ({
     file: h.file,
     modificationCount: h.count,
     riskLevel: h.count > 10 ? 'high' : h.count > 5 ? 'medium' : 'low'
   }));
-  
+
   // メタデータ更新
   patterns.metadata.totalFailures += newPatternsCount;
   patterns.metadata.totalRecoveries += newPatternsCount; // Git履歴から学習 = すでに修正済み
   patterns.metadata.lastUpdated = new Date().toISOString().split('T')[0];
   patterns.metadata.gitHistoryLearned = true;
   patterns.metadata.gitHistoryLearnedAt = new Date().toISOString();
-  
+
   fs.writeFileSync(FAILURE_PATTERNS_PATH, JSON.stringify(patterns, null, 2), 'utf-8');
-  
+
   return { newPatternsCount, updatedPatternsCount };
 }
 
@@ -268,7 +268,7 @@ function integratePatterns(extractedPatterns, hotspots) {
 function generateLearningReport(commits, extractedPatterns, hotspots, stats) {
   const report = `# Git履歴学習レポート
 
-**学習日時**: ${new Date().toISOString()}  
+**学習日時**: ${new Date().toISOString()}
 **学習範囲**: 学習AI実装開始以降
 
 ---
@@ -331,22 +331,22 @@ ${p.files?.length > 0 ? `**影響ファイル**: ${p.files.join(', ')}` : ''}
  */
 async function main() {
   console.log('🧠 Git履歴学習開始...\n');
-  
+
   // 1. 学習AI実装開始日を検出
   console.log('📅 学習AI実装開始日を検出中...');
   const startDate = detectLearningAIStartDate();
   console.log(`   開始日: ${startDate.toISOString().split('T')[0]}\n`);
-  
+
   // 2. 修正コミットを検出
   console.log('🔍 修正コミットを検出中...');
   const commits = detectFixCommits(startDate);
   console.log(`   検出: ${commits.length}件のコミット\n`);
-  
+
   if (commits.length === 0) {
     console.log('ℹ️  学習対象のコミットが見つかりませんでした');
     return;
   }
-  
+
   // 3. パターンを抽出
   console.log('🎯 失敗パターンを抽出中...');
   const extractedPatterns = [];
@@ -355,12 +355,12 @@ async function main() {
     extractedPatterns.push(...patterns);
   }
   console.log(`   抽出: ${extractedPatterns.length}件のパターン\n`);
-  
+
   // 4. ホットスポットを検出
   console.log('🔥 ホットスポットを検出中...');
   const hotspots = detectHotspots(startDate);
   console.log(`   検出: ${hotspots.length}ファイル\n`);
-  
+
   if (hotspots.length > 0) {
     console.log('   トップ5:');
     hotspots.slice(0, 5).forEach((h, i) => {
@@ -368,20 +368,20 @@ async function main() {
     });
     console.log('');
   }
-  
+
   // 5. パターンをデータベースに統合
   console.log('💾 パターンをデータベースに統合中...');
   const stats = integratePatterns(extractedPatterns, hotspots);
   console.log(`   新規パターン: ${stats.newPatternsCount}件`);
   console.log(`   更新パターン: ${stats.updatedPatternsCount}件\n`);
-  
+
   // 6. 学習レポートを生成
   console.log('📝 学習レポートを生成中...');
   const report = generateLearningReport(commits, extractedPatterns, hotspots, stats);
   const reportPath = path.join(__dirname, '../docs/GIT_HISTORY_LEARNING_REPORT.md');
   fs.writeFileSync(reportPath, report, 'utf-8');
   console.log(`   レポート: ${reportPath}\n`);
-  
+
   // 7. Instructionsを自動更新
   console.log('📚 Instructionsを自動更新中...');
   try {
@@ -392,7 +392,7 @@ async function main() {
   } catch (error) {
     console.error('⚠️  Instructions更新に失敗しました');
   }
-  
+
   console.log('\n✅ Git履歴学習完了！');
   console.log(`\n📊 サマリー:`);
   console.log(`   - 解析コミット: ${commits.length}件`);

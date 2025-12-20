@@ -208,8 +208,12 @@ export class CognitiveLoadAI implements SpecialistAI<CognitiveLoadSignal> {
     console.log(`  Load Level: ${signal.loadLevel}`);
     console.log(`  Fatigue Score: ${(signal.fatigueScore * 100).toFixed(1)}%`);
     console.log(`  Recommended Break: ${signal.recommendedBreak ? 'YES' : 'NO'}`);
-    console.log(`  Difficulty Adjustment: ${signal.difficultyAdjustment > 0 ? '+' : ''}${(signal.difficultyAdjustment * 100).toFixed(1)}%`);
-    console.log(`  Session: ${stats.totalAttempts} attempts, ${(stats.sessionDuration / 60000).toFixed(1)} minutes`);
+    console.log(
+      `  Difficulty Adjustment: ${signal.difficultyAdjustment > 0 ? '+' : ''}${(signal.difficultyAdjustment * 100).toFixed(1)}%`
+    );
+    console.log(
+      `  Session: ${stats.totalAttempts} attempts, ${(stats.sessionDuration / 60000).toFixed(1)} minutes`
+    );
     console.log(`  Consecutive Incorrect: ${stats.consecutiveIncorrect}`);
   }
 

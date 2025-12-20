@@ -8,11 +8,7 @@
  * - 推奨アクションの生成
  */
 
-import type {
-  AICoordinationResult,
-  AIAnalysisInput,
-  CoordinatorConfig,
-} from './types';
+import type { AICoordinationResult, AIAnalysisInput, CoordinatorConfig } from './types';
 
 import { DEFAULT_COORDINATOR_CONFIG } from './types';
 
@@ -157,9 +153,7 @@ export class AICoordinator {
     sessionStats: any
   ): boolean {
     // 忘却リスクが閾値を超える
-    if (
-      memorySignal.forgettingRisk >= this.config.emergencyThresholds.forgettingRisk
-    ) {
+    if (memorySignal.forgettingRisk >= this.config.emergencyThresholds.forgettingRisk) {
       return true;
     }
 
@@ -172,9 +166,7 @@ export class AICoordinator {
     }
 
     // 連続不正解が閾値を超える
-    if (
-      sessionStats.consecutiveIncorrect >= this.config.emergencyThresholds.consecutiveErrors
-    ) {
+    if (sessionStats.consecutiveIncorrect >= this.config.emergencyThresholds.consecutiveErrors) {
       return true;
     }
 
@@ -204,7 +196,8 @@ export class AICoordinator {
 
     // 誤答予測AI: 弱点優先
     if (errorPredictionSignal.weaknessAreas.length > 0) {
-      priority *= 1 - errorPredictionSignal.patternConfidence * 0.3 * this.config.weights.errorPrediction;
+      priority *=
+        1 - errorPredictionSignal.patternConfidence * 0.3 * this.config.weights.errorPrediction;
     }
 
     // 学習スタイルAI: スタイル適合度（簡易実装）
@@ -214,7 +207,8 @@ export class AICoordinator {
     priority *= 1 + linguisticSignal.inherentDifficulty * 0.2 * this.config.weights.linguistic;
 
     // 文脈的AI: 文脈関連性
-    priority *= 1 - (contextualSignal.contextRelevance - 0.5) * 0.3 * this.config.weights.contextual;
+    priority *=
+      1 - (contextualSignal.contextRelevance - 0.5) * 0.3 * this.config.weights.contextual;
 
     // ゲーミフィケーションAI: モチベーション調整
     if (gamificationSignal.motivationLevel < 0.3) {

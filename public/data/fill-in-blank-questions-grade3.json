@@ -12844,7 +12844,7 @@
             "that",
             "where"
           ],
-          "correctAnswer": ["that", "which"],
+          "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
           "hint": "関係代名詞を使って2つの文をつなぎます。",

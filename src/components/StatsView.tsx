@@ -20,6 +20,7 @@ import {
 import { QuestionSet, Question } from '../types';
 import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '../utils';
+import { CalibrationDashboard } from './CalibrationDashboard';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
@@ -200,6 +201,11 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 
   return (
     <div className="stats-view">
+      {/* AIキャリブレーション分析 */}
+      <div className="w-full mb-4 px-2">
+        <CalibrationDashboard minPredictions={50} />
+      </div>
+
       {/* 学習カレンダー */}
       <div className="w-full mb-4 px-2">
         <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">

@@ -10,6 +10,8 @@ import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
 import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
 import { deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
+import { MemoryAI } from '@/ai/specialists/MemoryAI';
+import { QuestionScheduler } from '@/ai/scheduler/QuestionScheduler';
 
 // 型定義をインポート＆re-export
 import type {
@@ -940,16 +942,31 @@ export async function updateWordProgress(
     progress.wordProgress[word] = wordProgress; // ✅ 新規作成時は必ず代入
   }
 
+  // 📊 キャリブレーション: 事前予測があればログに記録
+  if (wordProgress.lastRetentionRate !== undefined) {
+    // 予測された記憶保持率（0-1）
+    const predicted = wordProgress.lastRetentionRate;
+    // 実際の結果（正解=1、まだまだ=0.5、不正解=0）
+    const actual = isCorrect ? 1 : isStillLearning ? 0.5 : 0;
+
+    // 予測ログに記録（非同期だがawaitしない = ブロッキングしない）
+    import('@/ai/services/PredictionLogger').then(({ getPredictionLogger }) => {
+      getPredictionLogger().logPrediction(word, predicted, actual).catch((err) => {
+        console.warn('Failed to log prediction:', err);
+      });
+    });
+  }
+
   // 基本統計を更新
-  // 暗記タブの「まだまだ」は学習中として扱い、incorrectCountに加算するが連続不正解にはしない
+  // 暗記タブの「まだまだ」は学習中として扱い、correct/incorrectのどちらにも加算しない
   if (isCorrect) {
     wordProgress.correctCount++;
     wordProgress.consecutiveCorrect++;
     wordProgress.consecutiveIncorrect = 0;
   } else if (isStillLearning) {
-    // 「まだまだ」は部分的な正解として扱う（正答率50%相当）
-    // incorrectCountには加算するが、consecutiveIncorrectには加算しない
-    wordProgress.incorrectCount++;
+    // 「まだまだ」は部分的な学習として扱う
+    // correct/incorrectのどちらにも加算せず、連続カウントもリセットしない
+    // モード別統計（memorizationStillLearning）でのみカウント
     wordProgress.consecutiveCorrect = 0;
     wordProgress.consecutiveIncorrect = 0; // 連続不正解にはしない
   } else {
@@ -1008,10 +1025,14 @@ export async function updateWordProgress(
     (wordProgress.grammarAttempts || 0) +
     (wordProgress.memorizationAttempts || 0);
 
-  // 応答時間を更新
+  // 応答時間を更新（「まだまだ」も学習データとして記録）
   wordProgress.totalResponseTime += responseTime;
   const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
-  wordProgress.averageResponseTime = wordProgress.totalResponseTime / totalAttempts;
+
+  // 平均応答時間の計算（正解・不正解のみ。「まだまだ」は含まない）
+  if (totalAttempts > 0) {
+    wordProgress.averageResponseTime = wordProgress.totalResponseTime / totalAttempts;
+  }
 
   // ユーザー評価を記録（提供された場合）
   if (userRating !== undefined) {
@@ -1076,6 +1097,22 @@ export async function updateWordProgress(
       // 2秒未満で正解 → 学習速度が速い
       wordProgress.easinessFactor = Math.min(2.5, wordProgress.easinessFactor + 0.05);
     }
+
+    // 🧠 個別忘却曲線パラメータの更新（Phase 2: MemoryAI経由）
+    // MemoryAIを忘却曲線予測の唯一の窓口とする
+    const { updateForgettingCurveAfterAnswer } = await import('@/ai/specialists/MemoryAI');
+
+    const forgettingCurveUpdate = await updateForgettingCurveAfterAnswer(
+      wordProgress,
+      isCorrect,
+      responseTime
+    );
+
+    // 更新結果を反映
+    wordProgress.memoryStrength = forgettingCurveUpdate.memoryStrength;
+    wordProgress.forgettingCurveParams = forgettingCurveUpdate.forgettingCurveParams;
+    wordProgress.halfLife = forgettingCurveUpdate.halfLife;
+    wordProgress.lastRetentionRate = forgettingCurveUpdate.lastRetentionRate;
   }
 
   // 学習履歴を記録（学習曲線AI用）最新20件を保持
@@ -1088,6 +1125,19 @@ export async function updateWordProgress(
     responseTime,
     sessionIndex: 0, // App.tsxから渡すようにする
   });
+
+  // 応答時間配列を更新（正解・不正解のみ。「まだまだ」は含まない）
+  if (!isStillLearning) {
+    if (!wordProgress.responseTimes) {
+      wordProgress.responseTimes = [];
+    }
+    wordProgress.responseTimes.push(responseTime);
+
+    // 最新10件のみ保持（メモリ節約）
+    if (wordProgress.responseTimes.length > 10) {
+      wordProgress.responseTimes = wordProgress.responseTimes.slice(-10);
+    }
+  }
 
   // 最新20件のみ保持（容量削減）
   if (wordProgress.learningHistory.length > 20) {
@@ -1125,69 +1175,35 @@ export async function updateWordProgress(
   }
 
   // カテゴリーを更新（QuestionScheduler用）
-  // 🎯 用語定義：
-  //   - 「分からない」(incorrect) = 要学習（最優先で復習が必要）
-  //   - 「まだまだ」(still_learning) = 学習中（復習が必要だが改善傾向）
-  //   - 「覚えてる」(mastered) = 定着済み（復習頻度を下げる）
-  //   - 「新規」(new) = 未出題
-  //
-  // 🔥 判定ルール（正答率ベース）：
-  //   1. 定着判定システムが定着と判断 → mastered
-  //   2. 正答率80%以上 & 連続3回以上正解 → mastered（高精度安定）
-  //   3. 正答率70%以上 & 試行5回以上 → mastered（長期安定）
-  //   4. 正答率30%未満 OR 連続2回不正解 → incorrect（要復習）
-  //   5. それ以外 → still_learning（学習中）
-
-  const accuracy = totalAttempts > 0 ? wordProgress.correctCount / totalAttempts : 0;
-
-  if (masteryResult.isMastered) {
-    // 定着判定システムが定着と判断 → 即座に定着扱い
-    wordProgress.category = 'mastered';
-  } else if (accuracy >= 0.8 && wordProgress.consecutiveCorrect >= 3) {
-    // 🟢 高精度安定型：正答率80%以上 & 連続3回正解
-    wordProgress.category = 'mastered';
-  } else if (accuracy >= 0.7 && totalAttempts >= 5) {
-    // 🟢 長期安定型：正答率70%以上 & 5回以上挑戦
-    wordProgress.category = 'mastered';
-  } else if (accuracy < 0.3 || (!isStillLearning && wordProgress.consecutiveIncorrect >= 2)) {
-    // 🔴 要復習：正答率30%未満 OR 連続2回不正解
-    wordProgress.category = 'incorrect';
-  } else {
-    // 🟡 学習中：それ以外
-    wordProgress.category = 'still_learning';
-  }
+  // 🎯 カテゴリー判定をMemoryAIに委譲（Phase 1.1リファクタリング）
+  // MemoryAIが科学的なカテゴリー判定を行う
+  const memoryAI = new MemoryAI();
+  wordProgress.category = memoryAI.determineCategoryPublic(wordProgress);
 
   // デバッグ: カテゴリー変更をログ出力（直近の行動も表示）
   const actionLabel = isCorrect ? '✅正解' : isStillLearning ? '🟡まだまだ' : '❌分からない';
-  console.log(
-    `📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`
-  );
+  const accuracy = totalAttempts > 0 ? wordProgress.correctCount / totalAttempts : 0;
+  if (import.meta.env.DEV) {
+    console.log(
+      `📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`
+    );
+  }
 
   // ✅ 【解答直後に優先度を計算・保存】
-  // カテゴリー別のベース優先度
-  const basePriority: Record<string, number> = {
-    incorrect: 100, // 要復習: 最優先
-    still_learning: 75, // 学習中: 高優先度
-    new: 50, // 未学習: 中優先度
-    mastered: 10, // 定着済: 低優先度
-  };
+  // 🎯 Phase 1.2: 優先度計算をQuestionSchedulerに委譲
+  const questionScheduler = new QuestionScheduler();
+  const calculatedPriority = questionScheduler.recalculatePriorityAfterAnswer(wordProgress);
 
-  // 時間経過によるブースト（最終学習から時間が経つほど優先度上昇）
-  const daysSinceLastStudy = (Date.now() - wordProgress.lastStudied) / (1000 * 60 * 60 * 24);
-  const timeBoost = Math.min(daysSinceLastStudy * 2, 20); // 最大+20
-
-  // 最終優先度 = ベース優先度 + 時間ブースト
-  wordProgress.calculatedPriority =
-    (basePriority[wordProgress.category || 'new'] || 50) + timeBoost;
-  wordProgress.accuracyRate = accuracy;
-  wordProgress.lastPriorityUpdate = Date.now();
-
-  console.log(
-    `🎯 [Priority] ${word}: ${wordProgress.calculatedPriority.toFixed(1)} (base=${basePriority[wordProgress.category || 'new']}, time=+${timeBoost.toFixed(1)}, accuracy=${(accuracy * 100).toFixed(0)}%)`
-  );
+  if (import.meta.env.DEV) {
+    console.log(
+      `🎯 [Priority] ${word}: ${calculatedPriority.toFixed(1)} (category=${wordProgress.category}, accuracy=${(accuracy * 100).toFixed(0)}%)`
+    );
+  }
 
   // ✅ 保存前の確認: メモリ上のカテゴリー値
-  console.log(`💾 [保存前] ${word}のカテゴリー（メモリ）: ${wordProgress.category}`);
+  if (import.meta.env.DEV) {
+    console.log(`💾 [保存前] ${word}のカテゴリー（メモリ）: ${wordProgress.category}`);
+  }
 
   // results配列に記録（ScoreBoard統計用）
   if (mode) {

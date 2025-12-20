@@ -139,7 +139,7 @@ describe('sessionHistory', () => {
       expect(history).toHaveLength(3);
       expect(history[0].status).toBe('correct');
       expect(history[1].status).toBe('incorrect');
-      expect(history[2].status).toBe('skipped');
+      expect(history[2].status).toBe('review');
     });
   });
 

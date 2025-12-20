@@ -4,6 +4,8 @@
  * すべての専門AIが使用する共通のインターフェースとデータ型
  */
 
+import type { WordProgress as StorageWordProgress } from '../storage/progress/types';
+
 /**
  * 単語の学習カテゴリー
  */
@@ -169,14 +171,14 @@ export type AISignal =
 export interface AIAnalysisInput {
   /** 単語 */
   word: string;
-  /** 単語の進捗データ */
-  progress: WordProgress | null;
+  /** 単語の進捗データ（storage層の完全な型を使用） */
+  progress: StorageWordProgress | null;
   /** セッション統計 */
   sessionStats: SessionStats;
   /** 現在のタブ */
   currentTab: 'memorization' | 'grammar' | 'comprehensive';
   /** すべての単語進捗データ */
-  allProgress: Record<string, WordProgress>;
+  allProgress: Record<string, StorageWordProgress>;
 }
 
 /**
@@ -331,13 +333,13 @@ export interface CoordinatorConfig {
  */
 export const DEFAULT_COORDINATOR_CONFIG: CoordinatorConfig = {
   weights: {
-    memory: 1.0,          // 最重要
-    cognitiveLoad: 0.8,   // 重要
+    memory: 1.0, // 最重要
+    cognitiveLoad: 0.8, // 重要
     errorPrediction: 0.7, // 重要
-    learningStyle: 0.5,   // 中程度
-    linguistic: 0.4,      // 参考程度
-    contextual: 0.6,      // やや重要
-    gamification: 0.3,    // 付加価値
+    learningStyle: 0.5, // 中程度
+    linguistic: 0.4, // 参考程度
+    contextual: 0.6, // やや重要
+    gamification: 0.3, // 付加価値
   },
   emergencyThresholds: {
     forgettingRisk: 150,

@@ -2,7 +2,7 @@
 
 /**
  * 危険パターン検出スクリプト
- * 
+ *
  * AIが編集しようとしているファイルに対して、
  * 過去の失敗パターンとホットスポットを照合し、
  * リスクスコアを計算して警告を表示
@@ -27,7 +27,7 @@ function loadFailurePatterns() {
     console.error('❌ failure-patterns.jsonが見つかりません');
     process.exit(1);
   }
-  
+
   const content = fs.readFileSync(FAILURE_PATTERNS_PATH, 'utf-8');
   return JSON.parse(content);
 }
@@ -49,9 +49,9 @@ function detectPatternInDiff(file, patterns) {
       encoding: 'utf-8',
       cwd: ROOT
     });
-    
+
     const detectedPatterns = [];
-    
+
     Object.values(patterns).forEach(pattern => {
       // パターンごとの検出ロジック
       if (pattern.detectionPattern && pattern.detectionPattern.files) {
@@ -60,7 +60,7 @@ function detectPatternInDiff(file, patterns) {
           const regex = new RegExp(glob.replace('**/', '.*').replace('*', '[^/]*').replace('.', '\\.'));
           return regex.test(file);
         });
-        
+
         if (fileMatches) {
           // プロパティ名変更の検出
           if (pattern.category === 'type-error') {
@@ -74,13 +74,13 @@ function detectPatternInDiff(file, patterns) {
               });
             }
           }
-          
+
           // リファクタリングの検出
           if (pattern.category === 'logic-error') {
             const refactoringKeywords = ['refactor', 'リファクタリング', '整理', '統一'];
             const hasRefactoringKeyword = refactoringKeywords.some(kw => diff.toLowerCase().includes(kw));
             const hasLogicChange = diff.includes('if (') || diff.includes('switch') || diff.includes('case');
-            
+
             if (hasRefactoringKeyword && hasLogicChange) {
               detectedPatterns.push({
                 pattern,
@@ -92,7 +92,7 @@ function detectPatternInDiff(file, patterns) {
         }
       }
     });
-    
+
     return detectedPatterns;
   } catch (error) {
     // git diffが失敗した場合（新規ファイル等）
@@ -107,14 +107,14 @@ function calculateRiskScore(file, db) {
   let score = 0;
   const reasons = [];
   const warnings = [];
-  
+
   // 1. ホットスポットチェック（最大40点）
   const hotspot = isHotspot(file, db.hotspots || []);
   if (hotspot) {
     const hotspotScore = Math.min(40, hotspot.modificationCount * 2);
     score += hotspotScore;
     reasons.push(`ホットスポット（${hotspot.modificationCount}回修正）: +${hotspotScore}点`);
-    
+
     if (hotspot.modificationCount > 20) {
       warnings.push({
         level: 'critical',
@@ -146,16 +146,16 @@ function calculateRiskScore(file, db) {
       });
     }
   }
-  
+
   // 2. 危険パターン検出（最大60点）
   const detectedPatterns = detectPatternInDiff(file, db.failurePatterns);
   detectedPatterns.forEach(({ pattern, confidence, evidence }) => {
     const patternScore = Math.floor(pattern.weight * 30 * confidence);
     score += patternScore;
     reasons.push(`${pattern.description} (信頼度: ${Math.floor(confidence * 100)}%): +${patternScore}点`);
-    
+
     const successRatePercent = Math.floor((pattern.learningMetrics?.successRate || 0) * 100);
-    
+
     warnings.push({
       level: pattern.severity,
       message: `過去の失敗パターンを検出: ${pattern.description}`,
@@ -170,7 +170,7 @@ function calculateRiskScore(file, db) {
       ].filter(Boolean) : []
     });
   });
-  
+
   return {
     file,
     score: Math.min(100, score),
@@ -186,23 +186,23 @@ function calculateRiskScore(file, db) {
 function displayRiskAssessment(risks) {
   console.log('\n📊 ファイルリスク評価\n');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-  
+
   if (risks.length === 0) {
     console.log('✅ 検出されたリスクはありません\n');
     return;
   }
-  
+
   // リスクスコア順にソート
   risks.sort((a, b) => b.score - a.score);
-  
+
   risks.forEach((risk, index) => {
-    const icon = risk.level === 'critical' ? '🔴' : 
-                 risk.level === 'high' ? '🟠' : 
+    const icon = risk.level === 'critical' ? '🔴' :
+                 risk.level === 'high' ? '🟠' :
                  risk.level === 'medium' ? '🟡' : '🟢';
-    
+
     console.log(`${icon} ${risk.file}`);
     console.log(`   リスクスコア: ${risk.score}/100 (${risk.level.toUpperCase()})\n`);
-    
+
     if (risk.reasons.length > 0) {
       console.log('   理由:');
       risk.reasons.forEach(reason => {
@@ -210,12 +210,12 @@ function displayRiskAssessment(risks) {
       });
       console.log('');
     }
-    
+
     if (risk.warnings.length > 0) {
       console.log('   ⚠️  警告:');
       risk.warnings.forEach(warning => {
         console.log(`     ${warning.message}`);
-        
+
         if (warning.stats) {
           console.log(`       - 過去の発生回数: ${warning.stats.occurrences}回`);
           console.log(`       - 成功率: ${warning.stats.successRate}%`);
@@ -223,7 +223,7 @@ function displayRiskAssessment(risks) {
             console.log(`       - 検出内容: ${warning.stats.evidence}`);
           }
         }
-        
+
         if (warning.recommendation && warning.recommendation.length > 0) {
           console.log('       推奨アクション:');
           warning.recommendation.forEach(rec => {
@@ -233,16 +233,16 @@ function displayRiskAssessment(risks) {
         console.log('');
       });
     }
-    
+
     if (index < risks.length - 1) {
       console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
     }
   });
-  
+
   // サマリー
   const criticalCount = risks.filter(r => r.level === 'critical').length;
   const highCount = risks.filter(r => r.level === 'high').length;
-  
+
   if (criticalCount > 0 || highCount > 0) {
     console.log('\n⚠️  総合評価:');
     if (criticalCount > 0) {
@@ -261,39 +261,39 @@ function displayRiskAssessment(risks) {
  */
 async function main() {
   const args = process.argv.slice(2);
-  
+
   if (args.length === 0) {
     console.log('使い方: node scripts/detect-dangerous-patterns.mjs <files...>');
     console.log('例: node scripts/detect-dangerous-patterns.mjs src/ai/specialists/MemoryAI.ts');
     process.exit(1);
   }
-  
+
   // failure-patterns.json読み込み
   const db = loadFailurePatterns();
-  
+
   // 各ファイルのリスク評価
   const risks = [];
-  
+
   for (const file of args) {
     const normalizedFile = file.replace(/^\//, '').replace(ROOT + '/', '');
-    
+
     // ファイルが存在するかチェック
     const fullPath = path.join(ROOT, normalizedFile);
     if (!fs.existsSync(fullPath)) {
       console.log(`⚠️  ファイルが見つかりません: ${normalizedFile}`);
       continue;
     }
-    
+
     const riskAssessment = calculateRiskScore(normalizedFile, db);
-    
+
     if (riskAssessment.score > 0) {
       risks.push(riskAssessment);
     }
   }
-  
+
   // 結果表示
   displayRiskAssessment(risks);
-  
+
   // 超高リスクがある場合は終了コード1
   const hasCriticalRisk = risks.some(r => r.level === 'critical');
   if (hasCriticalRisk) {
@@ -302,7 +302,7 @@ async function main() {
     // 注意: コミットはブロックしない（警告のみ）
     // process.exit(1);
   }
-  
+
   process.exit(0);
 }
 

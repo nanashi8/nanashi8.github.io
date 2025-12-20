@@ -47,7 +47,7 @@ async function main() {
   for (let i = 0; i < allProfiles.length; i++) {
     const profile = allProfiles[i];
 
-    console.log(`\n[${ i + 1}/${allProfiles.length}] ${profile.name} のシミュレーション開始`);
+    console.log(`\n[${i + 1}/${allProfiles.length}] ${profile.name} のシミュレーション開始`);
     console.log(`説明: ${profile.description}\n`);
 
     try {
@@ -72,7 +72,6 @@ async function main() {
 
       console.log(`\n✅ ${profile.name} のシミュレーション完了`);
       console.log(`   結果: ${filepath}`);
-
     } catch (error) {
       console.error(`\n❌ ${profile.name} のシミュレーションでエラーが発生しました:`);
       console.error(error);
@@ -91,7 +90,7 @@ async function main() {
 
   console.log('📊 結果ファイル:');
   console.log(`   統合レポート: ${summaryPath}`);
-  results.forEach(result => {
+  results.forEach((result) => {
     const filename = `simulation_${result.profile.name.toLowerCase().replace(/\s+/g, '_')}.html`;
     console.log(`   ${result.profile.name}: ${path.join(outputDir, filename)}`);
   });
@@ -104,15 +103,16 @@ async function main() {
  * 統合レポートのHTML生成
  */
 function generateSummaryHTML(results: any[]): string {
-  const profileCards = results.map(result => {
-    const { profile, summary } = result;
-    const incorrectChange = summary.categoryChanges.incorrect.change;
-    const stillLearningChange = summary.categoryChanges.still_learning.change;
-    const masteredChange = summary.categoryChanges.mastered.change;
+  const profileCards = results
+    .map((result) => {
+      const { profile, summary } = result;
+      const incorrectChange = summary.categoryChanges.incorrect.change;
+      const stillLearningChange = summary.categoryChanges.still_learning.change;
+      const masteredChange = summary.categoryChanges.mastered.change;
 
-    const filename = `simulation_${profile.name.toLowerCase().replace(/\s+/g, '_')}.html`;
+      const filename = `simulation_${profile.name.toLowerCase().replace(/\s+/g, '_')}.html`;
 
-    return `
+      return `
       <div class="profile-card">
         <h3>${profile.name}</h3>
         <p class="description">${profile.description}</p>
@@ -143,7 +143,8 @@ function generateSummaryHTML(results: any[]): string {
         <a href="${filename}" class="detail-link">詳細を見る →</a>
       </div>
     `;
-  }).join('');
+    })
+    .join('');
 
   return `
 <!DOCTYPE html>
@@ -355,7 +356,7 @@ function generateSummaryHTML(results: any[]): string {
 }
 
 // メイン実行
-main().catch(error => {
+main().catch((error) => {
   console.error('\n❌ エラーが発生しました:');
   console.error(error);
   process.exit(1);

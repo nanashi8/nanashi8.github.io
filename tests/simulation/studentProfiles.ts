@@ -12,10 +12,10 @@ export interface StudentProfile {
   // 単語の分布
   totalWords: number;
   categoryDistribution: {
-    incorrect: number;      // 間違えた単語数
+    incorrect: number; // 間違えた単語数
     still_learning: number; // 学習中の単語数
-    mastered: number;       // 定着した単語数
-    new: number;           // 未学習の単語数
+    mastered: number; // 定着した単語数
+    new: number; // 未学習の単語数
   };
 
   // 解答パターン
@@ -38,9 +38,9 @@ export interface StudentProfile {
 
   // セッション情報
   session: {
-    durationMinutes: number;  // セッション時間（分）
-    cognitiveLoad: number;    // 認知負荷（0.0 - 1.0）
-    answersCount: number;     // 総解答数
+    durationMinutes: number; // セッション時間（分）
+    cognitiveLoad: number; // 認知負荷（0.0 - 1.0）
+    answersCount: number; // 総解答数
   };
 }
 
@@ -55,20 +55,26 @@ export const strugglingStudent: StudentProfile = {
 
   totalWords: 100,
   categoryDistribution: {
-    incorrect: 30,       // 30% が間違えた単語
-    still_learning: 40,  // 40% が学習中
-    mastered: 20,        // 20% が定着
-    new: 10,            // 10% が未学習
+    incorrect: 30, // 30% が間違えた単語
+    still_learning: 40, // 40% が学習中
+    mastered: 20, // 20% が定着
+    new: 10, // 10% が未学習
   },
 
   patterns: {
     recentErrors: [
-      'abandon', 'ability', 'absent', 'absorb', 'abstract',
-      'accept', 'access', 'accident', 'accomplish', 'account'
+      'abandon',
+      'ability',
+      'absent',
+      'absorb',
+      'abstract',
+      'accept',
+      'access',
+      'accident',
+      'accomplish',
+      'account',
     ],
-    consecutiveIncorrect: [
-      'achieve', 'acquire', 'across', 'action', 'active'
-    ],
+    consecutiveIncorrect: ['achieve', 'acquire', 'across', 'action', 'active'],
     timeGap: 24 * 60 * 60 * 1000, // 24時間経過
     consecutiveCorrect: 2,
     errorRate: 0.45, // 45%のエラー率（苦戦シグナル閾値40%超）
@@ -92,10 +98,10 @@ export const overlearningStudent: StudentProfile = {
 
   totalWords: 100,
   categoryDistribution: {
-    incorrect: 5,        // 5% のみ間違えた
-    still_learning: 15,  // 15% が学習中
-    mastered: 60,        // 60% が定着
-    new: 20,            // 20% が未学習
+    incorrect: 5, // 5% のみ間違えた
+    still_learning: 15, // 15% が学習中
+    mastered: 60, // 60% が定着
+    new: 20, // 20% が未学習
   },
 
   patterns: {

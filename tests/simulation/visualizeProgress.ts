@@ -663,7 +663,12 @@ function generateAIDecisionsHTML(aiSummary: any): string {
       html += '<span>' + decision.count + '回 (' + decision.percentage.toFixed(1) + '%)</span>';
       html += '</div>';
       html += '<div class="ai-progress-bar-bg">';
-      html += '<div class="ai-progress-bar-fill" style="width: ' + decision.percentage + '%; background: ' + color + ';">';
+      html +=
+        '<div class="ai-progress-bar-fill" style="width: ' +
+        decision.percentage +
+        '%; background: ' +
+        color +
+        ';">';
       html += decision.percentage > 15 ? decision.percentage.toFixed(0) + '%' : '';
       html += '</div>';
       html += '</div>';
@@ -691,11 +696,11 @@ function generateChartData(
   const allSnapshots = [initialState, ...progressSnapshots];
 
   const data = {
-    labels: allSnapshots.map(s => 'Step ' + s.step),
-    incorrect: allSnapshots.map(s => s.categoryDistribution.incorrect),
-    still_learning: allSnapshots.map(s => s.categoryDistribution.still_learning),
-    mastered: allSnapshots.map(s => s.categoryDistribution.mastered),
-    new: allSnapshots.map(s => s.categoryDistribution.new),
+    labels: allSnapshots.map((s) => 'Step ' + s.step),
+    incorrect: allSnapshots.map((s) => s.categoryDistribution.incorrect),
+    still_learning: allSnapshots.map((s) => s.categoryDistribution.still_learning),
+    mastered: allSnapshots.map((s) => s.categoryDistribution.mastered),
+    new: allSnapshots.map((s) => s.categoryDistribution.new),
   };
 
   return JSON.stringify(data);
@@ -718,7 +723,19 @@ export function printProgressBar(
   const empty = '░'.repeat(emptyLength);
   const percentage = (progress * 100).toFixed(1);
 
-  console.log(label.padEnd(20) + ' [' + filled + empty + '] ' + percentage + '% (' + current + '/' + total + ')');
+  console.log(
+    label.padEnd(20) +
+      ' [' +
+      filled +
+      empty +
+      '] ' +
+      percentage +
+      '% (' +
+      current +
+      '/' +
+      total +
+      ')'
+  );
 }
 
 /**
@@ -730,37 +747,22 @@ export function displaySimulationProgress(snapshot: SimulationSnapshot, totalWor
   console.log('ステップ ' + snapshot.step + ' の進捗');
   console.log('='.repeat(60) + '\n');
 
-  printProgressBar(
-    'incorrect',
-    snapshot.categoryDistribution.incorrect,
-    totalWords
-  );
+  printProgressBar('incorrect', snapshot.categoryDistribution.incorrect, totalWords);
 
-  printProgressBar(
-    'still_learning',
-    snapshot.categoryDistribution.still_learning,
-    totalWords
-  );
+  printProgressBar('still_learning', snapshot.categoryDistribution.still_learning, totalWords);
 
-  printProgressBar(
-    'mastered',
-    snapshot.categoryDistribution.mastered,
-    totalWords
-  );
+  printProgressBar('mastered', snapshot.categoryDistribution.mastered, totalWords);
 
-  printProgressBar(
-    'new',
-    snapshot.categoryDistribution.new,
-    totalWords
-  );
+  printProgressBar('new', snapshot.categoryDistribution.new, totalWords);
 
   if (snapshot.detectedSignals.length > 0) {
     console.log('\n検出されたシグナル:');
     snapshot.detectedSignals.forEach((signal: any) => {
-      console.log('  🎯 ' + signal.type + ': ' + signal.action + ' (confidence: ' + signal.confidence + ')');
+      console.log(
+        '  🎯 ' + signal.type + ': ' + signal.action + ' (confidence: ' + signal.confidence + ')'
+      );
     });
   }
 
   console.log();
 }
-
