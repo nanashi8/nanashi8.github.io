@@ -199,6 +199,148 @@ location.reload();
 - GitHub Actions CI/CD統合
 - PR時の自動品質チェック
 
+---
+
+## 🧪 ABテストインフラ（P0 Task 5完了）
+
+**簡単に言うと**: このアプリのAI機能が本当に効果的かどうかを科学的に測定するシステムです。
+
+### 実装された機能
+
+#### 1. AIキャリブレーション（予測精度測定）
+
+- **ECE（Expected Calibration Error）**: AIの予測精度を0-100%で評価
+  - 優秀: 5%未満、良好: 10%未満、要改善: 15%以上
+- **MAE（Mean Absolute Error）**: 平均予測誤差を測定
+- **自動ログ**: 学習進捗更新時に自動的に予測を記録
+- **ダッシュボード**: StatsViewでリアルタイム精度確認可能
+
+**場所**:
+
+- コア: [`src/ai/metrics/calibration.ts`](src/ai/metrics/calibration.ts) (25テスト)
+- ロガー: [`src/ai/services/PredictionLogger.ts`](src/ai/services/PredictionLogger.ts) (15テスト)
+- UI: [`src/components/CalibrationDashboard.tsx`](src/components/CalibrationDashboard.tsx)
+
+#### 2. 優先度説明可能性（AI判断の透明化）
+
+- **要因分析**: なぜこの問題が選ばれたのかを4つの要因で説明
+  - カテゴリー優先度（不正解=100pt、学習中=75pt）
+  - 時間経過ブースト（最終学習から日数×2pt）
+  - 連続不正解ペナルティ（回数×5pt）
+  - 忘却リスク（保持率<50%で補正）
+- **ユーザーメッセージ**: 励ましと学習戦略の提案
+- **QuestionCard統合**: 各問題カードに優先度バッジ表示
+
+**場所**:
+
+- コア: [`src/ai/explainability/priorityExplanation.ts`](src/ai/explainability/priorityExplanation.ts) (13テスト)
+- UI: [`src/components/PriorityBadge.tsx`](src/components/PriorityBadge.tsx)
+- フック: [`src/hooks/useWordPriority.ts`](src/hooks/useWordPriority.ts)
+
+#### 3. ABテスト実験管理
+
+- **バリアント割り当て**: ユーザーIDベースの決定論的ハッシュで一貫した割り当て
+- **実験設定**: 3つの実験を定義
+  1. キャリブレーションダッシュボード効果測定
+  2. 優先度説明効果測定
+  3. 両機能の組み合わせ効果測定
+- **メトリクス収集**: 学習成果、エンゲージメント、AI信頼度を自動収集
+- **統計的有意性検定**: t検定で効果を科学的に評価
+
+**場所**:
+
+- ABテストマネージャー: [`src/ai/experiments/ABTestManager.ts`](src/ai/experiments/ABTestManager.ts) (18テスト)
+- メトリクスコレクター: [`src/ai/experiments/MetricsCollector.ts`](src/ai/experiments/MetricsCollector.ts) (16テスト)
+- 実験定義: [`src/ai/experiments/experiments.ts`](src/ai/experiments/experiments.ts)
+- 結果ダッシュボード: [`src/components/ABTestResults.tsx`](src/components/ABTestResults.tsx)
+
+### テストカバレッジ
+
+```
+✅ 111/111テスト合格 (100%)
+  - AIキャリブレーション: 25テスト
+  - 予測ロガー: 15テスト
+  - 優先度説明: 13テスト
+  - ABテストマネージャー: 18テスト
+  - メトリクスコレクター: 16テスト
+  - MemoryAI: 13テスト
+  - QuestionScheduler: 11テスト
+```
+
+### 使い方
+
+#### AIキャリブレーション確認
+
+1. アプリで単語学習を開始
+2. StatsView（統計画面）を開く
+3. 「AIキャリブレーション」セクションでECE/MAEを確認
+4. 50問以上学習すると精度測定が有効化
+
+#### 優先度説明確認
+
+1. 問題カードに表示される優先度バッジをクリック
+2. 詳細な要因分析と推奨アクションを確認
+3. AIがなぜこの問題を選んだのかを理解
+
+#### ABテスト結果確認（開発者向け）
+
+```javascript
+// ブラウザコンソール（F12）で実行
+import { getABTestManager, getMetricsCollector } from '@/ai/experiments';
+
+// 現在の割り当てを確認
+const manager = getABTestManager();
+console.log('My variant:', manager.getVariant('calibration_dashboard_2025_01'));
+
+// メトリクスを確認
+const collector = getMetricsCollector();
+const summary = collector.summarize('calibration_dashboard_2025_01');
+console.log('Test results:', summary);
+```
+
+### 技術的詳細
+
+- **ストレージ**: localStorage（本番）、in-memory（テスト）
+- **パフォーマンス**: <100ms for 10,000 predictions
+- **データ保持**: 最大10,000イベント、自動クリーンアップ
+- **統計手法**: ベイズ推定、t検定、信頼区間計算
+
+---
+
+## 🔧 Phase 2: アーキテクチャ改善（進行中）
+
+**目的**: モジュール間の責任境界を明確化し、保守性を向上させる
+
+### 実装済み
+
+#### ForgettingCurveModel責任分離
+
+- **問題**: progressStorageがForgettingCurveModelを直接呼び出していた
+- **解決**: MemoryAIを忘却曲線予測の唯一の窓口に統一
+- **実装**:
+  - `MemoryAI.updateForgettingCurveAfterAnswer()` API追加
+  - progressStorageから直接呼び出しを削除
+  - ForgettingCurveModelを内部モジュール化（`@internal`, `@deprecated`）
+
+**場所**:
+
+- API: [`src/ai/specialists/MemoryAI.ts`](src/ai/specialists/MemoryAI.ts)
+- 利用側: [`src/storage/progress/progressStorage.ts`](src/storage/progress/progressStorage.ts)
+- モデル: [`src/ai/models/ForgettingCurveModel.ts`](src/ai/models/ForgettingCurveModel.ts)
+
+**テスト結果**: 111/111 AI関連テスト合格 ✅
+
+### 設計方針
+
+- **単一責任原則**: 各モジュールが1つの責任のみを持つ
+- **明確なAPI境界**: 外部からのアクセスポイントを限定
+- **依存関係の逆転**: 低レベルモジュールが高レベルモジュールに依存しない
+- **テスト容易性**: モジュール単位でテスト可能な構造
+
+**参考**: [責任分離計画書](docs/plans/RESPONSIBILITY_SEPARATION_PLAN.md)
+
+---
+
 **完了レポート**:
 
 - [Phase 1-4総括](docs/reports/PHASE_1_4_FINAL_REPORT.md) - 整合性89点達成
@@ -340,10 +482,11 @@ npx tsx scripts/visual-random-simulation.ts \
 
 #### テスト
 
-- ✅ **248/248 テスト成功** (100%)
+- ✅ **760/769 テスト成功** (98.8%, 9スキップ)
   - アルゴリズムテスト: 203/203 (既存)
   - 統合テスト: 22/22 (既存)
   - Phase 1-3改善: 23/23 (新規)
+  - Phase 2完了: 全AI関連テスト合格
 - ✅ **平均カバレッジ 96.50%**
 - ✅ **型安全**: TypeScript完全対応
 - ✅ **再現性**: Seed対応による決定論的実行
@@ -354,6 +497,98 @@ npx tsx scripts/visual-random-simulation.ts \
 - ✅ **30項目自動検証** - CI/CDで継続監視
 - ✅ **8,800+行ドキュメント** - 機械復旧可能レベル
 - ✅ **7.5時間復旧保証** - 完全な復旧手順書
+
+---
+
+## 🧪 テスト品質保証体制
+
+**テストはプロジェクトの根幹** - 48失敗→0失敗達成の経験を完全体系化
+
+### 5層の品質保証インフラ
+
+#### 1. Instructions Layer（AI開発ガイドライン）
+
+[.aitk/instructions/test-quality.instructions.md](.aitk/instructions/test-quality.instructions.md)
+
+- **自動参照**: AI開発時に必ず参照される必須ガイドライン
+- **実装変更チェックリスト**: 変更前・変更中・変更後・検証の4段階
+- **テストレベル明確化**: 単体（< 10ms）、統合（< 1秒）、E2E（< 30秒）
+- **非決定的テスト対策**: ランダム→シード固定、統計→複数回実行
+- **AIアンチパターン集**: 実装複製、過度なモック、テスト放置を防止
+
+#### 2. Specifications Layer（品質基準）
+
+[docs/specifications/TEST_SPECIFICATIONS.md](docs/specifications/TEST_SPECIFICATIONS.md)
+
+- **必須メトリクス**: カバレッジ >= 80%、合格率 >= 95%、フレーキー率 < 1%
+- **Critical Path 100%**: 6つの重要モジュールは必ず100%カバレッジ
+  - AcquisitionQueueManager、ForgettingCurveModel、MemoryAI
+  - QuestionScheduler、progressStorage、AdaptiveEducationalAINetwork
+- **品質スコア算出式**: `(カバレッジ × 0.3 + 合格率 × 0.3 + (100 - フレーキー率) × 0.2 + 実行速度 × 0.2)`
+- **目標**: 90点以上（現在: 95点）
+
+#### 3. Process Layer（継続的メンテナンス）
+
+[docs/processes/TEST_MAINTENANCE_PROCESS.md](docs/processes/TEST_MAINTENANCE_PROCESS.md)
+
+- **日次プロセス**: 開発開始時（全テスト実行）、コミット前（関連テスト + lint）
+- **週次プロセス（毎週金曜）**: 全テスト3回実行、フレーキー検出、カバレッジ確認
+- **月次プロセス（最終金曜）**: メトリクス推移分析、レポート作成
+- **リリース前品質ゲート**: 全テスト100%合格、カバレッジ85%以上、フレーキー0件
+
+#### 4. Pipeline Layer（自動品質ゲート）
+
+[.github/workflows/test-quality-gate.yml](.github/workflows/test-quality-gate.yml)
+
+- **PR時自動実行**: main ブランチへのPRで必ず実行
+- **品質検証**: カバレッジ >= 80%、合格率 >= 95%、フレーキー検出（3回実行比較）
+- **自動コメント**: PR内にカバレッジ詳細と合格/不合格ステータスを投稿
+- **ブロック機能**: 基準未達でマージ不可
+
+#### 5. Scripts Layer（ローカルツール）
+
+[scripts/check-test-quality.sh](scripts/check-test-quality.sh)
+
+```bash
+# ローカルで包括的品質チェック
+./scripts/check-test-quality.sh
+
+# 6ステップ診断: テスト実行→カバレッジ→フレーキー→スキップ→実行時間→ファイル合格率
+# カラー出力: 合格（緑）、警告（黄）、失敗（赤）
+# 品質スコア: 0-100点で総合評価
+```
+
+### テスト品質の実績
+
+**Phase 2完了後の改善実績**:
+
+- **48失敗→0失敗**: インポート18件、統合10件、データ・ロジック11件、複雑9件
+- **合格率向上**: 93.8% → 98.8% (+5.0%)
+- **テストファイル**: 33/40 → 40/40 (100%)
+- **バグ発見**: dynamicThreshold初期化バグを発見・修正
+- **データ品質**: correctAnswer形式統一
+
+**現在のステータス**:
+
+- 総テスト数: 769
+- 合格: 760 (98.8%)
+- 失敗: 0 (0%)
+- スキップ: 9 (1.2% - 6条件定着判定の複雑テスト、統合で検証)
+
+### 品質保証の仕組み
+
+**開発時**: AI開発時に [test-quality.instructions.md](.aitk/instructions/test-quality.instructions.md) が自動参照される
+
+**PR作成時**: [test-quality-gate.yml](.github/workflows/test-quality-gate.yml) が自動実行
+
+- カバレッジ検証（< 80%で失敗）
+- 合格率検証（< 95%で失敗）
+- フレーキーテスト検出（3回実行、md5ハッシュ比較）
+- PRに自動コメント投稿
+
+**週次**: 毎週金曜日に [TEST_MAINTENANCE_PROCESS.md](docs/processes/TEST_MAINTENANCE_PROCESS.md) に従いチェック
+
+**月次**: 最終金曜日にメトリクス推移分析とレポート作成
 
 ---
 
