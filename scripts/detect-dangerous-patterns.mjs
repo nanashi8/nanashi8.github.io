@@ -111,27 +111,37 @@ function calculateRiskScore(file, db) {
   // 1. ホットスポットチェック（最大40点）
   const hotspot = isHotspot(file, db.hotspots || []);
   if (hotspot) {
-    const hotspotScore = Math.min(40, hotspot.count * 2);
+    const hotspotScore = Math.min(40, hotspot.modificationCount * 2);
     score += hotspotScore;
-    reasons.push(`ホットスポット（${hotspot.count}回修正）: +${hotspotScore}点`);
+    reasons.push(`ホットスポット（${hotspot.modificationCount}回修正）: +${hotspotScore}点`);
     
-    if (hotspot.count > 20) {
+    if (hotspot.modificationCount > 20) {
       warnings.push({
         level: 'critical',
-        message: `このファイルは過去${hotspot.count}回修正されています（超高リスク）`,
+        message: `🔥 このファイルは過去${hotspot.modificationCount}回修正されています（超高リスク）`,
         recommendation: [
-          '変更前に必ずテストを実行',
-          '小さな変更に分割することを推奨',
-          'レビュー必須'
+          '⚠️  変更前に必ずテストを実行してください',
+          '📝 小さな変更に分割することを強く推奨',
+          '👀 レビュー必須',
+          '🧪 テストコマンド: npm run type-check && npm run test:unit'
         ]
       });
-    } else if (hotspot.count > 10) {
+    } else if (hotspot.modificationCount > 10) {
       warnings.push({
         level: 'high',
-        message: `このファイルは過去${hotspot.count}回修正されています（高リスク）`,
+        message: `⚠️  このファイルは過去${hotspot.modificationCount}回修正されています（高リスク）`,
         recommendation: [
-          '慎重に変更してください',
-          'テスト実行を推奨'
+          '🧪 慎重に変更してください',
+          '✅ 変更後のテスト実行を推奨',
+          '📋 テストコマンド: npm run type-check'
+        ]
+      });
+    } else if (hotspot.modificationCount > 5) {
+      warnings.push({
+        level: 'medium',
+        message: `📋 このファイルは過去${hotspot.modificationCount}回修正されています（中リスク）`,
+        recommendation: [
+          '✅ 変更後の動作確認を推奨'
         ]
       });
     }
