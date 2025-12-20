@@ -1,0 +1,270 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-12-20",
+  "metadata": {
+    "totalFailures": 3,
+    "totalRecoveries": 3,
+    "learningRate": 0.1,
+    "convergenceThreshold": 0.95,
+    "lastUpdated": "2025-12-20",
+    "gitHistoryLearned": true,
+    "gitHistoryLearnedAt": "2025-12-20T11:05:05.056Z"
+  },
+  "failurePatterns": {
+    "property-naming-error": {
+      "id": "property-naming-error",
+      "category": "type-error",
+      "severity": "critical",
+      "occurrences": 4,
+      "lastOccurred": "2025-12-20",
+      "recoveries": 1,
+      "weight": 1,
+      "description": "型定義を確認せずにプロパティ名を推測",
+      "detectionPattern": {
+        "errorMessage": "Property .* does not exist on type",
+        "files": ["src/**/*.ts", "src/**/*.tsx"]
+      },
+      "prevention": {
+        "checkType": "static-analysis",
+        "command": "npm run type-check",
+        "instructionsFile": ".aitk/instructions/property-naming-convention.instructions.md",
+        "autoFixable": false
+      },
+      "examples": [
+        {
+          "date": "2025-12-20",
+          "error": "Property 'correctCount' does not exist on type 'WordProgress'",
+          "fix": "Use 'memorizationCorrect' instead",
+          "testsFailed": 24
+        },
+        {
+          "date": "2025-12-20",
+          "error": "        } else if (wordProgress.incorrectCount && wordProgress.incorrectCount",
+          "fix": "      if (wordProgress?.memorizationAttempts && wordProgress.memorizationAttempts",
+          "testsFailed": 0,
+          "source": "git-history"
+        },
+        {
+          "date": "2025-12-20",
+          "error": "    if (ctx.attemptCount",
+          "fix": " (wordProgress.spellingAttempts || 0) + (wordProgress.grammarAttempts || 0) + (wordProgress.memorizationAttempts",
+          "testsFailed": 0,
+          "source": "git-history"
+        },
+        {
+          "date": "2025-12-20",
+          "error": "      wordStat.correctCount",
+          "fix": "      const transCorrect = wordStat.translationCorrect",
+          "testsFailed": 0,
+          "source": "git-history"
+        }
+      ],
+      "learningMetrics": {
+        "successRate": 0.5,
+        "averageRecoveryTime": "30min",
+        "preventionEffectiveness": 1
+      }
+    },
+    "refactoring-logic-change": {
+      "id": "refactoring-logic-change",
+      "category": "logic-error",
+      "severity": "high",
+      "occurrences": 0,
+      "lastOccurred": null,
+      "recoveries": 0,
+      "weight": 0.8,
+      "description": "リファクタリング時に元のロジックを変更",
+      "detectionPattern": {
+        "errorMessage": "Test failed.*expected.*received",
+        "files": ["src/**/*.ts"]
+      },
+      "prevention": {
+        "checkType": "test",
+        "command": "npm run test:unit",
+        "instructionsFile": ".aitk/instructions/refactoring-safety-guide.instructions.md",
+        "autoFixable": false
+      },
+      "examples": [],
+      "learningMetrics": {
+        "successRate": 1,
+        "averageRecoveryTime": null,
+        "preventionEffectiveness": 0.8
+      }
+    },
+    "logic-error": {
+      "id": "logic-error",
+      "category": "unknown",
+      "severity": "medium",
+      "occurrences": 248,
+      "lastOccurred": "2025-12-20",
+      "recoveries": 1,
+      "weight": 1,
+      "description": "perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善",
+      "detectionPattern": {
+        "errorMessage": "perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善",
+        "files": ["src/components/GrammarQuizView.tsx"]
+      },
+      "prevention": {
+        "checkType": "manual",
+        "command": null,
+        "instructionsFile": null,
+        "autoFixable": false
+      },
+      "examples": [],
+      "learningMetrics": {
+        "successRate": 1,
+        "averageRecoveryTime": null,
+        "preventionEffectiveness": 0.5
+      }
+    },
+    "type-error": {
+      "id": "type-error",
+      "category": "unknown",
+      "severity": "medium",
+      "occurrences": 23,
+      "lastOccurred": "2025-12-20",
+      "recoveries": 1,
+      "weight": 1,
+      "description": "fix: TypeScriptエラー修正(TimeBasedStats, NetworkConfig, Question型)",
+      "detectionPattern": {
+        "errorMessage": "fix: TypeScriptエラー修正(TimeBasedStats, NetworkConfig, Question型)",
+        "files": [
+          "src/ai/nodes/TimeBasedPriorityAI.ts",
+          "src/utils/questionPrioritySorter.ts",
+          "tests/unit/learningAI.test.ts"
+        ]
+      },
+      "prevention": {
+        "checkType": "manual",
+        "command": null,
+        "instructionsFile": null,
+        "autoFixable": false
+      },
+      "examples": [],
+      "learningMetrics": {
+        "successRate": 1,
+        "averageRecoveryTime": null,
+        "preventionEffectiveness": 0.5
+      }
+    },
+    "test-error": {
+      "id": "test-error",
+      "category": "unknown",
+      "severity": "medium",
+      "occurrences": 18,
+      "lastOccurred": "2025-12-20",
+      "recoveries": 1,
+      "weight": 1,
+      "description": "test: カバレッジ目標達成 - 94.74%",
+      "detectionPattern": {
+        "errorMessage": "test: カバレッジ目標達成 - 94.74%",
+        "files": ["tests/unit/useAdaptiveLearning.test.ts"]
+      },
+      "prevention": {
+        "checkType": "manual",
+        "command": null,
+        "instructionsFile": null,
+        "autoFixable": false
+      },
+      "examples": [],
+      "learningMetrics": {
+        "successRate": 1,
+        "averageRecoveryTime": null,
+        "preventionEffectiveness": 0.5
+      }
+    }
+  },
+  "guardRules": {
+    "pre-commit": {
+      "enabled": true,
+      "checks": [
+        "type-check",
+        "lint",
+        "dark-mode-check",
+        "specification-compliance"
+      ],
+      "weight": 1
+    },
+    "ci-cd": {
+      "enabled": true,
+      "checks": [
+        "property-naming",
+        "logic-duplication",
+        "unit-tests",
+        "integration-tests"
+      ],
+      "weight": 0.9
+    },
+    "instructions": {
+      "enabled": true,
+      "priority": "critical",
+      "weight": 0.7
+    }
+  },
+  "convergenceMetrics": {
+    "currentSuccessRate": 0.5,
+    "targetSuccessRate": 0.95,
+    "convergenceProgress": 0.526,
+    "estimatedConvergenceDate": "2026-01-20",
+    "recentFailures": [
+      {
+        "date": "2025-12-20",
+        "patternId": "property-naming-error",
+        "recovered": true,
+        "recoveryTime": 30
+      }
+    ]
+  },
+  "hotspots": [
+    {
+      "file": "src/App.tsx",
+      "modificationCount": 92,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/ScoreBoard.tsx",
+      "modificationCount": 90,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/GrammarQuizView.tsx",
+      "modificationCount": 83,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/SpellingView.tsx",
+      "modificationCount": 75,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/ComprehensiveReadingView.tsx",
+      "modificationCount": 73,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/MemorizationView.tsx",
+      "modificationCount": 67,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/QuizView.tsx",
+      "modificationCount": 56,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/progressStorage.ts",
+      "modificationCount": 40,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/QuestionCard.tsx",
+      "modificationCount": 39,
+      "riskLevel": "high"
+    },
+    {
+      "file": "src/components/StatsView.tsx",
+      "modificationCount": 30,
+      "riskLevel": "high"
+    }
+  ]
+}

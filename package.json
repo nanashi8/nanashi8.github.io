@@ -54,7 +54,18 @@
     "size": "size-limit",
     "size:why": "size-limit --why",
     "lighthouse": "lhci autorun",
-    "prepare": "husky"
+    "prepare": "husky",
+    "guard:record": "node scripts/analyze-failure-pattern.mjs record",
+    "guard:recover": "node scripts/analyze-failure-pattern.mjs recover",
+    "guard:report": "node scripts/analyze-failure-pattern.mjs report",
+    "guard:analyze": "node scripts/analyze-failure-pattern.mjs analyze",
+    "guard:learn-history": "node scripts/learn-from-git-history.mjs",
+    "guard:check-risk": "node scripts/detect-dangerous-patterns.mjs",
+    "update-instructions": "node scripts/update-instructions.mjs all",
+    "update-specifications": "node scripts/update-specifications.mjs",
+    "update-pipelines": "node scripts/update-pipelines.mjs",
+    "update-all-docs": "npm run update-instructions && npm run update-specifications && npm run update-pipelines",
+    "type-check": "tsc --noEmit"
   },
   "size-limit": [
     {
