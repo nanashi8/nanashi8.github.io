@@ -222,7 +222,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   });
 
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
-  const [_loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const [currentQuestions, setCurrentQuestions] = useState<GrammarQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -292,7 +292,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const handleStartQuiz = useCallback(async () => {
     // 🚨 パフォーマンス改善: 既に問題がロード済みの場合はスキップ
     if (loading) {
-      console.log('[GrammarQuizView] Already loading, skip duplicate call');
+      if (import.meta.env.DEV) {
+        console.log('[GrammarQuizView] Already loading, skip duplicate call');
+      }
       return;
     }
 

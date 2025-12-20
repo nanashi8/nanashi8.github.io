@@ -586,7 +586,7 @@ describe('customQuestionStorage', () => {
       expect(stats.totalWords).toBe(3);
       expect(stats.sources).toEqual({
         manual: 1,
-        quiz: 1,
+        reading: 1,
         memorization: 1,
       });
       expect(stats.hasIPA).toBe(0);

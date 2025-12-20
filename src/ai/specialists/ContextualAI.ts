@@ -8,11 +8,7 @@
  * - トピック継続性の評価
  */
 
-import type {
-  SpecialistAI,
-  ContextualSignal,
-  AIAnalysisInput,
-} from '../types';
+import type { SpecialistAI, ContextualSignal, AIAnalysisInput } from '../types';
 
 export class ContextualAI implements SpecialistAI<ContextualSignal> {
   readonly id = 'contextual';
@@ -88,9 +84,10 @@ export class ContextualAI implements SpecialistAI<ContextualSignal> {
     let fit = 0.5;
 
     const sessionMinutes = sessionStats.sessionDuration / (1000 * 60);
-    const correctRate = sessionStats.totalAttempts > 0
-      ? sessionStats.correctAnswers / sessionStats.totalAttempts
-      : 0.5;
+    const correctRate =
+      sessionStats.totalAttempts > 0
+        ? sessionStats.correctAnswers / sessionStats.totalAttempts
+        : 0.5;
 
     // 時間帯による調整（実際にはブラウザのDate APIで判定）
     const hour = new Date().getHours();

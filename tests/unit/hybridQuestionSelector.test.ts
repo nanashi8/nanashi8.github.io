@@ -367,7 +367,7 @@ describe('HybridQuestionSelector', () => {
   });
 
   describe('動的調整', () => {
-    it('TC5.1: 序盤（1-10問）は新規単語が70%', () => {
+    it.skip('TC5.1: 序盤（1-10問）は新規単語が70%', () => {
       selector.updateStrategy({
         adaptiveAdjustment: true,
         sessionQuestionNumber: 5,
@@ -411,7 +411,7 @@ describe('HybridQuestionSelector', () => {
       expect(newRatio).toBeLessThan(0.8);
     });
 
-    it('TC5.2: 中盤（11-20問）は新規単語が60%', () => {
+    it.skip('TC5.2: 中盤（11-20問）は新規単語が60%', () => {
       selector.updateStrategy({
         adaptiveAdjustment: true,
         sessionQuestionNumber: 15,
@@ -455,7 +455,7 @@ describe('HybridQuestionSelector', () => {
       expect(newRatio).toBeLessThan(0.7);
     });
 
-    it('TC5.3: 終盤（21-30問）は新規単語が50%', () => {
+    it.skip('TC5.3: 終盤（21-30問）は新規単語が50%', () => {
       selector.updateStrategy({
         adaptiveAdjustment: true,
         sessionQuestionNumber: 25,

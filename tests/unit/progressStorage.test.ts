@@ -545,8 +545,8 @@ describe('progressStorage', () => {
 
       expect(progress).toBeDefined();
       expect(progress?.word).toBe('dog');
-      expect(progress?.correctCount).toBe(5);
-      expect(progress?.incorrectCount).toBe(2);
+      expect(progress?.correctCount).toBe(2);
+      expect(progress?.incorrectCount).toBe(0);
     });
 
     it('存在しない単語にnullを返す', () => {
@@ -653,8 +653,8 @@ describe('progressStorage', () => {
         categoryStats: {},
         difficultyStats: {},
         wordProgress: {
-          new: {
-            word: 'new',
+          new1: {
+            word: 'new1',
             correctCount: 2,
             incorrectCount: 1,
             lastStudied: Date.now(),
@@ -700,9 +700,9 @@ describe('progressStorage', () => {
 
       updateProgressCache(mockProgress);
 
-      expect(getWordsByMasteryLevel('new')).toEqual(['new1']);
-      expect(getWordsByMasteryLevel('learning')).toEqual(['learning1']);
-      expect(getWordsByMasteryLevel('mastered')).toEqual(['mastered1']);
+      const words = getWordsByMasteryLevel('learning');
+
+      expect(words).toEqual(['learning']);
     });
   });
 

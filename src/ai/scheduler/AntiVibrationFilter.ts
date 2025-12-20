@@ -26,7 +26,7 @@ export class AntiVibrationFilter {
     const now = Date.now();
     let appliedCount = 0;
 
-    const filtered = questions.map(pq => {
+    const filtered = questions.map((pq) => {
       const recentAnswer = this.findRecentAnswer(pq.question.word, options.recentAnswers);
 
       if (!recentAnswer) {
@@ -37,8 +37,19 @@ export class AntiVibrationFilter {
       let penaltyApplied = false;
       let newPriority = pq.priority;
 
+      // 戦略0: 超短時間（30秒以内）の即座再出題を完全防止（最優先）
+      if (timeSinceAnswer < 30000) {
+        // 30秒以内に回答した問題は即座に最後尾に（優先度+100.0）
+        newPriority += 100.0;
+        penaltyApplied = true;
+
+        logger.debug(`[AntiVibration] 即座再出題防止: ${pq.question.word}`, {
+          timeSinceAnswer: Math.round(timeSinceAnswer / 1000) + 's',
+          penalty: 100.0,
+        });
+      }
       // 戦略1: 短時間内の再出題ペナルティ
-      if (timeSinceAnswer < options.minInterval && recentAnswer.correct) {
+      else if (timeSinceAnswer < options.minInterval && recentAnswer.correct) {
         // 1分以内に正解した問題は大幅に後回し（優先度+5.0）
         newPriority += 5.0;
         penaltyApplied = true;
@@ -97,7 +108,7 @@ export class AntiVibrationFilter {
    * @returns 該当する解答履歴（なければnull）
    */
   private findRecentAnswer(word: string, recentAnswers: RecentAnswer[]): RecentAnswer | null {
-    return recentAnswers.find(a => a.word === word) || null;
+    return recentAnswers.find((a) => a.word === word) || null;
   }
 
   /**
@@ -125,7 +136,7 @@ export class AntiVibrationFilter {
 
     const topQuestions = questions.slice(0, Math.min(topN, questions.length));
 
-    topQuestions.forEach(pq => {
+    topQuestions.forEach((pq) => {
       const recentAnswer = this.findRecentAnswer(pq.question.word, recentAnswers);
       if (!recentAnswer) return;
 
@@ -152,7 +163,7 @@ export class AntiVibrationFilter {
 
     if (finalScore > 50) {
       logger.warn(`[AntiVibration] 高い振動スコア検出: ${finalScore}`, {
-        topQuestions: topQuestions.slice(0, 5).map(pq => pq.question.word),
+        topQuestions: topQuestions.slice(0, 5).map((pq) => pq.question.word),
       });
     }
 
@@ -166,7 +177,7 @@ export class AntiVibrationFilter {
    * @returns sessionPriorityを持つ問題
    */
   extractSessionPriorityQuestions(questions: PrioritizedQuestion[]): PrioritizedQuestion[] {
-    return questions.filter(pq => pq.question.sessionPriority !== undefined);
+    return questions.filter((pq) => pq.question.sessionPriority !== undefined);
   }
 
   /**
@@ -176,6 +187,6 @@ export class AntiVibrationFilter {
    * @returns sessionPriorityを持たない問題
    */
   extractNormalQuestions(questions: PrioritizedQuestion[]): PrioritizedQuestion[] {
-    return questions.filter(pq => pq.question.sessionPriority === undefined);
+    return questions.filter((pq) => pq.question.sessionPriority === undefined);
   }
 }

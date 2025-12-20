@@ -11,6 +11,7 @@ import {
   DEFAULT_NETWORK_CONFIG,
   StrategyRecommendation,
   QuestionContext,
+  StrategyType,
 } from './types';
 import { SignalDetector } from './SignalDetector';
 import { StrategyExecutor } from './StrategyExecutor';
@@ -175,7 +176,7 @@ export class AdaptiveEducationalAINetwork {
 
       // フォールバック
       return {
-        strategy: 'CONTINUE_NORMAL' as any,
+        strategy: StrategyType.CONTINUE_NORMAL,
         confidence: 0,
         reason: 'AI処理が一時的に利用できないため、通常学習を続けます',
         signals: [],
@@ -350,7 +351,7 @@ export class AdaptiveEducationalAINetwork {
    */
   private getDefaultRecommendation(): StrategyRecommendation {
     return {
-      strategy: 'CONTINUE_NORMAL' as any,
+      strategy: StrategyType.CONTINUE_NORMAL,
       confidence: 0.5,
       reason: '通常の学習を続けます',
       signals: [],

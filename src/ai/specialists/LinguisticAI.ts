@@ -8,11 +8,7 @@
  * - 文法複雑度の判定
  */
 
-import type {
-  SpecialistAI,
-  LinguisticSignal,
-  AIAnalysisInput,
-} from '../types';
+import type { SpecialistAI, LinguisticSignal, AIAnalysisInput } from '../types';
 
 export class LinguisticAI implements SpecialistAI<LinguisticSignal> {
   readonly id = 'linguistic';
@@ -99,10 +95,7 @@ export class LinguisticAI implements SpecialistAI<LinguisticSignal> {
   /**
    * 意味的クラスターの検索
    */
-  private findSemanticCluster(
-    word: string,
-    allProgress: Record<string, WordProgress>
-  ): string[] {
+  private findSemanticCluster(word: string, allProgress: Record<string, WordProgress>): string[] {
     // 実際には語義データベース（WordNet等）を使用すべき
     // ここでは語根の共通性で簡易判定
 
@@ -145,8 +138,21 @@ export class LinguisticAI implements SpecialistAI<LinguisticSignal> {
 
     // 不規則動詞の判定（簡易版）
     const irregularVerbs = [
-      'be', 'have', 'do', 'go', 'take', 'get', 'make', 'know',
-      'think', 'see', 'come', 'want', 'use', 'find', 'give',
+      'be',
+      'have',
+      'do',
+      'go',
+      'take',
+      'get',
+      'make',
+      'know',
+      'think',
+      'see',
+      'come',
+      'want',
+      'use',
+      'find',
+      'give',
     ];
 
     if (irregularVerbs.some((v) => word.includes(v))) {

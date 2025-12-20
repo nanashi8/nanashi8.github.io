@@ -216,7 +216,7 @@ export class AcquisitionQueueManager {
         currentQueue: null,
         queuedAt: 0,
         todayReviews: [],
-        dynamicThreshold: 5,
+        dynamicThreshold: config.consolidationThreshold,
         consecutiveCorrectStreak: 0,
         totalAttempts: 0,
         correctRate: 0,
@@ -837,7 +837,9 @@ export class AcquisitionQueueManager {
       // 警告レベルを下げてコンソールの乱雑さを防ぐ
       if (queue.length % 50 === 0) {
         // 50件ごとに1回だけログ出力
-        console.info(`[MemoryAI] キュー管理: ${maxSize}語制限に達しました（古いエントリを自動削除）`);
+        console.info(
+          `[MemoryAI] キュー管理: ${maxSize}語制限に達しました（古いエントリを自動削除）`
+        );
       }
       queue.shift();
     }

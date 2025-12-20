@@ -33,10 +33,12 @@ import type {
   ForgettingRiskParams,
   DetectedSignal,
 } from './types';
+import type { WordProgress } from '@/storage/progress/types';
 import { AntiVibrationFilter } from './AntiVibrationFilter';
 import { logger } from '@/utils/logger';
 import { AICoordinator } from '../AICoordinator';
 import type { AIAnalysisInput, SessionStats as AISessionStats } from '../types';
+import { determineWordCategory } from '../utils/categoryDetermination';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;
@@ -78,7 +80,9 @@ export class QuestionScheduler {
       firstQuestions: params.questions.slice(0, 10).map((q) => q.word),
     };
 
-    console.log('🔥🔥🔥 [QuestionScheduler] スケジューリング開始', debugInfo);
+    if (import.meta.env.DEV) {
+      console.log('🔥🔥🔥 [QuestionScheduler] スケジューリング開始', debugInfo);
+    }
 
     // localStorage に保存（デバッグ用）
     try {
@@ -321,6 +325,7 @@ export class QuestionScheduler {
 
   /**
    * 優先度計算（DTA統合）
+   * ⚡ パフォーマンス最適化: localStorageを1回だけ読み込む
    */
   private calculatePriorities(
     questions: Question[],
@@ -328,8 +333,11 @@ export class QuestionScheduler {
     signals: any[],
     hybridMode = false
   ): PrioritizedQuestion[] {
+    // ⚡ 最適化: localStorage を一度だけ読み込んでキャッシュ
+    const progressCache = this.loadProgressCache();
+
     return questions.map((q, index) => {
-      const status = this.getWordStatus(q.word, context.mode);
+      const status = this.getWordStatusFromCache(q.word, context.mode, progressCache);
 
       // ハイブリッドモード: 元の順序を保持（indexベース）
       if (hybridMode) {
@@ -376,7 +384,8 @@ export class QuestionScheduler {
       priority = this.applyTimeBoost(priority, status);
 
       // 🤖 AI統合: AICoordinatorによる優先度調整（オプトイン）
-      if (this.useAICoordinator && this.aiCoordinator && index < 100) {
+      // ⚡ パフォーマンス最適化: 最初の20単語のみAI処理
+      if (this.useAICoordinator && this.aiCoordinator && index < 20) {
         try {
           const aiInput: AIAnalysisInput = {
             word: q.word,
@@ -408,7 +417,7 @@ export class QuestionScheduler {
       }
 
       // 💤 認知負荷AI領域: 優先度計算プロセスを可視化
-      if (index < 20) {
+      if (import.meta.env.DEV && index < 20) {
         const minutesSinceLastStudy = status?.lastStudied
           ? Math.round((Date.now() - status.lastStudied) / 60000)
           : 0;
@@ -558,7 +567,65 @@ export class QuestionScheduler {
   }
 
   /**
-   * 語句の学習状況を取得
+   * ⚡ localStorage からプログレスデータを1回だけ読み込む
+   */
+  private loadProgressCache(): any {
+    const key = 'english-progress';
+    const stored = localStorage.getItem(key);
+    if (!stored) return null;
+
+    try {
+      return JSON.parse(stored);
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * ⚡ キャッシュされたデータから語句の学習状況を取得
+   */
+  private getWordStatusFromCache(word: string, _mode: string, progressCache: any): WordStatus | null {
+    if (!progressCache || !progressCache.wordProgress) return null;
+
+    const wordProgress = progressCache.wordProgress[word];
+    if (!wordProgress) return null;
+
+    // カテゴリーを取得または推測
+    let category = wordProgress.category;
+
+    // 既存データにcategoryがない場合は推測
+    if (!category) {
+      const totalAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0);
+      const consecutiveCorrect = wordProgress.consecutiveCorrect || 0;
+      const consecutiveIncorrect = wordProgress.consecutiveIncorrect || 0;
+      const accuracy = totalAttempts > 0 ? (wordProgress.correctCount || 0) / totalAttempts : 0;
+
+      if (totalAttempts === 0) {
+        category = 'new';
+      } else if (
+        (accuracy >= 0.8 && consecutiveCorrect >= 3) ||
+        (accuracy >= 0.7 && totalAttempts >= 5)
+      ) {
+        category = 'mastered';
+      } else if (accuracy < 0.3 || consecutiveIncorrect >= 2) {
+        category = 'incorrect';
+      } else {
+        category = 'still_learning';
+      }
+    }
+
+    return {
+      category,
+      correct: wordProgress.correctCount || 0,
+      incorrect: wordProgress.incorrectCount || 0,
+      attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0),
+      lastStudied: wordProgress.lastStudied || 0,
+      reviewInterval: 1,
+    };
+  }
+
+  /**
+   * 語句の学習状況を取得（旧メソッド - 互換性のため残す）
    */
   private getWordStatus(word: string, _mode: string): WordStatus | null {
     const key = 'english-progress';
@@ -574,9 +641,11 @@ export class QuestionScheduler {
       let category = wordProgress.category;
 
       // ✅ デバッグ: localStorageから読み取ったカテゴリー
-      console.log(
-        `🔍 [QuestionScheduler] ${word}: localStorage.category = ${category || '未設定'}`
-      );
+      if (import.meta.env.DEV) {
+        console.log(
+          `🔍 [QuestionScheduler] ${word}: localStorage.category = ${category || '未設定'}`
+        );
+      }
 
       // 既存データにcategoryがない場合は推測
       // 🧠 記憶AI領域: progressStorage.tsと統一したカテゴリー判定
@@ -605,12 +674,14 @@ export class QuestionScheduler {
           category = 'still_learning';
         }
 
-        console.log(`🧠 [MemoryAI] ${word}: カテゴリー判定 → ${category}`, {
-          totalAttempts,
-          accuracy: (accuracy * 100).toFixed(0) + '%',
+        if (import.meta.env.DEV) {
+          console.log(`🧠 [MemoryAI] ${word}: カテゴリー判定 → ${category}`, {
+            totalAttempts,
+            accuracy: (accuracy * 100).toFixed(0) + '%',
           consecutiveCorrect,
           consecutiveIncorrect,
         });
+        }
       }
 
       // ✅ 【保存済み優先度を使用】解答直後に計算された優先度を取得
@@ -634,10 +705,12 @@ export class QuestionScheduler {
 
         calculatedPriority = (basePriority[category || 'new'] || 50) + timeBoost;
 
-        console.log(
-          `⚠️ [Priority Fallback] ${word}: 優先度を計算 (${calculatedPriority.toFixed(1)}, accuracy=${(accuracy * 100).toFixed(0)}%)`
-        );
-      } else {
+        if (import.meta.env.DEV) {
+          console.log(
+            `⚠️ [Priority Fallback] ${word}: 優先度を計算 (${calculatedPriority.toFixed(1)}, accuracy=${(accuracy * 100).toFixed(0)}%)`
+          );
+        }
+      } else if (import.meta.env.DEV) {
         console.log(
           `✅ [Priority Loaded] ${word}: 保存済み優先度を使用 (${calculatedPriority.toFixed(1)})`
         );
@@ -708,7 +781,8 @@ export class QuestionScheduler {
       {} as Record<string, number>
     );
 
-    console.log('📊📊📊 [QuestionScheduler] カテゴリ統計', {
+    if (import.meta.env.DEV) {
+      console.log('📊📊📊 [QuestionScheduler] カテゴリ統計', {
       total: questions.length,
       categories: categoryStats,
       incorrectSample: incorrectQuestions.slice(0, 3).map((pq) => pq.question.word),
@@ -718,6 +792,7 @@ export class QuestionScheduler {
         .slice(0, 5)
         .map((pq) => pq.question.word),
     });
+    }
 
     // 🚨 警告: すべての単語がnullカテゴリーの場合、学習履歴が読み取れていない
     if (categoryStats['null'] === questions.length) {
@@ -780,7 +855,8 @@ export class QuestionScheduler {
     }
 
     // デバッグログ
-    console.log('✅✅✅ [QuestionScheduler] 優先単語配置完了', {
+    if (import.meta.env.DEV) {
+      console.log('✅✅✅ [QuestionScheduler] 優先単語配置完了', {
       incorrectCount: incorrectQuestions.length,
       stillLearningCount: stillLearningQuestions.length,
       otherCount: otherQuestions.length,
@@ -795,6 +871,7 @@ export class QuestionScheduler {
           ? `${((reviewNeeded / Math.min(top20PercentCount, totalQuestions)) * 100).toFixed(0)}%`
           : 'N/A',
     });
+    }
 
     return sorted;
   }
@@ -924,5 +1001,59 @@ export class QuestionScheduler {
       incorrectCount: stats.incorrectCount || 0,
       newCount: stats.newCount || 0,
     };
+  }
+
+  /**
+   * 解答後の優先度再計算（Phase 1.2: progressStorageから移動）
+   *
+   * @param progress - 単語の進捗情報
+   * @returns 計算された優先度
+   *
+   * 優先度計算式:
+   * priority = basePriority(category) + timeBoost(daysSinceLastStudy)
+   *
+   * - basePriority: incorrect=100, still_learning=75, new=50, mastered=10
+   * - timeBoost: min(daysSinceLastStudy * 2, 20) ※最大+20
+   *
+   * WordProgressに以下のフィールドを更新:
+   * - calculatedPriority: 計算された優先度
+   * - lastPriorityUpdate: 優先度更新時刻
+   * - accuracyRate: 正答率
+   */
+  public recalculatePriorityAfterAnswer(progress: WordProgress): number {
+    // カテゴリーを動的に判定
+    const category = this.determineCategory(progress);
+
+    // カテゴリー別のベース優先度
+    const basePriority: Record<string, number> = {
+      incorrect: 100, // 要復習: 最優先
+      still_learning: 75, // 学習中: 高優先度
+      new: 50, // 未学習: 中優先度
+      mastered: 10, // 定着済: 低優先度
+    };
+
+    // 時間経過によるブースト（最終学習から時間が経つほど優先度上昇）
+    const daysSinceLastStudy = (Date.now() - (progress.lastStudied || Date.now())) / (1000 * 60 * 60 * 24);
+    const timeBoost = Math.min(daysSinceLastStudy * 2, 20); // 最大+20
+
+    // 最終優先度 = ベース優先度 + 時間ブースト
+    const calculatedPriority = (basePriority[category] || 50) + timeBoost;
+
+    // WordProgressを更新
+    progress.calculatedPriority = calculatedPriority;
+    progress.lastPriorityUpdate = Date.now();
+
+    // 正答率を計算
+    const totalAttempts = progress.correctCount + progress.incorrectCount;
+    progress.accuracyRate = totalAttempts > 0 ? progress.correctCount / totalAttempts : 0;
+
+    return calculatedPriority;
+  }
+
+  /**
+   * カテゴリーを判定（統一ユーティリティを使用）
+   */
+  private determineCategory(progress: WordProgress): string {
+    return determineWordCategory(progress);
   }
 }

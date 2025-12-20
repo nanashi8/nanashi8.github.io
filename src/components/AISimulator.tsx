@@ -191,8 +191,7 @@ export const AISimulator: React.FC = () => {
     // エラー予測AI
     const errorDecision =
       errorRate > 0.4 ? '高リスク検出' : errorRate > 0.25 ? '中リスク検出' : '低リスク';
-    tracker.errorPredictionAI[errorDecision] =
-      (tracker.errorPredictionAI[errorDecision] || 0) + 1;
+    tracker.errorPredictionAI[errorDecision] = (tracker.errorPredictionAI[errorDecision] || 0) + 1;
 
     // 学習スタイルAI
     const hour = new Date().getHours();
@@ -341,10 +340,7 @@ export const AISimulator: React.FC = () => {
       {results.length > 0 && (
         <div className="results-section">
           <h4>シミュレーション結果</h4>
-          <div
-            ref={tabsRef}
-            className="score-board-tabs grid gap-1 sm:gap-2"
-          >
+          <div ref={tabsRef} className="score-board-tabs grid gap-1 sm:gap-2">
             {results.map((result, index) => (
               <button
                 key={index}
@@ -493,39 +489,48 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({ data }) => {
             strokeWidth="1.5"
             strokeDasharray="4,4"
           />
-          <text x={padding - 15} y={yScale(value) + 5} fontSize="13" textAnchor="end" fill="#374151" fontWeight="500">
+          <text
+            x={padding - 15}
+            y={yScale(value) + 5}
+            fontSize="13"
+            textAnchor="end"
+            fill="#374151"
+            fontWeight="500"
+          >
             {value}
           </text>
         </g>
       ))}
 
       {/* X軸グリッド線（10ステップごと） */}
-      {data.steps.filter((_, i) => i % 10 === 0).map((step, _index) => {
-        const xPos = xScale(data.steps.indexOf(step));
-        return (
-          <g key={step}>
-            <line
-              x1={xPos}
-              y1={padding}
-              x2={xPos}
-              y2={height - padding}
-              stroke="#d1d5db"
-              strokeWidth="1.5"
-              strokeDasharray="4,4"
-            />
-            <text
-              x={xPos}
-              y={height - padding + 20}
-              fontSize="13"
-              textAnchor="middle"
-              fill="#374151"
-              fontWeight="500"
-            >
-              {step}
-            </text>
-          </g>
-        );
-      })}
+      {data.steps
+        .filter((_, i) => i % 10 === 0)
+        .map((step, _index) => {
+          const xPos = xScale(data.steps.indexOf(step));
+          return (
+            <g key={step}>
+              <line
+                x1={xPos}
+                y1={padding}
+                x2={xPos}
+                y2={height - padding}
+                stroke="#d1d5db"
+                strokeWidth="1.5"
+                strokeDasharray="4,4"
+              />
+              <text
+                x={xPos}
+                y={height - padding + 20}
+                fontSize="13"
+                textAnchor="middle"
+                fill="#374151"
+                fontWeight="500"
+              >
+                {step}
+              </text>
+            </g>
+          );
+        })}
 
       {/* データライン（太く、シャドウ付き） */}
       <path

@@ -10,9 +10,36 @@ describe('QuestionScheduler - 統合テスト', () => {
     scheduler = new QuestionScheduler();
 
     sampleQuestions = [
-      { word: 'apple', meaning: 'りんご', reading: 'アップル', difficulty: '', relatedWords: '', relatedFields: '', type: 'word', etymology: '' },
-      { word: 'book', meaning: '本', reading: 'ブック', difficulty: '', relatedWords: '', relatedFields: '', type: 'word', etymology: '' },
-      { word: 'computer', meaning: 'コンピューター', reading: 'コンピューター', difficulty: '', relatedWords: '', relatedFields: '', type: 'word', etymology: '' },
+      {
+        word: 'apple',
+        meaning: 'りんご',
+        reading: 'アップル',
+        difficulty: '',
+        relatedWords: '',
+        relatedFields: '',
+        type: 'word',
+        etymology: '',
+      },
+      {
+        word: 'book',
+        meaning: '本',
+        reading: 'ブック',
+        difficulty: '',
+        relatedWords: '',
+        relatedFields: '',
+        type: 'word',
+        etymology: '',
+      },
+      {
+        word: 'computer',
+        meaning: 'コンピューター',
+        reading: 'コンピューター',
+        difficulty: '',
+        relatedWords: '',
+        relatedFields: '',
+        type: 'word',
+        etymology: '',
+      },
     ] as Question[];
   });
 

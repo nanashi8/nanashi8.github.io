@@ -50,9 +50,10 @@ export class GamificationAI implements SpecialistAI<GamificationSignal> {
     let motivation = 0.5; // ベースライン
 
     // 正答率が高い → モチベーション上昇
-    const correctRate = sessionStats.totalAttempts > 0
-      ? sessionStats.correctAnswers / sessionStats.totalAttempts
-      : 0.5;
+    const correctRate =
+      sessionStats.totalAttempts > 0
+        ? sessionStats.correctAnswers / sessionStats.totalAttempts
+        : 0.5;
 
     if (correctRate >= 0.8) motivation += 0.3;
     else if (correctRate >= 0.6) motivation += 0.2;
@@ -92,9 +93,8 @@ export class GamificationAI implements SpecialistAI<GamificationSignal> {
     if (masteredCount > 0 && masteredCount % 10 === 0) return true;
 
     // 高正答率達成時
-    const correctRate = sessionStats.totalAttempts > 0
-      ? sessionStats.correctAnswers / sessionStats.totalAttempts
-      : 0;
+    const correctRate =
+      sessionStats.totalAttempts > 0 ? sessionStats.correctAnswers / sessionStats.totalAttempts : 0;
     if (correctRate >= 0.9 && sessionStats.totalAttempts >= 10) return true;
 
     // 連続学習日数（実装は簡易版）
@@ -115,9 +115,10 @@ export class GamificationAI implements SpecialistAI<GamificationSignal> {
    * チャレンジレベルの決定
    */
   private determineChallengeLevel(sessionStats: any): ChallengeLevel {
-    const correctRate = sessionStats.totalAttempts > 0
-      ? sessionStats.correctAnswers / sessionStats.totalAttempts
-      : 0.5;
+    const correctRate =
+      sessionStats.totalAttempts > 0
+        ? sessionStats.correctAnswers / sessionStats.totalAttempts
+        : 0.5;
 
     // 高正答率 → ハードチャレンジ
     if (correctRate >= 0.85) return 'hard';

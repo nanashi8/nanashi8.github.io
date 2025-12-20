@@ -239,8 +239,8 @@ export class HybridQuestionSelector {
       // 1分経過 = +5点、2分 = +7点、5分 = +10点、10分以上 = +15点
       if (secondsSinceFirstSeen >= 600) return 15; // 10分以上
       if (secondsSinceFirstSeen >= 300) return 10; // 5分以上
-      if (secondsSinceFirstSeen >= 120) return 7;  // 2分以上
-      if (secondsSinceFirstSeen >= 60) return 5;   // 1分以上
+      if (secondsSinceFirstSeen >= 120) return 7; // 2分以上
+      if (secondsSinceFirstSeen >= 60) return 5; // 1分以上
       return 0; // 1分未満は基本優先度のみ
     }
 
@@ -323,10 +323,7 @@ export class HybridQuestionSelector {
     // 新規単語にバイアスを適用
     const adjustedPriorities = priorities.map((p) => ({
       ...p,
-      adjustedPriority:
-        p.candidate.reviewCount === 0
-          ? p.priority + acquisitionBias
-          : p.priority,
+      adjustedPriority: p.candidate.reviewCount === 0 ? p.priority + acquisitionBias : p.priority,
     }));
 
     // バケット分類（高: 60+, 中: 30-59, 低: 0-29）
@@ -338,11 +335,7 @@ export class HybridQuestionSelector {
 
     // 上位バケットから選択
     const bucket =
-      highPriority.length > 0
-        ? highPriority
-        : midPriority.length > 0
-        ? midPriority
-        : lowPriority;
+      highPriority.length > 0 ? highPriority : midPriority.length > 0 ? midPriority : lowPriority;
 
     if (bucket.length === 0) {
       return null;

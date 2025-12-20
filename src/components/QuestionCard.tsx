@@ -15,6 +15,8 @@ import { getRelevantMistakeTip } from '../englishTrivia';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import AddToCustomButton from './AddToCustomButton';
 import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
+import { PriorityBadge } from './PriorityBadge';
+import { useWordPriority } from '@/hooks/useWordPriority';
 
 interface QuestionCardProps {
   question: Question;
@@ -72,6 +74,9 @@ function QuestionCard({
     processQuestion: processAdaptiveQuestion,
     currentStrategy,
   } = useAdaptiveNetwork();
+
+  // 優先度情報を取得
+  const priorityExplanation = useWordPriority(question.word);
 
   // メタAI分析ヘルパー関数
   const processWithAdaptiveAI = async (word: string, isCorrect: boolean) => {
@@ -501,6 +506,22 @@ function QuestionCard({
                 : question.difficulty === 'intermediate'
                   ? '中級'
                   : '上級'}
+            </div>
+          )}
+
+          {/* 優先度バッジ */}
+          {priorityExplanation && (
+            <div className="mt-3 flex justify-center">
+              <div className="inline-block">
+                <div
+                  className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border cursor-pointer hover:opacity-80 ${priorityExplanation.priority >= 100 ? 'text-red-600 bg-red-50 border-red-200' : priorityExplanation.priority >= 75 ? 'text-orange-600 bg-orange-50 border-orange-200' : priorityExplanation.priority >= 50 ? 'text-yellow-600 bg-yellow-50 border-yellow-200' : 'text-blue-600 bg-blue-50 border-blue-200'}`}
+                  title={priorityExplanation.userMessage}
+                >
+                  <span>{priorityExplanation.factors[0].icon}</span>
+                  <span>{priorityExplanation.priority >= 100 ? '最優先' : priorityExplanation.priority >= 75 ? '優先' : priorityExplanation.priority >= 50 ? '通常' : '低'}</span>
+                  <span className="font-bold">{priorityExplanation.priority.toFixed(0)}</span>
+                </div>
+              </div>
             </div>
           )}
 

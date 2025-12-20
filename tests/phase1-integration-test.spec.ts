@@ -11,7 +11,6 @@ import { test, expect } from '@playwright/test';
  */
 
 test.describe('Phase 1: 緊急バグ修正統合テスト', () => {
-
   test.beforeEach(async ({ page }) => {
     // ローカルストレージをクリア
     await page.goto('/');
@@ -45,15 +44,15 @@ test.describe('Phase 1: 緊急バグ修正統合テスト', () => {
       const logEntries: string[] = [];
       // localStorageから語句の優先度を取得
       const progress = JSON.parse(localStorage.getItem('english-progress') || '{}');
-      return Object.keys(progress).map(word => ({
+      return Object.keys(progress).map((word) => ({
         word,
         lastStudied: progress[word].lastStudied,
-        timeSince: Date.now() - progress[word].lastStudied
+        timeSince: Date.now() - progress[word].lastStudied,
       }));
     });
 
     // 2分経過した語句が存在することを確認
-    const twoMinuteWords = logs.filter(log => log.timeSince >= 2 * 60 * 1000);
+    const twoMinuteWords = logs.filter((log) => log.timeSince >= 2 * 60 * 1000);
     expect(twoMinuteWords.length).toBeGreaterThan(0);
   });
 
@@ -191,8 +190,8 @@ test.describe('Phase 1: 緊急バグ修正統合テスト', () => {
     await page.waitForTimeout(1000);
 
     // 🧠(MemoryAI), 🤖(MetaAI), 💤(CognitiveLoadAI) のいずれかが含まれているか確認
-    const hasDebugLog = logs.some(log =>
-      log.includes('🧠') || log.includes('🤖') || log.includes('💤')
+    const hasDebugLog = logs.some(
+      (log) => log.includes('🧠') || log.includes('🤖') || log.includes('💤')
     );
 
     // 開発環境でない場合はスキップ
@@ -213,7 +212,7 @@ test.describe('Phase 1: 緊急バグ修正統合テスト', () => {
     // 30分経過をシミュレート
     await page.evaluate(() => {
       const progress = JSON.parse(localStorage.getItem('english-progress') || '{}');
-      Object.keys(progress).forEach(word => {
+      Object.keys(progress).forEach((word) => {
         progress[word].lastStudied = Date.now() - 30 * 60 * 1000; // 30分前
       });
       localStorage.setItem('english-progress', JSON.stringify(progress));
@@ -245,7 +244,7 @@ test.describe('Phase 1: 緊急バグ修正統合テスト', () => {
     // 忘却リスク150+になるまで時間を進める（約1週間）
     await page.evaluate(() => {
       const progress = JSON.parse(localStorage.getItem('english-progress') || '{}');
-      Object.keys(progress).forEach(word => {
+      Object.keys(progress).forEach((word) => {
         if (progress[word].memorizationStreak >= 3) {
           progress[word].lastStudied = Date.now() - 7 * 24 * 60 * 60 * 1000; // 7日前
         }

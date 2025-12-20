@@ -202,7 +202,7 @@ export async function runSimulation(
   const scheduler = new MockQuestionScheduler();
 
   // 質問リストを生成
-  const questions: Question[] = wordList.map(word => ({
+  const questions: Question[] = wordList.map((word) => ({
     word,
     meaning: `${word}の意味`,
     reading: word,
@@ -254,7 +254,7 @@ export async function runSimulation(
 
     // シグナル検出
     const signals = scheduler.detectSignals({
-      sessionMinutes: profile.session.durationMinutes + (step / 10),
+      sessionMinutes: profile.session.durationMinutes + step / 10,
       cognitiveLoad: profile.session.cognitiveLoad,
       errorRate: profile.patterns.errorRate,
       consecutiveCorrect: profile.patterns.consecutiveCorrect,
@@ -264,14 +264,14 @@ export async function runSimulation(
     // _simulateAIDecisions(aiDecisionsTracker, signals, context, profile);
 
     // シグナルを記録
-    signals.forEach(signal => {
+    signals.forEach((signal) => {
       signalsDetected[signal.type as keyof typeof signalsDetected]++;
     });
 
     // 問題をスケジューリング
     const scheduleResult = scheduler.scheduleQuestions(questions, {
       wordProgressMap: context.wordProgressMap,
-      sessionMinutes: profile.session.durationMinutes + (step / 10),
+      sessionMinutes: profile.session.durationMinutes + step / 10,
       cognitiveLoad: profile.session.cognitiveLoad,
       errorRate: profile.patterns.errorRate,
       consecutiveCorrect: profile.patterns.consecutiveCorrect,
@@ -337,17 +337,23 @@ export async function runSimulation(
       incorrect: {
         start: initialSnapshot.categoryDistribution.incorrect,
         end: finalSnapshot.categoryDistribution.incorrect,
-        change: finalSnapshot.categoryDistribution.incorrect - initialSnapshot.categoryDistribution.incorrect,
+        change:
+          finalSnapshot.categoryDistribution.incorrect -
+          initialSnapshot.categoryDistribution.incorrect,
       },
       still_learning: {
         start: initialSnapshot.categoryDistribution.still_learning,
         end: finalSnapshot.categoryDistribution.still_learning,
-        change: finalSnapshot.categoryDistribution.still_learning - initialSnapshot.categoryDistribution.still_learning,
+        change:
+          finalSnapshot.categoryDistribution.still_learning -
+          initialSnapshot.categoryDistribution.still_learning,
       },
       mastered: {
         start: initialSnapshot.categoryDistribution.mastered,
         end: finalSnapshot.categoryDistribution.mastered,
-        change: finalSnapshot.categoryDistribution.mastered - initialSnapshot.categoryDistribution.mastered,
+        change:
+          finalSnapshot.categoryDistribution.mastered -
+          initialSnapshot.categoryDistribution.mastered,
       },
       new: {
         start: initialSnapshot.categoryDistribution.new,
@@ -367,9 +373,11 @@ export async function runSimulation(
     },
     signalsDetected,
     correctAnswerRate: (1 - profile.patterns.errorRate) * 100,
-    averagePriority: progressSnapshots.length > 0
-      ? progressSnapshots.reduce((sum, s) => sum + s.scheduledQuestions[0]?.priority || 0, 0) / progressSnapshots.length
-      : 0,
+    averagePriority:
+      progressSnapshots.length > 0
+        ? progressSnapshots.reduce((sum, s) => sum + s.scheduledQuestions[0]?.priority || 0, 0) /
+          progressSnapshots.length
+        : 0,
     totalQuestionsAsked,
     questionsToResolve: {
       incorrect: questionsByCategory.incorrect,
@@ -414,7 +422,7 @@ function createSnapshot(
     step,
     timestamp,
     categoryDistribution: distribution,
-    scheduledQuestions: (scheduledQuestions || questions.slice(0, 10)).map(q => {
+    scheduledQuestions: (scheduledQuestions || questions.slice(0, 10)).map((q) => {
       const word = typeof q === 'string' ? q : q.word;
       const category = context.wordProgressMap.get(word)?.category || 'new';
       return {
@@ -458,7 +466,7 @@ function calculateCategoryDistribution(wordProgressMap: Map<string, any>): any {
     new: 0,
   };
 
-  wordProgressMap.forEach(progress => {
+  wordProgressMap.forEach((progress) => {
     const category = progress.category || 'new';
     distribution[category as keyof typeof distribution]++;
   });
@@ -495,8 +503,10 @@ function simulateCategoryUpdate(
       progress.correctCount++;
 
       // 3回正解でmastered候補、5回正解で確実にmastered
-      if (progress.consecutiveCorrect >= 5 ||
-          (progress.consecutiveCorrect >= 3 && Math.random() > 0.3)) {
+      if (
+        progress.consecutiveCorrect >= 5 ||
+        (progress.consecutiveCorrect >= 3 && Math.random() > 0.3)
+      ) {
         progress.category = 'mastered';
         progress.masteredAt = Date.now();
       }
@@ -529,101 +539,121 @@ function simulateCategoryUpdate(
  */
 function logSnapshot(snapshot: SimulationSnapshot): void {
   console.log(`カテゴリー分布:`);
-  console.log(`  incorrect:       ${snapshot.categoryDistribution.incorrect.toString().padStart(3)} (${((snapshot.categoryDistribution.incorrect / 100) * 100).toFixed(1)}%)`);
-  console.log(`  still_learning:  ${snapshot.categoryDistribution.still_learning.toString().padStart(3)} (${((snapshot.categoryDistribution.still_learning / 100) * 100).toFixed(1)}%)`);
+  console.log(
+    `  incorrect:       ${snapshot.categoryDistribution.incorrect.toString().padStart(3)} (${((snapshot.categoryDistribution.incorrect / 100) * 100).toFixed(1)}%)`
+  );
+  console.log(
+    `  still_learning:  ${snapshot.categoryDistribution.still_learning.toString().padStart(3)} (${((snapshot.categoryDistribution.still_learning / 100) * 100).toFixed(1)}%)`
+  );
 
+  /**
+   * 8つのAIシステムの判断をシミュレート
+   */
+  function _simulateAIDecisions(
+    tracker: any,
+    signals: any[],
+    context: SimulationContext,
+    profile: StudentProfile
+  ): void {
+    // 1. 記憶AI: 記憶獲得・定着判定
+    const memoryDecision =
+      context.sessionStats.cognitiveLoad > 0.6
+        ? '短期記憶重視'
+        : context.sessionStats.cognitiveLoad > 0.3
+          ? '長期記憶移行'
+          : '完全定着';
+    tracker.memoryAI[memoryDecision] = (tracker.memoryAI[memoryDecision] || 0) + 1;
 
-/**
- * 8つのAIシステムの判断をシミュレート
- */
-function _simulateAIDecisions(
-  tracker: any,
-  signals: any[],
-  context: SimulationContext,
-  profile: StudentProfile
-): void {
-  // 1. 記憶AI: 記憶獲得・定着判定
-  const memoryDecision = context.sessionStats.cognitiveLoad > 0.6
-    ? '短期記憶重視'
-    : context.sessionStats.cognitiveLoad > 0.3
-    ? '長期記憶移行'
-    : '完全定着';
-  tracker.memoryAI[memoryDecision] = (tracker.memoryAI[memoryDecision] || 0) + 1;
+    // 2. 認知負荷AI: 疲労検出・休憩推奨
+    const cognitiveDecision =
+      profile.session.cognitiveLoad > 0.7
+        ? '休憩推奨'
+        : profile.session.cognitiveLoad > 0.5
+          ? '負荷注意'
+          : '最適状態';
+    tracker.cognitiveLoadAI[cognitiveDecision] =
+      (tracker.cognitiveLoadAI[cognitiveDecision] || 0) + 1;
 
-  // 2. 認知負荷AI: 疲労検出・休憩推奨
-  const cognitiveDecision = profile.session.cognitiveLoad > 0.7
-    ? '休憩推奨'
-    : profile.session.cognitiveLoad > 0.5
-    ? '負荷注意'
-    : '最適状態';
-  tracker.cognitiveLoadAI[cognitiveDecision] = (tracker.cognitiveLoadAI[cognitiveDecision] || 0) + 1;
+    // 3. エラー予測AI: 混同検出・誤答リスク予測
+    const errorDecision =
+      profile.patterns.errorRate > 0.4
+        ? '高リスク検出'
+        : profile.patterns.errorRate > 0.2
+          ? '中リスク検出'
+          : '低リスク';
+    tracker.errorPredictionAI[errorDecision] = (tracker.errorPredictionAI[errorDecision] || 0) + 1;
 
-  // 3. エラー予測AI: 混同検出・誤答リスク予測
-  const errorDecision = profile.patterns.errorRate > 0.4
-    ? '高リスク検出'
-    : profile.patterns.errorRate > 0.2
-    ? '中リスク検出'
-    : '低リスク';
-  tracker.errorPredictionAI[errorDecision] = (tracker.errorPredictionAI[errorDecision] || 0) + 1;
+    // 4. 学習スタイルAI: 個人最適化・時間帯調整
+    const hour = new Date().getHours();
+    const styleDecision = hour < 12 ? '朝型学習推奨' : hour < 18 ? '午後集中型' : '夜型学習推奨';
+    tracker.learningStyleAI[styleDecision] = (tracker.learningStyleAI[styleDecision] || 0) + 1;
 
-  // 4. 学習スタイルAI: 個人最適化・時間帯調整
-  const hour = new Date().getHours();
-  const styleDecision = hour < 12 ? '朝型学習推奨' : hour < 18 ? '午後集中型' : '夜型学習推奨';
-  tracker.learningStyleAI[styleDecision] = (tracker.learningStyleAI[styleDecision] || 0) + 1;
+    // 5. 言語関連AI: 語源・関連語ネットワーク
+    const linguisticDecision = Math.random() > 0.5 ? '語源関連提示' : '類義語展開';
+    tracker.linguisticAI[linguisticDecision] = (tracker.linguisticAI[linguisticDecision] || 0) + 1;
 
-  // 5. 言語関連AI: 語源・関連語ネットワーク
-  const linguisticDecision = Math.random() > 0.5 ? '語源関連提示' : '類義語展開';
-  tracker.linguisticAI[linguisticDecision] = (tracker.linguisticAI[linguisticDecision] || 0) + 1;
+    // 6. 文脈AI: 意味的クラスタリング
+    const contextDecision =
+      Math.random() > 0.6
+        ? 'テーマ別学習'
+        : Math.random() > 0.3
+          ? '文脈グループ化'
+          : 'ランダム配置';
+    tracker.contextualAI[contextDecision] = (tracker.contextualAI[contextDecision] || 0) + 1;
 
-  // 6. 文脈AI: 意味的クラスタリング
-  const contextDecision = Math.random() > 0.6 ? 'テーマ別学習' : Math.random() > 0.3 ? '文脈グループ化' : 'ランダム配置';
-  tracker.contextualAI[contextDecision] = (tracker.contextualAI[contextDecision] || 0) + 1;
+    // 7. ゲーミフィケーションAI: モチベーション管理
+    const gamificationDecision =
+      context.sessionStats.correctAnswers > context.sessionStats.incorrectAnswers * 2
+        ? '達成感強化'
+        : context.sessionStats.correctAnswers > context.sessionStats.incorrectAnswers
+          ? 'バランス維持'
+          : '励まし重視';
+    tracker.gamificationAI[gamificationDecision] =
+      (tracker.gamificationAI[gamificationDecision] || 0) + 1;
 
-  // 7. ゲーミフィケーションAI: モチベーション管理
-  const gamificationDecision = context.sessionStats.correctAnswers > context.sessionStats.incorrectAnswers * 2
-    ? '達成感強化'
-    : context.sessionStats.correctAnswers > context.sessionStats.incorrectAnswers
-    ? 'バランス維持'
-    : '励まし重視';
-  tracker.gamificationAI[gamificationDecision] = (tracker.gamificationAI[gamificationDecision] || 0) + 1;
-
-  // 8. QuestionScheduler（メタAI統合層）: 7AIのシグナル統合
-  const metaDecision = signals.length > 0
-    ? signals[0].action === 'review'
-      ? '復習優先出題'
-      : signals[0].action === 'easier'
-      ? '易問出題'
-      : signals[0].action === 'harder'
-      ? '難問出題'
-      : '通常出題'
-    : '通常出題';
-  tracker.metaAI[metaDecision] = (tracker.metaAI[metaDecision] || 0) + 1;
-}
-
-/**
- * AI判断サマリーを生成
- */
-function _generateAIDecisionsSummary(tracker: any, totalSteps: number): any {
-  const summary: any = {};
-
-  for (const [aiName, decisions] of Object.entries(tracker)) {
-    summary[aiName] = Object.entries(decisions as { [key: string]: number })
-      .map(([decision, count]) => ({
-        aiName,
-        decision,
-        count: count as number,
-        percentage: ((count as number) / totalSteps) * 100,
-      }))
-      .sort((a, b) => b.count - a.count);
+    // 8. QuestionScheduler（メタAI統合層）: 7AIのシグナル統合
+    const metaDecision =
+      signals.length > 0
+        ? signals[0].action === 'review'
+          ? '復習優先出題'
+          : signals[0].action === 'easier'
+            ? '易問出題'
+            : signals[0].action === 'harder'
+              ? '難問出題'
+              : '通常出題'
+        : '通常出題';
+    tracker.metaAI[metaDecision] = (tracker.metaAI[metaDecision] || 0) + 1;
   }
 
-  return summary;
-} console.log(`  mastered:        ${snapshot.categoryDistribution.mastered.toString().padStart(3)} (${((snapshot.categoryDistribution.mastered / 100) * 100).toFixed(1)}%)`);
-  console.log(`  new:             ${snapshot.categoryDistribution.new.toString().padStart(3)} (${((snapshot.categoryDistribution.new / 100) * 100).toFixed(1)}%)`);
+  /**
+   * AI判断サマリーを生成
+   */
+  function _generateAIDecisionsSummary(tracker: any, totalSteps: number): any {
+    const summary: any = {};
+
+    for (const [aiName, decisions] of Object.entries(tracker)) {
+      summary[aiName] = Object.entries(decisions as { [key: string]: number })
+        .map(([decision, count]) => ({
+          aiName,
+          decision,
+          count: count as number,
+          percentage: ((count as number) / totalSteps) * 100,
+        }))
+        .sort((a, b) => b.count - a.count);
+    }
+
+    return summary;
+  }
+  console.log(
+    `  mastered:        ${snapshot.categoryDistribution.mastered.toString().padStart(3)} (${((snapshot.categoryDistribution.mastered / 100) * 100).toFixed(1)}%)`
+  );
+  console.log(
+    `  new:             ${snapshot.categoryDistribution.new.toString().padStart(3)} (${((snapshot.categoryDistribution.new / 100) * 100).toFixed(1)}%)`
+  );
 
   if (snapshot.detectedSignals.length > 0) {
     console.log(`検出されたシグナル:`);
-    snapshot.detectedSignals.forEach(signal => {
+    snapshot.detectedSignals.forEach((signal) => {
       console.log(`  - ${signal.type}: ${signal.action} (confidence: ${signal.confidence})`);
     });
   }

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>優先度診断ツール</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    h1 { color: #667eea; margin-bottom: 10px; }
+    .btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px 5px;
+      transition: transform 0.2s;
+    }
+    .btn:active { transform: scale(0.95); }
+    .btn-back { background: #95a5a6; }
+    .summary {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .category { margin: 10px 0; font-size: 18px; }
+    .incorrect { color: #e74c3c; }
+    .still-learning { color: #f39c12; }
+    .new { color: #3498db; }
+    .mastered { color: #27ae60; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #667eea;
+      color: white;
+      font-weight: 600;
+    }
+    tr:hover { background: #f8f9fa; }
+    .priority { font-weight: bold; font-size: 16px; }
+    .no-data {
+      text-align: center;
+      padding: 40px;
+      color: #95a5a6;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 優先度診断ツール</h1>
+    <p style="color: #7f8c8d; margin-bottom: 20px;">LocalStorageに保存されている学習データを確認します</p>
+
+    <div>
+      <button class="btn" onclick="checkData()">📊 データを確認</button>
+      <button class="btn btn-back" onclick="location.href='/'">🏠 アプリに戻る</button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function checkData() {
+      try {
+        const data = JSON.parse(localStorage.getItem('english-progress') || '{}');
+        const wordProgress = data.wordProgress || {};
+
+        const words = Object.entries(wordProgress);
+
+        if (words.length === 0) {
+          document.getElementById('output').innerHTML = `
+            <div class="no-data">
+              ❌ データが見つかりません<br><br>
+              暗記タブで問題を解いてからもう一度お試しください
+            </div>
+          `;
+          return;
+        }
+
+        // カテゴリー別に分類
+        const categories = {
+          incorrect: [],
+          still_learning: [],
+          new: [],
+          mastered: []
+        };
+
+        let noPriority = 0;
+        let totalWords = 0;
+
+        words.forEach(([word, p]) => {
+          totalWords++;
+          const cat = p.category || 'new';
+
+          if (p.calculatedPriority === undefined) {
+            noPriority++;
+          }
+
+          const item = {
+            word,
+            correct: p.correctCount || 0,
+            incorrect: p.incorrectCount || 0,
+            priority: p.calculatedPriority,
+            accuracy: p.correctCount && p.incorrectCount
+              ? ((p.correctCount / (p.correctCount + p.incorrectCount)) * 100).toFixed(1)
+              : 'N/A'
+          };
+
+          if (categories[cat]) {
+            categories[cat].push(item);
+          }
+        });
+
+        // 優先度順にソート
+        Object.keys(categories).forEach(cat => {
+          categories[cat].sort((a, b) => (b.priority || 0) - (a.priority || 0));
+        });
+
+        // HTML生成
+        let html = `
+          <div class="summary">
+            <h2>📊 統計</h2>
+            <div class="category incorrect">❌ 分からない: ${categories.incorrect.length}語</div>
+            <div class="category still-learning">🟡 まだまだ: ${categories.still_learning.length}語</div>
+            <div class="category new">🆕 未学習: ${categories.new.length}語</div>
+            <div class="category mastered">✅ 覚えてる: ${categories.mastered.length}語</div>
+            <div class="category" style="color: #e74c3c;">⚠️ 優先度未計算: ${noPriority}語 / ${totalWords}語</div>
+          </div>
+        `;
+
+        // incorrectの詳細
+        if (categories.incorrect.length > 0) {
+          html += '<h3 style="color: #e74c3c; margin-top: 30px;">❌ 分からない（最優先で出題されるべき）</h3>';
+          html += '<table><thead><tr><th>単語</th><th>正解</th><th>不正解</th><th>正答率</th><th>優先度</th></tr></thead><tbody>';
+          categories.incorrect.slice(0, 20).forEach(item => {
+            const priorityColor = item.priority === undefined ? '#e74c3c' : '#27ae60';
+            html += `<tr>
+              <td><strong>${item.word}</strong></td>
+              <td>${item.correct}</td>
+              <td>${item.incorrect}</td>
+              <td>${item.accuracy}%</td>
+              <td class="priority" style="color: ${priorityColor};">
+                ${item.priority !== undefined ? item.priority.toFixed(1) : '未計算❌'}
+              </td>
+            </tr>`;
+          });
+          html += '</tbody></table>';
+        }
+
+        // still_learningの詳細
+        if (categories.still_learning.length > 0) {
+          html += '<h3 style="color: #f39c12; margin-top: 30px;">🟡 まだまだ</h3>';
+          html += '<table><thead><tr><th>単語</th><th>正解</th><th>不正解</th><th>正答率</th><th>優先度</th></tr></thead><tbody>';
+          categories.still_learning.slice(0, 10).forEach(item => {
+            const priorityColor = item.priority === undefined ? '#e74c3c' : '#27ae60';
+            html += `<tr>
+              <td><strong>${item.word}</strong></td>
+              <td>${item.correct}</td>
+              <td>${item.incorrect}</td>
+              <td>${item.accuracy}%</td>
+              <td class="priority" style="color: ${priorityColor};">
+                ${item.priority !== undefined ? item.priority.toFixed(1) : '未計算❌'}
+              </td>
+            </tr>`;
+          });
+          html += '</tbody></table>';
+        }
+
+        // 結論
+        if (noPriority > 0) {
+          html += `
+            <div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin-top: 20px;">
+              <strong>⚠️ 問題検出:</strong><br>
+              ${noPriority}語の優先度が未計算です。これらは修正前のデータです。<br>
+              これらの単語を1回ずつ回答すると優先度が正しく設定されます。
+            </div>
+          `;
+        } else {
+          html += `
+            <div style="background: #d4edda; border-left: 4px solid #27ae60; padding: 15px; margin-top: 20px;">
+              <strong>✅ 正常:</strong><br>
+              すべての単語に優先度が設定されています。incorrectの単語が最優先で出題されます。
+            </div>
+          `;
+        }
+
+        document.getElementById('output').innerHTML = html;
+
+      } catch (error) {
+        document.getElementById('output').innerHTML = `
+          <div class="no-data">
+            ❌ エラーが発生しました<br><br>
+            ${error.message}
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

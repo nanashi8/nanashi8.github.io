@@ -10824,7 +10824,7 @@
             "that",
             "where"
           ],
-          "correctAnswer": ["that", "which"],
+          "correctAnswer": "that",
           "difficulty": "intermediate",
           "explanation": "関係代名詞を使って2つの文をつなぎます。 先行詞が物の場合、thatまたはwhichを使います。",
           "grammarPoint": "関係代名詞",

@@ -490,29 +490,33 @@ function TranslationView({
                     />
                   </svg>
                 </button>
-            {currentQuestion && (
-              <>
-                <QuestionCard
-                  question={currentQuestion}
-                  questionNumber={currentIndex + 1}
-                  allQuestions={questions}
-                  currentIndex={currentIndex}
-                  answered={answered}
-                  selectedAnswer={selectedAnswer}
-                  onAnswer={handleAnswer}
-                  onNext={
-                    onSkip ? (answered ? handleNextWrapper : handleSkipWrapper) : handleNextWrapper
-                  }
-                  onPrevious={onPrevious}
-                  onDifficultyRate={onDifficultyRate}
-                  errorPrediction={errorPrediction}
-                  customQuestionSets={customQuestionSets}
-                  onAddWordToCustomSet={onAddWordToCustomSet}
-                  onRemoveWordFromCustomSet={onRemoveWordFromCustomSet}
-                  onOpenCustomSetManagement={onOpenCustomSetManagement}
-                />
-              </>
-            )}
+                {currentQuestion && (
+                  <>
+                    <QuestionCard
+                      question={currentQuestion}
+                      questionNumber={currentIndex + 1}
+                      allQuestions={questions}
+                      currentIndex={currentIndex}
+                      answered={answered}
+                      selectedAnswer={selectedAnswer}
+                      onAnswer={handleAnswer}
+                      onNext={
+                        onSkip
+                          ? answered
+                            ? handleNextWrapper
+                            : handleSkipWrapper
+                          : handleNextWrapper
+                      }
+                      onPrevious={onPrevious}
+                      onDifficultyRate={onDifficultyRate}
+                      errorPrediction={errorPrediction}
+                      customQuestionSets={customQuestionSets}
+                      onAddWordToCustomSet={onAddWordToCustomSet}
+                      onRemoveWordFromCustomSet={onRemoveWordFromCustomSet}
+                      onOpenCustomSetManagement={onOpenCustomSetManagement}
+                    />
+                  </>
+                )}
               </div>
             </div>
           </div>
