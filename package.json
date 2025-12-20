@@ -61,6 +61,8 @@
     "guard:analyze": "node scripts/analyze-failure-pattern.mjs analyze",
     "guard:learn-history": "node scripts/learn-from-git-history.mjs",
     "guard:check-risk": "node scripts/detect-dangerous-patterns.mjs",
+    "guard:check-cycle": "cat .aitk/.commit-count 2>/dev/null || echo '0'",
+    "guard:reset-cycle": "echo '0' > .aitk/.commit-count",
     "update-instructions": "node scripts/update-instructions.mjs all",
     "update-specifications": "node scripts/update-specifications.mjs",
     "update-pipelines": "node scripts/update-pipelines.mjs",

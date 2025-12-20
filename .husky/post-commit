@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# Post-commit hook: コミット後の自動学習トリガー
+
+# 学習サイクル設定
+LEARNING_CYCLE=15  # 15コミットごとに学習
+
+# コミットカウントファイル
+COUNT_FILE=".aitk/.commit-count"
+mkdir -p .aitk
+
+# 現在のコミット数を取得
+if [ -f "$COUNT_FILE" ]; then
+  COMMIT_COUNT=$(cat "$COUNT_FILE")
+else
+  COMMIT_COUNT=0
+fi
+
+# カウントをインクリメント
+COMMIT_COUNT=$((COMMIT_COUNT + 1))
+echo "$COMMIT_COUNT" > "$COUNT_FILE"
+
+echo "📊 サーバント: コミット数 $COMMIT_COUNT/$LEARNING_CYCLE"
+
+# 学習サイクルに達したか確認
+if [ $COMMIT_COUNT -ge $LEARNING_CYCLE ]; then
+  echo ""
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo "🧠 サーバント: 学習サイクル到達（${COMMIT_COUNT}コミット）"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo ""
+  echo "📚 Git履歴から最新の失敗パターンを学習中..."
+  echo ""
+  
+  # 学習実行（バックグラウンドで実行して次のコミットをブロックしない）
+  (
+    npm run guard:learn-history
+    
+    # カウントをリセット
+    echo "0" > "$COUNT_FILE"
+    
+    echo ""
+    echo "✅ 学習完了！次の学習まで: ${LEARNING_CYCLE}コミット"
+    echo ""
+  ) &
+  
+  echo "🔄 学習をバックグラウンドで実行中..."
+  echo "   （次のコミットを妨げません）"
+  echo ""
+fi

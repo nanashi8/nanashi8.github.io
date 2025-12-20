@@ -1,0 +1,125 @@
+name: Servant Auto Learning
+
+on:
+  # 毎日深夜2時に実行（日本時間11時 = UTC 2時）
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # 手動実行も可能
+  workflow_dispatch:
+  
+  # 大量のpushがあった場合も実行
+  push:
+    branches:
+      - main
+    # 5ファイル以上の変更があった場合のみ
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/**'
+
+jobs:
+  auto-learn:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 全履歴取得（学習に必要）
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check if learning is needed
+        id: check
+        run: |
+          # 前回の学習から何コミットあったかチェック
+          LAST_LEARNING_COMMIT=$(git log --grep="auto-learn:" --format="%H" -1 || echo "")
+          
+          if [ -z "$LAST_LEARNING_COMMIT" ]; then
+            # 初回学習
+            COMMITS_SINCE=100
+          else
+            # 前回学習からのコミット数
+            COMMITS_SINCE=$(git rev-list --count ${LAST_LEARNING_COMMIT}..HEAD)
+          fi
+          
+          echo "commits_since=$COMMITS_SINCE" >> $GITHUB_OUTPUT
+          
+          # 10コミット以上あれば学習実行
+          if [ $COMMITS_SINCE -ge 10 ]; then
+            echo "should_learn=true" >> $GITHUB_OUTPUT
+            echo "📊 前回の学習から${COMMITS_SINCE}コミット → 学習実行"
+          else
+            echo "should_learn=false" >> $GITHUB_OUTPUT
+            echo "📊 前回の学習から${COMMITS_SINCE}コミット → スキップ"
+          fi
+      
+      - name: Run Git history learning
+        if: steps.check.outputs.should_learn == 'true'
+        run: |
+          echo "🧠 サーバント: Git履歴から学習開始..."
+          npm run guard:learn-history
+      
+      - name: Commit learned patterns
+        if: steps.check.outputs.should_learn == 'true'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          # 変更があればコミット
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .aitk/failure-patterns.json
+            git add .aitk/instructions/adaptive-guard-system.instructions.md
+            git add docs/GIT_HISTORY_LEARNING_REPORT.md
+            git add scripts/adaptive-guard-checks.sh
+            
+            COMMITS_COUNT=${{ steps.check.outputs.commits_since }}
+            
+            git commit -m "chore(auto-learn): サーバント自動学習（${COMMITS_COUNT}コミット分）
+
+🧠 自動学習実行:
+- 前回の学習から${COMMITS_COUNT}コミット
+- 失敗パターンデータベース更新
+- Instructions自動更新
+- 学習レポート生成
+
+🤖 実行トリガー: GitHub Actions
+📅 実行日時: $(date '+%Y-%m-%d %H:%M:%S')"
+            
+            git push
+            
+            echo "✅ 学習結果をコミット完了"
+          else
+            echo "ℹ️  学習結果に変更なし"
+          fi
+      
+      - name: Create summary
+        if: steps.check.outputs.should_learn == 'true'
+        run: |
+          echo "## 🛡️ サーバント自動学習完了" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📊 **学習コミット数**: ${{ steps.check.outputs.commits_since }}件" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 学習レポートから情報抽出
+          if [ -f "docs/GIT_HISTORY_LEARNING_REPORT.md" ]; then
+            echo "### 📋 学習結果" >> $GITHUB_STEP_SUMMARY
+            head -30 docs/GIT_HISTORY_LEARNING_REPORT.md >> $GITHUB_STEP_SUMMARY
+          fi
+      
+      - name: Notify if skipped
+        if: steps.check.outputs.should_learn == 'false'
+        run: |
+          echo "## ℹ️ サーバント学習スキップ" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "前回の学習から${{ steps.check.outputs.commits_since }}コミット（閾値: 10コミット）" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "次回の自動学習: 明日 2:00 (JST)" >> $GITHUB_STEP_SUMMARY
