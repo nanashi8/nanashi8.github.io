@@ -181,5 +181,5 @@ test-results/                      # テスト結果（Git無視）
 
 ## 参考リンク
 
-- [Playwright Visual Comparisons](https://playwright.dev/docs/test-snapshots)
-- [Visual Regression Testing Guide](https://playwright.dev/docs/screenshots)
+- [Playwright Visual Comparisons](https://playwright.d../test-snapshots)
+- [Visual Regression Testing Guide](https://playwright.d../screenshots)

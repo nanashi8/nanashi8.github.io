@@ -246,7 +246,7 @@ npm run deploy
 
 ## 🔗 関連リンク
 
-- [VS Code Simple Browser 公式ドキュメント](https://code.visualstudio.com/docs/editor/command-line#_opening-vs-code-with-urls)
+- [VS Code Simple Browser 公式ドキュメント](https://code.visualstudio.c../editor/command-line#_opening-vs-code-with-urls)
 - [Vite 公式ドキュメント](https://vitejs.dev/)
 - [プロジェクトのREADME](../README.md)
 

@@ -700,9 +700,9 @@ module.exports = {
 
 ## 📚 関連ドキュメント
 
-- [自己管理型システム](./SELF_MANAGING_PROJECT.md)
+- [自己管理型システム](../maintenance/SELF_MANAGING_PROJECT.md)
 - [プロジェクト構造検証](./PROJECT_STRUCTURE_VALIDATION.md)
-- [品質保証システム](./quality/QUALITY_SYSTEM.md)
+- [品質保証システム](../quality/QUALITY_SYSTEM.md)
 
 ---
 
