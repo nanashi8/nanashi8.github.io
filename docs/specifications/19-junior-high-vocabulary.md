@@ -103,5 +103,5 @@ python3 scripts/normalize_categories_to_10.py
 - [archive/specifications/07-junior-high-entrance-vocabulary.md](./archive/specifications/07-junior-high-entrance-vocabulary.md) - 語彙作成仕様
 
 ### 開発ガイドライン
-- [AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md) - AI開発ワークフロー
-- [QUALITY_CHECKLIST.md](./QUALITY_CHECKLIST.md) - 品質チェックリスト
+- [AI_WORKFLOW_INSTRUCTIONS.md](../references/AI_WORKFLOW_INSTRUCTIONS.md) - AI開発ワークフロー
+- [QUALITY_CHECKLIST.md](../quality/QUALITY_CHECKLIST.md) - 品質チェックリスト

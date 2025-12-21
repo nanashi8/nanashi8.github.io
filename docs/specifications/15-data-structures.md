@@ -368,7 +368,7 @@ export interface CreatedQuestion {
 
 - [01. プロジェクト概要](./01-project-overview.md) - 技術スタック
 - [16. ストレージ戦略](./16-storage-strategy.md) - データ保存方法
-- [TypeScript開発ガイドライン](./TYPESCRIPT_DEVELOPMENT_GUIDELINES.md) - 型安全な開発
+- [TypeScript開発ガイドライン](../development/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md) - 型安全な開発
 - [緊急復旧ガイド](./EMERGENCY_RECOVERY_GUIDE.md) - 機能損失時の復旧手順
 
 ---

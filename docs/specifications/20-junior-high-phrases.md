@@ -151,8 +151,8 @@ python3 scripts/normalize_categories_to_10.py
 - [03. スペルクイズ機能](./03-spelling-quiz.md) - 熟語の綴り入力
 
 ### 開発ガイドライン
-- [AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md) - データ追加フロー
-- [QUALITY_CHECKLIST.md](./QUALITY_CHECKLIST.md) - 品質チェック項目
+- [AI_WORKFLOW_INSTRUCTIONS.md](../references/AI_WORKFLOW_INSTRUCTIONS.md) - データ追加フロー
+- [QUALITY_CHECKLIST.md](../quality/QUALITY_CHECKLIST.md) - 品質チェック項目
 
 ---
 

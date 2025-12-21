@@ -609,9 +609,9 @@ npm run test:smoke
 
 ### 関連ドキュメント
 
-- [CSS開発ガイドライン](./CSS_DEVELOPMENT_GUIDELINES.md)
-- [TypeScript開発ガイドライン](./TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)
-- [品質管理パイプライン](./QUALITY_PIPELINE.md)
+- [CSS開発ガイドライン](../development/CSS_DEVELOPMENT_GUIDELINES.md)
+- [TypeScript開発ガイドライン](../development/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)
+- [品質管理パイプライン](../quality/QUALITY_PIPELINE.md)
 - [データ構造仕様書](../specifications/15-data-structures.md)
 
 ### よくある質問
