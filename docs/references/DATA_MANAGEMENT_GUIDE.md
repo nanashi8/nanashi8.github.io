@@ -676,16 +676,16 @@ python3 scripts/grammar_stats_report.py
 ## 📚 関連ドキュメント
 
 ### Vocabulary管理
-- **[19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md)**: 単語データ仕様・10カテゴリ詳細
-- **[20-junior-high-phrases.md](./20-junior-high-phrases.md)**: フレーズデータ仕様
-- **[15-data-structures.md](./15-data-structures.md)**: TypeScript型定義とデータ構造
+- **[19-junior-high-vocabulary.md](../specifications/19-junior-high-vocabulary.md)**: 単語データ仕様・10カテゴリ詳細
+- **[20-junior-high-phrases.md](../specifications/20-junior-high-phrases.md)**: フレーズデータ仕様
+- **[15-data-structures.md](../specifications/15-data-structures.md)**: TypeScript型定義とデータ構造
 - **[QUALITY_CHECKLIST.md](./QUALITY_CHECKLIST.md)**: データ品質チェックリスト
 
 ### 長文パッセージ管理
 - **[PASSAGE_QUALITY_GUIDE.md](./PASSAGE_QUALITY_GUIDE.md)**: パッセージ品質検査の詳細ガイド
 - **[PASSAGE_PHRASE_SPLITTING_RULES_v3.md](./PASSAGE_PHRASE_SPLITTING_RULES_v3.md)**: フレーズ分割ルール
 - **[PASSAGE_CREATION_GUIDELINES.md](./PASSAGE_CREATION_GUIDELINES.md)**: パッセージ作成ガイドライン
-- **[21-reading-passages.md](./21-reading-passages.md)**: 長文読解パッセージの仕様
+- **[21-reading-passages.md](../specifications/21-reading-passages.md)**: 長文読解パッセージの仕様
 
 ### 文法問題管理
 - **[NEW_HORIZON_GRAMMAR_GUIDELINES.md](./NEW_HORIZON_GRAMMAR_GUIDELINES.md)**: 文法問題作成の標準仕様

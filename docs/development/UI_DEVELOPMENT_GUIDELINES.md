@@ -15,8 +15,8 @@ tags: [development, ai, dark-mode]
 ## 📚 関連ドキュメント
 
 - **[DESIGN_SYSTEM_RULES.md](./DESIGN_SYSTEM_RULES.md)** - カラーシステムの詳細ルール・自動チェック方法
-- [17-styling.md](./17-styling.md) - スタイリング全般
-- [18-dark-mode.md](./18-dark-mode.md) - ダークモード実装詳細
+- [17-styling.md](../specifications/17-styling.md) - スタイリング全般
+- [18-dark-mode.md](../specifications/18-dark-mode.md) - ダークモード実装詳細
 
 ## 必須要件
 
