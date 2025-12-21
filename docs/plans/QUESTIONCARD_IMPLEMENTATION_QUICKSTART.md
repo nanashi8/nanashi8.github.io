@@ -339,7 +339,7 @@ cat src/types/customQuestions.ts | grep "interface CustomWord"
 
 ## 📚 参考資料
 
-- [詳細実装計画](./questioncard-custom-set-implementation-plan.md)
+- [詳細実装計画](./QUESTIONCARD_CUSTOM_SET_IMPLEMENTATION_PLAN.md)
 - AddToCustomButtonコンポーネント: `src/components/AddToCustomButton.tsx`
 - CustomWord型定義: `src/types/customQuestions.ts`
 - 参照実装:
