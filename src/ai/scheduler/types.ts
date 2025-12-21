@@ -208,5 +208,6 @@ export interface ScheduleResult {
     dtaApplied: number;
     antiVibrationApplied: number;
     signalsDetected: DetectedSignal[];
+    randomSkipApplied?: boolean; // 🔥 ランダム飛ばし機能の適用フラグ
   };
 }
