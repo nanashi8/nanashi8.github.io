@@ -328,7 +328,7 @@ fi
 
 ### ドキュメント (2 files)
 
-1. **docs/quality/CONTENT_QUALITY_TESTING.md** (新規作成)
+1. **../quality/CONTENT_QUALITY_TESTING.md** (新規作成)
    - 実装ガイド
    - 使用方法
    - トラブルシューティング
@@ -548,7 +548,7 @@ function ContentQualityDashboard() {
 
 **質問・フィードバック**:
 - GitHub Issues: [nanashi8/nanashi8.github.io/issues](https://github.com/nanashi8/nanashi8.github.io/issues)
-- ドキュメント: [docs/quality/CONTENT_QUALITY_TESTING.md](docs/quality/CONTENT_QUALITY_TESTING.md)
+- ドキュメント: [../quality/CONTENT_QUALITY_TESTING.md](../quality/CONTENT_QUALITY_TESTING.md)
 
 **緊急時**:
 - テスト実装ガードのスキップ: `git commit --no-verify` (非推奨)

@@ -248,7 +248,7 @@ tags: [specification, ai, test]
 
 - **[CSS開発ガイドライン](../development/CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名、CSS変数、重複防止
 - **[TypeScript/React開発ガイドライン](../development/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - 型安全、コンポーネント設計
-- **[品質管理パイプライン](./QUALITY_PIPELINE.md)** - テスト戦略、Git Hooks、CI/CD
+- **[品質管理パイプライン](../quality/QUALITY_PIPELINE_LEGACY.md)** - テスト戦略、Git Hooks、CI/CD
 - **[AI開発アシスタント用指示書](../.aitk/instructions/development-guidelines.instructions.md)** - GitHub Copilot統合ガイド
 
 ### 機能仕様書

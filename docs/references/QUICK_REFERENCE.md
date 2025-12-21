@@ -329,7 +329,7 @@ cd scripts && python3 phrase_coverage_report.py
 
 | ドキュメント | 用途 |
 |-------------|------|
-| [24-testing-strategy.md](../specifications/24-testing-strategy.md) | テスト戦略 |
+| ~~24-testing-strategy.md（ファイル未作成）~~ | テスト戦略 |
 | 該当機能の仕様書（01-26） | 機能仕様確認 |
 | UI関連なら [UI_DEVELOPMENT_GUIDELINES.md](../development/UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
 
@@ -427,7 +427,7 @@ python3 scripts/normalize_categories_to_10.py
 
 | ドキュメント | 用途 |
 |-------------|------|
-| [23-deployment.md](../specifications/23-deployment.md) | デプロイ手順 |
+| ~~23-deployment.md（ファイル未作成）~~ | デプロイ手順 |
 
 ### ⚡ コマンド
 ```bash
