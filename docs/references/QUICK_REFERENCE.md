@@ -14,8 +14,8 @@
 |-------------|------|--------|
 | **[UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md)** | CSS変数使用規則・ライト/ダークモード対応 | ⭐⭐⭐ 最優先 |
 | **[DESIGN_SYSTEM_RULES.md](./DESIGN_SYSTEM_RULES.md)** | デザインルール・カラーシステム定義 | ⭐⭐⭐ 必読 |
-| [17-styling.md](./17-styling.md) | デザインシステム・スタイリング規則 | ⭐⭐ |
-| [18-dark-mode.md](./18-dark-mode.md) | ダークモード実装詳細 | ⭐⭐ |
+| [17-styling.md](../specifications/17-styling.md) | デザインシステム・スタイリング規則 | ⭐⭐ |
+| [18-dark-mode.md](../specifications/18-dark-mode.md) | ダークモード実装詳細 | ⭐⭐ |
 
 ### ⚡ クイックチェック
 
@@ -329,7 +329,7 @@ cd scripts && python3 phrase_coverage_report.py
 
 | ドキュメント | 用途 |
 |-------------|------|
-| [24-testing-strategy.md](./24-testing-strategy.md) | テスト戦略 |
+| [24-testing-strategy.md](../specifications/24-testing-strategy.md) | テスト戦略 |
 | 該当機能の仕様書（01-26） | 機能仕様確認 |
 | UI関連なら [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
 
@@ -347,10 +347,10 @@ cd scripts && python3 phrase_coverage_report.py
 
 | ドキュメント | 用途 |
 |-------------|------|
-| [01-project-overview.md](./01-project-overview.md) | プロジェクト全体像 |
+| [01-project-overview.md](../specifications/01-project-overview.md) | プロジェクト全体像 |
 | 関連機能仕様書（02-14） | 既存機能との統合 |
-| [15-data-structures.md](./15-data-structures.md) | データ構造 |
-| [16-storage-strategy.md](./16-storage-strategy.md) | ストレージ戦略 |
+| [15-data-structures.md](../specifications/15-data-structures.md) | データ構造 |
+| [16-storage-strategy.md](../specifications/16-storage-strategy.md) | ストレージ戦略 |
 | [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
 
 ### ⚡ クイックチェック
@@ -372,9 +372,9 @@ cd scripts && python3 phrase_coverage_report.py
 |-------------|------|--------|
 | **[AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md)** | データ追加ワークフロー | ⭐⭐⭐ 必読 |
 | **[DATA_MANAGEMENT_GUIDE.md](./DATA_MANAGEMENT_GUIDE.md)** | データ管理・正規化運用ガイド | ⭐⭐⭐ |
-| **[19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md)** | 単語データ仕様・10カテゴリ定義 | ⭐⭐⭐ |
-| **[20-junior-high-phrases.md](./20-junior-high-phrases.md)** | フレーズデータ仕様・作成ガイドライン | ⭐⭐⭐ |
-| [15-data-structures.md](./15-data-structures.md) | データ構造・型定義 | ⭐⭐ |
+| **[19-junior-high-vocabulary.md](../specifications/19-junior-high-vocabulary.md)** | 単語データ仕様・10カテゴリ定義 | ⭐⭐⭐ |
+| **[20-junior-high-phrases.md](../specifications/20-junior-high-phrases.md)** | フレーズデータ仕様・作成ガイドライン | ⭐⭐⭐ |
+| [15-data-structures.md](../specifications/15-data-structures.md) | データ構造・型定義 | ⭐⭐ |
 | [QUALITY_CHECKLIST.md](./QUALITY_CHECKLIST.md) | データ品質チェック項目 | ⭐⭐ |
 
 ### 🎯 10カテゴリシステム（厳守）
@@ -427,7 +427,7 @@ python3 scripts/normalize_categories_to_10.py
 
 | ドキュメント | 用途 |
 |-------------|------|
-| [23-deployment.md](./23-deployment.md) | デプロイ手順 |
+| [23-deployment.md](../specifications/23-deployment.md) | デプロイ手順 |
 
 ### ⚡ コマンド
 ```bash
@@ -459,42 +459,42 @@ gh-pages -d dist
 
 | 番号 | ドキュメント | 内容 |
 |-----|-------------|------|
-| 01 | [project-overview.md](./01-project-overview.md) | プロジェクト概要 |
-| 02 | [translation-quiz.md](./02-translation-quiz.md) | 和訳クイズ |
-| 03 | [spelling-quiz.md](./03-spelling-quiz.md) | スペルクイズ |
-| 04 | [reading-comprehension.md](./04-reading-comprehension.md) | 長文読解 |
-| 05 | [stats-analytics.md](./05-stats-analytics.md) | 統計・分析 |
-| 06 | [settings.md](./06-settings.md) | 設定画面 |
+| 01 | [project-overview.md](../specifications/01-project-overview.md) | プロジェクト概要 |
+| 02 | [translation-quiz.md](../specifications/02-translation-quiz.md) | 和訳クイズ |
+| 03 | [spelling-quiz.md](../specifications/03-spelling-quiz.md) | スペルクイズ |
+| 04 | [reading-comprehension.md](../specifications/04-reading-comprehension.md) | 長文読解 |
+| 05 | [stats-analytics.md](../specifications/05-stats-analytics.md) | 統計・分析 |
+| 06 | [settings.md](../specifications/06-settings.md) | 設定画面 |
 
 ### AI機能
 
 | 番号 | ドキュメント | 内容 |
 |-----|-------------|------|
-| 07 | [cognitive-load-ai.md](./07-cognitive-load-ai.md) | 認知負荷AI |
-| 08 | [error-prediction-ai.md](./08-error-prediction-ai.md) | エラー予測AI |
-| 09 | [contextual-learning-ai.md](./09-contextual-learning-ai.md) | 文脈学習AI |
-| 10 | [learning-style-ai.md](./10-learning-style-ai.md) | 学習スタイルAI |
-| 11 | [gamification-ai.md](./11-gamification-ai.md) | ゲーミフィケーションAI |
-| 12 | [learning-curve-ai.md](./12-learning-curve-ai.md) | 学習曲線AI |
-| 13 | [radar-chart-ai.md](./13-radar-chart-ai.md) | レーダーチャートAI |
-| 14 | [ai-comment-generator.md](./14-ai-comment-generator.md) | AIコメント生成 |
+| 07 | [cognitive-load-ai.md](../specifications/07-cognitive-load-ai.md) | 認知負荷AI |
+| 08 | [error-prediction-ai.md](../specifications/08-error-prediction-ai.md) | エラー予測AI |
+| 09 | [contextual-learning-ai.md](../specifications/09-contextual-learning-ai.md) | 文脈学習AI |
+| 10 | [learning-style-ai.md](../specifications/10-learning-style-ai.md) | 学習スタイルAI |
+| 11 | [gamification-ai.md](../specifications/11-gamification-ai.md) | ゲーミフィケーションAI |
+| 12 | [learning-curve-ai.md](../specifications/12-learning-curve-ai.md) | 学習曲線AI |
+| 13 | [radar-chart-ai.md](../specifications/13-radar-chart-ai.md) | レーダーチャートAI |
+| 14 | [ai-comment-generator.md](../specifications/14-ai-comment-generator.md) | AIコメント生成 |
 
 ### データ・開発
 
 | 番号 | ドキュメント | 内容 |
 |-----|-------------|------|
-| 15 | [data-structures.md](./15-data-structures.md) | データ構造 |
-| 16 | [storage-strategy.md](./16-storage-strategy.md) | ストレージ戦略 |
-| 17 | [styling.md](./17-styling.md) | スタイリング |
-| 18 | [dark-mode.md](./18-dark-mode.md) | ダークモード |
-| 19 | [junior-high-vocabulary.md](./19-junior-high-vocabulary.md) | 中学受験単語 |
-| 20 | [junior-high-phrases.md](./20-junior-high-phrases.md) | 中学受験フレーズ |
-| 21 | [reading-passages.md](./21-reading-passages.md) | 長文パッセージ |
-| 22 | [development-setup.md](./22-development-setup.md) | 開発環境 |
-| 23 | [deployment.md](./23-deployment.md) | デプロイ |
-| 24 | [testing-strategy.md](./24-testing-strategy.md) | テスト戦略 |
-| 25 | [changelog.md](./25-changelog.md) | 変更履歴 |
-| 26 | [final-report.md](./26-final-report.md) | 実装完了レポート |
+| 15 | [data-structures.md](../specifications/15-data-structures.md) | データ構造 |
+| 16 | [storage-strategy.md](../specifications/16-storage-strategy.md) | ストレージ戦略 |
+| 17 | [styling.md](../specifications/17-styling.md) | スタイリング |
+| 18 | [dark-mode.md](../specifications/18-dark-mode.md) | ダークモード |
+| 19 | [junior-high-vocabulary.md](../specifications/19-junior-high-vocabulary.md) | 中学受験単語 |
+| 20 | [junior-high-phrases.md](../specifications/20-junior-high-phrases.md) | 中学受験フレーズ |
+| 21 | [reading-passages.md](../specifications/21-reading-passages.md) | 長文パッセージ |
+| 22 | [development-setup.md](../specifications/22-development-setup.md) | 開発環境 |
+| 23 | [deployment.md](../specifications/23-deployment.md) | デプロイ |
+| 24 | [testing-strategy.md](../specifications/24-testing-strategy.md) | テスト戦略 |
+| 25 | [changelog.md](../specifications/25-changelog.md) | 変更履歴 |
+| 26 | [final-report.md](../specifications/26-final-report.md) | 実装完了レポート |
 
 ---
 

@@ -85,13 +85,23 @@ function analyzeLinks() {
   
   if (brokenLinks.length > 0) {
     console.log('⚠️  断線リンク詳細:');
-    brokenLinks.slice(0, 10).forEach(({ source, target, resolved }) => {
-      console.log(`  ${source}`);
-      console.log(`    → ${target} (解決先: ${resolved})`);
+    
+    // 断線をファイル別にグループ化
+    const brokenByFile = {};
+    brokenLinks.forEach(({ source, target, resolved }) => {
+      if (!brokenByFile[source]) {
+        brokenByFile[source] = [];
+      }
+      brokenByFile[source].push({ target, resolved });
     });
-    if (brokenLinks.length > 10) {
-      console.log(`  ... 他 ${brokenLinks.length - 10}件`);
-    }
+    
+    // ファイルごとに表示
+    Object.entries(brokenByFile).forEach(([source, targets]) => {
+      console.log(`  ${source} (${targets.length}箇所)`);
+      targets.forEach(({ target }) => {
+        console.log(`    → ${target}`);
+      });
+    });
     console.log();
   }
   

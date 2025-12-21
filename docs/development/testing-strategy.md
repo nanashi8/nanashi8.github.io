@@ -75,5 +75,5 @@ npm run preview
 
 ## 📚 関連ドキュメント
 
-- [22. 開発環境セットアップ](./22-development-setup.md)
-- [23. デプロイ手順](./23-deployment.md)
+- [22. 開発環境セットアップ](../specifications/22-development-setup.md)
+- [23. デプロイ手順](../specifications/23-deployment.md)
