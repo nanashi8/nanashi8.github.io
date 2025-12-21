@@ -1158,7 +1158,7 @@ project/
 
 ### 無料リソース
 1. **MDN Web Docs** (日本語)
-   - https://developer.mozilla.org/ja/docs/Web/CSS
+   - https://developer.mozilla.org/../Web/CSS
    - CSS公式リファレンス
 
 1. **CSS Tricks**

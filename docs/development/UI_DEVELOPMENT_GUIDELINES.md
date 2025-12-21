@@ -467,7 +467,7 @@ export const ThemeToggle: React.FC = () => {
 
 ## 参考リンク
 
-- [MDN: CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [MDN: CSS Variables](https://developer.mozilla.org/en-../Web/CSS/Using_CSS_custom_properties)
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
 - [React Accessibility](https://react.dev/learn/accessibility)
 - [Inclusive Components](https://inclusive-components.design/)

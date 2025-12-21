@@ -912,7 +912,7 @@ import { FeatureComponent } from './components/FeatureComponent';  # 拡張子�
 
 ## 参考資料
 
-- [TypeScript公式ドキュメント](https://www.typescriptlang.org/docs/)
+- [TypeScript公式ドキュメント](https://www.typescriptlang.o../)
 - [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
 - [React Hooks公式ドキュメント](https://react.dev/reference/react)
 - [ESLint React Hooks Plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks)

@@ -455,7 +455,7 @@ export default {
 
 ### 外部リンク
 
-- [CSS Variables - MDN](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS Variables - MDN](https://developer.mozilla.org/../Web/CSS/Using_CSS_custom_properties)
 - [CSS Modules - GitHub](https://github.com/css-modules/css-modules)
 - [PurgeCSS](https://purgecss.com/)
 - [Vite CSS Features](https://vitejs.dev/guide/features.html#css)

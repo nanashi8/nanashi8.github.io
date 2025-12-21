@@ -44,7 +44,7 @@ npm run check:dark-mode
 
 ### 詳細ガイドライン
 
-完全なルールと例は [.copilot-instructions.md](./.copilot-instructions.md) を参照してください。
+完全なルールと例は [.copilot-instructions.md](../.copilot-instructions.md) を参照してください。
 
 ## チェック項目
 
@@ -92,5 +92,5 @@ npm run check:dark-mode
 
 ## 参考資料
 
-- [Tailwind CSS Dark Mode](https://tailwindcss.com/docs/dark-mode)
-- [プロジェクトの Copilot Instructions](./.copilot-instructions.md)
+- [Tailwind CSS Dark Mode](https://tailwindcss.c../dark-mode)
+- [プロジェクトの Copilot Instructions](../.copilot-instructions.md)
