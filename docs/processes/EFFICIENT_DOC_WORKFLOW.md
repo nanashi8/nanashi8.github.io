@@ -214,10 +214,11 @@ Markdown files
 
 ## 📚 関連ドキュメント
 
-- [命名規則](../guidelines/DOCUMENT_NAMING_CONVENTION.md)
-- [ディレクトリ構造再編計画](../processes/DOCS_REORGANIZATION_PLAN.md)
-- [リンク修正完了レポート](../reports/LINK_FIX_COMPLETION_REPORT.md)
-- [Docusaurusセットアップガイド](./DOCUSAURUS_SETUP_GUIDE.md)
+- **強制装置の仕様**: [documentation-enforcement.instructions.md](../../.aitk/instructions/documentation-enforcement.instructions.md)
+- **命名規則**: [DOCUMENT_NAMING_CONVENTION.md](../guidelines/DOCUMENT_NAMING_CONVENTION.md)
+- **ディレクトリ構造再編計画**: [DOCS_REORGANIZATION_PLAN.md](../processes/DOCS_REORGANIZATION_PLAN.md)
+- **リンク修正完了レポート**: [LINK_FIX_COMPLETION_REPORT.md](../reports/LINK_FIX_COMPLETION_REPORT.md)
+- **Docusaurusセットアップガイド**: [DOCUSAURUS_SETUP_GUIDE.md](../how-to/DOCUSAURUS_SETUP_GUIDE.md)
 
 ## 🤝 貢献
 
