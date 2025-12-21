@@ -266,7 +266,7 @@ if (timeOfDay === 'morning') {
 
 - [AI_PROJECT_COMPLETE.md](../AI_PROJECT_COMPLETE.md)
 - [ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md](../../ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md)
-- [AntiVibrationFilter仕様](../specifications/anti-vibration-filter.md)
+- [AntiVibrationFilter仕様](anti-vibration-filter.md)
 
 ## バージョン履歴
 

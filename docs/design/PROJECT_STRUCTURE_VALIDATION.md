@@ -225,6 +225,6 @@ find .aitk/instructions -name "*.md" -exec sed -i '' 's|OLD_PATH|NEW_PATH|g' {} 
 
 ## 🔗 関連ドキュメント
 
-- [品質保証システム](.../quality/QUALITY_SYSTEM.md)
+- [品質システム](../quality/QUALITY_SYSTEM.md)
 - [プロジェクト構造検証指示](../.aitk/instructions/project-structure.instructions.md)
 - [開発ガイドライン](../.aitk/instructions/development-guidelines.instructions.md)

@@ -264,9 +264,9 @@ function exportProblemData() {
 
 ## 🔗 関連リソース
 
-- [PLATFORM_ROADMAP.md](./PLATFORM_ROADMAP.md) - 全体ロードマップ
-- [DATA_QUALITY_REPORT.md](./guidelines/DATA_QUALITY_REPORT.md) - データ品質計画
-- [CROSS_FILE_CONSISTENCY.md](./guidelines/CROSS_FILE_CONSISTENCY.md) - 整合性ガイドライン
+- [PLATFORM_ROADMAP.md](../roadmap/PLATFORM_ROADMAP.md) - 全体ロードマップ
+- [DATA_QUALITY_REPORT.md](../guidelines/DATA_QUALITY_REPORT.md) - データ品質計画
+- [CROSS_FILE_CONSISTENCY.md](../guidelines/CROSS_FILE_CONSISTENCY.md) - 整合性ガイドライン
 
 ---
 

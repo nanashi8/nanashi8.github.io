@@ -290,6 +290,6 @@ jobs:
 
 ## 📝 関連ドキュメント
 
-- [22-開発環境セットアップ](../specifications/22-development-setup.md)
-- [24-テスト戦略](../specifications/24-testing-strategy.md)
+- [22-開発環境セットアップ](setup.md)
+- [24-テスト戦略](testing-strategy.md)
 - [01-プロジェクト概要](../specifications/01-project-overview.md)

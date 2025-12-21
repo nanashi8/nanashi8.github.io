@@ -1042,7 +1042,7 @@ private getWordStatus(question: Question): WordStatus | null {
 
 - [QuestionScheduler 完全仕様書](../specifications/QUESTION_SCHEDULER_SPEC.md)
 - [型定義リファレンス](../references/QUESTION_SCHEDULER_TYPES.md)
-- [メタAI統合ガイド](META_AI_INTEGRATION_GUIDE.md)
+- [メタAI統合ガイド](../guidelines/META_AI_INTEGRATION_GUIDE.md)
 - [トラブルシューティングガイド](../guidelines/META_AI_TROUBLESHOOTING.md)
 
 ---

@@ -206,4 +206,4 @@ schedule:
 
 - [GitHub Actions ドキュメント](https://docs.github.com/en/actions)
 - [Dependabot ドキュメント](https://docs.github.com/en/code-security/dependabot)
-- [開発ガイドライン](.github/DEVELOPMENT_GUIDELINES.md)
+- [開発ガイドライン](../../.github/DEVELOPMENT_GUIDELINES.md)

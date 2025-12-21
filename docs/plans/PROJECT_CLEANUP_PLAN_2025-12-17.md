@@ -482,8 +482,8 @@ Phase 5: 将来の検討事項として保留
 
 ## 📚 参考資料
 
-- [ドキュメント整理レポート 2025-12-15](./DOCS_REORGANIZATION_2025-12-15.md)
-- [ルートファイル整理レポート 2025-12-15](./ROOT_FILES_CLEANUP_2025-12-15.md)
+- [ドキュメント整理レポート 2025-12-15](../processes/DOCS_REORGANIZATION_2025-12-15.md)
+- [ルートファイル整理レポート 2025-12-15](../processes/ROOT_FILES_CLEANUP_2025-12-15.md)
 - [リファクタリング安全ガイド](../processes/REFACTORING_SAFETY.md)
 - [プロジェクト構造検証](../design/PROJECT_STRUCTURE_VALIDATION.md)
 
