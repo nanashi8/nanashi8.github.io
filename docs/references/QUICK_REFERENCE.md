@@ -12,8 +12,8 @@
 
 | ドキュメント | 用途 | 重要度 |
 |-------------|------|--------|
-| **[UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md)** | CSS変数使用規則・ライト/ダークモード対応 | ⭐⭐⭐ 最優先 |
-| **[DESIGN_SYSTEM_RULES.md](./DESIGN_SYSTEM_RULES.md)** | デザインルール・カラーシステム定義 | ⭐⭐⭐ 必読 |
+| **[UI_DEVELOPMENT_GUIDELINES.md](../development/UI_DEVELOPMENT_GUIDELINES.md)** | CSS変数使用規則・ライト/ダークモード対応 | ⭐⭐⭐ 最優先 |
+| **[DESIGN_SYSTEM_RULES.md](../development/DESIGN_SYSTEM_RULES.md)** | デザインルール・カラーシステム定義 | ⭐⭐⭐ 必読 |
 | [17-styling.md](../specifications/17-styling.md) | デザインシステム・スタイリング規則 | ⭐⭐ |
 | [18-dark-mode.md](../specifications/18-dark-mode.md) | ダークモード実装詳細 | ⭐⭐ |
 
@@ -54,8 +54,8 @@ grep -rn ":\s*white\|:\s*black" src/**/*.css | grep -v "dark-mode"
 
 ### 💡 よくある作業
 
-- **新規コンポーネント作成** → UI_DEVELOPMENT_GUIDELINES.md の実装方法セクション
-- **既存UIの色変更** → DESIGN_SYSTEM_RULES.md でルール確認、CSS変数リスト参照
+- **新規コンポーネント作成** → ../development/UI_DEVELOPMENT_GUIDELINES.md の実装方法セクション
+- **既存UIの色変更** → ../development/DESIGN_SYSTEM_RULES.md でルール確認、CSS変数リスト参照
 - **ボタンスタイル** → `--btn-primary-*` 変数使用
 - **背景色** → `--background`、`--bg-secondary`、`--bg-tertiary`
 - **テキスト色** → `--text-color`、`--text-secondary`、`--text-tertiary`
@@ -69,9 +69,9 @@ grep -rn ":\s*white\|:\s*black" src/**/*.css | grep -v "dark-mode"
 | 問題タイプ | ドキュメント | 行数 | 重要度 |
 |-----------|-------------|------|--------|
 | **総合文法（60問/Unit）** | **[AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md)** セクション2 | - | ⭐⭐⭐ 最優先 |
-| **文並び替え** | **[NEW_HORIZON_GRAMMAR_GUIDELINES.md](./NEW_HORIZON_GRAMMAR_GUIDELINES.md)** | 1,017行 | ⭐⭐⭐ |
-| **動詞変化** | **[NEW_HORIZON_VERB_FORM_GUIDELINES.md](./NEW_HORIZON_VERB_FORM_GUIDELINES.md)** | - | ⭐⭐⭐ |
-| **穴埋め** | **[NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md](./NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md)** | - | ⭐⭐⭐ |
+| **文並び替え** | **[NEW_HORIZON_GRAMMAR_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_GRAMMAR_GUIDELINES.md)** | 1,017行 | ⭐⭐⭐ |
+| **動詞変化** | **[NEW_HORIZON_VERB_FORM_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_VERB_FORM_GUIDELINES.md)** | - | ⭐⭐⭐ |
+| **穴埋め** | **[NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md)** | - | ⭐⭐⭐ |
 
 ### 📋 総合文法問題構成（60問/Unit）
 
@@ -186,10 +186,10 @@ public/data/
 
 | ドキュメント | 用途 | 行数 | 重要度 |
 |-------------|------|------|--------|
-| **[PASSAGE_CREATION_GUIDELINES.md](./PASSAGE_CREATION_GUIDELINES.md)** | パッセージ作成標準 | 635行 | ⭐⭐⭐ |
-| **[PASSAGE_QUICKSTART.md](./PASSAGE_QUICKSTART.md)** | クイックスタート | 311行 | ⭐⭐⭐ |
-| [PASSAGE_QUALITY_GUIDE.md](./PASSAGE_QUALITY_GUIDE.md) | 品質基準 | - | ⭐⭐ |
-| [PASSAGE_PHRASE_JSON_CREATION_GUIDE.md](./PASSAGE_PHRASE_JSON_CREATION_GUIDE.md) | フレーズJSON作成 | - | ⭐⭐ |
+| **[PASSAGE_CREATION_GUIDELINES.md](../guidelines/passage/PASSAGE_CREATION_GUIDELINES.md)** | パッセージ作成標準 | 635行 | ⭐⭐⭐ |
+| **[PASSAGE_QUICKSTART.md](../guidelines/passage/PASSAGE_QUICKSTART.md)** | クイックスタート | 311行 | ⭐⭐⭐ |
+| [PASSAGE_QUALITY_GUIDE.md](../guidelines/passage/PASSAGE_QUALITY_GUIDE.md) | 品質基準 | - | ⭐⭐ |
+| [PASSAGE_PHRASE_JSON_CREATION_GUIDE.md](../guidelines/passage/PASSAGE_PHRASE_JSON_CREATION_GUIDE.md) | フレーズJSON作成 | - | ⭐⭐ |
 
 ### 🚀 6つのPhaseパイプライン
 
@@ -331,7 +331,7 @@ cd scripts && python3 phrase_coverage_report.py
 |-------------|------|
 | [24-testing-strategy.md](../specifications/24-testing-strategy.md) | テスト戦略 |
 | 該当機能の仕様書（01-26） | 機能仕様確認 |
-| UI関連なら [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
+| UI関連なら [UI_DEVELOPMENT_GUIDELINES.md](../development/UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
 
 ### ⚡ クイックチェック
 - [ ] バグ再現しない
@@ -351,7 +351,7 @@ cd scripts && python3 phrase_coverage_report.py
 | 関連機能仕様書（02-14） | 既存機能との統合 |
 | [15-data-structures.md](../specifications/15-data-structures.md) | データ構造 |
 | [16-storage-strategy.md](../specifications/16-storage-strategy.md) | ストレージ戦略 |
-| [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
+| [UI_DEVELOPMENT_GUIDELINES.md](../development/UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
 
 ### ⚡ クイックチェック
 - [ ] 機能仕様書作成/更新
@@ -375,7 +375,7 @@ cd scripts && python3 phrase_coverage_report.py
 | **[19-junior-high-vocabulary.md](../specifications/19-junior-high-vocabulary.md)** | 単語データ仕様・10カテゴリ定義 | ⭐⭐⭐ |
 | **[20-junior-high-phrases.md](../specifications/20-junior-high-phrases.md)** | フレーズデータ仕様・作成ガイドライン | ⭐⭐⭐ |
 | [15-data-structures.md](../specifications/15-data-structures.md) | データ構造・型定義 | ⭐⭐ |
-| [QUALITY_CHECKLIST.md](./QUALITY_CHECKLIST.md) | データ品質チェック項目 | ⭐⭐ |
+| [QUALITY_CHECKLIST.md](../quality/QUALITY_CHECKLIST.md) | データ品質チェック項目 | ⭐⭐ |
 
 ### 🎯 10カテゴリシステム（厳守）
 
@@ -581,7 +581,7 @@ nanashi8.github.io/
 
 - [メインドキュメント目次](./README.md)
 - [AI開発ワークフロー](./AI_WORKFLOW_INSTRUCTIONS.md)
-- [品質チェックリスト](./QUALITY_CHECKLIST.md)
+- [品質チェックリスト](../quality/QUALITY_CHECKLIST.md)
 - [デプロイURL](https://nanashi8.github.io/)
 - [GitHubリポジトリ](https://github.com/nanashi8/nanashi8.github.io)
 

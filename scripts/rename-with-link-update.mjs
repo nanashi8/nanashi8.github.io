@@ -33,14 +33,14 @@ const RENAME_PLAN = [
     to: 'docs/features/grammar-translation-fixes.md',
     priority: 'low'
   },
-  
+
   // guidelines/ → UPPER_SNAKE_CASE
   {
     from: 'docs/guidelines/ci-cd-enhancement-plan.md',
     to: 'docs/guidelines/CI_CD_ENHANCEMENT_PLAN.md',
     priority: 'high'
   },
-  
+
   // references/ → UPPER_SNAKE_CASE
   {
     from: 'docs/references/deploy-explained.md',
@@ -52,14 +52,14 @@ const RENAME_PLAN = [
     to: 'docs/references/GITHUB_CLI_SETUP.md',
     priority: 'high'
   },
-  
+
   // quality/ → UPPER_SNAKE_CASE
   {
     from: 'docs/quality/grammar_quality_report.md',
     to: 'docs/quality/GRAMMAR_QUALITY_REPORT.md',
     priority: 'high'
   },
-  
+
   // plans/ → UPPER_SNAKE_CASE
   {
     from: 'docs/plans/grammar-multiple-correct-answers-verification-plan.md',
@@ -81,7 +81,7 @@ const RENAME_PLAN = [
     to: 'docs/plans/QUESTIONCARD_IMPLEMENTATION_QUICKSTART.md',
     priority: 'medium'
   },
-  
+
   // reports/ → UPPER_SNAKE_CASE
   {
     from: 'docs/reports/choice-explanation-samples.md',
@@ -123,10 +123,10 @@ const RENAME_PLAN = [
 // リンク更新
 function updateLinks(renameMap) {
   console.log('\n🔗 リンク更新中...\n');
-  
+
   const allMdFiles = [];
   const scanDirs = ['docs', '.aitk/instructions'];
-  
+
   scanDirs.forEach(dir => {
     try {
       const result = execSync(`find ${dir} -name "*.md" 2>/dev/null || true`, { encoding: 'utf-8' });
@@ -136,21 +136,21 @@ function updateLinks(renameMap) {
       // Ignore errors
     }
   });
-  
+
   console.log(`  検索対象: ${allMdFiles.length}ファイル`);
-  
+
   let totalUpdates = 0;
-  
+
   for (const file of allMdFiles) {
     try {
       let content = readFileSync(file, 'utf-8');
       let updated = false;
       let fileUpdates = 0;
-      
+
       for (const [oldPath, newPath] of Object.entries(renameMap)) {
         const oldBase = basename(oldPath);
         const newBase = basename(newPath);
-        
+
         // 完全一致リンクを更新
         const regex1 = new RegExp(`\\]\\(${oldPath.replace(/\//g, '\\/')}\\)`, 'g');
         if (regex1.test(content)) {
@@ -158,7 +158,7 @@ function updateLinks(renameMap) {
           updated = true;
           fileUpdates++;
         }
-        
+
         // 相対パスリンクを更新（ファイル名のみ）
         const regex2 = new RegExp(`\\]\\([^)]*${oldBase.replace(/\./g, '\\.')}\\)`, 'g');
         const matches = content.match(regex2);
@@ -174,7 +174,7 @@ function updateLinks(renameMap) {
           });
         }
       }
-      
+
       if (updated) {
         if (!DRY_RUN) {
           writeFileSync(file, content, 'utf-8');
@@ -186,27 +186,27 @@ function updateLinks(renameMap) {
       console.log(`  ⚠️  ${file}: 読み取りエラー`);
     }
   }
-  
+
   console.log(`\n  合計: ${totalUpdates}箇所のリンクを更新\n`);
 }
 
 // リネーム実行
 function executeRenames(priority = null) {
-  const filteredPlan = priority 
+  const filteredPlan = priority
     ? RENAME_PLAN.filter(item => item.priority === priority)
     : RENAME_PLAN;
-  
+
   console.log(`\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
   console.log(`📝 リネーム実行${priority ? ` (優先度: ${priority})` : ''}`);
   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`);
-  
+
   if (DRY_RUN) {
     console.log('🔍 DRY RUN モード（実際の変更は行いません）\n');
   }
-  
+
   const renameMap = {};
   let successCount = 0;
-  
+
   for (const { from, to, priority: itemPriority } of filteredPlan) {
     try {
       if (!DRY_RUN) {
@@ -219,14 +219,14 @@ function executeRenames(priority = null) {
       console.log(`  ✗ ${from}: ${error.message}`);
     }
   }
-  
+
   console.log(`\n  成功: ${successCount}/${filteredPlan.length}ファイル\n`);
-  
+
   // リンク更新
   if (Object.keys(renameMap).length > 0) {
     updateLinks(renameMap);
   }
-  
+
   return successCount;
 }
 
@@ -235,22 +235,22 @@ function main() {
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log('🔄 ドキュメントリネーム + リンク更新');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-  
+
   const priorityArg = process.argv.find(arg => arg.startsWith('--priority='));
   const priority = priorityArg ? priorityArg.split('=')[1] : null;
-  
+
   if (priority && !['high', 'medium', 'low'].includes(priority)) {
     console.error('\n❌ 無効な優先度: ' + priority);
     console.error('   使用可能: high, medium, low\n');
     process.exit(1);
   }
-  
+
   const totalRenamed = executeRenames(priority);
-  
+
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log(`✅ 完了: ${totalRenamed}ファイルをリネーム`);
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-  
+
   if (!DRY_RUN) {
     console.log('💡 次のステップ:');
     console.log('  1. git status で変更を確認');

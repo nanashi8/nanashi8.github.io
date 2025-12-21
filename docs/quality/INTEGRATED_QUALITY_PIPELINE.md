@@ -258,7 +258,7 @@ python3 scripts/validate_all_content.py
 - 時制を変える: 現在 → 過去 → 未来
 - 文脈を変える: 場所・時間・状況
 
-詳細: [GRAMMAR_GENERATION_GUIDELINES.md](./GRAMMAR_GENERATION_GUIDELINES.md)
+詳細: [GRAMMAR_GENERATION_GUIDELINES.md](../guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md)
 
 ---
 
@@ -442,8 +442,8 @@ on:
 ## 関連ドキュメント
 
 - [QUALITY_AUTOMATION_GUIDE.md](./QUALITY_AUTOMATION_GUIDE.md) - 文法問題の自動化
-- [GRAMMAR_QUALITY_PIPELINE.md](./GRAMMAR_QUALITY_PIPELINE.md) - 品質プロセス全体
-- [GRAMMAR_GENERATION_GUIDELINES.md](./GRAMMAR_GENERATION_GUIDELINES.md) - 問題作成ガイドライン
+- [GRAMMAR_QUALITY_PIPELINE.md](../guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md) - 品質プロセス全体
+- [GRAMMAR_GENERATION_GUIDELINES.md](../guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md) - 問題作成ガイドライン
 # 統合品質パイプライン - 全タブコンテンツ対応
 
 ## 概要
@@ -679,7 +679,7 @@ python3 scripts/validate_all_content.py
 - 時制を変える: 現在 → 過去 → 未来
 - 文脈を変える: 場所・時間・状況
 
-詳細: [GRAMMAR_GENERATION_GUIDELINES.md](./GRAMMAR_GENERATION_GUIDELINES.md)
+詳細: [GRAMMAR_GENERATION_GUIDELINES.md](../guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md)
 
 ---
 
@@ -855,5 +855,5 @@ on:
 ## 関連ドキュメント
 
 - [QUALITY_AUTOMATION_GUIDE.md](./QUALITY_AUTOMATION_GUIDE.md) - 文法問題の自動化
-- [GRAMMAR_QUALITY_PIPELINE.md](./GRAMMAR_QUALITY_PIPELINE.md) - 品質プロセス全体
-- [GRAMMAR_GENERATION_GUIDELINES.md](./GRAMMAR_GENERATION_GUIDELINES.md) - 問題作成ガイドライン
+- [GRAMMAR_QUALITY_PIPELINE.md](../guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md) - 品質プロセス全体
+- [GRAMMAR_GENERATION_GUIDELINES.md](../guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md) - 問題作成ガイドライン

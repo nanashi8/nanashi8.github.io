@@ -289,7 +289,7 @@ python3 scripts/split_passages_into_phrases.py
 - 等位接続詞（and, but, or）前後の条件付き分割
 - カンマ分割の厳格化（前2語以上、後3語以上）
 
-**詳細**: [docs/PASSAGE_PHRASE_SPLITTING_RULES_v3.md](./PASSAGE_PHRASE_SPLITTING_RULES_v3.md)
+**詳細**: ~~PASSAGE_PHRASE_SPLITTING_RULES_v3.md（ファイル存在せず）~~
 
 #### 2. passage_quality_check.py（品質検証）
 
@@ -511,7 +511,7 @@ git add public/data/sentence-ordering-grade*.json
 git commit -m "feat(grammar): Update sentence ordering questions"
 ```
 
-**詳細**: [docs/NEW_HORIZON_GRAMMAR_GUIDELINES.md](./NEW_HORIZON_GRAMMAR_GUIDELINES.md)
+**詳細**: [NEW_HORIZON_GRAMMAR_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_GRAMMAR_GUIDELINES.md)
 
 ---
 
@@ -679,22 +679,22 @@ python3 scripts/grammar_stats_report.py
 - **[19-junior-high-vocabulary.md](../specifications/19-junior-high-vocabulary.md)**: 単語データ仕様・10カテゴリ詳細
 - **[20-junior-high-phrases.md](../specifications/20-junior-high-phrases.md)**: フレーズデータ仕様
 - **[15-data-structures.md](../specifications/15-data-structures.md)**: TypeScript型定義とデータ構造
-- **[QUALITY_CHECKLIST.md](./QUALITY_CHECKLIST.md)**: データ品質チェックリスト
+- **[QUALITY_CHECKLIST.md](../quality/QUALITY_CHECKLIST.md)**: データ品質チェックリスト
 
 ### 長文パッセージ管理
-- **[PASSAGE_QUALITY_GUIDE.md](./PASSAGE_QUALITY_GUIDE.md)**: パッセージ品質検査の詳細ガイド
-- **[PASSAGE_PHRASE_SPLITTING_RULES_v3.md](./PASSAGE_PHRASE_SPLITTING_RULES_v3.md)**: フレーズ分割ルール
-- **[PASSAGE_CREATION_GUIDELINES.md](./PASSAGE_CREATION_GUIDELINES.md)**: パッセージ作成ガイドライン
+- **[PASSAGE_QUALITY_GUIDE.md](../guidelines/passage/PASSAGE_QUALITY_GUIDE.md)**: パッセージ品質検査の詳細ガイド
+- **~~PASSAGE_PHRASE_SPLITTING_RULES_v3.md（ファイル存在せず）~~**: フレーズ分割ルール
+- **[PASSAGE_CREATION_GUIDELINES.md](../guidelines/passage/PASSAGE_CREATION_GUIDELINES.md)**: パッセージ作成ガイドライン
 - **[21-reading-passages.md](../specifications/21-reading-passages.md)**: 長文読解パッセージの仕様
 
 ### 文法問題管理
-- **[NEW_HORIZON_GRAMMAR_GUIDELINES.md](./NEW_HORIZON_GRAMMAR_GUIDELINES.md)**: 文法問題作成の標準仕様
-- **[NEW_HORIZON_VERB_FORM_GUIDELINES.md](./NEW_HORIZON_VERB_FORM_GUIDELINES.md)**: 動詞変化問題のガイドライン
-- **[NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md](./NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md)**: 穴埋め問題のガイドライン
+- **[NEW_HORIZON_GRAMMAR_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_GRAMMAR_GUIDELINES.md)**: 文法問題作成の標準仕様
+- **[NEW_HORIZON_VERB_FORM_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_VERB_FORM_GUIDELINES.md)**: 動詞変化問題のガイドライン
+- **[NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md)**: 穴埋め問題のガイドライン
 
 ### フレーズ翻訳管理
-- **[PASSAGE_PHRASE_JSON_CREATION_GUIDE.md](./PASSAGE_PHRASE_JSON_CREATION_GUIDE.md)**: フレーズJSON作成ガイド
-- **[PASSAGE_QUICKSTART.md](./PASSAGE_QUICKSTART.md)**: クイックスタートガイド
+- **[PASSAGE_PHRASE_JSON_CREATION_GUIDE.md](../guidelines/passage/PASSAGE_PHRASE_JSON_CREATION_GUIDE.md)**: フレーズJSON作成ガイド
+- **[PASSAGE_QUICKSTART.md](../guidelines/passage/PASSAGE_QUICKSTART.md)**: クイックスタートガイド
 
 ### 開発・運用
 - **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)**: クイックリファレンス
