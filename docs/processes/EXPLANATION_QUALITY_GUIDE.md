@@ -1,3 +1,11 @@
+---
+title: 文法問題解説の品質ガイドライン
+created: 2025-12-14
+updated: 2025-12-15
+status: in-progress
+tags: [process, ai]
+---
+
 # 文法問題解説の品質ガイドライン
 
 ## 目的
@@ -27,11 +35,13 @@ npm run validate:grammar:explanations
 すべての解説は **最低50文字以上** 必要です。
 
 ❌ 悪い例:
+
 ```json
 "explanation": "比較級: more + 形容詞"
 ```
 
 ✅ 良い例:
+
 ```json
 "explanation": "比較級は「～より...」という意味を表します。interestingは3音節の長い形容詞なので、語尾に-erをつけず「more + 形容詞」の形を使います。短い形容詞（1～2音節）にはtaller、smarterのように-erをつけますが、長い形容詞（3音節以上）にはmore interesting、more beautifulのようにmoreを前につけます。"
 ```
@@ -41,26 +51,32 @@ npm run validate:grammar:explanations
 各文法ポイントには、解説に含めるべき必須キーワードがあります:
 
 #### 比較級
+
 - 必須: 音節、more、-er、使い分け
 - 説明すべき内容: なぜmoreを使うのか/erをつけるのか、音節数による違い
 
 #### 最上級
+
 - 必須: 最も、most、-est、使い分け
 - 説明すべき内容: 形容詞の長さによる使い分け
 
 #### 受動態
+
 - 必須: be動詞、過去分詞、される
 - 説明すべき内容: 構造（be動詞 + 過去分詞）、意味、動作主の表し方
 
 #### 現在完了
+
 - 必須: have、has、過去分詞、経験、完了、継続、結果
 - 説明すべき内容: 形式（have/has + 過去分詞）、4つの用法のどれか
 
 #### 不定詞
+
 - 必須: to、原形、名詞的、副詞的、形容詞的
 - 説明すべき内容: 基本形、用法の種類
 
 #### 関係代名詞
+
 - 必須: 先行詞、which、who、that、修飾
 - 説明すべき内容: 先行詞との関係、使い分け
 
@@ -71,6 +87,7 @@ npm run validate:grammar:explanations
 #### more + 形容詞
 
 必須説明内容:
+
 - なぜ-erではなくmoreを使うのか
 - 音節数による使い分けルール
 - 短い形容詞と長い形容詞の違い
@@ -79,6 +96,7 @@ npm run validate:grammar:explanations
 #### be動詞 + 過去分詞（受動態）
 
 必須説明内容:
+
 - 受動態の構造
 - 能動態との違い
 - 動作主の表し方（by）
@@ -87,6 +105,7 @@ npm run validate:grammar:explanations
 #### have/has + 過去分詞（現在完了）
 
 必須説明内容:
+
 - 現在完了の形式
 - 4つの用法（経験・完了・継続・結果）のうち、その問題で使われている用法
 - 過去形との違い

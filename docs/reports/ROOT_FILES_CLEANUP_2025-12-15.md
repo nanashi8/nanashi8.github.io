@@ -1,3 +1,11 @@
+---
+title: ルートファイル整理レポート 2025-12-15
+created: 2025-12-15
+updated: 2025-12-15
+status: in-progress
+tags: [report, ai, test, dark-mode]
+---
+
 # ルートファイル整理レポート 2025-12-15
 
 ## 概要
@@ -8,34 +16,34 @@
 
 ### 1. デザイン関連 → `docs/design/` (3ファイル)
 
-| ファイル名 | 内容 | 用途 |
-|-----------|------|------|
+| ファイル名           | 内容                          | 用途                 |
+| -------------------- | ----------------------------- | -------------------- |
 | `DARK_MODE_GUIDE.md` | ライト/ダークモード開発ガイド | デザインガイドライン |
-| `DESIGN_FREEZE.md` | デザインフリーズ宣言 | デザイン方針 |
-| `color-mapping.md` | 80色→22色マッピング表 | カラーシステム |
+| `DESIGN_FREEZE.md`   | デザインフリーズ宣言          | デザイン方針         |
+| `color-mapping.md`   | 80色→22色マッピング表         | カラーシステム       |
 
 ### 2. レポート → `docs/reports/` (2ファイル)
 
-| ファイル名 | 内容 | 用途 |
-|-----------|------|------|
-| `DATA_COVERAGE_REPORT.md` | データ品質テストカバレッジレポート | 品質レポート |
-| `VERIFICATION_TRANSLATION_HISTORY.md` | 和訳タブ履歴表示の検証手順 | 実装検証記録 |
+| ファイル名                            | 内容                               | 用途         |
+| ------------------------------------- | ---------------------------------- | ------------ |
+| `DATA_COVERAGE_REPORT.md`             | データ品質テストカバレッジレポート | 品質レポート |
+| `VERIFICATION_TRANSLATION_HISTORY.md` | 和訳タブ履歴表示の検証手順         | 実装検証記録 |
 
 ### 3. デモファイル → `tools/demos/` (2ファイル)
 
-| ファイル名 | 内容 | 用途 |
-|-----------|------|------|
+| ファイル名           | 内容               | 用途           |
+| -------------------- | ------------------ | -------------- |
 | `color-palette.html` | カラーパレットデモ | デザインツール |
-| `geometry-demo.html` | 幾何学図形デモ | 開発ツール |
+| `geometry-demo.html` | 幾何学図形デモ     | 開発ツール     |
 
 ### 4. データファイル → `tools/data/` (4ファイル)
 
-| ファイル名 | 内容 | 用途 |
-|-----------|------|------|
-| `grammar_translation_fixes.json` | 文法翻訳修正データ | 開発データ |
-| `maintenance_report.json` | メンテナンスレポート | 自動生成レポート |
-| `quality_nervous_system_report.json` | 品質神経系レポート | 自動生成レポート |
-| `unused_css_classes.txt` | 未使用CSSクラス一覧 | 開発データ |
+| ファイル名                           | 内容                 | 用途             |
+| ------------------------------------ | -------------------- | ---------------- |
+| `grammar_translation_fixes.json`     | 文法翻訳修正データ   | 開発データ       |
+| `maintenance_report.json`            | メンテナンスレポート | 自動生成レポート |
+| `quality_nervous_system_report.json` | 品質神経系レポート   | 自動生成レポート |
+| `unused_css_classes.txt`             | 未使用CSSクラス一覧  | 開発データ       |
 
 ## 参照リンク更新
 
@@ -53,6 +61,7 @@
 ## 効果
 
 ### Before
+
 ```
 nanashi8.github.io/
 ├── README.md ⭕
@@ -73,6 +82,7 @@ nanashi8.github.io/
 ```
 
 ### After
+
 ```
 nanashi8.github.io/
 ├── README.md ✅
@@ -108,6 +118,7 @@ nanashi8.github.io/
 ## ルート直下に残るファイル（正常）
 
 ### 必須ファイル
+
 - `README.md` - プロジェクト説明
 - `index.html` - メインアプリケーション
 - `package.json` - Node.js設定
@@ -116,6 +127,7 @@ nanashi8.github.io/
 - `setup.sh` - セットアップスクリプト
 
 ### 設定ファイル
+
 - `tsconfig.json` - TypeScript設定
 - `tsconfig.node.json` - Node用TypeScript設定
 - `vite.config.ts` - Vite設定
@@ -141,15 +153,16 @@ nanashi8.github.io/
 
 ### ファイル配置ルール
 
-| ファイル種別 | 配置先 |
-|-------------|--------|
-| デザインガイド・カラーシステム | `docs/design/` |
-| 実装・検証レポート | `docs/reports/` |
-| デモ・プロトタイプHTML | `tools/demos/` |
-| 開発用データ・レポートJSON | `tools/data/` |
-| 設定ファイル | ルート直下 |
+| ファイル種別                   | 配置先          |
+| ------------------------------ | --------------- |
+| デザインガイド・カラーシステム | `docs/design/`  |
+| 実装・検証レポート             | `docs/reports/` |
+| デモ・プロトタイプHTML         | `tools/demos/`  |
+| 開発用データ・レポートJSON     | `tools/data/`   |
+| 設定ファイル                   | ルート直下      |
 
 ### 推奨事項
+
 1. HTMLデモファイルは`tools/demos/`に配置
 2. 自動生成JSONレポートは`tools/data/`または`.gitignore`追加
 3. デザイン関連ドキュメントは`docs/design/`に統一

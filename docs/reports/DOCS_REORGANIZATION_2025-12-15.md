@@ -1,3 +1,11 @@
+---
+title: ドキュメント整理レポート 2025-12-15
+created: 2025-12-15
+updated: 2025-12-15
+status: in-progress
+tags: [report, ai, test]
+---
+
 # ドキュメント整理レポート 2025-12-15
 
 ## 概要
@@ -18,6 +26,7 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 ### 2. ファイル移動
 
 #### processes/ (8ファイル)
+
 - AUTOMATION_GUIDE.md
 - DEPLOYMENT_OPERATIONS.md
 - EMERGENCY_RECOVERY.md
@@ -28,6 +37,7 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 - TDD_GUIDE.md
 
 #### design/ (5ファイル)
+
 - INDUSTRY_STANDARDS_ADOPTION_PLAN.md
 - PROJECT_AI_SERVANT_DESIGN.md
 - PROJECT_AI_SERVANT_EVALUATION.md
@@ -35,11 +45,13 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 - PROJECT_STRUCTURE_VALIDATION.md
 
 #### features/ (3ファイル)
+
 - GRAMMAR_PASSAGE_FEATURE.md
 - grammar_construction_implementation_plan.md
 - grammar_translation_fixes.md
 
 #### maintenance/ (6ファイル)
+
 - MAINTENANCE_AI_GUIDE.md
 - MAINTENANCE_AI_IMPROVEMENT_PROPOSALS.md
 - MAINTENANCE_AI_INDUSTRY_COMPARISON.md
@@ -48,12 +60,14 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 - SERVANT_AUTO_FIX_EXPANSION.md
 
 #### plans/ (4ファイル)
+
 - PHASE_1_TASKS.md
 - PHASE_2_PROJECT_SERVANT_TESTS_COMPLETE.md
 - PHASE_3_STATUS.md
 - PHASE_3_STEP3_ANALYSIS.md
 
 #### reports/ (4ファイル追加)
+
 - COVERAGE_ANALYSIS_AND_IMPROVEMENTS.md
 - GIT_RECOVERY_LOG.md
 - IMPLEMENTATION_SUMMARY.md
@@ -62,6 +76,7 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 ### 3. 参照リンク更新
 
 #### 更新対象ファイル (19ファイル)
+
 - `.aitk/instructions/refactoring-safety.instructions.md`
 - `.aitk/instructions/security-best-practices.instructions.md`
 - `.github/workflows/refactoring-safety-check.yml`
@@ -81,6 +96,7 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 - `tests/integration/project-ai-servant.test.ts`
 
 #### 主な更新内容
+
 - `docs/REFACTORING_SAFETY.md` → `docs/processes/REFACTORING_SAFETY.md`
 - `docs/TDD_GUIDE.md` → `docs/processes/TDD_GUIDE.md`
 - `docs/PROJECT_AI_SERVANT_*.md` → `docs/design/PROJECT_AI_SERVANT_*.md`
@@ -91,15 +107,18 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 ### 4. 検証結果
 
 ✅ **リンク切れ: 0件**
+
 - すべての内部参照を追跡し更新
 - 相対パス、絶対パスの両方を対応
 - テストファイル内の参照も更新
 
 ✅ **git mv使用: 27ファイル**
+
 - ファイル履歴を保持
 - リネーム検出: R (renamed), RM (renamed+modified)
 
 ✅ **カテゴリ分類の妥当性**
+
 - processes: 運用プロセス・手順書
 - design: アーキテクチャ・設計思想
 - features: 機能仕様書
@@ -110,6 +129,7 @@ docs/直下に散在していた31ファイルを6つのカテゴリフォルダ
 ## 効果
 
 ### Before
+
 ```
 docs/
 ├── 31 files (未分類)
@@ -119,6 +139,7 @@ docs/
 ```
 
 ### After
+
 ```
 docs/
 ├── README.md (唯一のルートファイル)
@@ -134,6 +155,7 @@ docs/
 ```
 
 ### メリット
+
 1. **可読性向上**: カテゴリごとに整理され、目的のファイルが見つけやすい
 2. **メンテナンス性**: 関連ファイルが同じフォルダに配置
 3. **スケーラビリティ**: 新規ファイル追加時の配置ルールが明確
@@ -151,16 +173,17 @@ docs/
 
 ### ファイル配置ルール
 
-| カテゴリ | 配置対象 |
-|---------|---------|
-| `processes/` | デプロイ、リファクタリング、インシデント対応などの運用手順書 |
-| `design/` | システム設計、標準化、アーキテクチャに関するドキュメント |
-| `features/` | 機能仕様書、実装計画 |
-| `maintenance/` | AIメンテナンスシステム、サーバント関連 |
-| `plans/` | フェーズ管理、タスクリスト、プロジェクト計画 |
-| `reports/` | 実装サマリ、分析レポート、完了報告 |
+| カテゴリ       | 配置対象                                                     |
+| -------------- | ------------------------------------------------------------ |
+| `processes/`   | デプロイ、リファクタリング、インシデント対応などの運用手順書 |
+| `design/`      | システム設計、標準化、アーキテクチャに関するドキュメント     |
+| `features/`    | 機能仕様書、実装計画                                         |
+| `maintenance/` | AIメンテナンスシステム、サーバント関連                       |
+| `plans/`       | フェーズ管理、タスクリスト、プロジェクト計画                 |
+| `reports/`     | 実装サマリ、分析レポート、完了報告                           |
 
 ### 推奨事項
+
 1. 新規ドキュメント作成時は上記カテゴリに従う
 2. クロスリファレンスは相対パスで統一
 3. ファイル移動時は`git mv`を使用して履歴を保持

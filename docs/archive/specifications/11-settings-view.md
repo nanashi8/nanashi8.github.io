@@ -1,3 +1,11 @@
+---
+title: 設定画面仕様書
+created: 2025-11-19
+updated: 2025-12-07
+status: deprecated
+tags: [archive, ai, adaptive, test, dark-mode]
+---
+
 # 設定画面仕様書
 
 ## 📌 概要

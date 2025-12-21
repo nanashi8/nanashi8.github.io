@@ -1,3 +1,11 @@
+---
+title: AI統合の有効化方法
+created: 2025-12-19
+updated: 2025-12-19
+status: in-progress
+tags: [other, ai]
+---
+
 # AI統合の有効化方法
 
 ## 方法1: ブラウザのコンソールで有効化

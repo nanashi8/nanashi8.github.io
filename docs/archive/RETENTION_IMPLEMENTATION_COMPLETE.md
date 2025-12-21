@@ -1,3 +1,11 @@
+---
+title: 定着率表示改善の実装完了
+created: 2025-11-20
+updated: 2025-11-22
+status: deprecated
+tags: [archive, ai]
+---
+
 # 定着率表示改善の実装完了
 
 ## ✅ 実装内容

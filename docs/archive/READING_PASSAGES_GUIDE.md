@@ -1,3 +1,11 @@
+---
+title: 長文読解パッセージ生成システム
+created: 2025-11-17
+updated: 2025-12-07
+status: deprecated
+tags: [archive, ai]
+---
+
 # 長文読解パッセージ生成システム
 
 ## 概要

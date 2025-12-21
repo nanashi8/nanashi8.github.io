@@ -1,3 +1,11 @@
+---
+title: メンテナンスAI ガイド
+created: 2025-12-14
+updated: 2025-12-20
+status: in-progress
+tags: [other, ai, test]
+---
+
 # メンテナンスAI ガイド
 
 ## 概要
@@ -18,10 +26,10 @@
 
 ```typescript
 const QUALITY_THRESHOLDS = {
-  testCoverage: 80,        // テストカバレッジ80%以上
-  buildSuccess: 95,        // ビルド成功率95%以上
-  responseTime: 200,       // レスポンス時間200ms以下
-  errorRate: 0.01,         // エラー率1%以下
+  testCoverage: 80, // テストカバレッジ80%以上
+  buildSuccess: 95, // ビルド成功率95%以上
+  responseTime: 200, // レスポンス時間200ms以下
+  errorRate: 0.01, // エラー率1%以下
 };
 ```
 

@@ -1,3 +1,11 @@
+---
+title: フォルダ構成整理サマリー
+created: 2025-12-15
+updated: 2025-12-15
+status: in-progress
+tags: [report, test]
+---
+
 # フォルダ構成整理サマリー
 
 **実行日時**: 2025年12月13日  
@@ -7,15 +15,18 @@
 ## ✅ 削除したもの
 
 ### 1. 重複ファイル
+
 - ✅ `nanashi8.github.io/.copilot-instructions 2` - 重複(本体の `.copilot-instructions.md` を保持)
 - ✅ `nanashi8.github.io-archive-2025-12-11/CHANGELOG 2.md` - アーカイブ内の重複
 
 ### 2. 不要フォルダ
+
 - ✅ `nanashi8.github.io/Documents/` - 謎の循環構造フォルダ
 - ✅ `nanashi8.github.io.bfg-report/` - BFG git cleaner一時レポート
 - ✅ `test-results/` (ルート) - 古いテスト結果(プロジェクト内のものを保持)
 
 ### 3. 統合・移動（パイプライン関連）
+
 - ✅ `scripts/` (ルート) → `nanashi8.github.io/scripts/` に統合
   - `map_to_core_palette.py`
   - `rebuild_grade2_complete.py`
@@ -25,7 +36,8 @@
 - ✅ `docs/` (ルート) → `nanashi8.github.io/docs/quality/` に統合
   - `INTEGRATED_QUALITY_PIPELINE.md`
   - `QUALITY_AUTOMATION_GUIDE.md`
-```
+
+````
 nanashi8-github-io-git/
 ├── .git/
 ├── .github/
@@ -56,18 +68,18 @@ nanashi8-github-io-git/
 ``` nanashi8.github.io-archive-2025-12-11/   # アーカイブ(保持)
 ├── README_QUALITY_PIPELINE.md
 └── package-lock.json
-```
+````
 
 ## 🎯 統合後の構成
 
 ### `/nanashi8.github.io/` (シングルアプリ構成)
+
 全てのプロジェクトリソースを統合:
 
 - **`docs/`**: 全ドキュメント（品質・仕様・ガイドライン）
   - `quality/`: 品質パイプライン関連（統合済み）
   - `guidelines/`: 開発ガイドライン
   - `specifications/`: 機能仕様
-  
 - **`scripts/`**: 全自動化スクリプト（33個）
   - 品質検証スクリプト（統合済み）
   - データ処理スクリプト
@@ -78,11 +90,13 @@ nanashi8-github-io-git/
 ## ✅ 更新された参照
 
 **以下のファイルを更新済み:**
+
 - ✅ `README_QUALITY_PIPELINE.md` - スクリプトパス更新
 - ✅ `.github/workflows/quality-check.yml` - CI/CD working-directory追加
 - ✅ `nanashi8.github.io/docs/quality/INTEGRATED_QUALITY_PIPELINE.md` - パス修正
 
 **機能への影響:**
+
 - ✅ 全スクリプトは正常に動作（パス更新済み）
 - ✅ CI/CDは正常に動作（working-directory設定済み）
 - ✅ アーカイブは保持
@@ -92,21 +106,25 @@ nanashi8-github-io-git/
 ### 削除・統合したファイル
 
 **「2」付き重複ファイル:**
+
 - ✅ `CSS_DEVELOPMENT_GUIDELINES 2.md` - 削除（完全同一）
 - ✅ `TYPESCRIPT_DEVELOPMENT_GUIDELINES 2.md` - 削除（完全同一）
 - ✅ `15-data-structures-v2 2.md` - 削除（完全同一）
 
 **v2ファイルの統合:**
+
 - ✅ `15-data-structures-v2.md` → `15-data-structures.md` に昇格（詳細版）
 - ✅ 旧 `15-data-structures.md` → `-old.md` にリネーム
 
 **品質ドキュメント整理（→ archive/）:**
+
 - ✅ `README_QUALITY_PIPELINE.md`
 - ✅ `CONTINUOUS_IMPROVEMENT_PIPELINE.md`
-- ✅ `QUALITY_PIPELINE.md` 
+- ✅ `QUALITY_PIPELINE.md`
 - ✅ `GRAMMAR_QUALITY_ASSURANCE.md`
 
 **スクリプト整理（→ archive/）:**
+
 - ✅ `check-data-quality.sh` - validate_all_content.pyと重複
 - ✅ `data-quality-check.py` - 同上
 - ✅ `validate_grammar_questions.py` - 古いバージョン

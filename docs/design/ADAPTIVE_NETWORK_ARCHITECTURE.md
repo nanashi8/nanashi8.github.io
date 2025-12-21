@@ -1,3 +1,11 @@
+---
+title: 適応的教育AIネットワーク - アーキテクチャ設計
+created: 2025-12-17
+updated: 2025-12-17
+status: in-progress
+tags: [design, ai, adaptive, test]
+---
+
 # 適応的教育AIネットワーク - アーキテクチャ設計
 
 **作成日**: 2025年12月16日  
@@ -82,7 +90,7 @@ AdaptiveEducationalAINetwork.recordOutcome()
     ↓
 EffectivenessTracker.track() （効果記録）
     ↓
-    
+
 生徒が次の問題を要求
     ↓
 useAdaptiveLearning.selectNextQuestion()
@@ -263,13 +271,13 @@ class AdaptiveEducationalAINetwork {
   private strategyExecutor: StrategyExecutor;
   private effectivenessTracker: EffectivenessTracker;
   private stateManager: StateManager;
-  
+
   // 状態
   private state: AdaptiveNetworkState;
-  
+
   // 設定
   private config: NetworkConfig;
-  
+
   /**
    * コンストラクタ
    */
@@ -281,26 +289,26 @@ class AdaptiveEducationalAINetwork {
     this.stateManager = new StateManager();
     this.state = this.initializeState();
   }
-  
+
   /**
    * 次の問題を選択（メインフロー）
    */
   selectNextQuestion(context: LearningContext): Question | null {
     // 1. 信号収集
     const signals = this.signalDetector.collectSignals(context);
-    
+
     // 2. 戦略選択
     const strategy = this.selectOptimalStrategy(signals);
-    
+
     // 3. 戦略実行
     const question = this.strategyExecutor.execute(strategy, context);
-    
+
     // 4. 状態更新
     this.updateState(strategy, signals);
-    
+
     return question;
   }
-  
+
   /**
    * 回答結果を記録
    */
@@ -313,14 +321,14 @@ class AdaptiveEducationalAINetwork {
       immediateOutcome: {
         questionsPresented: 1,
         correctAnswers: isCorrect ? 1 : 0,
-        averageResponseTime: responseTime
+        averageResponseTime: responseTime,
       },
-      wasCompleted: true
+      wasCompleted: true,
     };
-    
+
     this.effectivenessTracker.track(this.state.currentStrategy!, result);
   }
-  
+
   /**
    * 最適戦略を選択
    */
@@ -329,35 +337,35 @@ class AdaptiveEducationalAINetwork {
     if (signals.length === 0) {
       return StrategyType.SPACED_REPETITION;
     }
-    
+
     const strongestSignal = signals[0];
-    
+
     // 現在の戦略が効果的なら継続
     if (this.isCurrentStrategyEffective()) {
       return this.state.currentStrategy!;
     }
-    
+
     // 代替戦略を探す
     return this.findAlternativeStrategy(strongestSignal, signals);
   }
-  
+
   /**
    * 現在の戦略が効果的か判定
    */
   private isCurrentStrategyEffective(): boolean {
     if (!this.state.currentStrategy) return false;
-    
+
     // 直近5問の改善度を確認
     const recent5 = this.state.strategyHistory.slice(-5);
     const improvement = this.calculateImprovement(recent5);
-    
+
     // 最低3分は試す
     const duration = Date.now() - this.state.strategyStartTime;
     const minDuration = this.config.minSwitchInterval;
-    
+
     return improvement > 0 && duration < minDuration * 3;
   }
-  
+
   /**
    * 代替戦略を見つける
    */
@@ -370,24 +378,24 @@ class AdaptiveEducationalAINetwork {
     if (untried.length > 0) {
       return this.selectBySignalStrength(untried, allSignals);
     }
-    
+
     // 優先順位2: 過去に効果的だった戦略
     const effective = this.getMostEffectiveStrategies();
     if (effective.length > 0) {
       return effective[0];
     }
-    
+
     // フォールバック
     return primarySignal.recommendedStrategy;
   }
-  
+
   /**
    * 状態を取得
    */
   getState(): AdaptiveNetworkState {
     return { ...this.state };
   }
-  
+
   /**
    * リセット
    */
@@ -402,49 +410,47 @@ class AdaptiveEducationalAINetwork {
 ```typescript
 class SignalDetector {
   constructor(private config: NetworkConfig) {}
-  
+
   /**
    * 全AIから信号を収集
    */
   collectSignals(context: LearningContext): LearningSignal[] {
     const signals: LearningSignal[] = [];
-    
+
     // 各AIから信号検出
     const acquisitionSignal = this.detectFromAcquisition(context);
     if (acquisitionSignal) signals.push(acquisitionSignal);
-    
+
     const cognitiveSignal = this.detectFromCognitiveLoad(context);
     if (cognitiveSignal) signals.push(cognitiveSignal);
-    
+
     const errorSignal = this.detectFromErrorPrediction(context);
     if (errorSignal) signals.push(errorSignal);
-    
+
     const styleSignal = this.detectFromLearningStyle(context);
     if (styleSignal) signals.push(styleSignal);
-    
+
     const relationSignal = this.detectFromLinguisticRelations(context);
     if (relationSignal) signals.push(relationSignal);
-    
+
     const contextSignal = this.detectFromContextualLearning(context);
     if (contextSignal) signals.push(contextSignal);
-    
+
     // 優先度でソート
     return signals.sort((a, b) => {
       if (a.priority !== b.priority) return b.priority - a.priority;
       return b.strength - a.strength;
     });
   }
-  
+
   /**
    * 記憶獲得AIから信号検出
    */
-  private detectFromAcquisition(
-    context: LearningContext
-  ): LearningSignal | null {
+  private detectFromAcquisition(context: LearningContext): LearningSignal | null {
     // 実装は後で
     return null;
   }
-  
+
   // 他のAIからの信号検出メソッド...
 }
 ```
@@ -454,44 +460,39 @@ class SignalDetector {
 ```typescript
 class StrategyExecutor {
   constructor(private config: NetworkConfig) {}
-  
+
   /**
    * 戦略を実行
    */
-  execute(
-    strategy: StrategyType,
-    context: LearningContext
-  ): Question | null {
+  execute(strategy: StrategyType, context: LearningContext): Question | null {
     switch (strategy) {
       case StrategyType.IMMEDIATE_REPETITION:
         return this.executeImmediateRepetition(context);
-        
+
       case StrategyType.TAKE_BREAK:
         return this.executeTakeBreak(context);
-        
+
       case StrategyType.CLUSTER_LEARNING:
         return this.executeClusterLearning(context);
-        
+
       case StrategyType.CONFUSION_RESOLUTION:
         return this.executeConfusionResolution(context);
-        
+
       // 他の戦略...
-      
+
       default:
         return this.executeSpacedRepetition(context);
     }
   }
-  
+
   /**
    * 即時反復戦略
    */
-  private executeImmediateRepetition(
-    context: LearningContext
-  ): Question | null {
+  private executeImmediateRepetition(context: LearningContext): Question | null {
     // 実装は後で
     return null;
   }
-  
+
   // 他の戦略実行メソッド...
 }
 ```
@@ -501,30 +502,27 @@ class StrategyExecutor {
 ```typescript
 class EffectivenessTracker {
   private effectiveness: Map<StrategyType, StrategyEffectiveness> = new Map();
-  
+
   /**
    * 戦略の効果を記録
    */
-  track(
-    strategy: StrategyType,
-    result: StrategyExecutionResult
-  ): void {
+  track(strategy: StrategyType, result: StrategyExecutionResult): void {
     // 短期効果
     const shortTerm = this.calculateShortTermEffect(result);
-    
+
     // 効果データを更新
     let data = this.effectiveness.get(strategy);
     if (!data) {
       data = this.initializeEffectivenessData(strategy);
     }
-    
+
     data.effectiveness.shortTerm = shortTerm;
     data.stats.timesUsed++;
     data.stats.lastUsed = Date.now();
-    
+
     this.effectiveness.set(strategy, data);
   }
-  
+
   /**
    * 最も効果的な戦略を取得
    */
@@ -533,7 +531,7 @@ class EffectivenessTracker {
       .sort((a, b) => b[1].effectiveness.overall - a[1].effectiveness.overall)
       .map(([strategy]) => strategy);
   }
-  
+
   // 他の効果測定メソッド...
 }
 ```
@@ -556,7 +554,7 @@ class EffectivenessTracker {
     learnerProfile: {...},
     sessionStats: {...}
   },
-  
+
   // 設定
   'adaptive-network-config': {
     enabled: true,
@@ -573,4 +571,3 @@ class EffectivenessTracker {
 
 ✅ **工程2完了予定**: アーキテクチャ設計  
 ⏭️ **工程3**: 実装仕様書作成
-

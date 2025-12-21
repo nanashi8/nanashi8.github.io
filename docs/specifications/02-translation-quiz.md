@@ -1,3 +1,11 @@
+---
+title: 02. 和訳クイズ
+created: 2025-11-22
+updated: 2025-12-07
+status: in-progress
+tags: [specification, ai]
+---
+
 # 02. 和訳クイズ
 
 ## 📌 概要
@@ -6,6 +14,7 @@
 最も基本的な学習モードで、語彙の意味理解に重点を置く。
 
 **データ仕様参照**:
+
 - 単語データ: [19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md)
 - フレーズデータ: [20-junior-high-phrases.md](./20-junior-high-phrases.md)
 - データ構造: [15-data-structures.md](./15-data-structures.md)
@@ -35,11 +44,11 @@
 
 ### 学習状態の管理
 
-| 状態 | 条件 | 出題頻度 |
-|------|------|---------|
-| **定着済み** | 1発正解 または 連続2回以上正解 | しばらく出題を見送り |
-| **学習中** | 1回目不正解（「分からない」含む） | 継続して出題 |
-| **要復習** | 2回以上不正解 | 優先的に出題 |
+| 状態         | 条件                              | 出題頻度             |
+| ------------ | --------------------------------- | -------------------- |
+| **定着済み** | 1発正解 または 連続2回以上正解    | しばらく出題を見送り |
+| **学習中**   | 1回目不正解（「分からない」含む） | 継続して出題         |
+| **要復習**   | 2回以上不正解                     | 優先的に出題         |
 
 **注意**: 「分からない」を選択した場合は不正解扱いとなり、要復習にカウントされます。
 
@@ -47,32 +56,32 @@
 
 ### 難易度フィルター
 
-| レベル | 対象 | 単語数 |
-|--------|------|--------|
-| All | 全レベル | ~1,300語 |
-| Beginner | 初級（基礎単語） | ~400語 |
-| Intermediate | 中級（中学受験頻出） | ~600語 |
-| Advanced | 上級（難関校対応） | ~300語 |
+| レベル       | 対象                 | 単語数   |
+| ------------ | -------------------- | -------- |
+| All          | 全レベル             | ~1,300語 |
+| Beginner     | 初級（基礎単語）     | ~400語   |
+| Intermediate | 中級（中学受験頻出） | ~600語   |
+| Advanced     | 上級（難関校対応）   | ~300語   |
 
 ### 単語/フレーズフィルター
 
-| フィルター | 説明 | 例 |
-|-----------|------|-----|
-| All | すべて表示 | - |
-| Words Only | 単語のみ | abandon, accept |
+| フィルター   | 説明         | 例                       |
+| ------------ | ------------ | ------------------------ |
+| All          | すべて表示   | -                        |
+| Words Only   | 単語のみ     | abandon, accept          |
 | Phrases Only | フレーズのみ | give up, look forward to |
 
 ### フレーズタイプフィルター
 
 句動詞やイディオムをさらに細分化:
 
-| タイプ | 説明 | 例 |
-|--------|------|-----|
-| All | すべてのフレーズ | - |
-| Phrasal Verb | 句動詞 | give up, look after |
-| Idiom | イディオム | break the ice, piece of cake |
-| Collocation | 連語 | make a decision, take a look |
-| Other | その他の表現 | as well as, in order to |
+| タイプ       | 説明             | 例                           |
+| ------------ | ---------------- | ---------------------------- |
+| All          | すべてのフレーズ | -                            |
+| Phrasal Verb | 句動詞           | give up, look after          |
+| Idiom        | イディオム       | break the ice, piece of cake |
+| Collocation  | 連語             | make a decision, take a look |
+| Other        | その他の表現     | as well as, in order to      |
 
 ## 🔊 音声機能
 
@@ -86,12 +95,12 @@
 ```typescript
 function speakEnglish(text: string) {
   if (!isSpeechSynthesisSupported()) return;
-  
+
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = 'en-US';
   utterance.rate = 0.9;
   utterance.pitch = 1.0;
-  
+
   speechSynthesis.speak(utterance);
 }
 ```
@@ -108,6 +117,7 @@ function speakEnglish(text: string) {
 ### 選択肢のデザイン
 
 #### 通常状態
+
 ```css
 .choice-btn {
   padding: 16px;
@@ -122,6 +132,7 @@ function speakEnglish(text: string) {
 ```
 
 #### ホバー時
+
 ```css
 .choice-btn:hover:not(:disabled) {
   border-color: #667eea;
@@ -130,6 +141,7 @@ function speakEnglish(text: string) {
 ```
 
 #### 正解時
+
 ```css
 .choice-btn.correct {
   background: #d4edda;
@@ -140,6 +152,7 @@ function speakEnglish(text: string) {
 ```
 
 #### 不正解時
+
 ```css
 .choice-btn.incorrect {
   background: #f8d7da;
@@ -151,10 +164,12 @@ function speakEnglish(text: string) {
 ### レイアウト
 
 #### PC/タブレット（横向き）
+
 - 2列グリッド表示
 - gap: 14px
 
 #### スマホ（縦向き）
+
 - 1列表示
 - gap: 12px
 
@@ -195,30 +210,28 @@ function generateChoicesWithQuestions(
 ): Array<{ text: string; question: Question | null }> {
   // 誤答を2つ選択
   const wrongQuestions = selectWrongQuestions(allQuestions, currentQuestion, 2);
-  
+
   // 正解と誤答2つをシャッフル
   const firstThreeChoices = shuffle([
     { text: currentQuestion.meaning, question: currentQuestion },
-    ...wrongQuestions.map(q => ({ text: q.meaning, question: q }))
+    ...wrongQuestions.map((q) => ({ text: q.meaning, question: q })),
   ]);
-  
+
   // 最後に「分からない」を追加
-  return [
-    ...firstThreeChoices,
-    { text: '分からない', question: null }
-  ];
+  return [...firstThreeChoices, { text: '分からない', question: null }];
 }
 ```
-  
-  const wrongChoice1 = sameCategory[Math.floor(Math.random() * sameCategory.length)];
-  
-  // ランダムから1つ
-  const wrongChoice2 = allQuestions
-    .filter(q => q.meaning !== correctAnswer && q.meaning !== wrongChoice1);
-  
-  return shuffle([correctAnswer, wrongChoice1, wrongChoice2]);
+
+const wrongChoice1 = sameCategory[Math.floor(Math.random() * sameCategory.length)];
+
+// ランダムから1つ
+const wrongChoice2 = allQuestions
+.filter(q => q.meaning !== correctAnswer && q.meaning !== wrongChoice1);
+
+return shuffle([correctAnswer, wrongChoice1, wrongChoice2]);
 }
-```
+
+````
 
 ## 🧠 AI連携
 
@@ -232,7 +245,7 @@ if (prediction.risk > 0.7) {
   // 高リスク単語は警告表示
   showWarning('この単語は間違えやすいので注意！');
 }
-```
+````
 
 ### 認知負荷AI
 
@@ -252,11 +265,7 @@ if (cognitiveLoad.fatigue > 0.8) {
 関連単語をグループ化して連続出題:
 
 ```typescript
-const sequence = generateContextualSequence(
-  nextWord,
-  allQuestions,
-  userProgress
-);
+const sequence = generateContextualSequence(nextWord, allQuestions, userProgress);
 // 類義語・反義語・語源が同じ単語を連続で出題
 ```
 
@@ -320,48 +329,47 @@ interface WordProgress {
 
 ## 🎮 キーボードショートカット
 
-| キー | 動作 |
-|------|------|
-| 1 | 選択肢1を選択 |
-| 2 | 選択肢2を選択 |
-| 3 | 選択肢3を選択 |
-| 4 | 選択肢4を選択（分からない） |
-| Space | 音声再生 |
-| Enter | 次の問題へ（解答後） |
+| キー  | 動作                        |
+| ----- | --------------------------- |
+| 1     | 選択肢1を選択               |
+| 2     | 選択肢2を選択               |
+| 3     | 選択肢3を選択               |
+| 4     | 選択肢4を選択（分からない） |
+| Space | 音声再生                    |
+| Enter | 次の問題へ（解答後）        |
 
 ## 🔄 適応型出題
 
 ### 優先度計算
 
 ```typescript
-function calculateQuestionPriorities(
-  questions: Question[],
-  progress: UserProgress
-): Question[] {
-  return questions.map(q => {
-    const wordProgress = progress.wordProgress[q.word];
-    
-    // 優先度スコア計算
-    let priority = 0;
-    
-    // 1. 未学習単語は最優先
-    if (!wordProgress) priority += 100;
-    
-    // 2. 要復習単語は高優先度
-    if (wordProgress?.masteryLevel === 'struggling') priority += 80;
-    
-    // 3. 最終学習からの経過時間
-    const daysSince = (Date.now() - wordProgress?.lastAttempt) / (1000 * 60 * 60 * 24);
-    priority += Math.min(daysSince * 5, 50);
-    
-    // 4. 正答率が低い単語
-    const accuracy = wordProgress 
-      ? wordProgress.correctCount / (wordProgress.correctCount + wordProgress.incorrectCount)
-      : 0;
-    priority += (1 - accuracy) * 30;
-    
-    return { ...q, priority };
-  }).sort((a, b) => b.priority - a.priority);
+function calculateQuestionPriorities(questions: Question[], progress: UserProgress): Question[] {
+  return questions
+    .map((q) => {
+      const wordProgress = progress.wordProgress[q.word];
+
+      // 優先度スコア計算
+      let priority = 0;
+
+      // 1. 未学習単語は最優先
+      if (!wordProgress) priority += 100;
+
+      // 2. 要復習単語は高優先度
+      if (wordProgress?.masteryLevel === 'struggling') priority += 80;
+
+      // 3. 最終学習からの経過時間
+      const daysSince = (Date.now() - wordProgress?.lastAttempt) / (1000 * 60 * 60 * 24);
+      priority += Math.min(daysSince * 5, 50);
+
+      // 4. 正答率が低い単語
+      const accuracy = wordProgress
+        ? wordProgress.correctCount / (wordProgress.correctCount + wordProgress.incorrectCount)
+        : 0;
+      priority += (1 - accuracy) * 30;
+
+      return { ...q, priority };
+    })
+    .sort((a, b) => b.priority - a.priority);
 }
 ```
 

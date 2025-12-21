@@ -1,3 +1,11 @@
+---
+title: カテゴリ遷移が遅い問題の分析
+created: 2025-12-19
+updated: 2025-12-19
+status: in-progress
+tags: [fix, ai, scheduler]
+---
+
 # カテゴリ遷移が遅い問題の分析
 
 ## 問題の症状
@@ -44,11 +52,13 @@ if (masteryResult.isMastered) {
 ### 2. シミュレーターとの違い
 
 **シミュレーター:**
+
 - 初期カテゴリを設定して、QuestionScheduler に渡すだけ
 - カテゴリ遷移ロジックは使用していない
 - 結果として、カテゴリは最初から正しく設定されている
 
 **実際のタブ:**
+
 - `updateWordProgress()` でカテゴリを動的に更新
 - 連続正解の判定が厳しい
 - 結果として、カテゴリ遷移が遅い
@@ -82,14 +92,15 @@ if (masteryResult.isMastered) {
 ### 中期的な解決策
 
 1. **直近N回の正解率を記録**
+
    ```typescript
    interface WordProgress {
      // ...
      recentResults: boolean[]; // 直近10回の結果
    }
-   
+
    // 直近の正解率で判定
-   const recentCorrectRate = recentResults.filter(r => r).length / recentResults.length;
+   const recentCorrectRate = recentResults.filter((r) => r).length / recentResults.length;
    if (recentCorrectRate >= 0.8) {
      wordProgress.category = 'mastered';
    }
@@ -114,6 +125,7 @@ if (masteryResult.isMastered) {
 ### 1. カテゴリ遷移ロジックの修正（progressStorage.ts）
 
 **問題点:**
+
 ```typescript
 // ❌ 間違い: 過去の consecutiveIncorrect が優先される
 } else if (wordProgress.consecutiveIncorrect >= 2) {
@@ -122,6 +134,7 @@ if (masteryResult.isMastered) {
 ```
 
 **修正後:**
+
 ```typescript
 // ✅ 正解: 今回の回答を最優先
 if (isCorrect && wordProgress.correctCount >= 2) {
@@ -140,19 +153,21 @@ if (isCorrect && wordProgress.correctCount >= 2) {
 
 ```typescript
 // ✅ 毎回再スケジューリング（カテゴリ変化を即座に反映）
-setRescheduleCounter(prev => prev + 1);
+setRescheduleCounter((prev) => prev + 1);
 ```
 
 ## 検証方法
 
 1. **ブラウザコンソールでログ確認**
+
    ```
    📝 [Category] apple: ✅正解 → mastered | 正解2回, 不正解0回
    ```
 
 2. **localStorage 直接確認**
+
    ```javascript
-   JSON.parse(localStorage.getItem('english-progress')).words.apple.category
+   JSON.parse(localStorage.getItem('english-progress')).words.apple.category;
    ```
 
 3. **再スケジューリングログ確認**

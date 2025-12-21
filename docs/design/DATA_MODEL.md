@@ -1,4 +1,13 @@
+---
+title: データモデル定義書
+created: 2025-12-16
+updated: 2025-12-16
+status: in-progress
+tags: [design, ai, adaptive]
+---
+
 # データモデル定義書
+
 **バージョン**: 1.0  
 **作成日**: 2025年12月16日  
 **ステータス**: 確定
@@ -21,18 +30,18 @@
 enum LearningPhase {
   /** エンコーディング（0-30秒）: 作業記憶段階 */
   ENCODING = 'encoding',
-  
+
   /** 初期統合（1分-1時間）: 海馬の初期統合 */
   INITIAL_CONSOLIDATION = 'initial',
-  
+
   /** 同日復習（1-24時間）: 同日内の強化 */
   INTRADAY_REVIEW = 'intraday',
-  
+
   /** 短期記憶（1-7日）: 海馬→新皮質転送期間 */
   SHORT_TERM = 'short_term',
-  
+
   /** 長期記憶（7日以上）: 新皮質保存期間 */
-  LONG_TERM = 'long_term'
+  LONG_TERM = 'long_term',
 }
 ```
 
@@ -45,15 +54,15 @@ enum LearningPhase {
 enum QuestionCategory {
   /** 暗記タブ */
   MEMORIZATION = 'memorization',
-  
+
   /** 和訳タブ */
   TRANSLATION = 'translation',
-  
+
   /** スペルタブ */
   SPELLING = 'spelling',
-  
+
   /** 文法タブ */
-  GRAMMAR = 'grammar'
+  GRAMMAR = 'grammar',
 }
 ```
 
@@ -66,15 +75,15 @@ enum QuestionCategory {
 enum QueueType {
   /** 即時復習（1-3問後、約1分） */
   IMMEDIATE = 'immediate',
-  
+
   /** 早期復習（5-10問後、約10分） */
   EARLY = 'early',
-  
+
   /** 中期復習（20-30問後、約1時間） */
   MID = 'mid',
-  
+
   /** 終了時復習（セッション終了時） */
-  END = 'end'
+  END = 'end',
 }
 ```
 
@@ -92,46 +101,46 @@ enum QueueType {
 interface QuestionStatus {
   /** 単語（英語） */
   word: string;
-  
+
   /** 問題カテゴリ */
   category: QuestionCategory;
-  
+
   /** 総復習回数 */
   reviewCount: number;
-  
+
   /** 正答回数 */
   correctCount: number;
-  
+
   /** 誤答回数 */
   wrongCount: number;
-  
+
   /** 最終復習日時（UNIXタイムスタンプ ms） */
   lastReviewTime: number;
-  
+
   /** 最終正答日時（UNIXタイムスタンプ ms） */
   lastCorrectTime: number;
-  
+
   /** 平均応答時間（ms） */
   averageResponseTime: number;
-  
+
   /** 連続正答回数 */
   consecutiveCorrect: number;
-  
+
   /** 連続誤答回数 */
   consecutiveWrong: number;
-  
+
   /** 現在のフェーズ */
   phase: LearningPhase;
-  
+
   /** 記憶獲得進捗（フェーズ1） */
   acquisitionProgress: AcquisitionProgress;
-  
+
   /** 記憶保持スケジュール（フェーズ2） */
   retentionSchedule: RetentionSchedule;
-  
+
   /** 初回学習日時 */
   firstSeenTime: number;
-  
+
   /** 最終更新日時 */
   lastUpdated: number;
 }
@@ -146,25 +155,25 @@ interface QuestionStatus {
 interface AcquisitionProgress {
   /** 今日最初に学習した時刻 */
   todayFirstSeen: number;
-  
+
   /** 今日の正答回数 */
   todayCorrectCount: number;
-  
+
   /** 今日の誤答回数 */
   todayWrongCount: number;
-  
+
   /** 記憶獲得完了（閾値回数以上正答） */
   isAcquisitionComplete: boolean;
-  
+
   /** 現在所属しているキュー */
   currentQueue: QueueType | null;
-  
+
   /** キューに追加された時刻 */
   queuedAt: number | null;
-  
+
   /** キューに追加された問題番号 */
   queuedQuestionNumber: number | null;
-  
+
   /** 復習履歴（今日のみ） */
   todayReviews: {
     timestamp: number;
@@ -184,22 +193,22 @@ interface AcquisitionProgress {
 interface RetentionSchedule {
   /** 次回復習予定日時 */
   nextReviewDate: number;
-  
+
   /** 現在の復習間隔（日数） */
   currentInterval: number;
-  
+
   /** SuperMemo Ease Factor */
   easeFactor: number;
-  
+
   /** 分散学習の復習回数 */
   spacingReviewCount: number;
-  
+
   /** スケジュールの段階 */
   stage: 'FIXED' | 'SUPERMEMO';
-  
+
   /** 固定間隔のインデックス（FIXED時のみ） */
   fixedIntervalIndex: number;
-  
+
   /** 最後にSuperMemoを実行した日時 */
   lastSuperMemoUpdate: number | null;
 }
@@ -215,37 +224,37 @@ interface RetentionSchedule {
 interface LearningHistory {
   /** 記録ID（自動生成） */
   id: string;
-  
+
   /** タイムスタンプ */
   timestamp: number;
-  
+
   /** 単語 */
   word: string;
-  
+
   /** 問題カテゴリ */
   category: QuestionCategory;
-  
+
   /** 正誤 */
   isCorrect: boolean;
-  
+
   /** 応答時間（ms） */
   responseTime: number;
-  
+
   /** その時点のフェーズ */
   phase: LearningPhase;
-  
+
   /** 難易度（0-1） */
   difficulty: number;
-  
+
   /** 最終復習からの経過日数 */
   daysSinceLastReview: number;
-  
+
   /** その時点の正答率 */
   correctRate: number;
-  
+
   /** セッションID */
   sessionId: string;
-  
+
   /** 問題番号（セッション内） */
   questionNumber: number;
 }
@@ -261,25 +270,25 @@ interface LearningHistory {
 interface PersonalParameters {
   /** 学習速度（0.5-2.0、標準1.0） */
   learningSpeed: number;
-  
+
   /** 忘却速度（0.5-2.0、標準1.0） */
   forgettingSpeed: number;
-  
+
   /** 定着閾値（2-5回、標準3回） */
   consolidationThreshold: number;
-  
+
   /** 最適復習間隔倍率（0.5-2.0、標準1.0） */
   optimalInterval: number;
-  
+
   /** 推定に使用したサンプル数 */
   sampleSize: number;
-  
+
   /** 推定の信頼度（0-1） */
   confidence: number;
-  
+
   /** 最終更新日時 */
   lastUpdated: number;
-  
+
   /** 次回更新予定サンプル数 */
   nextUpdateAt: number;
 }
@@ -299,22 +308,22 @@ interface PersonalParameters {
 interface PhaseThresholds {
   /** エンコーディングの時間閾値（ms）: デフォルト30秒 */
   encodingTime: number;
-  
+
   /** 初期統合の時間閾値（ms）: デフォルト1時間 */
   initialConsolidation: number;
-  
+
   /** 同日復習のウィンドウ（ms）: デフォルト24時間 */
   intradayWindow: number;
-  
+
   /** 短期記憶のウィンドウ（日）: デフォルト7日 */
   shortTermWindow: number;
-  
+
   /** 長期記憶の閾値（日）: デフォルト7日 */
   longTermThreshold: number;
-  
+
   /** 正答率の閾値（短期→長期の遷移） */
   correctRateThreshold: number;
-  
+
   /** 応答時間の閾値（長期記憶判定） */
   responseTimeThreshold: number;
 }
@@ -329,24 +338,24 @@ interface PhaseThresholds {
 interface TabConfig {
   /** 問題カテゴリ */
   category: QuestionCategory;
-  
+
   /** 記憶獲得完了の閾値（同日内の正答回数） */
   consolidationThreshold: number;
-  
+
   /** 有効な同日復習スケジュール */
   intradaySchedule: {
-    immediate: boolean;  // 即時復習（1-3問後）
-    early: boolean;      // 早期復習（5-10問後）
-    mid: boolean;        // 中期復習（20-30問後）
-    end: boolean;        // 終了時復習
+    immediate: boolean; // 即時復習（1-3問後）
+    early: boolean; // 早期復習（5-10問後）
+    mid: boolean; // 中期復習（20-30問後）
+    end: boolean; // 終了時復習
   };
-  
+
   /** 混合戦略の新規問題比率 */
   acquisitionRatio: number;
-  
+
   /** 混合戦略の復習問題比率 */
   retentionRatio: number;
-  
+
   /** タブ固有の説明 */
   description: string;
 }
@@ -361,13 +370,13 @@ interface TabConfig {
 interface HybridStrategy {
   /** 記憶獲得（新規）の比率（0-1） */
   acquisitionRatio: number;
-  
+
   /** 記憶保持（復習）の比率（0-1） */
   retentionRatio: number;
-  
+
   /** セッション進行に応じた動的調整を有効化 */
   adaptiveAdjustment: boolean;
-  
+
   /** 優先度のランダム性（0-1） */
   randomnessFactor: number;
 }
@@ -386,16 +395,16 @@ interface HybridStrategy {
 interface QueueEntry {
   /** 単語 */
   word: string;
-  
+
   /** キューに追加された時刻 */
   enqueuedAt: number;
-  
+
   /** キューに追加された問題番号 */
   enqueuedQuestionNumber: number;
-  
+
   /** 復習予定問題番号 */
   scheduledQuestionNumber: number;
-  
+
   /** 優先度 */
   priority: number;
 }
@@ -410,19 +419,19 @@ interface QueueEntry {
 interface PriorityScore {
   /** 単語 */
   word: string;
-  
+
   /** 総合スコア（0-100） */
   totalScore: number;
-  
+
   /** スコアの内訳 */
   breakdown: {
-    phaseWeight: number;        // フェーズ別重み
-    urgency: number;            // 緊急度
-    forgettingRisk: number;     // 忘却リスク
-    consecutiveWrong: number;   // 連続誤答
-    randomness: number;         // ランダム性
+    phaseWeight: number; // フェーズ別重み
+    urgency: number; // 緊急度
+    forgettingRisk: number; // 忘却リスク
+    consecutiveWrong: number; // 連続誤答
+    randomness: number; // ランダム性
   };
-  
+
   /** デバッグ用説明 */
   reason: string;
 }
@@ -437,37 +446,37 @@ interface PriorityScore {
 interface SessionStats {
   /** セッションID */
   sessionId: string;
-  
+
   /** セッション開始時刻 */
   startTime: number;
-  
+
   /** 総問題数 */
   totalQuestions: number;
-  
+
   /** 正答数 */
   correctAnswers: number;
-  
+
   /** 誤答数 */
   wrongAnswers: number;
-  
+
   /** 今日学習した新規単語数 */
   newWordsToday: number;
-  
+
   /** 同日復習回数 */
   intradayReviews: number;
-  
+
   /** 記憶獲得完了数 */
   acquisitionComplete: number;
-  
+
   /** 分散復習回数 */
   spacingReviews: number;
-  
+
   /** フェーズ1（記憶獲得）の出題数 */
   phase1Questions: number;
-  
+
   /** フェーズ2（記憶保持）の出題数 */
   phase2Questions: number;
-  
+
   /** 平均応答時間 */
   averageResponseTime: number;
 }
@@ -505,13 +514,13 @@ type Word = string;
 
 ```typescript
 const DEFAULT_PHASE_THRESHOLDS: PhaseThresholds = {
-  encodingTime: 30000,              // 30秒
-  initialConsolidation: 3600000,    // 1時間
-  intradayWindow: 86400000,         // 24時間
-  shortTermWindow: 7,               // 7日
-  longTermThreshold: 7,             // 7日
-  correctRateThreshold: 0.8,        // 80%
-  responseTimeThreshold: 1500       // 1.5秒
+  encodingTime: 30000, // 30秒
+  initialConsolidation: 3600000, // 1時間
+  intradayWindow: 86400000, // 24時間
+  shortTermWindow: 7, // 7日
+  longTermThreshold: 7, // 7日
+  correctRateThreshold: 0.8, // 80%
+  responseTimeThreshold: 1500, // 1.5秒
 };
 ```
 
@@ -519,14 +528,14 @@ const DEFAULT_PHASE_THRESHOLDS: PhaseThresholds = {
 
 ```typescript
 const DEFAULT_PERSONAL_PARAMETERS: PersonalParameters = {
-  learningSpeed: 1.0,               // 標準
-  forgettingSpeed: 1.0,             // 標準
-  consolidationThreshold: 3,        // 3回
-  optimalInterval: 1.0,             // 標準
+  learningSpeed: 1.0, // 標準
+  forgettingSpeed: 1.0, // 標準
+  consolidationThreshold: 3, // 3回
+  optimalInterval: 1.0, // 標準
   sampleSize: 0,
-  confidence: 0.5,                  // 低信頼度
+  confidence: 0.5, // 低信頼度
   lastUpdated: Date.now(),
-  nextUpdateAt: 30                  // 30サンプル後
+  nextUpdateAt: 30, // 30サンプル後
 };
 ```
 
@@ -541,11 +550,11 @@ const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
       immediate: true,
       early: true,
       mid: true,
-      end: true
+      end: true,
     },
     acquisitionRatio: 0.6,
     retentionRatio: 0.4,
-    description: '暗記タブ: 標準的な学習特性'
+    description: '暗記タブ: 標準的な学習特性',
   },
   [QuestionCategory.TRANSLATION]: {
     category: QuestionCategory.TRANSLATION,
@@ -554,11 +563,11 @@ const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
       immediate: true,
       early: false,
       mid: false,
-      end: true
+      end: true,
     },
     acquisitionRatio: 0.7,
     retentionRatio: 0.3,
-    description: '和訳タブ: 認識は獲得が速い'
+    description: '和訳タブ: 認識は獲得が速い',
   },
   [QuestionCategory.SPELLING]: {
     category: QuestionCategory.SPELLING,
@@ -567,11 +576,11 @@ const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
       immediate: true,
       early: true,
       mid: true,
-      end: true
+      end: true,
     },
     acquisitionRatio: 0.5,
     retentionRatio: 0.5,
-    description: 'スペルタブ: 想起は獲得が遅い'
+    description: 'スペルタブ: 想起は獲得が遅い',
   },
   [QuestionCategory.GRAMMAR]: {
     category: QuestionCategory.GRAMMAR,
@@ -580,12 +589,12 @@ const DEFAULT_TAB_CONFIGS: Record<QuestionCategory, TabConfig> = {
       immediate: true,
       early: true,
       mid: false,
-      end: true
+      end: true,
     },
     acquisitionRatio: 0.6,
     retentionRatio: 0.4,
-    description: '文法タブ: 理解は中程度'
-  }
+    description: '文法タブ: 理解は中程度',
+  },
 };
 ```
 
@@ -611,11 +620,16 @@ function validateQuestionStatus(status: QuestionStatus): boolean {
 
 function validatePersonalParameters(params: PersonalParameters): boolean {
   return (
-    params.learningSpeed >= 0.5 && params.learningSpeed <= 2.0 &&
-    params.forgettingSpeed >= 0.5 && params.forgettingSpeed <= 2.0 &&
-    params.consolidationThreshold >= 2 && params.consolidationThreshold <= 5 &&
-    params.optimalInterval >= 0.5 && params.optimalInterval <= 2.0 &&
-    params.confidence >= 0 && params.confidence <= 1
+    params.learningSpeed >= 0.5 &&
+    params.learningSpeed <= 2.0 &&
+    params.forgettingSpeed >= 0.5 &&
+    params.forgettingSpeed <= 2.0 &&
+    params.consolidationThreshold >= 2 &&
+    params.consolidationThreshold <= 5 &&
+    params.optimalInterval >= 0.5 &&
+    params.optimalInterval <= 2.0 &&
+    params.confidence >= 0 &&
+    params.confidence <= 1
   );
 }
 ```
@@ -639,6 +653,7 @@ const CURRENT_DATA_VERSION = '1.0.0';
 ### 9.2 マイグレーション戦略
 
 将来のデータ構造変更時:
+
 1. 旧データ形式を検出
 2. 新形式に変換
 3. バージョン番号を更新

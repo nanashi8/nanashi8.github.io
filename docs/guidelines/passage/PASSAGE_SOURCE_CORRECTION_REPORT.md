@@ -1,3 +1,11 @@
+---
+title: Passage Source Correction Report (2025-11-23)
+created: 2025-11-23
+updated: 2025-12-07
+status: in-progress
+tags: [guideline, ai]
+---
+
 # Passage Source Correction Report (2025-11-23)
 
 本レポートは `public/data/passage-sources/*.txt` に含まれる既存英文ドラフトの品質監査結果です。目的は現行生成物を英語教育・読解教材として再利用可能か英文学的観点 (語法 / 構文 / 談話構成 / コロケーション / 語彙レベル適合) から判定し、再構築方針を確立することです。
