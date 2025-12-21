@@ -429,17 +429,17 @@ Future Options:
 ## 🔗 関連ドキュメント
 
 ### 既存のロードマップ・計画書
-- [DATA_QUALITY_REPORT.md](./guidelines/DATA_QUALITY_REPORT.md) - データ品質改善計画
-- [PASSAGE_CREATION_GUIDELINES.md](./guidelines/passage/PASSAGE_CREATION_GUIDELINES.md) - パッセージ作成ロードマップ
-- [GRAMMAR_QUALITY_PIPELINE.md](./guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md) - 文法問題品質管理
+- [DATA_QUALITY_REPORT.md](../guidelines/DATA_QUALITY_REPORT.md) - データ品質改善計画
+- [PASSAGE_CREATION_GUIDELINES.md](../guidelines/passage/PASSAGE_CREATION_GUIDELINES.md) - パッセージ作成ロードマップ
+- [GRAMMAR_QUALITY_PIPELINE.md](../guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md) - 文法問題品質管理
 
 ### 技術仕様
-- [CROSS_FILE_CONSISTENCY.md](./guidelines/CROSS_FILE_CONSISTENCY.md)
-- [DATA_QUALITY_ASSURANCE.md](./guidelines/DATA_QUALITY_ASSURANCE.md)
+- [CROSS_FILE_CONSISTENCY.md](../guidelines/CROSS_FILE_CONSISTENCY.md)
+- [DATA_QUALITY_ASSURANCE.md](../guidelines/DATA_QUALITY_ASSURANCE.md)
 
 ### 開発ガイドライン
-- [CSS_COLOR_BEST_PRACTICES.md](./development/CSS_COLOR_BEST_PRACTICES.md)
-- [GRAMMAR_GENERATION_GUIDELINES.md](./guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md)
+- [CSS_COLOR_BEST_PRACTICES.md](../development/CSS_COLOR_BEST_PRACTICES.md)
+- [GRAMMAR_GENERATION_GUIDELINES.md](../guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md)
 
 ---
 
@@ -457,4 +457,4 @@ Future Options:
 
 ---
 
-**次のアクション**: [Phase 1 タスクリスト](./PHASE_1_TASKS.md)
+**次のアクション**: [Phase 1 タスクリスト](../plans/PHASE_1_TASKS.md)

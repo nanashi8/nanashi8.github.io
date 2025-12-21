@@ -13,62 +13,62 @@ const DOCS_DIR = 'docs';
 function checkNamingConvention(filePath) {
   const dir = dirname(filePath);
   const base = basename(filePath);
-  
+
   // README.md と INDEX.md は除外
   if (base === 'README.md' || base === 'INDEX.md') {
     return { valid: true, reason: 'Special file' };
   }
-  
+
   // archive内は除外
   if (filePath.includes('/archive/')) {
     return { valid: true, reason: 'Archived file' };
   }
-  
+
   const dirName = dir.split('/').pop();
-  
+
   switch (dirName) {
     case 'specifications':
       // 番号付きkebab-case または UPPER_SNAKE_CASE
       if (/^[0-9]{2}-[a-z0-9-]+\.md$/.test(base) || /^[A-Z_]+\.md$/.test(base)) {
         return { valid: true };
       }
-      return { 
-        valid: false, 
+      return {
+        valid: false,
         expected: '01-project-overview.md or ADAPTIVE_NETWORK_API.md',
         reason: 'Should be numbered kebab-case or UPPER_SNAKE_CASE'
       };
-      
+
     case 'guidelines':
       if (/^[A-Z][A-Z0-9_]*\.md$/.test(base)) {
         return { valid: true };
       }
-      return { 
-        valid: false, 
+      return {
+        valid: false,
         expected: 'META_AI_TROUBLESHOOTING.md',
         reason: 'Should be UPPER_SNAKE_CASE'
       };
-      
+
     case 'references':
       if (/^[A-Z][A-Z0-9_]*\.md$/.test(base)) {
         return { valid: true };
       }
-      return { 
-        valid: false, 
+      return {
+        valid: false,
         expected: 'QUICK_REFERENCE.md',
         reason: 'Should be UPPER_SNAKE_CASE'
       };
-      
+
     case 'development':
       // kebab-case または UPPER_SNAKE_CASE
       if (/^[a-z][a-z0-9-]*\.md$/.test(base) || /^[A-Z][A-Z0-9_]*\.md$/.test(base)) {
         return { valid: true };
       }
-      return { 
-        valid: false, 
+      return {
+        valid: false,
         expected: 'setup.md or TYPESCRIPT_DEVELOPMENT_GUIDELINES.md',
         reason: 'Should be kebab-case or UPPER_SNAKE_CASE'
       };
-      
+
     case 'plans':
     case 'reports':
     case 'quality':
@@ -79,22 +79,22 @@ function checkNamingConvention(filePath) {
       if (/^[A-Z][A-Z0-9_]*(_[0-9]{4}-[0-9]{2}-[0-9]{2})?\.md$/.test(base)) {
         return { valid: true };
       }
-      return { 
-        valid: false, 
+      return {
+        valid: false,
         expected: 'LINK_FIX_PLAN.md or PLAN_2025-12-17.md',
         reason: 'Should be UPPER_SNAKE_CASE with optional date'
       };
-      
+
     case 'features':
       if (/^[a-z][a-z0-9-]*\.md$/.test(base)) {
         return { valid: true };
       }
-      return { 
-        valid: false, 
+      return {
+        valid: false,
         expected: 'random-skip-feature.md',
         reason: 'Should be kebab-case'
       };
-      
+
     default:
       // その他（サブディレクトリなど）
       if (dir.includes('guidelines/')) {
@@ -123,7 +123,7 @@ function suggestRename(filePath) {
   const dir = dirname(filePath);
   const base = basename(filePath);
   const dirName = dir.split('/').pop();
-  
+
   // kebab-case → UPPER_SNAKE_CASE
   if (/^[a-z][a-z0-9-]*\.md$/.test(base)) {
     const upperSnake = base
@@ -131,12 +131,12 @@ function suggestRename(filePath) {
       .split('-')
       .map(word => word.toUpperCase())
       .join('_') + '.md';
-    
+
     if (['guidelines', 'references', 'plans', 'reports', 'quality', 'how-to', 'processes', 'maintenance'].includes(dirName)) {
       return join(dir, upperSnake);
     }
   }
-  
+
   // UPPER_SNAKE_CASE → kebab-case (features only)
   if (dirName === 'features' && /^[A-Z_]+\.md$/.test(base)) {
     const kebab = base
@@ -145,7 +145,7 @@ function suggestRename(filePath) {
       .replace(/_/g, '-') + '.md';
     return join(dir, kebab);
   }
-  
+
   return null;
 }
 
@@ -154,7 +154,7 @@ function analyzeNamingConventions() {
   const files = getAllMDFiles(DOCS_DIR);
   const violations = [];
   const valid = [];
-  
+
   for (const file of files) {
     const check = checkNamingConvention(file);
     if (check.valid) {
@@ -169,18 +169,18 @@ function analyzeNamingConventions() {
       });
     }
   }
-  
+
   // 結果表示
   console.log(`📊 命名規則分析結果\n`);
   console.log(`総ファイル数: ${files.length}`);
   console.log(`✅ 規則準拠: ${valid.length}ファイル`);
   console.log(`❌ 規則違反: ${violations.length}ファイル\n`);
-  
+
   if (violations.length > 0) {
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log('⚠️  命名規則違反ファイル一覧');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-    
+
     // ディレクトリ別にグループ化
     const byDir = {};
     violations.forEach(v => {
@@ -188,7 +188,7 @@ function analyzeNamingConventions() {
       if (!byDir[dir]) byDir[dir] = [];
       byDir[dir].push(v);
     });
-    
+
     Object.entries(byDir).forEach(([dir, items]) => {
       console.log(`\n📁 ${dir}/`);
       items.forEach(({ file, reason, expected, suggested }) => {
@@ -201,7 +201,7 @@ function analyzeNamingConventions() {
         }
       });
     });
-    
+
     console.log('\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log('📋 リネーム実施の優先度');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
@@ -212,7 +212,7 @@ function analyzeNamingConventions() {
     console.log('【低】features/, development/');
     console.log('  → 日常的な文書\n');
   }
-  
+
   return { violations, valid };
 }
 
