@@ -16,7 +16,7 @@ tags: [plan, maintenance, documentation]
 
 ### 1. `.aitk/instructions`への参照 (推定100-150箇所)
 
-**パターン**: `[説明](../.aitk/instructions/xxx.instructions.md)`  
+**パターン**: `[説明](../.aitk/instructions/~~xxx.instructions.md（ファイル未作成）~~)`  
 **原因**: docs内からプロジェクトルートの`.aitk`を相対パスで参照  
 **修正方法**:
 
