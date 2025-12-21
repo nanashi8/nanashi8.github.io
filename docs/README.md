@@ -5,11 +5,15 @@
 このドキュメント群は [Diátaxis フレームワーク](https://diataxis.fr/) に基づいて整理されています：
 
 ### 🎓 Tutorials（学び始める）
+
 初めての方向け・学習順序ガイド
+
 - [プロジェクト概要](./specifications/01-project-overview.md)
 
 ### 🔧 How-to（実践する）
+
 具体的な手順書・トラブルシューティング
+
 - **メタAI（QuestionScheduler）** ⭐ **最優先**
   - [5分クイックガイド](./guidelines/QUESTION_SCHEDULER_QUICK_GUIDE.md)
   - [トラブルシューティング完全版](./guidelines/META_AI_TROUBLESHOOTING.md)
@@ -21,14 +25,18 @@
   - [リファクタリング安全手順](./processes/REFACTORING_SAFETY.md)
 
 ### 📖 Explanation（理解を深める）
+
 概念・背景・設計思想
+
 - [アダプティブネットワークアーキテクチャ](./design/ADAPTIVE_NETWORK_ARCHITECTURE.md)
 - [学習フェーズアーキテクチャ](./design/LEARNING_PHASE_ARCHITECTURE.md)
 - [品質原則](./quality/CONTENT_QUALITY_PRINCIPLES.md)
 - [技術ビジョン](./quality/TECHNICAL_VISION.md)
 
 ### 📋 Reference（調べる）
+
 仕様・API・固定情報・品質基準
+
 - **メタAI** ⭐
   - [QuestionScheduler詳細仕様](./specifications/QUESTION_SCHEDULER_SPEC.md)
   - [品質保証パイプライン](./quality/QUESTION_SCHEDULER_QA_PIPELINE.md)
@@ -61,10 +69,11 @@
 
 **プロジェクトの全体像と今後の方向性:**
 
-- [**📋 プラットフォーム開発ロードマップ**](./PLATFORM_ROADMAP.md) - ⭐ 全体アーキテクチャ・Phase 1-5の詳細計画・技術スタック
-- [**📝 Phase 1 タスクリスト**](./PHASE_1_TASKS.md) - ⭐ 基盤構築期の具体的タスク・進捗管理
+- [**📋 プラットフォーム開発ロードマップ**](./roadmap/PLATFORM_ROADMAP.md) - ⭐ 全体アーキテクチャ・Phase 1-5の詳細計画・技術スタック
+- [**📝 Phase 1 タスクリスト**](./plans/PHASE_1_TASKS.md) - ⭐ 基盤構築期の具体的タスク・進捗管理
 
 **既存の計画・ロードマップ:**
+
 - [データ品質改善計画](./guidelines/DATA_QUALITY_REPORT.md) - データ品質向上のフェーズ別計画
 - [パッセージ作成ロードマップ](./guidelines/passage/PASSAGE_CREATION_GUIDELINES.md) - 長文パッセージの段階的追加計画
 - [文法問題品質パイプライン](./guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md) - 文法問題の生成・検証フロー
@@ -82,9 +91,11 @@
 ---
 
 ### 1. プロジェクト概要
+
 - [01-プロジェクト概要](./01-project-overview.md) - プロジェクトの目的、ターゲット、主要機能
 
 ### 2. 機能仕様
+
 - [02-和訳クイズ](./02-translation-quiz.md) - 和訳クイズ機能の詳細仕様
 - [03-スペルクイズ](./03-spelling-quiz.md) - スペリングクイズ機能の詳細仕様
 - [04-長文読解](./04-reading-comprehension.md) - 長文読解機能の詳細仕様
@@ -92,6 +103,7 @@
 - [06-設定画面](./06-settings.md) - 設定画面の仕様
 
 ### 3. AI機能仕様
+
 - [07-認知負荷AI](./07-cognitive-load-ai.md) - 認知負荷の測定と調整
 - [08-エラー予測AI](./08-error-prediction-ai.md) - エラーパターン分析と予測
 - [09-文脈学習AI](./09-contextual-learning-ai.md) - 文脈に基づく学習順序の最適化
@@ -102,6 +114,7 @@
 - [14-AIコメント生成](./14-ai-comment-generator.md) - 動的コメント生成システム
 
 ### 4. データ構造
+
 - [15-データ構造](./15-data-structures.md) - 問題データ、進捗データの構造
 - [16-ストレージ戦略](./16-storage-strategy.md) - IndexedDB/LocalStorageの使い分け
 
@@ -113,18 +126,21 @@
 - [**デザインシステムルール**](./DESIGN_SYSTEM_RULES.md) - ⚠️ 必読：カラーシステム定義・自動チェック方法
 
 ### 6. データセット
+
 - [19-中学受験単語](./19-junior-high-vocabulary.md) - 中学受験頻出単語リスト
 - [20-中学受験フレーズ](./20-junior-high-phrases.md) - 中学受験頻出フレーズリスト
 - [21-長文読解パッセージ](./21-reading-passages.md) - 長文読解用パッセージデータ
 - [**NEW HORIZON文法問題ガイドライン**](./NEW_HORIZON_GRAMMAR_GUIDELINES.md) - 文並び替え問題の作成標準仕様
 
 ### 7. 開発ガイド
+
 - [22-開発環境セットアップ](./22-development-setup.md) - 開発環境の構築手順
 - [23-デプロイメント](./23-deployment.md) - GitHub Pagesへのデプロイ手順
 - [24-テスト戦略](./24-testing-strategy.md) - テスト方針とテストケース
 - [**パッセージ作成ガイドライン**](./PASSAGE_CREATION_GUIDELINES.md) - 長文パッセージの作成・編集標準仕様
 
 ### 8. 変更履歴・レポート
+
 - [25-変更履歴](./25-changelog.md) - 機能追加・修正の履歴
 - [26-実装完了レポート](./26-final-report.md) - プロジェクト完了時のレポート
 
@@ -135,7 +151,7 @@
 開発過程で作成された旧ドキュメントを `archive/` に保管:
 
 - **旧仕様書**: archive/specifications/ - 初期設計ドキュメント
-- **開発ワークフロー**: READING_*.md, RETENTION_*.md, PHRASE_*.md
+- **開発ワークフロー**: READING*\*.md, RETENTION*_.md, PHRASE\__.md
 - **参考資料**: references/ - デプロイガイド、セットアップ手順
 
 ### アーカイブ内の主要ドキュメント
