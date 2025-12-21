@@ -352,8 +352,7 @@ nanashi8.github.io/
 |---|---|
 | [AI_INTEGRATION_GUIDE.md](docs/AI_INTEGRATION_GUIDE.md) | 技術詳細・実装手順 |
 | [HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md) | ユーザー向け使い方 |
-| [AI_PROJECT_COMPLETE.md](docs/AI_PROJECT_COMPLETE.md) | Phase 1-4総括（407行） |
-| [PHASE3_COMPLETION_REPORT.md](docs/PHASE3_COMPLETION_REPORT.md) | AI統合詳細 |
+| [AI_PROJECT_COMPLETE.md](docs/AI_PROJECT_COMPLETE.md) | Phase 1-4総括（408行） |
 | [random-skip-feature.md](docs/features/random-skip-feature.md) | ランダム飛ばし機能仕様 |
 
 #### ドキュメント管理システム
