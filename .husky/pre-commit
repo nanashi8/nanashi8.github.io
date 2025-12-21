@@ -4,6 +4,10 @@ echo "🔍 Pre-commit チェック開始..."
 echo "⚠️  【重要】すべてのエラー・警告を完全に解消する必要があります"
 echo ""
 
+# -3. 効率化ガード（無駄な作業を検出）
+.husky/efficiency-guard.sh || true
+echo ""
+
 # -2. サーバント危険パターン検出（学習データベース活用）
 echo "🛡️  サーバント: 危険パターン検出中..."
 STAGED_FILES=$(git diff --cached --name-only | grep -E '\.(tsx?|jsx?)$' || true)
