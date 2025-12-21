@@ -1,12 +1,17 @@
+---
+title: ランダム飛ばし機能 (Random Skip Feature)
+created: 2025-12-21
+updated: 2025-12-21
+status: implemented
+tags: [feature, ai, scheduler, observer-proposal]
+author: Observer (User)
+---
+
 # ランダム飛ばし機能 (Random Skip Feature)
 
 ## 概要
 
 incorrect単語を待機キューに追加し、ランダムに2-5問飛ばして再出題する革新的な機能。
-
-**提案者**: オブザーバー（ユーザー）  
-**実装日**: 2025年12月21日  
-**ブランチ**: feature/random-skip-incorrect
 
 ## 問題の背景
 
@@ -31,22 +36,22 @@ incorrect単語を待機キューに追加し、ランダムに2-5問飛ばし�
 
 ### 既存の実装パターン
 
-| システム | 方式 | 複雑度 | 実装時間 |
-|---------|------|--------|---------|
-| Anki | Multi-Queue (New/Learning/Review/Graduated) | 高 | 2-3時間 |
-| Duolingo | 3段階分類（弱点は必ず出る） | 中 | 1-2時間 |
-| Quizlet | まだ覚えてない/もう少し/完璧 | 中 | 1-2時間 |
+| システム | 方式                                        | 複雑度 | 実装時間 |
+| -------- | ------------------------------------------- | ------ | -------- |
+| Anki     | Multi-Queue (New/Learning/Review/Graduated) | 高     | 2-3時間  |
+| Duolingo | 3段階分類（弱点は必ず出る）                 | 中     | 1-2時間  |
+| Quizlet  | まだ覚えてない/もう少し/完璧                | 中     | 1-2時間  |
 
 ### 採用した解決策
 
 **ランダム飛ばし方式（オブザーバー提案）**
 
-| 項目 | 値 |
-|------|-----|
-| 複雑度 | **超低** |
-| 実装時間 | **40分** |
+| 項目         | 値         |
+| ------------ | ---------- |
+| 複雑度       | **超低**   |
+| 実装時間     | **40分**   |
 | メンテナンス | **超簡単** |
-| 確実性 | **高** |
+| 確実性       | **高**     |
 
 ## 実装仕様
 
@@ -106,6 +111,7 @@ private skipTarget: number = 0;                          // 目標カウント
 ### リベンジ感
 
 「あ、またこの単語！」という気づきが重要：
+
 - 短すぎる → 記憶に残らない
 - 長すぎる → 忘れてしまう
 - **ランダム** → 予測できないため集中力維持
@@ -131,6 +137,7 @@ tests/
 #### 1. QuestionScheduler.ts
 
 **フィールド追加** (Line 50-53):
+
 ```typescript
 private incorrectSkipQueue: PrioritizedQuestion[] = [];
 private skipCounter: number = 0;
@@ -138,6 +145,7 @@ private skipTarget: number = 0;
 ```
 
 **重み付きランダム関数** (Line 60-67):
+
 ```typescript
 private getRandomSkipCount(): number {
   const random = Math.random();
@@ -149,6 +157,7 @@ private getRandomSkipCount(): number {
 ```
 
 **schedule()メソッド統合** (Line 109-161):
+
 - カウンター進行チェック
 - 待機キューからの再出題
 - incorrect検出とキュー追加
@@ -156,6 +165,7 @@ private getRandomSkipCount(): number {
 #### 2. types.ts
 
 **デバッグフィールド追加** (Line 209):
+
 ```typescript
 debug?: {
   dtaApplied: number;
@@ -170,6 +180,7 @@ debug?: {
 ### ユニットテスト
 
 ✅ **QuestionScheduler.priority.test.ts**: 11/11成功
+
 - still_learning語句の優先度計算
 - mastered語句の優先度計算
 - 時間経過ブースト（1日後、5日後、15日後）
@@ -178,6 +189,7 @@ debug?: {
 ### 統合テスト
 
 ✅ **learning-ai-integration.test.ts**: 主要テスト成功
+
 - incorrect単語の優先選択（待機キュー考慮）
 - still_learningカテゴリーの優先順位
 - masteredカテゴリーの低優先度
@@ -247,8 +259,8 @@ if (timeOfDay === 'morning') {
 
 ## 参考文献
 
-- Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin*, 132(3), 354-380.
-- Ebbinghaus, H. (1885). *Memory: A contribution to experimental psychology*. Teachers College, Columbia University.
+- Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. _Psychological Bulletin_, 132(3), 354-380.
+- Ebbinghaus, H. (1885). _Memory: A contribution to experimental psychology_. Teachers College, Columbia University.
 
 ## 関連ドキュメント
 
@@ -258,9 +270,9 @@ if (timeOfDay === 'morning') {
 
 ## バージョン履歴
 
-| バージョン | 日付 | 変更内容 |
-|-----------|------|---------|
-| 1.0.0 | 2025-12-21 | 初回実装 |
+| バージョン | 日付       | 変更内容 |
+| ---------- | ---------- | -------- |
+| 1.0.0      | 2025-12-21 | 初回実装 |
 
 ---
 
