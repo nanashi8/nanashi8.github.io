@@ -264,10 +264,13 @@ describe('学習AI統合テスト', () => {
         isReviewFocusMode: false,
       });
 
-      // incorrectカテゴリーの単語が上位に来ること
+      // 🔥 ランダム飛ばし機能: 最初のincorrect('cat')は待機キューに入る
+      // 2番目のincorrect('dog')が上位に来る
       const topWords = result.scheduledQuestions.slice(0, 2).map((q) => q.word);
-      expect(topWords).toContain('cat');
-      expect(topWords).toContain('dog');
+      expect(topWords).toContain('dog'); // 2番目のincorrectが出題
+      expect(topWords).toContain('book'); // still_learningが続く
+      // catは待機キューに入ったのでtop2には含まれない
+      expect(topWords).not.toContain('cat');
     });
 
     it('still_learningカテゴリーがincorrectの次に優先されること', () => {
@@ -326,10 +329,12 @@ describe('学習AI統合テスト', () => {
         isReviewFocusMode: false,
       });
 
-      // still_learningが上位に来ること
+      // 🔥 ランダム飛ばし機能: incorrectの'cat'は待機キューに入る
+      // 2番目のincorrect('dog')とstill_learning('book')が上位に来る
       const topWords = result.scheduledQuestions.slice(0, 2).map((q) => q.word);
-      expect(topWords).toContain('book');
-      expect(topWords).toContain('cat');
+      expect(topWords).toContain('book'); // still_learning
+      expect(topWords).toContain('dog'); // 2番目のincorrect
+      expect(topWords).not.toContain('cat'); // 待機キューに入った
     });
 
     it('masteredカテゴリーの単語は優先度が低いこと', () => {
@@ -374,8 +379,9 @@ describe('学習AI統合テスト', () => {
         isReviewFocusMode: false,
       });
 
-      // incorrectが最初に来ること
-      expect(result.scheduledQuestions[0].word).toBe('book');
+      // 🔥 ランダム飛ばし機能: incorrectの'cat'は待機キューに入る
+      // 2番目のincorrect('dog')が最初に来る
+      expect(result.scheduledQuestions[0].word).toBe('dog');
 
       // masteredは後方に配置されること
       const appleIndex = result.scheduledQuestions.findIndex((q) => q.word === 'apple');
