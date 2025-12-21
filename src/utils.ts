@@ -116,7 +116,7 @@ export function parseCSV(csvText: string): Question[] {
         logger.warn(
           `[データ整合性警告] 不正なカテゴリ: "${relatedFields}" (単語: "${word}")\n` +
             `有効なカテゴリ: ${OFFICIAL_CATEGORIES.join(', ')}\n` +
-            `参照: docs/19-junior-high-vocabulary.md`
+            `参照: docs/specifications/19-junior-high-vocabulary.md`
         );
       }
 

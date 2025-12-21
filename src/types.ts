@@ -2,7 +2,7 @@
 // 語句,読み,意味,語源等解説,関連語,関連分野,難易度
 
 // 10分野システム（厳格な型定義）
-// 参照: docs/19-junior-high-vocabulary.md
+// 参照: docs/specifications/19-junior-high-vocabulary.md
 export const OFFICIAL_CATEGORIES = [
   '言語基本',
   '学校・学習',
