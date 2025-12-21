@@ -23,7 +23,7 @@ tags: [guidelines, documentation, naming]
   例: setup.md, deployment.md, random-skip-feature.md
   
 その他: 約30ファイル（10%）
-  例: README.md, 14AI_INTEGRATION_GUIDE.md
+  例: README.md, AI_INTEGRATION_GUIDE.md
 ```
 
 **問題点**:

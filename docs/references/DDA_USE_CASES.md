@@ -587,7 +587,7 @@ class RLDifficultyAdjuster:
 7. **本プロジェクト**
    - [DDA実装ガイド](./DDA_IMPLEMENTATION.md)
    - [統一スケジューラー実装完了レポート](../development/UNIFIED_SCHEDULER_IMPLEMENTATION_COMPLETE.md)
-   - [14AI統合ガイド](../development/14AI_INTEGRATION_GUIDE.md)
+   - [14AI統合ガイド](../development/AI_INTEGRATION_GUIDE.md)
 
 ---
 

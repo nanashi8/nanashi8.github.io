@@ -174,7 +174,7 @@
 - **統合案**:
   - 新ファイル: `docs/design/ADAPTIVE_LEARNING_COMPLETE_DESIGN.md`
     - 全AI学習機能の設計を統合
-  - または既存の `adaptive-learning-api.md` を拡張
+  - または既存の `ADAPTIVE_LEARNING_API.md` を拡張
 - **影響範囲**: ドキュメントのみ
 - **検証方法**: 内容レビュー
 - **リスク**: 低

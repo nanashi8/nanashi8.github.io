@@ -1126,7 +1126,7 @@ Week 4: Phase 6-8（テスト・リリース）
 
 ### 社内ドキュメント
 
-- [学習AIシステム アーキテクチャ仕様書](../specifications/learning-ai-system-architecture.md)
+- [学習AIシステム アーキテクチャ仕様書](../specifications/LEARNING_AI_SYSTEM_ARCHITECTURE.md)
 - [学習コンテンツ品質保証ガード](../../.aitk/instructions/learning-content-quality-guard.instructions.md)
 
 ---

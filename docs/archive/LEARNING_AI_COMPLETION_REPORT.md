@@ -228,7 +228,7 @@ npx tsx scripts/visual-random-simulation.ts \
 
 ### 参考ドキュメント
 
-5. **[adaptive-learning-api.md](adaptive-learning-api.md)**
+5. **[ADAPTIVE_LEARNING_API.md](ADAPTIVE_LEARNING_API.md)**
    - 既存APIの詳細仕様
 
 6. **[design/adaptive-learning-algorithm-design.md](design/adaptive-learning-algorithm-design.md)**
