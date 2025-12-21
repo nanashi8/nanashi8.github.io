@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { Question, MemorizationCardState, MemorizationBehavior, QuestionSet } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import {
@@ -7,6 +7,7 @@ import {
   recordMemorizationBehavior,
   getMemorizationSettings,
   saveMemorizationSettings,
+  updateWordProgress,
 } from '../progressStorage';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import { logger } from '@/utils/logger';
@@ -18,6 +19,9 @@ import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 // import { sortQuestionsByPriority as sortByPriorityCommon } from '../utils/questionPrioritySorter'; // QuestionSchedulerに統合済み
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { QuestionScheduler } from '@/ai/scheduler';
+import { determineCategory } from '@/ai/utils/quickCategoryDetermination';
+import { PerformanceMonitor } from '@/utils/performance-monitor';
+import { QualityMonitor } from '@/utils/quality-monitor';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -108,7 +112,7 @@ function MemorizationView({
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
 
   // 直前に回答した問題（連続出題防止用）
-  const [lastAnsweredQuestionId, setLastAnsweredQuestionId] = useState<string | null>(null);
+  const [_lastAnsweredQuestionId, setLastAnsweredQuestionId] = useState<string | null>(null);
 
   // 滞在時間計測
   const cardDisplayTimeRef = useRef<number>(0);
@@ -148,7 +152,115 @@ function MemorizationView({
   });
 
   // 問題再出題管理フック
-  const { reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
+  const { reAddQuestion: _reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
+
+  // ═══════════════════════════════════════════════════════════
+  // 🚀 Phase 1 Pattern 3: 計算結果のメモ化拡大
+  // ═══════════════════════════════════════════════════════════
+
+  // カテゴリー別統計をメモ化（sessionStats変更時のみ再計算）
+  const _categoryStats = useMemo(() => {
+    PerformanceMonitor.start('calculate-category-stats');
+    const stats = {
+      incorrect: sessionStats.incorrect,
+      still_learning: sessionStats.still_learning,
+      correct: sessionStats.correct,
+      mastered: sessionStats.mastered,
+      total: sessionStats.total,
+      incorrectRate: sessionStats.total > 0 ? sessionStats.incorrect / sessionStats.total : 0,
+      correctRate: sessionStats.total > 0 ? sessionStats.correct / sessionStats.total : 0,
+    };
+    const duration = PerformanceMonitor.end('calculate-category-stats');
+
+    if (import.meta.env.DEV && duration > 10) {
+      console.log('📊 [MemorizationView] カテゴリー統計計算', {
+        duration: `${duration.toFixed(2)}ms`,
+        stats,
+      });
+    }
+
+    return stats;
+  }, [
+    sessionStats.incorrect,
+    sessionStats.still_learning,
+    sessionStats.correct,
+    sessionStats.mastered,
+    sessionStats.total,
+  ]);
+
+  // 関連分野リストをメモ化（allQuestions変更時のみ再計算）
+  const _availableCategories = useMemo(() => {
+    PerformanceMonitor.start('get-available-categories');
+    const categories = new Set<string>();
+    allQuestions.forEach((q) => {
+      if (q.relatedFields && Array.isArray(q.relatedFields)) {
+        q.relatedFields.forEach((field) => categories.add(field));
+      }
+    });
+    const result = Array.from(categories).sort();
+    const duration = PerformanceMonitor.end('get-available-categories');
+
+    if (import.meta.env.DEV && duration > 10) {
+      console.log('📂 [MemorizationView] カテゴリーリスト計算', {
+        duration: `${duration.toFixed(2)}ms`,
+        count: result.length,
+      });
+    }
+
+    return result;
+  }, [allQuestions]);
+
+  // フィルター済み問題リストをメモ化
+  const _filteredQuestions = useMemo(() => {
+    PerformanceMonitor.start('filter-questions');
+
+    let filtered = allQuestions;
+
+    // データソースフィルター
+    if (selectedDataSource !== 'all') {
+      // 将来的なデータ増加に対応
+    }
+
+    // 難易度フィルター
+    if (selectedDifficulty !== 'all') {
+      filtered = filtered.filter((q) => q.difficulty === selectedDifficulty);
+    }
+
+    // 関連分野フィルター
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(
+        (q) =>
+          q.relatedFields &&
+          Array.isArray(q.relatedFields) &&
+          q.relatedFields.includes(selectedCategory)
+      );
+    }
+
+    // 単語・熟語フィルター
+    if (selectedWordPhraseFilter === 'words') {
+      filtered = filtered.filter((q) => !q.word.includes(' ') || q.word.split(' ').length <= 2);
+    } else if (selectedWordPhraseFilter === 'phrases') {
+      filtered = filtered.filter((q) => q.word.includes(' ') && q.word.split(' ').length > 2);
+    }
+
+    const duration = PerformanceMonitor.end('filter-questions');
+
+    if (import.meta.env.DEV && duration > 20) {
+      console.log('🔍 [MemorizationView] 問題フィルタリング', {
+        duration: `${duration.toFixed(2)}ms`,
+        total: allQuestions.length,
+        filtered: filtered.length,
+      });
+    }
+
+    return filtered;
+  }, [
+    allQuestions,
+    selectedDataSource,
+    selectedDifficulty,
+    selectedCategory,
+    selectedWordPhraseFilter,
+  ]);
 
   // 初期化: カード表示設定と音声設定を読み込み
   useEffect(() => {
@@ -281,7 +393,7 @@ function MemorizationView({
       // localStorage に保存（デバッグ用）
       try {
         localStorage.setItem('debug_memorization_latest', JSON.stringify(debugInfo));
-      } catch (e) {
+      } catch {
         // ignore
       }
 
@@ -294,10 +406,18 @@ function MemorizationView({
       }
 
       setQuestions(sortedQuestions);
-      if (sortedQuestions.length > 0) {
-        setCurrentQuestion(sortedQuestions[0]);
+      // 🔧 初回表示時のみインデックスをリセット
+      // 再スケジューリング時(rescheduleCounter変更時)は、現在の問題を継続
+      if (sortedQuestions.length > 0 && currentIndex === 0 && !currentQuestion) {
+        const firstQuestion = sortedQuestions[0];
+        setCurrentQuestion(firstQuestion);
         setCurrentIndex(0);
         cardDisplayTimeRef.current = Date.now();
+        // 📊 1問目の出題をカウント
+        setSessionStats((prev) => ({
+          ...prev,
+          total: prev.total + 1,
+        }));
       }
     };
 
@@ -478,23 +598,47 @@ function MemorizationView({
         setIncorrectStreak(0);
       }
 
-      // 統計を3段階で更新
+      // 統計を3段階で更新（totalは問題表示時に既にカウント済み）
       setSessionStats((prev) => ({
         correct: isCorrect ? prev.correct + 1 : prev.correct,
         still_learning: isStillLearning ? prev.still_learning + 1 : prev.still_learning,
         incorrect: !isCorrect && !isStillLearning ? prev.incorrect + 1 : prev.incorrect,
         mastered: isCorrect ? prev.mastered + 1 : prev.mastered, // 覚えてる=mastered
-        total: prev.total + 1,
+        total: prev.total, // 既に表示時にカウント済み
         newQuestions: prev.newQuestions,
         reviewQuestions: prev.reviewQuestions,
         consecutiveNew: prev.consecutiveNew,
         consecutiveReview: prev.consecutiveReview,
       }));
 
-      // 回答時刻を即座に更新（ScoreBoard再計算のトリガー）
-      setLastAnswerTime(Date.now());
+      // � Phase 1 Pattern 2: 即座のカテゴリー判定（10-50ms目標）
+      // UI応答を最優先し、詳細分析は後回し
+      PerformanceMonitor.start('quick-category-determination');
+      const quickCategory = await determineCategory(answeredQuestion.word, isCorrect);
+      const categoryDuration = PerformanceMonitor.end('quick-category-determination');
 
-      // 📊 カテゴリ変化時のみ再スケジューリング（パフォーマンス最適化）
+      if (categoryDuration > 50) {
+        PerformanceMonitor.warnIfSlow('quick-category-determination', categoryDuration, 50);
+      }
+
+      // 品質測定に記録
+      QualityMonitor.recordCategoryDetermination(
+        quickCategory.category,
+        quickCategory.confidence,
+        categoryDuration
+      );
+
+      if (import.meta.env.DEV) {
+        console.log('⚡ [MemorizationView] 即座のカテゴリー判定', {
+          word: answeredQuestion.word,
+          category: quickCategory.category,
+          confidence: quickCategory.confidence,
+          reasoning: quickCategory.reasoning,
+          duration: `${categoryDuration.toFixed(2)}ms`,
+        });
+      }
+
+      // �📊 カテゴリ変化時のみ再スケジューリング（パフォーマンス最適化）
       // incorrect または still_learning が発生した時のみ再計算
       if (!isCorrect) {
         setRescheduleCounter((prev) => prev + 1);
@@ -514,7 +658,29 @@ function MemorizationView({
 
       // 16秒以上は放置とみなしてカウントしない
       if (answeredViewDuration < 16) {
-        // 🔥 重要: await を削除してバックグラウンド実行
+        // 🎯 最優先: updateWordProgress を先に実行してlocalStorageを更新
+        PerformanceMonitor.start('data-save');
+        try {
+          await updateWordProgress(
+            answeredQuestion.word,
+            isCorrect,
+            answeredViewDuration * 1000, // ミリ秒に変換
+            undefined,
+            'memorization', // 暗記タブは独立したモードとして記録
+            isStillLearning // まだまだフラグを渡す
+          );
+          const duration = PerformanceMonitor.end('data-save');
+          QualityMonitor.recordDataSave(true, duration);
+        } catch (error) {
+          const duration = PerformanceMonitor.end('data-save');
+          QualityMonitor.recordDataSave(false, duration, String(error));
+          logger.error('[MemorizationView] 学習データ記録エラー:', error);
+        } finally {
+          // ✅ 成功/失敗に関わらず回答時刻を更新（ScoreBoard再計算のトリガー）
+          setLastAnswerTime(Date.now());
+        }
+
+        // 🔥 その他の処理はバックグラウンドで実行
         Promise.all([
           // 行動記録の保存
           (async () => {
@@ -534,23 +700,6 @@ function MemorizationView({
             }
           })(),
 
-          // メインの学習データ記録
-          (async () => {
-            try {
-              const { updateWordProgress } = await import('../progressStorage');
-              await updateWordProgress(
-                answeredQuestion.word,
-                isCorrect,
-                answeredViewDuration * 1000, // ミリ秒に変換
-                undefined,
-                'memorization', // 暗記タブは独立したモードとして記録
-                isStillLearning // まだまだフラグを渡す
-              );
-            } catch (error) {
-              logger.error('[MemorizationView] 学習データ記録エラー:', error);
-            }
-          })(),
-
           // 追加の統計記録
           (async () => {
             try {
@@ -564,12 +713,27 @@ function MemorizationView({
             }
           })(),
 
-          // メタAI分析（adaptiveEnabled時のみ）
+          // 🔬 Phase 1 Pattern 2: AI分析の段階的実行
+          // 即座: カテゴリー判定（既に完了）
+          // 遅延: 詳細AI分析（adaptiveEnabled時のみ、1秒後）
           adaptiveEnabled
             ? (async () => {
+                // 1秒待機してから詳細分析
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                PerformanceMonitor.start('ai-detailed-analysis');
                 try {
                   await processWithAdaptiveAI(answeredQuestion.word, isCorrect);
+                  const duration = PerformanceMonitor.end('ai-detailed-analysis');
+
+                  if (import.meta.env.DEV) {
+                    console.log('🔬 [MemorizationView] 詳細AI分析完了', {
+                      word: answeredQuestion.word,
+                      duration: `${duration.toFixed(2)}ms`,
+                    });
+                  }
                 } catch (error) {
+                  PerformanceMonitor.end('ai-detailed-analysis');
                   logger.error('[MemorizationView] AI分析エラー:', error);
                 }
               })()
@@ -606,9 +770,15 @@ function MemorizationView({
           setQuestions(clearedQuestions);
         }
 
-        setCurrentQuestion(questions[nextIndex]);
+        const nextQuestion = questions[nextIndex];
+        setCurrentQuestion(nextQuestion);
         setCurrentIndex(nextIndex);
         cardDisplayTimeRef.current = Date.now();
+        // 📊 新しい問題の出題をカウント
+        setSessionStats((prev) => ({
+          ...prev,
+          total: prev.total + 1,
+        }));
         // 次の問題に移動したのlastAnswerWordをリセット（解答前に解答後コメントが表示されるのを防ぐ）
         setLastAnswerWord(undefined);
       } else {

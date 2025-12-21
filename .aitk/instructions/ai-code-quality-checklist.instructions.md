@@ -1,7 +1,6 @@
 ---
 description: AI実装時の品質保証チェックリスト - 型安全性・リファクタリング・テストの必須確認項目
 applyTo: '**/*.{ts,tsx,js,jsx}'
-priority: critical
 ---
 
 # AI実装時の品質保証チェックリスト
@@ -294,19 +293,19 @@ git diff HEAD~1 src/path/to/file.ts
 
 ### 型定義
 
-- [src/storage/progress/types.ts](../../src/storage/progress/types.ts) - 進捗データの型
-- [src/types/question.ts](../../src/types/question.ts) - 問題データの型
-- [src/ai/types/](../../src/ai/types/) - AI関連の型
+- src/storage/progress/types.ts - 進捗データの型
+- src/types/ - 各種データ型定義
+- src/ai/ - AI関連の型と実装
 
 ### テスト
 
-- [tests/phase1-integration-test.spec.ts](../../tests/phase1-integration-test.spec.ts) - Phase 1統合テスト
-- [tests/memorization.spec.ts](../../tests/memorization.spec.ts) - 暗記タブのテスト
+- tests/ - テストファイル群
+- tests/phase1-integration-test.spec.ts - Phase 1統合テスト
 
 ### ガイドライン
 
-- [docs/guidelines/typescript-style-guide.md](../../docs/guidelines/typescript-style-guide.md) - TypeScriptスタイルガイド
-- [docs/guidelines/testing-guide.md](../../docs/guidelines/testing-guide.md) - テストガイド
+- プロジェクトルートの docs/guidelines/ を参照
+- プロジェクトルートの docs/specifications/ を参照
 
 ---
 

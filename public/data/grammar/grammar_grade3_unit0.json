@@ -16,8 +16,13 @@
       "difficulty": "beginner",
       "sentence": "I ___ at home yesterday.",
       "correctAnswer": "was",
-      "choices": ["am", "was", "were", "is"],
-      "explanation": "正解: was\n日本語訳: 私は昨日家にいました。\n文法ポイント: 主語がIで過去の文なのでwasを使います。yesterdayが過去を表す目印です。\nよくある間違い: wereはI以外の複数主語で使います。"
+      "choices": [
+        "am",
+        "was",
+        "were",
+        "is"
+      ],
+      "explanation": "正解: was\n日本語訳: 私は昨日家にいました。\n文法ポイント: 主語がIで過去の文なのでwasを使います。yesterdayが過去を表す目印です。\nよくある間違い: wereはI以外の複数主語で使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_002",
@@ -25,8 +30,13 @@
       "difficulty": "beginner",
       "sentence": "They ___ happy last week.",
       "correctAnswer": "were",
-      "choices": ["am", "was", "were", "are"],
-      "explanation": "正解: were\n日本語訳: 彼らは先週幸せでした。\n文法ポイント: 主語がTheyで過去の文なのでwereを使います。last weekが過去を表す目印です。\nよくある間違い: wasは単数主語（I, he, she, it）で使います。"
+      "choices": [
+        "am",
+        "was",
+        "were",
+        "are"
+      ],
+      "explanation": "正解: were\n日本語訳: 彼らは先週幸せでした。\n文法ポイント: 主語がTheyで過去の文なのでwereを使います。last weekが過去を表す目印です。\nよくある間違い: wasは単数主語（I, he, she, it）で使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_003",
@@ -34,8 +44,13 @@
       "difficulty": "intermediate",
       "sentence": "She ___ the book last month.",
       "correctAnswer": "read",
-      "choices": ["read", "reads", "reading", "to read"],
-      "explanation": "正解: read（過去形）\n日本語訳: 彼女は先月その本を読みました。\n文法ポイント: last monthがあるので過去形readを使います。readの過去形もreadですが発音が異なります（/red/）。\nよくある間違い: readsは現在形の三人称単数です。"
+      "choices": [
+        "read",
+        "reads",
+        "reading",
+        "to read"
+      ],
+      "explanation": "正解: read（過去形）\n日本語訳: 彼女は先月その本を読みました。\n文法ポイント: last monthがあるので過去形readを使います。readの過去形もreadですが発音が異なります（/red/）。\nよくある間違い: readsは現在形の三人称単数です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【to read】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_004",
@@ -43,8 +58,13 @@
       "difficulty": "intermediate",
       "sentence": "We ___ to Tokyo last summer.",
       "correctAnswer": "went",
-      "choices": ["go", "went", "goes", "going"],
-      "explanation": "正解: went\n日本語訳: 私たちは去年の夏東京に行きました。\n文法ポイント: goの過去形はwentです（不規則動詞）。last summerが過去を表します。\nよくある間違い: goedという形は存在しません。"
+      "choices": [
+        "go",
+        "went",
+        "goes",
+        "going"
+      ],
+      "explanation": "正解: went\n日本語訳: 私たちは去年の夏東京に行きました。\n文法ポイント: goの過去形はwentです（不規則動詞）。last summerが過去を表します。\nよくある間違い: goedという形は存在しません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【went】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_005",
@@ -52,32 +72,54 @@
       "difficulty": "intermediate",
       "sentence": "He ___ soccer yesterday.",
       "correctAnswer": "played",
-      "choices": ["play", "played", "plays", "playing"],
-      "explanation": "正解: played\n日本語訳: 彼は昨日サッカーをしました。\n文法ポイント: playは規則動詞なので過去形は-edを付けてplayedになります。\nよくある間違い: playsは現在形の三人称単数です。"
+      "choices": [
+        "play",
+        "played",
+        "plays",
+        "playing"
+      ],
+      "explanation": "正解: played\n日本語訳: 彼は昨日サッカーをしました。\n文法ポイント: playは規則動詞なので過去形は-edを付けてplayedになります。\nよくある間違い: playsは現在形の三人称単数です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【played】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_006",
       "type": "sentenceOrdering",
       "difficulty": "beginner",
-      "words": ["I", "was", "busy", "yesterday"],
+      "words": [
+        "I",
+        "was",
+        "busy",
+        "yesterday"
+      ],
       "correctAnswer": "I was busy yesterday.",
-      "explanation": "正解: I was busy yesterday.\n日本語訳: 私は昨日忙しかったです。\n文法ポイント: 「主語 + was/were + 形容詞」の基本文型です。\nよくある間違い: yesterdayは文末に置くのが自然です。"
+      "explanation": "正解: I was busy yesterday.\n日本語訳: 私は昨日忙しかったです。\n文法ポイント: 「主語 + was/were + 形容詞」の基本文型です。\nよくある間違い: yesterdayは文末に置くのが自然です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_007",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["She", "went", "to", "school", "yesterday"],
+      "words": [
+        "She",
+        "went",
+        "to",
+        "school",
+        "yesterday"
+      ],
       "correctAnswer": "She went to school yesterday.",
-      "explanation": "正解: She went to school yesterday.\n日本語訳: 彼女は昨日学校に行きました。\n文法ポイント: 「主語 + 過去形動詞 + to + 場所 + 時」の語順です。\nよくある間違い: yesterdayは文末に置きます。"
+      "explanation": "正解: She went to school yesterday.\n日本語訳: 彼女は昨日学校に行きました。\n文法ポイント: 「主語 + 過去形動詞 + to + 場所 + 時」の語順です。\nよくある間違い: yesterdayは文末に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_008",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["We", "studied", "English", "last", "night"],
+      "words": [
+        "We",
+        "studied",
+        "English",
+        "last",
+        "night"
+      ],
       "correctAnswer": "We studied English last night.",
-      "explanation": "正解: We studied English last night.\n日本語訳: 私たちは昨夜英語を勉強しました。\n文法ポイント: 「主語 + 過去形動詞 + 目的語 + 時」の語順です。\nよくある間違い: last nightは2語で1つの時を表す表現です。"
+      "explanation": "正解: We studied English last night.\n日本語訳: 私たちは昨夜英語を勉強しました。\n文法ポイント: 「主語 + 過去形動詞 + 目的語 + 時」の語順です。\nよくある間違い: last nightは2語で1つの時を表す表現です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_009",
@@ -86,7 +128,12 @@
       "sentence": "I (visit) my grandmother last Sunday.",
       "correctAnswer": "visited",
       "baseForm": "visit",
-      "explanation": "正解: visited\n日本語訳: 私は先週の日曜日に祖母を訪ねました。\n文法ポイント: visitは規則動詞なので-edを付けます。last Sundayが過去を示します。\nよくある間違い: visittedのように二重にtを書かないよう注意。"
+      "explanation": "正解: visited\n日本語訳: 私は先週の日曜日に祖母を訪ねました。\n文法ポイント: visitは規則動詞なので-edを付けます。last Sundayが過去を示します。\nよくある間違い: visittedのように二重にtを書かないよう注意。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【visited】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【visit】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【visiting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "visited",
+        "visit",
+        "visiting"
+      ]
     },
     {
       "id": "g3u0_010",
@@ -95,7 +142,12 @@
       "sentence": "They (have) a good time at the party yesterday.",
       "correctAnswer": "had",
       "baseForm": "have",
-      "explanation": "正解: had\n日本語訳: 彼らは昨日のパーティーで楽しい時間を過ごしました。\n文法ポイント: haveの過去形はhad（不規則動詞）です。have a good timeは「楽しい時間を過ごす」という熟語。\nよくある間違い: havedという形は存在しません。"
+      "explanation": "正解: had\n日本語訳: 彼らは昨日のパーティーで楽しい時間を過ごしました。\n文法ポイント: haveの過去形はhad（不規則動詞）です。have a good timeは「楽しい時間を過ごす」という熟語。\nよくある間違い: havedという形は存在しません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【had】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【haved】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "had",
+        "have",
+        "haved"
+      ]
     },
     {
       "id": "g3u0_011",
@@ -103,8 +155,13 @@
       "difficulty": "beginner",
       "sentence": "I ___ going to study tomorrow.",
       "correctAnswer": "am",
-      "choices": ["am", "is", "are", "will"],
-      "explanation": "正解: am\n日本語訳: 私は明日勉強するつもりです。\n文法ポイント: be going toの構文で、主語がIなのでamを使います。\nよくある間違い: willは別の未来表現です。"
+      "choices": [
+        "am",
+        "is",
+        "are",
+        "will"
+      ],
+      "explanation": "正解: am\n日本語訳: 私は明日勉強するつもりです。\n文法ポイント: be going toの構文で、主語がIなのでamを使います。\nよくある間違い: willは別の未来表現です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【will】 ← 不正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_012",
@@ -112,8 +169,13 @@
       "difficulty": "beginner",
       "sentence": "She ___ visit us next week.",
       "correctAnswer": "will",
-      "choices": ["will", "is", "going", "to"],
-      "explanation": "正解: will\n日本語訳: 彼女は来週私たちを訪問するでしょう。\n文法ポイント: will + 動詞の原形で未来を表します。next weekが未来を示します。\nよくある間違い: willの後は必ず動詞の原形です。"
+      "choices": [
+        "will",
+        "is",
+        "going",
+        "to"
+      ],
+      "explanation": "正解: will\n日本語訳: 彼女は来週私たちを訪問するでしょう。\n文法ポイント: will + 動詞の原形で未来を表します。next weekが未来を示します。\nよくある間違い: willの後は必ず動詞の原形です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【will】 ← 正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_013",
@@ -121,8 +183,13 @@
       "difficulty": "intermediate",
       "sentence": "They are ___ play soccer tomorrow.",
       "correctAnswer": "going to",
-      "choices": ["going to", "will", "go to", "going"],
-      "explanation": "正解: going to\n日本語訳: 彼らは明日サッカーをするつもりです。\n文法ポイント: be going to + 動詞の原形で予定を表します。\nよくある間違い: goingだけでは文法的に不完全です。"
+      "choices": [
+        "going to",
+        "will",
+        "go to",
+        "going"
+      ],
+      "explanation": "正解: going to\n日本語訳: 彼らは明日サッカーをするつもりです。\n文法ポイント: be going to + 動詞の原形で予定を表します。\nよくある間違い: goingだけでは文法的に不完全です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【going to】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【will】 ← 不正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【go to】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_014",
@@ -130,8 +197,13 @@
       "difficulty": "intermediate",
       "sentence": "It ___ rain this afternoon.",
       "correctAnswer": "will",
-      "choices": ["will", "is", "going", "to"],
-      "explanation": "正解: will\n日本語訳: 今日の午後は雨が降るでしょう。\n文法ポイント: 天気の予測にはwillを使うことが多いです。\nよくある間違い: be going toも使えますが、will rainの方が自然です。"
+      "choices": [
+        "will",
+        "is",
+        "going",
+        "to"
+      ],
+      "explanation": "正解: will\n日本語訳: 今日の午後は雨が降るでしょう。\n文法ポイント: 天気の予測にはwillを使うことが多いです。\nよくある間違い: be going toも使えますが、will rainの方が自然です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【will】 ← 正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_015",
@@ -139,32 +211,59 @@
       "difficulty": "intermediate",
       "sentence": "We ___ have a test next Monday.",
       "correctAnswer": "will",
-      "choices": ["will", "are", "going", "to"],
-      "explanation": "正解: will\n日本語訳: 私たちは来週の月曜日にテストがあります。\n文法ポイント: will + 動詞の原形で未来の予定を表します。\nよくある間違い: are going toも正しいですが、ここではwillが適切です。"
+      "choices": [
+        "will",
+        "are",
+        "going",
+        "to"
+      ],
+      "explanation": "正解: will\n日本語訳: 私たちは来週の月曜日にテストがあります。\n文法ポイント: will + 動詞の原形で未来の予定を表します。\nよくある間違い: are going toも正しいですが、ここではwillが適切です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【will】 ← 正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_016",
       "type": "sentenceOrdering",
       "difficulty": "beginner",
-      "words": ["I", "am", "going", "to", "study", "tomorrow"],
+      "words": [
+        "I",
+        "am",
+        "going",
+        "to",
+        "study",
+        "tomorrow"
+      ],
       "correctAnswer": "I am going to study tomorrow.",
-      "explanation": "正解: I am going to study tomorrow.\n日本語訳: 私は明日勉強するつもりです。\n文法ポイント: be going to + 動詞の原形の語順です。\nよくある間違い: goingとtoは離さないでください。"
+      "explanation": "正解: I am going to study tomorrow.\n日本語訳: 私は明日勉強するつもりです。\n文法ポイント: be going to + 動詞の原形の語順です。\nよくある間違い: goingとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_017",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["She", "will", "visit", "Tokyo", "next", "month"],
+      "words": [
+        "She",
+        "will",
+        "visit",
+        "Tokyo",
+        "next",
+        "month"
+      ],
       "correctAnswer": "She will visit Tokyo next month.",
-      "explanation": "正解: She will visit Tokyo next month.\n日本語訳: 彼女は来月東京を訪れるでしょう。\n文法ポイント: will + 動詞の原形の後に目的語、最後に時を表す語句を置きます。\nよくある間違い: next monthは2語で1つの時を表す表現です。"
+      "explanation": "正解: She will visit Tokyo next month.\n日本語訳: 彼女は来月東京を訪れるでしょう。\n文法ポイント: will + 動詞の原形の後に目的語、最後に時を表す語句を置きます。\nよくある間違い: next monthは2語で1つの時を表す表現です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_018",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["We", "are", "going", "to", "have", "a", "party"],
+      "words": [
+        "We",
+        "are",
+        "going",
+        "to",
+        "have",
+        "a",
+        "party"
+      ],
       "correctAnswer": "We are going to have a party.",
-      "explanation": "正解: We are going to have a party.\n日本語訳: 私たちはパーティーを開く予定です。\n文法ポイント: be going to + 動詞の原形 + 目的語の語順です。\nよくある間違い: have a partyは1つのまとまりです。"
+      "explanation": "正解: We are going to have a party.\n日本語訳: 私たちはパーティーを開く予定です。\n文法ポイント: be going to + 動詞の原形 + 目的語の語順です。\nよくある間違い: have a partyは1つのまとまりです。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_019",
@@ -173,7 +272,12 @@
       "sentence": "I will (play) tennis tomorrow.",
       "correctAnswer": "play",
       "baseForm": "play",
-      "explanation": "正解: play\n日本語訳: 私は明日テニスをします。\n文法ポイント: willの後は必ず動詞の原形を使います。\nよくある間違い: playsやplayingにしないでください。"
+      "explanation": "正解: play\n日本語訳: 私は明日テニスをします。\n文法ポイント: willの後は必ず動詞の原形を使います。\nよくある間違い: playsやplayingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "play",
+        "playing",
+        "plays"
+      ]
     },
     {
       "id": "g3u0_020",
@@ -182,7 +286,12 @@
       "sentence": "She is going to (watch) a movie tonight.",
       "correctAnswer": "watch",
       "baseForm": "watch",
-      "explanation": "正解: watch\n日本語訳: 彼女は今夜映画を見る予定です。\n文法ポイント: be going toの後は必ず動詞の原形を使います。\nよくある間違い: watchesやwatchingにしないでください。"
+      "explanation": "正解: watch\n日本語訳: 彼女は今夜映画を見る予定です。\n文法ポイント: be going toの後は必ず動詞の原形を使います。\nよくある間違い: watchesやwatchingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watch】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【watching】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "watch",
+        "watching",
+        "watchs"
+      ]
     },
     {
       "id": "g3u0_021",
@@ -190,8 +299,13 @@
       "difficulty": "beginner",
       "sentence": "I was happy ___ I passed the test.",
       "correctAnswer": "because",
-      "choices": ["when", "if", "because", "that"],
-      "explanation": "正解: because\n日本語訳: 私はテストに合格したので幸せでした。\n文法ポイント: becauseは理由を表す接続詞です。\nよくある間違い: whenは時を表します。"
+      "choices": [
+        "when",
+        "if",
+        "because",
+        "that"
+      ],
+      "explanation": "正解: because\n日本語訳: 私はテストに合格したので幸せでした。\n文法ポイント: becauseは理由を表す接続詞です。\nよくある間違い: whenは時を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【because】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【that】 ← 不正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
     },
     {
       "id": "g3u0_022",
@@ -199,8 +313,13 @@
       "difficulty": "beginner",
       "sentence": "Call me ___ you arrive home.",
       "correctAnswer": "when",
-      "choices": ["when", "if", "because", "that"],
-      "explanation": "正解: when\n日本語訳: 家に着いたら電話してください。\n文法ポイント: whenは「〜する時」を表す接続詞です。\nよくある間違い: ifは「もし〜なら」という条件を表します。"
+      "choices": [
+        "when",
+        "if",
+        "because",
+        "that"
+      ],
+      "explanation": "正解: when\n日本語訳: 家に着いたら電話してください。\n文法ポイント: whenは「〜する時」を表す接続詞です。\nよくある間違い: ifは「もし〜なら」という条件を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【that】 ← 不正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
     },
     {
       "id": "g3u0_023",
@@ -208,8 +327,13 @@
       "difficulty": "intermediate",
       "sentence": "___ it rains tomorrow, we will stay home.",
       "correctAnswer": "If",
-      "choices": ["When", "If", "Because", "That"],
-      "explanation": "正解: If\n日本語訳: もし明日雨が降ったら、私たちは家にいます。\n文法ポイント: ifは「もし〜なら」という条件を表す接続詞です。\nよくある間違い: whenは確実な時を表します。"
+      "choices": [
+        "When",
+        "If",
+        "Because",
+        "That"
+      ],
+      "explanation": "正解: If\n日本語訳: もし明日雨が降ったら、私たちは家にいます。\n文法ポイント: ifは「もし〜なら」という条件を表す接続詞です。\nよくある間違い: whenは確実な時を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【If】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【Because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【That】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_024",
@@ -217,8 +341,13 @@
       "difficulty": "intermediate",
       "sentence": "I think ___ he is a good teacher.",
       "correctAnswer": "that",
-      "choices": ["when", "if", "because", "that"],
-      "explanation": "正解: that\n日本語訳: 私は彼が良い先生だと思います。\n文法ポイント: thatは「〜ということ」を表す接続詞で、thinkの後によく使われます。\nよくある間違い: 口語ではthatを省略することもあります。"
+      "choices": [
+        "when",
+        "if",
+        "because",
+        "that"
+      ],
+      "explanation": "正解: that\n日本語訳: 私は彼が良い先生だと思います。\n文法ポイント: thatは「〜ということ」を表す接続詞で、thinkの後によく使われます。\nよくある間違い: 口語ではthatを省略することもあります。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n💡 先行詞は「人」→ who / that が使用可能\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【that】 ← 正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✓ 正解理由: 先行詞が「人」なのでthatは適切です。"
     },
     {
       "id": "g3u0_025",
@@ -226,8 +355,13 @@
       "difficulty": "intermediate",
       "sentence": "She was tired ___ she worked hard.",
       "correctAnswer": "because",
-      "choices": ["when", "if", "because", "that"],
-      "explanation": "正解: because\n日本語訳: 彼女は一生懸命働いたので疲れていました。\n文法ポイント: becauseは原因・理由を表す接続詞です。\nよくある間違い: whenは時を表します。"
+      "choices": [
+        "when",
+        "if",
+        "because",
+        "that"
+      ],
+      "explanation": "正解: because\n日本語訳: 彼女は一生懸命働いたので疲れていました。\n文法ポイント: becauseは原因・理由を表す接続詞です。\nよくある間違い: whenは時を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【because】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【that】 ← 不正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
     },
     {
       "id": "g3u0_026",
@@ -235,40 +369,77 @@
       "difficulty": "advanced",
       "sentence": "I don't know ___ she will come to the party.",
       "correctAnswer": "if",
-      "choices": ["when", "if", "because", "that"],
-      "explanation": "正解: if\n日本語訳: 彼女がパーティーに来るかどうか分かりません。\n文法ポイント: ifは「〜かどうか」という意味でも使えます（間接疑問文）。\nよくある間違い: thatは「〜ということ」で、疑問の意味はありません。"
+      "choices": [
+        "when",
+        "if",
+        "because",
+        "that"
+      ],
+      "explanation": "正解: if\n日本語訳: 彼女がパーティーに来るかどうか分かりません。\n文法ポイント: ifは「〜かどうか」という意味でも使えます（間接疑問文）。\nよくある間違い: thatは「〜ということ」で、疑問の意味はありません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【that】 ← 不正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
     },
     {
       "id": "g3u0_027",
       "type": "sentenceOrdering",
       "difficulty": "beginner",
-      "words": ["I", "was", "happy", "when", "I", "saw", "you"],
+      "words": [
+        "I",
+        "was",
+        "happy",
+        "when",
+        "I",
+        "saw",
+        "you"
+      ],
       "correctAnswer": "I was happy when I saw you.",
-      "explanation": "正解: I was happy when I saw you.\n日本語訳: あなたに会った時、私は幸せでした。\n文法ポイント: whenで2つの文をつなぎます。\nよくある間違い: whenの前後で主語と動詞が必要です。"
+      "explanation": "正解: I was happy when I saw you.\n日本語訳: あなたに会った時、私は幸せでした。\n文法ポイント: whenで2つの文をつなぎます。\nよくある間違い: whenの前後で主語と動詞が必要です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_028",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["If", "it", "is", "sunny", "we", "will", "go", "out"],
+      "words": [
+        "If",
+        "it",
+        "is",
+        "sunny",
+        "we",
+        "will",
+        "go",
+        "out"
+      ],
       "correctAnswer": "If it is sunny, we will go out.",
-      "explanation": "正解: If it is sunny, we will go out.\n日本語訳: もし晴れたら、私たちは外出します。\n文法ポイント: if節の後にコンマを置き、主節を続けます。\nよくある間違い: if節では未来のことも現在形で表します。"
+      "explanation": "正解: If it is sunny, we will go out.\n日本語訳: もし晴れたら、私たちは外出します。\n文法ポイント: if節の後にコンマを置き、主節を続けます。\nよくある間違い: if節では未来のことも現在形で表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_029",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["I", "think", "that", "she", "is", "kind"],
+      "words": [
+        "I",
+        "think",
+        "that",
+        "she",
+        "is",
+        "kind"
+      ],
       "correctAnswer": "I think that she is kind.",
-      "explanation": "正解: I think that she is kind.\n日本語訳: 私は彼女が親切だと思います。\n文法ポイント: that節は「〜ということ」を表し、thinkの目的語になります。\nよくある間違い: thatは省略可能ですが、入れるのが正式です。"
+      "explanation": "正解: I think that she is kind.\n日本語訳: 私は彼女が親切だと思います。\n文法ポイント: that節は「〜ということ」を表し、thinkの目的語になります。\nよくある間違い: thatは省略可能ですが、入れるのが正式です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_030",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["She", "stayed", "home", "because", "she", "was", "sick"],
+      "words": [
+        "She",
+        "stayed",
+        "home",
+        "because",
+        "she",
+        "was",
+        "sick"
+      ],
       "correctAnswer": "She stayed home because she was sick.",
-      "explanation": "正解: She stayed home because she was sick.\n日本語訳: 彼女は病気だったので家にいました。\n文法ポイント: becauseで理由を表す文をつなぎます。\nよくある間違い: because節の前にコンマは不要です（文末の場合）。"
+      "explanation": "正解: She stayed home because she was sick.\n日本語訳: 彼女は病気だったので家にいました。\n文法ポイント: becauseで理由を表す文をつなぎます。\nよくある間違い: because節の前にコンマは不要です（文末の場合）。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_031",
@@ -276,8 +447,13 @@
       "difficulty": "beginner",
       "sentence": "I want ___ English.",
       "correctAnswer": "to study",
-      "choices": ["study", "to study", "studying", "studied"],
-      "explanation": "正解: to study\n日本語訳: 私は英語を勉強したいです。\n文法ポイント: wantの後は to + 動詞の原形（不定詞）を使います。\nよくある間違い: studyingは動名詞です。"
+      "choices": [
+        "study",
+        "to study",
+        "studying",
+        "studied"
+      ],
+      "explanation": "正解: to study\n日本語訳: 私は英語を勉強したいです。\n文法ポイント: wantの後は to + 動詞の原形（不定詞）を使います。\nよくある間違い: studyingは動名詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【to study】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【studying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【studied】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_032",
@@ -285,8 +461,13 @@
       "difficulty": "beginner",
       "sentence": "She came here ___ see me.",
       "correctAnswer": "to",
-      "choices": ["to", "for", "at", "in"],
-      "explanation": "正解: to\n日本語訳: 彼女は私に会うためにここに来ました。\n文法ポイント: to + 動詞の原形で「〜するために」という目的を表します。\nよくある間違い: forは後に名詞が来ます。"
+      "choices": [
+        "to",
+        "for",
+        "at",
+        "in"
+      ],
+      "explanation": "正解: to\n日本語訳: 彼女は私に会うためにここに来ました。\n文法ポイント: to + 動詞の原形で「〜するために」という目的を表します。\nよくある間違い: forは後に名詞が来ます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【at】 ← 不正解\n  語源: 古英語 æt\n  用法: 場所（点）、時刻、状態\n  ニュアンス: 特定の地点・時刻\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【in】 ← 不正解\n  語源: 古英語 in\n  用法: 場所（空間内）、期間、状態\n  ニュアンス: 空間的・時間的内部\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_033",
@@ -294,8 +475,13 @@
       "difficulty": "intermediate",
       "sentence": "I have a lot of homework ___.",
       "correctAnswer": "to do",
-      "choices": ["do", "to do", "doing", "did"],
-      "explanation": "正解: to do\n日本語訳: 私はするべき宿題がたくさんあります。\n文法ポイント: 不定詞の形容詞的用法で、名詞homeworkを修飾します。\nよくある間違い: doingは現在分詞です。"
+      "choices": [
+        "do",
+        "to do",
+        "doing",
+        "did"
+      ],
+      "explanation": "正解: to do\n日本語訳: 私はするべき宿題がたくさんあります。\n文法ポイント: 不定詞の形容詞的用法で、名詞homeworkを修飾します。\nよくある間違い: doingは現在分詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【to do】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【doing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【did】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_034",
@@ -303,8 +489,13 @@
       "difficulty": "intermediate",
       "sentence": "It is important ___ study hard.",
       "correctAnswer": "to",
-      "choices": ["to", "for", "of", "that"],
-      "explanation": "正解: to\n日本語訳: 一生懸命勉強することは重要です。\n文法ポイント: It is ... to ~の構文で、toの後は動詞の原形が来ます。\nよくある間違い: thatは接続詞で、後に主語と動詞が必要です。"
+      "choices": [
+        "to",
+        "for",
+        "of",
+        "that"
+      ],
+      "explanation": "正解: to\n日本語訳: 一生懸命勉強することは重要です。\n文法ポイント: It is ... to ~の構文で、toの後は動詞の原形が来ます。\nよくある間違い: thatは接続詞で、後に主語と動詞が必要です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 文法的・文脈的に不適切です。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【that】 ← 不正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
     },
     {
       "id": "g3u0_035",
@@ -312,32 +503,59 @@
       "difficulty": "advanced",
       "sentence": "I was glad ___ hear the news.",
       "correctAnswer": "to",
-      "choices": ["to", "for", "at", "of"],
-      "explanation": "正解: to\n日本語訳: 私はその知らせを聞いて嬉しかったです。\n文法ポイント: 感情の原因を表す不定詞です（副詞的用法）。\nよくある間違い: be glad to ~は感情の原因を表す熟語です。"
+      "choices": [
+        "to",
+        "for",
+        "at",
+        "of"
+      ],
+      "explanation": "正解: to\n日本語訳: 私はその知らせを聞いて嬉しかったです。\n文法ポイント: 感情の原因を表す不定詞です（副詞的用法）。\nよくある間違い: be glad to ~は感情の原因を表す熟語です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【at】 ← 不正解\n  語源: 古英語 æt\n  用法: 場所（点）、時刻、状態\n  ニュアンス: 特定の地点・時刻\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_036",
       "type": "sentenceOrdering",
       "difficulty": "beginner",
-      "words": ["I", "want", "to", "play", "tennis"],
+      "words": [
+        "I",
+        "want",
+        "to",
+        "play",
+        "tennis"
+      ],
       "correctAnswer": "I want to play tennis.",
-      "explanation": "正解: I want to play tennis.\n日本語訳: 私はテニスをしたいです。\n文法ポイント: want to + 動詞の原形の語順です。\nよくある間違い: toとplayは離さないでください。"
+      "explanation": "正解: I want to play tennis.\n日本語訳: 私はテニスをしたいです。\n文法ポイント: want to + 動詞の原形の語順です。\nよくある間違い: toとplayは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_037",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["She", "went", "to", "the", "store", "to", "buy", "milk"],
+      "words": [
+        "She",
+        "went",
+        "to",
+        "the",
+        "store",
+        "to",
+        "buy",
+        "milk"
+      ],
       "correctAnswer": "She went to the store to buy milk.",
-      "explanation": "正解: She went to the store to buy milk.\n日本語訳: 彼女は牛乳を買うために店に行きました。\n文法ポイント: to the store（場所）とto buy（目的）を区別します。\nよくある間違い: 最初のtoは前置詞、2つ目のtoは不定詞です。"
+      "explanation": "正解: She went to the store to buy milk.\n日本語訳: 彼女は牛乳を買うために店に行きました。\n文法ポイント: to the store（場所）とto buy（目的）を区別します。\nよくある間違い: 最初のtoは前置詞、2つ目のtoは不定詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_038",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["It", "is", "easy", "to", "make", "friends"],
+      "words": [
+        "It",
+        "is",
+        "easy",
+        "to",
+        "make",
+        "friends"
+      ],
       "correctAnswer": "It is easy to make friends.",
-      "explanation": "正解: It is easy to make friends.\n日本語訳: 友達を作るのは簡単です。\n文法ポイント: It is ... to ~の構文です。Itは形式主語です。\nよくある間違い: to make friendsが真主語です。"
+      "explanation": "正解: It is easy to make friends.\n日本語訳: 友達を作るのは簡単です。\n文法ポイント: It is ... to ~の構文です。Itは形式主語です。\nよくある間違い: to make friendsが真主語です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_039",
@@ -346,7 +564,12 @@
       "sentence": "I need to (study) for the test.",
       "correctAnswer": "study",
       "baseForm": "study",
-      "explanation": "正解: study\n日本語訳: 私はテストのために勉強する必要があります。\n文法ポイント: toの後は動詞の原形を使います。\nよくある間違い: studiesやstudyingにしないでください。"
+      "explanation": "正解: study\n日本語訳: 私はテストのために勉強する必要があります。\n文法ポイント: toの後は動詞の原形を使います。\nよくある間違い: studiesやstudyingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【studying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【studys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "study",
+        "studying",
+        "studys"
+      ]
     },
     {
       "id": "g3u0_040",
@@ -355,7 +578,12 @@
       "sentence": "I have many books to (read).",
       "correctAnswer": "read",
       "baseForm": "read",
-      "explanation": "正解: read\n日本語訳: 私は読むべき本がたくさんあります。\n文法ポイント: 不定詞の形容詞的用法で、toの後は動詞の原形を使います。\nよくある間違い: readingは現在分詞です。"
+      "explanation": "正解: read\n日本語訳: 私は読むべき本がたくさんあります。\n文法ポイント: 不定詞の形容詞的用法で、toの後は動詞の原形を使います。\nよくある間違い: readingは現在分詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "read",
+        "reads",
+        "reading"
+      ]
     },
     {
       "id": "g3u0_041",
@@ -363,8 +591,13 @@
       "difficulty": "beginner",
       "sentence": "You ___ study hard.",
       "correctAnswer": "must",
-      "choices": ["must", "can", "may", "will"],
-      "explanation": "正解: must\n日本語訳: あなたは一生懸命勉強しなければなりません。\n文法ポイント: mustは「〜しなければならない」という義務を表します。\nよくある間違い: canは「できる」という能力を表します。"
+      "choices": [
+        "must",
+        "can",
+        "may",
+        "will"
+      ],
+      "explanation": "正解: must\n日本語訳: あなたは一生懸命勉強しなければなりません。\n文法ポイント: mustは「〜しなければならない」という義務を表します。\nよくある間違い: canは「できる」という能力を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【must】 ← 正解\n  語源: ゲルマン語\n  用法: 義務・確信\n  ニュアンス: 〜しなければ、〜に違いない\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【can】 ← 不正解\n  語源: 古英語 cunnan\n  用法: 能力・可能性\n  ニュアンス: 物理的・能力的に可能\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【may】 ← 不正解\n  語源: 古英語 magan\n  用法: 許可・推量\n  ニュアンス: 〜してもよい、〜かも\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【will】 ← 不正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_042",
@@ -372,8 +605,13 @@
       "difficulty": "beginner",
       "sentence": "I ___ to go now.",
       "correctAnswer": "have",
-      "choices": ["have", "has", "must", "can"],
-      "explanation": "正解: have\n日本語訳: 私は今行かなければなりません。\n文法ポイント: have to + 動詞の原形で「〜しなければならない」を表します。\nよくある間違い: 主語がIなのでhaveを使います。"
+      "choices": [
+        "have",
+        "has",
+        "must",
+        "can"
+      ],
+      "explanation": "正解: have\n日本語訳: 私は今行かなければなりません。\n文法ポイント: have to + 動詞の原形で「〜しなければならない」を表します。\nよくある間違い: 主語がIなのでhaveを使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【must】 ← 不正解\n  語源: ゲルマン語\n  用法: 義務・確信\n  ニュアンス: 〜しなければ、〜に違いない\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【can】 ← 不正解\n  語源: 古英語 cunnan\n  用法: 能力・可能性\n  ニュアンス: 物理的・能力的に可能\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_043",
@@ -381,8 +619,13 @@
       "difficulty": "intermediate",
       "sentence": "She enjoys ___ music.",
       "correctAnswer": "listening to",
-      "choices": ["listen to", "listening to", "to listen", "listened"],
-      "explanation": "正解: listening to\n日本語訳: 彼女は音楽を聴くことを楽しんでいます。\n文法ポイント: enjoyの後は動名詞（-ing形）を使います。\nよくある間違い: enjoyの後に不定詞は使えません。"
+      "choices": [
+        "listen to",
+        "listening to",
+        "to listen",
+        "listened"
+      ],
+      "explanation": "正解: listening to\n日本語訳: 彼女は音楽を聴くことを楽しんでいます。\n文法ポイント: enjoyの後は動名詞（-ing形）を使います。\nよくある間違い: enjoyの後に不定詞は使えません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【listen to】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【listening to】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【to listen】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【listened】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_044",
@@ -390,8 +633,13 @@
       "difficulty": "intermediate",
       "sentence": "___ books is fun.",
       "correctAnswer": "Reading",
-      "choices": ["Read", "Reading", "To read", "Reads"],
-      "explanation": "正解: Reading\n日本語訳: 本を読むことは楽しいです。\n文法ポイント: 動名詞を主語として使います。文頭なので大文字で始めます。\nよくある間違い: 動詞の原形は主語になれません。"
+      "choices": [
+        "Read",
+        "Reading",
+        "To read",
+        "Reads"
+      ],
+      "explanation": "正解: Reading\n日本語訳: 本を読むことは楽しいです。\n文法ポイント: 動名詞を主語として使います。文頭なので大文字で始めます。\nよくある間違い: 動詞の原形は主語になれません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【Read】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【Reading】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【To read】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【Reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_045",
@@ -399,8 +647,13 @@
       "difficulty": "intermediate",
       "sentence": "You ___ not run in the hall.",
       "correctAnswer": "must",
-      "choices": ["must", "can", "may", "will"],
-      "explanation": "正解: must\n日本語訳: 廊下を走ってはいけません。\n文法ポイント: must notは「〜してはいけない」という禁止を表します。\nよくある間違い: can notは「〜できない」という不可能を表します。"
+      "choices": [
+        "must",
+        "can",
+        "may",
+        "will"
+      ],
+      "explanation": "正解: must\n日本語訳: 廊下を走ってはいけません。\n文法ポイント: must notは「〜してはいけない」という禁止を表します。\nよくある間違い: can notは「〜できない」という不可能を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【must】 ← 正解\n  語源: ゲルマン語\n  用法: 義務・確信\n  ニュアンス: 〜しなければ、〜に違いない\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【can】 ← 不正解\n  語源: 古英語 cunnan\n  用法: 能力・可能性\n  ニュアンス: 物理的・能力的に可能\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【may】 ← 不正解\n  語源: 古英語 magan\n  用法: 許可・推量\n  ニュアンス: 〜してもよい、〜かも\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【will】 ← 不正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_046",
@@ -408,40 +661,69 @@
       "difficulty": "advanced",
       "sentence": "She doesn't have to ___ early.",
       "correctAnswer": "get up",
-      "choices": ["get up", "getting up", "got up", "gets up"],
-      "explanation": "正解: get up\n日本語訳: 彼女は早起きする必要はありません。\n文法ポイント: don't have toの後は動詞の原形を使います。\nよくある間違い: getting upは動名詞です。"
+      "choices": [
+        "get up",
+        "getting up",
+        "got up",
+        "gets up"
+      ],
+      "explanation": "正解: get up\n日本語訳: 彼女は早起きする必要はありません。\n文法ポイント: don't have toの後は動詞の原形を使います。\nよくある間違い: getting upは動名詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【get up】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【getting up】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【got up】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【gets up】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_047",
       "type": "sentenceOrdering",
       "difficulty": "beginner",
-      "words": ["You", "must", "finish", "your", "homework"],
+      "words": [
+        "You",
+        "must",
+        "finish",
+        "your",
+        "homework"
+      ],
       "correctAnswer": "You must finish your homework.",
-      "explanation": "正解: You must finish your homework.\n日本語訳: あなたは宿題を終わらせなければなりません。\n文法ポイント: must + 動詞の原形 + 目的語の語順です。\nよくある間違い: mustの後は必ず動詞の原形です。"
+      "explanation": "正解: You must finish your homework.\n日本語訳: あなたは宿題を終わらせなければなりません。\n文法ポイント: must + 動詞の原形 + 目的語の語順です。\nよくある間違い: mustの後は必ず動詞の原形です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_048",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["I", "have", "to", "clean", "my", "room"],
+      "words": [
+        "I",
+        "have",
+        "to",
+        "clean",
+        "my",
+        "room"
+      ],
       "correctAnswer": "I have to clean my room.",
-      "explanation": "正解: I have to clean my room.\n日本語訳: 私は自分の部屋を掃除しなければなりません。\n文法ポイント: have to + 動詞の原形の語順です。\nよくある間違い: toとcleanは離さないでください。"
+      "explanation": "正解: I have to clean my room.\n日本語訳: 私は自分の部屋を掃除しなければなりません。\n文法ポイント: have to + 動詞の原形の語順です。\nよくある間違い: toとcleanは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_049",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["She", "enjoys", "playing", "the", "piano"],
+      "words": [
+        "She",
+        "enjoys",
+        "playing",
+        "the",
+        "piano"
+      ],
       "correctAnswer": "She enjoys playing the piano.",
-      "explanation": "正解: She enjoys playing the piano.\n日本語訳: 彼女はピアノを弾くことを楽しんでいます。\n文法ポイント: enjoy + 動名詞の語順です。\nよくある間違い: enjoyの後は必ず動名詞です。"
+      "explanation": "正解: She enjoys playing the piano.\n日本語訳: 彼女はピアノを弾くことを楽しんでいます。\n文法ポイント: enjoy + 動名詞の語順です。\nよくある間違い: enjoyの後は必ず動名詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_050",
       "type": "sentenceOrdering",
       "difficulty": "advanced",
-      "words": ["Studying", "English", "is", "important"],
+      "words": [
+        "Studying",
+        "English",
+        "is",
+        "important"
+      ],
       "correctAnswer": "Studying English is important.",
-      "explanation": "正解: Studying English is important.\n日本語訳: 英語を勉強することは重要です。\n文法ポイント: 動名詞を主語として使います。\nよくある間違い: Studying Englishが1つの主語です。"
+      "explanation": "正解: Studying English is important.\n日本語訳: 英語を勉強することは重要です。\n文法ポイント: 動名詞を主語として使います。\nよくある間違い: Studying Englishが1つの主語です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_051",
@@ -449,8 +731,13 @@
       "difficulty": "beginner",
       "sentence": "This book is ___ than that one.",
       "correctAnswer": "better",
-      "choices": ["good", "better", "best", "well"],
-      "explanation": "正解: better\n日本語訳: この本はあの本よりも良いです。\n文法ポイント: goodの比較級はbetterです（不規則変化）。thanがあるので比較級を使います。\nよくある間違い: gooderという形は存在しません。"
+      "choices": [
+        "good",
+        "better",
+        "best",
+        "well"
+      ],
+      "explanation": "正解: better\n日本語訳: この本はあの本よりも良いです。\n文法ポイント: goodの比較級はbetterです（不規則変化）。thanがあるので比較級を使います。\nよくある間違い: gooderという形は存在しません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【good】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【better】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【best】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【well】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_052",
@@ -458,8 +745,13 @@
       "difficulty": "beginner",
       "sentence": "She is the ___ student in our class.",
       "correctAnswer": "best",
-      "choices": ["good", "better", "best", "well"],
-      "explanation": "正解: best\n日本語訳: 彼女は私たちのクラスで最も優秀な生徒です。\n文法ポイント: goodの最上級はbestです。in our classがあるので最上級を使います。\nよくある間違い: the goodestという形は存在しません。"
+      "choices": [
+        "good",
+        "better",
+        "best",
+        "well"
+      ],
+      "explanation": "正解: best\n日本語訳: 彼女は私たちのクラスで最も優秀な生徒です。\n文法ポイント: goodの最上級はbestです。in our classがあるので最上級を使います。\nよくある間違い: the goodestという形は存在しません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【good】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【better】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【best】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【well】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_053",
@@ -467,8 +759,13 @@
       "difficulty": "intermediate",
       "sentence": "This car is ___ expensive than that one.",
       "correctAnswer": "more",
-      "choices": ["more", "most", "much", "many"],
-      "explanation": "正解: more\n日本語訳: この車はあの車よりも高価です。\n文法ポイント: 長い形容詞の比較級はmore + 形容詞で表します。\nよくある間違い: expensiver とは言いません。"
+      "choices": [
+        "more",
+        "most",
+        "much",
+        "many"
+      ],
+      "explanation": "正解: more\n日本語訳: この車はあの車よりも高価です。\n文法ポイント: 長い形容詞の比較級はmore + 形容詞で表します。\nよくある間違い: expensiver とは言いません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_054",
@@ -476,8 +773,13 @@
       "difficulty": "intermediate",
       "sentence": "Mt. Fuji is the ___ mountain in Japan.",
       "correctAnswer": "highest",
-      "choices": ["high", "higher", "highest", "most high"],
-      "explanation": "正解: highest\n日本語訳: 富士山は日本で最も高い山です。\n文法ポイント: highは短い形容詞なので-estを付けて最上級にします。\nよくある間違い: most highとは言いません。"
+      "choices": [
+        "high",
+        "higher",
+        "highest",
+        "most high"
+      ],
+      "explanation": "正解: highest\n日本語訳: 富士山は日本で最も高い山です。\n文法ポイント: highは短い形容詞なので-estを付けて最上級にします。\nよくある間違い: most highとは言いません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【high】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【higher】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【highest】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【most high】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_055",
@@ -485,8 +787,13 @@
       "difficulty": "intermediate",
       "sentence": "She runs as ___ as her brother.",
       "correctAnswer": "fast",
-      "choices": ["fast", "faster", "fastest", "more fast"],
-      "explanation": "正解: fast\n日本語訳: 彼女は兄と同じくらい速く走ります。\n文法ポイント: as ... as ~で「〜と同じくらい」を表します。間には原級を入れます。\nよくある間違い: fasterは比較級です。"
+      "choices": [
+        "fast",
+        "faster",
+        "fastest",
+        "more fast"
+      ],
+      "explanation": "正解: fast\n日本語訳: 彼女は兄と同じくらい速く走ります。\n文法ポイント: as ... as ~で「〜と同じくらい」を表します。間には原級を入れます。\nよくある間違い: fasterは比較級です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【fast】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【faster】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【fastest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【more fast】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_056",
@@ -494,40 +801,78 @@
       "difficulty": "advanced",
       "sentence": "English is ___ difficult than math.",
       "correctAnswer": "less",
-      "choices": ["less", "more", "much", "most"],
-      "explanation": "正解: less\n日本語訳: 英語は数学ほど難しくありません。\n文法ポイント: less ... than ~で「〜ほど...でない」を表します。\nよくある間違い: lessは劣等比較を表します。"
+      "choices": [
+        "less",
+        "more",
+        "much",
+        "most"
+      ],
+      "explanation": "正解: less\n日本語訳: 英語は数学ほど難しくありません。\n文法ポイント: less ... than ~で「〜ほど...でない」を表します。\nよくある間違い: lessは劣等比較を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【less】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_057",
       "type": "sentenceOrdering",
       "difficulty": "beginner",
-      "words": ["This", "is", "bigger", "than", "that"],
+      "words": [
+        "This",
+        "is",
+        "bigger",
+        "than",
+        "that"
+      ],
       "correctAnswer": "This is bigger than that.",
-      "explanation": "正解: This is bigger than that.\n日本語訳: これはあれより大きいです。\n文法ポイント: 比較級 + than ~の語順です。\nよくある間違い: thanの後に比較対象を置きます。"
+      "explanation": "正解: This is bigger than that.\n日本語訳: これはあれより大きいです。\n文法ポイント: 比較級 + than ~の語順です。\nよくある間違い: thanの後に比較対象を置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_058",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["She", "is", "the", "tallest", "girl", "in", "her", "class"],
+      "words": [
+        "She",
+        "is",
+        "the",
+        "tallest",
+        "girl",
+        "in",
+        "her",
+        "class"
+      ],
       "correctAnswer": "She is the tallest girl in her class.",
-      "explanation": "正解: She is the tallest girl in her class.\n日本語訳: 彼女はクラスで最も背が高い女の子です。\n文法ポイント: the + 最上級 + in/of ~の語順です。\nよくある間違い: 最上級には必ずtheを付けます。"
+      "explanation": "正解: She is the tallest girl in her class.\n日本語訳: 彼女はクラスで最も背が高い女の子です。\n文法ポイント: the + 最上級 + in/of ~の語順です。\nよくある間違い: 最上級には必ずtheを付けます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_059",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["This", "book", "is", "as", "interesting", "as", "that", "one"],
+      "words": [
+        "This",
+        "book",
+        "is",
+        "as",
+        "interesting",
+        "as",
+        "that",
+        "one"
+      ],
       "correctAnswer": "This book is as interesting as that one.",
-      "explanation": "正解: This book is as interesting as that one.\n日本語訳: この本はあの本と同じくらい面白いです。\n文法ポイント: as + 原級 + as ~の語順です。\nよくある間違い: 最初のasと2番目のasで形容詞を挟みます。"
+      "explanation": "正解: This book is as interesting as that one.\n日本語訳: この本はあの本と同じくらい面白いです。\n文法ポイント: as + 原級 + as ~の語順です。\nよくある間違い: 最初のasと2番目のasで形容詞を挟みます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_060",
       "type": "sentenceOrdering",
       "difficulty": "advanced",
-      "words": ["Tokyo", "is", "the", "most", "populous", "city", "in", "Japan"],
+      "words": [
+        "Tokyo",
+        "is",
+        "the",
+        "most",
+        "populous",
+        "city",
+        "in",
+        "Japan"
+      ],
       "correctAnswer": "Tokyo is the most populous city in Japan.",
-      "explanation": "正解: Tokyo is the most populous city in Japan.\n日本語訳: 東京は日本で最も人口の多い都市です。\n文法ポイント: the most + 長い形容詞で最上級を作ります。\nよくある間違い: populousは長い語なので-estは付けません。"
+      "explanation": "正解: Tokyo is the most populous city in Japan.\n日本語訳: 東京は日本で最も人口の多い都市です。\n文法ポイント: the most + 長い形容詞で最上級を作ります。\nよくある間違い: populousは長い語なので-estは付けません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_061",
@@ -535,8 +880,13 @@
       "difficulty": "beginner",
       "sentence": "English ___ spoken in many countries.",
       "correctAnswer": "is",
-      "choices": ["is", "are", "was", "were"],
-      "explanation": "正解: is\n日本語訳: 英語は多くの国で話されています。\n文法ポイント: 主語がEnglish（単数）で現在形なのでisを使います。\nよくある間違い: areは複数主語で使います。"
+      "choices": [
+        "is",
+        "are",
+        "was",
+        "were"
+      ],
+      "explanation": "正解: is\n日本語訳: 英語は多くの国で話されています。\n文法ポイント: 主語がEnglish（単数）で現在形なのでisを使います。\nよくある間違い: areは複数主語で使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_062",
@@ -544,8 +894,13 @@
       "difficulty": "beginner",
       "sentence": "This book was ___ by my father.",
       "correctAnswer": "written",
-      "choices": ["write", "writes", "wrote", "written"],
-      "explanation": "正解: written\n日本語訳: この本は私の父によって書かれました。\n文法ポイント: 受動態はbe動詞 + 過去分詞です。writeの過去分詞はwrittenです。\nよくある間違い: wroteは過去形です。"
+      "choices": [
+        "write",
+        "writes",
+        "wrote",
+        "written"
+      ],
+      "explanation": "正解: written\n日本語訳: この本は私の父によって書かれました。\n文法ポイント: 受動態はbe動詞 + 過去分詞です。writeの過去分詞はwrittenです。\nよくある間違い: wroteは過去形です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【writes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【wrote】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【written】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。"
     },
     {
       "id": "g3u0_063",
@@ -553,8 +908,13 @@
       "difficulty": "intermediate",
       "sentence": "The window was ___ by Tom.",
       "correctAnswer": "broken",
-      "choices": ["break", "broke", "broken", "breaking"],
-      "explanation": "正解: broken\n日本語訳: その窓はトムによって壊されました。\n文法ポイント: breakの過去分詞はbrokenです（不規則動詞）。\nよくある間違い: brokeは過去形です。"
+      "choices": [
+        "break",
+        "broke",
+        "broken",
+        "breaking"
+      ],
+      "explanation": "正解: broken\n日本語訳: その窓はトムによって壊されました。\n文法ポイント: breakの過去分詞はbrokenです（不規則動詞）。\nよくある間違い: brokeは過去形です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【break】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【broke】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【broken】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【breaking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_064",
@@ -562,8 +922,13 @@
       "difficulty": "intermediate",
       "sentence": "These cars ___ made in Japan.",
       "correctAnswer": "are",
-      "choices": ["is", "are", "was", "were"],
-      "explanation": "正解: are\n日本語訳: これらの車は日本で作られています。\n文法ポイント: 主語がThese cars（複数）で現在形なのでareを使います。\nよくある間違い: isは単数主語で使います。"
+      "choices": [
+        "is",
+        "are",
+        "was",
+        "were"
+      ],
+      "explanation": "正解: are\n日本語訳: これらの車は日本で作られています。\n文法ポイント: 主語がThese cars（複数）で現在形なのでareを使います。\nよくある間違い: isは単数主語で使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_065",
@@ -571,8 +936,13 @@
       "difficulty": "intermediate",
       "sentence": "The letter was ___ yesterday.",
       "correctAnswer": "sent",
-      "choices": ["send", "sent", "sending", "sends"],
-      "explanation": "正解: sent\n日本語訳: その手紙は昨日送られました。\n文法ポイント: sendの過去分詞はsentです（不規則動詞）。\nよくある間違い: sendedという形は存在しません。"
+      "choices": [
+        "send",
+        "sent",
+        "sending",
+        "sends"
+      ],
+      "explanation": "正解: sent\n日本語訳: その手紙は昨日送られました。\n文法ポイント: sendの過去分詞はsentです（不規則動詞）。\nよくある間違い: sendedという形は存在しません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【send】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【sent】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【sending】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【sends】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_066",
@@ -580,40 +950,77 @@
       "difficulty": "advanced",
       "sentence": "The cake was ___ by my mother.",
       "correctAnswer": "made",
-      "choices": ["make", "made", "making", "makes"],
-      "explanation": "正解: made\n日本語訳: そのケーキは私の母によって作られました。\n文法ポイント: makeの過去分詞はmadeです（不規則動詞）。\nよくある間違い: makedという形は存在しません。"
+      "choices": [
+        "make",
+        "made",
+        "making",
+        "makes"
+      ],
+      "explanation": "正解: made\n日本語訳: そのケーキは私の母によって作られました。\n文法ポイント: makeの過去分詞はmadeです（不規則動詞）。\nよくある間違い: makedという形は存在しません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【made】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【making】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【makes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
       "id": "g3u0_067",
       "type": "sentenceOrdering",
       "difficulty": "beginner",
-      "words": ["This", "song", "is", "loved", "by", "many", "people"],
+      "words": [
+        "This",
+        "song",
+        "is",
+        "loved",
+        "by",
+        "many",
+        "people"
+      ],
       "correctAnswer": "This song is loved by many people.",
-      "explanation": "正解: This song is loved by many people.\n日本語訳: この歌は多くの人に愛されています。\n文法ポイント: be動詞 + 過去分詞 + by ~の語順です。\nよくある間違い: byの後に行為者を置きます。"
+      "explanation": "正解: This song is loved by many people.\n日本語訳: この歌は多くの人に愛されています。\n文法ポイント: be動詞 + 過去分詞 + by ~の語順です。\nよくある間違い: byの後に行為者を置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_068",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["The", "house", "was", "built", "100", "years", "ago"],
+      "words": [
+        "The",
+        "house",
+        "was",
+        "built",
+        "100",
+        "years",
+        "ago"
+      ],
       "correctAnswer": "The house was built 100 years ago.",
-      "explanation": "正解: The house was built 100 years ago.\n日本語訳: その家は100年前に建てられました。\n文法ポイント: be動詞 + 過去分詞 + 時を表す語句の語順です。\nよくある間違い: years agoは2語で1つの時を表す表現です。"
+      "explanation": "正解: The house was built 100 years ago.\n日本語訳: その家は100年前に建てられました。\n文法ポイント: be動詞 + 過去分詞 + 時を表す語句の語順です。\nよくある間違い: years agoは2語で1つの時を表す表現です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_069",
       "type": "sentenceOrdering",
       "difficulty": "intermediate",
-      "words": ["These", "pictures", "were", "taken", "by", "my", "brother"],
+      "words": [
+        "These",
+        "pictures",
+        "were",
+        "taken",
+        "by",
+        "my",
+        "brother"
+      ],
       "correctAnswer": "These pictures were taken by my brother.",
-      "explanation": "正解: These pictures were taken by my brother.\n日本語訳: これらの写真は私の兄によって撮られました。\n文法ポイント: 複数主語なのでwereを使います。\nよくある間違い: takenはtakeの過去分詞です。"
+      "explanation": "正解: These pictures were taken by my brother.\n日本語訳: これらの写真は私の兄によって撮られました。\n文法ポイント: 複数主語なのでwereを使います。\nよくある間違い: takenはtakeの過去分詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
       "id": "g3u0_070",
       "type": "sentenceOrdering",
       "difficulty": "advanced",
-      "words": ["The", "bridge", "was", "destroyed", "by", "the", "earthquake"],
+      "words": [
+        "The",
+        "bridge",
+        "was",
+        "destroyed",
+        "by",
+        "the",
+        "earthquake"
+      ],
       "correctAnswer": "The bridge was destroyed by the earthquake.",
-      "explanation": "正解: The bridge was destroyed by the earthquake.\n日本語訳: その橋は地震によって破壊されました。\n文法ポイント: 自然現象もbyの後に置けます。\nよくある間違い: destroyedはdestroyの過去分詞です。"
+      "explanation": "正解: The bridge was destroyed by the earthquake.\n日本語訳: その橋は地震によって破壊されました。\n文法ポイント: 自然現象もbyの後に置けます。\nよくある間違い: destroyedはdestroyの過去分詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     }
   ]
 }

@@ -1,7 +1,6 @@
 ---
 description: リファクタリング時の安全手順 - ロジック変更を避け、構造のみ改善するための必須ガイド
 applyTo: '**/*.{ts,tsx,js,jsx}'
-priority: critical
 ---
 
 # リファクタリング安全実行ガイド

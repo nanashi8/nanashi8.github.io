@@ -743,6 +743,24 @@ git commit -m "fix: テスト失敗の修正"
 git push
 ```
 
+### ユニットテストで `Cannot redefine property: Symbol($$jest-matchers-object)` が出る
+
+**症状**: Vitest実行時に `Cannot redefine property: Symbol($$jest-matchers-object)` で落ちる。
+
+**典型原因**: Jest系の `expect` 拡張が同一プロセス内で二重に登録される（例: Playwright/Jest系ツールの混入、IDEのテスト実行機構がVitestではなく別ランナーとして実行している、など）。
+
+**回避策**:
+
+```bash
+# ユニットテストは Vitest を直接起動する（推奨）
+npm run test:unit
+
+# 1ファイルだけ実行したい場合
+./node_modules/.bin/vitest run --config vitest.config.ts tests/unit/your.test.ts
+```
+
+**前提**: Playwright(E2E)は `tests/**/*.spec.ts(x)` を使用し、Vitest側は `vitest.config.ts` の `test.include` に含まれるパターンのみを対象にする（E2Eの混入を避ける）。
+
 ### システム健康診断で問題が検出された
 
 #### 巨大ファイルの分割

@@ -140,9 +140,12 @@ function updateWordProgress(
   updated.averageResponseTime =
     updated.totalResponseTime / (updated.correctCount + updated.incorrectCount);
 
-  // 習熟レベル判定
-  if (updated.consecutiveCorrect >= 3) {
-    updated.masteryLevel = 'mastered';
+  // 習熟レベル判定（4タブ統一：1発正解は定着済）
+  const totalAttempts = updated.correctCount + updated.incorrectCount;
+  if (totalAttempts === 1 && updated.correctCount === 1) {
+    updated.masteryLevel = 'mastered'; // 1発正解
+  } else if (updated.consecutiveCorrect >= 3) {
+    updated.masteryLevel = 'mastered'; // 連続3回正解
   } else if (updated.correctCount + updated.incorrectCount > 0) {
     updated.masteryLevel = 'learning';
   }
@@ -176,14 +179,18 @@ function calculatePriority(
     category = 'new';
     basePriority = 50;
     reason = '未学習';
-  } else if (progress.incorrectCount > 0 && progress.consecutiveCorrect < 2) {
-    category = 'incorrect';
-    basePriority = 0; // 最優先
-    reason = `不正解${progress.incorrectCount}回`;
+  } else if (total === 1 && progress.correctCount === 1) {
+    category = 'mastered';
+    basePriority = 100; // 最後（時間経過で再出題）
+    reason = '1発正解';
   } else if (progress.consecutiveCorrect >= 3) {
     category = 'mastered';
     basePriority = 100; // 最後
     reason = `連続正解${progress.consecutiveCorrect}回`;
+  } else if (progress.incorrectCount > 0 && progress.consecutiveCorrect < 2) {
+    category = 'incorrect';
+    basePriority = 0; // 最優先
+    reason = `不正解${progress.incorrectCount}回`;
   } else {
     category = 'learning';
     basePriority = 30;

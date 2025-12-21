@@ -14,7 +14,9 @@ export default defineConfig({
       'tests/content/**/*.test.ts',
       'tests/integration/**/*.test.ts',
     ],
-    exclude: ['tests/smoke*.spec.ts', 'tests/visual*.spec.ts', 'node_modules/**'],
+    exclude: [
+      'node_modules/**',
+    ],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html', 'lcov'],
