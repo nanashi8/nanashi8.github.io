@@ -122,15 +122,15 @@
 
 - [17-スタイリング](./specifications/17-styling.md) - デザインシステムとCSSガイドライン
 - [18-ダークモード](./specifications/18-dark-mode.md) - ダークモード実装の詳細
-- [**UI開発ガイドライン**](./UI_DEVELOPMENT_GUIDELINES.md) - ⚠️ 必読：CSS変数使用規則・ライトモード/ダークモード対応必須事項
-- [**デザインシステムルール**](./DESIGN_SYSTEM_RULES.md) - ⚠️ 必読：カラーシステム定義・自動チェック方法
+- [**UI開発ガイドライン**](./development/UI_DEVELOPMENT_GUIDELINES.md) - ⚠️ 必読：CSS変数使用規則・ライトモード/ダークモード対応必須事項
+- [**デザインシステムルール**](./development/DESIGN_SYSTEM_RULES.md) - ⚠️ 必読：カラーシステム定義・自動チェック方法
 
 ### 6. データセット
 
 - [19-中学受験単語](./specifications/19-junior-high-vocabulary.md) - 中学受験頻出単語リスト
 - [20-中学受験フレーズ](./specifications/20-junior-high-phrases.md) - 中学受験頻出フレーズリスト
 - [21-長文読解パッセージ](./specifications/21-reading-passages.md) - 長文読解用パッセージデータ
-- [**NEW HORIZON文法問題ガイドライン**](./NEW_HORIZON_GRAMMAR_GUIDELINES.md) - 文並び替え問題の作成標準仕様
+- [**NEW HORIZON文法問題ガイドライン**](./guidelines/grammar/NEW_HORIZON_GRAMMAR_GUIDELINES.md) - 文並び替え問題の作成標準仕様
 
 ### 7. 開発ガイド
 
