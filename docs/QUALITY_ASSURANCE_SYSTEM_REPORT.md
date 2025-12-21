@@ -343,7 +343,7 @@ DUPLICATES=$(grep -rn "effectiveCorrect.*stillLearning.*0\.5" src/ | wc -l)
 - [リファクタリング安全実行ガイド](../.aitk/instructions/refactoring-safety-guide.instructions.md)
 - [プロパティ命名規則ガイド](../.aitk/instructions/property-naming-convention.instructions.md)
 - [AI自己チェックプロンプト](../.aitk/instructions/ai-self-check-prompts.instructions.md)
-- [CI/CD強化計画書](./guidelines/ci-cd-enhancement-plan.md)
+- [CI/CD強化計画書](./guidelines/CI_CD_ENHANCEMENT_PLAN.md)
 
 ---
 

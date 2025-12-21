@@ -28,12 +28,12 @@ function extractLinks(content, filePath) {
   const links = [];
   const regex = /\[([^\]]+)\]\(([^)]+\.md[^)]*)\)/g;
   let match;
-  
+
   while ((match = regex.exec(content)) !== null) {
     const [, text, target] = match;
     links.push({ text, target, source: filePath });
   }
-  
+
   return links;
 }
 
@@ -50,26 +50,26 @@ function analyzeLinks() {
   const allLinks = [];
   const brokenLinks = [];
   const linkGraph = {}; // ファイル→被参照数
-  
+
   console.log(`📁 分析対象: ${files.length}ファイル\n`);
-  
+
   // リンク抽出
   for (const file of files) {
     const content = readFileSync(file, 'utf-8');
     const links = extractLinks(content, file);
-    
+
     for (const link of links) {
       allLinks.push(link);
-      
+
       // リンク解決
       const resolved = resolveLink(file, link.target);
-      
+
       // 被参照カウント
       if (!linkGraph[resolved]) {
         linkGraph[resolved] = 0;
       }
       linkGraph[resolved]++;
-      
+
       // 断線チェック
       try {
         readFileSync(resolved, 'utf-8');
@@ -78,14 +78,14 @@ function analyzeLinks() {
       }
     }
   }
-  
+
   // 結果表示
   console.log(`🔗 総リンク数: ${allLinks.length}`);
   console.log(`❌ 断線リンク: ${brokenLinks.length}\n`);
-  
+
   if (brokenLinks.length > 0) {
     console.log('⚠️  断線リンク詳細:');
-    
+
     // 断線をファイル別にグループ化
     const brokenByFile = {};
     brokenLinks.forEach(({ source, target, resolved }) => {
@@ -94,7 +94,7 @@ function analyzeLinks() {
       }
       brokenByFile[source].push({ target, resolved });
     });
-    
+
     // ファイルごとに表示
     Object.entries(brokenByFile).forEach(([source, targets]) => {
       console.log(`  ${source} (${targets.length}箇所)`);
@@ -104,18 +104,18 @@ function analyzeLinks() {
     });
     console.log();
   }
-  
+
   // 最も参照されているファイル
   const topReferenced = Object.entries(linkGraph)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 15);
-  
+
   console.log('📊 最も参照されているファイル (Top 15):');
   topReferenced.forEach(([file, count]) => {
     const rel = relative(process.cwd(), file);
     console.log(`  ${count.toString().padStart(3)}回 - ${rel}`);
   });
-  
+
   // 警告: ファイル名変更厳禁リスト
   const criticalFiles = topReferenced.filter(([, count]) => count >= 10);
   if (criticalFiles.length > 0) {
@@ -126,7 +126,7 @@ function analyzeLinks() {
       console.log(`   - ${rel} (${count}回)`);
     });
   }
-  
+
   return {
     totalFiles: files.length,
     totalLinks: allLinks.length,

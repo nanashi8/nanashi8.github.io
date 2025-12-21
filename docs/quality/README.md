@@ -27,7 +27,7 @@
 
 - [HEALTH_CHECK_REPORT.md](HEALTH_CHECK_REPORT.md) - 健康診断レポート
 - [CONTENT_QUALITY_TESTING_REPORT.md](CONTENT_QUALITY_TESTING_REPORT.md) - コンテンツ品質テスト実装レポート
-- [grammar_quality_report.md](grammar_quality_report.md) - 文法品質レポート
+- [grammar_quality_report.md](GRAMMAR_QUALITY_REPORT.md) - 文法品質レポート
 
 ---
 
