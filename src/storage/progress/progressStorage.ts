@@ -10,7 +10,6 @@ import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
 import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
 import { deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
-import { MemoryAI } from '@/ai/specialists/MemoryAI';
 import { QuestionScheduler } from '@/ai/scheduler/QuestionScheduler';
 
 // 型定義をインポート＆re-export
@@ -136,17 +135,20 @@ export async function loadProgress(): Promise<UserProgress> {
     let repairedCount = 0;
     Object.values(progress.wordProgress).forEach((wp) => {
       if (!wp.category) {
-        const totalAttempts = (wp.correctCount || 0) + (wp.incorrectCount || 0);
-        const consecutiveIncorrect = wp.consecutiveIncorrect || 0;
+        const totalCorrect = (wp.correctCount || 0);
+        const totalIncorrect = (wp.incorrectCount || 0);
+        const totalAttempts = totalCorrect + totalIncorrect;
+        const consecutiveCorrect = wp.consecutiveCorrect || 0;
 
+        // 🎯 4タブ統一：1発正解は定着済
         if (totalAttempts === 0) {
           wp.category = 'new';
-        } else if (consecutiveIncorrect >= 2) {
-          wp.category = 'incorrect';
-        } else if (wp.incorrectCount && wp.incorrectCount > 0) {
-          wp.category = 'still_learning';
-        } else if (wp.masteryLevel === 'mastered') {
+        } else if (totalAttempts === 1 && totalCorrect === 1) {
+          wp.category = 'mastered'; // 1発正解
+        } else if (consecutiveCorrect >= 3) {
           wp.category = 'mastered';
+        } else if (totalIncorrect > 0 && consecutiveCorrect < 2) {
+          wp.category = 'incorrect';
         } else {
           wp.category = 'still_learning';
         }
@@ -1098,21 +1100,18 @@ export async function updateWordProgress(
       wordProgress.easinessFactor = Math.min(2.5, wordProgress.easinessFactor + 0.05);
     }
 
-    // 🧠 個別忘却曲線パラメータの更新（Phase 2: MemoryAI経由）
-    // MemoryAIを忘却曲線予測の唯一の窓口とする
-    const { updateForgettingCurveAfterAnswer } = await import('@/ai/specialists/MemoryAI');
-
-    const forgettingCurveUpdate = await updateForgettingCurveAfterAnswer(
-      wordProgress,
-      isCorrect,
-      responseTime
-    );
-
-    // 更新結果を反映
-    wordProgress.memoryStrength = forgettingCurveUpdate.memoryStrength;
-    wordProgress.forgettingCurveParams = forgettingCurveUpdate.forgettingCurveParams;
-    wordProgress.halfLife = forgettingCurveUpdate.halfLife;
-    wordProgress.lastRetentionRate = forgettingCurveUpdate.lastRetentionRate;
+    // TODO: 🧠 個別忘却曲線パラメータの更新（Phase 2: MemoryAI経由）
+    // MemoryAIにupdateForgettingCurveAfterAnswer関数を実装後に有効化
+    // const { updateForgettingCurveAfterAnswer } = await import('@/ai/specialists/MemoryAI');
+    // const forgettingCurveUpdate = await updateForgettingCurveAfterAnswer(
+    //   wordProgress,
+    //   isCorrect,
+    //   responseTime
+    // );
+    // wordProgress.memoryStrength = forgettingCurveUpdate.memoryStrength;
+    // wordProgress.forgettingCurveParams = forgettingCurveUpdate.forgettingCurveParams;
+    // wordProgress.halfLife = forgettingCurveUpdate.halfLife;
+    // wordProgress.lastRetentionRate = forgettingCurveUpdate.lastRetentionRate;
   }
 
   // 学習履歴を記録（学習曲線AI用）最新20件を保持
@@ -1175,14 +1174,30 @@ export async function updateWordProgress(
   }
 
   // カテゴリーを更新（QuestionScheduler用）
-  // 🎯 カテゴリー判定をMemoryAIに委譲（Phase 1.1リファクタリング）
-  // MemoryAIが科学的なカテゴリー判定を行う
-  const memoryAI = new MemoryAI();
-  wordProgress.category = memoryAI.determineCategoryPublic(wordProgress);
+  // 🎯 カテゴリー判定ロジック（4タブ統一：1発正解は定着済）
+  const totalCorrect = wordProgress.correctCount || 0;
+  const totalIncorrect = wordProgress.incorrectCount || 0;
+  const totalTrials = totalCorrect + totalIncorrect;
+
+  if (totalTrials === 0) {
+    wordProgress.category = 'new';
+  } else if (totalTrials === 1 && totalCorrect === 1) {
+    // 🟢 1発正解 = 定着済み（時間経過で再出題される）
+    wordProgress.category = 'mastered';
+  } else if (wordProgress.consecutiveCorrect >= 3) {
+    // 🟢 連続3回正解 = 定着済み
+    wordProgress.category = 'mastered';
+  } else if (totalIncorrect > 0 && wordProgress.consecutiveCorrect < 2) {
+    // 🔴 要復習: 不正解があり、まだ連続正解が少ない
+    wordProgress.category = 'incorrect';
+  } else {
+    // 🟡 学習中: それ以外
+    wordProgress.category = 'still_learning';
+  }
 
   // デバッグ: カテゴリー変更をログ出力（直近の行動も表示）
   const actionLabel = isCorrect ? '✅正解' : isStillLearning ? '🟡まだまだ' : '❌分からない';
-  const accuracy = totalAttempts > 0 ? wordProgress.correctCount / totalAttempts : 0;
+  const accuracy = totalTrials > 0 ? totalCorrect / totalTrials : 0;
   if (import.meta.env.DEV) {
     console.log(
       `📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`

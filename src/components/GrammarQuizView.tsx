@@ -615,8 +615,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     }
 
     prevSettingsRef.current = { quizType, grade };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [quizType, grade, quizStarted]);
+  }, [quizType, grade, quizStarted, handleStartQuiz]);
 
   // 問題が変わるたびに並べ替え用の単語をシャッフル
   useEffect(() => {
@@ -924,13 +923,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   };
 
   // コンポーネントマウント時に自動でクイズ開始
-  // 🚨 パフォーマンス改善: handleStartQuizを依存配列から削除
   useEffect(() => {
     if (!quizStarted) {
       handleStartQuiz();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [quizStarted]); // マウント時のみ実行
+  }, [quizStarted, handleStartQuiz]);
 
   return (
     <div className="quiz-view">
@@ -963,6 +960,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 onReviewFocus={handleReviewFocus}
                 isReviewFocusMode={isReviewFocusMode}
                 onShowSettings={() => setShowSettings(true)}
+                currentWord={
+                  currentQuestion?.id
+                    ? `grammar_${currentQuestion.id}`
+                    : currentQuestion?.question
+                      ? `grammar_${currentQuestion.question.slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`
+                      : undefined
+                }
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
                 lastAnswerWord={lastAnswerWord}

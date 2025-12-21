@@ -1,7 +1,6 @@
 ---
 description: UI/UXパフォーマンス最優先指示 - 生徒の学習を妨げないための必須原則
 applyTo: '**/*.{ts,tsx,js,jsx}'
-priority: CRITICAL
 ---
 
 # 🎯 UI/UXパフォーマンス最優先原則

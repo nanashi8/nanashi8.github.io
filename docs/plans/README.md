@@ -79,7 +79,8 @@
 ---
 
 ### 📊 [評価メトリクス定義](./METRICS_DEFINITION.md)
-  - データ収集基盤
+
+- データ収集基盤
 - Task 2: QuestionScheduler説明可能性
   - 優先度分解データ構造
   - 分解値の計算と記録

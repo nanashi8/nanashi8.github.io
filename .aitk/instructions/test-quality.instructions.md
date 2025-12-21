@@ -1,7 +1,6 @@
 ---
 description: テスト品質保証ガイドライン - AI開発時の必須チェック項目
 applyTo: '**/*.{test,spec}.{ts,tsx,js,jsx}'
-priority: critical
 ---
 
 # テスト品質保証ガイドライン
@@ -350,6 +349,6 @@ vi.mock('@/utils/time');
 
 ## 📚 参考資料
 
-- [テストガイドライン詳細](../../docs/guidelines/TESTING_GUIDELINES.md)
-- [テスト仕様書](../../docs/specifications/TEST_SPECIFICATIONS.md)
-- [テストメンテナンスプロセス](../../docs/processes/TEST_MAINTENANCE_PROCESS.md)
+- テストガイドライン: プロジェクトルートの docs/guidelines/ を参照
+- テスト仕様書: プロジェクトルートの docs/specifications/ を参照
+- テストメンテナンスプロセス: プロジェクトルートの docs/processes/ を参照

@@ -19,6 +19,7 @@ import { generateTimeBasedGreeting } from '../timeBasedGreeting';
 import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractions';
 import { getBreatherTrivia } from '../englishTrivia';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
+import { computeAttemptCounts } from './scoreBoard/attemptCounts';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'; // クイズモードを追加
@@ -59,6 +60,8 @@ interface ScoreBoardProps {
   wordPhraseFilter?: string; // 単語・熟語フィルター
   // 文法モード用の設定
   grammarUnit?: string; // 現在出題中の文法単元（例: "g1-unit0"）
+  // 現在の問題の出題回数
+  currentQuestionTimesShown?: number; // 現在表示中の問題の出題回数
 }
 
 function ScoreBoard({
@@ -87,6 +90,7 @@ function ScoreBoard({
   wordPhraseFilter = '',
   grammarUnit,
   sessionStats,
+  currentQuestionTimesShown,
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'>(
     'ai'
@@ -393,41 +397,12 @@ function ScoreBoard({
   const attemptCounts = useMemo(() => {
     const progress = loadProgressSync();
     const wordProgress = progress.wordProgress || {};
-    const counts = {
-      once: 0,
-      twice: 0,
-      three: 0,
-      four: 0,
-      five: 0,
-      sixOrMore: 0,
-    };
-
-    Object.values(wordProgress).forEach((wp) => {
-      // モード別の試行回数を取得（各モード専用の統計）
-      let attempts = 0;
-      if (mode === 'memorization') {
-        attempts = wp.memorizationAttempts || 0;
-      } else if (mode === 'translation') {
-        attempts = wp.translationAttempts || 0;
-      } else if (mode === 'spelling') {
-        attempts = wp.spellingAttempts || 0;
-      } else if (mode === 'grammar') {
-        attempts = wp.grammarAttempts || 0;
-      } else {
-        // モード指定がない場合は全モード合計
-        attempts = wp.totalAttempts || 0;
-      }
-
-      if (attempts === 1) counts.once++;
-      else if (attempts === 2) counts.twice++;
-      else if (attempts === 3) counts.three++;
-      else if (attempts === 4) counts.four++;
-      else if (attempts === 5) counts.five++;
-      else if (attempts >= 6) counts.sixOrMore++;
+    return computeAttemptCounts({
+      mode,
+      currentWord,
+      wordProgress,
     });
-
-    return counts;
-  }, [onAnswerTime, mode]);
+  }, [mode, currentWord, onAnswerTime]);
 
   // 文法モード用の単元別統計（タイトル付き）
   const [grammarUnitStats, setGrammarUnitStats] = useState<

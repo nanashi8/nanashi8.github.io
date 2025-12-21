@@ -23,6 +23,7 @@
  */
 
 import type { Question } from '@/types';
+import { loadProgressSync } from '@/storage/progress/progressStorage';
 import type {
   ScheduleParams,
   ScheduleContext,
@@ -212,12 +213,8 @@ export class QuestionScheduler {
       return this.recentAnswersCache.get(mode)!;
     }
 
-    const key = 'english-progress';
-    const stored = localStorage.getItem(key);
-    if (!stored) return [];
-
     try {
-      const progress = JSON.parse(stored);
+      const progress = loadProgressSync();
       const answers: RecentAnswer[] = [];
 
       Object.entries(progress.wordProgress || {}).forEach(([word, data]: [string, any]) => {
@@ -570,12 +567,9 @@ export class QuestionScheduler {
    * ⚡ localStorage からプログレスデータを1回だけ読み込む
    */
   private loadProgressCache(): any {
-    const key = 'english-progress';
-    const stored = localStorage.getItem(key);
-    if (!stored) return null;
-
     try {
-      return JSON.parse(stored);
+      const progress = loadProgressSync();
+      return progress;
     } catch {
       return null;
     }
@@ -616,10 +610,12 @@ export class QuestionScheduler {
 
     return {
       category,
-      correct: wordProgress.correctCount || 0,
-      incorrect: wordProgress.incorrectCount || 0,
-      attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0),
+      priority: 0,
       lastStudied: wordProgress.lastStudied || 0,
+      attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0),
+      correct: wordProgress.correctCount || 0,
+      streak: wordProgress.consecutiveCorrect || 0,
+      forgettingRisk: 0,
       reviewInterval: 1,
     };
   }
@@ -628,17 +624,13 @@ export class QuestionScheduler {
    * 語句の学習状況を取得（旧メソッド - 互換性のため残す）
    */
   private getWordStatus(word: string, _mode: string): WordStatus | null {
-    const key = 'english-progress';
-    const stored = localStorage.getItem(key);
-    if (!stored) return null;
-
     try {
-      const progress = JSON.parse(stored);
+      const progress = loadProgressSync();
       const wordProgress = progress.wordProgress?.[word];
       if (!wordProgress) return null;
 
       // カテゴリーを取得または推測
-      let category = wordProgress.category;
+      let category: 'new' | 'incorrect' | 'still_learning' | 'mastered' = wordProgress.category as any || 'new';
 
       // ✅ デバッグ: localStorageから読み取ったカテゴリー
       if (import.meta.env.DEV) {
@@ -720,11 +712,11 @@ export class QuestionScheduler {
         category,
         priority: calculatedPriority, // 保存済み優先度を使用
         lastStudied: wordProgress.lastStudied || 0,
-        attempts: wordProgress.attempts || 0,
-        correct: wordProgress.correct || 0,
-        streak: wordProgress.streak || 0,
-        forgettingRisk: wordProgress.forgettingRisk || 0,
-        reviewInterval: wordProgress.reviewInterval || 1,
+        attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0),
+        correct: wordProgress.correctCount || 0,
+        streak: wordProgress.consecutiveCorrect || 0,
+        forgettingRisk: 0, // 計算可能だが、ここでは簡略化
+        reviewInterval: 1,
       };
 
       // デバッグ: incorrect/still_learningの単語のみログ出力
@@ -965,8 +957,8 @@ export class QuestionScheduler {
    */
   private getWordProgress(word: string): any | null {
     try {
-      const progress = JSON.parse(localStorage.getItem('english-progress') || '{}');
-      return progress[word] || null;
+      const progress = loadProgressSync();
+      return progress.wordProgress?.[word] || null;
     } catch {
       return null;
     }
@@ -977,7 +969,8 @@ export class QuestionScheduler {
    */
   private getAllProgress(): Record<string, any> {
     try {
-      return JSON.parse(localStorage.getItem('english-progress') || '{}');
+      const progress = loadProgressSync();
+      return progress.wordProgress || {};
     } catch {
       return {};
     }

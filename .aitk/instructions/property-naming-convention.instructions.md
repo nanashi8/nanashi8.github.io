@@ -1,7 +1,6 @@
 ---
 description: プロパティ命名規則 - WordProgressのモード別プロパティの正しい使い分け
 applyTo: '**/*.{ts,tsx}'
-priority: high
 ---
 
 # プロパティ命名規則ガイド
