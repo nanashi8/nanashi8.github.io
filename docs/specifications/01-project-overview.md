@@ -246,8 +246,8 @@ tags: [specification, ai, test]
 
 ### 開発ガイドライン（必読）
 
-- **[CSS開発ガイドライン](./CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名、CSS変数、重複防止
-- **[TypeScript/React開発ガイドライン](./TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - 型安全、コンポーネント設計
+- **[CSS開発ガイドライン](../development/CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名、CSS変数、重複防止
+- **[TypeScript/React開発ガイドライン](../development/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - 型安全、コンポーネント設計
 - **[品質管理パイプライン](./QUALITY_PIPELINE.md)** - テスト戦略、Git Hooks、CI/CD
 - **[AI開発アシスタント用指示書](../.aitk/instructions/development-guidelines.instructions.md)** - GitHub Copilot統合ガイド
 
@@ -261,5 +261,5 @@ tags: [specification, ai, test]
 
 ### その他
 
-- [UI開発ガイドライン](./UI_DEVELOPMENT_GUIDELINES.md) - UI変更時の必須要件
+- [UI開発ガイドライン](../development/UI_DEVELOPMENT_GUIDELINES.md) - UI変更時の必須要件
 - [VS Code Simple Browser ガイド](./VS_CODE_SIMPLE_BROWSER_GUIDE.md) - 開発環境での確認方法
