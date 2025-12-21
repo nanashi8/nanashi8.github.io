@@ -1,3 +1,11 @@
+---
+title: 文法問題データ作成ガイドライン
+created: 2025-12-08
+updated: 2025-12-10
+status: in-progress
+tags: [guideline, ai]
+---
+
 # 文法問題データ作成ガイドライン
 
 ## 概要
@@ -10,22 +18,26 @@
 ### 1. 問題文と正解の整合性
 
 #### 不定詞問題
+
 - ❌ **間違い**: `"sentence": "To ____ a lie is bad."` + `"correctAnswer": "to tell"`
 - ✅ **正しい**: `"sentence": "To ____ a lie is bad."` + `"correctAnswer": "tell"`
 
 **ルール**: 問題文に既に`To`がある場合、空欄には動詞原形のみが入ります。
 
 #### be動詞過去形問題
+
 - ❌ **間違い**: `"sentence": "I ____ late."` + `"correctAnswer": "were"`
 - ✅ **正しい**: `"sentence": "I ____ late."` + `"correctAnswer": "was"`
 
 **ルール**: 主語とbe動詞の組み合わせ
+
 - `I, He, She, It` → `was`
 - `You, We, They` → `were`
 
 ### 2. 日本語訳の品質
 
 #### 文法用語ではなく翻訳を記載
+
 - ❌ **間違い**: `"japanese": "be動詞過去形(I)"`
 - ✅ **正しい**: `"japanese": "私は遅れました"`
 
@@ -54,7 +66,8 @@
 }
 ```
 
-**問題点**: 
+**問題点**:
+
 - 説明で「thatでもwhichでも良い」と言っている
 - しかし選択肢に両方含まれている
 - whichを選ぶと不正解になる
@@ -83,6 +96,7 @@
 ```
 
 **禁止される説明パターン**:
+
 - 「どちらでも良い」「どちらも正しい」
 - 「both are correct」「either is fine」
 - 「両方可能」「AでもBでも構わない」
@@ -92,6 +106,7 @@
 ### 5. 重複パターンの回避
 
 #### 二重不定詞
+
 - ❌ **間違い**: `"sentence": "To to tell a lie is bad."`
 - ✅ **正しい**: `"sentence": "To tell a lie is bad."`
 

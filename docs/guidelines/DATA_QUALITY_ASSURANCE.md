@@ -1,3 +1,11 @@
+---
+title: データ品質保証ガイドライン
+created: 2025-12-07
+updated: 2025-12-10
+status: in-progress
+tags: [guideline]
+---
+
 # データ品質保証ガイドライン
 
 ## 概要
@@ -30,6 +38,7 @@ npm run check:data-quality
 ### 1. IPA発音記号（reading フィールド）
 
 #### ✅ 正しい例
+
 ```json
 {
   "word": "call",
@@ -38,6 +47,7 @@ npm run check:data-quality
 ```
 
 #### ❌ 間違った例
+
 ```json
 {
   "word": "bacon",
@@ -51,6 +61,7 @@ npm run check:data-quality
 ```
 
 #### 修正方法
+
 - IPA記号の正しい変換を使用: https://tophonetics.com/
 - 大文字を使用しない
 - 有効なIPA記号のみ使用: ɑæəɛɪʊʌaeiouɔːˈˌθðʃʒŋtdkgpbfvszmnlrjwhʔ
@@ -58,6 +69,7 @@ npm run check:data-quality
 ### 2. カタカナ発音
 
 #### ✅ 正しい例
+
 ```json
 {
   "word": "apple",
@@ -66,14 +78,16 @@ npm run check:data-quality
 ```
 
 #### ❌ 間違った例
+
 ```json
 {
   "word": "apple",
-  "katakana": "(Apple)"  // ❌ 英語が混入
+  "katakana": "(Apple)" // ❌ 英語が混入
 }
 ```
 
 #### 修正方法
+
 - 必ずカタカナで記述
 - 英語を混入させない
 - カッコ内に記述: (カタカナ)
@@ -81,6 +95,7 @@ npm run check:data-quality
 ### 3. 意味（meaning フィールド）
 
 #### ✅ 正しい例
+
 ```json
 {
   "word": "call",
@@ -94,6 +109,7 @@ npm run check:data-quality
 ```
 
 #### ❌ 間違った例
+
 ```json
 {
   "word": "call",
@@ -107,6 +123,7 @@ npm run check:data-quality
 ```
 
 #### 修正方法
+
 - 必ず日本語訳を記述
 - 文法的役割を明記（〜を、〜に、等）
 - 複数の意味がある場合は主要な意味を記述

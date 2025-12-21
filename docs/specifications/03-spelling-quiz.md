@@ -1,3 +1,11 @@
+---
+title: 03. スペルクイズ
+created: 2025-11-22
+updated: 2025-12-07
+status: in-progress
+tags: [specification, ai, adaptive]
+---
+
 # 03. スペルクイズ
 
 ## 📌 概要
@@ -36,18 +44,17 @@
 function createBlanks(word: string): string[] {
   const length = word.length;
   const blankCount = Math.ceil(length * 0.4); // 40%を空欄に
-  
+
   const indices = [];
-  for (let i = 1; i < length - 1; i++) { // 最初と最後は除外
+  for (let i = 1; i < length - 1; i++) {
+    // 最初と最後は除外
     indices.push(i);
   }
-  
+
   // ランダムに選択
   const blanks = shuffle(indices).slice(0, blankCount);
-  
-  return word.split('').map((char, i) => 
-    blanks.includes(i) ? '_' : char
-  );
+
+  return word.split('').map((char, i) => (blanks.includes(i) ? '_' : char));
 }
 ```
 
@@ -56,9 +63,10 @@ function createBlanks(word: string): string[] {
 ```typescript
 // 母音のヒント
 function getVowelHint(word: string): string {
-  return word.split('').map(char => 
-    'aeiou'.includes(char.toLowerCase()) ? char : '_'
-  ).join(' ');
+  return word
+    .split('')
+    .map((char) => ('aeiou'.includes(char.toLowerCase()) ? char : '_'))
+    .join(' ');
 }
 
 // 例: "abandon" → "a_a_o_"
@@ -79,21 +87,24 @@ function getVowelHint(word: string): string {
 ### リアルタイム検証
 
 ```typescript
-function validateInput(userInput: string, correctAnswer: string): {
+function validateInput(
+  userInput: string,
+  correctAnswer: string
+): {
   isValid: boolean;
   errors: number[];
 } {
   const errors = [];
-  
+
   for (let i = 0; i < userInput.length; i++) {
     if (userInput[i].toLowerCase() !== correctAnswer[i]?.toLowerCase()) {
       errors.push(i);
     }
   }
-  
+
   return {
     isValid: errors.length === 0,
-    errors
+    errors,
   };
 }
 ```
@@ -123,6 +134,7 @@ function validateInput(userInput: string, correctAnswer: string): {
 ### 難易度フィルター
 
 和訳クイズと同様:
+
 - All
 - Beginner
 - Intermediate
@@ -206,10 +218,12 @@ function onCorrectAnswer(word: string) {
 ### レスポンシブ対応
 
 #### PC
+
 - 入力欄幅: 400px
 - フォントサイズ: 1.5em
 
 #### スマホ
+
 - 入力欄幅: 100%
 - フォントサイズ: 1.2em
 
@@ -218,13 +232,7 @@ function onCorrectAnswer(word: string) {
 ### ソフトキーボード対応
 
 ```html
-<input
-  type="text"
-  autocomplete="off"
-  autocapitalize="off"
-  autocorrect="off"
-  spellcheck="false"
-/>
+<input type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" />
 ```
 
 ### IME制御
@@ -277,7 +285,7 @@ const hints = [
   '最初の文字は "a" です',
   '7文字の単語です',
   '母音は "a", "a", "o" です',
-  '語源はフランス語の "abandonner" です'
+  '語源はフランス語の "abandonner" です',
 ];
 ```
 
@@ -299,23 +307,23 @@ interface SpellingProgress extends WordProgress {
 ```typescript
 function recordMistake(userInput: string, correctAnswer: string) {
   const mistakes = findDifferences(userInput, correctAnswer);
-  
+
   // 例: "abandun" → "abandon"
   // mistakes: [{ position: 5, wrong: 'u', correct: 'o' }]
-  
+
   saveMistakePattern(correctAnswer, mistakes);
 }
 ```
 
 ## 🎮 キーボードショートカット
 
-| キー | 動作 |
-|------|------|
-| Enter | 解答を確定 |
+| キー   | 動作         |
+| ------ | ------------ |
+| Enter  | 解答を確定   |
 | Escape | 入力をクリア |
-| Space | 音声再生 |
-| H | ヒント表示 |
-| S | スキップ |
+| Space  | 音声再生     |
+| H      | ヒント表示   |
+| S      | スキップ     |
 
 ## 📈 統計情報
 
@@ -340,22 +348,19 @@ interface SpellingStats {
 忘却曲線に基づく復習タイミング:
 
 ```typescript
-function getNextReviewTime(
-  correctCount: number,
-  lastAttempt: number
-): number {
+function getNextReviewTime(correctCount: number, lastAttempt: number): number {
   const intervals = [
-    1,      // 1日後
-    3,      // 3日後
-    7,      // 1週間後
-    14,     // 2週間後
-    30      // 1ヶ月後
+    1, // 1日後
+    3, // 3日後
+    7, // 1週間後
+    14, // 2週間後
+    30, // 1ヶ月後
   ];
-  
+
   const index = Math.min(correctCount, intervals.length - 1);
   const daysToAdd = intervals[index];
-  
-  return lastAttempt + (daysToAdd * 24 * 60 * 60 * 1000);
+
+  return lastAttempt + daysToAdd * 24 * 60 * 60 * 1000;
 }
 ```
 

@@ -1,3 +1,11 @@
+---
+title: 和訳タブ履歴表示の検証手順
+created: 2025-12-09
+updated: 2025-12-15
+status: in-progress
+tags: [report, ai]
+---
+
 # 和訳タブ履歴表示の検証手順
 
 ## 問題の説明

@@ -1,3 +1,11 @@
+---
+title: 文法問題パッセージ対応機能
+created: 2025-12-14
+updated: 2025-12-15
+status: in-progress
+tags: [feature, ai, test]
+---
+
 # 文法問題パッセージ対応機能
 
 ## 概要
@@ -15,9 +23,9 @@
 ```typescript
 interface Question {
   // 既存のプロパティ...
-  
+
   // パッセージ対応 (Grade 2/3)
-  passage?: string;         // 問題の文脈となる短いパッセージ
+  passage?: string; // 問題の文脈となる短いパッセージ
   passageJapanese?: string; // パッセージの日本語訳
 }
 ```
@@ -56,6 +64,7 @@ python3 scripts/add_passage_to_grammar.py
 #### 生成例
 
 **元の問題**:
+
 ```json
 {
   "id": "vf-g2-u0-002",
@@ -68,6 +77,7 @@ python3 scripts/add_passage_to_grammar.py
 ```
 
 **パッセージ追加後**:
+
 ```json
 {
   "id": "vf-g2-u0-002",
@@ -83,7 +93,8 @@ python3 scripts/add_passage_to_grammar.py
 
 ### 3. UI表示の更新
 
-**ファイル**: 
+**ファイル**:
+
 - `src/components/GrammarQuizView.tsx` (ロジック)
 - `src/components/GrammarQuizView.css` (スタイル)
 
@@ -94,9 +105,9 @@ python3 scripts/add_passage_to_grammar.py
 ```
 📖 文脈
 ────────────────────────────────
-My family is planning a trip to Okinawa. 
-We will stay there for a week. Everyone 
-is excited about swimming in the ocean. 
+My family is planning a trip to Okinawa.
+We will stay there for a week. Everyone
+is excited about swimming in the ocean.
 You ____ busy last week.
 
 家族で沖縄旅行を計画しています。1週間滞在します。
@@ -149,6 +160,7 @@ npx vitest run tests/content/grammar-passage.test.ts
 ### バックアップファイル
 
 元のファイルは以下にバックアップされています:
+
 - `public/data/*.json.backup`
 
 ## 教育的効果
@@ -156,6 +168,7 @@ npx vitest run tests/content/grammar-passage.test.ts
 ### 1. 文脈理解の向上
 
 短文だけでなく、文脈の中で文法を理解することで:
+
 - 実際の会話や文章での使用方法を学べる
 - 前後の文との関係性を理解できる
 - より自然な英語表現に触れられる
@@ -169,6 +182,7 @@ npx vitest run tests/content/grammar-passage.test.ts
 ### 3. 読解力の向上
 
 パッセージを読むことで:
+
 - 英語を英語のまま理解する力が育つ
 - 文章全体の流れを把握する力が向上
 - 実用的な英語力が身につく
@@ -178,6 +192,7 @@ npx vitest run tests/content/grammar-passage.test.ts
 ### 1. パッセージの多様化
 
 現在の5カテゴリに加えて:
+
 - ビジネス・仕事
 - 科学・テクノロジー
 - 歴史・文化
@@ -197,9 +212,10 @@ npx vitest run tests/content/grammar-passage.test.ts
 ### 4. パッセージ内の複数問題
 
 同じパッセージで複数の文法問題を出題:
+
 ```
-Passage: "Sarah loves traveling. Last summer, 
-she (1) ____ to Italy. She (2) ____ many 
+Passage: "Sarah loves traveling. Last summer,
+she (1) ____ to Italy. She (2) ____ many
 beautiful places there."
 
 Q1: (1) に入る動詞は?

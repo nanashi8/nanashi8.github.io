@@ -1,3 +1,11 @@
+---
+title: パイプラインリファクタリングログ
+created: 2025-11-30
+updated: 2025-12-07
+status: deprecated
+tags: [archive]
+---
+
 # パイプラインリファクタリングログ
 
 ## 実施日: 2025年11月30日

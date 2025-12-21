@@ -1,3 +1,11 @@
+---
+title: プロジェクトAI サーバント統合システム
+created: 2025-12-14
+updated: 2025-12-15
+status: in-progress
+tags: [design, ai]
+---
+
 # プロジェクトAI サーバント統合システム
 
 プロジェクト専用のコンテキスト認識AIサーバントを構築し、効率的な開発支援を実現
@@ -59,18 +67,21 @@ checklist = servant.generate_checklist(task)
 ## 📋 実装済み機能
 
 ### 1. メンテナンスAI（既存）
+
 - データ品質チェック
 - パフォーマンス測定
 - セキュリティスキャン（CodeQL）
 - 自動レポート生成
 
 ### 2. 品質神経系統（既存）
+
 - 語彙多様性検証
 - 主語多様性検証
 - 選択肢適切性検証
 - JSON詳細レポート
 
 ### 3. プロジェクトAI サーバント（新規実装）
+
 - タスク分析エンジン
 - コンテキスト抽出
 - ワークフロー提案
@@ -90,18 +101,18 @@ from typing import Dict, List, Optional
 
 class ProjectContextDB:
     """プロジェクト知識ベース"""
-    
+
     def __init__(self):
         self.base_dir = Path(__file__).parent.parent
         self.context_dir = self.base_dir / ".aitk" / "context"
         self._load_context()
-    
+
     def _load_context(self):
         """コンテキストをロード"""
         self.workflows = self._load_workflows()
         self.quality_rules = self._load_quality_rules()
         self.common_tasks = self._load_common_tasks()
-    
+
     def _load_workflows(self) -> Dict:
         """ワークフローパターンを定義"""
         return {
@@ -181,7 +192,7 @@ class ProjectContextDB:
                 ]
             }
         }
-    
+
     def _load_quality_rules(self) -> Dict:
         """品質基準を定義"""
         return {
@@ -201,7 +212,7 @@ class ProjectContextDB:
                 "bundle_size": 10  # MB
             }
         }
-    
+
     def _load_common_tasks(self) -> List[Dict]:
         """頻出タスクを定義"""
         return [
@@ -226,25 +237,25 @@ class ProjectContextDB:
                 "confidence": 0.85
             }
         ]
-    
+
     def get_workflow(self, task_type: str) -> Optional[Dict]:
         """ワークフローを取得"""
         return self.workflows.get(task_type)
-    
+
     def get_quality_rules(self, category: str = None) -> Dict:
         """品質基準を取得"""
         if category:
             return self.quality_rules.get(category, {})
         return self.quality_rules
-    
+
     def analyze_task_type(self, description: str) -> str:
         """タスクタイプを分析"""
         import re
-        
+
         for task in self.common_tasks:
             if re.search(task["pattern"], description, re.IGNORECASE):
                 return task["task_type"]
-        
+
         return "unknown"
 ```
 
@@ -266,33 +277,33 @@ from context_database import ProjectContextDB
 
 class ProjectServant:
     """プロジェクト専用AIサーバント"""
-    
+
     def __init__(self):
         self.db = ProjectContextDB()
         self.base_dir = Path(__file__).parent.parent
-    
+
     def analyze_task(self, description: str) -> Dict:
         """タスクを分析して最適なワークフローを提案"""
         task_type = self.db.analyze_task_type(description)
         workflow = self.db.get_workflow(task_type)
-        
+
         if not workflow:
             return {
                 "type": "unknown",
                 "message": "タスクタイプを特定できませんでした",
                 "suggestion": "具体的な作業内容を教えてください"
             }
-        
+
         return {
             "type": task_type,
             "workflow": workflow,
             "status": "ready"
         }
-    
+
     def get_context(self, task: Dict) -> Dict:
         """タスクに必要なコンテキストを収集"""
         workflow = task.get("workflow", {})
-        
+
         context = {
             "task_type": task.get("type"),
             "documents": [],
@@ -300,7 +311,7 @@ class ProjectServant:
             "quality_checks": workflow.get("quality_checks", []),
             "examples": []
         }
-        
+
         # ドキュメントの存在確認
         for doc_path in workflow.get("docs", []):
             full_path = self.base_dir / doc_path
@@ -316,39 +327,39 @@ class ProjectServant:
                     "exists": False,
                     "warning": "ドキュメントが見つかりません"
                 })
-        
+
         return context
-    
+
     def generate_checklist(self, task: Dict) -> List[str]:
         """実装前チェックリストを生成"""
         workflow = task.get("workflow", {})
         checklist = []
-        
+
         # ステップをチェックリスト化
         for i, step in enumerate(workflow.get("steps", []), 1):
             checklist.append(f"{i}. {step}")
-        
+
         # 品質チェックを追加
         checklist.append("\n品質チェック:")
         for check in workflow.get("quality_checks", []):
             checklist.append(f"  ☐ {check}")
-        
+
         return checklist
-    
+
     def get_quality_status(self) -> Dict:
         """現在の品質状態を取得"""
         # メンテナンスレポートを読み込み
         report_path = self.base_dir / "maintenance_report.json"
-        
+
         if not report_path.exists():
             return {
                 "status": "unknown",
                 "message": "メンテナンスレポートが見つかりません"
             }
-        
+
         with open(report_path, "r") as f:
             report = json.load(f)
-        
+
         return {
             "status": "critical" if report["critical_issues"] > 0 else "warning" if report["warning_issues"] > 0 else "healthy",
             "total_issues": report["total_issues"],
@@ -357,7 +368,7 @@ class ProjectServant:
             "last_check": report["timestamp"],
             "categories": self._group_by_category(report["issues"])
         }
-    
+
     def _group_by_category(self, issues: List[Dict]) -> Dict:
         """問題をカテゴリ別に集計"""
         categories = {}
@@ -367,15 +378,15 @@ class ProjectServant:
                 categories[cat] = 0
             categories[cat] += 1
         return categories
-    
+
     def suggest_next_action(self, context: Dict) -> str:
         """次のアクションを提案"""
         quality = self.get_quality_status()
-        
+
         # CRITICAL問題がある場合
         if quality.get("critical_issues", 0) > 0:
             return f"""⚠️ 優先対応推奨
-            
+
 CRITICAL問題が{quality['critical_issues']}件検出されています。
 新しい作業の前に、以下を実行してください：
 
@@ -386,11 +397,11 @@ CRITICAL問題が{quality['critical_issues']}件検出されています。
 主な問題カテゴリ:
 {json.dumps(quality.get('categories', {}), indent=2, ensure_ascii=False)}
 """
-        
+
         # 通常の作業フロー
         task_type = context.get("task_type")
         docs = context.get("documents", [])
-        
+
         return f"""✅ 作業準備完了
 
 タスクタイプ: {task_type}
@@ -412,20 +423,20 @@ CRITICAL問題が{quality['critical_issues']}件検出されています。
 def main():
     """CLIインターフェース"""
     import argparse
-    
+
     parser = argparse.ArgumentParser(description="プロジェクトAI サーバント")
     parser.add_argument("--analyze", type=str, help="タスクを分析")
     parser.add_argument("--status", action="store_true", help="品質状態を表示")
     parser.add_argument("--suggest", type=str, help="次のアクションを提案")
-    
+
     args = parser.parse_args()
-    
+
     servant = ProjectServant()
-    
+
     if args.status:
         status = servant.get_quality_status()
         print(json.dumps(status, indent=2, ensure_ascii=False))
-    
+
     elif args.analyze:
         task = servant.analyze_task(args.analyze)
         context = servant.get_context(task)
@@ -433,13 +444,13 @@ def main():
         print(json.dumps(task, indent=2, ensure_ascii=False))
         print("\n=== コンテキスト ===")
         print(json.dumps(context, indent=2, ensure_ascii=False))
-    
+
     elif args.suggest:
         task = servant.analyze_task(args.suggest)
         context = servant.get_context(task)
         suggestion = servant.suggest_next_action(context)
         print(suggestion)
-    
+
     else:
         parser.print_help()
 
@@ -458,17 +469,13 @@ python3 scripts/project_ai_servant.py --analyze "Grade2 Unit5の文法問題を�
 ```
 
 **出力**:
+
 ```json
 {
   "type": "grammar",
   "workflow": {
     "name": "文法問題追加",
-    "steps": [
-      "Unit・Grade確認",
-      "60問構成確認",
-      "ID採番ルール確認",
-      "品質チェック実行"
-    ],
+    "steps": ["Unit・Grade確認", "60問構成確認", "ID採番ルール確認", "品質チェック実行"],
     "docs": [
       "docs/references/AI_WORKFLOW_INSTRUCTIONS.md",
       "docs/guidelines/NEW_HORIZON_GRAMMAR_GUIDELINES.md"
@@ -484,6 +491,7 @@ python3 scripts/project_ai_servant.py --status
 ```
 
 **出力**:
+
 ```json
 {
   "status": "warning",
@@ -505,6 +513,7 @@ python3 scripts/project_ai_servant.py --suggest "UIを改善したい"
 ```
 
 **出力**:
+
 ```
 ✅ 作業準備完了
 
@@ -555,13 +564,13 @@ graph TD
 
 ## 📊 実装スケジュール
 
-| Phase | 内容 | 時間 | 優先度 |
-|-------|------|------|--------|
-| **Phase 1** | コンテキストDB構築 | 30分 | 🔴 高 |
-| **Phase 2** | サーバントAI実装 | 45分 | 🔴 高 |
-| **Phase 3** | CLIインターフェース | 15分 | 🟡 中 |
-| **Phase 4** | テスト作成 | 30分 | 🟡 中 |
-| **Phase 5** | GitHub Actions統合 | 30分 | 🟢 低 |
+| Phase       | 内容                | 時間 | 優先度 |
+| ----------- | ------------------- | ---- | ------ |
+| **Phase 1** | コンテキストDB構築  | 30分 | 🔴 高  |
+| **Phase 2** | サーバントAI実装    | 45分 | 🔴 高  |
+| **Phase 3** | CLIインターフェース | 15分 | 🟡 中  |
+| **Phase 4** | テスト作成          | 30分 | 🟡 中  |
+| **Phase 5** | GitHub Actions統合  | 30分 | 🟢 低  |
 
 **合計**: 2時間30分
 

@@ -1,3 +1,11 @@
+---
+title: 文法問題データ作成時のAI指示
+created: 2025-12-08
+updated: 2025-12-10
+status: in-progress
+tags: [guideline, ai]
+---
+
 # 文法問題データ作成時のAI指示
 
 ## 重要: データ品質は最優先事項
@@ -48,6 +56,7 @@
 ```
 
 **主語とbe動詞の対応表**:
+
 - `I, He, She, It` → `was`
 - `You, We, They` → `were`
 
@@ -68,6 +77,7 @@
 ```
 
 **禁止パターン**:
+
 - `be動詞過去形(主語)`
 - `不定詞(動詞)`
 - `現在完了(主語)`
@@ -114,12 +124,14 @@
 ```
 
 **問題・選択肢・正解は必ずセットで確認**:
+
 1. 問題文を読む
 1. 正解を確認
 1. 他の選択肢が明確に誤りか確認
 1. 説明文が選択肢と矛盾していないか確認
 
 **禁止される説明表現**（選択肢に複数候補がある場合）:
+
 - 「どちらでも良い」
 - 「どちらも正しい」
 - 「both are correct」
@@ -142,6 +154,7 @@
 ```
 
 **禁止される重複**:
+
 - `To to`
 - `the the`
 - `a a`
@@ -155,11 +168,12 @@
 {
   "words": ["To", "tell", "a", "lie", "is", "bad."],
   "correctAnswer": "To tell a lie is bad.",
-  "wordCount": 6  // ← 単語数が一致
+  "wordCount": 6 // ← 単語数が一致
 }
 ```
 
 **検証項目**:
+
 - `words`配列の要素数 = `correctAnswer`の単語数
 - `wordCount`フィールド = 実際の単語数
 - `words`配列から`correctAnswer`が構成できること
@@ -178,6 +192,7 @@
    - 文法的に正しいことを確認
 
 1. **スクリプト検証**
+
    ```bash
    python3 scripts/validate_grammar_questions.py
    ```

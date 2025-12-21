@@ -1,3 +1,11 @@
+---
+title: パッセージ品質検査ガイド
+created: 2025-11-23
+updated: 2025-12-07
+status: implemented
+tags: [guideline, ai]
+---
+
 # パッセージ品質検査ガイド
 
 ## 概要
@@ -45,126 +53,153 @@ done
 ## 検査項目
 
 ### 1. 従属節の分離 (高)
+
 **検出**: when, if, because, although, while等で始まる節が独立したフレーズになっている
 
 ❌ **悪い例**:
+
 ```
 Phrase 1: "I was very nervous"
 Phrase 2: "when I entered the classroom."
 ```
 
 ✅ **良い例**:
+
 ```
 Phrase 1: "I was very nervous when I entered the classroom."
 ```
 
 ### 2. 前置詞句の分離 (高)
+
 **検出**: with, from, to, at, in, on等で始まる短い句が独立したフレーズになっている
 
 ❌ **悪い例**:
+
 ```
 Phrase 1: "I played soccer"
 Phrase 2: "with my friends."
 ```
 
 ✅ **良い例**:
+
 ```
 Phrase 1: "I played soccer with my friends."
 ```
 
 ### 3. 等位接続詞の分離 (高)
+
 **検出**: and, or, butで始まるフレーズが独立している
 
 ❌ **悪い例**:
+
 ```
 Phrase 1: "I like reading books"
 Phrase 2: "and playing sports."
 ```
 
 ✅ **良い例**:
+
 ```
 Phrase 1: "I like reading books and playing sports."
 ```
 
 ### 4. to不定詞句の分離 (中)
+
 **検出**: "to + 動詞"で始まるフレーズが独立している
 
 ❌ **悪い例**:
+
 ```
 Phrase 1: "I went to the library"
 Phrase 2: "to study English."
 ```
 
 ✅ **良い例**:
+
 ```
 Phrase 1: "I went to the library to study English."
 ```
 
 ### 5. 関係詞節の分離 (高)
+
 **検出**: who, which, that, where等で始まる節が独立したフレーズになっている
 
 ❌ **悪い例**:
+
 ```
 Phrase 1: "I met a girl"
 Phrase 2: "who lives in Tokyo."
 ```
 
 ✅ **良い例**:
+
 ```
 Phrase 1: "I met a girl who lives in Tokyo."
 ```
 
 ### 6. 並列項目のカンマ欠落 (低)
+
 **検出**: 3つ以上の項目の並列でカンマが欠落している可能性
 
 ❌ **悪い例**:
+
 ```
 "We study math science and English."
 ```
 
 ✅ **良い例**:
+
 ```
 "We study math, science and English."
 ```
 
 ### 7. 句読点の重複 (高)
+
 **検出**: カンマやピリオドが重複している
 
 ❌ **悪い例**:
+
 ```
 "I like sports,, especially soccer."
 "We went home.."
 ```
 
 ✅ **良い例**:
+
 ```
 "I like sports, especially soccer."
 "We went home."
 ```
 
 ### 8. 所有格の誤り (中)
+
 **検出**: 所有格('s)にスペースが含まれている
 
 ❌ **悪い例**:
+
 ```
 "many countries ' cultures"
 ```
 
 ✅ **良い例**:
+
 ```
 "many countries' cultures"
 ```
 
 ### 9. 文断片 (中)
+
 **検出**: 句読点なしで終わり、次のフレーズが小文字で始まる
 
 ❌ **悪い例**:
+
 ```
 Phrase 1: "I enjoy playing soccer"
 Phrase 2: "because it is fun."
 ```
 
 ✅ **良い例**:
+
 ```
 Phrase 1: "I enjoy playing soccer because it is fun."
 ```
@@ -174,11 +209,13 @@ Phrase 1: "I enjoy playing soccer because it is fun."
 ### 新しいパッセージを追加する場合
 
 1. **JSONファイルを作成**
+
    ```bash
    # public/data/new-passage.json
    ```
 
 1. **基本構造を記述**
+
    ```json
    {
      "title": "タイトル",
@@ -192,6 +229,7 @@ Phrase 1: "I enjoy playing soccer because it is fun."
    ```
 
 1. **検査スクリプトを実行**
+
    ```bash
    python3 scripts/validate_passage.py public/data/new-passage.json
    ```
@@ -202,6 +240,7 @@ Phrase 1: "I enjoy playing soccer because it is fun."
    - 深刻度「低」の問題は文脈に応じて判断
 
 1. **再検査**
+
    ```bash
    python3 scripts/validate_passage.py public/data/new-passage.json
    ```
@@ -214,11 +253,13 @@ Phrase 1: "I enjoy playing soccer because it is fun."
 ### 既存のパッセージを修正する場合
 
 1. **現状を確認**
+
    ```bash
    python3 scripts/validate_passage.py public/data/existing-passage.json
    ```
 
 1. **バックアップを作成**
+
    ```bash
    cp public/data/existing-passage.json public/data/existing-passage.json.backup
    ```
@@ -243,33 +284,33 @@ import sys
 def fix_subordinate_clauses(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
     phrases = data.get('phrases', [])
     fixed_phrases = []
-    
+
     i = 0
     while i < len(phrases):
         current = phrases[i]
-        
+
         # 次のフレーズが従属節で始まる場合は統合
         if i + 1 < len(phrases):
             next_en = phrases[i + 1]['en'].strip()
             first_word = next_en.split()[0].lower() if next_en.split() else ''
-            
+
             if first_word in ['when', 'if', 'because', 'although']:
                 # 統合
                 current['en'] = current['en'].strip() + ' ' + next_en
                 current['ja'] = current['ja'].strip() + phrases[i + 1]['ja']
                 i += 1  # 次をスキップ
-        
+
         fixed_phrases.append(current)
         i += 1
-    
+
     data['phrases'] = fixed_phrases
-    
+
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✅ 修正完了: {len(phrases)} → {len(fixed_phrases)} フレーズ")
 
 if __name__ == '__main__':
@@ -323,11 +364,12 @@ A: スクリプトに新しいルールを追加できます。`validate_passage
 ## まとめ
 
 新しいパッセージを追加する際は:
+
 1. 📝 JSONファイルを作成
 1. 🔍 `validate_passage.py`で検査
-1. ✏️  問題を修正
+1. ✏️ 問題を修正
 1. 🔁 再検査
-1. 🏗️  ビルドテスト
+1. 🏗️ ビルドテスト
 1. ✅ 完了
 
 この手順を踏むことで、常に高品質なパッセージを維持できます。

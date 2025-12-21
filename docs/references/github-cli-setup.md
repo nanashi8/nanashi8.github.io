@@ -1,3 +1,11 @@
+---
+title: GitHub CLI (gh) セットアップガイド
+created: 2025-11-18
+updated: 2025-12-07
+status: in-progress
+tags: [reference]
+---
+
 # GitHub CLI (gh) セットアップガイド
 
 ## GitHub CLI とは

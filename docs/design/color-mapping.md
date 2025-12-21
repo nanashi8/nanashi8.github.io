@@ -1,3 +1,11 @@
+---
+title: 80色→22色 マッピング表
+created: 2025-12-01
+updated: 2025-12-15
+status: in-progress
+tags: [design]
+---
+
 # 80色→22色 マッピング表
 
 ## 基本テキスト色

@@ -1,3 +1,11 @@
+---
+title: ライト/ダークモード開発ガイド
+created: 2025-12-04
+updated: 2025-12-15
+status: in-progress
+tags: [design, ai, dark-mode]
+---
+
 # ライト/ダークモード開発ガイド
 
 ## 概要

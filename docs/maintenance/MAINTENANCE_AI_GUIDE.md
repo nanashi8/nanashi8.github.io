@@ -1,3 +1,11 @@
+---
+title: 定期メンテナンスAI ガイド
+created: 2025-12-14
+updated: 2025-12-15
+status: in-progress
+tags: [maintenance, ai, test]
+---
+
 # 定期メンテナンスAI ガイド
 
 ## 概要
@@ -32,7 +40,7 @@
 
 ### 4. ファイルサイズチェック
 
-**対象**: public/data/*.json
+**対象**: public/data/\*.json
 
 - 10MB超のファイルを検出
 - パフォーマンス劣化の可能性を警告
@@ -78,6 +86,7 @@ python3 scripts/maintenance_ai.py --output custom_report.json
 **スケジュール**: 毎日午前3時（JST）
 
 **手動実行**:
+
 1. GitHubリポジトリの「Actions」タブを開く
 1. 「定期メンテナンスAI」ワークフローを選択
 1. 「Run workflow」ボタンをクリック
@@ -165,6 +174,7 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 ```
 
 通知内容:
+
 - ✅ 問題なし: 緑色
 - ⚠️ WARNING問題: 黄色
 - 🚨 CRITICAL問題: 赤色
@@ -198,6 +208,7 @@ Developer → Pre-commit Hook → メンテナンスAI → 品質神経系統 �
 ### 2. CRITICAL問題の即時対応
 
 CRITICAL問題が検出された場合:
+
 1. 即座に確認
 1. 24時間以内に修正
 1. 修正後、再度メンテナンスAIを実行
@@ -205,6 +216,7 @@ CRITICAL問題が検出された場合:
 ### 3. 自動修正の慎重な適用
 
 自動修正を適用する前に:
+
 1. まず`--auto-fix`（dry run）で確認
 1. 問題ないことを確認後、`--no-dry-run`で実際に適用
 1. テストを実行して問題がないことを確認
@@ -220,6 +232,7 @@ CRITICAL問題が検出された場合:
 ### Q: メンテナンスAIがタイムアウトする
 
 **A**: 以下を確認:
+
 - データファイルのサイズが大きすぎないか
 - テストが無限ループになっていないか
 - `--verbose`オプションで詳細ログを確認
@@ -227,6 +240,7 @@ CRITICAL問題が検出された場合:
 ### Q: 自動修正が失敗する
 
 **A**: 以下を試す:
+
 1. 手動で修正コマンドを実行
 1. エラーメッセージを確認
 1. 依存関係の再インストール: `npm ci`
@@ -234,6 +248,7 @@ CRITICAL問題が検出された場合:
 ### Q: レポートが生成されない
 
 **A**: 以下を確認:
+
 - 書き込み権限があるか
 - ディスク容量は十分か
 - Pythonのバージョンは3.8以上か
@@ -248,7 +263,7 @@ def check_custom_quality(self):
     self.log("=" * 60)
     self.log("カスタムチェック開始", "INFO")
     self.log("=" * 60)
-    
+
     # チェックロジック
     if problem_detected:
         self.add_issue(

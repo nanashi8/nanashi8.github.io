@@ -1,3 +1,11 @@
+---
+title: 7AI統合システム - クイックスタートガイド
+created: 2025-12-19
+updated: 2025-12-19
+status: in-progress
+tags: [other, ai, scheduler]
+---
+
 # 7AI統合システム - クイックスタートガイド
 
 ## 概要
@@ -7,18 +15,21 @@ Phase 1のバグ修正とPhase 2の7AI責任分離アーキテクチャが完成
 ## 🎯 Phase 1 修正内容（すでに適用済み）
 
 ### 1. 時間ブースト（分単位化）
+
 - **修正前**: 7日経過で20%ブースト（暗記タブに不適切）
-- **修正後**: 
+- **修正後**:
   - 2分経過 → 15%ブースト
   - 5分経過 → 30%ブースト
   - 15分経過 → 50%ブースト
   - 30分経過 → 60%ブースト
 
 ### 2. カテゴリー遷移ルール明確化
+
 - **分からない**: 連続2回不正解 OR 正答率30%未満
 - **覚えてる**: 連続3回正解 OR (連続2回正解 AND 正答率80%以上)
 
 ### 3. AIシミュレーター双方向遷移
+
 - `分からない ⇄ まだまだ ⇄ 覚えてる` の反比例関係を可視化
 
 ## 🤖 Phase 2 新機能（オプトイン）
@@ -67,7 +78,7 @@ function App() {
     // ※実際のコードでは、QuestionSchedulerのインスタンスにアクセスする必要があります
     // この実装は各タブコンポーネントで行うのが適切です
   }, []);
-  
+
   // ... 既存のコード
 }
 ```
@@ -111,12 +122,14 @@ const result = scheduler.schedule({
 ### Phase 1のテスト
 
 1. **時間ブーストのテスト**
+
    ```bash
    # 暗記タブで問題を解く → 2分待つ → 再度開く
    # → その語句の優先度が上がっていることを確認
    ```
 
 2. **カテゴリー遷移のテスト**
+
    ```bash
    # 同じ語句で「分からない」を2回押す
    # → カテゴリーが「incorrect」になることを確認
@@ -185,18 +198,18 @@ const coordinator = scheduler['aiCoordinator']; // private accessが必要
 if (coordinator) {
   coordinator.updateConfig({
     weights: {
-      memory: 1.0,          // 記憶AI（最重要）
-      cognitiveLoad: 0.8,   // 認知負荷AI
+      memory: 1.0, // 記憶AI（最重要）
+      cognitiveLoad: 0.8, // 認知負荷AI
       errorPrediction: 0.7, // 誤答予測AI
-      learningStyle: 0.5,   // 学習スタイルAI
-      linguistic: 0.4,      // 言語学的AI
-      contextual: 0.6,      // 文脈的AI
-      gamification: 0.3,    // ゲーミフィケーションAI
+      learningStyle: 0.5, // 学習スタイルAI
+      linguistic: 0.4, // 言語学的AI
+      contextual: 0.6, // 文脈的AI
+      gamification: 0.3, // ゲーミフィケーションAI
     },
     emergencyThresholds: {
-      forgettingRisk: 150,      // 忘却リスク閾値
-      cognitiveOverload: true,  // 認知過負荷で緊急フラグ
-      consecutiveErrors: 5,     // 連続不正解閾値
+      forgettingRisk: 150, // 忘却リスク閾値
+      cognitiveOverload: true, // 認知過負荷で緊急フラグ
+      consecutiveErrors: 5, // 連続不正解閾値
     },
     debugMode: true, // デバッグモード有効化
   });
@@ -241,6 +254,7 @@ if (coordinator) {
 ## 📝 変更履歴
 
 ### 2025-12-19 Phase 1+2完了
+
 - ✅ 時間ブースト修正（分単位）
 - ✅ カテゴリー遷移ルール明確化
 - ✅ シミュレーター双方向遷移

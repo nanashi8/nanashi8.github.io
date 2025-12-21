@@ -1,3 +1,11 @@
+---
+title: デザインシステムルール
+created: 2025-11-25
+updated: 2025-12-07
+status: in-progress
+tags: [development, ai, dark-mode]
+---
+
 # デザインシステムルール
 
 ## 概要
@@ -9,11 +17,13 @@
 ### 基本ルール
 
 **❌ 禁止事項:**
+
 - ハードコードされた色の使用（`#ffffff`, `rgb()`, `white`, `black`等）
 - ライトモード専用またはダークモード専用の色指定
 - 直接色指定によるスタイル適用
 
 **✅ 必須事項:**
+
 - すべての色はCSS変数経由で指定
 - ライトモード・ダークモード両方への対応
 - セマンティックな色変数の使用
@@ -26,22 +36,22 @@
 /* src/index.css の :root で定義 */
 
 /* 基本文字色 */
---text-color: #333333;           /* メイン文字色: 黒に近いダークグレー */
---text-secondary: #666666;       /* サブ文字色: ミディアムグレー */
---text-tertiary: #999999;        /* 補助文字色: ライトグレー */
+--text-color: #333333; /* メイン文字色: 黒に近いダークグレー */
+--text-secondary: #666666; /* サブ文字色: ミディアムグレー */
+--text-tertiary: #999999; /* 補助文字色: ライトグレー */
 
 /* 基本背景色 */
---background: #ffffff;           /* メイン背景: 白 */
---bg-secondary: #f8f9fa;        /* セカンダリ背景: オフホワイト */
---bg-tertiary: #e9ecef;         /* ターシャリ背景: ライトグレー */
+--background: #ffffff; /* メイン背景: 白 */
+--bg-secondary: #f8f9fa; /* セカンダリ背景: オフホワイト */
+--bg-tertiary: #e9ecef; /* ターシャリ背景: ライトグレー */
 
 /* ボーダー・区切り線 */
---border-color: #dddddd;        /* ボーダー: ライトグレー */
+--border-color: #dddddd; /* ボーダー: ライトグレー */
 
 /* 基本ボタン */
---btn-primary-bg: #667eea;      /* プライマリボタン背景: 紫 */
---btn-primary-text: #ffffff;    /* プライマリボタン文字: 白 */
---btn-primary-hover: #5568d3;   /* プライマリボタンホバー: 濃い紫 */
+--btn-primary-bg: #667eea; /* プライマリボタン背景: 紫 */
+--btn-primary-text: #ffffff; /* プライマリボタン文字: 白 */
+--btn-primary-hover: #5568d3; /* プライマリボタンホバー: 濃い紫 */
 ```
 
 #### ダークモード
@@ -50,33 +60,35 @@
 /* src/App.css の .dark-mode で定義 */
 
 /* 基本文字色 */
---text-color: #e0e0e0;          /* メイン文字色: 白に近いライトグレー */
---text-secondary: #b0b0b0;      /* サブ文字色: ミディアムグレー */
---text-tertiary: #888888;       /* 補助文字色: グレー */
+--text-color: #e0e0e0; /* メイン文字色: 白に近いライトグレー */
+--text-secondary: #b0b0b0; /* サブ文字色: ミディアムグレー */
+--text-tertiary: #888888; /* 補助文字色: グレー */
 
 /* 基本背景色 */
---background: #1a1a1a;          /* メイン背景: ダークグレー（ほぼ黒） */
---bg-secondary: #2a2a2a;        /* セカンダリ背景: ダークグレー */
---bg-tertiary: #3a3a3a;         /* ターシャリ背景: ミディアムグレー */
+--background: #1a1a1a; /* メイン背景: ダークグレー（ほぼ黒） */
+--bg-secondary: #2a2a2a; /* セカンダリ背景: ダークグレー */
+--bg-tertiary: #3a3a3a; /* ターシャリ背景: ミディアムグレー */
 
 /* ボーダー・区切り線 */
---border-color: #555555;        /* ボーダー: ダークグレー */
+--border-color: #555555; /* ボーダー: ダークグレー */
 
 /* 基本ボタン */
---btn-primary-bg: #8b9ef5;      /* プライマリボタン背景: 明るい紫 */
---btn-primary-text: #ffffff;    /* プライマリボタン文字: 白 */
---btn-primary-hover: #7a8de4;   /* プライマリボタンホバー: 紫 */
+--btn-primary-bg: #8b9ef5; /* プライマリボタン背景: 明るい紫 */
+--btn-primary-text: #ffffff; /* プライマリボタン文字: 白 */
+--btn-primary-hover: #7a8de4; /* プライマリボタンホバー: 紫 */
 ```
 
 ### コントラスト比の要件
 
 #### ライトモード
+
 - 背景: 白 `#ffffff`
 - メイン文字: ダークグレー `#333333`（コントラスト比: 12.63:1 ✅ AAA）
 - サブ文字: ミディアムグレー `#666666`（コントラスト比: 5.74:1 ✅ AA）
 - 補助文字: ライトグレー `#999999`（コントラスト比: 2.85:1 ⚠️ 最小サイズのみ）
 
 #### ダークモード
+
 - 背景: ダークグレー `#1a1a1a`
 - メイン文字: ライトグレー `#e0e0e0`（コントラスト比: 12.09:1 ✅ AAA）
 - サブ文字: グレー `#b0b0b0`（コントラスト比: 7.24:1 ✅ AAA）
@@ -118,14 +130,14 @@
 }
 
 .dark-mode .button {
-  background: var(--bg-secondary);  /* 同じCSS変数なら不要 */
+  background: var(--bg-secondary); /* 同じCSS変数なら不要 */
 }
 ```
 
 ```css
 /* ✅ 正しい方法 */
 .button {
-  background: var(--bg-secondary);  /* CSS変数が自動的にモードに応じて変化 */
+  background: var(--bg-secondary); /* CSS変数が自動的にモードに応じて変化 */
 }
 ```
 
@@ -134,22 +146,22 @@
 ```css
 /* ❌ ライトモードで暗いグレーを直接指定（視認性低下） */
 .template-btn {
-  background: #6c757d;  /* ダークグレー - ライトモードで見づらい */
+  background: #6c757d; /* ダークグレー - ライトモードで見づらい */
 }
 
 .btn-skip-word:hover {
-  background: #757575;  /* ダークグレー - ライトモードで見づらい */
+  background: #757575; /* ダークグレー - ライトモードで見づらい */
 }
 ```
 
 ```css
 /* ✅ 正しい方法 */
 .template-btn {
-  background: #9e9e9e;  /* ライトモード: 明るいグレー */
+  background: #9e9e9e; /* ライトモード: 明るいグレー */
 }
 
 .dark-mode .template-btn {
-  background: #6c757d;  /* ダークモード: 暗いグレー */
+  background: #6c757d; /* ダークモード: 暗いグレー */
 }
 
 /* または専用のCSS変数を作成 */
@@ -185,11 +197,11 @@
 ```tsx
 // コンポーネント内での使用
 const MessageBox = ({ type, children }) => (
-  <div 
+  <div
     style={{
       backgroundColor: `var(--${type}-bg)`,
       color: `var(--${type}-text)`,
-      border: `1px solid var(--${type}-border)`
+      border: `1px solid var(--${type}-border)`,
     }}
   >
     {children}
@@ -202,15 +214,15 @@ const MessageBox = ({ type, children }) => (
 ```css
 /* 深度を表現するために3段階の背景色を使用 */
 .page {
-  background: var(--background);        /* レベル0: ページ背景 */
+  background: var(--background); /* レベル0: ページ背景 */
 }
 
 .card {
-  background: var(--bg-secondary);      /* レベル1: カード背景 */
+  background: var(--bg-secondary); /* レベル1: カード背景 */
 }
 
 .card-section {
-  background: var(--bg-tertiary);       /* レベル2: カード内セクション */
+  background: var(--bg-tertiary); /* レベル2: カード内セクション */
 }
 ```
 
@@ -219,6 +231,7 @@ const MessageBox = ({ type, children }) => (
 ### UI実装時の必須確認項目
 
 #### 色の使用
+
 - [ ] すべての`background`プロパティがCSS変数を使用
 - [ ] すべての`color`プロパティがCSS変数を使用
 - [ ] すべての`border-color`プロパティがCSS変数を使用
@@ -226,6 +239,7 @@ const MessageBox = ({ type, children }) => (
 - [ ] グレー系の色（`#[0-9][0-9][0-9][0-9][0-9][0-9]`）が直接指定されていない
 
 #### モード対応
+
 - [ ] ライトモードで視覚的に確認済み
 - [ ] ダークモードで視覚的に確認済み
 - [ ] 両モードで文字が読みやすい
@@ -234,6 +248,7 @@ const MessageBox = ({ type, children }) => (
 - [ ] 両モードでホバー・フォーカス状態が明確
 
 #### CSS変数の定義
+
 - [ ] 新しいCSS変数は`src/index.css`の`:root`に定義
 - [ ] 新しいCSS変数は`src/App.css`の`.dark-mode`にも定義
 - [ ] 変数名がセマンティックで用途が明確
@@ -262,25 +277,28 @@ grep -rn ":\s*white\|:\s*black" src/**/*.css | grep -v "dark-mode"
 以下のケースでは、直接色指定が許可されます:
 
 1. **グラデーション内の色**（両モードで同じ場合）
+
    ```css
    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
    ```
 
 1. **セマンティックカラー**（ブランドカラー等、モードで変えない場合）
+
    ```css
-   --primary-color: #667eea;  /* 両モードで共通のブランドカラー */
+   --primary-color: #667eea; /* 両モードで共通のブランドカラー */
    ```
 
 1. **特定の機能色**（成功・エラー等、認識しやすさ優先）
+
    ```css
-   --success-base: #28a745;  /* 緑は両モードで認識しやすい */
-   --error-base: #dc3545;    /* 赤は両モードで認識しやすい */
+   --success-base: #28a745; /* 緑は両モードで認識しやすい */
+   --error-base: #dc3545; /* 赤は両モードで認識しやすい */
    ```
 
 1. **`.dark-mode`セレクタ内での色指定**
    ```css
    .dark-mode .component {
-     background: #2a2a2a;  /* ダークモード専用スタイルなので許可 */
+     background: #2a2a2a; /* ダークモード専用スタイルなので許可 */
    }
    ```
 
@@ -294,6 +312,6 @@ grep -rn ":\s*white\|:\s*black" src/**/*.css | grep -v "dark-mode"
 
 ## 🔄 更新履歴
 
-| 日付 | バージョン | 内容 |
-|------|-----------|------|
-| 2025-11-25 | 1.0.0 | 初版作成。ライトモード/ダークモードの基本ルール定義 |
+| 日付       | バージョン | 内容                                                |
+| ---------- | ---------- | --------------------------------------------------- |
+| 2025-11-25 | 1.0.0      | 初版作成。ライトモード/ダークモードの基本ルール定義 |

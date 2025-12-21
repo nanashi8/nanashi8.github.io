@@ -1,3 +1,11 @@
+---
+title: 熟語データ生成ワークフロー
+created: 2025-11-16
+updated: 2025-12-07
+status: deprecated
+tags: [archive]
+---
+
 # 熟語データ生成ワークフロー
 
 ## 概要

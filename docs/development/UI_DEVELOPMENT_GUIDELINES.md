@@ -1,3 +1,11 @@
+---
+title: UI開発ガイドライン
+created: 2025-11-19
+updated: 2025-12-07
+status: in-progress
+tags: [development, ai, dark-mode]
+---
+
 # UI開発ガイドライン
 
 ## 概要
@@ -31,22 +39,26 @@
 ```tsx
 // ✅ 正しい: CSS変数を使用
 const MyComponent = () => (
-  <div style={{
-    backgroundColor: 'var(--background)',
-    color: 'var(--text-color)',
-    borderColor: 'var(--border-color)'
-  }}>
+  <div
+    style={{
+      backgroundColor: 'var(--background)',
+      color: 'var(--text-color)',
+      borderColor: 'var(--border-color)',
+    }}
+  >
     コンテンツ
   </div>
 );
 
 // ❌ 間違い: ハードコードされた色（絶対に使用禁止）
 const BadComponent = () => (
-  <div style={{
-    backgroundColor: '#ffffff',  // ダメ！
-    color: '#000000',            // ダメ！
-    borderColor: 'white'         // ダメ！
-  }}>
+  <div
+    style={{
+      backgroundColor: '#ffffff', // ダメ！
+      color: '#000000', // ダメ！
+      borderColor: 'white', // ダメ！
+    }}
+  >
     コンテンツ
   </div>
 );
@@ -58,28 +70,17 @@ const BadComponent = () => (
 /* 基本変数 (src/index.css で定義、.dark-mode で自動オーバーライド) */
 
 /* 背景色 */
---background: ライトモード時は #ffffff、ダークモード時は #1a1a1a
---bg-secondary: ライトモード時は #f8f9fa、ダークモード時は #2a2a2a
---bg-tertiary: ライトモード時は #e9ecef、ダークモード時は #3a3a3a
-
-/* テキスト色 */
---text-color: ライトモード時は #333333、ダークモード時は #e0e0e0
---text-secondary: ライトモード時は #666666、ダークモード時は #b0b0b0
---text-tertiary: ライトモード時は #999999、ダークモード時は #888888
-
-/* ボーダー */
---border-color: ライトモード時は #dddddd、ダークモード時は #555555
-
-/* ボタン */
---btn-primary-bg: ライトモード時は #667eea、ダークモード時は #8b9ef5
---btn-primary-text: ライトモード時は #ffffff、ダークモード時は #ffffff
---btn-primary-hover: ライトモード時は #5568d3、ダークモード時は #7a8de4
-
-/* セマンティックカラー */
---success-color: #28a745（両モードで共通、必要に応じてオーバーライド）
---error-color: #dc3545
---warning-color: #ffc107
---info-color: #17a2b8
+--background: ライトモード時は #ffffff、ダークモード時は #1a1a1a --bg-secondary: ライトモード時は
+  #f8f9fa、ダークモード時は #2a2a2a --bg-tertiary: ライトモード時は #e9ecef、ダークモード時は
+  #3a3a3a /* テキスト色 */ --text-color: ライトモード時は #333333、ダークモード時は #e0e0e0
+  --text-secondary: ライトモード時は #666666、ダークモード時は #b0b0b0
+  --text-tertiary: ライトモード時は #999999、ダークモード時は #888888 /* ボーダー */
+  --border-color: ライトモード時は #dddddd、ダークモード時は #555555 /* ボタン */
+  --btn-primary-bg: ライトモード時は #667eea、ダークモード時は #8b9ef5
+  --btn-primary-text: ライトモード時は #ffffff、ダークモード時は #ffffff
+  --btn-primary-hover: ライトモード時は #5568d3、ダークモード時は #7a8de4 /* セマンティックカラー */
+  --success-color: #28a745（両モードで共通、必要に応じてオーバーライド） --error-color: #dc3545
+  --warning-color: #ffc107 --info-color: #17a2b8;
 ```
 
 #### 利用可能なCSS変数の完全リスト
@@ -87,6 +88,7 @@ const BadComponent = () => (
 詳細は`src/index.css`を参照してください。主要な変数：
 
 **基本色**
+
 - `--text-color`: メインテキスト
 - `--text-secondary`: サブテキスト
 - `--text-tertiary`: 補助テキスト・プレースホルダー
@@ -96,6 +98,7 @@ const BadComponent = () => (
 - `--border-color`: ボーダー・区切り線
 
 **ボタン**
+
 - `--btn-primary-bg`: プライマリボタン背景
 - `--btn-primary-text`: プライマリボタンテキスト
 - `--btn-primary-hover`: プライマリボタンホバー
@@ -103,12 +106,14 @@ const BadComponent = () => (
 - `--btn-secondary-text`: セカンダリボタンテキスト
 
 **セマンティック**
+
 - `--success-color/bg/border/text`: 成功状態
 - `--error-color/bg/border/text`: エラー状態
 - `--warning-color/bg/border/text`: 警告状態
 - `--info-color/bg/border/text`: 情報表示
 
 **UI要素**
+
 - `--card-bg/border/shadow`: カード
 - `--shadow-sm/md/lg`: 影
 - `--overlay-bg`: オーバーレイ
@@ -232,16 +237,12 @@ interface MyComponentProps {
 export const MyComponent: React.FC<MyComponentProps> = ({
   title,
   onAction,
-  variant = 'primary'
+  variant = 'primary',
 }) => {
   return (
     <div className={`my-component my-component--${variant}`}>
       <h2 className="my-component__title">{title}</h2>
-      <button
-        className="my-component__button"
-        onClick={onAction}
-        aria-label={`${title}を実行`}
-      >
+      <button className="my-component__button" onClick={onAction} aria-label={`${title}を実行`}>
         実行
       </button>
     </div>
@@ -331,14 +332,10 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = () => {
@@ -411,12 +408,12 @@ export const ThemeToggle: React.FC = () => {
 
 ```css
 /* 不十分 */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --text-primary: #999999; /* ❌ コントラスト比低い */
 }
 
 /* 適切 */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --text-primary: #e0e0e0; /* ✅ コントラスト比十分 */
 }
 ```
@@ -440,7 +437,7 @@ export const ThemeToggle: React.FC = () => {
 **解決策**:
 
 ```css
-[data-theme="dark"] img {
+[data-theme='dark'] img {
   filter: brightness(0.8);
 }
 
@@ -449,7 +446,7 @@ export const ThemeToggle: React.FC = () => {
   content: url('/logo-light.png');
 }
 
-[data-theme="dark"] .logo {
+[data-theme='dark'] .logo {
   content: url('/logo-dark.png');
 }
 ```

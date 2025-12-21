@@ -1,3 +1,11 @@
+---
+title: デプロイ（超かんたんメモ）
+created: 2025-11-12
+updated: 2025-12-07
+status: in-progress
+tags: [reference, ai]
+---
+
 # デプロイ（超かんたんメモ）
 
 目的：`main` と `gh-pages` の違いを短くまとめ、あとで見返せるように残します。
