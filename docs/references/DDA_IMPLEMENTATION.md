@@ -461,7 +461,7 @@ if (cachedPriorities.has(word)) {
 ### 関連プロジェクト
 
 7. **本プロジェクトドキュメント**
-   - [14AI統合ガイド](./14AI_INTEGRATION_GUIDE.md)
+   - [14AI統合ガイド](./AI_INTEGRATION_GUIDE.md)
    - [統一スケジューラー実装完了レポート](./UNIFIED_SCHEDULER_IMPLEMENTATION_COMPLETE.md)
    - [統一スケジューラー計画](../plans/UNIFIED_QUESTION_SCHEDULER_PLAN.md)
 
