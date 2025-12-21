@@ -434,4 +434,4 @@ grep -rn "\.dark-mode" src/**/*.css | \
 
 - [DESIGN_SYSTEM_RULES.md](./DESIGN_SYSTEM_RULES.md) - デザインシステム全体のルール
 - [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) - UI開発ガイドライン
-- [AI_WORKFLOW_INSTRUCTIONS.md](../guidelines/AI_WORKFLOW_INSTRUCTIONS.md) - AI開発ワークフロー
+- [AI_WORKFLOW_INSTRUCTIONS.md](../references/AI_WORKFLOW_INSTRUCTIONS.md) - AI開発ワークフロー
