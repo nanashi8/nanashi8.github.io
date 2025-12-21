@@ -28,6 +28,33 @@ jobs:
           config-file: '.github/markdown-link-check-config.json'
           check-modified-files-only: 'yes'
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run advanced link analysis
+        run: |
+          echo "🔍 Running advanced link analysis..."
+          node scripts/analyze-doc-links.mjs
+
+          # 断線数を取得
+          BROKEN_COUNT=$(node scripts/analyze-doc-links.mjs | grep -oP '❌ 断線リンク: \K\d+')
+          echo "Found $BROKEN_COUNT broken links"
+
+          # 許容閾値（archive内やfalse positive含む）
+          THRESHOLD=80
+          if [ "$BROKEN_COUNT" -gt "$THRESHOLD" ]; then
+            echo "❌ Too many broken links: $BROKEN_COUNT (threshold: $THRESHOLD)"
+            exit 1
+          fi
+
+          echo "✅ Link quality acceptable: $BROKEN_COUNT broken links"
+
       - name: Check docs integrity
         run: |
           echo "Checking for broken internal links..."

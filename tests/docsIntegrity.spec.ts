@@ -15,11 +15,7 @@ describe('Docs integrity and relocation safety', () => {
     ).toBe(true);
   });
 
-  it('old path removed after relocation', () => {
-    const oldPath =
-      '/Users/yuichinakamura/Documents/nanashi8-github-io-git/docs/INTEGRATED_QUALITY_PIPELINE.md';
-    expect(exists(oldPath)).toBe(false);
-  });
+  // 旧ルートdocs/は削除済み（nanashi8.github.io/docs/に統合完了）
 
   it('core guides remain present', () => {
     // Keep TDD guide and testing summaries
