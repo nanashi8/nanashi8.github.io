@@ -529,7 +529,7 @@ QuestionSchedulerは以下を実装:
 
 **更新内容**:
 - validate_grammar_advanced.py の最新検証項目を反映
-- [GRAMMAR_QUESTION_VALIDATION.md](../guidelines/GRAMMAR_QUESTION_VALIDATION.md) との同期
+- [../guidelines/GRAMMAR_QUESTION_VALIDATION.md](../guidelines/../guidelines/GRAMMAR_QUESTION_VALIDATION.md) との同期
 
 #### 3.3 specification-enforcement.instructions.md 更新（2時間）
 
@@ -572,7 +572,7 @@ npm run validate:grammar:analyze # 詳細分析
 ```
 
 ## エラー時の対応
-[GRAMMAR_QUESTION_VALIDATION.md](GRAMMAR_QUESTION_VALIDATION.md) 参照
+[../guidelines/GRAMMAR_QUESTION_VALIDATION.md](../guidelines/GRAMMAR_QUESTION_VALIDATION.md) 参照
 ```
 
 #### 4.2 passage関連ガイドラインの作成（3時間）

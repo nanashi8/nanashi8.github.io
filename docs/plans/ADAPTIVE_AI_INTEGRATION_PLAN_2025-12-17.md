@@ -485,8 +485,8 @@ export function useLearningEngine<T>(config: LearningEngineConfig) {
 
 ## 📚 参考資料
 
-- [CHANGELOG_ADAPTIVE_LEARNING.md](../CHANGELOG_ADAPTIVE_LEARNING.md) - 適応型学習AI仕様
-- [adaptive-learning-api.md](../adaptive-learning-api.md) - API仕様書
+- [CHANGELOG_ADAPTIVE_LEARNING.md](../../CHANGELOG_ADAPTIVE_LEARNING.md) - 適応型学習AI仕様
+- [adaptive-learning-api.md](../specifications/adaptive-learning-api.md) - API仕様書
 - [MemorizationView.tsx](../../src/components/MemorizationView.tsx) - 成功事例（Phase 0）
 - [useAdaptiveLearning.ts](../../src/hooks/useAdaptiveLearning.ts) - フック実装
 

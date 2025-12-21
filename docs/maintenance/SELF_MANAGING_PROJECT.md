@@ -274,8 +274,8 @@ python3 scripts/auto_fix_project_structure.py --commit
 
 ## 📚 関連ドキュメント
 
-- [プロジェクト構造検証](./PROJECT_STRUCTURE_VALIDATION.md)
-- [品質保証システム](../docs/quality/QUALITY_SYSTEM.md)
+- [プロジェクト構造検証](../design/PROJECT_STRUCTURE_VALIDATION.md)
+- [品質保証システム](../quality/QUALITY_SYSTEM.md)
 - [開発ガイドライン](../.aitk/instructions/development-guidelines.instructions.md)
 
 ---

@@ -90,8 +90,8 @@ npm run preview
 
 ## 📚 関連ドキュメント
 
-- [23. デプロイ手順](../specifications/23-deployment.md) - GitHub Pagesへの公開
-- [24. テスト戦略](../specifications/24-testing-strategy.md) - テストの実行
+- [23. デプロイ手順](deployment.md) - GitHub Pagesへの公開
+- [24. テスト戦略](testing-strategy.md) - テストの実行
 - [**UI開発ガイドライン**](./UI_DEVELOPMENT_GUIDELINES.md) - ⚠️ UI開発前に必読：CSS変数使用規則
 
 ---

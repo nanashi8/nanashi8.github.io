@@ -155,10 +155,10 @@ jobs:
 
 以下のファイルは**絶対に移動・削除禁止**:
 
-- [specifications/QUESTION_SCHEDULER_SPEC.md](specifications/QUESTION_SCHEDULER_SPEC.md) - 16回
-- [guidelines/META_AI_TROUBLESHOOTING.md](guidelines/META_AI_TROUBLESHOOTING.md) - 12回
-- [references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md](references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md) - 10回
-- [specifications/15-data-structures.md](specifications/15-data-structures.md) - 10回
+- [../specifications/QUESTION_SCHEDULER_SPEC.md](../specifications/QUESTION_SCHEDULER_SPEC.md) - 16回
+- [../guidelines/META_AI_TROUBLESHOOTING.md](../guidelines/META_AI_TROUBLESHOOTING.md) - 12回
+- [../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md](../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md) - 10回
+- [../specifications/15-data-structures.md](../specifications/15-data-structures.md) - 10回
 
 ## 🔍 検証コマンド
 
