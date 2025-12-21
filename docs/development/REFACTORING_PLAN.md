@@ -916,8 +916,8 @@ import ScoreBoard from '@/components/organisms/ScoreBoard';
 ## 📚 関連ドキュメント
 
 - [技術的ビジョン](../quality/TECHNICAL_VISION.md)
-- [品質管理パイプライン](../quality/QUALITY_PIPELINE.md)
-- [TypeScript開発ガイドライン](../guidelines/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)
+- [品質管理パイプライン](../quality/archive/QUALITY_PIPELINE.md)
+- [TypeScript開発ガイドライン](TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)
 - [CSS開発ガイドライン](CSS_DEVELOPMENT_GUIDELINES.md)
 - [健康診断レポート](../quality/HEALTH_CHECK_REPORT.md)
 

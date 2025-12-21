@@ -561,7 +561,7 @@ grep -c "\.quiz-card {" src/styles/themes/dark.css
 - [BEM公式サイト](https://en.bem.info/)
 - [CSS Variables (MDN)](https://developer.mozilla.org/../Web/CSS/Using_CSS_custom_properties)
 - [UI開発ガイドライン](./UI_DEVELOPMENT_GUIDELINES.md)
-- [VS Code Simple Browser ガイド](../how-to/VS_CODE_SIMPLE_BROWSER_GUIDE.md)
+- [VS Code Simple Browser ガイド](../references/VS_CODE_SIMPLE_BROWSER_GUIDE.md)
 
 ---
 
