@@ -103,14 +103,14 @@ ELSE
 
 ### 4. 重み付けロジック
 
-| 状態 | 重み | 意味 |
-|------|------|------|
-| 初期 | 0.5 | 中程度のリスク |
-| 失敗発生 | +0.1 | リスク増加 |
-| 復旧成功 | -0.05 | リスク減少 |
-| 高リスク閾値 | 0.7 | 重点監視対象 |
-| 最大値 | 1.0 | 最高リスク |
-| 最小値 | 0.1 | 最低リスク |
+| 状態         | 重み  | 意味           |
+| ------------ | ----- | -------------- |
+| 初期         | 0.5   | 中程度のリスク |
+| 失敗発生     | +0.1  | リスク増加     |
+| 復旧成功     | -0.05 | リスク減少     |
+| 高リスク閾値 | 0.7   | 重点監視対象   |
+| 最大値       | 1.0   | 最高リスク     |
+| 最小値       | 0.1   | 最低リスク     |
 
 ---
 
@@ -118,7 +118,7 @@ ELSE
 
 ### 1. データベース
 
-- **[.aitk/failure-patterns.json](.aitk/failure-patterns.json)**
+- **[.aitk/failure-patterns.json](../../.aitk/failure-patterns.json)**
   - 失敗パターンの記録
   - 発生回数、復旧回数、重み、成功率
   - 収斂メトリクス
@@ -132,6 +132,7 @@ ELSE
   - レポート生成
 
 **使用方法**:
+
 ```bash
 # 失敗を記録
 node scripts/analyze-failure-pattern.mjs record property-naming-error "Property 'correctCount' does not exist" 24
@@ -154,6 +155,7 @@ node scripts/analyze-failure-pattern.mjs analyze "Property does not exist"
   - GitHub Actionsチェックスクリプト生成
 
 **使用方法**:
+
 ```bash
 # Instructions更新
 node scripts/update-instructions.mjs update
@@ -175,11 +177,13 @@ node scripts/update-instructions.mjs all
   - Git自動コミット
 
 **トリガー**:
+
 - `main`, `develop` へのpush
 - PR作成
 - 手動実行（workflow_dispatch）
 
 **手動失敗記録**:
+
 ```bash
 # GitHub Actions手動実行
 # 失敗記録: property-naming-error:Property does not exist:24
@@ -188,7 +192,7 @@ node scripts/update-instructions.mjs all
 
 ### 5. 自動生成ファイル
 
-- **[.aitk/instructions/adaptive-guard-system.instructions.md](.aitk/instructions/adaptive-guard-system.instructions.md)**
+- **[.aitk/instructions/adaptive-guard-system.instructions.md](../../.aitk/instructions/adaptive-guard-system.instructions.md)**
   - **自動生成**される適応的Instructions
   - 高リスクパターン一覧
   - 必須チェックリスト
@@ -333,7 +337,7 @@ node scripts/analyze-failure-pattern.mjs report
 
 ```yaml
 adaptive-guard-learning.yml
-  ↓
+↓
 - テスト実行
 - 失敗自動検出
 - パターン記録
@@ -388,17 +392,20 @@ AIは直接学習できないが、**サーバントが代わりに学習し、A
 ## 🎯 収斂の定義
 
 **収斂条件**:
+
 ```
 成功率 >= 95%
 ```
 
 **収斂状態**:
+
 - システムは安定稼働
 - 失敗率は5%以下
 - 高リスクパターンは解消
 - Instructions は最適化済み
 
 **学習中**:
+
 - 失敗パターンを蓄積
 - Instructions を動的に更新
 - 重みを調整
@@ -408,11 +415,11 @@ AIは直接学習できないが、**サーバントが代わりに学習し、A
 
 ## 📚 参考資料
 
-- [失敗パターンデータベース](.aitk/failure-patterns.json)
-- [適応的Instructions](.aitk/instructions/adaptive-guard-system.instructions.md)（自動生成）
-- [AI実装チェックリスト](.aitk/instructions/ai-code-quality-checklist.instructions.md)
-- [リファクタリングガイド](.aitk/instructions/refactoring-safety-guide.instructions.md)
-- [プロパティ命名規則](.aitk/instructions/property-naming-convention.instructions.md)
+- [失敗パターンデータベース](../../.aitk/failure-patterns.json)
+- [適応的Instructions](../../.aitk/instructions/adaptive-guard-system.instructions.md)（自動生成）
+- [AI実装チェックリスト](../../.aitk/instructions/ai-code-quality-checklist.instructions.md)
+- [リファクタリングガイド](../../.aitk/instructions/refactoring-safety-guide.instructions.md)
+- [プロパティ命名規則](../../.aitk/instructions/property-naming-convention.instructions.md)
 
 ---
 
@@ -421,6 +428,7 @@ AIは直接学習できないが、**サーバントが代わりに学習し、A
 このシステムは、「AIは成長できないが、サーバントは成長させられる」というユーザーの洞察から生まれました。
 
 **設計思想**:
+
 > プロジェクトとAIを仲介する強制装置を設置し、失敗が分かる度にサーバントを通して自動調整する。経験を積むことで学習し、収斂していく成長モデルを実現する。
 
 このシステムにより、AIの限界を超えて、**プロジェクト全体が学習・成長**します。
