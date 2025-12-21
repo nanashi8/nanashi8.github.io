@@ -111,7 +111,7 @@ export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
 export type DataSource = 'all' | 'junior' | 'intermediate' | 'advanced' | 'standard' | string; // stringはカスタム問題セットID
 
-// 10個の正式カテゴリ（docs/19-junior-high-vocabulary.md参照）
+// 10個の正式カテゴリ（docs/specifications/19-junior-high-vocabulary.md参照）
 export const OFFICIAL_CATEGORIES = [
   '言語基本',
   '学校・学習',

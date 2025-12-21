@@ -61,13 +61,13 @@ ls -la src/ai/scheduler/AntiVibrationFilter.ts
 ls -la src/utils/logger.ts
 
 # 7つのAIの存在確認
-ls -la src/ai/MemoryAI.ts
-ls -la src/ai/CognitiveLoadAI.ts
-ls -la src/ai/ErrorPredictionAI.ts
-ls -la src/ai/LearningStyleAI.ts
-ls -la src/ai/LinguisticAI.ts
-ls -la src/ai/ContextualRelevanceAI.ts
-ls -la src/ai/GamificationAI.ts
+ls -la src/ai/specialists/MemoryAI.ts
+ls -la src/ai/specialists/CognitiveLoadAI.ts
+ls -la src/ai/specialists/ErrorPredictionAI.ts
+ls -la src/ai/specialists/LearningStyleAI.ts
+ls -la src/ai/specialists/LinguisticAI.ts
+ls -la src/ai/specialists/ContextualAI.ts
+ls -la src/ai/specialists/GamificationAI.ts
 ```
 
 **全て存在する場合**: 復旧開始  
