@@ -78,7 +78,7 @@
 - [../AI_GRAMMAR_QUESTION_CREATION.md](../AI_GRAMMAR_QUESTION_CREATION.md) - AI による文法問題生成
 
 ### 品質管理
-- [../../quality/grammar_quality_report.md](../../quality/grammar_quality_report.md) - 文法品質レポート
+- [../../quality/grammar_quality_report.md](../../quality/GRAMMAR_QUALITY_REPORT.md) - 文法品質レポート
 - [../../quality/QUALITY_SYSTEM.md](../../quality/QUALITY_SYSTEM.md) - 品質保証システム
 
 ### 公式資料

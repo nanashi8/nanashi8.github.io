@@ -32,22 +32,22 @@ const CATEGORY_MAP = {
 // ステータス推定（ファイル名/パスから）
 function estimateStatus(filePath, content) {
   const lower = filePath.toLowerCase();
-  
+
   // archive, deprecated → deprecated
   if (lower.includes('archive') || lower.includes('deprecated')) {
     return 'deprecated';
   }
-  
+
   // COMPLETE, DONE, IMPLEMENTEDなどがタイトルにあれば→ implemented
   if (/complete|done|implemented|finished/i.test(content.slice(0, 500))) {
     return 'implemented';
   }
-  
+
   // PLAN, TODO, PROPOSAL → planned
   if (/\b(plan|todo|proposal|draft)\b/i.test(content.slice(0, 500))) {
     return 'planned';
   }
-  
+
   // デフォルトは in-progress
   return 'in-progress';
 }
@@ -56,7 +56,7 @@ function estimateStatus(filePath, content) {
 function extractTitle(content, fileName) {
   const match = content.match(/^#\s+(.+)$/m);
   if (match) return match[1].trim();
-  
+
   // ファイル名からタイトル生成
   return fileName
     .replace('.md', '')
@@ -72,13 +72,13 @@ function getGitDates(filePath) {
       `git log --follow --format=%ad --date=short "${filePath}" | tail -1`,
       { encoding: 'utf-8' }
     ).trim();
-    
+
     // 最後のコミット日 (updated)
     const updated = execSync(
       `git log -1 --format=%ad --date=short "${filePath}"`,
       { encoding: 'utf-8' }
     ).trim();
-    
+
     return { created: created || null, updated: updated || null };
   } catch (error) {
     return { created: null, updated: null };
@@ -89,7 +89,7 @@ function getGitDates(filePath) {
 function extractCategory(filePath) {
   const match = filePath.match(/docs\/([^/]+)/);
   if (!match) return 'other';
-  
+
   const dir = match[1];
   return CATEGORY_MAP[dir] || 'other';
 }
@@ -97,7 +97,7 @@ function extractCategory(filePath) {
 // タグ生成
 function generateTags(filePath, content, category) {
   const tags = [category];
-  
+
   // 内容からタグ抽出
   const lowerContent = content.toLowerCase();
   if (lowerContent.includes('ai')) tags.push('ai');
@@ -105,7 +105,7 @@ function generateTags(filePath, content, category) {
   if (lowerContent.includes('adaptive')) tags.push('adaptive');
   if (lowerContent.includes('test')) tags.push('test');
   if (lowerContent.includes('dark mode') || lowerContent.includes('dark-mode')) tags.push('dark-mode');
-  
+
   return [...new Set(tags)]; // 重複削除
 }
 
@@ -117,9 +117,9 @@ function generateFrontMatter(filePath, content) {
   const category = extractCategory(filePath);
   const status = estimateStatus(filePath, content);
   const tags = generateTags(filePath, content, category);
-  
+
   const today = new Date().toISOString().split('T')[0];
-  
+
   return `---
 title: ${title}
 created: ${created || today}
@@ -140,16 +140,16 @@ function hasFrontMatter(content) {
 function processMDFile(filePath) {
   try {
     const content = readFileSync(filePath, 'utf-8');
-    
+
     // 既にFront Matterがあればスキップ
     if (hasFrontMatter(content)) {
       console.log(`⏭️  スキップ: ${filePath} (既存)`);
       return false;
     }
-    
+
     const frontMatter = generateFrontMatter(filePath, content);
     const newContent = frontMatter + content;
-    
+
     writeFileSync(filePath, newContent, 'utf-8');
     console.log(`✅ 追加: ${filePath}`);
     return true;
@@ -162,15 +162,15 @@ function processMDFile(filePath) {
 // エントリーポイント
 function main() {
   const args = process.argv.slice(2);
-  
+
   if (args.length === 0) {
     console.error('使用法: node add-frontmatter.mjs <file1.md> [file2.md ...]');
     process.exit(1);
   }
-  
+
   let processed = 0;
   let skipped = 0;
-  
+
   for (const arg of args) {
     const filePath = resolve(arg);
     if (processMDFile(filePath)) {
@@ -179,7 +179,7 @@ function main() {
       skipped++;
     }
   }
-  
+
   console.log(`\n📊 完了: ${processed}件追加, ${skipped}件スキップ`);
 }
 
