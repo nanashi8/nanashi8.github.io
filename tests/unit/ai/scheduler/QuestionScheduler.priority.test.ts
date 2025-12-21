@@ -64,6 +64,10 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.6,
         memorizationAttempts: 5,
+        memorizationCorrect: 2,
+        memorizationIncorrect: 1,
+        memorizationStillLearning: 2,
+        memorizationStreak: 1,
       };
 
       const priority = scheduler.recalculatePriorityAfterAnswer(progress);
@@ -114,6 +118,10 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.8,
         memorizationAttempts: 5,
+        memorizationCorrect: 4,
+        memorizationIncorrect: 0,
+        memorizationStillLearning: 1,
+        memorizationStreak: 3,
       };
 
       const priority = scheduler.recalculatePriorityAfterAnswer(progress);
@@ -141,6 +149,10 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.6,
         memorizationAttempts: 5,
+        memorizationCorrect: 2,
+        memorizationIncorrect: 1,
+        memorizationStillLearning: 2,
+        memorizationStreak: 1,
       };
 
       const priority = scheduler.recalculatePriorityAfterAnswer(progress);
@@ -168,6 +180,10 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.6,
         memorizationAttempts: 5,
+        memorizationCorrect: 2,
+        memorizationIncorrect: 1,
+        memorizationStillLearning: 2,
+        memorizationStreak: 1,
       };
 
       const priority = scheduler.recalculatePriorityAfterAnswer(progress);
@@ -195,6 +211,10 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.6,
         memorizationAttempts: 5,
+        memorizationCorrect: 2,
+        memorizationIncorrect: 1,
+        memorizationStillLearning: 2,
+        memorizationStreak: 1,
       };
 
       const priority = scheduler.recalculatePriorityAfterAnswer(progress);
@@ -272,6 +292,10 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.6,
         memorizationAttempts: 5,
+        memorizationCorrect: 2,
+        memorizationIncorrect: 1,
+        memorizationStillLearning: 2,
+        memorizationStreak: 1,
       };
 
       scheduler.recalculatePriorityAfterAnswer(progress);
