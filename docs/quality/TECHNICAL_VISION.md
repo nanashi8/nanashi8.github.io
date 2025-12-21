@@ -515,7 +515,7 @@ UI Re-render (最適化済み)
 
 **最終更新**: 2025年12月6日  
 **関連ドキュメント**: 
-- [品質管理パイプライン](QUALITY_PIPELINE.md)
+- [品質管理パイプライン](../quality/QUALITY_PIPELINE_LEGACY.md)
 - [健康診断レポート](HEALTH_CHECK_REPORT.md)
 - [TypeScript開発ガイドライン](../TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)
 - [CSS開発ガイドライン](../CSS_DEVELOPMENT_GUIDELINES.md)

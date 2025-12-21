@@ -426,7 +426,7 @@
 - **UI開発**: [UI_DEVELOPMENT_GUIDELINES.md](../development/UI_DEVELOPMENT_GUIDELINES.md)
 - **文法問題**: [NEW_HORIZON_GRAMMAR_GUIDELINES.md](../guidelines/grammar/NEW_HORIZON_GRAMMAR_GUIDELINES.md)
 - **長文作成**: [PASSAGE_CREATION_GUIDELINES.md](../guidelines/passage/PASSAGE_CREATION_GUIDELINES.md)
-- **デプロイ**: [23-deployment.md](../specifications/23-deployment.md)
+- **デプロイ**: ~~23-deployment.md（ファイル未作成）~~
 - **ワークフロー**: [AI_WORKFLOW_INSTRUCTIONS.md](../references/AI_WORKFLOW_INSTRUCTIONS.md)
 
 ---

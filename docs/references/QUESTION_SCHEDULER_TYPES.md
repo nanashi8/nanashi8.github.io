@@ -890,7 +890,7 @@ const status: WordStatus = { category, ... };
 ## 関連ドキュメント
 
 - [QuestionScheduler 完全仕様書](../specifications/QUESTION_SCHEDULER_SPEC.md)
-- [QuestionScheduler 復旧手順書](QUESTION_SCHEDULER_RECOVERY.md)
+- [QuestionScheduler 復旧手順書](../how-to/QUESTION_SCHEDULER_RECOVERY.md)
 - [メタAI統合ガイド](META_AI_INTEGRATION_GUIDE.md)
 
 ---
