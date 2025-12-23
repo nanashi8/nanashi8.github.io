@@ -91,12 +91,28 @@ export interface WordProgress {
   // 定着済み単語の復習管理
   nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
 
+  // 📍 タブ別Position（AI出題工夫用）
+  memorizationPosition?: number; // 暗記タブでのPosition (0-100)
+  translationPosition?: number; // 和訳タブでのPosition (0-100)
+  spellingPosition?: number; // スペルタブでのPosition (0-100)
+  grammarPosition?: number; // 文法タブでのPosition (0-100)
+
   // 間隔反復学習（Spaced Repetition）用フィールド
   easinessFactor?: number; // 難易度係数（1.3-2.5、初期値2.5）個人の学習速度を反映
   reviewInterval?: number; // 現在の復習間隔（日数）
   lastReviewDate?: number; // 最終復習日時（タイムスタンプ）
   totalReviews?: number; // 総復習回数
   avgResponseSpeed?: number; // 平均応答速度（ms）- 学習速度の指標
+
+  // === Phase 4: SM-2追加フィールド ===
+  easeFactor?: number; // SM-2難易度係数（1.3-3.0、初期値2.5）easinessFactorのエイリアス
+  lastInterval?: number; // 前回の復習間隔（日数）
+  repetitions?: number; // 連続正解回数（SM-2用）
+  nextSM2ReviewDate?: Date; // SM-2による次回復習日
+
+  // === Phase 4: 長期記憶段階 ===
+  memoryStage?: 'WORKING_MEMORY' | 'SHORT_TERM' | 'CONSOLIDATING' | 'LONG_TERM';
+  stageTransitionDate?: number; // 段階移行日時（タイムスタンプ）
 
   // 🧠 個別忘却曲線モデル（Half-Life Regression風）
   memoryStrength?: number; // 記憶強度（0-100、個人適応）初期値50

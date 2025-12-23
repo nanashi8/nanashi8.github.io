@@ -2,6 +2,32 @@
 
 このプロジェクトへの貢献を検討いただきありがとうございます！
 
+## 🚨 最優先ポリシー: 対症療法の完全禁止
+
+**このプロジェクトでは対症療法的な修正を完全に禁止しています。**
+
+詳細: [対症療法禁止ポリシー](../docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md)
+
+### 対症療法とは？
+
+- ❌ 根本原因を解決せず、表面的な症状だけを修正する行為
+- ❌ ロジックの重複・コピー&ペースト
+- ❌ Single Source of Truth (SSOT) 原則の違反
+- ❌ 「とりあえず動けばいい」という短期的な修正
+
+### 必須チェックリスト（PR提出前）
+
+- [ ] 根本原因を特定したか？
+- [ ] 既存の類似関数を検索したか？（grep, semantic search）
+- [ ] Single Source of Truth になっているか？
+- [ ] 責任分離が適切か？
+- [ ] 対症療法検知スクリプトをパスしたか？
+  ```bash
+  ./scripts/check-symptomatic-fixes.sh
+  ```
+
+---
+
 ## 開発ガイドライン
 
 コードを変更する前に、必ず [開発ガイドライン](.github/DEVELOPMENT_GUIDELINES.md) をお読みください。
@@ -42,12 +68,17 @@
 
 ### ✅ 必須事項
 
-1. **TypeScriptエラーがないこと**
+1. **対症療法検知チェック**
+   ```bash
+   ./scripts/check-symptomatic-fixes.sh
+   ```
+
+2. **TypeScriptエラーがないこと**
    ```bash
    npm run typecheck
    ```
 
-2. **ビルドが成功すること**
+3. **ビルドが成功すること**
    ```bash
    npm run build
    ```

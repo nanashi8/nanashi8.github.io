@@ -1,51 +1,193 @@
 /**
- * カテゴリー判定ユーティリティ（単一責任）
+ * 学習段階（position）判定ユーティリティ（統合レイヤー）
  *
- * すべてのAIモジュールで統一したカテゴリー判定を行う
- * 重複コードを排除し、ロジックを一箇所に集約
+ * 設計思想:
+ * 1. ゴールファースト判定（連続正解による即座の定着判定）
+ * 2. 複雑なケースは基本的な計算で対応
+ * 3. 7つのAIの統合はQuestionSchedulerで実施（循環依存回避）
+ *
+ * Position = 0-100の優先度スコア
+ * - 0-20: mastered (定着済み)
+ * - 20-40: new (新規)
+ * - 40-70: still_learning (学習中)
+ * - 70-100: incorrect (要復習)
+ *
+ * スコアが高いほど優先的に出題される
  */
 
-import type { WordProgress, WordCategory } from '@/storage/progress/types';
+import type { WordProgress } from '@/storage/progress/types';
+import type { WordPosition } from '@/ai/types';
+import {
+  POSITION_VALUES,
+  CONSECUTIVE_THRESHOLDS,
+  ACCURACY_THRESHOLDS,
+  BOOST_VALUES,
+  ATTEMPT_THRESHOLDS,
+  normalizePosition
+} from './positionConstants';
 
 /**
- * 単語の学習カテゴリーを判定
+ * 単語の学習優先度スコア（Position）を計算
+ *
+ * 🎯 ゴール: まだまだ・分からない（Position 40+）を0にする
+ *
+ * アーキテクチャ:
+ * 1. ゴールファースト判定（連続正解による即座の定着判定）
+ * 2. 基本的な計算（正答率・連続不正解・時間経過）
+ *
+ * 注: 7つのAI統合はQuestionSchedulerで実施（循環依存回避のため）
  *
  * @param progress - 単語の進捗情報
- * @returns カテゴリー（'new' | 'incorrect' | 'still_learning' | 'mastered'）
- *
- * 判定基準:
- * - new: 未出題（memorizationAttempts === 0）
- * - mastered: 正答率80%以上＆連続3回正解 OR 正答率70%以上＆5回以上挑戦
- * - incorrect: 正答率30%未満 OR 連続2回不正解
- * - still_learning: 上記以外
- *
- * 重要: memorizationCorrect と memorizationStillLearning を使用
- * 「まだまだ」は0.5回の正解として計算に含める
+ * @param mode - 学習モード（タブ別Position管理）
+ * @returns Position スコア (0-100)
  */
-export function determineWordCategory(progress: WordProgress): WordCategory {
-  const attempts = progress.memorizationAttempts || 0;
-  const correct = progress.memorizationCorrect || 0;
-  const stillLearning = progress.memorizationStillLearning || 0;
-  const streak = progress.memorizationStreak || 0;
+export type LearningMode = 'memorization' | 'translation' | 'spelling' | 'grammar';
 
-  if (attempts === 0) return 'new';
+export function determineWordPosition(
+  progress: WordProgress | null | undefined,
+  mode: LearningMode = 'memorization'
+): WordPosition {
+  // 学習履歴が未作成の単語は新規扱い
+  if (!progress) {
+    return POSITION_VALUES.NEW_DEFAULT;
+  }
 
-  // まだまだを0.5回の正解として計算
+  // ✅ タブ別フィールドを使用（各タブで独立したカウント）
+  let attempts = 0;
+  let correct = 0;
+  let stillLearning = 0;
+
+  switch (mode) {
+    case 'memorization':
+      attempts = progress.memorizationAttempts || 0;
+      correct = progress.memorizationCorrect || 0;
+      stillLearning = progress.memorizationStillLearning || 0;
+      break;
+    case 'translation':
+      attempts = progress.translationAttempts || 0;
+      correct = progress.translationCorrect || 0;
+      break;
+    case 'spelling':
+      attempts = progress.spellingAttempts || 0;
+      correct = progress.spellingCorrect || 0;
+      break;
+    case 'grammar':
+      attempts = progress.grammarAttempts || 0;
+      correct = progress.grammarCorrect || 0;
+      break;
+  }
+
+  const consecutiveCorrect = progress.consecutiveCorrect || 0;
+  const consecutiveIncorrect = progress.consecutiveIncorrect || 0;
+  const lastStudied = progress.lastStudied || Date.now();
+
+  // 時間経過計算
+  const daysSince = (Date.now() - lastStudied) / (1000 * 60 * 60 * 24);
+
+  // 「まだまだ」を0.5回の正解として計算（暗記モードのみ）
   const effectiveCorrect = correct + stillLearning * 0.5;
-  const totalAttempts = attempts;
-  const incorrectCount = attempts - correct - stillLearning;
-  const accuracy = totalAttempts > 0 ? effectiveCorrect / totalAttempts : 0;
+  const accuracy = attempts > 0 ? effectiveCorrect / attempts : 0;
 
-  // 🟢 定着済み: 正答率80%以上 & 連続3回正解 OR 正答率70%以上 & 5回以上挑戦
-  if ((accuracy >= 0.8 && streak >= 3) || (accuracy >= 0.7 && totalAttempts >= 5)) {
-    return 'mastered';
+  // 未出題の新規単語
+  if (attempts === 0) {
+    return POSITION_VALUES.NEW_DEFAULT; // new範囲の中央 (20-40)
   }
 
-  // 🔴 要復習: 正答率30%未満 OR 連続2回不正解
-  if (accuracy < 0.3 || incorrectCount >= 2) {
-    return 'incorrect';
+  // ========================================
+  // 🎯 GOAL-FIRST: 学習完了判定（最優先）
+  // ========================================
+  // ゴール: まだまだ・分からないを0にする
+  // → 連続正解でPosition < 40（覚えてる）に即座に移行
+
+  if (consecutiveCorrect >= CONSECUTIVE_THRESHOLDS.MASTERED) {
+    // 3回連続正解 → 完全定着
+    return POSITION_VALUES.MASTERED_PERFECT;
   }
 
-  // 🟡 学習中: それ以外
-  return 'still_learning';
+  if (consecutiveCorrect >= CONSECUTIVE_THRESHOLDS.LEARNING) {
+    // 2回連続正解 → ほぼ定着
+    if (accuracy >= ACCURACY_THRESHOLDS.GOOD) {
+      return POSITION_VALUES.MASTERED_ALMOST; // 正答率80%以上なら定着扱い
+    }
+    return POSITION_VALUES.NEAR_MASTERY; // まだ新規扱い（もう1回正解で定着）
+  }
+
+  if (consecutiveCorrect === CONSECUTIVE_THRESHOLDS.STRUGGLING) {
+    // 1回正解 → 新規～まだまだ
+    if (accuracy >= ACCURACY_THRESHOLDS.EXCELLENT && attempts <= ATTEMPT_THRESHOLDS.QUICK_LEARNER) {
+      return POSITION_VALUES.ONE_SHOT_CORRECT; // 1発正解または2回で90%以上 → 定着扱い
+    }
+    if (accuracy >= ACCURACY_THRESHOLDS.FAIR) {
+      return POSITION_VALUES.NEW_NEAR_MASTERY; // 正答率60%以上 → 新規（次の正解で定着）
+    }
+    return POSITION_VALUES.STILL_LEARNING_LOW; // まだまだ（学習中）
+  }
+
+  // ========================================
+  // ⚠️ PENALTY: 連続不正解（要復習）
+  // ========================================
+  // 連続で間違えている → 分からない（70-100）
+
+  if (consecutiveIncorrect >= CONSECUTIVE_THRESHOLDS.INCORRECT) {
+    return POSITION_VALUES.INCORRECT_URGENT; // 3回以上連続不正解 → 最優先で再出題
+  }
+
+  if (consecutiveIncorrect >= CONSECUTIVE_THRESHOLDS.HIGH_PRIORITY) {
+    return POSITION_VALUES.INCORRECT_HIGH; // 2回連続不正解 → 高優先度
+  }
+
+  if (consecutiveIncorrect >= CONSECUTIVE_THRESHOLDS.STRUGGLING) {
+    // 1回不正解だが、過去に正解経験あり
+    if (accuracy >= ACCURACY_THRESHOLDS.POOR) {
+      return POSITION_VALUES.INCORRECT_LIGHT; // まだまだ（正答率50%以上）
+    }
+    return POSITION_VALUES.INCORRECT_MEDIUM; // 分からない（正答率50%未満）
+  }
+
+  // ========================================
+  // � STILL LEARNING: 「まだまだ」選択時の処理
+  // ========================================
+  // 「まだまだ」は学習中として扱い、Position 40-50に配置
+  // （連続正解・連続不正解がどちらも0 = まだまだ選択）
+
+  if (stillLearning > 0 && consecutiveCorrect === 0 && consecutiveIncorrect === 0) {
+    // 「まだまだ」選択回数に応じてPositionを引き上げ
+    const stillLearningBoost = Math.min(
+      stillLearning * BOOST_VALUES.STILL_LEARNING_MULTIPLIER,
+      BOOST_VALUES.STILL_LEARNING_MAX
+    );
+    const newPosition = Math.min(
+      POSITION_VALUES.STILL_LEARNING_LOW + stillLearningBoost,
+      POSITION_VALUES.STILL_LEARNING_DEFAULT
+    ); // Position 40-50範囲内
+
+    // デバッグログ（開発モードのみ）
+    if (import.meta.env?.DEV) {
+      console.log(`🟡 [まだまだ] 回数=${stillLearning}回 → Position ${newPosition} (+${stillLearningBoost})`);
+    }
+
+    return newPosition;
+  }
+
+  // ========================================
+  // �📊 BASIC CALCULATION: 基本的な計算
+  // ========================================
+  // 連続正解も連続不正解もない複雑なケースは、
+  // 正答率・時間経過から基本的なPositionを計算
+  // （7つのAI統合はQuestionSchedulerで実施）
+
+  // === BaseScore計算 ===
+  const baseScore = POSITION_VALUES.STILL_LEARNING_DEFAULT - (accuracy * 30) + (consecutiveIncorrect * 10);
+
+  // === 時間経過ブースト ===
+  const timeBoost = Math.min(
+    daysSince * BOOST_VALUES.TIME_DECAY_MULTIPLIER,
+    BOOST_VALUES.TIME_DECAY_MAX
+  );
+
+  // === 最終Position ===
+  const rawPosition = baseScore + timeBoost;
+  const position = normalizePosition(rawPosition);
+
+  return position;
 }

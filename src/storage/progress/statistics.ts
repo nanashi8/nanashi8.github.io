@@ -8,6 +8,7 @@ import {
   checkFlexibleMastery,
   autoDetectWordDifficulty,
 } from './progressStorage';
+import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 import type { QuizResult, DetailedRetentionStats, WordProgress } from './types';
 
 // モードごとの統計を取得
@@ -303,34 +304,37 @@ export function getMonthlyStats(): {
 export function getDetailedRetentionStats(): DetailedRetentionStats {
   const progress = loadProgressSync();
   const allWords = Object.values(progress.wordProgress);
-  const appearedWords = allWords.filter((wp) => wp.correctCount + wp.incorrectCount > 0);
+  // ✅ totalAttemptsで出題済み単語を判定（全モード合計）
+  const appearedWords = allWords.filter((wp) => (wp.totalAttempts || 0) > 0);
 
   let masteredCount = 0;
   let learningCount = 0;
   let strugglingCount = 0;
 
-  appearedWords.forEach((wp) => {
-    const totalAttempts = wp.correctCount + wp.incorrectCount;
-    const accuracy = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
+  // ⚡ パフォーマンス最適化: 最初の500単語のみ処理（プログレスバーは概算で十分）
+  const sampleWords = appearedWords.slice(0, Math.min(500, appearedWords.length));
+  const scaleFactor = appearedWords.length / sampleWords.length;
 
-    // 🟢 完全定着判定
-    const isDefinitelyMastered =
-      (totalAttempts === 1 && wp.correctCount === 1) || // 1発正解
-      wp.consecutiveCorrect >= 3 || // 連続3回以上正解
-      (wp.consecutiveCorrect >= 2 && accuracy >= 80); // 連続2回 + 正答率80%以上
+  // ✅ AI担当関数に完全委譲（modeなしで呼び出すとcorrectCountベースで計算）
+  sampleWords.forEach((wp) => {
+    const position = determineWordPosition(wp);
 
-    if (isDefinitelyMastered) {
+    // Position範囲でカテゴリ判定
+    // 0-20: mastered, 20-40: new→masteredに含める, 40-70: learning, 70-100: struggling
+    if (position < 40) {
+      // 0-40: mastered（定着済み + 新規学習中）
       masteredCount++;
-    }
-    // 🟡 学習中（正答率50%以上だがまだ定着していない）
-    else if (accuracy >= 50) {
+    } else if (position >= 40 && position < 70) {
       learningCount++;
-    }
-    // 🔴 要復習（正答率50%未満）
-    else {
+    } else if (position >= 70) {
       strugglingCount++;
     }
   });
+
+  // サンプリングした結果を全体にスケールアップ
+  masteredCount = Math.round(masteredCount * scaleFactor);
+  learningCount = Math.round(learningCount * scaleFactor);
+  strugglingCount = Math.round(strugglingCount * scaleFactor);
 
   const total = appearedWords.length;
 
@@ -382,9 +386,11 @@ export function getNearMasteryStats(): {
     const totalAttempts = wp.correctCount + wp.incorrectCount;
     if (totalAttempts === 0) return;
 
-    const masteryResult = checkFlexibleMastery(wp, true);
-    if (masteryResult.isMastered) {
-      // 長期記憶のカウント
+    // ✅ AI担当関数に委譲
+    const position = determineWordPosition(wp);
+
+    // mastered (0-20): 長期記憶のカウント
+    if (position < 20) {
       if (wp.consecutiveCorrect >= 7) {
         superMemoryCount++;
       } else if (wp.consecutiveCorrect >= 5) {
@@ -393,21 +399,24 @@ export function getNearMasteryStats(): {
       return;
     }
 
-    learningCount++;
+    // still_learning (40-70) または incorrect (70-100)
+    if (position >= 40) {
+      learningCount++;
 
-    // あと1回で定着する条件をチェック
-    const { consecutiveCorrect } = wp;
-    const accuracy = wp.correctCount / totalAttempts;
+      // あと1回で定着する条件をチェック
+      const { consecutiveCorrect } = wp;
+      const accuracy = wp.correctCount / totalAttempts;
 
-    if (
-      consecutiveCorrect === 2 || // 連続2回正解
-      (accuracy >= 0.9 && consecutiveCorrect === 1 && totalAttempts >= 2) || // 高精度安定型
-      (totalAttempts >= 4 && accuracy >= 0.75) // 高回数安定型
-    ) {
-      nearMasteryCount++;
-      totalRemaining += 1;
-    } else {
-      totalRemaining += Math.max(1, 3 - consecutiveCorrect);
+      if (
+        consecutiveCorrect === 2 || // 連続2回正解
+        (accuracy >= 0.9 && consecutiveCorrect === 1 && totalAttempts >= 2) || // 高精度安定型
+        (totalAttempts >= 4 && accuracy >= 0.75) // 高回数安定型
+      ) {
+        nearMasteryCount++;
+        totalRemaining += 1;
+      } else {
+        totalRemaining += Math.max(1, 3 - consecutiveCorrect);
+      }
     }
   });
 
@@ -822,63 +831,27 @@ export function getMemorizationDetailedRetentionStats(): DetailedRetentionStats 
     else categoryDebug.undefined++;
   });
 
-  console.log('📊 [Statistics] カテゴリー別内訳:', {
-    total: memorizationWords.length,
-    categories: categoryDebug,
-    willRecalculate: categoryDebug.new + categoryDebug.undefined,
-  });
+  // Debug log removed to reduce console noise
 
+  // ✅ AI担当関数に完全委譲（暗記モード専用）
   memorizationWords.forEach((wp) => {
-    // ✅ categoryフィールドを優先的に使用（QuestionSchedulerと同じロジック）
-    const category = wp.category;
+    const position = determineWordPosition(wp, 'memorization');
 
-    // カテゴリーベースのカウント（categoryが明示的に設定されている場合）
-    if (category === 'mastered') {
+    // Position範囲でカテゴリ判定（0-20: mastered, 20-40: new, 40-70: still_learning, 70-100: incorrect）
+    // 0-40: mastered（定着済み + 新規学習中）として表示
+    if (position < 40) {
       masteredCount++;
-    } else if (category === 'still_learning') {
+    } else if (position >= 40 && position < 70) {
       learningCount++;
-    } else if (category === 'incorrect') {
+    } else if (position >= 70) {
       strugglingCount++;
-    } else if (!category || category === 'new') {
-      // categoryが未設定または'new'の場合は統計から推定（後方互換性）
-      const totalAttempts = wp.memorizationAttempts || 0;
-      const correctCount = wp.memorizationCorrect || 0;
-      const stillLearningCount = wp.memorizationStillLearning || 0;
-      const consecutiveCorrect = wp.memorizationStreak || 0;
-
-      // まだまだを0.5回の正解として計算（正答率50%以上になるように）
-      const effectiveCorrect = correctCount + stillLearningCount * 0.5;
-      const accuracy = totalAttempts > 0 ? (effectiveCorrect / totalAttempts) * 100 : 0;
-
-      // 🟢 完全定着判定（覚えてる）
-      const isDefinitelyMastered =
-        (totalAttempts === 1 && correctCount === 1) ||
-        consecutiveCorrect >= 1 || // 連続正解が1回以上（最後が正解）
-        accuracy >= 80; // または正答率80%以上
-
-      if (isDefinitelyMastered) {
-        masteredCount++;
-      } else if (accuracy >= 50 || stillLearningCount > 0) {
-        // 🟡 まだまだ
-        learningCount++;
-      } else {
-        // 🔴 分からない
-        strugglingCount++;
-      }
     }
-    // それ以外のカテゴリー（存在しないはず）は無視
   });
 
   const total = memorizationWords.length;
   const weightedScore = masteredCount * 1.0 + learningCount * 0.5;
 
-  console.log('✅ [Statistics] 最終カウント結果:', {
-    masteredCount,
-    learningCount,
-    strugglingCount,
-    合計: masteredCount + learningCount + strugglingCount,
-    出題済み単語総数: total,
-  });
+  // Debug log removed to reduce console noise
 
   return {
     totalWords: allWords.length,
@@ -1021,4 +994,72 @@ export function getGrammarUnitStats(): Array<{
   result.sort((a, b) => a.unit.localeCompare(b.unit));
 
   return result;
+}
+
+/**
+ * まだまだ・分からない単語のリストを取得
+ * @param mode 学習モード（指定しない場合は全モード）
+ * @returns 単語リスト（Position降順）
+ */
+export function getStrugglingWordsList(mode?: LearningMode): Array<{
+  word: string;
+  position: number;
+  category: 'still_learning' | 'incorrect';
+  attempts: number;
+  correctCount: number;
+  incorrectCount: number;
+  lastStudied: number;
+}> {
+  const progress = loadProgressSync();
+  const allWords = Object.entries(progress.wordProgress);
+
+  const strugglingWords = allWords
+    .map(([word, wp]) => {
+      // モード指定がある場合はフィルタリング
+      let attempts = 0;
+      if (mode) {
+        switch (mode) {
+          case 'memorization':
+            attempts = wp.memorizationAttempts || 0;
+            break;
+          case 'translation':
+            attempts = wp.translationAttempts || 0;
+            break;
+          case 'spelling':
+            attempts = wp.spellingAttempts || 0;
+            break;
+          case 'grammar':
+            attempts = wp.grammarAttempts || 0;
+            break;
+        }
+        if (attempts === 0) return null;
+      } else {
+        attempts = wp.totalAttempts || 0;
+        if (attempts === 0) return null;
+      }
+
+      // Positionを計算
+      const position = mode ? determineWordPosition(wp, mode) : determineWordPosition(wp);
+
+      // まだまだ（40-70）または分からない（70-100）のみ
+      if (position < 40) return null;
+
+      const category: 'still_learning' | 'incorrect' = position >= 70 ? 'incorrect' : 'still_learning';
+
+      return {
+        word,
+        position,
+        category,
+        attempts,
+        correctCount: wp.correctCount || 0,
+        incorrectCount: wp.incorrectCount || 0,
+        lastStudied: wp.lastStudied || 0,
+      };
+    })
+    .filter((item): item is NonNullable<typeof item> => item !== null);
+
+  // Position降順（優先度が高い順）
+  strugglingWords.sort((a, b) => b.position - a.position);
+
+  return strugglingWords;
 }

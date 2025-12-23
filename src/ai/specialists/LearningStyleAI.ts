@@ -1,29 +1,58 @@
 /**
- * 🎯 LearningStyleAI - 学習スタイルAI
+ * 🎯 LearningStyleAI - 学習スタイルAI（Phase 4.5強化版 + ML統合）
  *
  * 責任:
  * - 学習者の学習スタイル推定
  * - 最適なセッション長の提案
  * - 好みの難易度設定の判定
  * - モチベーションタイプの分析
+ *
+ * Phase 4.5 ML統合:
+ * - TensorFlow.jsによる個人の学習パターン学習
+ * - ハイブリッドAI（ルールベース + ML）
+ * - 個別最適化された学習提案
  */
 
 import type {
-  SpecialistAI,
   LearningStyleSignal,
   LearningStyle,
   DifficultyPreference,
   MotivationType,
   AIAnalysisInput,
-  WordProgress,
+  StorageWordProgress,
 } from '../types';
+import { MLEnhancedSpecialistAI } from '../ml/MLEnhancedSpecialistAI';
 
-export class LearningStyleAI implements SpecialistAI<LearningStyleSignal> {
+export class LearningStyleAI extends MLEnhancedSpecialistAI<LearningStyleSignal> {
   readonly id = 'learningStyle';
   readonly name = 'Learning Style AI';
   readonly icon = '🎯';
 
-  analyze(input: AIAnalysisInput): LearningStyleSignal {
+  /**
+   * Position提案（統合レイヤー用）
+   *
+   * 学習スタイルAIの立場: 学習パターンからPositionを提案
+   * - 試行回数が少ない → Position中立（まだ判断できない）
+   * - 試行回数が多く正答率が低い → Position高（学習スタイルに合っていない）
+   */
+  proposePosition(progress: StorageWordProgress, accuracy: number, attempts: number): number {
+    // === 学習効率評価 ===
+    // 試行回数が多いのに習得できていない = 学習方法が合っていない
+    const inefficiency = attempts > 10 && accuracy < 0.6 ? 25 : 0;
+
+    // === 基準Position ===
+    const basePosition = 50;
+
+    // === 最終提案 ===
+    const proposedPosition = basePosition + inefficiency;
+
+    return Math.max(0, Math.min(100, proposedPosition));
+  }
+
+  /**
+   * ルールベース分析（Phase 4.5新機能）
+   */
+  protected analyzeByRules(input: AIAnalysisInput): LearningStyleSignal {
     const { progress, allProgress, sessionStats } = input;
 
     const styleProfile = this.determineStyleProfile(progress, allProgress);
@@ -206,4 +235,93 @@ export class LearningStyleAI implements SpecialistAI<LearningStyleSignal> {
 
     return true;
   }
+
+  // ========================================
+  // Phase 4.5: ML統合メソッド
+  // ========================================
+
+  protected async analyzeByML(input: AIAnalysisInput): Promise<LearningStyleSignal> {
+    const features = this.extractFeatures(input);
+    const prediction = await this.predict(features);
+
+    const styleValue = prediction.values[0];
+    let styleProfile: LearningStyle;
+    if (styleValue < 0.25) styleProfile = 'visual';
+    else if (styleValue < 0.5) styleProfile = 'auditory';
+    else if (styleValue < 0.75) styleProfile = 'kinesthetic';
+    else styleProfile = 'reading';
+
+    const optimalSessionLength = Math.round(prediction.values[1] * 60 + 10);
+
+    const diffValue = prediction.values[2];
+    let preferredDifficulty: DifficultyPreference;
+    if (diffValue < 0.33) preferredDifficulty = 'gradual';
+    else if (diffValue < 0.67) preferredDifficulty = 'mixed';
+    else preferredDifficulty = 'challenge';
+
+    const motivValue = prediction.values[3];
+    let motivationType: MotivationType;
+    if (motivValue < 0.33) motivationType = 'mastery';
+    else if (motivValue < 0.67) motivationType = 'performance';
+    else motivationType = 'social';
+
+    return {
+      aiId: 'learningStyle',
+      confidence: prediction.confidence,
+      timestamp: Date.now(),
+      styleProfile,
+      optimalSessionLength,
+      preferredDifficulty,
+      motivationType,
+    };
+  }
+
+  protected mergeSignals(
+    ruleSignal: LearningStyleSignal,
+    mlSignal: LearningStyleSignal,
+    input: AIAnalysisInput
+  ): LearningStyleSignal {
+    const totalWords = Object.keys(input.allProgress).length;
+    const mlWeight = Math.min(Math.max((totalWords - 20) / 50, 0), 0.6);
+    const ruleWeight = 1 - mlWeight;
+
+    return {
+      aiId: 'learningStyle',
+      confidence: (ruleSignal.confidence * ruleWeight) + (mlSignal.confidence * mlWeight),
+      timestamp: Date.now(),
+      styleProfile: totalWords > 50 ? mlSignal.styleProfile : ruleSignal.styleProfile,
+      optimalSessionLength: Math.round(
+        (ruleSignal.optimalSessionLength * ruleWeight) +
+        (mlSignal.optimalSessionLength * mlWeight)
+      ),
+      preferredDifficulty: totalWords > 50 ? mlSignal.preferredDifficulty : ruleSignal.preferredDifficulty,
+      motivationType: totalWords > 50 ? mlSignal.motivationType : ruleSignal.motivationType,
+    };
+  }
+
+  protected extractFeatures(input: AIAnalysisInput): number[] {
+    const { sessionStats, allProgress } = input;
+    const totalWords = Object.keys(allProgress).length;
+    const totalAttempts = Object.values(allProgress).reduce(
+      (sum, p) => sum + (p.memorizationAttempts || 0), 0
+    );
+
+    return [
+      sessionStats.sessionDuration / (1000 * 60 * 60),
+      sessionStats.totalAttempts / 50,
+      sessionStats.currentAccuracy ||
+        (sessionStats.totalAttempts > 0 ?
+          sessionStats.correctAnswers / sessionStats.totalAttempts : 0),
+      sessionStats.consecutiveCorrect || 0,
+      totalWords / 100,
+      totalAttempts / 200,
+      sessionStats.questionsAnswered || sessionStats.totalAttempts / 50,
+      (sessionStats.averageResponseTime || sessionStats.avgResponseTime || 0) / 10000,
+      new Date().getHours() / 24,
+      new Date().getDay() / 7,
+    ];
+  }
+
+  protected getFeatureDimension(): number { return 10; }
+  protected getOutputDimension(): number { return 4; }
 }

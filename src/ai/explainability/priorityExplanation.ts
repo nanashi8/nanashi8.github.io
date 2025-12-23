@@ -6,7 +6,7 @@
  */
 
 import type { WordProgress, WordCategory } from '@/storage/progress/types';
-import { determineWordCategory } from '@/ai/utils/categoryDetermination';
+import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 
 /** 優先度の理由 */
 export interface PriorityExplanation {
@@ -267,5 +267,5 @@ export function getPriorityLabel(priority: number): string {
  * カテゴリーを判定（統一ユーティリティを使用）
  */
 function determineCategory(progress: WordProgress): WordCategory {
-  return determineWordCategory(progress);
+  return determineWordPosition(progress);
 }

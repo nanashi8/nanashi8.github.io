@@ -71,6 +71,16 @@ jobs:
             exit 0
           }
 
+      - name: 🚫 対症療法検知チェック
+        run: |
+          echo "🔍 対症療法的修正を検知中..."
+          chmod +x scripts/check-symptomatic-fixes.sh
+          ./scripts/check-symptomatic-fixes.sh || {
+            echo "::error::対症療法的な修正が検出されました"
+            echo "詳細: docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md"
+            exit 1
+          }
+
       - name: テスト結果アップロード
         if: failure()
         uses: actions/upload-artifact@v3
@@ -93,3 +103,4 @@ jobs:
           echo "- ESLint: 成功"
           echo "- ユニットテスト: 成功"
           echo "- カバレッジレポート: 生成完了"
+          echo "- 対症療法検知: クリーン"

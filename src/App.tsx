@@ -5,6 +5,11 @@ import { useQuizSettings } from './hooks/useQuizSettings';
 import { useQuizFilters } from './hooks/useQuizFilters';
 import { useQuizState } from './hooks/useQuizState';
 
+// デバッグユーティリティ（開発環境のみ）
+if (import.meta.env.DEV) {
+  import('./utils/debugAIEvaluations');
+}
+
 // セッション管理用
 import {
   addQuizResult,
@@ -1596,7 +1601,7 @@ function App() {
       {/* タブメニュー - 中学生向け親しみやすいデザイン */}
       <div className="flex gap-0 bg-gray-100 shadow-md py-1 sm:py-2">
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'memorization'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1606,7 +1611,7 @@ function App() {
           💡 暗記
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'translation'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1616,7 +1621,7 @@ function App() {
           📝 和訳
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'spelling'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1626,7 +1631,7 @@ function App() {
           ✏️ スペル
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'grammar'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1644,7 +1649,7 @@ function App() {
           📚 文法
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'reading'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1662,7 +1667,7 @@ function App() {
           📖 長文
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'grammar-guide'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1672,7 +1677,7 @@ function App() {
           🔖 参考
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'dictionary'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1682,7 +1687,7 @@ function App() {
           📕 辞書
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'stats'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1692,7 +1697,7 @@ function App() {
           📊 成績
         </button>
         <button
-          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'settings'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'

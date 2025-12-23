@@ -11,6 +11,7 @@ import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { useLearningEngine } from '../hooks/useLearningEngine';
 import { QuestionScheduler } from '@/ai/scheduler';
+import { RequeuingDebugPanel } from './RequeuingDebugPanel';
 
 interface VerbFormQuestion {
   id: string;
@@ -115,13 +116,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [availableUnits, setAvailableUnits] = useState<{ value: string; label: string }[]>([]);
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
+  const [showDebugPanel, setShowDebugPanel] = useState(false);
 
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
-  // 適応的学習AIネットワーク
+  // 適応的学習AIネットワーク（常時有効）
   const {
-    enabled: adaptiveEnabled,
     processQuestion: processAdaptiveQuestion,
     currentStrategy,
   } = useAdaptiveNetwork();
@@ -131,7 +132,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     const enableAI =
-      process.env.NODE_ENV === 'development' ||
+      import.meta.env.DEV ||
       localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
@@ -141,7 +142,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   });
 
   // 問題再出題管理フック
-  const { clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<GrammarQuestion>();
+  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<GrammarQuestion>();
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -172,10 +173,20 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     setIsReviewFocusMode(!isReviewFocusMode);
   };
 
-  // 適応的AI分析ヘルパー関数
-  const processWithAdaptiveAI = async (questionId: string, isCorrect: boolean) => {
-    if (!adaptiveEnabled) return;
+  // デバッグハンドラー
+  const handleResetProgress = () => {
+    resetStats();
+    setCorrectStreak(0);
+    setIncorrectStreak(0);
+    console.log('🔄 [文法タブ] セッション統計をリセットしました');
+  };
 
+  const handleDebugRequeue = () => {
+    setShowDebugPanel(prev => !prev);
+  };
+
+  // 適応的AI分析ヘルパー関数（常時有効）
+  const processWithAdaptiveAI = async (questionId: string, isCorrect: boolean) => {
     try {
       const calculateDifficulty = (q: GrammarQuestion): number => {
         if (q.difficulty === 'beginner') return 0.3;
@@ -431,7 +442,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           mastered: sessionStats.mastered || 0,
           duration: 0,
         },
-        useMetaAI: adaptiveEnabled,
+        useMetaAI: true, // ✅ 常時有効
         isReviewFocusMode: isReviewFocusMode,
       });
 
@@ -960,6 +971,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 onReviewFocus={handleReviewFocus}
                 isReviewFocusMode={isReviewFocusMode}
                 onShowSettings={() => setShowSettings(true)}
+                onResetProgress={handleResetProgress}
+                onDebugRequeue={handleDebugRequeue}
                 currentWord={
                   currentQuestion?.id
                     ? `grammar_${currentQuestion.id}`
@@ -1185,10 +1198,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                           ? '中級'
                           : '上級'}
                     </div>
-                  )}
-                  {/* 適応的AI戦略バッジ */}
-                  {adaptiveEnabled && currentStrategy && (
-                    <div className="adaptive-strategy-badge">🧠 適応中</div>
                   )}
                 </div>
                 <button
@@ -1492,6 +1501,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             </div>
           </div>
         </>
+      )}
+
+      {/* デバッグパネル */}
+      {showDebugPanel && (
+        <RequeuingDebugPanel
+          currentIndex={currentIndex}
+          totalQuestions={questions.length}
+          questions={questions}
+          requeuedWords={getRequeuedWords(questions, currentIndex)}
+        />
       )}
     </div>
   );

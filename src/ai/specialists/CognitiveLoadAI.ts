@@ -1,5 +1,5 @@
 /**
- * 💤 CognitiveLoadAI - 認知負荷AI
+ * 💤 CognitiveLoadAI - 認知負荷AI（Phase 4.5強化版 + ML統合）
  *
  * 責任:
  * - 学習者の認知負荷レベル推定
@@ -7,26 +7,53 @@
  * - 休憩推奨判定
  * - 難易度調整提案
  *
- * Phase 1のデバッグログ機能を統合
+ * Phase 4.5 ML統合:
+ * - TensorFlow.jsによる個人の疲労パターン学習
+ * - ハイブリッドAI（ルールベース + ML）
+ * - 個別最適化された休憩推奨
  */
 
 import type {
-  SpecialistAI,
   CognitiveLoadSignal,
   CognitiveLoadLevel,
   AIAnalysisInput,
   SessionStats,
+  StorageWordProgress,
 } from '../types';
+import { MLEnhancedSpecialistAI } from '../ml/MLEnhancedSpecialistAI';
 
-export class CognitiveLoadAI implements SpecialistAI<CognitiveLoadSignal> {
+export class CognitiveLoadAI extends MLEnhancedSpecialistAI<CognitiveLoadSignal> {
   readonly id = 'cognitiveLoad';
   readonly name = 'Cognitive Load AI';
   readonly icon = '💤';
 
   /**
-   * 認知負荷分析を実行
+   * Position提案（統合レイヤー用）
+   *
+   * 認知負荷AIの立場: 学習者の疲労度からPositionを提案
+   * - 連続不正解が多い → Position高（認知負荷が高い単語）
+   * - 疲労している → 簡単な単語を推奨（Position低）
    */
-  analyze(input: AIAnalysisInput): CognitiveLoadSignal {
+  proposePosition(progress: StorageWordProgress, consecutiveIncorrect: number): number {
+    // === 認知負荷評価 ===
+    // 連続不正解 = この単語が認知的に難しい
+    const cognitiveDifficulty = consecutiveIncorrect * 15; // 最大+45点（3回で）
+
+    // === 基準Position ===
+    const basePosition = 50;
+
+    // === 最終提案 ===
+    const proposedPosition = basePosition + cognitiveDifficulty;
+
+    return Math.max(0, Math.min(100, proposedPosition));
+  }
+
+  /**
+   * ルールベース分析（Phase 4.5新機能）
+   *
+   * 従来のルールベース分析を移行
+   */
+  protected analyzeByRules(input: AIAnalysisInput): CognitiveLoadSignal {
     const { sessionStats } = input;
 
     const loadLevel = this.determineLoadLevel(sessionStats);
@@ -202,7 +229,7 @@ export class CognitiveLoadAI implements SpecialistAI<CognitiveLoadSignal> {
    * デバッグログ出力（Phase 1で実装した機能）
    */
   logAnalysis(signal: CognitiveLoadSignal, stats: SessionStats): void {
-    if (process.env.NODE_ENV !== 'development') return;
+    if (!import.meta.env.DEV) return;
 
     console.log(`${this.icon} ${this.name} Analysis:`);
     console.log(`  Load Level: ${signal.loadLevel}`);
@@ -261,5 +288,142 @@ export class CognitiveLoadAI implements SpecialistAI<CognitiveLoadSignal> {
     if (sessionMinutes < 5 || sessionMinutes > 45) return false;
 
     return true;
+  }
+
+  // ========================================
+  // Phase 4.5: ML統合メソッド
+  // ========================================
+
+  /**
+   * ML分析（Phase 4.5新機能）
+   *
+   * TensorFlow.jsによる個人の疲労パターン予測
+   * 個人差が大きい領域なのでMLが有効
+   */
+  protected async analyzeByML(input: AIAnalysisInput): Promise<CognitiveLoadSignal> {
+    const features = this.extractFeatures(input);
+    const prediction = await this.predict(features);
+
+    // ML予測結果からloadLevelを決定
+    const loadLevelValue = prediction.values[0]; // 0-1スケール
+    let loadLevel: CognitiveLoadLevel;
+    if (loadLevelValue < 0.25) loadLevel = 'low';
+    else if (loadLevelValue < 0.5) loadLevel = 'medium';
+    else if (loadLevelValue < 0.75) loadLevel = 'high';
+    else loadLevel = 'overload';
+
+    const fatigueScore = prediction.values[1];
+    const breakProbability = prediction.values[2];
+    const difficultyAdjustment = (prediction.values[3] - 0.5) * 0.4; // -0.2 ~ +0.2
+
+    return {
+      aiId: 'cognitiveLoad',
+      confidence: prediction.confidence,
+      timestamp: Date.now(),
+      loadLevel,
+      fatigueScore,
+      recommendedBreak: breakProbability > 0.5,
+      difficultyAdjustment,
+    };
+  }
+
+  /**
+   * シグナル統合（ルール + ML）
+   *
+   * CognitiveLoadは個人差が大きいため、データが溜まればML優先
+   */
+  protected mergeSignals(
+    ruleSignal: CognitiveLoadSignal,
+    mlSignal: CognitiveLoadSignal,
+    input: AIAnalysisInput
+  ): CognitiveLoadSignal {
+    const sessionCount = input.sessionStats.totalAttempts;
+    const totalSessions = Math.floor(sessionCount / 20); // セッション数推定
+
+    // セッション数が増えるほどML重み増加（個人パターン学習）
+    const mlWeight = Math.min(Math.max((totalSessions - 3) / 10, 0), 0.7);
+    const ruleWeight = 1 - mlWeight;
+
+    return {
+      aiId: 'cognitiveLoad',
+      confidence: (ruleSignal.confidence * ruleWeight) + (mlSignal.confidence * mlWeight),
+      timestamp: Date.now(),
+
+      // loadLevelはデータが十分あればML優先
+      loadLevel: totalSessions > 10 ? mlSignal.loadLevel : ruleSignal.loadLevel,
+
+      fatigueScore:
+        (ruleSignal.fatigueScore * ruleWeight) +
+        (mlSignal.fatigueScore * mlWeight),
+
+      // 休憩推奨はいずれかがtrueならtrue（安全側に倒す）
+      recommendedBreak: ruleSignal.recommendedBreak || mlSignal.recommendedBreak,
+
+      difficultyAdjustment:
+        (ruleSignal.difficultyAdjustment * ruleWeight) +
+        (mlSignal.difficultyAdjustment * mlWeight),
+    };
+  }
+
+  /**
+   * 特徴量抽出（ML用）
+   *
+   * 認知負荷予測に重要な18次元の特徴量
+   */
+  protected extractFeatures(input: AIAnalysisInput): number[] {
+    const { sessionStats, progress } = input;
+    const sessionMinutes = sessionStats.sessionDuration / (1000 * 60);
+
+    const totalAttempts = progress ? progress.memorizationAttempts || 0 : 0;
+    const correctCount = progress ? progress.memorizationCorrect || 0 : 0;
+    const consecutiveWrong = progress ? progress.consecutiveIncorrect || 0 : 0;
+
+    return [
+      // 1-4: セッション基本情報
+      sessionMinutes / 60,
+      sessionStats.totalAttempts / 50,
+      sessionStats.questionsAnswered || sessionStats.totalAttempts / 50,
+      sessionStats.currentAccuracy ||
+        (sessionStats.totalAttempts > 0 ?
+          sessionStats.correctAnswers / sessionStats.totalAttempts : 0),
+
+      // 5-8: パフォーマンス指標
+      sessionStats.consecutiveIncorrect / 5,
+      sessionStats.consecutiveCorrect || 0,
+      (sessionStats.averageResponseTime || sessionStats.avgResponseTime || 0) / 10000,
+      sessionStats.totalAttempts > 0 ?
+        sessionStats.correctAnswers / sessionStats.totalAttempts : 0,
+
+      // 9-11: 時間要因
+      new Date().getHours() / 24, // 時刻
+      new Date().getDay() / 7, // 曜日
+      sessionStats.sessionStartTime ?
+        (Date.now() - sessionStats.sessionStartTime) / (1000 * 60 * 60) : 0,
+
+      // 12-14: 履歴情報（progressがある場合）
+      totalAttempts / 20,
+      totalAttempts > 0 ? correctCount / totalAttempts : 0.5,
+      consecutiveWrong / 5,
+
+      // 15-18: 応答時間トレンド
+      sessionStats.responseTimeVariance || 0,
+      sessionStats.slowResponseCount || 0,
+      sessionStats.fastResponseCount || 0,
+      sessionStats.timeoutCount || 0,
+    ];
+  }
+
+  /**
+   * 特徴量の次元数
+   */
+  protected getFeatureDimension(): number {
+    return 18;
+  }
+
+  /**
+   * 出力の次元数
+   */
+  protected getOutputDimension(): number {
+    return 4; // loadLevel, fatigueScore, breakProbability, difficultyAdjustment
   }
 }

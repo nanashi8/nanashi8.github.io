@@ -7,6 +7,20 @@
 import type { Question } from '@/types';
 
 /**
+ * Position (0-100) から category を派生
+ * 🎯 後方互換性維持のためのヘルパー関数
+ */
+export function getCategoryFromPosition(
+  position: number | undefined
+): 'new' | 'incorrect' | 'still_learning' | 'mastered' {
+  if (position === undefined) return 'new';
+  if (position >= 70) return 'incorrect'; // 要復習
+  if (position >= 40) return 'still_learning'; // 学習中
+  if (position >= 20) return 'new'; // 新規
+  return 'mastered'; // 定着済み
+}
+
+/**
  * スケジューリングモード
  */
 export type ScheduleMode = 'memorization' | 'translation' | 'spelling' | 'grammar';
@@ -56,6 +70,9 @@ export interface ScheduleParams {
 
   /** ハイブリッドモード（既存AI優先度を尊重） */
   hybridMode?: boolean;
+
+  /** finalPriority主因モード（variant=Cで使用、AICoordinatorのfinalPriorityを主軸にする） */
+  finalPriorityMode?: boolean;
 }
 
 /**
@@ -85,14 +102,17 @@ export interface ScheduleContext {
 
   /** セッション開始時刻 */
   sessionStartTime: number;
+
+  /** 単語別の学習進捗 */
+  wordProgress: Record<string, any>;
 }
 
 /**
  * 語句の学習状況
  */
 export interface WordStatus {
-  category: 'new' | 'incorrect' | 'still_learning' | 'mastered';
-  priority: number;
+  category: 'new' | 'incorrect' | 'still_learning' | 'mastered'; // 後方互換性のため残す（position範囲から派生）
+  position: number; // Position スコア（0-100）
   lastStudied: number;
   attempts: number;
   correct: number;
@@ -108,11 +128,14 @@ export interface PrioritizedQuestion {
   /** 問題 */
   question: Question;
 
-  /** 計算された優先度（低いほど優先） */
-  priority: number;
+  /** Position スコア（0-100、高いほど優先） */
+  position: number;
 
   /** 語句の学習状況 */
   status: WordStatus | null;
+
+  /** 出題回数 */
+  attempts?: number;
 
   /** 振動防止フィルターが適用されたか */
   antiVibrationApplied?: boolean;

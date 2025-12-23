@@ -446,10 +446,7 @@ export class AcquisitionQueueManager {
       finalDifficulty = entry.difficulty;
       finalCategory = entry.category;
     } else if (difficulty === undefined || category === undefined) {
-      // 初回正解時：デフォルト値を使用
-      console.log(
-        `🆕 初回正解：キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`
-      );
+      // 初回正解時：デフォルト値を使用（ログ削減のため出力なし）
     }
 
     if (currentQueue === QueueType.IMMEDIATE && this.shouldEnqueueEarly(word, progress)) {
@@ -506,11 +503,7 @@ export class AcquisitionQueueManager {
     );
     progress.lastThresholdAdjustment = Date.now();
 
-    if (progress.dynamicThreshold !== oldThreshold) {
-      console.log(
-        `📈 誤答により動的閾値を上げました: ${word} → ${progress.dynamicThreshold}回（正答率: ${(progress.correctRate * 100).toFixed(1)}%）`
-      );
-    }
+    // 動的閾値更新（ログ削減のため出力なし）
 
     // 定着完了フラグをリセット（誤答したら再度復習が必要）
     if (progress.isAcquisitionComplete) {
@@ -528,10 +521,7 @@ export class AcquisitionQueueManager {
       finalDifficulty = entry.difficulty;
       finalCategory = entry.category;
     } else if (difficulty === undefined || category === undefined) {
-      // 初回不正解時：デフォルト値を使用してキューに追加
-      console.log(
-        `🆕 初回不正解：即時復習キューに追加 (${word}, difficulty: ${finalDifficulty}, category: ${finalCategory})`
-      );
+      // 初回不正解時：デフォルト値を使用してキューに追加（ログ削減のため出力なし）
     }
 
     // 誤答したら現在のキューから削除して即時復習キューに戻す
@@ -834,13 +824,7 @@ export class AcquisitionQueueManager {
   private enqueueWithLimit(queue: QueueEntry[], entry: QueueEntry, maxSize: number): void {
     if (queue.length >= maxSize) {
       // キューが満杯の場合は古いエントリを削除（これは正常動作）
-      // 警告レベルを下げてコンソールの乱雑さを防ぐ
-      if (queue.length % 50 === 0) {
-        // 50件ごとに1回だけログ出力
-        console.info(
-          `[MemoryAI] キュー管理: ${maxSize}語制限に達しました（古いエントリを自動削除）`
-        );
-      }
+      // ログ削減のため出力なし
       queue.shift();
     }
     queue.push(entry);

@@ -1,21 +1,65 @@
 /**
- * 📚 LinguisticAI - 言語学的AI
+ * 📚 LinguisticAI - 言語学的AI（Phase 4.5強化版 + ML統合）
  *
  * 責任:
  * - 語句の固有難易度評価
  * - 音韻的類似性の分析
  * - 意味的クラスタリング
  * - 文法複雑度の判定
+ *
+ * Phase 4.5 ML統合:
+ * - TensorFlow.jsによる言語的難易度予測
+ * - ハイブリッドAI（ルールベース + ML）
  */
 
-import type { SpecialistAI, LinguisticSignal, AIAnalysisInput } from '../types';
+import type { LinguisticSignal, AIAnalysisInput, StorageWordProgress } from '../types';
+import { MLEnhancedSpecialistAI } from '../ml/MLEnhancedSpecialistAI';
 
-export class LinguisticAI implements SpecialistAI<LinguisticSignal> {
+export class LinguisticAI extends MLEnhancedSpecialistAI<LinguisticSignal> {
   readonly id = 'linguistic';
   readonly name = 'Linguistic AI';
   readonly icon = '📚';
 
-  analyze(input: AIAnalysisInput): LinguisticSignal {
+  /**
+   * Position提案（統合レイヤー用）
+   *
+   * 言語学AIの立場: 単語の言語学的難易度からPositionを提案
+   * - 長い単語 → Position高（覚えにくい）
+   * - 不規則な綴り → Position高
+   * - 正答率が低い → Position高（実証済みの難易度）
+   */
+  proposePosition(progress: StorageWordProgress, accuracy: number): number {
+    const word = progress.word || '';
+
+    // === 言語学的難易度 ===
+    // 単語の長さ
+    const lengthFactor = Math.min(word.length * 2, 20); // 最大+20点
+
+    // 不規則な綴り（連続する子音、母音など）
+    const irregularityFactor = this.calculateIrregularity(word);
+
+    // === 実証済み難易度 ===
+    // 正答率が低い = 実際に難しい
+    const empiricalDifficulty = (1 - accuracy) * 30; // 最大+30点
+
+    // === 基準Position ===
+    const basePosition = 40; // やや低め（言語学的要因は補助的）
+
+    // === 最終提案 ===
+    const proposedPosition = basePosition + lengthFactor + irregularityFactor + empiricalDifficulty;
+
+    return Math.max(0, Math.min(100, proposedPosition));
+  }
+
+  private calculateIrregularity(word: string): number {
+    // 簡易的な不規則性評価
+    const hasDoubleConsonants = /([bcdfghjklmnpqrstvwxyz])\1/.test(word);
+    const hasUnusualCombinations = /([qx]|[^aeiou]{4})/.test(word);
+
+    return (hasDoubleConsonants ? 5 : 0) + (hasUnusualCombinations ? 10 : 0);
+  }
+
+  protected analyzeByRules(input: AIAnalysisInput): LinguisticSignal {
     const { word, allProgress } = input;
 
     const inherentDifficulty = this.calculateInherentDifficulty(word);
@@ -182,13 +226,66 @@ export class LinguisticAI implements SpecialistAI<LinguisticSignal> {
 
     return true;
   }
-}
 
-// 型定義のインポートを修正
-interface WordProgress {
-  memorizationAttempts?: number;
-  memorizationCorrect?: number;
-  memorizationStillLearning?: number;
-  memorizationStreak?: number;
-  lastStudied?: number;
+  // ========================================
+  // Phase 4.5: ML統合メソッド
+  // ========================================
+
+  protected async analyzeByML(input: AIAnalysisInput): Promise<LinguisticSignal> {
+    const features = this.extractFeatures(input);
+    const prediction = await this.predict(features);
+
+    return {
+      aiId: 'linguistic',
+      confidence: prediction.confidence,
+      timestamp: Date.now(),
+      inherentDifficulty: prediction.values[0],
+      phoneticSimilarity: [], // MLでは簡略化
+      semanticCluster: [], // MLでは簡略化
+      grammarComplexity: prediction.values[1],
+    };
+  }
+
+  protected mergeSignals(
+    ruleSignal: LinguisticSignal,
+    mlSignal: LinguisticSignal,
+    input: AIAnalysisInput
+  ): LinguisticSignal {
+    const totalWords = Object.keys(input.allProgress).length;
+    const mlWeight = Math.min(Math.max((totalWords - 30) / 50, 0), 0.5);
+    const ruleWeight = 1 - mlWeight;
+
+    return {
+      aiId: 'linguistic',
+      confidence: (ruleSignal.confidence * ruleWeight) + (mlSignal.confidence * mlWeight),
+      timestamp: Date.now(),
+      inherentDifficulty:
+        (ruleSignal.inherentDifficulty * ruleWeight) +
+        (mlSignal.inherentDifficulty * mlWeight),
+      phoneticSimilarity: ruleSignal.phoneticSimilarity,
+      semanticCluster: ruleSignal.semanticCluster,
+      grammarComplexity:
+        (ruleSignal.grammarComplexity * ruleWeight) +
+        (mlSignal.grammarComplexity * mlWeight),
+    };
+  }
+
+  protected extractFeatures(input: AIAnalysisInput): number[] {
+    const { word } = input;
+    return [
+      word.word.length / 15,
+      word.meaning.split(',').length / 5,
+      word.ipa ? word.ipa.length / 20 : 0,
+      word.katakana ? word.katakana.length / 20 : 0,
+      /[^aeiou]{3}/.test(word.word) ? 1 : 0,
+      /([bcdfghjklmnpqrstvwxyz])\1/.test(word.word) ? 1 : 0,
+      word.word.split('-').length / 3,
+      word.word.includes(' ') ? 1 : 0,
+      word.word.match(/[A-Z]/g)?.length || 0,
+      /(tion|ment|ness|ing|ed)$/.test(word.word) ? 1 : 0,
+    ];
+  }
+
+  protected getFeatureDimension(): number { return 10; }
+  protected getOutputDimension(): number { return 2; }
 }

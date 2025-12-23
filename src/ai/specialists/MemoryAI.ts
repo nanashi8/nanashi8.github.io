@@ -1,32 +1,143 @@
 /**
- * 🧠 MemoryAI - 記憶AI
+ * 🧠 MemoryAI - 記憶AI（Phase 4強化版 + ML統合）
  *
  * 責任:
  * - 記憶の定着度評価
- * - 忘却リスク計算
+ * - 忘却リスク計算（Ebbinghaus曲線）
+ * - 間隔反復学習（SM-2 Algorithm）
+ * - 長期記憶移行戦略（4段階）
  * - カテゴリー判定（new/incorrect/still_learning/mastered）
  * - 時間経過による優先度ブースト
  *
- * Phase 1で実装した時間ブースト修正を統合
+ * Phase 4新機能:
+ * - SM-2 Algorithm統合
+ * - Ebbinghaus忘却曲線モデル
+ * - 4段階記憶移行戦略（作業記憶 → 短期 → 固定化中 → 長期）
+ *
+ * Phase 4.5 ML統合:
+ * - TensorFlow.jsによる機械学習
+ * - ハイブリッドAI（ルールベース + ML）
+ * - 個人適応型学習
  */
 
 import type {
-  SpecialistAI,
   MemorySignal,
   AIAnalysisInput,
   WordCategory,
-  WordProgress,
+  StorageWordProgress,
 } from '../types';
+import { MLEnhancedSpecialistAI } from '../ml/MLEnhancedSpecialistAI';
+import { determineWordPosition } from '../utils/categoryDetermination';
+import { SM2Algorithm, type SM2Quality, type SM2Result } from './memory/SM2Algorithm';
+import { ForgettingCurveModel, type RetentionResult } from './memory/ForgettingCurveModel';
+import { LongTermMemoryStrategy, MemoryStage, type MemoryStageResult } from './memory/LongTermMemoryStrategy';
 
-export class MemoryAI implements SpecialistAI<MemorySignal> {
+export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
   readonly id = 'memory';
   readonly name = 'Memory AI';
   readonly icon = '🧠';
 
+  // Phase 4: 記憶科学モジュール
+  private sm2: SM2Algorithm;
+  private forgettingCurve: ForgettingCurveModel;
+  private longTermStrategy: LongTermMemoryStrategy;
+
+  constructor() {
+    super();
+    this.sm2 = new SM2Algorithm();
+    this.forgettingCurve = new ForgettingCurveModel();
+    this.longTermStrategy = new LongTermMemoryStrategy();
+  }
+
   /**
-   * 記憶分析を実行
+   * Position提案（統合レイヤー用）
+   *
+   * Phase 4強化: 記憶科学に基づく科学的Position決定
+   * - SM-2による復習タイミング
+   * - Ebbinghaus曲線による記憶保持率
+   * - 長期記憶段階による優先度調整
+   * - 時間経過が長い → Position高（優先的に出題）
+   * - 正答率が高い → Position低（定着済み）
    */
-  analyze(input: AIAnalysisInput): MemorySignal {
+  proposePosition(
+    progress: StorageWordProgress,
+    mode: string,
+    daysSince: number,
+    accuracy: number,
+    attempts: number
+  ): number {
+    // 未出題の新規単語
+    if (attempts === 0) {
+      return 35; // new範囲 (20-40)
+    }
+
+    // === Phase 4: 記憶科学ベースのPosition計算 ===
+    let position = 50; // 基準値
+
+    // 1️⃣ 長期記憶段階による調整
+    const memoryStage = this.longTermStrategy.determineMemoryStage(progress);
+    const stageAdjustment = this.longTermStrategy.suggestPriorityAdjustment(memoryStage, daysSince);
+    position += stageAdjustment;
+
+    // 2️⃣ SM-2による復習タイミング調整
+    const quality = this.determineQuality(progress);
+    const sm2Result = this.sm2.calculateNextReview(
+      quality,
+      progress.easeFactor || 2.5,
+      progress.lastInterval || 1,
+      progress.repetitions || 0
+    );
+
+    const now = new Date();
+    const daysUntilReview = Math.floor((sm2Result.nextReviewDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+
+    if (daysUntilReview <= 0) {
+      // 復習期限到来 → 優先度大幅アップ
+      position += 30;
+    } else if (daysUntilReview <= 2) {
+      // 復習期限が近い → 優先度アップ
+      position += 15;
+    } else if (daysUntilReview >= 7) {
+      // 復習までまだ時間がある → 優先度ダウン
+      position -= 20;
+    }
+
+    // 3️⃣ Ebbinghaus忘却曲線による調整
+    const retentionResult = this.forgettingCurve.analyzeRetention(progress, daysSince);
+    if (retentionResult.retention < 0.5) {
+      // 保持率50%未満 → 緊急復習
+      position += 25;
+    } else if (retentionResult.retention > 0.8) {
+      // 保持率80%以上 → 優先度ダウン
+      position -= 15;
+    }
+
+    // 4️⃣ 定着度ペナルティ（既存ロジック維持）
+    const retentionPenalty = accuracy * 30; // 最大-30点
+    position -= retentionPenalty;
+
+    // 5️⃣ 忘却曲線ファクター（既存ロジック維持）
+    const forgettingFactor = Math.min(daysSince * 5, 40); // 最大+40点
+    position += forgettingFactor;
+
+    // 0-100に収める
+    return Math.max(0, Math.min(100, position));
+  }
+
+  /**
+   * 記憶分析を実行（Phase 4強化版 + ML統合）
+   *
+   * Phase 4追加機能:
+   * - SM-2による次回復習計算
+   * - Ebbinghaus曲線による記憶保持率計算
+   * - 長期記憶段階の判定
+   *
+   * Phase 4.5 ML統合:
+   * - ルールベース分析をベースに
+   * - MLによる予測を加算
+   * - データ量に応じて重み付け調整
+   */
+  protected analyzeByRules(input: AIAnalysisInput): MemorySignal {
     const { word, progress, currentTab } = input;
 
     if (!progress || !progress.memorizationAttempts) {
@@ -34,10 +145,34 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
       return this.createNewWordSignal(word);
     }
 
+    // === 従来の分析（Phase 1-3） ===
     const category = this.determineCategory(progress);
     const forgettingRisk = this.calculateForgettingRisk(progress);
     const timeBoost = this.calculateTimeBoost(progress, currentTab);
     const retentionStrength = this.calculateRetentionStrength(progress);
+
+    // === Phase 4: 記憶科学分析 ===
+    const daysSince = this.getDaysSinceLastStudy(progress);
+
+    // 1️⃣ SM-2分析
+    const quality = this.determineQuality(progress);
+    const sm2Result = this.sm2.calculateNextReview(
+      quality,
+      progress.easeFactor || 2.5,
+      progress.lastInterval || 1,
+      progress.repetitions || 0
+    );
+
+    // 2️⃣ Ebbinghaus分析
+    const retentionResult = this.forgettingCurve.analyzeRetention(progress, daysSince);
+
+    // 3️⃣ 長期記憶段階分析
+    const memoryStageResult = this.longTermStrategy.analyzeMemoryStage(progress, sm2Result);
+
+    // デバッグログ（開発モードのみ）
+    if (import.meta.env?.DEV) {
+      this.logEnhancedAnalysis(progress, sm2Result, retentionResult, memoryStageResult);
+    }
 
     return {
       aiId: 'memory',
@@ -47,6 +182,11 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
       timeBoost,
       category,
       retentionStrength,
+      // Phase 4拡張フィールド
+      sm2Data: sm2Result,
+      retention: retentionResult.retention,
+      memoryStage: memoryStageResult.stage,
+      recommendedNextReview: sm2Result.nextReviewDate
     };
   }
 
@@ -55,31 +195,8 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
    * progressStorage.tsと統一したロジックを適用
    */
   private determineCategory(progress: WordProgress): WordCategory {
-    const attempts = progress.memorizationAttempts || 0;
-    const correct = progress.memorizationCorrect || 0;
-    const stillLearning = progress.memorizationStillLearning || 0;
-    const streak = progress.memorizationStreak || 0;
-
-    if (attempts === 0) return 'new';
-
-    // まだまだを0.5回の正解として計算
-    const effectiveCorrect = correct + stillLearning * 0.5;
-    const totalAttempts = attempts;
-    const incorrectCount = attempts - correct - stillLearning;
-    const accuracy = totalAttempts > 0 ? effectiveCorrect / totalAttempts : 0;
-
-    // 🟢 定着済み: 正答率80%以上 & 連続3回正解 OR 正答率70%以上 & 5回以上挑戦
-    if ((accuracy >= 0.8 && streak >= 3) || (accuracy >= 0.7 && totalAttempts >= 5)) {
-      return 'mastered';
-    }
-
-    // 🔴 要復習: 正答率30%未満 OR 連続2回不正解
-    if (accuracy < 0.3 || incorrectCount >= 2) {
-      return 'incorrect';
-    }
-
-    // 🟡 学習中: それ以外
-    return 'still_learning';
+    // 🎯 SSOT原則: determineWordPositionに委譲
+    return determineWordPosition(progress);
   }
 
   /**
@@ -193,6 +310,78 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
   }
 
   /**
+   * Phase 4補助メソッド: 前回学習からの経過日数計算
+   */
+  private getDaysSinceLastStudy(progress: WordProgress): number {
+    const lastStudied = progress.lastStudied || 0;
+    if (lastStudied === 0) return 0;
+
+    const timeSince = Date.now() - lastStudied;
+    return timeSince / (1000 * 60 * 60 * 24);
+  }
+
+  /**
+   * Phase 4補助メソッド: SM-2 Quality判定
+   *
+   * @returns 0-5のQualityスケール（SM-2準拠）
+   */
+  private determineQuality(progress: WordProgress): number {
+    const attempts = progress.memorizationAttempts || 0;
+    const correct = progress.memorizationCorrect || 0;
+    const incorrect = progress.memorizationIncorrect || 0;
+
+    if (attempts === 0) return 3; // デフォルト（普通）
+
+    // 正答率計算
+    const accuracy = correct / attempts;
+
+    // 最近の試行結果を重視（最後の試行が正解かどうか）
+    const lastAttemptCorrect = correct > 0;
+
+    if (!lastAttemptCorrect) {
+      // 最後が不正解
+      if (incorrect >= 3) return 0; // 完全失敗
+      if (incorrect >= 2) return 1; // ほぼ失敗
+      return 2; // かなり困難
+    }
+
+    // 最後が正解
+    if (accuracy >= 0.9) return 5; // 完璧
+    if (accuracy >= 0.7) return 4; // 少し迷った
+    return 3; // 正解だが困難
+  }
+
+  /**
+   * Phase 4補助メソッド: デバッグログ出力
+   */
+  private logEnhancedAnalysis(
+    progress: WordProgress,
+    sm2Result: any,
+    retentionResult: any,
+    memoryStageResult: any
+  ): void {
+    console.log('[MemoryAI Phase 4 分析]', {
+      word: progress.word,
+      sm2: {
+        quality: sm2Result.quality,
+        easeFactor: sm2Result.easeFactor,
+        interval: sm2Result.interval,
+        nextReview: sm2Result.nextReviewDate
+      },
+      retention: {
+        retention: retentionResult.retention,
+        memoryStrength: retentionResult.memoryStrength,
+        recommendation: retentionResult.recommendation
+      },
+      memoryStage: {
+        stage: memoryStageResult.stage,
+        nextReview: memoryStageResult.nextReviewInterval,
+        description: memoryStageResult.description
+      }
+    });
+  }
+
+  /**
    * シグナルの妥当性検証
    */
   validateSignal(signal: MemorySignal): boolean {
@@ -235,4 +424,144 @@ export class MemoryAI implements SpecialistAI<MemorySignal> {
     // EFの最小値は1.3
     return Math.max(newEF, 1.3);
   }
+
+  // ========================================
+  // Phase 4.5: ML統合メソッド
+  // ========================================
+
+  /**
+   * ML分析（Phase 4.5新機能）
+   *
+   * TensorFlow.jsによる機械学習ベースの記憶予測
+   */
+  protected async analyzeByML(input: AIAnalysisInput): Promise<MemorySignal> {
+    const features = this.extractFeatures(input);
+    const prediction = await this.predict(features);
+
+    return {
+      aiId: 'memory',
+      confidence: prediction.confidence,
+      timestamp: Date.now(),
+      forgettingRisk: prediction.values[0] * 100, // 0-100スケールに
+      timeBoost: prediction.values[1],
+      category: this.predictCategory(prediction.values[2]),
+      retentionStrength: prediction.values[3],
+    };
+  }
+
+  /**
+   * シグナル統合（ルール + ML）
+   */
+  protected mergeSignals(
+    ruleSignal: MemorySignal,
+    mlSignal: MemorySignal,
+    input: AIAnalysisInput
+  ): MemorySignal {
+    const dataCount = input.progress?.memorizationAttempts || 0;
+
+    // データ量に応じて重み調整
+    const mlWeight = Math.min(Math.max((dataCount - 10) / 20, 0), 0.7);
+    const ruleWeight = 1 - mlWeight;
+
+    return {
+      aiId: 'memory',
+      confidence: (ruleSignal.confidence * ruleWeight) + (mlSignal.confidence * mlWeight),
+      timestamp: Date.now(),
+
+      forgettingRisk:
+        (ruleSignal.forgettingRisk * ruleWeight) +
+        (mlSignal.forgettingRisk * mlWeight),
+
+      timeBoost:
+        (ruleSignal.timeBoost * ruleWeight) +
+        (mlSignal.timeBoost * mlWeight),
+
+      category: dataCount > 30 ? mlSignal.category : ruleSignal.category,
+
+      retentionStrength:
+        (ruleSignal.retentionStrength * ruleWeight) +
+        (mlSignal.retentionStrength * mlWeight),
+
+      // Phase 4データは保持
+      sm2Data: ruleSignal.sm2Data,
+      retention: ruleSignal.retention,
+      memoryStage: ruleSignal.memoryStage,
+      recommendedNextReview: ruleSignal.recommendedNextReview,
+    };
+  }
+
+  /**
+   * 特徴量抽出（ML用）
+   */
+  protected extractFeatures(input: AIAnalysisInput): number[] {
+    const { word, progress } = input;
+
+    if (!progress) {
+      return Array(15).fill(0);
+    }
+
+    const totalAttempts = progress.memorizationAttempts || 0;
+    const correctCount = progress.memorizationCorrect || 0;
+    const consecutiveCorrect = progress.consecutiveCorrect || 0;
+    const consecutiveWrong = progress.consecutiveIncorrect || 0;
+
+    return [
+      // 1-2: 単語特性
+      word.word.length / 15,
+      word.meaning.split(',').length / 5,
+
+      // 3-6: 学習履歴
+      totalAttempts / 20,
+      totalAttempts > 0 ? correctCount / totalAttempts : 0,
+      consecutiveCorrect / 10,
+      consecutiveWrong / 5,
+
+      // 7-8: 時間要因
+      this.getDaysSinceLastStudy(progress) / 30,
+      new Date().getHours() / 24,
+
+      // 9-11: 複数モードの習得
+      (progress.translationAttempts || 0) / 20,
+      (progress.spellingAttempts || 0) / 20,
+      (progress.grammarAttempts || 0) / 20,
+
+      // 12-13: セッション情報
+      input.sessionStats.questionsAnswered || input.sessionStats.totalAttempts / 50,
+      input.sessionStats.currentAccuracy ||
+        (input.sessionStats.totalAttempts > 0 ?
+          input.sessionStats.correctAnswers / input.sessionStats.totalAttempts : 0),
+
+      // 14-15: SM-2とEbbinghaus
+      progress.easeFactor || progress.easinessFactor || 2.5,
+      this.forgettingCurve.analyzeRetention(
+        progress,
+        this.getDaysSinceLastStudy(progress)
+      ).retention,
+    ];
+  }
+
+  /**
+   * ML予測値をカテゴリーに変換
+   */
+  private predictCategory(value: number): WordCategory {
+    if (value < 0.25) return 'new';
+    if (value < 0.5) return 'incorrect';
+    if (value < 0.75) return 'still_learning';
+    return 'mastered';
+  }
+
+  /**
+   * 特徴量の次元数
+   */
+  protected getFeatureDimension(): number {
+    return 15;
+  }
+
+  /**
+   * 出力の次元数
+   */
+  protected getOutputDimension(): number {
+    return 4; // forgettingRisk, timeBoost, category, retentionStrength
+  }
 }
+

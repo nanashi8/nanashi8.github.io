@@ -32,6 +32,13 @@ export class PerformanceMonitor {
     if (!this.enabled) return 0;
 
     try {
+      // startマークが存在するか確認
+      const startMarks = performance.getEntriesByName(`${label}-start`, 'mark');
+      if (startMarks.length === 0) {
+        // startが呼ばれていない場合は静かに無視
+        return 0;
+      }
+
       performance.mark(`${label}-end`);
       performance.measure(label, `${label}-start`, `${label}-end`);
 
@@ -52,7 +59,7 @@ export class PerformanceMonitor {
 
       return duration;
     } catch (error) {
-      console.error(`[PerformanceMonitor] Error measuring ${label}:`, error);
+      // 静かに失敗（開発用機能のためエラーログを出さない）
       return 0;
     }
   }

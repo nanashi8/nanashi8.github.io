@@ -1,21 +1,47 @@
 /**
- * 🌍 ContextualAI - 文脈的AI
+ * 🌍 ContextualAI - 文脈的AI（Phase 4.5強化版 + ML統合）
  *
  * 責任:
  * - 学習文脈の分析
  * - タブ間の相乗効果の評価
  * - 環境適合度の判定
  * - トピック継続性の評価
+ *
+ * Phase 4.5 ML統合:
+ * - TensorFlow.jsによる文脈適合度予測
+ * - ハイブリッドAI（ルールベース + ML）
  */
 
-import type { SpecialistAI, ContextualSignal, AIAnalysisInput } from '../types';
+import type { ContextualSignal, AIAnalysisInput, StorageWordProgress } from '../types';
+import { MLEnhancedSpecialistAI } from '../ml/MLEnhancedSpecialistAI';
 
-export class ContextualAI implements SpecialistAI<ContextualSignal> {
+export class ContextualAI extends MLEnhancedSpecialistAI<ContextualSignal> {
   readonly id = 'contextual';
   readonly name = 'Contextual AI';
   readonly icon = '🌍';
 
-  analyze(input: AIAnalysisInput): ContextualSignal {
+  /**
+   * Position提案（統合レイヤー用）
+   *
+   * 文脈AIの立場: 学習文脈からPositionを提案
+   * - 時間経過が長い → Position高（文脈忘却）
+   * - 最近学習した → Position低（文脈が鮮明）
+   */
+  proposePosition(progress: StorageWordProgress, daysSince: number): number {
+    // === 文脈忘却 ===
+    // 時間が経つと学習時の文脈を忘れる
+    const contextDecay = Math.min(daysSince * 3, 30); // 最大+30点
+
+    // === 基準Position ===
+    const basePosition = 50;
+
+    // === 最終提案 ===
+    const proposedPosition = basePosition + contextDecay;
+
+    return Math.max(0, Math.min(100, proposedPosition));
+  }
+
+  protected analyzeByRules(input: AIAnalysisInput): ContextualSignal {
     const { word, currentTab, allProgress, sessionStats } = input;
 
     const contextRelevance = this.calculateContextRelevance(word, currentTab);
@@ -183,13 +209,68 @@ export class ContextualAI implements SpecialistAI<ContextualSignal> {
 
     return true;
   }
-}
 
-interface WordProgress {
-  memorizationAttempts?: number;
-  memorizationCorrect?: number;
-  grammarAttempts?: number;
-  grammarCorrect?: number;
-  comprehensiveAttempts?: number;
-  comprehensiveCorrect?: number;
+  // ========================================
+  // Phase 4.5: ML統合メソッド
+  // ========================================
+
+  protected async analyzeByML(input: AIAnalysisInput): Promise<ContextualSignal> {
+    const features = this.extractFeatures(input);
+    const prediction = await this.predict(features);
+
+    return {
+      aiId: 'contextual',
+      confidence: prediction.confidence,
+      timestamp: Date.now(),
+      contextRelevance: prediction.values[0],
+      topicContinuity: prediction.values[1] > 0.5,
+      environmentFit: prediction.values[2],
+      crossTabSynergy: [],
+    };
+  }
+
+  protected mergeSignals(
+    ruleSignal: ContextualSignal,
+    mlSignal: ContextualSignal,
+    input: AIAnalysisInput
+  ): ContextualSignal {
+    const sessionCount = input.sessionStats.totalAttempts;
+    const mlWeight = Math.min(Math.max((sessionCount - 20) / 50, 0), 0.6);
+    const ruleWeight = 1 - mlWeight;
+
+    return {
+      aiId: 'contextual',
+      confidence: (ruleSignal.confidence * ruleWeight) + (mlSignal.confidence * mlWeight),
+      timestamp: Date.now(),
+      contextRelevance:
+        (ruleSignal.contextRelevance * ruleWeight) +
+        (mlSignal.contextRelevance * mlWeight),
+      topicContinuity: ruleSignal.topicContinuity || mlSignal.topicContinuity,
+      environmentFit:
+        (ruleSignal.environmentFit * ruleWeight) +
+        (mlSignal.environmentFit * mlWeight),
+      crossTabSynergy: ruleSignal.crossTabSynergy,
+    };
+  }
+
+  protected extractFeatures(input: AIAnalysisInput): number[] {
+    const { currentTab, sessionStats, progress } = input;
+    return [
+      currentTab === 'memorization' ? 1 : 0,
+      currentTab === 'grammar' ? 1 : 0,
+      currentTab === 'comprehensive' ? 1 : 0,
+      sessionStats.sessionDuration / (1000 * 60 * 60),
+      sessionStats.totalAttempts / 50,
+      sessionStats.currentAccuracy ||
+        (sessionStats.totalAttempts > 0 ?
+          sessionStats.correctAnswers / sessionStats.totalAttempts : 0),
+      progress ? (progress.memorizationAttempts || 0) / 20 : 0,
+      progress ? (progress.grammarAttempts || 0) / 20 : 0,
+      new Date().getHours() / 24,
+      new Date().getDay() / 7,
+    ];
+  }
+
+  protected getFeatureDimension(): number { return 10; }
+  protected getOutputDimension(): number { return 3; }
 }

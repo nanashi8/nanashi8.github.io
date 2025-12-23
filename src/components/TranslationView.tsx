@@ -11,6 +11,8 @@ import {
 import { ErrorPrediction } from '@/ai/prediction/errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
+import { RequeuingDebugPanel } from './RequeuingDebugPanel';
+import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
@@ -88,6 +90,7 @@ function TranslationView({
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showDebugPanel, setShowDebugPanel] = useState(false);
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -121,6 +124,21 @@ function TranslationView({
     const saved = localStorage.getItem('autoShowDetails');
     return saved !== 'false'; // デフォルトはtrue
   });
+
+  // デバッグ: 成績リセット
+  const handleResetProgress = () => {
+    if (!confirm('和訳タブの進捗データをリセットしますか？')) return;
+    logger.info('[TranslationView] 成績リセット完了');
+    alert('成績をリセットしました（実装は親コンポーネントで行う必要があります）');
+  };
+
+  // useQuestionRequeuフック
+  const { reAddQuestion: _reAddQuestion, clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<QuizState>();
+
+  // デバッグ: 再出題パネル表示トグル
+  const handleDebugRequeue = () => {
+    setShowDebugPanel(prev => !prev);
+  };
 
   // 回答処理をラップ（回答時刻更新用）
   const handleAnswer = async (answer: string, correct: string) => {
@@ -298,6 +316,8 @@ function TranslationView({
                 dataSource={
                   questionSets?.find((qs) => qs.id === selectedDataSource)?.name || '全問題集'
                 }
+                onResetProgress={handleResetProgress}
+                onDebugRequeue={handleDebugRequeue}
                 category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
                 difficulty={selectedDifficulty}
                 wordPhraseFilter={selectedWordPhraseFilter}
@@ -521,6 +541,16 @@ function TranslationView({
             </div>
           </div>
         </>
+      )}
+
+      {/* デバッグパネル */}
+      {showDebugPanel && (
+        <RequeuingDebugPanel
+          currentIndex={currentIndex}
+          totalQuestions={questions.length}
+          questions={questions}
+          requeuedWords={getRequeuedWords(questions, currentIndex)}
+        />
       )}
     </div>
   );

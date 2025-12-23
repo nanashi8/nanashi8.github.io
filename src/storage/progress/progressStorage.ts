@@ -11,6 +11,7 @@ import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
 import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
 import { deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
 import { QuestionScheduler } from '@/ai/scheduler/QuestionScheduler';
+import { determineWordPosition, type LearningMode } from '@/ai/utils/categoryDetermination';
 
 // 型定義をインポート＆re-export
 import type {
@@ -140,18 +141,8 @@ export async function loadProgress(): Promise<UserProgress> {
         const totalAttempts = totalCorrect + totalIncorrect;
         const consecutiveCorrect = wp.consecutiveCorrect || 0;
 
-        // 🎯 4タブ統一：1発正解は定着済
-        if (totalAttempts === 0) {
-          wp.category = 'new';
-        } else if (totalAttempts === 1 && totalCorrect === 1) {
-          wp.category = 'mastered'; // 1発正解
-        } else if (consecutiveCorrect >= 3) {
-          wp.category = 'mastered';
-        } else if (totalIncorrect > 0 && consecutiveCorrect < 2) {
-          wp.category = 'incorrect';
-        } else {
-          wp.category = 'still_learning';
-        }
+        // 🎯 SSOT原則: determineWordPositionに委譲
+        wp.category = determineWordPosition(wp);
         repairedCount++;
       }
     });
@@ -1173,52 +1164,35 @@ export async function updateWordProgress(
     }
   }
 
-  // カテゴリーを更新（QuestionScheduler用）
-  // 🎯 カテゴリー判定ロジック（4タブ統一：1発正解は定着済）
-  const totalCorrect = wordProgress.correctCount || 0;
-  const totalIncorrect = wordProgress.incorrectCount || 0;
-  const totalTrials = totalCorrect + totalIncorrect;
+  // 🤖 学習段階（position）判定を担当AIに委譲
+  // AI担当の determineWordPosition 関数が以下を判断：
+  // - 正答率と連続正解数から学習段階を決定
+  // - 「まだまだ」を0.5回の正解として計算
+  // - 複数のルールを統合して最適な判定
+  const oldPosition = wordProgress.position;
 
-  if (totalTrials === 0) {
-    wordProgress.category = 'new';
-  } else if (totalTrials === 1 && totalCorrect === 1) {
-    // 🟢 1発正解 = 定着済み（時間経過で再出題される）
-    wordProgress.category = 'mastered';
-  } else if (wordProgress.consecutiveCorrect >= 3) {
-    // 🟢 連続3回正解 = 定着済み
-    wordProgress.category = 'mastered';
-  } else if (totalIncorrect > 0 && wordProgress.consecutiveCorrect < 2) {
-    // 🔴 要復習: 不正解があり、まだ連続正解が少ない
-    wordProgress.category = 'incorrect';
-  } else {
-    // 🟡 学習中: それ以外
-    wordProgress.category = 'still_learning';
-  }
-
-  // デバッグ: カテゴリー変更をログ出力（直近の行動も表示）
-  const actionLabel = isCorrect ? '✅正解' : isStillLearning ? '🟡まだまだ' : '❌分からない';
-  const accuracy = totalTrials > 0 ? totalCorrect / totalTrials : 0;
-  if (import.meta.env.DEV) {
-    console.log(
-      `📝 [Category] ${word}: ${actionLabel} → ${wordProgress.category} | 正解${wordProgress.correctCount}回, 不正解${wordProgress.incorrectCount}回, 連続正解${wordProgress.consecutiveCorrect}, 連続不正解${wordProgress.consecutiveIncorrect}`
-    );
-  }
-
-  // ✅ 【解答直後に優先度を計算・保存】
-  // 🎯 Phase 1.2: 優先度計算をQuestionSchedulerに委譲
+  // ✅ 【解答直後にPositionを計算・保存】
+  // 🎯 タブ別Position計算（各タブで独立した学習進度を管理）
   const questionScheduler = new QuestionScheduler();
-  const calculatedPriority = questionScheduler.recalculatePriorityAfterAnswer(wordProgress);
+  const calculatedPosition = questionScheduler.recalculatePriorityAfterAnswer(
+    word,
+    wordProgress,
+    mode as 'memorization' | 'translation' | 'spelling' | 'grammar' | undefined
+  );
 
-  if (import.meta.env.DEV) {
-    console.log(
-      `🎯 [Priority] ${word}: ${calculatedPriority.toFixed(1)} (category=${wordProgress.category}, accuracy=${(accuracy * 100).toFixed(0)}%)`
-    );
+  // タブ別positionフィールドに保存（他タブのAI出題工夫用）
+  if (mode === 'memorization') {
+    wordProgress.memorizationPosition = calculatedPosition;
+  } else if (mode === 'translation') {
+    wordProgress.translationPosition = calculatedPosition;
+  } else if (mode === 'spelling') {
+    wordProgress.spellingPosition = calculatedPosition;
+  } else if (mode === 'grammar') {
+    wordProgress.grammarPosition = calculatedPosition;
   }
 
-  // ✅ 保存前の確認: メモリ上のカテゴリー値
-  if (import.meta.env.DEV) {
-    console.log(`💾 [保存前] ${word}のカテゴリー（メモリ）: ${wordProgress.category}`);
-  }
+  // 総合Position（デフォルト）
+  wordProgress.position = calculatedPosition;
 
   // results配列に記録（ScoreBoard統計用）
   if (mode) {
@@ -1257,17 +1231,7 @@ export async function updateWordProgress(
 
   // ✅ 保存後の確認: localStorage から読み取り
   try {
-    const savedData = localStorage.getItem('english-progress');
-    if (savedData) {
-      const parsed = JSON.parse(savedData);
-      const savedCategory = parsed.wordProgress?.[word]?.category;
-      console.log(`✅ [保存後] ${word}のカテゴリー（localStorage）: ${savedCategory}`);
-      if (savedCategory !== wordProgress.category) {
-        console.error(
-          `🚨 [保存エラー] ${word}: メモリ=${wordProgress.category}, localStorage=${savedCategory}`
-        );
-      }
-    }
+    // Debug logs removed to reduce console noise
   } catch (e) {
     console.error('[保存確認エラー]', e);
   }
@@ -2409,6 +2373,11 @@ export function getWordDetailedData(word: string): {
   status: 'mastered' | 'learning' | 'struggling' | 'new'; // 定着状態
   statusLabel: string; // 状態ラベル
   statusIcon: string; // 状態アイコン
+  position?: number; // Position (0-100)
+  memorizationPosition?: number; // 暗記タブPosition
+  translationPosition?: number; // 和訳タブPosition
+  spellingPosition?: number; // スペルタブPosition
+  grammarPosition?: number; // 文法タブPosition
 } | null {
   const progress = loadProgressSync();
   const wordProgress = progress.wordProgress[word];
@@ -2480,6 +2449,11 @@ export function getWordDetailedData(word: string): {
     status,
     statusLabel,
     statusIcon,
+    position: wordProgress.position,
+    memorizationPosition: wordProgress.memorizationPosition,
+    translationPosition: wordProgress.translationPosition,
+    spellingPosition: wordProgress.spellingPosition,
+    grammarPosition: wordProgress.grammarPosition,
   };
 }
 
@@ -2968,3 +2942,59 @@ export {
 
 // getGrammarUnitStatsで使用するため、再importが必要
 import { getGrammarUnitStats } from './statistics';
+
+/**
+ * 🔒 強制装置: 現在のセッション統計をprogressStorageから計算
+ *
+ * 手動カウントではなく、実際のcategoryをカウントすることで
+ * 整合性を保証する
+ *
+ * @param questions - 現在のセッションで使用している問題リスト
+ * @returns セッション統計
+ */
+export function calculateSessionStats(
+  questions: Array<{ word: string }>,
+  mode: 'memorization' | 'translation' | 'spelling' | 'grammar' = 'memorization'
+): {
+  incorrect: number;
+  still_learning: number;
+  mastered: number;
+  new: number;
+  total: number;
+} {
+  const progress = loadProgressSync();
+
+  const stats = {
+    incorrect: 0,
+    still_learning: 0,
+    mastered: 0,
+    new: 0,
+    total: questions.length,
+  };
+
+  questions.forEach(q => {
+    const wp = progress.wordProgress[q.word];
+    if (!wp) {
+      stats.new++;
+      return;
+    }
+
+    // ✅ Position範囲から集計（科学的根拠ベース）
+    // Position = determineWordPosition()で計算済み
+    // しかしWordProgressに保存されていないので、その場で計算
+    const position = determineWordPosition(wp);
+
+    // Position範囲でカテゴリ判定
+    if (position >= 70) {
+      stats.incorrect++; // 70-100: incorrect
+    } else if (position >= 40) {
+      stats.still_learning++; // 40-70: still_learning
+    } else if (position >= 20) {
+      stats.new++; // 20-40: new
+    } else {
+      stats.mastered++; // 0-20: mastered
+    }
+  });
+
+  return stats;
+}
