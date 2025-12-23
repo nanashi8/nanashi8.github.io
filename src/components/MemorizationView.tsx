@@ -176,10 +176,7 @@ function MemorizationView({
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.MEMORIZATION);
 
   // 適応的学習AIネットワーク（常時有効）
-  const {
-    processQuestion: processAdaptiveQuestion,
-    currentStrategy,
-  } = useAdaptiveNetwork();
+  const { processQuestion: processAdaptiveQuestion, currentStrategy } = useAdaptiveNetwork();
 
   // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
   const [scheduler] = useState(() => {
@@ -187,8 +184,7 @@ function MemorizationView({
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     // 開発環境でAI統合をテストする場合はtrueに設定
     const enableAI =
-      import.meta.env.DEV ||
-      localStorage.getItem('enable-ai-coordination') === 'true';
+      import.meta.env.DEV || localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
       logger.info('🤖 [MemorizationView] AI統合が有効化されました');
@@ -197,7 +193,12 @@ function MemorizationView({
   });
 
   // 問題再出題管理フック
-  const { reAddQuestion: _reAddQuestion, clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<Question>();
+  const {
+    reAddQuestion: _reAddQuestion,
+    clearExpiredFlags,
+    updateRequeueStats,
+    getRequeuedWords,
+  } = useQuestionRequeue<Question>();
 
   // ═══════════════════════════════════════════════════════════
   // 🚀 Phase 1 Pattern 3: 計算結果のメモ化拡大
@@ -487,7 +488,11 @@ function MemorizationView({
         );
 
         // N=20フォールバック（variant=B/Cのみ、悪化時）
-        if (guardResult.shouldFallback && !abFallbackApplied && (abVariant === 'B' || abVariant === 'C')) {
+        if (
+          guardResult.shouldFallback &&
+          !abFallbackApplied &&
+          (abVariant === 'B' || abVariant === 'C')
+        ) {
           logger.warn('[MemorizationView] 振動スコア悪化: N=20フォールバック適用', {
             score: vibrationScore,
             variant: abVariant,
@@ -591,10 +596,14 @@ function MemorizationView({
   };
 
   // デバッグ: 成績リセット
-  const handleResetProgress = () => {
-    if (!confirm('暗記タブの進捗データをリセットしますか？')) return;
+  const handleResetProgress = async () => {
+    if (!confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) return;
 
     try {
+      // resetAllProgressを使用して完全リセット（成績タブと同じ処理）
+      const { resetAllProgress } = await import('../progressStorage');
+      await resetAllProgress();
+
       // セッション統計をリセット
       setSessionStats({
         correct: 0,
@@ -621,7 +630,7 @@ function MemorizationView({
       setAbConsecutiveDivergence(0);
 
       logger.info('[MemorizationView] 成績リセット完了');
-      alert('成績をリセットしました');
+      alert('学習記録をリセットしました');
     } catch (error) {
       logger.error('[MemorizationView] 成績リセット失敗', error);
       alert('リセットに失敗しました');
@@ -630,7 +639,7 @@ function MemorizationView({
 
   // デバッグ: 再出題ロジック（デバッグパネル表示）
   const handleDebugRequeue = () => {
-    setShowDebugPanel(prev => !prev);
+    setShowDebugPanel((prev) => !prev);
   };
 
   // 適応的AI分析ヘルパー関数（常時有効）
@@ -939,24 +948,24 @@ function MemorizationView({
           // 遅延: 詳細AI分析（常時有効、1秒後）
           (async () => {
             // 1秒待機してから詳細分析
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            await new Promise((resolve) => setTimeout(resolve, 1000));
 
-                PerformanceMonitor.start('ai-detailed-analysis');
-                try {
-                  await processWithAdaptiveAI(answeredQuestion.word, isCorrect);
-                  const duration = PerformanceMonitor.end('ai-detailed-analysis');
+            PerformanceMonitor.start('ai-detailed-analysis');
+            try {
+              await processWithAdaptiveAI(answeredQuestion.word, isCorrect);
+              const duration = PerformanceMonitor.end('ai-detailed-analysis');
 
-                  if (import.meta.env.DEV) {
-                    console.log('🔬 [MemorizationView] 詳細AI分析完了', {
-                      word: answeredQuestion.word,
-                      duration: `${duration.toFixed(2)}ms`,
-                    });
-                  }
-                } catch (error) {
-                  PerformanceMonitor.end('ai-detailed-analysis');
-                  logger.error('[MemorizationView] AI分析エラー:', error);
-                }
-              })(),
+              if (import.meta.env.DEV) {
+                console.log('🔬 [MemorizationView] 詳細AI分析完了', {
+                  word: answeredQuestion.word,
+                  duration: `${duration.toFixed(2)}ms`,
+                });
+              }
+            } catch (error) {
+              PerformanceMonitor.end('ai-detailed-analysis');
+              logger.error('[MemorizationView] AI分析エラー:', error);
+            }
+          })(),
         ]).catch((error) => {
           // 全体のエラーハンドリング（個別エラーは既にキャッチ済み）
           logger.error('[MemorizationView] バックグラウンド処理エラー:', error);
@@ -1031,7 +1040,10 @@ function MemorizationView({
 
       // 🚫 連続出題防止: 直前に回答した問題をスキップ（最大5問先までチェック）
       const maxSkip = Math.min(nextIndex + 5, questionsForNextIndex.length);
-      while (nextIndex < maxSkip && questionsForNextIndex[nextIndex].word === currentQuestion.word) {
+      while (
+        nextIndex < maxSkip &&
+        questionsForNextIndex[nextIndex].word === currentQuestion.word
+      ) {
         logger.warn('[MemorizationView] 連続出題を検出、スキップ', {
           word: questionsForNextIndex[nextIndex].word,
           nextIndex,
@@ -1277,24 +1289,26 @@ function MemorizationView({
                     )}
 
                     {/* カスタムセットに追加ボタン */}
-                    {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
-                      <div className="mt-3 flex justify-center">
-                        <AddToCustomButton
-                          word={{
-                            word: currentQuestion.word,
-                            meaning: currentQuestion.meaning,
-                            ipa: currentQuestion.reading,
-                            source: 'memorization',
-                          }}
-                          sets={customQuestionSets}
-                          onAddWord={onAddWordToCustomSet}
-                          onRemoveWord={onRemoveWordFromCustomSet}
-                          onOpenManagement={onOpenCustomSetManagement}
-                          size="medium"
-                          variant="both"
-                        />
-                      </div>
-                    )}
+                    {onAddWordToCustomSet &&
+                      onRemoveWordFromCustomSet &&
+                      onOpenCustomSetManagement && (
+                        <div className="mt-3 flex justify-center">
+                          <AddToCustomButton
+                            word={{
+                              word: currentQuestion.word,
+                              meaning: currentQuestion.meaning,
+                              ipa: currentQuestion.reading,
+                              source: 'memorization',
+                            }}
+                            sets={customQuestionSets}
+                            onAddWord={onAddWordToCustomSet}
+                            onRemoveWord={onRemoveWordFromCustomSet}
+                            onOpenManagement={onOpenCustomSetManagement}
+                            size="medium"
+                            variant="both"
+                          />
+                        </div>
+                      )}
                   </div>
                 </div>
 
@@ -1862,24 +1876,26 @@ function MemorizationView({
                     )}
 
                     {/* カスタムセットに追加ボタン */}
-                    {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
-                      <div className="mt-3 flex justify-center">
-                        <AddToCustomButton
-                          word={{
-                            word: currentQuestion.word,
-                            meaning: currentQuestion.meaning,
-                            ipa: currentQuestion.reading,
-                            source: 'memorization',
-                          }}
-                          sets={customQuestionSets}
-                          onAddWord={onAddWordToCustomSet}
-                          onRemoveWord={onRemoveWordFromCustomSet}
-                          onOpenManagement={onOpenCustomSetManagement}
-                          size="medium"
-                          variant="both"
-                        />
-                      </div>
-                    )}
+                    {onAddWordToCustomSet &&
+                      onRemoveWordFromCustomSet &&
+                      onOpenCustomSetManagement && (
+                        <div className="mt-3 flex justify-center">
+                          <AddToCustomButton
+                            word={{
+                              word: currentQuestion.word,
+                              meaning: currentQuestion.meaning,
+                              ipa: currentQuestion.reading,
+                              source: 'memorization',
+                            }}
+                            sets={customQuestionSets}
+                            onAddWord={onAddWordToCustomSet}
+                            onRemoveWord={onRemoveWordFromCustomSet}
+                            onOpenManagement={onOpenCustomSetManagement}
+                            size="medium"
+                            variant="both"
+                          />
+                        </div>
+                      )}
                   </div>
                 </div>
 

@@ -126,18 +126,33 @@ function TranslationView({
   });
 
   // デバッグ: 成績リセット
-  const handleResetProgress = () => {
-    if (!confirm('和訳タブの進捗データをリセットしますか？')) return;
-    logger.info('[TranslationView] 成績リセット完了');
-    alert('成績をリセットしました（実装は親コンポーネントで行う必要があります）');
+  const handleResetProgress = async () => {
+    if (!confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) return;
+
+    try {
+      // resetAllProgressを使用して完全リセット（成績タブと同じ処理）
+      const { resetAllProgress } = await import('../progressStorage');
+      await resetAllProgress();
+
+      logger.info('[TranslationView] 成績リセット完了');
+      alert('学習記録をリセットしました');
+    } catch (error) {
+      logger.error('[TranslationView] 成績リセット失敗', error);
+      alert('リセットに失敗しました');
+    }
   };
 
   // useQuestionRequeuフック
-  const { reAddQuestion: _reAddQuestion, clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<QuizState>();
+  const {
+    reAddQuestion: _reAddQuestion,
+    clearExpiredFlags,
+    updateRequeueStats,
+    getRequeuedWords,
+  } = useQuestionRequeue<QuizState>();
 
   // デバッグ: 再出題パネル表示トグル
   const handleDebugRequeue = () => {
-    setShowDebugPanel(prev => !prev);
+    setShowDebugPanel((prev) => !prev);
   };
 
   // 回答処理をラップ（回答時刻更新用）

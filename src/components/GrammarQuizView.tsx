@@ -122,18 +122,14 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
   // 適応的学習AIネットワーク（常時有効）
-  const {
-    processQuestion: processAdaptiveQuestion,
-    currentStrategy,
-  } = useAdaptiveNetwork();
+  const { processQuestion: processAdaptiveQuestion, currentStrategy } = useAdaptiveNetwork();
 
   // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
   const [scheduler] = useState(() => {
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     const enableAI =
-      import.meta.env.DEV ||
-      localStorage.getItem('enable-ai-coordination') === 'true';
+      import.meta.env.DEV || localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
       logger.info('🤖 [GrammarQuizView] AI統合が有効化されました');
@@ -142,7 +138,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   });
 
   // 問題再出題管理フック
-  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<GrammarQuestion>();
+  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } =
+    useQuestionRequeue<GrammarQuestion>();
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -174,15 +171,27 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   };
 
   // デバッグハンドラー
-  const handleResetProgress = () => {
-    resetStats();
-    setCorrectStreak(0);
-    setIncorrectStreak(0);
-    console.log('🔄 [文法タブ] セッション統計をリセットしました');
+  const handleResetProgress = async () => {
+    if (!confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) return;
+
+    try {
+      // resetAllProgressを使用して完全リセット（成績タブと同じ処理）
+      const { resetAllProgress } = await import('../progressStorage');
+      await resetAllProgress();
+
+      resetStats();
+      setCorrectStreak(0);
+      setIncorrectStreak(0);
+      console.log('✅ [文法タブ] 学習記録をリセットしました');
+      alert('学習記録をリセットしました');
+    } catch (error) {
+      console.error('❌ [文法タブ] 成績リセット失敗', error);
+      alert('リセットに失敗しました');
+    }
   };
 
   const handleDebugRequeue = () => {
-    setShowDebugPanel(prev => !prev);
+    setShowDebugPanel((prev) => !prev);
   };
 
   // 適応的AI分析ヘルパー関数（常時有効）
