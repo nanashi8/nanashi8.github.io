@@ -191,7 +191,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   };
 
   const handleDebugRequeue = () => {
-    setShowDebugPanel((prev) => !prev);
+    setShowDebugPanel(true);
   };
 
   // 適応的AI分析ヘルパー関数（常時有効）

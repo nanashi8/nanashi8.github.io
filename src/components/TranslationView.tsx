@@ -152,7 +152,7 @@ function TranslationView({
 
   // デバッグ: 再出題パネル表示トグル
   const handleDebugRequeue = () => {
-    setShowDebugPanel((prev) => !prev);
+    setShowDebugPanel(true);
   };
 
   // 回答処理をラップ（回答時刻更新用）
