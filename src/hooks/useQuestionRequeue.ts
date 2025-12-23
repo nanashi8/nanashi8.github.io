@@ -35,6 +35,14 @@ interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
     currentStats: TStats,
     setter: (updater: (prev: TStats) => TStats) => void
   ) => void;
+
+  // 🆕 デバッグ用: 再出題予定のリストを取得
+  getRequeuedWords: (questions: T[], currentIndex: number) => Array<{
+    word: string;
+    reason: 'incorrect' | 'still_learning';
+    insertAt: number;
+    timestamp: number;
+  }>;
 }
 
 /**
@@ -46,9 +54,16 @@ export function useQuestionRequeue<
 >(): UseQuestionRequeueResult<T, TStats> {
   /**
    * 問題を再追加（最優先キューに追加）
-   * 次の3-5問の中で必ず再出題されるように配置
+   * 🔒 分からない: 1-2問後に積極的に再出題
+   * 🟡 まだまだ: 3-5問後に再出題
    */
   const reAddQuestion = useCallback((question: T, questions: T[], currentIndex: number): T[] => {
+    // nullガード
+    if (!questions || !Array.isArray(questions)) {
+      console.warn('[useQuestionRequeue] questions is null or not an array');
+      return [];
+    }
+
     const qid =
       (question as any).id ?? (question as any).word ?? String((question as any).japanese ?? '');
     const reAddedQuestion = {
@@ -57,26 +72,44 @@ export function useQuestionRequeue<
       reAddedCount: (question.reAddedCount || 0) + 1,
     } as T;
 
-    // 直近ウィンドウ(次の5問)に同一IDがあれば重複再追加しない
-    const windowEnd = Math.min(currentIndex + 6, questions.length);
+    // 直近ウィンドウ(次の10問)に同一IDがあれば重複再追加しない
+    const windowSize = 10; // 振動防止のため10問に拡大
+    const windowEnd = Math.min(currentIndex + windowSize + 1, questions.length);
     const upcoming = questions.slice(currentIndex + 1, windowEnd);
     const existsNearby = upcoming.some((q: any) => {
       const id = q?.id ?? q?.word ?? String(q?.japanese ?? '');
       return id === qid;
     });
     if (existsNearby) {
+      if (import.meta.env.DEV) {
+        console.log('🔄 [useQuestionRequeue] 重複スキップ: 既に次の10問以内に存在', {
+          word: String(qid),
+          currentIndex,
+          windowEnd,
+        });
+      }
       return questions;
     }
 
-    // 即座に再出題（次の1問後）：スキップ連打で高速消化を実現
-    const offset = 1; // 常に次の問題として再出題
-    const insertPosition = Math.min(currentIndex + 1 + offset, questions.length);
+    // 🔒 強制装置: 再出題位置を決定
+    // incorrectの判定は難しいため、reAddedCountで判定
+    // 初回再出題(count=0): 3-5問後
+    // 2回目以降(count>=1): 1-2問後（積極的に再出題）
+    const isUrgent = (question.reAddedCount || 0) >= 1;
+    const offset = isUrgent
+      ? 1 + Math.floor(Math.random() * 2) // 1 or 2 (分からない)
+      : 3 + Math.floor(Math.random() * 3); // 3, 4, or 5 (まだまだ)
+    const insertPosition = Math.min(currentIndex + offset, questions.length);
 
     // KPI: 再追加を記録（開発用）
     try {
       sessionKpi.onReAdd(String(qid));
     } catch {
       // KPI記録失敗は無視（開発用機能のため本番動作に影響なし）
+    }
+
+    if (import.meta.env.DEV && isUrgent) {
+      console.log('🔴 [強制装置] 分からない問題を1-2問後に再出題:', String(qid));
     }
 
     return [
@@ -128,10 +161,54 @@ export function useQuestionRequeue<
     []
   );
 
+  /**
+   * 🆕 デバッグ用: 再出題予定のリストを取得
+   * sessionPriorityが設定されている問題 = 再出題された問題
+   */
+  const getRequeuedWords = useCallback(
+    (
+      questions: T[],
+      currentIndex: number
+    ): Array<{
+      word: string;
+      reason: 'incorrect' | 'still_learning';
+      insertAt: number;
+      timestamp: number;
+    }> => {
+      const requeued: Array<{
+        word: string;
+        reason: 'incorrect' | 'still_learning';
+        insertAt: number;
+        timestamp: number;
+      }> = [];
+
+      questions.forEach((q, idx) => {
+        if (idx > currentIndex && q.sessionPriority) {
+          const word = String((q as any).word || (q as any).japanese || '(unknown)');
+
+          // reasonの判定（簡易的にreAddedCountで判定）
+          // 本来はWordProgressを見るべきだが、デバッグ用のため簡易実装
+          const reason: 'incorrect' | 'still_learning' = 'still_learning';
+
+          requeued.push({
+            word,
+            reason,
+            insertAt: idx + 1, // 1-indexed
+            timestamp: q.sessionPriority,
+          });
+        }
+      });
+
+      return requeued;
+    },
+    []
+  );
+
   return {
     reAddQuestion,
     clearExpiredFlags,
     isReviewQuestion,
     updateRequeueStats,
+    getRequeuedWords,
   };
 }

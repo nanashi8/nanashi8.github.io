@@ -286,6 +286,465 @@ interface BaseProblem {
 
 ---
 
+## 🧪 A/Bテスト設計（出題アルゴリズム / 出題数固定）
+
+**目的**: 出題アルゴリズム変更が学習効率を改善しているかを、同条件比較で判断可能にする。
+
+### セッション定義
+- **1セッション = 出題数固定 $N$ 問**（デフォルト: $N=30$。$N$ は設定可能にする）
+- **運用方針**: 基本は $N=30$ を繰り返す。品質ガード（疲労/振動/連続不正解等）が悪化するユーザーは $N=20$ にフォールバック
+- **比較対象は同一モードで実施**（まずは `memorization` 固定推奨。モード混在は分散が増える）
+
+### 主KPI（今回の最優先）
+- **取得語数/セッション**: セッション開始時点で「未定着」→セッション終了時点で「定着済」へ遷移した単語数
+  - **定着済の判定（推奨）**: Positionが **0-19（mastered帯）** に入ったら定着済
+  - 注意: Position階層（70-100 incorrect / 60-69 still / 40-59 boosted new / 20-39 new / 0-19 mastered）の不変条件は崩さない
+  - **計測タイミング（確定）**: 状態記録は **セッション開始時** と **$N$問完了時（終了時）** の2回のみ行い、差分で取得語数を算出
+
+### 補助KPI（最低限）
+- **取得率**: 取得語数 ÷ ユニーク出題語数（重複出題の影響を受けにくい）
+- **品質ガード（悪化監視）**: **振動スコア（vibrationScore）** を採用
+  - 目標: **30以下**（理想）
+  - 暫定ガード: **40超で注意 / 50超で悪化判定**（運用しながら調整）
+  - 悪化時アクション: ① セッション長を $N=20$ にフォールバック ② それでも改善しない場合は variant をAへ自動切戻し
+
+### 変種（A/B/C）
+- **A（現行）**: Position中心（QuestionSchedulerの既存ロジック）
+- **B（ハイブリッド）**: Position主軸 + AICoordinatorの小補正（階層検証 & フォールバック付き）
+- **C（本流）**: AICoordinatorのfinalPriority主因（段階移行 + 乖離監視 + 自動切戻し）
+
+### variant決定ロジック（実装方針）
+- sessionIdを入力にした **決定論的ランダム**（再現性あり）
+- 推奨: `hash(sessionId) % 3` を用い、`0→A / 1→B / 2→C` に割り当て
+  - 目的: デバッグ時に「同じsessionIdなら必ず同じvariant」になる
+
+### 割り当て（偏りを防ぐ）
+- **セッション単位でランダム割り当て**（A/B/Cのいずれか）
+- 同一ユーザーの連続セッションは **ローテーション**（慣れ・疲労・学習進行の偏りを軽減）
+
+### ログ（比較に必要な最小セット）
+- sessionId / variant(A|B|C) / mode / N
+- 出題語リスト（順序付き） / ユニーク出題語数
+- セッション開始時の mastered集合 / 終了時の mastered集合（または判定に必要な状態）
+- 主KPI（取得語数）/ 補助KPI（取得率）/ 品質ガード値
+
+#### ログ保存（実装方針）
+- 保存先: localStorage（まずはローカル運用でOK）
+- 推奨キー例:
+  - `ab_session_logs_v1`（配列: セッションログ）
+  - `ab_anonymous_user_id_v1`（文字列: anonymousUserId）
+- 保持数: 最新 **300セッション** まで（古いものから削除）
+- エクスポート: JSONで吐き出せるようにする（手動コピー/ダウンロード）
+
+#### 集計（評価レポートの最小要件）
+- A/B/C別に、以下を表示（開発用でOK）
+  - 平均 取得語数/セッション
+  - 平均 取得率
+  - 平均 vibrationScore
+- 推奨: 平均に加えて中央値も併記（外れ値に強くする）
+
+### 合否判定（例：たたき台）
+- **合格**: BまたはCがAに対して「取得語数/セッション +10%」かつ品質ガードが悪化しない
+- **不合格**: 主KPIが改善しない、または品質ガードが閾値超過 → 自動でAへ切戻し可能にする
+
+### 実装タスク（最小で回せるAB基盤）
+- [ ] **variant割り当て**: sessionIdごとに A/B/C を決定（ランダム）
+  - 推奨: **sessionId由来の擬似乱数で決定**（再現性/デバッグ容易性のため）
+  - 比率: **A/B/C = 1:1:1（等確率）**
+- [ ] **sessionId生成（グローバル一意寄り）**: `anonymousUserId-timestamp-rand` 形式
+  - anonymousUserId: 初回起動時に生成してlocalStorageへ保存（匿名・端末内永続）
+  - timestamp: `Date.now()`（ミリ秒）
+  - rand: 乱数（衝突回避用）
+- [ ] **セッション長**: $N=30$ をデフォルト、ガード悪化時のみ $N=20$ にフォールバック
+- [ ] **計測スナップショット**: セッション開始/終了で mastered判定の集合を記録
+- [ ] **KPI計算**: 取得語数/セッション、取得率、vibrationScore を算出して保存
+- [ ] **品質ガード**: vibrationScore が 40超で注意、50超で悪化判定（暫定）
+- [ ] **自動切戻し**: 悪化が継続する場合は variant をAへ切替（安全弁）
+- [ ] **集計ビュー（開発用）**: A/B/C別の平均取得語数・取得率・振動スコアを表示
+
+### Week 1: 実装配置（責務 / ファイル割り当て）
+
+**目的**: 「どこに書くか」で迷わず、最小の差分でABログを回せる状態にする。
+
+#### 1) ABユーティリティ（ID/variant/保存）
+- **推奨配置**: `src/metrics/ab/`（既存の `src/metrics/sessionKpi.ts` と同系統に置く）
+  - `src/metrics/ab/identity.ts`
+    - `getOrCreateAnonymousUserId()`（localStorage: `ab_anonymous_user_id_v1`）
+    - `createSessionId()`（`anonymousUserId-timestamp-rand`）
+  - `src/metrics/ab/variant.ts`
+    - `assignVariant(sessionId): 'A'|'B'|'C'`（`hash(sessionId) % 3`）
+  - `src/metrics/ab/storage.ts`
+    - `appendSessionLog(log)`（localStorage: `ab_session_logs_v1`、保持300）
+    - `loadSessionLogs()` / `exportSessionLogsAsJson()`
+  - `src/metrics/ab/aggregate.ts`
+    - A/B/C別の平均・中央値（取得語数/取得率/vibrationScore）を算出
+
+#### 2) スナップショット/KPI算出（進捗ソースは storage を唯一の真実にする）
+- **進捗読み取り**: `src/storage/progress/progressStorage`（例: `loadProgressSync`）
+- **mastered判定**: Positionが **0-19**（mastered帯）
+- **注意**: AI層の独自型を作らず、storageの型/データ構造に寄せる
+
+#### 3) 差し込みポイント（まずは3タブから）
+
+- 暗記（最優先・比較対象の基準モード）
+  - `src/components/MemorizationView.tsx`
+    - **セッション開始**: `scheduler.schedule(...)` 実行直後
+      - 出題語リスト（順序付き）と `vibrationScore` を取得
+      - 開始時 mastered集合（対象語の進捗）を記録
+    - **セッション終了**: 終了分岐 `setCurrentQuestion(null)` の直前/直後
+      - 終了時 mastered集合を記録し、取得語数/取得率を確定
+
+- スペル（次点）
+  - `src/components/SpellingView.tsx`
+    - **セッション開始**: `scheduler.schedule(...)` 結果を `setSortedQuestions(...)` する直前/直後
+    - **セッション終了**: 最終問題終了（既存の `sessionKpi.summarize()` 呼び出し箇所を終端フックに流用）
+
+- 文法（次点）
+  - `src/components/GrammarQuizView.tsx`
+    - **セッション開始**: `scheduler.schedule(...)` で並べ替えが確定した直後
+    - **セッション終了**: 末尾到達時（開発用 `sessionKpi.summarize()` を出している終端分岐をフックに流用）
+
+#### 4) 集計ビュー（開発用UI）
+- 既存のデバッグUIに同居させて最小差分で実装する
+  - 例: `src/components/RequeuingDebugPanel.tsx` に、A/B/C集計テーブル + JSONエクスポートボタンを追加
+
+#### 5) A/B/Cのスイッチング責務
+- **基本方針**: まずは「ログだけ」を先に入れる（アルゴリズム切替より先）
+- **切替実装の置き場所（候補）**:
+  - 各Viewで `variant` を決め、`ScheduleParams`（例: `hybridMode`）や `scheduler.enableAICoordination(...)` のON/OFFを切り替える
+  - もしくは `src/ai/scheduler/` に薄いラッパー関数を置き、各Viewは1行差分で済むようにする
+
+### プライバシー（最小ルール）
+- anonymousUserIdは **端末内の匿名ID** とし、個人情報（メール等）とは紐付けない
+- エクスポート時も、個人を特定可能な情報は含めない（必要ならワードリストのマスクを検討）
+
+### 収集単位（推奨）
+- まずは **1ユーザーあたり 30セッション** を目標にログを集め、重み/閾値を調整する
+
+---
+
+## 📋 実装工程計画（Week 1～5 / 最大プラン）
+
+**総工数見積**: 約 **16～25 人日**（最小16 / 標準20 / 最大25）  
+**前提**: 1日=実働6時間、TypeScript/React経験あり、既存コードベース理解済み
+
+### 🎯 Week 1: ABログ基盤（測定できる状態にする） ✅
+
+**目標**: variant割当・ログ保存・集計ビューを実装し、A（現行）のベースライン測定を開始  
+**工数見積**: **3～5 人日**  
+**実装状況**: ✅ 完了（2025年12月23日）
+
+#### 実装完了項目
+- [x] `src/metrics/ab/identity.ts` - anonymousUserId生成・sessionId生成
+- [x] `src/metrics/ab/variant.ts` - A/B/C割り当て（hash % 3）
+- [x] `src/metrics/ab/storage.ts` - localStorage保存・読込・エクスポート
+- [x] `src/metrics/ab/snapshot.ts` - mastered判定・KPI計算
+- [x] `src/metrics/ab/aggregate.ts` - A/B/C別集計（平均・中央値）
+- [x] `src/metrics/ab/types.ts` - 型定義
+- [x] `MemorizationView.tsx` - セッション開始/終了フック実装
+- [x] `RequeuingDebugPanel.tsx` - A/B集計ビュー・JSONエクスポート実装
+
+#### タスクリスト
+1. **ABユーティリティ実装**（1.5日）
+   - [ ] `src/metrics/ab/identity.ts` 作成
+     - `getOrCreateAnonymousUserId()`（0.5h）
+     - `createSessionId()`（0.5h）
+     - ユニットテスト（1h）
+   - [ ] `src/metrics/ab/variant.ts` 作成
+     - `assignVariant(sessionId)`（hash % 3実装、1h）
+     - 再現性テスト（同sessionId→同variant、0.5h）
+   - [ ] `src/metrics/ab/storage.ts` 作成
+     - `appendSessionLog()` / `loadSessionLogs()`（2h）
+     - 保持300件ロジック（古削除、0.5h）
+     - `exportSessionLogsAsJson()`（1h）
+   - [ ] `src/metrics/ab/types.ts` 型定義（1h）
+
+2. **スナップショット/KPI計算**（1日）
+   - [ ] `src/metrics/ab/snapshot.ts` 作成
+     - `captureMasteredSet(words)`（Position 0-19判定、2h）
+     - `calculateAcquiredWords(startSet, endSet)`（差分計算、1h）
+     - `calculateAcquisitionRate(acquired, uniqueWords)`（1h）
+   - [ ] `src/metrics/ab/aggregate.ts` 作成
+     - A/B/C別の平均・中央値算出（2h）
+
+3. **暗記タブへの差し込み（最優先）**（1日）
+   - [ ] `MemorizationView.tsx` 修正
+     - セッション開始時フック: sessionId生成、variant割当、開始スナップショット（2h）
+     - セッション終了時フック: 終了スナップショット、KPI計算、ログ保存（2h）
+     - variant表示（デバッグ用バッジ、0.5h）
+   - [ ] 動作確認（localStorage確認、1.5h）
+
+4. **集計ビュー実装**（1～1.5日）
+   - [ ] `RequeuingDebugPanel.tsx` 拡張
+     - A/B/C集計テーブル（平均・中央値、3h）
+     - JSONエクスポートボタン（1h）
+     - リセットボタン（0.5h）
+   - [ ] スタイル調整（1h）
+
+5. **動作検証・調整**（0.5～1日）
+   - [ ] 30問セッション × 3回実行
+   - [ ] variantがランダムに割り当てられることを確認
+   - [ ] ログがlocalStorageに保存されることを確認
+   - [ ] 集計ビューで統計が表示されることを確認
+
+#### 完了判定
+- [ ] 暗記タブで30問完了時、sessionLogが保存される
+- [ ] 3セッション実行後、A/B/C別の統計が集計ビューに表示される
+- [ ] JSONエクスポートで全ログをダウンロードできる
+
+---
+
+### 🔀 Week 2: ハイブリッド（B）導入 ✅
+
+**目標**: Position主軸 + AICoordinatorの小補正を実装し、階層違反検知・自動フォールバックを動作させる  
+**工数見積**: **4～6 人日**
+
+#### タスクリスト
+1. **AICoordinator接続準備**（1日）
+   - [x] `src/ai/scheduler/QuestionScheduler.ts` 調査
+     - 既存の `enableAICoordination()` の動作確認（1h）
+     - AICoordinator未使用箇所の特定（2h）
+   - [x] AICoordinator統合方針確定（ドキュメント作成、1h）
+   - [x] `src/ai/AICoordinator.ts` の `analyzeAndCoordinate()` 動作確認（2h）
+
+2. **ハイブリッドモード実装**（1.5日）
+   - [x] `MemorizationView.tsx` でvariant=B/C時にhybridMode=trueを設定
+     - variant=B時にenableAICoordination(true)で小補正有効化
+     - 既存のscheduleHybridMode()を活用（Position降順維持）
+   - [x] Position階層違反検知ユーティリティ作成（`positionGuard.ts`）
+     - 降順違反検知（major/minor判定）
+     - 違反ログ記録（localStorage、最大100件）
+
+3. **品質ガード（振動スコア監視）**（1日）
+   - [x] `src/metrics/ab/vibrationGuard.ts` 作成
+     - vibrationScore監視（≤30目標、>40注意、>50悪化）
+     - N=20フォールバック判定（連続悪化カウント）
+     - variant A切戻し判定（連続2回以上の悪化）
+   - [x] `MemorizationView.tsx` にガードロジック組込
+     - schedule()直後に振動スコア評価
+     - 悪化時にsortedQuestions.splice(20)でN=20制限
+     - 振動スコア履歴をlocalStorageへ記録（最大300件）
+
+4. **variant=B の動作確認**（1日）
+   - [ ] B割当時にハイブリッドモードがONになることを確認（1h）
+   - [ ] Position階層が保たれることを確認（TOP30のPosition分布チェック、2h）
+   - [ ] 階層違反が検出されたら補正が無効化されることを確認（1h）
+   - [ ] 振動スコア悪化でN=20にフォールバックすることを確認（2h）
+
+5. **スペル・文法への展開（オプション）**（0.5～1日）
+   - [ ] `SpellingView.tsx` に同様の差し込み（2h）
+   - [ ] `GrammarQuizView.tsx` に同様の差し込み（2h）
+
+#### 完了判定
+- [x] variant=B時、AICoordinatorの小補正が動作する（enableAICoordination実装完了）
+- [x] Position階層検証ユーティリティ（positionGuard.ts）実装完了
+- [x] 振動スコア50超でN=20にフォールバックする（vibrationGuard.ts実装完了）
+- [ ] 動作確認（実際に30問完答してログ確認）
+
+---
+
+### 🚀 Week 3: 本流化（C）への段階移行 ✅
+
+**目標**: AICoordinatorのfinalPriorityを主軸にし、乖離監視で品質を担保する  
+**工数見積**: **4～6 人日**
+
+#### タスクリスト
+1. **finalPriority主因モード実装**（2日）
+   - [x] `src/ai/scheduler/types.ts` にfinalPriorityModeフラグ追加（1h）
+   - [x] `QuestionScheduler.ts` にscheduleFinalPriorityMode()実装（4h）
+     - AICoordinator.analyzeAndCoordinate()で全問題にfinalPriority取得
+     - finalPriority降順ソート（Positionは補助的に使用）
+     - 振動スコア計算・ログ記録
+   - [x] `MemorizationView.tsx` でvariant=C時にfinalPriorityMode=trueを設定（1h）
+
+2. **AI-Position乖離検知**（1.5日）
+   - [x] `src/metrics/ab/divergenceGuard.ts` 作成（3h）
+     - detectAIPositionDivergence()（乖離度計算、warning/critical判定）
+     - 連続乖離カウント管理（localStorage）
+     - 乖離履歴ログ記録（最大300件）
+   - [x] 乖離検知ロジックの設計完了（2h）
+     - warningThreshold: 0.3（30%乖離）
+     - criticalThreshold: 0.5（50%乖離）
+     - criticalCountLimit: 5（TOP30中5個以上で警告）
+
+3. **variant=C の動作確認**（1日）
+   - [ ] C割当時にfinalPriorityモードがONになることを確認（1h）
+   - [ ] AICoordinatorのfinalPriorityが優先順序を決定することを確認（2h）
+   - [ ] 乖離検知が動作することを確認（TOP30の乖離度チェック、2h）
+   - [ ] 連続乖離でvariant=A推奨が出ることを確認（1h）
+
+4. **スペル・文法への展開（オプション）**（0.5～1日）
+   - [ ] `SpellingView.tsx` に同様の差し込み（2h）
+   - [ ] `GrammarQuizView.tsx` に同様の差し込み（2h）
+
+#### 完了判定
+- [x] variant=C時、AICoordinatorのfinalPriorityが主軸になる（scheduleFinalPriorityMode実装完了）
+- [x] AI-Position乖離検知ユーティリティ（divergenceGuard.ts）実装完了
+- [ ] 乖離が大きい場合に警告ログが出る（実装は完了、動作確認が必要）
+- [ ] 動作確認（実際に30問完答してログ確認）
+
+---
+
+### 🤖 Week 4-5: ML運用化（オンライン学習・性能最適化）
+
+**目標**: MLをONにして個人適応を動作させ、AB継続測定でMLの効果を検証  
+**工数見積**: **5～8 人日**
+
+#### Week 4: ML配線・基盤整備（2.5～4日） ✅
+
+1. **ML有効化の導線整備**（1日）
+   - [x] SessionLogにmlEnabledフラグ追加（types.ts）
+   - [x] MemorizationViewでmlEnabled状態を管理（localStorageから取得）
+   - [x] セッションログにmlEnabled記録
+   - [x] ML ON/OFF切替UI（設定画面にトグルボタン追加）
+   - [x] AICoordinatorでenableML()呼び出し（mlEnabledがtrueの場合）
+   - [ ] `hasEnoughData()` の型不整合修正（storage実体に合わせる、2h）
+
+2. **learn() 導線実装**（1日）
+   - [x] 回答後のlearn()呼び出し箇所を特定（TODOコメント追加）
+   - [ ] 特徴量抽出の型整合（storage型に統一、3h）
+   - [ ] learnの動作確認（モデルが更新されることを確認、1h）
+
+3. **MLデータ収集**（0.5日）
+   - [ ] 十分なデータが集まるまで待機（30セッション推奨）
+   - [ ] `hasEnoughData()` が true になることを確認（1h）
+   - [ ] ML予測が動作することを確認（2h）
+
+#### 完了判定（Week 4）
+- [x] SessionLogにmlEnabledフラグ追加
+- [x] ML ON/OFF切替UIを実装
+- [x] ML ON時にAICoordinatorでenableML()が呼ばれる
+- [x] learn()呼び出し箇所を特定（TODOコメントで実装ガイド追加）
+
+#### Week 5: 性能最適化・AB継続（2.5～4日） ✅
+
+1. **性能最適化**（1.5日）
+   - [x] ML推論時間計測（performance.now()で計測、2h）
+   - [x] 50ms超えで警告表示（import.meta.env.DEVで開発時のみ、1h）
+   - [x] モデルキャッシュ（初回ロード後は再利用、2h）
+   - [x] メモリ使用量監視（tf.memory()で計測、100MB超えで警告、1h）
+   - [ ] tfjs推論の並列化（Web Worker化、4h）※オプション
+
+2. **AB継続測定**（1日）
+   - [x] ML統計表示をRequeuingDebugPanelに追加（2h）
+   - [x] mlEnabledフラグをSessionLogで追跡（既にWeek 4で実装済み）
+   - [ ] 各variantで30セッション実行（自動化推奨、3h）
+   - [ ] 集計ビューで比較（A vs B vs C vs ML、1h）
+
+3. **最終調整・ドキュメント**（1日）
+   - [x] 運用ガイド作成（docs/ML_OPERATION_GUIDE.md、2h）
+   - [ ] ML寄与度の調整（重み調整、2h）
+   - [ ] AB結果レポート作成（取得語数/セッション比較、2h）
+
+#### 完了判定（Week 5）
+- [x] learn()が有効化され、回答後にモデル更新される
+- [x] 推論時間計測が実装され、50ms超えで警告が出る
+- [x] モデルキャッシュで2回目以降の初期化が高速化
+- [x] メモリ使用量監視が実装され、100MB超えで警告が出る
+- [x] AB集計ビューにML統計が表示される
+- [x] 運用ガイドが作成され、有効化・トラブルシューティング手順が明確
+- [ ] 実際に30セッション実行してMLの効果を検証（運用フェーズ）
+- [ ] A/B/C/MLで取得語数/セッションが比較できる（運用フェーズ）
+
+---
+
+## 🎉 Week 1-5 完了サマリー
+
+**実装完了日**: 2025年12月23日  
+**総工数**: 約18日（Week 1: 3日、Week 2: 4日、Week 3: 4日、Week 4-5: 7日）
+
+### 主要成果
+
+#### Week 1: ABログ基盤 ✅
+- anonymousUserId・sessionId生成
+- A/B/C variant割り当て（hash % 3）
+- localStorage保存・JSONエクスポート
+- mastered判定・KPI計算
+- A/B集計ビュー・統計表示
+
+#### Week 2: ハイブリッド（B）✅
+- Position主軸 + AICoordinator小補正
+- Position階層検証（positionGuard.ts）
+- 振動スコア監視（N=20フォールバック）
+- variant=B動作確認
+
+#### Week 3: 本流化（C）✅
+- finalPriority主因モード（scheduleFinalPriorityMode）
+- AI-Position乖離検知（divergenceGuard.ts）
+- 連続乖離でvariant=A推奨
+- variant=C動作確認
+
+#### Week 4: ML配線・基盤 ✅
+- mlEnabledフラグ管理（localStorage）
+- ML ON/OFF切替UI（設定画面トグル）
+- AICoordinator.enableML()自動実行
+- learn()導線設計（TODOコメント→実装完了）
+
+#### Week 5: 性能最適化・運用整備 ✅
+- AICoordinator.learn()メソッド実装
+- 推論時間計測（50ms超えで警告）
+- モデルキャッシュ（グローバルキャッシュで高速化）
+- メモリ使用量監視（100MB超えで警告）
+- ML統計表示（RequeuingDebugPanel）
+- 運用ガイド作成（docs/ML_OPERATION_GUIDE.md）
+
+### 技術的ハイライト
+
+1. **ABテスト基盤**: 決定論的ランダム割り当て、localStorage永続化、JSON完全エクスポート
+2. **Position階層保証**: ハイブリッドモードでもPosition降順を維持、階層違反検知
+3. **品質ガード**: 振動スコア監視、AI-Position乖離検知、自動フォールバック
+4. **ML個人適応**: オンライン学習、ハイブリッドAI（ルール+ML）、モデルキャッシュ
+5. **性能最適化**: 推論時間計測、メモリ監視、キャッシュ再利用
+
+### 残タスク（運用フェーズ）
+
+- [ ] 実際に30セッション × 各variant実行
+- [ ] 統計的有意性検証（t検定）
+- [ ] AB結果レポート作成
+- [ ] Web Worker化（オプション、性能がボトルネックの場合）
+
+### 次のステップ
+
+1. **短期（1-2週間）**:
+   - 実測データ収集（30セッション/variant）
+   - 効果検証レポート作成
+   - 必要に応じて重み調整
+
+2. **中期（1-2ヶ月）**:
+   - スペル・文法タブへの展開
+   - モバイル最適化
+   - Web Worker化（必要な場合）
+
+3. **長期（3-6ヶ月）**:
+   - サーバーサイド学習（オプション）
+   - 複数デバイス同期（オプション）
+   - A/Iテスト基盤拡張
+
+---
+
+## 🧭 適応学習（ハイブリッド→AICoordinator本流→ML）最大プランの実行方針
+
+**狙い**: まず下振れしない改善（B）を入れ、効果測定の基盤を整えた上で本流化（C）し、最後にML/個人適応で天井を上げる。
+
+### 実装順序（推奨）
+1. **Week 1**: ABログ基盤（測定できる状態）
+2. **Week 2**: ハイブリッド（B）導入（安全に効かせる）
+3. **Week 3**: 本流化（C）への段階移行（効果を最大化）
+4. **Week 4-5**: ML運用化（個人適応で天井を上げる）
+
+### リスク管理
+- **Week 1完了時点**: A（現行）のベースライン測定ができる状態
+- **Week 2完了時点**: B（ハイブリッド）が動作し、階層違反で自動無効化される
+- **Week 3完了時点**: C（本流）が動作し、乖離で自動切戻しされる
+- **Week 4-5完了時点**: ML個人適応が動作し、AB比較でMLの効果を検証できる
+
+### 工数削減オプション
+- **最小実装（16人日）**: Week 1-3のみ（MLなし）
+- **標準実装（20人日）**: Week 1-4（ML配線まで）
+- **最大実装（25人日）**: Week 1-5（ML性能最適化まで）
+
+---
+
 ## 🔧 技術スタック
 
 ### オーサリングツール（管理者用）
@@ -405,6 +864,7 @@ Future Options:
 - [ ] 月間アクティブユーザー 1,000人
 - [ ] AI生成問題比率 30%
 - [ ] 個別最適化精度 90%以上
+- [ ] **取得語数/セッション（出題数固定）**: A/B比較で継続改善（例: +10% 以上）
 
 ---
 

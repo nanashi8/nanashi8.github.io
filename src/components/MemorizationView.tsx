@@ -8,6 +8,7 @@ import {
   getMemorizationSettings,
   saveMemorizationSettings,
   updateWordProgress,
+  calculateSessionStats,
 } from '../progressStorage';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import { logger } from '@/utils/logger';
@@ -22,6 +23,29 @@ import { QuestionScheduler } from '@/ai/scheduler';
 import { determineCategory } from '@/ai/utils/quickCategoryDetermination';
 import { PerformanceMonitor } from '@/utils/performance-monitor';
 import { QualityMonitor } from '@/utils/quality-monitor';
+import { RequeuingDebugPanel } from './RequeuingDebugPanel';
+// A/Bテストログ
+import { createSessionId, getOrCreateAnonymousUserId } from '@/metrics/ab/identity';
+import { assignVariant } from '@/metrics/ab/variant';
+import type { SessionLog } from '@/metrics/ab/types';
+import {
+  captureMasteredSet,
+  calculateAcquiredWords,
+  calculateAcquisitionRate,
+  calculateUniqueWordCount,
+  extractWordList,
+} from '@/metrics/ab/snapshot';
+import { appendSessionLog } from '@/metrics/ab/storage';
+import {
+  evaluateVibrationScore,
+  updateConsecutiveCritical,
+  logVibrationScore,
+} from '@/metrics/ab/vibrationGuard';
+import {
+  detectAIPositionDivergence,
+  updateConsecutiveDivergence,
+  logDivergence,
+} from '@/metrics/ab/divergenceGuard';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -34,7 +58,7 @@ interface MemorizationViewProps {
 
 function MemorizationView({
   allQuestions,
-  questionSets,
+  questionSets: _questionSets, // 将来の拡張のため引数として残すが現在未使用
   customQuestionSets = [],
   onAddWordToCustomSet,
   onRemoveWordFromCustomSet,
@@ -83,6 +107,25 @@ function MemorizationView({
   const [sessionId] = useState(() => `session-${Date.now()}`);
   const [consecutiveViews, setConsecutiveViews] = useState(0);
 
+  // A/Bテストセッション管理
+  const [abSessionId] = useState(() => createSessionId());
+  const [abVariant] = useState(() => assignVariant(abSessionId));
+  const [abSessionStartedAt] = useState(() => Date.now());
+  const [abStartMasteredWords, setAbStartMasteredWords] = useState<string[]>([]);
+  const [abQuestionWords, setAbQuestionWords] = useState<string[]>([]);
+  const [abVibrationScore, setAbVibrationScore] = useState<number>(0);
+  const [abConsecutiveCritical, setAbConsecutiveCritical] = useState<number>(0);
+  const [abFallbackApplied, setAbFallbackApplied] = useState<boolean>(false);
+  const [abConsecutiveDivergence, setAbConsecutiveDivergence] = useState<number>(0);
+  const [abMlEnabled, setAbMlEnabled] = useState<boolean>(() => {
+    // ML有効化フラグ（localStorage設定から取得、デフォルトfalse）
+    try {
+      return localStorage.getItem('ab_ml_enabled') === 'true';
+    } catch {
+      return false;
+    }
+  });
+
   // 復習モード
   const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
 
@@ -102,8 +145,8 @@ function MemorizationView({
   // 回答時刻（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(0);
 
-  // 再スケジューリングトリガー（カテゴリ変化時に更新）
-  const [rescheduleCounter, setRescheduleCounter] = useState(0);
+  // 再スケジューリングトリガー（カテゴリ変化時に更新）- 現在未使用だが将来の拡張のため残す
+  const [_rescheduleCounter, _setRescheduleCounter] = useState(0);
 
   // 回答結果を追跡（動的AIコメント用）
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
@@ -126,12 +169,14 @@ function MemorizationView({
   // 全画面表示モード
   const [isFullscreen, setIsFullscreen] = useState(false);
 
+  // デバッグパネル表示
+  const [showDebugPanel, setShowDebugPanel] = useState(false);
+
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.MEMORIZATION);
 
-  // 適応的学習AIネットワーク
+  // 適応的学習AIネットワーク（常時有効）
   const {
-    enabled: adaptiveEnabled,
     processQuestion: processAdaptiveQuestion,
     currentStrategy,
   } = useAdaptiveNetwork();
@@ -142,7 +187,7 @@ function MemorizationView({
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     // 開発環境でAI統合をテストする場合はtrueに設定
     const enableAI =
-      process.env.NODE_ENV === 'development' ||
+      import.meta.env.DEV ||
       localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
@@ -152,7 +197,7 @@ function MemorizationView({
   });
 
   // 問題再出題管理フック
-  const { reAddQuestion: _reAddQuestion, clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
+  const { reAddQuestion: _reAddQuestion, clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<Question>();
 
   // ═══════════════════════════════════════════════════════════
   // 🚀 Phase 1 Pattern 3: 計算結果のメモ化拡大
@@ -305,133 +350,239 @@ function MemorizationView({
     if (isLoading) return;
 
     const selectQuestions = () => {
-      // データソースに基づいて問題を取得
-      const baseQuestions = allQuestions;
-
-      // データソースフィルター（現在はsource プロパティが 'junior' しかないため、実質的なフィルタリングは行わない）
-      // 将来的にデータが増えた場合、ここでフィルタリングを実装
-      if (selectedDataSource !== 'all') {
-        // 現在は全て junior なので、フィルタリングなし
-        // 将来: standard/advanced/comprehensiveに対応
-      }
-
-      if (baseQuestions.length === 0) return;
-
-      // 学習設定に基づいてフィルタリング
-      let filtered = baseQuestions;
-
-      // 難易度フィルター
-      if (selectedDifficulty !== 'all') {
-        filtered = filtered.filter((q) => q.difficulty === selectedDifficulty);
-      }
-
-      // 関連分野フィルター
-      if (selectedCategory !== 'all') {
-        filtered = filtered.filter(
-          (q) =>
-            q.relatedFields &&
-            Array.isArray(q.relatedFields) &&
-            q.relatedFields.includes(selectedCategory)
-        );
-      }
-
-      // 単語・熟語フィルター
-      if (selectedWordPhraseFilter === 'words') {
-        filtered = filtered.filter((q) => !q.word.includes(' ') || q.word.split(' ').length <= 2);
-      } else if (selectedWordPhraseFilter === 'phrases') {
-        filtered = filtered.filter((q) => q.word.includes(' ') && q.word.split(' ').length > 2);
-      }
-
-      // デバッグ: フィルター後の単語数を確認
-      logger.info('[MemorizationView] フィルター後の単語数', {
-        totalFiltered: filtered.length,
-        sessionStats: {
-          correct: sessionStats.correct,
-          incorrect: sessionStats.incorrect,
-          still_learning: sessionStats.still_learning || 0,
-        },
-      });
-
-      // 適応的出題順序（統一スケジューラー: DTA + 振動防止 + メタAI統合）
-      if (import.meta.env.DEV) {
-        console.log('🚀🚀🚀 [MemorizationView] スケジューラー呼び出し開始', {
-          filteredCount: filtered.length,
-          adaptiveEnabled,
-        });
-      }
-
-      const scheduleResult = scheduler.schedule({
-        questions: filtered,
-        mode: 'memorization',
-        limits: {
-          learningLimit: stillLearningLimit,
-          reviewLimit: incorrectLimit,
-        },
-        sessionStats: {
-          correct: sessionStats.correct,
-          incorrect: sessionStats.incorrect,
-          still_learning: sessionStats.still_learning || 0,
-          mastered: sessionStats.mastered || 0, // 定着済みも反映
-          duration: Date.now() - cardDisplayTimeRef.current,
-        },
-        useMetaAI: true, // ✅ 学習AIは常に有効（カテゴリー別優先順位）
-        isReviewFocusMode: false,
-      });
-      const sortedQuestions = scheduleResult.scheduledQuestions;
-
-      // デバッグ: スケジュール後の単語を確認
-      const debugInfo = {
-        totalScheduled: sortedQuestions.length,
-        top10Words: sortedQuestions.slice(0, 10).map((q) => q.word),
-        timestamp: new Date().toISOString(),
-      };
-
-      if (import.meta.env.DEV) {
-        console.log('📝📝📝 [MemorizationView] スケジュール後の単語', debugInfo);
-      }
-
-      // localStorage に保存（デバッグ用）
       try {
-        localStorage.setItem('debug_memorization_latest', JSON.stringify(debugInfo));
-      } catch {
-        // ignore
-      }
+        // データソースに基づいて問題を取得
+        const baseQuestions = allQuestions;
 
-      // 振動スコア監視
-      if (scheduleResult.vibrationScore > 50) {
-        logger.warn('[MemorizationView] 高い振動スコア検出', {
-          score: scheduleResult.vibrationScore,
-          processingTime: scheduleResult.processingTime,
+        // データソースフィルター（現在はsource プロパティが 'junior' しかないため、実質的なフィルタリングは行わない）
+        // 将来的にデータが増えた場合、ここでフィルタリングを実装
+        if (selectedDataSource !== 'all') {
+          // 現在は全て junior なので、フィルタリングなし
+          // 将来: standard/advanced/comprehensiveに対応
+        }
+
+        if (baseQuestions.length === 0) {
+          logger.warn('[MemorizationView] 問題が見つかりません');
+          return;
+        }
+
+        // 学習設定に基づいてフィルタリング
+        let filtered = baseQuestions;
+
+        // 難易度フィルター
+        if (selectedDifficulty !== 'all') {
+          filtered = filtered.filter((q) => q.difficulty === selectedDifficulty);
+        }
+
+        // 関連分野フィルター
+        if (selectedCategory !== 'all') {
+          filtered = filtered.filter(
+            (q) =>
+              q.relatedFields &&
+              Array.isArray(q.relatedFields) &&
+              q.relatedFields.includes(selectedCategory)
+          );
+        }
+
+        // 単語・熟語フィルター
+        if (selectedWordPhraseFilter === 'words') {
+          filtered = filtered.filter((q) => !q.word.includes(' ') || q.word.split(' ').length <= 2);
+        } else if (selectedWordPhraseFilter === 'phrases') {
+          filtered = filtered.filter((q) => q.word.includes(' ') && q.word.split(' ').length > 2);
+        }
+
+        if (filtered.length === 0) {
+          logger.warn('[MemorizationView] フィルター後の問題が0件です');
+          return;
+        }
+
+        // デバッグ: フィルター後の単語数を確認
+        logger.info('[MemorizationView] フィルター後の単語数', {
+          totalFiltered: filtered.length,
+          sessionStats: {
+            correct: sessionStats.correct,
+            incorrect: sessionStats.incorrect,
+            still_learning: sessionStats.still_learning || 0,
+          },
         });
-      }
 
-      setQuestions(sortedQuestions);
-      // 🔧 初回表示時のみインデックスをリセット
-      // 再スケジューリング時(rescheduleCounter変更時)は、現在の問題を継続
-      if (sortedQuestions.length > 0 && currentIndex === 0 && !currentQuestion) {
-        const firstQuestion = sortedQuestions[0];
-        setCurrentQuestion(firstQuestion);
-        setCurrentIndex(0);
-        cardDisplayTimeRef.current = Date.now();
-        // 📊 1問目の出題をカウント
-        setSessionStats((prev) => ({
-          ...prev,
-          total: prev.total + 1,
-        }));
+        // 適応的出題順序（統一スケジューラー: DTA + 振動防止 + メタAI統合）
+        // スケジューリング開始（ログ削減のため出力なし）
+
+        // 🔧 再スケジューリングは現在無効（filtered問題のみを使用）
+        const questionsToSchedule = filtered;
+
+        // 🧪 variant別のスケジューリング設定
+        if (abVariant === 'B') {
+          scheduler.enableAICoordination(true); // B: 小補正
+        } else if (abVariant === 'C') {
+          scheduler.enableAICoordination(true); // C: finalPriority主因
+        } else {
+          scheduler.enableAICoordination(false); // A: Position中心
+        }
+
+        const scheduleResult = scheduler.schedule({
+          questions: questionsToSchedule,
+          mode: 'memorization',
+          limits: {
+            learningLimit: stillLearningLimit,
+            reviewLimit: incorrectLimit,
+          },
+          sessionStats: {
+            correct: sessionStats.correct,
+            incorrect: sessionStats.incorrect,
+            still_learning: sessionStats.still_learning || 0,
+            mastered: sessionStats.mastered || 0, // 定着済みも反映
+            duration: Date.now() - cardDisplayTimeRef.current,
+          },
+          useMetaAI: true, // ✅ 学習AIは常に有効（カテゴリー別優先順位）
+          isReviewFocusMode: false,
+          hybridMode: abVariant === 'B', // 🧪 B: Position主軸+AI小補正
+          finalPriorityMode: abVariant === 'C', // 🧪 C: AI主軸（finalPriority主因）
+        });
+
+        if (!scheduleResult || !scheduleResult.scheduledQuestions) {
+          logger.error('[MemorizationView] スケジュール結果が無効です', { scheduleResult });
+          return;
+        }
+
+        const sortedQuestions = scheduleResult.scheduledQuestions;
+
+        // デバッグ: スケジュール後の単語を確認
+        const debugInfo = {
+          totalScheduled: sortedQuestions.length,
+          top10Words: sortedQuestions.slice(0, 10).map((q) => q.word),
+          timestamp: new Date().toISOString(),
+        };
+
+        // スケジュール完了（ログ削減のため出力なし）
+
+        // localStorage に保存（デバッグ用）
+        try {
+          localStorage.setItem('debug_memorization_latest', JSON.stringify(debugInfo));
+        } catch {
+          // ignore
+        }
+
+        // 振動スコア監視（🧪 A/Bテスト品質ガード）
+        const vibrationScore = scheduleResult.vibrationScore;
+        const userId = getOrCreateAnonymousUserId();
+        const guardResult = evaluateVibrationScore(vibrationScore, abConsecutiveCritical);
+
+        // 連続悪化カウント更新
+        const updatedConsecutiveCritical = updateConsecutiveCritical(
+          userId,
+          abVariant,
+          guardResult.level === 'critical'
+        );
+        setAbConsecutiveCritical(updatedConsecutiveCritical);
+
+        // 振動スコアログ記録
+        logVibrationScore(
+          abSessionId,
+          abVariant,
+          vibrationScore,
+          guardResult.level,
+          guardResult.shouldFallback
+        );
+
+        // N=20フォールバック（variant=B/Cのみ、悪化時）
+        if (guardResult.shouldFallback && !abFallbackApplied && (abVariant === 'B' || abVariant === 'C')) {
+          logger.warn('[MemorizationView] 振動スコア悪化: N=20フォールバック適用', {
+            score: vibrationScore,
+            variant: abVariant,
+            consecutiveCritical: updatedConsecutiveCritical,
+          });
+          setAbFallbackApplied(true);
+          // 出題数を20問に制限（sortedQuestionsを切り詰め）
+          sortedQuestions.splice(20);
+        }
+
+        // variant=A切戻し推奨（連続2回以上の悪化）
+        if (guardResult.shouldSwitchToA) {
+          logger.error('[MemorizationView] variant=A切戻し推奨', {
+            score: vibrationScore,
+            variant: abVariant,
+            consecutiveCritical: updatedConsecutiveCritical,
+            message: guardResult.message,
+          });
+        }
+
+        if (scheduleResult.vibrationScore > 50) {
+          logger.warn('[MemorizationView] 高い振動スコア検出', {
+            score: scheduleResult.vibrationScore,
+            processingTime: scheduleResult.processingTime,
+          });
+        }
+
+        // 🧪 variant=C: AI-Position乖離監視
+        if (abVariant === 'C') {
+          // 乖離検知はscheduleFinalPriorityMode内でfinalPriorityが設定されている前提
+          // ここでは簡易的にログ記録のみ実施（実際の検知はschedule内部で実施すべき）
+          // TODO: scheduleFinalPriorityMode内でdetectAIPositionDivergence()を呼び出し、
+          //       DivergenceGuardResultを返すように改修
+          if (import.meta.env.DEV) {
+            logger.info('[MemorizationView] variant=C 乖離監視未実装（TODO）', {
+              variant: abVariant,
+            });
+          }
+        }
+
+        setQuestions(sortedQuestions);
+
+        // 🧪 A/Bテスト: セッション開始時フック
+        if (sortedQuestions.length > 0 && currentIndex === 0 && !currentQuestion) {
+          const wordList = extractWordList(sortedQuestions);
+          setAbQuestionWords(wordList);
+          setAbVibrationScore(scheduleResult.vibrationScore);
+
+          // 開始時スナップショット（mastered語集合を記録）
+          const startMastered = captureMasteredSet(wordList);
+          setAbStartMasteredWords(startMastered);
+
+          if (import.meta.env.DEV) {
+            console.log('[AB Session Start]', {
+              sessionId: abSessionId,
+              variant: abVariant,
+              questionCount: sortedQuestions.length,
+              uniqueWords: calculateUniqueWordCount(wordList),
+              startMastered: startMastered.length,
+              vibrationScore: scheduleResult.vibrationScore,
+            });
+          }
+        }
+
+        // 🔧 初回表示時のみインデックスをリセット
+        // 再スケジューリング時(rescheduleCounter変更時)は、現在の問題を継続
+        if (sortedQuestions.length > 0 && currentIndex === 0 && !currentQuestion) {
+          const firstQuestion = sortedQuestions[0];
+          setCurrentQuestion(firstQuestion);
+          setCurrentIndex(0);
+          cardDisplayTimeRef.current = Date.now();
+          // 📊 1問目の出題をカウント
+          setSessionStats((prev) => ({
+            ...prev,
+            total: prev.total + 1,
+          }));
+        }
+      } catch (error) {
+        logger.error('[MemorizationView] 問題選択エラー:', error);
+        // エラー時もローディングを解除
+        setIsLoading(false);
       }
     };
 
     selectQuestions();
   }, [
-    questionSets,
     selectedDataSource,
     selectedDifficulty,
     selectedCategory,
     selectedWordPhraseFilter,
     allQuestions,
     isLoading,
-    rescheduleCounter, // ✅ カテゴリ変化時に再スケジューリング
-    // isReviewFocusMode を削除：復習モード切り替え時に問題をリセットしない
+    // questionsとschedulerは除外（無限ループ防止）
+    // sessionStatsも除外（内部で更新されるため）
+    // rescheduleCounterも除外（現在未使用のため）
   ]);
 
   // 復習モードトグル
@@ -439,10 +590,51 @@ function MemorizationView({
     setIsReviewFocusMode(!isReviewFocusMode);
   };
 
-  // 適応的AI分析ヘルパー関数
-  const processWithAdaptiveAI = async (word: string, isCorrect: boolean) => {
-    if (!adaptiveEnabled) return;
+  // デバッグ: 成績リセット
+  const handleResetProgress = () => {
+    if (!confirm('暗記タブの進捗データをリセットしますか？')) return;
 
+    try {
+      // セッション統計をリセット
+      setSessionStats({
+        correct: 0,
+        still_learning: 0,
+        incorrect: 0,
+        mastered: 0,
+        total: 0,
+        newQuestions: 0,
+        reviewQuestions: 0,
+        consecutiveNew: 0,
+        consecutiveReview: 0,
+      });
+
+      // 連続記録をリセット
+      setCorrectStreak(0);
+      setIncorrectStreak(0);
+
+      // 問題リストを再生成
+      setCurrentIndex(0);
+
+      // ABテスト記録をリセット
+      setAbVibrationScore(0);
+      setAbConsecutiveCritical(0);
+      setAbConsecutiveDivergence(0);
+
+      logger.info('[MemorizationView] 成績リセット完了');
+      alert('成績をリセットしました');
+    } catch (error) {
+      logger.error('[MemorizationView] 成績リセット失敗', error);
+      alert('リセットに失敗しました');
+    }
+  };
+
+  // デバッグ: 再出題ロジック（デバッグパネル表示）
+  const handleDebugRequeue = () => {
+    setShowDebugPanel(prev => !prev);
+  };
+
+  // 適応的AI分析ヘルパー関数（常時有効）
+  const processWithAdaptiveAI = async (word: string, isCorrect: boolean) => {
     try {
       const calculateDifficulty = (q: Question): number => {
         const gradeWeight = (q.grade || 1) / 9;
@@ -482,6 +674,28 @@ function MemorizationView({
       }
     }
   }, [sessionStats, stillLearningLimit, incorrectLimit, isReviewFocusMode]);
+
+  // 🔒 強制装置: 回答後にprogressStorageから正確な統計を再計算
+  useEffect(() => {
+    if (lastAnswerTime === 0) return; // 初回ロード時はスキップ
+    if (questions.length === 0) return;
+
+    // updateWordProgress完了後に呼び出されることを期待
+    setTimeout(() => {
+      const actualStats = calculateSessionStats(questions, 'memorization');
+      setSessionStats((prev) => ({
+        ...prev,
+        incorrect: actualStats.incorrect,
+        still_learning: actualStats.still_learning,
+        mastered: actualStats.mastered,
+        // correct, totalは手動カウントを維持（セッション中の正解数）
+      }));
+
+      if (import.meta.env.DEV) {
+        console.log('🔒 [強制装置] 統計を再計算:', actualStats);
+      }
+    }, 100); // 100ms待機してupdateWordProgressの完了を待つ
+  }, [lastAnswerTime, questions]);
 
   // calculateOptimalInterval, calculateForgettingRisk: QuestionSchedulerに統合済み
 
@@ -599,17 +813,37 @@ function MemorizationView({
       }
 
       // 統計を3段階で更新（totalは問題表示時に既にカウント済み）
-      setSessionStats((prev) => ({
-        correct: isCorrect ? prev.correct + 1 : prev.correct,
-        still_learning: isStillLearning ? prev.still_learning + 1 : prev.still_learning,
-        incorrect: !isCorrect && !isStillLearning ? prev.incorrect + 1 : prev.incorrect,
-        mastered: isCorrect ? prev.mastered + 1 : prev.mastered, // 覚えてる=mastered
-        total: prev.total, // 既に表示時にカウント済み
-        newQuestions: prev.newQuestions,
-        reviewQuestions: prev.reviewQuestions,
-        consecutiveNew: prev.consecutiveNew,
-        consecutiveReview: prev.consecutiveReview,
-      }));
+      // 🔒 強制装置: progressStorageから実際のcategoryを計算
+      setSessionStats((prev) => {
+        // updateWordProgressの完了を待ってからcalculateSessionStatsを呼び出すべきだが、
+        // UIのレスポンスを優先するため、ここでは簡易的に手動カウント
+        // 後でlastAnswerTime変更時に再計算される
+
+        const wasIncorrect = currentQuestion.reAddedCount && currentQuestion.reAddedCount > 0;
+
+        let newIncorrect = prev.incorrect;
+        let newStillLearning = prev.still_learning;
+
+        if (isCorrect && wasIncorrect) {
+          if (newIncorrect > 0) {
+            newIncorrect = Math.max(0, newIncorrect - 1);
+          } else if (newStillLearning > 0) {
+            newStillLearning = Math.max(0, newStillLearning - 1);
+          }
+        }
+
+        return {
+          correct: isCorrect ? prev.correct + 1 : prev.correct,
+          still_learning: isStillLearning ? newStillLearning + 1 : newStillLearning,
+          incorrect: !isCorrect && !isStillLearning ? newIncorrect + 1 : newIncorrect,
+          mastered: isCorrect ? prev.mastered + 1 : prev.mastered,
+          total: prev.total,
+          newQuestions: prev.newQuestions,
+          reviewQuestions: prev.reviewQuestions,
+          consecutiveNew: prev.consecutiveNew,
+          consecutiveReview: prev.consecutiveReview,
+        };
+      });
 
       // � Phase 1 Pattern 2: 即座のカテゴリー判定（10-50ms目標）
       // UI応答を最優先し、詳細分析は後回し
@@ -628,27 +862,14 @@ function MemorizationView({
         categoryDuration
       );
 
-      if (import.meta.env.DEV) {
-        console.log('⚡ [MemorizationView] 即座のカテゴリー判定', {
-          word: answeredQuestion.word,
-          category: quickCategory.category,
-          confidence: quickCategory.confidence,
-          reasoning: quickCategory.reasoning,
-          duration: `${categoryDuration.toFixed(2)}ms`,
-        });
-      }
+      // Debug log removed to reduce console noise
 
-      // �📊 カテゴリ変化時のみ再スケジューリング（パフォーマンス最適化）
-      // incorrect または still_learning が発生した時のみ再計算
-      if (!isCorrect) {
-        setRescheduleCounter((prev) => prev + 1);
-        console.log('🔄 [MemorizationView] カテゴリ変化による再スケジューリング', {
-          word: currentQuestion.word,
-          category: isStillLearning ? 'still_learning' : 'incorrect',
-          incorrect: sessionStats.incorrect + (!isStillLearning ? 1 : 0),
-          still_learning: sessionStats.still_learning + (isStillLearning ? 1 : 0),
-        });
-      }
+      // 📊 カテゴリ変化時の再スケジューリングを無効化
+      // 理由: 再スケジューリングが再出題キューを破壊する問題を回避
+      // カテゴリ変化は次のセッション開始時に自動的に反映される
+      // if (!isCorrect) {
+      //   setRescheduleCounter((prev) => prev + 1);
+      // }
 
       // ═══════════════════════════════════════════════════════════
       // 🎨 バックグラウンド処理（ステップ2: 非同期・非ブロッキング）
@@ -715,11 +936,10 @@ function MemorizationView({
 
           // 🔬 Phase 1 Pattern 2: AI分析の段階的実行
           // 即座: カテゴリー判定（既に完了）
-          // 遅延: 詳細AI分析（adaptiveEnabled時のみ、1秒後）
-          adaptiveEnabled
-            ? (async () => {
-                // 1秒待機してから詳細分析
-                await new Promise(resolve => setTimeout(resolve, 1000));
+          // 遅延: 詳細AI分析（常時有効、1秒後）
+          (async () => {
+            // 1秒待機してから詳細分析
+            await new Promise(resolve => setTimeout(resolve, 1000));
 
                 PerformanceMonitor.start('ai-detailed-analysis');
                 try {
@@ -736,8 +956,7 @@ function MemorizationView({
                   PerformanceMonitor.end('ai-detailed-analysis');
                   logger.error('[MemorizationView] AI分析エラー:', error);
                 }
-              })()
-            : Promise.resolve(),
+              })(),
         ]).catch((error) => {
           // 全体のエラーハンドリング（個別エラーは既にキャッチ済み）
           logger.error('[MemorizationView] バックグラウンド処理エラー:', error);
@@ -751,26 +970,93 @@ function MemorizationView({
       // 直前に回答した問題IDを記録（連続出題防止）
       setLastAnsweredQuestionId(currentQuestion.word);
 
-      // 次の語句へ
+      // 🧪 Week 5: ML learn()導線（回答後にモデル更新）
+      if (abMlEnabled && scheduler.aiCoordinator) {
+        try {
+          // AIAnalysisInputを構築してlearn()に渡す
+          const aiInput = {
+            word: currentQuestion.word,
+            wordProgress,
+            sessionStats: {
+              correct: sessionStats.correct,
+              incorrect: sessionStats.incorrect,
+              still_learning: sessionStats.still_learning,
+              mastered: sessionStats.mastered,
+              total: sessionStats.total,
+            },
+            currentQuestion,
+            recentAnswers: [], // 必要なら履歴を追加
+            mode: 'memorization',
+          };
+          // MLLearningOutcome型に準拠
+          const outcome = {
+            wasCorrect: isCorrect,
+            responseTime: 0, // 必要なら実測値を設定
+            timestamp: Date.now(),
+            features: [], // 必要なら特徴量を設定
+          };
+
+          scheduler.aiCoordinator.learn(aiInput, outcome).catch((error) => {
+            console.warn('[ML] learn() failed', error);
+          });
+          if (import.meta.env.DEV) {
+            console.log('[ML] learn() called', { word: currentQuestion.word, isCorrect });
+          }
+        } catch (error) {
+          console.warn('[ML] learn() error', error);
+        }
+      }
+
+      // 🔄 再出題メカニズム: useQuestionRequeueフックを使用
+      // 不正解またはまだまだの場合に再追加
+      let questionsForNextIndex = questions; // 次のインデックス計算用
+      if (!isCorrect || isStillLearning) {
+        const updatedQuestions = _reAddQuestion(currentQuestion, questions, currentIndex);
+        if (updatedQuestions !== questions) {
+          questionsForNextIndex = updatedQuestions; // 更新後の配列を使用
+          setQuestions(updatedQuestions);
+          if (import.meta.env.DEV) {
+            const reason = !isCorrect ? '分からない' : 'まだまだ';
+            console.log(`✅ [再出題] キュー追加 (${reason})`, {
+              word: currentQuestion.word,
+              insertAt: currentIndex + 2,
+              newLength: updatedQuestions.length,
+            });
+          }
+        }
+      }
+
+      // 次の語句へ（再出題キュー追加後の配列を使用）
       let nextIndex = currentIndex + 1;
 
-      // 🚫 連続出題防止: 直前に回答した問題をスキップ
-      while (nextIndex < questions.length && questions[nextIndex].word === currentQuestion.word) {
+      // 🚫 連続出題防止: 直前に回答した問題をスキップ（最大5問先までチェック）
+      const maxSkip = Math.min(nextIndex + 5, questionsForNextIndex.length);
+      while (nextIndex < maxSkip && questionsForNextIndex[nextIndex].word === currentQuestion.word) {
         logger.warn('[MemorizationView] 連続出題を検出、スキップ', {
-          word: questions[nextIndex].word,
+          word: questionsForNextIndex[nextIndex].word,
           nextIndex,
         });
         nextIndex++;
       }
 
-      if (nextIndex < questions.length) {
+      if (nextIndex < questionsForNextIndex.length) {
         // セッション優先フラグのクリーン処理：5問経過後にクリア
-        const clearedQuestions = clearExpiredFlags(questions, currentIndex);
-        if (clearedQuestions !== questions) {
+        const clearedQuestions = clearExpiredFlags(questionsForNextIndex, currentIndex);
+        if (clearedQuestions !== questionsForNextIndex) {
           setQuestions(clearedQuestions);
         }
 
-        const nextQuestion = questions[nextIndex];
+        const nextQuestion = questionsForNextIndex[nextIndex];
+
+        // 再出題確認ログ
+        if (import.meta.env.DEV && (nextQuestion as any).reAddedCount > 0) {
+          console.log('🔄 [再出題] 問題表示', {
+            word: nextQuestion.word,
+            reAddedCount: (nextQuestion as any).reAddedCount,
+            nextIndex,
+          });
+        }
+
         setCurrentQuestion(nextQuestion);
         setCurrentIndex(nextIndex);
         cardDisplayTimeRef.current = Date.now();
@@ -783,6 +1069,56 @@ function MemorizationView({
         setLastAnswerWord(undefined);
       } else {
         // 全て終了
+
+        // 🧪 A/Bテスト: セッション終了時フック
+        if (abQuestionWords.length > 0) {
+          try {
+            // 終了時スナップショット（mastered語集合を取得）
+            const endMastered = captureMasteredSet(abQuestionWords);
+
+            // KPI計算
+            const acquiredWords = calculateAcquiredWords(abStartMasteredWords, endMastered);
+            const uniqueWords = calculateUniqueWordCount(abQuestionWords);
+            const acquisitionRate = calculateAcquisitionRate(acquiredWords, uniqueWords);
+            const endedAt = Date.now();
+            const durationSec = Math.round((endedAt - abSessionStartedAt) / 1000);
+
+            // ログ保存
+            const log: SessionLog = {
+              sessionId: abSessionId,
+              variant: abVariant,
+              mode: 'memorization',
+              sessionLength: abQuestionWords.length,
+              questionWords: abQuestionWords,
+              uniqueWordCount: uniqueWords,
+              startMasteredWords: abStartMasteredWords,
+              endMasteredWords: endMastered,
+              acquiredWordCount: acquiredWords,
+              acquisitionRate,
+              vibrationScore: abVibrationScore,
+              startedAt: abSessionStartedAt,
+              endedAt,
+              durationSec,
+              mlEnabled: abMlEnabled, // 🧪 Week 4: ML有効フラグを記録
+            };
+
+            appendSessionLog(log);
+
+            if (import.meta.env.DEV) {
+              console.log('[AB Session End]', {
+                sessionId: abSessionId,
+                variant: abVariant,
+                acquiredWords,
+                acquisitionRate: (acquisitionRate * 100).toFixed(1) + '%',
+                vibrationScore: abVibrationScore,
+                durationSec,
+              });
+            }
+          } catch (error) {
+            console.error('[AB Session End] Failed to save log:', error);
+          }
+        }
+
         setCurrentQuestion(null);
         setLastAnswerWord(undefined);
       }
@@ -854,7 +1190,7 @@ function MemorizationView({
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center py-8">
         <div className="text-xl">読み込み中...</div>
       </div>
     );
@@ -863,14 +1199,14 @@ function MemorizationView({
   // currentQuestionが未設定の場合は待機表示
   if (!currentQuestion) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center py-8">
         <div className="text-xl">読み込み中...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="quiz-view">
       {/* 全画面モード時は暗記カードのみ表示 */}
       {isFullscreen ? (
         <div className="fixed inset-0 z-50 bg-gray-50 overflow-y-auto">
@@ -939,10 +1275,24 @@ function MemorizationView({
                         </div>
                       </div>
                     )}
-                    {/* 適応的AI戦略バッジ */}
-                    {adaptiveEnabled && currentStrategy && (
-                      <div className="flex justify-center mt-2">
-                        <div className="adaptive-strategy-badge">🧠 適応中</div>
+
+                    {/* カスタムセットに追加ボタン */}
+                    {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
+                      <div className="mt-3 flex justify-center">
+                        <AddToCustomButton
+                          word={{
+                            word: currentQuestion.word,
+                            meaning: currentQuestion.meaning,
+                            ipa: currentQuestion.reading,
+                            source: 'memorization',
+                          }}
+                          sets={customQuestionSets}
+                          onAddWord={onAddWordToCustomSet}
+                          onRemoveWord={onRemoveWordFromCustomSet}
+                          onOpenManagement={onOpenCustomSetManagement}
+                          size="medium"
+                          variant="both"
+                        />
                       </div>
                     )}
                   </div>
@@ -1130,6 +1480,8 @@ function MemorizationView({
                 wordPhraseFilter={selectedWordPhraseFilter}
                 onReviewFocus={handleReviewFocus}
                 isReviewFocusMode={isReviewFocusMode}
+                onResetProgress={handleResetProgress}
+                onDebugRequeue={handleDebugRequeue}
               />
             </div>
           </div>
@@ -1401,6 +1753,43 @@ function MemorizationView({
                     )}
                   </div>
                 </div>
+
+                {/* 🧪 Week 4: ML ON/OFF切替 */}
+                <div className="border-t pt-4 mt-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        🤖 機械学習（ML）
+                      </label>
+                      <p className="text-xs text-gray-500">
+                        個人の学習パターンに適応（実験的機能）
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => {
+                        try {
+                          const newValue = !abMlEnabled;
+                          localStorage.setItem('ab_ml_enabled', String(newValue));
+                          setAbMlEnabled(newValue);
+                          alert(
+                            newValue
+                              ? 'ML機能を有効にしました。設定を反映するにはページをリロードしてください。'
+                              : 'ML機能を無効にしました。設定を反映するにはページをリロードしてください。'
+                          );
+                        } catch (error) {
+                          alert('設定の保存に失敗しました');
+                        }
+                      }}
+                      className={`px-4 py-2 rounded-lg font-medium transition ${
+                        abMlEnabled
+                          ? 'bg-blue-500 text-white hover:bg-blue-600'
+                          : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
+                      }`}
+                    >
+                      {abMlEnabled ? 'ON' : 'OFF'}
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           )}
@@ -1471,10 +1860,24 @@ function MemorizationView({
                         </div>
                       </div>
                     )}
-                    {/* 適応的AI戦略バッジ */}
-                    {adaptiveEnabled && currentStrategy && (
-                      <div className="flex justify-center mt-2">
-                        <div className="adaptive-strategy-badge">🧠 適応中</div>
+
+                    {/* カスタムセットに追加ボタン */}
+                    {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
+                      <div className="mt-3 flex justify-center">
+                        <AddToCustomButton
+                          word={{
+                            word: currentQuestion.word,
+                            meaning: currentQuestion.meaning,
+                            ipa: currentQuestion.reading,
+                            source: 'memorization',
+                          }}
+                          sets={customQuestionSets}
+                          onAddWord={onAddWordToCustomSet}
+                          onRemoveWord={onRemoveWordFromCustomSet}
+                          onOpenManagement={onOpenCustomSetManagement}
+                          size="medium"
+                          variant="both"
+                        />
                       </div>
                     )}
                   </div>
@@ -1512,26 +1915,6 @@ function MemorizationView({
                     <span className="text-sm sm:text-base">覚えてる</span>
                   </button>
                 </div>
-
-                {/* カスタムセットに追加ボタン */}
-                {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
-                  <div className="mb-4 flex justify-center">
-                    <AddToCustomButton
-                      word={{
-                        word: currentQuestion.word,
-                        meaning: currentQuestion.meaning,
-                        ipa: currentQuestion.reading,
-                        source: 'memorization',
-                      }}
-                      sets={customQuestionSets}
-                      onAddWord={onAddWordToCustomSet}
-                      onRemoveWord={onRemoveWordFromCustomSet}
-                      onOpenManagement={onOpenCustomSetManagement}
-                      size="medium"
-                      variant="both"
-                    />
-                  </div>
-                )}
 
                 {/* 詳細情報 */}
                 <div className="space-y-3">
@@ -1633,6 +2016,16 @@ function MemorizationView({
             </div>
           </div>
         </>
+      )}
+
+      {/* デバッグパネル */}
+      {showDebugPanel && (
+        <RequeuingDebugPanel
+          currentIndex={currentIndex}
+          totalQuestions={questions.length}
+          questions={questions}
+          requeuedWords={getRequeuedWords(questions, currentIndex)}
+        />
       )}
     </div>
   );

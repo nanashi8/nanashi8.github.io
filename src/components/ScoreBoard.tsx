@@ -62,6 +62,9 @@ interface ScoreBoardProps {
   grammarUnit?: string; // 現在出題中の文法単元（例: "g1-unit0"）
   // 現在の問題の出題回数
   currentQuestionTimesShown?: number; // 現在表示中の問題の出題回数
+  // デバッグ機能
+  onResetProgress?: () => void; // 成績リセットボタンのコールバック
+  onDebugRequeue?: () => void; // 再出題デバッグボタンのコールバック
 }
 
 function ScoreBoard({
@@ -91,6 +94,8 @@ function ScoreBoard({
   grammarUnit,
   sessionStats,
   currentQuestionTimesShown,
+  onResetProgress,
+  onDebugRequeue,
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'>(
     'ai'
@@ -830,10 +835,35 @@ function ScoreBoard({
           <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="retention-breakdown-container">
               <div className="retention-breakdown-header">
-                <div className="attempt-counts-summary">
-                  出題数：1回 {attemptCounts.once}問 2回 {attemptCounts.twice}問 3回{' '}
-                  {attemptCounts.three}問 4回 {attemptCounts.four}問 5回 {attemptCounts.five}問
-                  6回以上 {attemptCounts.sixOrMore}問
+                <div className="flex items-center justify-between gap-2">
+                  <div className="attempt-counts-summary flex-1">
+                    出題数：1回 {attemptCounts.once}問 2回 {attemptCounts.twice}問 3回{' '}
+                    {attemptCounts.three}問 4回 {attemptCounts.four}問 5回 {attemptCounts.five}問
+                    6回以上 {attemptCounts.sixOrMore}問
+                  </div>
+                  {/* デバッグボタン */}
+                  {import.meta.env.DEV && (
+                    <div className="flex gap-1">
+                      {onResetProgress && (
+                        <button
+                          onClick={onResetProgress}
+                          className="px-2 py-1 text-xs bg-red-500 text-white rounded hover:bg-red-600 transition-colors whitespace-nowrap"
+                          title="現在のモードの成績をリセット"
+                        >
+                          🔄 リセット
+                        </button>
+                      )}
+                      {onDebugRequeue && (
+                        <button
+                          onClick={onDebugRequeue}
+                          className="px-2 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors whitespace-nowrap"
+                          title="再出題ロジックのデバッグ情報を表示"
+                        >
+                          🐛 デバッグ
+                        </button>
+                      )}
+                    </div>
+                  )}
                 </div>
                 {detailedStats.appearedWords > 0 ? (
                   <div className="retention-subtitle">
@@ -1090,7 +1120,59 @@ function ScoreBoard({
                     <strong className="word-stat-value word-retention-rate">
                       {currentWordData.retentionRate}%
                     </strong>
+                    {currentWordData.position !== undefined && (
+                      <>
+                        <span className="word-stat-divider">｜</span>
+                        <span className="word-stat-label">Position:</span>
+                        <strong className="word-stat-value">
+                          {currentWordData.position.toFixed(0)}
+                        </strong>
+                      </>
+                    )}
                   </div>
+                  {/* タブ別Position表示 */}
+                  {(currentWordData.memorizationPosition !== undefined ||
+                    currentWordData.translationPosition !== undefined ||
+                    currentWordData.spellingPosition !== undefined ||
+                    currentWordData.grammarPosition !== undefined) && (
+                    <div className="word-detail-stats">
+                      {currentWordData.memorizationPosition !== undefined && (
+                        <>
+                          <span className="word-stat-label">暗記:</span>
+                          <strong className="word-stat-value">
+                            {currentWordData.memorizationPosition.toFixed(0)}
+                          </strong>
+                          <span className="word-stat-divider">｜</span>
+                        </>
+                      )}
+                      {currentWordData.translationPosition !== undefined && (
+                        <>
+                          <span className="word-stat-label">和訳:</span>
+                          <strong className="word-stat-value">
+                            {currentWordData.translationPosition.toFixed(0)}
+                          </strong>
+                          <span className="word-stat-divider">｜</span>
+                        </>
+                      )}
+                      {currentWordData.spellingPosition !== undefined && (
+                        <>
+                          <span className="word-stat-label">スペル:</span>
+                          <strong className="word-stat-value">
+                            {currentWordData.spellingPosition.toFixed(0)}
+                          </strong>
+                          <span className="word-stat-divider">｜</span>
+                        </>
+                      )}
+                      {currentWordData.grammarPosition !== undefined && (
+                        <>
+                          <span className="word-stat-label">文法:</span>
+                          <strong className="word-stat-value">
+                            {currentWordData.grammarPosition.toFixed(0)}
+                          </strong>
+                        </>
+                      )}
+                    </div>
+                  )}
                 </div>
               ) : currentWord && !currentWordData ? (
                 <div className="word-detail-empty">

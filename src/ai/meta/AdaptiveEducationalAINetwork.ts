@@ -31,7 +31,7 @@ interface Logger {
 
 const logger: Logger = {
   debug: (message, context) => {
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.debug(`[AdaptiveNetwork] ${message}`, context);
     }
   },

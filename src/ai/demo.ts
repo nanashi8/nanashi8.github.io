@@ -216,7 +216,7 @@ export function runAllDemos() {
 }
 
 // 開発環境でのみ実行
-if (process.env.NODE_ENV === 'development') {
+if (import.meta.env.DEV) {
   console.log('AI統合デモコードが読み込まれました。');
   console.log('実行するには: runAllDemos()');
 }

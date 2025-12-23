@@ -40,7 +40,7 @@ export function useAdaptiveNetwork(): AdaptiveNetworkHook {
   const networkRef = useRef<AdaptiveEducationalAINetwork | null>(null);
 
   // 状態管理
-  const [enabled, setEnabledState] = useState(false);
+  const [enabled, setEnabledState] = useState(true); // ✅ 常時有効化
   const [currentStrategy, setCurrentStrategy] = useState<StrategyType | null>(null);
   const [effectiveness, setEffectiveness] = useState<Map<StrategyType, StrategyEffectiveness>>(
     new Map()
@@ -55,7 +55,7 @@ export function useAdaptiveNetwork(): AdaptiveNetworkHook {
       try {
         if (!networkRef.current) {
           networkRef.current = new AdaptiveEducationalAINetwork({
-            enabled: false, // デフォルトはOFF（保守的）
+            enabled: true, // ✅ 常時有効化
           });
 
           await networkRef.current.initialize();
@@ -92,9 +92,7 @@ export function useAdaptiveNetwork(): AdaptiveNetworkHook {
         return getDefaultRecommendation();
       }
 
-      if (!enabled) {
-        return getDefaultRecommendation();
-      }
+      // ✅ 常時有効化のため、enabledチェックを削除
 
       setIsLoading(true);
       setError(null);

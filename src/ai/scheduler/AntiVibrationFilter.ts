@@ -27,6 +27,12 @@ export class AntiVibrationFilter {
     let appliedCount = 0;
 
     const filtered = questions.map((pq) => {
+      // ✅ Position 40以上（まだまだ・分からない）の単語はAntiVibration免除
+      // 🎯 ゴール: まだまだ・分からないを0にする → 最優先で出題
+      if (pq.position >= 40) {
+        return pq;
+      }
+
       const recentAnswer = this.findRecentAnswer(pq.question.word, options.recentAnswers);
 
       if (!recentAnswer) {
@@ -35,49 +41,49 @@ export class AntiVibrationFilter {
 
       const timeSinceAnswer = now - recentAnswer.timestamp;
       let penaltyApplied = false;
-      let newPriority = pq.priority;
+      let newPosition = pq.position;
 
       // 戦略0: 超短時間（30秒以内）の即座再出題を完全防止（最優先）
       if (timeSinceAnswer < 30000) {
-        // 30秒以内に回答した問題は即座に最後尾に（優先度+100.0）
-        newPriority += 100.0;
+        // 30秒以内に回答した問題は即座に最後尾に（Position-100.0）
+        newPosition -= 100.0;
         penaltyApplied = true;
 
         logger.debug(`[AntiVibration] 即座再出題防止: ${pq.question.word}`, {
           timeSinceAnswer: Math.round(timeSinceAnswer / 1000) + 's',
-          penalty: 100.0,
+          penalty: -100.0,
         });
       }
       // 戦略1: 短時間内の再出題ペナルティ
       else if (timeSinceAnswer < options.minInterval && recentAnswer.correct) {
-        // 1分以内に正解した問題は大幅に後回し（優先度+5.0）
-        newPriority += 5.0;
+        // 1分以内に正解した問題は大幅に後回し（Position-5.0）
+        newPosition -= 5.0;
         penaltyApplied = true;
 
         logger.debug(`[AntiVibration] 短時間再出題ペナルティ: ${pq.question.word}`, {
           timeSinceAnswer: Math.round(timeSinceAnswer / 1000) + 's',
-          penalty: 5.0,
+          penalty: -5.0,
         });
       } else if (timeSinceAnswer < options.minInterval * 5 && recentAnswer.correct) {
-        // 5分以内に正解した問題は中程度に後回し（優先度+2.0）
-        newPriority += 2.0;
+        // 5分以内に正解した問題は中程度に後回し（Position-2.0）
+        newPosition -= 2.0;
         penaltyApplied = true;
 
         logger.debug(`[AntiVibration] 中時間再出題ペナルティ: ${pq.question.word}`, {
           timeSinceAnswer: Math.round(timeSinceAnswer / 1000) + 's',
-          penalty: 2.0,
+          penalty: -2.0,
         });
       }
 
       // 戦略2: 連続正解の頻度低減
       if (recentAnswer.consecutiveCorrect >= options.consecutiveThreshold) {
-        // 3回以上連続正解した問題は頻度を下げる（優先度+2.0）
-        newPriority += 2.0;
+        // 3回以上連続正解した問題は頻度を下げる（Position-2.0）
+        newPosition -= 2.0;
         penaltyApplied = true;
 
         logger.debug(`[AntiVibration] 連続正解頻度低減: ${pq.question.word}`, {
           consecutiveCorrect: recentAnswer.consecutiveCorrect,
-          penalty: 2.0,
+          penalty: -2.0,
         });
       }
 
@@ -85,7 +91,7 @@ export class AntiVibrationFilter {
         appliedCount++;
         return {
           ...pq,
-          priority: newPriority,
+          position: newPosition,
           antiVibrationApplied: true,
         };
       }

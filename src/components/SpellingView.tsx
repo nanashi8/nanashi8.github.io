@@ -37,6 +37,7 @@ import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { useLearningEngine } from '../hooks/useLearningEngine';
 import { QuestionScheduler } from '@/ai/scheduler';
+import { RequeuingDebugPanel } from './RequeuingDebugPanel';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -116,10 +117,8 @@ function SpellingView({
     currentStrategy,
   } = useAdaptiveNetwork();
 
-  // メタAI分析ヘルパー関数
+  // メタAI分析ヘルパー関数（常時有効）
   const processWithAdaptiveAI = async (word: string, isCorrect: boolean) => {
-    if (!adaptiveEnabled) return;
-
     try {
       const getTimeOfDay = (): 'morning' | 'afternoon' | 'evening' | 'night' => {
         const hour = new Date().getHours();
@@ -177,7 +176,7 @@ function SpellingView({
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     const enableAI =
-      process.env.NODE_ENV === 'development' ||
+      import.meta.env.DEV ||
       localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
@@ -187,7 +186,7 @@ function SpellingView({
   });
 
   // 問題再出題管理フック
-  const { clearExpiredFlags, updateRequeueStats } = useQuestionRequeue<Question>();
+  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<Question>();
 
   // 統一学習エンジン
   const learningEngine = useLearningEngine<Question>({
@@ -199,6 +198,7 @@ function SpellingView({
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
+  const [showDebugPanel, setShowDebugPanel] = useState(false);
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -222,6 +222,18 @@ function SpellingView({
 
   // letter-cardsのrefを追加
   const letterCardsRef = useRef<HTMLDivElement>(null);
+
+  // デバッグハンドラー
+  const handleResetProgress = () => {
+    resetStats();
+    setCorrectStreak(0);
+    setIncorrectStreak(0);
+    console.log('🔄 [スペルタブ] セッション統計をリセットしました');
+  };
+
+  const handleDebugRequeue = () => {
+    setShowDebugPanel(prev => !prev);
+  };
 
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
@@ -259,7 +271,7 @@ function SpellingView({
           mastered: sessionStats.mastered || 0,
           duration: Date.now() - quizStartTimeRef.current,
         },
-        useMetaAI: adaptiveEnabled,
+        useMetaAI: true, // ✅ 常時有効
         isReviewFocusMode: isReviewFocusMode || false,
       });
 
@@ -281,7 +293,7 @@ function SpellingView({
     };
 
     initializeQuestions();
-  }, [questions, learningLimit, reviewLimit, isReviewFocusMode, adaptiveEnabled, scheduler]);
+  }, [questions, learningLimit, reviewLimit, isReviewFocusMode, scheduler]);
 
   // letter-cardsに自動フォーカス
   useEffect(() => {
@@ -673,6 +685,8 @@ function SpellingView({
                 onReviewFocus={onReviewFocus}
                 isReviewFocusMode={isReviewFocusMode}
                 onShowSettings={() => setShowSettings(true)}
+                onResetProgress={handleResetProgress}
+                onDebugRequeue={handleDebugRequeue}
                 currentWord={spellingState.questions[spellingState.currentIndex]?.word}
                 onAnswerTime={lastAnswerTime}
                 lastAnswerCorrect={lastAnswerCorrect}
@@ -850,25 +864,6 @@ function SpellingView({
                     </span>
                   </div>
 
-                  {/* カスタムセットに追加ボタン */}
-                  {customWord &&
-                    onAddWordToCustomSet &&
-                    onRemoveWordFromCustomSet &&
-                    onOpenCustomSetManagement &&
-                    customQuestionSets && (
-                      <div className="mt-3 flex justify-center">
-                        <AddToCustomButton
-                          word={customWord}
-                          sets={customQuestionSets}
-                          onAddWord={onAddWordToCustomSet}
-                          onRemoveWord={onRemoveWordFromCustomSet}
-                          onOpenManagement={onOpenCustomSetManagement}
-                          size="medium"
-                          variant="both"
-                        />
-                      </div>
-                    )}
-
                   <div className="meaning-meta">
                     {currentQuestion.difficulty && (
                       <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
@@ -879,10 +874,26 @@ function SpellingView({
                             : '上級'}
                       </div>
                     )}
-                    {/* 適応的AI戦略バッジ */}
-                    {adaptiveEnabled && currentStrategy && (
-                      <div className="adaptive-strategy-badge">🧠 適応中</div>
-                    )}
+
+                    {/* カスタムセットに追加ボタン */}
+                    {customWord &&
+                      onAddWordToCustomSet &&
+                      onRemoveWordFromCustomSet &&
+                      onOpenCustomSetManagement &&
+                      customQuestionSets && (
+                        <div className="mt-3 flex justify-center">
+                          <AddToCustomButton
+                            word={customWord}
+                            sets={customQuestionSets}
+                            onAddWord={onAddWordToCustomSet}
+                            onRemoveWord={onRemoveWordFromCustomSet}
+                            onOpenManagement={onOpenCustomSetManagement}
+                            size="medium"
+                            variant="both"
+                          />
+                        </div>
+                      )}
+
                     {currentQuestion.word.includes(' ') && (
                       <div className="phrase-hint">
                         💡 熟語({phraseWords.length}語): 単語ごとに入力してください
@@ -1087,18 +1098,22 @@ function SpellingView({
                       </div>
                     )}
                     {/* 適応的AI戦略バッジ */}
-                    {adaptiveEnabled && currentStrategy && (
-                      <div className="detail-row">
-                        <span className="detail-label">🧠 AI:</span>
-                        <div className="adaptive-strategy-badge">適応中</div>
-                      </div>
-                    )}
                   </div>
                 </div>
               )}
             </div>
           )}
         </>
+      )}
+
+      {/* デバッグパネル */}
+      {showDebugPanel && (
+        <RequeuingDebugPanel
+          currentIndex={spellingState.currentIndex}
+          totalQuestions={spellingState.questions.length}
+          questions={spellingState.questions}
+          requeuedWords={getRequeuedWords(spellingState.questions, spellingState.currentIndex)}
+        />
       )}
     </div>
   );

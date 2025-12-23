@@ -4,7 +4,6 @@ import type { DataSource } from '../App';
 import type { CustomQuestionSet } from '../types/customQuestions';
 import LearningPlanView from './LearningPlanView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
-import { AISimulator } from './AISimulator';
 
 interface SettingsViewProps {
   allQuestions: Question[];
@@ -318,18 +317,6 @@ function SettingsView({
             </div>
           </div>
         </div>
-      </div>
-
-      {/* 学習AIシミュレーター */}
-      <div className="bg-card-bg rounded-xl p-6 shadow-md border-2 border-card-border">
-        <h3 className="text-xl font-bold text-text-color mb-4 flex items-center gap-2">
-          <span>🤖</span>
-          <span>学習AIシミュレーター</span>
-        </h3>
-        <p className="text-sm text-text-secondary bg-bg-secondary px-4 py-3 rounded-lg mb-4">
-          問題出題アルゴリズムをシミュレーションで検証できます。初期状態を設定して、5つの異なる生徒プロファイルでシミュレーションを実行します。
-        </p>
-        <AISimulator />
       </div>
 
       {/* プライバシーポリシー */}

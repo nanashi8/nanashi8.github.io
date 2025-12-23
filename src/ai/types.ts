@@ -6,10 +6,25 @@
 
 import type { WordProgress as StorageWordProgress } from '../storage/progress/types';
 
+// Storage層のWordProgressを再エクスポート
+export type { StorageWordProgress };
+
 /**
- * 単語の学習カテゴリー
+ * 単語の学習スコア（0-100の数値）
+ *
+ * スコア範囲と意味:
+ * - 0-20:   mastered (定着済み、最低優先)
+ * - 20-40:  new (未学習、中低優先)
+ * - 40-70:  still_learning (学習中、中高優先)
+ * - 70-100: incorrect (要復習、最高優先)
+ *
+ * 各担当AIの評価を統合して算出される
  */
-export type WordCategory = 'new' | 'incorrect' | 'still_learning' | 'mastered';
+export type WordPosition = number;
+
+// 後方互換性のためのエイリアス（非推奨）
+/** @deprecated Use WordPosition (now a number 0-100) instead */
+export type WordCategory = WordPosition;
 
 /**
  * 認知負荷レベル
@@ -50,6 +65,11 @@ export interface BaseAISignal {
 
 /**
  * 記憶AIシグナル (🧠 MemoryAI)
+ *
+ * Phase 4拡張: 記憶科学統合
+ * - SM-2分析結果
+ * - Ebbinghaus保持率
+ * - 長期記憶段階
  */
 export interface MemorySignal extends BaseAISignal {
   aiId: 'memory';
@@ -61,6 +81,22 @@ export interface MemorySignal extends BaseAISignal {
   category: WordCategory;
   /** 記憶定着度 (0-1) */
   retentionStrength: number;
+
+  // === Phase 4拡張フィールド ===
+  /** SM-2分析結果（optional: 既存データとの互換性のため） */
+  sm2Data?: {
+    quality: number;
+    easeFactor: number;
+    interval: number;
+    repetitions: number;
+    nextReviewDate: Date;
+  };
+  /** Ebbinghaus保持率 (0-1, optional) */
+  retention?: number;
+  /** 長期記憶段階 (optional) */
+  memoryStage?: 'WORKING_MEMORY' | 'SHORT_TERM' | 'CONSOLIDATING' | 'LONG_TERM';
+  /** 推奨次回復習日 (optional) */
+  recommendedNextReview?: Date;
 }
 
 /**
@@ -91,6 +127,14 @@ export interface ErrorPredictionSignal extends BaseAISignal {
   preemptiveReview: string[];
   /** パターン信頼度 (0-1) */
   patternConfidence: number;
+
+  // Phase 4.5 ML拡張フィールド
+  /** 誤答確率 (0-1) - ML予測 */
+  errorProbability?: number;
+  /** 弱点レベル (0-1) - ML予測 */
+  weaknessLevel?: number;
+  /** 混同スコア (0-1) - ML予測 */
+  confusionScore?: number;
 }
 
 /**
@@ -169,8 +213,8 @@ export type AISignal =
  * AI分析入力データ - 各AIが受け取る共通の入力
  */
 export interface AIAnalysisInput {
-  /** 単語 */
-  word: string;
+  /** 単語オブジェクト */
+  word: WordData;
   /** 単語の進捗データ（storage層の完全な型を使用） */
   progress: StorageWordProgress | null;
   /** セッション統計 */
@@ -182,37 +226,38 @@ export interface AIAnalysisInput {
 }
 
 /**
- * 単語進捗データ（既存のWordProgress型を拡張）
+ * 単語データ（Phase 4.5: ML特徴量抽出用）
  */
-export interface WordProgress {
-  // 暗記タブ
-  memorizationAttempts?: number;
-  memorizationCorrect?: number;
-  memorizationStillLearning?: number;
-  memorizationStreak?: number;
-
-  // 文法タブ
-  grammarAttempts?: number;
-  grammarCorrect?: number;
-
-  // 総合タブ
-  comprehensiveAttempts?: number;
-  comprehensiveCorrect?: number;
-
-  // 共通
-  lastStudied?: number;
-  easinessFactor?: number;
-  reviewInterval?: number;
-
-  // 誤答履歴（ErrorPredictionAI用）
-  errorHistory?: ErrorRecord[];
-
-  // 学習時間パターン（LearningStyleAI用）
-  studyTimePatterns?: number[]; // Unix timestamps
-
-  // 問題形式選好（LearningStyleAI用）
-  preferredQuestionTypes?: string[];
+export interface WordData {
+  word: string;
+  meaning: string;
+  ipa?: string;
+  katakana?: string;
+  [key: string]: any; // 拡張性のため
 }
+
+/**
+ * 試行回数のサマリー（Phase 4.5拡張）
+ * Note: 実際のデータ構造はstorage層で定義されています
+ * このインターフェースは、AI層で期待される最小限の構造を定義します
+ */
+export interface AttemptsSummary {
+  totalAttempts: number;
+  correctCount: number;
+  wrongCount?: number;
+  stillLearningCount?: number;
+  consecutiveCorrect: number;
+  consecutiveWrong: number;
+  streak?: number;
+  wrongAnswerPatterns?: string[];
+}
+
+/**
+ * WordProgress型はstorage層で定義されています
+ * AI層では StorageWordProgress を使用してください
+ *
+ * @deprecated AI層では直接使用しないでください。StorageWordProgressを使用してください。
+ */
 
 /**
  * 誤答記録
@@ -244,6 +289,16 @@ export interface SessionStats {
   stillLearningCount: number;
   incorrectCount: number;
   newCount: number;
+
+  // Phase 4.5 ML拡張フィールド
+  questionsAnswered?: number;
+  currentAccuracy?: number;
+  consecutiveCorrect?: number;
+  averageResponseTime?: number;
+  responseTimeVariance?: number;
+  slowResponseCount?: number;
+  fastResponseCount?: number;
+  timeoutCount?: number;
 }
 
 /**
@@ -290,9 +345,9 @@ export interface SpecialistAI<T extends BaseAISignal> {
   /**
    * 分析を実行してシグナルを生成
    * @param input 分析入力データ
-   * @returns AIシグナル
+   * @returns AIシグナル（Phase 4.5: MLサポートのためPromiseに対応）
    */
-  analyze(input: AIAnalysisInput): T;
+  analyze(input: AIAnalysisInput): T | Promise<T>;
 
   /**
    * シグナルの妥当性を検証

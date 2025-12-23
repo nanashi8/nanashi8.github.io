@@ -1,0 +1,22 @@
+#!/bin/sh
+# Pre-commit hook: 対症療法検知
+# .git/hooks/pre-commit にこのファイルをコピーして使用
+
+echo "🔍 Pre-commit: 対症療法をチェック中..."
+
+# 対症療法検知スクリプトを実行
+./scripts/check-symptomatic-fixes.sh
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ コミットを中止しました"
+  echo "📚 詳細: docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md"
+  echo ""
+  echo "💡 強制的にコミットする場合（非推奨）:"
+  echo "   git commit --no-verify -m 'your message'"
+  echo ""
+  exit 1
+fi
+
+echo "✅ 対症療法チェック: クリーン"
+exit 0
