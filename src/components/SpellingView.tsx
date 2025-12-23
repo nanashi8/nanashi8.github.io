@@ -176,8 +176,7 @@ function SpellingView({
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
     const enableAI =
-      import.meta.env.DEV ||
-      localStorage.getItem('enable-ai-coordination') === 'true';
+      import.meta.env.DEV || localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
       s.enableAICoordination(true);
       logger.info('🤖 [SpellingView] AI統合が有効化されました');
@@ -186,7 +185,8 @@ function SpellingView({
   });
 
   // 問題再出題管理フック
-  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } = useQuestionRequeue<Question>();
+  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } =
+    useQuestionRequeue<Question>();
 
   // 統一学習エンジン
   const learningEngine = useLearningEngine<Question>({
@@ -224,15 +224,27 @@ function SpellingView({
   const letterCardsRef = useRef<HTMLDivElement>(null);
 
   // デバッグハンドラー
-  const handleResetProgress = () => {
-    resetStats();
-    setCorrectStreak(0);
-    setIncorrectStreak(0);
-    console.log('🔄 [スペルタブ] セッション統計をリセットしました');
+  const handleResetProgress = async () => {
+    if (!confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) return;
+
+    try {
+      // resetAllProgressを使用して完全リセット（成績タブと同じ処理）
+      const { resetAllProgress } = await import('../progressStorage');
+      await resetAllProgress();
+
+      resetStats();
+      setCorrectStreak(0);
+      setIncorrectStreak(0);
+      console.log('✅ [スペルタブ] 学習記録をリセットしました');
+      alert('学習記録をリセットしました');
+    } catch (error) {
+      console.error('❌ [スペルタブ] 成績リセット失敗', error);
+      alert('リセットに失敗しました');
+    }
   };
 
   const handleDebugRequeue = () => {
-    setShowDebugPanel(prev => !prev);
+    setShowDebugPanel((prev) => !prev);
   };
 
   // 進捗追跡用
