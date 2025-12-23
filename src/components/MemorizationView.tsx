@@ -639,7 +639,7 @@ function MemorizationView({
 
   // デバッグ: 再出題ロジック（デバッグパネル表示）
   const handleDebugRequeue = () => {
-    setShowDebugPanel((prev) => !prev);
+    setShowDebugPanel(true);
   };
 
   // 適応的AI分析ヘルパー関数（常時有効）

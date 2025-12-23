@@ -244,7 +244,7 @@ function SpellingView({
   };
 
   const handleDebugRequeue = () => {
-    setShowDebugPanel((prev) => !prev);
+    setShowDebugPanel(true);
   };
 
   // 進捗追跡用
