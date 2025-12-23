@@ -174,7 +174,7 @@ export class QuestionScheduler {
     // 📊 localStorage保存: postProcess後のTOP30（実際の出題順序）
     try {
       const top30 = questions.slice(0, 30).map((q, idx) => {
-        const pq = sorted.find(pq => pq.question.word === q.word);
+        const pq = sorted.find((pq) => pq.question.word === q.word);
         return {
           word: q.word,
           position: pq?.position || 0,
@@ -294,9 +294,9 @@ export class QuestionScheduler {
     // 単語別の学習進捗を読み込み
     const progress = loadProgressSync();
     const wordProgress: Record<string, any> = {};
-    if (progress && progress.words) {
+    if (progress && progress.wordProgress) {
       for (const question of params.questions) {
-        const wp = progress.words[question.word];
+        const wp = progress.wordProgress[question.word];
         if (wp) {
           wordProgress[question.word] = wp;
         }
@@ -456,7 +456,10 @@ export class QuestionScheduler {
     hybridMode = false
   ): PrioritizedQuestion[] {
     // 📞 関数呼び出しトレース
-    this.recordFunctionCall('calculatePriorities', { questionsCount: questions.length, hybridMode });
+    this.recordFunctionCall('calculatePriorities', {
+      questionsCount: questions.length,
+      hybridMode,
+    });
 
     // ⚡ 最適化: localStorage を一度だけ読み込んでキャッシュ
     const progressCache = this.loadProgressCache();
@@ -489,7 +492,9 @@ export class QuestionScheduler {
 
       // 🔍 デバッグ: Position値確認（開発環境のみ、最初の20単語のみ）
       if (import.meta.env.DEV && index < 20) {
-        console.log(`🔍 [calculatePriorities] ${q.word}: position=${position}, status.position=${status?.position}`);
+        console.log(
+          `🔍 [calculatePriorities] ${q.word}: position=${position}, status.position=${status?.position}`
+        );
       }
 
       return {
@@ -513,42 +518,53 @@ export class QuestionScheduler {
    */
   private applyInterleavingAdjustment(prioritized: PrioritizedQuestion[]): PrioritizedQuestion[] {
     // 📞 関数呼び出しトレース
-    this.recordFunctionCall('applyInterleavingAdjustment', { prioritizedCount: prioritized.length });
+    this.recordFunctionCall('applyInterleavingAdjustment', {
+      prioritizedCount: prioritized.length,
+    });
 
     const gamificationAI = new GamificationAI();
 
     // 🔍 デバッグ: Position分散前の統計（正確なカテゴリ判定）
     const before = {
-      stillLearning: prioritized.filter(pq => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0).length,
-      incorrect: prioritized.filter(pq => pq.position >= 70).length,
-      new: prioritized.filter(pq => pq.position < 40).length,
-      boostable: prioritized.filter(pq => pq.position >= 25 && pq.position < 40 && (pq.attempts ?? 0) === 0).length,
+      stillLearning: prioritized.filter(
+        (pq) => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
+      ).length,
+      incorrect: prioritized.filter((pq) => pq.position >= 70).length,
+      new: prioritized.filter((pq) => pq.position < 40).length,
+      boostable: prioritized.filter(
+        (pq) => pq.position >= 25 && pq.position < 40 && (pq.attempts ?? 0) === 0
+      ).length,
     };
 
     // まだまだ語のブースト（Position 45 → 60）
-    const { result: boostedStill, changed: stillChanged } = gamificationAI.boostStillLearningQuestions(prioritized);
+    const { result: boostedStill, changed: stillChanged } =
+      gamificationAI.boostStillLearningQuestions(prioritized);
 
     // 新規語のPosition引き上げ
     const { result, changed } = gamificationAI.adjustPositionForInterleaving(boostedStill);
 
     // 🔍 デバッグ: Position分散後の統計（正確なカテゴリ判定）
     const after = {
-      stillLearning: result.filter(pq => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0).length,
-      incorrect: result.filter(pq => pq.position >= 70).length,
-      new: result.filter(pq => pq.position < 40).length,
-      boostable: result.filter(pq => pq.position >= 25 && pq.position < 40 && (pq.attempts ?? 0) === 0).length,
+      stillLearning: result.filter(
+        (pq) => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
+      ).length,
+      incorrect: result.filter((pq) => pq.position >= 70).length,
+      new: result.filter((pq) => pq.position < 40).length,
+      boostable: result.filter(
+        (pq) => pq.position >= 25 && pq.position < 40 && (pq.attempts ?? 0) === 0
+      ).length,
     };
 
     // 🔍 Position階層検証（「あっちを立てればこっちが立たず」防止）
-    const stillInBoostedZone = result.filter(pq => {
+    const stillInBoostedZone = result.filter((pq) => {
       const isStill = pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0;
       return isStill && pq.position >= 60 && pq.position < 70; // まだまだ語が60-69範囲内
     }).length;
-    const newInBoostedZone = result.filter(pq => {
+    const newInBoostedZone = result.filter((pq) => {
       const isNew = pq.position >= 40 && (pq.attempts ?? 0) === 0;
       return isNew && pq.position >= 40 && pq.position < 60; // 新規語（ブースト後）が40-59範囲内
     }).length;
-    const hierarchyViolation = result.filter(pq => {
+    const hierarchyViolation = result.filter((pq) => {
       const isNew = (pq.attempts ?? 0) === 0;
       const isStill = (pq.attempts ?? 0) > 0 && pq.position >= 40 && pq.position < 70;
       // 新規 > まだまだ の逆転をチェック
@@ -556,9 +572,11 @@ export class QuestionScheduler {
     });
 
     if (import.meta.env.DEV && hierarchyViolation.length > 0) {
-      console.error(`❌ [Position階層違反] 「あっちを立てればこっちが立たず」検出: ${hierarchyViolation.length}語`);
+      console.error(
+        `❌ [Position階層違反] 「あっちを立てればこっちが立たず」検出: ${hierarchyViolation.length}語`
+      );
       console.error('🚨 新規語がPosition 60以上、またはまだまだ語がPosition 60未満');
-      hierarchyViolation.slice(0, 3).forEach(pq => {
+      hierarchyViolation.slice(0, 3).forEach((pq) => {
         const word = pq.question.word;
         const type = (pq.attempts ?? 0) === 0 ? '新規' : 'まだまだ';
         console.error(`  • ${word} (${type}): Position ${pq.position.toFixed(0)}`);
@@ -567,19 +585,22 @@ export class QuestionScheduler {
 
     // localStorage保存（デバッグパネル用）
     try {
-      localStorage.setItem('debug_position_hierarchy_validation', JSON.stringify({
-        stillInBoostedZone,
-        newInBoostedZone,
-        violations: hierarchyViolation.map(pq => ({
-          word: pq.question.word,
-          position: pq.position,
-          attempts: pq.attempts ?? 0,
-          type: (pq.attempts ?? 0) === 0 ? 'new_exceeds_60' : 'still_below_60',
-        })),
-        violationCount: hierarchyViolation.length,
-        isValid: hierarchyViolation.length === 0,
-        timestamp: new Date().toISOString(),
-      }));
+      localStorage.setItem(
+        'debug_position_hierarchy_validation',
+        JSON.stringify({
+          stillInBoostedZone,
+          newInBoostedZone,
+          violations: hierarchyViolation.map((pq) => ({
+            word: pq.question.word,
+            position: pq.position,
+            attempts: pq.attempts ?? 0,
+            type: (pq.attempts ?? 0) === 0 ? 'new_exceeds_60' : 'still_below_60',
+          })),
+          violationCount: hierarchyViolation.length,
+          isValid: hierarchyViolation.length === 0,
+          timestamp: new Date().toISOString(),
+        })
+      );
     } catch {
       // localStorage失敗は無視
     }
@@ -588,17 +609,20 @@ export class QuestionScheduler {
 
     // localStorage保存
     try {
-      localStorage.setItem('debug_position_interleaving', JSON.stringify({
-        before,
-        after,
-        stillChanged,
-        changed,
-        summary: {
-          stillBoosted: stillChanged.length,
-          newBoosted: changed.length,
-          working: stillChanged.length > 0 || changed.length > 0,
-        },
-      }));
+      localStorage.setItem(
+        'debug_position_interleaving',
+        JSON.stringify({
+          before,
+          after,
+          stillChanged,
+          changed,
+          summary: {
+            stillBoosted: stillChanged.length,
+            newBoosted: changed.length,
+            working: stillChanged.length > 0 || changed.length > 0,
+          },
+        })
+      );
     } catch {
       // localStorage失敗は無視
     }
@@ -607,26 +631,30 @@ export class QuestionScheduler {
       console.log('🎮 [GamificationAI] Position分散前:', before);
       console.log('🎮 [GamificationAI] Position分散後:', after);
       if (stillChanged.length > 0) {
-        console.log('✅ [GamificationAI] まだまだ語ブースト:',
-          stillChanged.slice(0, 10).map(c => ({
+        console.log(
+          '✅ [GamificationAI] まだまだ語ブースト:',
+          stillChanged.slice(0, 10).map((c) => ({
             word: c.word,
             before: c.before.toFixed(0),
-            after: c.after.toFixed(0)
+            after: c.after.toFixed(0),
           }))
         );
       }
       if (changed.length > 0) {
-        console.log('✅ [GamificationAI] 新規語Position引き上げ:',
-          changed.slice(0, 10).map(c => ({
+        console.log(
+          '✅ [GamificationAI] 新規語Position引き上げ:',
+          changed.slice(0, 10).map((c) => ({
             word: c.word,
             before: c.before.toFixed(0),
-            after: c.after.toFixed(0)
+            after: c.after.toFixed(0),
           }))
         );
       } else {
         // まだまだ語が0の場合はPosition分散がスキップされる（正常動作）
         if (before.stillLearning === 0 && before.incorrect === 0) {
-          console.log('ℹ️ [GamificationAI] まだまだ・分からない語が0語 → Position分散スキップ（正常動作）');
+          console.log(
+            'ℹ️ [GamificationAI] まだまだ・分からない語が0語 → Position分散スキップ（正常動作）'
+          );
         } else {
           console.warn('⚠️ [GamificationAI] Position変更なし - 新規語が不足している可能性');
         }
@@ -639,21 +667,25 @@ export class QuestionScheduler {
 
     // localStorage保存
     try {
-      localStorage.setItem('debug_still_learning_boost', JSON.stringify({
-        boosted: stillLearningChanges.length,
-        changes: stillLearningChanges,
-        working: stillLearningChanges.length > 0,
-      }));
+      localStorage.setItem(
+        'debug_still_learning_boost',
+        JSON.stringify({
+          boosted: stillLearningChanges.length,
+          changes: stillLearningChanges,
+          working: stillLearningChanges.length > 0,
+        })
+      );
     } catch {
       // localStorage失敗は無視
     }
 
     if (import.meta.env.DEV && stillLearningChanges.length > 0) {
-      console.log('🎯 [GamificationAI] まだまだ語ブースト:',
-        stillLearningChanges.slice(0, 10).map(c => ({
+      console.log(
+        '🎯 [GamificationAI] まだまだ語ブースト:',
+        stillLearningChanges.slice(0, 10).map((c) => ({
           word: c.word,
           before: c.before.toFixed(0),
-          after: c.after.toFixed(0)
+          after: c.after.toFixed(0),
         }))
       );
     }
@@ -786,7 +818,10 @@ export class QuestionScheduler {
 
     // ✅ AI担当関数に委譲: Position = 0-100スコア（7つのAI評価統合済み）
     // ✅ モード別Position優先: タブごとに独立した学習進度を管理
-    const position = determineWordPosition(wordProgress, mode as 'memorization' | 'translation' | 'spelling' | 'grammar');
+    const position = determineWordPosition(
+      wordProgress,
+      mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
+    );
 
     // Position範囲からcategoryを派生（後方互換性）
     let category: 'new' | 'incorrect' | 'still_learning' | 'mastered';
@@ -818,7 +853,10 @@ export class QuestionScheduler {
 
       // ✅ AI担当関数に委譲: Position = 0-100スコア（7つのAI評価統合済み）
       // ✅ モード別Position優先: タブごとに独立した学習進度を管理
-      const position = determineWordPosition(wordProgress, mode as 'memorization' | 'translation' | 'spelling' | 'grammar');
+      const position = determineWordPosition(
+        wordProgress,
+        mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
+      );
 
       // Position範囲からcategoryを派生（後方互換性）
       let category: 'new' | 'incorrect' | 'still_learning' | 'mastered';
@@ -886,8 +924,9 @@ export class QuestionScheduler {
     // �🔍 デバッグ: TOP20のPosition確認
     if (import.meta.env.DEV && questions.length > 0) {
       const top20 = questions.slice(0, Math.min(20, questions.length));
-      console.log('🔍 [sortAndBalance] TOP20 Position確認:',
-        top20.map(pq => ({
+      console.log(
+        '🔍 [sortAndBalance] TOP20 Position確認:',
+        top20.map((pq) => ({
           word: pq.question.word,
           position: pq.position,
           statusPosition: pq.status?.position,
@@ -911,8 +950,8 @@ export class QuestionScheduler {
         incorrect: incorrectQuestions.length,
         stillLearning: stillLearningQuestions.length,
         other: otherQuestions.length,
-        incorrectWords: incorrectQuestions.slice(0, 5).map(pq => pq.question.word),
-        stillLearningWords: stillLearningQuestions.slice(0, 5).map(pq => pq.question.word),
+        incorrectWords: incorrectQuestions.slice(0, 5).map((pq) => pq.question.word),
+        stillLearningWords: stillLearningQuestions.slice(0, 5).map((pq) => pq.question.word),
       });
     }
 
@@ -944,8 +983,8 @@ export class QuestionScheduler {
       }
 
       // 🎲 ABC順排除: 学習履歴のない単語（null/new）はランダムソート
-      const aIsNew = (a.position >= 20 && a.position < 40);
-      const bIsNew = (b.position >= 20 && b.position < 40);
+      const aIsNew = a.position >= 20 && a.position < 40;
+      const bIsNew = b.position >= 20 && b.position < 40;
 
       if (aIsNew && bIsNew) {
         return Math.random() - 0.5; // 両方とも新出単語はランダム
@@ -981,20 +1020,27 @@ export class QuestionScheduler {
       };
       console.log('🔀 [出題順序] インターリーブ後の学習段階分布', positionDistribution);
 
-      const top20Categories = top20.map(pq => {
-        const word = pq.question.word;
-        const attempts = pq.attempts ?? 0;
-        const category = attempts > 0 && pq.position >= 40 && pq.position < 70 ? 'まだまだ' :
-                        pq.position >= 40 && pq.position < 70 ? '新規(引上)' :
-                        pq.position >= 70 ? '分からない' : '新規';
-        return `${word}(${category})`;
-      }).join(', ');
+      const top20Categories = top20
+        .map((pq) => {
+          const word = pq.question.word;
+          const attempts = pq.attempts ?? 0;
+          const category =
+            attempts > 0 && pq.position >= 40 && pq.position < 70
+              ? 'まだまだ'
+              : pq.position >= 40 && pq.position < 70
+                ? '新規(引上)'
+                : pq.position >= 70
+                  ? '分からない'
+                  : '新規';
+          return `${word}(${category})`;
+        })
+        .join(', ');
       console.log('🎮 [インターリーブ] TOP20:', top20Categories);
     }
 
     // 📊 localStorage保存: sortAndBalance出力のTOP30
     try {
-      const top30 = interleaved.slice(0, 30).map(pq => ({
+      const top30 = interleaved.slice(0, 30).map((pq) => ({
         word: pq.question.word,
         position: pq.position,
         category: pq.status?.category,
@@ -1011,8 +1057,8 @@ export class QuestionScheduler {
         attempts: pq.status?.attempts || 0,
       }));
       // ⚠️ まだまだ語の定義: Position 40-70 かつ attempts > 0
-      const stillLearningInTop100 = top100.filter(item =>
-        item.position >= 40 && item.position < 70 && item.attempts > 0
+      const stillLearningInTop100 = top100.filter(
+        (item) => item.position >= 40 && item.position < 70 && item.attempts > 0
       );
 
       // 📊 TOP516位も確認（Position 50の新規516語の後にまだまだ語が来るはず）
@@ -1022,19 +1068,30 @@ export class QuestionScheduler {
         position: pq.position,
         attempts: pq.status?.attempts || 0,
       }));
-      const stillLearningInTop600 = top600.filter(item =>
-        item.position >= 40 && item.position < 70 && item.attempts > 0
+      const stillLearningInTop600 = top600.filter(
+        (item) => item.position >= 40 && item.position < 70 && item.attempts > 0
       );
 
-      localStorage.setItem('debug_sortAndBalance_top100', JSON.stringify({
-        top100,
-        top600Count: top600.length,
-        stillLearningInTop100: stillLearningInTop100.length,
-        stillLearningInTop600: stillLearningInTop600.length,
-        stillLearningWordsInTop100: stillLearningInTop100.map(item => `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`),
-        stillLearningWordsInTop600: stillLearningInTop600.slice(0, 20).map(item => `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`),
-        position50Count: top600.filter(item => item.position === 50 && item.attempts === 0).length,
-      }));
+      localStorage.setItem(
+        'debug_sortAndBalance_top100',
+        JSON.stringify({
+          top100,
+          top600Count: top600.length,
+          stillLearningInTop100: stillLearningInTop100.length,
+          stillLearningInTop600: stillLearningInTop600.length,
+          stillLearningWordsInTop100: stillLearningInTop100.map(
+            (item) => `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`
+          ),
+          stillLearningWordsInTop600: stillLearningInTop600
+            .slice(0, 20)
+            .map(
+              (item) =>
+                `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`
+            ),
+          position50Count: top600.filter((item) => item.position === 50 && item.attempts === 0)
+            .length,
+        })
+      );
     } catch {
       // localStorage失敗は無視
     }
@@ -1060,9 +1117,7 @@ export class QuestionScheduler {
 
     // 【確実性保証】ハイブリッドモードでも復習単語を確実に上位に配置
     const incorrectQuestions = sorted.filter((pq) => pq.position >= 70);
-    const stillLearningQuestions = sorted.filter(
-      (pq) => pq.position >= 40 && pq.position < 70
-    );
+    const stillLearningQuestions = sorted.filter((pq) => pq.position >= 40 && pq.position < 70);
     const reviewNeeded = incorrectQuestions.length + stillLearningQuestions.length;
     const totalQuestions = sorted.length;
 
@@ -1085,10 +1140,10 @@ export class QuestionScheduler {
     try {
       const top30 = questions.slice(0, 30).map((q, idx) => {
         // sorted配列から対応するPrioritizedQuestionを検索
-        const pq = sorted.find(pq => pq.question.word === q.word);
+        const pq = sorted.find((pq) => pq.question.word === q.word);
         return {
           word: q.word,
-          position: pq?.position || 0,  // メモリ上のPosition値
+          position: pq?.position || 0, // メモリ上のPosition値
           category: pq?.status?.category,
           attempts: pq?.status?.attempts || 0,
         };
@@ -1128,13 +1183,18 @@ export class QuestionScheduler {
    * finalPriorityモード（variant=C）
    * AICoordinatorのfinalPriorityを主軸に、Positionは補助的に使用
    */
-  private async scheduleFinalPriorityMode(params: ScheduleParams, startTime: number): Promise<ScheduleResult> {
+  private async scheduleFinalPriorityMode(
+    params: ScheduleParams,
+    startTime: number
+  ): Promise<ScheduleResult> {
     const context = this.buildContext(params);
     const signals = params.useMetaAI ? this.detectSignals(context) : [];
 
     // AICoordinatorが必須
     if (!this.useAICoordinator || !this.aiCoordinator) {
-      logger.warn('[QuestionScheduler FinalPriority] AICoordinatorが未初期化、ハイブリッドモードにフォールバック');
+      logger.warn(
+        '[QuestionScheduler FinalPriority] AICoordinatorが未初期化、ハイブリッドモードにフォールバック'
+      );
       return this.scheduleHybridMode(params, startTime);
     }
 
@@ -1144,7 +1204,10 @@ export class QuestionScheduler {
       const wordProgress = context.wordProgress[question.word];
 
       // Position決定（モード別）
-      const position = determineWordPosition(wordProgress, params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar');
+      const position = determineWordPosition(
+        wordProgress,
+        params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
+      );
 
       // Position範囲からcategoryを派生
       let category: 'new' | 'incorrect' | 'still_learning' | 'mastered';
@@ -1211,7 +1274,7 @@ export class QuestionScheduler {
       vibrationScore,
       aiEnabled: true,
       totalCount: questions.length,
-      top5FinalPriority: sorted.slice(0, 5).map(pq => ({
+      top5FinalPriority: sorted.slice(0, 5).map((pq) => ({
         word: pq.question.word,
         finalPriority: pq.finalPriority.toFixed(3),
         position: pq.position,
@@ -1505,9 +1568,9 @@ export class QuestionScheduler {
 
     wordProgresses.forEach((wp: any) => {
       const difficultyMap: Record<string, 'beginner' | 'intermediate' | 'advanced'> = {
-        '初級': 'beginner',
-        '中級': 'intermediate',
-        '上級': 'advanced',
+        初級: 'beginner',
+        中級: 'intermediate',
+        上級: 'advanced',
       };
       const difficulty = difficultyMap[wp.difficulty as string];
 
@@ -1535,8 +1598,7 @@ export class QuestionScheduler {
 
     // 🎯 判定: 中級・上級の正答率が悪い場合、初級を優先
     // 条件: 中級 < 60% OR 上級 < 50%
-    const shouldPrioritizeBeginner =
-      accuracy.intermediate < 60 || accuracy.advanced < 50;
+    const shouldPrioritizeBeginner = accuracy.intermediate < 60 || accuracy.advanced < 50;
 
     // 優先度ブースト計算: 中級・上級の正答率が低いほど初級のブーストが大きい
     let priorityBoost = 0;
@@ -1575,9 +1637,9 @@ export class QuestionScheduler {
     }
 
     const difficultyMap: Record<string, 'beginner' | 'intermediate' | 'advanced'> = {
-      '初級': 'beginner',
-      '中級': 'intermediate',
-      '上級': 'advanced',
+      初級: 'beginner',
+      中級: 'intermediate',
+      上級: 'advanced',
     };
     const difficulty = difficultyMap[question.difficulty];
 

@@ -21,6 +21,7 @@ interface DebugPanelProps {
     difficulty?: string;
   }>;
   requeuedWords?: RequeuedWord[];
+  initialExpanded?: boolean;
 }
 
 export function RequeuingDebugPanel({
@@ -28,11 +29,14 @@ export function RequeuingDebugPanel({
   totalQuestions,
   questions,
   requeuedWords: _requeuedWords = [],
+  initialExpanded = true, // デフォルトで展開状態
 }: DebugPanelProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(initialExpanded);
   const [aiEvaluations, setAIEvaluations] = useState<any[]>([]);
   const [copySuccess, setCopySuccess] = useState(false);
-  const [strugglingWords, setStrugglingWords] = useState<ReturnType<typeof getStrugglingWordsList>>([]);
+  const [strugglingWords, setStrugglingWords] = useState<ReturnType<typeof getStrugglingWordsList>>(
+    []
+  );
   const [interleavingDiag, setInterleavingDiag] = useState<any>(null);
   const [answerLogs, setAnswerLogs] = useState<any[]>([]);
   const [functionCalls, setFunctionCalls] = useState<any[]>([]);
@@ -76,39 +80,49 @@ export function RequeuingDebugPanel({
 
     // 統計計算
     const totalAttempts = Object.values(allProgress.wordProgress || {}).reduce(
-      (sum: number, p: any) => sum + (p.totalAttempts || 0), 0
+      (sum: number, p: any) => sum + (p.totalAttempts || 0),
+      0
     );
     const totalCorrect = Object.values(allProgress.wordProgress || {}).reduce(
-      (sum: number, p: any) => sum + (p.memorizationCorrect || 0), 0
+      (sum: number, p: any) => sum + (p.memorizationCorrect || 0),
+      0
     );
     const totalIncorrect = Object.values(allProgress.wordProgress || {}).reduce(
-      (sum: number, p: any) => sum + (p.memorizationIncorrect || 0), 0
+      (sum: number, p: any) => sum + (p.memorizationIncorrect || 0),
+      0
     );
-    const overallAccuracy = totalAttempts > 0 ? (totalCorrect / totalAttempts * 100).toFixed(1) : '0.0';
+    const overallAccuracy =
+      totalAttempts > 0 ? ((totalCorrect / totalAttempts) * 100).toFixed(1) : '0.0';
 
     // 次の出題予定を抽出（コピー時に使用）
     // 🔥 重要: questions配列は既にQuestionSchedulerで並び替え済みなので、
     // 現在位置から次の10問を直接取得すればOK
-    const upcomingWords = questions
-      .slice(currentIndex + 1, currentIndex + 11)
-      .map((q, idx) => ({
-        word: q.word,
-        position: currentIndex + idx + 2, // currentIndex + 1は現在の問題なので、+2から開始
-      }));
+    const upcomingWords = questions.slice(currentIndex + 1, currentIndex + 11).map((q, idx) => ({
+      word: q.word,
+      position: currentIndex + idx + 2, // currentIndex + 1は現在の問題なので、+2から開始
+    }));
 
     // AI評価テーブル生成
-    const aiEvalTable = aiEvaluations.length === 0 ? '_（データなし）_' :
-      `| 単語 | Position | Category | 🧠 Memory | 💤 CogLoad | 🔮 Error | 📚 Linguistic | 🌍 Context | 🎯 Style | 🎮 Gamify |\n` +
-      `|------|----------|----------|-----------|-----------|----------|--------------|-----------|----------|----------|\n` +
-      aiEvaluations.map((evaluation) => {
-        const categoryLabel = evaluation.category === 'incorrect' ? '❌ 分からない'
-          : evaluation.category === 'still_learning' ? '🟡 まだまだ'
-          : evaluation.category === 'mastered' ? '✅ 定着済'
-          : '⚪ 新規';
-        const position = (evaluation.position ?? 0).toFixed(0);
-        const ai = evaluation.aiProposals || {};
-        return `| **${evaluation.word}** | ${position} | ${categoryLabel} | ${(ai.memory ?? 0).toFixed(0)} | ${(ai.cognitiveLoad ?? 0).toFixed(0)} | ${(ai.errorPrediction ?? 0).toFixed(0)} | ${(ai.linguistic ?? 0).toFixed(0)} | ${(ai.contextual ?? 0).toFixed(0)} | ${(ai.learningStyle ?? 0).toFixed(0)} | ${(ai.gamification ?? 0).toFixed(0)} |`;
-      }).join('\n');
+    const aiEvalTable =
+      aiEvaluations.length === 0
+        ? '_（データなし）_'
+        : `| 単語 | Position | Category | 🧠 Memory | 💤 CogLoad | 🔮 Error | 📚 Linguistic | 🌍 Context | 🎯 Style | 🎮 Gamify |\n` +
+          `|------|----------|----------|-----------|-----------|----------|--------------|-----------|----------|----------|\n` +
+          aiEvaluations
+            .map((evaluation) => {
+              const categoryLabel =
+                evaluation.category === 'incorrect'
+                  ? '❌ 分からない'
+                  : evaluation.category === 'still_learning'
+                    ? '🟡 まだまだ'
+                    : evaluation.category === 'mastered'
+                      ? '✅ 定着済'
+                      : '⚪ 新規';
+              const position = (evaluation.position ?? 0).toFixed(0);
+              const ai = evaluation.aiProposals || {};
+              return `| **${evaluation.word}** | ${position} | ${categoryLabel} | ${(ai.memory ?? 0).toFixed(0)} | ${(ai.cognitiveLoad ?? 0).toFixed(0)} | ${(ai.errorPrediction ?? 0).toFixed(0)} | ${(ai.linguistic ?? 0).toFixed(0)} | ${(ai.contextual ?? 0).toFixed(0)} | ${(ai.learningStyle ?? 0).toFixed(0)} | ${(ai.gamification ?? 0).toFixed(0)} |`;
+            })
+            .join('\n');
 
     const debugText = `# 🔍 再出題デバッグレポート（詳細版）
 
@@ -121,7 +135,7 @@ export function RequeuingDebugPanel({
 
 **総合統計**:
 - 📚 総単語数: ${totalWords}語
-- ✅ 習得済み (Position < 20): ${masteredWords}語 (${totalWords > 0 ? (masteredWords / totalWords * 100).toFixed(1) : '0.0'}%)
+- ✅ 習得済み (Position < 20): ${masteredWords}語 (${totalWords > 0 ? ((masteredWords / totalWords) * 100).toFixed(1) : '0.0'}%)
 - 🟡 まだまだ (Position 40-70, attempts>0): ${stillLearningWords}語
 - 🔴 分からない (Position≥70): ${incorrectWords}語
 - ⚠️ 苦手語合計 (Position≥40): ${strugglingWordsCount}語
@@ -139,43 +153,63 @@ export function RequeuingDebugPanel({
 ## 🎯 インターリーブ診断
 
 ### Position分布（まだまだ・分からない58語）
-${strugglingWords.length === 0 ? '_（なし）_' : `
-- **Position 85-100**: ${strugglingWords.filter(w => w.position >= 85).length}語
-- **Position 70-84**: ${strugglingWords.filter(w => w.position >= 70 && w.position < 85).length}語
-- **Position 40-69**: ${strugglingWords.filter(w => w.position >= 40 && w.position < 70).length}語
+${
+  strugglingWords.length === 0
+    ? '_（なし）_'
+    : `
+- **Position 85-100**: ${strugglingWords.filter((w) => w.position >= 85).length}語
+- **Position 70-84**: ${strugglingWords.filter((w) => w.position >= 70 && w.position < 85).length}語
+- **Position 40-69**: ${strugglingWords.filter((w) => w.position >= 40 && w.position < 70).length}語
 
 **期待される動作**:
 - まだまだ58語 → GamificationAI が新規の17% (約10語) をPosition +15
 - 結果: Position 40-55の新規が上位10問中に混入するはず
-`}
+`
+}
 
 ### 次10問のPosition分析
-${upcomingWords.map((item, idx) => {
-  const question = questions[currentIndex + idx + 1];
-  const word = question?.word || item.word;
-  const allProgress = loadProgressSync();
-  const wordProgress = allProgress.wordProgress?.[word];
-  const position = wordProgress?.memorizationPosition ?? 0;
-  const attempts = wordProgress?.totalAttempts ?? 0;
-  const status = attempts === 0 ? '⚪ 新規（未出題）' : position >= 70 ? '🔴 分からない' : position >= 40 ? '🟡 まだまだ' : position >= 20 ? '⚪ 新規' : '✅ 定着済';
-  return `${idx + 1}. **${word}** - Position ${position.toFixed(0)} (${attempts}回) ${status}`;
-}).join('\n')}
+${upcomingWords
+  .map((item, idx) => {
+    const question = questions[currentIndex + idx + 1];
+    const word = question?.word || item.word;
+    const allProgress = loadProgressSync();
+    const wordProgress = allProgress.wordProgress?.[word];
+    const position = wordProgress?.memorizationPosition ?? 0;
+    const attempts = wordProgress?.totalAttempts ?? 0;
+    const status =
+      attempts === 0
+        ? '⚪ 新規（未出題）'
+        : position >= 70
+          ? '🔴 分からない'
+          : position >= 40
+            ? '🟡 まだまだ'
+            : position >= 20
+              ? '⚪ 新規'
+              : '✅ 定着済';
+    return `${idx + 1}. **${word}** - Position ${position.toFixed(0)} (${attempts}回) ${status}`;
+  })
+  .join('\n')}
 
 **問題検出**:
-${upcomingWords.every(item => {
-  const word = questions[currentIndex + upcomingWords.indexOf(item) + 1]?.word || item.word;
-  const allProgress = loadProgressSync();
-  const wordProgress = allProgress.wordProgress?.[word];
-  const position = wordProgress?.memorizationPosition ?? 0;
-  return position < 40;
-}) ? `❌ **全て新規（Position < 40）** → Position分散が機能していない！` : `✅ 新規とまだまだが混在 → Position分散が機能中`}
+${
+  upcomingWords.every((item) => {
+    const word = questions[currentIndex + upcomingWords.indexOf(item) + 1]?.word || item.word;
+    const allProgress = loadProgressSync();
+    const wordProgress = allProgress.wordProgress?.[word];
+    const position = wordProgress?.memorizationPosition ?? 0;
+    return position < 40;
+  })
+    ? `❌ **全て新規（Position < 40）** → Position分散が機能していない！`
+    : `✅ 新規とまだまだが混在 → Position分散が機能中`
+}
 
 ---
 
 ## 🎮 Position分散診断
 
-${interleavingDiag ?
-`**分散前**:
+${
+  interleavingDiag
+    ? `**分散前**:
 - まだまだ・分からない: ${interleavingDiag.before.struggling}語
 - 新規: ${interleavingDiag.before.new}語
 - 引き上げ候補(Position≥25): ${interleavingDiag.before.boostable || 0}語
@@ -190,13 +224,27 @@ ${interleavingDiag ?
 <details>
 <summary>引き上げられた単語リスト (最初10件)</summary>
 
-${interleavingDiag.changed.slice(0, 10).map((c: any) => {
-  return '- **' + c.word + '**: ' + c.before.toFixed(0) + ' → ' + c.after.toFixed(0) + ' (+' + (c.after - c.before).toFixed(0) + ')';
-}).join('\n')}
+${interleavingDiag.changed
+  .slice(0, 10)
+  .map((c: any) => {
+    return (
+      '- **' +
+      c.word +
+      '**: ' +
+      c.before.toFixed(0) +
+      ' → ' +
+      c.after.toFixed(0) +
+      ' (+' +
+      (c.after - c.before).toFixed(0) +
+      ')'
+    );
+  })
+  .join('\n')}
 
 ${interleavingDiag.changed.length > 10 ? '\n_…他' + (interleavingDiag.changed.length - 10) + '語_' : ''}
 </details>`
-: '⚠️ Position分散診断情報がありません（calculatePriorities()が呼ばれていない可能性）'}
+    : '⚠️ Position分散診断情報がありません（calculatePriorities()が呼ばれていない可能性）'
+}
 
 ### 🎯 まだまだ語のブースト
 
@@ -215,9 +263,12 @@ ${(() => {
 <details>
 <summary>ブーストされた単語リスト (最初10件)</summary>
 
-${boostData.changes.slice(0, 10).map((c: any) => {
-  return '- **' + c.word + '**: ' + c.before.toFixed(0) + ' → ' + c.after.toFixed(0) + ' (+15)';
-}).join('\n')}
+${boostData.changes
+  .slice(0, 10)
+  .map((c: any) => {
+    return '- **' + c.word + '**: ' + c.before.toFixed(0) + ' → ' + c.after.toFixed(0) + ' (+15)';
+  })
+  .join('\n')}
 
 ${boostData.boosted > 10 ? '\n_…他' + (boostData.boosted - 10) + '語_' : ''}
 </details>`;
@@ -254,22 +305,42 @@ ${(() => {
     };
 
     // パターン視覚化（絵文字）
-    const pattern = categorized.slice(0, 20).map((c: string) => {
-      switch(c) {
-        case 'まだまだ': return '🟡';
-        case '新規(引上)': return '🔵';
-        case '分からない': return '🔴';
-        case '定着済': return '✅';
-        default: return '⚪';
-      }
-    }).join('');
+    const pattern = categorized
+      .slice(0, 20)
+      .map((c: string) => {
+        switch (c) {
+          case 'まだまだ':
+            return '🟡';
+          case '新規(引上)':
+            return '🔵';
+          case '分からない':
+            return '🔴';
+          case '定着済':
+            return '✅';
+          default:
+            return '⚪';
+        }
+      })
+      .join('');
 
     // 詳細リスト
-    const details = top30.slice(0, 15).map((item: any, idx: number) => {
-      const cat = categorized[idx];
-      const emoji = cat === 'まだまだ' ? '🟡' : cat === '新規(引上)' ? '🔵' : cat === '分からない' ? '🔴' : cat === '定着済' ? '✅' : '⚪';
-      return `${idx + 1}. ${emoji} **${item.word}** (Pos ${item.position.toFixed(0)}, ${item.attempts}回) - ${cat}`;
-    }).join('\n');
+    const details = top30
+      .slice(0, 15)
+      .map((item: any, idx: number) => {
+        const cat = categorized[idx];
+        const emoji =
+          cat === 'まだまだ'
+            ? '🟡'
+            : cat === '新規(引上)'
+              ? '🔵'
+              : cat === '分からない'
+                ? '🔴'
+                : cat === '定着済'
+                  ? '✅'
+                  : '⚪';
+        return `${idx + 1}. ${emoji} **${item.word}** (Pos ${item.position.toFixed(0)}, ${item.attempts}回) - ${cat}`;
+      })
+      .join('\n');
 
     let result = `**TOP30のカテゴリ分布**:
 - 🟡 まだまだ: ${stats.まだまだ}語
@@ -309,9 +380,13 @@ ${details}
       }
 
       if (interleavingQuality >= 3) {
-        result += '\n\n✅ **交互配置が正常に機能しています**（切り替え回数: ' + interleavingQuality + '回）';
+        result +=
+          '\n\n✅ **交互配置が正常に機能しています**（切り替え回数: ' +
+          interleavingQuality +
+          '回）';
       } else {
-        result += '\n\n⚠️ **交互配置の頻度が低い可能性**（切り替え回数: ' + interleavingQuality + '回）';
+        result +=
+          '\n\n⚠️ **交互配置の頻度が低い可能性**（切り替え回数: ' + interleavingQuality + '回）';
       }
     }
 
@@ -366,11 +441,15 @@ ${(() => {
     if (stillStored) {
       const still = JSON.parse(stillStored);
       if (still.violationCount === 0) {
-        result += '✅ **GamificationAI（まだまだ語）**: 全' + still.totalStill + '語がPosition 60-69範囲内\n\n';
+        result +=
+          '✅ **GamificationAI（まだまだ語）**: 全' +
+          still.totalStill +
+          '語がPosition 60-69範囲内\n\n';
       } else {
         hasViolation = true;
         result += '❌ **GamificationAI（まだまだ語）**: Position 60-69範囲外の語を検出\n';
-        result += '  - 違反件数: ' + still.violationCount + '語（全' + still.totalStill + '語中）\n';
+        result +=
+          '  - 違反件数: ' + still.violationCount + '語（全' + still.totalStill + '語中）\n';
         violations.push(...still.violations);
       }
     }
@@ -392,11 +471,24 @@ ${(() => {
     if (hasViolation && violations.length > 0) {
       result += '\n**🚨 違反の詳細**:\n';
       violations.slice(0, 10).forEach((v: any, idx: number) => {
-        const typeLabel = v.type === 'new_exceeds_60' ? '新規語がPosition 60以上'
-          : v.type === 'still_below_60' ? 'まだまだ語がPosition 60未満'
-          : v.type === 'still_above_70' ? 'まだまだ語がPosition 70以上'
-          : '不明';
-        result += (idx + 1) + '. **' + v.word + '**: Position ' + v.position.toFixed(0) + ' ← ' + typeLabel + '\n';
+        const typeLabel =
+          v.type === 'new_exceeds_60'
+            ? '新規語がPosition 60以上'
+            : v.type === 'still_below_60'
+              ? 'まだまだ語がPosition 60未満'
+              : v.type === 'still_above_70'
+                ? 'まだまだ語がPosition 70以上'
+                : '不明';
+        result +=
+          idx +
+          1 +
+          '. **' +
+          v.word +
+          '**: Position ' +
+          v.position.toFixed(0) +
+          ' ← ' +
+          typeLabel +
+          '\n';
       });
       if (violations.length > 10) {
         result += '\n_…他' + (violations.length - 10) + '件_\n';
@@ -423,9 +515,26 @@ ${(() => {
 
 ## �📞 関数呼び出し履歴 (最新30件)
 
-${functionCalls.length > 0 ? functionCalls.slice(-30).reverse().map((call: any, idx: number) => {
-  return (idx + 1) + '. **' + call.function + '** ' + JSON.stringify(call.params) + ' - ' + new Date(call.timestamp).toLocaleTimeString();
-}).join('\n') : '⚠️ 関数呼び出し履歴がありません'}
+${
+  functionCalls.length > 0
+    ? functionCalls
+        .slice(-30)
+        .reverse()
+        .map((call: any, idx: number) => {
+          return (
+            idx +
+            1 +
+            '. **' +
+            call.function +
+            '** ' +
+            JSON.stringify(call.params) +
+            ' - ' +
+            new Date(call.timestamp).toLocaleTimeString()
+          );
+        })
+        .join('\n')
+    : '⚠️ 関数呼び出し履歴がありません'
+}
 
 ---
 
@@ -437,10 +546,33 @@ ${(() => {
   if (!sortedOutput) return '⚠️ sortAndBalance()の出力が保存されていません';
   try {
     const data = JSON.parse(sortedOutput);
-    return data.slice(0, 30).map((item: any, idx: number) => {
-      const status = item.attempts === 0 ? '⚪ 新規(未出題)' : item.position >= 70 ? '🔴 分からない' : item.position >= 40 ? '🟡 まだまだ' : item.position >= 20 ? '⚪ 新規' : '✅ 定着';
-      return (idx + 1) + '. **' + item.word + '** - Position ' + (item.position ?? 0).toFixed(0) + ' (' + item.attempts + '回) ' + status;
-    }).join('\n');
+    return data
+      .slice(0, 30)
+      .map((item: any, idx: number) => {
+        const status =
+          item.attempts === 0
+            ? '⚪ 新規(未出題)'
+            : item.position >= 70
+              ? '🔴 分からない'
+              : item.position >= 40
+                ? '🟡 まだまだ'
+                : item.position >= 20
+                  ? '⚪ 新規'
+                  : '✅ 定着';
+        return (
+          idx +
+          1 +
+          '. **' +
+          item.word +
+          '** - Position ' +
+          (item.position ?? 0).toFixed(0) +
+          ' (' +
+          item.attempts +
+          '回) ' +
+          status
+        );
+      })
+      .join('\n');
   } catch {
     return '⚠️ データ解析エラー';
   }
@@ -452,10 +584,33 @@ ${(() => {
   if (!postProcessOutput) return '⚠️ postProcess()の出力が保存されていません';
   try {
     const data = JSON.parse(postProcessOutput);
-    return data.slice(0, 30).map((item: any, idx: number) => {
-      const status = item.attempts === 0 ? '⚪ 新規(未出題)' : item.position >= 70 ? '🔴 分からない' : item.position >= 40 ? '🟡 まだまだ' : item.position >= 20 ? '⚪ 新規' : '✅ 定着';
-      return (idx + 1) + '. **' + item.word + '** - Position ' + (item.position ?? 0).toFixed(0) + ' (' + item.attempts + '回) ' + status;
-    }).join('\n');
+    return data
+      .slice(0, 30)
+      .map((item: any, idx: number) => {
+        const status =
+          item.attempts === 0
+            ? '⚪ 新規(未出題)'
+            : item.position >= 70
+              ? '🔴 分からない'
+              : item.position >= 40
+                ? '🟡 まだまだ'
+                : item.position >= 20
+                  ? '⚪ 新規'
+                  : '✅ 定着';
+        return (
+          idx +
+          1 +
+          '. **' +
+          item.word +
+          '** - Position ' +
+          (item.position ?? 0).toFixed(0) +
+          ' (' +
+          item.attempts +
+          '回) ' +
+          status
+        );
+      })
+      .join('\n');
   } catch {
     return '⚠️ データ解析エラー';
   }
@@ -479,9 +634,15 @@ ${(() => {
     if (data.stillLearningInTop100 === 0) {
       result += '❌ **まだまだ語（Position 40-70, attempts>0）がTOP100に1つも入っていません！**\n';
     } else {
-      result += '✅ まだまだ語が**' + data.stillLearningInTop100 + '語**、TOP100内にあります:\n' +
+      result +=
+        '✅ まだまだ語が**' +
+        data.stillLearningInTop100 +
+        '語**、TOP100内にあります:\n' +
         data.stillLearningWordsInTop100.slice(0, 10).join('\n') +
-        (data.stillLearningWordsInTop100.length > 10 ? '\n_…他' + (data.stillLearningWordsInTop100.length - 10) + '語_' : '') + '\n\n';
+        (data.stillLearningWordsInTop100.length > 10
+          ? '\n_…他' + (data.stillLearningWordsInTop100.length - 10) + '語_'
+          : '') +
+        '\n\n';
     }
 
     // TOP600内のまだまだ語
@@ -497,8 +658,14 @@ ${(() => {
       result += '❌ **TOP600内にもまだまだ語が見つかりません**';
     }
 
-    result += '\n\n**🚨 結論**: Position 50の新規' + data.position50Count + '語 > Position 45のまだまだ15語\n';
-    result += '→ Position降順ソートで新規が優先され、まだまだが' + (data.position50Count + 1) + '位以降に追いやられている！';
+    result +=
+      '\n\n**🚨 結論**: Position 50の新規' +
+      data.position50Count +
+      '語 > Position 45のまだまだ15語\n';
+    result +=
+      '→ Position降順ソートで新規が優先され、まだまだが' +
+      (data.position50Count + 1) +
+      '位以降に追いやられている！';
 
     return result;
   } catch {
@@ -509,24 +676,61 @@ ${(() => {
 ---
 
 ## 📝 解答処理ログ (最新10件)
-${answerLogs.length > 0 ? answerLogs.map((log: any, idx: number) => {
-  const changed = Math.abs(log.positionAfter - log.positionBefore) > 1;
-  const arrow = changed ? (log.positionAfter > log.positionBefore ? '🔺' : '🔻') : '→';
+${
+  answerLogs.length > 0
+    ? answerLogs
+        .map((log: any, idx: number) => {
+          const changed = Math.abs(log.positionAfter - log.positionBefore) > 1;
+          const arrow = changed ? (log.positionAfter > log.positionBefore ? '🔺' : '🔻') : '→';
 
-  // LocalStorageから実際の履歴を取得して検証
-  const allProgress = loadProgressSync();
-  const actualProgress = allProgress.wordProgress?.[log.word];
-  const actualCorrect = actualProgress?.memorizationCorrect ?? 0;
-  const actualStillLearning = actualProgress?.memorizationStillLearning ?? 0;
-  const actualAttempts = actualProgress?.memorizationAttempts ?? 0;
-  const actualIncorrect = actualAttempts - actualCorrect - actualStillLearning;
+          // LocalStorageから実際の履歴を取得して検証
+          const allProgress = loadProgressSync();
+          const actualProgress = allProgress.wordProgress?.[log.word];
+          const actualCorrect = actualProgress?.memorizationCorrect ?? 0;
+          const actualStillLearning = actualProgress?.memorizationStillLearning ?? 0;
+          const actualAttempts = actualProgress?.memorizationAttempts ?? 0;
+          const actualIncorrect = actualAttempts - actualCorrect - actualStillLearning;
 
-  // 実際の値を常に表示（不一致があれば⚠️マーク）
-  const mismatch = (actualCorrect !== log.progress.correctCount || actualIncorrect !== log.progress.incorrectCount);
-  const actualInfo = ' | **実際のLS**: 正解' + actualCorrect + '/まだまだ' + actualStillLearning + '/誤答' + actualIncorrect + ' (計' + actualAttempts + '回)' + (mismatch ? ' ⚠️**不一致**' : '');
+          // 実際の値を常に表示（不一致があれば⚠️マーク）
+          const mismatch =
+            actualCorrect !== log.progress.correctCount ||
+            actualIncorrect !== log.progress.incorrectCount;
+          const actualInfo =
+            ' | **実際のLS**: 正解' +
+            actualCorrect +
+            '/まだまだ' +
+            actualStillLearning +
+            '/誤答' +
+            actualIncorrect +
+            ' (計' +
+            actualAttempts +
+            '回)' +
+            (mismatch ? ' ⚠️**不一致**' : '');
 
-  return (idx + 1) + '. **' + log.word + '**: Position ' + log.positionBefore.toFixed(0) + ' ' + arrow + ' ' + log.positionAfter.toFixed(0) + ' (' + log.category + ') [ログ: 正解' + log.progress.correctCount + '/' + log.progress.incorrectCount + '誤答]' + actualInfo;
-}).join('\n') : '⚠️ 解答ログがありません（まだ解答していない可能性）'}
+          return (
+            idx +
+            1 +
+            '. **' +
+            log.word +
+            '**: Position ' +
+            log.positionBefore.toFixed(0) +
+            ' ' +
+            arrow +
+            ' ' +
+            log.positionAfter.toFixed(0) +
+            ' (' +
+            log.category +
+            ') [ログ: 正解' +
+            log.progress.correctCount +
+            '/' +
+            log.progress.incorrectCount +
+            '誤答]' +
+            actualInfo
+          );
+        })
+        .join('\n')
+    : '⚠️ 解答ログがありません（まだ解答していない可能性）'
+}
 
 ---
 
@@ -537,14 +741,17 @@ GamificationAIによるブースト後のPosition（スケジューリング時�
 
 | # | 単語 | Position (LS) | 状態 | 試行回数 | 最終学習 | 連続誤答 |
 |---|------|---------------|------|----------|----------|----------|
-${strugglingWords.slice(0, 30).map((item, idx) => {
-  const lastStudied = item.lastStudied ? new Date(item.lastStudied).toLocaleDateString() : '-';
-  const category = item.position >= 70 ? '🔴 分からない' : '🟡 まだまだ';
-  const allProgress = loadProgressSync();
-  const wordProgress = allProgress.wordProgress?.[item.word];
-  const consecutiveIncorrect = wordProgress?.consecutiveIncorrect ?? 0;
-  return `| ${idx + 1} | **${item.word}** | ${item.position.toFixed(0)} | ${category} | ${item.attempts}回 | ${lastStudied} | ${consecutiveIncorrect}回 |`;
-}).join('\n')}
+${strugglingWords
+  .slice(0, 30)
+  .map((item, idx) => {
+    const lastStudied = item.lastStudied ? new Date(item.lastStudied).toLocaleDateString() : '-';
+    const category = item.position >= 70 ? '🔴 分からない' : '🟡 まだまだ';
+    const allProgress = loadProgressSync();
+    const wordProgress = allProgress.wordProgress?.[item.word];
+    const consecutiveIncorrect = wordProgress?.consecutiveIncorrect ?? 0;
+    return `| ${idx + 1} | **${item.word}** | ${item.position.toFixed(0)} | ${category} | ${item.attempts}回 | ${lastStudied} | ${consecutiveIncorrect}回 |`;
+  })
+  .join('\n')}
 
 _…他${Math.max(0, strugglingWords.length - 30)}語省略_
 
@@ -564,9 +771,12 @@ ${(() => {
 
 | # | 単語 | Before | After | 増加量 |
 |---|------|--------|-------|--------|
-${boostData.changes.slice(0, 20).map((c: any, idx: number) => {
-  return `| ${idx + 1} | **${c.word}** | ${c.before.toFixed(0)} | ${c.after.toFixed(0)} | +${(c.after - c.before).toFixed(0)} |`;
-}).join('\n')}
+${boostData.changes
+  .slice(0, 20)
+  .map((c: any, idx: number) => {
+    return `| ${idx + 1} | **${c.word}** | ${c.before.toFixed(0)} | ${c.after.toFixed(0)} | +${(c.after - c.before).toFixed(0)} |`;
+  })
+  .join('\n')}
 
 ${boostData.changes.length > 20 ? '_…他' + (boostData.changes.length - 20) + '語_' : ''}
 
@@ -585,15 +795,45 @@ ${boostData.changes.length > 20 ? '_…他' + (boostData.changes.length - 20) + 
 ${(() => {
   const postProcessOutput = localStorage.getItem('debug_postProcess_output');
   if (!postProcessOutput) {
-    return '⚠️ スケジューリング結果が保存されていません。ページを再読み込みしてください。\n\n**元のJSON順序（参考情報のみ）**:\n' +
-      questions.slice(currentIndex + 1, currentIndex + 31).map((q, idx) => {
-        const allProgress = loadProgressSync();
-        const wordProgress = allProgress.wordProgress?.[q.word];
-        const position = wordProgress?.memorizationPosition ?? 0;
-        const attempts = wordProgress?.totalAttempts ?? 0;
-        const status = attempts === 0 ? '⚪ 新規（未出題）' : position >= 70 ? '🔴 分からない' : position >= 40 ? '🟡 まだまだ' : position >= 20 ? '⚪ 新規' : '✅ 定着';
-        return '| ' + (idx + 1) + ' | ' + (currentIndex + idx + 2) + '問目 | **' + q.word + '** | ' + position.toFixed(0) + ' | ' + attempts + '回 | ' + (q.difficulty || 'unknown') + ' | ' + status + ' |';
-      }).join('\n');
+    return (
+      '⚠️ スケジューリング結果が保存されていません。ページを再読み込みしてください。\n\n**元のJSON順序（参考情報のみ）**:\n' +
+      questions
+        .slice(currentIndex + 1, currentIndex + 31)
+        .map((q, idx) => {
+          const allProgress = loadProgressSync();
+          const wordProgress = allProgress.wordProgress?.[q.word];
+          const position = wordProgress?.memorizationPosition ?? 0;
+          const attempts = wordProgress?.totalAttempts ?? 0;
+          const status =
+            attempts === 0
+              ? '⚪ 新規（未出題）'
+              : position >= 70
+                ? '🔴 分からない'
+                : position >= 40
+                  ? '🟡 まだまだ'
+                  : position >= 20
+                    ? '⚪ 新規'
+                    : '✅ 定着';
+          return (
+            '| ' +
+            (idx + 1) +
+            ' | ' +
+            (currentIndex + idx + 2) +
+            '問目 | **' +
+            q.word +
+            '** | ' +
+            position.toFixed(0) +
+            ' | ' +
+            attempts +
+            '回 | ' +
+            (q.difficulty || 'unknown') +
+            ' | ' +
+            status +
+            ' |'
+          );
+        })
+        .join('\n')
+    );
   }
 
   try {
@@ -602,12 +842,37 @@ ${(() => {
       return '⚠️ スケジューリングキューが空です';
     }
 
-    return '| # | 単語 | Position | 出題回数 | 状態 |\n' +
+    return (
+      '| # | 単語 | Position | 出題回数 | 状態 |\n' +
       '|---|------|----------|----------|------|\n' +
-      scheduledQueue.map((item: any, idx: number) => {
-        const status = item.attempts === 0 ? '⚪ 新規(未出題)' : item.position >= 70 ? '🔴 分からない' : item.position >= 40 ? '🟡 まだまだ' : item.position >= 20 ? '⚪ 新規' : '✅ 定着';
-        return '| ' + (idx + 1) + ' | **' + item.word + '** | ' + (item.position ?? 0).toFixed(0) + ' | ' + item.attempts + '回 | ' + status + ' |';
-      }).join('\n');
+      scheduledQueue
+        .map((item: any, idx: number) => {
+          const status =
+            item.attempts === 0
+              ? '⚪ 新規(未出題)'
+              : item.position >= 70
+                ? '🔴 分からない'
+                : item.position >= 40
+                  ? '🟡 まだまだ'
+                  : item.position >= 20
+                    ? '⚪ 新規'
+                    : '✅ 定着';
+          return (
+            '| ' +
+            (idx + 1) +
+            ' | **' +
+            item.word +
+            '** | ' +
+            (item.position ?? 0).toFixed(0) +
+            ' | ' +
+            item.attempts +
+            '回 | ' +
+            status +
+            ' |'
+          );
+        })
+        .join('\n')
+    );
   } catch {
     return '⚠️ データ解析エラー';
   }
@@ -626,16 +891,28 @@ ${(() => {
 
 | # | 問題位置 | 単語 | Position | 出題回数 | 難易度 | 状態 |
 |---|----------|------|----------|----------|--------|------|
-${questions.slice(currentIndex + 1, currentIndex + 31).map((question, idx) => {
-  const word = question?.word;
-  const allProgress = loadProgressSync();
-  const wordProgress = allProgress.wordProgress?.[word];
-  const position = wordProgress?.memorizationPosition ?? 0;
-  const attempts = wordProgress?.totalAttempts ?? 0;
-  const difficulty = question?.difficulty ?? '不明';
-  const status = attempts === 0 ? '⚪ 新規（未出題）' : position >= 70 ? '🔴 分からない' : position >= 40 ? '🟡 まだまだ' : position >= 20 ? '⚪ 新規' : '✅ 定着';
-  return `| ${idx + 1} | ${currentIndex + idx + 2}問目 | **${word}** | ${position.toFixed(0)} | ${attempts}回 | ${difficulty} | ${status} |`;
-}).join('\n')}
+${questions
+  .slice(currentIndex + 1, currentIndex + 31)
+  .map((question, idx) => {
+    const word = question?.word;
+    const allProgress = loadProgressSync();
+    const wordProgress = allProgress.wordProgress?.[word];
+    const position = wordProgress?.memorizationPosition ?? 0;
+    const attempts = wordProgress?.totalAttempts ?? 0;
+    const difficulty = question?.difficulty ?? '不明';
+    const status =
+      attempts === 0
+        ? '⚪ 新規（未出題）'
+        : position >= 70
+          ? '🔴 分からない'
+          : position >= 40
+            ? '🟡 まだまだ'
+            : position >= 20
+              ? '⚪ 新規'
+              : '✅ 定着';
+    return `| ${idx + 1} | ${currentIndex + idx + 2}問目 | **${word}** | ${position.toFixed(0)} | ${attempts}回 | ${difficulty} | ${status} |`;
+  })
+  .join('\n')}
 
 ---
 
@@ -648,31 +925,39 @@ ${aiEvalTable}
 ## 📊 統計サマリー
 
 - **総問題数**: ${totalQuestions}問
-- **現在進捗**: ${((currentIndex + 1) / totalQuestions * 100).toFixed(1)}%
+- **現在進捗**: ${(((currentIndex + 1) / totalQuestions) * 100).toFixed(1)}%
 - **LocalStorage保存中（まだまだ・分からない）**: ${strugglingWords.length}語
-  - 分からない (Position≥70): ${strugglingWords.filter(w => w.position >= 70).length}語
-  - まだまだ (Position≥40): ${strugglingWords.filter(w => w.position >= 40 && w.position < 70).length}語
+  - 分からない (Position≥70): ${strugglingWords.filter((w) => w.position >= 70).length}語
+  - まだまだ (Position≥40): ${strugglingWords.filter((w) => w.position >= 40 && w.position < 70).length}語
 - **次30問中の状態別**:
-  - 🔴 分からない: ${questions.slice(currentIndex + 1, currentIndex + 31).filter(q => {
-    const wp = loadProgressSync().wordProgress?.[q.word];
-    return (wp?.memorizationPosition ?? 0) >= 70;
-  }).length}問
-  - 🟡 まだまだ: ${questions.slice(currentIndex + 1, currentIndex + 31).filter(q => {
-    const wp = loadProgressSync().wordProgress?.[q.word];
-    const pos = wp?.memorizationPosition ?? 0;
-    return pos >= 40 && pos < 70;
-  }).length}問
-  - ⚪ 新規: ${questions.slice(currentIndex + 1, currentIndex + 31).filter(q => {
-    const wp = loadProgressSync().wordProgress?.[q.word];
-    const attempts = wp?.totalAttempts ?? 0;
-    const pos = wp?.memorizationPosition ?? 0;
-    return attempts === 0 || (pos >= 20 && pos < 40);
-  }).length}問
-  - ✅ 定着済: ${questions.slice(currentIndex + 1, currentIndex + 31).filter(q => {
-    const wp = loadProgressSync().wordProgress?.[q.word];
-    const attempts = wp?.totalAttempts ?? 0;
-    return attempts > 0 && (wp?.memorizationPosition ?? 0) < 20;
-  }).length}問
+  - 🔴 分からない: ${
+    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
+      const wp = loadProgressSync().wordProgress?.[q.word];
+      return (wp?.memorizationPosition ?? 0) >= 70;
+    }).length
+  }問
+  - 🟡 まだまだ: ${
+    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
+      const wp = loadProgressSync().wordProgress?.[q.word];
+      const pos = wp?.memorizationPosition ?? 0;
+      return pos >= 40 && pos < 70;
+    }).length
+  }問
+  - ⚪ 新規: ${
+    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
+      const wp = loadProgressSync().wordProgress?.[q.word];
+      const attempts = wp?.totalAttempts ?? 0;
+      const pos = wp?.memorizationPosition ?? 0;
+      return attempts === 0 || (pos >= 20 && pos < 40);
+    }).length
+  }問
+  - ✅ 定着済: ${
+    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
+      const wp = loadProgressSync().wordProgress?.[q.word];
+      const attempts = wp?.totalAttempts ?? 0;
+      return attempts > 0 && (wp?.memorizationPosition ?? 0) < 20;
+    }).length
+  }問
 
 ## 🔍 デバッグヒント
 
@@ -809,29 +1094,33 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             (p: any) => p.memorizationPosition < 20
           ).length;
           const stillLearningWords = Object.values(allProgress.wordProgress || {}).filter(
-            (p: any) => p.memorizationPosition >= 40 && p.memorizationPosition < 70 && p.totalAttempts > 0
+            (p: any) =>
+              p.memorizationPosition >= 40 && p.memorizationPosition < 70 && p.totalAttempts > 0
           ).length;
           const incorrectWords = Object.values(allProgress.wordProgress || {}).filter(
             (p: any) => p.memorizationPosition >= 70
           ).length;
 
           const totalAttempts = Object.values(allProgress.wordProgress || {}).reduce(
-            (sum: number, p: any) => sum + (p.totalAttempts || 0), 0
+            (sum: number, p: any) => sum + (p.totalAttempts || 0),
+            0
           );
           const totalCorrect = Object.values(allProgress.wordProgress || {}).reduce(
-            (sum: number, p: any) => sum + (p.memorizationCorrect || 0), 0
+            (sum: number, p: any) => sum + (p.memorizationCorrect || 0),
+            0
           );
           const totalIncorrect = Object.values(allProgress.wordProgress || {}).reduce(
-            (sum: number, p: any) => sum + (p.memorizationIncorrect || 0), 0
+            (sum: number, p: any) => sum + (p.memorizationIncorrect || 0),
+            0
           );
-          const overallAccuracy = totalAttempts > 0 ? (totalCorrect / totalAttempts * 100).toFixed(1) : '0.0';
-          const masteryRate = totalWords > 0 ? (masteredWords / totalWords * 100).toFixed(1) : '0.0';
+          const overallAccuracy =
+            totalAttempts > 0 ? ((totalCorrect / totalAttempts) * 100).toFixed(1) : '0.0';
+          const masteryRate =
+            totalWords > 0 ? ((masteredWords / totalWords) * 100).toFixed(1) : '0.0';
 
           return (
             <div className="bg-green-50 p-3 rounded border-2 border-green-300">
-              <p className="font-semibold text-green-800">
-                スコアボード（学習状況）
-              </p>
+              <p className="font-semibold text-green-800">スコアボード（学習状況）</p>
               <div className="mt-2 space-y-2 text-xs">
                 <div className="grid grid-cols-2 gap-2">
                   <div className="bg-white p-2 rounded">
@@ -871,7 +1160,9 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                 <div className="bg-white p-2 rounded">
                   <div className="flex justify-between">
                     <span className="text-gray-600">進捗率:</span>
-                    <span className="font-bold">{((currentIndex / totalQuestions) * 100).toFixed(1)}%</span>
+                    <span className="font-bold">
+                      {((currentIndex / totalQuestions) * 100).toFixed(1)}%
+                    </span>
                   </div>
                   <div className="text-xs text-gray-500 mt-1">
                     {currentIndex} / {totalQuestions} 問目
@@ -895,22 +1186,23 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
               📞 関数呼び出し履歴 (最新{functionCalls.length}件)
             </p>
             <div className="mt-2 space-y-1 max-h-40 overflow-y-auto">
-              {functionCalls.slice().reverse().map((call: any, idx: number) => (
-                <div
-                  key={idx}
-                  className="text-xs bg-white p-2 rounded flex justify-between items-center"
-                >
-                  <div>
-                    <span className="font-mono font-bold text-blue-600">{call.function}</span>
-                    <span className="ml-2 text-gray-600">
-                      {JSON.stringify(call.params)}
+              {functionCalls
+                .slice()
+                .reverse()
+                .map((call: any, idx: number) => (
+                  <div
+                    key={idx}
+                    className="text-xs bg-white p-2 rounded flex justify-between items-center"
+                  >
+                    <div>
+                      <span className="font-mono font-bold text-blue-600">{call.function}</span>
+                      <span className="ml-2 text-gray-600">{JSON.stringify(call.params)}</span>
+                    </div>
+                    <span className="text-xs text-gray-500">
+                      {new Date(call.timestamp).toLocaleTimeString()}
                     </span>
                   </div>
-                  <span className="text-xs text-gray-500">
-                    {new Date(call.timestamp).toLocaleTimeString()}
-                  </span>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         )}
@@ -922,71 +1214,71 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
               📝 解答直後のPosition計算 (最新{answerLogs.length}件)
             </p>
             <div className="mt-2 space-y-2 max-h-60 overflow-y-auto">
-              {answerLogs.slice().reverse().map((log: any, idx: number) => {
-                const changed = Math.abs(log.positionAfter - log.positionBefore) > 1;
-                const increased = log.positionAfter > log.positionBefore;
-                return (
-                  <div
-                    key={idx}
-                    className="text-xs bg-white p-2 rounded border"
-                  >
-                    <div className="flex justify-between items-center">
-                      <span className="font-mono font-bold">{log.word}</span>
-                      <span className="text-xs text-gray-500">
-                        {new Date(log.timestamp).toLocaleTimeString()}
-                      </span>
-                    </div>
-                    <div className="mt-1 flex justify-between items-center">
-                      <div>
-                        <span className="text-gray-600">Position: </span>
+              {answerLogs
+                .slice()
+                .reverse()
+                .map((log: any, idx: number) => {
+                  const changed = Math.abs(log.positionAfter - log.positionBefore) > 1;
+                  const increased = log.positionAfter > log.positionBefore;
+                  return (
+                    <div key={idx} className="text-xs bg-white p-2 rounded border">
+                      <div className="flex justify-between items-center">
+                        <span className="font-mono font-bold">{log.word}</span>
+                        <span className="text-xs text-gray-500">
+                          {new Date(log.timestamp).toLocaleTimeString()}
+                        </span>
+                      </div>
+                      <div className="mt-1 flex justify-between items-center">
+                        <div>
+                          <span className="text-gray-600">Position: </span>
+                          <span
+                            className={
+                              changed
+                                ? increased
+                                  ? 'text-red-600 font-bold'
+                                  : 'text-green-600 font-bold'
+                                : ''
+                            }
+                          >
+                            {log.positionBefore.toFixed(0)} → {log.positionAfter.toFixed(0)}
+                          </span>
+                          {changed && (
+                            <span className="ml-2">
+                              {increased ? '🔺' : '🔻'}
+                              {Math.abs(log.positionAfter - log.positionBefore).toFixed(0)}
+                            </span>
+                          )}
+                        </div>
                         <span
                           className={
-                            changed
-                              ? increased
-                                ? 'text-red-600 font-bold'
-                                : 'text-green-600 font-bold'
-                              : ''
+                            log.category === 'incorrect'
+                              ? 'bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs'
+                              : log.category === 'still_learning'
+                                ? 'bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs'
+                                : log.category === 'new'
+                                  ? 'bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs'
+                                  : 'bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs'
                           }
                         >
-                          {log.positionBefore.toFixed(0)} → {log.positionAfter.toFixed(0)}
-                        </span>
-                        {changed && (
-                          <span className="ml-2">
-                            {increased ? '🔺' : '🔻'}
-                            {Math.abs(log.positionAfter - log.positionBefore).toFixed(0)}
-                          </span>
-                        )}
-                      </div>
-                      <span
-                        className={
-                          log.category === 'incorrect'
-                            ? 'bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs'
+                          {log.category === 'incorrect'
+                            ? '🔴 分からない'
                             : log.category === 'still_learning'
-                            ? 'bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs'
-                            : log.category === 'new'
-                            ? 'bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs'
-                            : 'bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs'
-                        }
-                      >
-                        {log.category === 'incorrect'
-                          ? '🔴 分からない'
-                          : log.category === 'still_learning'
-                          ? '🟡 まだまだ'
-                          : log.category === 'new'
-                          ? '⚪ 新規'
-                          : '✅ 定着済'}
-                      </span>
+                              ? '🟡 まだまだ'
+                              : log.category === 'new'
+                                ? '⚪ 新規'
+                                : '✅ 定着済'}
+                        </span>
+                      </div>
+                      <div className="mt-1 flex gap-3 text-xs text-gray-600">
+                        <span>正答: {log.progress.correctCount}</span>
+                        <span>誤答: {log.progress.incorrectCount}</span>
+                        <span>連続正答: {log.progress.consecutiveCorrect}</span>
+                        <span>連続誤答: {log.progress.consecutiveIncorrect}</span>
+                        <span>正答率: {(log.progress.accuracy * 100).toFixed(0)}%</span>
+                      </div>
                     </div>
-                    <div className="mt-1 flex gap-3 text-xs text-gray-600">
-                      <span>正答: {log.progress.correctCount}</span>
-                      <span>誤答: {log.progress.incorrectCount}</span>
-                      <span>連続正答: {log.progress.consecutiveCorrect}</span>
-                      <span>連続誤答: {log.progress.consecutiveIncorrect}</span>
-                      <span>正答率: {(log.progress.accuracy * 100).toFixed(0)}%</span>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
             </div>
           </div>
         )}
@@ -994,14 +1286,13 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
         {/* 🎮 Position分散診断 */}
         {interleavingDiag && (
           <div className="bg-purple-50 p-3 rounded border-2 border-purple-300">
-            <p className="font-semibold text-purple-800">
-              🎮 Position分散診断
-            </p>
+            <p className="font-semibold text-purple-800">🎮 Position分散診断</p>
             <div className="mt-2 space-y-2 text-xs">
               <div className="flex justify-between">
                 <span>分散前:</span>
                 <span>
-                  まだまだ{interleavingDiag.before.struggling}語 / 新規{interleavingDiag.before.new}語
+                  まだまだ{interleavingDiag.before.struggling}語 / 新規{interleavingDiag.before.new}
+                  語
                 </span>
               </div>
               <div className="flex justify-between">
@@ -1013,11 +1304,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
               <div className="flex justify-between font-bold">
                 <span>Position引き上げ:</span>
                 <span
-                  className={
-                    interleavingDiag.summary.working
-                      ? 'text-green-600'
-                      : 'text-red-600'
-                  }
+                  className={interleavingDiag.summary.working ? 'text-green-600' : 'text-red-600'}
                 >
                   {interleavingDiag.summary.boosted}語
                   {interleavingDiag.summary.working ? ' ✅' : ' ❌'}
@@ -1061,7 +1348,8 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             // カテゴリ判定
             const categorized = top30.map((item: any) => {
               if (item.attempts > 0 && item.position >= 40 && item.position < 70) return 'まだまだ';
-              if (item.attempts === 0 && item.position >= 40 && item.position < 70) return '新規(引上)';
+              if (item.attempts === 0 && item.position >= 40 && item.position < 70)
+                return '新規(引上)';
               if (item.position >= 70) return '分からない';
               if (item.position < 20) return '定着済';
               return '新規';
@@ -1071,19 +1359,28 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             const stats = {
               まだまだ: categorized.filter((c: string) => c === 'まだまだ').length,
               新規引上: categorized.filter((c: string) => c === '新規(引上)').length,
-              その他: categorized.filter((c: string) => !['まだまだ', '新規(引上)'].includes(c)).length,
+              その他: categorized.filter((c: string) => !['まだまだ', '新規(引上)'].includes(c))
+                .length,
             };
 
             // パターン視覚化（絵文字）
-            const pattern = categorized.slice(0, 20).map((c: string) => {
-              switch(c) {
-                case 'まだまだ': return '🟡';
-                case '新規(引上)': return '🔵';
-                case '分からない': return '🔴';
-                case '定着済': return '✅';
-                default: return '⚪';
-              }
-            }).join('');
+            const pattern = categorized
+              .slice(0, 20)
+              .map((c: string) => {
+                switch (c) {
+                  case 'まだまだ':
+                    return '🟡';
+                  case '新規(引上)':
+                    return '🔵';
+                  case '分からない':
+                    return '🔴';
+                  case '定着済':
+                    return '✅';
+                  default:
+                    return '⚪';
+                }
+              })
+              .join('');
 
             // 交互配置の品質チェック
             let interleavingQuality = 0;
@@ -1117,15 +1414,15 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 
                   <div className="mt-3 p-2 bg-white rounded">
                     <p className="text-xs font-semibold mb-1">パターン視覚化 (TOP20):</p>
-                    <div className="text-lg leading-relaxed break-all">
-                      {pattern}
-                    </div>
+                    <div className="text-lg leading-relaxed break-all">{pattern}</div>
                     <p className="text-xs text-gray-500 mt-1">
                       🟡まだまだ 🔵新規(引上) ⚪新規 🔴分からない ✅定着済
                     </p>
                   </div>
 
-                  <div className={`mt-2 p-2 rounded ${isWorking ? 'bg-green-100' : 'bg-yellow-100'}`}>
+                  <div
+                    className={`mt-2 p-2 rounded ${isWorking ? 'bg-green-100' : 'bg-yellow-100'}`}
+                  >
                     <p className="font-semibold">
                       {isWorking ? '✅ 交互配置が正常に機能' : '⚠️ 交互配置の頻度が低い'}
                     </p>
@@ -1135,10 +1432,8 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     </p>
                   </div>
 
-                  {(stats.まだまだ === 0 && stats.新規引上 === 0) && (
-                    <div className="text-gray-600 mt-2">
-                      ℹ️ インターリーブ対象なし（正常動作）
-                    </div>
+                  {stats.まだまだ === 0 && stats.新規引上 === 0 && (
+                    <div className="text-gray-600 mt-2">ℹ️ インターリーブ対象なし（正常動作）</div>
                   )}
                 </div>
               </div>
@@ -1169,10 +1464,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
           ) : (
             <ul className="mt-2 space-y-1 max-h-60 overflow-y-auto">
               {strugglingWords.slice(0, 20).map((item, idx) => (
-                <li
-                  key={idx}
-                  className="text-xs bg-white p-2 rounded"
-                >
+                <li key={idx} className="text-xs bg-white p-2 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-mono font-bold">{item.word}</span>
                     <span
@@ -1203,9 +1495,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 
         {/* 次の10問 */}
         <div className="bg-blue-50 p-3 rounded">
-          <p className="font-semibold text-blue-800">
-            📋 次の30問（Position分散診断用）
-          </p>
+          <p className="font-semibold text-blue-800">📋 次の30問（Position分散診断用）</p>
           <p className="text-xs text-gray-600 mt-1">
             まだまだ58語 → 新規の17% (約10語) がPosition +15されているはず
           </p>
@@ -1222,18 +1512,20 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
               const isStrugglingWord = position >= 40;
 
               // 状態ラベル
-              const statusLabel = position >= 70 ? '🔴 分からない'
-                : position >= 40 ? '🟡 まだまだ'
-                : position >= 20 ? '⚪ 新規'
-                : '✅ 定着済';
+              const statusLabel =
+                position >= 70
+                  ? '🔴 分からない'
+                  : position >= 40
+                    ? '🟡 まだまだ'
+                    : position >= 20
+                      ? '⚪ 新規'
+                      : '✅ 定着済';
 
               return (
                 <li
                   key={idx}
                   className={`text-xs p-2 rounded ${
-                    isStrugglingWord
-                      ? 'bg-yellow-200 font-bold'
-                      : 'bg-white'
+                    isStrugglingWord ? 'bg-yellow-200 font-bold' : 'bg-white'
                   }`}
                 >
                   <div className="flex justify-between items-center">
@@ -1241,9 +1533,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                       <span className="text-gray-500">{currentIndex + idx + 2}問目</span>{' '}
                       <span className="font-mono font-bold">{word}</span>
                     </div>
-                    <div className="text-xs">
-                      {statusLabel}
-                    </div>
+                    <div className="text-xs">{statusLabel}</div>
                   </div>
                   <div className="flex gap-3 mt-1 text-xs text-gray-600">
                     <span>Position: {position.toFixed(0)}</span>
@@ -1263,9 +1553,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 
         {/* AI評価（最新10件） */}
         <div className="bg-purple-50 p-3 rounded">
-          <p className="font-semibold text-purple-800">
-            🤖 AI評価（最新10件）
-          </p>
+          <p className="font-semibold text-purple-800">🤖 AI評価（最新10件）</p>
           {aiEvaluations.length === 0 ? (
             <p className="text-gray-600">（なし）</p>
           ) : (
@@ -1277,9 +1565,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     <div className="flex justify-between items-center mb-1">
                       <div className="flex items-center gap-2">
                         <span className="text-gray-500">#{idx + 1}</span>
-                        <span className="font-mono font-bold text-base text-blue-600">
-                          {word}
-                        </span>
+                        <span className="font-mono font-bold text-base text-blue-600">{word}</span>
                       </div>
                       <span
                         className={`px-2 py-0.5 rounded text-xs ${
@@ -1303,9 +1589,12 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     </div>
                     <div className="flex flex-col gap-1 text-gray-600">
                       <div>
-                        <span className="font-semibold">Position: {(evaluation.position ?? 0).toFixed(0)}</span>
+                        <span className="font-semibold">
+                          Position: {(evaluation.position ?? 0).toFixed(0)}
+                        </span>
                         <span className="ml-2 text-xs">
-                          (連続正解: {evaluation.consecutiveCorrect ?? 0}, 連続不正解: {evaluation.consecutiveIncorrect ?? 0})
+                          (連続正解: {evaluation.consecutiveCorrect ?? 0}, 連続不正解:{' '}
+                          {evaluation.consecutiveIncorrect ?? 0})
                         </span>
                       </div>
                       <div className="text-xs">
@@ -1317,13 +1606,27 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                         <div className="mt-2 pt-2 border-t border-gray-300">
                           <div className="text-xs font-semibold mb-1">🤖 7つのAI提案:</div>
                           <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-                            <span>🧠 Memory: {(evaluation.aiProposals.memory ?? 0).toFixed(0)}</span>
-                            <span>💤 CogLoad: {(evaluation.aiProposals.cognitiveLoad ?? 0).toFixed(0)}</span>
-                            <span>🔮 Error: {(evaluation.aiProposals.errorPrediction ?? 0).toFixed(0)}</span>
-                            <span>📚 Linguistic: {(evaluation.aiProposals.linguistic ?? 0).toFixed(0)}</span>
-                            <span>🌍 Context: {(evaluation.aiProposals.contextual ?? 0).toFixed(0)}</span>
-                            <span>🎯 Style: {(evaluation.aiProposals.learningStyle ?? 0).toFixed(0)}</span>
-                            <span className="col-span-2">🎮 Gamify: {(evaluation.aiProposals.gamification ?? 0).toFixed(0)}</span>
+                            <span>
+                              🧠 Memory: {(evaluation.aiProposals.memory ?? 0).toFixed(0)}
+                            </span>
+                            <span>
+                              💤 CogLoad: {(evaluation.aiProposals.cognitiveLoad ?? 0).toFixed(0)}
+                            </span>
+                            <span>
+                              🔮 Error: {(evaluation.aiProposals.errorPrediction ?? 0).toFixed(0)}
+                            </span>
+                            <span>
+                              📚 Linguistic: {(evaluation.aiProposals.linguistic ?? 0).toFixed(0)}
+                            </span>
+                            <span>
+                              🌍 Context: {(evaluation.aiProposals.contextual ?? 0).toFixed(0)}
+                            </span>
+                            <span>
+                              🎯 Style: {(evaluation.aiProposals.learningStyle ?? 0).toFixed(0)}
+                            </span>
+                            <span className="col-span-2">
+                              🎮 Gamify: {(evaluation.aiProposals.gamification ?? 0).toFixed(0)}
+                            </span>
                           </div>
                         </div>
                       )}
@@ -1417,11 +1720,31 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     <tr className="bg-gray-200">
                       <th className="border border-gray-300 px-2 py-1">Variant</th>
                       <th className="border border-gray-300 px-2 py-1">N</th>
-                      <th className="border border-gray-300 px-2 py-1">取得語数<br/>(平均)</th>
-                      <th className="border border-gray-300 px-2 py-1">取得語数<br/>(中央値)</th>
-                      <th className="border border-gray-300 px-2 py-1">取得率<br/>(平均)</th>
-                      <th className="border border-gray-300 px-2 py-1">振動スコア<br/>(平均)</th>
-                      <th className="border border-gray-300 px-2 py-1">所要時間<br/>(平均)</th>
+                      <th className="border border-gray-300 px-2 py-1">
+                        取得語数
+                        <br />
+                        (平均)
+                      </th>
+                      <th className="border border-gray-300 px-2 py-1">
+                        取得語数
+                        <br />
+                        (中央値)
+                      </th>
+                      <th className="border border-gray-300 px-2 py-1">
+                        取得率
+                        <br />
+                        (平均)
+                      </th>
+                      <th className="border border-gray-300 px-2 py-1">
+                        振動スコア
+                        <br />
+                        (平均)
+                      </th>
+                      <th className="border border-gray-300 px-2 py-1">
+                        所要時間
+                        <br />
+                        (平均)
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1430,8 +1753,13 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                       if (!data) {
                         return (
                           <tr key={variant}>
-                            <td className="border border-gray-300 px-2 py-1 text-center font-bold">{variant}</td>
-                            <td colSpan={6} className="border border-gray-300 px-2 py-1 text-center text-gray-500">
+                            <td className="border border-gray-300 px-2 py-1 text-center font-bold">
+                              {variant}
+                            </td>
+                            <td
+                              colSpan={6}
+                              className="border border-gray-300 px-2 py-1 text-center text-gray-500"
+                            >
                               データなし
                             </td>
                           </tr>
@@ -1439,13 +1767,27 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                       }
                       return (
                         <tr key={variant}>
-                          <td className="border border-gray-300 px-2 py-1 text-center font-bold">{variant}</td>
-                          <td className="border border-gray-300 px-2 py-1 text-center">{data.sessionCount}</td>
-                          <td className="border border-gray-300 px-2 py-1 text-center">{data.avgAcquiredWords.toFixed(2)}</td>
-                          <td className="border border-gray-300 px-2 py-1 text-center">{data.medianAcquiredWords.toFixed(0)}</td>
-                          <td className="border border-gray-300 px-2 py-1 text-center">{(data.avgAcquisitionRate * 100).toFixed(1)}%</td>
-                          <td className="border border-gray-300 px-2 py-1 text-center">{data.avgVibrationScore.toFixed(1)}</td>
-                          <td className="border border-gray-300 px-2 py-1 text-center">{Math.round(data.avgDurationSec)}秒</td>
+                          <td className="border border-gray-300 px-2 py-1 text-center font-bold">
+                            {variant}
+                          </td>
+                          <td className="border border-gray-300 px-2 py-1 text-center">
+                            {data.sessionCount}
+                          </td>
+                          <td className="border border-gray-300 px-2 py-1 text-center">
+                            {data.avgAcquiredWords.toFixed(2)}
+                          </td>
+                          <td className="border border-gray-300 px-2 py-1 text-center">
+                            {data.medianAcquiredWords.toFixed(0)}
+                          </td>
+                          <td className="border border-gray-300 px-2 py-1 text-center">
+                            {(data.avgAcquisitionRate * 100).toFixed(1)}%
+                          </td>
+                          <td className="border border-gray-300 px-2 py-1 text-center">
+                            {data.avgVibrationScore.toFixed(1)}
+                          </td>
+                          <td className="border border-gray-300 px-2 py-1 text-center">
+                            {Math.round(data.avgDurationSec)}秒
+                          </td>
                         </tr>
                       );
                     })}
@@ -1484,27 +1826,34 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                 <div className="bg-yellow-50/20 p-3 rounded border border-yellow-300">
                   <div className="text-sm font-semibold mb-2">📈 判定基準（暫定）</div>
                   <div className="text-xs space-y-1">
-                    <div>✅ <strong>合格:</strong> B or C が A に対して「取得語数/セッション +10%」かつ振動スコア悪化なし</div>
-                    <div>❌ <strong>不合格:</strong> 改善なし or 振動スコア &gt; 50</div>
+                    <div>
+                      ✅ <strong>合格:</strong> B or C が A に対して「取得語数/セッション
+                      +10%」かつ振動スコア悪化なし
+                    </div>
+                    <div>
+                      ❌ <strong>不合格:</strong> 改善なし or 振動スコア &gt; 50
+                    </div>
                   </div>
                   {abAggregate.byVariant.B && abAggregate.byVariant.A && (
                     <div className="mt-2 text-xs">
-                      <strong>B vs A:</strong> {
-                        abAggregate.byVariant.B.avgAcquiredWords >= abAggregate.byVariant.A.avgAcquiredWords * 1.1 &&
-                        abAggregate.byVariant.B.avgVibrationScore <= abAggregate.byVariant.A.avgVibrationScore + 5
-                          ? '✅ 合格（+10%達成）'
-                          : '⏳ 継続測定'
-                      }
+                      <strong>B vs A:</strong>{' '}
+                      {abAggregate.byVariant.B.avgAcquiredWords >=
+                        abAggregate.byVariant.A.avgAcquiredWords * 1.1 &&
+                      abAggregate.byVariant.B.avgVibrationScore <=
+                        abAggregate.byVariant.A.avgVibrationScore + 5
+                        ? '✅ 合格（+10%達成）'
+                        : '⏳ 継続測定'}
                     </div>
                   )}
                   {abAggregate.byVariant.C && abAggregate.byVariant.A && (
                     <div className="mt-1 text-xs">
-                      <strong>C vs A:</strong> {
-                        abAggregate.byVariant.C.avgAcquiredWords >= abAggregate.byVariant.A.avgAcquiredWords * 1.1 &&
-                        abAggregate.byVariant.C.avgVibrationScore <= abAggregate.byVariant.A.avgVibrationScore + 5
-                          ? '✅ 合格（+10%達成）'
-                          : '⏳ 継続測定'
-                      }
+                      <strong>C vs A:</strong>{' '}
+                      {abAggregate.byVariant.C.avgAcquiredWords >=
+                        abAggregate.byVariant.A.avgAcquiredWords * 1.1 &&
+                      abAggregate.byVariant.C.avgVibrationScore <=
+                        abAggregate.byVariant.A.avgVibrationScore + 5
+                        ? '✅ 合格（+10%達成）'
+                        : '⏳ 継続測定'}
                     </div>
                   )}
                 </div>
