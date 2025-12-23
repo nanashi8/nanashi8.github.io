@@ -23,7 +23,7 @@ import {
   ACCURACY_THRESHOLDS,
   BOOST_VALUES,
   ATTEMPT_THRESHOLDS,
-  normalizePosition
+  normalizePosition,
 } from './positionConstants';
 
 /**
@@ -50,6 +50,24 @@ export function determineWordPosition(
   // 学習履歴が未作成の単語は新規扱い
   if (!progress) {
     return POSITION_VALUES.NEW_DEFAULT;
+  }
+
+  // 🚨 最優先: LocalStorageに保存されたタブ別Positionを読み込み
+  // これにより、「まだまだ」「分からない」の状態が確実に保持される
+  let savedPosition: number | undefined;
+  switch (mode) {
+    case 'memorization':
+      savedPosition = progress.memorizationPosition;
+      break;
+    case 'translation':
+      savedPosition = progress.translationPosition;
+      break;
+    case 'spelling':
+      savedPosition = progress.spellingPosition;
+      break;
+    case 'grammar':
+      savedPosition = progress.grammarPosition;
+      break;
   }
 
   // ✅ タブ別フィールドを使用（各タブで独立したカウント）
@@ -80,6 +98,32 @@ export function determineWordPosition(
   const consecutiveCorrect = progress.consecutiveCorrect || 0;
   const consecutiveIncorrect = progress.consecutiveIncorrect || 0;
   const lastStudied = progress.lastStudied || Date.now();
+
+  // 🎯 CRITICAL: LocalStorageのタブ別Positionを最優先
+  // 理由: 「まだまだ」「分からない」の状態を確実に保持するため
+  // - 解答直後にPositionが保存されている場合は、それを信頼する
+  // - 動的計算は、保存されたPositionが存在しない場合のみ実行
+  if (savedPosition !== undefined && savedPosition !== null) {
+    // ⚠️ ただし、連続正解で定着した場合は動的計算を優先（まだまだ解消）
+    if (consecutiveCorrect >= CONSECUTIVE_THRESHOLDS.MASTERED) {
+      // 3回連続正解 → 完全定着（LocalStorageのPositionを無視）
+      return POSITION_VALUES.MASTERED_PERFECT;
+    }
+    if (consecutiveCorrect >= CONSECUTIVE_THRESHOLDS.LEARNING) {
+      // 2回連続正解 → ほぼ定着
+      const accuracy = attempts > 0 ? (correct + stillLearning * 0.5) / attempts : 0;
+      if (accuracy >= ACCURACY_THRESHOLDS.GOOD) {
+        return POSITION_VALUES.MASTERED_ALMOST; // 正答率80%以上なら定着扱い
+      }
+      return POSITION_VALUES.NEAR_MASTERY; // まだ新規扱い（もう1回正解で定着）
+    }
+
+    // 📍 保存されたPositionを返す（まだまだ・分からないの状態を保持）
+    if (import.meta.env?.DEV) {
+      console.log(`📍 [Position優先読み込み] ${mode}: savedPosition=${savedPosition}`);
+    }
+    return savedPosition;
+  }
 
   // 時間経過計算
   const daysSince = (Date.now() - lastStudied) / (1000 * 60 * 60 * 24);
@@ -163,7 +207,9 @@ export function determineWordPosition(
 
     // デバッグログ（開発モードのみ）
     if (import.meta.env?.DEV) {
-      console.log(`🟡 [まだまだ] 回数=${stillLearning}回 → Position ${newPosition} (+${stillLearningBoost})`);
+      console.log(
+        `🟡 [まだまだ] 回数=${stillLearning}回 → Position ${newPosition} (+${stillLearningBoost})`
+      );
     }
 
     return newPosition;
@@ -177,7 +223,8 @@ export function determineWordPosition(
   // （7つのAI統合はQuestionSchedulerで実施）
 
   // === BaseScore計算 ===
-  const baseScore = POSITION_VALUES.STILL_LEARNING_DEFAULT - (accuracy * 30) + (consecutiveIncorrect * 10);
+  const baseScore =
+    POSITION_VALUES.STILL_LEARNING_DEFAULT - accuracy * 30 + consecutiveIncorrect * 10;
 
   // === 時間経過ブースト ===
   const timeBoost = Math.min(

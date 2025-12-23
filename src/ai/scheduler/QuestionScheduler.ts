@@ -830,12 +830,39 @@ export class QuestionScheduler {
     else if (position >= 20) category = 'new';
     else category = 'mastered';
 
+    // 🎯 モード別の試行回数を取得（重要！）
+    // まだまだ・分からないの判定には、そのタブでの実際の試行回数を使う
+    let modeAttempts = 0;
+    let modeCorrect = 0;
+    switch (mode) {
+      case 'memorization':
+        modeAttempts = wordProgress.memorizationAttempts || 0;
+        modeCorrect = wordProgress.memorizationCorrect || 0;
+        break;
+      case 'translation':
+        modeAttempts = wordProgress.translationAttempts || 0;
+        modeCorrect = wordProgress.translationCorrect || 0;
+        break;
+      case 'spelling':
+        modeAttempts = wordProgress.spellingAttempts || 0;
+        modeCorrect = wordProgress.spellingCorrect || 0;
+        break;
+      case 'grammar':
+        modeAttempts = wordProgress.grammarAttempts || 0;
+        modeCorrect = wordProgress.grammarCorrect || 0;
+        break;
+      default:
+        // フォールバック: 総合値
+        modeAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0);
+        modeCorrect = wordProgress.correctCount || 0;
+    }
+
     return {
       category,
       position,
       lastStudied: wordProgress.lastStudied || 0,
-      attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0),
-      correct: wordProgress.correctCount || 0,
+      attempts: modeAttempts, // ✅ モード別試行回数
+      correct: modeCorrect, // ✅ モード別正解回数
       streak: wordProgress.consecutiveCorrect || 0,
       forgettingRisk: 0,
       reviewInterval: 1,
@@ -870,12 +897,38 @@ export class QuestionScheduler {
         console.log(`🔍 [QuestionScheduler] ${word}: Position=${position}, category=${category}`);
       }
 
+      // 🎯 モード別の試行回数を取得（重要！）
+      let modeAttempts = 0;
+      let modeCorrect = 0;
+      switch (mode) {
+        case 'memorization':
+          modeAttempts = wordProgress.memorizationAttempts || 0;
+          modeCorrect = wordProgress.memorizationCorrect || 0;
+          break;
+        case 'translation':
+          modeAttempts = wordProgress.translationAttempts || 0;
+          modeCorrect = wordProgress.translationCorrect || 0;
+          break;
+        case 'spelling':
+          modeAttempts = wordProgress.spellingAttempts || 0;
+          modeCorrect = wordProgress.spellingCorrect || 0;
+          break;
+        case 'grammar':
+          modeAttempts = wordProgress.grammarAttempts || 0;
+          modeCorrect = wordProgress.grammarCorrect || 0;
+          break;
+        default:
+          // フォールバック: 総合値
+          modeAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0);
+          modeCorrect = wordProgress.correctCount || 0;
+      }
+
       const status = {
         category,
         position,
         lastStudied: wordProgress.lastStudied || 0,
-        attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0),
-        correct: wordProgress.correctCount || 0,
+        attempts: modeAttempts, // ✅ モード別試行回数
+        correct: modeCorrect, // ✅ モード別正解回数
         streak: wordProgress.consecutiveCorrect || 0,
         forgettingRisk: 0,
         reviewInterval: 1,
