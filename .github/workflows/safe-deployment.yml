@@ -22,7 +22,7 @@ jobs:
     outputs:
       build-status: ${{ job.status }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -72,7 +72,7 @@ jobs:
       name: staging
       url: https://staging.nanashi8.github.io
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Download build artifact
         uses: actions/download-artifact@v3
@@ -156,7 +156,7 @@ jobs:
       name: production
       url: https://nanashi8.github.io
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Download build artifact
         uses: actions/download-artifact@v3
