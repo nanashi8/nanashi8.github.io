@@ -1148,7 +1148,8 @@ ${(() => {
     const wp = progress.wordProgress[wordKey];
     if (wp) {
       const realPosition = determineWordPosition(wp, mode);
-      return { ...q, position: realPosition, _originalPosition: q.position };
+      const originalPosition = Number.isFinite(q.position) ? q.position : null;
+      return { ...q, position: realPosition, _originalPosition: originalPosition };
     }
     return q;
   });
@@ -1156,7 +1157,9 @@ ${(() => {
   // 🚨 Position不整合検出
   const positionMismatches = remainingWithRealPosition
     .filter((q: any) => {
-      const orig = q._originalPosition ?? 0;
+      // positionが元々付与されていない場合は不整合判定しない（0扱いの誤検出を防ぐ）
+      if (!Number.isFinite(q._originalPosition)) return false;
+      const orig = q._originalPosition as number;
       const real = q.position ?? 0;
       return Math.abs(orig - real) > 5; // 5以上の差があれば不整合
     })
@@ -1524,9 +1527,10 @@ ${boostData.changes.length > 20 ? '_…他' + (boostData.changes.length - 20) + 
 
 ---
 
-## 📋 次の出題予定 (30問）
+## 📋 postProcess()後のTOP30（スナップショット）
 
-**⚠️ 重要**: この表示は元のJSON順序ではなく、**実際のスケジューリング結果**（postProcess()出力）を表示します。
+**⚠️ 重要**: **debug_postProcess_output** は **postProcess()後のTOP30のみ**を保存しています。
+現在位置（currentIndex）に追従する「次の30問」ではありません。
 
 ${(() => {
   const postProcessOutput = localStorage.getItem('debug_postProcess_output');
@@ -1614,6 +1618,47 @@ ${(() => {
   }
 })()}
 
+---
+
+## 📋 現在のキュー：次の出題予定 (30問）
+
+**⚠️ 重要**: これは「いま保持しているキュー（questions）」の「currentIndex+1..+30」を表示します。
+Positionは LocalStorage から再計算した値です（determineWordPosition()）。
+
+${(() => {
+  if (!questions || questions.length === 0) return '⚠️ キューが空です。';
+
+  const progress = loadProgressSync();
+  const nextWindow = questions.slice(currentIndex + 1, currentIndex + 31);
+  if (nextWindow.length === 0) return '✅ すべての問題が出題済みです。';
+
+  return (
+    '| # | 問題位置 | 単語 | Position | 出題回数 | 難易度 | 状態 |\n' +
+    '|---|----------|------|----------|----------|--------|------|\n' +
+    nextWindow
+      .map((q: any, idx: number) => {
+        const word = String(q?.word ?? '');
+        const wp = progress.wordProgress?.[word];
+        const position = wp ? determineWordPosition(wp, mode) : 0;
+        const attempts = wp?.totalAttempts ?? 0;
+        const difficulty = q?.difficulty ?? '不明';
+        const status =
+          attempts === 0
+            ? '⚪ 新規（未出題）'
+            : position >= 70
+              ? '🔴 分からない'
+              : position >= 40
+                ? '🟡 まだまだ'
+                : position >= 20
+                  ? '⚪ 新規'
+                  : '✅ 定着';
+
+        return `| ${idx + 1} | ${currentIndex + idx + 2}問目 | **${word}** | ${position.toFixed(0)} | ${attempts}回 | ${difficulty} | ${status} |`;
+      })
+      .join('\n')
+  );
+})()}
+
 **🔍 分析**:
 - まだまだ(Position 45)が上位に来ているか？ → ✅ 正常
 - Position 50の引き上げ単語が混入しているか？ → ✅ 正常
@@ -1621,9 +1666,9 @@ ${(() => {
 
 ---
 
-## 📋 元のJSON順序（参考情報）
+## 📋 残りキュー（LocalStorage Position降順 TOP30）
 
-この表示は**Position降順にソート済み**の残りキューです（再出題による順序崩れを補正）。
+この表示は、残り問題を LocalStorage の生Positionで **降順ソートしたTOP30** です（参考）。
 
 | # | 問題位置 | 単語 | Position | 出題回数 | 難易度 | 状態 |
 |---|----------|------|----------|----------|--------|------|
@@ -1675,49 +1720,48 @@ ${aiEvalTable}
 - **LocalStorage保存中（まだまだ・分からない）**: ${strugglingWords.length}語
   - 分からない (Position≥70): ${strugglingWords.filter((w) => w.position >= 70).length}語
   - まだまだ (Position≥40): ${strugglingWords.filter((w) => w.position >= 40 && w.position < 70).length}語
-- **次30問中の状態別**（Position降順ソート済み）:
+- **次30問中の状態別**（キュー順／PositionはLocalStorageから再計算）:
   - 🔴 分からない: ${(() => {
-    const allProgress = loadProgressSync();
-    return questions
-      .slice(currentIndex + 1)
-      .filter((q) => {
-        const wp = allProgress.wordProgress?.[q.word];
-        return (wp?.memorizationPosition ?? 0) >= 70;
-      })
-      .slice(0, 30).length;
+    const progress = loadProgressSync();
+    const nextWindow = questions.slice(currentIndex + 1, currentIndex + 31);
+    return nextWindow.filter((q: any) => {
+      const word = String(q?.word ?? '');
+      const wp = progress.wordProgress?.[word];
+      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      return pos >= 70;
+    }).length;
   })()}問
   - 🟡 まだまだ: ${(() => {
-    const allProgress = loadProgressSync();
-    return questions
-      .slice(currentIndex + 1)
-      .filter((q) => {
-        const wp = allProgress.wordProgress?.[q.word];
-        const pos = wp?.memorizationPosition ?? 0;
-        return pos >= 40 && pos < 70;
-      })
-      .slice(0, 30).length;
+    const progress = loadProgressSync();
+    const nextWindow = questions.slice(currentIndex + 1, currentIndex + 31);
+    return nextWindow.filter((q: any) => {
+      const word = String(q?.word ?? '');
+      const wp = progress.wordProgress?.[word];
+      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      return pos >= 40 && pos < 70;
+    }).length;
   })()}問
   - ⚪ 新規: ${(() => {
-    const allProgress = loadProgressSync();
-    return questions
-      .slice(currentIndex + 1)
-      .filter((q) => {
-        const wp = allProgress.wordProgress?.[q.word];
-        const pos = wp?.memorizationPosition ?? 0;
-        return pos >= 20 && pos < 40;
-      })
-      .slice(0, 30).length;
+    const progress = loadProgressSync();
+    const nextWindow = questions.slice(currentIndex + 1, currentIndex + 31);
+    return nextWindow.filter((q: any) => {
+      const word = String(q?.word ?? '');
+      const wp = progress.wordProgress?.[word];
+      const attempts = wp?.totalAttempts ?? 0;
+      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      return attempts === 0 || (pos >= 20 && pos < 40);
+    }).length;
   })()}問
   - ✅ 定着済: ${(() => {
-    const allProgress = loadProgressSync();
-    return questions
-      .slice(currentIndex + 1)
-      .filter((q) => {
-        const wp = allProgress.wordProgress?.[q.word];
-        const attempts = wp?.totalAttempts ?? 0;
-        return attempts > 0 && (wp?.memorizationPosition ?? 0) < 20;
-      })
-      .slice(0, 30).length;
+    const progress = loadProgressSync();
+    const nextWindow = questions.slice(currentIndex + 1, currentIndex + 31);
+    return nextWindow.filter((q: any) => {
+      const word = String(q?.word ?? '');
+      const wp = progress.wordProgress?.[word];
+      const attempts = wp?.totalAttempts ?? 0;
+      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      return attempts > 0 && pos < 20;
+    }).length;
   })()}問
 
 ## 🔍 デバッグヒント

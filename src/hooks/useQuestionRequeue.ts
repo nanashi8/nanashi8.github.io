@@ -11,6 +11,8 @@
 
 import { useCallback } from 'react';
 import { sessionKpi } from '../metrics/sessionKpi';
+import { loadProgressSync } from '@/storage/progress/progressStorage';
+import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 
 export interface RequeuableQuestion {
   sessionPriority?: number;
@@ -302,10 +304,6 @@ export function useQuestionRequeue<
       reason: string;
     } => {
       try {
-        // LocalStorageから最新のProgressを取得
-        const { loadProgressSync } = require('@/storage/progress/progressStorage');
-        const { determineWordPosition } = require('@/ai/utils/categoryDetermination');
-        
         const progress = loadProgressSync();
         if (!progress?.wordProgress) {
           return {
@@ -324,7 +322,10 @@ export function useQuestionRequeue<
           const word = (q as any).word;
           if (!word) continue;
 
-          const originalPosition = (q as any).position ?? 0;
+          // positionが付与されていない（または不正）場合は比較不能なのでスキップ
+          const rawPosition = (q as any).position;
+          const originalPosition = Number.isFinite(rawPosition) ? Number(rawPosition) : null;
+          if (originalPosition === null) continue;
           const wp = progress.wordProgress[word];
 
           if (!wp) continue;
