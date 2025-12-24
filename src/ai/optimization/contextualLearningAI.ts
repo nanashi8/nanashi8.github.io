@@ -15,6 +15,8 @@
 
 import { Question } from '@/types';
 import { WordProgress } from '@/storage/progress/progressStorage';
+import { extractWordMetadata, type WordMetadata } from './wordMetadata';
+import { getWordMetadata, getWordMetadataFromQuestion } from './wordMetadataCache';
 
 /**
  * 意味的関連性のタイプ
@@ -452,11 +454,67 @@ export function generateSemanticClusters(
 }
 
 /**
- * 単語間の関連性を検出
+ * 単語間の関連性を検出（メタ情報拡張版）
  */
-export function detectWordRelations(word1: string, word2: string): WordRelation | null {
+export function detectWordRelations(word1: string, word2: string, question1?: Question, question2?: Question): WordRelation | null {
   const w1 = word1.toLowerCase();
   const w2 = word2.toLowerCase();
+
+  // メタ情報を抽出（キャッシュ活用）
+  const meta1 = question1
+    ? getWordMetadataFromQuestion(question1)
+    : getWordMetadata(word1);
+  const meta2 = question2
+    ? getWordMetadataFromQuestion(question2)
+    : getWordMetadata(word2);
+
+  // 語根チェック（最優先）
+  if (meta1.family?.root && meta2.family?.root && meta1.family.root === meta2.family.root) {
+    return {
+      word1,
+      word2,
+      relationType: 'word_family',
+      strength: 0.95,
+      description: `"${word1}"と"${word2}"は同じ語根（${meta1.family.root}）`,
+    };
+  }
+
+  // 接頭辞チェック
+  if (meta1.family?.prefix && meta2.family?.prefix && meta1.family.prefix === meta2.family.prefix) {
+    return {
+      word1,
+      word2,
+      relationType: 'word_family',
+      strength: 0.7,
+      description: `"${word1}"と"${word2}"は同じ接頭辞（${meta1.family.prefix}-）`,
+    };
+  }
+
+  // 接尾辞チェック（品詞が同じ場合のみ）
+  if (meta1.family?.suffix && meta2.family?.suffix && 
+      meta1.family.suffix === meta2.family.suffix &&
+      meta1.pos === meta2.pos) {
+    return {
+      word1,
+      word2,
+      relationType: 'word_family',
+      strength: 0.65,
+      description: `"${word1}"と"${word2}"は同じ接尾辞（-${meta1.family.suffix}）`,
+    };
+  }
+
+  // 熟語パターンチェック
+  if (meta1.phrasePattern && meta2.phrasePattern && 
+      meta1.phrasePattern === meta2.phrasePattern &&
+      meta1.phrasePattern !== 'none') {
+    return {
+      word1,
+      word2,
+      relationType: 'collocation',
+      strength: 0.75,
+      description: `"${word1}"と"${word2}"は同じ熟語パターン`,
+    };
+  }
 
   // 対義語チェック
   for (const pair of ANTONYM_PAIRS) {
@@ -549,7 +607,10 @@ export function generateContextualSequence(
 
       const prevWord = sequence[sequence.length - 1];
       if (prevWord) {
-        const relation = detectWordRelations(prevWord, word);
+        // Questionオブジェクトを探して渡す（メタ情報活用のため）
+        const prevQ = questions.find(q => q.word === prevWord);
+        const currentQ = questions.find(q => q.word === word);
+        const relation = detectWordRelations(prevWord, word, prevQ, currentQ);
         transitions.push({
           from: prevWord,
           to: word,

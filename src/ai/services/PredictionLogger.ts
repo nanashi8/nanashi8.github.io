@@ -222,8 +222,16 @@ export function getPredictionLogger(): PredictionLogger {
   if (!defaultInstance) {
     // 本番環境ではstorageManagerを使用
     if (typeof window !== 'undefined') {
-      import('@/storage/manager/storageManager').then(({ storageManager }) => {
-        defaultInstance = new PredictionLogger(storageManager as unknown as IStorage);
+      import('@/storage/manager/storageManager').then(({ loadSetting, saveSetting }) => {
+        const adapter: IStorage = {
+          async getItem(key: string) {
+            return loadSetting(key);
+          },
+          async setItem(key: string, value: unknown) {
+            await saveSetting(key, value);
+          },
+        };
+        defaultInstance = new PredictionLogger(adapter);
       });
     }
     // 初期化中はインメモリストレージを使用

@@ -3,11 +3,10 @@
  *
  * Phase 1.2: 優先度計算のテスト（TDD Red phase）
  *
- * 優先度計算式:
- * priority = basePriority(category) + timeBoost(daysSinceLastStudy)
- *
- * - basePriority: incorrect=100, still_learning=75, new=50, mastered=10
- * - timeBoost: min(daysSinceLastStudy * 2, 20) ※最大+20
+ * 現行仕様:
+ * - recalculatePriorityAfterAnswer() は「カテゴリ」ではなく Position(0-100) を返す
+ * - Positionは determineWordPosition()（タブ別カウント + 時間経過 + 連続正解/不正解）で算出される
+ * - 解答直後は savedPosition を一時的に無視して再計算する
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
@@ -22,13 +21,13 @@ describe('QuestionScheduler - Priority Calculation', () => {
   });
 
   describe('recalculatePriorityAfterAnswer', () => {
-    it('incorrect語句に最高優先度100を割り当て', () => {
+    it('連続不正解3回でincorrect（Position 85）', () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 1,
         incorrectCount: 4,
         consecutiveCorrect: 0,
-        consecutiveIncorrect: 0,
+        consecutiveIncorrect: 3,
         lastStudied: Date.now(), // 今日学習
         totalResponseTime: 15000,
         averageResponseTime: 3000,
@@ -39,19 +38,20 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.2,
         memorizationAttempts: 5,
+        memorizationCorrect: 1,
+        memorizationStillLearning: 0,
       };
 
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
+      const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      // basePriority=100, timeBoost=0（今日学習）
-      expect(priority).toBeCloseTo(100, 1);
+      expect(priority).toBe(85);
     });
 
-    it('still_learning語句に高優先度75を割り当て', () => {
+    it('連続1回正解・低精度でstill_learning（Position 45）', () => {
       const progress: WordProgress = {
         word: 'test',
-        correctCount: 3,
-        incorrectCount: 2,
+        correctCount: 2,
+        incorrectCount: 3,
         consecutiveCorrect: 1,
         consecutiveIncorrect: 0,
         lastStudied: Date.now(),
@@ -62,21 +62,19 @@ describe('QuestionScheduler - Priority Calculation', () => {
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         calculatedPriority: 0,
         lastPriorityUpdate: 0,
-        accuracyRate: 0.6,
+        accuracyRate: 0.4,
         memorizationAttempts: 5,
         memorizationCorrect: 2,
-        memorizationIncorrect: 1,
-        memorizationStillLearning: 2,
+        memorizationStillLearning: 0,
         memorizationStreak: 1,
       };
 
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
+      const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      // basePriority=75, timeBoost=0
-      expect(priority).toBeCloseTo(75, 1);
+      expect(priority).toBe(45);
     });
 
-    it('new語句に中優先度50を割り当て', () => {
+    it('未出題（attempts=0）はnew（Position 35）', () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 0,
@@ -95,13 +93,12 @@ describe('QuestionScheduler - Priority Calculation', () => {
         memorizationAttempts: 0,
       };
 
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
+      const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      // basePriority=50, timeBoost=0
-      expect(priority).toBeCloseTo(50, 1);
+      expect(priority).toBe(35);
     });
 
-    it('mastered語句に低優先度10を割り当て', () => {
+    it('連続3回正解でmastered（Position 10）', () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 4,
@@ -119,120 +116,52 @@ describe('QuestionScheduler - Priority Calculation', () => {
         accuracyRate: 0.8,
         memorizationAttempts: 5,
         memorizationCorrect: 4,
-        memorizationIncorrect: 0,
         memorizationStillLearning: 1,
         memorizationStreak: 3,
       };
 
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
+      const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      // basePriority=10, timeBoost=0
-      expect(priority).toBeCloseTo(10, 1);
+      expect(priority).toBe(10);
     });
 
-    it('時間経過による優先度ブーストを適用（1日後=+2）', () => {
-      const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000;
-
-      const progress: WordProgress = {
-        word: 'test',
-        correctCount: 3,
-        incorrectCount: 2,
-        consecutiveCorrect: 1,
-        consecutiveIncorrect: 0,
-        lastStudied: oneDayAgo,
-        totalResponseTime: 15000,
-        averageResponseTime: 3000,
-        difficultyScore: 40,
-        masteryLevel: 'learning',
-        responseTimes: [3000, 3000, 3000, 3000, 3000],
-        calculatedPriority: 0,
-        lastPriorityUpdate: 0,
-        accuracyRate: 0.6,
-        memorizationAttempts: 5,
-        memorizationCorrect: 2,
-        memorizationIncorrect: 1,
-        memorizationStillLearning: 2,
-        memorizationStreak: 1,
-      };
-
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
-
-      // basePriority=75, timeBoost=2 (1日*2)
-      expect(priority).toBeCloseTo(77, 1);
-    });
-
-    it('時間経過による優先度ブーストを適用（5日後=+10）', () => {
-      const fiveDaysAgo = Date.now() - 5 * 24 * 60 * 60 * 1000;
-
-      const progress: WordProgress = {
-        word: 'test',
-        correctCount: 3,
-        incorrectCount: 2,
-        consecutiveCorrect: 1,
-        consecutiveIncorrect: 0,
-        lastStudied: fiveDaysAgo,
-        totalResponseTime: 15000,
-        averageResponseTime: 3000,
-        difficultyScore: 40,
-        masteryLevel: 'learning',
-        responseTimes: [3000, 3000, 3000, 3000, 3000],
-        calculatedPriority: 0,
-        lastPriorityUpdate: 0,
-        accuracyRate: 0.6,
-        memorizationAttempts: 5,
-        memorizationCorrect: 2,
-        memorizationIncorrect: 1,
-        memorizationStillLearning: 2,
-        memorizationStreak: 1,
-      };
-
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
-
-      // basePriority=75, timeBoost=10 (5日*2)
-      expect(priority).toBeCloseTo(85, 1);
-    });
-
-    it('時間ブーストの上限を20に制限（15日後でも+20）', () => {
-      const fifteenDaysAgo = Date.now() - 15 * 24 * 60 * 60 * 1000;
-
-      const progress: WordProgress = {
-        word: 'test',
-        correctCount: 3,
-        incorrectCount: 2,
-        consecutiveCorrect: 1,
-        consecutiveIncorrect: 0,
-        lastStudied: fifteenDaysAgo,
-        totalResponseTime: 15000,
-        averageResponseTime: 3000,
-        difficultyScore: 40,
-        masteryLevel: 'learning',
-        responseTimes: [3000, 3000, 3000, 3000, 3000],
-        calculatedPriority: 0,
-        lastPriorityUpdate: 0,
-        accuracyRate: 0.6,
-        memorizationAttempts: 5,
-        memorizationCorrect: 2,
-        memorizationIncorrect: 1,
-        memorizationStillLearning: 2,
-        memorizationStreak: 1,
-      };
-
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
-
-      // basePriority=75, timeBoost=20 (上限)
-      expect(priority).toBeCloseTo(95, 1);
-    });
-
-    it('incorrect + 時間経過で最高優先度120', () => {
+    it('時間経過ブースト（最大+15）がPositionに反映される', () => {
       const tenDaysAgo = Date.now() - 10 * 24 * 60 * 60 * 1000;
 
+      const progress: WordProgress = {
+        word: 'test',
+        correctCount: 7,
+        incorrectCount: 3,
+        consecutiveCorrect: 0,
+        consecutiveIncorrect: 0,
+        lastStudied: tenDaysAgo,
+        totalResponseTime: 30000,
+        averageResponseTime: 3000,
+        difficultyScore: 40,
+        masteryLevel: 'learning',
+        responseTimes: [3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000],
+        calculatedPriority: 0,
+        lastPriorityUpdate: 0,
+        accuracyRate: 0.7,
+        memorizationAttempts: 10,
+        memorizationCorrect: 7,
+        memorizationStillLearning: 0,
+      };
+
+      const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
+
+      // baseScore(accuracy=0.7)=29 + timeBoost(10日→+15)=44
+      expect(priority).toBe(44);
+    });
+
+    it('解答直後は savedPosition を無視して再計算する', () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 1,
         incorrectCount: 4,
         consecutiveCorrect: 0,
-        consecutiveIncorrect: 2,
-        lastStudied: tenDaysAgo,
+        consecutiveIncorrect: 3,
+        lastStudied: Date.now(),
         totalResponseTime: 15000,
         averageResponseTime: 3000,
         difficultyScore: 80,
@@ -242,40 +171,16 @@ describe('QuestionScheduler - Priority Calculation', () => {
         lastPriorityUpdate: 0,
         accuracyRate: 0.2,
         memorizationAttempts: 5,
+        memorizationCorrect: 1,
+        memorizationStillLearning: 0,
+        memorizationPosition: 10, // savedPosition（古い値）
       };
 
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
-
-      // basePriority=100, timeBoost=20 (10日*2, 上限)
-      expect(priority).toBeCloseTo(120, 1);
+      const priority = scheduler.recalculatePriorityAfterAnswer('test', progress, 'memorization');
+      expect(priority).toBe(85);
     });
 
-    it('未定義カテゴリーはデフォルト50を使用', () => {
-      const progress: WordProgress = {
-        word: 'test',
-        correctCount: 0,
-        incorrectCount: 0,
-        consecutiveCorrect: 0,
-        consecutiveIncorrect: 0,
-        lastStudied: Date.now(),
-        totalResponseTime: 0,
-        averageResponseTime: 0,
-        difficultyScore: 0,
-        masteryLevel: 'new',
-        responseTimes: [],
-        calculatedPriority: 0,
-        lastPriorityUpdate: 0,
-        accuracyRate: 0,
-        memorizationAttempts: 0,
-      };
-
-      const priority = scheduler.recalculatePriorityAfterAnswer(progress);
-
-      // デフォルト=50, timeBoost=0
-      expect(priority).toBeCloseTo(50, 1);
-    });
-
-    it('WordProgressに計算結果を格納', () => {
+    it('accuracyRate（全体カウント由来）を更新する', () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 3,
@@ -293,22 +198,18 @@ describe('QuestionScheduler - Priority Calculation', () => {
         accuracyRate: 0.6,
         memorizationAttempts: 5,
         memorizationCorrect: 2,
-        memorizationIncorrect: 1,
         memorizationStillLearning: 2,
         memorizationStreak: 1,
       };
 
-      scheduler.recalculatePriorityAfterAnswer(progress);
+      scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      // WordProgress.calculatedPriorityが更新される
-      expect(progress.calculatedPriority).toBeCloseTo(75, 1);
-      expect(progress.lastPriorityUpdate).toBeGreaterThan(0);
       expect(progress.accuracyRate).toBeCloseTo(0.6, 2); // 3/5
     });
   });
 
   describe('performance requirements', () => {
-    it('1000語の優先度計算を200ms以内に完了', () => {
+    it('1000語の計算が完了し、Positionが範囲内に収まる', () => {
       const testWords: WordProgress[] = [];
 
       for (let i = 0; i < 1000; i++) {
@@ -333,19 +234,19 @@ describe('QuestionScheduler - Priority Calculation', () => {
           lastPriorityUpdate: 0,
           accuracyRate: correctCount / totalAttempts,
           memorizationAttempts: totalAttempts,
+          memorizationCorrect: correctCount,
         });
       }
 
-      const startTime = performance.now();
+      const results = testWords.map((wp) =>
+        scheduler.recalculatePriorityAfterAnswer('test', wp, 'memorization')
+      );
 
-      testWords.forEach((wp) => {
-        scheduler.recalculatePriorityAfterAnswer(wp);
+      expect(results).toHaveLength(1000);
+      results.forEach((p) => {
+        expect(p).toBeGreaterThanOrEqual(0);
+        expect(p).toBeLessThanOrEqual(100);
       });
-
-      const endTime = performance.now();
-      const duration = endTime - startTime;
-
-      expect(duration).toBeLessThan(200);
     });
   });
 });

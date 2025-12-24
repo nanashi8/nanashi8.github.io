@@ -4,8 +4,27 @@
 
 import { describe, it, expect, beforeAll } from 'vitest';
 import { MemoryAI } from '@/ai/specialists/MemoryAI';
-import type { AIAnalysisInput } from '@/ai/types';
-import type { Question } from '@/types';
+import type { AIAnalysisInput, SessionStats, WordData } from '@/ai/types';
+import type { WordProgress as StorageWordProgress } from '@/storage/progress/types';
+
+function createSessionStats(overrides: Partial<SessionStats> = {}): SessionStats {
+  return {
+    totalAttempts: 0,
+    correctAnswers: 0,
+    incorrectAnswers: 0,
+    stillLearningAnswers: 0,
+    sessionStartTime: Date.now(),
+    sessionDuration: 0,
+    consecutiveIncorrect: 0,
+    masteredCount: 0,
+    stillLearningCount: 0,
+    incorrectCount: 0,
+    newCount: 0,
+    questionsAnswered: 0,
+    currentAccuracy: 0,
+    ...overrides,
+  };
+}
 
 describe('MemoryAI ML Integration', () => {
   let memoryAI: MemoryAI;
@@ -22,24 +41,17 @@ describe('MemoryAI ML Integration', () => {
   });
 
   it('should analyze using rules when ML is disabled', async () => {
-    const testWord: Question = {
+    const testWord: WordData = {
       word: 'test',
       meaning: 'テスト',
-      questionType: 'memorization',
     };
 
     const input: AIAnalysisInput = {
       word: testWord,
       progress: null,
       currentTab: 'memorization',
-      sessionStats: {
-        questionsAnswered: 0,
-        correctAnswers: 0,
-        currentAccuracy: 0,
-        sessionDuration: 0,
-        startTime: Date.now(),
-      },
-      cognitiveLoad: 0.5,
+      sessionStats: createSessionStats(),
+      allProgress: {},
     };
 
     const signal = await memoryAI.analyze(input);
@@ -50,54 +62,51 @@ describe('MemoryAI ML Integration', () => {
   });
 
   it('should extract features correctly', () => {
-    const testWord: Question = {
+    const testWord: WordData = {
       word: 'example',
       meaning: '例,サンプル',
-      questionType: 'memorization',
+    };
+
+    const progress: StorageWordProgress = {
+      word: 'example',
+      correctCount: 7,
+      incorrectCount: 3,
+      consecutiveCorrect: 2,
+      consecutiveIncorrect: 0,
+      lastStudied: Date.now() - 86400000, // 1日前
+      totalResponseTime: 0,
+      averageResponseTime: 0,
+      difficultyScore: 50,
+      masteryLevel: 'learning',
+      responseTimes: [],
+
+      memorizationAttempts: 10,
+      memorizationCorrect: 7,
+      memorizationStillLearning: 0,
+      memorizationStreak: 2,
+
+      translationAttempts: 5,
+      spellingAttempts: 3,
+
+      reviewInterval: 1,
+      easeFactor: 2.5,
+      repetitions: 2,
     };
 
     const input: AIAnalysisInput = {
       word: testWord,
-      progress: {
-        word: 'example',
-        memorizationAttempts: {
-          totalAttempts: 10,
-          correctCount: 7,
-          wrongCount: 3,
-          consecutiveCorrect: 2,
-          consecutiveWrong: 0,
-          lastAttemptCorrect: true,
-        },
-        translationAttempts: {
-          totalAttempts: 5,
-          correctCount: 4,
-          wrongCount: 1,
-          consecutiveCorrect: 1,
-          consecutiveWrong: 0,
-          lastAttemptCorrect: true,
-        },
-        spellingAttempts: {
-          totalAttempts: 3,
-          correctCount: 2,
-          wrongCount: 1,
-          consecutiveCorrect: 1,
-          consecutiveWrong: 0,
-          lastAttemptCorrect: true,
-        },
-        lastStudied: Date.now() - 86400000, // 1日前
-        reviewInterval: 1,
-        easeFactor: 2.5,
-        repetitions: 2,
-      },
+      progress,
       currentTab: 'memorization',
-      sessionStats: {
-        questionsAnswered: 15,
+      sessionStats: createSessionStats({
+        totalAttempts: 15,
         correctAnswers: 10,
+        incorrectAnswers: 5,
+        questionsAnswered: 15,
         currentAccuracy: 0.67,
-        sessionDuration: 300,
-        startTime: Date.now() - 300000,
-      },
-      cognitiveLoad: 0.6,
+        sessionStartTime: Date.now() - 300000,
+        sessionDuration: 300000,
+      }),
+      allProgress: { example: progress },
     };
 
     // @ts-ignore - accessing protected method for testing

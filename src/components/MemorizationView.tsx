@@ -7,6 +7,7 @@ import {
   recordMemorizationBehavior,
   getMemorizationSettings,
   saveMemorizationSettings,
+  loadProgress,
   updateWordProgress,
   calculateSessionStats,
 } from '../progressStorage';
@@ -21,6 +22,9 @@ import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { QuestionScheduler } from '@/ai/scheduler';
 import { determineCategory } from '@/ai/utils/quickCategoryDetermination';
+import { determineWordPosition } from '@/ai/utils/categoryDetermination';
+import { loadProgressSync } from '@/storage/progress/progressStorage';
+import type { AIAnalysisInput, SessionStats as AISessionStats } from '@/ai/types';
 import { PerformanceMonitor } from '@/utils/performance-monitor';
 import { QualityMonitor } from '@/utils/quality-monitor';
 import { RequeuingDebugPanel } from './RequeuingDebugPanel';
@@ -148,6 +152,11 @@ function MemorizationView({
   // 再スケジューリングトリガー（カテゴリ変化時に更新）- 現在未使用だが将来の拡張のため残す
   const [_rescheduleCounter, _setRescheduleCounter] = useState(0);
 
+  // 🎯 自動再スケジューリング管理
+  const [answerCountSinceSchedule, setAnswerCountSinceSchedule] = useState(0);
+  const [needsRescheduling, setNeedsRescheduling] = useState(false);
+  const [reschedulingNotification, setReschedulingNotification] = useState<string | null>(null);
+
   // 回答結果を追跡（動的AIコメント用）
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
   const [lastAnswerWord, setLastAnswerWord] = useState<string | undefined>(undefined);
@@ -198,6 +207,7 @@ function MemorizationView({
     clearExpiredFlags,
     updateRequeueStats,
     getRequeuedWords,
+    checkPositionMismatch,
   } = useQuestionRequeue<Question>();
 
   // ═══════════════════════════════════════════════════════════
@@ -350,7 +360,7 @@ function MemorizationView({
   useEffect(() => {
     if (isLoading) return;
 
-    const selectQuestions = () => {
+    const selectQuestions = async () => {
       try {
         // データソースに基づいて問題を取得
         const baseQuestions = allQuestions;
@@ -422,7 +432,10 @@ function MemorizationView({
           scheduler.enableAICoordination(false); // A: Position中心
         }
 
-        const scheduleResult = scheduler.schedule({
+        // ✅ progressCacheを先に温める（loadProgressSyncが空の初期値を掴むのを防ぐ）
+        await loadProgress();
+
+        const scheduleResult = await scheduler.schedule({
           questions: questionsToSchedule,
           mode: 'memorization',
           limits: {
@@ -577,7 +590,7 @@ function MemorizationView({
       }
     };
 
-    selectQuestions();
+    void selectQuestions();
   }, [
     selectedDataSource,
     selectedDifficulty,
@@ -709,6 +722,108 @@ function MemorizationView({
   // calculateOptimalInterval, calculateForgettingRisk: QuestionSchedulerに統合済み
 
   // ローカルソート関数は削除: QuestionSchedulerに統合済み
+
+  // 🎯 自動再スケジューリング実行
+  useEffect(() => {
+    if (!needsRescheduling || isLoading || questions.length === 0) return;
+
+    const performRescheduling = async () => {
+      try {
+        logger.info('[MemorizationView] 自動再スケジューリング開始', {
+          answerCount: answerCountSinceSchedule,
+          reason: reschedulingNotification,
+        });
+
+        // 現在のフィルタ条件で再スケジューリング
+        const baseQuestions = allQuestions;
+        let filtered = baseQuestions;
+
+        // 難易度フィルター
+        if (selectedDifficulty !== 'all') {
+          filtered = filtered.filter((q) => q.difficulty === selectedDifficulty);
+        }
+
+        // 関連分野フィルター
+        if (selectedCategory !== 'all') {
+          filtered = filtered.filter(
+            (q) =>
+              q.relatedFields &&
+              Array.isArray(q.relatedFields) &&
+              q.relatedFields.includes(selectedCategory)
+          );
+        }
+
+        // 単語・熟語フィルター
+        if (selectedWordPhraseFilter === 'words') {
+          filtered = filtered.filter((q) => !q.word.includes(' ') || q.word.split(' ').length <= 2);
+        } else if (selectedWordPhraseFilter === 'phrases') {
+          filtered = filtered.filter((q) => q.word.includes(' ') && q.word.split(' ').length > 2);
+        }
+
+        if (filtered.length === 0) {
+          logger.warn('[MemorizationView] 再スケジューリング対象なし');
+          setNeedsRescheduling(false);
+          setReschedulingNotification(null);
+          return;
+        }
+
+        // QuestionSchedulerで再スケジューリング
+        const result = await scheduler.schedule({
+          questions: filtered,
+          mode: 'memorization',
+          limits: {
+            learningLimit: stillLearningLimit ?? null,
+            reviewLimit: incorrectLimit ?? null,
+          },
+          sessionStats: {
+            correct: sessionStats.correct,
+            incorrect: sessionStats.incorrect,
+            still_learning: sessionStats.still_learning,
+            mastered: sessionStats.mastered,
+            duration: 0,
+          },
+          useMetaAI: true,
+          hybridMode: abVariant === 'A' || abVariant === 'B',
+        });
+
+        setQuestions(result.scheduledQuestions);
+
+        // カウンターとフラグをリセット
+        setAnswerCountSinceSchedule(0);
+        setNeedsRescheduling(false);
+
+        // 3秒後に通知を消す
+        setTimeout(() => {
+          setReschedulingNotification(null);
+        }, 3000);
+
+        logger.info('[MemorizationView] 自動再スケジューリング完了', {
+          newLength: result.scheduledQuestions.length,
+        });
+      } catch (error) {
+        logger.error('[MemorizationView] 再スケジューリングエラー:', error);
+        setNeedsRescheduling(false);
+        setReschedulingNotification(null);
+      }
+    };
+
+    performRescheduling();
+  }, [
+    needsRescheduling,
+    isLoading,
+    questions.length,
+    allQuestions,
+    selectedDifficulty,
+    selectedCategory,
+    selectedWordPhraseFilter,
+    stillLearningLimit,
+    incorrectLimit,
+    sessionStats,
+    abVariant,
+    scheduler,
+    answerCountSinceSchedule,
+    reschedulingNotification,
+  ]);
 
   // 音声読み上げ（カード表示時）
   useEffect(() => {
@@ -979,28 +1094,99 @@ function MemorizationView({
       // 直前に回答した問題IDを記録（連続出題防止）
       setLastAnsweredQuestionId(currentQuestion.word);
 
+      // 🎯 自動再スケジューリング: 解答カウンター増加と不整合チェック
+      setAnswerCountSinceSchedule((prev) => {
+        const newCount = prev + 1;
+
+        // トリガー条件1: 50回解答ごと
+        if (newCount >= 50) {
+          setNeedsRescheduling(true);
+          setReschedulingNotification('50回解答に達しました');
+          return newCount;
+        }
+
+        // トリガー条件2: 10回ごとにPosition不整合チェック
+        if (newCount % 10 === 0) {
+          try {
+            const mismatchResult = checkPositionMismatch(questions, 'memorization');
+            if (mismatchResult.needsRescheduling) {
+              setNeedsRescheduling(true);
+              setReschedulingNotification(mismatchResult.reason);
+            }
+          } catch (error) {
+            logger.error('[MemorizationView] Position不整合チェックエラー:', error);
+          }
+        }
+
+        return newCount;
+      });
+
       // 🧪 Week 5: ML learn()導線（回答後にモデル更新）
       if (abMlEnabled && scheduler.aiCoordinator) {
         try {
-          // AIAnalysisInputを構築してlearn()に渡す
-          const aiInput = {
-            word: currentQuestion.word,
-            wordProgress,
-            sessionStats: {
-              correct: sessionStats.correct,
-              incorrect: sessionStats.incorrect,
-              still_learning: sessionStats.still_learning,
-              mastered: sessionStats.mastered,
-              total: sessionStats.total,
-            },
-            currentQuestion,
-            recentAnswers: [], // 必要なら履歴を追加
-            mode: 'memorization',
+          // AIAnalysisInputを構築してlearn()に渡す（AICoordinator/各専門AIの前提に合わせる）
+          const progressCache = loadProgressSync();
+          const allProgress = (progressCache?.wordProgress ?? {}) as Record<string, any>;
+          const progress =
+            (allProgress[currentQuestion.word] as any) ??
+            (progressCache?.wordProgress?.[currentQuestion.word] as any) ??
+            null;
+
+          // 学習段階の分布（AIの推定で利用）
+          let masteredCount = 0;
+          let stillLearningCount = 0;
+          let incorrectCount = 0;
+          let newCount = 0;
+          for (const wp of Object.values(allProgress)) {
+            const pos = determineWordPosition(wp as any, 'memorization');
+            if (pos >= 70) incorrectCount++;
+            else if (pos >= 40) stillLearningCount++;
+            else if (pos >= 20) newCount++;
+            else masteredCount++;
+          }
+
+          const totalAttempts =
+            (sessionStats.correct || 0) +
+            (sessionStats.incorrect || 0) +
+            (sessionStats.still_learning || 0) +
+            (sessionStats.mastered || 0);
+
+          const aiSessionStats: AISessionStats = {
+            totalAttempts,
+            correctAnswers: sessionStats.correct || 0,
+            incorrectAnswers: sessionStats.incorrect || 0,
+            stillLearningAnswers: sessionStats.still_learning || 0,
+            sessionStartTime: abSessionStartedAt,
+            sessionDuration: Date.now() - abSessionStartedAt,
+            consecutiveIncorrect: 0,
+            masteredCount,
+            stillLearningCount,
+            incorrectCount,
+            newCount,
+            consecutiveCorrect: (sessionStats as any).consecutiveCorrect || 0,
           };
+
+          const aiInput: AIAnalysisInput = {
+            word: {
+              word: currentQuestion.word,
+              meaning: currentQuestion.meaning,
+              reading: (currentQuestion as any).reading,
+              difficulty: (currentQuestion as any).difficulty,
+              category: (currentQuestion as any).category,
+              source: (currentQuestion as any).source,
+              type: (currentQuestion as any).type,
+              isPhraseOnly: (currentQuestion as any).isPhraseOnly,
+            },
+            progress,
+            sessionStats: aiSessionStats,
+            currentTab: 'memorization',
+            allProgress,
+          };
+
           // MLLearningOutcome型に準拠
           const outcome = {
             wasCorrect: isCorrect,
-            responseTime: 0, // 必要なら実測値を設定
+            responseTime: Math.round(answeredViewDuration * 1000),
             timestamp: Date.now(),
             features: [], // 必要なら特徴量を設定
           };
@@ -1219,6 +1405,23 @@ function MemorizationView({
 
   return (
     <div className="quiz-view">
+      {/* 🎯 自動再スケジューリング通知 */}
+      {reschedulingNotification && (
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-[60] px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg animate-fade-in">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+              />
+            </svg>
+            <span className="text-sm font-medium">📊 学習状況を最新化しました（{reschedulingNotification}）</span>
+          </div>
+        </div>
+      )}
+
       {/* 全画面モード時は暗記カードのみ表示 */}
       {isFullscreen ? (
         <div className="fixed inset-0 z-50 bg-gray-50 overflow-y-auto">
@@ -1276,8 +1479,10 @@ function MemorizationView({
                         【{currentQuestion.reading}】
                       </div>
                     )}
-                    {currentQuestion.difficulty && (
-                      <div className="flex justify-center mt-4">
+
+                    {/* 難易度とカスタムセット追加ボタンを横並び */}
+                    <div className="flex items-center justify-center gap-3 mt-4 flex-wrap">
+                      {currentQuestion.difficulty && (
                         <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
                           {currentQuestion.difficulty === 'beginner'
                             ? '初級'
@@ -1285,14 +1490,10 @@ function MemorizationView({
                               ? '中級'
                               : '上級'}
                         </div>
-                      </div>
-                    )}
-
-                    {/* カスタムセットに追加ボタン */}
-                    {onAddWordToCustomSet &&
-                      onRemoveWordFromCustomSet &&
-                      onOpenCustomSetManagement && (
-                        <div className="mt-3 flex justify-center">
+                      )}
+                      {onAddWordToCustomSet &&
+                        onRemoveWordFromCustomSet &&
+                        onOpenCustomSetManagement && (
                           <AddToCustomButton
                             word={{
                               word: currentQuestion.word,
@@ -1307,8 +1508,8 @@ function MemorizationView({
                             size="medium"
                             variant="both"
                           />
-                        </div>
-                      )}
+                        )}
+                    </div>
                   </div>
                 </div>
 
@@ -1379,28 +1580,6 @@ function MemorizationView({
                       {cardState.showMeaning && (
                         <div className="flex-1 text-base sm:text-lg text-gray-900 break-words">
                           {currentQuestion.meaning}
-                        </div>
-                      )}
-                    </div>
-                  </button>
-
-                  {/* 読み */}
-                  <button
-                    onClick={() => toggleCardField('showPronunciation')}
-                    className="w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100:bg-gray-600 transition"
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                      <div className="flex items-center gap-2 sm:gap-4">
-                        <span className="font-semibold text-gray-700 w-16 sm:w-24 flex-shrink-0">
-                          読み
-                        </span>
-                        <span className="text-gray-500 flex-shrink-0">
-                          {cardState.showPronunciation ? '▼' : '▶'}
-                        </span>
-                      </div>
-                      {cardState.showPronunciation && (
-                        <div className="flex-1 text-sm sm:text-base text-gray-700 break-words">
-                          {currentQuestion.reading}
                         </div>
                       )}
                     </div>
@@ -1863,8 +2042,10 @@ function MemorizationView({
                         【{currentQuestion.reading}】
                       </div>
                     )}
-                    {currentQuestion.difficulty && (
-                      <div className="flex justify-center mt-4">
+
+                    {/* 難易度とカスタムセット追加ボタンを横並び */}
+                    <div className="flex items-center justify-center gap-3 mt-4 flex-wrap">
+                      {currentQuestion.difficulty && (
                         <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
                           {currentQuestion.difficulty === 'beginner'
                             ? '初級'
@@ -1872,14 +2053,10 @@ function MemorizationView({
                               ? '中級'
                               : '上級'}
                         </div>
-                      </div>
-                    )}
-
-                    {/* カスタムセットに追加ボタン */}
-                    {onAddWordToCustomSet &&
-                      onRemoveWordFromCustomSet &&
-                      onOpenCustomSetManagement && (
-                        <div className="mt-3 flex justify-center">
+                      )}
+                      {onAddWordToCustomSet &&
+                        onRemoveWordFromCustomSet &&
+                        onOpenCustomSetManagement && (
                           <AddToCustomButton
                             word={{
                               word: currentQuestion.word,
@@ -1894,8 +2071,8 @@ function MemorizationView({
                             size="medium"
                             variant="both"
                           />
-                        </div>
-                      )}
+                        )}
+                    </div>
                   </div>
                 </div>
 
@@ -1951,28 +2128,6 @@ function MemorizationView({
                       {cardState.showMeaning && (
                         <div className="flex-1 text-base sm:text-lg text-gray-900 break-words">
                           {currentQuestion.meaning}
-                        </div>
-                      )}
-                    </div>
-                  </button>
-
-                  {/* 読み */}
-                  <button
-                    onClick={() => toggleCardField('showPronunciation')}
-                    className="w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100:bg-gray-600 transition"
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                      <div className="flex items-center gap-2 sm:gap-4">
-                        <span className="font-semibold text-gray-700 w-16 sm:w-24 flex-shrink-0">
-                          読み
-                        </span>
-                        <span className="text-gray-500 flex-shrink-0">
-                          {cardState.showPronunciation ? '▼' : '▶'}
-                        </span>
-                      </div>
-                      {cardState.showPronunciation && (
-                        <div className="flex-1 text-sm sm:text-base text-gray-700 break-words">
-                          {currentQuestion.reading}
                         </div>
                       )}
                     </div>
@@ -2037,6 +2192,7 @@ function MemorizationView({
       {/* デバッグパネル */}
       {showDebugPanel && (
         <RequeuingDebugPanel
+          mode="memorization"
           currentIndex={currentIndex}
           totalQuestions={questions.length}
           questions={questions}

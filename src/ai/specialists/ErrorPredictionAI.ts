@@ -16,6 +16,11 @@
 import type { ErrorPredictionSignal, AIAnalysisInput, StorageWordProgress } from '../types';
 import { MLEnhancedSpecialistAI } from '../ml/MLEnhancedSpecialistAI';
 
+type LegacyErrorRecord = {
+  grammarPoint?: string;
+  userAnswer?: string;
+};
+
 export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSignal> {
   readonly id = 'errorPrediction';
   readonly name = 'Error Prediction AI';
@@ -53,10 +58,11 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
    */
   protected analyzeByRules(input: AIAnalysisInput): ErrorPredictionSignal {
     const { word, progress, allProgress } = input;
+    const wordStr = typeof word === 'string' ? word : word?.word || '';
 
     const weaknessAreas = this.identifyWeaknessAreas(progress, allProgress);
-    const confusionPairs = this.findConfusionPairs(word, allProgress);
-    const preemptiveReview = this.recommendPreemptiveReview(word, allProgress);
+    const confusionPairs = this.findConfusionPairs(wordStr, allProgress);
+    const preemptiveReview = this.recommendPreemptiveReview(wordStr, allProgress);
     const patternConfidence = this.calculatePatternConfidence(progress);
 
     return {
@@ -74,15 +80,16 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
    * 弱点分野の特定
    */
   private identifyWeaknessAreas(
-    progress: WordProgress | null,
-    allProgress: Record<string, WordProgress>
+    _progress: StorageWordProgress | null,
+    allProgress: Record<string, StorageWordProgress>
   ): string[] {
     const weaknessAreas: string[] = [];
     const grammarErrorCounts: Record<string, number> = {};
 
     // 全語句の誤答履歴から文法項目を集計
     Object.values(allProgress).forEach((p) => {
-      p.errorHistory?.forEach((error) => {
+      const errorHistory = (p as any).errorHistory as LegacyErrorRecord[] | undefined;
+      errorHistory?.forEach((error: LegacyErrorRecord) => {
         if (error.grammarPoint) {
           grammarErrorCounts[error.grammarPoint] =
             (grammarErrorCounts[error.grammarPoint] || 0) + 1;
@@ -105,17 +112,18 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
    */
   private findConfusionPairs(
     word: string,
-    allProgress: Record<string, WordProgress>
+    allProgress: Record<string, StorageWordProgress>
   ): [string, string][] {
     const confusionPairs: [string, string][] = [];
 
     // この語句の誤答履歴を取得
     const wordProgress = allProgress[word];
-    if (!wordProgress?.errorHistory) return [];
+    const errorHistory = (wordProgress as any)?.errorHistory as LegacyErrorRecord[] | undefined;
+    if (!errorHistory) return [];
 
     // 誤答パターンを分析
     const errorPatterns: Record<string, number> = {};
-    wordProgress.errorHistory.forEach((error) => {
+    errorHistory.forEach((error: LegacyErrorRecord) => {
       if (error.userAnswer) {
         errorPatterns[error.userAnswer] = (errorPatterns[error.userAnswer] || 0) + 1;
       }
@@ -136,7 +144,7 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
    */
   private recommendPreemptiveReview(
     word: string,
-    allProgress: Record<string, WordProgress>
+    allProgress: Record<string, StorageWordProgress>
   ): string[] {
     const recommendations: string[] = [];
 
@@ -165,10 +173,11 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
   /**
    * パターン信頼度の計算
    */
-  private calculatePatternConfidence(progress: WordProgress | null): number {
-    if (!progress?.errorHistory) return 0;
+  private calculatePatternConfidence(progress: StorageWordProgress | null): number {
+    const errorHistory = (progress as any)?.errorHistory as LegacyErrorRecord[] | undefined;
+    if (!errorHistory) return 0;
 
-    const errorCount = progress.errorHistory.length;
+    const errorCount = errorHistory.length;
 
     // 誤答履歴が多いほど信頼度が高い
     if (errorCount >= 5) return 0.9;
@@ -178,8 +187,9 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
     return 0.1;
   }
 
-  private calculateConfidence(progress: WordProgress | null): number {
-    const errorCount = progress?.errorHistory?.length || 0;
+  private calculateConfidence(progress: StorageWordProgress | null): number {
+    const errorHistory = (progress as any)?.errorHistory as LegacyErrorRecord[] | undefined;
+    const errorCount = errorHistory?.length || 0;
     const attempts = progress?.memorizationAttempts || 0;
 
     // 試行回数と誤答履歴の量で信頼度を計算
@@ -248,7 +258,10 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
     mlSignal: ErrorPredictionSignal,
     input: AIAnalysisInput
   ): ErrorPredictionSignal {
-    const errorCount = input.progress?.errorHistory?.length || 0;
+    const legacyProgress = input.progress as (StorageWordProgress & {
+      errorHistory?: unknown[];
+    }) | undefined;
+    const errorCount = legacyProgress?.errorHistory?.length || 0;
     const attempts = input.progress?.memorizationAttempts || 0;
     const dataCount = errorCount + attempts;
 
@@ -296,7 +309,11 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
 
     // 全体の統計を計算
     const totalWords = Object.keys(allProgress).length;
-    const errorHistoryLength = progress.errorHistory?.length || 0;
+    const legacyProgress = progress as StorageWordProgress & {
+      errorHistory?: unknown[];
+      lastErrorType?: string;
+    };
+    const errorHistoryLength = legacyProgress.errorHistory?.length || 0;
     const attempts = progress.memorizationAttempts || 0;
     const correctCount = progress.memorizationCorrect || 0;
     const accuracy = attempts > 0 ? correctCount / attempts : 0;
@@ -313,8 +330,8 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
       (progress.consecutiveIncorrect || 0) / 5,
       attempts > 0 ? (1 - accuracy) : 0.5, // 誤答率
       0, // wrongAnswerPatternsは実装されていないため0
-      progress.lastErrorType === 'spelling' ? 1 : 0,
-      progress.lastErrorType === 'meaning' ? 1 : 0,
+      legacyProgress.lastErrorType === 'spelling' ? 1 : 0,
+      legacyProgress.lastErrorType === 'meaning' ? 1 : 0,
 
       // 11-14: 学習履歴
       attempts / 20,
@@ -339,7 +356,7 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
   /**
    * 前回学習からの経過日数計算
    */
-  private getDaysSinceLastStudy(progress: WordProgress): number {
+  private getDaysSinceLastStudy(progress: StorageWordProgress): number {
     const lastStudied = progress.lastStudied || 0;
     if (lastStudied === 0) return 0;
 

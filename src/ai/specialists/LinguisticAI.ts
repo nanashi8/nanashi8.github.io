@@ -61,11 +61,12 @@ export class LinguisticAI extends MLEnhancedSpecialistAI<LinguisticSignal> {
 
   protected analyzeByRules(input: AIAnalysisInput): LinguisticSignal {
     const { word, allProgress } = input;
+    const wordStr = typeof word === 'string' ? word : word?.word || '';
 
-    const inherentDifficulty = this.calculateInherentDifficulty(word);
-    const phoneticSimilarity = this.findPhoneticallySimilarWords(word, allProgress);
-    const semanticCluster = this.findSemanticCluster(word, allProgress);
-    const grammarComplexity = this.assessGrammarComplexity(word);
+    const inherentDifficulty = this.calculateInherentDifficulty(wordStr);
+    const phoneticSimilarity = this.findPhoneticallySimilarWords(wordStr, allProgress);
+    const semanticCluster = this.findSemanticCluster(wordStr, allProgress);
+    const grammarComplexity = this.assessGrammarComplexity(wordStr);
 
     return {
       aiId: 'linguistic',
@@ -114,7 +115,7 @@ export class LinguisticAI extends MLEnhancedSpecialistAI<LinguisticSignal> {
    */
   private findPhoneticallySimilarWords(
     word: string,
-    allProgress: Record<string, WordProgress>
+    allProgress: Record<string, StorageWordProgress>
   ): string[] {
     const similarWords: string[] = [];
 
@@ -139,7 +140,10 @@ export class LinguisticAI extends MLEnhancedSpecialistAI<LinguisticSignal> {
   /**
    * 意味的クラスターの検索
    */
-  private findSemanticCluster(word: string, allProgress: Record<string, WordProgress>): string[] {
+  private findSemanticCluster(
+    word: string,
+    allProgress: Record<string, StorageWordProgress>
+  ): string[] {
     // 実際には語義データベース（WordNet等）を使用すべき
     // ここでは語根の共通性で簡易判定
 

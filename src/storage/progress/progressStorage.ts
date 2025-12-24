@@ -11,7 +11,7 @@ import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
 import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
 import { deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
 import { QuestionScheduler } from '@/ai/scheduler/QuestionScheduler';
-import { determineWordPosition, type LearningMode } from '@/ai/utils/categoryDetermination';
+import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 
 // 型定義をインポート＆re-export
 import type {
@@ -132,25 +132,64 @@ export async function loadProgress(): Promise<UserProgress> {
     // 起動時に自動圧縮を実行
     compressProgressData(progress);
 
-    // カテゴリー修復処理（既存データにcategoryがない場合）
-    let repairedCount = 0;
+    // 起動時修復（既存データの矛盾を最小限で補正）
+    // - category: 学習段階ではなく「問題カテゴリ」用途のため、数値(Position)を入れない
+    // - memorizationPosition: 過去のバグで stillLearning が Position に反映されず低い値で固定された可能性がある
+    let repairedCategoryCount = 0;
+    let repairedMemorizationPositionCount = 0;
+    let needsSave = false;
+
     Object.values(progress.wordProgress).forEach((wp) => {
       if (!wp.category) {
-        const totalCorrect = (wp.correctCount || 0);
-        const totalIncorrect = (wp.incorrectCount || 0);
-        const totalAttempts = totalCorrect + totalIncorrect;
-        const consecutiveCorrect = wp.consecutiveCorrect || 0;
+        wp.category = '未分類';
+        repairedCategoryCount++;
+        needsSave = true;
+      }
 
-        // 🎯 SSOT原則: determineWordPositionに委譲
-        wp.category = determineWordPosition(wp);
-        repairedCount++;
+      const attempts = wp.memorizationAttempts || 0;
+      const stillLearning = wp.memorizationStillLearning || 0;
+      const consecutiveIncorrect = wp.consecutiveIncorrect || 0;
+      const currentPos = wp.memorizationPosition;
+
+      // 「まだまだ/分からない」の履歴があるのに Position<40 なら矛盾 → 再計算して引き上げ
+      if (attempts > 0 && (stillLearning > 0 || consecutiveIncorrect > 0)) {
+        const basePos = typeof currentPos === 'number' ? currentPos : -1;
+        if (basePos < 40) {
+          const desired = determineWordPosition({ ...wp, memorizationPosition: undefined }, 'memorization');
+          if (typeof desired === 'number' && desired >= 40 && desired > basePos) {
+            wp.memorizationPosition = desired;
+            repairedMemorizationPositionCount++;
+            needsSave = true;
+          }
+        }
       }
     });
 
-    // 修復が実行された場合はログ出力して保存
-    if (repairedCount > 0) {
-      logger.info(`[Category Repair] ${repairedCount}個の単語にcategoryを追加しました`);
+    if (needsSave) {
+      if (repairedCategoryCount > 0) {
+        logger.info(`[Category Repair] ${repairedCategoryCount}個の単語にcategoryを追加しました`);
+      }
+      if (repairedMemorizationPositionCount > 0) {
+        logger.info(
+          `[Position Repair] memorizationPositionを再計算して補正: ${repairedMemorizationPositionCount}語`
+        );
+      }
       await saveProgressData(progress as UserProgress);
+    }
+
+    // デバッグパネル向け: 修復サマリーをlocalStorageに保存（コンソールログを貼れない環境でも追跡可能にする）
+    try {
+      localStorage.setItem(
+        'debug_progress_repair_summary',
+        JSON.stringify({
+          timestamp: new Date().toISOString(),
+          categoryAdded: repairedCategoryCount,
+          memorizationPositionRepaired: repairedMemorizationPositionCount,
+          saved: needsSave,
+        })
+      );
+    } catch {
+      // localStorage失敗は無視
     }
 
     // キャッシュを更新
@@ -1169,8 +1208,6 @@ export async function updateWordProgress(
   // - 正答率と連続正解数から学習段階を決定
   // - 「まだまだ」を0.5回の正解として計算
   // - 複数のルールを統合して最適な判定
-  const oldPosition = wordProgress.position;
-
   // ✅ 【解答直後にPositionを計算・保存】
   // 🎯 タブ別Position計算（各タブで独立した学習進度を管理）
   const questionScheduler = new QuestionScheduler();
@@ -2210,7 +2247,7 @@ export function getStreakDays(): number {
   for (let i = 0; i < 365; i++) {
     const date = new Date(now);
     date.setDate(date.getDate() - i);
-    const dateStr = formatLocalYYYYMMDD(date);
+    formatLocalYYYYMMDD(date);
 
     // その日の結果を集計
     const dayStart = new Date(date).setHours(0, 0, 0, 0);
@@ -2982,7 +3019,7 @@ export function calculateSessionStats(
     // ✅ Position範囲から集計（科学的根拠ベース）
     // Position = determineWordPosition()で計算済み
     // しかしWordProgressに保存されていないので、その場で計算
-    const position = determineWordPosition(wp);
+    const position = determineWordPosition(wp, mode);
 
     // Position範囲でカテゴリ判定
     if (position >= 70) {

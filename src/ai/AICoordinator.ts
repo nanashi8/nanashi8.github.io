@@ -380,33 +380,9 @@ export class AICoordinator {
   /**
    * デバッグログ出力
    */
-  logCoordinationResult(result: AICoordinationResult): void {
+  logCoordinationResult(_result: AICoordinationResult): void {
     // Debug logging disabled to reduce console noise
     return;
-    console.log(`Final Priority: ${result.finalPriority.toFixed(2)}`);
-    console.log(`Urgent Flag: ${result.urgentFlag ? 'YES ⚠️' : 'NO'}`);
-
-    if (result.signals.memory) {
-      console.log(
-        `${this.memoryAI.icon} Memory: forgettingRisk=${result.signals.memory.forgettingRisk.toFixed(0)}, timeBoost=${(result.signals.memory.timeBoost * 100).toFixed(0)}%`
-      );
-    }
-
-    if (result.signals.cognitiveLoad) {
-      console.log(
-        `${this.cognitiveLoadAI.icon} CognitiveLoad: level=${result.signals.cognitiveLoad.loadLevel}, fatigue=${(result.signals.cognitiveLoad.fatigueScore * 100).toFixed(0)}%`
-      );
-    }
-
-    if (result.recommendedAction) {
-      console.log(`💡 Action: ${result.recommendedAction}`);
-    }
-
-    if (result.debug) {
-      console.log('Debug Info:', result.debug.reasoning);
-    }
-
-    console.groupEnd();
   }
 
   /**

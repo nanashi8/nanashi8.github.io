@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { QuizState, QuestionSet } from '../types';
+import { QuizState, Question, QuestionSet } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import {
   DifficultyLevel,
@@ -148,7 +148,7 @@ function TranslationView({
     clearExpiredFlags,
     updateRequeueStats,
     getRequeuedWords,
-  } = useQuestionRequeue<QuizState>();
+  } = useQuestionRequeue<Question>();
 
   // デバッグ: 再出題パネル表示トグル
   const handleDebugRequeue = () => {
@@ -561,6 +561,7 @@ function TranslationView({
       {/* デバッグパネル */}
       {showDebugPanel && (
         <RequeuingDebugPanel
+          mode="translation"
           currentIndex={currentIndex}
           totalQuestions={questions.length}
           questions={questions}

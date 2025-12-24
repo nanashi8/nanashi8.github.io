@@ -8,7 +8,7 @@ import {
   checkFlexibleMastery,
   autoDetectWordDifficulty,
 } from './progressStorage';
-import { determineWordPosition } from '@/ai/utils/categoryDetermination';
+import { determineWordPosition, type LearningMode } from '@/ai/utils/categoryDetermination';
 import type { QuizResult, DetailedRetentionStats, WordProgress } from './types';
 
 // モードごとの統計を取得

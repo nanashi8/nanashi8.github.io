@@ -32,6 +32,7 @@ describe('Priority Explanation', () => {
         lastPriorityUpdate: Date.now(),
         accuracyRate: 0.1,
         memorizationAttempts: 10,
+        memorizationPosition: 85,
       };
 
       const explanation = explainPriority(progress);
@@ -48,7 +49,7 @@ describe('Priority Explanation', () => {
         word: 'learning',
         correctCount: 5,
         incorrectCount: 3,
-        consecutiveCorrect: 2,
+        consecutiveCorrect: 1,
         consecutiveIncorrect: 0,
         lastStudied: Date.now() - 1 * 24 * 60 * 60 * 1000, // 1日前
         totalResponseTime: 24000,
@@ -60,6 +61,7 @@ describe('Priority Explanation', () => {
         lastPriorityUpdate: Date.now(),
         accuracyRate: 0.625,
         memorizationAttempts: 8,
+        memorizationPosition: 65,
       };
 
       const explanation = explainPriority(progress);
@@ -86,6 +88,7 @@ describe('Priority Explanation', () => {
         lastPriorityUpdate: Date.now(),
         accuracyRate: 0,
         memorizationAttempts: 0,
+        memorizationPosition: 35,
       };
 
       const explanation = explainPriority(progress);
@@ -113,6 +116,7 @@ describe('Priority Explanation', () => {
         lastPriorityUpdate: Date.now(),
         accuracyRate: 0.91,
         memorizationAttempts: 11,
+        memorizationPosition: 10,
       };
 
       const explanation = explainPriority(progress);
@@ -288,6 +292,7 @@ describe('Priority Explanation', () => {
         incorrectCount: 0,
         consecutiveCorrect: 0,
         consecutiveIncorrect: 0,
+        lastStudied: 0,
         totalResponseTime: 0,
         averageResponseTime: 0,
         difficultyScore: 0,

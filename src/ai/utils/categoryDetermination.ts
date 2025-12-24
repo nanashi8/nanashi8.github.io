@@ -17,6 +17,7 @@
 
 import type { WordProgress } from '@/storage/progress/types';
 import type { WordPosition } from '@/ai/types';
+import type { WordCategory } from '@/ai/types';
 import {
   POSITION_VALUES,
   CONSECUTIVE_THRESHOLDS,
@@ -156,6 +157,36 @@ export function determineWordPosition(
     return POSITION_VALUES.NEAR_MASTERY; // まだ新規扱い（もう1回正解で定着）
   }
 
+  // ========================================
+  // 🟡 STILL LEARNING (memorization): 「まだまだ」履歴の保持
+  // ========================================
+  // 目的: 「まだまだ」を押した単語が、直後に1回正解しただけで new (<40) に落ちて
+  //       大量の新規語に埋もれて再出題されない現象を防ぐ。
+  // ルール: 2回連続正解（かつ精度が十分）で初めて <40 へ移行。
+  if (
+    mode === 'memorization' &&
+    stillLearning > 0 &&
+    consecutiveIncorrect === 0 &&
+    consecutiveCorrect < CONSECUTIVE_THRESHOLDS.LEARNING
+  ) {
+    const stillLearningBoost = Math.min(
+      stillLearning * BOOST_VALUES.STILL_LEARNING_MULTIPLIER,
+      BOOST_VALUES.STILL_LEARNING_MAX
+    );
+    const newPosition = Math.min(
+      POSITION_VALUES.STILL_LEARNING_LOW + stillLearningBoost,
+      POSITION_VALUES.STILL_LEARNING_DEFAULT
+    );
+
+    if (import.meta.env?.DEV) {
+      console.log(
+        `🟡 [まだまだ保持] consecutiveCorrect=${consecutiveCorrect}, 回数=${stillLearning}回 → Position ${newPosition} (+${stillLearningBoost})`
+      );
+    }
+
+    return newPosition;
+  }
+
   if (consecutiveCorrect === CONSECUTIVE_THRESHOLDS.STRUGGLING) {
     // 1回正解 → 新規～まだまだ
     if (accuracy >= ACCURACY_THRESHOLDS.EXCELLENT && attempts <= ATTEMPT_THRESHOLDS.QUICK_LEARNER) {
@@ -237,4 +268,14 @@ export function determineWordPosition(
   const position = normalizePosition(rawPosition);
 
   return position;
+}
+
+/**
+ * Position(0-100)を学習カテゴリへ変換
+ */
+export function positionToCategory(position: WordPosition): WordCategory {
+  if (position >= 70) return 'incorrect';
+  if (position >= 40) return 'still_learning';
+  if (position >= 20) return 'new';
+  return 'mastered';
 }

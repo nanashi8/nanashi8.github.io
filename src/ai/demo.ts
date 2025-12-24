@@ -11,7 +11,7 @@ import type { Question } from '@/types';
 /**
  * デモ1: 基本的なAI統合の使い方
  */
-export function demo1_BasicAIIntegration() {
+export async function demo1_BasicAIIntegration() {
   console.log('=== Demo 1: Basic AI Integration ===');
 
   const scheduler = new QuestionScheduler();
@@ -44,7 +44,7 @@ export function demo1_BasicAIIntegration() {
   ] as Question[];
 
   // スケジューリング実行
-  const result = scheduler.schedule({
+  const result = await scheduler.schedule({
     questions: sampleQuestions,
     mode: 'memorization',
     limits: {
@@ -204,7 +204,7 @@ export function MemorizationTab() {
  * すべてのデモを実行
  */
 export function runAllDemos() {
-  demo1_BasicAIIntegration();
+  void demo1_BasicAIIntegration();
   console.log('\n');
   demo2_CustomConfiguration();
   console.log('\n');

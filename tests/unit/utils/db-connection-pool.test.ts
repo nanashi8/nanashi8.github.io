@@ -20,25 +20,38 @@ const mockDB = {
   },
 };
 
-const mockOpenRequest = {
-  result: mockDB,
-  onsuccess: null as ((event: Event) => void) | null,
-  onerror: null as ((event: Event) => void) | null,
-  onupgradeneeded: null as ((event: IDBVersionChangeEvent) => void) | null,
-};
+function createMockOpenRequest(): IDBOpenDBRequest {
+  const request = {
+    result: mockDB,
+    error: null,
+    onsuccess: null as ((event: Event) => void) | null,
+    onerror: null as ((event: Event) => void) | null,
+    onupgradeneeded: null as ((event: IDBVersionChangeEvent) => void) | null,
+  } as unknown as IDBOpenDBRequest;
+
+  // createNewConnection() がハンドラをセットした後に発火させる
+  queueMicrotask(() => {
+    (request as unknown as { onsuccess: ((event: Event) => void) | null }).onsuccess?.(
+      new Event('success')
+    );
+  });
+
+  return request;
+}
 
 // グローバル indexedDB をモック
 global.indexedDB = {
-  open: vi.fn(() => mockOpenRequest as unknown as IDBOpenDBRequest),
+  open: vi.fn(() => createMockOpenRequest()),
   deleteDatabase: vi.fn(),
 } as unknown as IDBFactory;
 
 describe('DBConnectionPool', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    mockOpenRequest.onsuccess = null;
-    mockOpenRequest.onerror = null;
-    mockOpenRequest.onupgradeneeded = null;
+    mockDB.transaction.mockReset();
+    mockDB.close.mockReset();
+    mockDB.objectStoreNames.contains.mockReset();
+    mockDB.objectStoreNames.contains.mockReturnValue(false);
   });
 
   afterEach(async () => {
@@ -47,35 +60,18 @@ describe('DBConnectionPool', () => {
 
   describe('initDB - 接続プール初期化', () => {
     it('初回呼び出しで新規接続を作成する', async () => {
-      const initPromise = initDB();
-
-      // onsuccess コールバックをシミュレート
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-
-      const db = await initPromise;
+      const db = await initDB();
 
       expect(global.indexedDB.open).toHaveBeenCalledWith('QuizAppDB', 1);
       expect(db).toBe(mockDB);
     });
 
-    it('2回目以降はプールから既存接続を再利用する', async () => {
-      // 1回目
-      const init1Promise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await init1Promise;
+    it('executeTransaction は接続を解放し、次回は既存接続を再利用する', async () => {
+      await executeTransaction('testStore', 'readonly', async () => 'ok');
+      await executeTransaction('testStore', 'readonly', async () => 'ok2');
 
-      vi.clearAllMocks();
-
-      // 2回目
-      const db2 = await initDB();
-
-      // open は呼ばれない（プールから再利用）
-      expect(global.indexedDB.open).not.toHaveBeenCalled();
-      expect(db2).toBe(mockDB);
+      // 初期化で1回だけ open され、以降は同一接続を再利用
+      expect(global.indexedDB.open).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -92,12 +88,6 @@ describe('DBConnectionPool', () => {
       };
 
       mockDB.transaction.mockReturnValue(mockTransaction);
-
-      const initPromise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await initPromise;
 
       const result = await executeTransaction<string>(
         'testStore',
@@ -119,12 +109,6 @@ describe('DBConnectionPool', () => {
     });
 
     it('エラー時も接続を解放する', async () => {
-      const initPromise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await initPromise;
-
       mockDB.transaction.mockImplementation(() => {
         throw new Error('Transaction error');
       });
@@ -143,11 +127,7 @@ describe('DBConnectionPool', () => {
 
   describe('getPoolStats - プール統計', () => {
     it('接続プールの統計情報を取得できる', async () => {
-      const initPromise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await initPromise;
+      await executeTransaction('test', 'readonly', async () => 'done');
 
       const stats = getPoolStats();
 
@@ -159,12 +139,6 @@ describe('DBConnectionPool', () => {
     });
 
     it('使用中の接続数を正しく報告する', async () => {
-      const initPromise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await initPromise;
-
       // トランザクション実行中
       const txPromise = executeTransaction('test', 'readonly', async () => {
         const stats = getPoolStats();
@@ -181,37 +155,17 @@ describe('DBConnectionPool', () => {
   });
 
   describe('パフォーマンステスト', () => {
-    it('接続プールにより2回目以降の接続が高速化される', async () => {
-      // 1回目: 新規接続（遅い）
-      const start1 = performance.now();
-      const init1Promise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await init1Promise;
-      const duration1 = performance.now() - start1;
+    it('接続プールにより2回目以降はopen回数が増えない', async () => {
+      await executeTransaction('testStore', 'readonly', async () => 'ok');
+      await executeTransaction('testStore', 'readonly', async () => 'ok2');
 
-      // 2回目: プールから再利用（速い）
-      const start2 = performance.now();
-      await initDB();
-      const duration2 = performance.now() - start2;
-
-      expect(duration2).toBeLessThan(duration1);
-      expect(duration2).toBeLessThan(10); // 10ms以内
+      expect(global.indexedDB.open).toHaveBeenCalledTimes(1);
     });
 
     it('並列トランザクション実行が可能', async () => {
-      const initPromise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await initPromise;
-
       mockDB.transaction.mockReturnValue({
         objectStore: vi.fn(() => ({})),
       });
-
-      const start = performance.now();
 
       // 10個の並列トランザクション
       const promises = Array.from({ length: 10 }, (_, i) =>
@@ -222,20 +176,17 @@ describe('DBConnectionPool', () => {
       );
 
       const results = await Promise.all(promises);
-      const duration = performance.now() - start;
 
       expect(results).toHaveLength(10);
-      expect(duration).toBeLessThan(100); // 並列実行により100ms以内
+
+      // 初期化 + 最大接続数までの新規作成に収まる
+      expect(global.indexedDB.open).toHaveBeenCalledTimes(5);
     });
   });
 
   describe('closePool - プールクローズ', () => {
     it('全ての接続をクローズする', async () => {
-      const initPromise = initDB();
-      if (mockOpenRequest.onsuccess) {
-        mockOpenRequest.onsuccess(new Event('success'));
-      }
-      await initPromise;
+      await executeTransaction('test', 'readonly', async () => 'done');
 
       await closePool();
 

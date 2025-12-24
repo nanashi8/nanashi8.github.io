@@ -27,7 +27,7 @@ import type {
   StorageWordProgress,
 } from '../types';
 import { MLEnhancedSpecialistAI } from '../ml/MLEnhancedSpecialistAI';
-import { determineWordPosition } from '../utils/categoryDetermination';
+import { determineWordPosition, positionToCategory } from '../utils/categoryDetermination';
 import { SM2Algorithm, type SM2Quality, type SM2Result } from './memory/SM2Algorithm';
 import { ForgettingCurveModel, type RetentionResult } from './memory/ForgettingCurveModel';
 import { LongTermMemoryStrategy, MemoryStage, type MemoryStageResult } from './memory/LongTermMemoryStrategy';
@@ -139,10 +139,11 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
    */
   protected analyzeByRules(input: AIAnalysisInput): MemorySignal {
     const { word, progress, currentTab } = input;
+    const wordStr = typeof word === 'string' ? word : word?.word || '';
 
     if (!progress || !progress.memorizationAttempts) {
       // 新規語句
-      return this.createNewWordSignal(word);
+      return this.createNewWordSignal(wordStr);
     }
 
     // === 従来の分析（Phase 1-3） ===
@@ -171,8 +172,15 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
 
     // デバッグログ（開発モードのみ）
     if (import.meta.env?.DEV) {
-      this.logEnhancedAnalysis(progress, sm2Result, retentionResult, memoryStageResult);
+      this.logEnhancedAnalysis(progress, sm2Result, retentionResult, memoryStageResult, quality);
     }
+
+    const memoryStageMap: Record<MemoryStage, MemorySignal['memoryStage']> = {
+      [MemoryStage.WORKING_MEMORY]: 'WORKING_MEMORY',
+      [MemoryStage.SHORT_TERM]: 'SHORT_TERM',
+      [MemoryStage.CONSOLIDATING]: 'CONSOLIDATING',
+      [MemoryStage.LONG_TERM]: 'LONG_TERM',
+    };
 
     return {
       aiId: 'memory',
@@ -183,9 +191,15 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
       category,
       retentionStrength,
       // Phase 4拡張フィールド
-      sm2Data: sm2Result,
+      sm2Data: {
+        quality,
+        easeFactor: sm2Result.easeFactor,
+        interval: sm2Result.nextInterval,
+        repetitions: sm2Result.repetitions,
+        nextReviewDate: sm2Result.nextReviewDate,
+      },
       retention: retentionResult.retention,
-      memoryStage: memoryStageResult.stage,
+      memoryStage: memoryStageMap[memoryStageResult.stage],
       recommendedNextReview: sm2Result.nextReviewDate
     };
   }
@@ -194,16 +208,16 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
    * カテゴリー判定
    * progressStorage.tsと統一したロジックを適用
    */
-  private determineCategory(progress: WordProgress): WordCategory {
-    // 🎯 SSOT原則: determineWordPositionに委譲
-    return determineWordPosition(progress);
+  private determineCategory(progress: StorageWordProgress): WordCategory {
+    // 🎯 SSOT原則: determineWordPosition(0-100) -> categoryへ変換
+    return positionToCategory(determineWordPosition(progress));
   }
 
   /**
    * 忘却リスク計算
    * 間隔反復学習アルゴリズムベース
    */
-  private calculateForgettingRisk(progress: WordProgress): number {
+  private calculateForgettingRisk(progress: StorageWordProgress): number {
     const lastStudied = progress.lastStudied || 0;
     const reviewInterval = progress.reviewInterval || 1;
 
@@ -236,7 +250,7 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
    * 時間ブースト計算
    * Phase 1で修正: 分単位に変更
    */
-  private calculateTimeBoost(progress: WordProgress, currentTab: string): number {
+  private calculateTimeBoost(progress: StorageWordProgress, currentTab: string): number {
     const lastStudied = progress.lastStudied || 0;
     if (lastStudied === 0) return 0;
 
@@ -263,7 +277,7 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
   /**
    * 記憶定着度計算 (0-1)
    */
-  private calculateRetentionStrength(progress: WordProgress): number {
+  private calculateRetentionStrength(progress: StorageWordProgress): number {
     const attempts = progress.memorizationAttempts || 0;
     const correct = progress.memorizationCorrect || 0;
     const stillLearning = progress.memorizationStillLearning || 0;
@@ -283,7 +297,7 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
   /**
    * シグナルの信頼度計算
    */
-  private calculateConfidence(progress: WordProgress): number {
+  private calculateConfidence(progress: StorageWordProgress): number {
     const attempts = progress.memorizationAttempts || 0;
 
     // 試行回数が多いほど信頼度が高い
@@ -312,7 +326,7 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
   /**
    * Phase 4補助メソッド: 前回学習からの経過日数計算
    */
-  private getDaysSinceLastStudy(progress: WordProgress): number {
+  private getDaysSinceLastStudy(progress: StorageWordProgress): number {
     const lastStudied = progress.lastStudied || 0;
     if (lastStudied === 0) return 0;
 
@@ -325,57 +339,53 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
    *
    * @returns 0-5のQualityスケール（SM-2準拠）
    */
-  private determineQuality(progress: WordProgress): number {
+  private determineQuality(progress: StorageWordProgress): SM2Quality {
     const attempts = progress.memorizationAttempts || 0;
     const correct = progress.memorizationCorrect || 0;
-    const incorrect = progress.memorizationIncorrect || 0;
+    const stillLearning = progress.memorizationStillLearning || 0;
 
-    if (attempts === 0) return 3; // デフォルト（普通）
+    if (attempts === 0) return 3;
 
-    // 正答率計算
-    const accuracy = correct / attempts;
+    const effectiveCorrect = correct + stillLearning * 0.5;
+    const accuracy = effectiveCorrect / attempts;
 
-    // 最近の試行結果を重視（最後の試行が正解かどうか）
-    const lastAttemptCorrect = correct > 0;
+    // 直近の傾向は連続不正解で近似
+    const consecutiveIncorrect = progress.consecutiveIncorrect || 0;
+    if (consecutiveIncorrect >= 3) return 0;
+    if (consecutiveIncorrect >= 2) return 1;
+    if (consecutiveIncorrect >= 1) return 2;
 
-    if (!lastAttemptCorrect) {
-      // 最後が不正解
-      if (incorrect >= 3) return 0; // 完全失敗
-      if (incorrect >= 2) return 1; // ほぼ失敗
-      return 2; // かなり困難
-    }
-
-    // 最後が正解
-    if (accuracy >= 0.9) return 5; // 完璧
-    if (accuracy >= 0.7) return 4; // 少し迷った
-    return 3; // 正解だが困難
+    if (accuracy >= 0.9) return 5;
+    if (accuracy >= 0.7) return 4;
+    return 3;
   }
 
   /**
    * Phase 4補助メソッド: デバッグログ出力
    */
   private logEnhancedAnalysis(
-    progress: WordProgress,
-    sm2Result: any,
-    retentionResult: any,
-    memoryStageResult: any
+    progress: StorageWordProgress,
+    sm2Result: SM2Result,
+    retentionResult: RetentionResult,
+    memoryStageResult: MemoryStageResult,
+    quality: SM2Quality
   ): void {
     console.log('[MemoryAI Phase 4 分析]', {
       word: progress.word,
       sm2: {
-        quality: sm2Result.quality,
+        quality,
         easeFactor: sm2Result.easeFactor,
-        interval: sm2Result.interval,
+        interval: sm2Result.nextInterval,
         nextReview: sm2Result.nextReviewDate
       },
       retention: {
         retention: retentionResult.retention,
         memoryStrength: retentionResult.memoryStrength,
-        recommendation: retentionResult.recommendation
+        reviewUrgency: retentionResult.reviewUrgency
       },
       memoryStage: {
         stage: memoryStageResult.stage,
-        nextReview: memoryStageResult.nextReviewInterval,
+        nextReview: memoryStageResult.nextInterval,
         description: memoryStageResult.description
       }
     });

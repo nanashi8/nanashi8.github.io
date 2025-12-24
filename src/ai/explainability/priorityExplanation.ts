@@ -5,8 +5,9 @@
  * ユーザーに「なぜこの問題が選ばれたのか」を透明化
  */
 
-import type { WordProgress, WordCategory } from '@/storage/progress/types';
-import { determineWordPosition } from '@/ai/utils/categoryDetermination';
+import type { WordProgress } from '@/storage/progress/types';
+import type { WordCategory } from '@/ai/types';
+import { determineWordPosition, positionToCategory } from '@/ai/utils/categoryDetermination';
 
 /** 優先度の理由 */
 export interface PriorityExplanation {
@@ -267,5 +268,5 @@ export function getPriorityLabel(priority: number): string {
  * カテゴリーを判定（統一ユーティリティを使用）
  */
 function determineCategory(progress: WordProgress): WordCategory {
-  return determineWordPosition(progress);
+  return positionToCategory(determineWordPosition(progress));
 }

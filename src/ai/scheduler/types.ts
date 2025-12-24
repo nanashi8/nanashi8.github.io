@@ -145,6 +145,12 @@ export interface PrioritizedQuestion {
 
   /** 元のインデックス（安定ソート用） */
   originalIndex?: number;
+
+  /** AI主因モードなどで使用する最終優先度（高いほど優先） */
+  finalPriority?: number;
+
+  /** 時間経過などによる補正値（デバッグ/可観測性用） */
+  timeBoost?: number;
 }
 
 /**

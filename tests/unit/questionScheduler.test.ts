@@ -44,8 +44,8 @@ describe('QuestionScheduler - 統合テスト', () => {
   });
 
   describe('基本機能', () => {
-    it('問題をスケジュールできる', () => {
-      const result = scheduler.schedule({
+    it('問題をスケジュールできる', async () => {
+      const result = await scheduler.schedule({
         questions: sampleQuestions,
         mode: 'memorization',
         limits: { learningLimit: null, reviewLimit: null },
@@ -58,8 +58,8 @@ describe('QuestionScheduler - 統合テスト', () => {
       expect(result.vibrationScore).toBeLessThanOrEqual(100);
     });
 
-    it('すべての問題が含まれる', () => {
-      const result = scheduler.schedule({
+    it('すべての問題が含まれる', async () => {
+      const result = await scheduler.schedule({
         questions: sampleQuestions,
         mode: 'memorization',
         limits: { learningLimit: null, reviewLimit: null },
@@ -74,8 +74,8 @@ describe('QuestionScheduler - 統合テスト', () => {
   });
 
   describe('エッジケース', () => {
-    it('問題が0件でもエラーにならない', () => {
-      const result = scheduler.schedule({
+    it('問題が0件でもエラーにならない', async () => {
+      const result = await scheduler.schedule({
         questions: [],
         mode: 'memorization',
         limits: { learningLimit: null, reviewLimit: null },
@@ -85,8 +85,8 @@ describe('QuestionScheduler - 統合テスト', () => {
       expect(result.scheduledQuestions).toHaveLength(0);
     });
 
-    it('問題が1件でも動作する', () => {
-      const result = scheduler.schedule({
+    it('問題が1件でも動作する', async () => {
+      const result = await scheduler.schedule({
         questions: [sampleQuestions[0]],
         mode: 'memorization',
         limits: { learningLimit: null, reviewLimit: null },
@@ -99,7 +99,7 @@ describe('QuestionScheduler - 統合テスト', () => {
   });
 
   describe('パフォーマンス', () => {
-    it('大量の問題を高速に処理できる', () => {
+    it('大量の問題を高速に処理できる', async () => {
       const largeQuestionSet: Question[] = Array.from({ length: 100 }, (_, i) => ({
         word: `word${i}`,
         meaning: `意味${i}`,
@@ -112,7 +112,7 @@ describe('QuestionScheduler - 統合テスト', () => {
       }));
 
       const startTime = performance.now();
-      const result = scheduler.schedule({
+      const result = await scheduler.schedule({
         questions: largeQuestionSet,
         mode: 'memorization',
         limits: { learningLimit: null, reviewLimit: null },

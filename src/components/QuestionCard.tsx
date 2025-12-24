@@ -492,22 +492,22 @@ function QuestionCard({
               【{question.reading}】
             </div>
           )}
-          {question.difficulty && (
-            <div className={`difficulty-badge ${question.difficulty}`}>
-              {question.difficulty === 'beginner'
-                ? '初級'
-                : question.difficulty === 'intermediate'
-                  ? '中級'
-                  : '上級'}
-            </div>
-          )}
 
-          {/* カスタムセットに追加ボタン */}
-          {onAddWordToCustomSet &&
-            onRemoveWordFromCustomSet &&
-            onOpenCustomSetManagement &&
-            customQuestionSets && (
-              <div className="mt-3 flex justify-center">
+          {/* 難易度とカスタムセット追加ボタンを横並び */}
+          <div className="flex items-center justify-center gap-3 mt-4 flex-wrap">
+            {question.difficulty && (
+              <div className={`difficulty-badge ${question.difficulty}`}>
+                {question.difficulty === 'beginner'
+                  ? '初級'
+                  : question.difficulty === 'intermediate'
+                    ? '中級'
+                    : '上級'}
+              </div>
+            )}
+            {onAddWordToCustomSet &&
+              onRemoveWordFromCustomSet &&
+              onOpenCustomSetManagement &&
+              customQuestionSets && (
                 <AddToCustomButton
                   word={{
                     word: question.word,
@@ -522,8 +522,8 @@ function QuestionCard({
                   size="medium"
                   variant="both"
                 />
-              </div>
-            )}
+              )}
+          </div>
         </div>
         <button
           className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed"

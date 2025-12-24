@@ -43,6 +43,14 @@ interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
     insertAt: number;
     timestamp: number;
   }>;
+
+  // 🎯 Position不整合検出（再スケジューリングトリガー）
+  checkPositionMismatch: (questions: T[], mode: 'memorization' | 'translation') => {
+    needsRescheduling: boolean;
+    mismatchCount: number;
+    totalDiff: number;
+    reason: string;
+  };
 }
 
 /**
@@ -56,6 +64,7 @@ export function useQuestionRequeue<
    * 問題を再追加（最優先キューに追加）
    * 🔒 分からない: 1-2問後に積極的に再出題
    * 🟡 まだまだ: 3-5問後に再出題
+   * 🎯 Position-aware: 新たに高Positionになった単語は他の高Position単語の近くに配置
    */
   const reAddQuestion = useCallback((question: T, questions: T[], currentIndex: number): T[] => {
     // nullガード
@@ -96,10 +105,75 @@ export function useQuestionRequeue<
     // 初回再出題(count=0): 3-5問後
     // 2回目以降(count>=1): 1-2問後（積極的に再出題）
     const isUrgent = (question.reAddedCount || 0) >= 1;
-    const offset = isUrgent
+    const baseOffset = isUrgent
       ? 1 + Math.floor(Math.random() * 2) // 1 or 2 (分からない)
       : 3 + Math.floor(Math.random() * 3); // 3, 4, or 5 (まだまだ)
-    const insertPosition = Math.min(currentIndex + offset, questions.length);
+    
+    let insertPosition = Math.min(currentIndex + baseOffset, questions.length);
+
+    // 🎯 Position-aware insertion: 既存の高Position単語群に割り込み配置
+    // キュー後半に高Position単語が埋もれている場合、それらの近くに配置
+    const questionPosition = (question as any).position;
+    if (questionPosition !== undefined && questionPosition >= 40) {
+      // 挿入位置から前方30問をスキャン（軽量なO(30)操作）
+      const scanStart = Math.max(insertPosition, currentIndex + 1);
+      const scanEnd = Math.min(scanStart + 30, questions.length);
+      
+      // Position 40以上の単語を探す
+      let lastHighPositionIdx = -1;
+      for (let i = scanStart; i < scanEnd; i++) {
+        const pos = (questions[i] as any).position;
+        if (pos !== undefined && pos >= 40) {
+          lastHighPositionIdx = i;
+        }
+      }
+
+      // 高Position単語が見つかった場合、その直後に配置
+      if (lastHighPositionIdx >= 0) {
+        const originalPosition = insertPosition;
+        insertPosition = lastHighPositionIdx + 1;
+        
+        // 📊 Position-aware挿入ログをlocalStorageに記録
+        try {
+          const log = {
+            timestamp: new Date().toISOString(),
+            word: String(qid),
+            position: questionPosition,
+            originalInsert: originalPosition,
+            adjustedInsert: insertPosition,
+            currentIndex,
+            nearbyHighPositions: questions
+              .slice(scanStart, scanEnd)
+              .filter((q) => {
+                const pos = (q as any).position;
+                return pos !== undefined && pos >= 40;
+              })
+              .map((q) => ({
+                word: (q as any).word || (q as any).id,
+                position: (q as any).position,
+              })),
+          };
+
+          const stored = localStorage.getItem('debug_position_aware_insertions');
+          const logs = stored ? JSON.parse(stored) : [];
+          logs.push(log);
+          // 最新30件のみ保持
+          if (logs.length > 30) logs.shift();
+          localStorage.setItem('debug_position_aware_insertions', JSON.stringify(logs));
+        } catch {
+          // localStorage失敗は無視
+        }
+
+        if (import.meta.env.DEV) {
+          console.log('🎯 [Position-aware] 高Position単語群に割り込み配置', {
+            word: String(qid),
+            position: questionPosition,
+            originalInsert: originalPosition,
+            adjustedInsert: insertPosition,
+          });
+        }
+      }
+    }
 
     // KPI: 再追加を記録（開発用）
     try {
@@ -204,11 +278,97 @@ export function useQuestionRequeue<
     []
   );
 
+  /**
+   * 🎯 Position不整合検出（再スケジューリングトリガー）
+   * 
+   * questions配列のPositionとLocalStorageの実際のPositionを比較し、
+   * 再スケジューリングが必要かを判定します。
+   * 
+   * トリガー条件：
+   * - 不整合語数が10語以上 AND 差分合計が200以上
+   * 
+   * @param questions 現在のキュー
+   * @param mode 学習モード（暗記/和訳）
+   * @returns 再スケジューリング判定結果
+   */
+  const checkPositionMismatch = useCallback(
+    (
+      questions: T[],
+      mode: 'memorization' | 'translation'
+    ): {
+      needsRescheduling: boolean;
+      mismatchCount: number;
+      totalDiff: number;
+      reason: string;
+    } => {
+      try {
+        // LocalStorageから最新のProgressを取得
+        const { loadProgressSync } = require('@/storage/progress/progressStorage');
+        const { determineWordPosition } = require('@/ai/utils/categoryDetermination');
+        
+        const progress = loadProgressSync();
+        if (!progress?.wordProgress) {
+          return {
+            needsRescheduling: false,
+            mismatchCount: 0,
+            totalDiff: 0,
+            reason: 'LocalStorage未初期化',
+          };
+        }
+
+        let mismatchCount = 0;
+        let totalDiff = 0;
+
+        // questions配列の各単語のPositionをチェック
+        for (const q of questions) {
+          const word = (q as any).word;
+          if (!word) continue;
+
+          const originalPosition = (q as any).position ?? 0;
+          const wp = progress.wordProgress[word];
+
+          if (!wp) continue;
+
+          // LocalStorageから実際のPositionを計算
+          const realPosition = determineWordPosition(wp, mode);
+          const diff = Math.abs(realPosition - originalPosition);
+
+          if (diff >= 5) {
+            mismatchCount++;
+            totalDiff += diff;
+          }
+        }
+
+        // トリガー条件判定
+        const needsRescheduling = mismatchCount >= 10 && totalDiff >= 200;
+
+        return {
+          needsRescheduling,
+          mismatchCount,
+          totalDiff,
+          reason: needsRescheduling
+            ? `不整合${mismatchCount}語（差分合計: ${totalDiff}）`
+            : '正常範囲内',
+        };
+      } catch (error) {
+        console.error('[useQuestionRequeue] Position不整合チェックエラー:', error);
+        return {
+          needsRescheduling: false,
+          mismatchCount: 0,
+          totalDiff: 0,
+          reason: 'チェック失敗',
+        };
+      }
+    },
+    []
+  );
+
   return {
     reAddQuestion,
     clearExpiredFlags,
     isReviewQuestion,
     updateRequeueStats,
     getRequeuedWords,
+    checkPositionMismatch,
   };
 }
