@@ -200,7 +200,7 @@ export function RequeuingDebugPanel({
       const lower = (progressMap as any)[raw.toLowerCase()];
       if (lower) return lower;
       const actualKey = normalizedIndex.get(normalizeLookupKey(raw));
-      return actualKey ? (progressMap as any)[actualKey] ?? null : null;
+      return actualKey ? ((progressMap as any)[actualKey] ?? null) : null;
     };
 
     // 次10問の分析対象
@@ -208,14 +208,19 @@ export function RequeuingDebugPanel({
     // - 取得できない場合のみ、props（現在位置の次10問）にフォールバック
     const postProcessTop30 = safeParse(localStorage.getItem('debug_postProcess_output'));
     const postProcessTop10Words = Array.isArray(postProcessTop30)
-      ? postProcessTop30.slice(0, 10).map((i: any) => String(i?.word ?? '')).filter(Boolean)
+      ? postProcessTop30
+          .slice(0, 10)
+          .map((i: any) => String(i?.word ?? ''))
+          .filter(Boolean)
       : [];
     const fallbackNext10Words = questions
       .slice(currentIndex + 1, currentIndex + 11)
       .map((q) => String(q.word ?? ''))
       .filter(Boolean);
-    const next10Words = postProcessTop10Words.length > 0 ? postProcessTop10Words : fallbackNext10Words;
-    const next10Source = postProcessTop10Words.length > 0 ? 'postProcess() TOP10' : 'props（現在位置の次10問）';
+    const next10Words =
+      postProcessTop10Words.length > 0 ? postProcessTop10Words : fallbackNext10Words;
+    const next10Source =
+      postProcessTop10Words.length > 0 ? 'postProcess() TOP10' : 'props（現在位置の次10問）';
 
     const computeWordSnapshot = (word: string) => {
       const wp = resolveWordProgress(word);
@@ -233,7 +238,8 @@ export function RequeuingDebugPanel({
                 : '✅ 定着済';
       return { position, attempts, status };
     };
-    const allNext10Under40 = next10Words.length > 0 && next10Words.every((w) => computeWordSnapshot(w).position < 40);
+    const allNext10Under40 =
+      next10Words.length > 0 && next10Words.every((w) => computeWordSnapshot(w).position < 40);
 
     // AI評価テーブル生成
     const aiEvalTable =
@@ -294,7 +300,8 @@ export function RequeuingDebugPanel({
 
 ${(() => {
   const stored = localStorage.getItem('debug_progress_repair_summary');
-  if (!stored) return '⚠️ 修復サマリーがありません（まだloadProgress()が走っていない/保存できていない可能性）';
+  if (!stored)
+    return '⚠️ 修復サマリーがありません（まだloadProgress()が走っていない/保存できていない可能性）';
   try {
     const s = JSON.parse(stored);
     const ts = s.timestamp ? String(s.timestamp) : '-';
@@ -846,8 +853,7 @@ ${(() => {
     byModeSnapshot && String(byModeSnapshot?.mode ?? '') === desiredMode ? byModeSnapshot : null;
 
   const legacy = safeParse(localStorage.getItem('debug_sortAndBalance_top100'));
-  const legacyIfModeMatch =
-    legacy && String(legacy?.mode ?? '') === desiredMode ? legacy : null;
+  const legacyIfModeMatch = legacy && String(legacy?.mode ?? '') === desiredMode ? legacy : null;
 
   // mode一致を優先、なければlegacy（警告付き）
   const data = bestFromHistory ?? bestFromByMode ?? legacyIfModeMatch ?? legacy;
@@ -894,7 +900,9 @@ ${(() => {
       if (!normalizedIndex.has(nk)) normalizedIndex.set(nk, key);
     }
 
-    const resolveProgressKey = (word: string): { key: string | null; wp: any | null; hit: string } => {
+    const resolveProgressKey = (
+      word: string
+    ): { key: string | null; wp: any | null; hit: string } => {
       const raw = normalizeWordKey(word);
       if (!raw) return { key: null, wp: null, hit: 'empty' };
 
@@ -907,7 +915,8 @@ ${(() => {
 
       const nk = normalizeLookupKey(raw);
       const actualKey = normalizedIndex.get(nk) ?? null;
-      if (actualKey) return { key: actualKey, wp: (progressMap as any)[actualKey] ?? null, hit: 'normalized' };
+      if (actualKey)
+        return { key: actualKey, wp: (progressMap as any)[actualKey] ?? null, hit: 'normalized' };
 
       return { key: null, wp: null, hit: 'miss' };
     };
@@ -980,7 +989,10 @@ ${(() => {
     }
 
     // TOP100のキー命中率（progressCacheとの照合）
-    const hitStats = { direct: 0, lower: 0, normalized: 0, miss: 0, empty: 0 } as Record<string, number>;
+    const hitStats = { direct: 0, lower: 0, normalized: 0, miss: 0, empty: 0 } as Record<
+      string,
+      number
+    >;
     for (const item of top100) {
       const word = String((item as any)?.word ?? '');
       const r = resolveProgressKey(word);
@@ -1124,7 +1136,7 @@ ${(() => {
 
   // currentIndexから先の未出題問題を分析
   const remaining = questions.slice(currentIndex);
-  
+
   if (remaining.length === 0) {
     return '✅ すべての問題が出題済みです。';
   }
@@ -1164,7 +1176,22 @@ ${(() => {
         const diff = real - orig;
         const icon = real >= 70 ? '🔴' : real >= 40 ? '🟡' : '⚪';
         const arrow = diff > 0 ? '🔺' : diff < 0 ? '🔻' : '→';
-        return '  ' + icon + ' **' + q.word + '**: ' + orig + ' ' + arrow + ' ' + real + ' (差分: ' + (diff > 0 ? '+' : '') + diff + ')';
+        return (
+          '  ' +
+          icon +
+          ' **' +
+          q.word +
+          '**: ' +
+          orig +
+          ' ' +
+          arrow +
+          ' ' +
+          real +
+          ' (差分: ' +
+          (diff > 0 ? '+' : '') +
+          diff +
+          ')'
+        );
       })
       .join('\n');
     result += '\n\n**原因候補**:\n';
@@ -1175,11 +1202,15 @@ ${(() => {
 
   const positionGroups = {
     incorrect: remainingWithRealPosition.filter((q: any) => (q.position ?? 0) >= 70),
-    stillLearning: remainingWithRealPosition.filter((q: any) => (q.position ?? 0) >= 40 && (q.position ?? 0) < 70),
-    newBoosted: remainingWithRealPosition.filter((q: any) => (q.position ?? 0) >= 20 && (q.position ?? 0) < 40),
+    stillLearning: remainingWithRealPosition.filter(
+      (q: any) => (q.position ?? 0) >= 40 && (q.position ?? 0) < 70
+    ),
+    newBoosted: remainingWithRealPosition.filter(
+      (q: any) => (q.position ?? 0) >= 20 && (q.position ?? 0) < 40
+    ),
     newNormal: remainingWithRealPosition.filter((q: any) => (q.position ?? 0) < 20),
   };
-  
+
   result += '**Position別内訳**:\n';
   result += '- 🔴 分からない（70-100）: ' + positionGroups.incorrect.length + '語\n';
   result += '- 🟡 まだまだ（40-69）: ' + positionGroups.stillLearning.length + '語\n';
@@ -1189,7 +1220,7 @@ ${(() => {
   // 次の30問の詳細（再計算されたPositionを使用）
   const next30 = remainingWithRealPosition.slice(0, 30);
   const next30High = next30.filter((q: any) => (q.position ?? 0) >= 40);
-  
+
   result += '**次の30問の構成**:\n';
   result += '- 高Position語（≥40）: ' + next30High.length + '語 / ' + next30.length + '問\n';
   result += '- 割合: ' + ((next30High.length / next30.length) * 100).toFixed(1) + '%\n\n';
@@ -1205,7 +1236,9 @@ ${(() => {
         const label = pos >= 70 ? '分からない' : 'まだまだ';
         const requeued = (q as any).reAddedCount > 0 ? ' 🔄×' + (q as any).reAddedCount : '';
         const posChange = origPos !== undefined && origPos !== pos ? ' (元:' + origPos + ')' : '';
-        return '  ' + icon + ' ' + q.word + ' (Pos ' + pos + posChange + ', ' + label + ')' + requeued;
+        return (
+          '  ' + icon + ' ' + q.word + ' (Pos ' + pos + posChange + ', ' + label + ')' + requeued
+        );
       })
       .join('\n');
     if (next30High.length > 10) {
@@ -1218,8 +1251,14 @@ ${(() => {
   // 警告判定
   const totalHigh = positionGroups.incorrect.length + positionGroups.stillLearning.length;
   if (totalHigh > 10 && next30High.length < 5) {
-    result += '\n\n❌ **警告**: 高Position語が' + totalHigh + '語存在しますが、次の30問には' + next30High.length + '語しか含まれていません！';
-    result += '\n→ Position降順ソートが機能していない、またはフォーク並びが不十分な可能性があります。';
+    result +=
+      '\n\n❌ **警告**: 高Position語が' +
+      totalHigh +
+      '語存在しますが、次の30問には' +
+      next30High.length +
+      '語しか含まれていません！';
+    result +=
+      '\n→ Position降順ソートが機能していない、またはフォーク並びが不十分な可能性があります。';
   } else if (totalHigh > 0 && next30High.length >= Math.min(totalHigh, 15)) {
     result += '\n\n✅ **良好**: 高Position語が適切に前方に配置されています。';
   }
@@ -1235,17 +1274,17 @@ ${(() => {
   const progress = loadProgressSync();
   const functionCalls = JSON.parse(localStorage.getItem('debug_function_calls') || '[]');
   const answerLogs = JSON.parse(localStorage.getItem('debug_answer_logs') || '[]');
-  
+
   // 最後のsortAndBalance呼び出しを探す
   const lastSchedule = functionCalls
     .filter((f: any) => f.name === 'sortAndBalance' && f.args?.questionsCount > 100)
     .slice(-1)[0];
-  
+
   // 最後の解答を探す
   const lastAnswer = answerLogs.slice(-1)[0];
-  
+
   let result = '**📋 現在のキュー生成情報**:\n';
-  
+
   if (lastSchedule) {
     const scheduleTime = new Date(lastSchedule.timestamp).toLocaleTimeString('ja-JP');
     result += '- 最後のスケジューリング: ' + scheduleTime + '\n';
@@ -1253,48 +1292,63 @@ ${(() => {
   } else {
     result += '⚠️ スケジューリング履歴が見つかりません\n';
   }
-  
+
   if (lastAnswer) {
     const answerTime = new Date(lastAnswer.timestamp).toLocaleTimeString('ja-JP');
     result += '- 最後の解答: ' + answerTime + ' (' + lastAnswer.word + ')\n';
-    result += '- Position変化: ' + lastAnswer.positionBefore + ' → ' + lastAnswer.positionAfter + '\n';
+    result +=
+      '- Position変化: ' + lastAnswer.positionBefore + ' → ' + lastAnswer.positionAfter + '\n';
   }
-  
+
   result += '\n';
-  
+
   // スケジューリング後に解答があったかチェック
   if (lastSchedule && lastAnswer) {
     const scheduleTs = new Date(lastSchedule.timestamp).getTime();
     const answerTs = new Date(lastAnswer.timestamp).getTime();
-    
+
     if (answerTs > scheduleTs) {
-      const answersSinceSchedule = answerLogs.filter((a: any) => 
-        new Date(a.timestamp).getTime() > scheduleTs
+      const answersSinceSchedule = answerLogs.filter(
+        (a: any) => new Date(a.timestamp).getTime() > scheduleTs
       ).length;
-      
+
       result += '🚨 **警告**: スケジューリング後に' + answersSinceSchedule + '回解答されました\n';
       result += '→ questions配列のPositionが古くなっている可能性が高いです！\n\n';
-      
+
       // Position変化のあった単語をリスト
       const positionChanges = answerLogs
-        .filter((a: any) => 
-          new Date(a.timestamp).getTime() > scheduleTs && 
-          Math.abs(a.positionAfter - a.positionBefore) >= 10
+        .filter(
+          (a: any) =>
+            new Date(a.timestamp).getTime() > scheduleTs &&
+            Math.abs(a.positionAfter - a.positionBefore) >= 10
         )
         .slice(-10);
-      
+
       if (positionChanges.length > 0) {
         result += '**スケジューリング後のPosition大幅変化（±10以上）**:\n';
         result += positionChanges
           .map((a: any) => {
             const diff = a.positionAfter - a.positionBefore;
             const arrow = diff > 0 ? '🔺' : '🔻';
-            return '  ' + arrow + ' ' + a.word + ': ' + a.positionBefore + ' → ' + a.positionAfter + ' (' + (diff > 0 ? '+' : '') + diff + ')';
+            return (
+              '  ' +
+              arrow +
+              ' ' +
+              a.word +
+              ': ' +
+              a.positionBefore +
+              ' → ' +
+              a.positionAfter +
+              ' (' +
+              (diff > 0 ? '+' : '') +
+              diff +
+              ')'
+            );
           })
           .join('\n');
         result += '\n\n';
       }
-      
+
       result += '**推奨対応**:\n';
       result += '- 再スケジューリングを実行（データソース選択をやり直す）\n';
       result += '- または、useQuestionRequeuのPosition-aware機能が自動調整します\n';
@@ -1302,7 +1356,7 @@ ${(() => {
       result += '✅ スケジューリングは最新です（解答後に再スケジューリング済み）\n';
     }
   }
-  
+
   return result;
 })()}
 
@@ -1569,32 +1623,42 @@ ${(() => {
 
 ## 📋 元のJSON順序（参考情報）
 
-この表示は**QuestionScheduler通過前**の元データ順序です。
+この表示は**Position降順にソート済み**の残りキューです（再出題による順序崩れを補正）。
 
 | # | 問題位置 | 単語 | Position | 出題回数 | 難易度 | 状態 |
 |---|----------|------|----------|----------|--------|------|
-${questions
-  .slice(currentIndex + 1, currentIndex + 31)
-  .map((question, idx) => {
-    const word = question?.word;
-    const allProgress = loadProgressSync();
-    const wordProgress = allProgress.wordProgress?.[word];
-    const position = wordProgress?.memorizationPosition ?? 0;
-    const attempts = wordProgress?.totalAttempts ?? 0;
-    const difficulty = question?.difficulty ?? '不明';
-    const status =
-      attempts === 0
-        ? '⚪ 新規（未出題）'
-        : position >= 70
-          ? '🔴 分からない'
-          : position >= 40
-            ? '🟡 まだまだ'
-            : position >= 20
-              ? '⚪ 新規'
-              : '✅ 定着';
-    return `| ${idx + 1} | ${currentIndex + idx + 2}問目 | **${word}** | ${position.toFixed(0)} | ${attempts}回 | ${difficulty} | ${status} |`;
-  })
-  .join('\n')}
+${(() => {
+  const allProgress = loadProgressSync();
+  // 現在位置より後ろの問題を取得し、Position降順でソート
+  const remainingQuestions = questions
+    .slice(currentIndex + 1)
+    .map((question) => {
+      const word = question?.word;
+      const wordProgress = allProgress.wordProgress?.[word];
+      const position = wordProgress?.memorizationPosition ?? 0;
+      const attempts = wordProgress?.totalAttempts ?? 0;
+      const difficulty = question?.difficulty ?? '不明';
+      const status =
+        attempts === 0
+          ? '⚪ 新規（未出題）'
+          : position >= 70
+            ? '🔴 分からない'
+            : position >= 40
+              ? '🟡 まだまだ'
+              : position >= 20
+                ? '⚪ 新規'
+                : '✅ 定着';
+      return { word, position, attempts, difficulty, status, originalQuestion: question };
+    })
+    .sort((a, b) => b.position - a.position) // Position降順
+    .slice(0, 30); // 上位30問
+
+  return remainingQuestions
+    .map((item, idx) => {
+      return `| ${idx + 1} | - | **${item.word}** | ${item.position.toFixed(0)} | ${item.attempts}回 | ${item.difficulty} | ${item.status} |`;
+    })
+    .join('\n');
+})()}
 
 ---
 
@@ -1611,35 +1675,50 @@ ${aiEvalTable}
 - **LocalStorage保存中（まだまだ・分からない）**: ${strugglingWords.length}語
   - 分からない (Position≥70): ${strugglingWords.filter((w) => w.position >= 70).length}語
   - まだまだ (Position≥40): ${strugglingWords.filter((w) => w.position >= 40 && w.position < 70).length}語
-- **次30問中の状態別**:
-  - 🔴 分からない: ${
-    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
-      const wp = loadProgressSync().wordProgress?.[q.word];
-      return (wp?.memorizationPosition ?? 0) >= 70;
-    }).length
-  }問
-  - 🟡 まだまだ: ${
-    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
-      const wp = loadProgressSync().wordProgress?.[q.word];
-      const pos = wp?.memorizationPosition ?? 0;
-      return pos >= 40 && pos < 70;
-    }).length
-  }問
-  - ⚪ 新規: ${
-    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
-      const wp = loadProgressSync().wordProgress?.[q.word];
-      const attempts = wp?.totalAttempts ?? 0;
-      const pos = wp?.memorizationPosition ?? 0;
-      return attempts === 0 || (pos >= 20 && pos < 40);
-    }).length
-  }問
-  - ✅ 定着済: ${
-    questions.slice(currentIndex + 1, currentIndex + 31).filter((q) => {
-      const wp = loadProgressSync().wordProgress?.[q.word];
-      const attempts = wp?.totalAttempts ?? 0;
-      return attempts > 0 && (wp?.memorizationPosition ?? 0) < 20;
-    }).length
-  }問
+- **次30問中の状態別**（Position降順ソート済み）:
+  - 🔴 分からない: ${(() => {
+    const allProgress = loadProgressSync();
+    return questions
+      .slice(currentIndex + 1)
+      .filter((q) => {
+        const wp = allProgress.wordProgress?.[q.word];
+        return (wp?.memorizationPosition ?? 0) >= 70;
+      })
+      .slice(0, 30).length;
+  })()}問
+  - 🟡 まだまだ: ${(() => {
+    const allProgress = loadProgressSync();
+    return questions
+      .slice(currentIndex + 1)
+      .filter((q) => {
+        const wp = allProgress.wordProgress?.[q.word];
+        const pos = wp?.memorizationPosition ?? 0;
+        return pos >= 40 && pos < 70;
+      })
+      .slice(0, 30).length;
+  })()}問
+  - ⚪ 新規: ${(() => {
+    const allProgress = loadProgressSync();
+    return questions
+      .slice(currentIndex + 1)
+      .filter((q) => {
+        const wp = allProgress.wordProgress?.[q.word];
+        const pos = wp?.memorizationPosition ?? 0;
+        return pos >= 20 && pos < 40;
+      })
+      .slice(0, 30).length;
+  })()}問
+  - ✅ 定着済: ${(() => {
+    const allProgress = loadProgressSync();
+    return questions
+      .slice(currentIndex + 1)
+      .filter((q) => {
+        const wp = allProgress.wordProgress?.[q.word];
+        const attempts = wp?.totalAttempts ?? 0;
+        return attempts > 0 && (wp?.memorizationPosition ?? 0) < 20;
+      })
+      .slice(0, 30).length;
+  })()}問
 
 ## 🔍 デバッグヒント
 
@@ -1700,13 +1779,20 @@ ${(() => {
     result += '✅ **まだまだ・分からない語はありません** → 学習が進んでいます！\n';
   } else if (strugglingInTop30 >= Math.min(struggling.length, 20)) {
     result +=
-      '✅ **吸引成功**: TOP30に' + strugglingInTop30 + '語が含まれています。確実に優先出題されています！\n';
+      '✅ **吸引成功**: TOP30に' +
+      strugglingInTop30 +
+      '語が含まれています。確実に優先出題されています！\n';
   } else if (strugglingInTop30 >= Math.ceil(struggling.length * 0.5)) {
     result +=
-      '⚠️ **部分的吸引**: TOP30に' + strugglingInTop30 + '語が含まれていますが、期待値（' + expectedInTop30 + '語）より少ないです。\n';
+      '⚠️ **部分的吸引**: TOP30に' +
+      strugglingInTop30 +
+      '語が含まれていますが、期待値（' +
+      expectedInTop30 +
+      '語）より少ないです。\n';
   } else {
     result += '❌ **吸引失敗**: TOP30に' + strugglingInTop30 + '語しか含まれていません！\n';
-    result += '→ Position降順ソートが機能していない、またはPosition値が不正確な可能性があります。\n';
+    result +=
+      '→ Position降順ソートが機能していない、またはPosition値が不正確な可能性があります。\n';
   }
 
   result += '\n**TOP10の内訳**:\n';
@@ -1727,7 +1813,19 @@ ${(() => {
           : item.position >= 20
             ? '新規'
             : '定着済';
-      return item.rank + '. ' + icon + ' **' + item.word + '** (Pos ' + item.position + ', ' + item.attempts + '回) - ' + label;
+      return (
+        item.rank +
+        '. ' +
+        icon +
+        ' **' +
+        item.word +
+        '** (Pos ' +
+        item.position +
+        ', ' +
+        item.attempts +
+        '回) - ' +
+        label
+      );
     })
     .join('\n');
 
@@ -1751,17 +1849,17 @@ ${(() => {
     }
 
     let result = `**📊 挿入調整の実行履歴（最新${logs.length}件）**:\n\n`;
-    
+
     const recentLogs = logs.slice(-10); // 最新10件を表示
     recentLogs.forEach((log: any, idx: number) => {
       const timeStr = new Date(log.timestamp).toLocaleTimeString('ja-JP');
       const adjusted = log.adjustedInsert !== log.originalInsert;
       const icon = adjusted ? '🎯' : '⚪';
-      
+
       result += `${icon} **${log.word}** (Position ${log.position})\n`;
       result += `  - 時刻: ${timeStr}\n`;
       result += `  - 元の挿入位置: index ${log.originalInsert} (現在位置+${log.originalInsert - log.currentIndex})\n`;
-      
+
       if (adjusted) {
         result += `  - 🎯 調整後: index ${log.adjustedInsert} (現在位置+${log.adjustedInsert - log.currentIndex})\n`;
         result += `  - 理由: 高Position単語群に割り込み\n`;
@@ -1779,20 +1877,23 @@ ${(() => {
     });
 
     // 統計サマリ
-    const adjustedCount = logs.filter((log: any) => log.adjustedInsert !== log.originalInsert).length;
+    const adjustedCount = logs.filter(
+      (log: any) => log.adjustedInsert !== log.originalInsert
+    ).length;
     const adjustRate = ((adjustedCount / logs.length) * 100).toFixed(1);
-    
+
     result += '**📈 統計サマリ**:\n';
     result += `- 総挿入回数: ${logs.length}回\n`;
     result += `- Position-aware調整: ${adjustedCount}回 (${adjustRate}%)\n`;
     result += `- 通常挿入: ${logs.length - adjustedCount}回\n\n`;
-    
+
     if (adjustedCount > 0) {
       result += '✅ **フォーク並びが正常に機能しています**\n';
       result += '→ まだまだ・分からない語が既存の高Position語の近くに配置されています。\n';
     } else {
       result += '⚠️ **調整が1度も発生していません**\n';
-      result += '→ キュー内に高Position語が少ないか、再出題がまだ実行されていない可能性があります。\n';
+      result +=
+        '→ キュー内に高Position語が少ないか、再出題がまだ実行されていない可能性があります。\n';
     }
 
     return result;
