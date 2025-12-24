@@ -21,8 +21,7 @@ import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 // import { sortQuestionsByPriority as sortByPriorityCommon } from '../utils/questionPrioritySorter'; // QuestionSchedulerに統合済み
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { QuestionScheduler } from '@/ai/scheduler';
-import { determineCategory } from '@/ai/utils/quickCategoryDetermination';
-import { determineWordPosition } from '@/ai/utils/categoryDetermination';
+import { determineWordPosition, positionToCategory } from '@/ai/utils/categoryDetermination';
 import { loadProgressSync } from '@/storage/progress/progressStorage';
 import type { AIAnalysisInput, SessionStats as AISessionStats } from '@/ai/types';
 import { PerformanceMonitor } from '@/utils/performance-monitor';
@@ -972,19 +971,18 @@ function MemorizationView({
       // � Phase 1 Pattern 2: 即座のカテゴリー判定（10-50ms目標）
       // UI応答を最優先し、詳細分析は後回し
       PerformanceMonitor.start('quick-category-determination');
-      const quickCategory = await determineCategory(answeredQuestion.word, isCorrect);
+      const progressCache = loadProgressSync();
+      const wordProgress = progressCache.wordProgress?.[answeredQuestion.word];
+      const position = determineWordPosition(wordProgress, 'memorization');
+      const category = positionToCategory(position);
+
       const categoryDuration = PerformanceMonitor.end('quick-category-determination');
 
       if (categoryDuration > 50) {
         PerformanceMonitor.warnIfSlow('quick-category-determination', categoryDuration, 50);
       }
 
-      // 品質測定に記録
-      QualityMonitor.recordCategoryDetermination(
-        quickCategory.category,
-        quickCategory.confidence,
-        categoryDuration
-      );
+      QualityMonitor.recordCategoryDetermination(category, 1.0, categoryDuration);
 
       // Debug log removed to reduce console noise
 
@@ -1417,7 +1415,9 @@ function MemorizationView({
                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
               />
             </svg>
-            <span className="text-sm font-medium">📊 学習状況を最新化しました（{reschedulingNotification}）</span>
+            <span className="text-sm font-medium">
+              📊 学習状況を最新化しました（{reschedulingNotification}）
+            </span>
           </div>
         </div>
       )}
