@@ -74,7 +74,7 @@ describe('メンテナンスAI統合', () => {
     });
 
     it('文法問題パッセージ機能ドキュメントが存在する', () => {
-      const docPath = join(baseDir, 'docs/features/GRAMMAR_PASSAGE_FEATURE.md');
+      const docPath = join(baseDir, 'docs/features/grammar-passage-feature.md');
       expect(existsSync(docPath), `${docPath} が見つかりません`).toBe(true);
     });
   });
