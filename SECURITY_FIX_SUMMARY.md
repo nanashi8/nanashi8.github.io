@@ -80,5 +80,5 @@ npm run build
 3. ⏭️ **今後の対応**: @lhci/cli（tmp依存）の更新検討
 
 ## コミット情報
-- コミットハッシュ: 9aac806
 - コミットメッセージ: "fix: セキュリティ脆弱性修正 - vite 6.4.1へアップグレード"
+- ブランチ: copilot/fix-security-vulnerabilities
