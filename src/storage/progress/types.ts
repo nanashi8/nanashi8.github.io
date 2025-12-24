@@ -92,6 +92,7 @@ export interface WordProgress {
   nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
 
   // 📍 タブ別Position（AI出題工夫用）
+  position?: number; // 総合Position (0-100) - 互換性のため任意
   memorizationPosition?: number; // 暗記タブでのPosition (0-100)
   translationPosition?: number; // 和訳タブでのPosition (0-100)
   spellingPosition?: number; // スペルタブでのPosition (0-100)

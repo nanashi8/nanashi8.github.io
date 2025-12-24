@@ -48,6 +48,7 @@ class DBConnectionPool {
   private static instance: DBConnectionPool | null = null;
 
   private connections: PooledConnection[] = [];
+  private pendingConnectionCreations = 0;
   private config: ConnectionPoolConfig = {
     maxConnections: 5, // 最大5接続
     connectionTimeout: 5000, // 5秒
@@ -89,7 +90,10 @@ class DBConnectionPool {
 
     try {
       // 最初の接続を作成
-      const db = await this.createNewConnection();
+      this.pendingConnectionCreations++;
+      const db = await this.createNewConnection().finally(() => {
+        this.pendingConnectionCreations--;
+      });
       this.connections.push({
         db,
         lastUsed: Date.now(),
@@ -177,10 +181,8 @@ class DBConnectionPool {
   async getConnection(): Promise<IDBDatabase> {
     PerformanceMonitor.start('db-pool-get-connection');
 
-    // 初期化されていない場合は初期化
-    if (!this.initializationPromise) {
-      await this.initialize();
-    }
+    // 初期化は常に待機（並列呼び出し時の接続作成レースを防ぐ）
+    await this.initialize();
 
     // 利用可能な接続を探す
     const availableConnection = this.connections.find(conn => !conn.inUse);
@@ -198,9 +200,13 @@ class DBConnectionPool {
       return availableConnection.db;
     }
 
-    // 接続数が上限に達していない場合は新規作成
-    if (this.connections.length < this.config.maxConnections) {
-      const db = await this.createNewConnection();
+    // 接続数が上限に達していない場合は新規作成（作成中も含めて上限管理）
+    if (this.connections.length + this.pendingConnectionCreations < this.config.maxConnections) {
+      this.pendingConnectionCreations++;
+      const db = await this.createNewConnection().finally(() => {
+        this.pendingConnectionCreations--;
+      });
+
       this.connections.push({
         db,
         lastUsed: Date.now(),

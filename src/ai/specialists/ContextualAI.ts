@@ -43,11 +43,12 @@ export class ContextualAI extends MLEnhancedSpecialistAI<ContextualSignal> {
 
   protected analyzeByRules(input: AIAnalysisInput): ContextualSignal {
     const { word, currentTab, allProgress, sessionStats } = input;
+    const wordStr = typeof word === 'string' ? word : word?.word || '';
 
-    const contextRelevance = this.calculateContextRelevance(word, currentTab);
-    const topicContinuity = this.evaluateTopicContinuity(word, allProgress, sessionStats);
+    const contextRelevance = this.calculateContextRelevance(wordStr, currentTab);
+    const topicContinuity = this.evaluateTopicContinuity(wordStr, allProgress, sessionStats);
     const environmentFit = this.assessEnvironmentFit(currentTab, sessionStats);
-    const crossTabSynergy = this.identifyCrossTabSynergy(word, currentTab, allProgress);
+    const crossTabSynergy = this.identifyCrossTabSynergy(wordStr, currentTab, allProgress);
 
     return {
       aiId: 'contextual',
@@ -93,7 +94,7 @@ export class ContextualAI extends MLEnhancedSpecialistAI<ContextualSignal> {
    */
   private evaluateTopicContinuity(
     word: string,
-    allProgress: Record<string, WordProgress>,
+    allProgress: Record<string, StorageWordProgress>,
     sessionStats: any
   ): boolean {
     // 最近学習した語句との関連性を評価
@@ -147,7 +148,7 @@ export class ContextualAI extends MLEnhancedSpecialistAI<ContextualSignal> {
   private identifyCrossTabSynergy(
     word: string,
     currentTab: string,
-    allProgress: Record<string, WordProgress>
+    allProgress: Record<string, StorageWordProgress>
   ): string[] {
     const synergy: string[] = [];
 

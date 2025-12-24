@@ -22,9 +22,13 @@ export type { StorageWordProgress };
  */
 export type WordPosition = number;
 
-// 後方互換性のためのエイリアス（非推奨）
-/** @deprecated Use WordPosition (now a number 0-100) instead */
-export type WordCategory = WordPosition;
+/**
+ * 学習カテゴリ（文字列）
+ *
+ * 注: Position(0-100)とは別物。
+ * UI/説明・シグナル・デバッグではこちらのカテゴリ名を使用する。
+ */
+export type WordCategory = 'new' | 'incorrect' | 'still_learning' | 'mastered';
 
 /**
  * 認知負荷レベル

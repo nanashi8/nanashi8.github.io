@@ -252,7 +252,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
 
     return {
       values: Array.from(values),
-      confidence: this.calculatePredictionConfidence(values),
+      confidence: this.calculatePredictionConfidence(Array.from(values)),
       timestamp: Date.now(),
     };
   }
@@ -277,7 +277,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     if (!progress) return false;
 
     // 最低10回の試行が必要
-    return progress.memorizationAttempts.totalAttempts >= 10;
+    return (progress.memorizationAttempts ?? 0) >= 10;
   }
 
   /**

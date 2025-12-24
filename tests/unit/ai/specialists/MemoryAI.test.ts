@@ -7,6 +7,25 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { MemoryAI } from '../../../../src/ai/specialists/MemoryAI';
 import type { WordProgress } from '../../../../src/storage/progress/types';
+import type { SessionStats, WordData } from '../../../../src/ai/types';
+import { determineWordPosition, positionToCategory } from '../../../../src/ai/utils/categoryDetermination';
+
+function createSessionStats(overrides: Partial<SessionStats> = {}): SessionStats {
+  return {
+    totalAttempts: 0,
+    correctAnswers: 0,
+    incorrectAnswers: 0,
+    stillLearningAnswers: 0,
+    sessionStartTime: Date.now(),
+    sessionDuration: 0,
+    consecutiveIncorrect: 0,
+    masteredCount: 0,
+    stillLearningCount: 0,
+    incorrectCount: 0,
+    newCount: 0,
+    ...overrides,
+  };
+}
 
 describe('MemoryAI', () => {
   let memoryAI: MemoryAI;
@@ -15,7 +34,7 @@ describe('MemoryAI', () => {
     memoryAI = new MemoryAI();
   });
 
-  describe('determineCategoryPublic', () => {
+  describe('determineWordPosition (SSOT)', () => {
     it('新規語句（未出題）をnewとして判定', () => {
       const progress: WordProgress = {
         word: 'test',
@@ -32,11 +51,11 @@ describe('MemoryAI', () => {
         memorizationAttempts: 0,
       };
 
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('new');
+      const position = determineWordPosition(progress);
+      expect(positionToCategory(position)).toBe('new');
     });
 
-    it('正答率80%以上＆連続3回正解でmastered判定', () => {
+    it('連続3回正解でmastered判定', () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 4,
@@ -50,18 +69,21 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
+        memorizationCorrect: 4,
+        memorizationStillLearning: 0,
       };
 
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('mastered');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(10);
+      expect(positionToCategory(position)).toBe('mastered');
     });
 
-    it('正答率70%以上＆5回以上挑戦でmastered判定', () => {
+    it('連続2回正解＆正答率80%以上でmastered判定', () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 4,
         incorrectCount: 1,
-        consecutiveCorrect: 1,
+        consecutiveCorrect: 2,
         consecutiveIncorrect: 0,
         lastStudied: Date.now(),
         totalResponseTime: 15000,
@@ -70,10 +92,13 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
+        memorizationCorrect: 4,
+        memorizationStillLearning: 0,
       };
 
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('mastered');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(15);
+      expect(positionToCategory(position)).toBe('mastered');
     });
 
     it('正答率30%未満でincorrect判定', () => {
@@ -90,11 +115,14 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
+        memorizationCorrect: 1,
+        memorizationStillLearning: 0,
       };
 
       // accuracy = 1/5 = 0.2 (20%) < 30%
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('incorrect');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(75);
+      expect(positionToCategory(position)).toBe('incorrect');
     });
 
     it('連続2回不正解でincorrect判定', () => {
@@ -111,12 +139,15 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
+        memorizationCorrect: 1,
+        memorizationStillLearning: 0,
       };
 
       // accuracy = 1/5 = 0.2 (20%) < 30%
       // 連続2回不正解は正答率が低い傾向があるため、incorrectと判定される
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('incorrect');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(75);
+      expect(positionToCategory(position)).toBe('incorrect');
     });
 
     it('まだまだを0.5回正解として計算', () => {
@@ -133,21 +164,23 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000],
         memorizationAttempts: 4,
+        memorizationCorrect: 2,
         memorizationStillLearning: 2, // まだまだ2回 = 正解1回相当
       };
 
       // effectiveCorrect = 2 + 2*0.5 = 3
       // accuracy = 3/4 = 0.75
       // 75%は70%以上だが5回未満なのでstill_learning
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('still_learning');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(50);
+      expect(positionToCategory(position)).toBe('still_learning');
     });
 
     it('中間的な成績でstill_learning判定', () => {
       const progress: WordProgress = {
         word: 'test',
-        correctCount: 3,
-        incorrectCount: 2,
+        correctCount: 2,
+        incorrectCount: 3,
         consecutiveCorrect: 1,
         consecutiveIncorrect: 0,
         lastStudied: Date.now(),
@@ -157,13 +190,16 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
+        memorizationCorrect: 2,
+        memorizationStillLearning: 0,
       };
 
       // accuracy = 3/5 = 0.6 (60%)
       // 30%以上なのでincorrectではない
       // 80%未満なのでmasteredではない
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('still_learning');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(45);
+      expect(positionToCategory(position)).toBe('still_learning');
     });
 
     it('境界値テスト: 正答率80%ちょうどで連続3回正解', () => {
@@ -180,11 +216,14 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
+        memorizationCorrect: 4,
+        memorizationStillLearning: 0,
       };
 
       // accuracy = 4/5 = 0.8 (80%)
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('mastered');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(10);
+      expect(positionToCategory(position)).toBe('mastered');
     });
 
     it('境界値テスト: 正答率30%ちょうど', () => {
@@ -193,7 +232,7 @@ describe('MemoryAI', () => {
         correctCount: 3,
         incorrectCount: 7,
         consecutiveCorrect: 0,
-        consecutiveIncorrect: 1,
+        consecutiveIncorrect: 0,
         lastStudied: Date.now(),
         totalResponseTime: 30000,
         averageResponseTime: 3000,
@@ -201,20 +240,23 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 10,
+        memorizationCorrect: 3,
+        memorizationStillLearning: 0,
       };
 
       // accuracy = 3/10 = 0.3 (30%)
       // 30%未満ではないのでincorrectではない
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('still_learning');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(41);
+      expect(positionToCategory(position)).toBe('still_learning');
     });
 
-    it('境界値テスト: 正答率70%ちょうどで5回挑戦', () => {
+    it('境界値テスト: 連続2回正解＆正答率80%未満でnear_mastery判定', () => {
       const progress: WordProgress = {
         word: 'test',
-        correctCount: 3.5,
-        incorrectCount: 1.5,
-        consecutiveCorrect: 1,
+        correctCount: 3,
+        incorrectCount: 2,
+        consecutiveCorrect: 2,
         consecutiveIncorrect: 0,
         lastStudied: Date.now(),
         totalResponseTime: 15000,
@@ -223,35 +265,34 @@ describe('MemoryAI', () => {
         masteryLevel: 'learning',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
-        memorizationStillLearning: 1, // まだまだ1回
+        memorizationCorrect: 3,
+        memorizationStillLearning: 0,
       };
 
       // effectiveCorrect = 3 + 1*0.5 = 3.5
       // accuracy = 3.5/5 = 0.7 (70%)
-      const category = memoryAI.determineCategoryPublic(progress);
-      expect(category).toBe('mastered');
+      const position = determineWordPosition(progress);
+      expect(position).toBe(25);
+      expect(positionToCategory(position)).toBe('new');
     });
   });
 
   describe('analyze - category integration', () => {
-    it('新規語句をanalizeした際にnewカテゴリーを返す', () => {
-      const result = memoryAI.analyze({
-        word: 'test',
+    it('新規語句をanalizeした際にnewカテゴリーを返す', async () => {
+      const word: WordData = { word: 'test', meaning: '' };
+      const result = await memoryAI.analyze({
+        word,
         currentTab: 'memorization',
         progress: null,
-        sessionStats: {
-          correct: 0,
-          incorrect: 0,
-          total: 0,
-        },
-        allProgress: [],
+        sessionStats: createSessionStats(),
+        allProgress: {},
       });
 
       expect(result.category).toBe('new');
       expect(result.aiId).toBe('memory');
     });
 
-    it('定着済み語句をanalizeした際にmasteredカテゴリーを返す', () => {
+    it('定着済み語句をanalizeした際にmasteredカテゴリーを返す', async () => {
       const progress: WordProgress = {
         word: 'test',
         correctCount: 4,
@@ -265,18 +306,22 @@ describe('MemoryAI', () => {
         masteryLevel: 'mastered',
         responseTimes: [3000, 3000, 3000, 3000, 3000],
         memorizationAttempts: 5,
+        memorizationCorrect: 4,
+        memorizationStillLearning: 0,
       };
 
-      const result = memoryAI.analyze({
-        word: 'test',
+      const word: WordData = { word: 'test', meaning: '' };
+      const result = await memoryAI.analyze({
+        word,
         currentTab: 'memorization',
         progress,
-        sessionStats: {
-          correct: 4,
-          incorrect: 1,
-          total: 5,
-        },
-        allProgress: [progress],
+        sessionStats: createSessionStats({
+          totalAttempts: 5,
+          correctAnswers: 4,
+          incorrectAnswers: 1,
+          masteredCount: 1,
+        }),
+        allProgress: { [progress.word]: progress },
       });
 
       expect(result.category).toBe('mastered');
@@ -308,7 +353,7 @@ describe('MemoryAI', () => {
       const startTime = performance.now();
 
       testWords.forEach((wp) => {
-        memoryAI.determineCategoryPublic(wp);
+        determineWordPosition(wp);
       });
 
       const endTime = performance.now();

@@ -1121,6 +1121,7 @@ function SpellingView({
       {/* デバッグパネル */}
       {showDebugPanel && (
         <RequeuingDebugPanel
+          mode="spelling"
           currentIndex={spellingState.currentIndex}
           totalQuestions={spellingState.questions.length}
           questions={spellingState.questions}

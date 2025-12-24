@@ -179,7 +179,28 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       const { resetAllProgress } = await import('../progressStorage');
       await resetAllProgress();
 
-      resetStats();
+      // 画面上のセッション状態もリセット
+      setQuizStarted(false);
+      setCurrentQuestions([]);
+      setCurrentQuestionIndex(0);
+      setSelectedAnswer(null);
+      setSelectedWords([]);
+      setRemainingWords([]);
+      setTextInput('');
+      setAnswered(false);
+      setShowHint(false);
+      setScore(0);
+      setTotalAnswered(0);
+      setSessionStats({
+        correct: 0,
+        incorrect: 0,
+        review: 0,
+        mastered: 0,
+        newQuestions: 0,
+        reviewQuestions: 0,
+        consecutiveNew: 0,
+        consecutiveReview: 0,
+      });
       setCorrectStreak(0);
       setIncorrectStreak(0);
       console.log('✅ [文法タブ] 学習記録をリセットしました');
@@ -1515,10 +1536,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       {/* デバッグパネル */}
       {showDebugPanel && (
         <RequeuingDebugPanel
-          currentIndex={currentIndex}
-          totalQuestions={questions.length}
-          questions={questions}
-          requeuedWords={getRequeuedWords(questions, currentIndex)}
+          mode="grammar"
+          currentIndex={currentQuestionIndex}
+          totalQuestions={currentQuestions.length}
+          questions={currentQuestions.map((q) => ({ word: q.id, difficulty: q.difficulty }))}
+          requeuedWords={getRequeuedWords(currentQuestions, currentQuestionIndex)}
         />
       )}
     </div>

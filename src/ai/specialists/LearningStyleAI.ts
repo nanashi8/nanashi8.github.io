@@ -75,8 +75,8 @@ export class LearningStyleAI extends MLEnhancedSpecialistAI<LearningStyleSignal>
    * 学習スタイルプロファイルの判定
    */
   private determineStyleProfile(
-    progress: WordProgress | null,
-    allProgress: Record<string, WordProgress>
+    progress: StorageWordProgress | null,
+    allProgress: Record<string, StorageWordProgress>
   ): LearningStyle {
     // 簡易実装: 問題形式の選好から推定
     // 実際にはIPA利用頻度、視覚/聴覚コンテンツの利用状況などを分析
@@ -84,7 +84,7 @@ export class LearningStyleAI extends MLEnhancedSpecialistAI<LearningStyleSignal>
     const preferredTypes: Record<string, number> = {};
 
     Object.values(allProgress).forEach((p) => {
-      p.preferredQuestionTypes?.forEach((type) => {
+      (p as any).preferredQuestionTypes?.forEach((type: string) => {
         preferredTypes[type] = (preferredTypes[type] || 0) + 1;
       });
     });
@@ -110,15 +110,16 @@ export class LearningStyleAI extends MLEnhancedSpecialistAI<LearningStyleSignal>
    * 最適セッション長の計算
    */
   private calculateOptimalSessionLength(
-    allProgress: Record<string, WordProgress>,
+    allProgress: Record<string, StorageWordProgress>,
     _sessionStats: any
   ): number {
     // 過去の学習時間パターンから最適な長さを推定
     const allStudyTimes: number[] = [];
 
     Object.values(allProgress).forEach((p) => {
-      if (p.studyTimePatterns) {
-        allStudyTimes.push(...p.studyTimePatterns);
+      const studyTimePatterns = (p as any).studyTimePatterns as number[] | undefined;
+      if (studyTimePatterns) {
+        allStudyTimes.push(...studyTimePatterns);
       }
     });
 
@@ -151,7 +152,7 @@ export class LearningStyleAI extends MLEnhancedSpecialistAI<LearningStyleSignal>
    * 難易度設定の推定
    */
   private inferDifficultyPreference(
-    allProgress: Record<string, WordProgress>,
+    _allProgress: Record<string, StorageWordProgress>,
     sessionStats: any
   ): DifficultyPreference {
     const totalAttempts = sessionStats.totalAttempts;
@@ -173,7 +174,7 @@ export class LearningStyleAI extends MLEnhancedSpecialistAI<LearningStyleSignal>
   /**
    * モチベーションタイプの推定
    */
-  private inferMotivationType(allProgress: Record<string, WordProgress>): MotivationType {
+  private inferMotivationType(allProgress: Record<string, StorageWordProgress>): MotivationType {
     // 簡易実装: 学習パターンから推定
     // 実際には達成度、競争スコア、SNS共有頻度などを分析
 
@@ -198,7 +199,7 @@ export class LearningStyleAI extends MLEnhancedSpecialistAI<LearningStyleSignal>
     return 'social'; // デフォルト
   }
 
-  private calculateConfidence(allProgress: Record<string, WordProgress>): number {
+  private calculateConfidence(allProgress: Record<string, StorageWordProgress>): number {
     const totalWords = Object.keys(allProgress).length;
     const totalAttempts = Object.values(allProgress).reduce(
       (sum, p) => sum + (p.memorizationAttempts || 0),
