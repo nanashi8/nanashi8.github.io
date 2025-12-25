@@ -14,9 +14,16 @@ import { logger } from '@/utils/logger';
 import { calculateTimeBasedPriority } from '@/ai/nodes/TimeBasedPriorityAI';
 import { AdaptiveEducationalAINetwork } from '@/ai/meta/AdaptiveEducationalAINetwork';
 import type { QuestionContext } from '@/ai/meta/types';
+import type { WordCategory } from '@/ai/types';
+import {
+  isIncorrectWordCategory,
+  isMasteredWordCategory,
+  isNewWordCategory,
+  isStillLearningWordCategory,
+} from '@/ai/utils/wordCategoryPredicates';
 
 interface WordStatus {
-  category: 'new' | 'incorrect' | 'still_learning' | 'mastered';
+  category: WordCategory;
   priority: number;
   lastStudied: number;
   attempts: number;
@@ -223,11 +230,13 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
 
   // カテゴリ別にカウント
   const counts = {
-    mastered: questionsWithStatus.filter((q) => q.status?.category === 'mastered').length,
-    still_learning: questionsWithStatus.filter((q) => q.status?.category === 'still_learning')
+    mastered: questionsWithStatus.filter((q) => isMasteredWordCategory(q.status?.category)).length,
+    still_learning: questionsWithStatus.filter((q) =>
+      isStillLearningWordCategory(q.status?.category)
+    ).length,
+    incorrect: questionsWithStatus.filter((q) => isIncorrectWordCategory(q.status?.category))
       .length,
-    incorrect: questionsWithStatus.filter((q) => q.status?.category === 'incorrect').length,
-    new: questionsWithStatus.filter((q) => q.status?.category === 'new').length,
+    new: questionsWithStatus.filter((q) => isNewWordCategory(q.status?.category)).length,
   };
 
   // 上限チェック
@@ -310,17 +319,17 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
 
     // 復習モード（手動or自動）：分からない・まだまだに完全集中
     if (effectiveReviewMode) {
-      if (statusA?.category === 'incorrect') priorityA = 0;
-      if (statusB?.category === 'incorrect') priorityB = 0;
+      if (isIncorrectWordCategory(statusA?.category)) priorityA = 0;
+      if (isIncorrectWordCategory(statusB?.category)) priorityB = 0;
 
-      if (statusA?.category === 'still_learning' && priorityA !== 0) priorityA = 0.5;
-      if (statusB?.category === 'still_learning' && priorityB !== 0) priorityB = 0.5;
+      if (isStillLearningWordCategory(statusA?.category) && priorityA !== 0) priorityA = 0.5;
+      if (isStillLearningWordCategory(statusB?.category) && priorityB !== 0) priorityB = 0.5;
 
       // 覚えてる・新規は完全に出題しない
-      if (statusA?.category === 'mastered' && priorityA > 1) priorityA = 999;
-      if (statusB?.category === 'mastered' && priorityB > 1) priorityB = 999;
-      if (statusA?.category === 'new' && priorityA > 1) priorityA = 999;
-      if (statusB?.category === 'new' && priorityB > 1) priorityB = 999;
+      if (isMasteredWordCategory(statusA?.category) && priorityA > 1) priorityA = 999;
+      if (isMasteredWordCategory(statusB?.category) && priorityB > 1) priorityB = 999;
+      if (isNewWordCategory(statusA?.category) && priorityA > 1) priorityA = 999;
+      if (isNewWordCategory(statusB?.category) && priorityB > 1) priorityB = 999;
     } else {
       // 通常モード
       const riskA = statusA?.forgettingRisk || 0;
@@ -333,17 +342,19 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       if (riskB >= 100 && riskB < 150) priorityB = 0.2;
 
       // 覚えていない語句の優先度（大量バックログ対応）
-      if (statusA?.category === 'incorrect' && priorityA > 0.2) {
+      if (isIncorrectWordCategory(statusA?.category) && priorityA > 0.2) {
         if (hasLargeIncorrectBacklog) {
-          const isRecentA = statusA.lastStudied && Date.now() - statusA.lastStudied < 86400000;
+          const lastStudiedA = statusA?.lastStudied || 0;
+          const isRecentA = lastStudiedA > 0 && Date.now() - lastStudiedA < 86400000;
           priorityA = isRecentA ? 0.1 : 0.3;
         } else {
           priorityA = 0.3;
         }
       }
-      if (statusB?.category === 'incorrect' && priorityB > 0.2) {
+      if (isIncorrectWordCategory(statusB?.category) && priorityB > 0.2) {
         if (hasLargeIncorrectBacklog) {
-          const isRecentB = statusB.lastStudied && Date.now() - statusB.lastStudied < 86400000;
+          const lastStudiedB = statusB?.lastStudied || 0;
+          const isRecentB = lastStudiedB > 0 && Date.now() - lastStudiedB < 86400000;
           priorityB = isRecentB ? 0.1 : 0.3;
         } else {
           priorityB = 0.3;
@@ -351,21 +362,21 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
       }
 
       // まだまだ語句
-      if (statusA?.category === 'still_learning' && priorityA > 0.3) priorityA = 0.8;
-      if (statusB?.category === 'still_learning' && priorityB > 0.3) priorityB = 0.8;
+      if (isStillLearningWordCategory(statusA?.category) && priorityA > 0.3) priorityA = 0.8;
+      if (isStillLearningWordCategory(statusB?.category) && priorityB > 0.3) priorityB = 0.8;
 
       // 覚えてる語句
-      if (statusA?.category === 'mastered') {
+      if (isMasteredWordCategory(statusA?.category)) {
         if (riskA >= 50 && priorityA > 1) priorityA = 2.0;
         else if (priorityA > 2) priorityA = 4.5;
       }
-      if (statusB?.category === 'mastered') {
+      if (isMasteredWordCategory(statusB?.category)) {
         if (riskB >= 50 && priorityB > 1) priorityB = 2.0;
         else if (priorityB > 2) priorityB = 4.5;
       }
 
       // 新規問題の段階的導入
-      if (statusA?.category === 'new' && priorityA > 3) {
+      if (isNewWordCategory(statusA?.category) && priorityA > 3) {
         if (hasLargeIncorrectBacklog) {
           priorityA = 999; // 事実上出題されない
         } else if (canIntroduceNewQuestions) {
@@ -374,7 +385,7 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
           priorityA = shouldSuppressNew ? 5 : 3.5;
         }
       }
-      if (statusB?.category === 'new' && priorityB > 3) {
+      if (isNewWordCategory(statusB?.category) && priorityB > 3) {
         if (hasLargeIncorrectBacklog) {
           priorityB = 999; // 事実上出題されない
         } else if (canIntroduceNewQuestions) {
@@ -386,12 +397,12 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
 
       // 上限達成時の優先度調整
       if (shouldFocusOnIncorrect) {
-        if (statusA?.category === 'incorrect') priorityA = 0;
-        if (statusB?.category === 'incorrect') priorityB = 0;
+        if (isIncorrectWordCategory(statusA?.category)) priorityA = 0;
+        if (isIncorrectWordCategory(statusB?.category)) priorityB = 0;
       }
       if (shouldFocusOnStillLearning) {
-        if (statusA?.category === 'still_learning') priorityA = 0.05;
-        if (statusB?.category === 'still_learning') priorityB = 0.05;
+        if (isStillLearningWordCategory(statusA?.category)) priorityA = 0.05;
+        if (isStillLearningWordCategory(statusB?.category)) priorityB = 0.05;
       }
     }
 
@@ -425,7 +436,7 @@ export function sortQuestionsByPriority(questions: Question[], options: SortOpti
   otherQuestions.forEach((q) => {
     // 既に学習したことがある問題（incorrect, still_learning, mastered）は復習扱い
     const status = getWordStatus(q.word, mode);
-    if (status && status.category !== 'new') {
+    if (status && !isNewWordCategory(status.category)) {
       reviewQuestions.push(q);
     } else {
       newQuestions.push(q);

@@ -496,7 +496,7 @@ export class AcquisitionQueueManager {
     progress.correctRate = progress.todayCorrectCount / progress.totalAttempts;
 
     // 動的閾値の増加（誤答した単語は定着が難しいため閾値を上げる）
-    const oldThreshold = progress.dynamicThreshold;
+    const _oldThreshold = progress.dynamicThreshold;
     progress.dynamicThreshold = Math.min(
       MAX_THRESHOLD,
       progress.dynamicThreshold + THRESHOLD_INCREMENT_ON_WRONG
