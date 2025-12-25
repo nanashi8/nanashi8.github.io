@@ -600,6 +600,22 @@ function MemorizationView({
           for (const q of weakQuestions) dedup.set(q.word, q);
           candidateQuestions = Array.from(dedup.values());
         }
+        
+        // 🐛 DEBUG: scheduler.schedule()に渡す直前の状態を確認
+        if (import.meta.env.DEV) {
+          const weakWordsInCandidates = candidateQuestions.filter(q => {
+            const wp = wordProgress[q.word];
+            if (!wp) return false;
+            const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
+            if (attempts <= 0) return false;
+            const pos = determineWordPosition(wp, 'memorization');
+            return pos >= 40;
+          });
+          console.log(`🚨 [scheduler入力直前] candidateQuestions: ${candidateQuestions.length}語, まだまだ語: ${weakWordsInCandidates.length}語`);
+          if (weakWordsInCandidates.length > 0) {
+            console.log(`🚨 [scheduler入力直前] まだまだ語TOP5:`, weakWordsInCandidates.slice(0, 5).map(q => q.word));
+          }
+        }
 
         const scheduleResult = await scheduler.schedule({
           questions: candidateQuestions,
