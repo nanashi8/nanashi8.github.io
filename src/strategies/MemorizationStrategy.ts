@@ -12,6 +12,12 @@ import {
 } from './QuestionSelectionStrategy';
 import { calculateOptimalInterval, calculateForgettingRisk } from './learningUtils';
 import { logger } from '@/utils/logger';
+import {
+  isIncorrectWordCategory,
+  isMasteredWordCategory,
+  isNewWordCategory,
+  isStillLearningWordCategory,
+} from '@/ai/utils/wordCategoryPredicates';
 
 /**
  * 暗記タブ用の問題選択戦略クラス
@@ -51,10 +57,10 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
 
     // 復習モードの場合の優先度調整
     if (this.isReviewFocusMode) {
-      if (status.category === 'incorrect') return 0;
-      if (status.category === 'still_learning') return 0.5;
-      if (status.category === 'mastered') return 10;
-      if (status.category === 'new') return 8;
+      if (isIncorrectWordCategory(status.category)) return 0;
+      if (isStillLearningWordCategory(status.category)) return 0.5;
+      if (isMasteredWordCategory(status.category)) return 10;
+      if (isNewWordCategory(status.category)) return 8;
     }
 
     // 通常モード: 忘却リスクベース
@@ -62,11 +68,11 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
     if (risk >= 150) return 0.1; // 緊急
     if (risk >= 100) return 0.2; // 高リスク
 
-    if (status.category === 'incorrect') return Math.min(priority, 0.3);
-    if (status.category === 'still_learning') return Math.min(priority, 0.8);
+    if (isIncorrectWordCategory(status.category)) return Math.min(priority, 0.3);
+    if (isStillLearningWordCategory(status.category)) return Math.min(priority, 0.8);
 
     // masteredは忘却リスクに応じて調整
-    if (status.category === 'mastered') {
+    if (isMasteredWordCategory(status.category)) {
       if (risk >= 50) return 2.0;
       return 4.5;
     }
@@ -93,11 +99,14 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
 
       // カテゴリ別にカウント
       const counts = {
-        mastered: questionsWithStatus.filter((q) => q.status?.category === 'mastered').length,
-        still_learning: questionsWithStatus.filter((q) => q.status?.category === 'still_learning')
+        mastered: questionsWithStatus.filter((q) => isMasteredWordCategory(q.status?.category))
           .length,
-        incorrect: questionsWithStatus.filter((q) => q.status?.category === 'incorrect').length,
-        new: questionsWithStatus.filter((q) => q.status?.category === 'new').length,
+        still_learning: questionsWithStatus.filter((q) =>
+          isStillLearningWordCategory(q.status?.category)
+        ).length,
+        incorrect: questionsWithStatus.filter((q) => isIncorrectWordCategory(q.status?.category))
+          .length,
+        new: questionsWithStatus.filter((q) => isNewWordCategory(q.status?.category)).length,
       };
 
       // 上限チェックと優先度調整
@@ -277,14 +286,14 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
     // 🔥 復習モードが有効な場合: 分からないとまだまだを集中的に出題
     if (this.isReviewFocusMode) {
       // 分からない（incorrect）を最優先（約70%の出現率）
-      if (status.category === 'incorrect') return 0;
+      if (isIncorrectWordCategory(status.category)) return 0;
 
       // まだまだ（still_learning）を次に優先（約25%の出現率）
-      if (status.category === 'still_learning') return 0.5;
+      if (isStillLearningWordCategory(status.category)) return 0.5;
 
       // 覚えてる（mastered）と新規はほぼ出題しない（合計5%）
-      if (status.category === 'mastered') return 10;
-      if (status.category === 'new') return 8;
+      if (isMasteredWordCategory(status.category)) return 10;
+      if (isNewWordCategory(status.category)) return 8;
     } else {
       // 通常モード: 適応型間隔反復 + 忘却リスクベースの優先度
 
@@ -298,13 +307,13 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
       if (risk >= 100 && risk < 150) return 0.2;
 
       // 🔴 分からないは常に高優先（記憶の定着が最重要）
-      if (status.category === 'incorrect' && priority > 0.2) priority = 0.3;
+      if (isIncorrectWordCategory(status.category) && priority > 0.2) priority = 0.3;
 
       // 🟡 まだまだも高優先（定着させることが重要）
-      if (status.category === 'still_learning' && priority > 0.3) priority = 0.8;
+      if (isStillLearningWordCategory(status.category) && priority > 0.3) priority = 0.8;
 
       // 🟢 覚えてる: 忘却リスクに応じて出題タイミングを調整
-      if (status.category === 'mastered') {
+      if (isMasteredWordCategory(status.category)) {
         if (risk >= 50 && priority > 1) {
           priority = 2.0; // 中リスク → 適度に復習
         } else if (priority > 2) {
@@ -314,15 +323,15 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
 
       // 🆕 新規問題は復習状況に応じて大幅に抑制
       // フラッシュカード学習では、復習が優先で新規は少しずつ追加
-      if (status.category === 'new' && priority > 3) {
+      if (isNewWordCategory(status.category) && priority > 3) {
         priority = shouldSuppressNew ? 5 : 3.5; // 20%以上: 最後尾、20%未満: 後回し
       }
 
       // 上限に達した場合はさらに優先度を上げる
-      if (shouldFocusOnIncorrect && status.category === 'incorrect') {
+      if (shouldFocusOnIncorrect && isIncorrectWordCategory(status.category)) {
         priority = 0;
       }
-      if (shouldFocusOnStillLearning && status.category === 'still_learning') {
+      if (shouldFocusOnStillLearning && isStillLearningWordCategory(status.category)) {
         priority = 0.05;
       }
     }

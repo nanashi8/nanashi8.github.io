@@ -6,6 +6,10 @@
 import { Question } from '../types';
 import { BaseQuestionStrategy, SessionStats, LearningLimits } from './QuestionSelectionStrategy';
 import { logger } from '@/utils/logger';
+import {
+  isIncorrectWordCategory,
+  isStillLearningWordCategory,
+} from '@/ai/utils/wordCategoryPredicates';
 
 /**
  * 文法タブ用の問題選択戦略クラス
@@ -90,12 +94,12 @@ export class GrammarStrategy extends BaseQuestionStrategy<Question> {
 
         // 上限達成時の優先度調整
         if (shouldFocusOnIncorrect) {
-          if (statusA?.category === 'incorrect') priorityA = 0;
-          if (statusB?.category === 'incorrect') priorityB = 0;
+          if (isIncorrectWordCategory(statusA?.category)) priorityA = 0;
+          if (isIncorrectWordCategory(statusB?.category)) priorityB = 0;
         }
         if (shouldFocusOnLearning) {
-          if (statusA?.category === 'still_learning') priorityA = 0.5;
-          if (statusB?.category === 'still_learning') priorityB = 0.5;
+          if (isStillLearningWordCategory(statusA?.category)) priorityA = 0.5;
+          if (isStillLearningWordCategory(statusB?.category)) priorityB = 0.5;
         }
 
         // 優先度順

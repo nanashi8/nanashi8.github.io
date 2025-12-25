@@ -249,14 +249,20 @@ export function RequeuingDebugPanel({
           `|------|----------|----------|-----------|-----------|----------|--------------|-----------|----------|----------|\n` +
           aiEvaluations
             .map((evaluation) => {
-              const categoryLabel =
-                evaluation.category === 'incorrect'
-                  ? '❌ 分からない'
-                  : evaluation.category === 'still_learning'
-                    ? '🟡 まだまだ'
-                    : evaluation.category === 'mastered'
-                      ? '✅ 定着済'
-                      : '⚪ 新規';
+              const categoryLabel = (() => {
+                switch (evaluation.category) {
+                  case 'incorrect':
+                    return '❌ 分からない';
+                  case 'still_learning':
+                    return '🟡 まだまだ';
+                  case 'mastered':
+                    return '✅ 定着済';
+                  case 'new':
+                    return '⚪ 新規';
+                  default:
+                    return '⚪ 新規';
+                }
+              })();
               const position = (evaluation.position ?? 0).toFixed(0);
               const ai = evaluation.aiProposals || {};
               return `| **${evaluation.word}** | ${position} | ${categoryLabel} | ${(ai.memory ?? 0).toFixed(0)} | ${(ai.cognitiveLoad ?? 0).toFixed(0)} | ${(ai.errorPrediction ?? 0).toFixed(0)} | ${(ai.linguistic ?? 0).toFixed(0)} | ${(ai.contextual ?? 0).toFixed(0)} | ${(ai.learningStyle ?? 0).toFixed(0)} | ${(ai.gamification ?? 0).toFixed(0)} |`;
@@ -1232,7 +1238,7 @@ ${(() => {
     result += '**次の30問内の高Position語**（LocalStorage再計算済み）:\n';
     result += next30High
       .slice(0, 10)
-      .map((q: any, idx: number) => {
+      .map((q: any, _idx: number) => {
         const pos = q.position ?? 0;
         const origPos = q._originalPosition;
         const icon = pos >= 70 ? '🔴' : '🟡';
@@ -1274,13 +1280,30 @@ ${(() => {
 ## 🔄 スケジューリング状態診断
 
 ${(() => {
-  const progress = loadProgressSync();
+  const _progress = loadProgressSync();
   const functionCalls = JSON.parse(localStorage.getItem('debug_function_calls') || '[]');
   const answerLogs = JSON.parse(localStorage.getItem('debug_answer_logs') || '[]');
+  const rescheduleEvents = JSON.parse(localStorage.getItem('debug_reschedule_events') || '[]');
 
-  // 最後のsortAndBalance呼び出しを探す
-  const lastSchedule = functionCalls
-    .filter((f: any) => f.name === 'sortAndBalance' && f.args?.questionsCount > 100)
+  const normalizeCall = (f: any) => {
+    const name = f?.function ?? f?.name ?? f?.functionName ?? 'unknown';
+    const params = f?.params ?? f?.args ?? f?.parameters ?? null;
+    const ts = f?.timestamp ?? null;
+    return { name, params, ts };
+  };
+
+  const calls = Array.isArray(functionCalls) ? functionCalls.map(normalizeCall) : [];
+  const events = Array.isArray(rescheduleEvents) ? rescheduleEvents : [];
+
+  // 最後のsortAndBalance呼び出しを探す（初期スケジュール/途中再スケジュール両方）
+  const lastSchedule = calls.filter((c: any) => c.name === 'sortAndBalance').slice(-1)[0];
+
+  // 再スケジュールイベント（MemorizationViewが記録）
+  const lastTriggered = events
+    .filter((e: any) => e?.mode === mode && e?.phase === 'triggered')
+    .slice(-1)[0];
+  const lastApplied = events
+    .filter((e: any) => e?.mode === mode && e?.phase === 'applied')
     .slice(-1)[0];
 
   // 最後の解答を探す
@@ -1288,10 +1311,31 @@ ${(() => {
 
   let result = '**📋 現在のキュー生成情報**:\n';
 
+  // 再スケジュールの可視化（通知を消した代わり）
+  result += '\n**🔄 再スケジュール（debug_reschedule_events）**:\n';
+  if (lastApplied) {
+    const t = new Date(lastApplied.timestamp).toLocaleTimeString('ja-JP');
+    result += `- 最後の適用: ${t} (${lastApplied.reason || '理由なし'})\n`;
+    if (lastApplied.details) {
+      const before = (lastApplied.details as any).remainingBefore;
+      const after = (lastApplied.details as any).remainingAfter;
+      if (before != null || after != null) {
+        result += `- 残りキュー: ${before ?? '不明'} → ${after ?? '不明'}\n`;
+      }
+    }
+  } else {
+    result += '- まだ適用ログがありません\n';
+  }
+  if (lastTriggered) {
+    const t = new Date(lastTriggered.timestamp).toLocaleTimeString('ja-JP');
+    result += `- 最後のトリガー: ${t} (${lastTriggered.reason || '理由なし'})\n`;
+  }
+  result += '\n';
+
   if (lastSchedule) {
-    const scheduleTime = new Date(lastSchedule.timestamp).toLocaleTimeString('ja-JP');
+    const scheduleTime = new Date(lastSchedule.ts).toLocaleTimeString('ja-JP');
     result += '- 最後のスケジューリング: ' + scheduleTime + '\n';
-    result += '- 問題数: ' + (lastSchedule.args?.questionsCount || '不明') + '問\n';
+    result += '- 問題数: ' + ((lastSchedule.params as any)?.questionsCount || '不明') + '問\n';
   } else {
     result += '⚠️ スケジューリング履歴が見つかりません\n';
   }
@@ -1307,7 +1351,7 @@ ${(() => {
 
   // スケジューリング後に解答があったかチェック
   if (lastSchedule && lastAnswer) {
-    const scheduleTs = new Date(lastSchedule.timestamp).getTime();
+    const scheduleTs = new Date(lastSchedule.ts).getTime();
     const answerTs = new Date(lastAnswer.timestamp).getTime();
 
     if (answerTs > scheduleTs) {
@@ -1895,7 +1939,7 @@ ${(() => {
     let result = `**📊 挿入調整の実行履歴（最新${logs.length}件）**:\n\n`;
 
     const recentLogs = logs.slice(-10); // 最新10件を表示
-    recentLogs.forEach((log: any, idx: number) => {
+    recentLogs.forEach((log: any, _idx: number) => {
       const timeStr = new Date(log.timestamp).toLocaleTimeString('ja-JP');
       const adjusted = log.adjustedInsert !== log.originalInsert;
       const icon = adjusted ? '🎯' : '⚪';
@@ -2266,25 +2310,43 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                             </span>
                           )}
                         </div>
-                        <span
-                          className={
-                            log.category === 'incorrect'
-                              ? 'bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs'
-                              : log.category === 'still_learning'
-                                ? 'bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs'
-                                : log.category === 'new'
-                                  ? 'bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs'
-                                  : 'bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs'
-                          }
-                        >
-                          {log.category === 'incorrect'
-                            ? '🔴 分からない'
-                            : log.category === 'still_learning'
-                              ? '🟡 まだまだ'
-                              : log.category === 'new'
-                                ? '⚪ 新規'
-                                : '✅ 定着済'}
-                        </span>
+                        {(() => {
+                          const badge = (() => {
+                            switch (log.category) {
+                              case 'incorrect':
+                                return {
+                                  className: 'bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs',
+                                  label: '🔴 分からない',
+                                };
+                              case 'still_learning':
+                                return {
+                                  className:
+                                    'bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs',
+                                  label: '🟡 まだまだ',
+                                };
+                              case 'new':
+                                return {
+                                  className:
+                                    'bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs',
+                                  label: '⚪ 新規',
+                                };
+                              case 'mastered':
+                                return {
+                                  className:
+                                    'bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs',
+                                  label: '✅ 定着済',
+                                };
+                              default:
+                                return {
+                                  className:
+                                    'bg-gray-100 text-gray-800 px-2 py-0.5 rounded text-xs',
+                                  label: String(log.category ?? ''),
+                                };
+                            }
+                          })();
+
+                          return <span className={badge.className}>{badge.label}</span>;
+                        })()}
                       </div>
                       <div className="mt-1 flex gap-3 text-xs text-gray-600">
                         <span>正答: {log.progress.correctCount}</span>
@@ -2577,6 +2639,20 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             <ul className="mt-2 space-y-2">
               {aiEvaluations.slice(-10).map((evaluation: any, idx) => {
                 const word = evaluation.word || '(単語名なし)';
+                const badge = (() => {
+                  switch (evaluation.category) {
+                    case 'incorrect':
+                      return { className: 'bg-red-100 text-red-800', label: '分からない' };
+                    case 'still_learning':
+                      return { className: 'bg-yellow-100 text-yellow-800', label: 'まだまだ' };
+                    case 'mastered':
+                      return { className: 'bg-green-100 text-green-800', label: '定着済' };
+                    case 'new':
+                      return { className: 'bg-gray-100 text-gray-800', label: '未学習' };
+                    default:
+                      return { className: 'bg-gray-100 text-gray-800', label: '未学習' };
+                  }
+                })();
                 return (
                   <li key={idx} className="text-xs bg-white p-2 rounded">
                     <div className="flex justify-between items-center mb-1">
@@ -2584,24 +2660,8 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                         <span className="text-gray-500">#{idx + 1}</span>
                         <span className="font-mono font-bold text-base text-blue-600">{word}</span>
                       </div>
-                      <span
-                        className={`px-2 py-0.5 rounded text-xs ${
-                          evaluation.category === 'incorrect'
-                            ? 'bg-red-100 text-red-800'
-                            : evaluation.category === 'still_learning'
-                              ? 'bg-yellow-100 text-yellow-800'
-                              : evaluation.category === 'mastered'
-                                ? 'bg-green-100 text-green-800'
-                                : 'bg-gray-100 text-gray-800'
-                        }`}
-                      >
-                        {evaluation.category === 'incorrect'
-                          ? '分からない'
-                          : evaluation.category === 'still_learning'
-                            ? 'まだまだ'
-                            : evaluation.category === 'mastered'
-                              ? '定着済'
-                              : '未学習'}
+                      <span className={`px-2 py-0.5 rounded text-xs ${badge.className}`}>
+                        {badge.label}
                       </span>
                     </div>
                     <div className="flex flex-col gap-1 text-gray-600">

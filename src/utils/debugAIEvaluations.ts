@@ -65,14 +65,20 @@ function displayEvaluations(entries: [string, AIEvaluation][]): void {
         .map((v) => v.toFixed(1))
         .join('/');
 
-      const categoryEmoji =
-        evaluation.category === 'incorrect'
-          ? '🔴'
-          : evaluation.category === 'still_learning'
-            ? '🟡'
-            : evaluation.category === 'mastered'
-              ? '🟢'
-              : '⚪';
+      const categoryEmoji = (() => {
+        switch (evaluation.category) {
+          case 'incorrect':
+            return '🔴';
+          case 'still_learning':
+            return '🟡';
+          case 'mastered':
+            return '🟢';
+          case 'new':
+            return '⚪';
+          default:
+            return '⚪';
+        }
+      })();
 
       console.log(
         `${categoryEmoji} ${word.padEnd(20)} ${evaluation.finalPriority.toFixed(1).padStart(6)}[${scores}] (${evaluation.category})`
@@ -124,11 +130,17 @@ export function showDetailedEvaluation(word: string): void {
     console.log(`最終優先度: ${evaluation.finalPriority.toFixed(1)}`);
     console.log(`\n各AI担当の評価 (0-100):`);
     console.log(`  記憶AI (Memory):          ${evaluation.aiEvaluations.memory.toFixed(1)}`);
-    console.log(`  認知負荷AI (CognitiveLoad): ${evaluation.aiEvaluations.cognitiveLoad.toFixed(1)}`);
-    console.log(`  誤答予測AI (ErrorPrediction): ${evaluation.aiEvaluations.errorPrediction.toFixed(1)}`);
+    console.log(
+      `  認知負荷AI (CognitiveLoad): ${evaluation.aiEvaluations.cognitiveLoad.toFixed(1)}`
+    );
+    console.log(
+      `  誤答予測AI (ErrorPrediction): ${evaluation.aiEvaluations.errorPrediction.toFixed(1)}`
+    );
     console.log(`  定着度AI (Retention):      ${evaluation.aiEvaluations.retention.toFixed(1)}`);
     console.log(`  難易度AI (Difficulty):     ${evaluation.aiEvaluations.difficulty.toFixed(1)}`);
-    console.log(`  間隔反復AI (SpaceRepetition): ${evaluation.aiEvaluations.spaceRepetition.toFixed(1)}`);
+    console.log(
+      `  間隔反復AI (SpaceRepetition): ${evaluation.aiEvaluations.spaceRepetition.toFixed(1)}`
+    );
     console.log(`  忘却リスクAI (Forgetting): ${evaluation.aiEvaluations.forgetting.toFixed(1)}`);
     console.log(`\n更新日時: ${evaluation.timestamp}\n`);
   } catch (e) {

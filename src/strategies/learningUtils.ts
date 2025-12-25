@@ -4,6 +4,7 @@
  */
 
 import { logger } from '@/utils/logger';
+import { isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
 
 /**
  * 適応型間隔反復学習：個人の学習速度に最適化（SuperMemo SM-2アルゴリズムベース）
@@ -359,8 +360,7 @@ export function filterQuestionsNeedingReview(
     // 忘却リスクが高い、または不正解・学習中のカテゴリ
     return (
       (status.forgettingRisk && status.forgettingRisk >= 100) ||
-      status.category === 'incorrect' ||
-      status.category === 'still_learning'
+      isReviewWordCategory(status.category)
     );
   });
 }
