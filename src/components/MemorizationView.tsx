@@ -28,6 +28,7 @@ import type { AIAnalysisInput, SessionStats as AISessionStats } from '@/ai/types
 import { PerformanceMonitor } from '@/utils/performance-monitor';
 import { QualityMonitor } from '@/utils/quality-monitor';
 import { RequeuingDebugPanel } from './RequeuingDebugPanel';
+import { DebugCheckpoint } from '@/utils/DebugCheckpoint';
 // A/Bテストログ
 import { createSessionId, getOrCreateAnonymousUserId } from '@/metrics/ab/identity';
 import { assignVariant } from '@/metrics/ab/variant';
@@ -602,7 +603,6 @@ function MemorizationView({
         }
         
         // 🐛 DEBUG: scheduler.schedule()に渡す直前の状態を確認
-        const schedulerInputTime = performance.now();
         if (import.meta.env.DEV) {
           const weakWordsInCandidates = candidateQuestions.filter(q => {
             const wp = wordProgress[q.word];
@@ -612,19 +612,15 @@ function MemorizationView({
             const pos = determineWordPosition(wp, 'memorization');
             return pos >= 40;
           });
-          console.log(`🚨 [scheduler入力直前 ${new Date().toISOString().split('T')[1]}] candidateQuestions: ${candidateQuestions.length}語, まだまだ語: ${weakWordsInCandidates.length}語 (time: ${schedulerInputTime.toFixed(2)}ms)`);
-          if (weakWordsInCandidates.length > 0) {
-            console.log(`🚨 [scheduler入力直前] まだまだ語TOP5:`, weakWordsInCandidates.slice(0, 5).map(q => q.word));
-          }
-          // localStorageに保存（デバッグパネル用）
-          try {
-            localStorage.setItem('debug_scheduler_input_time', JSON.stringify({
-              timestamp: new Date().toISOString(),
-              performanceTime: schedulerInputTime,
-              weakWordsCount: weakWordsInCandidates.length,
-              candidateCount: candidateQuestions.length,
-            }));
-          } catch {}
+          
+          DebugCheckpoint.record(
+            'M_1',
+            'scheduler入力直前',
+            weakWordsInCandidates.length,
+            candidateQuestions.length,
+            undefined,
+            weakWordsInCandidates.map(q => q.word)
+          );
         }
 
         const scheduleResult = await scheduler.schedule({
