@@ -145,8 +145,8 @@ function TranslationView({
   // useQuestionRequeuフック
   const {
     reAddQuestion: _reAddQuestion,
-    clearExpiredFlags,
-    updateRequeueStats,
+    clearExpiredFlags: _clearExpiredFlags,
+    updateRequeueStats: _updateRequeueStats,
     getRequeuedWords,
   } = useQuestionRequeue<Question>();
 

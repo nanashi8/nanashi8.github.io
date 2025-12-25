@@ -15,7 +15,7 @@
 
 import { Question } from '@/types';
 import { WordProgress } from '@/storage/progress/progressStorage';
-import { extractWordMetadata, type WordMetadata } from './wordMetadata';
+import { extractWordMetadata as _extractWordMetadata, type WordMetadata as _WordMetadata } from './wordMetadata';
 import { getWordMetadata, getWordMetadataFromQuestion } from './wordMetadataCache';
 
 /**

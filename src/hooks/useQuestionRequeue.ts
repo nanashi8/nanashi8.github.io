@@ -47,7 +47,10 @@ interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
   }>;
 
   // 🎯 Position不整合検出（再スケジューリングトリガー）
-  checkPositionMismatch: (questions: T[], mode: 'memorization' | 'translation') => {
+  checkPositionMismatch: (
+    questions: T[],
+    mode: 'memorization' | 'translation' | 'spelling' | 'grammar'
+  ) => {
     needsRescheduling: boolean;
     mismatchCount: number;
     totalDiff: number;
@@ -66,6 +69,7 @@ export function useQuestionRequeue<
    * 問題を再追加（最優先キューに追加）
    * 🔒 分からない: 1-2問後に積極的に再出題
    * 🟡 まだまだ: 3-5問後に再出題
+   * 🧘 連続で分からないが続く場合: 出題間隔を少しずつ延ばして疲労を防ぐ
    * 🎯 Position-aware: 新たに高Positionになった単語は他の高Position単語の近くに配置
    */
   const reAddQuestion = useCallback((question: T, questions: T[], currentIndex: number): T[] => {
@@ -83,8 +87,27 @@ export function useQuestionRequeue<
       reAddedCount: (question.reAddedCount || 0) + 1,
     } as T;
 
-    // 直近ウィンドウ(次の10問)に同一IDがあれば重複再追加しない
-    const windowSize = 10; // 振動防止のため10問に拡大
+    const currentReaddCount = question.reAddedCount || 0;
+
+    // 可能ならPositionから「分からない/まだまだ」を推定（なければ still_learning 相当として扱う）
+    const questionPosition = (question as any).position;
+    const isIncorrectLike = questionPosition !== undefined && questionPosition >= 70;
+
+    // 🔒 強制装置: 再出題位置を決定
+    // 初回は比較的早めに再出題するが、連続で「分からない」が続くほど間隔を少しずつ延ばす
+    const baseOffset = isIncorrectLike
+      ? 1 + Math.floor(Math.random() * 2) // 1 or 2 (分からない)
+      : 3 + Math.floor(Math.random() * 3); // 3, 4, or 5 (まだまだ)
+
+    // 連続不正解が続くほど間隔を延長（上限あり）
+    const extraDelay = isIncorrectLike
+      ? Math.min(currentReaddCount * 3, 18)
+      : Math.min(currentReaddCount * 2, 12);
+
+    const plannedOffset = baseOffset + extraDelay;
+
+    // 直近ウィンドウに同一IDがあれば重複再追加しない（実際の挿入予定位置に合わせて探索範囲も拡張）
+    const windowSize = Math.min(30, Math.max(10, plannedOffset + 5));
     const windowEnd = Math.min(currentIndex + windowSize + 1, questions.length);
     const upcoming = questions.slice(currentIndex + 1, windowEnd);
     const existsNearby = upcoming.some((q: any) => {
@@ -102,25 +125,15 @@ export function useQuestionRequeue<
       return questions;
     }
 
-    // 🔒 強制装置: 再出題位置を決定
-    // incorrectの判定は難しいため、reAddedCountで判定
-    // 初回再出題(count=0): 3-5問後
-    // 2回目以降(count>=1): 1-2問後（積極的に再出題）
-    const isUrgent = (question.reAddedCount || 0) >= 1;
-    const baseOffset = isUrgent
-      ? 1 + Math.floor(Math.random() * 2) // 1 or 2 (分からない)
-      : 3 + Math.floor(Math.random() * 3); // 3, 4, or 5 (まだまだ)
-    
-    let insertPosition = Math.min(currentIndex + baseOffset, questions.length);
+    let insertPosition = Math.min(currentIndex + plannedOffset, questions.length);
 
     // 🎯 Position-aware insertion: 既存の高Position単語群に割り込み配置
     // キュー後半に高Position単語が埋もれている場合、それらの近くに配置
-    const questionPosition = (question as any).position;
     if (questionPosition !== undefined && questionPosition >= 40) {
       // 挿入位置から前方30問をスキャン（軽量なO(30)操作）
       const scanStart = Math.max(insertPosition, currentIndex + 1);
       const scanEnd = Math.min(scanStart + 30, questions.length);
-      
+
       // Position 40以上の単語を探す
       let lastHighPositionIdx = -1;
       for (let i = scanStart; i < scanEnd; i++) {
@@ -134,13 +147,15 @@ export function useQuestionRequeue<
       if (lastHighPositionIdx >= 0) {
         const originalPosition = insertPosition;
         insertPosition = lastHighPositionIdx + 1;
-        
+
         // 📊 Position-aware挿入ログをlocalStorageに記録
         try {
           const log = {
             timestamp: new Date().toISOString(),
             word: String(qid),
             position: questionPosition,
+            baseOffset,
+            extraDelay,
             originalInsert: originalPosition,
             adjustedInsert: insertPosition,
             currentIndex,
@@ -184,8 +199,13 @@ export function useQuestionRequeue<
       // KPI記録失敗は無視（開発用機能のため本番動作に影響なし）
     }
 
-    if (import.meta.env.DEV && isUrgent) {
-      console.log('🔴 [強制装置] 分からない問題を1-2問後に再出題:', String(qid));
+    if (import.meta.env.DEV && isIncorrectLike) {
+      console.log('🔴 [強制装置] 分からない問題を再出題（ただし繰り返し不正解ほど間隔延長）:', {
+        word: String(qid),
+        baseOffset,
+        extraDelay,
+        plannedOffset,
+      });
     }
 
     return [
@@ -282,13 +302,13 @@ export function useQuestionRequeue<
 
   /**
    * 🎯 Position不整合検出（再スケジューリングトリガー）
-   * 
+   *
    * questions配列のPositionとLocalStorageの実際のPositionを比較し、
    * 再スケジューリングが必要かを判定します。
-   * 
+   *
    * トリガー条件：
    * - 不整合語数が10語以上 AND 差分合計が200以上
-   * 
+   *
    * @param questions 現在のキュー
    * @param mode 学習モード（暗記/和訳）
    * @returns 再スケジューリング判定結果
@@ -296,7 +316,7 @@ export function useQuestionRequeue<
   const checkPositionMismatch = useCallback(
     (
       questions: T[],
-      mode: 'memorization' | 'translation'
+        mode: 'memorization' | 'translation' | 'spelling' | 'grammar'
     ): {
       needsRescheduling: boolean;
       mismatchCount: number;

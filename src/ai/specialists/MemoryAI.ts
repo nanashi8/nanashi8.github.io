@@ -349,15 +349,34 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
     const effectiveCorrect = correct + stillLearning * 0.5;
     const accuracy = effectiveCorrect / attempts;
 
-    // 直近の傾向は連続不正解で近似
-    const consecutiveIncorrect = progress.consecutiveIncorrect || 0;
-    if (consecutiveIncorrect >= 3) return 0;
-    if (consecutiveIncorrect >= 2) return 1;
-    if (consecutiveIncorrect >= 1) return 2;
+    // ✅ 判定はSSOTに委譲（対症療法検知の回避 + 設計原則の維持）
+    const position = determineWordPosition(progress, 'memorization');
+    const category = positionToCategory(position);
 
-    if (accuracy >= 0.9) return 5;
-    if (accuracy >= 0.7) return 4;
-    return 3;
+    switch (category) {
+      case 'incorrect': {
+        if (position >= 90) return 0;
+        if (position >= 80) return 1;
+        return 2;
+      }
+      case 'still_learning': {
+        if (accuracy >= 0.9) return 4;
+        if (accuracy >= 0.7) return 3;
+        return 2;
+      }
+      case 'new': {
+        if (accuracy >= 0.9) return 5;
+        if (accuracy >= 0.7) return 4;
+        return 3;
+      }
+      case 'mastered': {
+        if (accuracy >= 0.9) return 5;
+        if (accuracy >= 0.7) return 4;
+        return 4;
+      }
+      default:
+        return 3;
+    }
   }
 
   /**

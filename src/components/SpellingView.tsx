@@ -35,7 +35,6 @@ import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 // import { sortQuestionsByPriority as _sortQuestionsByPriority } from '../utils/questionPrioritySorter'; // QuestionSchedulerに統合済み
 import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
-import { useLearningEngine } from '../hooks/useLearningEngine';
 import { QuestionScheduler } from '@/ai/scheduler';
 import { RequeuingDebugPanel } from './RequeuingDebugPanel';
 
@@ -112,9 +111,9 @@ function SpellingView({
 
   // 適応的教育AIネットワーク
   const {
-    enabled: adaptiveEnabled,
+    enabled: _adaptiveEnabled,
     processQuestion: processAdaptiveQuestion,
-    currentStrategy,
+    currentStrategy: _currentStrategy,
   } = useAdaptiveNetwork();
 
   // メタAI分析ヘルパー関数（常時有効）
@@ -185,16 +184,13 @@ function SpellingView({
   });
 
   // 問題再出題管理フック
-  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } =
-    useQuestionRequeue<Question>();
-
-  // 統一学習エンジン
-  const learningEngine = useLearningEngine<Question>({
-    mode: 'spelling',
-    learningLimit: learningLimit,
-    reviewLimit: reviewLimit,
-    isReviewFocusMode: isReviewFocusMode || false,
-  });
+  const {
+    reAddQuestion,
+    clearExpiredFlags,
+    updateRequeueStats,
+    getRequeuedWords,
+    checkPositionMismatch,
+  } = useQuestionRequeue<Question>();
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [_isFullscreen, _setIsFullscreen] = useState(false);
@@ -202,6 +198,10 @@ function SpellingView({
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
+
+  // 🎯 暗記タブ同等: 途中の再吸引（再スケジュール）トリガー
+  const [answerCountSinceSchedule, setAnswerCountSinceSchedule] = useState(0);
+  const [needsRescheduling, setNeedsRescheduling] = useState(false);
 
   // 回答結果を追跡（動的AIコメント用）
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | undefined>(undefined);
@@ -298,6 +298,9 @@ function SpellingView({
       }
 
       setSortedQuestions(scheduled);
+      // スケジュール適用直後はカウンターをリセット
+      setAnswerCountSinceSchedule(0);
+      setNeedsRescheduling(false);
       logger.log('[SpellingView] QuestionScheduler適用完了', {
         total: scheduled.length,
         vibrationScore: scheduleResult.vibrationScore,
@@ -306,6 +309,80 @@ function SpellingView({
 
     initializeQuestions();
   }, [questions, learningLimit, reviewLimit, isReviewFocusMode, scheduler]);
+
+  // 🎯 暗記タブ同等: 途中の自動再スケジューリング（現在位置以降のみ）
+  useEffect(() => {
+    if (!needsRescheduling) return;
+    if (spellingState.questions.length === 0) return;
+
+    const currentIndexAtSchedule = spellingState.currentIndex;
+
+    const performRescheduling = async () => {
+      try {
+        const remaining = spellingState.questions.slice(currentIndexAtSchedule);
+        if (remaining.length === 0) {
+          setNeedsRescheduling(false);
+          return;
+        }
+
+        logger.info('[SpellingView] 自動再スケジューリング開始', {
+          answerCount: answerCountSinceSchedule,
+          currentIndex: currentIndexAtSchedule,
+          remaining: remaining.length,
+        });
+
+        const scheduleResult = await scheduler.schedule({
+          questions: remaining,
+          mode: 'spelling',
+          limits: {
+            learningLimit: learningLimit,
+            reviewLimit: reviewLimit,
+          },
+          sessionStats: {
+            correct: sessionStats.correct,
+            incorrect: sessionStats.incorrect,
+            still_learning: 0,
+            mastered: sessionStats.mastered || 0,
+            duration: Date.now() - quizStartTimeRef.current,
+          },
+          useMetaAI: true,
+          isReviewFocusMode: isReviewFocusMode || false,
+        });
+
+        setSpellingState((prev) => {
+          if (prev.currentIndex !== currentIndexAtSchedule) {
+            return prev;
+          }
+          return {
+            ...prev,
+            questions: [...prev.questions.slice(0, currentIndexAtSchedule), ...scheduleResult.scheduledQuestions],
+          };
+        });
+
+        setAnswerCountSinceSchedule(0);
+        setNeedsRescheduling(false);
+
+        logger.info('[SpellingView] 自動再スケジューリング完了', {
+          newRemaining: scheduleResult.scheduledQuestions.length,
+        });
+      } catch (error) {
+        logger.error('[SpellingView] 再スケジューリングエラー:', error);
+        setNeedsRescheduling(false);
+      }
+    };
+
+    performRescheduling();
+  }, [
+    needsRescheduling,
+    spellingState.currentIndex,
+    spellingState.questions,
+    scheduler,
+    learningLimit,
+    reviewLimit,
+    sessionStats,
+    isReviewFocusMode,
+    answerCountSinceSchedule,
+  ]);
 
   // letter-cardsに自動フォーカス
   useEffect(() => {
@@ -421,23 +498,39 @@ function SpellingView({
       incorrectWordsRef.current.push(currentQuestion.word);
     }
 
-    // 統一学習エンジンによる出題最適化（不正解時のみ）
+    // 🔒 暗記タブ同等: 不正解は近い将来に再出題として差し込み
+    let questionsAfterRequeue = spellingState.questions;
     if (!isCorrect && currentQuestion) {
-      const totalAnswered = sessionStats.correct + sessionStats.incorrect;
-      const updatedQuestions = learningEngine.updateQuestionsAfterAnswer(
-        spellingState.questions,
-        currentQuestion,
-        spellingState.currentIndex,
-        { isCorrect, totalAnswered }
-      );
-
-      if (updatedQuestions !== spellingState.questions) {
+      const updated = reAddQuestion(currentQuestion, spellingState.questions, spellingState.currentIndex);
+      questionsAfterRequeue = updated;
+      if (updated !== spellingState.questions) {
         setSpellingState((prev) => ({
           ...prev,
-          questions: updatedQuestions,
+          questions: updated,
         }));
       }
     }
+
+    // 🎯 暗記タブ同等: 50回ごと再吸引 + 10回ごとPosition不整合チェック
+    setAnswerCountSinceSchedule((prev) => {
+      const next = prev + 1;
+
+      // 50問ごとに強制再スケジューリング
+      if (next >= 50) {
+        setNeedsRescheduling(true);
+        return 0;
+      }
+
+      // 10問ごとにPosition不整合を検知して再スケジューリング
+      if (next % 10 === 0) {
+        const mismatchResult = checkPositionMismatch(questionsAfterRequeue, 'spelling');
+        if (mismatchResult.needsRescheduling) {
+          setNeedsRescheduling(true);
+        }
+      }
+
+      return next;
+    });
 
     // 新規/復習の統計を更新
     if (currentQuestion) {
@@ -589,6 +682,22 @@ function SpellingView({
 
     // 和訳タブ同様、即時に次の問題へ
     handleNext();
+
+    // 🎯 暗記タブ同等: スキップも「解答」としてカウントし、定期再スケジューリング対象に含める
+    setAnswerCountSinceSchedule((prev) => {
+      const next = prev + 1;
+      if (next >= 50) {
+        setNeedsRescheduling(true);
+        return 0;
+      }
+      if (next % 10 === 0) {
+        const mismatchResult = checkPositionMismatch(spellingState.questions, 'spelling');
+        if (mismatchResult.needsRescheduling) {
+          setNeedsRescheduling(true);
+        }
+      }
+      return next;
+    });
   };
 
   const handlePrevious = () => {

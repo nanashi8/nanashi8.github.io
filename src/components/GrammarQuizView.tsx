@@ -9,7 +9,6 @@ import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
 import { sessionKpi } from '../metrics/sessionKpi';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
-import { useLearningEngine } from '../hooks/useLearningEngine';
 import { QuestionScheduler } from '@/ai/scheduler';
 import { RequeuingDebugPanel } from './RequeuingDebugPanel';
 
@@ -76,6 +75,11 @@ type Grade = 'all' | '1' | '2' | '3' | '1-all' | '2-all' | '3-all' | string; // 
 // 全ての型のプロパティを含む包括的な型定義
 interface GrammarQuestion {
   id: string;
+  // QuestionScheduler/ProgressStorageと整合させるためのキー
+  word?: string;
+  // QuestionSchedulerで計算されたPosition（0-100）
+  position?: number;
+  finalPriority?: number;
   japanese: string;
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   hint: string;
@@ -122,7 +126,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
   // 適応的学習AIネットワーク（常時有効）
-  const { processQuestion: processAdaptiveQuestion, currentStrategy } = useAdaptiveNetwork();
+  const { processQuestion: processAdaptiveQuestion, currentStrategy: _currentStrategy } = useAdaptiveNetwork();
 
   // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
   const [scheduler] = useState(() => {
@@ -138,8 +142,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   });
 
   // 問題再出題管理フック
-  const { clearExpiredFlags, updateRequeueStats, getRequeuedWords } =
-    useQuestionRequeue<GrammarQuestion>();
+  const {
+    reAddQuestion,
+    clearExpiredFlags,
+    updateRequeueStats,
+    getRequeuedWords,
+    checkPositionMismatch,
+  } = useQuestionRequeue<GrammarQuestion>();
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
@@ -157,13 +166,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   // 復習モード
   const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
 
-  // 統一学習エンジン（isReviewFocusModeの後に初期化）
-  const learningEngine = useLearningEngine<GrammarQuestion>({
-    mode: 'grammar',
-    learningLimit: null,
-    reviewLimit: null,
-    isReviewFocusMode: isReviewFocusMode,
-  });
+  // 🎯 暗記タブ同等: 途中の再吸引（再スケジュール）トリガー
+  const [answerCountSinceSchedule, setAnswerCountSinceSchedule] = useState(0);
+  const [needsRescheduling, setNeedsRescheduling] = useState(false);
 
   // 復習モードトグル
   const handleReviewFocus = () => {
@@ -448,9 +453,20 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
       // QuestionSchedulerで出題順序を決定（シャッフルは内部で実施）
       // 🔥 重要: 前回セッションの統計データも引き継ぐ（より良い初期出題順序）
-      const scheduleResult = await scheduler.schedule({
-        questions: questions.map((q) => ({
-          word: q.id || q.japanese || 'unknown',
+      const toProgressKey = (q: GrammarQuestion): string => {
+        if (q.word) return q.word;
+        if (q.id) return `grammar_${q.id}`;
+        if (q.question) {
+          return `grammar_${q.question.slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
+        }
+        const fallback = q.japanese || q.sentence || 'unknown';
+        return `grammar_${String(fallback).slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
+      };
+
+      const scheduleInputs = questions.map((q) => {
+        const word = toProgressKey(q);
+        return {
+          word,
           meaning: q.japanese || '',
           reading: '',
           grade: 1,
@@ -459,7 +475,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           relatedWords: '',
           relatedFields: '',
           difficulty: q.difficulty || 'beginner',
-        })),
+        };
+      });
+
+      const scheduleResult = await scheduler.schedule({
+        questions: scheduleInputs,
         mode: 'grammar',
         limits: {
           learningLimit: learningLimit,
@@ -477,9 +497,23 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       });
 
       // スケジュールされたID順序にGrammarQuestionを並べ替え
-      const wordToQuestion = new Map(questions.map((q) => [q.id || q.japanese || 'unknown', q]));
+      const wordToQuestion = new Map(
+        questions.map((q) => {
+          const key = toProgressKey(q);
+          return [key, q] as const;
+        })
+      );
       const scheduledQuestions = scheduleResult.scheduledQuestions
-        .map((q) => wordToQuestion.get(q.word))
+        .map((q) => {
+          const original = wordToQuestion.get(q.word);
+          if (!original) return undefined;
+          return {
+            ...original,
+            word: q.word,
+            position: (q as any).position,
+            finalPriority: (q as any).finalPriority,
+          } as GrammarQuestion;
+        })
         .filter((q): q is GrammarQuestion => q !== undefined);
 
       // 振動スコア監視
@@ -514,6 +548,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         consecutiveNew: 0,
         consecutiveReview: 0,
       });
+      setAnswerCountSinceSchedule(0);
+      setNeedsRescheduling(false);
       setQuizStarted(true);
       setLoading(false);
     } catch (err) {
@@ -522,6 +558,121 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setLoading(false);
     }
   }, [quizType, grade]);
+
+  // 🎯 暗記タブ同等: 途中の自動再スケジューリング（現在位置以降のみ）
+  useEffect(() => {
+    if (!needsRescheduling) return;
+    if (currentQuestions.length === 0) return;
+
+    const currentIndexAtSchedule = currentQuestionIndex;
+
+    const toProgressKey = (q: GrammarQuestion): string => {
+      if (q.word) return q.word;
+      if (q.id) return `grammar_${q.id}`;
+      if (q.question) {
+        return `grammar_${q.question.slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
+      }
+      const fallback = q.japanese || q.sentence || 'unknown';
+      return `grammar_${String(fallback).slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
+    };
+
+    const performRescheduling = async () => {
+      try {
+        const remaining = currentQuestions.slice(currentIndexAtSchedule);
+        if (remaining.length === 0) {
+          setNeedsRescheduling(false);
+          return;
+        }
+
+        const scheduleInputs = remaining.map((q) => {
+          const word = toProgressKey(q);
+          return {
+            word,
+            meaning: q.japanese || '',
+            reading: '',
+            grade: 1,
+            category: 'grammar',
+            etymology: '',
+            relatedWords: '',
+            relatedFields: '',
+            difficulty: q.difficulty || 'beginner',
+          };
+        });
+
+        const wordToQuestion = new Map(
+          remaining.map((q) => {
+            const key = toProgressKey(q);
+            return [key, q] as const;
+          })
+        );
+
+        logger.info('[GrammarQuizView] 自動再スケジューリング開始', {
+          answerCount: answerCountSinceSchedule,
+          currentIndex: currentIndexAtSchedule,
+          remaining: remaining.length,
+        });
+
+        const scheduleResult = await scheduler.schedule({
+          questions: scheduleInputs,
+          mode: 'grammar',
+          limits: {
+            learningLimit: learningLimit,
+            reviewLimit: reviewLimit,
+          },
+          sessionStats: {
+            correct: sessionStats.correct,
+            incorrect: sessionStats.incorrect,
+            still_learning: sessionStats.review || 0,
+            mastered: sessionStats.mastered || 0,
+            duration: 0,
+          },
+          useMetaAI: true,
+          isReviewFocusMode: isReviewFocusMode,
+        });
+
+        const newRemaining = scheduleResult.scheduledQuestions
+          .map((q) => {
+            const original = wordToQuestion.get(q.word);
+            if (!original) return undefined;
+            return {
+              ...original,
+              word: q.word,
+              position: (q as any).position,
+              finalPriority: (q as any).finalPriority,
+            } as GrammarQuestion;
+          })
+          .filter((q): q is GrammarQuestion => q !== undefined);
+
+        setCurrentQuestions((prev) => {
+          if (prev.length === 0) return prev;
+          if (currentQuestionIndex !== currentIndexAtSchedule) return prev;
+          return [...prev.slice(0, currentIndexAtSchedule), ...newRemaining];
+        });
+
+        setAnswerCountSinceSchedule(0);
+        setNeedsRescheduling(false);
+
+        logger.info('[GrammarQuizView] 自動再スケジューリング完了', {
+          newRemaining: newRemaining.length,
+        });
+      } catch (error) {
+        logger.error('[GrammarQuizView] 再スケジューリングエラー:', error);
+        setNeedsRescheduling(false);
+      }
+    };
+
+    performRescheduling();
+  }, [
+    needsRescheduling,
+    currentQuestions,
+    currentQuestionIndex,
+    scheduler,
+    learningLimit,
+    reviewLimit,
+    sessionStats,
+    isReviewFocusMode,
+    answerCountSinceSchedule,
+  ]);
 
   const handleSkip = useCallback(async () => {
     if (!answered) {
@@ -587,11 +738,34 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         }
         setAnswered(false);
       }
+
+      // 🎯 暗記タブ同等: スキップも「解答」としてカウントし、定期再スケジューリング対象に含める
+      setAnswerCountSinceSchedule((prev) => {
+        const next = prev + 1;
+        if (next >= 50) {
+          setNeedsRescheduling(true);
+          return 0;
+        }
+        if (next % 10 === 0) {
+          const mismatchResult = checkPositionMismatch(currentQuestions, 'grammar');
+          if (mismatchResult.needsRescheduling) {
+            setNeedsRescheduling(true);
+          }
+        }
+        return next;
+      });
     } else {
       // 回答済みの場合は通常の次へ処理
       handleNext();
     }
-  }, [answered, currentQuestionIndex, currentQuestions.length, currentQuestion, handleNext]);
+  }, [
+    answered,
+    currentQuestionIndex,
+    currentQuestions,
+    currentQuestion,
+    handleNext,
+    checkPositionMismatch,
+  ]);
 
   // 設定をlocalStorageに保存
   useEffect(() => {
@@ -813,18 +987,31 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
     setLastAnswerTime(Date.now());
 
-    // 統一学習エンジンによる出題最適化
-    if (!isCorrect && !isReviewFocusMode) {
-      setCurrentQuestions((prev) => {
-        const updatedQuestions = learningEngine.updateQuestionsAfterAnswer(
-          prev,
-          currentQuestion,
-          currentQuestionIndex,
-          { isCorrect, totalAnswered }
-        );
-        return updatedQuestions;
-      });
+    // 🔒 暗記タブ同等: 不正解は近い将来に再出題として差し込み
+    let questionsAfterRequeue = currentQuestions;
+    if (!isCorrect && currentQuestion) {
+      const updated = reAddQuestion(currentQuestion, currentQuestions, currentQuestionIndex);
+      questionsAfterRequeue = updated;
+      if (updated !== currentQuestions) {
+        setCurrentQuestions(updated);
+      }
     }
+
+    // 🎯 暗記タブ同等: 50回ごと再吸引 + 10回ごとPosition不整合チェック
+    setAnswerCountSinceSchedule((prev) => {
+      const next = prev + 1;
+      if (next >= 50) {
+        setNeedsRescheduling(true);
+        return 0;
+      }
+      if (next % 10 === 0) {
+        const mismatchResult = checkPositionMismatch(questionsAfterRequeue, 'grammar');
+        if (mismatchResult.needsRescheduling) {
+          setNeedsRescheduling(true);
+        }
+      }
+      return next;
+    });
 
     // KPIロギング + 新規/復習の統計を更新
     {

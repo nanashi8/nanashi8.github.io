@@ -281,7 +281,16 @@ function App() {
     reAddQuestion: _reAddQuestion,
     clearExpiredFlags,
     updateRequeueStats,
+    checkPositionMismatch,
   } = useQuestionRequeue<Question>();
+
+  // 🎯 和訳タブ: 暗記/スペル同等の途中再吸引トリガー
+  const [translationAnswerCountSinceSchedule, setTranslationAnswerCountSinceSchedule] =
+    useState(0);
+  const [translationNeedsRescheduling, setTranslationNeedsRescheduling] = useState(false);
+  const [translationReschedulingReason, setTranslationReschedulingReason] = useState<string | null>(
+    null
+  );
 
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
@@ -304,6 +313,89 @@ function App() {
 
   // 言語学的関連性追跡用(最近学習した単語を記録)
   const recentlyStudiedWordsRef = useRef<string[]>([]);
+
+  // 🎯 和訳タブ: 途中の自動再スケジューリング（現在位置以降のみ）
+  useEffect(() => {
+    if (activeTab !== 'translation') return;
+    if (!translationNeedsRescheduling) return;
+    if (quizState.questions.length === 0) return;
+
+    const currentIndexAtSchedule = quizState.currentIndex;
+    const startIndex = quizState.answered ? currentIndexAtSchedule + 1 : currentIndexAtSchedule;
+
+    const performRescheduling = async () => {
+      try {
+        const remaining = quizState.questions.slice(startIndex);
+        if (remaining.length === 0) {
+          setTranslationNeedsRescheduling(false);
+          setTranslationReschedulingReason(null);
+          setTranslationAnswerCountSinceSchedule(0);
+          return;
+        }
+
+        logger.info('[Translation] 自動再スケジューリング開始', {
+          answerCount: translationAnswerCountSinceSchedule,
+          reason: translationReschedulingReason,
+          currentIndex: currentIndexAtSchedule,
+          startIndex,
+          remaining: remaining.length,
+        });
+
+        const scheduleResult = await translationScheduler.schedule({
+          questions: remaining,
+          mode: 'translation',
+          limits: {
+            learningLimit: null,
+            reviewLimit: null,
+          },
+          sessionStats: {
+            correct: sessionStats.correct,
+            incorrect: sessionStats.incorrect,
+            still_learning: sessionStats.review || 0,
+            mastered: sessionStats.mastered || 0,
+            duration: Date.now() - quizStartTimeRef.current,
+          },
+          useMetaAI: true,
+          isReviewFocusMode: reviewFocusMode,
+          hybridMode: true,
+        });
+
+        setQuizState((prev) => {
+          if (prev.currentIndex !== currentIndexAtSchedule) return prev;
+          const prefix = prev.questions.slice(0, startIndex);
+          return {
+            ...prev,
+            questions: [...prefix, ...scheduleResult.scheduledQuestions],
+          };
+        });
+
+        setTranslationAnswerCountSinceSchedule(0);
+        setTranslationNeedsRescheduling(false);
+        setTranslationReschedulingReason(null);
+
+        logger.info('[Translation] 自動再スケジューリング完了', {
+          newRemaining: scheduleResult.scheduledQuestions.length,
+        });
+      } catch (error) {
+        logger.error('[Translation] 再スケジューリングエラー:', error);
+        setTranslationNeedsRescheduling(false);
+        setTranslationReschedulingReason(null);
+      }
+    };
+
+    performRescheduling();
+  }, [
+    activeTab,
+    translationNeedsRescheduling,
+    translationAnswerCountSinceSchedule,
+    translationReschedulingReason,
+    quizState.questions,
+    quizState.currentIndex,
+    quizState.answered,
+    translationScheduler,
+    sessionStats,
+    reviewFocusMode,
+  ]);
 
   // クイズ設定（カスタムフック）
   const { autoAdvance: _autoAdvance, autoAdvanceDelay: _autoAdvanceDelay } = useQuizSettings();
@@ -1027,7 +1119,7 @@ function App() {
     // 7つの専門AIの判断を尊重しつつ、DTAと振動防止を適用
     // シグナル検出（疲労、苦戦、過学習、最適状態）により優先度を最大30%調整
     if (activeTab === 'translation' && filteredQuestions.length > 0) {
-      const progress = await loadProgress();
+      const _progress = await loadProgress();
       const hybridResult = await translationScheduler.schedule({
         questions: filteredQuestions,
         mode: 'translation',
@@ -1078,6 +1170,11 @@ function App() {
       answered: false,
       selectedAnswer: null,
     });
+
+    // 和訳タブ: 途中再吸引トリガーをリセット
+    setTranslationAnswerCountSinceSchedule(0);
+    setTranslationNeedsRescheduling(false);
+    setTranslationReschedulingReason(null);
 
     // セッション統計をリセット
     setSessionStats({
@@ -1377,19 +1474,42 @@ function App() {
       updateRequeueStats(currentQuestion, sessionStats, setSessionStats);
     }
 
+    // 🔒 暗記タブ同等: 不正解は近い将来に再出題として差し込み
+    let questionsAfterRequeue = quizState.questions;
+    if (!reviewFocusMode && currentQuestion && !isCorrect) {
+      const updated = _reAddQuestion(currentQuestion, quizState.questions, quizState.currentIndex);
+      questionsAfterRequeue = updated;
+    }
+
+    // 🎯 暗記タブ同等: 50回ごと再吸引 + 10回ごとPosition不整合チェック
+    if (!reviewFocusMode) {
+      setTranslationAnswerCountSinceSchedule((prev) => {
+        const next = prev + 1;
+        if (next >= 50) {
+          setTranslationNeedsRescheduling(true);
+          setTranslationReschedulingReason('50回解答に達しました');
+          return 0;
+        }
+        if (next % 10 === 0) {
+          const mismatchResult = checkPositionMismatch(questionsAfterRequeue, 'translation');
+          if (mismatchResult.needsRescheduling) {
+            setTranslationNeedsRescheduling(true);
+            setTranslationReschedulingReason(mismatchResult.reason);
+          }
+        }
+        return next;
+      });
+    }
+
     setQuizState((prev) => {
-      const newState = {
+      return {
         ...prev,
+        questions: questionsAfterRequeue,
         answered: true,
         selectedAnswer: answer,
         score: isCorrect ? prev.score + 1 : prev.score,
         totalAnswered: prev.totalAnswered + 1,
       };
-
-      // 自動で次へ進む機能を無効化（ユーザーが解答を確認できるように）
-      // autoAdvanceが有効でも、解答表示を確認してから手動で次へ進む
-
-      return newState;
     });
   };
 
@@ -1575,6 +1695,26 @@ function App() {
 
     // 次の問題の開始時刻を記録
     questionStartTimeRef.current = Date.now();
+
+    // 🎯 暗記タブ同等: スキップも「解答」としてカウントし、定期再スケジューリング対象に含める
+    if (!reviewFocusMode && activeTab === 'translation') {
+      setTranslationAnswerCountSinceSchedule((prev) => {
+        const next = prev + 1;
+        if (next >= 50) {
+          setTranslationNeedsRescheduling(true);
+          setTranslationReschedulingReason('50回解答に達しました');
+          return 0;
+        }
+        if (next % 10 === 0) {
+          const mismatchResult = checkPositionMismatch(quizState.questions, 'translation');
+          if (mismatchResult.needsRescheduling) {
+            setTranslationNeedsRescheduling(true);
+            setTranslationReschedulingReason(mismatchResult.reason);
+          }
+        }
+        return next;
+      });
+    }
   };
 
   // 難易度評価のハンドラー

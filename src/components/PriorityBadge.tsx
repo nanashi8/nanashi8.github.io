@@ -9,7 +9,7 @@ import {
   explainPriority,
   getPriorityColor,
   getPriorityLabel,
-  type PriorityExplanation,
+  // type PriorityExplanation,
 } from '@/ai/explainability/priorityExplanation';
 import type { WordProgress } from '@/storage/progress/types';
 
@@ -142,7 +142,7 @@ export const PriorityExplanationModal: React.FC<PriorityExplanationModalProps> =
   progress,
   onClose,
 }) => {
-  const explanation = explainPriority(progress);
+  const _explanation = explainPriority(progress);
 
   return (
     <div
