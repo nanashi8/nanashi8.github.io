@@ -947,7 +947,41 @@ function MemorizationView({
 
         const lockedPrefixCount = Math.min(currentIndexAtSchedule + 1, questions.length);
         const remaining = questions.slice(lockedPrefixCount);
-        if (remaining.length === 0) {
+        
+        // 🔥 再スケジューリング時に、現在のprogressから新たにまだまだ語を検出
+        const progress = loadProgressSync();
+        const wordProgress = progress.wordProgress || {};
+        const weakQuestions: Question[] = [];
+        
+        for (const q of baseQuestions) {
+          const wp = wordProgress[q.word];
+          if (!wp) continue;
+          const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
+          if (attempts <= 0) continue;
+          const pos = determineWordPosition(wp, 'memorization');
+          
+          if (pos >= 40) {
+            // remainingに既に含まれていない場合のみ追加
+            if (!remaining.find(rq => rq.word === q.word)) {
+              weakQuestions.push(q);
+            }
+          }
+        }
+        
+        // weakQuestionsをremainingに追加
+        let rescheduleTarget = remaining;
+        if (weakQuestions.length > 0) {
+          if (import.meta.env.DEV) {
+            console.log(`🔥 [再スケジューリング] まだまだ語を追加: ${weakQuestions.length}語`);
+            console.log(`   単語:`, weakQuestions.map(q => q.word));
+          }
+          const dedup = new Map<string, Question>();
+          for (const q of remaining) dedup.set(q.word, q);
+          for (const q of weakQuestions) dedup.set(q.word, q);
+          rescheduleTarget = Array.from(dedup.values());
+        }
+        
+        if (rescheduleTarget.length === 0) {
           logger.warn('[MemorizationView] 再スケジューリング対象なし');
           setAnswerCountSinceSchedule(0);
           setNeedsRescheduling(false);
@@ -961,7 +995,7 @@ function MemorizationView({
 
         // QuestionSchedulerで再スケジューリング
         const result = await scheduler.schedule({
-          questions: remaining,
+          questions: rescheduleTarget,
           mode: 'memorization',
           limits: {
             learningLimit: stillLearningLimit ?? null,
@@ -991,7 +1025,7 @@ function MemorizationView({
         setLearningStatusTabPulseKey(Date.now());
         recordRescheduleEvent('applied', reschedulingNotification ?? '自動再スケジューリング', {
           lockedPrefixCount,
-          remainingBefore: remaining.length,
+          remainingBefore: rescheduleTarget.length,
           remainingAfter: result.scheduledQuestions.length,
         });
 
