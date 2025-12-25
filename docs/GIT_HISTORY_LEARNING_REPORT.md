@@ -78,8 +78,8 @@
 
 ### 5. property-naming-error
 
-**修正前**: `        const totalCorrect = (wp.correctCount`
-**修正後**: `    return (progress.memorizationAttempts`
+**修正前**: `const totalCorrect = (wp.correctCount`
+**修正後**: `return (progress.memorizationAttempts`
 **影響ファイル**: .aitk/.commit-count, docs/features/grammar-passage-feature.md, docs/maintenance/WORD_GROUPING_OPERATIONS_GUIDE.md, public/data/vocabulary/high-school-intermediate-phrases.csv, src/ai/AICoordinator.ts, src/ai/demo.ts, src/ai/explainability/priorityExplanation.ts, src/ai/ml/MLEnhancedSpecialistAI.ts, src/ai/optimization/contextualLearningAI.ts, src/ai/optimization/wordGroupingQualityMetrics.ts, src/ai/optimization/wordMetadata.ts, src/ai/optimization/wordMetadataCache.ts, src/ai/optimization/wordMetadataDebug.ts, src/ai/scheduler/QuestionScheduler.ts, src/ai/scheduler/types.ts, src/ai/services/PredictionLogger.ts, src/ai/specialists/ContextualAI.ts, src/ai/specialists/ErrorPredictionAI.ts, src/ai/specialists/LearningStyleAI.ts, src/ai/specialists/LinguisticAI.ts, src/ai/specialists/MemoryAI.ts, src/ai/types.ts, src/ai/utils/categoryDetermination.ts, src/components/GrammarQuizView.tsx, src/components/MemorizationView.tsx, src/components/QuestionCard.tsx, src/components/RequeuingDebugPanel.tsx, src/components/SpellingView.tsx, src/components/TranslationView.tsx, src/hooks/useQuestionRequeue.ts, src/hooks/useWordPriority.ts, src/index.css, src/storage/progress/progressStorage.ts, src/storage/progress/statistics.ts, src/storage/progress/types.ts, src/utils/db-connection-pool.ts, tests/ai/ml/MemoryAI.ml.test.ts, tests/integration/learning-ai-integration.test.ts, tests/integration/phase1-performance.test.ts, tests/unit/ai/explainability/priorityExplanation.test.ts, tests/unit/ai/scheduler/QuestionScheduler.priority.test.ts, tests/unit/ai/specialists/MemoryAI.test.ts, tests/unit/ai/utils/quickCategoryDetermination.test.ts, tests/unit/questionScheduler.test.ts, tests/unit/utils/db-connection-pool.test.ts
 
 ### 6. logic-error
@@ -96,8 +96,8 @@
 
 ### 8. property-naming-error
 
-**修正前**: `      attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount`
-**修正後**: `        modeAttempts = wordProgress.memorizationAttempts`
+**修正前**: `attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount`
+**修正後**: `modeAttempts = wordProgress.memorizationAttempts`
 **影響ファイル**: .aitk/.commit-count, src/ai/scheduler/QuestionScheduler.ts, src/ai/utils/categoryDetermination.ts
 
 ### 9. logic-error
@@ -108,7 +108,7 @@
 
 ### 10. property-naming-error
 
-**修正前**: `**修正前**: ` wordProgress.incorrectCount+`**修正後**:` "fix": " const transCorrect = wordStat.translationCorrect`
+**修正前**: `**修正前**:` wordProgress.incorrectCount+`**修正後**:` "fix": " const transCorrect = wordStat.translationCorrect`
 **影響ファイル**: .aitk/.commit-count, .aitk/failure-patterns.json, .aitk/instructions/adaptive-guard-system.instructions.md, docs/GIT_HISTORY_LEARNING_REPORT.md, scripts/adaptive-guard-checks.sh, src/ai/scheduler/QuestionScheduler.ts, src/components/RequeuingDebugPanel.tsx
 
 ---
