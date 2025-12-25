@@ -189,7 +189,15 @@ export class QuestionScheduler {
           attempts: pq?.status?.attempts || 0,
         };
       });
-      localStorage.setItem('debug_postProcess_output', JSON.stringify(top30));
+      localStorage.setItem(
+        'debug_postProcess_output',
+        JSON.stringify({
+          timestamp: new Date().toISOString(),
+          mode: context.mode,
+          source: 'schedule',
+          top30,
+        })
+      );
     } catch {
       // localStorage失敗は無視
     }
@@ -1347,7 +1355,15 @@ export class QuestionScheduler {
           attempts: pq?.status?.attempts || 0,
         };
       });
-      localStorage.setItem('debug_postProcess_output', JSON.stringify(top30));
+      localStorage.setItem(
+        'debug_postProcess_output',
+        JSON.stringify({
+          timestamp: new Date().toISOString(),
+          mode: context.mode,
+          source: 'scheduleHybridMode',
+          top30,
+        })
+      );
     } catch {
       // localStorage失敗は無視
     }
@@ -1680,6 +1696,31 @@ export class QuestionScheduler {
     // 後処理
     const questions = this.postProcess(interleaved, context);
 
+    // 📊 localStorage保存: postProcess後のTOP30（finalPriorityMode）
+    try {
+      const top30 = questions.slice(0, 30).map((q) => {
+        const pq = interleaved.find((pq) => pq.question.word === q.word);
+        return {
+          word: q.word,
+          position: pq?.position || (q as any).position || 0,
+          category: pq?.status?.category,
+          attempts: pq?.status?.attempts || 0,
+          finalPriority: pq?.finalPriority ?? (q as any).finalPriority ?? 0,
+        };
+      });
+      localStorage.setItem(
+        'debug_postProcess_output',
+        JSON.stringify({
+          timestamp: new Date().toISOString(),
+          mode: context.mode,
+          source: 'scheduleFinalPriorityMode',
+          top30,
+        })
+      );
+    } catch {
+      // ignore
+    }
+
     // 振動スコア計算
     const vibrationScore = this.antiVibration.calculateVibrationScore(
       interleaved,
@@ -1727,6 +1768,58 @@ export class QuestionScheduler {
           finalPriority: pq.finalPriority,
         }) as unknown as Question
     );
+
+    // ✅ インターリーブ済みの順序を保持
+    // sortAndBalance() で GamificationAI.interleaveByCategory() により
+    // Position階層を跨いだ交互配置が既に適用されている場合、ここでPosition帯域ごとに
+    // 再構成すると「新規が前に来ない（分からない連打で新規が消える）」状態を作る。
+    // そのため、順序が“厳密なPosition帯域の単調並び”になっていない場合は、後処理の
+    // 並べ替え（関連語グループ化）をスキップして既存順序を返す。
+    const bandIndex = (pos: number) => {
+      if (pos >= 70) return 0;
+      if (pos >= 60) return 1;
+      if (pos >= 40) return 2;
+      if (pos >= 20) return 3;
+      return 4;
+    };
+
+    let isInterleavedAcrossBands = false;
+    let prevBand = -1;
+    for (const pq of questions) {
+      const b = bandIndex(pq.position);
+      if (prevBand !== -1 && b < prevBand) {
+        isInterleavedAcrossBands = true;
+        break;
+      }
+      prevBand = b;
+    }
+
+    // デバッグ用: postProcessの挙動を保存（パネルで原因切り分けに使う）
+    try {
+      const top30 = baseQuestions.slice(0, 30).map((q) => ({
+        word: q.word,
+        position: (q as any).position ?? 0,
+        attempts: (q as any).attempts ?? 0,
+      }));
+      localStorage.setItem(
+        'debug_postProcess_meta',
+        JSON.stringify({
+          timestamp: new Date().toISOString(),
+          mode: context.mode,
+          isInterleavedAcrossBands,
+          action: isInterleavedAcrossBands
+            ? 'skipped_contextual_reorder'
+            : 'applied_contextual_reorder',
+          top30,
+        })
+      );
+    } catch {
+      // ignore
+    }
+
+    if (isInterleavedAcrossBands) {
+      return baseQuestions;
+    }
 
     // 関連語グループ化機能を適用（contextualLearningAI）
     try {

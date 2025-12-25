@@ -82,6 +82,29 @@ function getModeStillLearning(progress: any, mode: ScheduleMode): number {
   return toFiniteNumber(progress.memorizationStillLearning, 0);
 }
 
+function readPostProcessTop30(): any[] {
+  const raw = localStorage.getItem('debug_postProcess_output');
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw) as any;
+    if (Array.isArray(parsed)) return parsed;
+    if (Array.isArray(parsed?.top30)) return parsed.top30;
+    return [];
+  } catch {
+    return [];
+  }
+}
+
+function readPostProcessMeta(): any | null {
+  const raw = localStorage.getItem('debug_postProcess_meta');
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
 export function RequeuingDebugPanel({
   mode,
   currentIndex,
@@ -207,13 +230,11 @@ export function RequeuingDebugPanel({
     // 次10問の分析対象
     // - 期待される挙動（上位10問に混入）と一致させるため、可能なら postProcess() TOP10 を参照
     // - 取得できない場合のみ、props（現在位置の次10問）にフォールバック
-    const postProcessTop30 = safeParse(localStorage.getItem('debug_postProcess_output'));
-    const postProcessTop10Words = Array.isArray(postProcessTop30)
-      ? postProcessTop30
-          .slice(0, 10)
-          .map((i: any) => String(i?.word ?? ''))
-          .filter(Boolean)
-      : [];
+    const postProcessTop30 = readPostProcessTop30();
+    const postProcessTop10Words = postProcessTop30
+      .slice(0, 10)
+      .map((i: any) => String(i?.word ?? ''))
+      .filter(Boolean);
     const fallbackNext10Words = questions
       .slice(currentIndex + 1, currentIndex + 11)
       .map((q) => String(q.word ?? ''))
@@ -517,13 +538,10 @@ ${boostData.boosted > 10 ? '\n_…他' + (boostData.boosted - 10) + '語_' : ''}
 
 ${(() => {
   // TOP30のカテゴリパターンを視覚化
-  const postProcessOutput = localStorage.getItem('debug_postProcess_output');
-  if (!postProcessOutput) return '⚠️ インターリーブ情報がありません';
+  const top30 = readPostProcessTop30().slice(0, 30);
+  if (top30.length === 0) return '⚠️ インターリーブ情報がありません';
 
   try {
-    const data = JSON.parse(postProcessOutput);
-    const top30 = data.slice(0, 30);
-
     // カテゴリ判定
     const categorized = top30.map((item: any) => {
       if (item.attempts > 0 && item.position >= 40 && item.position < 70) return 'まだまだ';
@@ -754,7 +772,7 @@ ${(() => {
 ${
   functionCalls.length > 0
     ? functionCalls
-        .slice(-30)
+        .slice(-10)
         .reverse()
         .map((call: any, idx: number) => {
           return (
@@ -816,11 +834,17 @@ ${(() => {
 
 **postProcess()後のTOP30（実際の出題キュー）**:
 ${(() => {
-  const postProcessOutput = localStorage.getItem('debug_postProcess_output');
-  if (!postProcessOutput) return '⚠️ postProcess()の出力が保存されていません';
-  try {
-    const data = JSON.parse(postProcessOutput);
-    return data
+  const meta = readPostProcessMeta();
+  const data = readPostProcessTop30();
+  if (!data || data.length === 0) return '⚠️ postProcess()の出力が保存されていません';
+
+  const metaLine = meta
+    ? `\n(メタ) action=${meta.action}, interleavedAcrossBands=${Boolean(meta.isInterleavedAcrossBands)}\n`
+    : '';
+
+  return (
+    metaLine +
+    data
       .slice(0, 30)
       .map((item: any, idx: number) => {
         const status =
@@ -846,10 +870,8 @@ ${(() => {
           status
         );
       })
-      .join('\n');
-  } catch {
-    return '⚠️ データ解析エラー';
-  }
+      .join('\n')
+  );
 })()}
 
 **🚨 重要**: sortAndBalance()とpostProcess()の出力が異なる場合、postProcess()が順序を破壊しています！
@@ -2068,8 +2090,8 @@ ${aiEvalTable}
 
 ${(() => {
   // 実際の出題キュー（postProcess output）を分析して、まだまだ・分からない語が確実に上位に来ているか検証
-  const postProcessData = safeParse(localStorage.getItem('debug_postProcess_output'));
-  if (!postProcessData || !Array.isArray(postProcessData)) {
+  const postProcessData = readPostProcessTop30();
+  if (!postProcessData || postProcessData.length === 0) {
     return '⚠️ postProcess出力が取得できません。スケジューリング後に再度確認してください。';
   }
 
