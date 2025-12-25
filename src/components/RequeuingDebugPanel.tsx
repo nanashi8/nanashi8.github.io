@@ -284,15 +284,18 @@ ${
       const weakWordsDetection = localStorage.getItem('debug_weak_words_detection');
       if (weakWordsDetection) {
         const detection = JSON.parse(weakWordsDetection);
+        const detectedCount = (detection.allWeakWordsInLS || 0) - (detection.missingFromBase?.length || 0);
+        const missingCount = detection.missingFromBase?.length || 0;
+        
         let section = '## 🚨 まだまだ語検出状況\n\n';
         section += `**timestamp**: ${detection.timestamp || 'N/A'}\n\n`;
         section += `- 📊 LocalStorageのまだまだ語: **${detection.allWeakWordsInLS || 0}語**\n`;
-        section += `- ✅ 検出成功: **${detection.weakQuestionsDetected || 0}語**\n`;
-        section += `- ❌ データ欠損: **${detection.dataMissing || 0}語**\n`;
+        section += `- ✅ 検出成功（baseQuestionsに存在）: **${detectedCount}語**\n`;
+        section += `- ❌ データ欠損（baseQuestionsに不在）: **${missingCount}語**\n`;
         section += `- 📁 baseQuestions総数: ${detection.baseQuestionsCount || 0}語\n`;
         section += `- 🔍 filtered総数: ${detection.filteredCount || 0}語\n\n`;
         
-        if (detection.dataMissing > 0) {
+        if (missingCount > 0) {
           section += '### ❌ 致命的エラー: baseQuestionsに存在しないまだまだ語\n\n';
           if (detection.missingFromBase && detection.missingFromBase.length > 0) {
             section += '```\n';
