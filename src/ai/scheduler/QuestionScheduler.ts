@@ -477,15 +477,28 @@ export class QuestionScheduler {
     const progressCache = this.loadProgressCache();
     
     // 🐛 DEBUG: 入力時点でまだまだ語が含まれているか確認
+    const calcPrioritiesInputTime = performance.now();
     if (import.meta.env.DEV) {
+      const schedulerInputData = JSON.parse(localStorage.getItem('debug_scheduler_input_time') || '{}');
+      const timeDiff = schedulerInputData.performanceTime ? (calcPrioritiesInputTime - schedulerInputData.performanceTime).toFixed(2) : 'N/A';
+      
       const weakWordsInInput = questions.filter(q => {
         const status = this.getWordStatusFromCache(q.word, context.mode, progressCache);
         return status && status.attempts > 0 && status.position >= 40;
       });
-      console.log(`🚨 [calculatePriorities入力] questions: ${questions.length}語, まだまだ語: ${weakWordsInInput.length}語`);
+      console.log(`🚨 [calculatePriorities入力 ${new Date().toISOString().split('T')[1]}] questions: ${questions.length}語, まだまだ語: ${weakWordsInInput.length}語 (time: ${calcPrioritiesInputTime.toFixed(2)}ms, Δ${timeDiff}ms)`);
       if (weakWordsInInput.length > 0) {
         console.log(`🚨 [calculatePriorities入力] まだまだ語TOP5:`, weakWordsInInput.slice(0, 5).map(q => q.word));
       }
+      // localStorageに保存
+      try {
+        localStorage.setItem('debug_calc_priorities_input_time', JSON.stringify({
+          timestamp: new Date().toISOString(),
+          performanceTime: calcPrioritiesInputTime,
+          weakWordsCount: weakWordsInInput.length,
+          questionsCount: questions.length,
+        }));
+      } catch {}
     }
 
     // 🎯 難易度別適応学習: 中級・上級の正答率が悪い場合、初級を優先
@@ -558,14 +571,27 @@ export class QuestionScheduler {
     });
     
     // 🐛 DEBUG: GamificationAI入力時点でまだまだ語を確認
+    const gamificationInputTime = performance.now();
     if (import.meta.env.DEV) {
+      const calcPrioritiesData = JSON.parse(localStorage.getItem('debug_calc_priorities_input_time') || '{}');
+      const timeDiff = calcPrioritiesData.performanceTime ? (gamificationInputTime - calcPrioritiesData.performanceTime).toFixed(2) : 'N/A';
+      
       const weakWordsInInput = prioritized.filter(pq => 
         pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
       );
-      console.log(`🚨 [GamificationAI入力] prioritized: ${prioritized.length}語, まだまだ語: ${weakWordsInInput.length}語`);
+      console.log(`🚨 [GamificationAI入力 ${new Date().toISOString().split('T')[1]}] prioritized: ${prioritized.length}語, まだまだ語: ${weakWordsInInput.length}語 (time: ${gamificationInputTime.toFixed(2)}ms, Δ${timeDiff}ms)`);
       if (weakWordsInInput.length > 0) {
         console.log(`🚨 [GamificationAI入力] まだまだ語TOP5:`, weakWordsInInput.slice(0, 5).map(pq => pq.question.word));
       }
+      // localStorageに保存
+      try {
+        localStorage.setItem('debug_gamification_input_time', JSON.stringify({
+          timestamp: new Date().toISOString(),
+          performanceTime: gamificationInputTime,
+          weakWordsCount: weakWordsInInput.length,
+          prioritizedCount: prioritized.length,
+        }));
+      } catch {}
     }
 
     const gamificationAI = new GamificationAI();
