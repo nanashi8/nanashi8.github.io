@@ -1772,6 +1772,34 @@ export class QuestionScheduler {
         });
       }
 
+      // 📊 postProcess後のTOP30を保存（デバッグパネル用）
+      try {
+        const top30 = reorderedQuestions.slice(0, 30).map((q, idx) => ({
+          rank: idx + 1,
+          word: q.word,
+          position: (q as any).position ?? 0,
+          attempts: 0, // postProcess後はattemptsが失われる可能性
+        }));
+        
+        // Position分布を計算
+        const positionDistribution = {
+          incorrect: top30.filter(q => q.position >= 70).length,
+          stillLearning: top30.filter(q => q.position >= 60 && q.position < 70).length,
+          newBoosted: top30.filter(q => q.position >= 40 && q.position < 60).length,
+          newNormal: top30.filter(q => q.position >= 20 && q.position < 40).length,
+          mastered: top30.filter(q => q.position < 20).length,
+        };
+        
+        localStorage.setItem('debug_postProcess_output', JSON.stringify({
+          timestamp: new Date().toISOString(),
+          top30,
+          positionDistribution,
+          totalQuestions: reorderedQuestions.length,
+        }));
+      } catch {
+        // localStorage失敗は無視
+      }
+
       return reorderedQuestions;
     } catch (error) {
       // エラー時はフォールバック
