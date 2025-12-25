@@ -5,7 +5,7 @@
  * テストケース数: 45個
  */
 
-import { describe, test, expect, beforeEach } from 'vitest';
+import { describe, test, expect, beforeEach, vi } from 'vitest';
 import {
   LearningPhaseDetector,
   LearningPhase,
@@ -633,18 +633,16 @@ describe('LearningPhaseDetector', () => {
     test('TC8.3: キャッシュの動作確認', () => {
       const status = createStatus(10, 6, 4, now - 86400000);
 
+      // detectPhase は内部で detectPhaseWithReason を呼ぶが、キャッシュヒット時は呼ばれない
+      const spy = vi.spyOn(detector as any, 'detectPhaseWithReason');
+
       // 1回目の判定
-      const start1 = performance.now();
       detector.detectPhase('cached-word', status);
-      const time1 = performance.now() - start1;
+      expect(spy).toHaveBeenCalledTimes(1);
 
       // 2回目の判定（キャッシュヒット）
-      const start2 = performance.now();
       detector.detectPhase('cached-word', status);
-      const time2 = performance.now() - start2;
-
-      // キャッシュヒット時の方が速い（ただし計測誤差があるので大まかな確認）
-      expect(time2).toBeLessThanOrEqual(time1 * 2);
+      expect(spy).toHaveBeenCalledTimes(1);
     });
   });
 

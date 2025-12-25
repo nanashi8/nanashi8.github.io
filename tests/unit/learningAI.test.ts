@@ -1,5 +1,5 @@
 // @test-guard-bypass: Unit test for priority sorting algorithm - no data files used
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect /* , beforeEach */ } from 'vitest';
 import { sortQuestionsByPriority as sortQuestionsByPriorityImpl } from '../../src/utils/questionPrioritySorter';
 import type { WordProgress } from '../../src/storage/progress/types';
 import type { Question } from '../../src/types';
@@ -17,7 +17,7 @@ function sortQuestionsByPriority(
   progressMap: Map<string, WordProgress>,
   isReviewFocusMode: boolean,
   concentrationThreshold: number,
-  newQuestionThreshold: number
+  _newQuestionThreshold: number
 ): Question[] {
   // LocalStorageにprogressMapを保存
   const progressObj: Record<string, WordProgress> = {};
@@ -181,7 +181,7 @@ describe('学習AIネットワーク - 21問目以降の出題順序テスト', 
     sorted.slice(0, 5).forEach((q, i) => {
       const progress = progressMap.get(q.word);
       if (progress) {
-        const total = progress.correctCount + progress.incorrectCount;
+        const _total = progress.correctCount + progress.incorrectCount;
         console.log(
           `  ${i + 1}. ${q.word}: 正解${progress.correctCount}/不正解${progress.incorrectCount} 連続${progress.consecutiveCorrect}`
         );

@@ -9,7 +9,7 @@ import {
   explainPriority,
   getPriorityColor,
   getPriorityLabel,
-  type PriorityExplanation,
+  // type PriorityExplanation,
 } from '../../../../src/ai/explainability/priorityExplanation';
 import type { WordProgress } from '../../../../src/storage/progress/types';
 

@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach /*, vi */ } from 'vitest';
 import { PerformanceMonitor } from '@/utils/performance-monitor';
 import { QualityMonitor } from '@/utils/quality-monitor';
 
@@ -28,7 +28,7 @@ describe('Phase 1: パフォーマンス最適化統合テスト', () => {
 
         // 模擬処理（実際の判定ロジック）
         const accuracy = Math.random();
-        const category = accuracy > 0.8 ? 'correct' :
+        const _category = accuracy > 0.8 ? 'correct' :
                         accuracy > 0.5 ? 'still_learning' : 'incorrect';
 
         const duration = PerformanceMonitor.end('quick-category');
@@ -61,7 +61,7 @@ describe('Phase 1: パフォーマンス最適化統合テスト', () => {
       for (let i = 0; i < 50; i++) {
         // UI応答（即座のカテゴリー判定のみ）
         PerformanceMonitor.start('ui-response');
-        const quickCategory = 'correct'; // 即座判定
+        const _quickCategory = 'correct'; // 即座判定
         const uiDuration = PerformanceMonitor.end('ui-response');
         uiResponseTime.push(uiDuration);
 
@@ -210,10 +210,10 @@ describe('Phase 1: パフォーマンス最適化統合テスト', () => {
         PerformanceMonitor.start('ui-interaction');
 
         // パターン2: 即座判定
-        const category = Math.random() > 0.5 ? 'correct' : 'incorrect';
+        const _category = Math.random() > 0.5 ? 'correct' : 'incorrect';
 
         // パターン3: メモ化された計算
-        const cachedStats = { /* cached */ };
+        const _cachedStats = { /* cached */ };
 
         PerformanceMonitor.end('ui-interaction');
       }
@@ -241,10 +241,10 @@ describe('Phase 1: パフォーマンス最適化統合テスト', () => {
         PerformanceMonitor.start('data-save');
 
         // パターン5: プール接続（10ms）
-        const connection = { /* from pool */ };
+        const _connection = { /* from pool */ };
 
         // データ書き込み（模擬）
-        const data = { word: 'test', progress: {} };
+        const _data = { word: 'test', progress: {} };
 
         PerformanceMonitor.end('data-save');
         QualityMonitor.recordDataSave(true, 0);
@@ -290,10 +290,11 @@ describe('Phase 1: パフォーマンス最適化統合テスト', () => {
 
     it('AI分析精度95%以上を維持', () => {
       // 100回のAI分析を模擬
+      // 乱数だと期待値ブレでフレークするため、決定的に95%精度を再現
       for (let i = 0; i < 100; i++) {
-        const isCorrect = Math.random() > 0.05; // 95%正確
-        const predicted = isCorrect ? 'correct' : 'incorrect';
-        const actual = isCorrect ? predicted : predicted === 'correct' ? 'incorrect' : 'correct';
+        const shouldMatch = i >= 5; // 95/100で予測が一致
+        const predicted = 'correct';
+        const actual = shouldMatch ? 'correct' : 'incorrect';
         QualityMonitor.recordAIAnalysis(predicted, 0.9, actual);
       }
 

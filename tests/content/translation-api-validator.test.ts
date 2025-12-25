@@ -1,5 +1,12 @@
 import { describe, it, expect, beforeAll } from 'vitest';
-import verbFormGrade1 from '../../public/data/verb-form-questions-grade1.json';
+import { readFileSync } from 'node:fs';
+
+function loadJson<T = unknown>(relativePath: string): T {
+  const raw = readFileSync(new URL(relativePath, import.meta.url), 'utf-8');
+  return JSON.parse(raw) as T;
+}
+
+const verbFormGrade1 = loadJson<any>('../../public/data/verb-form-questions-grade1.json');
 
 /**
  * 翻訳API・言語解析API連携による高度なコンテンツ品質検証

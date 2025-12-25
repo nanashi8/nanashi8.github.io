@@ -6,7 +6,7 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import type { Question } from '../../src/types';
+// import type { Question } from '../../src/types';
 
 // ブラウザ環境をシミュレート
 const setupBrowserEnvironment = () => {
