@@ -603,6 +603,7 @@ function MemorizationView({
         }
         
         // 🐛 DEBUG: scheduler.schedule()に渡す直前の状態を確認
+        let prepareSpanId: string | undefined;
         if (import.meta.env.DEV) {
           const weakWordsInCandidates = candidateQuestions.filter(q => {
             const wp = wordProgress[q.word];
@@ -615,7 +616,7 @@ function MemorizationView({
           
           // 🎫 トレース開始
           DebugTracer.startTrace('weak-words-flow');
-          DebugTracer.startSpan(
+          prepareSpanId = DebugTracer.startSpan(
             'MemorizationView.prepareScheduling',
             {
               weakWordsCount: weakWordsInCandidates.length,
@@ -653,7 +654,7 @@ function MemorizationView({
         const sortedQuestions = scheduleResult.scheduledQuestions;
 
         // 🎫 スパン終了（スケジュール完了）
-        if (import.meta.env.DEV) {
+        if (import.meta.env.DEV && prepareSpanId) {
           const weakWordsAfterScheduling = sortedQuestions.filter(q => {
             const wp = wordProgress[q.word];
             if (!wp) return false;
@@ -663,8 +664,11 @@ function MemorizationView({
             return pos >= 40;
           });
           
-          // MemorizationView.prepareSchedulingスパンの終了は不要（QuestionSchedulerがトレースを終了する）
-          // ここでは何もしない（トレース全体はQuestionScheduler側で終了済み）
+          DebugTracer.endSpan(prepareSpanId, {
+            weakWordsCountAfter: weakWordsAfterScheduling.length,
+            totalCountAfter: sortedQuestions.length,
+            weakWordsAfter: weakWordsAfterScheduling.map(q => q.word),
+          });
         }
 
         // デバッグ: スケジュール後の単語を確認
