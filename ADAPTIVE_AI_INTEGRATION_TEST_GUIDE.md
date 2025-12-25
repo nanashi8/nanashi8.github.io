@@ -56,8 +56,23 @@ location.reload();
 
 - ✅ 初回問題選択時に適応型AIのログが表示される
 - ✅ 次の問題選択時に適応型AIのログが表示される
-- ✅ 不正解（分からない）の問題が近い位置に再出題される
+- ✅ 不正解（分からない）の問題が近い位置に再出題される（初回は1-2問後）
+- ✅ 同じ問題が繰り返し「分からない」になり続ける場合、再出題間隔が少しずつ延びる（うんざり防止）
 - ✅ 正解（覚えてる）の問題は間隔を空けて出題される
+
+#### 再スケジュール（新規苦手化の吸引）の可視化
+
+暗記モードでは、学習状態が新規に悪化（例: new/mastered → still_learning/incorrect）した場合に、
+残りキュー（現在位置以降）へ再スケジュールが適用されます。
+
+- ✅ 可視化: ScoreBoard の「📈 学習状況」タブ文字が短時間パルスする
+- ✅ デバッグ: `debug_reschedule_events` に triggered/applied/skipped/error が記録される
+
+```javascript
+// コンソールで確認
+const events = JSON.parse(localStorage.getItem('debug_reschedule_events') || '[]');
+console.log(events);
+```
 
 #### 確認ポイント
 

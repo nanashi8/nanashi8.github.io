@@ -11,7 +11,7 @@ export default defineConfig({
   // タイムアウト設定
   timeout: 10 * 1000, // 10秒に短縮
   expect: {
-    timeout: 3000 // 3秒に短縮
+    timeout: 3000, // 3秒に短縮
   },
 
   // テスト実行設定
@@ -21,11 +21,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   // レポート設定
-  reporter: [
-    ['html'],
-    ['list'],
-    process.env.CI ? ['github'] : ['list']
-  ],
+  reporter: [['html', { open: 'never' }], ['list'], process.env.CI ? ['github'] : ['list']],
 
   // 共通設定
   use: {
