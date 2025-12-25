@@ -652,6 +652,21 @@ function MemorizationView({
 
         const sortedQuestions = scheduleResult.scheduledQuestions;
 
+        // 🎫 スパン終了（スケジュール完了）
+        if (import.meta.env.DEV) {
+          const weakWordsAfterScheduling = sortedQuestions.filter(q => {
+            const wp = wordProgress[q.word];
+            if (!wp) return false;
+            const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
+            if (attempts <= 0) return false;
+            const pos = determineWordPosition(wp, 'memorization');
+            return pos >= 40;
+          });
+          
+          // MemorizationView.prepareSchedulingスパンの終了は不要（QuestionSchedulerがトレースを終了する）
+          // ここでは何もしない（トレース全体はQuestionScheduler側で終了済み）
+        }
+
         // デバッグ: スケジュール後の単語を確認
         const debugInfo = {
           totalScheduled: sortedQuestions.length,
