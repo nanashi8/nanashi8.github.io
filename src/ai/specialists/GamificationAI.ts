@@ -178,6 +178,10 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
   /**
    * まだまだ語のPosition引き上げ（新規より優先させる）
    * Position 40-70, attempts > 0 の単語を +15 引き上げ
+   *
+  * 🎯 段階的ブースト戦略:
+  * - 分からない（70-100）がある → 通常ブースト（Position 60-69）
+  * - 分からないが0になった → 強化ブースト（ただしPosition階層を崩さず60-69の上位に寄せる）
    */
   boostStillLearningQuestions<
     T extends { position: number; attempts?: number; question?: { word: string } },
@@ -187,11 +191,20 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     const stillLearning = questions.filter(
       (pq) => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
     );
+    const incorrect = questions.filter((pq) => pq.position >= 70 && (pq.attempts ?? 0) > 0);
 
     const isDevMode = import.meta.env?.DEV ?? false;
 
+    // 🎯 分からないが0になったら「まだまだ集中モード」発動
+    const isFocusMode = incorrect.length === 0 && stillLearning.length > 0;
+
     if (isDevMode) {
-      console.log(`🎯 [GamificationAI] まだまだ語ブースト開始: ${stillLearning.length}語`);
+      console.log(
+        `🎯 [GamificationAI] まだまだ語ブースト開始: ${stillLearning.length}語 ${isFocusMode ? '【集中モード】' : '【通常モード】'}`
+      );
+      if (isFocusMode) {
+        console.log('🔥 [集中モード] 分からない0語 → まだまだを強化ブースト（Position 60-69の上位へ寄せる）');
+      }
     }
 
     if (stillLearning.length === 0) {
@@ -202,12 +215,25 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
 
     const changed: Array<{ word: string; before: number; after: number }> = [];
 
-    // まだまだ語を引き上げ（Position 60-69に引き上げ、新規より確実に優先）
+    // まだまだ語を引き上げ
     for (const sq of stillLearning) {
       const before = sq.position;
-      // まだまだ語を最優先にするため大幅ブースト（Position 60-69ゾーンに配置）
-      const boostAmount = before < 50 ? 20 : before < 60 ? 10 : 5; // 50未満は+20、50-60は+10、60以上は+5
-      sq.position = Math.max(Math.min(sq.position + boostAmount, 69), 60); // 🚨 Position階層の不変条件: 60-69範囲内（まだまだ専用ゾーン）
+
+      let targetPosition: number;
+      if (isFocusMode) {
+        // 🔥 集中モード: Position階層を崩さず、60-69の上位（68-69）へ寄せる
+        // これで新規より確実に優先されつつ、分からない範囲（70+）へ侵入しない
+        const boostAmount = before < 50 ? 25 : before < 60 ? 15 : 8;
+        targetPosition = Math.min(before + boostAmount, 69);
+        targetPosition = Math.max(targetPosition, 68);
+      } else {
+        // 通常モード: Position 60-69（まだまだ専用ゾーン）
+        const boostAmount = before < 50 ? 20 : before < 60 ? 10 : 5;
+        targetPosition = Math.min(before + boostAmount, 69);
+        targetPosition = Math.max(targetPosition, 60);
+      }
+
+      sq.position = targetPosition;
       const word = sq.question?.word || '(unknown)';
 
       changed.push({ word, before, after: sq.position });
@@ -218,10 +244,14 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     }
 
     // 🔍 Position階層検証（デバッグ用）
-    const violatingStill = stillLearning.filter((sq) => sq.position < 60 || sq.position >= 70);
+    const expectedMin = isFocusMode ? 68 : 60;
+    const expectedMax = 69;
+    const violatingStill = stillLearning.filter(
+      (sq) => sq.position < expectedMin || sq.position > expectedMax
+    );
     if (violatingStill.length > 0 && isDevMode) {
       console.error(
-        `❌ [Position階層違反] まだまだ語がPosition 60-69範囲外: ${violatingStill.length}語`
+        `❌ [Position階層違反] まだまだ語がPosition ${expectedMin}-${expectedMax}範囲外: ${violatingStill.length}語`
       );
       console.error('🚨 これは「あっちを立てればこっちが立たず」の原因です');
       violatingStill.slice(0, 3).forEach((sq) => {
@@ -235,10 +265,15 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
       localStorage.setItem(
         'debug_position_hierarchy_still',
         JSON.stringify({
+          mode: isFocusMode ? 'focus' : 'normal',
+          targetRange: `${expectedMin}-${expectedMax}`,
           violations: violatingStill.map((sq) => ({
             word: sq.question?.word || '(unknown)',
             position: sq.position,
-            type: sq.position < 60 ? 'still_below_60' : 'still_above_70',
+            type:
+              sq.position < expectedMin
+                ? `still_below_${expectedMin}`
+                : `still_above_${expectedMax}`,
           })),
           totalStill: stillLearning.length,
           violationCount: violatingStill.length,

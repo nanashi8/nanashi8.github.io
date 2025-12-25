@@ -699,7 +699,6 @@ python3 scripts/grammar_stats_report.py
 ### 開発・運用
 - **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)**: クイックリファレンス
 - **[AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md)**: AI開発ワークフロー
-- **[scripts/README.md](../scripts/README.md)**: スクリプト集の詳細
 
 ---
 

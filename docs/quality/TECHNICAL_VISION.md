@@ -517,5 +517,5 @@ UI Re-render (最適化済み)
 **関連ドキュメント**: 
 - [品質管理パイプライン](../quality/QUALITY_PIPELINE_LEGACY.md)
 - [健康診断レポート](HEALTH_CHECK_REPORT.md)
-- [TypeScript開発ガイドライン](../TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)
-- [CSS開発ガイドライン](../CSS_DEVELOPMENT_GUIDELINES.md)
+- [TypeScript開発ガイドライン](../development/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)
+- [CSS開発ガイドライン](../development/CSS_DEVELOPMENT_GUIDELINES.md)

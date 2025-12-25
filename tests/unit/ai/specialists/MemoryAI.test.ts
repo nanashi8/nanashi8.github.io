@@ -101,6 +101,32 @@ describe('MemoryAI', () => {
       expect(positionToCategory(position)).toBe('mastered');
     });
 
+    it('「分からない→まだまだ(自動昇格)」は改善が見えたらsavedPositionを固定しない', () => {
+      // savedPosition=55（INCORRECT_LIGHT相当）だが、まだまだボタン履歴は無い（memorizationStillLearning=0）
+      // 直近で正解が入って精度が60%以上なら、new(30)へ降りて解消方向に進むべき
+      const progress: WordProgress = {
+        word: 'test',
+        correctCount: 3,
+        incorrectCount: 2,
+        consecutiveCorrect: 1,
+        consecutiveIncorrect: 0,
+        lastStudied: Date.now(),
+        totalResponseTime: 15000,
+        averageResponseTime: 3000,
+        difficultyScore: 50,
+        masteryLevel: 'learning',
+        responseTimes: [3000, 3000, 3000, 3000, 3000],
+        memorizationAttempts: 5,
+        memorizationCorrect: 3,
+        memorizationStillLearning: 0,
+        memorizationPosition: 55,
+      };
+
+      const position = determineWordPosition(progress, 'memorization');
+      expect(position).toBe(30);
+      expect(positionToCategory(position)).toBe('new');
+    });
+
     it('正答率30%未満でincorrect判定', () => {
       const progress: WordProgress = {
         word: 'test',

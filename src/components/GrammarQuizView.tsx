@@ -990,7 +990,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 🔒 暗記タブ同等: 不正解は近い将来に再出題として差し込み
     let questionsAfterRequeue = currentQuestions;
     if (!isCorrect && currentQuestion) {
-      const updated = reAddQuestion(currentQuestion, currentQuestions, currentQuestionIndex);
+      const updated = reAddQuestion(currentQuestion, currentQuestions, currentQuestionIndex, 'grammar');
       questionsAfterRequeue = updated;
       if (updated !== currentQuestions) {
         setCurrentQuestions(updated);

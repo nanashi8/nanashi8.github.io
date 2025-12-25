@@ -99,7 +99,76 @@ Markdown files
 ❌ 断線リンク: 76
 ```
 
-### 新しいドキュメント作成時
+### 🤖 AI（エージェント）による新規ドキュメント作成の必須手順
+
+**【重要】ドキュメント（.mdファイル）を作成する際は、必ずこの手順に従ってください。**
+
+#### ステップ1: ディレクトリ別の命名規則を確認
+
+ファイルを作成する前に、ターゲットディレクトリの命名規則を確認してください：
+
+| ディレクトリ | 命名規則 | 例 |
+|-------------|---------|-----|
+| `docs/specifications/` | `番号-kebab-case.md` | `01-project-overview.md` |
+| `docs/guidelines/` | `UPPER_SNAKE_CASE.md` | `META_AI_TROUBLESHOOTING.md` |
+| `docs/how-to/` | `UPPER_SNAKE_CASE.md` | `TESTING_GUIDE.md` |
+| `docs/references/` | `UPPER_SNAKE_CASE.md` | `QUICK_REFERENCE.md` |
+| `docs/reports/` | `UPPER_SNAKE_CASE.md` | `DATA_QUALITY_REPORT.md` |
+| `docs/quality/` | `UPPER_SNAKE_CASE.md` | `QUALITY_CHECKLIST.md` |
+| `docs/plans/` | `UPPER_SNAKE_CASE.md` | `PHASE_1_TASKS.md` |
+| `docs/processes/` | `UPPER_SNAKE_CASE.md` | `AUTOMATION_GUIDE.md` |
+| `docs/maintenance/` | `UPPER_SNAKE_CASE.md` | `SELF_MANAGING_PROJECT.md` |
+| `docs/features/` | `kebab-case.md` | `random-skip-feature.md` |
+| `docs/development/` | `kebab-case.md` または `UPPER_SNAKE_CASE.md` | `setup.md` or `TYPESCRIPT_DEVELOPMENT_GUIDELINES.md` |
+
+**詳細**: [DOCUMENT_NAMING_CONVENTION.md](../../docs/guidelines/DOCUMENT_NAMING_CONVENTION.md)
+
+#### ステップ2: ファイル名を決定
+
+命名規則に従ってファイル名を決定します：
+
+```bash
+# ❌ 間違った例（how-to/に小文字で作成）
+docs/how-to/testing-guide.md
+
+# ✅ 正しい例（UPPER_SNAKE_CASE）
+docs/how-to/TESTING_GUIDE.md
+```
+
+#### ステップ3: ファイルを作成
+
+`create_file` ツールで正しいファイル名で作成します。
+
+```typescript
+create_file({
+  filePath: '/path/to/docs/how-to/TESTING_GUIDE.md',
+  content: '...'
+})
+```
+
+#### ステップ4: 作成後に必ず検証
+
+ファイル作成後、必ず命名規則の検証を実行してください：
+
+```bash
+npm run docs:analyze:naming
+```
+
+**このコマンドは実行しなくてもPre-commit Hookが自動でチェックします**が、AI作業中にエラーを早期発見するため推奨します。
+
+#### 違反時の対処
+
+命名規則に違反していた場合：
+
+```bash
+# ファイル名を変更
+git mv docs/how-to/testing-guide.md docs/how-to/TESTING_GUIDE.md
+
+# またはOSコマンド
+mv docs/how-to/testing-guide.md docs/how-to/TESTING_GUIDE.md
+```
+
+### 新しいドキュメント作成時（ユーザー向け）
 
 1. **VS Codeでファイル作成**
    - リアルタイムで命名規則違反を検出（VS Code拡張）
@@ -132,10 +201,10 @@ docs/references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md
 
 ## 🔗 関連ドキュメント
 
-- **命名規則の詳細**: [DOCUMENT_NAMING_CONVENTION.md](../../guidelines/DOCUMENT_NAMING_CONVENTION.md)
-- **ワークフロー全体**: [EFFICIENT_DOC_WORKFLOW.md](../../processes/EFFICIENT_DOC_WORKFLOW.md)
-- **SSG導入ガイド**: [DOCUSAURUS_SETUP_GUIDE.md](../../how-to/DOCUSAURUS_SETUP_GUIDE.md)
-- **リンク修正レポート**: [LINK_FIX_COMPLETION_REPORT.md](../../reports/LINK_FIX_COMPLETION_REPORT.md)
+- **命名規則の詳細**: [DOCUMENT_NAMING_CONVENTION.md](../../docs/guidelines/DOCUMENT_NAMING_CONVENTION.md)
+- **ワークフロー全体**: [EFFICIENT_DOC_WORKFLOW.md](../../docs/processes/EFFICIENT_DOC_WORKFLOW.md)
+- **SSG導入ガイド**: [DOCUSAURUS_SETUP_GUIDE.md](../../docs/how-to/DOCUSAURUS_SETUP_GUIDE.md)
+- **リンク修正レポート**: [LINK_FIX_COMPLETION_REPORT.md](../../docs/reports/LINK_FIX_COMPLETION_REPORT.md)
 
 ## 🎓 業界標準との比較
 

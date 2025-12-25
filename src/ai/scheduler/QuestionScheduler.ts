@@ -39,7 +39,11 @@ import { AntiVibrationFilter } from './AntiVibrationFilter';
 import { logger } from '@/utils/logger';
 import { AICoordinator } from '../AICoordinator';
 import type { SessionStats as AISessionStats } from '../types';
-import { determineWordPosition, positionToCategory } from '../utils/categoryDetermination';
+import {
+  determineWordPosition,
+  getSavedPositionDecisionForDebug,
+  positionToCategory,
+} from '../utils/categoryDetermination';
 import { MemoryAI } from '@/ai/specialists/MemoryAI';
 import { CognitiveLoadAI } from '@/ai/specialists/CognitiveLoadAI';
 import { ErrorPredictionAI } from '@/ai/specialists/ErrorPredictionAI';
@@ -1753,6 +1757,10 @@ export class QuestionScheduler {
 
     const position = this.determinePositionAfterAnswer(progress, mode);
 
+    // デバッグ用: savedPositionを考慮した通常計算結果も採取（savedPosition固定が原因の切り分け用）
+    const positionWithSavedPosition = determineWordPosition(progress, mode);
+    const savedDecision = getSavedPositionDecisionForDebug(progress, mode);
+
     // 時間経過計算（デバッグ用）
     const daysSinceLastStudy =
       (Date.now() - (progress.lastStudied || Date.now())) / (1000 * 60 * 60 * 24);
@@ -1796,7 +1804,9 @@ export class QuestionScheduler {
         mode,
         positionBefore,
         positionAfter: position,
+        positionWithSavedPosition,
         category: bucket,
+        savedPositionDebug: savedDecision,
         progress: {
           correctCount: progress.correctCount,
           incorrectCount: progress.incorrectCount,

@@ -520,6 +520,16 @@ function ScoreBoard({
     [mode]
   );
 
+  // 🔥 暗記タブの「まだまだブースト」判定はUI表示と一致させる
+  // - 分からないが0
+  // - まだまだが残っている
+  // - 復習モードOFF（復習モード時は別の点滅仕様）
+  const isBoostMode =
+    mode === 'memorization' &&
+    !isReviewFocusMode &&
+    (detailedStatsData?.learningCount ?? 0) > 0 &&
+    (detailedStatsData?.strugglingCount ?? 0) === 0;
+
   // 累計回答数を取得（メモ化 - modeで更新）
   const _totalAnsweredCount = useMemo(() => getTotalAnsweredCount(mode), [mode]);
 
@@ -915,8 +925,27 @@ function ScoreBoard({
                     {mode === 'memorization' ? (
                       <>
                         {detailedStats.appearedWords}語確認： 🟢覚えてる{' '}
-                        {detailedStats.masteredCount}語 🟡まだまだ {detailedStats.learningCount}語
-                        🔴分からない {detailedStats.strugglingCount}語
+                        {detailedStats.masteredCount}語{' '}
+                        <span
+                          className={`retention-label ${
+                            isReviewFocusMode || isBoostMode ? 'pulsing-text' : ''
+                          }`}
+                          title={
+                            isReviewFocusMode
+                              ? '📚 復習モード中'
+                              : isBoostMode
+                                ? '🔥 まだまだブースト中'
+                                : undefined
+                          }
+                        >
+                          🟡まだまだ {detailedStats.learningCount}語
+                        </span>{' '}
+                        <span
+                          className={`retention-label ${isReviewFocusMode ? 'pulsing-text' : ''}`}
+                          title={isReviewFocusMode ? '📚 復習モード中' : undefined}
+                        >
+                          🔴分からない {detailedStats.strugglingCount}語
+                        </span>
                         {onReviewFocus && (
                           <span
                             className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
@@ -988,9 +1017,17 @@ function ScoreBoard({
                         {detailedStats.learningCount > 0 && (
                           <div
                             ref={learningRef}
-                            className="retention-segment retention-learning"
+                            className={`retention-segment retention-learning ${
+                              isReviewFocusMode || isBoostMode ? 'pulsing' : ''
+                            }`}
                             data-width={Math.round(detailedStats.learningPercentage)}
-                            title={`🟡 まだまだ: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
+                            title={`🟡 まだまだ: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%) ${
+                              isReviewFocusMode
+                                ? '📚 復習中'
+                                : isBoostMode
+                                  ? '🔥 ブースト中'
+                                  : ''
+                            }`}
                           >
                             {detailedStats.learningPercentage >= 10 && (
                               <span>{Math.round(detailedStats.learningPercentage)}%</span>
@@ -1000,9 +1037,13 @@ function ScoreBoard({
                         {detailedStats.strugglingCount > 0 && (
                           <div
                             ref={strugglingRef}
-                            className="retention-segment retention-struggling"
+                            className={`retention-segment retention-struggling ${
+                              isReviewFocusMode ? 'pulsing' : ''
+                            }`}
                             data-width={Math.round(detailedStats.strugglingPercentage)}
-                            title={`🔴 分からない: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
+                            title={`🔴 分からない: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%) ${
+                              isReviewFocusMode ? '📚 復習中' : ''
+                            }`}
                           >
                             {detailedStats.strugglingPercentage >= 10 && (
                               <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
@@ -1028,9 +1069,13 @@ function ScoreBoard({
                         {detailedStats.learningPercentage > 0 && (
                           <div
                             ref={learningRef}
-                            className="retention-segment retention-learning"
+                            className={`retention-segment retention-learning ${
+                              isBoostMode || isReviewFocusMode ? 'pulsing' : ''
+                            }`}
                             data-width={Math.round(detailedStats.learningPercentage)}
-                            title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
+                            title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%) ${
+                              isBoostMode ? '🔥 ブースト中' : isReviewFocusMode ? '📚 復習中' : ''
+                            }`}
                           >
                             {detailedStats.learningPercentage >= 10 && (
                               <span>{Math.round(detailedStats.learningPercentage)}%</span>
@@ -1040,9 +1085,13 @@ function ScoreBoard({
                         {detailedStats.strugglingPercentage > 0 && (
                           <div
                             ref={strugglingRef}
-                            className="retention-segment retention-struggling"
+                            className={`retention-segment retention-struggling ${
+                              isReviewFocusMode ? 'pulsing' : ''
+                            }`}
                             data-width={Math.round(detailedStats.strugglingPercentage)}
-                            title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
+                            title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%) ${
+                              isReviewFocusMode ? '📚 復習中' : ''
+                            }`}
                           >
                             {detailedStats.strugglingPercentage >= 10 && (
                               <span>{Math.round(detailedStats.strugglingPercentage)}%</span>

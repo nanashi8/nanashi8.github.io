@@ -491,7 +491,7 @@ export function detectWordRelations(word1: string, word2: string, question1?: Qu
   }
 
   // 接尾辞チェック（品詞が同じ場合のみ）
-  if (meta1.family?.suffix && meta2.family?.suffix && 
+  if (meta1.family?.suffix && meta2.family?.suffix &&
       meta1.family.suffix === meta2.family.suffix &&
       meta1.pos === meta2.pos) {
     return {
@@ -504,7 +504,7 @@ export function detectWordRelations(word1: string, word2: string, question1?: Qu
   }
 
   // 熟語パターンチェック
-  if (meta1.phrasePattern && meta2.phrasePattern && 
+  if (meta1.phrasePattern && meta2.phrasePattern &&
       meta1.phrasePattern === meta2.phrasePattern &&
       meta1.phrasePattern !== 'none') {
     return {

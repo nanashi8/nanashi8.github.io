@@ -44,6 +44,146 @@ import {
  */
 export type LearningMode = 'memorization' | 'translation' | 'spelling' | 'grammar';
 
+export type SavedPositionDecisionForDebug = {
+  mode: LearningMode;
+  savedPosition: number;
+  decision: 'use_saved_position' | 'ignore_saved_position';
+  reason?: 'auto_promoted_still_learning_progress' | 'other';
+  accuracyForOverride: number;
+  modeAttempts: number;
+  modeCorrect: number;
+  modeStillLearning: number;
+  consecutiveCorrect: number;
+  consecutiveIncorrect: number;
+};
+
+function getSavedPosition(progress: WordProgress, mode: LearningMode): number | undefined {
+  switch (mode) {
+    case 'memorization':
+      return progress.memorizationPosition;
+    case 'translation':
+      return progress.translationPosition;
+    case 'spelling':
+      return progress.spellingPosition;
+    case 'grammar':
+      return progress.grammarPosition;
+  }
+}
+
+function getModeCounts(
+  progress: WordProgress,
+  mode: LearningMode
+): { attempts: number; correct: number; stillLearning: number } {
+  switch (mode) {
+    case 'memorization':
+      return {
+        attempts: progress.memorizationAttempts || 0,
+        correct: progress.memorizationCorrect || 0,
+        stillLearning: progress.memorizationStillLearning || 0,
+      };
+    case 'translation':
+      return {
+        attempts: progress.translationAttempts || 0,
+        correct: progress.translationCorrect || 0,
+        stillLearning: 0,
+      };
+    case 'spelling':
+      return {
+        attempts: progress.spellingAttempts || 0,
+        correct: progress.spellingCorrect || 0,
+        stillLearning: 0,
+      };
+    case 'grammar':
+      return {
+        attempts: progress.grammarAttempts || 0,
+        correct: progress.grammarCorrect || 0,
+        stillLearning: 0,
+      };
+  }
+}
+
+function evaluateSavedPositionUsage(params: {
+  mode: LearningMode;
+  savedPosition: number;
+  attempts: number;
+  correct: number;
+  stillLearning: number;
+  consecutiveCorrect: number;
+  consecutiveIncorrect: number;
+}): { decision: 'use_saved_position' | 'ignore_saved_position'; reason?: SavedPositionDecisionForDebug['reason']; accuracyForOverride: number } {
+  const {
+    mode,
+    savedPosition,
+    attempts,
+    correct,
+    stillLearning,
+    consecutiveCorrect,
+    consecutiveIncorrect,
+  } = params;
+
+  const accuracyForOverride = attempts > 0 ? (correct + stillLearning * 0.5) / attempts : 0;
+  const isSavedStillLearningBand = savedPosition >= 40 && savedPosition < 70;
+  const isPromotedStillLearning = mode === 'memorization' && stillLearning === 0;
+
+  const shouldIgnoreSavedForProgress =
+    isPromotedStillLearning &&
+    isSavedStillLearningBand &&
+    consecutiveCorrect === CONSECUTIVE_THRESHOLDS.STRUGGLING &&
+    consecutiveIncorrect === 0 &&
+    accuracyForOverride >= ACCURACY_THRESHOLDS.FAIR;
+
+  if (shouldIgnoreSavedForProgress) {
+    return {
+      decision: 'ignore_saved_position',
+      reason: 'auto_promoted_still_learning_progress',
+      accuracyForOverride,
+    };
+  }
+
+  return {
+    decision: 'use_saved_position',
+    reason: 'other',
+    accuracyForOverride,
+  };
+}
+
+export function getSavedPositionDecisionForDebug(
+  progress: WordProgress | null | undefined,
+  mode: LearningMode = 'memorization'
+): SavedPositionDecisionForDebug | null {
+  if (!progress) return null;
+
+  const savedPosition = getSavedPosition(progress, mode);
+  if (savedPosition === undefined || savedPosition === null) return null;
+
+  const { attempts, correct, stillLearning } = getModeCounts(progress, mode);
+  const consecutiveCorrect = progress.consecutiveCorrect || 0;
+  const consecutiveIncorrect = progress.consecutiveIncorrect || 0;
+
+  const decision = evaluateSavedPositionUsage({
+    mode,
+    savedPosition,
+    attempts,
+    correct,
+    stillLearning,
+    consecutiveCorrect,
+    consecutiveIncorrect,
+  });
+
+  return {
+    mode,
+    savedPosition,
+    decision: decision.decision,
+    reason: decision.reason,
+    accuracyForOverride: decision.accuracyForOverride,
+    modeAttempts: attempts,
+    modeCorrect: correct,
+    modeStillLearning: stillLearning,
+    consecutiveCorrect,
+    consecutiveIncorrect,
+  };
+}
+
 export function determineWordPosition(
   progress: WordProgress | null | undefined,
   mode: LearningMode = 'memorization'
@@ -55,46 +195,13 @@ export function determineWordPosition(
 
   // 🚨 最優先: LocalStorageに保存されたタブ別Positionを読み込み
   // これにより、「まだまだ」「分からない」の状態が確実に保持される
-  let savedPosition: number | undefined;
-  switch (mode) {
-    case 'memorization':
-      savedPosition = progress.memorizationPosition;
-      break;
-    case 'translation':
-      savedPosition = progress.translationPosition;
-      break;
-    case 'spelling':
-      savedPosition = progress.spellingPosition;
-      break;
-    case 'grammar':
-      savedPosition = progress.grammarPosition;
-      break;
-  }
+  const savedPosition = getSavedPosition(progress, mode);
 
   // ✅ タブ別フィールドを使用（各タブで独立したカウント）
-  let attempts = 0;
-  let correct = 0;
-  let stillLearning = 0;
-
-  switch (mode) {
-    case 'memorization':
-      attempts = progress.memorizationAttempts || 0;
-      correct = progress.memorizationCorrect || 0;
-      stillLearning = progress.memorizationStillLearning || 0;
-      break;
-    case 'translation':
-      attempts = progress.translationAttempts || 0;
-      correct = progress.translationCorrect || 0;
-      break;
-    case 'spelling':
-      attempts = progress.spellingAttempts || 0;
-      correct = progress.spellingCorrect || 0;
-      break;
-    case 'grammar':
-      attempts = progress.grammarAttempts || 0;
-      correct = progress.grammarCorrect || 0;
-      break;
-  }
+  const modeCounts = getModeCounts(progress, mode);
+  const attempts = modeCounts.attempts;
+  const correct = modeCounts.correct;
+  const stillLearning = modeCounts.stillLearning;
 
   const consecutiveCorrect = progress.consecutiveCorrect || 0;
   const consecutiveIncorrect = progress.consecutiveIncorrect || 0;
@@ -119,11 +226,33 @@ export function determineWordPosition(
       return POSITION_VALUES.NEAR_MASTERY; // まだ新規扱い（もう1回正解で定着）
     }
 
-    // 📍 保存されたPositionを返す（まだまだ・分からないの状態を保持）
-    if (import.meta.env?.DEV) {
-      console.log(`📍 [Position優先読み込み] ${mode}: savedPosition=${savedPosition}`);
+    // ✅ 例外: 「分からない→(自動的に)まだまだ」昇格は、改善が見えたら savedPosition を固定しない
+    // 背景:
+    // - savedPosition(例: 55) を常に返すと、正解で改善しても Position が変わらず「解消されない」印象になる
+    // - ただし「まだまだボタン」由来 (memorizationStillLearning>0) は維持し、埋もれを防ぐ
+    // 方針:
+    // - stillLearning履歴が無い（ボタン未使用）かつ savedPosition が still_learning 帯(40-69)
+    // - 直近で改善が見えている（consecutiveCorrect=1）かつ精度が一定以上（>=60%）
+    // → 動的計算へフォールスルーして、new(30) などへ自然に降ろす
+    const decision = evaluateSavedPositionUsage({
+      mode,
+      savedPosition,
+      attempts,
+      correct,
+      stillLearning,
+      consecutiveCorrect,
+      consecutiveIncorrect,
+    });
+
+    if (decision.decision === 'ignore_saved_position') {
+      // fallthrough（savedPosition を使わず、下の通常計算へ）
+    } else {
+      // 📍 保存されたPositionを返す（まだまだ・分からないの状態を保持）
+      if (import.meta.env?.DEV) {
+        console.log(`📍 [Position優先読み込み] ${mode}: savedPosition=${savedPosition}`);
+      }
+      return savedPosition;
     }
-    return savedPosition;
   }
 
   // 時間経過計算
