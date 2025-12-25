@@ -677,7 +677,8 @@ describe('学習AI統合テスト', () => {
         results: [],
       };
 
-      localStorage.setItem('english-progress', JSON.stringify(progress));
+      // progressStorage側は内部キャッシュを持つため、テストでは必ず helper 経由で反映する
+      setProgress(progress);
 
       // 多くのincorrectを含むセッション
       const result = await scheduler.schedule({

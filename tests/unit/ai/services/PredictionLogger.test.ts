@@ -90,7 +90,7 @@ describe('PredictionLogger', () => {
 
   describe('getPredictionsByTimeRange', () => {
     it('期間を指定して予測を取得', async () => {
-      const now = Date.now();
+      const _now = Date.now();
 
       await logger.logPrediction('word1', 0.8, 1);
       await new Promise((resolve) => setTimeout(resolve, 10));

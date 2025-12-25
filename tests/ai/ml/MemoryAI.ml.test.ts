@@ -109,7 +109,7 @@ describe('MemoryAI ML Integration', () => {
       allProgress: { example: progress },
     };
 
-    // @ts-ignore - accessing protected method for testing
+    // @ts-expect-error - accessing protected method for testing
     const features = memoryAI.extractFeatures(input);
 
     expect(features).toHaveLength(15);

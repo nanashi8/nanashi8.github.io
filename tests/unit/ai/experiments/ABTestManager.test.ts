@@ -261,12 +261,12 @@ describe('ABTestManager', () => {
     });
 
     it('should persist user ID across instances', () => {
-      const manager1 = getABTestManager();
+      const _manager1 = getABTestManager();
       const userId1 = localStorage.getItem('ab_test_user_id');
 
       resetABTestManager();
 
-      const manager2 = getABTestManager();
+      const _manager2 = getABTestManager();
       const userId2 = localStorage.getItem('ab_test_user_id');
 
       expect(userId1).toBe(userId2);

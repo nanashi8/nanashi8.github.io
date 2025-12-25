@@ -1,13 +1,20 @@
 import { describe, it, expect } from 'vitest';
-import grammarQuestionsGrade1 from '../../public/data/fill-in-blank-questions-grade1.json';
-import grammarQuestionsGrade2 from '../../public/data/fill-in-blank-questions-grade2.json';
-import grammarQuestionsGrade3 from '../../public/data/fill-in-blank-questions-grade3.json';
-import verbFormGrade1 from '../../public/data/verb-form-questions-grade1.json';
-import verbFormGrade2 from '../../public/data/verb-form-questions-grade2.json';
-import verbFormGrade3 from '../../public/data/verb-form-questions-grade3.json';
-import sentenceOrderingGrade1 from '../../public/data/sentence-ordering-grade1.json';
-import sentenceOrderingGrade2 from '../../public/data/sentence-ordering-grade2.json';
-import sentenceOrderingGrade3 from '../../public/data/sentence-ordering-grade3.json';
+import { readFileSync } from 'node:fs';
+
+function loadJson<T = unknown>(relativePath: string): T {
+  const raw = readFileSync(new URL(relativePath, import.meta.url), 'utf-8');
+  return JSON.parse(raw) as T;
+}
+
+const grammarQuestionsGrade1 = loadJson<any>('../../public/data/fill-in-blank-questions-grade1.json');
+const grammarQuestionsGrade2 = loadJson<any>('../../public/data/fill-in-blank-questions-grade2.json');
+const grammarQuestionsGrade3 = loadJson<any>('../../public/data/fill-in-blank-questions-grade3.json');
+const verbFormGrade1 = loadJson<any>('../../public/data/verb-form-questions-grade1.json');
+const verbFormGrade2 = loadJson<any>('../../public/data/verb-form-questions-grade2.json');
+const verbFormGrade3 = loadJson<any>('../../public/data/verb-form-questions-grade3.json');
+const sentenceOrderingGrade1 = loadJson<any>('../../public/data/sentence-ordering-grade1.json');
+const sentenceOrderingGrade2 = loadJson<any>('../../public/data/sentence-ordering-grade2.json');
+const sentenceOrderingGrade3 = loadJson<any>('../../public/data/sentence-ordering-grade3.json');
 
 /**
  * 文法問題の品質検証テスト
@@ -607,7 +614,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     it('totalQuestionsが実際の問題数と一致する', () => {
       allData.forEach(({ data, name: _name }) => {
         // totalQuestionsはファイル内の全セクションの合計を表すべき
-        const actualCount = data.units.reduce((sum, unit: any) => {
+        const actualCount = data.units.reduce((sum: number, unit: any) => {
           const vfCount = unit.verbForm?.length || 0;
           const fbCount = unit.fillInBlank?.length || 0;
           const soCount = unit.sentenceOrdering?.length || 0;

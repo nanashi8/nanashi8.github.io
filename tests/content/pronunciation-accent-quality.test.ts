@@ -9,8 +9,15 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import pronunciationData from '../../public/data/pronunciation-questions.json';
-import accentData from '../../public/data/accent-questions.json';
+import { readFileSync } from 'node:fs';
+
+function loadJson<T = unknown>(relativePath: string): T {
+  const raw = readFileSync(new URL(relativePath, import.meta.url), 'utf-8');
+  return JSON.parse(raw) as T;
+}
+
+const pronunciationData = loadJson<any>('../../public/data/pronunciation-questions.json');
+const accentData = loadJson<any>('../../public/data/accent-questions.json');
 
 // 型定義
 interface PronunciationQuestion {

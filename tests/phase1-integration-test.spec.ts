@@ -41,7 +41,7 @@ test.describe('Phase 1: 緊急バグ修正統合テスト', () => {
 
     // デバッグログを確認（コンソールに出力されているはず）
     const logs = await page.evaluate(() => {
-      const logEntries: string[] = [];
+      const _logEntries: string[] = [];
       // localStorageから語句の優先度を取得
       const progress = JSON.parse(localStorage.getItem('english-progress') || '{}');
       return Object.keys(progress).map((word) => ({
