@@ -277,6 +277,69 @@ export function RequeuingDebugPanel({
 
 ---
 
+${
+  (() => {
+    // 🚨 まだまだ語検出状況（最優先表示）
+    try {
+      const weakWordsDetection = localStorage.getItem('debug_weak_words_detection');
+      if (weakWordsDetection) {
+        const detection = JSON.parse(weakWordsDetection);
+        let section = '## 🚨 まだまだ語検出状況\n\n';
+        section += `**timestamp**: ${detection.timestamp || 'N/A'}\n\n`;
+        section += `- 📊 LocalStorageのまだまだ語: **${detection.allWeakWordsInLS || 0}語**\n`;
+        section += `- ✅ 検出成功: **${detection.weakQuestionsDetected || 0}語**\n`;
+        section += `- ❌ データ欠損: **${detection.dataMissing || 0}語**\n`;
+        section += `- 📁 baseQuestions総数: ${detection.baseQuestionsCount || 0}語\n`;
+        section += `- 🔍 filtered総数: ${detection.filteredCount || 0}語\n\n`;
+        
+        if (detection.dataMissing > 0) {
+          section += '### ❌ 致命的エラー: baseQuestionsに存在しないまだまだ語\n\n';
+          if (detection.missingFromBase && detection.missingFromBase.length > 0) {
+            section += '```\n';
+            detection.missingFromBase.forEach((word: string, i: number) => {
+              section += `${i + 1}. ${word}\n`;
+            });
+            section += '```\n\n';
+            section += '**原因**: これらの単語が元のJSONデータ（juniorWords.json等）に含まれていません。\n';
+            section += '**対策**: データソースを確認し、これらの単語を追加してください。\n\n';
+          }
+        }
+        
+        if (detection.weakWordsList && detection.weakWordsList.length > 0) {
+          section += '### 📋 LocalStorageのまだまだ語リスト\n\n';
+          section += '| # | 単語 | Position | memPos | attempts |\n';
+          section += '|---|------|----------|--------|----------|\n';
+          detection.weakWordsList.slice(0, 20).forEach((w: any, i: number) => {
+            section += `| ${i + 1} | **${w.word}** | ${w.position} | ${w.memPos ?? '-'} | ${w.attempts}回 |\n`;
+          });
+          if (detection.weakWordsList.length > 20) {
+            section += `\n_…他${detection.weakWordsList.length - 20}語省略_\n`;
+          }
+          section += '\n';
+        }
+        
+        if (detection.weakQuestionsWords && detection.weakQuestionsWords.length > 0) {
+          section += '### ✅ 検出されたweakQuestions\n\n';
+          section += '```\n';
+          detection.weakQuestionsWords.slice(0, 10).forEach((word: string, i: number) => {
+            section += `${i + 1}. ${word}\n`;
+          });
+          if (detection.weakQuestionsWords.length > 10) {
+            section += `...他${detection.weakQuestionsWords.length - 10}語\n`;
+          }
+          section += '```\n\n';
+        }
+        
+        section += '---\n\n';
+        return section;
+      }
+    } catch (e) {
+      return `## 🚨 まだまだ語検出状況\n\n⚠️ 検出データの読み込みエラー: ${e}\n\n---\n\n`;
+    }
+    return '';
+  })()
+}
+
 ## 📊 スコアボード（学習状況）
 
 **総合統計**:

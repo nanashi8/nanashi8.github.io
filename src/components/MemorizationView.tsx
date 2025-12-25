@@ -503,6 +503,49 @@ function MemorizationView({
         const progress = loadProgressSync();
         const wordProgress = progress.wordProgress || {};
         const weakQuestions: Question[] = [];
+        
+        // 🐛 DEBUG: LocalStorageのまだまだ語を全て列挙
+        const allWeakWordsInLS = Object.entries(wordProgress)
+          .filter(([_word, wp]) => {
+            const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
+            if (attempts <= 0) return false;
+            const pos = determineWordPosition(wp, 'memorization');
+            return pos >= 40;
+          })
+          .map(([word, wp]) => ({
+            word,
+            position: determineWordPosition(wp, 'memorization'),
+            memPos: wp.memorizationPosition,
+            attempts: wp.memorizationAttempts ?? wp.totalAttempts ?? 0,
+          }));
+        
+        if (import.meta.env.DEV) {
+          console.log(`🚨 [LocalStorageのまだまだ語] 合計: ${allWeakWordsInLS.length}語`);
+          if (allWeakWordsInLS.length > 0) {
+            console.log(`🚨 [まだまだ語リスト]:`, allWeakWordsInLS);
+          }
+        }
+        
+        // baseQuestionsに存在するか確認
+        const baseQuestionsWords = new Set(baseQuestions.map(q => q.word));
+        const missingFromBase = allWeakWordsInLS.filter(w => !baseQuestionsWords.has(w.word));
+        
+        // 🔍 DEBUG: 検出結果をlocalStorageに保存（デバッグパネル用）
+        try {
+          localStorage.setItem('debug_weak_words_detection', JSON.stringify({
+            timestamp: new Date().toISOString(),
+            allWeakWordsInLS: allWeakWordsInLS.length,
+            weakWordsList: allWeakWordsInLS,
+            missingFromBase: missingFromBase.map(w => w.word),
+            baseQuestionsCount: baseQuestions.length,
+            filteredCount: filtered.length,
+          }));
+        } catch {}
+        
+        if (import.meta.env.DEV && missingFromBase.length > 0) {
+          console.error(`❌ [致命的エラー] まだまだ語${missingFromBase.length}語がbaseQuestionsに存在しません:`, missingFromBase.map(w => w.word));
+        }
+        
         for (const q of baseQuestions) {
           const wp = wordProgress[q.word];
           if (!wp) continue;
@@ -522,11 +565,23 @@ function MemorizationView({
         
         // 🐛 DEBUG: 弱点語のサマリー
         if (import.meta.env.DEV) {
-          console.log(`🔍 [WeakQuestions] 検出数: ${weakQuestions.length}語, 候補: ${baseQuestions.length}語`);
+          console.log(`🔍 [WeakQuestions] 検出数: ${weakQuestions.length}語 / LocalStorage: ${allWeakWordsInLS.length}語, 候補: ${baseQuestions.length}語`);
           if (weakQuestions.length > 0) {
             console.log(`🔍 [WeakQuestions] TOP5:`, weakQuestions.slice(0, 5).map(q => q.word));
           }
+          if (weakQuestions.length < allWeakWordsInLS.length) {
+            console.error(`❌ [データ欠損] baseQuestionsに${allWeakWordsInLS.length - weakQuestions.length}語のまだまだ語が見つかりません`);
+          }
         }
+        
+        // 🔍 DEBUG: weakQuestions検出結果をlocalStorageに保存（デバッグパネル用）
+        try {
+          const detectionResult = JSON.parse(localStorage.getItem('debug_weak_words_detection') || '{}');
+          detectionResult.weakQuestionsDetected = weakQuestions.length;
+          detectionResult.weakQuestionsWords = weakQuestions.map(q => q.word);
+          detectionResult.dataMissing = allWeakWordsInLS.length - weakQuestions.length;
+          localStorage.setItem('debug_weak_words_detection', JSON.stringify(detectionResult));
+        } catch {}
 
         let candidateQuestions = filtered;
         if (weakQuestions.length > 0) {
