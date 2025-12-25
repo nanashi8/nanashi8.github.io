@@ -517,7 +517,7 @@ function ScoreBoard({
   // 本日の統計を取得（メモ化 - modeで更新）
   const { todayAccuracy: _todayAccuracy, todayTotalAnswered: _todayTotalAnswered } = useMemo(
     () => getTodayStats(mode),
-    [mode]
+    [mode, onAnswerTime]
   );
 
   // 🔥 暗記タブの「まだまだブースト」判定はUI表示と一致させる
@@ -531,10 +531,10 @@ function ScoreBoard({
     (detailedStatsData?.strugglingCount ?? 0) === 0;
 
   // 累計回答数を取得（メモ化 - modeで更新）
-  const _totalAnsweredCount = useMemo(() => getTotalAnsweredCount(mode), [mode]);
+  const _totalAnsweredCount = useMemo(() => getTotalAnsweredCount(mode), [mode, onAnswerTime]);
 
   // 定着数を取得（全体から）（メモ化）
-  const _masteredCount = useMemo(() => getTotalMasteredWordsCount(), []);
+  const _masteredCount = useMemo(() => getTotalMasteredWordsCount(), [onAnswerTime]);
 
   // 定着率をstateから取得
   const { retentionRate: _retentionRate } = retentionData;
@@ -1022,11 +1022,7 @@ function ScoreBoard({
                             }`}
                             data-width={Math.round(detailedStats.learningPercentage)}
                             title={`🟡 まだまだ: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%) ${
-                              isReviewFocusMode
-                                ? '📚 復習中'
-                                : isBoostMode
-                                  ? '🔥 ブースト中'
-                                  : ''
+                              isReviewFocusMode ? '📚 復習中' : isBoostMode ? '🔥 ブースト中' : ''
                             }`}
                           >
                             {detailedStats.learningPercentage >= 10 && (
