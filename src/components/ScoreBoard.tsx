@@ -947,28 +947,12 @@ function ScoreBoard({
                           🔴分からない {detailedStats.strugglingCount}語
                         </span>
                         {onReviewFocus && (
-                          <span style={{ position: 'relative', display: 'inline-block' }}>
-                            <span
-                              className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
-                              onClick={onReviewFocus}
-                              title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
-                            >
-                              🔥
-                            </span>
-                            {isReviewFocusMode && (
-                              <span
-                                className="animate-pulse"
-                                style={{
-                                  position: 'absolute',
-                                  top: '-2px',
-                                  right: '-12px',
-                                  fontSize: '0.8em',
-                                }}
-                                title="復習モード実行中"
-                              >
-                                ✨
-                              </span>
-                            )}
+                          <span
+                            className={`review-mode-icon ${isReviewFocusMode ? 'active animate-pulse' : ''}`}
+                            onClick={onReviewFocus}
+                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                          >
+                            🔥
                           </span>
                         )}
                       </>
@@ -978,28 +962,12 @@ function ScoreBoard({
                         🟡学習中 {detailedStats.learningCount}問 🔴要復習{' '}
                         {detailedStats.strugglingCount}問
                         {onReviewFocus && (
-                          <span style={{ position: 'relative', display: 'inline-block' }}>
-                            <span
-                              className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
-                              onClick={onReviewFocus}
-                              title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
-                            >
-                              🔥
-                            </span>
-                            {isReviewFocusMode && (
-                              <span
-                                className="animate-pulse"
-                                style={{
-                                  position: 'absolute',
-                                  top: '-2px',
-                                  right: '-12px',
-                                  fontSize: '0.8em',
-                                }}
-                                title="復習モード実行中"
-                              >
-                                ✨
-                              </span>
-                            )}
+                          <span
+                            className={`review-mode-icon ${isReviewFocusMode ? 'active animate-pulse' : ''}`}
+                            onClick={onReviewFocus}
+                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                          >
+                            🔥
                           </span>
                         )}
                       </>
@@ -1009,28 +977,12 @@ function ScoreBoard({
                         🟡学習中 {detailedStats.learningCount}語 🔴要復習{' '}
                         {detailedStats.strugglingCount}語
                         {(mode === 'translation' || mode === 'spelling') && onReviewFocus && (
-                          <span style={{ position: 'relative', display: 'inline-block' }}>
-                            <span
-                              className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
-                              onClick={onReviewFocus}
-                              title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
-                            >
-                              🔥
-                            </span>
-                            {isReviewFocusMode && (
-                              <span
-                                className="animate-pulse"
-                                style={{
-                                  position: 'absolute',
-                                  top: '-2px',
-                                  right: '-12px',
-                                  fontSize: '0.8em',
-                                }}
-                                title="復習モード実行中"
-                              >
-                                ✨
-                              </span>
-                            )}
+                          <span
+                            className={`review-mode-icon ${isReviewFocusMode ? 'active animate-pulse' : ''}`}
+                            onClick={onReviewFocus}
+                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                          >
+                            🔥
                           </span>
                         )}
                       </>
