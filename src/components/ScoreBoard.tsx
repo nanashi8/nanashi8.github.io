@@ -61,10 +61,13 @@ interface ScoreBoardProps {
   // 文法モード用の設定
   grammarUnit?: string; // 現在出題中の文法単元（例: "g1-unit0"）
   // 現在の問題の出題回数
-  currentQuestionTimesShown?: number; // 現在表示中の問題の出題回数
+  _currentQuestionTimesShown?: number; // 現在表示中の問題の出題回数
   // デバッグ機能
   onResetProgress?: () => void; // 成績リセットボタンのコールバック
   onDebugRequeue?: () => void; // 再出題デバッグボタンのコールバック
+
+  // UX: 再スケジューリングが走ったことを示すため、学習状況タブ文字を一時的に光らせる
+  learningStatusTabPulseKey?: number; // 値が変わるたびにパルス
 }
 
 function ScoreBoard({
@@ -93,13 +96,37 @@ function ScoreBoard({
   wordPhraseFilter = '',
   grammarUnit,
   sessionStats,
-  currentQuestionTimesShown,
+  _currentQuestionTimesShown,
   onResetProgress,
   onDebugRequeue,
+  learningStatusTabPulseKey,
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'>(
     'ai'
   );
+
+  const [isLearningTabPulsing, setIsLearningTabPulsing] = useState(false);
+  const pulseTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!learningStatusTabPulseKey) return;
+
+    setIsLearningTabPulsing(true);
+    if (pulseTimerRef.current) {
+      window.clearTimeout(pulseTimerRef.current);
+    }
+    pulseTimerRef.current = window.setTimeout(() => {
+      setIsLearningTabPulsing(false);
+      pulseTimerRef.current = null;
+    }, 1600);
+
+    return () => {
+      if (pulseTimerRef.current) {
+        window.clearTimeout(pulseTimerRef.current);
+        pulseTimerRef.current = null;
+      }
+    };
+  }, [learningStatusTabPulseKey]);
 
   // 出題時コメント（解答前）と解答後コメントを分離
   const [questionComment, setQuestionComment] = useState<string>(() => {
@@ -557,8 +584,26 @@ function ScoreBoard({
           onClick={() => setActiveTab('breakdown')}
           title="学習状況"
         >
-          <span className="hidden sm:inline">📈 学習状況</span>
-          <span className="sm:hidden">📈</span>
+          <span
+            className={`hidden sm:inline ${
+              isLearningTabPulsing
+                ? 'animate-pulse drop-shadow-sm ' +
+                  (activeTab === 'breakdown' ? '' : 'text-primary')
+                : ''
+            }`}
+          >
+            📈 学習状況
+          </span>
+          <span
+            className={`sm:hidden ${
+              isLearningTabPulsing
+                ? 'animate-pulse drop-shadow-sm ' +
+                  (activeTab === 'breakdown' ? '' : 'text-primary')
+                : ''
+            }`}
+          >
+            📈
+          </span>
         </button>
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${

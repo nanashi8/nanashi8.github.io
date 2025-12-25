@@ -15,7 +15,7 @@ import { getRelevantMistakeTip } from '../englishTrivia';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import AddToCustomButton from './AddToCustomButton';
 import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
-import { PriorityBadge } from './PriorityBadge';
+// import { PriorityBadge } from './PriorityBadge';
 
 interface QuestionCardProps {
   question: Question;
@@ -70,7 +70,7 @@ function QuestionCard({
   // 適応的学習AIネットワーク（常時有効）
   const {
     processQuestion: processAdaptiveQuestion,
-    currentStrategy,
+    currentStrategy: _currentStrategy,
   } = useAdaptiveNetwork();
 
   // メタAI分析ヘルパー関数（常時有効）

@@ -14,7 +14,7 @@ import {
 } from '@/utils/db-connection-pool';
 
 const DB_NAME = 'QuizAppDB';
-const DB_VERSION = 1;
+// const DB_VERSION = 1;
 
 // Store名の定義（再エクスポート）
 export { STORES };
@@ -306,16 +306,16 @@ export async function getCount(storeName: string): Promise<number> {
 
 // DB全削除（テスト用）
 export async function deleteDatabase(): Promise<boolean> {
-  return new Promise(async (resolve) => {
-    // 1. 接続プールを完全にクローズ
-    try {
-      await closePool();
-      logger.log('🔒 Connection pool closed before DB deletion');
-    } catch (error) {
-      logger.error('⚠️ Pool close error:', error);
-    }
+  // 1. 接続プールを完全にクローズ
+  try {
+    await closePool();
+    logger.log('🔒 Connection pool closed before DB deletion');
+  } catch (error) {
+    logger.error('⚠️ Pool close error:', error);
+  }
 
-    // 2. データベース削除
+  // 2. データベース削除
+  return new Promise((resolve) => {
     const request = indexedDB.deleteDatabase(DB_NAME);
     request.onsuccess = () => {
       logger.log('🗑️ Database deleted');

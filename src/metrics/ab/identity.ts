@@ -18,7 +18,7 @@ export function getOrCreateAnonymousUserId(): string {
     const id = `anon_${Date.now()}_${Math.random().toString(36).substring(2, 15)}`;
     localStorage.setItem(STORAGE_KEY_ANONYMOUS_USER_ID, id);
     return id;
-  } catch (error) {
+  } catch {
     // localStorage失敗時はセッション内のみ有効なIDを返す
     console.warn('[AB Identity] localStorage not available, using session-only ID');
     return `temp_${Date.now()}_${Math.random().toString(36).substring(2, 15)}`;

@@ -583,7 +583,7 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     mlSignal: GamificationSignal,
     input: AIAnalysisInput
   ): GamificationSignal {
-    const totalWords = Object.keys(input.allProgress).length;
+    const _totalWords = Object.keys(input.allProgress).length;
     const studyDays = this.calculateStudyDays(input.allProgress);
     const mlWeight = Math.min(Math.max((studyDays - 3) / 10, 0), 0.6);
     const ruleWeight = 1 - mlWeight;

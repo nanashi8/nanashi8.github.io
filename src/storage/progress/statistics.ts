@@ -5,7 +5,7 @@
 
 import {
   loadProgressSync,
-  checkFlexibleMastery,
+  // checkFlexibleMastery,
   autoDetectWordDifficulty,
 } from './progressStorage';
 import { determineWordPosition, type LearningMode } from '@/ai/utils/categoryDetermination';
@@ -1044,12 +1044,12 @@ export function getStrugglingWordsList(mode?: LearningMode): Array<{
       // まだまだ（40-70）または分からない（70-100）のみ
       if (position < 40) return null;
 
-      const category: 'still_learning' | 'incorrect' = position >= 70 ? 'incorrect' : 'still_learning';
+      const bucket: 'still_learning' | 'incorrect' = position >= 70 ? 'incorrect' : 'still_learning';
 
       return {
         word,
         position,
-        category,
+        category: bucket,
         attempts,
         correctCount: wp.correctCount || 0,
         incorrectCount: wp.incorrectCount || 0,

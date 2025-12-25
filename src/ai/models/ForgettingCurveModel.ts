@@ -26,7 +26,7 @@
  */
 
 import type { WordProgress } from '@/storage/progress/types';
-import { logger } from '@/utils/logger';
+import { logger as _logger } from '@/utils/logger';
 
 export interface RetentionPrediction {
   retentionRate: number; // 現在の記憶保持率（0-1）

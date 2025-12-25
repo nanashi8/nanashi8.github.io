@@ -132,7 +132,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
       this.mlState.ready = true;
 
       logger.info(`[${this.name}] ✅ ML initialized successfully`);
-    } catch (error) {
+    } catch {
       // モデルファイルがない場合は静かにフォールバックモデルを生成
       this.mlState.initialized = false;
       this.mlState.ready = false;

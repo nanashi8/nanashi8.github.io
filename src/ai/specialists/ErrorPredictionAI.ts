@@ -308,7 +308,7 @@ export class ErrorPredictionAI extends MLEnhancedSpecialistAI<ErrorPredictionSig
     }
 
     // 全体の統計を計算
-    const totalWords = Object.keys(allProgress).length;
+    const _totalWords = Object.keys(allProgress).length;
     const legacyProgress = progress as StorageWordProgress & {
       errorHistory?: unknown[];
       lastErrorType?: string;

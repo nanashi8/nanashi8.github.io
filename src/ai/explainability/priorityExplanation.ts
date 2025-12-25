@@ -192,25 +192,24 @@ function generateUserMessage(
   mainFactor: PriorityFactor,
   accuracy: number
 ): string {
-  if (category === 'incorrect') {
-    return '苦手な単語です。集中的に復習しましょう！';
+  switch (category) {
+    case 'incorrect':
+      return '苦手な単語です。集中的に復習しましょう！';
+    case 'still_learning':
+      if (accuracy < 0.5) {
+        return 'もう少しで定着します。繰り返し練習しましょう。';
+      }
+      return '順調に学習が進んでいます。引き続き頑張りましょう！';
+    case 'new':
+      return '新しい単語です。まずは意味を覚えましょう。';
+    case 'mastered':
+      if (mainFactor.name === '復習タイミング') {
+        return '定着していますが、忘れる前に復習しておきましょう。';
+      }
+      return 'よく覚えています。定期的な復習で記憶を維持しましょう。';
+    default:
+      return '一緒に学習を進めましょう！';
   }
-  if (category === 'still_learning') {
-    if (accuracy < 0.5) {
-      return 'もう少しで定着します。繰り返し練習しましょう。';
-    }
-    return '順調に学習が進んでいます。引き続き頑張りましょう！';
-  }
-  if (category === 'new') {
-    return '新しい単語です。まずは意味を覚えましょう。';
-  }
-  if (category === 'mastered') {
-    if (mainFactor.name === '復習タイミング') {
-      return '定着していますが、忘れる前に復習しておきましょう。';
-    }
-    return 'よく覚えています。定期的な復習で記憶を維持しましょう。';
-  }
-  return '一緒に学習を進めましょう！';
 }
 
 /**
@@ -221,25 +220,24 @@ function generateRecommendedAction(
   accuracy: number,
   daysSinceLastStudy: number
 ): string {
-  if (category === 'incorrect') {
-    return '語源や関連語を確認して、記憶の手がかりを増やしましょう';
+  switch (category) {
+    case 'incorrect':
+      return '語源や関連語を確認して、記憶の手がかりを増やしましょう';
+    case 'still_learning':
+      if (accuracy < 0.5) {
+        return '間違えやすいポイントを意識して、例文で使い方を確認しましょう';
+      }
+      return 'あと数回の正解で定着します。焦らず着実に進めましょう';
+    case 'new':
+      return '発音と意味を一緒に覚えると効果的です';
+    case 'mastered':
+      if (daysSinceLastStudy > 7) {
+        return '1週間以上復習していません。忘れる前に確認しましょう';
+      }
+      return '定期的な復習で長期記憶に定着させましょう';
+    default:
+      return '自分のペースで学習を続けましょう';
   }
-  if (category === 'still_learning') {
-    if (accuracy < 0.5) {
-      return '間違えやすいポイントを意識して、例文で使い方を確認しましょう';
-    }
-    return 'あと数回の正解で定着します。焦らず着実に進めましょう';
-  }
-  if (category === 'new') {
-    return '発音と意味を一緒に覚えると効果的です';
-  }
-  if (category === 'mastered') {
-    if (daysSinceLastStudy > 7) {
-      return '1週間以上復習していません。忘れる前に確認しましょう';
-    }
-    return '定期的な復習で長期記憶に定着させましょう';
-  }
-  return '自分のペースで学習を続けましょう';
 }
 
 /**

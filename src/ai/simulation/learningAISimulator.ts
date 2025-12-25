@@ -170,29 +170,29 @@ function calculatePriority(
   const timeBoost = timeResult.timePriorityBoost;
 
   // カテゴリ判定
-  let category = 'new';
+  let bucket = 'new';
   let basePriority = 50;
   let reason = '';
 
   const total = progress.correctCount + progress.incorrectCount;
   if (total === 0) {
-    category = 'new';
+    bucket = 'new';
     basePriority = 50;
     reason = '未学習';
   } else if (total === 1 && progress.correctCount === 1) {
-    category = 'mastered';
+    bucket = 'mastered';
     basePriority = 100; // 最後（時間経過で再出題）
     reason = '1発正解';
   } else if (progress.consecutiveCorrect >= 3) {
-    category = 'mastered';
+    bucket = 'mastered';
     basePriority = 100; // 最後
     reason = `連続正解${progress.consecutiveCorrect}回`;
   } else if (progress.incorrectCount > 0 && progress.consecutiveCorrect < 2) {
-    category = 'incorrect';
+    bucket = 'incorrect';
     basePriority = 0; // 最優先
     reason = `不正解${progress.incorrectCount}回`;
   } else {
-    category = 'learning';
+    bucket = 'learning';
     basePriority = 30;
     reason = `学習中（正解率${Math.round((progress.correctCount / total) * 100)}%）`;
   }
@@ -203,7 +203,7 @@ function calculatePriority(
   return {
     priority: finalPriority,
     timeBoost,
-    category,
+    category: bucket,
     reason: `${reason} + 時間経過${timeResult.bucketName}`,
   };
 }
@@ -311,12 +311,23 @@ export function formatSimulationResult(result: SimulationResult): string {
   lines.push('');
 
   // カテゴリ別分布
-  const categories = {
-    incorrect: result.reorderedQuestions.filter((q) => q.category === 'incorrect').length,
-    learning: result.reorderedQuestions.filter((q) => q.category === 'learning').length,
-    mastered: result.reorderedQuestions.filter((q) => q.category === 'mastered').length,
-    new: result.reorderedQuestions.filter((q) => q.category === 'new').length,
-  };
+  const categories = { incorrect: 0, learning: 0, mastered: 0, new: 0 };
+  for (const q of result.reorderedQuestions) {
+    switch (q.category) {
+      case 'incorrect':
+        categories.incorrect++;
+        break;
+      case 'learning':
+        categories.learning++;
+        break;
+      case 'mastered':
+        categories.mastered++;
+        break;
+      case 'new':
+        categories.new++;
+        break;
+    }
+  }
 
   lines.push(`【カテゴリ別分布】`);
   lines.push(`  分からない: ${categories.incorrect}問`);
