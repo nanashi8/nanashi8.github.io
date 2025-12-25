@@ -28,7 +28,7 @@ import type { AIAnalysisInput, SessionStats as AISessionStats } from '@/ai/types
 import { PerformanceMonitor } from '@/utils/performance-monitor';
 import { QualityMonitor } from '@/utils/quality-monitor';
 import { RequeuingDebugPanel } from './RequeuingDebugPanel';
-import { DebugCheckpoint } from '@/utils/DebugCheckpoint';
+import { DebugTracer } from '@/utils/DebugTracer';
 // A/Bテストログ
 import { createSessionId, getOrCreateAnonymousUserId } from '@/metrics/ab/identity';
 import { assignVariant } from '@/metrics/ab/variant';
@@ -613,13 +613,15 @@ function MemorizationView({
             return pos >= 40;
           });
           
-          DebugCheckpoint.record(
-            'M_1',
-            'scheduler入力直前',
-            weakWordsInCandidates.length,
-            candidateQuestions.length,
-            undefined,
-            weakWordsInCandidates.map(q => q.word)
+          // 🎫 トレース開始
+          DebugTracer.startTrace('weak-words-flow');
+          DebugTracer.startSpan(
+            'MemorizationView.prepareScheduling',
+            {
+              weakWordsCount: weakWordsInCandidates.length,
+              totalCount: candidateQuestions.length,
+              weakWords: weakWordsInCandidates.map(q => q.word),
+            }
           );
         }
 

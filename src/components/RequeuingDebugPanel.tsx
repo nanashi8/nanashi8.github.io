@@ -3,7 +3,7 @@ import { getStrugglingWordsList } from '../storage/progress/statistics';
 import { loadProgressSync } from '../storage/progress/progressStorage';
 import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 import type { ScheduleMode } from '@/ai/scheduler/types';
-import { DebugCheckpoint } from '@/utils/DebugCheckpoint';
+import { DebugTracer } from '@/utils/DebugTracer';
 // A/B集計用
 import { aggregateAll } from '@/metrics/ab/aggregate';
 import { exportSessionLogsAsJson, clearSessionLogs } from '@/metrics/ab/storage';
@@ -278,7 +278,7 @@ export function RequeuingDebugPanel({
 
 ---
 
-${DebugCheckpoint.getFlowSummary()}
+${DebugTracer.generateSummary()}
 
 ---
 
@@ -2442,12 +2442,12 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
       <div className="p-4 space-y-4 text-sm">
         {/* データフロー追跡 */}
         {(() => {
-          const flowSummary = DebugCheckpoint.getFlowSummary();
-          if (flowSummary === 'チェックポイントデータなし') {
+          const flowSummary = DebugTracer.generateSummary();
+          if (flowSummary === 'トレースデータなし' || flowSummary === 'スパンデータなし') {
             return (
               <div className="bg-gray-50 p-3 rounded border-2 border-gray-300">
-                <p className="font-semibold text-gray-800">🔍 データフロー追跡</p>
-                <p className="text-xs text-gray-600 mt-2">チェックポイントデータなし（学習を開始してください）</p>
+                <p className="font-semibold text-gray-800">🎫 データフロー追跡</p>
+                <p className="text-xs text-gray-600 mt-2">トレースデータなし（学習を開始してください）</p>
               </div>
             );
           }
@@ -2469,7 +2469,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 
           return (
             <div className="bg-purple-50 p-3 rounded border-2 border-purple-300">
-              <p className="font-semibold text-purple-800">🔍 データフロー追跡</p>
+              <p className="font-semibold text-purple-800">🎫 データフロー追跡（スパンベース）</p>
               <div className="mt-2 overflow-x-auto">
                 <table className="min-w-full text-xs">
                   <thead>

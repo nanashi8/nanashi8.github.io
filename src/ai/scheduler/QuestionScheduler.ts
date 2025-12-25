@@ -53,7 +53,7 @@ import { LearningStyleAI } from '@/ai/specialists/LearningStyleAI';
 import { GamificationAI } from '@/ai/specialists/GamificationAI';
 import { generateContextualSequence } from '@/ai/optimization/contextualLearningAI';
 import { isIncorrectWordCategory, isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
-import { DebugCheckpoint } from '@/utils/DebugCheckpoint';
+import { DebugTracer } from '@/utils/DebugTracer';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;
@@ -484,13 +484,13 @@ export class QuestionScheduler {
         return status && status.attempts > 0 && status.position >= 40;
       });
       
-      DebugCheckpoint.record(
-        'S_1',
-        'calculatePriorities入力',
-        weakWordsInInput.length,
-        questions.length,
-        'M_1',
-        weakWordsInInput.map(q => q.word)
+      const spanId = DebugTracer.startSpan(
+        'QuestionScheduler.calculatePriorities',
+        {
+          weakWordsCount: weakWordsInInput.length,
+          totalCount: questions.length,
+          weakWords: weakWordsInInput.map(q => q.word),
+        }
       );
     }
 
@@ -569,13 +569,13 @@ export class QuestionScheduler {
         pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
       );
       
-      DebugCheckpoint.record(
-        'G_1',
-        'GamificationAI入力',
-        weakWordsInInput.length,
-        prioritized.length,
-        'S_1',
-        weakWordsInInput.map(pq => pq.question.word)
+      DebugTracer.startSpan(
+        'QuestionScheduler.beforeGamification',
+        {
+          weakWordsCount: weakWordsInInput.length,
+          totalCount: prioritized.length,
+          weakWords: weakWordsInInput.map(pq => pq.question.word),
+        }
       );
     }
 
@@ -1419,6 +1419,27 @@ export class QuestionScheduler {
       return this.scheduleHybridMode(params, startTime);
     }
 
+    // 🐛 DEBUG: AIループ前の入力チェック（S_1）
+    if (import.meta.env.DEV) {
+      const weakWordsInInput = params.questions.filter(q => {
+        const wp = allProgress[q.word] ?? context.wordProgress[q.word] ?? null;
+        if (!wp) return false;
+        const attempts = (wp.memorizationAttempts ?? wp.totalAttempts ?? 0);
+        if (attempts <= 0) return false;
+        const pos = determineWordPosition(wp, params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar');
+        return pos >= 40;
+      });
+      
+      DebugTracer.startSpan(
+        'QuestionScheduler.finalPriorityMode.beforeAI',
+        {
+          weakWordsCount: weakWordsInInput.length,
+          totalCount: params.questions.length,
+          weakWords: weakWordsInInput.map(q => q.word),
+        }
+      );
+    }
+
     // 各問題にAICoordinatorのfinalPriorityを取得
     const prioritized: PrioritizedQuestion[] = [];
     for (const question of params.questions) {
@@ -1473,6 +1494,28 @@ export class QuestionScheduler {
         status,
         timeBoost: 1.0,
       });
+    }
+
+    // 🐛 DEBUG: AIループ完了後のチェック（S_2）
+    if (import.meta.env.DEV) {
+      const weakWordsInPrioritized = prioritized.filter(pq => {
+        if (!pq.status) return false;
+        const attempts = pq.status.attempts ?? 0;
+        if (attempts <= 0) return false;
+        return pq.position >= 40;
+      });
+      
+      DebugTracer.startSpan(
+        'QuestionScheduler.finalPriorityMode.afterAI',
+        {
+          weakWordsCount: weakWordsInPrioritized.length,
+          totalCount: prioritized.length,
+          weakWords: weakWordsInPrioritized.map(pq => pq.question.word),
+        }
+      );
+      
+      // トレース終了
+      DebugTracer.endTrace();
     }
 
     // finalPriority降順ソート（AIの判定を最優先）
