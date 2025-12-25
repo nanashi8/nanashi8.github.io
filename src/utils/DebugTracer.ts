@@ -461,6 +461,108 @@ export class DebugTracer {
       summary += `エラー: ${e}\n`;
     }
     
+    // 🔍 postProcess後のTOP30情報
+    try {
+      const postProcessOutput = localStorage.getItem('debug_postProcess_output');
+      const sortAndBalanceOutput = localStorage.getItem('debug_sortAndBalance_output');
+      
+      if (postProcessOutput || sortAndBalanceOutput) {
+        summary += '\n### 🔍 sortAndBalance → postProcess の順序検証\n\n';
+        
+        if (sortAndBalanceOutput) {
+          const sortAndBalanceData = JSON.parse(sortAndBalanceOutput) as Array<{
+            word: string;
+            position: number;
+            category?: string;
+            attempts: number;
+          }>;
+          
+          summary += `**sortAndBalance後のTOP10**:\n\n`;
+          summary += `| ランク | 単語 | Position | カテゴリ | 出題回数 |\n`;
+          summary += `|---|---|---|---|---|\n`;
+          
+          sortAndBalanceData.slice(0, 10).forEach((item, idx) => {
+            const posEmoji = item.position >= 70 ? '🔴' : item.position >= 60 ? '🟡' : item.position >= 40 ? '🔵' : item.position >= 20 ? '⚪' : '✅';
+            summary += `| ${idx + 1} | **${item.word}** | ${item.position} ${posEmoji} | ${item.category || '-'} | ${item.attempts}回 |\n`;
+          });
+          
+          // Position分布を表示
+          const sortAndBalanceDistribution = {
+            incorrect: sortAndBalanceData.filter(item => item.position >= 70).length,
+            stillLearning: sortAndBalanceData.filter(item => item.position >= 60 && item.position < 70 && item.attempts > 0).length,
+            newBoosted: sortAndBalanceData.filter(item => item.position >= 40 && item.position < 60 && item.attempts === 0).length,
+            newNormal: sortAndBalanceData.filter(item => item.position >= 20 && item.position < 40).length,
+            mastered: sortAndBalanceData.filter(item => item.position < 20).length,
+          };
+          
+          summary += `\n**Position分布（TOP30）**:\n`;
+          summary += `- 🔴 分からない (Position≥70): ${sortAndBalanceDistribution.incorrect}語\n`;
+          summary += `- 🟡 まだまだ (Position 60-69, attempts>0): ${sortAndBalanceDistribution.stillLearning}語\n`;
+          summary += `- 🔵 新規ブースト (Position 40-59, attempts=0): ${sortAndBalanceDistribution.newBoosted}語\n`;
+          summary += `- ⚪ 新規通常 (Position 20-39): ${sortAndBalanceDistribution.newNormal}語\n`;
+          summary += `- ✅ 定着済 (Position <20): ${sortAndBalanceDistribution.mastered}語\n\n`;
+        }
+        
+        if (postProcessOutput) {
+          const postProcessData = JSON.parse(postProcessOutput) as {
+            timestamp: string;
+            top30: Array<{
+              rank: number;
+              word: string;
+              position: number;
+              attempts: number;
+            }>;
+            positionDistribution: {
+              incorrect: number;
+              stillLearning: number;
+              newBoosted: number;
+              newNormal: number;
+              mastered: number;
+            };
+            totalQuestions: number;
+          };
+          
+          summary += `**postProcess後のTOP10**:\n\n`;
+          summary += `| ランク | 単語 | Position | 状態 |\n`;
+          summary += `|---|---|---|---|\n`;
+          
+          postProcessData.top30.slice(0, 10).forEach((item) => {
+            const posEmoji = item.position >= 70 ? '🔴' : item.position >= 60 ? '🟡' : item.position >= 40 ? '🔵' : item.position >= 20 ? '⚪' : '✅';
+            const stateText = item.position >= 70 ? '分からない' : item.position >= 60 ? 'まだまだ' : item.position >= 40 ? '新規ブースト' : item.position >= 20 ? '新規' : '定着済';
+            summary += `| ${item.rank} | **${item.word}** | ${item.position} ${posEmoji} | ${stateText} |\n`;
+          });
+          
+          summary += `\n**Position分布（TOP30）**:\n`;
+          summary += `- 🔴 分からない: ${postProcessData.positionDistribution.incorrect}語\n`;
+          summary += `- 🟡 まだまだ: ${postProcessData.positionDistribution.stillLearning}語\n`;
+          summary += `- 🔵 新規ブースト: ${postProcessData.positionDistribution.newBoosted}語\n`;
+          summary += `- ⚪ 新規通常: ${postProcessData.positionDistribution.newNormal}語\n`;
+          summary += `- ✅ 定着済: ${postProcessData.positionDistribution.mastered}語\n\n`;
+          
+          // sortAndBalanceとpostProcessの比較
+          if (sortAndBalanceOutput) {
+            const sortAndBalanceData = JSON.parse(sortAndBalanceOutput) as Array<{ word: string }>;
+            const sortTop10Words = sortAndBalanceData.slice(0, 10).map(item => item.word);
+            const postTop10Words = postProcessData.top30.slice(0, 10).map(item => item.word);
+            
+            const orderChanged = sortTop10Words.some((word, idx) => word !== postTop10Words[idx]);
+            
+            if (orderChanged) {
+              summary += `⚠️ **警告**: sortAndBalanceとpostProcessでTOP10の順序が変わっています！\n`;
+              summary += `→ postProcess()の関連語グループ化がPosition階層を破壊している可能性があります。\n\n`;
+            } else {
+              summary += `✅ **順序保持**: sortAndBalanceとpostProcessでTOP10の順序が一致しています。\n\n`;
+            }
+          }
+        } else {
+          summary += `⚠️ postProcess後のスナップショットがありません。\n`;
+        }
+      }
+    } catch (e) {
+      summary += '\n### ⚠️ postProcess情報の読み取りエラー\n\n';
+      summary += `エラー: ${e}\n`;
+    }
+    
     return summary;
   }
   
