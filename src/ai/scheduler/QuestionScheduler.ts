@@ -1567,8 +1567,43 @@ export class QuestionScheduler {
       DebugTracer.endTrace();
     }
 
-    // finalPriority降順ソート（AIの判定を最優先）
-    const sorted = prioritized.sort((a, b) => (b.finalPriority ?? 0) - (a.finalPriority ?? 0));
+    // 🎮 GamificationAI: まだまだ語をブースト
+    // NOTE: finalPriorityModeでは、Position引き上げだけでは効果がないため、
+    // finalPriorityを直接ブーストして、まだまだ語を最優先にする
+    const gamificationAI = new GamificationAI();
+    const boostedResult = gamificationAI.boostStillLearningQuestions(prioritized);
+    const boostedPrioritized = boostedResult.result;
+    
+    // 🔥 まだまだ語のfinalPriorityをブースト（Position 60-69の単語を最優先）
+    for (const pq of boostedPrioritized) {
+      if (pq.position >= 60 && pq.position < 70 && (pq.status?.attempts ?? 0) > 0) {
+        // まだまだ語のfinalPriorityを大幅にブースト（+100.0）
+        // これにより、AIの評価に関係なく、まだまだ語が上位に来る
+        pq.finalPriority = (pq.finalPriority ?? 0) + 100.0;
+      }
+    }
+    
+    if (import.meta.env.DEV) {
+      const weakWordsAfterBoost = boostedPrioritized.filter(pq => pq.position >= 40 && (pq.status?.attempts ?? 0) > 0);
+      const weakWordsInTop10 = boostedPrioritized
+        .sort((a, b) => (b.finalPriority ?? 0) - (a.finalPriority ?? 0))
+        .slice(0, 10)
+        .filter(pq => pq.position >= 40 && (pq.status?.attempts ?? 0) > 0);
+      
+      console.log('🎮 [finalPriorityMode] GamificationAI ブースト後:', {
+        totalQuestions: boostedPrioritized.length,
+        weakWordsCount: weakWordsAfterBoost.length,
+        weakWordsInTop10: weakWordsInTop10.length,
+        weakWordsTop5: weakWordsInTop10.slice(0, 5).map(pq => ({
+          word: pq.question.word,
+          position: pq.position,
+          finalPriority: pq.finalPriority ?? 0,
+        })),
+      });
+    }
+
+    // finalPriority降順ソート（AIの判定 + GamificationAIブーストを最優先）
+    const sorted = boostedPrioritized.sort((a, b) => (b.finalPriority ?? 0) - (a.finalPriority ?? 0));
 
     // 📊 localStorage保存: finalPriorityモードのTOP30（デバッグパネル/コピペ用）
     try {

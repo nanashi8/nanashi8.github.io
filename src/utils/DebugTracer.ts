@@ -400,6 +400,67 @@ export class DebugTracer {
       }
     }
     
+    // 🧠 finalPriorityモードの詳細情報
+    try {
+      const finalPriorityOutput = localStorage.getItem('debug_finalPriority_output');
+      const finalPrioritySessionStats = localStorage.getItem('debug_finalPriority_sessionStats');
+      
+      if (finalPriorityOutput && finalPrioritySessionStats) {
+        const top30 = JSON.parse(finalPriorityOutput) as Array<{
+          rank: number;
+          word: string;
+          position: number;
+          finalPriority: number;
+          category?: string;
+          attempts: number;
+        }>;
+        const sessionStats = JSON.parse(finalPrioritySessionStats) as {
+          currentTab: string;
+          totalQuestions: number;
+          allProgressCount: number;
+          timestamp: string;
+        };
+        
+        summary += '\n### 🧠 finalPriorityモード（AI主軸）の詳細\n\n';
+        summary += `**スケジューリング情報**:\n`;
+        summary += `- タブ: ${sessionStats.currentTab}\n`;
+        summary += `- 総問題数: ${sessionStats.totalQuestions}問\n`;
+        summary += `- 進捗データ: ${sessionStats.allProgressCount}語\n`;
+        summary += `- タイムスタンプ: ${sessionStats.timestamp}\n\n`;
+        
+        summary += `**TOP10の問題（finalPriority降順）**:\n\n`;
+        summary += `| ランク | 単語 | Position | finalPriority | カテゴリ | 出題回数 |\n`;
+        summary += `|---|---|---|---|---|---|\n`;
+        
+        top30.slice(0, 10).forEach((item) => {
+          const posEmoji = item.position >= 70 ? '🔴' : item.position >= 40 ? '🟡' : item.position >= 20 ? '⚪' : '✅';
+          summary += `| ${item.rank} | **${item.word}** | ${item.position} ${posEmoji} | ${item.finalPriority.toFixed(3)} | ${item.category || '-'} | ${item.attempts}回 |\n`;
+        });
+        
+        // まだまだ語のランキング分析
+        const weakWordsInTop30 = top30.filter(item => item.position >= 40 && item.attempts > 0);
+        summary += `\n**まだまだ語のランキング**:\n`;
+        summary += `- TOP10に含まれるまだまだ語: ${weakWordsInTop30.slice(0, 10).length}語\n`;
+        summary += `- TOP30に含まれるまだまだ語: ${weakWordsInTop30.length}語\n`;
+        
+        if (weakWordsInTop30.length > 0) {
+          summary += `\n**まだまだ語TOP5**:\n`;
+          weakWordsInTop30.slice(0, 5).forEach((item) => {
+            summary += `- **${item.word}** (ランク${item.rank}, Position ${item.position}, finalPriority ${item.finalPriority.toFixed(3)})\n`;
+          });
+        } else {
+          summary += `\n⚠️ **警告**: TOP30にまだまだ語が含まれていません！\n`;
+          summary += `→ GamificationAIのブースト処理が適用されていない可能性があります。\n`;
+        }
+      } else {
+        summary += '\n### ⚠️ finalPriorityモードのスナップショットがありません\n\n';
+        summary += `finalPriorityModeが使用されていないか、スナップショットの保存に失敗しています。\n`;
+      }
+    } catch (e) {
+      summary += '\n### ⚠️ finalPriorityモードのスナップショット読み取りエラー\n\n';
+      summary += `エラー: ${e}\n`;
+    }
+    
     return summary;
   }
   
