@@ -82,27 +82,34 @@ function getModeStillLearning(progress: any, mode: ScheduleMode): number {
   return toFiniteNumber(progress.memorizationStillLearning, 0);
 }
 
-function readPostProcessTop30(): any[] {
-  const raw = localStorage.getItem('debug_postProcess_output');
-  if (!raw) return [];
-  try {
-    const parsed = JSON.parse(raw) as any;
-    if (Array.isArray(parsed)) return parsed;
-    if (Array.isArray(parsed?.top30)) return parsed.top30;
-    return [];
-  } catch {
-    return [];
+function readPostProcessTop30(desiredMode: ScheduleMode): any[] {
+  const keys = [`debug_postProcess_output_${desiredMode}`, 'debug_postProcess_output'];
+  for (const key of keys) {
+    const raw = localStorage.getItem(key);
+    if (!raw) continue;
+    try {
+      const parsed = JSON.parse(raw) as any;
+      if (Array.isArray(parsed)) return parsed;
+      if (Array.isArray(parsed?.top30)) return parsed.top30;
+    } catch {
+      // ignore
+    }
   }
+  return [];
 }
 
-function readPostProcessMeta(): any | null {
-  const raw = localStorage.getItem('debug_postProcess_meta');
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw);
-  } catch {
-    return null;
+function readPostProcessMeta(desiredMode: ScheduleMode): any | null {
+  const keys = [`debug_postProcess_meta_${desiredMode}`, 'debug_postProcess_meta'];
+  for (const key of keys) {
+    const raw = localStorage.getItem(key);
+    if (!raw) continue;
+    try {
+      return JSON.parse(raw);
+    } catch {
+      // ignore
+    }
   }
+  return null;
 }
 
 export function RequeuingDebugPanel({
@@ -194,15 +201,6 @@ export function RequeuingDebugPanel({
     const overallAccuracy =
       totalAttempts > 0 ? ((totalCorrect / totalAttempts) * 100).toFixed(1) : '0.0';
 
-    const safeParse = (raw: string | null) => {
-      if (!raw) return null;
-      try {
-        return JSON.parse(raw);
-      } catch {
-        return null;
-      }
-    };
-
     // progressCache照合（隠しスペース/大小/Unicode差異を吸収）
     const progressMap = (allProgress.wordProgress || {}) as Record<string, any>;
     const normalizeWordKey = (w: string) =>
@@ -230,7 +228,7 @@ export function RequeuingDebugPanel({
     // 次10問の分析対象
     // - 期待される挙動（上位10問に混入）と一致させるため、可能なら postProcess() TOP10 を参照
     // - 取得できない場合のみ、props（現在位置の次10問）にフォールバック
-    const postProcessTop30 = readPostProcessTop30();
+    const postProcessTop30 = readPostProcessTop30(mode);
     const postProcessTop10Words = postProcessTop30
       .slice(0, 10)
       .map((i: any) => String(i?.word ?? ''))
@@ -538,7 +536,7 @@ ${boostData.boosted > 10 ? '\n_…他' + (boostData.boosted - 10) + '語_' : ''}
 
 ${(() => {
   // TOP30のカテゴリパターンを視覚化
-  const top30 = readPostProcessTop30().slice(0, 30);
+  const top30 = readPostProcessTop30(mode).slice(0, 30);
   if (top30.length === 0) return '⚠️ インターリーブ情報がありません';
 
   try {
@@ -834,8 +832,8 @@ ${(() => {
 
 **postProcess()後のTOP30（実際の出題キュー）**:
 ${(() => {
-  const meta = readPostProcessMeta();
-  const data = readPostProcessTop30();
+  const meta = readPostProcessMeta(mode);
+  const data = readPostProcessTop30(mode);
   if (!data || data.length === 0) return '⚠️ postProcess()の出力が保存されていません';
 
   const metaLine = meta
@@ -1542,8 +1540,12 @@ ${(() => {
 ## 🧠 finalPriorityモード（variant C）スナップショット
 
 ${(() => {
-  const stored = localStorage.getItem('debug_finalPriority_output');
-  const statsStored = localStorage.getItem('debug_finalPriority_sessionStats');
+  const stored =
+    localStorage.getItem(`debug_finalPriority_output_${mode}`) ||
+    localStorage.getItem('debug_finalPriority_output');
+  const statsStored =
+    localStorage.getItem(`debug_finalPriority_sessionStats_${mode}`) ||
+    localStorage.getItem('debug_finalPriority_sessionStats');
   if (!stored && !statsStored)
     return '⚠️ finalPriorityスナップショットがありません（finalPriorityModeが未使用 or まだ実行されていない）';
 
@@ -1770,8 +1772,8 @@ ${boostData.changes.length > 20 ? '_…他' + (boostData.changes.length - 20) + 
 現在位置（currentIndex）に追従する「次の30問」ではありません。
 
 ${(() => {
-  const postProcessOutput = localStorage.getItem('debug_postProcess_output');
-  if (!postProcessOutput) {
+  const scheduledQueue = readPostProcessTop30(mode);
+  if (!scheduledQueue || scheduledQueue.length === 0) {
     return (
       '⚠️ スケジューリング結果が保存されていません。ページを再読み込みしてください。\n\n**元のJSON順序（参考情報のみ）**:\n' +
       questions
@@ -1827,46 +1829,37 @@ ${(() => {
     );
   }
 
-  try {
-    const scheduledQueue = JSON.parse(postProcessOutput);
-    if (!Array.isArray(scheduledQueue) || scheduledQueue.length === 0) {
-      return '⚠️ スケジューリングキューが空です';
-    }
-
-    return (
-      '| # | 単語 | Position | 出題回数 | 状態 |\n' +
-      '|---|------|----------|----------|------|\n' +
-      scheduledQueue
-        .map((item: any, idx: number) => {
-          const status =
-            item.attempts === 0
-              ? '⚪ 新規(未出題)'
-              : item.position >= 70
-                ? '🔴 分からない'
-                : item.position >= 40
-                  ? '🟡 まだまだ'
-                  : item.position >= 20
-                    ? '⚪ 新規'
-                    : '✅ 定着';
-          return (
-            '| ' +
-            (idx + 1) +
-            ' | **' +
-            item.word +
-            '** | ' +
-            (item.position ?? 0).toFixed(0) +
-            ' | ' +
-            item.attempts +
-            '回 | ' +
-            status +
-            ' |'
-          );
-        })
-        .join('\n')
-    );
-  } catch {
-    return '⚠️ データ解析エラー';
-  }
+  return (
+    '| # | 単語 | Position | 出題回数 | 状態 |\n' +
+    '|---|------|----------|----------|------|\n' +
+    scheduledQueue
+      .map((item: any, idx: number) => {
+        const status =
+          item.attempts === 0
+            ? '⚪ 新規(未出題)'
+            : item.position >= 70
+              ? '🔴 分からない'
+              : item.position >= 40
+                ? '🟡 まだまだ'
+                : item.position >= 20
+                  ? '⚪ 新規'
+                  : '✅ 定着';
+        return (
+          '| ' +
+          (idx + 1) +
+          ' | **' +
+          item.word +
+          '** | ' +
+          (item.position ?? 0).toFixed(0) +
+          ' | ' +
+          item.attempts +
+          '回 | ' +
+          status +
+          ' |'
+        );
+      })
+      .join('\n')
+  );
 })()}
 
 ---
@@ -2090,7 +2083,7 @@ ${aiEvalTable}
 
 ${(() => {
   // 実際の出題キュー（postProcess output）を分析して、まだまだ・分からない語が確実に上位に来ているか検証
-  const postProcessData = readPostProcessTop30();
+  const postProcessData = readPostProcessTop30(mode);
   if (!postProcessData || postProcessData.length === 0) {
     return '⚠️ postProcess出力が取得できません。スケジューリング後に再度確認してください。';
   }
@@ -2861,13 +2854,10 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 
         {/* 🎮 カテゴリ別インターリーブ（交互配置） */}
         {(() => {
-          const postProcessOutput = localStorage.getItem('debug_postProcess_output');
-          if (!postProcessOutput) return null;
+          const top30 = readPostProcessTop30(mode).slice(0, 30);
+          if (top30.length === 0) return null;
 
           try {
-            const data = JSON.parse(postProcessOutput);
-            const top30 = data.slice(0, 30);
-
             // カテゴリ判定
             const categorized = top30.map((item: any) => {
               if (item.attempts > 0 && item.position >= 40 && item.position < 70) return 'まだまだ';
@@ -2916,6 +2906,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 
             const isWorking = interleavingQuality >= 3;
 
+            // prettier-ignore
             return (
               <div className="bg-blue-50 p-3 rounded border-2 border-blue-300">
                 <p className="font-semibold text-blue-800">

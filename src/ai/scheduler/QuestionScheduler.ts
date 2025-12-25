@@ -179,6 +179,7 @@ export class QuestionScheduler {
     const questions = this.postProcess(sorted, context);
 
     // 📊 localStorage保存: postProcess後のTOP30（実際の出題順序）
+    // NOTE: mode別キーも併記して、translation等の30問テストで上書きされないようにする
     try {
       const top30 = questions.slice(0, 30).map((q, _idx) => {
         const pq = sorted.find((pq) => pq.question.word === q.word);
@@ -189,15 +190,16 @@ export class QuestionScheduler {
           attempts: pq?.status?.attempts || 0,
         };
       });
-      localStorage.setItem(
-        'debug_postProcess_output',
-        JSON.stringify({
-          timestamp: new Date().toISOString(),
-          mode: context.mode,
-          source: 'schedule',
-          top30,
-        })
-      );
+
+      const payload = {
+        timestamp: new Date().toISOString(),
+        mode: context.mode,
+        source: 'schedule',
+        top30,
+      };
+
+      localStorage.setItem('debug_postProcess_output', JSON.stringify(payload));
+      localStorage.setItem(`debug_postProcess_output_${context.mode}`, JSON.stringify(payload));
     } catch {
       // localStorage失敗は無視
     }
@@ -1680,14 +1682,22 @@ export class QuestionScheduler {
       }));
       localStorage.setItem('debug_finalPriority_output', JSON.stringify(top30Final));
       localStorage.setItem(
-        'debug_finalPriority_sessionStats',
-        JSON.stringify({
-          currentTab,
-          totalQuestions: params.questions.length,
-          allProgressCount: Object.keys(allProgress || {}).length,
-          aiSessionStats,
-          timestamp: new Date().toISOString(),
-        })
+        `debug_finalPriority_output_${context.mode}`,
+        JSON.stringify(top30Final)
+      );
+
+      const statsPayload = {
+        currentTab,
+        totalQuestions: params.questions.length,
+        allProgressCount: Object.keys(allProgress || {}).length,
+        aiSessionStats,
+        timestamp: new Date().toISOString(),
+        mode: context.mode,
+      };
+      localStorage.setItem('debug_finalPriority_sessionStats', JSON.stringify(statsPayload));
+      localStorage.setItem(
+        `debug_finalPriority_sessionStats_${context.mode}`,
+        JSON.stringify(statsPayload)
       );
     } catch {
       // localStorage失敗は無視
@@ -1697,6 +1707,7 @@ export class QuestionScheduler {
     const questions = this.postProcess(interleaved, context);
 
     // 📊 localStorage保存: postProcess後のTOP30（finalPriorityMode）
+    // NOTE: mode別キーも併記して、translation等の30問テストで上書きされないようにする
     try {
       const top30 = questions.slice(0, 30).map((q) => {
         const pq = interleaved.find((pq) => pq.question.word === q.word);
@@ -1708,15 +1719,16 @@ export class QuestionScheduler {
           finalPriority: pq?.finalPriority ?? (q as any).finalPriority ?? 0,
         };
       });
-      localStorage.setItem(
-        'debug_postProcess_output',
-        JSON.stringify({
-          timestamp: new Date().toISOString(),
-          mode: context.mode,
-          source: 'scheduleFinalPriorityMode',
-          top30,
-        })
-      );
+
+      const payload = {
+        timestamp: new Date().toISOString(),
+        mode: context.mode,
+        source: 'scheduleFinalPriorityMode',
+        top30,
+      };
+
+      localStorage.setItem('debug_postProcess_output', JSON.stringify(payload));
+      localStorage.setItem(`debug_postProcess_output_${context.mode}`, JSON.stringify(payload));
     } catch {
       // ignore
     }
@@ -1795,24 +1807,26 @@ export class QuestionScheduler {
     }
 
     // デバッグ用: postProcessの挙動を保存（パネルで原因切り分けに使う）
+    // NOTE: mode別キーも併記して、translation等の30問テストで上書きされないようにする
     try {
-      const top30 = baseQuestions.slice(0, 30).map((q) => ({
-        word: q.word,
-        position: (q as any).position ?? 0,
-        attempts: (q as any).attempts ?? 0,
+      const top30 = questions.slice(0, 30).map((pq) => ({
+        word: pq.question.word,
+        position: pq.position ?? 0,
+        attempts: pq.status?.attempts ?? 0,
       }));
-      localStorage.setItem(
-        'debug_postProcess_meta',
-        JSON.stringify({
-          timestamp: new Date().toISOString(),
-          mode: context.mode,
-          isInterleavedAcrossBands,
-          action: isInterleavedAcrossBands
-            ? 'skipped_contextual_reorder'
-            : 'applied_contextual_reorder',
-          top30,
-        })
-      );
+
+      const payload = {
+        timestamp: new Date().toISOString(),
+        mode: context.mode,
+        isInterleavedAcrossBands,
+        action: isInterleavedAcrossBands
+          ? 'skipped_contextual_reorder'
+          : 'applied_contextual_reorder',
+        top30,
+      };
+
+      localStorage.setItem('debug_postProcess_meta', JSON.stringify(payload));
+      localStorage.setItem(`debug_postProcess_meta_${context.mode}`, JSON.stringify(payload));
     } catch {
       // ignore
     }
@@ -1911,12 +1925,13 @@ export class QuestionScheduler {
       }
 
       // 📊 postProcess後のTOP30を保存（デバッグパネル用）
+      // NOTE: read側は { top30: [...] } のみを前提にする
       try {
         const top30 = reorderedQuestions.slice(0, 30).map((q, idx) => ({
           rank: idx + 1,
           word: q.word,
           position: (q as any).position ?? 0,
-          attempts: 0, // postProcess後はattemptsが失われる可能性
+          attempts: (q as any).attempts ?? 0,
         }));
 
         // Position分布を計算
@@ -1928,15 +1943,17 @@ export class QuestionScheduler {
           mastered: top30.filter((q) => q.position < 20).length,
         };
 
-        localStorage.setItem(
-          'debug_postProcess_output',
-          JSON.stringify({
-            timestamp: new Date().toISOString(),
-            top30,
-            positionDistribution,
-            totalQuestions: reorderedQuestions.length,
-          })
-        );
+        const payload = {
+          timestamp: new Date().toISOString(),
+          mode: context.mode,
+          source: 'postProcess',
+          top30,
+          positionDistribution,
+          totalQuestions: reorderedQuestions.length,
+        };
+
+        localStorage.setItem('debug_postProcess_output', JSON.stringify(payload));
+        localStorage.setItem(`debug_postProcess_output_${context.mode}`, JSON.stringify(payload));
       } catch {
         // localStorage失敗は無視
       }
