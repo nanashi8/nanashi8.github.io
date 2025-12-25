@@ -282,71 +282,71 @@ ${DebugTracer.generateSummary()}
 
 ---
 
-${
-  (() => {
-    // 🚨 まだまだ語検出状況（最優先表示）
-    try {
-      const weakWordsDetection = localStorage.getItem('debug_weak_words_detection');
-      if (weakWordsDetection) {
-        const detection = JSON.parse(weakWordsDetection);
-        const detectedCount = (detection.allWeakWordsInLS || 0) - (detection.missingFromBase?.length || 0);
-        const missingCount = detection.missingFromBase?.length || 0;
-        
-        let section = '## 🚨 まだまだ語検出状況\n\n';
-        section += `**timestamp**: ${detection.timestamp || 'N/A'}\n\n`;
-        section += `- 📊 LocalStorageのまだまだ語: **${detection.allWeakWordsInLS || 0}語**\n`;
-        section += `- ✅ 検出成功（baseQuestionsに存在）: **${detectedCount}語**\n`;
-        section += `- ❌ データ欠損（baseQuestionsに不在）: **${missingCount}語**\n`;
-        section += `- 📁 baseQuestions総数: ${detection.baseQuestionsCount || 0}語\n`;
-        section += `- 🔍 filtered総数: ${detection.filteredCount || 0}語\n\n`;
-        
-        if (missingCount > 0) {
-          section += '### ❌ 致命的エラー: baseQuestionsに存在しないまだまだ語\n\n';
-          if (detection.missingFromBase && detection.missingFromBase.length > 0) {
-            section += '```\n';
-            detection.missingFromBase.forEach((word: string, i: number) => {
-              section += `${i + 1}. ${word}\n`;
-            });
-            section += '```\n\n';
-            section += '**原因**: これらの単語が元のJSONデータ（juniorWords.json等）に含まれていません。\n';
-            section += '**対策**: データソースを確認し、これらの単語を追加してください。\n\n';
-          }
-        }
-        
-        if (detection.weakWordsList && detection.weakWordsList.length > 0) {
-          section += '### 📋 LocalStorageのまだまだ語リスト\n\n';
-          section += '| # | 単語 | Position | memPos | attempts |\n';
-          section += '|---|------|----------|--------|----------|\n';
-          detection.weakWordsList.slice(0, 20).forEach((w: any, i: number) => {
-            section += `| ${i + 1} | **${w.word}** | ${w.position} | ${w.memPos ?? '-'} | ${w.attempts}回 |\n`;
-          });
-          if (detection.weakWordsList.length > 20) {
-            section += `\n_…他${detection.weakWordsList.length - 20}語省略_\n`;
-          }
-          section += '\n';
-        }
-        
-        if (detection.weakQuestionsWords && detection.weakQuestionsWords.length > 0) {
-          section += '### ✅ 検出されたweakQuestions\n\n';
+${(() => {
+  // 🚨 まだまだ語検出状況（最優先表示）
+  try {
+    const weakWordsDetection = localStorage.getItem('debug_weak_words_detection');
+    if (weakWordsDetection) {
+      const detection = JSON.parse(weakWordsDetection);
+      const detectedCount =
+        (detection.allWeakWordsInLS || 0) - (detection.missingFromBase?.length || 0);
+      const missingCount = detection.missingFromBase?.length || 0;
+
+      let section = '## 🚨 まだまだ語検出状況\n\n';
+      section += `**timestamp**: ${detection.timestamp || 'N/A'}\n\n`;
+      section += `- 📊 LocalStorageのまだまだ語: **${detection.allWeakWordsInLS || 0}語**\n`;
+      section += `- ✅ 検出成功（baseQuestionsに存在）: **${detectedCount}語**\n`;
+      section += `- ❌ データ欠損（baseQuestionsに不在）: **${missingCount}語**\n`;
+      section += `- 📁 baseQuestions総数: ${detection.baseQuestionsCount || 0}語\n`;
+      section += `- 🔍 filtered総数: ${detection.filteredCount || 0}語\n\n`;
+
+      if (missingCount > 0) {
+        section += '### ❌ 致命的エラー: baseQuestionsに存在しないまだまだ語\n\n';
+        if (detection.missingFromBase && detection.missingFromBase.length > 0) {
           section += '```\n';
-          detection.weakQuestionsWords.slice(0, 10).forEach((word: string, i: number) => {
+          detection.missingFromBase.forEach((word: string, i: number) => {
             section += `${i + 1}. ${word}\n`;
           });
-          if (detection.weakQuestionsWords.length > 10) {
-            section += `...他${detection.weakQuestionsWords.length - 10}語\n`;
-          }
           section += '```\n\n';
+          section +=
+            '**原因**: これらの単語が元のJSONデータ（juniorWords.json等）に含まれていません。\n';
+          section += '**対策**: データソースを確認し、これらの単語を追加してください。\n\n';
         }
-        
-        section += '---\n\n';
-        return section;
       }
-    } catch (e) {
-      return `## 🚨 まだまだ語検出状況\n\n⚠️ 検出データの読み込みエラー: ${e}\n\n---\n\n`;
+
+      if (detection.weakWordsList && detection.weakWordsList.length > 0) {
+        section += '### 📋 LocalStorageのまだまだ語リスト\n\n';
+        section += '| # | 単語 | Position | memPos | attempts |\n';
+        section += '|---|------|----------|--------|----------|\n';
+        detection.weakWordsList.slice(0, 20).forEach((w: any, i: number) => {
+          section += `| ${i + 1} | **${w.word}** | ${w.position} | ${w.memPos ?? '-'} | ${w.attempts}回 |\n`;
+        });
+        if (detection.weakWordsList.length > 20) {
+          section += `\n_…他${detection.weakWordsList.length - 20}語省略_\n`;
+        }
+        section += '\n';
+      }
+
+      if (detection.weakQuestionsWords && detection.weakQuestionsWords.length > 0) {
+        section += '### ✅ 検出されたweakQuestions\n\n';
+        section += '```\n';
+        detection.weakQuestionsWords.slice(0, 10).forEach((word: string, i: number) => {
+          section += `${i + 1}. ${word}\n`;
+        });
+        if (detection.weakQuestionsWords.length > 10) {
+          section += `...他${detection.weakQuestionsWords.length - 10}語\n`;
+        }
+        section += '```\n\n';
+      }
+
+      section += '---\n\n';
+      return section;
     }
-    return '';
-  })()
-}
+  } catch (e) {
+    return `## 🚨 まだまだ語検出状況\n\n⚠️ 検出データの読み込みエラー: ${e}\n\n---\n\n`;
+  }
+  return '';
+})()}
 
 ## 📊 スコアボード（学習状況）
 
@@ -1645,18 +1645,17 @@ ${
           const posWithSaved = (log as any).positionWithSavedPosition;
           const debugCalcInfo =
             savedPos !== undefined || posWithSaved !== undefined
-              ?
-                  ' | **savedPosition**: ' +
-                  (savedPos ?? '-') +
-                  ' | **calc(saved有り)**: ' +
-                  (posWithSaved ?? '-') +
-                  ' | **calc(saved無視/解答直後)**: ' +
-                  (log.positionAfter ?? '-') +
-                  (savedDecision
-                    ? ' | **saved判定**: ' +
-                      savedDecision +
-                      (savedReason ? ' (' + savedReason + ')' : '')
-                    : '')
+              ? ' | **savedPosition**: ' +
+                (savedPos ?? '-') +
+                ' | **calc(saved有り)**: ' +
+                (posWithSaved ?? '-') +
+                ' | **calc(saved無視/解答直後)**: ' +
+                (log.positionAfter ?? '-') +
+                (savedDecision
+                  ? ' | **saved判定**: ' +
+                    savedDecision +
+                    (savedReason ? ' (' + savedReason + ')' : '')
+                  : '')
               : '';
 
           return (
@@ -2252,7 +2251,9 @@ ${(() => {
     const recent = (byMode.length > 0 ? byMode : logs).slice(-30);
 
     const inserted = recent.filter((l: any) => l?.decision === 'inserted').length;
-    const skipped = recent.filter((l: any) => String(l?.decision ?? '').startsWith('skipped')).length;
+    const skipped = recent.filter((l: any) =>
+      String(l?.decision ?? '').startsWith('skipped')
+    ).length;
 
     let result = `**📊 サマリ**: inserted=${inserted}, skipped=${skipped}（表示: ${
       byMode.length > 0 ? mode : '全モード'
@@ -2264,9 +2265,13 @@ ${(() => {
         const word = String(l?.word ?? l?.qid ?? '(unknown)');
         const decision = String(l?.decision ?? 'unknown');
         const reason = String(l?.reason ?? '');
-        const plannedOffset = Number.isFinite(Number(l?.plannedOffset)) ? Number(l.plannedOffset) : null;
+        const plannedOffset = Number.isFinite(Number(l?.plannedOffset))
+          ? Number(l.plannedOffset)
+          : null;
         const insertAt = Number.isFinite(Number(l?.insertAt)) ? Number(l.insertAt) : null;
-        const currentIndex = Number.isFinite(Number(l?.currentIndex)) ? Number(l.currentIndex) : null;
+        const currentIndex = Number.isFinite(Number(l?.currentIndex))
+          ? Number(l.currentIndex)
+          : null;
 
         const qPos = l?.questionPosition ?? null;
         const ssotPos = l?.ssotPosition ?? null;
@@ -2440,6 +2445,37 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
       </div>
 
       <div className="p-4 space-y-4 text-sm">
+        {/* 🧪 A/Bテスト情報（JSON形式でコピペしやすく） */}
+        {(() => {
+          try {
+            const abInfo = localStorage.getItem('debug_ab_session_info');
+            if (!abInfo) return null;
+
+            const parsed = JSON.parse(abInfo);
+            const jsonStr = JSON.stringify(parsed, null, 2);
+
+            return (
+              <div className="bg-orange-50 p-3 rounded border-2 border-orange-300">
+                <p className="font-semibold text-orange-800">🧪 A/Bテスト情報（コピペ用）</p>
+                <p className="text-xs text-gray-600 mt-1">クリックでJSONをコピー</p>
+                <pre
+                  className="mt-2 bg-white p-2 rounded text-xs cursor-pointer whitespace-pre-wrap break-words"
+                  onClick={() => {
+                    navigator.clipboard.writeText(jsonStr);
+                    setCopySuccess(true);
+                    setTimeout(() => setCopySuccess(false), 1500);
+                  }}
+                  title="クリックしてコピー"
+                >
+                  {jsonStr}
+                </pre>
+              </div>
+            );
+          } catch {
+            return null;
+          }
+        })()}
+
         {/* データフロー追跡 */}
         {(() => {
           const flowSummary = DebugTracer.generateSummary();
@@ -2447,24 +2483,32 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             return (
               <div className="bg-gray-50 p-3 rounded border-2 border-gray-300">
                 <p className="font-semibold text-gray-800">🎫 データフロー追跡</p>
-                <p className="text-xs text-gray-600 mt-2">トレースデータなし（学習を開始してください）</p>
+                <p className="text-xs text-gray-600 mt-2">
+                  トレースデータなし（学習を開始してください）
+                </p>
               </div>
             );
           }
 
           // マークダウンテーブルをHTMLに変換
-          const lines = flowSummary.split('\n').filter(line => line.trim());
-          const tableLines = lines.filter(line => line.startsWith('|'));
-          
+          const lines = flowSummary.split('\n').filter((line) => line.trim());
+          const tableLines = lines.filter((line) => line.startsWith('|'));
+
           if (tableLines.length === 0) {
             return null;
           }
 
           // ヘッダーとデータ行を分離
           const [headerLine, _separatorLine, ...dataLines] = tableLines;
-          const headers = headerLine.split('|').filter(h => h.trim()).map(h => h.trim());
-          const rows = dataLines.map(line => 
-            line.split('|').filter(cell => cell.trim()).map(cell => cell.trim())
+          const headers = headerLine
+            .split('|')
+            .filter((h) => h.trim())
+            .map((h) => h.trim());
+          const rows = dataLines.map((line) =>
+            line
+              .split('|')
+              .filter((cell) => cell.trim())
+              .map((cell) => cell.trim())
           );
 
           return (
@@ -2475,7 +2519,9 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                   <thead>
                     <tr className="bg-purple-100">
                       {headers.map((header, idx) => (
-                        <th key={idx} className="px-2 py-1 text-left font-semibold">{header}</th>
+                        <th key={idx} className="px-2 py-1 text-left font-semibold">
+                          {header}
+                        </th>
                       ))}
                     </tr>
                   </thead>
@@ -2483,7 +2529,9 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     {rows.map((row, rowIdx) => (
                       <tr key={rowIdx} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-purple-50'}>
                         {row.map((cell, cellIdx) => (
-                          <td key={cellIdx} className="px-2 py-1">{cell}</td>
+                          <td key={cellIdx} className="px-2 py-1">
+                            {cell}
+                          </td>
                         ))}
                       </tr>
                     ))}
@@ -2711,12 +2759,15 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                         const savedDecision = saved?.decision;
                         const savedReason = saved?.reason;
                         const posWithSaved = (log as any).positionWithSavedPosition;
-                        if (savedPos === undefined && posWithSaved === undefined && !savedDecision) return null;
+                        if (savedPos === undefined && posWithSaved === undefined && !savedDecision)
+                          return null;
                         return (
                           <div className="mt-1 flex flex-wrap gap-3 text-xs text-gray-600">
                             <span>savedPosition: {savedPos ?? '-'}</span>
                             <span>calc(saved有り): {posWithSaved ?? '-'}</span>
-                            <span>calc(saved無視/解答直後): {log.positionAfter?.toFixed?.(0) ?? '-'}</span>
+                            <span>
+                              calc(saved無視/解答直後): {log.positionAfter?.toFixed?.(0) ?? '-'}
+                            </span>
                             {savedDecision && (
                               <span>
                                 saved判定: {String(savedDecision)}
