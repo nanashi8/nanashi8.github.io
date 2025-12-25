@@ -103,9 +103,13 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     } else if (struggling.length >= 20) {
       boostRatio = 0.25;
       boostAmount = 8; // +8 → Position 33-48
-    } else if (struggling.length >= 1) {
+    } else if (struggling.length >= 5) {
       boostRatio = 0.33;
-      boostAmount = 5; // +5 → Position 30-45（まだまだより確実に下）
+      boostAmount = 8; // +8 → Position 35-48（振動防止のため増量）
+    } else if (struggling.length >= 1) {
+      // 🔥 苦手語が極少（2-4語）の場合、振動防止のため新規を多めに混ぜる
+      boostRatio = 0.5; // 50%の新規を引き上げ
+      boostAmount = 15; // +15 → Position 35→50（苦手語との差を広げて確実に混ぜる）
     }
 
     const changed: Array<{ word: string; before: number; after: number }> = [];
@@ -179,9 +183,9 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
    * まだまだ語のPosition引き上げ（新規より優先させる）
    * Position 40-70, attempts > 0 の単語を +15 引き上げ
    *
-  * 🎯 段階的ブースト戦略:
-  * - 分からない（70-100）がある → 通常ブースト（Position 60-69）
-  * - 分からないが0になった → 強化ブースト（ただしPosition階層を崩さず60-69の上位に寄せる）
+   * 🎯 段階的ブースト戦略:
+   * - 分からない（70-100）がある → 通常ブースト（Position 60-69）
+   * - 分からないが0になった → 強化ブースト（ただしPosition階層を崩さず60-69の上位に寄せる）
    */
   boostStillLearningQuestions<
     T extends { position: number; attempts?: number; question?: { word: string } },
@@ -203,7 +207,9 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
         `🎯 [GamificationAI] まだまだ語ブースト開始: ${stillLearning.length}語 ${isFocusMode ? '【集中モード】' : '【通常モード】'}`
       );
       if (isFocusMode) {
-        console.log('🔥 [集中モード] 分からない0語 → まだまだを強化ブースト（Position 60-69の上位へ寄せる）');
+        console.log(
+          '🔥 [集中モード] 分からない0語 → まだまだを強化ブースト（Position 60-69の上位へ寄せる）'
+        );
       }
     }
 
