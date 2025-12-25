@@ -3,6 +3,7 @@ import { getStrugglingWordsList } from '../storage/progress/statistics';
 import { loadProgressSync } from '../storage/progress/progressStorage';
 import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 import type { ScheduleMode } from '@/ai/scheduler/types';
+import { DebugCheckpoint } from '@/utils/DebugCheckpoint';
 // A/B集計用
 import { aggregateAll } from '@/metrics/ab/aggregate';
 import { exportSessionLogsAsJson, clearSessionLogs } from '@/metrics/ab/storage';
@@ -274,6 +275,10 @@ export function RequeuingDebugPanel({
 **生成日時**: ${timestamp}
     **mode**: ${mode}
 **現在位置**: ${currentIndex + 1} / ${totalQuestions} 問目
+
+---
+
+${DebugCheckpoint.getFlowSummary()}
 
 ---
 
@@ -2398,14 +2403,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
   }, [currentIndex]);
 
   if (!isExpanded) {
-    return (
-      <button
-        onClick={() => setIsExpanded(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 z-50"
-      >
-        🔍 再出題デバッグ
-      </button>
-    );
+    return null;
   }
 
   // 次の出題予定を抽出
@@ -2442,6 +2440,60 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
       </div>
 
       <div className="p-4 space-y-4 text-sm">
+        {/* データフロー追跡 */}
+        {(() => {
+          const flowSummary = DebugCheckpoint.getFlowSummary();
+          if (flowSummary === 'チェックポイントデータなし') {
+            return (
+              <div className="bg-gray-50 p-3 rounded border-2 border-gray-300">
+                <p className="font-semibold text-gray-800">🔍 データフロー追跡</p>
+                <p className="text-xs text-gray-600 mt-2">チェックポイントデータなし（学習を開始してください）</p>
+              </div>
+            );
+          }
+
+          // マークダウンテーブルをHTMLに変換
+          const lines = flowSummary.split('\n').filter(line => line.trim());
+          const tableLines = lines.filter(line => line.startsWith('|'));
+          
+          if (tableLines.length === 0) {
+            return null;
+          }
+
+          // ヘッダーとデータ行を分離
+          const [headerLine, _separatorLine, ...dataLines] = tableLines;
+          const headers = headerLine.split('|').filter(h => h.trim()).map(h => h.trim());
+          const rows = dataLines.map(line => 
+            line.split('|').filter(cell => cell.trim()).map(cell => cell.trim())
+          );
+
+          return (
+            <div className="bg-purple-50 p-3 rounded border-2 border-purple-300">
+              <p className="font-semibold text-purple-800">🔍 データフロー追跡</p>
+              <div className="mt-2 overflow-x-auto">
+                <table className="min-w-full text-xs">
+                  <thead>
+                    <tr className="bg-purple-100">
+                      {headers.map((header, idx) => (
+                        <th key={idx} className="px-2 py-1 text-left font-semibold">{header}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows.map((row, rowIdx) => (
+                      <tr key={rowIdx} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-purple-50'}>
+                        {row.map((cell, cellIdx) => (
+                          <td key={cellIdx} className="px-2 py-1">{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          );
+        })()}
+
         {/* スコアボード */}
         {(() => {
           const allProgress = loadProgressSync();
