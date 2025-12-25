@@ -1289,6 +1289,29 @@ export async function updateWordProgress(
   } catch {
     // SSR等でwindowが無い場合は無視
   }
+
+  // 🚨 オブザーバーパターン: 「まだまだ・分からない」発生時に再スケジューリングをトリガー
+  // Position >= 60（まだまだ・分からない）の場合、即座に再出題候補に含める
+  try {
+    if (typeof window !== 'undefined' && calculatedPosition >= 60) {
+      const rescheduleEvent = new CustomEvent('weak-word-detected', {
+        detail: {
+          word,
+          position: calculatedPosition,
+          mode,
+          isIncorrect: !isCorrect,
+          timestamp: Date.now(),
+        },
+      });
+      window.dispatchEvent(rescheduleEvent);
+      
+      if (import.meta.env.DEV) {
+        console.log(`🚨 [WeakWordDetected] ${word}: Position=${calculatedPosition} → 再スケジューリングをトリガー`);
+      }
+    }
+  } catch {
+    // イベント発行失敗は無視
+  }
 }
 
 /**
