@@ -5,6 +5,7 @@
 ABC順の単調な出題順序を改善し、語源・品詞・意味的関連性に基づいて関連語を近くに配置する機能です。
 
 **重要な制約**: Position階層（復習優先度）は絶対に保持されます。
+
 - 70-100: incorrect（分からない）← 最優先
 - 60-69: still_learning（ブースト）
 - 40-59: new（ブースト）
@@ -63,14 +64,14 @@ ABC順の単調な出題順序を改善し、語源・品詞・意味的関連�
 
 通常通り `public/data/questions.json` に追加：
 
-\`\`\`json
+```json
 {
   "word": "construction",
   "meaning": "建設、構造",
   "category": "noun",
   "ipa": "/kənˈstrʌkʃən/"
 }
-\`\`\`
+```
 
 ### 2. メタ情報の自動抽出
 
@@ -93,7 +94,7 @@ ABC順の単調な出題順序を改善し、語源・品詞・意味的関連�
 
 開発モードで実行し、コンソールログを確認：
 
-\`\`\`javascript
+```javascript
 [postProcess] 関連語グループ化適用:
   totalClusters: 15
   totalTransitions: 42
@@ -101,7 +102,7 @@ ABC順の単調な出題順序を改善し、語源・品詞・意味的関連�
     { from: "construct", to: "construction", reason: "同じ語根（struct）" },
     { from: "construction", to: "structure", reason: "同じ語根（struct）" }
   ]
-\`\`\`
+```
 
 ## トラブルシューティング
 
@@ -112,15 +113,17 @@ ABC順の単調な出題順序を改善し、語源・品詞・意味的関連�
 **原因**: `postProcess()`のバグまたは`splitByPositionBands()`の実装ミス
 
 **解決策**:
+
 1. デバッグユーティリティで検証：
-   \`\`\`typescript
+
+   ```typescript
    import { validatePositionHierarchy } from '@/ai/optimization/wordMetadataDebug';
-   
+
    const violation = validatePositionHierarchy(questions, positionMap);
    if (violation) {
      console.error('Position階層違反:', violation);
    }
-   \`\`\`
+   ```
 
 2. `splitByPositionBands()`の範囲定義を確認：
    - 70-100, 60-69, 40-59, 20-39, 0-19が正しく定義されているか
@@ -136,28 +139,31 @@ ABC順の単調な出題順序を改善し、語源・品詞・意味的関連�
 **原因**: データベースに登録されていない語根・接頭辞・接尾辞
 
 **解決策**:
+
 1. カバレッジ統計を確認：
-   \`\`\`typescript
+
+   ```typescript
    import { calculateMetadataCoverage } from '@/ai/optimization/wordMetadataDebug';
-   
+
    const stats = calculateMetadataCoverage(questions);
    console.log('カバレッジ:', stats);
    // 期待値: wordFamilyCoverage > 0.5（50%以上）
-   \`\`\`
+   ```
 
 2. [wordMetadata.ts](../src/ai/optimization/wordMetadata.ts)に語根・接頭辞を追加：
-   \`\`\`typescript
+
+   ```typescript
    const COMMON_PREFIXES: PrefixInfo[] = [
      // 既存のエントリ
      { prefix: 'trans-', meaning: '超えて', examples: ['transport', 'translate'] }, // 追加
    ];
-   \`\`\`
+   ```
 
 3. キャッシュをクリア：
-   \`\`\`typescript
+   ```typescript
    import { metadataCache } from '@/ai/optimization/wordMetadataCache';
    metadataCache.clear();
-   \`\`\`
+   ```
 
 ### 関連性が弱すぎる
 
@@ -166,14 +172,16 @@ ABC順の単調な出題順序を改善し、語源・品詞・意味的関連�
 **原因**: `detectWordRelations()`が関連性を検出できていない
 
 **解決策**:
+
 1. 関連性強度分布を確認：
-   \`\`\`typescript
+
+   ```typescript
    import { analyzeRelationStrengthDistribution } from '@/ai/optimization/wordMetadataDebug';
-   
+
    const dist = analyzeRelationStrengthDistribution(transitions);
    console.log('強度分布:', dist);
    // 期待値: veryStrong + strong > 30%
-   \`\`\`
+   ```
 
 2. テーマ・類義語・反意語を追加：
    [contextualLearningAI.ts](../src/ai/optimization/contextualLearningAI.ts)の`SEMANTIC_THEMES`、`SYNONYM_GROUPS`、`ANTONYM_PAIRS`を拡張
@@ -188,38 +196,42 @@ ABC順の単調な出題順序を改善し、語源・品詞・意味的関連�
 **原因**: メタ情報の抽出が毎回実行されている
 
 **解決策**:
+
 1. キャッシュ統計を確認：
-   \`\`\`typescript
+
+   ```typescript
    import { metadataCache } from '@/ai/optimization/wordMetadataCache';
-   
+
    const stats = metadataCache.getStats();
    console.log('キャッシュサイズ:', stats.size);
    // 期待値: size > questions.length / 2（50%以上ヒット）
-   \`\`\`
+   ```
 
 2. TTLを延長（開発時のみ）：
-   \`\`\`typescript
+
+   ```typescript
    metadataCache.setTTL(7 * 24 * 60 * 60 * 1000); // 7日間
-   \`\`\`
+   ```
 
 3. 期限切れエントリを削除：
-   \`\`\`typescript
+   ```typescript
    const removed = metadataCache.purgeExpired();
    console.log('削除:', removed);
-   \`\`\`
+   ```
 
 ## 品質測定
 
 ### 基本メトリクス
 
-\`\`\`typescript
+```typescript
 import { calculateQualityMetrics } from '@/ai/optimization/wordGroupingQualityMetrics';
 
 const metrics = calculateQualityMetrics(questions, positionMap);
 console.log(formatQualityMetrics(metrics));
-\`\`\`
+```
 
 期待値：
+
 - 近接率: 70%以上（関連語が5問以内に配置）
 - 多様性: 60%以上（カテゴリが偏らない）
 - 階層保持: 100%（違反ゼロ）
@@ -227,14 +239,15 @@ console.log(formatQualityMetrics(metrics));
 
 ### ABC順との比較
 
-\`\`\`typescript
+```typescript
 import { compareOrderingQuality } from '@/ai/optimization/wordGroupingQualityMetrics';
 
 const comparison = compareOrderingQuality(abcQuestions, contextualQuestions, positionMap);
 console.log('改善度:', comparison.improvement);
-\`\`\`
+```
 
 期待値：
+
 - 近接率: +20%以上の改善
 - 平均関連度: +30%以上の改善
 
@@ -269,7 +282,7 @@ console.log('改善度:', comparison.improvement);
 
 ### 単体テスト
 
-\`\`\`typescript
+```typescript
 import { extractWordMetadata } from '@/ai/optimization/wordMetadata';
 
 describe('wordMetadata', () => {
@@ -277,22 +290,22 @@ describe('wordMetadata', () => {
     const meta = extractWordMetadata('unhappy', '不幸な');
     expect(meta.family?.prefix).toBe('un-');
   });
-  
+
   test('語根の検出', () => {
     const meta = extractWordMetadata('construction', '建設');
     expect(meta.family?.root).toBe('struct');
   });
-  
+
   test('接尾辞の検出', () => {
     const meta = extractWordMetadata('happiness', '幸福');
     expect(meta.family?.suffix).toBe('-ness');
   });
 });
-\`\`\`
+```
 
 ### 統合テスト
 
-\`\`\`typescript
+```typescript
 import { detectWordRelations } from '@/ai/optimization/contextualLearningAI';
 
 describe('contextualLearningAI', () => {
@@ -301,18 +314,18 @@ describe('contextualLearningAI', () => {
     expect(relation?.relationType).toBe('word_family');
     expect(relation?.strength).toBe(0.95);
   });
-  
+
   test('反意語の検出', () => {
     const relation = detectWordRelations('happy', 'sad');
     expect(relation?.relationType).toBe('antonym');
     expect(relation?.strength).toBe(0.9);
   });
 });
-\`\`\`
+```
 
 ### Position階層テスト
 
-\`\`\`typescript
+```typescript
 import { validatePositionHierarchy } from '@/ai/optimization/wordMetadataDebug';
 
 describe('QuestionScheduler', () => {
@@ -327,11 +340,11 @@ describe('QuestionScheduler', () => {
       ['b', 70],
       ['c', 60],
     ]);
-    
+
     const violation = validatePositionHierarchy(questions, positionMap);
     expect(violation).toBeNull();
   });
-  
+
   test('Position階層違反を検出', () => {
     const questions = [
       { word: 'a', position: 60 },
@@ -341,13 +354,13 @@ describe('QuestionScheduler', () => {
       ['a', 60],
       ['b', 80],
     ]);
-    
+
     const violation = validatePositionHierarchy(questions, positionMap);
     expect(violation).not.toBeNull();
     expect(violation?.violationIndex).toBe(0);
   });
 });
-\`\`\`
+```
 
 ## 今後の拡張
 

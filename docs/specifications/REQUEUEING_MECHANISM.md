@@ -18,7 +18,12 @@
 
 1. **解答時**: 優先度を計算し、学習段階（position）を判定
 2. **保存**: まだまだ/分からないの問題をリストに記録
-3. **再出題**: 適切なタイミング（3-5問後）で自動挿入
+3. **再出題**: 適切なタイミングで自動挿入
+
+- 分からない（Position>=70相当）: 初回は1-2問後
+- まだまだ（Position<70相当）: 初回は3-5問後
+- ただし、繰り返し再追加されるほど出題間隔を少しずつ延ばす（うんざり防止）
+
 4. **振動防止**: 同じ問題が連続で出ないようにする
 5. **🔒 完了強制**: まだまだ/分からないが0になるまで終了させない
 
@@ -114,6 +119,7 @@ const handleAnswer = async (isCorrect: boolean, isPartial: boolean) => {
 ```
 
 **重要ポイント**:
+
 - `updateWordProgress` が先に実行される（AI判定のため）
 - `reAddQuestion` は questions 配列を返す（副作用なし）
 - `setQuestions` でReact stateを更新
@@ -123,39 +129,26 @@ const handleAnswer = async (isCorrect: boolean, isPartial: boolean) => {
 **場所**: `src/hooks/useQuestionRequeue.ts`
 
 ```typescript
+// 概念図（実装の要点）
 const reAddQuestion = (question, questions, currentIndex) => {
-  // 1. 重複チェック: 次の10問以内に同じ問題があるか？
-  const windowSize = 10;
-  const upcoming = questions.slice(currentIndex + 1, currentIndex + windowSize + 1);
-  if (upcoming.some(q => q.word === question.word)) {
-    console.log('🔄 重複スキップ: 既に次の10問以内に存在');
-    return questions; // 追加しない
-  }
-
-  // 2. 挿入位置を計算: 3-5問後（ランダム）
-  const offset = 3 + Math.floor(Math.random() * 3); // 3, 4, or 5
-  const insertPosition = Math.min(currentIndex + offset, questions.length);
-
-  // 3. マーキング
-  const markedQuestion = {
-    ...question,
-    sessionPriority: Date.now(), // 再出題フラグ
-    reAddedCount: (question.reAddedCount || 0) + 1,
-  };
-
-  // 4. 配列に挿入
-  return [
-    ...questions.slice(0, insertPosition),
-    markedQuestion,
-    ...questions.slice(insertPosition),
-  ];
+  // 1) Positionから「分からない/まだまだ」を推定（Position>=70は分からない相当）
+  // 2) baseOffset を決定
+  //    - 分からない: 1-2問後
+  //    - まだまだ:   3-5問後
+  // 3) reAddedCount が増えるほど extraDelay を増やして plannedOffset を延長（上限あり）
+  // 4) plannedOffset に合わせて重複チェック範囲（windowSize）も拡張し、近傍に同一IDがあればスキップ
+  // 5) 可能なら Position-aware で高Position単語群の近くに寄せて挿入
+  // 6) questions 配列に挿入して返す（副作用なし）
 };
 ```
 
 **重要ポイント**:
-- **振動防止**: 10問ウィンドウで重複チェック
-- **ランダム化**: 3-5問後でランダム（パターン化防止）
+
+- **うんざり防止**: 繰り返し不正解/まだまだが続くほど出題間隔を延長（上限あり）
+- **振動防止**: plannedOffset に合わせて重複チェック範囲も拡張（固定10問に依存しない）
+- **ランダム化**: 初回の baseOffset はランダム（パターン化防止）
 - **マーキング**: `sessionPriority` で再出題であることを記録
+- **Position-aware**: 高Position（>=40）単語が後半に埋もれる場合、近傍に寄せる
 
 ### 3. AI評価（QuestionScheduler）
 
@@ -195,6 +188,7 @@ public recalculatePriorityAfterAnswer(progress: WordProgress): number {
 ```
 
 **重要ポイント**:
+
 - `determinePosition()` は `determineWordPosition()` に委譲（SSOT原則）
 - AI評価は localStorage に記録（デバッグパネルで可視化）
 
@@ -205,6 +199,7 @@ public recalculatePriorityAfterAnswer(progress: WordProgress): number {
 ### デバッグパネルの使い方
 
 1. **開発モードで起動**:
+
    ```bash
    npm run dev
    ```
@@ -218,6 +213,10 @@ public recalculatePriorityAfterAnswer(progress: WordProgress): number {
    - **再出題リスト**: 今後出題される問題
    - **次の10問**: 出題予定
    - **AI評価**: 最新5件の判定結果
+
+### localStorage のデバッグキー
+
+- `debug_position_aware_insertions`: Position-aware で挿入位置を調整したログ（最新30件）
 
 ### ログの見方
 
@@ -235,8 +234,8 @@ public recalculatePriorityAfterAnswer(progress: WordProgress): number {
 
 ```javascript
 // ブラウザのDevToolsで実行
-JSON.parse(localStorage.getItem('debug_ai_evaluations'))
-JSON.parse(localStorage.getItem('progress-data'))
+JSON.parse(localStorage.getItem('debug_ai_evaluations'));
+JSON.parse(localStorage.getItem('progress-data'));
 ```
 
 ---
@@ -278,12 +277,14 @@ JSON.parse(localStorage.getItem('progress-data'))
 ### 問題: 再出題されない
 
 **チェック項目**:
+
 1. ✅ `updateWordProgress` が呼ばれているか？
 2. ✅ `reAddQuestion` が呼ばれているか？
 3. ✅ questions配列が更新されているか？
 4. ✅ 重複チェックで弾かれていないか？
 
 **確認方法**:
+
 ```typescript
 // handleAnswer内に追加
 console.log('🔍 reAddQuestion前:', questions.length);
@@ -296,10 +297,12 @@ console.log('🔍 reAddQuestion後:', newQuestions.length);
 **原因**: 振動防止が機能していない
 
 **確認方法**:
+
 - デバッグパネルで「次の10問」を確認
 - 同じ単語が2回以上入っていないか？
 
 **対策**:
+
 - `windowSize` を拡大（現在は10）
 - `offset` を大きくする（現在は3-5）
 
@@ -308,11 +311,13 @@ console.log('🔍 reAddQuestion後:', newQuestions.length);
 **原因**: `determineWordPosition()` の判定ミス
 
 **確認方法**:
+
 1. localStorage の `progress-data` を確認
 2. WordProgress の `consecutiveIncorrect`, `consecutiveCorrect` を確認
 3. デバッグパネルのAI評価を確認
 
 **対策**:
+
 - `src/ai/utils/categoryDetermination.ts` を確認
 - 判定条件を調整
 
