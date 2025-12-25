@@ -270,8 +270,14 @@ export class DebugTracer {
     summary += '| スパン | 開始時刻 | 所要時間 | まだまだ語 | 総単語数 | 状態 |\n';
     summary += '|---|---|---|---|---|---|\n';
 
+    const maxSpansToShow = 30;
+    const spansToShow = spans.length > maxSpansToShow ? spans.slice(-maxSpansToShow) : spans;
+    if (spans.length > maxSpansToShow) {
+      summary += `> ℹ️ スパンが多いため、全${spans.length}件中、末尾${maxSpansToShow}件のみ表示します\n\n`;
+    }
+
     let prevCount = -1;
-    for (const span of spans) {
+    for (const span of spansToShow) {
       const duration = span.endTime ? `${(span.endTime - span.startTime).toFixed(2)}ms` : '実行中';
       const timeStr = new Date(Date.now() - performance.now() + span.startTime)
         .toISOString()
@@ -553,29 +559,37 @@ export class DebugTracer {
         }
 
         if (postProcessOutput) {
-          const postProcessData = JSON.parse(postProcessOutput) as {
-            timestamp: string;
-            top30: Array<{
-              rank: number;
-              word: string;
-              position: number;
-              attempts: number;
-            }>;
-            positionDistribution: {
-              incorrect: number;
-              stillLearning: number;
-              newBoosted: number;
-              newNormal: number;
-              mastered: number;
-            };
-            totalQuestions: number;
+          const raw = JSON.parse(postProcessOutput) as any;
+          const rawTop30: any[] = Array.isArray(raw)
+            ? raw
+            : Array.isArray(raw?.top30)
+              ? raw.top30
+              : [];
+
+          const top30 = rawTop30.slice(0, 30).map((item: any, idx: number) => ({
+            rank: Number(item?.rank) || idx + 1,
+            word: String(item?.word ?? ''),
+            position: Number(item?.position ?? 0),
+            attempts: Number(item?.attempts ?? 0),
+          }));
+
+          const positionDistribution = {
+            incorrect: top30.filter((item) => item.position >= 70).length,
+            stillLearning: top30.filter(
+              (item) => item.position >= 60 && item.position < 70 && item.attempts > 0
+            ).length,
+            newBoosted: top30.filter(
+              (item) => item.position >= 40 && item.position < 60 && item.attempts === 0
+            ).length,
+            newNormal: top30.filter((item) => item.position >= 20 && item.position < 40).length,
+            mastered: top30.filter((item) => item.position < 20).length,
           };
 
           summary += `**postProcess後のTOP10**:\n\n`;
           summary += `| ランク | 単語 | Position | 状態 |\n`;
           summary += `|---|---|---|---|\n`;
 
-          postProcessData.top30.slice(0, 10).forEach((item) => {
+          top30.slice(0, 10).forEach((item) => {
             const posEmoji =
               item.position >= 70
                 ? '🔴'
@@ -600,17 +614,17 @@ export class DebugTracer {
           });
 
           summary += `\n**Position分布（TOP30）**:\n`;
-          summary += `- 🔴 分からない: ${postProcessData.positionDistribution.incorrect}語\n`;
-          summary += `- 🟡 まだまだ: ${postProcessData.positionDistribution.stillLearning}語\n`;
-          summary += `- 🔵 新規ブースト: ${postProcessData.positionDistribution.newBoosted}語\n`;
-          summary += `- ⚪ 新規通常: ${postProcessData.positionDistribution.newNormal}語\n`;
-          summary += `- ✅ 定着済: ${postProcessData.positionDistribution.mastered}語\n\n`;
+          summary += `- 🔴 分からない: ${positionDistribution.incorrect}語\n`;
+          summary += `- 🟡 まだまだ: ${positionDistribution.stillLearning}語\n`;
+          summary += `- 🔵 新規ブースト: ${positionDistribution.newBoosted}語\n`;
+          summary += `- ⚪ 新規通常: ${positionDistribution.newNormal}語\n`;
+          summary += `- ✅ 定着済: ${positionDistribution.mastered}語\n\n`;
 
           // sortAndBalanceとpostProcessの比較
           if (sortAndBalanceOutput) {
             const sortAndBalanceData = JSON.parse(sortAndBalanceOutput) as Array<{ word: string }>;
             const sortTop10Words = sortAndBalanceData.slice(0, 10).map((item) => item.word);
-            const postTop10Words = postProcessData.top30.slice(0, 10).map((item) => item.word);
+            const postTop10Words = top30.slice(0, 10).map((item) => item.word);
 
             const orderChanged = sortTop10Words.some((word, idx) => word !== postTop10Words[idx]);
 
