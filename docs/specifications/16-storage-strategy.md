@@ -444,4 +444,3 @@ interface Settings {
 
 - [15-データ構造](./15-data-structures.md)
 - [05-統計・分析](./05-stats-analytics.md)
-- [22-開発環境セットアップ](./22-development-setup.md)

@@ -951,6 +951,36 @@
   opacity: 0.9;
 }
 
+/* 🔥 ブーストモード・復習モード時の点滅アニメーション */
+.retention-segment.pulsing {
+  animation: retention-pulse 1.5s ease-in-out infinite;
+}
+
+/* 文字（サブタイトル）用の点滅 */
+.pulsing-text {
+  animation: retention-pulse-text 1.5s ease-in-out infinite;
+}
+
+@keyframes retention-pulse-text {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes retention-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
 .retention-mastered {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
 }

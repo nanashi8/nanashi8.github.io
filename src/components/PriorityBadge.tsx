@@ -64,7 +64,7 @@ export const PriorityBadge: React.FC<PriorityBadgeProps> = ({
           </div>
         </div>
         {expandable && (
-          <button className="text-lg transition-transform" style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+          <button className={`text-lg transition-transform ${isExpanded ? 'rotate-180' : 'rotate-0'}`}>
             ▼
           </button>
         )}

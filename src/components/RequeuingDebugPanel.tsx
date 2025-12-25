@@ -180,7 +180,7 @@ export function RequeuingDebugPanel({
     };
 
     // progressCache照合（隠しスペース/大小/Unicode差異を吸収）
-    const progressMap = allProgress.wordProgress || {};
+    const progressMap = (allProgress.wordProgress || {}) as Record<string, any>;
     const normalizeWordKey = (w: string) =>
       String(w ?? '')
         .normalize('NFC')
@@ -1149,15 +1149,43 @@ ${(() => {
 
   // 🔧 Position再計算: questions配列のpositionは古い可能性があるため、LocalStorageから取得
   const progress = loadProgressSync();
+  const getAttemptsForMode = (wp: any | undefined | null) => {
+    if (!wp) return 0;
+    switch (mode) {
+      case 'memorization':
+        return wp.memorizationAttempts ?? 0;
+      case 'translation':
+        return wp.translationAttempts ?? 0;
+      case 'spelling':
+        return wp.spellingAttempts ?? 0;
+      case 'grammar':
+        return wp.grammarAttempts ?? 0;
+      default:
+        return wp.totalAttempts ?? 0;
+    }
+  };
   const remainingWithRealPosition = remaining.map((q: any) => {
     const wordKey = String(q.word ?? '');
     const wp = progress.wordProgress[wordKey];
+    const originalPosition = Number.isFinite(q.position) ? q.position : null;
     if (wp) {
       const realPosition = determineWordPosition(wp, mode);
-      const originalPosition = Number.isFinite(q.position) ? q.position : null;
-      return { ...q, position: realPosition, _originalPosition: originalPosition };
+      return {
+        ...q,
+        position: realPosition,
+        _originalPosition: originalPosition,
+        _wpMissing: false,
+        _attempts: getAttemptsForMode(wp),
+      };
     }
-    return q;
+    // WordProgress未作成の単語は、新規のSSOT初期値(35)として扱う（Position 0の誤表示を防ぐ）
+    return {
+      ...q,
+      position: 35,
+      _originalPosition: originalPosition,
+      _wpMissing: true,
+      _attempts: 0,
+    };
   });
 
   // 🚨 Position不整合検出
@@ -1211,20 +1239,29 @@ ${(() => {
 
   const positionGroups = {
     incorrect: remainingWithRealPosition.filter((q: any) => (q.position ?? 0) >= 70),
-    stillLearning: remainingWithRealPosition.filter(
-      (q: any) => (q.position ?? 0) >= 40 && (q.position ?? 0) < 70
-    ),
-    newBoosted: remainingWithRealPosition.filter(
-      (q: any) => (q.position ?? 0) >= 20 && (q.position ?? 0) < 40
-    ),
-    newNormal: remainingWithRealPosition.filter((q: any) => (q.position ?? 0) < 20),
+    stillLearning: remainingWithRealPosition.filter((q: any) => {
+      const pos = q.position ?? 0;
+      const attempts = q._attempts ?? 0;
+      return pos >= 40 && pos < 70 && attempts > 0;
+    }),
+    newBoosted: remainingWithRealPosition.filter((q: any) => {
+      const pos = q.position ?? 0;
+      const attempts = q._attempts ?? 0;
+      return pos >= 40 && pos < 60 && attempts === 0;
+    }),
+    newNormal: remainingWithRealPosition.filter((q: any) => {
+      const pos = q.position ?? 0;
+      return pos >= 20 && pos < 40;
+    }),
+    mastered: remainingWithRealPosition.filter((q: any) => (q.position ?? 0) < 20),
   };
 
   result += '**Position別内訳**:\n';
   result += '- 🔴 分からない（70-100）: ' + positionGroups.incorrect.length + '語\n';
-  result += '- 🟡 まだまだ（40-69）: ' + positionGroups.stillLearning.length + '語\n';
-  result += '- 🔵 新規引上（20-39）: ' + positionGroups.newBoosted.length + '語\n';
-  result += '- ⚪ 新規通常（0-19）: ' + positionGroups.newNormal.length + '語\n\n';
+  result += '- 🟡 まだまだ（40-69, attempts>0）: ' + positionGroups.stillLearning.length + '語\n';
+  result += '- 🔵 新規引上（40-59, attempts=0）: ' + positionGroups.newBoosted.length + '語\n';
+  result += '- ⚪ 新規通常（20-39）: ' + positionGroups.newNormal.length + '語\n';
+  result += '- ✅ 定着済（0-19）: ' + positionGroups.mastered.length + '語\n\n';
 
   // 次の30問の詳細（再計算されたPositionを使用）
   const next30 = remainingWithRealPosition.slice(0, 30);
@@ -1469,26 +1506,87 @@ ${
           // LocalStorageから実際の履歴を取得して検証
           const allProgress = loadProgressSync();
           const actualProgress = allProgress.wordProgress?.[log.word];
-          const actualCorrect = actualProgress?.memorizationCorrect ?? 0;
-          const actualStillLearning = actualProgress?.memorizationStillLearning ?? 0;
-          const actualAttempts = actualProgress?.memorizationAttempts ?? 0;
-          const actualIncorrect = actualAttempts - actualCorrect - actualStillLearning;
+          const actual = (() => {
+            if (!actualProgress) return { attempts: 0, correct: 0, stillLearning: 0, incorrect: 0 };
+            const attempts = (() => {
+              switch (log.mode) {
+                case 'memorization':
+                  return actualProgress.memorizationAttempts ?? 0;
+                case 'translation':
+                  return actualProgress.translationAttempts ?? 0;
+                case 'spelling':
+                  return actualProgress.spellingAttempts ?? 0;
+                case 'grammar':
+                  return actualProgress.grammarAttempts ?? 0;
+                default:
+                  return actualProgress.totalAttempts ?? 0;
+              }
+            })();
+            const correct = (() => {
+              switch (log.mode) {
+                case 'memorization':
+                  return actualProgress.memorizationCorrect ?? 0;
+                case 'translation':
+                  return actualProgress.translationCorrect ?? 0;
+                case 'spelling':
+                  return actualProgress.spellingCorrect ?? 0;
+                case 'grammar':
+                  return actualProgress.grammarCorrect ?? 0;
+                default:
+                  return actualProgress.correctCount ?? 0;
+              }
+            })();
+            const stillLearning =
+              log.mode === 'memorization' ? (actualProgress.memorizationStillLearning ?? 0) : 0;
+            const incorrect = attempts - correct - stillLearning;
+            return { attempts, correct, stillLearning, incorrect };
+          })();
+
+          const loggedMode = (() => {
+            const attempts = Number(log.progress?.modeAttempts ?? 0);
+            const correct = Number(log.progress?.modeCorrect ?? 0);
+            const stillLearning = Number(log.progress?.modeStillLearning ?? 0);
+            const incorrect = attempts - correct - stillLearning;
+            return { attempts, correct, stillLearning, incorrect };
+          })();
 
           // 実際の値を常に表示（不一致があれば⚠️マーク）
           const mismatch =
-            actualCorrect !== log.progress.correctCount ||
-            actualIncorrect !== log.progress.incorrectCount;
+            actual.correct !== loggedMode.correct ||
+            actual.stillLearning !== loggedMode.stillLearning ||
+            actual.incorrect !== loggedMode.incorrect;
           const actualInfo =
             ' | **実際のLS**: 正解' +
-            actualCorrect +
+            actual.correct +
             '/まだまだ' +
-            actualStillLearning +
+            actual.stillLearning +
             '/誤答' +
-            actualIncorrect +
+            actual.incorrect +
             ' (計' +
-            actualAttempts +
+            actual.attempts +
             '回)' +
             (mismatch ? ' ⚠️**不一致**' : '');
+
+          const saved = (log as any).savedPositionDebug;
+          const savedPos = saved?.savedPosition;
+          const savedDecision = saved?.decision;
+          const savedReason = saved?.reason;
+          const posWithSaved = (log as any).positionWithSavedPosition;
+          const debugCalcInfo =
+            savedPos !== undefined || posWithSaved !== undefined
+              ?
+                  ' | **savedPosition**: ' +
+                  (savedPos ?? '-') +
+                  ' | **calc(saved有り)**: ' +
+                  (posWithSaved ?? '-') +
+                  ' | **calc(saved無視/解答直後)**: ' +
+                  (log.positionAfter ?? '-') +
+                  (savedDecision
+                    ? ' | **saved判定**: ' +
+                      savedDecision +
+                      (savedReason ? ' (' + savedReason + ')' : '')
+                    : '')
+              : '';
 
           return (
             idx +
@@ -1503,12 +1601,15 @@ ${
             log.positionAfter.toFixed(0) +
             ' (' +
             log.category +
-            ') [ログ: 正解' +
-            log.progress.correctCount +
-            '/' +
-            log.progress.incorrectCount +
-            '誤答]' +
-            actualInfo
+            ') [ログ(mode): 正解' +
+            loggedMode.correct +
+            '/まだまだ' +
+            loggedMode.stillLearning +
+            '/誤答' +
+            loggedMode.incorrect +
+            ']' +
+            actualInfo +
+            debugCalcInfo
           );
         })
         .join('\n')
@@ -1586,8 +1687,22 @@ ${(() => {
         .map((q, idx) => {
           const allProgress = loadProgressSync();
           const wordProgress = allProgress.wordProgress?.[q.word];
-          const position = wordProgress?.memorizationPosition ?? 0;
-          const attempts = wordProgress?.totalAttempts ?? 0;
+          const position = wordProgress ? determineWordPosition(wordProgress, mode) : 35;
+          const attempts = (() => {
+            if (!wordProgress) return 0;
+            switch (mode) {
+              case 'memorization':
+                return wordProgress.memorizationAttempts ?? 0;
+              case 'translation':
+                return wordProgress.translationAttempts ?? 0;
+              case 'spelling':
+                return wordProgress.spellingAttempts ?? 0;
+              case 'grammar':
+                return wordProgress.grammarAttempts ?? 0;
+              default:
+                return wordProgress.totalAttempts ?? 0;
+            }
+          })();
           const status =
             attempts === 0
               ? '⚪ 新規（未出題）'
@@ -1683,8 +1798,22 @@ ${(() => {
       .map((q: any, idx: number) => {
         const word = String(q?.word ?? '');
         const wp = progress.wordProgress?.[word];
-        const position = wp ? determineWordPosition(wp, mode) : 0;
-        const attempts = wp?.totalAttempts ?? 0;
+        const position = wp ? determineWordPosition(wp, mode) : 35;
+        const attempts = (() => {
+          if (!wp) return 0;
+          switch (mode) {
+            case 'memorization':
+              return wp.memorizationAttempts ?? 0;
+            case 'translation':
+              return wp.translationAttempts ?? 0;
+            case 'spelling':
+              return wp.spellingAttempts ?? 0;
+            case 'grammar':
+              return wp.grammarAttempts ?? 0;
+            default:
+              return wp.totalAttempts ?? 0;
+          }
+        })();
         const difficulty = q?.difficulty ?? '不明';
         const status =
           attempts === 0
@@ -1724,8 +1853,22 @@ ${(() => {
     .map((question) => {
       const word = question?.word;
       const wordProgress = allProgress.wordProgress?.[word];
-      const position = wordProgress?.memorizationPosition ?? 0;
-      const attempts = wordProgress?.totalAttempts ?? 0;
+      const position = wordProgress ? determineWordPosition(wordProgress, mode) : 35;
+      const attempts = (() => {
+        if (!wordProgress) return 0;
+        switch (mode) {
+          case 'memorization':
+            return wordProgress.memorizationAttempts ?? 0;
+          case 'translation':
+            return wordProgress.translationAttempts ?? 0;
+          case 'spelling':
+            return wordProgress.spellingAttempts ?? 0;
+          case 'grammar':
+            return wordProgress.grammarAttempts ?? 0;
+          default:
+            return wordProgress.totalAttempts ?? 0;
+        }
+      })();
       const difficulty = question?.difficulty ?? '不明';
       const status =
         attempts === 0
@@ -1771,7 +1914,7 @@ ${aiEvalTable}
     return nextWindow.filter((q: any) => {
       const word = String(q?.word ?? '');
       const wp = progress.wordProgress?.[word];
-      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      const pos = wp ? determineWordPosition(wp, mode) : 35;
       return pos >= 70;
     }).length;
   })()}問
@@ -1781,7 +1924,7 @@ ${aiEvalTable}
     return nextWindow.filter((q: any) => {
       const word = String(q?.word ?? '');
       const wp = progress.wordProgress?.[word];
-      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      const pos = wp ? determineWordPosition(wp, mode) : 35;
       return pos >= 40 && pos < 70;
     }).length;
   })()}問
@@ -1791,8 +1934,22 @@ ${aiEvalTable}
     return nextWindow.filter((q: any) => {
       const word = String(q?.word ?? '');
       const wp = progress.wordProgress?.[word];
-      const attempts = wp?.totalAttempts ?? 0;
-      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      const attempts = (() => {
+        if (!wp) return 0;
+        switch (mode) {
+          case 'memorization':
+            return wp.memorizationAttempts ?? 0;
+          case 'translation':
+            return wp.translationAttempts ?? 0;
+          case 'spelling':
+            return wp.spellingAttempts ?? 0;
+          case 'grammar':
+            return wp.grammarAttempts ?? 0;
+          default:
+            return wp.totalAttempts ?? 0;
+        }
+      })();
+      const pos = wp ? determineWordPosition(wp, mode) : 35;
       return attempts === 0 || (pos >= 20 && pos < 40);
     }).length;
   })()}問
@@ -1802,8 +1959,22 @@ ${aiEvalTable}
     return nextWindow.filter((q: any) => {
       const word = String(q?.word ?? '');
       const wp = progress.wordProgress?.[word];
-      const attempts = wp?.totalAttempts ?? 0;
-      const pos = wp ? determineWordPosition(wp, mode) : 0;
+      const attempts = (() => {
+        if (!wp) return 0;
+        switch (mode) {
+          case 'memorization':
+            return wp.memorizationAttempts ?? 0;
+          case 'translation':
+            return wp.translationAttempts ?? 0;
+          case 'spelling':
+            return wp.spellingAttempts ?? 0;
+          case 'grammar':
+            return wp.grammarAttempts ?? 0;
+          default:
+            return wp.totalAttempts ?? 0;
+        }
+      })();
+      const pos = wp ? determineWordPosition(wp, mode) : 35;
       return attempts > 0 && pos < 20;
     }).length;
   })()}問
@@ -1987,6 +2158,66 @@ ${(() => {
     return result;
   } catch (error) {
     return `⚠️ Position-aware挿入ログの解析に失敗: ${error}`;
+  }
+})()}
+
+---
+
+### 🔄 再出題差し込みログ（useQuestionRequeue）
+
+${(() => {
+  const stored = localStorage.getItem('debug_requeue_events');
+  if (!stored) {
+    return '⚠️ debug_requeue_events がありません（まだ再出題差し込みが発生していない可能性）';
+  }
+
+  try {
+    const logs = JSON.parse(stored);
+    if (!Array.isArray(logs) || logs.length === 0) {
+      return '⚠️ debug_requeue_events が空です';
+    }
+
+    const byMode = logs.filter((l: any) => String(l?.mode ?? '') === mode);
+    const recent = (byMode.length > 0 ? byMode : logs).slice(-30);
+
+    const inserted = recent.filter((l: any) => l?.decision === 'inserted').length;
+    const skipped = recent.filter((l: any) => String(l?.decision ?? '').startsWith('skipped')).length;
+
+    let result = `**📊 サマリ**: inserted=${inserted}, skipped=${skipped}（表示: ${
+      byMode.length > 0 ? mode : '全モード'
+    } / 最新${recent.length}件）\n\n`;
+
+    result += recent
+      .map((l: any, idx: number) => {
+        const time = l?.timestamp ? new Date(l.timestamp).toLocaleTimeString('ja-JP') : '-';
+        const word = String(l?.word ?? l?.qid ?? '(unknown)');
+        const decision = String(l?.decision ?? 'unknown');
+        const reason = String(l?.reason ?? '');
+        const plannedOffset = Number.isFinite(Number(l?.plannedOffset)) ? Number(l.plannedOffset) : null;
+        const insertAt = Number.isFinite(Number(l?.insertAt)) ? Number(l.insertAt) : null;
+        const currentIndex = Number.isFinite(Number(l?.currentIndex)) ? Number(l.currentIndex) : null;
+
+        const qPos = l?.questionPosition ?? null;
+        const ssotPos = l?.ssotPosition ?? null;
+        const effPos = l?.effectivePosition ?? null;
+        const posInfo = `pos(q)=${qPos ?? '-'}, pos(ssot)=${ssotPos ?? '-'}, pos(used)=${effPos ?? '-'}`;
+
+        const where =
+          decision === 'inserted' && insertAt != null && currentIndex != null
+            ? `insert@index ${insertAt} (現在位置+${insertAt - currentIndex})`
+            : decision.startsWith('skipped')
+              ? `skip (windowEnd=${l?.windowEnd ?? '-'})`
+              : '';
+
+        const offsetInfo = plannedOffset != null ? `offset=${plannedOffset}` : '';
+
+        return `${idx + 1}. ${time} [${decision}] **${word}** (${reason}) ${offsetInfo} ${where} | ${posInfo}`;
+      })
+      .join('\n');
+
+    return result;
+  } catch (e) {
+    return `⚠️ debug_requeue_events の解析に失敗: ${String(e)}`;
   }
 })()}
 
@@ -2355,6 +2586,28 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                         <span>連続誤答: {log.progress.consecutiveIncorrect}</span>
                         <span>正答率: {(log.progress.accuracy * 100).toFixed(0)}%</span>
                       </div>
+
+                      {(() => {
+                        const saved = (log as any).savedPositionDebug;
+                        const savedPos = saved?.savedPosition;
+                        const savedDecision = saved?.decision;
+                        const savedReason = saved?.reason;
+                        const posWithSaved = (log as any).positionWithSavedPosition;
+                        if (savedPos === undefined && posWithSaved === undefined && !savedDecision) return null;
+                        return (
+                          <div className="mt-1 flex flex-wrap gap-3 text-xs text-gray-600">
+                            <span>savedPosition: {savedPos ?? '-'}</span>
+                            <span>calc(saved有り): {posWithSaved ?? '-'}</span>
+                            <span>calc(saved無視/解答直後): {log.positionAfter?.toFixed?.(0) ?? '-'}</span>
+                            {savedDecision && (
+                              <span>
+                                saved判定: {String(savedDecision)}
+                                {savedReason ? ` (${String(savedReason)})` : ''}
+                              </span>
+                            )}
+                          </div>
+                        );
+                      })()}
                     </div>
                   );
                 })}

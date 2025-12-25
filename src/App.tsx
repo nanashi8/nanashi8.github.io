@@ -1477,7 +1477,12 @@ function App() {
     // 🔒 暗記タブ同等: 不正解は近い将来に再出題として差し込み
     let questionsAfterRequeue = quizState.questions;
     if (!reviewFocusMode && currentQuestion && !isCorrect) {
-      const updated = _reAddQuestion(currentQuestion, quizState.questions, quizState.currentIndex);
+      const updated = _reAddQuestion(
+        currentQuestion,
+        quizState.questions,
+        quizState.currentIndex,
+        'translation'
+      );
       questionsAfterRequeue = updated;
     }
 

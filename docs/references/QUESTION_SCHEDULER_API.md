@@ -583,7 +583,7 @@ localStorage.setItem('debug-scheduler', 'true');
 - [型定義リファレンス](../references/QUESTION_SCHEDULER_TYPES.md) - 全インターフェース定義
 - [復旧手順書](../how-to/QUESTION_SCHEDULER_RECOVERY.md) - 機能喪失時の復旧方法
 - [メタAI統合ガイド](../guidelines/META_AI_INTEGRATION_GUIDE.md) - 4タブへの統合方法
-- [DetectedSignal活用ガイド](DETECTED_SIGNAL_USAGE_GUIDE.md) - シグナルのUI統合
+- [DetectedSignal活用ガイド](../how-to/DETECTED_SIGNAL_USAGE_GUIDE.md) - シグナルのUI統合
 
 ---
 

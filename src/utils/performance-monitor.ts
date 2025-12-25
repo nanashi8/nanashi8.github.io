@@ -58,7 +58,7 @@ export class PerformanceMonitor {
       performance.clearMeasures(label);
 
       return duration;
-    } catch (error) {
+    } catch {
       // 静かに失敗（開発用機能のためエラーログを出さない）
       return 0;
     }

@@ -44,7 +44,7 @@ while [ $ELAPSED -lt $TIMEOUT ]; do
     fi
     sleep 1
     ELAPSED=$((ELAPSED + 1))
-    
+
     # 進捗表示
     if [ $((ELAPSED % 5)) -eq 0 ]; then
         echo -e "${YELLOW}  待機中... ${ELAPSED}/${TIMEOUT}秒${NC}"
@@ -61,6 +61,9 @@ fi
 
 # 5. テスト実行
 echo -e "${BLUE}=== テスト実行開始 ===${NC}"
+
+# 無駄な視覚回帰（可変内容のスナップショット比較）を事前に禁止
+bash scripts/check-no-wasted-visual-tests.sh
 
 # テストタイプを引数から取得（デフォルト: smoke-fast）
 TEST_TYPE=${1:-smoke-fast}

@@ -501,7 +501,12 @@ function SpellingView({
     // 🔒 暗記タブ同等: 不正解は近い将来に再出題として差し込み
     let questionsAfterRequeue = spellingState.questions;
     if (!isCorrect && currentQuestion) {
-      const updated = reAddQuestion(currentQuestion, spellingState.questions, spellingState.currentIndex);
+      const updated = reAddQuestion(
+        currentQuestion,
+        spellingState.questions,
+        spellingState.currentIndex,
+        'spelling'
+      );
       questionsAfterRequeue = updated;
       if (updated !== spellingState.questions) {
         setSpellingState((prev) => ({

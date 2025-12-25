@@ -467,8 +467,32 @@ function MemorizationView({
         // ✅ progressCacheを先に温める（loadProgressSyncが空の初期値を掴むのを防ぐ）
         await loadProgress();
 
+        // 🔥 復習/ブースト時に「弱点語がフィルタで落ちて再出題されない」を防ぐ
+        // filtered（ユーザー設定）に、現在の進捗上の弱点語（Position>=40 & attempts>0）を必ず含める
+        const progress = loadProgressSync();
+        const wordProgress = progress.wordProgress || {};
+        const weakQuestions: Question[] = [];
+        for (const q of baseQuestions) {
+          const wp = wordProgress[q.word];
+          if (!wp) continue;
+          const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
+          if (attempts <= 0) continue;
+          const pos = determineWordPosition(wp, 'memorization');
+          if (pos >= 40) {
+            weakQuestions.push(q);
+          }
+        }
+
+        let candidateQuestions = filtered;
+        if (weakQuestions.length > 0) {
+          const dedup = new Map<string, Question>();
+          for (const q of filtered) dedup.set(q.word, q);
+          for (const q of weakQuestions) dedup.set(q.word, q);
+          candidateQuestions = Array.from(dedup.values());
+        }
+
         const scheduleResult = await scheduler.schedule({
-          questions: filtered,
+          questions: candidateQuestions,
           mode: 'memorization',
           limits: {
             learningLimit: stillLearningLimit,
@@ -482,7 +506,7 @@ function MemorizationView({
             duration: Date.now() - cardDisplayTimeRef.current,
           },
           useMetaAI: true, // ✅ 学習AIは常に有効（カテゴリー別優先順位）
-          isReviewFocusMode: false,
+          isReviewFocusMode,
           hybridMode: abVariant === 'B', // 🧪 B: Position主軸+AI小補正
           finalPriorityMode: abVariant === 'C', // 🧪 C: AI主軸（finalPriority主因）
         });
@@ -630,6 +654,7 @@ function MemorizationView({
     selectedWordPhraseFilter,
     allQuestions,
     isLoading,
+    isReviewFocusMode,
     // questionsとschedulerは除外（無限ループ防止）
     // sessionStatsも除外（内部で更新されるため）
     // rescheduleCounterも除外（現在未使用のため）
@@ -1300,7 +1325,7 @@ function MemorizationView({
       // 不正解またはまだまだの場合に再追加
       let questionsForNextIndex = questions; // 次のインデックス計算用
       if (!isCorrect || isStillLearning) {
-        const updatedQuestions = _reAddQuestion(currentQuestion, questions, currentIndex);
+        const updatedQuestions = _reAddQuestion(currentQuestion, questions, currentIndex, 'memorization');
         if (updatedQuestions !== questions) {
           questionsForNextIndex = updatedQuestions; // 更新後の配列を使用
           setQuestions(updatedQuestions);

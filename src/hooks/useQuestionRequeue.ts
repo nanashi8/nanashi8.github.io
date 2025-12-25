@@ -20,10 +20,12 @@ export interface RequeuableQuestion {
   [key: string]: any;
 }
 
+type LearningMode = 'memorization' | 'translation' | 'spelling' | 'grammar';
+
 // 統計型は呼び出し側の型パラメータに任せる
 interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
   // 再追加処理
-  reAddQuestion: (question: T, questions: T[], currentIndex: number) => T[];
+  reAddQuestion: (question: T, questions: T[], currentIndex: number, mode?: LearningMode) => T[];
 
   // フラグクリア処理
   clearExpiredFlags: (questions: T[], currentIndex: number) => T[];
@@ -72,7 +74,8 @@ export function useQuestionRequeue<
    * 🧘 連続で分からないが続く場合: 出題間隔を少しずつ延ばして疲労を防ぐ
    * 🎯 Position-aware: 新たに高Positionになった単語は他の高Position単語の近くに配置
    */
-  const reAddQuestion = useCallback((question: T, questions: T[], currentIndex: number): T[] => {
+  const reAddQuestion = useCallback(
+    (question: T, questions: T[], currentIndex: number, mode?: LearningMode): T[] => {
     // nullガード
     if (!questions || !Array.isArray(questions)) {
       console.warn('[useQuestionRequeue] questions is null or not an array');
@@ -81,6 +84,27 @@ export function useQuestionRequeue<
 
     const qid =
       (question as any).id ?? (question as any).word ?? String((question as any).japanese ?? '');
+
+    // SSOT（LocalStorage）からPositionを推定（可能な場合）
+    // - question.position は古い/未付与の可能性があるため、modeが分かるときはSSOTを優先
+    const questionRawPosition = (question as any).position;
+    const questionPosition = Number.isFinite(questionRawPosition)
+      ? Number(questionRawPosition)
+      : undefined;
+
+    const ssotPosition = (() => {
+      if (!mode) return undefined;
+      try {
+        const progress = loadProgressSync();
+        const wordKey = String((question as any).word ?? qid ?? '');
+        const wp = progress?.wordProgress?.[wordKey];
+        return wp ? determineWordPosition(wp, mode) : 35;
+      } catch {
+        return undefined;
+      }
+    })();
+
+    const effectivePosition = ssotPosition ?? questionPosition;
     const reAddedQuestion = {
       ...question,
       sessionPriority: Date.now(),
@@ -90,8 +114,7 @@ export function useQuestionRequeue<
     const currentReaddCount = question.reAddedCount || 0;
 
     // 可能ならPositionから「分からない/まだまだ」を推定（なければ still_learning 相当として扱う）
-    const questionPosition = (question as any).position;
-    const isIncorrectLike = questionPosition !== undefined && questionPosition >= 70;
+    const isIncorrectLike = effectivePosition !== undefined && effectivePosition >= 70;
 
     // 🔒 強制装置: 再出題位置を決定
     // 初回は比較的早めに再出題するが、連続で「分からない」が続くほど間隔を少しずつ延ばす
@@ -106,6 +129,20 @@ export function useQuestionRequeue<
 
     const plannedOffset = baseOffset + extraDelay;
 
+    const pushRequeueDebugLog = (entry: Record<string, unknown>) => {
+      try {
+        const key = 'debug_requeue_events';
+        const stored = localStorage.getItem(key);
+        const logs = stored ? JSON.parse(stored) : [];
+        logs.push(entry);
+        // 最新30件のみ保持
+        if (logs.length > 30) logs.shift();
+        localStorage.setItem(key, JSON.stringify(logs));
+      } catch {
+        // ignore
+      }
+    };
+
     // 直近ウィンドウに同一IDがあれば重複再追加しない（実際の挿入予定位置に合わせて探索範囲も拡張）
     const windowSize = Math.min(30, Math.max(10, plannedOffset + 5));
     const windowEnd = Math.min(currentIndex + windowSize + 1, questions.length);
@@ -115,6 +152,23 @@ export function useQuestionRequeue<
       return id === qid;
     });
     if (existsNearby) {
+      pushRequeueDebugLog({
+        timestamp: new Date().toISOString(),
+        mode: mode ?? 'unknown',
+        word: String((question as any).word ?? qid),
+        qid: String(qid),
+        decision: 'skipped_exists_nearby',
+        reason: isIncorrectLike ? 'incorrect_like' : 'still_learning_like',
+        currentIndex,
+        windowEnd,
+        baseOffset,
+        extraDelay,
+        plannedOffset,
+        questionPosition: questionPosition ?? null,
+        ssotPosition: ssotPosition ?? null,
+        effectivePosition: effectivePosition ?? null,
+        reAddedCountBefore: currentReaddCount,
+      });
       if (import.meta.env.DEV) {
         console.log('🔄 [useQuestionRequeue] 重複スキップ: 既に次の10問以内に存在', {
           word: String(qid),
@@ -127,9 +181,12 @@ export function useQuestionRequeue<
 
     let insertPosition = Math.min(currentIndex + plannedOffset, questions.length);
 
+    const originalInsertPosition = insertPosition;
+    let positionAwareAdjusted = false;
+
     // 🎯 Position-aware insertion: 既存の高Position単語群に割り込み配置
     // キュー後半に高Position単語が埋もれている場合、それらの近くに配置
-    if (questionPosition !== undefined && questionPosition >= 40) {
+    if (effectivePosition !== undefined && effectivePosition >= 40) {
       // 挿入位置から前方30問をスキャン（軽量なO(30)操作）
       const scanStart = Math.max(insertPosition, currentIndex + 1);
       const scanEnd = Math.min(scanStart + 30, questions.length);
@@ -147,13 +204,14 @@ export function useQuestionRequeue<
       if (lastHighPositionIdx >= 0) {
         const originalPosition = insertPosition;
         insertPosition = lastHighPositionIdx + 1;
+        positionAwareAdjusted = insertPosition !== originalPosition;
 
         // 📊 Position-aware挿入ログをlocalStorageに記録
         try {
           const log = {
             timestamp: new Date().toISOString(),
             word: String(qid),
-            position: questionPosition,
+            position: effectivePosition,
             baseOffset,
             extraDelay,
             originalInsert: originalPosition,
@@ -184,7 +242,7 @@ export function useQuestionRequeue<
         if (import.meta.env.DEV) {
           console.log('🎯 [Position-aware] 高Position単語群に割り込み配置', {
             word: String(qid),
-            position: questionPosition,
+            position: effectivePosition,
             originalInsert: originalPosition,
             adjustedInsert: insertPosition,
           });
@@ -208,12 +266,35 @@ export function useQuestionRequeue<
       });
     }
 
+    pushRequeueDebugLog({
+      timestamp: new Date().toISOString(),
+      mode: mode ?? 'unknown',
+      word: String((question as any).word ?? qid),
+      qid: String(qid),
+      decision: 'inserted',
+      reason: isIncorrectLike ? 'incorrect_like' : 'still_learning_like',
+      currentIndex,
+      baseOffset,
+      extraDelay,
+      plannedOffset,
+      insertAt: insertPosition,
+      originalInsertAt: originalInsertPosition,
+      positionAwareAdjusted,
+      questionPosition: questionPosition ?? null,
+      ssotPosition: ssotPosition ?? null,
+      effectivePosition: effectivePosition ?? null,
+      reAddedCountBefore: currentReaddCount,
+      reAddedCountAfter: currentReaddCount + 1,
+    });
+
     return [
       ...questions.slice(0, insertPosition),
       reAddedQuestion,
       ...questions.slice(insertPosition),
     ];
-  }, []);
+    },
+    []
+  );
 
   /**
    * 期限切れのsessionPriorityフラグをクリア
