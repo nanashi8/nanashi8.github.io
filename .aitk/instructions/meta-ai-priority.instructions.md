@@ -202,14 +202,17 @@ console.log('AI Coordination Enabled:', aiEnabled);
 ## 🧪 テストコマンド
 
 ```bash
-# QuestionSchedulerのユニットテスト
-npm run test:scheduler
+# TypeScript
+npm run typecheck
 
-# AI統合のE2Eテスト
-npm run test:ai-integration
+# ユニットテスト
+npm run test:unit
 
-# 出題シミュレーション
-npm run test:simulation
+# ユニットテスト（高速・APIスキップ）
+npm run test:unit:fast
+
+# Playwright 煙テスト（PR/CIでの基本導線確認）
+npm run test:smoke
 ```
 
 ## 📝 コードレビューチェックリスト
@@ -237,8 +240,8 @@ QuestionScheduler関連のコード変更時は以下を確認：
 2. **全テストパス**:
 
    ```bash
-   npm run test
-   npm run test:scheduler
+   npm run test:unit
+   npm run test:smoke
    ```
 
 3. **ビルド成功**:
@@ -251,6 +254,21 @@ QuestionScheduler関連のコード変更時は以下を確認：
    - README.mdに最新の機能説明があるか
    - CHANGELOG.mdが更新されているか
    - docs/配下のドキュメントが最新か
+
+## 🔁 補助機構: 再出題/再スケジュール（重要）
+
+QuestionScheduler（Position降順ソート + インターリーブ）が主。
+ただし、学習体験の破綻を防ぐために以下の補助機構が存在する。
+
+- **再出題（requeue）**: 「まだまだ/分からない」を数問後に差し込み、完了（Position 40+ の解消）へ向かわせる
+  - 連続で同じ問題が「分からない」になり続ける場合は、再出題間隔を少しずつ延長してうんざりを防ぐ
+- **再スケジュール（reschedule）**: 新規苦手化を検知したら、残りキュー（現在位置以降）のみ再スケジュールして吸引を継続
+  - 可視化は通知ではなく ScoreBoard の「学習状況」タブのパルスを使う
+
+デバッグキー:
+
+- `debug_reschedule_events`（triggered/applied/skipped/error）
+- `debug_position_aware_insertions`（Position-aware 挿入ログ）
 
 ## 📞 エスカレーション
 
