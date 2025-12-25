@@ -20,7 +20,7 @@ interface CheckpointHistory {
 
 export class DebugCheckpoint {
   private static STORAGE_KEY = 'debug_checkpoint_history';
-  
+
   /**
    * チェックポイントを記録
    * @param id チェックポイントID (例: "M_1", "S_1", "G_1")
@@ -47,7 +47,7 @@ export class DebugCheckpoint {
     // 前のチェックポイントとの差分を計算
     let timeDiff: number | undefined;
     let prevData: CheckpointData | undefined;
-    
+
     if (prevCheckpointId) {
       prevData = this.get(prevCheckpointId);
       if (prevData) {
@@ -56,7 +56,8 @@ export class DebugCheckpoint {
     }
 
     // コンソール出力
-    const timeDiffStr = timeDiff !== undefined ? `, Δ${timeDiff.toFixed(2)}ms from ${prevCheckpointId}` : '';
+    const timeDiffStr =
+      timeDiff !== undefined ? `, Δ${timeDiff.toFixed(2)}ms from ${prevCheckpointId}` : '';
     console.log(
       `🚨 [${id}: ${label} ${timeOnly}] total: ${totalCount}語, まだまだ語: ${weakWordsCount}語 (time: ${now.toFixed(2)}ms${timeDiffStr})`
     );
@@ -124,7 +125,9 @@ export class DebugCheckpoint {
   static clear(): void {
     try {
       localStorage.removeItem(this.STORAGE_KEY);
-    } catch {}
+    } catch {
+      // LocalStorageアクセスエラーを無視
+    }
   }
 
   /**
@@ -132,8 +135,8 @@ export class DebugCheckpoint {
    */
   static getFlowSummary(): string {
     const history = this.getHistory();
-    const checkpoints = Object.values(history).sort((a, b) => 
-      a.performanceTime - b.performanceTime
+    const checkpoints = Object.values(history).sort(
+      (a, b) => a.performanceTime - b.performanceTime
     );
 
     if (checkpoints.length === 0) {
@@ -145,11 +148,14 @@ export class DebugCheckpoint {
     summary += '|---|---|---|---|---|---|\n';
 
     checkpoints.forEach((cp, index) => {
-      const status = cp.weakWordsCount === 0 ? '❌ 消失' : 
-                     index > 0 && cp.weakWordsCount < checkpoints[index - 1].weakWordsCount ? '⚠️ 減少' : 
-                     '✅ 正常';
+      const status =
+        cp.weakWordsCount === 0
+          ? '❌ 消失'
+          : index > 0 && cp.weakWordsCount < checkpoints[index - 1].weakWordsCount
+            ? '⚠️ 減少'
+            : '✅ 正常';
       const timeDiff = cp.timeDiffFromPrev ? `${cp.timeDiffFromPrev.toFixed(2)}ms` : '-';
-      
+
       summary += `| ${cp.checkpoint} | ${cp.label} | ${cp.timestamp.split('T')[1]} | ${cp.weakWordsCount}語 | ${timeDiff} | ${status} |\n`;
     });
 
