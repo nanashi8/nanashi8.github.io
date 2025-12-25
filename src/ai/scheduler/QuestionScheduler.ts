@@ -498,6 +498,11 @@ export class QuestionScheduler {
       // ✅ Position = 0-100スコア（determineWordPosition()で計算済み）
       // すでに7つのAI評価・TimeBoost・全ての要素が統合されている
       let position = status?.position || 35; // デフォルト: new範囲
+      
+      // 🐛 DEBUG: statusがnullの場合を検出
+      if (import.meta.env.DEV && status === null && index < 20) {
+        console.warn(`⚠️ [calculatePriorities] ${q.word}: status is NULL (using default position=35)`);
+      }
 
       // 🎯 難易度別適応: 中級・上級が苦手な場合、初級を優先
       position = this.applyDifficultyAdaptation(position, q, difficultyAdaptation);
@@ -505,7 +510,7 @@ export class QuestionScheduler {
       // 🔍 デバッグ: Position値確認（開発環境のみ、最初の20単語のみ）
       if (import.meta.env.DEV && index < 20) {
         console.log(
-          `🔍 [calculatePriorities] ${q.word}: position=${position}, status.position=${status?.position}`
+          `🔍 [calculatePriorities] ${q.word}: position=${position}, status.position=${status?.position}, status=${status ? 'OK' : 'NULL'}`
         );
       }
 
@@ -858,7 +863,11 @@ export class QuestionScheduler {
     if (!progressCache || !progressCache.wordProgress) return null;
 
     const wordProgress = progressCache.wordProgress[word];
-    if (!wordProgress) return null;
+    if (!wordProgress) {
+      // 🐛 DEBUG: LocalStorageに存在するはずの単語が見つからない場合
+      // （大量ログを避けるため、ここでは出力しない）
+      return null;
+    }
 
     // ✅ AI担当関数に委譲: Position = 0-100スコア（7つのAI評価統合済み）
     // ✅ モード別Position優先: タブごとに独立した学習進度を管理

@@ -236,6 +236,37 @@ function MemorizationView({
     currentQuestionWordRef.current = currentQuestion?.word ?? null;
   }, [currentIndex, currentQuestion?.word]);
 
+  // 🚨 オブザーバーパターン: 「まだまだ・分からない」発生時の監視
+  // Position >= 60の語が発生したら、即座に再スケジューリングをトリガー
+  useEffect(() => {
+    const handleWeakWordDetected = (event: Event) => {
+      const customEvent = event as CustomEvent<{
+        word: string;
+        position: number;
+        mode: string;
+        isIncorrect: boolean;
+        timestamp: number;
+      }>;
+      const { word, position, mode: eventMode } = customEvent.detail;
+      
+      // 暗記モード以外は無視
+      if (eventMode !== 'memorization') return;
+      
+      if (import.meta.env.DEV) {
+        console.log(`🚨 [MemorizationView] 弱点語検出: ${word} (Position=${position}) → 再スケジューリング準備`);
+      }
+      
+      // 即座に再スケジューリングをトリガー
+      setNeedsRescheduling(true);
+      setReschedulingNotification(`弱点語検出: ${word} (Position=${position})`);
+    };
+
+    window.addEventListener('weak-word-detected', handleWeakWordDetected);
+    return () => {
+      window.removeEventListener('weak-word-detected', handleWeakWordDetected);
+    };
+  }, []);
+
   // 問題再出題管理フック
   const {
     reAddQuestion: _reAddQuestion,
@@ -478,8 +509,22 @@ function MemorizationView({
           const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
           if (attempts <= 0) continue;
           const pos = determineWordPosition(wp, 'memorization');
+          
+          // 🐛 DEBUG: まだまだ語が吸引されない問題のデバッグ
+          if (import.meta.env.DEV && pos >= 40) {
+            console.log(`🔍 [WeakQuestion検出] ${q.word}: Position=${pos}, memPos=${wp.memorizationPosition}, stillLearning=${wp.memorizationStillLearning}, attempts=${attempts}`);
+          }
+          
           if (pos >= 40) {
             weakQuestions.push(q);
+          }
+        }
+        
+        // 🐛 DEBUG: 弱点語のサマリー
+        if (import.meta.env.DEV) {
+          console.log(`🔍 [WeakQuestions] 検出数: ${weakQuestions.length}語, 候補: ${baseQuestions.length}語`);
+          if (weakQuestions.length > 0) {
+            console.log(`🔍 [WeakQuestions] TOP5:`, weakQuestions.slice(0, 5).map(q => q.word));
           }
         }
 
