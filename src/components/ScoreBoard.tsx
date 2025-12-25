@@ -927,9 +927,7 @@ function ScoreBoard({
                         {detailedStats.appearedWords}語確認： 🟢覚えてる{' '}
                         {detailedStats.masteredCount}語{' '}
                         <span
-                          className={`retention-label ${
-                            !isReviewFocusMode && isBoostMode ? 'pulsing-text' : ''
-                          }`}
+                          className="retention-label"
                           title={
                             isReviewFocusMode
                               ? '📚 復習モード中'
