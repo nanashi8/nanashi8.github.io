@@ -478,13 +478,14 @@ export class QuestionScheduler {
     const progressCache = this.loadProgressCache();
     
     // 🐛 DEBUG: 入力時点でまだまだ語が含まれているか確認
+    let calcSpanId: string | undefined;
     if (import.meta.env.DEV) {
       const weakWordsInInput = questions.filter(q => {
         const status = this.getWordStatusFromCache(q.word, context.mode, progressCache);
         return status && status.attempts > 0 && status.position >= 40;
       });
       
-      const spanId = DebugTracer.startSpan(
+      calcSpanId = DebugTracer.startSpan(
         'QuestionScheduler.calculatePriorities',
         {
           weakWordsCount: weakWordsInInput.length,
@@ -545,6 +546,18 @@ export class QuestionScheduler {
     // 🎮 Position分散適用（インターリーブ）
     const adjusted = this.applyInterleavingAdjustment(prioritized, context.mode, questions.length);
 
+    // 🎫 スパン終了（calculatePriorities完了）
+    if (import.meta.env.DEV && calcSpanId) {
+      const weakWordsAfter = adjusted.filter(pq => 
+        pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
+      );
+      DebugTracer.endSpan(calcSpanId, {
+        weakWordsCount: weakWordsAfter.length,
+        totalCount: adjusted.length,
+        weakWords: weakWordsAfter.map(pq => pq.question.word),
+      });
+    }
+
     return adjusted;
   }
 
@@ -564,12 +577,13 @@ export class QuestionScheduler {
     });
     
     // 🐛 DEBUG: GamificationAI入力時点でまだまだ語を確認
+    let gamificationSpanId: string | undefined;
     if (import.meta.env.DEV) {
       const weakWordsInInput = prioritized.filter(pq => 
         pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
       );
       
-      DebugTracer.startSpan(
+      gamificationSpanId = DebugTracer.startSpan(
         'QuestionScheduler.beforeGamification',
         {
           weakWordsCount: weakWordsInInput.length,
@@ -771,6 +785,18 @@ export class QuestionScheduler {
           after: c.after.toFixed(0),
         }))
       );
+    }
+
+    // 🎫 スパン終了（GamificationAI処理完了）
+    if (import.meta.env.DEV && gamificationSpanId) {
+      const weakWordsAfter = stillLearningBoosted.filter(pq => 
+        pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
+      );
+      DebugTracer.endSpan(gamificationSpanId, {
+        weakWordsCount: weakWordsAfter.length,
+        totalCount: stillLearningBoosted.length,
+        weakWords: weakWordsAfter.map(pq => pq.question.word),
+      });
     }
 
     return stillLearningBoosted;
@@ -1420,6 +1446,7 @@ export class QuestionScheduler {
     }
 
     // 🐛 DEBUG: AIループ前の入力チェック（S_1）
+    let beforeAISpanId: string | undefined;
     if (import.meta.env.DEV) {
       const weakWordsInInput = params.questions.filter(q => {
         const wp = allProgress[q.word] ?? context.wordProgress[q.word] ?? null;
@@ -1430,7 +1457,7 @@ export class QuestionScheduler {
         return pos >= 40;
       });
       
-      DebugTracer.startSpan(
+      beforeAISpanId = DebugTracer.startSpan(
         'QuestionScheduler.finalPriorityMode.beforeAI',
         {
           weakWordsCount: weakWordsInInput.length,
@@ -1498,6 +1525,21 @@ export class QuestionScheduler {
 
     // 🐛 DEBUG: AIループ完了後のチェック（S_2）
     if (import.meta.env.DEV) {
+      // beforeAIスパンを終了
+      if (beforeAISpanId) {
+        const weakWordsAfterLoop = prioritized.filter(pq => {
+          if (!pq.status) return false;
+          const attempts = pq.status.attempts ?? 0;
+          if (attempts <= 0) return false;
+          return pq.position >= 40;
+        });
+        DebugTracer.endSpan(beforeAISpanId, {
+          weakWordsCount: weakWordsAfterLoop.length,
+          totalCount: prioritized.length,
+          weakWords: weakWordsAfterLoop.map(pq => pq.question.word),
+        });
+      }
+      
       const weakWordsInPrioritized = prioritized.filter(pq => {
         if (!pq.status) return false;
         const attempts = pq.status.attempts ?? 0;
@@ -1505,7 +1547,7 @@ export class QuestionScheduler {
         return pq.position >= 40;
       });
       
-      DebugTracer.startSpan(
+      const afterAISpanId = DebugTracer.startSpan(
         'QuestionScheduler.finalPriorityMode.afterAI',
         {
           weakWordsCount: weakWordsInPrioritized.length,
@@ -1513,6 +1555,13 @@ export class QuestionScheduler {
           weakWords: weakWordsInPrioritized.map(pq => pq.question.word),
         }
       );
+      
+      // afterAIスパンもすぐに終了
+      DebugTracer.endSpan(afterAISpanId, {
+        weakWordsCount: weakWordsInPrioritized.length,
+        totalCount: prioritized.length,
+        weakWords: weakWordsInPrioritized.map(pq => pq.question.word),
+      });
       
       // トレース終了
       DebugTracer.endTrace();

@@ -279,6 +279,43 @@ export class DebugTracer {
       if (lostWords.length > 10) {
         summary += `\n_...他${lostWords.length - 10}語_\n`;
       }
+    } else {
+      summary += '\n### ✅ 消失した単語なし\n\n';
+    }
+    
+    // 📊 スパンごとの単語リスト変化（TOP5表示）
+    summary += '\n### 📊 スパンごとの単語リスト変化\n\n';
+    for (const span of spans) {
+      const words = span.attributes.weakWords || [];
+      if (words.length > 0) {
+        const top5 = words.slice(0, 5).join(', ');
+        const remaining = words.length > 5 ? ` (+${words.length - 5}語)` : '';
+        summary += `- **${span.name}**: ${words.length}語 → [${top5}${remaining}]\n`;
+      } else {
+        summary += `- **${span.name}**: 0語\n`;
+      }
+    }
+    
+    // 🔍 消失の詳細分析
+    if (lostWords.length > 0) {
+      summary += '\n### 🔍 消失の詳細分析\n\n';
+      summary += '以下の単語が処理中に消失しました：\n\n';
+      
+      // スパン間の差分を計算
+      for (let i = 0; i < spans.length - 1; i++) {
+        const currentWords = new Set(spans[i].attributes.weakWords || []);
+        const nextWords = new Set(spans[i + 1].attributes.weakWords || []);
+        
+        const disappeared = [...currentWords].filter(w => !nextWords.has(w));
+        if (disappeared.length > 0) {
+          summary += `\n**${spans[i].name} → ${spans[i + 1].name}**:\n`;
+          summary += `- 消失: ${disappeared.slice(0, 5).join(', ')}`;
+          if (disappeared.length > 5) {
+            summary += ` (+${disappeared.length - 5}語)`;
+          }
+          summary += '\n';
+        }
+      }
     }
     
     return summary;
