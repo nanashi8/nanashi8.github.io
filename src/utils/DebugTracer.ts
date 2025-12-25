@@ -245,8 +245,8 @@ export class DebugTracer {
     if (spans.length === 0) return 'スパンデータなし';
     
     let summary = '## 🎫 データフロー追跡（スパンベース）\n\n';
-    summary += '| スパン | 開始時刻 | 所要時間 | まだまだ語 | 状態 |\n';
-    summary += '|---|---|---|---|---|\n';
+    summary += '| スパン | 開始時刻 | 所要時間 | まだまだ語 | 総単語数 | 状態 |\n';
+    summary += '|---|---|---|---|---|---|\n';
     
     let prevCount = -1;
     for (const span of spans) {
@@ -254,19 +254,76 @@ export class DebugTracer {
       const timeStr = new Date(Date.now() - performance.now() + span.startTime)
         .toISOString()
         .split('T')[1];
-      const count = span.attributes.weakWordsCount;
+      const weakCount = span.attributes.weakWordsCount ?? span.attributes.weakWordsCountAfter ?? 0;
+      const totalCount = span.attributes.totalCount ?? span.attributes.totalCountAfter ?? 0;
       
       let status = '✅ 正常';
+      let changeInfo = '';
       if (prevCount !== -1) {
-        if (count === 0 && prevCount > 0) {
+        const diff = weakCount - prevCount;
+        if (weakCount === 0 && prevCount > 0) {
           status = '❌ 消失';
-        } else if (count < prevCount) {
+          changeInfo = ` (-${prevCount}語)`;
+        } else if (diff < 0) {
           status = '⚠️ 減少';
+          changeInfo = ` (${diff}語)`;
+        } else if (diff > 0) {
+          status = '📈 増加';
+          changeInfo = ` (+${diff}語)`;
         }
       }
-      prevCount = count;
+      prevCount = weakCount;
       
-      summary += `| ${span.name} | ${timeStr} | ${duration} | ${count}語 | ${status} |\n`;
+      summary += `| ${span.name} | ${timeStr} | ${duration} | ${weakCount}語${changeInfo} | ${totalCount}語 | ${status} |\n`;
+    }
+    
+    // 📊 スケジュール前後の比較（MemorizationView.prepareScheduling）
+    const prepareSpan = spans.find(s => s.name === 'MemorizationView.prepareScheduling');
+    if (prepareSpan) {
+      const beforeCount = prepareSpan.attributes.weakWordsCount ?? 0;
+      const afterCount = prepareSpan.attributes.weakWordsCountAfter ?? 0;
+      const beforeTotal = prepareSpan.attributes.totalCount ?? 0;
+      const afterTotal = prepareSpan.attributes.totalCountAfter ?? 0;
+      
+      summary += '\n### 📊 スケジュール前後の比較\n\n';
+      summary += '**MemorizationView.prepareScheduling**:\n';
+      summary += `- スケジュール前: ${beforeCount}語のまだまだ語 / ${beforeTotal}語の候補\n`;
+      summary += `- スケジュール後: ${afterCount}語のまだまだ語 / ${afterTotal}語の結果\n`;
+      
+      if (beforeCount > afterCount) {
+        const lost = beforeCount - afterCount;
+        const percentage = ((lost / beforeCount) * 100).toFixed(1);
+        summary += `- **変化**: ${lost}語減少（${percentage}%消失） ⚠️\n`;
+      } else if (beforeCount < afterCount) {
+        const gained = afterCount - beforeCount;
+        summary += `- **変化**: ${gained}語増加 📈\n`;
+      } else {
+        summary += `- **変化**: 変化なし ✅\n`;
+      }
+      
+      // スケジュール前後の単語リスト比較
+      const beforeWords = new Set((prepareSpan.attributes.weakWords as string[]) || []);
+      const afterWords = new Set((prepareSpan.attributes.weakWordsAfter as string[]) || []);
+      const disappeared = [...beforeWords].filter(w => !afterWords.has(w));
+      const appeared = [...afterWords].filter(w => !beforeWords.has(w));
+      
+      if (disappeared.length > 0) {
+        summary += `\n**消失した単語（${disappeared.length}語）**:\n`;
+        summary += `- ${disappeared.slice(0, 10).join(', ')}`;
+        if (disappeared.length > 10) {
+          summary += ` (+${disappeared.length - 10}語)`;
+        }
+        summary += '\n';
+      }
+      
+      if (appeared.length > 0) {
+        summary += `\n**新たに追加された単語（${appeared.length}語）**:\n`;
+        summary += `- ${appeared.slice(0, 10).join(', ')}`;
+        if (appeared.length > 10) {
+          summary += ` (+${appeared.length - 10}語)`;
+        }
+        summary += '\n';
+      }
     }
     
     // 消失した単語のリスト
@@ -299,21 +356,46 @@ export class DebugTracer {
     // 🔍 消失の詳細分析
     if (lostWords.length > 0) {
       summary += '\n### 🔍 消失の詳細分析\n\n';
-      summary += '以下の単語が処理中に消失しました：\n\n';
+      summary += `**総消失数**: ${lostWords.length}語\n\n`;
       
       // スパン間の差分を計算
       for (let i = 0; i < spans.length - 1; i++) {
-        const currentWords = new Set(spans[i].attributes.weakWords || []);
-        const nextWords = new Set(spans[i + 1].attributes.weakWords || []);
+        const currentWords = new Set((spans[i].attributes.weakWords as string[]) || (spans[i].attributes.weakWordsAfter as string[]) || []);
+        const nextWords = new Set((spans[i + 1].attributes.weakWords as string[]) || []);
         
         const disappeared = [...currentWords].filter(w => !nextWords.has(w));
-        if (disappeared.length > 0) {
+        const appeared = [...nextWords].filter(w => !currentWords.has(w));
+        
+        if (disappeared.length > 0 || appeared.length > 0) {
+          const currentCount = currentWords.size;
+          const nextCount = nextWords.size;
+          const diff = nextCount - currentCount;
+          const percentage = currentCount > 0 ? ((Math.abs(diff) / currentCount) * 100).toFixed(1) : '0.0';
+          
           summary += `\n**${spans[i].name} → ${spans[i + 1].name}**:\n`;
-          summary += `- 消失: ${disappeared.slice(0, 5).join(', ')}`;
-          if (disappeared.length > 5) {
-            summary += ` (+${disappeared.length - 5}語)`;
+          summary += `- 単語数変化: ${currentCount}語 → ${nextCount}語`;
+          if (diff < 0) {
+            summary += ` (${diff}語、-${percentage}%) ⚠️`;
+          } else if (diff > 0) {
+            summary += ` (+${diff}語、+${percentage}%) 📈`;
           }
           summary += '\n';
+          
+          if (disappeared.length > 0) {
+            summary += `- 消失（${disappeared.length}語）: ${disappeared.slice(0, 5).join(', ')}`;
+            if (disappeared.length > 5) {
+              summary += ` (+${disappeared.length - 5}語)`;
+            }
+            summary += '\n';
+          }
+          
+          if (appeared.length > 0) {
+            summary += `- 追加（${appeared.length}語）: ${appeared.slice(0, 5).join(', ')}`;
+            if (appeared.length > 5) {
+              summary += ` (+${appeared.length - 5}語)`;
+            }
+            summary += '\n';
+          }
         }
       }
     }
