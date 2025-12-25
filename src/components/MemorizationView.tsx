@@ -574,6 +574,16 @@ function MemorizationView({
           }
         }
         
+        // 🔍 DEBUG: weakQuestionsの内容もlocalStorageに追加保存
+        try {
+          const prevData = JSON.parse(localStorage.getItem('debug_weak_words_detection') || '{}');
+          localStorage.setItem('debug_weak_words_detection', JSON.stringify({
+            ...prevData,
+            weakQuestionsCount: weakQuestions.length,
+            weakQuestionsWords: weakQuestions.map(q => q.word),
+          }));
+        } catch {}
+        
         // 🔍 DEBUG: weakQuestions検出結果をlocalStorageに保存（デバッグパネル用）
         try {
           const detectionResult = JSON.parse(localStorage.getItem('debug_weak_words_detection') || '{}');
