@@ -213,7 +213,8 @@ function MemorizationView({
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.MEMORIZATION);
 
   // 適応的学習AIネットワーク（常時有効）
-  const { processQuestion: processAdaptiveQuestion, currentStrategy: _currentStrategy } = useAdaptiveNetwork();
+  const { processQuestion: processAdaptiveQuestion, currentStrategy: _currentStrategy } =
+    useAdaptiveNetwork();
 
   // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
   const [scheduler] = useState(() => {
@@ -249,14 +250,16 @@ function MemorizationView({
         timestamp: number;
       }>;
       const { word, position, mode: eventMode } = customEvent.detail;
-      
+
       // 暗記モード以外は無視
       if (eventMode !== 'memorization') return;
-      
+
       if (import.meta.env.DEV) {
-        console.log(`🚨 [MemorizationView] 弱点語検出: ${word} (Position=${position}) → 再スケジューリング準備`);
+        console.log(
+          `🚨 [MemorizationView] 弱点語検出: ${word} (Position=${position}) → 再スケジューリング準備`
+        );
       }
-      
+
       // 即座に再スケジューリングをトリガー
       setNeedsRescheduling(true);
       setReschedulingNotification(`弱点語検出: ${word} (Position=${position})`);
@@ -504,7 +507,7 @@ function MemorizationView({
         const progress = loadProgressSync();
         const wordProgress = progress.wordProgress || {};
         const weakQuestions: Question[] = [];
-        
+
         // 🐛 DEBUG: LocalStorageのまだまだ語を全て列挙
         const allWeakWordsInLS = Object.entries(wordProgress)
           .filter(([_word, wp]) => {
@@ -519,80 +522,106 @@ function MemorizationView({
             memPos: wp.memorizationPosition,
             attempts: wp.memorizationAttempts ?? wp.totalAttempts ?? 0,
           }));
-        
+
         if (import.meta.env.DEV) {
           console.log(`🚨 [LocalStorageのまだまだ語] 合計: ${allWeakWordsInLS.length}語`);
           if (allWeakWordsInLS.length > 0) {
             console.log(`🚨 [まだまだ語リスト]:`, allWeakWordsInLS);
           }
         }
-        
+
         // baseQuestionsに存在するか確認
-        const baseQuestionsWords = new Set(baseQuestions.map(q => q.word));
-        const missingFromBase = allWeakWordsInLS.filter(w => !baseQuestionsWords.has(w.word));
-        
+        const baseQuestionsWords = new Set(baseQuestions.map((q) => q.word));
+        const missingFromBase = allWeakWordsInLS.filter((w) => !baseQuestionsWords.has(w.word));
+
         // 🔍 DEBUG: 検出結果をlocalStorageに保存（デバッグパネル用）
         try {
-          localStorage.setItem('debug_weak_words_detection', JSON.stringify({
-            timestamp: new Date().toISOString(),
-            allWeakWordsInLS: allWeakWordsInLS.length,
-            weakWordsList: allWeakWordsInLS,
-            missingFromBase: missingFromBase.map(w => w.word),
-            baseQuestionsCount: baseQuestions.length,
-            filteredCount: filtered.length,
-          }));
-        } catch {}
-        
-        if (import.meta.env.DEV && missingFromBase.length > 0) {
-          console.error(`❌ [致命的エラー] まだまだ語${missingFromBase.length}語がbaseQuestionsに存在しません:`, missingFromBase.map(w => w.word));
+          localStorage.setItem(
+            'debug_weak_words_detection',
+            JSON.stringify({
+              timestamp: new Date().toISOString(),
+              allWeakWordsInLS: allWeakWordsInLS.length,
+              weakWordsList: allWeakWordsInLS,
+              missingFromBase: missingFromBase.map((w) => w.word),
+              baseQuestionsCount: baseQuestions.length,
+              filteredCount: filtered.length,
+            })
+          );
+        } catch {
+          // LocalStorageアクセスエラーを無視
         }
-        
+
+        if (import.meta.env.DEV && missingFromBase.length > 0) {
+          console.error(
+            `❌ [致命的エラー] まだまだ語${missingFromBase.length}語がbaseQuestionsに存在しません:`,
+            missingFromBase.map((w) => w.word)
+          );
+        }
+
         for (const q of baseQuestions) {
           const wp = wordProgress[q.word];
           if (!wp) continue;
           const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
           if (attempts <= 0) continue;
           const pos = determineWordPosition(wp, 'memorization');
-          
+
           // 🐛 DEBUG: まだまだ語が吸引されない問題のデバッグ
           if (import.meta.env.DEV && pos >= 40) {
-            console.log(`🔍 [WeakQuestion検出] ${q.word}: Position=${pos}, memPos=${wp.memorizationPosition}, stillLearning=${wp.memorizationStillLearning}, attempts=${attempts}`);
+            console.log(
+              `🔍 [WeakQuestion検出] ${q.word}: Position=${pos}, memPos=${wp.memorizationPosition}, stillLearning=${wp.memorizationStillLearning}, attempts=${attempts}`
+            );
           }
-          
+
           if (pos >= 40) {
             weakQuestions.push(q);
           }
         }
-        
+
         // 🐛 DEBUG: 弱点語のサマリー
         if (import.meta.env.DEV) {
-          console.log(`🔍 [WeakQuestions] 検出数: ${weakQuestions.length}語 / LocalStorage: ${allWeakWordsInLS.length}語, 候補: ${baseQuestions.length}語`);
+          console.log(
+            `🔍 [WeakQuestions] 検出数: ${weakQuestions.length}語 / LocalStorage: ${allWeakWordsInLS.length}語, 候補: ${baseQuestions.length}語`
+          );
           if (weakQuestions.length > 0) {
-            console.log(`🔍 [WeakQuestions] TOP5:`, weakQuestions.slice(0, 5).map(q => q.word));
+            console.log(
+              `🔍 [WeakQuestions] TOP5:`,
+              weakQuestions.slice(0, 5).map((q) => q.word)
+            );
           }
           if (weakQuestions.length < allWeakWordsInLS.length) {
-            console.error(`❌ [データ欠損] baseQuestionsに${allWeakWordsInLS.length - weakQuestions.length}語のまだまだ語が見つかりません`);
+            console.error(
+              `❌ [データ欠損] baseQuestionsに${allWeakWordsInLS.length - weakQuestions.length}語のまだまだ語が見つかりません`
+            );
           }
         }
-        
+
         // 🔍 DEBUG: weakQuestionsの内容もlocalStorageに追加保存
         try {
           const prevData = JSON.parse(localStorage.getItem('debug_weak_words_detection') || '{}');
-          localStorage.setItem('debug_weak_words_detection', JSON.stringify({
-            ...prevData,
-            weakQuestionsCount: weakQuestions.length,
-            weakQuestionsWords: weakQuestions.map(q => q.word),
-          }));
-        } catch {}
-        
+          localStorage.setItem(
+            'debug_weak_words_detection',
+            JSON.stringify({
+              ...prevData,
+              weakQuestionsCount: weakQuestions.length,
+              weakQuestionsWords: weakQuestions.map((q) => q.word),
+            })
+          );
+        } catch {
+          // LocalStorageアクセスエラーを無視
+        }
+
         // 🔍 DEBUG: weakQuestions検出結果をlocalStorageに保存（デバッグパネル用）
         try {
-          const detectionResult = JSON.parse(localStorage.getItem('debug_weak_words_detection') || '{}');
+          const detectionResult = JSON.parse(
+            localStorage.getItem('debug_weak_words_detection') || '{}'
+          );
           detectionResult.weakQuestionsDetected = weakQuestions.length;
-          detectionResult.weakQuestionsWords = weakQuestions.map(q => q.word);
+          detectionResult.weakQuestionsWords = weakQuestions.map((q) => q.word);
           detectionResult.dataMissing = allWeakWordsInLS.length - weakQuestions.length;
           localStorage.setItem('debug_weak_words_detection', JSON.stringify(detectionResult));
-        } catch {}
+        } catch {
+          // LocalStorageアクセスエラーを無視
+        }
 
         let candidateQuestions = filtered;
         if (weakQuestions.length > 0) {
@@ -601,11 +630,25 @@ function MemorizationView({
           for (const q of weakQuestions) dedup.set(q.word, q);
           candidateQuestions = Array.from(dedup.values());
         }
-        
+
         // 🐛 DEBUG: scheduler.schedule()に渡す直前の状態を確認
         let prepareSpanId: string | undefined;
         if (import.meta.env.DEV) {
-          const weakWordsInCandidates = candidateQuestions.filter(q => {
+          // 🧪 A/Bテスト情報をlocalStorageに保存（デバッグパネル表示用）
+          try {
+            localStorage.setItem(
+              'debug_ab_session_info',
+              JSON.stringify({
+                variant: abVariant,
+                sessionId: abSessionId,
+                timestamp: new Date().toISOString(),
+              })
+            );
+          } catch {
+            // LocalStorageアクセスエラーを無視
+          }
+
+          const weakWordsInCandidates = candidateQuestions.filter((q) => {
             const wp = wordProgress[q.word];
             if (!wp) return false;
             const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
@@ -613,17 +656,14 @@ function MemorizationView({
             const pos = determineWordPosition(wp, 'memorization');
             return pos >= 40;
           });
-          
+
           // 🎫 トレース開始
           DebugTracer.startTrace('weak-words-flow');
-          prepareSpanId = DebugTracer.startSpan(
-            'MemorizationView.prepareScheduling',
-            {
-              weakWordsCount: weakWordsInCandidates.length,
-              totalCount: candidateQuestions.length,
-              weakWords: weakWordsInCandidates.map(q => q.word),
-            }
-          );
+          prepareSpanId = DebugTracer.startSpan('MemorizationView.prepareScheduling', {
+            weakWordsCount: weakWordsInCandidates.length,
+            totalCount: candidateQuestions.length,
+            weakWords: weakWordsInCandidates.map((q) => q.word),
+          });
         }
 
         const scheduleResult = await scheduler.schedule({
@@ -655,7 +695,7 @@ function MemorizationView({
 
         // 🎫 スパン終了（スケジュール完了）
         if (import.meta.env.DEV && prepareSpanId) {
-          const weakWordsAfterScheduling = sortedQuestions.filter(q => {
+          const weakWordsAfterScheduling = sortedQuestions.filter((q) => {
             const wp = wordProgress[q.word];
             if (!wp) return false;
             const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
@@ -663,11 +703,11 @@ function MemorizationView({
             const pos = determineWordPosition(wp, 'memorization');
             return pos >= 40;
           });
-          
+
           DebugTracer.endSpan(prepareSpanId, {
             weakWordsCountAfter: weakWordsAfterScheduling.length,
             totalCountAfter: sortedQuestions.length,
-            weakWordsAfter: weakWordsAfterScheduling.map(q => q.word),
+            weakWordsAfter: weakWordsAfterScheduling.map((q) => q.word),
           });
         }
 
@@ -951,40 +991,44 @@ function MemorizationView({
 
         const lockedPrefixCount = Math.min(currentIndexAtSchedule + 1, questions.length);
         const remaining = questions.slice(lockedPrefixCount);
-        
+
         // 🔥 再スケジューリング時に、現在のprogressから新たにまだまだ語を検出
         const progress = loadProgressSync();
         const wordProgress = progress.wordProgress || {};
         const weakQuestions: Question[] = [];
-        
-        for (const q of baseQuestions) {
+
+        // 全問題リストからまだまだ語を検出
+        for (const q of allQuestions) {
           const wp = wordProgress[q.word];
           if (!wp) continue;
           const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
           if (attempts <= 0) continue;
           const pos = determineWordPosition(wp, 'memorization');
-          
+
           if (pos >= 40) {
             // remainingに既に含まれていない場合のみ追加
-            if (!remaining.find(rq => rq.word === q.word)) {
+            if (!remaining.find((rq) => rq.word === q.word)) {
               weakQuestions.push(q);
             }
           }
         }
-        
+
         // weakQuestionsをremainingに追加
         let rescheduleTarget = remaining;
         if (weakQuestions.length > 0) {
           if (import.meta.env.DEV) {
             console.log(`🔥 [再スケジューリング] まだまだ語を追加: ${weakQuestions.length}語`);
-            console.log(`   単語:`, weakQuestions.map(q => q.word));
+            console.log(
+              `   単語:`,
+              weakQuestions.map((q) => q.word)
+            );
           }
           const dedup = new Map<string, Question>();
           for (const q of remaining) dedup.set(q.word, q);
           for (const q of weakQuestions) dedup.set(q.word, q);
           rescheduleTarget = Array.from(dedup.values());
         }
-        
+
         if (rescheduleTarget.length === 0) {
           logger.warn('[MemorizationView] 再スケジューリング対象なし');
           setAnswerCountSinceSchedule(0);
@@ -1266,14 +1310,11 @@ function MemorizationView({
             const categoryAfter = positionToCategory(posAfter);
 
             const becameHarderNow =
-              isReviewWordCategory(categoryAfter) &&
-              categoryAfter !== categoryBefore;
+              isReviewWordCategory(categoryAfter) && categoryAfter !== categoryBefore;
 
             if (becameHarderNow) {
               setNeedsRescheduling(true);
-              setReschedulingNotification(
-                `学習状態変化: ${categoryBefore}→${categoryAfter}`
-              );
+              setReschedulingNotification(`学習状態変化: ${categoryBefore}→${categoryAfter}`);
               recordRescheduleEvent(
                 'triggered',
                 `学習状態変化: ${categoryBefore}→${categoryAfter}`,
@@ -1512,7 +1553,12 @@ function MemorizationView({
       // 不正解またはまだまだの場合に再追加
       let questionsForNextIndex = questions; // 次のインデックス計算用
       if (!isCorrect || isStillLearning) {
-        const updatedQuestions = _reAddQuestion(currentQuestion, questions, currentIndex, 'memorization');
+        const updatedQuestions = _reAddQuestion(
+          currentQuestion,
+          questions,
+          currentIndex,
+          'memorization'
+        );
         if (updatedQuestions !== questions) {
           questionsForNextIndex = updatedQuestions; // 更新後の配列を使用
           setQuestions(updatedQuestions);
