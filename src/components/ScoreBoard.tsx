@@ -928,7 +928,7 @@ function ScoreBoard({
                         {detailedStats.masteredCount}語{' '}
                         <span
                           className={`retention-label ${
-                            isReviewFocusMode || isBoostMode ? 'pulsing-text' : ''
+                            !isReviewFocusMode && isBoostMode ? 'pulsing-text' : ''
                           }`}
                           title={
                             isReviewFocusMode
@@ -941,18 +941,34 @@ function ScoreBoard({
                           🟡まだまだ {detailedStats.learningCount}語
                         </span>{' '}
                         <span
-                          className={`retention-label ${isReviewFocusMode ? 'pulsing-text' : ''}`}
+                          className="retention-label"
                           title={isReviewFocusMode ? '📚 復習モード中' : undefined}
                         >
                           🔴分からない {detailedStats.strugglingCount}語
                         </span>
                         {onReviewFocus && (
-                          <span
-                            className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
-                            onClick={onReviewFocus}
-                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
-                          >
-                            🔥
+                          <span style={{ position: 'relative', display: 'inline-block' }}>
+                            <span
+                              className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
+                              onClick={onReviewFocus}
+                              title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                            >
+                              🔥
+                            </span>
+                            {isReviewFocusMode && (
+                              <span
+                                className="animate-pulse"
+                                style={{
+                                  position: 'absolute',
+                                  top: '-2px',
+                                  right: '-12px',
+                                  fontSize: '0.8em',
+                                }}
+                                title="復習モード実行中"
+                              >
+                                ✨
+                              </span>
+                            )}
                           </span>
                         )}
                       </>
@@ -962,12 +978,28 @@ function ScoreBoard({
                         🟡学習中 {detailedStats.learningCount}問 🔴要復習{' '}
                         {detailedStats.strugglingCount}問
                         {onReviewFocus && (
-                          <span
-                            className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
-                            onClick={onReviewFocus}
-                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
-                          >
-                            🔥
+                          <span style={{ position: 'relative', display: 'inline-block' }}>
+                            <span
+                              className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
+                              onClick={onReviewFocus}
+                              title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                            >
+                              🔥
+                            </span>
+                            {isReviewFocusMode && (
+                              <span
+                                className="animate-pulse"
+                                style={{
+                                  position: 'absolute',
+                                  top: '-2px',
+                                  right: '-12px',
+                                  fontSize: '0.8em',
+                                }}
+                                title="復習モード実行中"
+                              >
+                                ✨
+                              </span>
+                            )}
                           </span>
                         )}
                       </>
@@ -977,12 +1009,28 @@ function ScoreBoard({
                         🟡学習中 {detailedStats.learningCount}語 🔴要復習{' '}
                         {detailedStats.strugglingCount}語
                         {(mode === 'translation' || mode === 'spelling') && onReviewFocus && (
-                          <span
-                            className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
-                            onClick={onReviewFocus}
-                            title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
-                          >
-                            🔥
+                          <span style={{ position: 'relative', display: 'inline-block' }}>
+                            <span
+                              className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
+                              onClick={onReviewFocus}
+                              title={isReviewFocusMode ? '復習モード解除' : '復習モード開始'}
+                            >
+                              🔥
+                            </span>
+                            {isReviewFocusMode && (
+                              <span
+                                className="animate-pulse"
+                                style={{
+                                  position: 'absolute',
+                                  top: '-2px',
+                                  right: '-12px',
+                                  fontSize: '0.8em',
+                                }}
+                                title="復習モード実行中"
+                              >
+                                ✨
+                              </span>
+                            )}
                           </span>
                         )}
                       </>
