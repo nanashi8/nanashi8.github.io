@@ -1661,11 +1661,25 @@ function ComprehensiveReadingView({
                           // 句の検出（前置詞句、副詞句など）
                           const phrases = new Set<number>();
                           selectedSentenceDetails.grammarAnalysis.forEach((analysis, idx) => {
-                            if (analysis.tag === 'Prep' || analysis.tag === 'Adv') {
+                            if (analysis.tag === 'Prep') {
                               phrases.add(idx);
                               // 次の単語も句に含める（前置詞+名詞など）
                               if (idx + 1 < selectedSentenceDetails.grammarAnalysis.length) {
                                 phrases.add(idx + 1);
+                              }
+                            }
+                          });
+                          
+                          // 従属節の検出（接続詞で始まる節）
+                          const subordinateClauses = new Set<number>();
+                          const subordinatingConjunctions = ['because', 'if', 'when', 'while', 'although', 'though', 'unless', 'since', 'after', 'before', 'as'];
+                          selectedSentenceDetails.grammarAnalysis.forEach((analysis, idx) => {
+                            if (analysis.tag === 'Conj' && subordinatingConjunctions.includes(analysis.word.toLowerCase())) {
+                              // 従属接続詞から文末またはカンマまでを従属節とする
+                              for (let i = idx; i < selectedSentenceDetails.grammarAnalysis.length; i++) {
+                                const word = selectedSentenceDetails.grammarAnalysis[i].word;
+                                if (word === ',' || word === '.') break;
+                                subordinateClauses.add(i);
                               }
                             }
                           });
@@ -1675,6 +1689,7 @@ function ComprehensiveReadingView({
                             .map((analysis, idx) => {
                               const isPhrasal = phrasalWordIndices.has(idx);
                               const isPhrase = phrases.has(idx);
+                              const isSubordinate = subordinateClauses.has(idx);
                               
                               return (
                                 <div
@@ -1685,9 +1700,9 @@ function ComprehensiveReadingView({
                                   <span className={`font-medium text-base ${
                                     isPhrasal ? 'border-b-2 border-yellow-500' : ''
                                   } ${
-                                    isPhrase ? 'px-1' : ''
+                                    isPhrase || isSubordinate ? 'px-0.5' : ''
                                   }`}>
-                                    {isPhrase && '＜'}{analysis.word}{isPhrase && '＞'}
+                                    {isSubordinate && '（'}{isPhrase && '＜'}{analysis.word}{isPhrase && '＞'}{isSubordinate && '）'}
                                   </span>
                                   <span
                                     className="text-xs grammar-tag-label mt-0.5"
