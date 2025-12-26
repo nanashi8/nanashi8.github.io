@@ -21,6 +21,7 @@ import { QuestionSet, Question } from '../types';
 import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '../utils';
 import { CalibrationDashboard } from './CalibrationDashboard';
+import { downloadBackup, importFromFile } from '@/storage/manager/dataExport';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
@@ -350,6 +351,40 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 
       {/* 全体リセット */}
       <div className="w-full mb-4 px-2">
+        {/* バックアップ */}
+        <div className="bg-white rounded-xl shadow-lg border-2 border-blue-200 p-6 mb-4">
+          <h3 className="text-xl font-bold text-gray-800 mb-2">💾 バックアップ</h3>
+          <p className="text-sm text-gray-600 mb-3">
+            学習データをJSONで保存/復元できます。データのリセット前にバックアップ推奨。
+          </p>
+          <button
+            onClick={() => {
+              downloadBackup();
+            }}
+            className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+          >
+            ⬇️ ダウンロード
+          </button>
+          <span className="mx-2" />
+          <input
+            type="file"
+            accept="application/json"
+            aria-label="バックアップファイルを選択"
+            onChange={async (e) => {
+              const file = e.target.files?.[0];
+              // 同じファイルを連続で選べるようにクリア
+              e.target.value = '';
+              if (!file) return;
+
+              const ok = await importFromFile(file);
+              if (ok) {
+                // 復元後に確実に全状態を反映
+                window.location.reload();
+              }
+            }}
+          />
+        </div>
+
         <div className="bg-white rounded-xl shadow-lg border-2 border-red-200 p-6">
           <div className="flex items-center justify-between">
             <div>

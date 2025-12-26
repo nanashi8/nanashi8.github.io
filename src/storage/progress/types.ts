@@ -146,6 +146,8 @@ export interface QuestionSetStats {
 }
 
 export interface UserProgress {
+  // 進捗データのスキーマバージョン（後方互換のため任意）
+  schemaVersion?: number;
   results: QuizResult[];
   statistics: Statistics;
   questionSetStats: {
