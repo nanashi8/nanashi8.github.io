@@ -57,6 +57,24 @@ function _getLevelLabel(level: string): string {
   return levelMap[level] || level;
 }
 
+// 文法タグを日本語に変換
+function getGrammarTagLabel(tag: string): string {
+  const tagMap: Record<string, string> = {
+    S: '主語',
+    V: '動詞',
+    O: '目的語',
+    C: '補語',
+    M: '修飾語',
+    Prep: '前置詞',
+    Conj: '接続詞',
+    Det: '限定詞',
+    Adj: '形容詞',
+    Adv: '副詞',
+    Unknown: 'その他',
+  };
+  return tagMap[tag] || tag;
+}
+
 function ComprehensiveReadingView({
   onSaveUnknownWords,
   customQuestionSets = [],
@@ -1618,23 +1636,23 @@ function ComprehensiveReadingView({
                         </div>
                       )}
 
-                      <div className="flex flex-wrap gap-1 text-sm">
+                      <div className="flex flex-wrap gap-2 text-sm">
                         {selectedSentenceDetails.grammarAnalysis
                           .filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word))
                           .map((analysis, idx) => (
-                            <span
+                            <div
                               key={idx}
-                              className="inline-flex items-center"
+                              className="inline-flex flex-col items-center"
                               title={analysis.description}
                             >
-                              <span className="font-medium">{analysis.word}</span>
+                              <span className="font-medium text-base">{analysis.word}</span>
                               <span
-                                className="ml-0.5 text-xs grammar-tag-label"
+                                className="text-xs grammar-tag-label mt-0.5"
                                 data-tag={analysis.tag}
                               >
-                                [{analysis.tag}]
+                                {getGrammarTagLabel(analysis.tag)}
                               </span>
-                            </span>
+                            </div>
                           ))}
                       </div>
 
