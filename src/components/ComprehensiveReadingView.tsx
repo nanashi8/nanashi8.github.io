@@ -1425,7 +1425,7 @@ function ComprehensiveReadingView({
                                   className="text-xs grammar-tag-label mt-0.5"
                                   data-tag={analysis.tag}
                                 >
-                                  {getPartOfSpeech(analysis.tag)}
+                                  {getGrammarTagLabel(analysis.tag)}
                                 </span>
                               </div>
                             );
