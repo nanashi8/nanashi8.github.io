@@ -126,7 +126,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.GRAMMAR);
 
   // 適応的学習AIネットワーク（常時有効）
-  const { processQuestion: processAdaptiveQuestion, currentStrategy: _currentStrategy } = useAdaptiveNetwork();
+  const { processQuestion: processAdaptiveQuestion, currentStrategy: _currentStrategy } =
+    useAdaptiveNetwork();
 
   // 統一問題スケジューラー（DTA + 振動防止 + メタAI統合）
   const [scheduler] = useState(() => {
@@ -460,7 +461,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           return `grammar_${q.question.slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
         }
         const fallback = q.japanese || q.sentence || 'unknown';
-        return `grammar_${String(fallback).slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
+        return `grammar_${String(fallback)
+          .slice(0, 50)
+          .replace(/[^a-zA-Z0-9]/g, '_')}`;
       };
 
       const scheduleInputs = questions.map((q) => {
@@ -573,7 +576,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         return `grammar_${q.question.slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
       }
       const fallback = q.japanese || q.sentence || 'unknown';
-      return `grammar_${String(fallback).slice(0, 50).replace(/[^a-zA-Z0-9]/g, '_')}`;
+      return `grammar_${String(fallback)
+        .slice(0, 50)
+        .replace(/[^a-zA-Z0-9]/g, '_')}`;
     };
 
     const performRescheduling = async () => {
@@ -889,6 +894,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setCorrectStreak(0);
     }
 
+    // 🔥 新規枯渇防止: 不正解連打（「分からない」含む）時は残りキューを再スケジューリングして
+    // インターリーブ（[苦手語4, 新規1]）を回復させる
+    const nextIncorrectStreak = isCorrect ? 0 : incorrectStreak + 1;
+    if (!needsRescheduling && nextIncorrectStreak >= 5) {
+      setNeedsRescheduling(true);
+    }
+
     // 自動読み上げが有効な場合、問題と正解の英文を読み上げ
     if (autoReadAloud && currentQuestion.sentence) {
       setTimeout(() => {
@@ -990,7 +1002,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 🔒 暗記タブ同等: 不正解は近い将来に再出題として差し込み
     let questionsAfterRequeue = currentQuestions;
     if (!isCorrect && currentQuestion) {
-      const updated = reAddQuestion(currentQuestion, currentQuestions, currentQuestionIndex, 'grammar');
+      const updated = reAddQuestion(
+        currentQuestion,
+        currentQuestions,
+        currentQuestionIndex,
+        'grammar'
+      );
       questionsAfterRequeue = updated;
       if (updated !== currentQuestions) {
         setCurrentQuestions(updated);

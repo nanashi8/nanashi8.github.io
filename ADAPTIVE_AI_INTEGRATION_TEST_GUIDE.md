@@ -38,6 +38,19 @@ location.reload();
 
 ---
 
+## 🤖 自動回帰（Playwright）
+
+新規混入（インターリーブ）が意図どおり機能しているかは、自動テストでも確認できます。
+
+```bash
+npx playwright test tests/integration/interleaveRatioTolerance.spec.ts --config=playwright.config.ts --project=chromium
+```
+
+- 目的: 各モードで「苦手4 → 新規1（目標20%）」が成立する範囲を、許容幅（10〜30%）で検証
+- 安定化: `progress-data`（localStorage）に加えて IndexedDB（`QuizAppDB/progress/main`）にも seed して環境差を排除
+
+---
+
 ## 🧪 テストシナリオ
 
 ### Phase 0: 暗記モード ✅

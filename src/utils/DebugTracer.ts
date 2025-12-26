@@ -8,6 +8,8 @@
  * - parentSpanId: 親スパンのID（階層構造）
  */
 
+import { readDebugRaw } from './debugStorage';
+
 interface SpanAttributes {
   weakWordsCount: number;
   totalCount: number;
@@ -230,7 +232,7 @@ export class DebugTracer {
   /**
    * サマリーを生成（デバッグパネル用）
    */
-  static generateSummary(): string {
+  static generateSummary(mode?: string): string {
     if (!this.currentContext) return 'トレースデータなし';
 
     const spans = Array.from(this.currentContext.spans.values()).sort(
@@ -435,8 +437,10 @@ export class DebugTracer {
 
     // 🧠 finalPriorityモードの詳細情報
     try {
-      const finalPriorityOutput = localStorage.getItem('debug_finalPriority_output');
-      const finalPrioritySessionStats = localStorage.getItem('debug_finalPriority_sessionStats');
+      const finalPriorityOutput = readDebugRaw('debug_finalPriority_output', { mode }).raw;
+      const finalPrioritySessionStats = readDebugRaw('debug_finalPriority_sessionStats', {
+        mode,
+      }).raw;
 
       if (finalPriorityOutput && finalPrioritySessionStats) {
         const top30 = JSON.parse(finalPriorityOutput) as Array<{
@@ -503,7 +507,7 @@ export class DebugTracer {
 
     // 🔍 postProcess後のTOP30情報
     try {
-      const postProcessOutput = localStorage.getItem('debug_postProcess_output');
+      const postProcessOutput = readDebugRaw('debug_postProcess_output', { mode }).raw;
       const sortAndBalanceOutput = localStorage.getItem('debug_sortAndBalance_output');
 
       if (postProcessOutput || sortAndBalanceOutput) {

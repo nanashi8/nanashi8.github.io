@@ -1210,6 +1210,18 @@ function MemorizationView({
       // 回答結果を記録（動的AIコメント用）
       setLastAnswerCorrect(isCorrect);
       setLastAnswerWord(currentQuestion.word);
+
+      // 🔥 新規枯渇防止: 「分からない」連打時は残りキューを再スケジューリングして
+      // GamificationAIの新規混入（[苦手語4, 新規1]）を回復させる
+      const nextIncorrectStreak = !isCorrect && !isStillLearning ? incorrectStreak + 1 : 0;
+      if (!needsRescheduling && nextIncorrectStreak >= 5) {
+        setNeedsRescheduling(true);
+        setReschedulingNotification('不正解連打で新規枯渇を回避');
+        recordRescheduleEvent('triggered', '不正解連打で新規枯渇を回避', {
+          word: currentQuestion.word,
+          incorrectStreak: nextIncorrectStreak,
+        });
+      }
       if (isCorrect) {
         setCorrectStreak((prev) => prev + 1);
         setIncorrectStreak(0);

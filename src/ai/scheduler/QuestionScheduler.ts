@@ -37,6 +37,7 @@ import type {
 import type { WordProgress } from '@/storage/progress/types';
 import { AntiVibrationFilter } from './AntiVibrationFilter';
 import { logger } from '@/utils/logger';
+import { writeDebugJSON } from '@/utils/debugStorage';
 import { AICoordinator } from '../AICoordinator';
 import type { SessionStats as AISessionStats } from '../types';
 import {
@@ -198,8 +199,7 @@ export class QuestionScheduler {
         top30,
       };
 
-      localStorage.setItem('debug_postProcess_output', JSON.stringify(payload));
-      localStorage.setItem(`debug_postProcess_output_${context.mode}`, JSON.stringify(payload));
+      writeDebugJSON('debug_postProcess_output', payload, { mode: context.mode });
     } catch {
       // localStorage失敗は無視
     }
@@ -1658,7 +1658,7 @@ export class QuestionScheduler {
     // ✅ 新規混入（Position分散 → インターリーブ）
     // finalPriorityModeでも「分からない連打で新規が一切出ない」を避ける
     // - Position分散: 新規の一部を40-59へ引き上げ（まだまだ/分からないより下位）
-    // - インターリーブ: [苦手語3-5問, 新規1問] を混ぜる
+    // - インターリーブ: [苦手語4問, 新規1問] を混ぜる（新規比率=20%、定着率優先）
     const { result: adjustedForNew } =
       gamificationAI.adjustPositionForInterleaving(boostedPrioritized);
 
@@ -1680,11 +1680,7 @@ export class QuestionScheduler {
         category: pq.status?.category,
         attempts: pq.status?.attempts ?? 0,
       }));
-      localStorage.setItem('debug_finalPriority_output', JSON.stringify(top30Final));
-      localStorage.setItem(
-        `debug_finalPriority_output_${context.mode}`,
-        JSON.stringify(top30Final)
-      );
+      writeDebugJSON('debug_finalPriority_output', top30Final, { mode: context.mode });
 
       const statsPayload = {
         currentTab,
@@ -1694,11 +1690,7 @@ export class QuestionScheduler {
         timestamp: new Date().toISOString(),
         mode: context.mode,
       };
-      localStorage.setItem('debug_finalPriority_sessionStats', JSON.stringify(statsPayload));
-      localStorage.setItem(
-        `debug_finalPriority_sessionStats_${context.mode}`,
-        JSON.stringify(statsPayload)
-      );
+      writeDebugJSON('debug_finalPriority_sessionStats', statsPayload, { mode: context.mode });
     } catch {
       // localStorage失敗は無視
     }
@@ -1727,8 +1719,7 @@ export class QuestionScheduler {
         top30,
       };
 
-      localStorage.setItem('debug_postProcess_output', JSON.stringify(payload));
-      localStorage.setItem(`debug_postProcess_output_${context.mode}`, JSON.stringify(payload));
+      writeDebugJSON('debug_postProcess_output', payload, { mode: context.mode });
     } catch {
       // ignore
     }
@@ -1825,8 +1816,7 @@ export class QuestionScheduler {
         top30,
       };
 
-      localStorage.setItem('debug_postProcess_meta', JSON.stringify(payload));
-      localStorage.setItem(`debug_postProcess_meta_${context.mode}`, JSON.stringify(payload));
+      writeDebugJSON('debug_postProcess_meta', payload, { mode: context.mode });
     } catch {
       // ignore
     }
@@ -1952,8 +1942,7 @@ export class QuestionScheduler {
           totalQuestions: reorderedQuestions.length,
         };
 
-        localStorage.setItem('debug_postProcess_output', JSON.stringify(payload));
-        localStorage.setItem(`debug_postProcess_output_${context.mode}`, JSON.stringify(payload));
+        writeDebugJSON('debug_postProcess_output', payload, { mode: context.mode });
       } catch {
         // localStorage失敗は無視
       }
