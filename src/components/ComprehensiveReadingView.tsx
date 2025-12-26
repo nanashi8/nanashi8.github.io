@@ -1269,19 +1269,19 @@ function ComprehensiveReadingView({
 
                 {/* 選択された文の読解エリア */}
                 {selectedSentenceIndex !== null && selectedSentenceDetails && (
-                  <div className="selected-sentence-analysis mt-6">
-                    <div className="flex justify-between items-center mb-4">
-                      <h4 className="m-0 text-lg font-semibold">📝 選択した文の読解</h4>
-                      <div className="flex gap-2">
+                  <div className="selected-sentence-analysis mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <div className="flex justify-between items-center mb-2">
+                      <h4 className="m-0 text-base font-semibold text-blue-700">📜 文の読解</h4>
+                      <div className="flex gap-1">
                         <button
-                          className="px-3 py-1 text-sm bg-primary text-white rounded hover:bg-primary-hover"
+                          className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700"
                           onClick={() => speakEnglish(selectedSentenceDetails.text)}
-                          title="この文を発音"
+                          title="発音"
                         >
-                          🔊 発音
+                          🔊
                         </button>
                         <button
-                          className="px-3 py-1 text-sm bg-info text-white rounded hover:bg-info-hover"
+                          className="px-2 py-1 text-xs bg-gray-600 text-white rounded hover:bg-gray-700"
                           onClick={() =>
                             setSelectedSentenceDetails({
                               ...selectedSentenceDetails,
@@ -1294,19 +1294,19 @@ function ComprehensiveReadingView({
                       </div>
                     </div>
 
-                    <div className="selected-sentence-text mb-4">
+                    <div className="selected-sentence-text mb-2 text-base">
                       {selectedSentenceDetails.text}
                     </div>
 
                     {/* 文法構造の表示 */}
-                    <div className="grammar-structure mb-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <h5 className="text-sm font-semibold m-0">🔤 文法構造:</h5>
+                    <div className="grammar-structure mb-2">
+                      <div className="flex justify-between items-center mb-1">
+                        <h5 className="text-xs font-semibold m-0 text-gray-700">🔤 文法構造</h5>
                         <button
-                          className="px-2 py-1 text-xs bg-gray-200 rounded hover:bg-gray-300:bg-gray-600"
+                          className="px-2 py-0.5 text-xs bg-gray-200 rounded hover:bg-gray-300:bg-gray-600"
                           onClick={() => setShowGrammarLegend(!showGrammarLegend)}
                         >
-                          {showGrammarLegend ? '凡例を隠す' : '凡例を表示'}
+                          {showGrammarLegend ? '凡例を隠す' : '凡例'}
                         </button>
                       </div>
 
@@ -1618,53 +1618,27 @@ function ComprehensiveReadingView({
                         </div>
                       )}
 
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1 text-sm">
                         {selectedSentenceDetails.grammarAnalysis
                           .filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word))
                           .map((analysis, idx) => (
-                            <div
+                            <span
                               key={idx}
-                              className="grammar-tag"
-                              data-tag={analysis.tag}
+                              className="inline-flex items-center"
                               title={analysis.description}
                             >
-                              <span className="font-semibold">{analysis.word}</span>
+                              <span className="font-medium">{analysis.word}</span>
                               <span
-                                className="ml-1 text-xs grammar-tag-label"
+                                className="ml-0.5 text-xs grammar-tag-label"
                                 data-tag={analysis.tag}
                               >
                                 [{analysis.tag}]
                               </span>
-                            </div>
+                            </span>
                           ))}
                       </div>
 
-                      {/* 句読点・記号の意味 */}
-                      {selectedSentenceDetails.grammarAnalysis.some((a) =>
-                        /^[.,!?;:\-—–"'()]$/.test(a.word)
-                      ) && (
-                        <div className="mt-3">
-                          <h6 className="text-xs font-semibold mb-2 text-gray-600">
-                            📌 記号の意味:
-                          </h6>
-                          <div className="flex flex-wrap gap-2">
-                            {selectedSentenceDetails.grammarAnalysis
-                              .filter((a) => /^[.,!?;:\-—–"'()]$/.test(a.word))
-                              .map((analysis, idx) => (
-                                <div
-                                  key={idx}
-                                  className="punctuation-card"
-                                  title={analysis.description}
-                                >
-                                  <span className="font-bold text-lg">{analysis.word}</span>
-                                  <span className="ml-2 text-xs text-gray-600">
-                                    {analysis.description}
-                                  </span>
-                                </div>
-                              ))}
-                          </div>
-                        </div>
-                      )}
+                      {/* 記号は非表示（冗長なため） */}
                     </div>
 
                     {/* 句動詞・慣用表現 */}
@@ -1675,27 +1649,14 @@ function ComprehensiveReadingView({
                       if (phrasalExpressions.length === 0) return null;
 
                       return (
-                        <div className="phrasal-expressions-section mt-4">
-                          <h5 className="text-sm font-semibold mb-2">🔗 熟語:</h5>
-                          <div className="space-y-2">
+                        <div className="mt-2">
+                          <h5 className="text-xs font-semibold mb-1 text-gray-700">🔗 熟語</h5>
+                          <div className="space-y-1">
                             {phrasalExpressions.map((expr: PhrasalExpression, idx: number) => (
-                              <div key={idx} className="phrasal-expression-card">
-                                <div className="phrasal-expression-words">
-                                  {expr.words.map((word, widx) => {
-                                    const meaning = getMeaning(word, undefined);
-                                    return (
-                                      <div key={widx} className="phrasal-word-item">
-                                        <div className="phrasal-word">{word}</div>
-                                        <div className="phrasal-word-meaning">{meaning || '-'}</div>
-                                      </div>
-                                    );
-                                  })}
-                                </div>
-                                <div className="phrasal-expression-divider">
-                                  <div className="phrasal-divider-line"></div>
+                              <div key={idx} className="bg-yellow-50 p-2 rounded border border-yellow-200">
+                                <div className="flex items-center justify-between gap-2">
                                   <div className="flex items-center gap-2">
-                                    <div className="phrasal-type-label">熟語</div>
-                                    {/* カスタムセットに追加ボタン */}
+                                    <span className="font-semibold text-sm">{expr.words.join(' ')}</span>
                                     {onAddWordToCustomSet &&
                                       onRemoveWordFromCustomSet &&
                                       onOpenCustomSetManagement && (
@@ -1714,8 +1675,8 @@ function ComprehensiveReadingView({
                                         />
                                       )}
                                   </div>
+                                  <span className="text-xs text-gray-600">{expr.meaning}</span>
                                 </div>
-                                <div className="phrasal-expression-meaning">{expr.meaning}</div>
                               </div>
                             ))}
                           </div>
@@ -1730,19 +1691,16 @@ function ComprehensiveReadingView({
                       if (patterns.length === 0) return null;
 
                       return (
-                        <div className="grammar-patterns-section mt-4">
-                          <h5 className="text-sm font-semibold mb-2">📐 重要構文:</h5>
-                          <div className="space-y-2">
+                        <div className="mt-2">
+                          <h5 className="text-xs font-semibold mb-1 text-gray-700">📐 重要構文</h5>
+                          <div className="space-y-1">
                             {patterns.map((pattern: GrammarPattern, idx: number) => (
-                              <div key={idx} className="grammar-pattern-card">
-                                <div className="pattern-header">
-                                  <div className="pattern-name">{pattern.name}</div>
-                                  <div className="pattern-meaning">{pattern.meaning}</div>
+                              <div key={idx} className="bg-green-50 p-2 rounded border border-green-200">
+                                <div className="flex items-center justify-between text-sm">
+                                  <span className="font-semibold text-green-700">{pattern.name}</span>
+                                  <span className="text-xs text-gray-600">{pattern.meaning}</span>
                                 </div>
-                                <div className="pattern-sentence">
-                                  {selectedSentenceDetails.text}
-                                </div>
-                                <div className="pattern-explanation">💡 {pattern.explanation}</div>
+                                <div className="text-xs text-gray-600 mt-1">💡 {pattern.explanation}</div>
                               </div>
                             ))}
                           </div>
