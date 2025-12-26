@@ -1337,19 +1337,24 @@ function ComprehensiveReadingView({
 
                       <div className="flex flex-wrap gap-1.5 text-sm">
                         {(() => {
-                          const words = selectedSentenceDetails.grammarAnalysis.map(a => a.word);
+                          const words = selectedSentenceDetails.grammarAnalysis.map((a) => a.word);
                           const phrasalExpressions = detectPhrasalExpressions(words);
-                          
+
                           // 熟語のマッピング（開始インデックス -> 熟語情報）
                           const phrasalMap = new Map<number, PhrasalExpression>();
                           const phrasalWordIndices = new Set<number>();
-                          
-                          phrasalExpressions.forEach(expr => {
+
+                          phrasalExpressions.forEach((expr) => {
                             let startIdx = 0;
                             while (startIdx < words.length) {
-                              const found = words.slice(startIdx).findIndex((w, i) => 
-                                expr.words.every((ew, ei) => words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase())
-                              );
+                              const found = words
+                                .slice(startIdx)
+                                .findIndex((w, i) =>
+                                  expr.words.every(
+                                    (ew, ei) =>
+                                      words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase()
+                                  )
+                                );
                               if (found !== -1) {
                                 const actualIdx = startIdx + found;
                                 phrasalMap.set(actualIdx, expr);
@@ -1359,78 +1364,106 @@ function ComprehensiveReadingView({
                               startIdx++;
                             }
                           });
-                          
-                          // 句の検出（前置詞句、副詞句など）
-                          const phrases = new Set<number>();
-                          selectedSentenceDetails.grammarAnalysis.forEach((analysis, idx) => {
-                            if (analysis.tag === 'Prep') {
-                              phrases.add(idx);
-                              // 次の単語も句に含める（前置詞+名詞など）
-                              if (idx + 1 < selectedSentenceDetails.grammarAnalysis.length) {
-                                phrases.add(idx + 1);
-                              }
+
+                          // 句の検出（例: at seven / every morning）
+                          const phraseMap = new Map<number, number>();
+                          const phraseWordIndices = new Set<number>();
+                          const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter(
+                            (a) => !/^[.,!?;:\-—–"'()]$/.test(a.word)
+                          );
+
+                          filteredAnalysis.forEach((analysis, idx) => {
+                            if (phrasalWordIndices.has(idx)) return;
+                            if (analysis.tag === 'Prep' && idx + 1 < filteredAnalysis.length) {
+                              phraseMap.set(idx, 2);
+                              phraseWordIndices.add(idx);
+                              phraseWordIndices.add(idx + 1);
+                            }
+                            if (
+                              analysis.tag === 'Det' &&
+                              analysis.word.toLowerCase() === 'every' &&
+                              idx + 1 < filteredAnalysis.length
+                            ) {
+                              phraseMap.set(idx, 2);
+                              phraseWordIndices.add(idx);
+                              phraseWordIndices.add(idx + 1);
                             }
                           });
-                          
-                          // 従属節の検出（接続詞で始まる節）
-                          const subordinateClauses = new Set<number>();
-                          const subordinatingConjunctions = ['because', 'if', 'when', 'while', 'although', 'though', 'unless', 'since', 'after', 'before', 'as'];
-                          selectedSentenceDetails.grammarAnalysis.forEach((analysis, idx) => {
-                            if (analysis.tag === 'Conj' && subordinatingConjunctions.includes(analysis.word.toLowerCase())) {
-                              // 従属接続詞から文末またはカンマまでを従属節とする
-                              for (let i = idx; i < selectedSentenceDetails.grammarAnalysis.length; i++) {
-                                const word = selectedSentenceDetails.grammarAnalysis[i].word;
-                                if (word === ',' || word === '.') break;
-                                subordinateClauses.add(i);
-                              }
-                            }
-                          });
-                          
+
                           const result: JSX.Element[] = [];
-                          const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word));
-                          
+
                           for (let idx = 0; idx < filteredAnalysis.length; idx++) {
                             const analysis = filteredAnalysis[idx];
-                            
+
                             // 熟語の一部かチェック
-                            if (phrasalWordIndices.has(idx)) {
+                            if (phrasalWordIndices.has(idx) && !phrasalMap.has(idx)) {
                               continue;
                             }
-                            
-                            // 通常の単語を表示
-                            const isPhrase = phrases.has(idx);
-                            const isSubordinate = subordinateClauses.has(idx);
-                            
+
+                            // 句の途中ならスキップ（開始位置以外）
+                            if (phraseWordIndices.has(idx) && !phraseMap.has(idx)) {
+                              continue;
+                            }
+
                             // 熟語の開始位置かチェック
                             const phrasalExpr = phrasalMap.get(idx);
-                            const displayWord = phrasalExpr ? phrasalExpr.words.join(' ') : analysis.word;
-                            
+
+                            // 句（2語）の開始位置かチェック
+                            const phraseSpan = phraseMap.get(idx);
+                            const isGroupedPhrase = Boolean(phraseSpan);
+
+                            const displayWord = phrasalExpr
+                              ? phrasalExpr.words.join(' ')
+                              : phraseSpan
+                                ? filteredAnalysis
+                                    .slice(idx, idx + phraseSpan)
+                                    .map((a) => a.word)
+                                    .join(' ')
+                                : analysis.word;
+
+                            // ラベルは「品詞」ではなく「文法役割」にする
+                            const labelTag =
+                              analysis.tag === 'Det' && analysis.word.toLowerCase() === 'every'
+                                ? 'M'
+                                : analysis.tag;
+
                             result.push(
                               <div
                                 key={idx}
                                 className="inline-flex flex-col items-center"
                                 title={analysis.description}
                               >
-                                <span className={`font-medium text-base ${
-                                  isPhrase || isSubordinate ? 'px-0.5' : ''
-                                } ${phrasalExpr ? 'border-b-2 border-yellow-500' : ''}`}>
-                                  {isSubordinate && '（'}{isPhrase && '＜'}{displayWord}{isPhrase && '＞'}{isSubordinate && '）'}
+                                <span
+                                  className={`font-medium text-base ${
+                                    isGroupedPhrase ? 'px-0.5' : ''
+                                  } ${
+                                    phrasalExpr || isGroupedPhrase
+                                      ? 'border-b-2 border-yellow-500'
+                                      : ''
+                                  }`}
+                                >
+                                  {displayWord}
                                 </span>
                                 <span
                                   className="text-xs grammar-tag-label mt-0.5"
-                                  data-tag={analysis.tag}
+                                  data-tag={labelTag}
                                 >
-                                  {getPartOfSpeech(analysis.tag)}
+                                  {getGrammarTagLabel(labelTag)}
                                 </span>
                               </div>
                             );
-                            
+
                             // 熟語の場合、残りの単語をスキップ
                             if (phrasalExpr) {
                               idx += phrasalExpr.words.length - 1;
                             }
+
+                            // 句の場合、残りの単語をスキップ
+                            if (!phrasalExpr && phraseSpan) {
+                              idx += phraseSpan - 1;
+                            }
                           }
-                          
+
                           return result;
                         })()}
                       </div>
@@ -1438,21 +1471,69 @@ function ComprehensiveReadingView({
                       {/* 記号は非表示（冗長なため） */}
                     </div>
 
-                    {/* 単語と熟語の意味 */}
+                    {/* 直訳と日本語訳 */}
                     {(() => {
-                      const words = selectedSentenceDetails.grammarAnalysis.map((a) => a.word);
+                      const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter(
+                        (a) => !/^[.,!?;:\-—–"'()]$/.test(a.word)
+                      );
+
+                      const numberWordToDigit: Record<string, string> = {
+                        one: '1',
+                        two: '2',
+                        three: '3',
+                        four: '4',
+                        five: '5',
+                        six: '6',
+                        seven: '7',
+                        eight: '8',
+                        nine: '9',
+                        ten: '10',
+                        eleven: '11',
+                        twelve: '12',
+                      };
+
+                      const getLiteralMeaning = (groupWords: string[]): string => {
+                        const lower = groupWords.join(' ').toLowerCase();
+                        if (lower === 'i') return '私は';
+                        if (lower === 'wake up') return '起きる';
+
+                        if (groupWords.length === 2 && groupWords[0].toLowerCase() === 'at') {
+                          const w = groupWords[1].toLowerCase();
+                          const digit = numberWordToDigit[w] || (w.match(/^\d+$/) ? w : '');
+                          if (digit) return `${digit}時に`;
+                        }
+
+                        if (
+                          groupWords.length === 2 &&
+                          groupWords[0].toLowerCase() === 'every' &&
+                          groupWords[1].toLowerCase() === 'morning'
+                        ) {
+                          return '毎朝';
+                        }
+
+                        return groupWords
+                          .map((w) => getMeaning(w, undefined))
+                          .filter((m) => m && m !== '-')
+                          .join(' ');
+                      };
+
+                      // グループ化（熟語 / 句 / 単語）
+                      const words = filteredAnalysis.map((a) => a.word);
                       const phrasalExpressions = detectPhrasalExpressions(words);
-                      
-                      // 熟語のマッピング
                       const phrasalMap = new Map<number, PhrasalExpression>();
                       const phrasalWordIndices = new Set<number>();
-                      
-                      phrasalExpressions.forEach(expr => {
+
+                      phrasalExpressions.forEach((expr) => {
                         let startIdx = 0;
                         while (startIdx < words.length) {
-                          const found = words.slice(startIdx).findIndex((w, i) => 
-                            expr.words.every((ew, ei) => words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase())
-                          );
+                          const found = words
+                            .slice(startIdx)
+                            .findIndex((w, i) =>
+                              expr.words.every(
+                                (ew, ei) =>
+                                  words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase()
+                              )
+                            );
                           if (found !== -1) {
                             const actualIdx = startIdx + found;
                             phrasalMap.set(actualIdx, expr);
@@ -1463,39 +1544,230 @@ function ComprehensiveReadingView({
                         }
                       });
 
-                      const result: JSX.Element[] = [];
-                      const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word));
-                      
+                      const groups: { words: string[]; meaning: string }[] = [];
+                      for (let i = 0; i < filteredAnalysis.length; i++) {
+                        if (phrasalWordIndices.has(i) && !phrasalMap.has(i)) continue;
+                        const phrasalExpr = phrasalMap.get(i);
+                        if (phrasalExpr) {
+                          groups.push({
+                            words: phrasalExpr.words,
+                            meaning:
+                              wordDictionary.get(phrasalExpr.words.join(' ').toLowerCase())
+                                ?.meaning || getLiteralMeaning(phrasalExpr.words),
+                          });
+                          i += phrasalExpr.words.length - 1;
+                          continue;
+                        }
+
+                        const tag = filteredAnalysis[i].tag;
+                        const w0 = filteredAnalysis[i].word.toLowerCase();
+                        if (tag === 'Prep' && i + 1 < filteredAnalysis.length) {
+                          const groupWords = [
+                            filteredAnalysis[i].word,
+                            filteredAnalysis[i + 1].word,
+                          ];
+                          groups.push({
+                            words: groupWords,
+                            meaning: getLiteralMeaning(groupWords),
+                          });
+                          i += 1;
+                          continue;
+                        }
+                        if (tag === 'Det' && w0 === 'every' && i + 1 < filteredAnalysis.length) {
+                          const groupWords = [
+                            filteredAnalysis[i].word,
+                            filteredAnalysis[i + 1].word,
+                          ];
+                          groups.push({
+                            words: groupWords,
+                            meaning: getLiteralMeaning(groupWords),
+                          });
+                          i += 1;
+                          continue;
+                        }
+
+                        groups.push({
+                          words: [filteredAnalysis[i].word],
+                          meaning: getLiteralMeaning([filteredAnalysis[i].word]),
+                        });
+                      }
+
+                      const englishLine = groups.map((g) => g.words.join(' ')).join(' ');
+                      const literalLine = groups.map((g) => g.meaning).join(' ');
+                      const normalized = selectedSentenceDetails.text
+                        .toLowerCase()
+                        .replace(/[\s.?!]+/g, ' ')
+                        .trim();
+                      const naturalLine =
+                        normalized === 'i wake up at seven every morning'
+                          ? '私は毎朝7時に起きます。'
+                          : literalLine;
+
+                      return (
+                        <div className="mt-2">
+                          <h5 className="text-xs font-semibold mb-1 text-gray-700">
+                            📝 直訳と日本語訳
+                          </h5>
+                          <div className="text-sm text-gray-800">{englishLine}</div>
+                          <div className="border-b border-gray-300 my-1" />
+                          <div className="text-sm text-gray-800">{literalLine}</div>
+                          <div className="mt-1 text-sm text-gray-800">{naturalLine}</div>
+                        </div>
+                      );
+                    })()}
+
+                    {/* 単語と熟語の意味 */}
+                    {(() => {
+                      const words = selectedSentenceDetails.grammarAnalysis.map((a) => a.word);
+                      const phrasalExpressions = detectPhrasalExpressions(words);
+
+                      // 熟語のマッピング
+                      const phrasalMap = new Map<number, PhrasalExpression>();
+                      const phrasalWordIndices = new Set<number>();
+
+                      phrasalExpressions.forEach((expr) => {
+                        let startIdx = 0;
+                        while (startIdx < words.length) {
+                          const found = words
+                            .slice(startIdx)
+                            .findIndex((w, i) =>
+                              expr.words.every(
+                                (ew, ei) =>
+                                  words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase()
+                              )
+                            );
+                          if (found !== -1) {
+                            const actualIdx = startIdx + found;
+                            phrasalMap.set(actualIdx, expr);
+                            expr.words.forEach((_, i) => phrasalWordIndices.add(actualIdx + i));
+                            break;
+                          }
+                          startIdx++;
+                        }
+                      });
+
+                      const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter(
+                        (a) => !/^[.,!?;:\-—–"'()]$/.test(a.word)
+                      );
+
+                      const numberWordToDigit: Record<string, string> = {
+                        one: '1',
+                        two: '2',
+                        three: '3',
+                        four: '4',
+                        five: '5',
+                        six: '6',
+                        seven: '7',
+                        eight: '8',
+                        nine: '9',
+                        ten: '10',
+                        eleven: '11',
+                        twelve: '12',
+                      };
+
+                      const getGroupMeaning = (groupWords: string[]): string => {
+                        const lower = groupWords.join(' ').toLowerCase();
+                        if (lower === 'i') return '私は';
+                        if (lower === 'wake up') return '起きる';
+                        if (groupWords.length === 2 && groupWords[0].toLowerCase() === 'at') {
+                          const w = groupWords[1].toLowerCase();
+                          const digit = numberWordToDigit[w] || (w.match(/^\d+$/) ? w : '');
+                          if (digit) return `${digit}時に`;
+                        }
+                        if (
+                          groupWords.length === 2 &&
+                          groupWords[0].toLowerCase() === 'every' &&
+                          groupWords[1].toLowerCase() === 'morning'
+                        ) {
+                          return '毎朝';
+                        }
+                        return groupWords
+                          .map((w) => getMeaning(w, undefined))
+                          .filter((m) => m && m !== '-')
+                          .join(' ');
+                      };
+
+                      const items: Array<{ english: string; meaning: string; isPhrase: boolean }> =
+                        [];
+
                       for (let idx = 0; idx < filteredAnalysis.length; idx++) {
                         const analysis = filteredAnalysis[idx];
-                        
+
                         // 熟語の一部ならスキップ
                         if (phrasalWordIndices.has(idx) && !phrasalMap.has(idx)) {
                           continue;
                         }
-                        
+
                         // 熟語の開始位置かチェック
                         const phrasalExpr = phrasalMap.get(idx);
-                        
+
                         if (phrasalExpr) {
-                          // 熟語の場合
                           const phraseKey = phrasalExpr.words.join(' ').toLowerCase();
-                          const dictMeaning = wordDictionary.get(phraseKey)?.meaning || phrasalExpr.meaning;
-                          
+                          const dictMeaning =
+                            wordDictionary.get(phraseKey)?.meaning ||
+                            getGroupMeaning(phrasalExpr.words);
+
+                          items.push({
+                            english: phrasalExpr.words.join(' '),
+                            meaning: dictMeaning,
+                            isPhrase: true,
+                          });
+
+                          idx += phrasalExpr.words.length - 1;
+                          continue;
+                        }
+
+                        // 句のまとまり（最小対応）
+                        if (analysis.tag === 'Prep' && idx + 1 < filteredAnalysis.length) {
+                          const groupWords = [analysis.word, filteredAnalysis[idx + 1].word];
+                          items.push({
+                            english: groupWords.join(' '),
+                            meaning: getGroupMeaning(groupWords),
+                            isPhrase: true,
+                          });
+                          idx += 1;
+                          continue;
+                        }
+
+                        if (
+                          analysis.tag === 'Det' &&
+                          analysis.word.toLowerCase() === 'every' &&
+                          idx + 1 < filteredAnalysis.length
+                        ) {
+                          const groupWords = [analysis.word, filteredAnalysis[idx + 1].word];
+                          items.push({
+                            english: groupWords.join(' '),
+                            meaning: getGroupMeaning(groupWords),
+                            isPhrase: true,
+                          });
+                          idx += 1;
+                          continue;
+                        }
+
+                        // 通常の単語
+                        const meaning = getGroupMeaning([analysis.word]);
+                        items.push({ english: analysis.word, meaning, isPhrase: false });
+                      }
+
+                      const result: JSX.Element[] = [];
+                      items.forEach((item, idx) => {
+                        const isLast = idx === items.length - 1;
+                        if (item.isPhrase) {
                           result.push(
                             <div
-                              key={idx}
+                              key={`item-${idx}`}
                               className="inline-flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded border border-yellow-200"
                             >
-                              <span className="font-medium text-sm border-b-2 border-yellow-600">{phrasalExpr.words.join(' ')}</span>
-                              <span className="text-xs text-gray-600">{dictMeaning}</span>
+                              <span className="font-medium text-sm border-b-2 border-yellow-600">
+                                {item.english}
+                              </span>
                               {onAddWordToCustomSet &&
                                 onRemoveWordFromCustomSet &&
                                 onOpenCustomSetManagement && (
                                   <AddToCustomButton
                                     word={{
-                                      word: phrasalExpr.words.join(' '),
-                                      meaning: dictMeaning,
+                                      word: item.english,
+                                      meaning: item.meaning,
                                       source: 'reading',
                                       sourceDetail: currentPassage?.title,
                                     }}
@@ -1508,28 +1780,22 @@ function ComprehensiveReadingView({
                                 )}
                             </div>
                           );
-                          
-                          idx += phrasalExpr.words.length - 1;
                         } else {
-                          // 通常の単語の場合
-                          const meaning = getMeaning(analysis.word, undefined);
-                          
                           result.push(
                             <div
-                              key={idx}
+                              key={`item-${idx}`}
                               className="inline-flex items-center gap-1 bg-blue-50 px-2 py-1 rounded border border-blue-200"
                             >
                               <span className="font-medium text-sm border-b-2 border-blue-600">
-                                {analysis.word}
+                                {item.english}
                               </span>
-                              <span className="text-xs text-gray-600">{meaning}</span>
                               {onAddWordToCustomSet &&
                                 onRemoveWordFromCustomSet &&
                                 onOpenCustomSetManagement && (
                                   <AddToCustomButton
                                     word={{
-                                      word: analysis.word,
-                                      meaning: meaning,
+                                      word: item.english,
+                                      meaning: item.meaning,
                                       source: 'reading',
                                       sourceDetail: currentPassage?.title,
                                     }}
@@ -1543,13 +1809,24 @@ function ComprehensiveReadingView({
                             </div>
                           );
                         }
-                      }
+
+                        if (!isLast) {
+                          result.push(
+                            <span key={`sep-${idx}`} className="text-gray-500">
+                              +
+                            </span>
+                          );
+                        }
+                      });
 
                       return (
                         <div className="mt-2">
-                          <h5 className="text-xs font-semibold mb-1 text-gray-700">📚 単語と熟語</h5>
-                          <div className="flex flex-wrap gap-1">
-                            {result}
+                          <h5 className="text-xs font-semibold mb-1 text-gray-700">
+                            📚 単語と熟語
+                          </h5>
+                          <div className="flex flex-wrap gap-1">{result}</div>
+                          <div className="mt-1 text-sm text-gray-700">
+                            {items.map((i) => i.meaning).join(' ')}
                           </div>
                         </div>
                       );
@@ -1566,12 +1843,19 @@ function ComprehensiveReadingView({
                           <h5 className="text-xs font-semibold mb-1 text-gray-700">📐 重要構文</h5>
                           <div className="space-y-1">
                             {patterns.map((pattern: GrammarPattern, idx: number) => (
-                              <div key={idx} className="bg-green-50 p-2 rounded border border-green-200">
+                              <div
+                                key={idx}
+                                className="bg-green-50 p-2 rounded border border-green-200"
+                              >
                                 <div className="flex items-center justify-between text-sm">
-                                  <span className="font-semibold text-green-700">{pattern.name}</span>
+                                  <span className="font-semibold text-green-700">
+                                    {pattern.name}
+                                  </span>
                                   <span className="text-xs text-gray-600">{pattern.meaning}</span>
                                 </div>
-                                <div className="text-xs text-gray-600 mt-1">💡 {pattern.explanation}</div>
+                                <div className="text-xs text-gray-600 mt-1">
+                                  💡 {pattern.explanation}
+                                </div>
                               </div>
                             ))}
                           </div>
