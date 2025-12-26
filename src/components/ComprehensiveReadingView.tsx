@@ -1641,8 +1641,10 @@ function ComprehensiveReadingView({
                           const words = selectedSentenceDetails.grammarAnalysis.map(a => a.word);
                           const phrasalExpressions = detectPhrasalExpressions(words);
                           
-                          // 熟語の単語インデックスを収集
+                          // 熟語のマッピング（開始インデックス -> 熟語情報）
+                          const phrasalMap = new Map<number, PhrasalExpression>();
                           const phrasalWordIndices = new Set<number>();
+                          
                           phrasalExpressions.forEach(expr => {
                             let startIdx = 0;
                             while (startIdx < words.length) {
@@ -1651,6 +1653,7 @@ function ComprehensiveReadingView({
                               );
                               if (found !== -1) {
                                 const actualIdx = startIdx + found;
+                                phrasalMap.set(actualIdx, expr);
                                 expr.words.forEach((_, i) => phrasalWordIndices.add(actualIdx + i));
                                 break;
                               }
@@ -1684,35 +1687,69 @@ function ComprehensiveReadingView({
                             }
                           });
                           
-                          return selectedSentenceDetails.grammarAnalysis
-                            .filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word))
-                            .map((analysis, idx) => {
-                              const isPhrasal = phrasalWordIndices.has(idx);
-                              const isPhrase = phrases.has(idx);
-                              const isSubordinate = subordinateClauses.has(idx);
+                          const result: JSX.Element[] = [];
+                          const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word));
+                          
+                          for (let idx = 0; idx < filteredAnalysis.length; idx++) {
+                            const analysis = filteredAnalysis[idx];
+                            
+                            // 熟語の開始位置かチェック
+                            const phrasalExpr = phrasalMap.get(idx);
+                            if (phrasalExpr) {
+                              // 熟語を1つのカードとして表示
+                              const phraseKey = phrasalExpr.words.join(' ').toLowerCase();
+                              const dictMeaning = wordDictionary.get(phraseKey)?.meaning || phrasalExpr.meaning;
                               
-                              return (
+                              result.push(
                                 <div
-                                  key={idx}
-                                  className="inline-flex flex-col items-center"
-                                  title={analysis.description}
+                                  key={`phrasal-${idx}`}
+                                  className="inline-flex flex-col items-center border border-yellow-300 bg-yellow-50 rounded px-1"
                                 >
-                                  <span className={`font-medium text-base ${
-                                    isPhrasal ? 'border-b-2 border-yellow-500' : ''
-                                  } ${
-                                    isPhrase || isSubordinate ? 'px-0.5' : ''
-                                  }`}>
-                                    {isSubordinate && '（'}{isPhrase && '＜'}{analysis.word}{isPhrase && '＞'}{isSubordinate && '）'}
+                                  <span className="font-medium text-base border-b-2 border-yellow-500">
+                                    {phrasalExpr.words.join(' ')}
                                   </span>
-                                  <span
-                                    className="text-xs grammar-tag-label mt-0.5"
-                                    data-tag={analysis.tag}
-                                  >
-                                    {getGrammarTagLabel(analysis.tag)}
+                                  <span className="text-xs text-gray-600 mt-0.5">
+                                    {dictMeaning}
                                   </span>
                                 </div>
                               );
-                            });
+                              
+                              // 熟語の残りの単語をスキップ
+                              idx += phrasalExpr.words.length - 1;
+                              continue;
+                            }
+                            
+                            // 熟語の一部ならスキップ（既に処理済み）
+                            if (phrasalWordIndices.has(idx)) {
+                              continue;
+                            }
+                            
+                            // 通常の単語を表示
+                            const isPhrase = phrases.has(idx);
+                            const isSubordinate = subordinateClauses.has(idx);
+                            
+                            result.push(
+                              <div
+                                key={idx}
+                                className="inline-flex flex-col items-center"
+                                title={analysis.description}
+                              >
+                                <span className={`font-medium text-base ${
+                                  isPhrase || isSubordinate ? 'px-0.5' : ''
+                                }`}>
+                                  {isSubordinate && '（'}{isPhrase && '＜'}{analysis.word}{isPhrase && '＞'}{isSubordinate && '）'}
+                                </span>
+                                <span
+                                  className="text-xs grammar-tag-label mt-0.5"
+                                  data-tag={analysis.tag}
+                                >
+                                  {getGrammarTagLabel(analysis.tag)}
+                                </span>
+                              </div>
+                            );
+                          }
+                          
+                          return result;
                         })()}
                       </div>
 
