@@ -40,7 +40,9 @@
       "correctAnswer": "if",
       "difficulty": "beginner",
       "explanation": "ifは「もし~ならば」という条件を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「雨が降ったら、家にいます。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「雨が降ったら、家にいます。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「雨が降ったら、家にいます。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Mount Fuji is Japan's highest mountain. Many people climb it every year. The view from the top is amazing. I will stay home ____ it rains.",
+      "passageJapanese": "富士山は日本で最も高い山です。毎年多くの人が登ります。頂上からの景色は素晴らしいです。雨が降ったら、家にいます。"
     },
     {
       "id": "g2-u6-fib-003",
@@ -145,7 +147,9 @@
       "correctAnswer": "if",
       "difficulty": "beginner",
       "explanation": "ifは条件を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「寒かったら、コートを着てください。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「寒かったら、コートを着てください。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「寒かったら、コートを着てください。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. Please wear a coat ____ it is cold.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。寒かったら、コートを着てください。"
     },
     {
       "id": "g2-u6-fib-010",
@@ -190,7 +194,9 @@
       "correctAnswer": "if",
       "difficulty": "beginner",
       "explanation": "ifは「もし~ならば」という条件です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「時間があれば、手伝います。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「時間があれば、手伝います。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「時間があれば、手伝います。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I will help you ____ I have time.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。時間があれば、手伝います。"
     },
     {
       "id": "g2-u6-fib-013",
@@ -205,7 +211,9 @@
       "correctAnswer": "that",
       "difficulty": "beginner",
       "explanation": "thatは名詞節を導く接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【that】 ← 正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女が親切だと知っています。」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女が親切だと知っています。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I know ____ she is kind.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私は彼女が親切だと知っています。"
     },
     {
       "id": "g2-u6-fib-014",
@@ -220,7 +228,9 @@
       "correctAnswer": "when",
       "difficulty": "beginner",
       "explanation": "whenは「~のとき」という時を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「私は若いとき、よく泳ぎました。」から、この形が適切です。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は若いとき、よく泳ぎました。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は若いとき、よく泳ぎました。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I often swam ____ I was young.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私は若いとき、よく泳ぎました。"
     },
     {
       "id": "g2-u6-fib-015",
@@ -235,7 +245,9 @@
       "correctAnswer": "if",
       "difficulty": "beginner",
       "explanation": "ifは条件を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「暑かったら、窓を開けてください。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「暑かったら、窓を開けてください。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「暑かったら、窓を開けてください。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. Please open the window ____ it is hot.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。暑かったら、窓を開けてください。"
     },
     {
       "id": "g2-u6-fib-016",
@@ -265,7 +277,9 @@
       "correctAnswer": "that",
       "difficulty": "intermediate",
       "explanation": "thatは「~ということ」を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【that】 ← 正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼が来ると思います。」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼が来ると思います。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I think ____ he will come.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は彼が来ると思います。"
     },
     {
       "id": "g2-u6-fib-018",
@@ -280,7 +294,9 @@
       "correctAnswer": "when",
       "difficulty": "intermediate",
       "explanation": "whenは「~したら/~するとき」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「学校が終わったら、遊びましょう。」から、この形が適切です。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校が終わったら、遊びましょう。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校が終わったら、遊びましょう。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. Let's play ____ school is over.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。学校が終わったら、遊びましょう。"
     },
     {
       "id": "g2-u6-fib-019",
@@ -355,7 +371,9 @@
       "correctAnswer": "that",
       "difficulty": "intermediate",
       "explanation": "thatは名詞節を導きます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【that】 ← 正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼が正直だと信じています。」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼が正直だと信じています。」に合いません。",
-      "hint": "接続詞の意味を考えましょう"
+      "hint": "接続詞の意味を考えましょう",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I believe ____ he is honest.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私は彼が正直だと信じています。"
     },
     {
       "id": "g2-u6-fib-024",
@@ -423,7 +441,9 @@
       "difficulty": "beginner",
       "explanation": "ifは条件「もし~ならば」を表します。\n\n「雨が降ったら、家にいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "I will stay home if it rains ."
+      "correctAnswer": "I will stay home if it rains .",
+      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. I will stay home if it rains .",
+      "passageJapanese": "春が一番好きな季節です。どこでも花が咲きます。桜は特に美しいです。雨が降ったら、家にいます。"
     },
     {
       "id": "g2-u6-so-003",
@@ -458,7 +478,9 @@
       "difficulty": "beginner",
       "explanation": "whenは「~したとき」という時を表します。\n\n「彼女が来たとき、私は料理をしていました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "I was cooking when she came ."
+      "correctAnswer": "I was cooking when she came .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I was cooking when she came .",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女が来たとき、私は料理をしていました。"
     },
     {
       "id": "g2-u6-so-005",
@@ -478,7 +500,9 @@
       "difficulty": "beginner",
       "explanation": "ifは条件を表す接続詞です。\n\n「晴れたら、公園に行きましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "Let's go to the park if it is sunny ."
+      "correctAnswer": "Let's go to the park if it is sunny .",
+      "passage": "Mount Fuji is Japan's highest mountain. Many people climb it every year. The view from the top is amazing. Let's go to the park if it is sunny .",
+      "passageJapanese": "富士山は日本で最も高い山です。毎年多くの人が登ります。頂上からの景色は素晴らしいです。晴れたら、公園に行きましょう。"
     },
     {
       "id": "g2-u6-so-006",
@@ -573,7 +597,9 @@
       "difficulty": "beginner",
       "explanation": "becauseは理由「~なので」です。\n\n「私は病気なので、学校を休みました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "I was absent from school because I was sick ."
+      "correctAnswer": "I was absent from school because I was sick .",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. I was absent from school because I was sick .",
+      "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。私は病気なので、学校を休みました。"
     },
     {
       "id": "g2-u6-so-011",
@@ -590,7 +616,9 @@
       "difficulty": "beginner",
       "explanation": "whenは時を表す接続詞です。\n\n「彼女が来るとき、私に教えてください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "Please tell me when she comes ."
+      "correctAnswer": "Please tell me when she comes .",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Please tell me when she comes .",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女が来るとき、私に教えてください。"
     },
     {
       "id": "g2-u6-so-012",
@@ -663,7 +691,9 @@
       "difficulty": "intermediate",
       "explanation": "ifは条件を表す接続詞です。\n\n「暑かったら、窓を開けてください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "Please open the window if it is hot ."
+      "correctAnswer": "Please open the window if it is hot .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. Please open the window if it is hot .",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。暑かったら、窓を開けてください。"
     },
     {
       "id": "g2-u6-so-016",
@@ -718,7 +748,9 @@
       "difficulty": "intermediate",
       "explanation": "whenは時を表します。\n\n「学校が終わったら、遊びましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "Let's play when school is over ."
+      "correctAnswer": "Let's play when school is over .",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. Let's play when school is over .",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。学校が終わったら、遊びましょう。"
     },
     {
       "id": "g2-u6-so-019",
@@ -737,7 +769,9 @@
       "difficulty": "intermediate",
       "explanation": "ifは条件を表します。\n\n「雨が降れば、試合は中止です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "The game will be canceled if it rains ."
+      "correctAnswer": "The game will be canceled if it rains .",
+      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. The game will be canceled if it rains .",
+      "passageJapanese": "ピアノを弾くのが好きです。毎晩練習します。幼い頃、母が教えてくれました。雨が降れば、試合は中止です。"
     },
     {
       "id": "g2-u6-so-020",
@@ -756,7 +790,9 @@
       "difficulty": "intermediate",
       "explanation": "becauseは理由を表す接続詞です。\n\n「私は頭が痛いので、薬を飲みました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "接続詞の位置に注意",
-      "correctAnswer": "I took medicine because I had a headache ."
+      "correctAnswer": "I took medicine because I had a headache .",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I took medicine because I had a headache .",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は頭が痛いので、薬を飲みました。"
     },
     {
       "id": "g2-u6-so-021",
@@ -790,7 +826,9 @@
       "correctAnswer": "when",
       "difficulty": "intermediate",
       "explanation": "at the timeをwhenで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「私は疲れているとき、早く寝ます。」から、この形が適切です。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は疲れているとき、早く寝ます。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は疲れているとき、早く寝ます。」に合いません。",
-      "hint": "接続詞で言い換え"
+      "hint": "接続詞で言い換え",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I go to bed early at the time I am tired.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は疲れているとき、早く寝ます。"
     },
     {
       "id": "g2-u6-pp-002",
@@ -854,7 +892,9 @@
       "correctAnswer": "if",
       "difficulty": "intermediate",
       "explanation": "in caseをifで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「晴れたら、公園に行きましょう。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「晴れたら、公園に行きましょう。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「晴れたら、公園に行きましょう。」に合いません。",
-      "hint": "接続詞で言い換え"
+      "hint": "接続詞で言い換え",
+      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. Let's go to the park in case it is sunny.",
+      "passageJapanese": "春が一番好きな季節です。どこでも花が咲きます。桜は特に美しいです。晴れたら、公園に行きましょう。"
     },
     {
       "id": "g2-u6-pp-006",
@@ -934,7 +974,9 @@
       "correctAnswer": "because",
       "difficulty": "intermediate",
       "explanation": "due toをbecauseで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【because】 ← 正解\n  ✓ 正解理由: 日本語訳「私は病気なので、学校を休みました。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は病気なので、学校を休みました。」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は病気なので、学校を休みました。」に合いません。",
-      "hint": "接続詞で言い換え"
+      "hint": "接続詞で言い換え",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. I was absent from school due to being sick.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。私は病気なので、学校を休みました。"
     },
     {
       "id": "g2-u6-pp-011",
@@ -966,7 +1008,9 @@
       "correctAnswer": "if",
       "difficulty": "intermediate",
       "explanation": "in caseをifで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「時間があれば、手伝います。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「時間があれば、手伝います。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「時間があれば、手伝います。」に合いません。",
-      "hint": "接続詞で言い換え"
+      "hint": "接続詞で言い換え",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I will help you in case I have time.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。時間があれば、手伝います。"
     },
     {
       "id": "g2-u6-pp-013",
@@ -1046,7 +1090,9 @@
       "correctAnswer": "that",
       "difficulty": "intermediate",
       "explanation": "名詞節を導くthatを補います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【that】 ← 正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼が来ると思います。」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼が来ると思います。」に合いません。",
-      "hint": "接続詞で言い換え"
+      "hint": "接続詞で言い換え",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I think he will come.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私は彼が来ると思います。"
     },
     {
       "id": "g2-u6-vf-001",
@@ -1091,7 +1137,9 @@
       "correctAnswer": "because",
       "difficulty": "intermediate",
       "explanation": "理由「~なので」を表すbecauseです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【because】 ← 正解\n  ✓ 正解理由: 日本語訳「私は忙しい____、行けません。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は忙しい____、行けません。」に合いません。\n\n❌ 【if】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は忙しい____、行けません。」に合いません。",
-      "hint": "適切な接続詞を選びましょう"
+      "hint": "適切な接続詞を選びましょう",
+      "passage": "Last summer, I visited Kyoto. The city has many historical temples. I learned a lot about Japanese culture. I can't go ____ I am busy.",
+      "passageJapanese": "去年の夏、京都を訪れました。その町には多くの歴史的な寺院があります。日本文化についてたくさん学びました。私は忙しい____、行けません。"
     },
     {
       "id": "g2-u6-vf-004",
@@ -1121,7 +1169,9 @@
       "correctAnswer": "if",
       "difficulty": "intermediate",
       "explanation": "条件を表すifが適切です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「晴れ____、公園に行きましょう。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「晴れ____、公園に行きましょう。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「晴れ____、公園に行きましょう。」に合いません。",
-      "hint": "適切な接続詞を選びましょう"
+      "hint": "適切な接続詞を選びましょう",
+      "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. Let's go to the park ____ it is sunny.",
+      "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。晴れ____、公園に行きましょう。"
     },
     {
       "id": "g2-u6-vf-006",
@@ -1181,7 +1231,9 @@
       "correctAnswer": "if",
       "difficulty": "intermediate",
       "explanation": "条件「もし~ならば」を表すifです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【if】 ← 正解\n  ✓ 正解理由: 日本語訳「時間があ____、手伝います。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「時間があ____、手伝います。」に合いません。\n\n❌ 【because】 ← 不正解\n  ✗ 不正解理由: 日本語訳「時間があ____、手伝います。」に合いません。",
-      "hint": "適切な接続詞を選びましょう"
+      "hint": "適切な接続詞を選びましょう",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I will help you ____ I have time.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。時間があ____、手伝います。"
     },
     {
       "id": "g2-u6-vf-010",
@@ -1250,7 +1302,9 @@
       "dialogue": [
         "A: What do you believe?",
         "B: I believe ____ hard work pays off."
-      ]
+      ],
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I believe ____ hard work pays off.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。"
     },
     {
       "id": "g2-u6-conv-004",
@@ -1286,7 +1340,9 @@
       "dialogue": [
         "A: When did you come to Japan?",
         "B: I came here ____ I was a child."
-      ]
+      ],
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I came here ____ I was a child.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。"
     },
     {
       "id": "g2-u6-conv-006",
@@ -1304,7 +1360,9 @@
       "dialogue": [
         "A: Why are you studying English?",
         "B: ____ I think it will be useful in the future."
-      ]
+      ],
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ I think it will be useful in the future.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。"
     },
     {
       "id": "g2-u6-conv-007",

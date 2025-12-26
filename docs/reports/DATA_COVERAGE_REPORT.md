@@ -24,8 +24,8 @@ tags: [report]
 
 - ✅ `high-school-entrance-words.csv` - 2,662語 (756KB)
 - ✅ `high-school-entrance-phrases.csv` - 96フレーズ (27KB)
-- ✅ `high-school-intermediate-words.csv` - 1,579語 (337KB)
-- ✅ `high-school-intermediate-phrases.csv` - 212フレーズ (44KB)
+- ✅ `junior-high-intermediate-words.csv` - 1,579語 (337KB)
+- ✅ `junior-high-intermediate-phrases.csv` - 212フレーズ (44KB)
 - **テスト内容**:
   - データ完全性検証 (日本語、IPA、カテゴリ)
   - IPA発音記号妥当性

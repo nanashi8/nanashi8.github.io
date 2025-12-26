@@ -19,7 +19,7 @@ export interface Question {
   relatedFields: string; // 関連分野（表示用・CSVから読み込み）
   category?: string; // 関連分野（フィルター用・内部処理）
   difficulty: string; // 難易度（CSVから読み込み）
-  source?: 'junior' | 'intermediate'; // データソース（高校受験 or 中級1800）
+  source?: 'junior' | 'intermediate'; // データソース（high-school-entrance / junior-high-intermediate）
   type?: 'word' | 'phrase'; // 単語か熟語か（オプショナル、将来の拡張用）
   isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）
 }

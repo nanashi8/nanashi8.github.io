@@ -54,7 +54,9 @@
       "correctAnswer": "These",
       "difficulty": "beginner",
       "explanation": "近くのもの（複数）を指すときはtheseを使います。be動詞もareになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【These】 ← 正解\n  ✓ 正解理由: 日本語訳「これらは本です。」から、この形が適切です。\n\n❌ 【This】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です。」に合いません。\n\n❌ 【Those】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です。」に合いません。",
-      "hint": "近く・複数 → these"
+      "hint": "近く・複数 → these",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ are books.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。これらは本です。"
     },
     {
       "id": "g1-u3-fib-004",
@@ -69,7 +71,9 @@
       "correctAnswer": "Those",
       "difficulty": "beginner",
       "explanation": "遠くのもの（複数）を指すときはthoseを使います。be動詞もareになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Those】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは車です。」から、この形が適切です。\n\n❌ 【That】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。\n\n❌ 【These】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。",
-      "hint": "遠く・複数 → those"
+      "hint": "遠く・複数 → those",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ are cars.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。あれらは車です。"
     },
     {
       "id": "g1-u3-fib-005",
@@ -84,7 +88,9 @@
       "correctAnswer": "books",
       "difficulty": "beginner",
       "explanation": "複数を表すときは名詞に-sを付けます。threeは複数なので必ず-sです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【books】 ← 正解\n  ✓ 正解理由: 日本語訳「私は3冊の本を持っています。」から、この形が適切です。\n\n❌ 【book】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3冊の本を持っています。」に合いません。\n\n❌ 【bookes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3冊の本を持っています。」に合いません。",
-      "hint": "複数 → -s"
+      "hint": "複数 → -s",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. I have three ____.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私は3冊の本を持っています。"
     },
     {
       "id": "g1-u3-fib-006",
@@ -174,7 +180,9 @@
       "correctAnswer": "tomatoes",
       "difficulty": "advanced",
       "explanation": "-oで終わる名詞は-esを付けます。tomato→tomatoesです。potato→potatoesも同様です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【tomatoes】 ← 正解\n  ✓ 正解理由: 日本語訳「これらはトマトです。」から、この形が適切です。\n\n❌ 【tomatos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらはトマトです。」に合いません。\n\n❌ 【tomato】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらはトマトです。」に合いません。",
-      "hint": "-o → -es"
+      "hint": "-o → -es",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. These are ____.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。これらはトマトです。"
     },
     {
       "id": "g1-u3-fib-012",
@@ -266,7 +274,9 @@
       "difficulty": "beginner",
       "explanation": "That is ～の基本語順です。遠くの単数を指します。\n\n「あれは学校です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is a school.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "That is ～",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "We study English every day. We do homework after dinner. That is a school.",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。あれは学校です。"
     },
     {
       "id": "g1-u3-so-003",
@@ -282,7 +292,9 @@
       "difficulty": "beginner",
       "explanation": "These are ～の語順です。近くの複数を指します。be動詞はareです。\n\n「これらは私の本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are my books.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "These are ～",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. These are my books.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。これらは私の本です。"
     },
     {
       "id": "g1-u3-so-004",
@@ -313,7 +325,9 @@
       "difficulty": "beginner",
       "explanation": "疑問詞What + is + this?の語順です。「これは何？」です。\n\n「これは何ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What is this?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "What is ～?",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. What is this?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。これは何ですか。"
     },
     {
       "id": "g1-u3-so-006",
@@ -391,7 +405,9 @@
       "difficulty": "intermediate",
       "explanation": "I have many ～の語順です。manyは必ず複数形と使います。\n\n「彼女は多くの友達がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has many friends.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I have many ～",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She has many friends.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は多くの友達がいます。"
     },
     {
       "id": "g1-u3-so-011",
@@ -567,7 +583,9 @@
       "correctAnswer": "What are those?",
       "difficulty": "intermediate",
       "explanation": "What are those?で「あれらは何ですか」です。複数なのでareです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What are those?】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは何ですか。」から、この形が適切です。\n\n❌ 【What those are?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは何ですか。」に合いません。\n\n❌ 【Those are what?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは何ですか。」に合いません。",
-      "hint": "What are those?"
+      "hint": "What are those?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. What are those?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。あれらは何ですか。"
     },
     {
       "id": "g1-u3-para-007",
@@ -631,7 +649,9 @@
       "correctAnswer": "I have two boxes.",
       "difficulty": "advanced",
       "explanation": "box→boxes（-x→-es）です。twoは複数形と使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I have two boxes.】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2つの箱を持っています。」から、この形が適切です。\n\n❌ 【I have two boxs.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの箱を持っています。」に合いません。\n\n❌ 【I have two box.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの箱を持っています。」に合いません。",
-      "hint": "box → boxes"
+      "hint": "box → boxes",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. I have two boxes.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私は2つの箱を持っています。"
     },
     {
       "id": "g1-u3-para-011",
@@ -775,7 +795,9 @@
       "correctAnswer": "watches",
       "difficulty": "intermediate",
       "explanation": "-chで終わる名詞は-esを付けます。watch→watchesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watches】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はたくさんの腕時計を持っています。」から、この形が適切です。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はたくさんの腕時計を持っています。」に合いません。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はたくさんの腕時計を持っています。」に合いません。",
-      "hint": "-ch → -es"
+      "hint": "-ch → -es",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. He has many ____.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼はたくさんの腕時計を持っています。"
     },
     {
       "id": "g1-u3-vf-005",
@@ -807,7 +829,9 @@
       "correctAnswer": "cities",
       "difficulty": "intermediate",
       "explanation": "子音+yで終わる名詞はyをiに変えて-esを付けます。city→citiesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cities】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2つの都市を訪れました。」から、この形が適切です。\n\n❌ 【citys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの都市を訪れました。」に合いません。\n\n❌ 【city】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの都市を訪れました。」に合いません。",
-      "hint": "子音+y → -ies"
+      "hint": "子音+y → -ies",
+      "passage": "We travel by train. The train is fast. I like looking out of the window. I visited two ____.",
+      "passageJapanese": "電車で旅行します。電車は速いです。窓の外を見るのが好きです。私は2つの都市を訪れました。"
     },
     {
       "id": "g1-u3-vf-007",
@@ -839,7 +863,9 @@
       "correctAnswer": "pianos",
       "difficulty": "advanced",
       "explanation": "piano→pianos（-oで終わるが例外で-sのみ）です。photo→photosも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【pianos】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは2台のピアノを持っています。」から、この形が適切です。\n\n❌ 【pianoes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2台のピアノを持っています。」に合いません。\n\n❌ 【piano】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2台のピアノを持っています。」に合いません。",
-      "hint": "piano → pianos"
+      "hint": "piano → pianos",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. We have two ____.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私たちは2台のピアノを持っています。"
     },
     {
       "id": "g1-u3-vf-009",
@@ -871,7 +897,9 @@
       "correctAnswer": "leaves",
       "difficulty": "advanced",
       "explanation": "-fで終わる名詞はfをvに変えて-esを付けます。leaf→leavesです。knife→knivesも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【leaves】 ← 正解\n  ✓ 正解理由: 日本語訳「その木はたくさんの葉を持っています。」から、この形が適切です。\n\n❌ 【leafs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その木はたくさんの葉を持っています。」に合いません。\n\n❌ 【leaf】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その木はたくさんの葉を持っています。」に合いません。",
-      "hint": "-f → -ves"
+      "hint": "-f → -ves",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. The tree has many ____.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。その木はたくさんの葉を持っています。"
     },
     {
       "id": "g1-u3-conv-001",
@@ -896,7 +924,9 @@
       "correctAnswer": "This",
       "difficulty": "beginner",
       "explanation": "What is this?（これは何？）に対する答えです。近くの単数なのでThisです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【This】 ← 正解\n  ✓ 正解理由: 日本語訳「近くのものを指す。」から、この形が適切です。\n\n❌ 【That】 ← 不正解\n  ✗ 不正解理由: 日本語訳「近くのものを指す。」に合いません。\n\n❌ 【These】 ← 不正解\n  ✗ 不正解理由: 日本語訳「近くのものを指す。」に合いません。",
-      "hint": "近く・単数 → This"
+      "hint": "近く・単数 → This",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. This",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。近くのものを指す。"
     },
     {
       "id": "g1-u3-conv-002",

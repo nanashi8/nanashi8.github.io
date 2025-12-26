@@ -24,7 +24,9 @@
       "correctAnswer": "study",
       "difficulty": "beginner",
       "explanation": "一般動詞は主語I/You/We/Theyでは原形です。studyは「勉強する」です。×studiesは三人称単数用。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「私は英語を勉強します。」から、この形が適切です。\n\n❌ 【studies】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は英語を勉強します。」に合いません。\n\n❌ 【am study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は英語を勉強します。」に合いません。",
-      "hint": "I/Youは原形"
+      "hint": "I/Youは原形",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. I ____ English.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私は英語を勉強します。"
     },
     {
       "id": "g1-u1-fib-002",
@@ -99,7 +101,9 @@
       "correctAnswer": "listen",
       "difficulty": "beginner",
       "explanation": "listen to ～で「～を聞く」です。主語Theyは原形です。×listensは三人称単数用。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【listen】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは音楽を聞きます。」から、この形が適切です。\n\n❌ 【listens】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは音楽を聞きます。」に合いません。\n\n❌ 【are listen】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは音楽を聞きます。」に合いません。",
-      "hint": "They → 原形"
+      "hint": "They → 原形",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. They ____ to music.",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。彼らは音楽を聞きます。"
     },
     {
       "id": "g1-u1-fib-007",
@@ -234,7 +238,9 @@
       "correctAnswer": "watch",
       "difficulty": "advanced",
       "explanation": "watch TV（テレビを見る）、after dinner（夕食後）です。don'tの後は必ず原形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watch】 ← 正解\n  ✓ 正解理由: 日本語訳「私は夕食後テレビを見ません。」から、この形が適切です。\n\n❌ 【watches】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は夕食後テレビを見ません。」に合いません。\n\n❌ 【watching】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は夕食後テレビを見ません。」に合いません。",
-      "hint": "don't + 原形"
+      "hint": "don't + 原形",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. I don't ____ TV after dinner.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私は夕食後テレビを見ません。"
     },
     {
       "id": "g1-u1-so-001",
@@ -281,7 +287,9 @@
       "difficulty": "beginner",
       "explanation": "否定文：主語 + don't + 原形です。I don't playの語順を覚えましょう。\n\n「私は野球をしません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I don't play baseball.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I don't + 動詞",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. I don't play baseball.",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。私は野球をしません。"
     },
     {
       "id": "g1-u1-so-004",
@@ -297,7 +305,9 @@
       "difficulty": "beginner",
       "explanation": "go to ～の語順です。toは前置詞で「～へ」です。\n\n「私たちは学校へ行きます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We go to school.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "go to + 場所",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "We study English every day. We do homework after dinner. We go to school.",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。私たちは学校へ行きます。"
     },
     {
       "id": "g1-u1-so-005",
@@ -381,7 +391,9 @@
       "difficulty": "intermediate",
       "explanation": "do my homeworkの語順です。myは必ず付けます。every dayは文末です。\n\n「私は毎日宿題をします。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I do my homework every day.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "do my homework",
-      "wordCount": 6
+      "wordCount": 6,
+      "passage": "I am in my classroom now. Our teacher is kind and friendly. I do my homework every day.",
+      "passageJapanese": "今、教室にいます。先生は親切でやさしいです。私は毎日宿題をします。"
     },
     {
       "id": "g1-u1-so-010",
@@ -418,7 +430,9 @@
       "difficulty": "advanced",
       "explanation": "疑問詞Whatは文頭です。doが2回（助動詞＋動詞）出ることに注意してください。\n\n「あなたは放課後何をしますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What do you do after school?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "What do you do?",
-      "wordCount": 7
+      "wordCount": 7,
+      "passage": "I am in my classroom now. Our teacher is kind and friendly. What do you do after school?",
+      "passageJapanese": "今、教室にいます。先生は親切でやさしいです。あなたは放課後何をしますか。"
     },
     {
       "id": "g1-u1-so-012",
@@ -493,7 +507,9 @@
       "difficulty": "advanced",
       "explanation": "Do they ～?の疑問文です。場所→時の語順です。every morning（毎朝）は習慣表現です。\n\n「彼らは毎朝公園を走りますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Do they run in the park every morning?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Do they + 動詞?",
-      "wordCount": 9
+      "wordCount": 9,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Do they run in the park every morning?",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らは毎朝公園を走りますか。"
     },
     {
       "id": "g1-u1-para-001",
@@ -541,7 +557,9 @@
       "correctAnswer": "We study English.",
       "difficulty": "beginner",
       "explanation": "I/You/We/Theyはすべて原形です。主語が変わっても動詞の形は同じです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【We study English.】 ← 正解\n  ✓ 正解理由: 日本語訳「主語の変更（I→We）。」から、この形が適切です。\n\n❌ 【We studies English.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「主語の変更（I→We）。」に合いません。\n\n❌ 【We are study English.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「主語の変更（I→We）。」に合いません。",
-      "hint": "We + 原形"
+      "hint": "We + 原形",
+      "passage": "We study English every day. We do homework after dinner. We study English.",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。主語の変更（I→We）。"
     },
     {
       "id": "g1-u1-para-004",
@@ -685,7 +703,9 @@
       "correctAnswer": "We play soccer in the park.",
       "difficulty": "advanced",
       "explanation": "場所を表す語句は文末にです。基本語順：主語 + 動詞 + 目的語 + 場所です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【We play soccer in the park.】 ← 正解\n  ✓ 正解理由: 日本語訳「場所の追加。」から、この形が適切です。\n\n❌ 【We in the park play soccer.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「場所の追加。」に合いません。\n\n❌ 【In the park we play soccer.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「場所の追加。」に合いません。",
-      "hint": "文末に置く"
+      "hint": "文末に置く",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. We play soccer in the park.",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。場所の追加。"
     },
     {
       "id": "g1-u1-para-013",
@@ -781,7 +801,9 @@
       "correctAnswer": "go",
       "difficulty": "beginner",
       "explanation": "主語Weは原形goです。go to ～で「～へ行く」です。不規則動詞goの現在形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは学校へ行きます。」から、この形が適切です。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは学校へ行きます。」に合いません。\n\n❌ 【went】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは学校へ行きます。」に合いません。",
-      "hint": "We → 原形"
+      "hint": "We → 原形",
+      "passage": "We study English every day. We do homework after dinner. We ____ to school.",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。私たちは学校へ行きます。"
     },
     {
       "id": "g1-u1-vf-004",

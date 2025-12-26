@@ -1,7 +1,7 @@
 #!/bin/bash
 # 英熟語の表記を一括修正するスクリプト
 
-FILE="public/data/vocabulary/high-school-intermediate-phrases.csv"
+FILE="public/data/vocabulary/junior-high-intermediate-phrases.csv"
 BACKUP="${FILE}.backup-phrase-notation"
 
 # バックアップを作成

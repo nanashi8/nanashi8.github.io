@@ -114,7 +114,9 @@
       "correctAnswer": "Can",
       "difficulty": "intermediate",
       "explanation": "Can she～?で「彼女は～できますか」です。三人称でもdoesではなくCanです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Can】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は歌えますか。」から、この形が適切です。\n\n❌ 【Does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は歌えますか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は歌えますか。」に合いません。",
-      "hint": "疑問文 → Can"
+      "hint": "疑問文 → Can",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ she sing well?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は歌えますか。"
     },
     {
       "id": "g1-u5-fib-008",
@@ -159,7 +161,9 @@
       "correctAnswer": "speak",
       "difficulty": "intermediate",
       "explanation": "can'tの後ろも動詞の原形です。can't speak Chineseで「中国語を話せません」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【speak】 ← 正解\n  ✓ 正解理由: 日本語訳「私は中国語を話せません。」から、この形が適切です。\n\n❌ 【speaks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は中国語を話せません。」に合いません。\n\n❌ 【speaking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は中国語を話せません。」に合いません。",
-      "hint": "can't + 原形"
+      "hint": "can't + 原形",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. I can't ____ Chinese.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私は中国語を話せません。"
     },
     {
       "id": "g1-u5-fib-011",
@@ -189,7 +193,9 @@
       "correctAnswer": "Can",
       "difficulty": "advanced",
       "explanation": "Can she～?で「彼女は～できますか」です。play the guitarで「ギターを弾く」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Can】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はギターを弾けますか。」から、この形が適切です。\n\n❌ 【Does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はギターを弾けますか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はギターを弾けますか。」に合いません。",
-      "hint": "Can + 原形"
+      "hint": "Can + 原形",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. ____ she play the guitar?",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。彼女はギターを弾けますか。"
     },
     {
       "id": "g1-u5-fib-013",
@@ -219,7 +225,9 @@
       "correctAnswer": "skate",
       "difficulty": "advanced",
       "explanation": "canの後ろは必ず原形です。skate wellで「上手にスケートする」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【skate】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は上手にスケートできます。」から、この形が適切です。\n\n❌ 【skates】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は上手にスケートできます。」に合いません。\n\n❌ 【skating】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は上手にスケートできます。」に合いません。",
-      "hint": "can + 原形"
+      "hint": "can + 原形",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. He can ____ very well.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼は上手にスケートできます。"
     },
     {
       "id": "g1-u5-fib-015",
@@ -266,7 +274,9 @@
       "difficulty": "beginner",
       "explanation": "She can play the piano.で「彼女はピアノを弾けます」です。play the pianoは定冠詞が必要です。\n\n「彼女はピアノを弾けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She can play the piano.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "She can ～",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. She can play the piano.",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。彼女はピアノを弾けます。"
     },
     {
       "id": "g1-u5-so-003",
@@ -345,7 +355,9 @@
       "difficulty": "intermediate",
       "explanation": "We can play soccer.で「私たちはサッカーができます」です。\n\n「私たちはサッカーができます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We can play soccer.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "We can ～",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "I like soccer. I play it after school. My friends play with me. We can play soccer.",
+      "passageJapanese": "サッカーが好きです。放課後にします。友達もいっしょにします。私たちはサッカーができます。"
     },
     {
       "id": "g1-u5-so-008",
@@ -361,7 +373,9 @@
       "difficulty": "intermediate",
       "explanation": "They cannot + 動詞原形です。cannot read Japaneseで「日本語を読めません」です。\n\n「彼らは日本語を読めません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They cannot read Japanese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "They cannot ～",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. They cannot read Japanese.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼らは日本語を読めません。"
     },
     {
       "id": "g1-u5-so-009",
@@ -509,7 +523,9 @@
       "correctAnswer": "She cannot play tennis.",
       "difficulty": "beginner",
       "explanation": "canの否定形はcannot（can't）です。She cannot play tennis.で「彼女はテニスができません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【She cannot play tennis.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はテニスができません。」から、この形が適切です。\n\n❌ 【She doesn't can play tennis.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はテニスができません。」に合いません。\n\n❌ 【She can't plays tennis.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はテニスができません。」に合いません。",
-      "hint": "cannot を使う"
+      "hint": "cannot を使う",
+      "passage": "I like soccer. I play it after school. My friends play with me. She cannot play tennis.",
+      "passageJapanese": "サッカーが好きです。放課後にします。友達もいっしょにします。彼女はテニスができません。"
     },
     {
       "id": "g1-u5-para-003",
@@ -605,7 +621,9 @@
       "correctAnswer": "She cannot speak English.",
       "difficulty": "intermediate",
       "explanation": "can'tの正式形はcannot（1語）です。She cannot speak English.で「英語を話せません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【She cannot speak English.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は英語を話せません。」から、この形が適切です。\n\n❌ 【She can not speak English.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は英語を話せません。」に合いません。\n\n❌ 【She does not can speak English.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は英語を話せません。」に合いません。",
-      "hint": "cannot は1語"
+      "hint": "cannot は1語",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. She cannot speak English.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼女は英語を話せません。"
     },
     {
       "id": "g1-u5-para-009",
@@ -749,7 +767,9 @@
       "correctAnswer": "play",
       "difficulty": "beginner",
       "explanation": "三人称単数でもcanの後ろは原形です。play the pianoで「ピアノを弾く」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はピアノを弾けます。」から、この形が適切です。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はピアノを弾けます。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はピアノを弾けます。」に合いません。",
-      "hint": "can + 原形"
+      "hint": "can + 原形",
+      "passage": "I like soccer. I play it after school. My friends play with me. She can ____ the piano.",
+      "passageJapanese": "サッカーが好きです。放課後にします。友達もいっしょにします。彼女はピアノを弾けます。"
     },
     {
       "id": "g1-u5-vf-003",
@@ -781,7 +801,9 @@
       "correctAnswer": "drive",
       "difficulty": "beginner",
       "explanation": "疑問文でもcanの後ろは原形です。drive a carで「車を運転する」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【drive】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは車を運転できますか。」から、この形が適切です。\n\n❌ 【drives】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは車を運転できますか。」に合いません。\n\n❌ 【driving】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは車を運転できますか。」に合いません。",
-      "hint": "Can + 原形"
+      "hint": "Can + 原形",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. Can you ____ a car?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。あなたは車を運転できますか。"
     },
     {
       "id": "g1-u5-vf-005",
@@ -843,7 +865,9 @@
       "correctAnswer": "speak",
       "difficulty": "advanced",
       "explanation": "三人称でもcan'tの後ろは原形です。speak Chineseで「中国語を話す」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【speak】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は中国語を話せません。」から、この形が適切です。\n\n❌ 【speaks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は中国語を話せません。」に合いません。\n\n❌ 【speaking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は中国語を話せません。」に合いません。",
-      "hint": "can't + 原形"
+      "hint": "can't + 原形",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. He can't ____ Chinese.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼は中国語を話せません。"
     },
     {
       "id": "g1-u5-vf-009",
@@ -925,7 +949,9 @@
       "correctAnswer": "can't",
       "difficulty": "beginner",
       "explanation": "Can you～?の否定の答えはNo, I can't.（できません）です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【can't】 ← 正解\n  ✓ 正解理由: 日本語訳「できないことを答える。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「できないことを答える。」に合いません。\n\n❌ 【am not】 ← 不正解\n  ✗ 不正解理由: 日本語訳「できないことを答える。」に合いません。",
-      "hint": "No, I can't"
+      "hint": "No, I can't",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. can't",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。できないことを答える。"
     },
     {
       "id": "g1-u5-conv-003",

@@ -40,7 +40,9 @@
       "correctAnswer": "get",
       "difficulty": "beginner",
       "explanation": "toの後は動詞の原形を使います。\n\n正解は「get」です。\n\n【日本語】\n早起きするのは難しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【get】 ← 正解\n  ✓ 正解理由: 日本語訳「早起きするのは難しいです。」から、この形が適切です。\n\n❌ 【gets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「早起きするのは難しいです。」に合いません。\n\n❌ 【getting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「早起きするのは難しいです。」に合いません。",
-      "hint": "to + 動詞の原形"
+      "hint": "to + 動詞の原形",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. It is difficult to ____ up early.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。早起きするのは難しいです。"
     },
     {
       "id": "g3-u3-fib-003",
@@ -55,7 +57,9 @@
       "correctAnswer": "for",
       "difficulty": "intermediate",
       "explanation": "It is + 形容詞 + for + 人 + to + 動詞で「（人）にとって～することは…だ」です。\n\n正解は「for」です。\n\n【日本語】\n私にとってこの本を読むのは簡単です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【for】 ← 正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「私にとってこの本を読むのは簡単です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私にとってこの本を読むのは簡単です。」に合いません。",
-      "hint": "for + 人 + to"
+      "hint": "for + 人 + to",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. It is easy ____ me to read this book.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私にとってこの本を読むのは簡単です。"
     },
     {
       "id": "g3-u3-fib-004",
@@ -85,7 +89,9 @@
       "correctAnswer": "her",
       "difficulty": "intermediate",
       "explanation": "forの後は目的格（her）を使います。\n\n正解は「her」です。\n\n【日本語】\n彼女にとって日本語を話すのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【her】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女にとって日本語を話すのは難しい。」から、この形が適切です。\n\n❌ 【she】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女にとって日本語を話すのは難しい。」に合いません。\n\n❌ 【hers】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女にとって日本語を話すのは難しい。」に合いません。",
-      "hint": "for + 目的格"
+      "hint": "for + 目的格",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It is difficult for ____ to speak Japanese.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女にとって日本語を話すのは難しい。"
     },
     {
       "id": "g3-u3-fib-006",
@@ -115,7 +121,9 @@
       "correctAnswer": "do",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形で「人が～するのを手伝う」です。toは省略できます。\n\n正解は「do」です。\n\n【日本語】\n彼女は私が宿題をするのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私が宿題をするのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私が宿題をするのを手伝ってくれました。」に合いません。\n\n❌ 【doing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私が宿題をするのを手伝ってくれました。」に合いません。",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. She helped me ____ my homework.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。彼女は私が宿題をするのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-fib-008",
@@ -130,7 +138,9 @@
       "correctAnswer": "us",
       "difficulty": "intermediate",
       "explanation": "letの後は目的格（us）を使います。\n\n正解は「us」です。\n\n【日本語】\n先生は私たちに英語を話させました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【us】 ← 正解\n  ✓ 正解理由: 日本語訳「先生は私たちに英語を話させました。」から、この形が適切です。\n\n❌ 【we】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに英語を話させました。」に合いません。\n\n❌ 【our】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに英語を話させました。」に合いません。",
-      "hint": "let + 目的格"
+      "hint": "let + 目的格",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. The teacher let ____ speak English.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。先生は私たちに英語を話させました。"
     },
     {
       "id": "g3-u3-fib-009",
@@ -145,7 +155,9 @@
       "correctAnswer": "carry",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形で「人が～するのを手伝う」です。\n\n正解は「carry」です。\n\n【日本語】\n彼は私が荷物を運ぶのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【carry】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私が荷物を運ぶのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to carry】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が荷物を運ぶのを手伝ってくれました。」に合いません。\n\n❌ 【carrying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が荷物を運ぶのを手伝ってくれました。」に合いません。",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. He helped me ____ the bag.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼は私が荷物を運ぶのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-fib-010",
@@ -175,7 +187,9 @@
       "correctAnswer": "for",
       "difficulty": "intermediate",
       "explanation": "It is + 形容詞 + for + 人 + to + 動詞です。\n\n正解は「for」です。\n\n【日本語】\n私たちにとって環境を守ることは必要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【for】 ← 正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「私たちにとって環境を守ることは必要です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちにとって環境を守ることは必要です。」に合いません。",
-      "hint": "for + 人 + to"
+      "hint": "for + 人 + to",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. It is necessary ____ us to protect the environment.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私たちにとって環境を守ることは必要です。"
     },
     {
       "id": "g3-u3-fib-012",
@@ -235,7 +249,9 @@
       "correctAnswer": "him",
       "difficulty": "intermediate",
       "explanation": "forの後は目的格（him）を使います。\n\n正解は「him」です。\n\n【日本語】\n彼にとってピアノを弾くのは簡単です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【him】 ← 正解\n  ✓ 正解理由: 日本語訳「彼にとってピアノを弾くのは簡単です。」から、この形が適切です。\n\n❌ 【he】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼にとってピアノを弾くのは簡単です。」に合いません。\n\n❌ 【his】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼にとってピアノを弾くのは簡単です。」に合いません。",
-      "hint": "for + 目的格"
+      "hint": "for + 目的格",
+      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. It is easy for ____ to play the piano.",
+      "passageJapanese": "写真撮影が趣味です。自然の写真を撮ります。先月、山に行きました。彼にとってピアノを弾くのは簡単です。"
     },
     {
       "id": "g3-u3-fib-016",
@@ -250,7 +266,9 @@
       "correctAnswer": "play",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形です。\n\n正解は「play」です。\n\n【日本語】\n彼女は私に外で遊ばせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に外で遊ばせてくれました。」から、この形が適切です。\n\n❌ 【to play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に外で遊ばせてくれました。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に外で遊ばせてくれました。」に合いません。",
-      "hint": "let + 人 + 動詞の原形"
+      "hint": "let + 人 + 動詞の原形",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She let me ____ outside.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女は私に外で遊ばせてくれました。"
     },
     {
       "id": "g3-u3-fib-017",
@@ -265,7 +283,9 @@
       "correctAnswer": "finish",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形です。\n\n正解は「finish」です。\n\n【日本語】\n友達は私が宿題を終わらせるのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【finish】 ← 正解\n  ✓ 正解理由: 日本語訳「友達は私が宿題を終わらせるのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to finish】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友達は私が宿題を終わらせるのを手伝ってくれました。」に合いません。\n\n❌ 【finishing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友達は私が宿題を終わらせるのを手伝ってくれました。」に合いません。",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. My friend helped me ____ my homework.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。友達は私が宿題を終わらせるのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-fib-018",
@@ -280,7 +300,9 @@
       "correctAnswer": "to",
       "difficulty": "beginner",
       "explanation": "It is + 形容詞 + to + 動詞の原形です。\n\n正解は「to」です。\n\n【日本語】\n新しい言語を学ぶことは面白い。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「新しい言語を学ぶことは面白い。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「新しい言語を学ぶことは面白い。」に合いません。",
-      "hint": "It is + 形容詞 + to"
+      "hint": "It is + 形容詞 + to",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It is interesting ____ learn a new language.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。新しい言語を学ぶことは面白い。"
     },
     {
       "id": "g3-u3-fib-019",
@@ -295,7 +317,9 @@
       "correctAnswer": "us",
       "difficulty": "intermediate",
       "explanation": "forの後は目的格（us）を使います。\n\n正解は「us」です。\n\n【日本語】\n私たちにとって早く走ることは困難です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【us】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちにとって早く走ることは困難です。」から、この形が適切です。\n\n❌ 【we】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちにとって早く走ることは困難です。」に合いません。\n\n❌ 【our】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちにとって早く走ることは困難です。」に合いません。",
-      "hint": "for + 目的格"
+      "hint": "for + 目的格",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It is difficult for ____ to run fast.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私たちにとって早く走ることは困難です。"
     },
     {
       "id": "g3-u3-fib-020",
@@ -355,7 +379,9 @@
       "correctAnswer": "to",
       "difficulty": "intermediate",
       "explanation": "for + 人の後はto + 動詞の原形です。\n\n正解は「to」です。\n\n【日本語】\n彼女にとって早起きすることは容易です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「彼女にとって早起きすることは容易です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女にとって早起きすることは容易です。」に合いません。",
-      "hint": "for + 人 + to"
+      "hint": "for + 人 + to",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. It is easy for her ____ get up early.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女にとって早起きすることは容易です。"
     },
     {
       "id": "g3-u3-fib-024",
@@ -385,7 +411,9 @@
       "correctAnswer": "carry",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形です。\n\n正解は「carry」です。\n\n【日本語】\n彼は私が重い箱を持つのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【carry】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私が重い箱を持つのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to carry】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が重い箱を持つのを手伝ってくれました。」に合いません。\n\n❌ 【carrying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が重い箱を持つのを手伝ってくれました。」に合いません。",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. He helped me ____ the heavy box.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼は私が重い箱を持つのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-so-001",
@@ -420,7 +448,9 @@
       "correctAnswer": "It is difficult to get up early.",
       "difficulty": "beginner",
       "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n早起きするのは難しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "It is + 形容詞 + to"
+      "hint": "It is + 形容詞 + to",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It is difficult to get up early.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。早起きするのは難しいです。"
     },
     {
       "id": "g3-u3-so-003",
@@ -458,7 +488,9 @@
       "correctAnswer": "It is fun for him to swim.",
       "difficulty": "intermediate",
       "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n彼にとって泳ぐのは楽しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "It is + 形容詞 + for + 人 + to"
+      "hint": "It is + 形容詞 + for + 人 + to",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. It is fun for him to swim.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼にとって泳ぐのは楽しいです。"
     },
     {
       "id": "g3-u3-so-005",
@@ -493,7 +525,9 @@
       "correctAnswer": "She helped me do my homework.",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n彼女は私が宿題をするのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. She helped me do my homework.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼女は私が宿題をするのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-so-007",
@@ -530,7 +564,9 @@
       "correctAnswer": "It is necessary for us to protect the environment.",
       "difficulty": "intermediate",
       "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n私たちにとって環境を守ることは必要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "It is + 形容詞 + for + 人 + to"
+      "hint": "It is + 形容詞 + for + 人 + to",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. It is necessary for us to protect the environment.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私たちにとって環境を守ることは必要です。"
     },
     {
       "id": "g3-u3-so-009",
@@ -548,7 +584,9 @@
       "correctAnswer": "My father let me wash the car.",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n父は私に車を洗わせました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "let + 人 + 動詞の原形"
+      "hint": "let + 人 + 動詞の原形",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. My father let me wash the car.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。父は私に車を洗わせました。"
     },
     {
       "id": "g3-u3-so-010",
@@ -565,7 +603,9 @@
       "correctAnswer": "My brother helped me study math.",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n兄は私が数学を勉強するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. My brother helped me study math.",
+      "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。兄は私が数学を勉強するのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-so-011",
@@ -619,7 +659,9 @@
       "correctAnswer": "She let me play outside.",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n彼女は私に外で遊ばせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "let + 人 + 動詞の原形"
+      "hint": "let + 人 + 動詞の原形",
+      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. She let me play outside.",
+      "passageJapanese": "写真撮影が趣味です。自然の写真を撮ります。先月、山に行きました。彼女は私に外で遊ばせてくれました。"
     },
     {
       "id": "g3-u3-so-014",
@@ -656,7 +698,9 @@
       "correctAnswer": "It is interesting to learn a new language.",
       "difficulty": "beginner",
       "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n新しい言語を学ぶことは面白い。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "It is + 形容詞 + to"
+      "hint": "It is + 形容詞 + to",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. It is interesting to learn a new language.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。新しい言語を学ぶことは面白い。"
     },
     {
       "id": "g3-u3-so-016",
@@ -693,7 +737,9 @@
       "correctAnswer": "My mother let me make a cake.",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n母は私にケーキを作らせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "let + 人 + 動詞の原形"
+      "hint": "let + 人 + 動詞の原形",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. My mother let me make a cake.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。母は私にケーキを作らせてくれました。"
     },
     {
       "id": "g3-u3-so-018",
@@ -728,7 +774,9 @@
       "correctAnswer": "It is good to exercise every day.",
       "difficulty": "beginner",
       "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n毎日運動することは良いことです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "It is + 形容詞 + to"
+      "hint": "It is + 形容詞 + to",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. It is good to exercise every day.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。毎日運動することは良いことです。"
     },
     {
       "id": "g3-u3-so-020",
@@ -748,7 +796,9 @@
       "correctAnswer": "It is easy for her to get up early.",
       "difficulty": "intermediate",
       "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n彼女にとって早起きすることは容易です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "It is + 形容詞 + for + 人 + to"
+      "hint": "It is + 形容詞 + for + 人 + to",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It is easy for her to get up early.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女にとって早起きすることは容易です。"
     },
     {
       "id": "g3-u3-so-021",
@@ -765,7 +815,9 @@
       "correctAnswer": "The teacher let us ask questions.",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n先生は私たちに質問させてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "let + 人 + 動詞の原形"
+      "hint": "let + 人 + 動詞の原形",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. The teacher let us ask questions.",
+      "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。先生は私たちに質問させてくれました。"
     },
     {
       "id": "g3-u3-so-022",
@@ -783,7 +835,9 @@
       "correctAnswer": "He helped me carry the heavy box.",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n彼は私が重い箱を持つのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He helped me carry the heavy box.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は私が重い箱を持つのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-so-023",
@@ -802,7 +856,9 @@
       "correctAnswer": "It is difficult for her to speak Japanese.",
       "difficulty": "intermediate",
       "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n彼女にとって日本語を話すのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "It is + 形容詞 + for + 人 + to"
+      "hint": "It is + 形容詞 + for + 人 + to",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. It is difficult for her to speak Japanese.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女にとって日本語を話すのは難しい。"
     },
     {
       "id": "g3-u3-para-001",
@@ -812,7 +868,9 @@
       "correctAnswer": "It is important to study English.",
       "difficulty": "beginner",
       "explanation": "It is + 形容詞の後はto + 動詞の原形を使います。forではありません。\n\n【日本語】\n英語を勉強するのは重要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "to + 動詞の原形"
+      "hint": "to + 動詞の原形",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. It is important to study English.",
+      "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。英語を勉強するのは重要です。"
     },
     {
       "id": "g3-u3-para-002",
@@ -832,7 +890,9 @@
       "correctAnswer": "My mother let me clean my room.",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形です。toは不要です。\n\n【日本語】\n私の母は私に部屋を掃除させました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "let + 人 + 動詞の原形（toなし）"
+      "hint": "let + 人 + 動詞の原形（toなし）",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. My mother let me clean my room.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私の母は私に部屋を掃除させました。"
     },
     {
       "id": "g3-u3-para-004",
@@ -842,7 +902,9 @@
       "correctAnswer": "She helped me do my homework.",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形です。doingではありません。\n\n【日本語】\n彼女は私が宿題をするのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. She helped me do my homework.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。彼女は私が宿題をするのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-para-005",
@@ -852,7 +914,9 @@
       "correctAnswer": "It is fun for him to swim.",
       "difficulty": "intermediate",
       "explanation": "人を示すときはfor + 人を使います。\n\n【日本語】\n彼にとって泳ぐのは楽しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "for + 人"
+      "hint": "for + 人",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It is fun for him to swim.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼にとって泳ぐのは楽しいです。"
     },
     {
       "id": "g3-u3-para-006",
@@ -888,7 +952,9 @@
         "swim",
         "",
         "s"
-      ]
+      ],
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It is fun to ____.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。泳ぐことは楽しい。"
     },
     {
       "id": "g3-u3-vf-002",
@@ -904,7 +970,9 @@
         "run",
         "",
         "s"
-      ]
+      ],
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. It is good exercise to ____.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。走ることは良い運動です。"
     },
     {
       "id": "g3-u3-vf-003",
@@ -936,7 +1004,9 @@
         "read",
         "",
         "s"
-      ]
+      ],
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He helped me ____ the book.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は私が本を読むのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-vf-005",
@@ -968,7 +1038,9 @@
         "dance",
         "",
         "s"
-      ]
+      ],
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. The teacher let us ____.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。先生は私たちに踊らせてくれました。"
     },
     {
       "id": "g3-u3-vf-007",
@@ -1000,7 +1072,9 @@
         "listen",
         "",
         "s"
-      ]
+      ],
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. It is important to ____.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。聞くことは大切です。"
     },
     {
       "id": "g3-u3-vf-009",
@@ -1016,7 +1090,9 @@
         "go",
         "",
         "s"
-      ]
+      ],
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. My mother let me ____ shopping.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。母は私に買い物に行かせてくれました。"
     },
     {
       "id": "g3-u3-vf-010",
@@ -1032,7 +1108,9 @@
         "choose",
         "",
         "s"
-      ]
+      ],
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. My friend helped me ____.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。友達は私が選ぶのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-conv-001",
@@ -1082,7 +1160,9 @@
       "correctAnswer": "help",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形です。\n\n【日本語】\n父は私に手伝わせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【help】 ← 正解\n  ✓ 正解理由: 日本語訳「父は私に手伝わせてくれました。」から、この形が適切です。\n\n❌ 【to help】 ← 不正解\n  ✗ 不正解理由: 日本語訳「父は私に手伝わせてくれました。」に合いません。\n\n❌ 【helping】 ← 不正解\n  ✗ 不正解理由: 日本語訳「父は私に手伝わせてくれました。」に合いません。",
-      "hint": "let + 人 + 動詞の原形"
+      "hint": "let + 人 + 動詞の原形",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. Yes, he let me ____ him.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。父は私に手伝わせてくれました。"
     },
     {
       "id": "g3-u3-conv-003",
@@ -1107,7 +1187,9 @@
       "correctAnswer": "study",
       "difficulty": "intermediate",
       "explanation": "help + 人 + 動詞の原形です。\n\n【日本語】\n姉は私が勉強するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「姉は私が勉強するのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「姉は私が勉強するのを手伝ってくれました。」に合いません。\n\n❌ 【studying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「姉は私が勉強するのを手伝ってくれました。」に合いません。",
-      "hint": "help + 人 + 動詞の原形"
+      "hint": "help + 人 + 動詞の原形",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. My sister helped me ____.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。姉は私が勉強するのを手伝ってくれました。"
     },
     {
       "id": "g3-u3-conv-004",
@@ -1132,7 +1214,9 @@
       "correctAnswer": "for",
       "difficulty": "intermediate",
       "explanation": "It is + 形容詞 + for + 人 + to + 動詞です。\n\n【日本語】\n私にとってピアノを弾くのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【for】 ← 正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「私にとってピアノを弾くのは難しい。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私にとってピアノを弾くのは難しい。」に合いません。",
-      "hint": "for + 人 + to"
+      "hint": "for + 人 + to",
+      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. It is difficult ____ me to play it.",
+      "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにグラウンドがあります。週末には多くの子供たちがそこで遊びます。私にとってピアノを弾くのは難しい。"
     },
     {
       "id": "g3-u3-conv-005",
@@ -1157,7 +1241,9 @@
       "correctAnswer": "play",
       "difficulty": "intermediate",
       "explanation": "let + 人 + 動詞の原形です。\n\n【日本語】\n母は私に外で遊ばせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「母は私に外で遊ばせてくれました。」から、この形が適切です。\n\n❌ 【to play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私に外で遊ばせてくれました。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私に外で遊ばせてくれました。」に合いません。",
-      "hint": "let + 人 + 動詞の原形"
+      "hint": "let + 人 + 動詞の原形",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. Yes, my mother let me ____ outside.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。母は私に外で遊ばせてくれました。"
     }
   ]
 }

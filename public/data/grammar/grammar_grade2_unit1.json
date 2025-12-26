@@ -69,7 +69,9 @@
       "correctAnswer": "are going to",
       "difficulty": "intermediate",
       "explanation": "事前に決めていた計画にはbe going toを使います。主語がweなのでareを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are going to】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは今年の夏に沖縄へ行く予定です。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今年の夏に沖縄へ行く予定です。」に合いません。\n\n❌ 【went】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今年の夏に沖縄へ行く予定です。」に合いません。",
-      "hint": "計画を表す"
+      "hint": "計画を表す",
+      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. We ____ go to Okinawa this summer.",
+      "passageJapanese": "春が一番好きな季節です。どこでも花が咲きます。桜は特に美しいです。私たちは今年の夏に沖縄へ行く予定です。"
     },
     {
       "id": "g2-u2-fib-005",
@@ -144,7 +146,9 @@
       "correctAnswer": "are going to",
       "difficulty": "beginner",
       "explanation": "午後の予定を表すにはbe going toを使います。主語がweなのでareを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are going to】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは今日の午後サッカーをする予定です。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今日の午後サッカーをする予定です。」に合いません。\n\n❌ 【played】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今日の午後サッカーをする予定です。」に合いません。",
-      "hint": "予定を表す"
+      "hint": "予定を表す",
+      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. We ____ play soccer this afternoon.",
+      "passageJapanese": "ピアノを弾くのが好きです。毎晩練習します。幼い頃、母が教えてくれました。私たちは今日の午後サッカーをする予定です。"
     },
     {
       "id": "g2-u2-fib-010",
@@ -219,7 +223,9 @@
       "correctAnswer": "will",
       "difficulty": "intermediate",
       "explanation": "next month（来月）の予定を表すにはwillを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【will】 ← 正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは来月試験があります。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは来月試験があります。」に合いません。",
-      "hint": "未来の予定"
+      "hint": "未来の予定",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. We ____ have an exam next month.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私たちは来月試験があります。"
     },
     {
       "id": "g2-u2-fib-015",
@@ -292,7 +298,9 @@
       "difficulty": "beginner",
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来を表す文",
-      "explanation": "willの後は必ず動詞の原形を使います。\n\n「彼らは今晩パーティーを開きます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They will have a party tonight.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+      "explanation": "willの後は必ず動詞の原形を使います。\n\n「彼らは今晩パーティーを開きます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They will have a party tonight.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. They will have a party tonight.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼らは今晩パーティーを開きます。"
     },
     {
       "id": "g2-u2-so-004",
@@ -335,7 +343,9 @@
       "difficulty": "intermediate",
       "grammarPoint": "will + be",
       "hint": "未来の状態",
-      "explanation": "未来の状態を表すときは will be を使います。\n\n「彼は来年高校生になります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will be a high school student next year.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+      "explanation": "未来の状態を表すときは will be を使います。\n\n「彼は来年高校生になります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will be a high school student next year.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. He will be a high school student next year.",
+      "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。彼は来年高校生になります。"
     },
     {
       "id": "g2-u2-so-006",
@@ -413,7 +423,9 @@
       "difficulty": "beginner",
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来の予定",
-      "explanation": "take a testで「テストを受ける」という意味です。\n\n「彼は明日テストを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will take a test tomorrow.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+      "explanation": "take a testで「テストを受ける」という意味です。\n\n「彼は明日テストを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will take a test tomorrow.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. He will take a test tomorrow.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼は明日テストを受けます。"
     },
     {
       "id": "g2-u2-so-010",
@@ -451,7 +463,9 @@
       "difficulty": "beginner",
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来の行動",
-      "explanation": "その場で決めたことにはwillを使います。\n\n「彼女は今晩夕食を作ります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will cook dinner tonight.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+      "explanation": "その場で決めたことにはwillを使います。\n\n「彼女は今晩夕食を作ります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will cook dinner tonight.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She will cook dinner tonight.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は今晩夕食を作ります。"
     },
     {
       "id": "g2-u2-so-012",
@@ -531,7 +545,9 @@
       "difficulty": "intermediate",
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来の予定",
-      "explanation": "have a lessonで「レッスンを受ける」という意味です。\n\n「彼女は来週ピアノのレッスンを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will have a piano lesson next week.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+      "explanation": "have a lessonで「レッスンを受ける」という意味です。\n\n「彼女は来週ピアノのレッスンを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will have a piano lesson next week.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. She will have a piano lesson next week.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼女は来週ピアノのレッスンを受けます。"
     },
     {
       "id": "g2-u2-para-001",
@@ -627,7 +643,9 @@
       "correctAnswer": "She will do her homework tonight.",
       "difficulty": "intermediate",
       "explanation": "be going toをwillに書き換えるとき、動詞は原形のdoを使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【She will do her homework tonight.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は今晩宿題をする予定です。」から、この形が適切です。\n\n❌ 【She will does her homework tonight.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は今晩宿題をする予定です。」に合いません。\n\n❌ 【She will doing her homework tonight.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は今晩宿題をする予定です。」に合いません。",
-      "hint": "動詞の原形"
+      "hint": "動詞の原形",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. She will do her homework tonight.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼女は今晩宿題をする予定です。"
     },
     {
       "id": "g2-u2-para-007",
@@ -787,7 +805,9 @@
       "correctAnswer": "play",
       "difficulty": "beginner",
       "explanation": "willの後は必ず動詞の原形を使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「私は明日テニスをします。」から、この形が適切です。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は明日テニスをします。」に合いません。\n\n❌ 【played】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は明日テニスをします。」に合いません。",
-      "hint": "動詞の原形"
+      "hint": "動詞の原形",
+      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. I will ____ tennis tomorrow.",
+      "passageJapanese": "ピアノを弾くのが好きです。毎晩練習します。幼い頃、母が教えてくれました。私は明日テニスをします。"
     },
     {
       "id": "g2-u2-vf-002",
@@ -819,7 +839,9 @@
       "correctAnswer": "watch",
       "difficulty": "beginner",
       "explanation": "willの後は動詞の原形watchを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watch】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは今夜映画を見ます。」から、この形が適切です。\n\n❌ 【watches】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今夜映画を見ます。」に合いません。\n\n❌ 【watched】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今夜映画を見ます。」に合いません。",
-      "hint": "動詞の原形"
+      "hint": "動詞の原形",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. We will ____ a movie tonight.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私たちは今夜映画を見ます。"
     },
     {
       "id": "g2-u2-vf-004",
@@ -835,7 +857,9 @@
       "correctAnswer": "get",
       "difficulty": "beginner",
       "explanation": "be going toの後は動詞の原形getを使います。三人称単数のsは不要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【get】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は明日早く起きる予定です。」から、この形が適切です。\n\n❌ 【gets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は明日早く起きる予定です。」に合いません。\n\n❌ 【got】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は明日早く起きる予定です。」に合いません。",
-      "hint": "動詞の原形"
+      "hint": "動詞の原形",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He is going to ____ up early tomorrow.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は明日早く起きる予定です。"
     },
     {
       "id": "g2-u2-vf-005",
@@ -851,7 +875,9 @@
       "correctAnswer": "go",
       "difficulty": "intermediate",
       "explanation": "willの後は動詞の原形goを使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「私は来月日本に行きます。」から、この形が適切です。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は来月日本に行きます。」に合いません。\n\n❌ 【went】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は来月日本に行きます。」に合いません。",
-      "hint": "動詞の原形"
+      "hint": "動詞の原形",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I will ____ to Japan next month.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は来月日本に行きます。"
     },
     {
       "id": "g2-u2-vf-006",
@@ -883,7 +909,9 @@
       "correctAnswer": "go",
       "difficulty": "intermediate",
       "explanation": "willの後は動詞の原形goを使います。go shoppingで「買い物に行く」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは週末に買い物に行きます。」から、この形が適切です。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは週末に買い物に行きます。」に合いません。\n\n❌ 【went】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは週末に買い物に行きます。」に合いません。",
-      "hint": "動詞の原形"
+      "hint": "動詞の原形",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. We will ____ shopping this weekend.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私たちは週末に買い物に行きます。"
     },
     {
       "id": "g2-u2-vf-008",

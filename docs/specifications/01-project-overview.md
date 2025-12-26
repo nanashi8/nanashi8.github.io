@@ -124,10 +124,10 @@ tags: [specification, ai, test]
 
 - **単語数**: 約3,282語（all-words.csv）
   - 高校受験頻出語彙
-  - 中級1800語（intermediate-1800-words.csv）
+  - 中学履修語彙（junior-high-intermediate-words.csv）
 - **フレーズ数**: 約2,904フレーズ
   - 高校受験頻出フレーズ
-  - 中級1800フレーズ（intermediate-1800-phrases.csv）
+  - 中学履修フレーズ（junior-high-intermediate-phrases.csv）
 
 ### 長文パッセージ
 

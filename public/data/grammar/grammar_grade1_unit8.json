@@ -39,7 +39,9 @@
       "correctAnswer": "watched",
       "difficulty": "beginner",
       "explanation": "last nightは過去です。watch + ed = watchedです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watched】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨夜テレビを見ました。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨夜テレビを見ました。」に合いません。\n\n❌ 【watches】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨夜テレビを見ました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. She ____ TV last night.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼女は昨夜テレビを見ました。"
     },
     {
       "id": "g1-u8-fib-003",
@@ -99,7 +101,9 @@
       "correctAnswer": "received",
       "difficulty": "intermediate",
       "explanation": "last Sundayは過去です。receive + d = received（eで終わる→d）です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【received】 ← 正解\n  ✓ 正解理由: 日本語訳「私は先週の日曜日に手紙を受け取りました。」から、この形が適切です。\n\n❌ 【receive】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は先週の日曜日に手紙を受け取りました。」に合いません。\n\n❌ 【receives】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は先週の日曜日に手紙を受け取りました。」に合いません。",
-      "hint": "e→d"
+      "hint": "e→d",
+      "passage": "It is raining now. I have an umbrella. The streets are wet. I ____ a letter last Sunday.",
+      "passageJapanese": "今、雨がふっています。傘を持っています。道がぬれています。私は先週の日曜日に手紙を受け取りました。"
     },
     {
       "id": "g1-u8-fib-007",
@@ -114,7 +118,9 @@
       "correctAnswer": "carried",
       "difficulty": "intermediate",
       "explanation": "yesterdayは過去です。carry → y を i に変えて ed = carriedです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【carried】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨日カバンを運びました。」から、この形が適切です。\n\n❌ 【carry】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日カバンを運びました。」に合いません。\n\n❌ 【carries】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日カバンを運びました。」に合いません。",
-      "hint": "y→ied"
+      "hint": "y→ied",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. She ____ her bag yesterday.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼女は昨日カバンを運びました。"
     },
     {
       "id": "g1-u8-fib-008",
@@ -129,7 +135,9 @@
       "correctAnswer": "worked",
       "difficulty": "intermediate",
       "explanation": "last monthは過去です。work + ed = workedです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【worked】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは先月一生懸命働きました。」から、この形が適切です。\n\n❌ 【work】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先月一生懸命働きました。」に合いません。\n\n❌ 【works】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先月一生懸命働きました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. We ____ hard last month.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私たちは先月一生懸命働きました。"
     },
     {
       "id": "g1-u8-fib-009",
@@ -159,7 +167,9 @@
       "correctAnswer": "finished",
       "difficulty": "intermediate",
       "explanation": "two hours agoは過去です。finish + ed = finishedです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【finished】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は2時間前に宿題を終えました。」から、この形が適切です。\n\n❌ 【finish】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は2時間前に宿題を終えました。」に合いません。\n\n❌ 【finishes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は2時間前に宿題を終えました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "We study English every day. We do homework after dinner. He ____ his homework two hours ago.",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。彼は2時間前に宿題を終えました。"
     },
     {
       "id": "g1-u8-fib-011",
@@ -174,7 +184,9 @@
       "correctAnswer": "started",
       "difficulty": "intermediate",
       "explanation": "yesterday morningは過去です。start + ed = startedです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【started】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日の朝に新しい本を始めました。」から、この形が適切です。\n\n❌ 【start】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日の朝に新しい本を始めました。」に合いません。\n\n❌ 【starts】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日の朝に新しい本を始めました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. I ____ a new book yesterday morning.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私は昨日の朝に新しい本を始めました。"
     },
     {
       "id": "g1-u8-fib-012",
@@ -189,7 +201,9 @@
       "correctAnswer": "cooked",
       "difficulty": "advanced",
       "explanation": "last Saturdayは過去です。cook + ed = cookedです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cooked】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先週の土曜日に一日中料理をしました。」から、この形が適切です。\n\n❌ 【cook】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週の土曜日に一日中料理をしました。」に合いません。\n\n❌ 【cooks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週の土曜日に一日中料理をしました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She ____ all day last Saturday.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は先週の土曜日に一日中料理をしました。"
     },
     {
       "id": "g1-u8-fib-013",
@@ -249,7 +263,9 @@
       "difficulty": "beginner",
       "explanation": "「私は昨日歩きました」です。walk + ed = walkedです。\n\n「私は昨日歩きました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I walked yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "主語 + 過去形",
-      "wordCount": 3
+      "wordCount": 3,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. I walked yesterday.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私は昨日歩きました。"
     },
     {
       "id": "g1-u8-so-002",
@@ -345,7 +361,9 @@
       "difficulty": "intermediate",
       "explanation": "「彼女は質問をしました」です。ask + ed = askedです。\n\n「彼女は質問をしました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She asked a question.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "過去形",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She asked a question.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は質問をしました。"
     },
     {
       "id": "g1-u8-so-008",
@@ -412,7 +430,9 @@
       "difficulty": "advanced",
       "explanation": "「私は今朝歯を磨きました」です。brush + ed = brushedです。\n\n「私は今朝歯を磨きました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I brushed my teeth this morning.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "brushed teeth",
-      "wordCount": 6
+      "wordCount": 6,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. I brushed my teeth this morning.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私は今朝歯を磨きました。"
     },
     {
       "id": "g1-u8-so-012",
@@ -429,7 +449,9 @@
       "difficulty": "advanced",
       "explanation": "「彼女は学校に早く着きました」です。arrive + d = arrivedです。\n\n「彼女は学校に早く着きました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She arrived at school early.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "arrived at",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "We study English every day. We do homework after dinner. She arrived at school early.",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。彼女は学校に早く着きました。"
     },
     {
       "id": "g1-u8-so-013",
@@ -445,7 +467,9 @@
       "difficulty": "advanced",
       "explanation": "「彼らは何度も挑戦しました」です。try → y を i に変えて ed = triedです。\n\n「彼らは何度も挑戦しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They tried many times.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "y→ied",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. They tried many times.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らは何度も挑戦しました。"
     },
     {
       "id": "g1-u8-so-014",
@@ -462,7 +486,9 @@
       "difficulty": "advanced",
       "explanation": "「私たちは注意深く通りを渡りました」です。cross + ed = crossedです。\n\n「私たちは注意深く通りを渡りました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We crossed the street carefully.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "crossed",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. We crossed the street carefully.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私たちは注意深く通りを渡りました。"
     },
     {
       "id": "g1-u8-so-015",
@@ -479,7 +505,9 @@
       "difficulty": "advanced",
       "explanation": "「彼はすぐに間違いに気づきました」です。notice + d = noticedです。\n\n「彼はすぐに間違いに気づきました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He noticed the mistake immediately.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "noticed",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. He noticed the mistake immediately.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼はすぐに間違いに気づきました。"
     },
     {
       "id": "g1-u8-para-001",
@@ -655,7 +683,9 @@
       "correctAnswer": "Yes, I did.",
       "difficulty": "advanced",
       "explanation": "Did～?への答えはdidを使います。「はい、楽しみました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Yes, I did.】 ← 正解\n  ✓ 正解理由: 日本語訳「はい、楽しみました。」から、この形が適切です。\n\n❌ 【Yes, I do.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、楽しみました。」に合いません。\n\n❌ 【Yes, I enjoyed.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、楽しみました。」に合いません。",
-      "hint": "Yes, I did"
+      "hint": "Yes, I did",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Yes, I did.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。はい、楽しみました。"
     },
     {
       "id": "g1-u8-para-012",
@@ -687,7 +717,9 @@
       "correctAnswer": "I played soccer yesterday.",
       "difficulty": "advanced",
       "explanation": "every day → yesterdayです。playedです。「私は昨日サッカーをしました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I played soccer yesterday.】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日サッカーをしました。」から、この形が適切です。\n\n❌ 【I play soccer yesterday.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日サッカーをしました。」に合いません。\n\n❌ 【I played soccer every day.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日サッカーをしました。」に合いません。",
-      "hint": "yesterday"
+      "hint": "yesterday",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. I played soccer yesterday.",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。私は昨日サッカーをしました。"
     },
     {
       "id": "g1-u8-para-014",
@@ -719,7 +751,9 @@
       "correctAnswer": "What did you play?",
       "difficulty": "advanced",
       "explanation": "What did + 主語 + 原形です。「あなたは何をしましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What did you play?】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは何をしましたか。」から、この形が適切です。\n\n❌ 【What do you play?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何をしましたか。」に合いません。\n\n❌ 【What did you played?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何をしましたか。」に合いません。",
-      "hint": "What did"
+      "hint": "What did",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. What did you play?",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。あなたは何をしましたか。"
     },
     {
       "id": "g1-u8-vf-001",
@@ -735,7 +769,9 @@
       "correctAnswer": "watched",
       "difficulty": "beginner",
       "explanation": "yesterdayは過去です。watch + ed = watchedです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watched】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日テレビを見ました。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日テレビを見ました。」に合いません。\n\n❌ 【watches】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日テレビを見ました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. I ____ TV yesterday.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私は昨日テレビを見ました。"
     },
     {
       "id": "g1-u8-vf-002",
@@ -847,7 +883,9 @@
       "correctAnswer": "finished",
       "difficulty": "advanced",
       "explanation": "last monthは過去です。finish + ed = finishedです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【finished】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは先月試合を終えました。」から、この形が適切です。\n\n❌ 【finish】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは先月試合を終えました。」に合いません。\n\n❌ 【finishes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは先月試合を終えました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "I like soccer. I play it after school. My friends play with me. They ____ the game last month.",
+      "passageJapanese": "サッカーが好きです。放課後にします。友達もいっしょにします。彼らは先月試合を終えました。"
     },
     {
       "id": "g1-u8-vf-009",
@@ -879,7 +917,9 @@
       "correctAnswer": "remembered",
       "difficulty": "advanced",
       "explanation": "yesterdayは過去です。remember + ed = rememberedです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【remembered】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日答えを思い出しました。」から、この形が適切です。\n\n❌ 【remember】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日答えを思い出しました。」に合いません。\n\n❌ 【remembers】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日答えを思い出しました。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. He ____ the answer yesterday.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼は昨日答えを思い出しました。"
     },
     {
       "id": "g1-u8-conv-001",
@@ -904,7 +944,9 @@
       "correctAnswer": "played",
       "difficulty": "beginner",
       "explanation": "Didで聞かれたら過去形で答えります。「私はサッカーをしました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【played】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の行動を尋ねる。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の行動を尋ねる。」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の行動を尋ねる。」に合いません。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "passage": "I like soccer. I play it after school. My friends play with me. played",
+      "passageJapanese": "サッカーが好きです。放課後にします。友達もいっしょにします。過去の行動を尋ねる。"
     },
     {
       "id": "g1-u8-conv-002",
@@ -954,7 +996,9 @@
       "correctAnswer": "didn't",
       "difficulty": "intermediate",
       "explanation": "Didへの否定の答えはdidn'tです。「いいえ、見ませんでした」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【didn't】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の否定。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。\n\n❌ 【wasn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。",
-      "hint": "didn't"
+      "hint": "didn't",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. didn't",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。過去の否定。"
     },
     {
       "id": "g1-u8-conv-004",
@@ -1004,7 +1048,9 @@
       "correctAnswer": "study",
       "difficulty": "advanced",
       "explanation": "did の後ろは原形です。「あなたはどこで勉強しましたか」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の詳細を尋ねる。」から、この形が適切です。\n\n❌ 【studied】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の詳細を尋ねる。」に合いません。\n\n❌ 【studies】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の詳細を尋ねる。」に合いません。",
-      "hint": "原形"
+      "hint": "原形",
+      "passage": "We study English every day. We do homework after dinner. study",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。過去の詳細を尋ねる。"
     }
   ]
 }

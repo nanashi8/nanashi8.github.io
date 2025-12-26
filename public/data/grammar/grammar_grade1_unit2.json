@@ -99,7 +99,9 @@
       "correctAnswer": "watches",
       "difficulty": "intermediate",
       "explanation": "-chで終わる動詞は-esを付けます。watch→watchesです。-sh/-ch/-x/-s/-oは-esパターンです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watches】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はテレビを見ます。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はテレビを見ます。」に合いません。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はテレビを見ます。」に合いません。",
-      "hint": "-ch → -es"
+      "hint": "-ch → -es",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. He ____ TV.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼はテレビを見ます。"
     },
     {
       "id": "g1-u2-fib-007",
@@ -129,7 +131,9 @@
       "correctAnswer": "Does",
       "difficulty": "intermediate",
       "explanation": "三人称単数の疑問文はDoes + 主語 + 原形です。答えはYes, he does. / No, he doesn't.です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は野球をしますか。」から、この形が適切です。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は野球をしますか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は野球をしますか。」に合いません。",
-      "hint": "he/she/it → Does"
+      "hint": "he/she/it → Does",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. ____ he play baseball?",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。彼は野球をしますか。"
     },
     {
       "id": "g1-u2-fib-009",
@@ -219,7 +223,9 @@
       "correctAnswer": "speak",
       "difficulty": "advanced",
       "explanation": "doesn'tの後は原形です。×speaksは誤りです。否定文でも動詞は原形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【speak】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は英語を話しません。」から、この形が適切です。\n\n❌ 【speaks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は英語を話しません。」に合いません。\n\n❌ 【speaking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は英語を話しません。」に合いません。",
-      "hint": "doesn't + 原形"
+      "hint": "doesn't + 原形",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. He doesn't ____ English.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼は英語を話しません。"
     },
     {
       "id": "g1-u2-fib-015",
@@ -249,7 +255,9 @@
       "difficulty": "beginner",
       "explanation": "三人称単数の基本語順：He + studies（動詞-s/-es）+ 目的語です。\n\n「彼は日本語を勉強します。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He studies Japanese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "He studies ～",
-      "wordCount": 3
+      "wordCount": 3,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. He studies Japanese.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼は日本語を勉強します。"
     },
     {
       "id": "g1-u2-so-002",
@@ -379,7 +387,9 @@
       "difficulty": "intermediate",
       "explanation": "do→doesの不規則変化です。do the cleaningは「掃除をする」です。\n\n「彼女は毎日掃除をします。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She does the cleaning every day.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "She does ～",
-      "wordCount": 6
+      "wordCount": 6,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She does the cleaning every day.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は毎日掃除をします。"
     },
     {
       "id": "g1-u2-so-010",
@@ -467,7 +477,9 @@
       "difficulty": "advanced",
       "explanation": "doesn't + 原形の語順です。speak Chineseで「中国語を話す」です。\n\n「彼は中国語を話しません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He doesn't speak Chinese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "doesn't + 原形",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. He doesn't speak Chinese.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼は中国語を話しません。"
     },
     {
       "id": "g1-u2-so-015",
@@ -663,7 +675,9 @@
       "correctAnswer": "Tom does his homework.",
       "difficulty": "advanced",
       "explanation": "do→does、my→hisの両方を変更です。人名も三人称単数です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Tom does his homework.】 ← 正解\n  ✓ 正解理由: 日本語訳「主語の変更（I→Tom）。」から、この形が適切です。\n\n❌ 【Tom do his homework.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「主語の変更（I→Tom）。」に合いません。\n\n❌ 【Tom dose his homework.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「主語の変更（I→Tom）。」に合いません。",
-      "hint": "do → does、my → his"
+      "hint": "do → does、my → his",
+      "passage": "We study English every day. We do homework after dinner. Tom does his homework.",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。主語の変更（I→Tom）。"
     },
     {
       "id": "g1-u2-para-012",
@@ -775,7 +789,9 @@
       "correctAnswer": "goes",
       "difficulty": "beginner",
       "explanation": "goの三人称単数形はgoes（-o→-es）です。頻出の不規則パターンです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【goes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は図書館へ行きます。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は図書館へ行きます。」に合いません。\n\n❌ 【gos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は図書館へ行きます。」に合いません。",
-      "hint": "-o → -es"
+      "hint": "-o → -es",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. He ____ to the library.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼は図書館へ行きます。"
     },
     {
       "id": "g1-u2-vf-004",
@@ -791,7 +807,9 @@
       "correctAnswer": "has",
       "difficulty": "beginner",
       "explanation": "haveの三人称単数形はhas（完全不規則）です。最重要の不規則変化です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は犬を飼っています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は犬を飼っています。」に合いません。\n\n❌ 【haves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は犬を飼っています。」に合いません。",
-      "hint": "have → has"
+      "hint": "have → has",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. She ____ a dog.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼女は犬を飼っています。"
     },
     {
       "id": "g1-u2-vf-005",
@@ -962,7 +980,9 @@
       "correctAnswer": "goes",
       "difficulty": "intermediate",
       "explanation": "How does～?は方法を尋ねる三人称の疑問文です。She goesで答えります。by bikeは交通手段です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【goes】 ← 正解\n  ✓ 正解理由: 日本語訳「友人の通学方法を尋ねる。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人の通学方法を尋ねる。」に合いません。\n\n❌ 【is go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人の通学方法を尋ねる。」に合いません。",
-      "hint": "She goes ～"
+      "hint": "She goes ～",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. goes",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。友人の通学方法を尋ねる。"
     },
     {
       "id": "g1-u2-conv-004",
@@ -1012,7 +1032,9 @@
       "correctAnswer": "plays",
       "difficulty": "advanced",
       "explanation": "What does～do?は「何をするか」を尋ねります。usuallyは頻度副詞で動詞の前に置きます。play the piano「ピアノを弾く」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【plays】 ← 正解\n  ✓ 正解理由: 日本語訳「兄弟の活動を尋ねる。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「兄弟の活動を尋ねる。」に合いません。\n\n❌ 【played】 ← 不正解\n  ✗ 不正解理由: 日本語訳「兄弟の活動を尋ねる。」に合いません。",
-      "hint": "He usually plays ～"
+      "hint": "He usually plays ～",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. plays",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。兄弟の活動を尋ねる。"
     },
     {
       "id": "g1-u2-tag-001",
@@ -1074,7 +1096,9 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「否定文, 肯定疑問?」の形になる構文として覚えてください。isn't → isとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「それは簡単じゃないですよね。」から、この形が適切です。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「それは簡単じゃないですよね。」に合いません。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「それは簡単じゃないですよね。」に合いません。",
-      "hint": "is"
+      "hint": "is",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. It isn't easy, ____ it?",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。それは簡単じゃないですよね。"
     },
     {
       "id": "g1-u2-tag-005",
@@ -1107,7 +1131,9 @@
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えてください。isn't → isです。\n\n「彼女は先生じゃないですよね。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She isn't a teacher, is she?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "is she",
-      "wordCount": 6
+      "wordCount": 6,
+      "passage": "We study English every day. We do homework after dinner. She isn't a teacher, is she?",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。彼女は先生じゃないですよね。"
     },
     {
       "id": "g1-u2-tag-007",
@@ -1147,7 +1173,9 @@
       "correctAnswer": "aren't",
       "difficulty": "beginner",
       "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【aren't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは日本人ですよね。」から、この形が適切です。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本人ですよね。」に合いません。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本人ですよね。」に合いません。",
-      "hint": "aren't"
+      "hint": "aren't",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. aren't",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。あなたは日本人ですよね。"
     },
     {
       "id": "g1-u2-tag-009",
@@ -1162,7 +1190,9 @@
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えてください。aren't → areとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは遅刻していないですよね。」から、この形が適切です。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは遅刻していないですよね。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは遅刻していないですよね。」に合いません。",
-      "hint": "are"
+      "hint": "are",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. We aren't late, ____ we?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私たちは遅刻していないですよね。"
     },
     {
       "id": "g1-u2-tag-010",
@@ -1257,7 +1287,9 @@
       "correctAnswer": "don't",
       "difficulty": "intermediate",
       "explanation": "複数の付加疑問文は「肯定文, don't...?」という構文として覚えてください。They run → don't theyです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【don't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは毎日走りますよね。」から、この形が適切です。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは毎日走りますよね。」に合いません。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは毎日走りますよね。」に合いません。",
-      "hint": "don't"
+      "hint": "don't",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. They run every day, ____ they?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼らは毎日走りますよね。"
     },
     {
       "id": "g1-u2-tag-016",
@@ -1315,7 +1347,9 @@
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
       "explanation": "三人称単数の付加疑問文という構文として覚えてください。speaks → doesn'tです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【doesn't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は日本語を話しますよね。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は日本語を話しますよね。」に合いません。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は日本語を話しますよね。」に合いません。",
-      "hint": "doesn't"
+      "hint": "doesn't",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. doesn't",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼女は日本語を話しますよね。"
     },
     {
       "id": "g1-u2-tag-019",
@@ -1395,7 +1429,9 @@
       "difficulty": "intermediate",
       "explanation": "一般動詞の付加疑問文という構文として覚えてください。live → don'tです。\n\n「彼らはここに住んでいますよね。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They live here, don't they?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "don't they",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. They live here, don't they?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼らはここに住んでいますよね。"
     },
     {
       "id": "g1-u2-tag-024",
@@ -1483,7 +1519,9 @@
       "correctAnswer": "will",
       "difficulty": "advanced",
       "explanation": "命令文の付加疑問文は will you? という構文として覚えてください。Open → will you?で丁寧な依頼になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【will】 ← 正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【shall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を開けてくれませんか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を開けてくれませんか。」に合いません。",
-      "hint": "will"
+      "hint": "will",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. Open the window, ____ you?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。窓を開けてくれませんか。"
     },
     {
       "id": "g1-u2-tag-029",
@@ -1498,7 +1536,9 @@
       "correctAnswer": "shall",
       "difficulty": "advanced",
       "explanation": "Let's の付加疑問文は shall we? という構文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【shall】 ← 正解\n  ✓ 正解理由: 日本語訳「映画を見ましょうよ。」から、この形が適切です。\n\n❌ 【will】 ← 不正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✗ 不正解理由: 日本語訳「映画を見ましょうよ。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「映画を見ましょうよ。」に合いません。",
-      "hint": "shall"
+      "hint": "shall",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. Let's watch a movie, ____ we?",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。映画を見ましょうよ。"
     },
     {
       "id": "g1-u2-tag-030",

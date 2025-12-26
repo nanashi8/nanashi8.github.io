@@ -32,6 +32,7 @@
 - **[COPILOT_WORK_MANAGEMENT.md](COPILOT_WORK_MANAGEMENT.md)** - 効率的開発パイプライン・作業管理ルール
 - [TDD_GUIDE.md](TDD_GUIDE.md) - テスト駆動開発ガイド
 - [EXPLANATION_QUALITY_GUIDE.md](EXPLANATION_QUALITY_GUIDE.md) - 説明文品質ガイド
+- [CONTENT_AUTHORING_WORKFLOW.md](CONTENT_AUTHORING_WORKFLOW.md) - コンテンツ作成ワークフロー（品質重視）
 
 ---
 

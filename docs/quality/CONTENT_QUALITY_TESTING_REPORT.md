@@ -33,8 +33,8 @@
 **対象データ**:
 - `high-school-entrance-words.csv` (2,662 entries)
 - `high-school-entrance-phrases.csv` (96 entries)
-- `high-school-intermediate-words.csv` (1,579 entries)
-- `high-school-intermediate-phrases.csv` (212 entries)
+- `junior-high-intermediate-words.csv` (1,579 entries)
+- `junior-high-intermediate-phrases.csv` (212 entries)
 - **合計**: 4,549 entries
 
 **テスト観点**:

@@ -108,8 +108,8 @@ Phase 2完了時: 19.5%
 **検証データ**:
 - high-school-entrance-words.csv: 2,662エントリー
 - high-school-entrance-phrases.csv: 96エントリー
-- high-school-intermediate-words.csv: 1,579エントリー
-- high-school-intermediate-phrases.csv: 212エントリー
+- junior-high-intermediate-words.csv: 1,579エントリー
+- junior-high-intermediate-phrases.csv: 212エントリー
 - **合計**: 4,549エントリー
 
 **基本品質スコア**:

@@ -39,7 +39,9 @@
       "correctAnswer": "were",
       "difficulty": "beginner",
       "explanation": "主語がTheyなのでwereです。「彼らは昨晩家にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨晩家にいました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩家にいました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩家にいました。」に合いません。",
-      "hint": "They → were"
+      "hint": "They → were",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. They ____ at home last night.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼らは昨晩家にいました。"
     },
     {
       "id": "g2-u0-fib-003",
@@ -69,7 +71,9 @@
       "correctAnswer": "were",
       "difficulty": "beginner",
       "explanation": "主語がYouなのでwereです。「あなたは先週忙しかった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは先週忙しかった。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは先週忙しかった。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは先週忙しかった。」に合いません。",
-      "hint": "You → were"
+      "hint": "You → were",
+      "passage": "Last summer, I visited Kyoto. The city has many historical temples. I learned a lot about Japanese culture. You ____ busy last week.",
+      "passageJapanese": "去年の夏、京都を訪れました。その町には多くの歴史的な寺院があります。日本文化についてたくさん学びました。あなたは先週忙しかった。"
     },
     {
       "id": "g2-u0-fib-005",
@@ -114,7 +118,9 @@
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "主語がItなのでwasです。「昨日は寒かった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「昨日は寒かった。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日は寒かった。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日は寒かった。」に合いません。",
-      "hint": "It → was"
+      "hint": "It → was",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. It ____ cold yesterday.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。昨日は寒かった。"
     },
     {
       "id": "g2-u0-fib-008",
@@ -129,7 +135,9 @@
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
       "explanation": "was not = wasn'tです。「私は昨日疲れていませんでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wasn't】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日疲れていませんでした。」から、この形が適切です。\n\n❌ 【weren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日疲れていませんでした。」に合いません。\n\n❌ 【am not】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日疲れていませんでした。」に合いません。",
-      "hint": "wasn't"
+      "hint": "wasn't",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I ____ tired yesterday.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は昨日疲れていませんでした。"
     },
     {
       "id": "g2-u0-fib-009",
@@ -174,7 +182,9 @@
       "correctAnswer": "Was",
       "difficulty": "intermediate",
       "explanation": "主語がsheなのでWasです。「彼女は昨日怒っていましたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨日怒っていましたか。」から、この形が適切です。\n\n❌ 【Were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日怒っていましたか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日怒っていましたか。」に合いません。",
-      "hint": "Was she"
+      "hint": "Was she",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ she angry yesterday?",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女は昨日怒っていましたか。"
     },
     {
       "id": "g2-u0-fib-012",
@@ -298,7 +308,9 @@
       "difficulty": "beginner",
       "explanation": "「私たちはその時友達でした」です。\n\n「私たちはその時友達でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We were friends then.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "We were",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We were friends then.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちはその時友達でした。"
     },
     {
       "id": "g2-u0-so-005",
@@ -330,7 +342,9 @@
       "difficulty": "intermediate",
       "explanation": "「私は昨日お腹が空いていませんでした」です。\n\n「私は昨日お腹が空いていませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I wasn't hungry yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "wasn't",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I wasn't hungry yesterday.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私は昨日お腹が空いていませんでした。"
     },
     {
       "id": "g2-u0-so-007",
@@ -346,7 +360,9 @@
       "difficulty": "intermediate",
       "explanation": "「彼らは昨日ここにいませんでした」です。\n\n「彼らは昨日ここにいませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n場所の副詞 → 時の副詞の順序\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They weren't here yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "weren't",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. They weren't here yesterday.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼らは昨日ここにいませんでした。"
     },
     {
       "id": "g2-u0-so-008",
@@ -362,7 +378,9 @@
       "difficulty": "intermediate",
       "explanation": "「彼は昨日病気でしたか」です。\n\n「彼は昨日病気でしたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Was he sick yesterday?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Was",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. Was he sick yesterday?",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は昨日病気でしたか。"
     },
     {
       "id": "g2-u0-so-009",
@@ -573,7 +591,9 @@
       "correctAnswer": "Was she happy?",
       "difficulty": "intermediate",
       "explanation": "Was she～?の語順です。「彼女は幸せでしたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Was she happy?】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は幸せでしたか。」から、この形が適切です。\n\n❌ 【Were she happy?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は幸せでしたか。」に合いません。\n\n❌ 【Is she happy?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は幸せでしたか。」に合いません。",
-      "hint": "Was"
+      "hint": "Was",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. Was she happy?",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女は幸せでしたか。"
     },
     {
       "id": "g2-u0-para-007",
@@ -701,7 +721,9 @@
       "correctAnswer": "Where was he?",
       "difficulty": "advanced",
       "explanation": "Where was～?の語順です。「彼はどこにいましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Where was he?】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどこへ行きましたか。」から、この形が適切です。\n\n❌ 【Where were he?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどこへ行きましたか。」に合いません。\n\n❌ 【Where is he?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどこへ行きましたか。」に合いません。",
-      "hint": "Where was"
+      "hint": "Where was",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. Where was he?",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。あなたはどこへ行きましたか。"
     },
     {
       "id": "g2-u0-para-015",
@@ -797,7 +819,9 @@
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "主語がSheなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は東京にいました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京にいました。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京にいました。」に合いません。",
-      "hint": "She → was"
+      "hint": "She → was",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She ____ in Tokyo.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女は東京にいました。"
     },
     {
       "id": "g2-u0-vf-006",
@@ -813,7 +837,9 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "explanation": "主語がWeなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはその時友達でした。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその時友達でした。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその時友達でした。」に合いません。",
-      "hint": "We → were"
+      "hint": "We → were",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We ____ friends then.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちはその時友達でした。"
     },
     {
       "id": "g2-u0-vf-007",
@@ -952,7 +978,9 @@
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
       "explanation": "Wasへの否定の答えはwasn'tです。「いいえ、疲れていませんでした」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wasn't】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の否定。」から、この形が適切です。\n\n❌ 【weren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。",
-      "hint": "wasn't"
+      "hint": "wasn't",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. No, he ____.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。過去の否定。"
     },
     {
       "id": "g2-u0-conv-004",
@@ -1017,7 +1045,9 @@
       "correctAnswer": "played",
       "difficulty": "beginner",
       "explanation": "playの過去形はplayedです。yesterdayがあるので過去形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【played】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日テニスをしました。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日テニスをしました。」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日テニスをしました。」に合いません。",
-      "hint": "play + ed"
+      "hint": "play + ed",
+      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. I ____ tennis yesterday.",
+      "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにグラウンドがあります。週末には多くの子供たちがそこで遊びます。私は昨日テニスをしました。"
     },
     {
       "id": "g2-u0-fib-017",
@@ -1263,7 +1293,9 @@
       "correctAnswer": "We went to Tokyo last week.",
       "difficulty": "beginner",
       "explanation": "goの過去形はwentです。頻出の不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "go → went（不規則動詞）"
+      "hint": "go → went（不規則動詞）",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. We went to Tokyo last week.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私たちは先週東京に行きました。"
     },
     {
       "id": "g2-u0-para-019",
@@ -1283,7 +1315,9 @@
       "correctAnswer": "They played soccer in the park.",
       "difficulty": "beginner",
       "explanation": "過去の出来事を表すので過去形playedを使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "play → played"
+      "hint": "play → played",
+      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. They played soccer in the park.",
+      "passageJapanese": "ピアノを弾くのが好きです。毎晩練習します。幼い頃、母が教えてくれました。彼らは公園でサッカーをしました。"
     },
     {
       "id": "g2-u0-vf-011",
@@ -1331,7 +1365,9 @@
         "had",
         "have",
         "haved"
-      ]
+      ],
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We ____ a good time last night.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちは昨夜楽しい時間を過ごしました。"
     },
     {
       "id": "g2-u0-vf-014",
@@ -1488,7 +1524,9 @@
       "correctAnswer": "didn't",
       "difficulty": "beginner",
       "explanation": "Did you...?の否定の答えはNo, I didn't.です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【didn't】 ← 正解\n  ✓ 正解理由: 日本語訳「昨日彼女に会いましたか？/いいえ、会いませんでした。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日彼女に会いましたか？/いいえ、会いませんでした。」に合いません。\n\n❌ 【wasn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日彼女に会いましたか？/いいえ、会いませんでした。」に合いません。",
-      "hint": "Did you...? → No, I didn't."
+      "hint": "Did you...? → No, I didn't.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. No, I ____.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。昨日彼女に会いましたか？/いいえ、会いませんでした。"
     }
   ]
 }

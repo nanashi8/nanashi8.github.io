@@ -25,7 +25,9 @@
       "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼に会ったことがあります。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼に会ったことがあります。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼に会ったことがあります。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I ____ met him.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は彼に会ったことがあります。"
     },
     {
       "id": "vf-g3-u1-002",
@@ -105,7 +107,9 @@
       "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私はこの本を読んだことがありません。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの本を読んだことがありません。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの本を読んだことがありません。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I ____ never read this book.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私はこの本を読んだことがありません。"
     },
     {
       "id": "vf-g3-u1-007",
@@ -137,7 +141,9 @@
       "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Have】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは日本に行ったことがありますか。」から、この形が適切です。\n\n❌ 【Has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本に行ったことがありますか。」に合いません。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本に行ったことがありますか。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ you been to Japan?",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。あなたは日本に行ったことがありますか。"
     },
     {
       "id": "vf-g3-u1-009",
@@ -153,7 +159,9 @@
       "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はその知らせを聞きましたか。」から、この形が適切です。\n\n❌ 【Have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ he heard the news?",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼はその知らせを聞きましたか。"
     },
     {
       "id": "vf-g3-u1-010",
@@ -169,7 +177,9 @@
       "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は3年間英語を勉強しています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I ____ studied English for three years.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私は3年間英語を勉強しています。"
     },
     {
       "id": "vf-g3-u1-011",
@@ -201,7 +211,9 @@
       "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはちょうど到着しました。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. We ____ just arrived.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私たちはちょうど到着しました。"
     },
     {
       "id": "vf-g3-u1-013",
@@ -249,7 +261,9 @@
       "difficulty": "beginner",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼女に会ったことがありません。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に会ったことがありません。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に会ったことがありません。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I ____ never met her.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は彼女に会ったことがありません。"
     },
     {
       "id": "vf-g3-u1-016",
@@ -265,7 +279,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Have】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは昼食を食べましたか。」から、この形が適切です。\n\n❌ 【Has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昼食を食べましたか。」に合いません。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昼食を食べましたか。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ you eaten lunch?",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あなたは昼食を食べましたか。"
     },
     {
       "id": "vf-g3-u1-017",
@@ -297,7 +313,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは長い間ここに住んでいます。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは長い間ここに住んでいます。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは長い間ここに住んでいます。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. We ____ lived here for a long time.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私たちは長い間ここに住んでいます。"
     },
     {
       "id": "vf-g3-u1-019",
@@ -359,7 +377,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【been】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は東京に行ったことがあります。」から、この形が適切です。\n\n❌ 【be】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京に行ったことがあります。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京に行ったことがあります。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She has ____ to Tokyo.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は東京に行ったことがあります。"
     },
     {
       "id": "fb-g3-u1-003",
@@ -374,7 +394,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【seen】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはその映画を見たことがあります。」から、この形が適切です。\n\n❌ 【see】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその映画を見たことがあります。」に合いません。\n\n❌ 【saw】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその映画を見たことがあります。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We have ____ that movie.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちはその映画を見たことがあります。"
     },
     {
       "id": "fb-g3-u1-004",
@@ -449,7 +471,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【heard】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はその知らせを聞きましたか。」から、この形が適切です。\n\n❌ 【hear】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。\n\n❌ 【hears】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. Has he ____ the news?",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼はその知らせを聞きましたか。"
     },
     {
       "id": "fb-g3-u1-009",
@@ -464,7 +488,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【studied】 ← 正解\n  ✓ 正解理由: 日本語訳「私は3年間英語を勉強しています。」から、この形が適切です。\n\n❌ 【studi】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。\n\n❌ 【studis】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I have ____ English for three years.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私は3年間英語を勉強しています。"
     },
     {
       "id": "fb-g3-u1-010",
@@ -479,7 +505,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【waited】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は2時間待っています。」から、この形が適切です。\n\n❌ 【wait】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2時間待っています。」に合いません。\n\n❌ 【waits】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2時間待っています。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She has ____ for two hours.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は2時間待っています。"
     },
     {
       "id": "fb-g3-u1-011",
@@ -494,7 +522,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【arrived】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはちょうど到着しました。」から、この形が適切です。\n\n❌ 【arriv】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。\n\n❌ 【arrivs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. We have just ____.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私たちはちょうど到着しました。"
     },
     {
       "id": "fb-g3-u1-012",
@@ -509,7 +539,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【left】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はすでに出発しました。」から、この形が適切です。\n\n❌ 【leave】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はすでに出発しました。」に合いません。\n\n❌ 【leaves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はすでに出発しました。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He has already ____.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼はすでに出発しました。"
     },
     {
       "id": "fb-g3-u1-013",
@@ -629,7 +661,9 @@
       "difficulty": "intermediate",
       "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【lost】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はその鍵を失くしました。」から、この形が適切です。\n\n❌ 【lose】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はその鍵を失くしました。」に合いません。\n\n❌ 【loses】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はその鍵を失くしました。」に合いません。",
       "hint": "have/has + 過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She has ____ the key.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女はその鍵を失くしました。"
     },
     {
       "id": "so-g3-u1-001",
@@ -647,7 +681,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 4,
       "type": "sentenceOrdering",
-      "correctAnswer": "I have met him."
+      "correctAnswer": "I have met him.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I have met him.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私は彼に会ったことがあります。"
     },
     {
       "id": "so-g3-u1-002",
@@ -685,7 +721,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 5,
       "type": "sentenceOrdering",
-      "correctAnswer": "We have seen that movie."
+      "correctAnswer": "We have seen that movie.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. We have seen that movie.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私たちはその映画を見たことがあります。"
     },
     {
       "id": "so-g3-u1-004",
@@ -704,7 +742,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 5,
       "type": "sentenceOrdering",
-      "correctAnswer": "He has finished his homework."
+      "correctAnswer": "He has finished his homework.",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. He has finished his homework.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。彼は宿題を終えました。"
     },
     {
       "id": "so-g3-u1-005",
@@ -762,7 +802,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 5,
       "type": "sentenceOrdering",
-      "correctAnswer": "She has not come yet."
+      "correctAnswer": "She has not come yet.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She has not come yet.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女はまだ来ていません。"
     },
     {
       "id": "so-g3-u1-008",
@@ -821,7 +863,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 7,
       "type": "sentenceOrdering",
-      "correctAnswer": "I have studied English for three years."
+      "correctAnswer": "I have studied English for three years.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I have studied English for three years.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私は3年間英語を勉強しています。"
     },
     {
       "id": "so-g3-u1-011",
@@ -841,7 +885,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 6,
       "type": "sentenceOrdering",
-      "correctAnswer": "She has waited for two hours."
+      "correctAnswer": "She has waited for two hours.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She has waited for two hours.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は2時間待っています。"
     },
     {
       "id": "so-g3-u1-012",
@@ -859,7 +905,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 4,
       "type": "sentenceOrdering",
-      "correctAnswer": "We have just arrived."
+      "correctAnswer": "We have just arrived.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. We have just arrived.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私たちはちょうど到着しました。"
     },
     {
       "id": "so-g3-u1-013",
@@ -877,7 +925,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 4,
       "type": "sentenceOrdering",
-      "correctAnswer": "He has already left."
+      "correctAnswer": "He has already left.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He has already left.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼はすでに出発しました。"
     },
     {
       "id": "so-g3-u1-014",
@@ -932,7 +982,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 4,
       "type": "sentenceOrdering",
-      "correctAnswer": "Have you eaten lunch?"
+      "correctAnswer": "Have you eaten lunch?",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Have you eaten lunch?",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あなたは昼食を食べましたか。"
     },
     {
       "id": "so-g3-u1-017",
@@ -952,7 +1004,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 6,
       "type": "sentenceOrdering",
-      "correctAnswer": "She has finished writing the letter."
+      "correctAnswer": "She has finished writing the letter.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She has finished writing the letter.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は手紙を書き終えました。"
     },
     {
       "id": "so-g3-u1-018",
@@ -993,7 +1047,9 @@
       "grammarPoint": "現在完了",
       "wordCount": 5,
       "type": "sentenceOrdering",
-      "correctAnswer": "He has failed many times."
+      "correctAnswer": "He has failed many times.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He has failed many times.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は何度も失敗しました。"
     },
     {
       "id": "so-g3-u1-020",
@@ -1027,7 +1083,9 @@
       "correctAnswer": "How long",
       "difficulty": "intermediate",
       "explanation": "How long + 現在完了形で「どのくらいの期間~していますか」と継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How long】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどのくらいの間東京に住んでいますか。」から、この形が適切です。\n\n❌ 【How many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間東京に住んでいますか。」に合いません。\n\n❌ 【How much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間東京に住んでいますか。」に合いません。",
-      "hint": "期間を尋ねる"
+      "hint": "期間を尋ねる",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ have you lived in Tokyo?",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。あなたはどのくらいの間東京に住んでいますか。"
     },
     {
       "id": "g3-u1-howlong-002",
@@ -1045,7 +1103,9 @@
       "difficulty": "intermediate",
       "explanation": "How long + have/has + 過去分詞という疑問文として覚えてください。継続期間を尋ねります。\n\n「あなたはどのくらいの間英語を勉強していますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you studied English?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long have",
-      "wordCount": 6
+      "wordCount": 6,
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. How long have you studied English?",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あなたはどのくらいの間英語を勉強していますか。"
     },
     {
       "id": "g3-u1-howlong-003",
@@ -1060,7 +1120,9 @@
       "correctAnswer": "has",
       "difficulty": "intermediate",
       "explanation": "How longの疑問文で三人称単数の主語の時はhasを使うことです。How long has he worked here?です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はどのくらいの間ここで働いていますか。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はどのくらいの間ここで働いていますか。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はどのくらいの間ここで働いていますか。」に合いません。",
-      "hint": "三人称単数"
+      "hint": "三人称単数",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. How long ____ he worked here?",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼はどのくらいの間ここで働いていますか。"
     },
     {
       "id": "g3-u1-howlong-004",
@@ -1085,7 +1147,9 @@
       "correctAnswer": "How long",
       "difficulty": "intermediate",
       "explanation": "How long + 現在完了形で継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How long】 ← 正解\n  ✓ 正解理由: 日本語訳「どのくらいの間彼女を知っていますか。」から、この形が適切です。\n\n❌ 【How many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どのくらいの間彼女を知っていますか。」に合いません。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どのくらいの間彼女を知っていますか。」に合いません。",
-      "hint": "期間を尋ねる"
+      "hint": "期間を尋ねる",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. For three years.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。どのくらいの間彼女を知っていますか。"
     },
     {
       "id": "g3-u1-howlong-005",
@@ -1121,7 +1185,9 @@
       "correctAnswer": "been",
       "difficulty": "intermediate",
       "explanation": "How long + have/has + been で状態の継続を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【been】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らはどのくらいの間結婚していますか。」から、この形が適切です。\n\n❌ 【be】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはどのくらいの間結婚していますか。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはどのくらいの間結婚していますか。」に合いません。",
-      "hint": "be動詞の過去分詞"
+      "hint": "be動詞の過去分詞",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. How long have they ____ married?",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼らはどのくらいの間結婚していますか。"
     },
     {
       "id": "g3-u1-howlong-007",
@@ -1136,7 +1202,9 @@
       "correctAnswer": "How long",
       "difficulty": "beginner",
       "explanation": "How long + have been で「どのくらいの間~にいますか」という疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How long】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどのくらいの間ここにいますか。」から、この形が適切です。\n\n❌ 【How many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間ここにいますか。」に合いません。\n\n❌ 【How much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間ここにいますか。」に合いません。",
-      "hint": "期間を尋ねる"
+      "hint": "期間を尋ねる",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ have you been here?",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あなたはどのくらいの間ここにいますか。"
     },
     {
       "id": "g3-u1-howlong-008",
@@ -1158,7 +1226,9 @@
       "explanation": "How long + 現在完了で期間を尋ねます。不要な語: did, live（2語）\n\n「3年間日本に住んでいます。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you lived in Japan?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "how long have",
       "wordCount": 7,
-      "unusedWords": 2
+      "unusedWords": 2,
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. How long have you lived in Japan?",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。3年間日本に住んでいます。"
     },
     {
       "id": "g3-u1-howlong-009",
@@ -1221,7 +1291,9 @@
       "correctAnswer": "sad",
       "difficulty": "intermediate",
       "explanation": "SVOC構文です。make + O + C（形容詞）で「OをCにする」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sad】 ← 正解\n  ✓ 正解理由: 日本語訳「その知らせは彼女を悲しくさせました。」から、この形が適切です。\n\n❌ 【sadly】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その知らせは彼女を悲しくさせました。」に合いません。\n\n❌ 【sadness】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その知らせは彼女を悲しくさせました。」に合いません。",
-      "hint": "make + 人 + 形容詞"
+      "hint": "make + 人 + 形容詞",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. The news made her ____.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。その知らせは彼女を悲しくさせました。"
     },
     {
       "id": "g3-u1-fib-028",
@@ -1236,7 +1308,9 @@
       "correctAnswer": "Tom",
       "difficulty": "intermediate",
       "explanation": "SVOC構文です。call + O + C（名詞）で「OをCと呼ぶ」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Tom】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは彼をトムと呼びます。」から、この形が適切です。\n\n❌ 【to Tom】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは彼をトムと呼びます。」に合いません。\n\n❌ 【Toming】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは彼をトムと呼びます。」に合いません。",
-      "hint": "call + 人 + 名前"
+      "hint": "call + 人 + 名前",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We call him ____.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちは彼をトムと呼びます。"
     },
     {
       "id": "g3-u1-fib-029",
@@ -1251,7 +1325,9 @@
       "correctAnswer": "book",
       "difficulty": "beginner",
       "explanation": "SVOO構文です。give + 人 + 物で「人に物を与える」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【book】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私に本をくれました。」から、この形が適切です。\n\n❌ 【to book】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私に本をくれました。」に合いません。\n\n❌ 【books】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私に本をくれました。」に合いません。",
-      "hint": "give + 人 + 物"
+      "hint": "give + 人 + 物",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He gave me a ____.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は私に本をくれました。"
     },
     {
       "id": "g3-u1-fib-030",
@@ -1281,7 +1357,9 @@
       "correctAnswer": "story",
       "difficulty": "intermediate",
       "explanation": "SVOO構文です。tell + 人 + 物で「人に物を話す」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【story】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私たちに面白い話を教えてくれました。」から、この形が適切です。\n\n❌ 【to story】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私たちに面白い話を教えてくれました。」に合いません。\n\n❌ 【stories】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私たちに面白い話を教えてくれました。」に合いません。",
-      "hint": "tell + 人 + 物"
+      "hint": "tell + 人 + 物",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He told us an interesting ____.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は私たちに面白い話を教えてくれました。"
     },
     {
       "id": "g3-u1-fib-032",
@@ -1296,7 +1374,9 @@
       "correctAnswer": "present",
       "difficulty": "intermediate",
       "explanation": "SVOO構文です。buy + 人 + 物で「人に物を買う」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【present】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼女に誕生日プレゼントを買いました。」から、この形が適切です。\n\n❌ 【to present】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に誕生日プレゼントを買いました。」に合いません。\n\n❌ 【presents】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に誕生日プレゼントを買いました。」に合いません。",
-      "hint": "buy + 人 + 物"
+      "hint": "buy + 人 + 物",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I bought her a birthday ____.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は彼女に誕生日プレゼントを買いました。"
     },
     {
       "id": "g3-u1-fib-033",
@@ -1311,7 +1391,9 @@
       "correctAnswer": "secret",
       "difficulty": "intermediate",
       "explanation": "SVOO構文です。show + 人 + 物で「人に物を見せる」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【secret】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に秘密を教えてくれました。」から、この形が適切です。\n\n❌ 【to secret】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に秘密を教えてくれました。」に合いません。\n\n❌ 【secrets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に秘密を教えてくれました。」に合いません。",
-      "hint": "show + 人 + 物"
+      "hint": "show + 人 + 物",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She showed me her ____.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は私に秘密を教えてくれました。"
     },
     {
       "id": "g3-u1-fib-034",
@@ -1403,7 +1485,9 @@
       "correctAnswer": "He gave me a book.",
       "difficulty": "beginner",
       "explanation": "SVOO構文：give + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "give + 人 + 物"
+      "hint": "give + 人 + 物",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He gave me a book.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は私に本をくれました。"
     },
     {
       "id": "g3-u1-so-028",
@@ -1419,7 +1503,9 @@
       "correctAnswer": "She sent me a letter.",
       "difficulty": "beginner",
       "explanation": "SVOO構文：send + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "send + 人 + 物"
+      "hint": "send + 人 + 物",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She sent me a letter.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女は私に手紙を送りました。"
     },
     {
       "id": "g3-u1-so-029",
@@ -1435,7 +1521,9 @@
       "correctAnswer": "He told us a story.",
       "difficulty": "intermediate",
       "explanation": "SVOO構文：tell + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "tell + 人 + 物"
+      "hint": "tell + 人 + 物",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He told us a story.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は私たちに物語を話してくれました。"
     },
     {
       "id": "g3-u1-so-030",
@@ -1483,7 +1571,9 @@
       "correctAnswer": "She showed me her photos.",
       "difficulty": "intermediate",
       "explanation": "SVOO構文：show + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "show + 人 + 物"
+      "hint": "show + 人 + 物",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She showed me her photos.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は私に写真を見せてくれました。"
     },
     {
       "id": "g3-u1-so-033",
@@ -1499,7 +1589,9 @@
       "correctAnswer": "The news made us surprised.",
       "difficulty": "advanced",
       "explanation": "SVOC構文：make + O + 過去分詞で「Oを驚いた状態にする」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "make + 人 + 過去分詞"
+      "hint": "make + 人 + 過去分詞",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The news made us surprised.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その知らせは私たちを驚かせました。"
     },
     {
       "id": "g3-u1-para-002",
@@ -1519,7 +1611,9 @@
       "correctAnswer": "The story made us sad.",
       "difficulty": "intermediate",
       "explanation": "SVOC構文です。目的語の位置には目的格（us）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "we → us（目的格）"
+      "hint": "we → us（目的格）",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The story made us sad.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その話は私たちを悲しくさせました。"
     },
     {
       "id": "g3-u1-para-004",
@@ -1539,7 +1633,9 @@
       "correctAnswer": "I sent him a letter.",
       "difficulty": "beginner",
       "explanation": "SVOO構文です。目的語の位置には目的格（him）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "he → him（目的格）"
+      "hint": "he → him（目的格）",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I sent him a letter.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私は彼に手紙を送りました。"
     },
     {
       "id": "g3-u1-para-006",
@@ -1549,7 +1645,9 @@
       "correctAnswer": "He told us a story.",
       "difficulty": "intermediate",
       "explanation": "SVOO構文です。目的語の位置には目的格（us）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "hint": "we → us（目的格）"
+      "hint": "we → us（目的格）",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He told us a story.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は私たちに物語を話してくれました。"
     },
     {
       "id": "g3-u1-conv-002",
@@ -1599,7 +1697,9 @@
       "correctAnswer": "present",
       "difficulty": "beginner",
       "explanation": "SVOO構文です。give + 人 + 物の形です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【present】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私にプレゼントをくれました。」から、この形が適切です。\n\n❌ 【to present】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私にプレゼントをくれました。」に合いません。\n\n❌ 【presents】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私にプレゼントをくれました。」に合いません。",
-      "hint": "give + 人 + 物"
+      "hint": "give + 人 + 物",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He gave me a ____.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は私にプレゼントをくれました。"
     },
     {
       "id": "g3-u1-conv-004",
@@ -1624,7 +1724,9 @@
       "correctAnswer": "advice",
       "difficulty": "intermediate",
       "explanation": "SVOO構文です。adviceは不可算名詞なのでsをつけません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【advice】 ← 正解\n  ✓ 正解理由: 日本語訳「先生は私に助言をくれました。」から、この形が適切です。\n\n❌ 【to advice】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私に助言をくれました。」に合いません。\n\n❌ 【advices】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私に助言をくれました。」に合いません。",
-      "hint": "give + 人 + 物（advice = 不可算名詞）"
+      "hint": "give + 人 + 物（advice = 不可算名詞）",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. Yes, she gave me some ____.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。先生は私に助言をくれました。"
     },
     {
       "id": "g3-u1-conv-005",
@@ -1649,7 +1751,9 @@
       "correctAnswer": "bored",
       "difficulty": "advanced",
       "explanation": "SVOC構文です。感情を表す過去分詞（bored）を使い、「退屈な状態にした」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bored】 ← 正解\n  ✓ 正解理由: 日本語訳「その本は私を退屈にさせました。」から、この形が適切です。\n\n❌ 【boring】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その本は私を退屈にさせました。」に合いません。\n\n❌ 【bore】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その本は私を退屈にさせました。」に合いません。",
-      "hint": "make + 人 + 過去分詞"
+      "hint": "make + 人 + 過去分詞",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. It made me ____.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その本は私を退屈にさせました。"
     },
     {
       "id": "g3-u1-conv-006",
@@ -1674,7 +1778,9 @@
       "correctAnswer": "truth",
       "difficulty": "intermediate",
       "explanation": "SVOO構文です。tell + 人 + 物の形です。truthは不可算名詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【truth】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に真実を教えてくれました。」から、この形が適切です。\n\n❌ 【to truth】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に真実を教えてくれました。」に合いません。\n\n❌ 【truths】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に真実を教えてくれました。」に合いません。",
-      "hint": "tell + 人 + 物"
+      "hint": "tell + 人 + 物",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She told me the ____.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女は私に真実を教えてくれました。"
     }
   ]
 }

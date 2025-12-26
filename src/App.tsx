@@ -517,36 +517,36 @@ function App() {
           logger.warn('高校受験英熟語データの読み込みに失敗:', error);
         }
 
-        // 中級1800単語データを読み込み
+        // 中学履修単語データを読み込み
         let intermediateWordsQuestions: Question[] = [];
         try {
           const intermediateWordsResponse = await fetch(
-            '/data/vocabulary/high-school-intermediate-words.csv'
+            '/data/vocabulary/junior-high-intermediate-words.csv'
           );
           const intermediateWordsText = await intermediateWordsResponse.text();
           intermediateWordsQuestions = parseCSV(intermediateWordsText).map((q) => ({
             ...q,
             source: 'intermediate' as const,
           }));
-          logger.log(`📚 中級1800単語を読み込みました: ${intermediateWordsQuestions.length}個`);
+          logger.log(`📚 中学履修単語を読み込みました: ${intermediateWordsQuestions.length}個`);
         } catch (error) {
-          logger.warn('中級1800単語データの読み込みに失敗:', error);
+          logger.warn('中学履修単語データの読み込みに失敗:', error);
         }
 
-        // 中級1800熟語データを読み込み
+        // 中学履修熟語データを読み込み
         let intermediatePhrasesQuestions: Question[] = [];
         try {
           const intermediatePhrasesResponse = await fetch(
-            '/data/vocabulary/high-school-intermediate-phrases.csv'
+            '/data/vocabulary/junior-high-intermediate-phrases.csv'
           );
           const intermediatePhrasesText = await intermediatePhrasesResponse.text();
           intermediatePhrasesQuestions = parseCSV(intermediatePhrasesText).map((q) => ({
             ...q,
             source: 'intermediate' as const,
           }));
-          logger.log(`📚 中級1800熟語を読み込みました: ${intermediatePhrasesQuestions.length}個`);
+          logger.log(`📚 中学履修熟語を読み込みました: ${intermediatePhrasesQuestions.length}個`);
         } catch (error) {
-          logger.warn('中級1800熟語データの読み込みに失敗:', error);
+          logger.warn('中学履修熟語データの読み込みに失敗:', error);
         }
 
         // 並び替え問題・文法問題のJSONファイルを読み込んでUnit情報を取得
@@ -674,7 +674,7 @@ function App() {
             ),
             createdAt: Date.now(),
             isBuiltIn: true,
-            source: 'high-school-intermediate (単語1579 + 熟語212)',
+            source: 'junior-high-intermediate (単語1579 + 熟語212)',
           };
 
           // カスタム問題セットを読み込み

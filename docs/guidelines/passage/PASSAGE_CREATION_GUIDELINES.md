@@ -566,9 +566,9 @@ python3 vocab_coverage_report.py --vocab ../public/data/vocabulary/all-words.csv
 ```
 public/data/vocabulary/
 ├── all-words.csv                 # Master vocabulary (3,281 words)
-├── junior-high-entrance-words.csv
-├── intermediate-1800-words.csv
-└── intermediate-1800-phrases.csv
+├── high-school-entrance-words.csv
+├── junior-high-intermediate-words.csv
+└── junior-high-intermediate-phrases.csv
 ```
 
 ---
