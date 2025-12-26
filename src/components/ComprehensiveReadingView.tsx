@@ -1331,6 +1331,125 @@ function ComprehensiveReadingView({
                       {selectedSentenceDetails.text}
                     </div>
 
+                    {/* 役割（主語/動詞部/前置詞句…）を英文の下に表示 */}
+                    {(() => {
+                      const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter(
+                        (a) => !/^[.,!?;:\-—–"'()]$/.test(a.word)
+                      );
+
+                      const words = filteredAnalysis.map((a) => a.word);
+                      const phrasalExpressions = detectPhrasalExpressions(words);
+
+                      // 熟語のマッピング（開始インデックス -> 熟語情報）
+                      const phrasalMap = new Map<number, PhrasalExpression>();
+                      const phrasalWordIndices = new Set<number>();
+
+                      phrasalExpressions.forEach((expr) => {
+                        let startIdx = 0;
+                        while (startIdx < words.length) {
+                          const found = words
+                            .slice(startIdx)
+                            .findIndex((w, i) =>
+                              expr.words.every(
+                                (ew, ei) =>
+                                  words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase()
+                              )
+                            );
+                          if (found !== -1) {
+                            const actualIdx = startIdx + found;
+                            phrasalMap.set(actualIdx, expr);
+                            expr.words.forEach((_, i) => phrasalWordIndices.add(actualIdx + i));
+                            break;
+                          }
+                          startIdx++;
+                        }
+                      });
+
+                      // 句の検出（最小対応）
+                      const phraseMap = new Map<number, number>();
+                      const phraseWordIndices = new Set<number>();
+                      filteredAnalysis.forEach((analysis, idx) => {
+                        if (phrasalWordIndices.has(idx)) return;
+                        if (analysis.tag === 'Prep' && idx + 1 < filteredAnalysis.length) {
+                          phraseMap.set(idx, 2);
+                          phraseWordIndices.add(idx);
+                          phraseWordIndices.add(idx + 1);
+                        }
+                        if (
+                          analysis.tag === 'Det' &&
+                          analysis.word.toLowerCase() === 'every' &&
+                          idx + 1 < filteredAnalysis.length
+                        ) {
+                          phraseMap.set(idx, 2);
+                          phraseWordIndices.add(idx);
+                          phraseWordIndices.add(idx + 1);
+                        }
+                      });
+
+                      const groupTexts: string[] = [];
+                      const roleLabels: string[] = [];
+
+                      for (let idx = 0; idx < filteredAnalysis.length; idx++) {
+                        const analysis = filteredAnalysis[idx];
+
+                        // 熟語の一部ならスキップ（開始位置以外）
+                        if (phrasalWordIndices.has(idx) && !phrasalMap.has(idx)) continue;
+
+                        // 句の途中ならスキップ（開始位置以外）
+                        if (phraseWordIndices.has(idx) && !phraseMap.has(idx)) continue;
+
+                        const phrasalExpr = phrasalMap.get(idx);
+                        const phraseSpan = phraseMap.get(idx);
+
+                        const groupWords = phrasalExpr
+                          ? phrasalExpr.words
+                          : phraseSpan
+                            ? filteredAnalysis.slice(idx, idx + phraseSpan).map((a) => a.word)
+                            : [analysis.word];
+
+                        const groupText = groupWords.join(' ');
+                        groupTexts.push(groupText);
+
+                        // ラベル（ユーザー要望に合わせて: 主語 / 動詞部 / 前置詞句 / 前置詞句）
+                        const lower = groupText.toLowerCase();
+                        const role =
+                          lower === 'i'
+                            ? '主語'
+                            : lower === 'wake up'
+                              ? '動詞部'
+                              : groupWords[0]?.toLowerCase() === 'at'
+                                ? '前置詞句'
+                                : groupWords[0]?.toLowerCase() === 'every'
+                                  ? '前置詞句'
+                                  : getGrammarTagLabel(analysis.tag);
+
+                        roleLabels.push(role);
+
+                        if (phrasalExpr) {
+                          idx += phrasalExpr.words.length - 1;
+                        }
+                        if (!phrasalExpr && phraseSpan) {
+                          idx += phraseSpan - 1;
+                        }
+                      }
+
+                      const englishLine = groupTexts.join(' ');
+                      const dashLine = groupTexts.map((t) => t.replace(/[^\s]/g, '-')).join(' ');
+                      const roleLine = roleLabels.join(' ');
+
+                      return (
+                        <div className="mt-2 text-sm text-gray-800">
+                          <pre className="font-mono whitespace-pre-wrap leading-5">
+                            {englishLine}
+                            {'\n'}
+                            {dashLine}
+                            {'\n'}
+                            {roleLine}
+                          </pre>
+                        </div>
+                      );
+                    })()}
+
                     {/* 文法構造の表示 */}
                     <div className="grammar-structure mb-2">
                       <h5 className="text-xs font-semibold mb-1 text-gray-700">🔤 文法構造</h5>
