@@ -1392,33 +1392,7 @@ function ComprehensiveReadingView({
                           for (let idx = 0; idx < filteredAnalysis.length; idx++) {
                             const analysis = filteredAnalysis[idx];
                             
-                            // 熟語の開始位置かチェック
-                            const phrasalExpr = phrasalMap.get(idx);
-                            if (phrasalExpr) {
-                              // 熟語を1つのカードとして表示
-                              const phraseKey = phrasalExpr.words.join(' ').toLowerCase();
-                              const dictMeaning = wordDictionary.get(phraseKey)?.meaning || phrasalExpr.meaning;
-                              
-                              result.push(
-                                <div
-                                  key={`phrasal-${idx}`}
-                                  className="inline-flex flex-col items-center border border-yellow-300 bg-yellow-50 rounded px-1"
-                                >
-                                  <span className="font-medium text-base border-b-2 border-yellow-500">
-                                    {phrasalExpr.words.join(' ')}
-                                  </span>
-                                  <span className="text-xs text-gray-600 mt-0.5">
-                                    {dictMeaning}
-                                  </span>
-                                </div>
-                              );
-                              
-                              // 熟語の残りの単語をスキップ
-                              idx += phrasalExpr.words.length - 1;
-                              continue;
-                            }
-                            
-                            // 熟語の一部ならスキップ（既に処理済み）
+                            // 熟語の一部かチェック
                             if (phrasalWordIndices.has(idx)) {
                               continue;
                             }
@@ -1426,6 +1400,10 @@ function ComprehensiveReadingView({
                             // 通常の単語を表示
                             const isPhrase = phrases.has(idx);
                             const isSubordinate = subordinateClauses.has(idx);
+                            
+                            // 熟語の開始位置かチェック
+                            const phrasalExpr = phrasalMap.get(idx);
+                            const displayWord = phrasalExpr ? phrasalExpr.words.join(' ') : analysis.word;
                             
                             result.push(
                               <div
@@ -1435,8 +1413,8 @@ function ComprehensiveReadingView({
                               >
                                 <span className={`font-medium text-base ${
                                   isPhrase || isSubordinate ? 'px-0.5' : ''
-                                }`}>
-                                  {isSubordinate && '（'}{isPhrase && '＜'}{analysis.word}{isPhrase && '＞'}{isSubordinate && '）'}
+                                } ${phrasalExpr ? 'border-b-2 border-yellow-500' : ''}`}>
+                                  {isSubordinate && '（'}{isPhrase && '＜'}{displayWord}{isPhrase && '＞'}{isSubordinate && '）'}
                                 </span>
                                 <span
                                   className="text-xs grammar-tag-label mt-0.5"
@@ -1446,6 +1424,11 @@ function ComprehensiveReadingView({
                                 </span>
                               </div>
                             );
+                            
+                            // 熟語の場合、残りの単語をスキップ
+                            if (phrasalExpr) {
+                              idx += phrasalExpr.words.length - 1;
+                            }
                           }
                           
                           return result;
@@ -1455,55 +1438,116 @@ function ComprehensiveReadingView({
                       {/* 記号は非表示（冗長なため） */}
                     </div>
 
-                    {/* 句動詞・慣用表現 */}
+                    {/* 単語と熟語の意味 */}
                     {(() => {
                       const words = selectedSentenceDetails.grammarAnalysis.map((a) => a.word);
                       const phrasalExpressions = detectPhrasalExpressions(words);
+                      
+                      // 熟語のマッピング
+                      const phrasalMap = new Map<number, PhrasalExpression>();
+                      const phrasalWordIndices = new Set<number>();
+                      
+                      phrasalExpressions.forEach(expr => {
+                        let startIdx = 0;
+                        while (startIdx < words.length) {
+                          const found = words.slice(startIdx).findIndex((w, i) => 
+                            expr.words.every((ew, ei) => words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase())
+                          );
+                          if (found !== -1) {
+                            const actualIdx = startIdx + found;
+                            phrasalMap.set(actualIdx, expr);
+                            expr.words.forEach((_, i) => phrasalWordIndices.add(actualIdx + i));
+                            break;
+                          }
+                          startIdx++;
+                        }
+                      });
 
-                      if (phrasalExpressions.length === 0) return null;
-
-                      // 重複を除去（同じ熟語が複数回検出される場合）
-                      const uniqueExpressions = phrasalExpressions.filter(
-                        (expr, index, self) =>
-                          index === self.findIndex((e) => e.words.join(' ') === expr.words.join(' '))
-                      );
+                      const result: JSX.Element[] = [];
+                      const filteredAnalysis = selectedSentenceDetails.grammarAnalysis.filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word));
+                      
+                      for (let idx = 0; idx < filteredAnalysis.length; idx++) {
+                        const analysis = filteredAnalysis[idx];
+                        
+                        // 熟語の一部ならスキップ
+                        if (phrasalWordIndices.has(idx) && !phrasalMap.has(idx)) {
+                          continue;
+                        }
+                        
+                        // 熟語の開始位置かチェック
+                        const phrasalExpr = phrasalMap.get(idx);
+                        
+                        if (phrasalExpr) {
+                          // 熟語の場合
+                          const phraseKey = phrasalExpr.words.join(' ').toLowerCase();
+                          const dictMeaning = wordDictionary.get(phraseKey)?.meaning || phrasalExpr.meaning;
+                          
+                          result.push(
+                            <div
+                              key={idx}
+                              className="inline-flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded border border-yellow-200"
+                            >
+                              <span className="font-medium text-sm border-b-2 border-yellow-600">{phrasalExpr.words.join(' ')}</span>
+                              <span className="text-xs text-gray-600">{dictMeaning}</span>
+                              {onAddWordToCustomSet &&
+                                onRemoveWordFromCustomSet &&
+                                onOpenCustomSetManagement && (
+                                  <AddToCustomButton
+                                    word={{
+                                      word: phrasalExpr.words.join(' '),
+                                      meaning: dictMeaning,
+                                      source: 'reading',
+                                      sourceDetail: currentPassage?.title,
+                                    }}
+                                    sets={customQuestionSets}
+                                    onAddWord={onAddWordToCustomSet}
+                                    onRemoveWord={onRemoveWordFromCustomSet}
+                                    onOpenManagement={onOpenCustomSetManagement}
+                                    size="small"
+                                  />
+                                )}
+                            </div>
+                          );
+                          
+                          idx += phrasalExpr.words.length - 1;
+                        } else {
+                          // 通常の単語の場合
+                          const meaning = getMeaning(analysis.word, undefined);
+                          
+                          result.push(
+                            <div
+                              key={idx}
+                              className="inline-flex items-center gap-1 bg-blue-50 px-2 py-1 rounded border border-blue-200"
+                            >
+                              <span className="font-medium text-sm">{analysis.word}</span>
+                              <span className="text-xs text-gray-600">{meaning}</span>
+                              {onAddWordToCustomSet &&
+                                onRemoveWordFromCustomSet &&
+                                onOpenCustomSetManagement && (
+                                  <AddToCustomButton
+                                    word={{
+                                      word: analysis.word,
+                                      meaning: meaning,
+                                      source: 'reading',
+                                      sourceDetail: currentPassage?.title,
+                                    }}
+                                    sets={customQuestionSets}
+                                    onAddWord={onAddWordToCustomSet}
+                                    onRemoveWord={onRemoveWordFromCustomSet}
+                                    onOpenManagement={onOpenCustomSetManagement}
+                                    size="small"
+                                  />
+                                )}
+                            </div>
+                          );
+                        }
+                      }
 
                       return (
                         <div className="mt-2">
-                          <h5 className="text-xs font-semibold mb-1 text-gray-700">🔗 熟語</h5>
+                          <h5 className="text-xs font-semibold mb-1 text-gray-700">📚 単語と熟語</h5>
                           <div className="flex flex-wrap gap-1">
-                            {uniqueExpressions.map((expr: PhrasalExpression, idx: number) => {
-                              // 辞書から意味を取得（なければdetectPhrasalExpressionsの意味を使用）
-                              const phraseKey = expr.words.join(' ').toLowerCase();
-                              const dictMeaning = wordDictionary.get(phraseKey)?.meaning || expr.meaning;
-
-                              return (
-                                <div
-                                  key={idx}
-                                  className="inline-flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded border border-yellow-200"
-                                >
-                                  <span className="font-medium text-sm border-b-2 border-yellow-600">{expr.words.join(' ')}</span>
-                                  <span className="text-xs text-gray-600">{dictMeaning}</span>
-                                  {onAddWordToCustomSet &&
-                                    onRemoveWordFromCustomSet &&
-                                    onOpenCustomSetManagement && (
-                                      <AddToCustomButton
-                                        word={{
-                                          word: expr.words.join(' '),
-                                          meaning: dictMeaning,
-                                          source: 'reading',
-                                          sourceDetail: currentPassage?.title,
-                                        }}
-                                        sets={customQuestionSets}
-                                        onAddWord={onAddWordToCustomSet}
-                                        onRemoveWord={onRemoveWordFromCustomSet}
-                                        onOpenManagement={onOpenCustomSetManagement}
-                                        size="small"
-                                      />
-                                    )}
-                                </div>
-                              );
-                            })}
+                            {result}
                           </div>
                         </div>
                       );
