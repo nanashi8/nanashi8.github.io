@@ -3,6 +3,9 @@ import type { Question, AIPersonality } from '../types';
 import type { DataSource } from '../App';
 import type { CustomQuestionSet } from '../types/customQuestions';
 import LearningPlanView from './LearningPlanView';
+import GrammarGuideView from './GrammarGuideView';
+import DictionaryView from './DictionaryView';
+import StatsView from './StatsView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
 
 interface SettingsViewProps {
@@ -12,7 +15,13 @@ interface SettingsViewProps {
   _onDataSourceChange?: (source: DataSource) => void;
   customQuestionSets: CustomQuestionSet[];
   onOpenCustomSetManagement: () => void;
+  questionSets?: any[];
+  categoryList?: string[];
+  onResetComplete?: () => void;
+  onQuestionSetsUpdated?: () => Promise<void>;
 }
+
+type SettingsTab = 'settings' | 'reference' | 'dictionary' | 'stats';
 
 function SettingsView({
   allQuestions,
@@ -21,7 +30,13 @@ function SettingsView({
   _onDataSourceChange,
   customQuestionSets,
   onOpenCustomSetManagement,
+  questionSets = [],
+  categoryList = [],
+  onResetComplete,
+  onQuestionSetsUpdated,
 }: SettingsViewProps) {
+  // サブタブの状態管理
+  const [activeSubTab, setActiveSubTab] = useState<SettingsTab>('settings');
   // localStorageからバッチサイズを読み込み
   const [batchSize, setBatchSize] = useState<number>(() => {
     const saved = localStorage.getItem('batchSize');
@@ -124,7 +139,66 @@ function SettingsView({
   const _estimatedDaysText = `約${estimatedDays}日間`;
 
   return (
-    <div className="w-full px-4 py-6 space-y-6">
+    <div className="w-full">
+      {/* サブタブナビゲーション */}
+      <div className="flex gap-2 mb-6 border-b-2 border-gray-200">
+        <button
+          className={`px-4 py-3 font-semibold transition-all duration-200 border-b-4 ${
+            activeSubTab === 'settings'
+              ? 'text-blue-600 border-blue-600'
+              : 'text-gray-600 border-transparent hover:text-blue-600 hover:border-blue-300'
+          }`}
+          onClick={() => setActiveSubTab('settings')}
+        >
+          ⚙️ 設定
+        </button>
+        <button
+          className={`px-4 py-3 font-semibold transition-all duration-200 border-b-4 ${
+            activeSubTab === 'reference'
+              ? 'text-blue-600 border-blue-600'
+              : 'text-gray-600 border-transparent hover:text-blue-600 hover:border-blue-300'
+          }`}
+          onClick={() => setActiveSubTab('reference')}
+        >
+          🔖 参考
+        </button>
+        <button
+          className={`px-4 py-3 font-semibold transition-all duration-200 border-b-4 ${
+            activeSubTab === 'dictionary'
+              ? 'text-blue-600 border-blue-600'
+              : 'text-gray-600 border-transparent hover:text-blue-600 hover:border-blue-300'
+          }`}
+          onClick={() => setActiveSubTab('dictionary')}
+        >
+          📕 辞書
+        </button>
+        <button
+          className={`px-4 py-3 font-semibold transition-all duration-200 border-b-4 ${
+            activeSubTab === 'stats'
+              ? 'text-blue-600 border-blue-600'
+              : 'text-gray-600 border-transparent hover:text-blue-600 hover:border-blue-300'
+          }`}
+          onClick={() => setActiveSubTab('stats')}
+        >
+          📊 成績
+        </button>
+      </div>
+
+      {/* サブタブコンテンツ */}
+      {activeSubTab === 'reference' ? (
+        <GrammarGuideView />
+      ) : activeSubTab === 'dictionary' ? (
+        <DictionaryView />
+      ) : activeSubTab === 'stats' ? (
+        <StatsView
+          questionSets={questionSets}
+          allQuestions={allQuestions}
+          categoryList={categoryList}
+          onResetComplete={onResetComplete || (() => setActiveSubTab('stats'))}
+          onQuestionSetsUpdated={onQuestionSetsUpdated || (async () => {})}
+        />
+      ) : (
+        <div className="px-4 py-6 space-y-6">
       {/* カスタム問題セット管理 */}
       <div className="bg-card-bg rounded-xl p-6 shadow-md border-2 border-card-border">
         <h3 className="text-xl font-bold text-text-color mb-4 flex items-center gap-2">
@@ -339,6 +413,8 @@ function SettingsView({
           </p>
         </div>
       </div>
+        </div>
+      )}
     </div>
   );
 }
