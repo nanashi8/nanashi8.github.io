@@ -1519,7 +1519,9 @@ function ComprehensiveReadingView({
                               key={idx}
                               className="inline-flex items-center gap-1 bg-blue-50 px-2 py-1 rounded border border-blue-200"
                             >
-                              <span className="font-medium text-sm">{analysis.word}</span>
+                              <span className="font-medium text-sm border-b-2 border-blue-600">
+                                {analysis.word}
+                              </span>
                               <span className="text-xs text-gray-600">{meaning}</span>
                               {onAddWordToCustomSet &&
                                 onRemoveWordFromCustomSet &&
