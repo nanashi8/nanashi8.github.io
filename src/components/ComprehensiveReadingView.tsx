@@ -1636,7 +1636,7 @@ function ComprehensiveReadingView({
                         </div>
                       )}
 
-                      <div className="flex flex-wrap gap-2 text-sm">
+                      <div className="flex flex-wrap gap-1.5 text-sm">
                         {selectedSentenceDetails.grammarAnalysis
                           .filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word))
                           .map((analysis, idx) => (
@@ -1666,37 +1666,48 @@ function ComprehensiveReadingView({
 
                       if (phrasalExpressions.length === 0) return null;
 
+                      // 重複を除去（同じ熟語が複数回検出される場合）
+                      const uniqueExpressions = phrasalExpressions.filter(
+                        (expr, index, self) =>
+                          index === self.findIndex((e) => e.words.join(' ') === expr.words.join(' '))
+                      );
+
                       return (
                         <div className="mt-2">
                           <h5 className="text-xs font-semibold mb-1 text-gray-700">🔗 熟語</h5>
-                          <div className="space-y-1">
-                            {phrasalExpressions.map((expr: PhrasalExpression, idx: number) => (
-                              <div key={idx} className="bg-yellow-50 p-2 rounded border border-yellow-200">
-                                <div className="flex items-center justify-between gap-2">
-                                  <div className="flex items-center gap-2">
-                                    <span className="font-semibold text-sm">{expr.words.join(' ')}</span>
-                                    {onAddWordToCustomSet &&
-                                      onRemoveWordFromCustomSet &&
-                                      onOpenCustomSetManagement && (
-                                        <AddToCustomButton
-                                          word={{
-                                            word: expr.words.join(' '),
-                                            meaning: expr.meaning,
-                                            source: 'reading',
-                                            sourceDetail: currentPassage?.title,
-                                          }}
-                                          sets={customQuestionSets}
-                                          onAddWord={onAddWordToCustomSet}
-                                          onRemoveWord={onRemoveWordFromCustomSet}
-                                          onOpenManagement={onOpenCustomSetManagement}
-                                          size="small"
-                                        />
-                                      )}
-                                  </div>
-                                  <span className="text-xs text-gray-600">{expr.meaning}</span>
+                          <div className="flex flex-wrap gap-1">
+                            {uniqueExpressions.map((expr: PhrasalExpression, idx: number) => {
+                              // 辞書から意味を取得（なければdetectPhrasalExpressionsの意味を使用）
+                              const phraseKey = expr.words.join(' ').toLowerCase();
+                              const dictMeaning = wordDictionary.get(phraseKey)?.meaning || expr.meaning;
+
+                              return (
+                                <div
+                                  key={idx}
+                                  className="inline-flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded border border-yellow-200"
+                                >
+                                  <span className="font-medium text-sm">{expr.words.join(' ')}</span>
+                                  <span className="text-xs text-gray-600">{dictMeaning}</span>
+                                  {onAddWordToCustomSet &&
+                                    onRemoveWordFromCustomSet &&
+                                    onOpenCustomSetManagement && (
+                                      <AddToCustomButton
+                                        word={{
+                                          word: expr.words.join(' '),
+                                          meaning: dictMeaning,
+                                          source: 'reading',
+                                          sourceDetail: currentPassage?.title,
+                                        }}
+                                        sets={customQuestionSets}
+                                        onAddWord={onAddWordToCustomSet}
+                                        onRemoveWord={onRemoveWordFromCustomSet}
+                                        onOpenManagement={onOpenCustomSetManagement}
+                                        size="small"
+                                      />
+                                    )}
                                 </div>
-                              </div>
-                            ))}
+                              );
+                            })}
                           </div>
                         </div>
                       );
