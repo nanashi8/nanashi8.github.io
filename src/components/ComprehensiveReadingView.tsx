@@ -57,22 +57,22 @@ function _getLevelLabel(level: string): string {
   return levelMap[level] || level;
 }
 
-// 文法タグを日本語に変換
-function getGrammarTagLabel(tag: string): string {
-  const tagMap: Record<string, string> = {
-    S: '主語',
+// 文法タグから品詞を取得
+function getPartOfSpeech(tag: string): string {
+  const posMap: Record<string, string> = {
+    S: '名詞',
     V: '動詞',
-    O: '目的語',
-    C: '補語',
-    M: '修飾語',
+    O: '名詞',
+    C: '名詞',
+    M: '副詞',
     Prep: '前置詞',
     Conj: '接続詞',
-    Det: '限定詞',
+    Det: '冠詞',
     Adj: '形容詞',
     Adv: '副詞',
-    Unknown: 'その他',
+    Unknown: '',
   };
-  return tagMap[tag] || tag;
+  return posMap[tag] || '';
 }
 
 function ComprehensiveReadingView({
@@ -107,8 +107,6 @@ function ComprehensiveReadingView({
     grammarAnalysis: GrammarAnalysisResult[];
     showMeanings: boolean;
   } | null>(null);
-  const [showGrammarLegend, setShowGrammarLegend] = useState(false);
-  const [showDetailedExplanation, setShowDetailedExplanation] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   // 分からない単語のマーク状態のみをLocalStorageに保存（軽量）
@@ -1318,323 +1316,7 @@ function ComprehensiveReadingView({
 
                     {/* 文法構造の表示 */}
                     <div className="grammar-structure mb-2">
-                      <div className="flex justify-between items-center mb-1">
-                        <h5 className="text-xs font-semibold m-0 text-gray-700">🔤 文法構造</h5>
-                        <button
-                          className="px-2 py-0.5 text-xs bg-gray-200 rounded hover:bg-gray-300:bg-gray-600"
-                          onClick={() => setShowGrammarLegend(!showGrammarLegend)}
-                        >
-                          {showGrammarLegend ? '凡例を隠す' : '凡例'}
-                        </button>
-                      </div>
-
-                      {/* 文法タグの凡例 */}
-                      {showGrammarLegend && (
-                        <div className="grammar-legend mb-3 p-3 bg-gray-50 rounded">
-                          <div className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center mb-2">
-                            <h6 className="text-xs font-semibold m-0">📖 文法タグ一覧</h6>
-                            <button
-                              className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200:bg-blue-800"
-                              onClick={() => setShowDetailedExplanation(!showDetailedExplanation)}
-                            >
-                              {showDetailedExplanation ? '簡易表示' : '📚 さらに詳しく'}
-                            </button>
-                          </div>
-
-                          {!showDetailedExplanation ? (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="S">
-                                  <span className="grammar-tag-label" data-tag="S">
-                                    [S]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">主語 (Subject)</span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="V">
-                                  <span className="grammar-tag-label" data-tag="V">
-                                    [V]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">動詞 (Verb)</span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="O">
-                                  <span className="grammar-tag-label" data-tag="O">
-                                    [O]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">目的語 (Object)</span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="C">
-                                  <span className="grammar-tag-label" data-tag="C">
-                                    [C]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">
-                                  補語 (Complement)
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="M">
-                                  <span className="grammar-tag-label" data-tag="M">
-                                    [M]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">
-                                  修飾語 (Modifier)
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="Prep">
-                                  <span className="grammar-tag-label" data-tag="Prep">
-                                    [Prep]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">
-                                  前置詞 (Preposition)
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="Conj">
-                                  <span className="grammar-tag-label" data-tag="Conj">
-                                    [Conj]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">
-                                  接続詞 (Conjunction)
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="Det">
-                                  <span className="grammar-tag-label" data-tag="Det">
-                                    [Det]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">
-                                  限定詞 (Determiner)
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="Adj">
-                                  <span className="grammar-tag-label" data-tag="Adj">
-                                    [Adj]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">
-                                  形容詞 (Adjective)
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="Adv">
-                                  <span className="grammar-tag-label" data-tag="Adv">
-                                    [Adv]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">副詞 (Adverb)</span>
-                              </div>
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="grammar-tag" data-tag="Unknown">
-                                  <span className="grammar-tag-label" data-tag="Unknown">
-                                    [?]
-                                  </span>
-                                </span>
-                                <span className="flex-1 min-w-0 break-words">その他</span>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="detailed-grammar-explanation text-xs space-y-3 break-words">
-                              <div className="explanation-section">
-                                <h6 className="font-semibold text-sm mb-2">
-                                  🎯 文の骨格 (必須要素)
-                                </h6>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="S">
-                                      <span className="grammar-tag-label" data-tag="S">
-                                        [S]
-                                      </span>
-                                    </span>
-                                    <strong>主語 (Subject)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>「誰が」「何が」</strong>を表す。文の主役。
-                                    <br />
-                                    例: <em>I</em> study English. / <em>The cat</em> is cute.
-                                  </p>
-                                </div>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="V">
-                                      <span className="grammar-tag-label" data-tag="V">
-                                        [V]
-                                      </span>
-                                    </span>
-                                    <strong>動詞 (Verb)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>「〜する」「〜である」</strong>
-                                    を表す。主語の動作や状態。
-                                    <br />
-                                    例: I <em>study</em> English. / The cat <em>is</em> cute.
-                                  </p>
-                                </div>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="O">
-                                      <span className="grammar-tag-label" data-tag="O">
-                                        [O]
-                                      </span>
-                                    </span>
-                                    <strong>目的語 (Object)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>「何を」「誰を」</strong>を表す。動詞の対象。
-                                    <br />
-                                    例: I study <em>English</em>. / I like <em>cats</em>.
-                                  </p>
-                                </div>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="C">
-                                      <span className="grammar-tag-label" data-tag="C">
-                                        [C]
-                                      </span>
-                                    </span>
-                                    <strong>補語 (Complement)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>「どうである」「何である」</strong>
-                                    を表す。主語や目的語の状態・性質。
-                                    <br />
-                                    例: The cat is <em>cute</em>. / I am <em>a student</em>.
-                                  </p>
-                                </div>
-                              </div>
-
-                              <div className="explanation-section">
-                                <h6 className="font-semibold text-sm mb-2">
-                                  ✨ 文を詳しくする要素
-                                </h6>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="M">
-                                      <span className="grammar-tag-label" data-tag="M">
-                                        [M]
-                                      </span>
-                                    </span>
-                                    <strong>修飾語 (Modifier)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>「どんな」「どのように」「いつ」「どこで」</strong>
-                                    を表す。文を豊かにする。
-                                    <br />
-                                    例: I wake up at <em>seven</em>. / I read a <em>good</em> book.
-                                  </p>
-                                </div>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="Adj">
-                                      <span className="grammar-tag-label" data-tag="Adj">
-                                        [Adj]
-                                      </span>
-                                    </span>
-                                    <strong>形容詞 (Adjective)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>名詞を詳しく説明</strong>する語。
-                                    <br />
-                                    例: a <em>beautiful</em> flower / <em>happy</em> students
-                                  </p>
-                                </div>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="Adv">
-                                      <span className="grammar-tag-label" data-tag="Adv">
-                                        [Adv]
-                                      </span>
-                                    </span>
-                                    <strong>副詞 (Adverb)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>動詞・形容詞・副詞を詳しく説明</strong>する語。
-                                    <br />
-                                    例: run <em>quickly</em> / <em>very</em> happy / <em>always</em>{' '}
-                                    study
-                                  </p>
-                                </div>
-                              </div>
-
-                              <div className="explanation-section">
-                                <h6 className="font-semibold text-sm mb-2">
-                                  🔗 つなぐ・限定する要素
-                                </h6>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="Prep">
-                                      <span className="grammar-tag-label" data-tag="Prep">
-                                        [Prep]
-                                      </span>
-                                    </span>
-                                    <strong>前置詞 (Preposition)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>名詞の前に置いて場所・時間・方法</strong>などを示す。
-                                    <br />
-                                    例: <em>at</em> school / <em>in</em> the morning / <em>with</em>{' '}
-                                    friends
-                                  </p>
-                                </div>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="Conj">
-                                      <span className="grammar-tag-label" data-tag="Conj">
-                                        [Conj]
-                                      </span>
-                                    </span>
-                                    <strong>接続詞 (Conjunction)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>語・句・文をつなぐ</strong>語。
-                                    <br />
-                                    例: I <em>and</em> you / study <em>but</em> tired /{' '}
-                                    <em>because</em> I like it
-                                  </p>
-                                </div>
-
-                                <div className="explanation-item mb-2">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="grammar-tag" data-tag="Det">
-                                      <span className="grammar-tag-label" data-tag="Det">
-                                        [Det]
-                                      </span>
-                                    </span>
-                                    <strong>限定詞 (Determiner)</strong>
-                                  </div>
-                                  <p className="ml-6 text-gray-600">
-                                    <strong>名詞の範囲・数量を限定</strong>
-                                    する語。冠詞・指示詞・数量詞など。
-                                    <br />
-                                    例: <em>the</em> book / <em>my</em> cat / <em>every</em> day /{' '}
-                                    <em>some</em> water
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      )}
+                      <h5 className="text-xs font-semibold mb-1 text-gray-700">🔤 文法構造</h5>
 
                       <div className="flex flex-wrap gap-1.5 text-sm">
                         {(() => {
@@ -1743,7 +1425,7 @@ function ComprehensiveReadingView({
                                   className="text-xs grammar-tag-label mt-0.5"
                                   data-tag={analysis.tag}
                                 >
-                                  {getGrammarTagLabel(analysis.tag)}
+                                  {getPartOfSpeech(analysis.tag)}
                                 </span>
                               </div>
                             );
