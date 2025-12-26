@@ -30,6 +30,8 @@ export interface WordProgress {
 }
 
 export interface ProgressData {
+  // 進捗データのスキーマバージョン（後方互換のため任意）
+  schemaVersion?: number;
   quizzes: Record<string, QuizResult[]>;
   lastUpdated: number;
   totalAnswered: Record<string, number>;

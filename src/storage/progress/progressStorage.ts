@@ -12,6 +12,11 @@ import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/stor
 import { deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
 import { QuestionScheduler } from '@/ai/scheduler/QuestionScheduler';
 import { determineWordPosition } from '@/ai/utils/categoryDetermination';
+import {
+  CURRENT_PROGRESS_SCHEMA_VERSION,
+  migrateUserProgress,
+  normalizeSchemaVersion,
+} from '@/storage/progress/progressSchema';
 
 // 型定義をインポート＆re-export
 import type {
@@ -53,9 +58,29 @@ const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 9999; // 保存する最大結果数（容量削減）
 const MAX_RESPONSE_TIMES = 3; // 応答時間履歴の最大保存数（容量削減）
 
+const MIGRATION_BACKUP_KEY = 'backup_progress_before_migration';
+
+async function backupStoredProgressBeforeMigration(params: {
+  fromVersion: number;
+  toVersion: number;
+  storedData: unknown;
+}): Promise<void> {
+  try {
+    await saveSetting(MIGRATION_BACKUP_KEY, {
+      createdAt: new Date().toISOString(),
+      fromVersion: params.fromVersion,
+      toVersion: params.toVersion,
+      storedData: params.storedData,
+    });
+  } catch (error) {
+    logger.warn('Failed to backup progress before migration:', error);
+  }
+}
+
 // 初期化
 function initializeProgress(): UserProgress {
   return {
+    schemaVersion: CURRENT_PROGRESS_SCHEMA_VERSION,
     results: [],
     statistics: {
       totalQuizzes: 0,
@@ -85,6 +110,8 @@ export async function loadProgress(): Promise<UserProgress> {
       updateProgressCache(initialized);
       return initialized;
     }
+
+    const storedSchemaVersion = normalizeSchemaVersion((data as any)?.schemaVersion);
 
     // ProgressDataからUserProgressへの変換（Phase 3で型統合予定）
     const rawData = data as Record<string, unknown>;
@@ -132,6 +159,28 @@ export async function loadProgress(): Promise<UserProgress> {
     // 起動時に自動圧縮を実行
     compressProgressData(progress);
 
+    // スキーママイグレーション（互換性の強制装置）
+    const migration = migrateUserProgress(progress, storedSchemaVersion);
+    if (migration.status === 'too_new') {
+      // 未来バージョンのデータは破壊的に上書きしない
+      try {
+        localStorage.setItem(
+          'debug_progress_schema_too_new',
+          JSON.stringify({
+            timestamp: new Date().toISOString(),
+            storedVersion: migration.storedVersion,
+            supportedVersion: migration.supportedVersion,
+            notes: migration.notes,
+          })
+        );
+      } catch {
+        // localStorage失敗は無視
+      }
+
+      updateProgressCache(progress);
+      return progress;
+    }
+
     // 起動時修復（既存データの矛盾を最小限で補正）
     // - category: 学習段階ではなく「問題カテゴリ」用途のため、数値(Position)を入れない
     // - memorizationPosition: 過去のバグで stillLearning が Position に反映されず低い値で固定された可能性がある
@@ -155,7 +204,10 @@ export async function loadProgress(): Promise<UserProgress> {
       if (attempts > 0 && (stillLearning > 0 || consecutiveIncorrect > 0)) {
         const basePos = typeof currentPos === 'number' ? currentPos : -1;
         if (basePos < 40) {
-          const desired = determineWordPosition({ ...wp, memorizationPosition: undefined }, 'memorization');
+          const desired = determineWordPosition(
+            { ...wp, memorizationPosition: undefined },
+            'memorization'
+          );
           if (typeof desired === 'number' && desired >= 40 && desired > basePos) {
             wp.memorizationPosition = desired;
             repairedMemorizationPositionCount++;
@@ -174,7 +226,6 @@ export async function loadProgress(): Promise<UserProgress> {
           `[Position Repair] memorizationPositionを再計算して補正: ${repairedMemorizationPositionCount}語`
         );
       }
-      await saveProgressData(progress as UserProgress);
     }
 
     // デバッグパネル向け: 修復サマリーをlocalStorageに保存（コンソールログを貼れない環境でも追跡可能にする）
@@ -190,6 +241,35 @@ export async function loadProgress(): Promise<UserProgress> {
       );
     } catch {
       // localStorage失敗は無視
+    }
+
+    // マイグレーション/修復が発生した場合は、保存を強制して将来の改修時の見落としを防ぐ
+    const needsPersist = needsSave || migration.didMigrate;
+    if (migration.didMigrate) {
+      await backupStoredProgressBeforeMigration({
+        fromVersion: migration.fromVersion,
+        toVersion: migration.toVersion,
+        storedData: data,
+      });
+
+      try {
+        localStorage.setItem(
+          'debug_progress_migration_summary',
+          JSON.stringify({
+            timestamp: new Date().toISOString(),
+            fromVersion: migration.fromVersion,
+            toVersion: migration.toVersion,
+            didMigrate: migration.didMigrate,
+            notes: migration.notes,
+          })
+        );
+      } catch {
+        // localStorage失敗は無視
+      }
+    }
+
+    if (needsPersist) {
+      await saveProgress(progress);
     }
 
     // キャッシュを更新
@@ -239,6 +319,18 @@ export function loadProgressSync(): UserProgress {
     }
     const progress = JSON.parse(data) as UserProgress;
 
+    const migration = migrateUserProgress(
+      progress,
+      normalizeSchemaVersion((progress as any)?.schemaVersion)
+    );
+    if (migration.status === 'ok' && migration.didMigrate) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+      } catch {
+        // localStorage失敗は無視
+      }
+    }
+
     // データ構造の完全性チェックと補完
     if (!progress.statistics) {
       progress.statistics = {
@@ -285,6 +377,9 @@ export function updateProgressCache(progress: UserProgress): void {
 // 進捗データの保存（IndexedDB対応）
 export async function saveProgress(progress: UserProgress): Promise<void> {
   try {
+    // 保存前に必ずスキーマバージョンを付与（将来の改修で互換性を強制する）
+    progress.schemaVersion = CURRENT_PROGRESS_SCHEMA_VERSION;
+
     // データ圧縮: 古いデータを削除
     compressProgressData(progress);
 
@@ -300,6 +395,7 @@ export async function saveProgress(progress: UserProgress): Promise<void> {
 
     // UserProgressをProgressDataに変換して保存
     const progressData: import('@/types/storage').ProgressData = {
+      schemaVersion: CURRENT_PROGRESS_SCHEMA_VERSION,
       quizzes: {},
       lastUpdated: Date.now(),
       totalAnswered: {},
@@ -983,9 +1079,11 @@ export async function updateWordProgress(
 
     // 予測ログに記録（非同期だがawaitしない = ブロッキングしない）
     import('@/ai/services/PredictionLogger').then(({ getPredictionLogger }) => {
-      getPredictionLogger().logPrediction(word, predicted, actual).catch((err) => {
-        console.warn('Failed to log prediction:', err);
-      });
+      getPredictionLogger()
+        .logPrediction(word, predicted, actual)
+        .catch((err) => {
+          console.warn('Failed to log prediction:', err);
+        });
     });
   }
 
@@ -1304,9 +1402,11 @@ export async function updateWordProgress(
         },
       });
       window.dispatchEvent(rescheduleEvent);
-      
+
       if (import.meta.env.DEV) {
-        console.log(`🚨 [WeakWordDetected] ${word}: Position=${calculatedPosition} → 再スケジューリングをトリガー`);
+        console.log(
+          `🚨 [WeakWordDetected] ${word}: Position=${calculatedPosition} → 再スケジューリングをトリガー`
+        );
       }
     }
   } catch {
@@ -3032,7 +3132,7 @@ export function calculateSessionStats(
     total: questions.length,
   };
 
-  questions.forEach(q => {
+  questions.forEach((q) => {
     const wp = progress.wordProgress[q.word];
     if (!wp) {
       stats.new++;
