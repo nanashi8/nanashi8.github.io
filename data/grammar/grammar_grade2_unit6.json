@@ -40,7 +40,9 @@
       "correctAnswer": "bigger",
       "difficulty": "beginner",
       "explanation": "比較級: big → bigger。短い形容詞はerをつけます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bigger】 ← 正解\n  ✓ 正解理由: 日本語訳「これはあれより大きいです。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより大きいです。」に合いません。\n\n❌ 【biggest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより大きいです。」に合いません。",
-      "hint": "比較級か最上級かを判断しましょう"
+      "hint": "比較級か最上級かを判断しましょう",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This is ____ than that.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これはあれより大きいです。"
     },
     {
       "id": "g2-u7-fib-003",
@@ -130,7 +132,9 @@
       "correctAnswer": "younger",
       "difficulty": "beginner",
       "explanation": "比較級: young → younger\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【younger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より若いです。」から、この形が適切です。\n\n❌ 【young】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若いです。」に合いません。\n\n❌ 【youngest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若いです。」に合いません。",
-      "hint": "比較級か最上級かを判断しましょう"
+      "hint": "比較級か最上級かを判断しましょう",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She is ____ than me.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女は私より若いです。"
     },
     {
       "id": "g2-u7-fib-009",
@@ -190,7 +194,9 @@
       "correctAnswer": "most",
       "difficulty": "beginner",
       "explanation": "popularは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はクラスで最も人気があります。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。",
-      "hint": "比較級か最上級かを判断しましょう"
+      "hint": "比較級か最上級かを判断しましょう",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. She is the ____ popular in the class.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。彼女はクラスで最も人気があります。"
     },
     {
       "id": "g2-u7-fib-013",
@@ -265,7 +271,9 @@
       "correctAnswer": "kinder",
       "difficulty": "intermediate",
       "explanation": "比較級: kind → kinder\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【kinder】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より親切です。」から、この形が適切です。\n\n❌ 【kind】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。\n\n❌ 【kindest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。",
-      "hint": "比較級か最上級かを判断しましょう"
+      "hint": "比較級か最上級かを判断しましょう",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She is ____ than me.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は私より親切です。"
     },
     {
       "id": "g2-u7-fib-018",
@@ -355,7 +363,9 @@
       "correctAnswer": "most",
       "difficulty": "intermediate",
       "explanation": "importantは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も重要な問題です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も重要な問題です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も重要な問題です。」に合いません。",
-      "hint": "比較級か最上級かを判断しましょう"
+      "hint": "比較級か最上級かを判断しましょう",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This is the ____ important problem.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これは最も重要な問題です。"
     },
     {
       "id": "g2-u7-fib-024",
@@ -415,7 +425,9 @@
       "correctAnswer": "best",
       "difficulty": "intermediate",
       "explanation": "不規則変化の最上級: good → best\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【best】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も良い選択です。」から、この形が適切です。\n\n❌ 【good】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も良い選択です。」に合いません。\n\n❌ 【better】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も良い選択です。」に合いません。",
-      "hint": "比較級か最上級かを判断しましょう"
+      "hint": "比較級か最上級かを判断しましょう",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This is the ____ choice.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これは最も良い選択です。"
     },
     {
       "id": "g2-u7-so-001",
@@ -535,7 +547,9 @@
       "difficulty": "beginner",
       "explanation": "最上級the most interestingです。\n\n「これは最もおもしろい本です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "This is the most interesting book ."
+      "correctAnswer": "This is the most interesting book .",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This is the most interesting book .",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これは最もおもしろい本です。"
     },
     {
       "id": "g2-u7-so-008",
@@ -567,7 +581,9 @@
       "difficulty": "beginner",
       "explanation": "比較級cheaperです。\n\n「これはあれより安いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "This is cheaper than that ."
+      "correctAnswer": "This is cheaper than that .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This is cheaper than that .",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これはあれより安いです。"
     },
     {
       "id": "g2-u7-so-010",
@@ -601,7 +617,9 @@
       "difficulty": "beginner",
       "explanation": "more difficult thanの語順です。\n\n「この問題はあれより難しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "This problem is more difficult than that one ."
+      "correctAnswer": "This problem is more difficult than that one .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This problem is more difficult than that one .",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この問題はあれより難しいです。"
     },
     {
       "id": "g2-u7-so-012",
@@ -653,7 +671,9 @@
       "difficulty": "intermediate",
       "explanation": "最上級the most expensiveです。\n\n「これは最も高価な車です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "This is the most expensive car ."
+      "correctAnswer": "This is the most expensive car .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This is the most expensive car .",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。これは最も高価な車です。"
     },
     {
       "id": "g2-u7-so-015",
@@ -669,7 +689,9 @@
       "difficulty": "intermediate",
       "explanation": "比較級strongerを使います。\n\n「彼は私より強いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "He is stronger than me ."
+      "correctAnswer": "He is stronger than me .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He is stronger than me .",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は私より強いです。"
     },
     {
       "id": "g2-u7-so-016",
@@ -718,7 +740,9 @@
       "difficulty": "intermediate",
       "explanation": "more beautifulの語順です。\n\n「これはより美しい花です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "This is a more beautiful flower ."
+      "correctAnswer": "This is a more beautiful flower .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This is a more beautiful flower .",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これはより美しい花です。"
     },
     {
       "id": "g2-u7-so-019",
@@ -734,7 +758,9 @@
       "difficulty": "intermediate",
       "explanation": "最上級the smartestを使います。\n\n「彼は最も賢い生徒です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "He is the smartest student ."
+      "correctAnswer": "He is the smartest student .",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. He is the smartest student .",
+      "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。彼は最も賢い生徒です。"
     },
     {
       "id": "g2-u7-so-020",
@@ -782,7 +808,9 @@
       "difficulty": "intermediate",
       "explanation": "比較級busierを使います。\n\n「私は彼より忙しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "比較級・最上級の語順に注意",
-      "correctAnswer": "I am busier than him ."
+      "correctAnswer": "I am busier than him .",
+      "passage": "Traveling by train is convenient in Japan. The trains are usually on time. You can see scenery from the window. I am busier than him .",
+      "passageJapanese": "日本では電車での旅行が便利です。電車はたいてい時間通りです。窓から景色が見えます。私は彼より忙しいです。"
     },
     {
       "id": "g2-u7-pp-001",
@@ -798,7 +826,9 @@
       "correctAnswer": "taller",
       "difficulty": "intermediate",
       "explanation": "比較級tallerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【taller】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より背が高いです。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が高いです。」に合いません。\n\n❌ 【tallest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が高いです。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He has more height than me.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は私より背が高いです。"
     },
     {
       "id": "g2-u7-pp-002",
@@ -830,7 +860,9 @@
       "correctAnswer": "more",
       "difficulty": "intermediate",
       "explanation": "more interestingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この本はあの本よりおもしろいです。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろいです。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This book has more interest than that one.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。この本はあの本よりおもしろいです。"
     },
     {
       "id": "g2-u7-pp-004",
@@ -878,7 +910,9 @@
       "correctAnswer": "most",
       "difficulty": "intermediate",
       "explanation": "最上級most interestingです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最もおもしろい本です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろい本です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろい本です。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This book has the most interest.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これは最もおもしろい本です。"
     },
     {
       "id": "g2-u7-pp-007",
@@ -942,7 +976,9 @@
       "correctAnswer": "more",
       "difficulty": "intermediate",
       "explanation": "more difficultで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この問題はあれより難しいです。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難しいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難しいです。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This problem has more difficulty than that one.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。この問題はあれより難しいです。"
     },
     {
       "id": "g2-u7-pp-011",
@@ -958,7 +994,9 @@
       "correctAnswer": "most",
       "difficulty": "intermediate",
       "explanation": "最上級most popularです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はクラスで最も人気があります。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. She has the most popularity in the class.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼女はクラスで最も人気があります。"
     },
     {
       "id": "g2-u7-pp-012",
@@ -974,7 +1012,9 @@
       "correctAnswer": "older",
       "difficulty": "intermediate",
       "explanation": "比較級olderで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【older】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼より年上です。」から、この形が適切です。\n\n❌ 【old】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年上です。」に合いません。\n\n❌ 【oldest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年上です。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I have more age than him.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私は彼より年上です。"
     },
     {
       "id": "g2-u7-pp-013",
@@ -990,7 +1030,9 @@
       "correctAnswer": "most",
       "difficulty": "intermediate",
       "explanation": "最上級most expensiveです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も高価な車です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も高価な車です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も高価な車です。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This car has the highest price.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これは最も高価な車です。"
     },
     {
       "id": "g2-u7-pp-014",
@@ -1006,7 +1048,9 @@
       "correctAnswer": "stronger",
       "difficulty": "intermediate",
       "explanation": "比較級strongerです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【stronger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より強いです。」から、この形が適切です。\n\n❌ 【strong】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より強いです。」に合いません。\n\n❌ 【strongest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より強いです。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. He has more strength than me.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼は私より強いです。"
     },
     {
       "id": "g2-u7-pp-015",
@@ -1038,7 +1082,9 @@
       "correctAnswer": "kinder",
       "difficulty": "intermediate",
       "explanation": "比較級kinderです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【kinder】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より親切です。」から、この形が適切です。\n\n❌ 【kind】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。\n\n❌ 【kindest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She has more kindness than me.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は私より親切です。"
     },
     {
       "id": "g2-u7-pp-017",
@@ -1070,7 +1116,9 @@
       "correctAnswer": "smartest",
       "difficulty": "intermediate",
       "explanation": "最上級smartestです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【smartest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は最も賢い生徒です。」から、この形が適切です。\n\n❌ 【smart】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も賢い生徒です。」に合いません。\n\n❌ 【smarter】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も賢い生徒です。」に合いません。",
-      "hint": "比較級・最上級で言い換え"
+      "hint": "比較級・最上級で言い換え",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He has the most intelligence.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は最も賢い生徒です。"
     },
     {
       "id": "g2-u7-vf-001",
@@ -1100,7 +1148,9 @@
       "correctAnswer": "biggest",
       "difficulty": "intermediate",
       "explanation": "theとinがあるので最上級biggestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【biggest】 ← 正解\n  ✓ 正解理由: 日本語訳「これはクラスで最も大き____です。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大き____です。」に合いません。\n\n❌ 【bigger】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大き____です。」に合いません。",
-      "hint": "文脈から比較級か最上級かを判断"
+      "hint": "文脈から比較級か最上級かを判断",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. This is the ____ in the class.",
+      "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。これはクラスで最も大き____です。"
     },
     {
       "id": "g2-u7-vf-003",
@@ -1160,7 +1210,9 @@
       "correctAnswer": "younger",
       "difficulty": "intermediate",
       "explanation": "比較級youngerが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【younger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より若____です。」から、この形が適切です。\n\n❌ 【young】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若____です。」に合いません。\n\n❌ 【youngest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若____です。」に合いません。",
-      "hint": "文脈から比較級か最上級かを判断"
+      "hint": "文脈から比較級か最上級かを判断",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She is ____ than me.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は私より若____です。"
     },
     {
       "id": "g2-u7-vf-007",
@@ -1190,7 +1242,9 @@
       "correctAnswer": "more",
       "difficulty": "intermediate",
       "explanation": "thanがあるので比較級moreです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この問題はあれより難し____です。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難し____です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難し____です。」に合いません。",
-      "hint": "文脈から比較級か最上級かを判断"
+      "hint": "文脈から比較級か最上級かを判断",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This problem is ____ difficult than that one.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。この問題はあれより難し____です。"
     },
     {
       "id": "g2-u7-vf-009",
@@ -1205,7 +1259,9 @@
       "correctAnswer": "most",
       "difficulty": "intermediate",
       "explanation": "theとin the classがあるので最上級mostです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はクラスで最も人気が____ます。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気が____ます。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気が____ます。」に合いません。",
-      "hint": "文脈から比較級か最上級かを判断"
+      "hint": "文脈から比較級か最上級かを判断",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. She is the ____ popular in the class.",
+      "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼女はクラスで最も人気が____ます。"
     },
     {
       "id": "g2-u7-vf-010",
@@ -1274,7 +1330,9 @@
       "dialogue": [
         "A: Who is the tallest in the class?",
         "B: Tanaka is the ____."
-      ]
+      ],
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. Tanaka is the ____.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。"
     },
     {
       "id": "g2-u7-conv-004",
@@ -1292,7 +1350,9 @@
       "dialogue": [
         "A: Which is more interesting, this or that?",
         "B: This is ____ interesting than that."
-      ]
+      ],
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This is ____ interesting than that.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。"
     },
     {
       "id": "g2-u7-conv-005",
@@ -1328,7 +1388,9 @@
       "dialogue": [
         "A: Who is younger, she or you?",
         "B: She is ____ than me."
-      ]
+      ],
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She is ____ than me.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。"
     },
     {
       "id": "g2-u7-conv-007",

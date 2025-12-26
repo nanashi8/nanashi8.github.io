@@ -57,7 +57,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その手紙は彼女によって書かれました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その手紙は彼女によって書かれました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その手紙は彼女によって書かれました。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The letter ____ written by her.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その手紙は彼女によって書かれました。"
     },
     {
       "id": "vf-g3-u0-004",
@@ -73,7 +75,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「この橋は1990年に建てられました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この橋は1990年に建てられました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この橋は1990年に建てられました。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This bridge ____ built in 1990.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この橋は1990年に建てられました。"
     },
     {
       "id": "vf-g3-u0-005",
@@ -89,7 +93,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの車は日本で作られています。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの車は日本で作られています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの車は日本で作られています。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. These cars ____ made in Japan.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。これらの車は日本で作られています。"
     },
     {
       "id": "vf-g3-u0-006",
@@ -137,7 +143,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼の名前はよく知られています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼の名前はよく知られています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼の名前はよく知られています。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. His name ____ well known.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼の名前はよく知られています。"
     },
     {
       "id": "vf-g3-u0-009",
@@ -153,7 +161,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その窓は彼によって壊されました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その窓は彼によって壊されました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その窓は彼によって壊されました。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The window ____ broken by him.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その窓は彼によって壊されました。"
     },
     {
       "id": "vf-g3-u0-010",
@@ -169,7 +179,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの写真は去年撮られました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの写真は去年撮られました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの写真は去年撮られました。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. These photos ____ taken last year.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これらの写真は去年撮られました。"
     },
     {
       "id": "vf-g3-u0-011",
@@ -217,7 +229,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その建物は1950年に建てられました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1950年に建てられました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1950年に建てられました。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The building ____ constructed in 1950.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その建物は1950年に建てられました。"
     },
     {
       "id": "vf-g3-u0-014",
@@ -233,7 +247,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「多くの木が植えられました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「多くの木が植えられました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「多くの木が植えられました。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. Many trees ____ planted.",
+      "passageJapanese": "春が一番好きな季節です。どこでも花が咲きます。桜は特に美しいです。多くの木が植えられました。"
     },
     {
       "id": "vf-g3-u0-015",
@@ -249,7 +265,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「その映画は世界中で見られています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は世界中で見られています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は世界中で見られています。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The movie ____ watched worldwide.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その映画は世界中で見られています。"
     },
     {
       "id": "vf-g3-u0-016",
@@ -297,7 +315,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの製品は中国で製造されています。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの製品は中国で製造されています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの製品は中国で製造されています。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. These products ____ manufactured in China.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これらの製品は中国で製造されています。"
     },
     {
       "id": "vf-g3-u0-019",
@@ -313,7 +333,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その絵は有名な画家によって描かれました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その絵は有名な画家によって描かれました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その絵は有名な画家によって描かれました。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The painting ____ painted by a famous artist.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その絵は有名な画家によって描かれました。"
     },
     {
       "id": "vf-g3-u0-020",
@@ -329,7 +351,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態: be動詞 + 過去分詞です。時制と主語の数に応じてbe動詞を選びます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【be】 ← 正解\n  ✓ 正解理由: 日本語訳「この規則は守られるべきです。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この規則は守られるべきです。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この規則は守られるべきです。」に合いません。",
       "hint": "受動態: be + p.p.",
-      "type": "verbForm"
+      "type": "verbForm",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This rule should ____ followed.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。この規則は守られるべきです。"
     },
     {
       "id": "fb-g3-u0-001",
@@ -344,7 +368,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【spoken】 ← 正解\n  ✓ 正解理由: 日本語訳「英語は世界中で話されています。」から、この形が適切です。\n\n❌ 【speak】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語は世界中で話されています。」に合いません。\n\n❌ 【spoke】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語は世界中で話されています。」に合いません。",
       "hint": "be動詞の後は過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. English is ____ around the world.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。英語は世界中で話されています。"
     },
     {
       "id": "fb-g3-u0-002",
@@ -359,7 +385,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「この本は多くの人に読まれています。」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は多くの人に読まれています。」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は多くの人に読まれています。」に合いません。",
       "hint": "be動詞の後は過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This book is ____ by many people.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この本は多くの人に読まれています。"
     },
     {
       "id": "fb-g3-u0-003",
@@ -434,7 +462,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【loved】 ← 正解\n  ✓ 正解理由: 日本語訳「この歌は若者に愛されています。」から、この形が適切です。\n\n❌ 【lov】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この歌は若者に愛されています。」に合いません。\n\n❌ 【lovs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この歌は若者に愛されています。」に合いません。",
       "hint": "be動詞の後は過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This song is ____ by young people.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。この歌は若者に愛されています。"
     },
     {
       "id": "fb-g3-u0-008",
@@ -479,7 +509,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【taken】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの写真は去年撮られました。」から、この形が適切です。\n\n❌ 【take】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの写真は去年撮られました。」に合いません。\n\n❌ 【took】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの写真は去年撮られました。」に合いません。",
       "hint": "be動詞の後は過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. These photos were ____ last year.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これらの写真は去年撮られました。"
     },
     {
       "id": "fb-g3-u0-011",
@@ -509,7 +541,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【used】 ← 正解\n  ✓ 正解理由: 日本語訳「このコンピューターは使われていません。」から、この形が適切です。\n\n❌ 【us】 ← 不正解\n  ✗ 不正解理由: 日本語訳「このコンピューターは使われていません。」に合いません。\n\n❌ 【uss】 ← 不正解\n  ✗ 不正解理由: 日本語訳「このコンピューターは使われていません。」に合いません。",
       "hint": "be動詞の後は過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This computer is not ____.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。このコンピューターは使われていません。"
     },
     {
       "id": "fb-g3-u0-013",
@@ -554,7 +588,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watched】 ← 正解\n  ✓ 正解理由: 日本語訳「その映画は世界中で見られています。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は世界中で見られています。」に合いません。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は世界中で見られています。」に合いません。",
       "hint": "be動詞の後は過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. The movie is ____ worldwide.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。その映画は世界中で見られています。"
     },
     {
       "id": "fb-g3-u0-016",
@@ -599,7 +635,9 @@
       "difficulty": "intermediate",
       "explanation": "受動態では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【manufactured】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの製品は中国で製造されています。」から、この形が適切です。\n\n❌ 【manufactur】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの製品は中国で製造されています。」に合いません。\n\n❌ 【manufacturs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの製品は中国で製造されています。」に合いません。",
       "hint": "be動詞の後は過去分詞",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. These products are ____ in China.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これらの製品は中国で製造されています。"
     },
     {
       "id": "fb-g3-u0-019",
@@ -648,7 +686,9 @@
       "grammarPoint": "受動態",
       "wordCount": 6,
       "type": "sentenceOrdering",
-      "correctAnswer": "English is spoken around the world."
+      "correctAnswer": "English is spoken around the world.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. English is spoken around the world.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。英語は世界中で話されています。"
     },
     {
       "id": "so-g3-u0-002",
@@ -668,7 +708,9 @@
       "grammarPoint": "受動態",
       "wordCount": 7,
       "type": "sentenceOrdering",
-      "correctAnswer": "This book is read by many people."
+      "correctAnswer": "This book is read by many people.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This book is read by many people.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。この本は多くの人に読まれています。"
     },
     {
       "id": "so-g3-u0-003",
@@ -687,7 +729,9 @@
       "grammarPoint": "受動態",
       "wordCount": 6,
       "type": "sentenceOrdering",
-      "correctAnswer": "The letter was written by her."
+      "correctAnswer": "The letter was written by her.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The letter was written by her.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その手紙は彼女によって書かれました。"
     },
     {
       "id": "so-g3-u0-004",
@@ -763,7 +807,9 @@
       "grammarPoint": "受動態",
       "wordCount": 7,
       "type": "sentenceOrdering",
-      "correctAnswer": "This song is loved by young people."
+      "correctAnswer": "This song is loved by young people.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This song is loved by young people.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。この歌は若者に愛されています。"
     },
     {
       "id": "so-g3-u0-008",
@@ -800,7 +846,9 @@
       "grammarPoint": "受動態",
       "wordCount": 6,
       "type": "sentenceOrdering",
-      "correctAnswer": "The window was broken by him."
+      "correctAnswer": "The window was broken by him.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The window was broken by him.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その窓は彼によって壊されました。"
     },
     {
       "id": "so-g3-u0-010",
@@ -819,7 +867,9 @@
       "grammarPoint": "受動態",
       "wordCount": 6,
       "type": "sentenceOrdering",
-      "correctAnswer": "These photos were taken last year."
+      "correctAnswer": "These photos were taken last year.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. These photos were taken last year.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これらの写真は去年撮られました。"
     },
     {
       "id": "so-g3-u0-011",
@@ -836,7 +886,9 @@
       "grammarPoint": "受動態",
       "wordCount": 4,
       "type": "sentenceOrdering",
-      "correctAnswer": "The door is opened."
+      "correctAnswer": "The door is opened.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The door is opened.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その扉は開けられています。"
     },
     {
       "id": "so-g3-u0-012",
@@ -854,7 +906,9 @@
       "grammarPoint": "受動態",
       "wordCount": 5,
       "type": "sentenceOrdering",
-      "correctAnswer": "This computer is not used."
+      "correctAnswer": "This computer is not used.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This computer is not used.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。このコンピューターは使われていません。"
     },
     {
       "id": "so-g3-u0-013",
@@ -890,7 +944,9 @@
       "grammarPoint": "受動態",
       "wordCount": 4,
       "type": "sentenceOrdering",
-      "correctAnswer": "Many trees were planted."
+      "correctAnswer": "Many trees were planted.",
+      "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. Many trees were planted.",
+      "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。多くの木が植えられました。"
     },
     {
       "id": "so-g3-u0-015",
@@ -927,7 +983,9 @@
       "grammarPoint": "受動態",
       "wordCount": 6,
       "type": "sentenceOrdering",
-      "correctAnswer": "This room is cleaned every day."
+      "correctAnswer": "This room is cleaned every day.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This room is cleaned every day.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この部屋は毎日掃除されます。"
     },
     {
       "id": "so-g3-u0-017",
@@ -986,7 +1044,9 @@
       "grammarPoint": "受動態",
       "wordCount": 8,
       "type": "sentenceOrdering",
-      "correctAnswer": "The painting was painted by a famous artist."
+      "correctAnswer": "The painting was painted by a famous artist.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The painting was painted by a famous artist.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その絵は有名な画家によって描かれました。"
     },
     {
       "id": "so-g3-u0-020",
@@ -1020,7 +1080,9 @@
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "受動態: be動詞 + 過去分詞。現在形なのでisを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「この本は多くの人に読まれています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は多くの人に読まれています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は多くの人に読まれています。」に合いません。",
-      "hint": "be動詞 + 過去分詞"
+      "hint": "be動詞 + 過去分詞",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This book ____ read by many people.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。この本は多くの人に読まれています。"
     },
     {
       "id": "g2-u9-fib-002",
@@ -1035,7 +1097,9 @@
       "correctAnswer": "were",
       "difficulty": "beginner",
       "explanation": "過去形の受動態。複数なのでwereです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの手紙は昨日書かれました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの手紙は昨日書かれました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの手紙は昨日書かれました。」に合いません。",
-      "hint": "be動詞 + 過去分詞"
+      "hint": "be動詞 + 過去分詞",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. These letters ____ written yesterday.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これらの手紙は昨日書かれました。"
     },
     {
       "id": "g2-u9-fib-003",
@@ -1065,7 +1129,9 @@
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "過去形の受動態。単数なのでwasです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「この写真は彼によって撮られました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この写真は彼によって撮られました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この写真は彼によって撮られました。」に合いません。",
-      "hint": "be動詞 + 過去分詞"
+      "hint": "be動詞 + 過去分詞",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This picture ____ taken by him.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この写真は彼によって撮られました。"
     },
     {
       "id": "g2-u9-fib-005",
@@ -1125,7 +1191,9 @@
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "過去形の受動態。単数なのでwasです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その建物は1900年に建てられました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1900年に建てられました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1900年に建てられました。」に合いません。",
-      "hint": "be動詞 + 過去分詞"
+      "hint": "be動詞 + 過去分詞",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The building ____ built in 1900.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その建物は1900年に建てられました。"
     },
     {
       "id": "g2-u9-fib-009",
@@ -1140,7 +1208,9 @@
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "現在形の受動態。複数です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの花は庭で育てられています。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの花は庭で育てられています。」に合いません。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの花は庭で育てられています。」に合いません。",
-      "hint": "be動詞 + 過去分詞"
+      "hint": "be動詞 + 過去分詞",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. These flowers ____ grown in the garden.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これらの花は庭で育てられています。"
     },
     {
       "id": "g2-u9-fib-010",
@@ -1230,7 +1300,9 @@
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "過去形の受動態です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その映画は先月公開されました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は先月公開されました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は先月公開されました。」に合いません。",
-      "hint": "be動詞 + 過去分詞"
+      "hint": "be動詞 + 過去分詞",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The movie ____ released last month.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その映画は先月公開されました。"
     },
     {
       "id": "g2-u9-so-001",
@@ -1248,7 +1320,9 @@
       "difficulty": "beginner",
       "explanation": "be動詞 + 過去分詞の語順です。\n\n「この本は多くの人に読まれています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
-      "correctAnswer": "This book is read by many people ."
+      "correctAnswer": "This book is read by many people .",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This book is read by many people .",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。この本は多くの人に読まれています。"
     },
     {
       "id": "g2-u9-so-002",
@@ -1402,7 +1476,9 @@
       "difficulty": "beginner",
       "explanation": "was + 過去分詞writtenの語順です。\n\n「この手紙は彼女によって書かれました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
-      "correctAnswer": "This letter was written by her ."
+      "correctAnswer": "This letter was written by her .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This letter was written by her .",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この手紙は彼女によって書かれました。"
     },
     {
       "id": "g2-u9-so-011",
@@ -1418,7 +1494,9 @@
       "difficulty": "intermediate",
       "explanation": "was + 過去分詞solvedです。\n\n「この問題は簡単に解決されました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
-      "correctAnswer": "This problem was solved easily ."
+      "correctAnswer": "This problem was solved easily .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This problem was solved easily .",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。この問題は簡単に解決されました。"
     },
     {
       "id": "g2-u9-so-012",
@@ -1452,7 +1530,9 @@
       "difficulty": "intermediate",
       "explanation": "is + 過去分詞likedです。\n\n「彼女は皆に好かれています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
-      "correctAnswer": "She is liked by everyone ."
+      "correctAnswer": "She is liked by everyone .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She is liked by everyone .",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女は皆に好かれています。"
     },
     {
       "id": "g2-u9-so-014",
@@ -1469,7 +1549,9 @@
       "difficulty": "intermediate",
       "explanation": "is + 過去分詞cleanedの語順です。\n\n「この部屋は毎日掃除されています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
-      "correctAnswer": "This room is cleaned every day ."
+      "correctAnswer": "This room is cleaned every day .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This room is cleaned every day .",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この部屋は毎日掃除されています。"
     },
     {
       "id": "g2-u9-so-015",
@@ -1486,7 +1568,9 @@
       "difficulty": "intermediate",
       "explanation": "was + 過去分詞releasedです。\n\n「その映画は先月公開されました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
-      "correctAnswer": "The movie was released last month ."
+      "correctAnswer": "The movie was released last month .",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The movie was released last month .",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その映画は先月公開されました。"
     },
     {
       "id": "g2-u9-pp-001",
@@ -1534,7 +1618,9 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "受動態で言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「英語は世界中で話されています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語は世界中で話されています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語は世界中で話されています。」に合いません。",
-      "hint": "能動態を受動態に"
+      "hint": "能動態を受動態に",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. People speak English all over the world.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。英語は世界中で話されています。"
     },
     {
       "id": "g2-u9-pp-004",
@@ -1566,7 +1652,9 @@
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "受動態で表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの車は日本で作られています。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの車は日本で作られています。」に合いません。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの車は日本で作られています。」に合いません。",
-      "hint": "能動態を受動態に"
+      "hint": "能動態を受動態に",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. They make these cars in Japan.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これらの車は日本で作られています。"
     },
     {
       "id": "g2-u9-pp-006",
@@ -1598,7 +1686,9 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "能動態を受動態に変換します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は皆に尊敬されています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は皆に尊敬されています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は皆に尊敬されています。」に合いません。",
-      "hint": "能動態を受動態に"
+      "hint": "能動態を受動態に",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. Everyone respects him.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は皆に尊敬されています。"
     },
     {
       "id": "g2-u9-pp-008",
@@ -1630,7 +1720,9 @@
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "受動態で言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの花は庭で育てられています。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの花は庭で育てられています。」に合いません。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの花は庭で育てられています。」に合いません。",
-      "hint": "能動態を受動態に"
+      "hint": "能動態を受動態に",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. They grow these flowers in the garden.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これらの花は庭で育てられています。"
     },
     {
       "id": "g2-u9-pp-010",
@@ -1646,7 +1738,9 @@
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "能動態を受動態に変換します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「この手紙は彼女によって書かれました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この手紙は彼女によって書かれました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この手紙は彼女によって書かれました。」に合いません。",
-      "hint": "能動態を受動態に"
+      "hint": "能動態を受動態に",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She wrote this letter.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。この手紙は彼女によって書かれました。"
     },
     {
       "id": "g2-u9-pp-011",
@@ -1741,7 +1835,9 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "現在形の受動態。単数なのでisです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「この本は多くの人に読まれています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は多くの人に読まれています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は多くの人に読まれています。」に合いません。",
-      "hint": "時制と単複で判断"
+      "hint": "時制と単複で判断",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This book ____ read by many people.",
+      "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この本は多くの人に読まれています。"
     },
     {
       "id": "g2-u9-vf-002",
@@ -1756,7 +1852,9 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "explanation": "過去形の受動態。複数なのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「これらの手紙は昨日書かれました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの手紙は昨日書かれました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらの手紙は昨日書かれました。」に合いません。",
-      "hint": "時制と単複で判断"
+      "hint": "時制と単複で判断",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. These letters ____ written yesterday.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これらの手紙は昨日書かれました。"
     },
     {
       "id": "g2-u9-vf-003",
@@ -1771,7 +1869,9 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "現在形の受動態です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「英語は世界中で話されています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語は世界中で話されています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語は世界中で話されています。」に合いません。",
-      "hint": "時制と単複で判断"
+      "hint": "時制と単複で判断",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. English ____ spoken all over the world.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。英語は世界中で話されています。"
     },
     {
       "id": "g2-u9-vf-004",
@@ -1831,7 +1931,9 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "現在形の受動態。単数です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は皆に尊敬されています。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は皆に尊敬されています。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は皆に尊敬されています。」に合いません。",
-      "hint": "時制と単複で判断"
+      "hint": "時制と単複で判断",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. He ____ respected by everyone.",
+      "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼は皆に尊敬されています。"
     },
     {
       "id": "g2-u9-vf-008",
@@ -1846,7 +1948,9 @@
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "過去形の受動態です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その建物は1900年に建てられました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1900年に建てられました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1900年に建てられました。」に合いません。",
-      "hint": "時制と単複で判断"
+      "hint": "時制と単複で判断",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The building ____ built in 1900.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その建物は1900年に建てられました。"
     },
     {
       "id": "g2-u9-vf-009",
@@ -1876,7 +1980,9 @@
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "過去形の受動態。単数です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「この手紙は彼女によって書かれました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この手紙は彼女によって書かれました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この手紙は彼女によって書かれました。」に合いません。",
-      "hint": "時制と単複で判断"
+      "hint": "時制と単複で判断",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This letter ____ written by her.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。この手紙は彼女によって書かれました。"
     },
     {
       "id": "g2-u9-conv-001",
@@ -1912,7 +2018,9 @@
       "dialogue": [
         "A: When were these letters written?",
         "B: They ____ written yesterday."
-      ]
+      ],
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. They ____ written yesterday.",
+      "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。"
     },
     {
       "id": "g2-u9-conv-003",
@@ -1948,7 +2056,9 @@
       "dialogue": [
         "A: Who took this picture?",
         "B: It ____ taken by him."
-      ]
+      ],
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It ____ taken by him.",
+      "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。"
     },
     {
       "id": "g2-u9-conv-005",

@@ -24,7 +24,9 @@
       "correctAnswer": "Open",
       "difficulty": "beginner",
       "explanation": "命令文は動詞の原形で始まります。Open the door.で「ドアを開けなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Open】 ← 正解\n  ✓ 正解理由: 日本語訳「ドアを開けなさい。」から、この形が適切です。\n\n❌ 【Opens】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ドアを開けなさい。」に合いません。\n\n❌ 【Opening】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ドアを開けなさい。」に合いません。",
-      "hint": "原形"
+      "hint": "原形",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ the door.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。ドアを開けなさい。"
     },
     {
       "id": "g1-u7-fib-002",
@@ -129,7 +131,9 @@
       "correctAnswer": "Close",
       "difficulty": "intermediate",
       "explanation": "命令文は動詞の原形で始まります。Close the box.で「箱を閉めなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Close】 ← 正解\n  ✓ 正解理由: 日本語訳「窓を閉めなさい。」から、この形が適切です。\n\n❌ 【Closes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を閉めなさい。」に合いません。\n\n❌ 【Closing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を閉めなさい。」に合いません。",
-      "hint": "原形"
+      "hint": "原形",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ the box.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。窓を閉めなさい。"
     },
     {
       "id": "g1-u7-fib-009",
@@ -248,7 +252,9 @@
       "difficulty": "beginner",
       "explanation": "sit downで「座る」です。命令文は原形で始まります。\n\n「座りなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Sit down.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Sit down",
-      "wordCount": 2
+      "wordCount": 2,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. Sit down.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。座りなさい。"
     },
     {
       "id": "g1-u7-so-002",
@@ -262,7 +268,9 @@
       "difficulty": "beginner",
       "explanation": "stand upで「立つ」です。Stand up.で「立ちなさい」です。\n\n「立ちなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Stand up.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Stand up",
-      "wordCount": 2
+      "wordCount": 2,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Stand up.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。立ちなさい。"
     },
     {
       "id": "g1-u7-so-003",
@@ -304,7 +312,9 @@
       "difficulty": "beginner",
       "explanation": "Let's goで「行きましょう」です。勧誘の表現です。\n\n「一緒に行きましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Let's go.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Let's go",
-      "wordCount": 2
+      "wordCount": 2,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. Let's go.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。一緒に行きましょう。"
     },
     {
       "id": "g1-u7-so-006",
@@ -348,7 +358,9 @@
       "difficulty": "intermediate",
       "explanation": "Don't be late.で「遅れないで」です。Don't + be + 形容詞です。\n\n「遅れないでください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Don't be late.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Don't be",
-      "wordCount": 3
+      "wordCount": 3,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. Don't be late.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。遅れないでください。"
     },
     {
       "id": "g1-u7-so-009",
@@ -392,7 +404,9 @@
       "difficulty": "advanced",
       "explanation": "Speak English.で「英語を話しなさい」です。\n\n「英語を話しなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Speak English.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Speak English",
-      "wordCount": 2
+      "wordCount": 2,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. Speak English.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。英語を話しなさい。"
     },
     {
       "id": "g1-u7-so-012",
@@ -453,7 +467,9 @@
       "difficulty": "advanced",
       "explanation": "Be kind to others.で「他の人に親切にしなさい」です。\n\n「親切にしなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Be kind to others.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Be kind",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. Be kind to others.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。親切にしなさい。"
     },
     {
       "id": "g1-u7-para-001",
@@ -565,7 +581,9 @@
       "correctAnswer": "Please close the window.",
       "difficulty": "intermediate",
       "explanation": "Pleaseを文頭に付けて丁寧にです。Please close the window.で「窓を閉めてください」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Please close the window.】 ← 正解\n  ✓ 正解理由: 日本語訳「窓を閉めてください。」から、この形が適切です。\n\n❌ 【Please closes the window.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を閉めてください。」に合いません。\n\n❌ 【Close the window please.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を閉めてください。」に合いません。",
-      "hint": "Please"
+      "hint": "Please",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Please close the window.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。窓を閉めてください。"
     },
     {
       "id": "g1-u7-para-008",
@@ -613,7 +631,9 @@
       "correctAnswer": "Be careful.",
       "difficulty": "intermediate",
       "explanation": "be動詞の命令形です。Be careful.で「注意しなさい」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Be careful.】 ← 正解\n  ✓ 正解理由: 日本語訳「注意しなさい。」から、この形が適切です。\n\n❌ 【Are careful.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「注意しなさい。」に合いません。\n\n❌ 【Is careful.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「注意しなさい。」に合いません。",
-      "hint": "Be"
+      "hint": "Be",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. Be careful.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。注意しなさい。"
     },
     {
       "id": "g1-u7-para-011",
@@ -677,7 +697,9 @@
       "correctAnswer": "Please listen to me, please.",
       "difficulty": "advanced",
       "explanation": "文頭と文末にpleaseを付けて丁寧にです。Please listen to me, please.です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Please listen to me, please.】 ← 正解\n  ✓ 正解理由: 日本語訳「必ず静かにしてください。」から、この形が適切です。\n\n❌ 【Please listens to me, please.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「必ず静かにしてください。」に合いません。\n\n❌ 【Listen to me please, please.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「必ず静かにしてください。」に合いません。",
-      "hint": "Please ～, please"
+      "hint": "Please ～, please",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. Please listen to me, please.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。必ず静かにしてください。"
     },
     {
       "id": "g1-u7-para-015",
@@ -773,7 +795,9 @@
       "correctAnswer": "play",
       "difficulty": "intermediate",
       "explanation": "Let'sの後ろは原形です。Let's play soccer.で「サッカーをしましょう」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「サッカーをしましょう。」から、この形が適切です。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「サッカーをしましょう。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「サッカーをしましょう。」に合いません。",
-      "hint": "Let's + 原形"
+      "hint": "Let's + 原形",
+      "passage": "I like soccer. I play it after school. My friends play with me. Let's ____ soccer.",
+      "passageJapanese": "サッカーが好きです。放課後にします。友達もいっしょにします。サッカーをしましょう。"
     },
     {
       "id": "g1-u7-vf-006",
@@ -805,7 +829,9 @@
       "correctAnswer": "be",
       "difficulty": "intermediate",
       "explanation": "Don'tの後ろも原形です。Don't be angry.で「怒らないで」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【be】 ← 正解\n  ✓ 正解理由: 日本語訳「遅れないでください。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅れないでください。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅れないでください。」に合いません。",
-      "hint": "Don't + be"
+      "hint": "Don't + be",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. Don't ____ angry.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。遅れないでください。"
     },
     {
       "id": "g1-u7-vf-008",
@@ -821,7 +847,9 @@
       "correctAnswer": "Get",
       "difficulty": "advanced",
       "explanation": "get upで「起きる」です。Get up late.で「遅く起きなさい（遅くまで寝ていなさい）」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Get】 ← 正解\n  ✓ 正解理由: 日本語訳「遅く起きなさい。」から、この形が適切です。\n\n❌ 【Gets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅く起きなさい。」に合いません。\n\n❌ 【Getting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅く起きなさい。」に合いません。",
-      "hint": "原形"
+      "hint": "原形",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ up late.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。遅く起きなさい。"
     },
     {
       "id": "g1-u7-vf-009",
@@ -853,7 +881,9 @@
       "correctAnswer": "give",
       "difficulty": "advanced",
       "explanation": "sit downで「座る」です。Don't sit down.で「座らないで」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【give】 ← 正解\n  ✓ 正解理由: 日本語訳「座らないで。」から、この形が適切です。\n\n❌ 【gives】 ← 不正解\n  ✗ 不正解理由: 日本語訳「座らないで。」に合いません。\n\n❌ 【giving】 ← 不正解\n  ✗ 不正解理由: 日本語訳「座らないで。」に合いません。",
-      "hint": "Don't + 原形"
+      "hint": "Don't + 原形",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Don't ____ down.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。座らないで。"
     },
     {
       "id": "g1-u7-conv-001",

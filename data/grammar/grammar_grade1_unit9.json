@@ -24,7 +24,9 @@
       "correctAnswer": "went",
       "difficulty": "beginner",
       "explanation": "goの過去形はwentです。「私は昨日東京へ行きました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【went】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日東京へ行きました。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日東京へ行きました。」に合いません。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日東京へ行きました。」に合いません。",
-      "hint": "went"
+      "hint": "went",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. I ____ to Tokyo yesterday.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私は昨日東京へ行きました。"
     },
     {
       "id": "g1-u9-fib-002",
@@ -54,7 +56,9 @@
       "correctAnswer": "saw",
       "difficulty": "beginner",
       "explanation": "seeの過去形はsawです。「私たちは昨日映画を見ました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【saw】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは昨日映画を見ました。」から、この形が適切です。\n\n❌ 【see】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨日映画を見ました。」に合いません。\n\n❌ 【sees】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨日映画を見ました。」に合いません。",
-      "hint": "saw"
+      "hint": "saw",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. We ____ a movie yesterday.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私たちは昨日映画を見ました。"
     },
     {
       "id": "g1-u9-fib-004",
@@ -84,7 +88,9 @@
       "correctAnswer": "made",
       "difficulty": "beginner",
       "explanation": "makeの過去形はmadeです。「彼らは昨日ケーキを作りました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【made】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日ケーキを作りました。」から、この形が適切です。\n\n❌ 【make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日ケーキを作りました。」に合いません。\n\n❌ 【makes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日ケーキを作りました。」に合いません。",
-      "hint": "made"
+      "hint": "made",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. They ____ a cake yesterday.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼らは昨日ケーキを作りました。"
     },
     {
       "id": "g1-u9-fib-006",
@@ -159,7 +165,9 @@
       "correctAnswer": "read",
       "difficulty": "intermediate",
       "explanation": "readの過去形はread（発音が違う）です。「彼らは先月その本を読みました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは先月その本を読みました。」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは先月その本を読みました。」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは先月その本を読みました。」に合いません。",
-      "hint": "read"
+      "hint": "read",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. They ____ the book last month.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らは先月その本を読みました。"
     },
     {
       "id": "g1-u9-fib-011",
@@ -174,7 +182,9 @@
       "correctAnswer": "wrote",
       "difficulty": "intermediate",
       "explanation": "writeの過去形はwroteです。「私は昨日手紙を書きました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wrote】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日手紙を書きました。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日手紙を書きました。」に合いません。\n\n❌ 【writes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日手紙を書きました。」に合いません。",
-      "hint": "wrote"
+      "hint": "wrote",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. I ____ a letter yesterday.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私は昨日手紙を書きました。"
     },
     {
       "id": "g1-u9-fib-012",
@@ -234,7 +244,9 @@
       "correctAnswer": "found",
       "difficulty": "advanced",
       "explanation": "findの過去形はfoundです。「彼らは昨晩鍵を見つけました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【found】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨晩鍵を見つけました。」から、この形が適切です。\n\n❌ 【find】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩鍵を見つけました。」に合いません。\n\n❌ 【finds】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩鍵を見つけました。」に合いません。",
-      "hint": "found"
+      "hint": "found",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. They ____ the key last night.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼らは昨晩鍵を見つけました。"
     },
     {
       "id": "g1-u9-so-001",
@@ -250,7 +262,9 @@
       "difficulty": "beginner",
       "explanation": "「私は昨日家に帰りました」です。go → wentです。\n\n「私は昨日家に帰りました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I went home yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "went",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. I went home yesterday.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私は昨日家に帰りました。"
     },
     {
       "id": "g1-u9-so-002",
@@ -282,7 +296,9 @@
       "difficulty": "beginner",
       "explanation": "「私たちは昨日彼に会いました」です。see → sawです。\n\n「私たちは昨日彼に会いました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We saw him yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "saw",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. We saw him yesterday.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私たちは昨日彼に会いました。"
     },
     {
       "id": "g1-u9-so-004",
@@ -298,7 +314,9 @@
       "difficulty": "beginner",
       "explanation": "「彼は昨日昼食を食べました」です。have → hadです。\n\n「彼は昨日昼食を食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He had lunch yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "had",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. He had lunch yesterday.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼は昨日昼食を食べました。"
     },
     {
       "id": "g1-u9-so-005",
@@ -364,7 +382,9 @@
       "difficulty": "intermediate",
       "explanation": "「私たちは昨晩ピザを食べました」です。eat → ateです。\n\n「私たちは昨晩ピザを食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We ate pizza last night.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "ate",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. We ate pizza last night.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私たちは昨晩ピザを食べました。"
     },
     {
       "id": "g1-u9-so-009",
@@ -533,7 +553,9 @@
       "correctAnswer": "They saw the cat.",
       "difficulty": "beginner",
       "explanation": "see → sawです。「彼らは猫を見ました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【They saw the cat.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは猫を見ました。」から、この形が適切です。\n\n❌ 【They seed the cat.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは猫を見ました。」に合いません。\n\n❌ 【They seeing the cat.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは猫を見ました。」に合いません。",
-      "hint": "saw"
+      "hint": "saw",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. They saw the cat.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼らは猫を見ました。"
     },
     {
       "id": "g1-u9-para-004",
@@ -629,7 +651,9 @@
       "correctAnswer": "I didn't see the movie last week.",
       "difficulty": "intermediate",
       "explanation": "didn't + 原形です。「私は先週その映画を見ませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I didn't see the movie last week.】 ← 正解\n  ✓ 正解理由: 日本語訳「私は先週その映画を見ませんでした。」から、この形が適切です。\n\n❌ 【I don't see the movie last week.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は先週その映画を見ませんでした。」に合いません。\n\n❌ 【I didn't saw the movie last week.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は先週その映画を見ませんでした。」に合いません。",
-      "hint": "didn't"
+      "hint": "didn't",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. I didn't see the movie last week.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私は先週その映画を見ませんでした。"
     },
     {
       "id": "g1-u9-para-010",
@@ -677,7 +701,9 @@
       "correctAnswer": "No, she didn't.",
       "difficulty": "advanced",
       "explanation": "Didへの否定の答えはdidn'tです。「いいえ、行きませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【No, she didn't.】 ← 正解\n  ✓ 正解理由: 日本語訳「いいえ、行きませんでした。」から、この形が適切です。\n\n❌ 【No, she doesn't.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いいえ、行きませんでした。」に合いません。\n\n❌ 【No, she not.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いいえ、行きませんでした。」に合いません。",
-      "hint": "No, she didn't"
+      "hint": "No, she didn't",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. No, she didn't.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。いいえ、行きませんでした。"
     },
     {
       "id": "g1-u9-para-013",
@@ -757,7 +783,9 @@
       "correctAnswer": "came",
       "difficulty": "beginner",
       "explanation": "comeの過去形はcameです。「彼女は先週私の家に来ました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【came】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先週私の家に来ました。」から、この形が適切です。\n\n❌ 【come】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週私の家に来ました。」に合いません。\n\n❌ 【comed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週私の家に来ました。」に合いません。",
-      "hint": "came"
+      "hint": "came",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She ____ to my house last week.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は先週私の家に来ました。"
     },
     {
       "id": "g1-u9-vf-003",
@@ -985,7 +1013,9 @@
       "correctAnswer": "bought",
       "difficulty": "intermediate",
       "explanation": "Didで聞かれたら過去形で答えります。「新しいバッグを買いました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bought】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の経験を語る。」から、この形が適切です。\n\n❌ 【buy】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の経験を語る。」に合いません。\n\n❌ 【buys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の経験を語る。」に合いません。",
-      "hint": "bought"
+      "hint": "bought",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. bought",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。過去の経験を語る。"
     },
     {
       "id": "g1-u9-conv-005",
