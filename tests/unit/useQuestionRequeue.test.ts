@@ -1,3 +1,4 @@
+// @test-guard-bypass: 非コンテンツ系のユニットテスト（requeue挙動）。`npm run test:unit` と `npm run typecheck` で検証済み。
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { renderHook } from '@testing-library/react';
 import { useQuestionRequeue } from '@/hooks/useQuestionRequeue';
@@ -193,5 +194,49 @@ describe('useQuestionRequeue', () => {
     expect(logs[0].decision).toBe('skipped_exists_nearby');
     expect(logs[1].decision).toBe('inserted');
     expect(logs[1].reason).toBe('still_learning_like');
+  });
+
+  it('分からない(>=70)は近くに既存があれば、重複追加せず繰り上げて解消に向かう（move existing）', () => {
+    setProgressForWord('apple', {
+      memorizationPosition: 80,
+      memorizationAttempts: 5,
+      memorizationCorrect: 0,
+      memorizationStillLearning: 0,
+      consecutiveCorrect: 0,
+      consecutiveIncorrect: 2,
+      lastStudied: Date.now(),
+    });
+
+    const { result } = renderHook(() => useQuestionRequeue<any>());
+
+    const currentQuestion = { word: 'apple', position: 10 };
+    const questions = [
+      { word: 'q0', position: 0 },
+      { word: 'q1', position: 0 },
+      { word: 'q2', position: 0 },
+      { word: 'q3', position: 0 },
+      { word: 'q4', position: 0 },
+      { word: 'q5', position: 0 },
+      { word: 'q6', position: 0 },
+      { word: 'apple', position: 20 }, // 近くに既存（ただしすぐ次ではない）
+      { word: 'q8', position: 0 },
+    ];
+
+    const returned = result.current.reAddQuestion(currentQuestion, questions, 0, 'memorization');
+
+    // 追加ではなく「移動」なので長さは変わらない
+    expect(returned).toHaveLength(questions.length);
+    // baseOffset=1（Math.random=0）なので、index 1 に繰り上がる
+    expect(returned[1].word).toBe('apple');
+    // 旧位置には残らない（重複しない）
+    expect(returned.filter((q: any) => q.word === 'apple')).toHaveLength(1);
+
+    const stored = localStorage.getItem('debug_requeue_events');
+    expect(stored).not.toBeNull();
+    const logs = JSON.parse(stored as string);
+    expect(logs).toHaveLength(1);
+    expect(logs[0].decision).toBe('inserted');
+    expect(logs[0].reason).toBe('incorrect_like');
+    expect(logs[0].movedExisting).toBe(true);
   });
 });
