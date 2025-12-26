@@ -107,9 +107,6 @@ type Tab =
   | 'spelling'
   | 'grammar'
   | 'reading'
-  | 'grammar-guide'
-  | 'dictionary'
-  | 'stats'
   | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
@@ -1813,36 +1810,6 @@ function App() {
         </button>
         <button
           className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'grammar-guide'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
-          }`}
-          onClick={() => setActiveTab('grammar-guide')}
-        >
-          🔖 参考
-        </button>
-        <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'dictionary'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
-          }`}
-          onClick={() => setActiveTab('dictionary')}
-        >
-          📕 辞書
-        </button>
-        <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'stats'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
-          }`}
-          onClick={() => setActiveTab('stats')}
-        >
-          📊 成績
-        </button>
-        <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'settings'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1980,24 +1947,16 @@ function App() {
             />
           ) : activeTab === 'grammar' ? (
             <GrammarQuizView />
-          ) : activeTab === 'grammar-guide' ? (
-            <GrammarGuideView />
-          ) : activeTab === 'dictionary' ? (
-            <DictionaryView />
-          ) : activeTab === 'stats' ? (
-            <StatsView
-              questionSets={questionSets}
-              allQuestions={allQuestions}
-              categoryList={categoryList}
-              onResetComplete={() => setActiveTab('stats')}
-              onQuestionSetsUpdated={reloadQuestionSets}
-            />
           ) : (
             <SettingsView
               allQuestions={allQuestions}
               _selectedDataSource={selectedDataSource}
               _onDataSourceChange={setSelectedDataSource}
               customQuestionSets={customQuestionState.sets}
+              questionSets={questionSets}
+              categoryList={categoryList}
+              onResetComplete={() => setActiveTab('settings')}
+              onQuestionSetsUpdated={reloadQuestionSets}
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
               onStartSession={(_mode, questions) => {
                 // セッションの単語でクイズを開始
