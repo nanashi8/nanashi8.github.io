@@ -355,7 +355,10 @@ function SpellingView({
           }
           return {
             ...prev,
-            questions: [...prev.questions.slice(0, currentIndexAtSchedule), ...scheduleResult.scheduledQuestions],
+            questions: [
+              ...prev.questions.slice(0, currentIndexAtSchedule),
+              ...scheduleResult.scheduledQuestions,
+            ],
           };
         });
 
@@ -434,6 +437,13 @@ function SpellingView({
     } else {
       setIncorrectStreak((prev) => prev + 1);
       setCorrectStreak(0);
+    }
+
+    // 🔥 新規枯渇防止: 不正解連打時は残りキューを再スケジューリングして
+    // インターリーブ（[苦手語4, 新規1]）を回復させる
+    const nextIncorrectStreak = isCorrect ? 0 : incorrectStreak + 1;
+    if (!needsRescheduling && nextIncorrectStreak >= 5) {
+      setNeedsRescheduling(true);
     }
 
     // 単語進捗を更新

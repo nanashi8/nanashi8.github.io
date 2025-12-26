@@ -4,6 +4,7 @@ import { loadProgressSync } from '../storage/progress/progressStorage';
 import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 import type { ScheduleMode } from '@/ai/scheduler/types';
 import { DebugTracer } from '@/utils/DebugTracer';
+import { readDebugJSON } from '@/utils/debugStorage';
 // A/B集計用
 import { aggregateAll } from '@/metrics/ab/aggregate';
 import { exportSessionLogsAsJson, clearSessionLogs } from '@/metrics/ab/storage';
@@ -83,33 +84,15 @@ function getModeStillLearning(progress: any, mode: ScheduleMode): number {
 }
 
 function readPostProcessTop30(desiredMode: ScheduleMode): any[] {
-  const keys = [`debug_postProcess_output_${desiredMode}`, 'debug_postProcess_output'];
-  for (const key of keys) {
-    const raw = localStorage.getItem(key);
-    if (!raw) continue;
-    try {
-      const parsed = JSON.parse(raw) as any;
-      if (Array.isArray(parsed)) return parsed;
-      if (Array.isArray(parsed?.top30)) return parsed.top30;
-    } catch {
-      // ignore
-    }
-  }
+  const { value } = readDebugJSON<any>('debug_postProcess_output', { mode: desiredMode });
+  if (!value) return [];
+  if (Array.isArray(value)) return value;
+  if (Array.isArray((value as any)?.top30)) return (value as any).top30;
   return [];
 }
 
 function readPostProcessMeta(desiredMode: ScheduleMode): any | null {
-  const keys = [`debug_postProcess_meta_${desiredMode}`, 'debug_postProcess_meta'];
-  for (const key of keys) {
-    const raw = localStorage.getItem(key);
-    if (!raw) continue;
-    try {
-      return JSON.parse(raw);
-    } catch {
-      // ignore
-    }
-  }
-  return null;
+  return readDebugJSON<any>('debug_postProcess_meta', { mode: desiredMode }).value;
 }
 
 export function RequeuingDebugPanel({
@@ -297,7 +280,7 @@ export function RequeuingDebugPanel({
 
 ---
 
-${DebugTracer.generateSummary()}
+${DebugTracer.generateSummary(mode)}
 
 ---
 
@@ -2493,7 +2476,7 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 
         {/* データフロー追跡 */}
         {(() => {
-          const flowSummary = DebugTracer.generateSummary();
+          const flowSummary = DebugTracer.generateSummary(mode);
           if (flowSummary === 'トレースデータなし' || flowSummary === 'スパンデータなし') {
             return (
               <div className="bg-gray-50 p-3 rounded border-2 border-gray-300">

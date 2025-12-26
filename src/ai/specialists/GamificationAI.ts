@@ -314,7 +314,7 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
    * 🎮 カテゴリ別インターリーブ（交互配置）
    *
    * Position降順ソート後に、苦手語（分からない+まだまだ）とPosition引き上げ新規語を交互配置
-   * パターン: [苦手語3-5問, 新規1問] のサイクルで配置
+   * パターン: [苦手語4問, 新規1問] のサイクルで配置（新規比率=20%、定着率優先）
    *
    * @param questions Position降順ソート済みの問題リスト
    * @returns インターリーブ済みの問題リスト
@@ -323,6 +323,11 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     T extends { position: number; attempts?: number; question?: { word: string } },
   >(questions: T[]): T[] {
     const isDevMode = import.meta.env?.DEV ?? false;
+
+    // 定着率優先: 新規混入比率は20%を目標に安定化（乱数でブレないよう固定サイクル）
+    // 例: 1 / (4 + 1) = 0.20
+    const targetNewRatio = 0.2;
+    const strugglingPerNew = Math.max(1, Math.round((1 - targetNewRatio) / targetNewRatio));
 
     // 苦手語（分からない Position≥70 + まだまだ Position 40-70, attempts > 0）を抽出
     const struggling = questions.filter((pq) => pq.position >= 40 && (pq.attempts ?? 0) > 0);
@@ -364,14 +369,14 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
       return [...boostedNew, ...others];
     }
 
-    // 交互配置パターン: [苦手語3-5問, 新規1問]（苦手語が主、新規が従）
+    // 交互配置パターン: [苦手語4問, 新規1問]（苦手語が主、新規が従）
     const interleaved: T[] = [];
     let strugIdx = 0;
     let newIdx = 0;
 
     while (strugIdx < struggling.length || newIdx < boostedNew.length) {
-      // 苦手語を3-5問追加（主）
-      const strugCount = Math.min(Math.floor(Math.random() * 3) + 3, struggling.length - strugIdx);
+      // 苦手語を4問追加（主）
+      const strugCount = Math.min(strugglingPerNew, struggling.length - strugIdx);
       for (let i = 0; i < strugCount; i++) {
         interleaved.push(struggling[strugIdx++]);
       }
