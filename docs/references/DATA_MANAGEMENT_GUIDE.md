@@ -51,10 +51,10 @@
 
 **対象ファイル**:
 - `all-words.csv`
-- `junior-high-entrance-words.csv`
-- `junior-high-entrance-phrases.csv`
-- `intermediate-1800-words.csv`
-- `intermediate-1800-phrases.csv`
+- `high-school-entrance-words.csv`
+- `high-school-entrance-phrases.csv`
+- `junior-high-intermediate-words.csv`
+- `junior-high-intermediate-phrases.csv`
 
 **実行方法**:
 ```bash

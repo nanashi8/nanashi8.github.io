@@ -39,7 +39,9 @@
       "correctAnswer": "reading",
       "difficulty": "beginner",
       "explanation": "現在進行形はbe + -ingです。She is reading a book.で「本を読んでいます」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【reading】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は本を読んでいます。」から、この形が適切です。\n\n❌ 【read】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は本を読んでいます。」に合いません。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は本を読んでいます。」に合いません。",
-      "hint": "is + -ing"
+      "hint": "is + -ing",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. She is ____ a book.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼女は本を読んでいます。"
     },
     {
       "id": "g1-u6-fib-003",
@@ -129,7 +131,9 @@
       "correctAnswer": "doing",
       "difficulty": "intermediate",
       "explanation": "否定文でもbe + -ing形です。I am not doing my homework.で「宿題をしていません」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【doing】 ← 正解\n  ✓ 正解理由: 日本語訳「私は宿題をしていません。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は宿題をしていません。」に合いません。\n\n❌ 【does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は宿題をしていません。」に合いません。",
-      "hint": "not + -ing"
+      "hint": "not + -ing",
+      "passage": "I am in my classroom now. Our teacher is kind and friendly. I am not ____ my homework.",
+      "passageJapanese": "今、教室にいます。先生は親切でやさしいです。私は宿題をしていません。"
     },
     {
       "id": "g1-u6-fib-009",
@@ -159,7 +163,9 @@
       "correctAnswer": "cooking",
       "difficulty": "intermediate",
       "explanation": "cookは-ingを付けるだけです。He is cooking.で「料理をしています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cooking】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は料理をしています。」から、この形が適切です。\n\n❌ 【cook】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は料理をしています。」に合いません。\n\n❌ 【cooks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は料理をしています。」に合いません。",
-      "hint": "cook + ing"
+      "hint": "cook + ing",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. He is ____.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼は料理をしています。"
     },
     {
       "id": "g1-u6-fib-011",
@@ -219,7 +225,9 @@
       "correctAnswer": "singing",
       "difficulty": "advanced",
       "explanation": "否定文はbe not + -ingです。She is not singing a song.で「歌を歌っていません」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【singing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は歌を歌っていません。」から、この形が適切です。\n\n❌ 【sing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は歌を歌っていません。」に合いません。\n\n❌ 【sings】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は歌を歌っていません。」に合いません。",
-      "hint": "not + -ing"
+      "hint": "not + -ing",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She is not ____ a song.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は歌を歌っていません。"
     },
     {
       "id": "g1-u6-fib-015",
@@ -234,7 +242,9 @@
       "correctAnswer": "having",
       "difficulty": "advanced",
       "explanation": "haveはeを取ってhavingです。We are having lunch.で「昼食を食べています」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【having】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは今、昼食を食べています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今、昼食を食べています。」に合いません。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今、昼食を食べています。」に合いません。",
-      "hint": "e を取る"
+      "hint": "e を取る",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. We are ____ lunch now.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私たちは今、昼食を食べています。"
     },
     {
       "id": "g1-u6-so-001",
@@ -279,7 +289,9 @@
       "difficulty": "beginner",
       "explanation": "複数主語はareです。They are eating.で「食べています」です。\n\n「彼らは食べています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They are eating.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "They are",
-      "wordCount": 3
+      "wordCount": 3,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. They are eating.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らは食べています。"
     },
     {
       "id": "g1-u6-so-004",
@@ -356,7 +368,9 @@
       "difficulty": "intermediate",
       "explanation": "listen to musicで「音楽を聞く」です。I am listening to music.です。\n\n「私は音楽を聞いています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am listening to music.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "listening to",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "I like soccer. I play it after school. My friends play with me. I am listening to music.",
+      "passageJapanese": "サッカーが好きです。放課後にします。友達もいっしょにします。私は音楽を聞いています。"
     },
     {
       "id": "g1-u6-so-009",
@@ -424,7 +438,9 @@
       "difficulty": "advanced",
       "explanation": "write a letterで「手紙を書く」です。She is writing a letter.です。\n\n「彼女は手紙を書いています。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is writing a letter.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "writing a",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. She is writing a letter.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼女は手紙を書いています。"
     },
     {
       "id": "g1-u6-so-013",
@@ -458,7 +474,9 @@
       "difficulty": "advanced",
       "explanation": "疑問詞 + be動詞 + 主語 + -ingです。What are you doing?で「何をしていますか」です。\n\n「あなたは何をしていますか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What are you doing?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "What are",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. What are you doing?",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。あなたは何をしていますか。"
     },
     {
       "id": "g1-u6-so-015",
@@ -475,7 +493,9 @@
       "difficulty": "advanced",
       "explanation": "複数の否定文です。They are not eating breakfast.で「朝食を食べていません」です。\n\n「彼らは朝食を食べていません。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They are not eating breakfast.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "are not",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. They are not eating breakfast.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼らは朝食を食べていません。"
     },
     {
       "id": "g1-u6-para-001",
@@ -491,7 +511,9 @@
       "correctAnswer": "Are you studying?",
       "difficulty": "beginner",
       "explanation": "現在進行形の疑問文はbe動詞を文頭にです。Are you studying?で「勉強していますか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Are you studying?】 ← 正解\n  ✓ 正解理由: 日本語訳「勉強していますか。」から、この形が適切です。\n\n❌ 【You are studying?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「勉強していますか。」に合いません。\n\n❌ 【Do you studying?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「勉強していますか。」に合いません。",
-      "hint": "Are you"
+      "hint": "Are you",
+      "passage": "We study English every day. We do homework after dinner. Are you studying?",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。勉強していますか。"
     },
     {
       "id": "g1-u6-para-002",
@@ -555,7 +577,9 @@
       "correctAnswer": "They are not playing soccer.",
       "difficulty": "beginner",
       "explanation": "疑問文を否定文にです。They are not playing soccer.で「サッカーをしていません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【They are not playing soccer.】 ← 正解\n  ✓ 正解理由: 日本語訳「サッカーをしていません。」から、この形が適切です。\n\n❌ 【They don't play soccer.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「サッカーをしていません。」に合いません。\n\n❌ 【They not playing soccer.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「サッカーをしていません。」に合いません。",
-      "hint": "are not"
+      "hint": "are not",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. They are not playing soccer.",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。サッカーをしていません。"
     },
     {
       "id": "g1-u6-para-006",
@@ -619,7 +643,9 @@
       "correctAnswer": "I'm not running.",
       "difficulty": "intermediate",
       "explanation": "I am → I'mです。I'm not running.で「走っていません」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I'm not running.】 ← 正解\n  ✓ 正解理由: 日本語訳「走っていません。」から、この形が適切です。\n\n❌ 【I amn't running.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走っていません。」に合いません。\n\n❌ 【I not running.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走っていません。」に合いません。",
-      "hint": "I'm"
+      "hint": "I'm",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. I'm not running.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。走っていません。"
     },
     {
       "id": "g1-u6-para-010",
@@ -683,7 +709,9 @@
       "correctAnswer": "I am watching TV now.",
       "difficulty": "advanced",
       "explanation": "習慣（現在形）→今（進行形）です。I am watching TV now.で「今テレビを見ています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I am watching TV now.】 ← 正解\n  ✓ 正解理由: 日本語訳「今テレビを見ています。」から、この形が適切です。\n\n❌ 【I watch TV now.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「今テレビを見ています。」に合いません。\n\n❌ 【I watching TV now.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「今テレビを見ています。」に合いません。",
-      "hint": "am watching now"
+      "hint": "am watching now",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. I am watching TV now.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。今テレビを見ています。"
     },
     {
       "id": "g1-u6-para-014",
@@ -763,7 +791,9 @@
       "correctAnswer": "writing",
       "difficulty": "beginner",
       "explanation": "writeはeを取ってwritingです。語末のeは取ってから-ingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【writing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は手紙を書いています。」から、この形が適切です。\n\n❌ 【writeing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は手紙を書いています。」に合いません。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は手紙を書いています。」に合いません。",
-      "hint": "e を取る"
+      "hint": "e を取る",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. He is ____ a letter.",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼は手紙を書いています。"
     },
     {
       "id": "g1-u6-vf-004",
@@ -779,7 +809,9 @@
       "correctAnswer": "running",
       "difficulty": "beginner",
       "explanation": "runはnを重ねてrunningです。短母音+単子音字は最後の文字を重ねります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【running】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは走っています。」から、この形が適切です。\n\n❌ 【runing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは走っています。」に合いません。\n\n❌ 【run】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは走っています。」に合いません。",
-      "hint": "nn"
+      "hint": "nn",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. They are ____.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らは走っています。"
     },
     {
       "id": "g1-u6-vf-005",
@@ -811,7 +843,9 @@
       "correctAnswer": "having",
       "difficulty": "intermediate",
       "explanation": "haveはeを取ってhavingです。I am having lunch.で「昼食を食べています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【having】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨食を食べています。」から、この形が適切です。\n\n❌ 【haveing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨食を食べています。」に合いません。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨食を食べています。」に合いません。",
-      "hint": "e を取る"
+      "hint": "e を取る",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. I am ____ lunch.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私は昨食を食べています。"
     },
     {
       "id": "g1-u6-vf-007",
@@ -843,7 +877,9 @@
       "correctAnswer": "shopping",
       "difficulty": "advanced",
       "explanation": "shopはpを重ねてshoppingです。She is shopping.で「買い物をしています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【shopping】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は店で買い物をしています。」から、この形が適切です。\n\n❌ 【shoping】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は店で買い物をしています。」に合いません。\n\n❌ 【shop】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は店で買い物をしています。」に合いません。",
-      "hint": "pp"
+      "hint": "pp",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. She is ____ in the store.",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼女は店で買い物をしています。"
     },
     {
       "id": "g1-u6-vf-009",
@@ -859,7 +895,9 @@
       "correctAnswer": "making",
       "difficulty": "advanced",
       "explanation": "makeはeを取ってmakingです。They are making a cake.で「ケーキを作っています」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【making】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らはケーキを作っています。」から、この形が適切です。\n\n❌ 【makeing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはケーキを作っています。」に合いません。\n\n❌ 【make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはケーキを作っています。」に合いません。",
-      "hint": "e を取る"
+      "hint": "e を取る",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. They are ____ a cake.",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らはケーキを作っています。"
     },
     {
       "id": "g1-u6-vf-010",

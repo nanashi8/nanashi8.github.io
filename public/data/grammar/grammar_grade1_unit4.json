@@ -144,7 +144,9 @@
       "correctAnswer": "Where",
       "difficulty": "intermediate",
       "explanation": "「どこで」はWhereで尋ねります。Where do you～?で「どこで～しますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Where】 ← 正解\n  ✓ 正解理由: 日本語訳「どこで昼食を食べますか。」から、この形が適切です。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どこで昼食を食べますか。」に合いません。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どこで昼食を食べますか。」に合いません。",
-      "hint": "どこで → Where"
+      "hint": "どこで → Where",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ do you eat lunch?",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。どこで昼食を食べますか。"
     },
     {
       "id": "g1-u4-fib-010",
@@ -189,7 +191,9 @@
       "correctAnswer": "How",
       "difficulty": "advanced",
       "explanation": "「どのくらい」はHow longで尋ねります。How long does it take?で「どのくらいかかりますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How】 ← 正解\n  ✓ 正解理由: 日本語訳「学校までどのくらいかかりますか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校までどのくらいかかりますか。」に合いません。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校までどのくらいかかりますか。」に合いません。",
-      "hint": "どのくらい → How long"
+      "hint": "どのくらい → How long",
+      "passage": "I am in my classroom now. Our teacher is kind and friendly. ____ long does it take to school?",
+      "passageJapanese": "今、教室にいます。先生は親切でやさしいです。学校までどのくらいかかりますか。"
     },
     {
       "id": "g1-u4-fib-013",
@@ -204,7 +208,9 @@
       "correctAnswer": "Who",
       "difficulty": "advanced",
       "explanation": "「誰と」はWhoで尋ねります。Who is～talking to?で「誰と話していますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Who】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は誰と話していますか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰と話していますか。」に合いません。\n\n❌ 【Where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰と話していますか。」に合いません。",
-      "hint": "誰と → Who"
+      "hint": "誰と → Who",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ is he talking to?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼は誰と話していますか。"
     },
     {
       "id": "g1-u4-fib-014",
@@ -264,7 +270,9 @@
       "difficulty": "beginner",
       "explanation": "Who are you?で「あなたは誰ですか」です。疑問詞Whoを文頭にです。\n\n「あなたは誰ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Who are you?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Who are ～?",
-      "wordCount": 4
+      "wordCount": 4,
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Who are you?",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。あなたは誰ですか。"
     },
     {
       "id": "g1-u4-so-003",
@@ -297,7 +305,9 @@
       "difficulty": "beginner",
       "explanation": "When do you～?で「いつ～しますか」です。一般動詞の疑問文です。\n\n「いつテニスをしますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ When do you play tennis?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "When do you ～?",
-      "wordCount": 6
+      "wordCount": 6,
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. When do you play tennis?",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。いつテニスをしますか。"
     },
     {
       "id": "g1-u4-so-005",
@@ -451,7 +461,9 @@
       "difficulty": "advanced",
       "explanation": "How long does it take to～?で「～までどのくらいかかりますか」です。\n\n「駅までどのくらいかかりますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long does it take to the station?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long does it take ～?",
-      "wordCount": 9
+      "wordCount": 9,
+      "passage": "We travel by train. The train is fast. I like looking out of the window. How long does it take to the station?",
+      "passageJapanese": "電車で旅行します。電車は速いです。窓の外を見るのが好きです。駅までどのくらいかかりますか。"
     },
     {
       "id": "g1-u4-so-014",
@@ -725,7 +737,9 @@
       "correctAnswer": "How old is she?",
       "difficulty": "advanced",
       "explanation": "How old is～?で「～は何歳ですか」です。年齢を尋ねります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How old is she?】 ← 正解\n  ✓ 正解理由: 日本語訳「How oldへの変換。」から、この形が適切です。\n\n❌ 【She is how old?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How oldへの変換。」に合いません。\n\n❌ 【How old she is?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How oldへの変換。」に合いません。",
-      "hint": "How old is ～?"
+      "hint": "How old is ～?",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. How old is she?",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。How oldへの変換。"
     },
     {
       "id": "g1-u4-vf-001",
@@ -789,7 +803,9 @@
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "theseは複数なのでbe動詞はareです。What are these?で「これらは何ですか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは何を欲しがっていますか。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは何を欲しがっていますか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは何を欲しがっていますか。」に合いません。",
-      "hint": "these → are"
+      "hint": "these → are",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. What ____ these?",
+      "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らは何を欲しがっていますか。"
     },
     {
       "id": "g1-u4-vf-005",
@@ -805,7 +821,9 @@
       "correctAnswer": "does",
       "difficulty": "intermediate",
       "explanation": "三人称単数の疑問文はdoesを使います。heなのでdoesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はいつ起きますか。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はいつ起きますか。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はいつ起きますか。」に合いません。",
-      "hint": "he → does"
+      "hint": "he → does",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. When ____ he play soccer?",
+      "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。彼はいつ起きますか。"
     },
     {
       "id": "g1-u4-vf-006",
@@ -821,7 +839,9 @@
       "correctAnswer": "do",
       "difficulty": "intermediate",
       "explanation": "一般動詞の疑問文です。youなのでdoです。How do you～?で「どうやって～しますか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどうやって学校へ行きますか。」から、この形が適切です。\n\n❌ 【does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどうやって学校へ行きますか。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどうやって学校へ行きますか。」に合いません。",
-      "hint": "you → do"
+      "hint": "you → do",
+      "passage": "We study English every day. We do homework after dinner. How ____ you go to school?",
+      "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。あなたはどうやって学校へ行きますか。"
     },
     {
       "id": "g1-u4-vf-007",
@@ -837,7 +857,9 @@
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "friendsは複数なのでareです。Where are～from?で「～はどこ出身ですか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたの友達はどこ出身ですか。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの友達はどこ出身ですか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの友達はどこ出身ですか。」に合いません。",
-      "hint": "friends → are"
+      "hint": "friends → are",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. Where ____ your friends from?",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。あなたの友達はどこ出身ですか。"
     },
     {
       "id": "g1-u4-vf-008",
@@ -1025,7 +1047,9 @@
       "correctAnswer": "How old",
       "difficulty": "beginner",
       "explanation": "How + 形容詞で「どのくらい~」と程度を尋ねる疑問文として覚えてください。How old = 「何歳」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How old】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは何歳ですか。」から、この形が適切です。\n\n❌ 【What old】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何歳ですか。」に合いません。\n\n❌ 【How age】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何歳ですか。」に合いません。",
-      "hint": "年齢を尋ねる"
+      "hint": "年齢を尋ねる",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ ____ are you?",
+      "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。あなたは何歳ですか。"
     },
     {
       "id": "g1-u4-howadj-002",
@@ -1058,7 +1082,9 @@
       "difficulty": "intermediate",
       "explanation": "How + 形容詞という疑問文として覚えてください。How far = 「どのくらい遠い」で距離を尋ねります。\n\n「東京までどのくらい遠いですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How far is it to Tokyo?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How far",
-      "wordCount": 6
+      "wordCount": 6,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. How far is it to Tokyo?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。東京までどのくらい遠いですか。"
     },
     {
       "id": "g1-u4-howadj-004",
@@ -1100,7 +1126,9 @@
       "difficulty": "intermediate",
       "explanation": "How + 形容詞という疑問文として覚えてください。How high = 「どのくらい高い」で高さを尋ねります。\n\n「この建物はどのくらい高いですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How high is this building?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How high",
-      "wordCount": 5
+      "wordCount": 5,
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. How high is this building?",
+      "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。この建物はどのくらい高いですか。"
     }
   ]
 }

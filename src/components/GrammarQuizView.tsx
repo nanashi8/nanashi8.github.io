@@ -12,6 +12,56 @@ import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
 import { QuestionScheduler } from '@/ai/scheduler';
 import { RequeuingDebugPanel } from './RequeuingDebugPanel';
 
+function buildPunctuationAwareBlankTemplate(answer: string | undefined | null): string | null {
+  if (!answer) return null;
+
+  // Keep common punctuation visible while hiding words as blanks.
+  const tokens = answer.match(
+    /[A-Za-z0-9]+(?:[’'][A-Za-z0-9]+)*(?:-[A-Za-z0-9]+(?:[’'][A-Za-z0-9]+)*)*|[.,!?;:()]/g
+  );
+  if (!tokens || tokens.length === 0) return null;
+
+  const out: string[] = [];
+  for (const token of tokens) {
+    const isWordLike = /[A-Za-z0-9]/.test(token);
+    if (isWordLike) {
+      out.push('____');
+      continue;
+    }
+
+    // Attach punctuation to the previous blank/token (no extra spaces)
+    if (/^[.,!?;:]$/.test(token)) {
+      if (out.length === 0) {
+        out.push(`____${token}`);
+      } else {
+        out[out.length - 1] = `${out[out.length - 1]}${token}`;
+      }
+      continue;
+    }
+
+    // Parentheses: keep readable spacing
+    if (token === '(') {
+      out.push('(');
+      continue;
+    }
+    if (token === ')') {
+      if (out.length === 0) {
+        out.push(')');
+      } else {
+        out[out.length - 1] = `${out[out.length - 1]})`;
+      }
+      continue;
+    }
+  }
+
+  return out
+    .join(' ')
+    .replace(/\(\s+/g, '(')
+    .replace(/\s+\)/g, ')')
+    .replace(/\s+([.,!?;:])/g, '$1')
+    .trim();
+}
+
 interface VerbFormQuestion {
   id: string;
   japanese: string;
@@ -296,6 +346,18 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const currentQuestion = currentQuestions[currentQuestionIndex];
   const isSentenceOrdering =
     currentQuestion?.type === 'sentenceOrdering' || quizType === 'sentence-ordering';
+
+  const sentenceOrderingCorrectAnswer: string | undefined = isSentenceOrdering
+    ? ((currentQuestion as any)?.correctAnswer || (currentQuestion as any)?.correctOrder)
+    : undefined;
+  const sentenceOrderingPunctuationTemplate = isSentenceOrdering
+    ? buildPunctuationAwareBlankTemplate(sentenceOrderingCorrectAnswer)
+    : null;
+  const shouldShowSentenceOrderingPunctuationTemplate =
+    isSentenceOrdering &&
+    typeof sentenceOrderingCorrectAnswer === 'string' &&
+    /[.,!?;:]/.test(sentenceOrderingCorrectAnswer) &&
+    !!sentenceOrderingPunctuationTemplate;
 
   // 現在の問題から単元を抽出（履歴表示用）
   const currentGrammarUnit = currentQuestion?.id
@@ -1462,6 +1524,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
               {isSentenceOrdering ? (
                 <div className="word-area">
+                  {shouldShowSentenceOrderingPunctuationTemplate && (
+                    <div className="selected-words-area">
+                      <div className="area-label">文の形（句読点つき）</div>
+                      <div className="sentence-display">{sentenceOrderingPunctuationTemplate}</div>
+                    </div>
+                  )}
                   <div className="selected-words-area">
                     <div className="area-label-with-reset">
                       <span className="area-label">選択した単語 ({selectedWords.length}語)</span>

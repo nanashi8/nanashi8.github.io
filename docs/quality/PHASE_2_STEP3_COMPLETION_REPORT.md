@@ -23,8 +23,8 @@
 |----------|-------------|------|
 | high-school-entrance-words.csv | 2,662 | ✅ 高度検証済み |
 | high-school-entrance-phrases.csv | 96 | ✅ 高度検証済み |
-| high-school-intermediate-words.csv | 1,579 | ✅ 高度検証済み |
-| high-school-intermediate-phrases.csv | 212 | ✅ 高度検証済み |
+| junior-high-intermediate-words.csv | 1,579 | ✅ 高度検証済み |
+| junior-high-intermediate-phrases.csv | 212 | ✅ 高度検証済み |
 
 ### 🎯 新規追加テスト (21項目)
 
@@ -37,8 +37,8 @@
 **結果**:
 - high-school-entrance-words.csv: 100.0% (2661/2662)
 - high-school-entrance-phrases.csv: 100.0% (96/96)
-- high-school-intermediate-words.csv: 69.3% (1095/1579)
-- high-school-intermediate-phrases.csv: 100.0% (212/212)
+- junior-high-intermediate-words.csv: 69.3% (1095/1579)
+- junior-high-intermediate-phrases.csv: 100.0% (212/212)
 
 **基準**: 50%以上が充実した語源解説を持つ → ✅ 全ファイル達成
 

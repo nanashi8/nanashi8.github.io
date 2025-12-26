@@ -8,8 +8,8 @@ import path from 'path';
  * 検証対象:
  * - high-school-entrance-words.csv (高校入試単語)
  * - high-school-entrance-phrases.csv (高校入試フレーズ)
- * - high-school-intermediate-words.csv (高校中級単語)
- * - high-school-intermediate-phrases.csv (高校中級フレーズ)
+ * - junior-high-intermediate-words.csv (junior-high-intermediate / 中学履修単語)
+ * - junior-high-intermediate-phrases.csv (junior-high-intermediate / 中学履修フレーズ)
  *
  * 専門家の視点:
  * - 英語教育者: 難易度の適切性
@@ -33,8 +33,8 @@ const DATA_DIR = path.join(process.cwd(), 'public', 'data', 'vocabulary');
 const VOCABULARY_FILES = [
   'high-school-entrance-words.csv',
   'high-school-entrance-phrases.csv',
-  'high-school-intermediate-words.csv',
-  'high-school-intermediate-phrases.csv',
+  'junior-high-intermediate-words.csv',
+  'junior-high-intermediate-phrases.csv',
 ];
 
 function parseCSV(filePath: string): VocabularyEntry[] {
@@ -261,8 +261,8 @@ describe('Vocabulary品質検証 - 教育的妥当性', () => {
     expect(appropriateRate).toBeGreaterThan(0.6);
   });
 
-  it('高校中級レベルの単語はintermediate/advanced難易度が多い', () => {
-    const filePath = path.join(DATA_DIR, 'high-school-intermediate-words.csv');
+  it('junior-high-intermediate（中学履修）レベルの単語はintermediate/advanced難易度が多い', () => {
+    const filePath = path.join(DATA_DIR, 'junior-high-intermediate-words.csv');
     if (!fs.existsSync(filePath)) return;
 
     const entries = parseCSV(filePath);
@@ -274,10 +274,10 @@ describe('Vocabulary品質検証 - 教育的妥当性', () => {
 
     const appropriateRate = (intermediateCount + advancedCount) / difficulties.length;
 
-    console.log(`\n📊 高校中級単語の難易度分布:`);
+    console.log(`\n📊 junior-high-intermediate（中学履修）単語の難易度分布:`);
     console.log(`  intermediate+advanced: ${(appropriateRate * 100).toFixed(1)}%`);
 
-    // 高校中級は40%以上がintermediate+advanced (実データ: 46.0%)
+    // junior-high-intermediate（中学履修）は40%以上がintermediate+advanced (実データ: 46.0%)
     expect(appropriateRate).toBeGreaterThan(0.4);
   });
 });
