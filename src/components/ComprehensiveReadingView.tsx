@@ -75,6 +75,23 @@ function getPartOfSpeech(tag: string): string {
   return posMap[tag] || '';
 }
 
+function getGrammarTagLabel(tag: string): string {
+  const labelMap: Record<string, string> = {
+    S: '主語',
+    V: '動詞',
+    O: '目的語',
+    C: '補語',
+    M: '修飾語',
+    Prep: '前置詞',
+    Conj: '接続詞',
+    Det: '限定詞',
+    Adj: '形容詞',
+    Adv: '副詞',
+    Unknown: '',
+  };
+  return labelMap[tag] || '';
+}
+
 function ComprehensiveReadingView({
   onSaveUnknownWords,
   customQuestionSets = [],
