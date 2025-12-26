@@ -162,11 +162,88 @@ export function useQuestionRequeue<
       const windowSize = Math.min(30, Math.max(10, plannedOffset + 5));
       const windowEnd = Math.min(currentIndex + windowSize + 1, questions.length);
       const upcoming = questions.slice(currentIndex + 1, windowEnd);
-      const existsNearby = upcoming.some((q: any) => {
+      const existingNearbyRelIndex = upcoming.findIndex((q: any) => {
         const id = q?.id ?? q?.word ?? String(q?.japanese ?? '');
         return id === qid;
       });
+      const existsNearby = existingNearbyRelIndex >= 0;
       if (existsNearby) {
+        const existingNearbyAbsIndex = currentIndex + 1 + existingNearbyRelIndex;
+
+        // ✅ 分からない(>=70)は「既に近くに存在する」理由で永遠に再出題が抑制されると、
+        // 解消に向かわず詰まるため、必要なら既存の出題位置を繰り上げる。
+        if (isIncorrectLike) {
+          const desiredInsertPosition = Math.min(currentIndex + plannedOffset, questions.length);
+          // 既に想定より早く（または同等の位置に）出現するなら、ここでは何もしない
+          if (existingNearbyAbsIndex <= desiredInsertPosition) {
+            pushRequeueDebugLog({
+              timestamp: new Date().toISOString(),
+              mode: mode ?? 'unknown',
+              word: String((question as any).word ?? qid),
+              qid: String(qid),
+              decision: 'skipped_exists_nearby',
+              reason: 'incorrect_like',
+              currentIndex,
+              windowEnd,
+              baseOffset,
+              extraDelay,
+              plannedOffset,
+              questionPosition: questionPosition ?? null,
+              ssotPosition: ssotPosition ?? null,
+              effectivePosition: effectivePosition ?? null,
+              reAddedCountBefore: currentReaddCount,
+              note: 'already_scheduled_soon',
+              existingNearbyAbsIndex,
+            });
+            return questions;
+          }
+
+          // 既存の同一ID出題を前に繰り上げ（重複は増やさない）
+          const existingQuestion = questions[existingNearbyAbsIndex] as any;
+          const movedReaddCount = (existingQuestion?.reAddedCount || 0) + 1;
+          const movedQuestion = {
+            ...existingQuestion,
+            sessionPriority: Date.now(),
+            reAddedCount: movedReaddCount,
+          } as T;
+
+          const removed = [
+            ...questions.slice(0, existingNearbyAbsIndex),
+            ...questions.slice(existingNearbyAbsIndex + 1),
+          ];
+
+          // 取り除いた後の配列に挿入（indexズレに注意）
+          const insertAt = Math.min(desiredInsertPosition, removed.length);
+          const nextQuestions = [
+            ...removed.slice(0, insertAt),
+            movedQuestion,
+            ...removed.slice(insertAt),
+          ];
+
+          pushRequeueDebugLog({
+            timestamp: new Date().toISOString(),
+            mode: mode ?? 'unknown',
+            word: String((question as any).word ?? qid),
+            qid: String(qid),
+            decision: 'inserted',
+            reason: 'incorrect_like',
+            currentIndex,
+            baseOffset,
+            extraDelay,
+            plannedOffset,
+            insertAt,
+            originalInsertAt: existingNearbyAbsIndex,
+            movedExisting: true,
+            questionPosition: questionPosition ?? null,
+            ssotPosition: ssotPosition ?? null,
+            effectivePosition: effectivePosition ?? null,
+            reAddedCountBefore: existingQuestion?.reAddedCount ?? null,
+            reAddedCountAfter: movedReaddCount,
+          });
+
+          return nextQuestions;
+        }
+
         pushRequeueDebugLog({
           timestamp: new Date().toISOString(),
           mode: mode ?? 'unknown',
@@ -201,10 +278,13 @@ export function useQuestionRequeue<
 
       // 🎯 Position-aware insertion: 既存の高Position単語群に割り込み配置
       // キュー後半に高Position単語が埋もれている場合、それらの近くに配置
+      // ❗分からない(>=70)も高Position群に寄せたいが、30問先へ飛ぶのは避けたいので
+      // スキャン範囲を短くする（still_learning_like は従来どおり30問スキャン）。
       if (effectivePosition !== undefined && effectivePosition >= 40) {
-        // 挿入位置から前方30問をスキャン（軽量なO(30)操作）
+        // 挿入位置から前方をスキャン（軽量なO(10..30)操作）
         const scanStart = Math.max(insertPosition, currentIndex + 1);
-        const scanEnd = Math.min(scanStart + 30, questions.length);
+        const scanLimit = isIncorrectLike ? 10 : 30;
+        const scanEnd = Math.min(scanStart + scanLimit, questions.length);
 
         // Position 40以上の単語を探す
         let lastHighPositionIdx = -1;
