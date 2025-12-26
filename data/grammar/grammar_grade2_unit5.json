@@ -1,1041 +1,880 @@
 {
-  "enabled": true,
   "unit": "Unit 5",
-  "title": "動名詞",
-  "grammar": "動詞-ing形の名詞的用法",
+  "title": "疑問詞+不定詞",
+  "grammar": "how to / what to / where to / when to",
+  "enabled": true,
   "totalQuestions": 60,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
-    "paraphrase": 15,
-    "verbForm": 10,
-    "conversation": 5
+    "fillInBlank": 30,
+    "sentenceOrdering": 20,
+    "verbForm": 10
   },
   "questions": [
     {
-      "id": "g2-u5-fib-001",
+      "id": "g2u5_001",
       "type": "fillInBlank",
-      "japanese": "私は泳ぐことが好きです。",
-      "sentence": "I like ____.",
-      "choices": [
-        "swimming",
-        "swim",
-        "to swim"
-      ],
-      "correctAnswer": "swimming",
       "difficulty": "beginner",
-      "explanation": "動名詞swimmingは「泳ぐこと」という意味の名詞として機能します。likeの目的語になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動詞-ing形で「~すること」"
+      "sentence": "I know ___ to play the piano.",
+      "correctAnswer": "how",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: how\n日本語訳: 私はピアノの弾き方を知っています。\n文法ポイント: how to + 動詞の原形で「〜の仕方」を表します。\nよくある間違い: whatは「何を」、whereは「どこで」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-002",
+      "id": "g2u5_002",
       "type": "fillInBlank",
-      "japanese": "彼女は歌うことが好きです。",
-      "sentence": "She enjoys ____.",
-      "choices": [
-        "singing",
-        "sing",
-        "to sing"
-      ],
-      "correctAnswer": "singing",
       "difficulty": "beginner",
-      "explanation": "enjoyは動名詞を目的語に取る動詞です。「歌うこと」= singing\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "enjoyの後ろは-ing形"
+      "sentence": "Please tell me ___ to do.",
+      "correctAnswer": "what",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: what\n日本語訳: 何をすればよいか教えてください。\n文法ポイント: what to doで「何をすべきか」を表します。\nよくある間違い: howは「どのように」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-003",
+      "id": "g2u5_003",
       "type": "fillInBlank",
-      "japanese": "私は本を読むことが好きです。",
-      "sentence": "I enjoy ____ books.",
-      "choices": [
-        "reading",
-        "read",
-        "to read"
-      ],
-      "correctAnswer": "reading",
       "difficulty": "beginner",
-      "explanation": "reading booksで「本を読むこと」という動名詞句になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞「~すること」"
+      "sentence": "I don't know ___ to go.",
+      "correctAnswer": "where",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: where\n日本語訳: どこへ行けばよいか分かりません。\n文法ポイント: where to goで「どこへ行くべきか」を表します。\nよくある間違い: whatは「何を」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-004",
+      "id": "g2u5_004",
       "type": "fillInBlank",
-      "japanese": "彼は料理をすることが好きです。",
-      "sentence": "He likes ____.",
-      "choices": [
-        "cooking",
-        "cook",
-        "to cook"
-      ],
-      "correctAnswer": "cooking",
       "difficulty": "beginner",
-      "explanation": "cookingは動名詞で「料理をすること」という意味です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動詞-ing形で名詞化"
+      "sentence": "She knows ___ to start.",
+      "correctAnswer": "when",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: when\n日本語訳: 彼女はいつ始めればよいか知っています。\n文法ポイント: when to + 動詞の原形で「いつ〜すべきか」を表します。\nよくある間違い: whereは「どこで」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。"
     },
     {
-      "id": "g2-u5-fib-005",
+      "id": "g2u5_005",
       "type": "fillInBlank",
-      "japanese": "私たちは踊ることが好きです。",
-      "sentence": "We enjoy ____.",
+      "difficulty": "intermediate",
+      "sentence": "Can you teach me ___ to cook this?",
+      "correctAnswer": "how",
       "choices": [
-        "dancing",
-        "dance",
-        "to dance"
+        "how",
+        "what",
+        "where",
+        "when"
       ],
-      "correctAnswer": "dancing",
-      "difficulty": "beginner",
-      "explanation": "dancingは「踊ること」という意味の動名詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "enjoyの後ろは-ing"
+      "explanation": "正解: how\n日本語訳: これの作り方を教えてくれますか？\n文法ポイント: how to cookで「調理の仕方」を表します。\nよくある間違い: what to cookは「何を料理するか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-006",
+      "id": "g2u5_006",
       "type": "fillInBlank",
-      "japanese": "彼女は絵を描くことが好きです。",
-      "sentence": "She likes ____ pictures.",
+      "difficulty": "intermediate",
+      "sentence": "I learned ___ to swim last summer.",
+      "correctAnswer": "how",
       "choices": [
-        "drawing",
-        "draw",
-        "to draw"
+        "how",
+        "what",
+        "where",
+        "when"
       ],
-      "correctAnswer": "drawing",
-      "difficulty": "beginner",
-      "explanation": "drawing picturesで「絵を描くこと」という動名詞句です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞「~すること」"
+      "explanation": "正解: how\n日本語訳: 私は去年の夏に泳ぎ方を学びました。\n文法ポイント: learn how to + 動詞で「〜の仕方を学ぶ」を表します。\nよくある間違い: learnの後はhowやwhatがよく使われます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-007",
+      "id": "g2u5_007",
       "type": "fillInBlank",
-      "japanese": "私は音楽を聴くことが好きです。",
-      "sentence": "I like ____ to music.",
+      "difficulty": "intermediate",
+      "sentence": "He didn't know ___ to say.",
+      "correctAnswer": "what",
       "choices": [
-        "listening",
-        "listen",
-        "to listen"
+        "how",
+        "what",
+        "where",
+        "when"
       ],
-      "correctAnswer": "listening",
-      "difficulty": "beginner",
-      "explanation": "listening to musicで「音楽を聴くこと」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "listen to ~「~を聴く」の-ing形"
+      "explanation": "正解: what\n日本語訳: 彼は何を言えばよいか分かりませんでした。\n文法ポイント: what to sayで「何を言うべきか」を表します。\nよくある間違い: how to sayは「どのように言うか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-008",
+      "id": "g2u5_008",
       "type": "fillInBlank",
-      "japanese": "彼は走ることが好きです。",
-      "sentence": "He enjoys ____.",
+      "difficulty": "intermediate",
+      "sentence": "Do you know ___ to buy the ticket?",
+      "correctAnswer": "where",
       "choices": [
-        "running",
-        "run",
-        "to run"
+        "how",
+        "what",
+        "where",
+        "when"
       ],
-      "correctAnswer": "running",
-      "difficulty": "beginner",
-      "explanation": "runningは「走ること」という動名詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞-ing形"
+      "explanation": "正解: where\n日本語訳: チケットをどこで買えばよいか知っていますか？\n文法ポイント: where to + 動詞で「どこで〜すべきか」を表します。\nよくある間違い: how to buyは「買い方」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-009",
+      "id": "g2u5_009",
       "type": "fillInBlank",
-      "japanese": "私は写真を撮ることが好きです。",
-      "sentence": "I like ____ pictures.",
+      "difficulty": "intermediate",
+      "sentence": "We decided ___ to leave.",
+      "correctAnswer": "when",
       "choices": [
-        "taking",
-        "take",
-        "to take"
+        "how",
+        "what",
+        "where",
+        "when"
       ],
-      "correctAnswer": "taking",
-      "difficulty": "beginner",
-      "explanation": "taking picturesで「写真を撮ること」という動名詞句です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞「~すること」"
+      "explanation": "正解: when\n日本語訳: 私たちはいつ出発するか決めました。\n文法ポイント: decide when to + 動詞で「いつ〜するか決める」を表します。\nよくある間違い: decideの後にはwhatやwhenがよく使われます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。"
     },
     {
-      "id": "g2-u5-fib-010",
+      "id": "g2u5_010",
       "type": "fillInBlank",
-      "japanese": "彼女は買い物をすることが好きです。",
-      "sentence": "She enjoys ____.",
+      "difficulty": "intermediate",
+      "sentence": "She showed me ___ to use the computer.",
+      "correctAnswer": "how",
       "choices": [
-        "shopping",
-        "shop",
-        "to shop"
+        "how",
+        "what",
+        "where",
+        "which"
       ],
-      "correctAnswer": "shopping",
-      "difficulty": "beginner",
-      "explanation": "shoppingは「買い物をすること」という動名詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "enjoyの後ろは-ing"
+      "explanation": "正解: how\n日本語訳: 彼女はコンピューターの使い方を私に教えてくれました。\n文法ポイント: show + 人 + how to で「〜の仕方を教える」を表します。\nよくある間違い: whichは選択肢がある場合に使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【which】 ← 不正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
     },
     {
-      "id": "g2-u5-fib-011",
+      "id": "g2u5_011",
       "type": "fillInBlank",
-      "japanese": "私は英語を勉強することが好きです。",
-      "sentence": "I like ____ English.",
+      "difficulty": "intermediate",
+      "sentence": "I don't know ___ book to read.",
+      "correctAnswer": "which",
       "choices": [
-        "studying",
-        "study",
-        "to study"
+        "how",
+        "what",
+        "where",
+        "which"
       ],
-      "correctAnswer": "studying",
-      "difficulty": "beginner",
-      "explanation": "studying Englishで「英語を勉強すること」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞-ing形"
+      "explanation": "正解: which\n日本語訳: どの本を読めばよいか分かりません。\n文法ポイント: which + 名詞 + to + 動詞で「どの〜を...すべきか」を表します。\nよくある間違い: whatは特定されていない場合に使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n💡 先行詞は「物」→ which / that が使用可能\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【which】 ← 正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✓ 正解理由: 先行詞が「物」なのでwhichは適切です。"
     },
     {
-      "id": "g2-u5-fib-012",
+      "id": "g2u5_012",
       "type": "fillInBlank",
-      "japanese": "彼はテレビを見ることが好きです。",
-      "sentence": "He enjoys ____ TV.",
+      "difficulty": "advanced",
+      "sentence": "The question is ___ to solve this problem.",
+      "correctAnswer": "how",
       "choices": [
-        "watching",
-        "watch",
-        "to watch"
+        "how",
+        "what",
+        "where",
+        "when"
       ],
-      "correctAnswer": "watching",
-      "difficulty": "beginner",
-      "explanation": "watching TVで「テレビを見ること」という動名詞句です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞「~すること」"
+      "explanation": "正解: how\n日本語訳: 問題はこの問題をどう解決するかです。\n文法ポイント: 補語として疑問詞+to不定詞を使えます。\nよくある間違い: 文の補語としても使えることに注意。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-013",
+      "id": "g2u5_013",
       "type": "fillInBlank",
-      "japanese": "私はサッカーをすることが好きです。",
-      "sentence": "I like ____ soccer.",
+      "difficulty": "advanced",
+      "sentence": "The problem is ___ to choose.",
+      "correctAnswer": "what",
       "choices": [
-        "playing",
-        "play",
-        "to play"
+        "how",
+        "what",
+        "where",
+        "which"
       ],
-      "correctAnswer": "playing",
-      "difficulty": "beginner",
-      "explanation": "playing soccerで「サッカーをすること」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "play soccerの-ing形"
+      "explanation": "正解: what\n日本語訳: 問題は何を選ぶかです。\n文法ポイント: what to + 動詞は補語としても使えます。\nよくある間違い: whichは選択肢が限定されている場合に使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【which】 ← 不正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
     },
     {
-      "id": "g2-u5-fib-014",
+      "id": "g2u5_014",
       "type": "fillInBlank",
-      "japanese": "彼女は旅行することが好きです。",
-      "sentence": "She enjoys ____.",
-      "choices": [
-        "traveling",
-        "travel",
-        "to travel"
-      ],
-      "correctAnswer": "traveling",
       "difficulty": "beginner",
-      "explanation": "travelingは「旅行すること」という動名詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞-ing形"
+      "sentence": "Tell me ___ to get there.",
+      "correctAnswer": "how",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: how\n日本語訳: そこへの行き方を教えてください。\n文法ポイント: how to getで「行き方」を表します。\nよくある間違い: where to goは「どこへ行くか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-fib-015",
+      "id": "g2u5_015",
       "type": "fillInBlank",
-      "japanese": "私はギターを弾くことが好きです。",
-      "sentence": "I like ____ the guitar.",
-      "choices": [
-        "playing",
-        "play",
-        "to play"
-      ],
-      "correctAnswer": "playing",
       "difficulty": "beginner",
-      "explanation": "playing the guitarで「ギターを弾くこと」という動名詞句です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "動名詞「~すること」"
+      "sentence": "I know ___ to eat.",
+      "correctAnswer": "what",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: what\n日本語訳: 私は何を食べればよいか知っています。\n文法ポイント: what to eatで「何を食べるべきか」を表します。\nよくある間違い: where to eatは「どこで食べるか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
     },
     {
-      "id": "g2-u5-so-001",
+      "id": "g2u5_016",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "She explained ___ to do it.",
+      "correctAnswer": "how",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "why"
+      ],
+      "explanation": "正解: how\n日本語訳: 彼女はそれのやり方を説明しました。\n文法ポイント: explain how to + 動詞で「〜の仕方を説明する」を表します。\nよくある間違い: whyは理由を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【why】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_017",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "We need to decide ___ to meet.",
+      "correctAnswer": "where",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: where\n日本語訳: 私たちはどこで会うか決める必要があります。\n文法ポイント: where to meetで「どこで会うか」を表します。\nよくある間違い: when to meetは「いつ会うか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_018",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "He asked me ___ to come.",
+      "correctAnswer": "when",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: when\n日本語訳: 彼は私にいつ来ればよいか尋ねました。\n文法ポイント: ask + 人 + when to で「いつ〜すべきか尋ねる」を表します。\nよくある間違い: whereは「どこで」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。"
+    },
+    {
+      "id": "g2u5_019",
+      "type": "fillInBlank",
+      "difficulty": "advanced",
+      "sentence": "I forgot ___ to turn.",
+      "correctAnswer": "where",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: where\n日本語訳: 私はどこで曲がるか忘れました。\n文法ポイント: forget + 疑問詞 + to不定詞も使えます。\nよくある間違い: when to turnは「いつ曲がるか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_020",
+      "type": "fillInBlank",
+      "difficulty": "advanced",
+      "sentence": "The question is ___ one to buy.",
+      "correctAnswer": "which",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "which"
+      ],
+      "explanation": "正解: which\n日本語訳: 問題はどれを買うかです。\n文法ポイント: which one to + 動詞で「どれを〜すべきか」を表します。\nよくある間違い: whatは特定されていない場合に使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【which】 ← 正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✓ 正解理由: 文法的・意味的に最適です。"
+    },
+    {
+      "id": "g2u5_021",
+      "type": "fillInBlank",
+      "difficulty": "beginner",
+      "sentence": "She doesn't know ___ to begin.",
+      "correctAnswer": "when",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: when\n日本語訳: 彼女はいつ始めればよいか分かりません。\n文法ポイント: when to beginで「いつ始めるか」を表します。\nよくある間違い: how to beginは「始め方」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。"
+    },
+    {
+      "id": "g2u5_022",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "Please show me ___ to open this.",
+      "correctAnswer": "how",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: how\n日本語訳: これの開け方を教えてください。\n文法ポイント: how to openで「開け方」を表します。\nよくある間違い: what to openは「何を開けるか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_023",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "I wonder ___ to wear tomorrow.",
+      "correctAnswer": "what",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "which"
+      ],
+      "explanation": "正解: what\n日本語訳: 明日何を着ようか迷っています。\n文法ポイント: wonder what to + 動詞で「何を〜しようか迷う」を表します。\nよくある間違い: whichは選択肢が限定されている場合に使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【which】 ← 不正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。"
+    },
+    {
+      "id": "g2u5_024",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "He told me ___ to park.",
+      "correctAnswer": "where",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: where\n日本語訳: 彼はどこに駐車すればよいか教えてくれました。\n文法ポイント: tell + 人 + where to で「どこで〜すべきか教える」を表します。\nよくある間違い: how to parkは「駐車の仕方」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_025",
+      "type": "fillInBlank",
+      "difficulty": "advanced",
+      "sentence": "I can't decide ___ course to take.",
+      "correctAnswer": "which",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "which"
+      ],
+      "explanation": "正解: which\n日本語訳: どのコースを取るか決められません。\n文法ポイント: which + 名詞 + to + 動詞で選択を表します。\nよくある間違い: what courseは「何のコース」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【which】 ← 正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✓ 正解理由: 文法的・意味的に最適です。"
+    },
+    {
+      "id": "g2u5_026",
+      "type": "fillInBlank",
+      "difficulty": "beginner",
+      "sentence": "Do you know ___ to spell this word?",
+      "correctAnswer": "how",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: how\n日本語訳: この単語の綴り方を知っていますか？\n文法ポイント: how to spellで「綴り方」を表します。\nよくある間違い: what to spellは「何を綴るか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_027",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "They discussed ___ to do next.",
+      "correctAnswer": "what",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: what\n日本語訳: 彼らは次に何をすべきか話し合いました。\n文法ポイント: what to do nextで「次に何をすべきか」を表します。\nよくある間違い: when to do nextは不自然です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_028",
+      "type": "fillInBlank",
+      "difficulty": "intermediate",
+      "sentence": "I'm not sure ___ to ask for help.",
+      "correctAnswer": "when",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "when"
+      ],
+      "explanation": "正解: when\n日本語訳: いつ助けを求めればよいか分かりません。\n文法ポイント: when to + 動詞で「いつ〜すべきか」を表します。\nよくある間違い: how to askは「尋ね方」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。"
+    },
+    {
+      "id": "g2u5_029",
+      "type": "fillInBlank",
+      "difficulty": "advanced",
+      "sentence": "The teacher explained ___ to solve the equation.",
+      "correctAnswer": "how",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "why"
+      ],
+      "explanation": "正解: how\n日本語訳: 先生は方程式の解き方を説明しました。\n文法ポイント: explain how to + 動詞で「〜の仕方を説明する」を表します。\nよくある間違い: whyは理由を説明する場合に使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【why】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。"
+    },
+    {
+      "id": "g2u5_030",
+      "type": "fillInBlank",
+      "difficulty": "advanced",
+      "sentence": "I need to find out ___ restaurant to go to.",
+      "correctAnswer": "which",
+      "choices": [
+        "how",
+        "what",
+        "where",
+        "which"
+      ],
+      "explanation": "正解: which\n日本語訳: どのレストランに行くか調べる必要があります。\n文法ポイント: which + 名詞 + to + 動詞で選択を表します。\nよくある間違い: where to goは「どこへ行くか」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n❌ 【how】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n✅ 【which】 ← 正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✓ 正解理由: 文法的・意味的に最適です。"
+    },
+    {
+      "id": "g2u5_031",
       "type": "sentenceOrdering",
-      "japanese": "泳ぐことは楽しいです。",
-      "words": [
-        "Swimming",
-        "is",
-        "fun",
-        "."
-      ],
-      "correctOrder": [
-        "Swimming",
-        "is",
-        "fun",
-        "."
-      ],
       "difficulty": "beginner",
-      "explanation": "動名詞Swimmingが文の主語になっています。「泳ぐこと」= Swimming\n\n「泳ぐことは楽しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "動名詞を主語に"
-    },
-    {
-      "id": "g2-u5-so-002",
-      "type": "sentenceOrdering",
-      "japanese": "本を読むことは重要です。",
-      "words": [
-        "Reading",
-        "books",
-        "is",
-        "important",
-        "."
-      ],
-      "correctOrder": [
-        "Reading",
-        "books",
-        "is",
-        "important",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "動名詞句Reading booksが主語です。\n\n「本を読むことは重要です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "Reading books is ~"
-    },
-    {
-      "id": "g2-u5-so-003",
-      "type": "sentenceOrdering",
-      "japanese": "私は歌うことが好きです。",
       "words": [
         "I",
-        "like",
-        "singing",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "like",
-        "singing",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "動名詞singingが目的語になっています。\n\n「私は歌うことが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "I like ~ing"
-    },
-    {
-      "id": "g2-u5-so-004",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は料理をすることが好きです。",
-      "words": [
-        "She",
-        "enjoys",
-        "cooking",
-        "."
-      ],
-      "correctOrder": [
-        "She",
-        "enjoys",
-        "cooking",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "enjoyは動名詞cookingを目的語に取ります。\n\n「彼女は料理をすることが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "She enjoys ~ing"
-    },
-    {
-      "id": "g2-u5-so-005",
-      "type": "sentenceOrdering",
-      "japanese": "私は音楽を聴くことが好きです。",
-      "words": [
-        "I",
-        "enjoy",
-        "listening",
+        "know",
+        "how",
         "to",
-        "music",
-        "."
+        "swim"
       ],
-      "correctOrder": [
-        "I",
-        "enjoy",
-        "listening",
+      "correctAnswer": "I know how to swim.",
+      "explanation": "正解: I know how to swim.\n日本語訳: 私は泳ぎ方を知っています。\n文法ポイント: 疑問詞 + to不定詞の基本語順です。\nよくある間違い: howとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_032",
+      "type": "sentenceOrdering",
+      "difficulty": "beginner",
+      "words": [
+        "She",
+        "knows",
+        "what",
         "to",
-        "music",
-        "."
+        "do"
       ],
-      "difficulty": "beginner",
-      "explanation": "listening to musicで「音楽を聴くこと」という動名詞句です。\n\n「私は音楽を聴くことが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "enjoy + 動名詞"
+      "correctAnswer": "She knows what to do.",
+      "explanation": "正解: She knows what to do.\n日本語訳: 彼女は何をすべきか知っています。\n文法ポイント: what to doは「何をすべきか」を表す決まった表現です。\nよくある間違い: whatとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
-      "id": "g2-u5-so-006",
+      "id": "g2u5_033",
       "type": "sentenceOrdering",
-      "japanese": "彼は走ることが好きです。",
-      "words": [
-        "He",
-        "likes",
-        "running",
-        "."
-      ],
-      "correctOrder": [
-        "He",
-        "likes",
-        "running",
-        "."
-      ],
       "difficulty": "beginner",
-      "explanation": "動名詞runningが目的語です。\n\n「彼は走ることが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "He likes ~ing"
-    },
-    {
-      "id": "g2-u5-so-007",
-      "type": "sentenceOrdering",
-      "japanese": "踊ることは楽しいです。",
-      "words": [
-        "Dancing",
-        "is",
-        "fun",
-        "."
-      ],
-      "correctOrder": [
-        "Dancing",
-        "is",
-        "fun",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "動名詞Dancingが主語になっています。\n\n「踊ることは楽しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "Dancing is ~"
-    },
-    {
-      "id": "g2-u5-so-008",
-      "type": "sentenceOrdering",
-      "japanese": "私は絵を描くことが好きです。",
       "words": [
         "I",
-        "like",
-        "drawing",
-        "pictures",
-        "."
+        "don't",
+        "know",
+        "where",
+        "to",
+        "go"
       ],
-      "correctOrder": [
-        "I",
-        "like",
-        "drawing",
-        "pictures",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "drawing picturesで「絵を描くこと」という動名詞句です。\n\n「私は絵を描くことが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "I like ~ing"
+      "correctAnswer": "I don't know where to go.",
+      "explanation": "正解: I don't know where to go.\n日本語訳: どこへ行けばよいか分かりません。\n文法ポイント: where to goで「どこへ行くべきか」を表します。\nよくある間違い: whereとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
-      "id": "g2-u5-so-009",
+      "id": "g2u5_034",
       "type": "sentenceOrdering",
-      "japanese": "彼女は買い物をすることが好きです。",
+      "difficulty": "intermediate",
+      "words": [
+        "Please",
+        "tell",
+        "me",
+        "how",
+        "to",
+        "use",
+        "this"
+      ],
+      "correctAnswer": "Please tell me how to use this.",
+      "explanation": "正解: Please tell me how to use this.\n日本語訳: これの使い方を教えてください。\n文法ポイント: tell + 人 + 疑問詞 + to不定詞の語順です。\nよくある間違い: meの後に疑問詞+to不定詞を置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_035",
+      "type": "sentenceOrdering",
+      "difficulty": "intermediate",
       "words": [
         "She",
-        "enjoys",
-        "shopping",
-        "."
+        "showed",
+        "me",
+        "what",
+        "to",
+        "buy"
       ],
-      "correctOrder": [
-        "She",
-        "enjoys",
-        "shopping",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "動名詞shoppingがenjoyの目的語です。\n\n「彼女は買い物をすることが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "She enjoys ~ing"
+      "correctAnswer": "She showed me what to buy.",
+      "explanation": "正解: She showed me what to buy.\n日本語訳: 彼女は何を買うべきか教えてくれました。\n文法ポイント: show + 人 + what to + 動詞の語順です。\nよくある間違い: meの後にwhat to buyを置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
-      "id": "g2-u5-so-010",
+      "id": "g2u5_036",
       "type": "sentenceOrdering",
-      "japanese": "私は英語を勉強することが好きです。",
+      "difficulty": "intermediate",
       "words": [
-        "I",
-        "like",
-        "studying",
-        "English",
-        "."
+        "We",
+        "decided",
+        "when",
+        "to",
+        "leave"
       ],
-      "correctOrder": [
-        "I",
-        "like",
-        "studying",
-        "English",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "studying Englishで「英語を勉強すること」です。\n\n「私は英語を勉強することが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "I like ~ing"
+      "correctAnswer": "We decided when to leave.",
+      "explanation": "正解: We decided when to leave.\n日本語訳: 私たちはいつ出発するか決めました。\n文法ポイント: decide + 疑問詞 + to不定詞の語順です。\nよくある間違い: whenとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
-      "id": "g2-u5-so-011",
+      "id": "g2u5_037",
       "type": "sentenceOrdering",
-      "japanese": "彼はテレビを見ることが好きです。",
+      "difficulty": "intermediate",
       "words": [
         "He",
-        "enjoys",
-        "watching",
-        "TV",
-        "."
+        "asked",
+        "me",
+        "where",
+        "to",
+        "meet"
       ],
-      "correctOrder": [
-        "He",
-        "enjoys",
-        "watching",
-        "TV",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "watching TVで「テレビを見ること」という動名詞句です。\n\n「彼はテレビを見ることが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "He enjoys ~ing"
+      "correctAnswer": "He asked me where to meet.",
+      "explanation": "正解: He asked me where to meet.\n日本語訳: 彼はどこで会うか私に尋ねました。\n文法ポイント: ask + 人 + 疑問詞 + to不定詞の語順です。\nよくある間違い: meの後にwhere to meetを置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
     },
     {
-      "id": "g2-u5-so-012",
+      "id": "g2u5_038",
       "type": "sentenceOrdering",
-      "japanese": "写真を撮ることは楽しいです。",
-      "words": [
-        "Taking",
-        "pictures",
-        "is",
-        "fun",
-        "."
-      ],
-      "correctOrder": [
-        "Taking",
-        "pictures",
-        "is",
-        "fun",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "動名詞句Taking picturesが主語です。\n\n「写真を撮ることは楽しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "Taking pictures is ~"
-    },
-    {
-      "id": "g2-u5-so-013",
-      "type": "sentenceOrdering",
-      "japanese": "私はサッカーをすることが好きです。",
+      "difficulty": "intermediate",
       "words": [
         "I",
-        "like",
-        "playing",
-        "soccer",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "like",
-        "playing",
-        "soccer",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "playing soccerで「サッカーをすること」です。\n\n「私はサッカーをすることが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "I like ~ing"
-    },
-    {
-      "id": "g2-u5-so-014",
-      "type": "sentenceOrdering",
-      "japanese": "彼女は旅行することが好きです。",
-      "words": [
-        "She",
-        "enjoys",
-        "traveling",
-        "."
-      ],
-      "correctOrder": [
-        "She",
-        "enjoys",
-        "traveling",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "動名詞travelingがenjoyの目的語です。\n\n「彼女は旅行することが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "She enjoys ~ing"
-    },
-    {
-      "id": "g2-u5-so-015",
-      "type": "sentenceOrdering",
-      "japanese": "ギターを弾くことは楽しいです。",
-      "words": [
-        "Playing",
-        "the",
-        "guitar",
-        "is",
-        "fun",
-        "."
-      ],
-      "correctOrder": [
-        "Playing",
-        "the",
-        "guitar",
-        "is",
-        "fun",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "動名詞句Playing the guitarが主語になっています。\n\n「ギターを弾くことは楽しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "Playing the guitar is ~"
-    },
-    {
-      "id": "g2-u5-pp-001",
-      "type": "paraphrase",
-      "japanese": "私は泳ぐことが好きです。",
-      "sentence": "I like to swim.",
-      "targetSentence": "I like ____.",
-      "choices": [
-        "swimming",
-        "swim",
-        "swims"
-      ],
-      "correctAnswer": "swimming",
-      "difficulty": "beginner",
-      "explanation": "不定詞to swimを動名詞swimmingで言い換えます。どちらも「泳ぐこと」という意味です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞で言い換え"
-    },
-    {
-      "id": "g2-u5-pp-002",
-      "type": "paraphrase",
-      "japanese": "彼女は歌うことが好きです。",
-      "sentence": "She enjoys to sing.",
-      "targetSentence": "She enjoys ____.",
-      "choices": [
-        "singing",
-        "sing",
-        "sings"
-      ],
-      "correctAnswer": "singing",
-      "difficulty": "beginner",
-      "explanation": "enjoyの後ろは動名詞を取るのが正しいです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-pp-003",
-      "type": "paraphrase",
-      "japanese": "私は本を読むことが好きです。",
-      "sentence": "I like to read books.",
-      "targetSentence": "I enjoy ____ books.",
-      "choices": [
-        "reading",
-        "read",
-        "to read"
-      ],
-      "correctAnswer": "reading",
-      "difficulty": "beginner",
-      "explanation": "不定詞to readを動名詞readingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "enjoyは動名詞を取る"
-    },
-    {
-      "id": "g2-u5-pp-004",
-      "type": "paraphrase",
-      "japanese": "彼は料理をすることが好きです。",
-      "sentence": "He likes to cook.",
-      "targetSentence": "He likes ____.",
-      "choices": [
-        "cooking",
+        "learned",
+        "how",
+        "to",
         "cook",
+        "pasta"
+      ],
+      "correctAnswer": "I learned how to cook pasta.",
+      "explanation": "正解: I learned how to cook pasta.\n日本語訳: 私はパスタの作り方を学びました。\n文法ポイント: learn + how to + 動詞 + 目的語の語順です。\nよくある間違い: pastaは目的語として最後に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_039",
+      "type": "sentenceOrdering",
+      "difficulty": "advanced",
+      "words": [
+        "The",
+        "question",
+        "is",
+        "how",
+        "to",
+        "solve",
+        "this"
+      ],
+      "correctAnswer": "The question is how to solve this.",
+      "explanation": "正解: The question is how to solve this.\n日本語訳: 問題はこれをどう解決するかです。\n文法ポイント: 疑問詞+to不定詞は補語としても使えます。\nよくある間違い: isの後に疑問詞+to不定詞を置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_040",
+      "type": "sentenceOrdering",
+      "difficulty": "advanced",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "which",
+        "one",
+        "to",
+        "choose"
+      ],
+      "correctAnswer": "I don't know which one to choose.",
+      "explanation": "正解: I don't know which one to choose.\n日本語訳: どれを選べばよいか分かりません。\n文法ポイント: which + 名詞 + to + 動詞の語順です。\nよくある間違い: which oneは1つの塊です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_041",
+      "type": "sentenceOrdering",
+      "difficulty": "intermediate",
+      "words": [
+        "She",
+        "explained",
+        "how",
+        "to",
+        "do",
+        "it"
+      ],
+      "correctAnswer": "She explained how to do it.",
+      "explanation": "正解: She explained how to do it.\n日本語訳: 彼女はそれのやり方を説明しました。\n文法ポイント: explain + how to + 動詞の語順です。\nよくある間違い: itは目的語として最後に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_042",
+      "type": "sentenceOrdering",
+      "difficulty": "intermediate",
+      "words": [
+        "They",
+        "discussed",
+        "what",
+        "to",
+        "do",
+        "next"
+      ],
+      "correctAnswer": "They discussed what to do next.",
+      "explanation": "正解: They discussed what to do next.\n日本語訳: 彼らは次に何をすべきか話し合いました。\n文法ポイント: discuss + what to + 動詞の語順です。\nよくある間違い: nextは最後に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_043",
+      "type": "sentenceOrdering",
+      "difficulty": "advanced",
+      "words": [
+        "I",
+        "wonder",
+        "what",
+        "to",
+        "wear",
+        "tomorrow"
+      ],
+      "correctAnswer": "I wonder what to wear tomorrow.",
+      "explanation": "正解: I wonder what to wear tomorrow.\n日本語訳: 明日何を着ようか迷っています。\n文法ポイント: wonder + what to + 動詞の語順です。\nよくある間違い: tomorrowは最後に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_044",
+      "type": "sentenceOrdering",
+      "difficulty": "intermediate",
+      "words": [
+        "He",
+        "told",
+        "me",
+        "when",
+        "to",
+        "come"
+      ],
+      "correctAnswer": "He told me when to come.",
+      "explanation": "正解: He told me when to come.\n日本語訳: 彼はいつ来ればよいか教えてくれました。\n文法ポイント: tell + 人 + when to + 動詞の語順です。\nよくある間違い: meの後にwhen to comeを置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_045",
+      "type": "sentenceOrdering",
+      "difficulty": "advanced",
+      "words": [
+        "I",
+        "can't",
+        "decide",
+        "which",
+        "book",
+        "to",
+        "read"
+      ],
+      "correctAnswer": "I can't decide which book to read.",
+      "explanation": "正解: I can't decide which book to read.\n日本語訳: どの本を読むか決められません。\n文法ポイント: which + 名詞 + to + 動詞の語順です。\nよくある間違い: which bookは1つの塊です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_046",
+      "type": "sentenceOrdering",
+      "difficulty": "intermediate",
+      "words": [
+        "We",
+        "need",
+        "to",
+        "know",
+        "where",
+        "to",
+        "park"
+      ],
+      "correctAnswer": "We need to know where to park.",
+      "explanation": "正解: We need to know where to park.\n日本語訳: 私たちはどこに駐車すればよいか知る必要があります。\n文法ポイント: need to know + 疑問詞 + to不定詞の語順です。\nよくある間違い: where to parkは1つの塊です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_047",
+      "type": "sentenceOrdering",
+      "difficulty": "advanced",
+      "words": [
+        "The",
+        "problem",
+        "is",
+        "what",
+        "to",
+        "choose"
+      ],
+      "correctAnswer": "The problem is what to choose.",
+      "explanation": "正解: The problem is what to choose.\n日本語訳: 問題は何を選ぶかです。\n文法ポイント: 疑問詞+to不定詞は補語として使えます。\nよくある間違い: isの後にwhat to chooseを置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_048",
+      "type": "sentenceOrdering",
+      "difficulty": "intermediate",
+      "words": [
+        "I",
+        "forgot",
+        "where",
+        "to",
+        "turn"
+      ],
+      "correctAnswer": "I forgot where to turn.",
+      "explanation": "正解: I forgot where to turn.\n日本語訳: どこで曲がるか忘れました。\n文法ポイント: forget + 疑問詞 + to不定詞も使えます。\nよくある間違い: whereとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_049",
+      "type": "sentenceOrdering",
+      "difficulty": "advanced",
+      "words": [
+        "She",
+        "taught",
+        "me",
+        "how",
+        "to",
+        "play",
+        "the",
+        "guitar"
+      ],
+      "correctAnswer": "She taught me how to play the guitar.",
+      "explanation": "正解: She taught me how to play the guitar.\n日本語訳: 彼女は私にギターの弾き方を教えてくれました。\n文法ポイント: teach + 人 + how to + 動詞の語順です。\nよくある間違い: the guitarは目的語として最後に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_050",
+      "type": "sentenceOrdering",
+      "difficulty": "advanced",
+      "words": [
+        "I",
+        "need",
+        "to",
+        "find",
+        "out",
+        "which",
+        "train",
+        "to",
+        "take"
+      ],
+      "correctAnswer": "I need to find out which train to take.",
+      "explanation": "正解: I need to find out which train to take.\n日本語訳: どの電車に乗るか調べる必要があります。\n文法ポイント: find out + which + 名詞 + to + 動詞の語順です。\nよくある間違い: which trainは1つの塊です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "id": "g2u5_051",
+      "type": "verbForm",
+      "difficulty": "beginner",
+      "sentence": "I know how to (play) the piano.",
+      "correctAnswer": "play",
+      "baseForm": "play",
+      "explanation": "正解: play\n日本語訳: 私はピアノの弾き方を知っています。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: playsやplayingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "play",
+        "playing",
+        "plays"
+      ]
+    },
+    {
+      "id": "g2u5_052",
+      "type": "verbForm",
+      "difficulty": "beginner",
+      "sentence": "She doesn't know what to (do).",
+      "correctAnswer": "do",
+      "baseForm": "do",
+      "explanation": "正解: do\n日本語訳: 彼女は何をすべきか分かりません。\n文法ポイント: what toの後は必ず動詞の原形を使います。\nよくある間違い: doesやdoingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【doing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【dos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "do",
+        "doing",
+        "dos"
+      ]
+    },
+    {
+      "id": "g2u5_053",
+      "type": "verbForm",
+      "difficulty": "beginner",
+      "sentence": "I don't know where to (go).",
+      "correctAnswer": "go",
+      "baseForm": "go",
+      "explanation": "正解: go\n日本語訳: どこへ行けばよいか分かりません。\n文法ポイント: where toの後は必ず動詞の原形を使います。\nよくある間違い: goesやgoingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【gos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "go",
+        "going",
+        "gos"
+      ]
+    },
+    {
+      "id": "g2u5_054",
+      "type": "verbForm",
+      "difficulty": "intermediate",
+      "sentence": "Please tell me how to (use) this machine.",
+      "correctAnswer": "use",
+      "baseForm": "use",
+      "explanation": "正解: use\n日本語訳: この機械の使い方を教えてください。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: usesやusingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【use】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【useing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【uses】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "use",
+        "useing",
+        "uses"
+      ]
+    },
+    {
+      "id": "g2u5_055",
+      "type": "verbForm",
+      "difficulty": "intermediate",
+      "sentence": "She showed me what to (buy).",
+      "correctAnswer": "buy",
+      "baseForm": "buy",
+      "explanation": "正解: buy\n日本語訳: 彼女は何を買うべきか教えてくれました。\n文法ポイント: what toの後は必ず動詞の原形を使います。\nよくある間違い: buysやbuyingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【buy】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【buying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【buys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "buy",
+        "buying",
+        "buys"
+      ]
+    },
+    {
+      "id": "g2u5_056",
+      "type": "verbForm",
+      "difficulty": "intermediate",
+      "sentence": "We decided when to (leave).",
+      "correctAnswer": "leave",
+      "baseForm": "leave",
+      "explanation": "正解: leave\n日本語訳: 私たちはいつ出発するか決めました。\n文法ポイント: when toの後は必ず動詞の原形を使います。\nよくある間違い: leavesやleavingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【leave】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【leaveing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【leaves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "leave",
+        "leaveing",
+        "leaves"
+      ]
+    },
+    {
+      "id": "g2u5_057",
+      "type": "verbForm",
+      "difficulty": "intermediate",
+      "sentence": "He asked me where to (meet).",
+      "correctAnswer": "meet",
+      "baseForm": "meet",
+      "explanation": "正解: meet\n日本語訳: 彼はどこで会うか私に尋ねました。\n文法ポイント: where toの後は必ず動詞の原形を使います。\nよくある間違い: meetsやmeetingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【meet】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【meeting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【meets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "meet",
+        "meeting",
+        "meets"
+      ]
+    },
+    {
+      "id": "g2u5_058",
+      "type": "verbForm",
+      "difficulty": "advanced",
+      "sentence": "I learned how to (cook) Italian food.",
+      "correctAnswer": "cook",
+      "baseForm": "cook",
+      "explanation": "正解: cook\n日本語訳: 私はイタリア料理の作り方を学びました。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: cooksやcookingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cook】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【cooking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【cooks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
+      "choices": [
+        "cook",
+        "cooking",
         "cooks"
-      ],
-      "correctAnswer": "cooking",
-      "difficulty": "beginner",
-      "explanation": "to cookを動名詞cookingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞-ing形"
+      ]
     },
     {
-      "id": "g2-u5-pp-005",
-      "type": "paraphrase",
-      "japanese": "私たちは踊ることが好きです。",
-      "sentence": "We like to dance.",
-      "targetSentence": "We enjoy ____.",
-      "choices": [
-        "dancing",
-        "dance",
-        "to dance"
-      ],
-      "correctAnswer": "dancing",
-      "difficulty": "beginner",
-      "explanation": "不定詞to danceを動名詞dancingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-pp-006",
-      "type": "paraphrase",
-      "japanese": "彼女は絵を描くことが好きです。",
-      "sentence": "She likes to draw pictures.",
-      "targetSentence": "She likes ____ pictures.",
-      "choices": [
-        "drawing",
-        "draw",
-        "draws"
-      ],
-      "correctAnswer": "drawing",
-      "difficulty": "beginner",
-      "explanation": "to draw picturesを動名詞drawing picturesで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞で言い換え"
-    },
-    {
-      "id": "g2-u5-pp-007",
-      "type": "paraphrase",
-      "japanese": "私は音楽を聴くことが好きです。",
-      "sentence": "I like to listen to music.",
-      "targetSentence": "I like ____ to music.",
-      "choices": [
-        "listening",
-        "listen",
-        "listens"
-      ],
-      "correctAnswer": "listening",
-      "difficulty": "beginner",
-      "explanation": "to listen to musicを動名詞listening to musicで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞-ing形"
-    },
-    {
-      "id": "g2-u5-pp-008",
-      "type": "paraphrase",
-      "japanese": "彼は走ることが好きです。",
-      "sentence": "He likes to run.",
-      "targetSentence": "He enjoys ____.",
-      "choices": [
-        "running",
-        "run",
-        "to run"
-      ],
-      "correctAnswer": "running",
-      "difficulty": "beginner",
-      "explanation": "to runを動名詞runningで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-pp-009",
-      "type": "paraphrase",
-      "japanese": "私は写真を撮ることが好きです。",
-      "sentence": "I like to take pictures.",
-      "targetSentence": "I like ____ pictures.",
-      "choices": [
-        "taking",
-        "take",
-        "takes"
-      ],
-      "correctAnswer": "taking",
-      "difficulty": "beginner",
-      "explanation": "to take picturesを動名詞taking picturesで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞で言い換え"
-    },
-    {
-      "id": "g2-u5-pp-010",
-      "type": "paraphrase",
-      "japanese": "彼女は買い物をすることが好きです。",
-      "sentence": "She likes to shop.",
-      "targetSentence": "She enjoys ____.",
-      "choices": [
-        "shopping",
-        "shop",
-        "to shop"
-      ],
-      "correctAnswer": "shopping",
-      "difficulty": "beginner",
-      "explanation": "to shopを動名詞shoppingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-pp-011",
-      "type": "paraphrase",
-      "japanese": "私は英語を勉強することが好きです。",
-      "sentence": "I like to study English.",
-      "targetSentence": "I like ____ English.",
-      "choices": [
-        "studying",
-        "study",
-        "studies"
-      ],
-      "correctAnswer": "studying",
-      "difficulty": "beginner",
-      "explanation": "to study Englishを動名詞studying Englishで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞-ing形"
-    },
-    {
-      "id": "g2-u5-pp-012",
-      "type": "paraphrase",
-      "japanese": "彼はテレビを見ることが好きです。",
-      "sentence": "He likes to watch TV.",
-      "targetSentence": "He enjoys ____ TV.",
-      "choices": [
-        "watching",
-        "watch",
-        "to watch"
-      ],
-      "correctAnswer": "watching",
-      "difficulty": "beginner",
-      "explanation": "to watch TVを動名詞watching TVで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-pp-013",
-      "type": "paraphrase",
-      "japanese": "私はサッカーをすることが好きです。",
-      "sentence": "I like to play soccer.",
-      "targetSentence": "I like ____ soccer.",
-      "choices": [
-        "playing",
-        "play",
-        "plays"
-      ],
-      "correctAnswer": "playing",
-      "difficulty": "beginner",
-      "explanation": "to play soccerを動名詞playing soccerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞で言い換え"
-    },
-    {
-      "id": "g2-u5-pp-014",
-      "type": "paraphrase",
-      "japanese": "彼女は旅行することが好きです。",
-      "sentence": "She likes to travel.",
-      "targetSentence": "She enjoys ____.",
-      "choices": [
-        "traveling",
-        "travel",
-        "to travel"
-      ],
-      "correctAnswer": "traveling",
-      "difficulty": "beginner",
-      "explanation": "to travelを動名詞travelingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-pp-015",
-      "type": "paraphrase",
-      "japanese": "私はギターを弾くことが好きです。",
-      "sentence": "I like to play the guitar.",
-      "targetSentence": "I like ____ the guitar.",
-      "choices": [
-        "playing",
-        "play",
-        "plays"
-      ],
-      "correctAnswer": "playing",
-      "difficulty": "beginner",
-      "explanation": "to play the guitarを動名詞playing the guitarで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "動名詞-ing形"
-    },
-    {
-      "id": "g2-u5-vf-001",
+      "id": "g2u5_059",
       "type": "verbForm",
-      "japanese": "泳ぐことは楽しいです。",
-      "sentence": "____ is fun.",
+      "difficulty": "advanced",
+      "sentence": "The question is how to (solve) this problem.",
+      "correctAnswer": "solve",
+      "baseForm": "solve",
+      "explanation": "正解: solve\n日本語訳: 問題はこれをどう解決するかです。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: solvesやsolvingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【solve】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【solveing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【solves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
       "choices": [
-        "Swimming",
-        "Swim",
-        "To swim"
-      ],
-      "correctAnswer": "Swimming",
-      "difficulty": "beginner",
-      "explanation": "動名詞Swimmingが主語になります。動詞の原形Swimは主語になれません。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "主語には動名詞"
+        "solve",
+        "solveing",
+        "solves"
+      ]
     },
     {
-      "id": "g2-u5-vf-002",
+      "id": "g2u5_060",
       "type": "verbForm",
-      "japanese": "本を読むことは重要です。",
-      "sentence": "____ books is important.",
+      "difficulty": "advanced",
+      "sentence": "I can't decide which one to (choose).",
+      "correctAnswer": "choose",
+      "baseForm": "choose",
+      "explanation": "正解: choose\n日本語訳: どれを選べばよいか決められません。\n文法ポイント: which + 名詞 + toの後は必ず動詞の原形を使います。\nよくある間違い: choosesやchoosingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【choose】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【chooseing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【chooses】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
       "choices": [
-        "Reading",
-        "Read",
-        "To read"
-      ],
-      "correctAnswer": "Reading",
-      "difficulty": "beginner",
-      "explanation": "動名詞Reading booksが主語です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動名詞を主語に"
-    },
-    {
-      "id": "g2-u5-vf-003",
-      "type": "verbForm",
-      "japanese": "彼女は料理をすることが好きです。",
-      "sentence": "She enjoys ____.",
-      "choices": [
-        "cooking",
-        "cook",
-        "to cook"
-      ],
-      "correctAnswer": "cooking",
-      "difficulty": "beginner",
-      "explanation": "enjoyは動名詞cookingを目的語に取ります。不定詞は取りません。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-vf-004",
-      "type": "verbForm",
-      "japanese": "私は音楽を聴くことが好きです。",
-      "sentence": "I enjoy ____ to music.",
-      "choices": [
-        "listening",
-        "listen",
-        "to listen"
-      ],
-      "correctAnswer": "listening",
-      "difficulty": "beginner",
-      "explanation": "enjoyの後ろは動名詞listeningです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "enjoyは動名詞を取る"
-    },
-    {
-      "id": "g2-u5-vf-005",
-      "type": "verbForm",
-      "japanese": "彼は走ることが好きです。",
-      "sentence": "He likes ____.",
-      "choices": [
-        "running",
-        "run",
-        "runs"
-      ],
-      "correctAnswer": "running",
-      "difficulty": "beginner",
-      "explanation": "動名詞runningが目的語です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動名詞-ing形"
-    },
-    {
-      "id": "g2-u5-vf-006",
-      "type": "verbForm",
-      "japanese": "踊ることは楽しいです。",
-      "sentence": "____ is fun.",
-      "choices": [
-        "Dancing",
-        "Dance",
-        "To dance"
-      ],
-      "correctAnswer": "Dancing",
-      "difficulty": "beginner",
-      "explanation": "動名詞Dancingが主語になります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "主語には動名詞"
-    },
-    {
-      "id": "g2-u5-vf-007",
-      "type": "verbForm",
-      "japanese": "私は絵を描くことが好きです。",
-      "sentence": "I like ____ pictures.",
-      "choices": [
-        "drawing",
-        "draw",
-        "to draw"
-      ],
-      "correctAnswer": "drawing",
-      "difficulty": "beginner",
-      "explanation": "動名詞drawing picturesが目的語です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動名詞で「~すること」"
-    },
-    {
-      "id": "g2-u5-vf-008",
-      "type": "verbForm",
-      "japanese": "彼女は買い物をすることが好きです。",
-      "sentence": "She enjoys ____.",
-      "choices": [
-        "shopping",
-        "shop",
-        "to shop"
-      ],
-      "correctAnswer": "shopping",
-      "difficulty": "beginner",
-      "explanation": "enjoyの後ろは動名詞shoppingです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-vf-009",
-      "type": "verbForm",
-      "japanese": "写真を撮ることは楽しいです。",
-      "sentence": "____ pictures is fun.",
-      "choices": [
-        "Taking",
-        "Take",
-        "To take"
-      ],
-      "correctAnswer": "Taking",
-      "difficulty": "beginner",
-      "explanation": "動名詞Taking picturesが主語です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "主語には動名詞"
-    },
-    {
-      "id": "g2-u5-vf-010",
-      "type": "verbForm",
-      "japanese": "私はサッカーをすることが好きです。",
-      "sentence": "I like ____ soccer.",
-      "choices": [
-        "playing",
-        "play",
-        "to play"
-      ],
-      "correctAnswer": "playing",
-      "difficulty": "beginner",
-      "explanation": "動名詞playing soccerが目的語です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "動名詞-ing形"
-    },
-    {
-      "id": "g2-u5-conv-001",
-      "type": "conversation",
-      "japanese": "A: 趣味は何ですか? B: 泳ぐことが好きです。",
-      "conversation": [
-        "A: What is your hobby?",
-        "B: I like ____."
-      ],
-      "choices": [
-        "swimming",
-        "swim",
-        "to swim"
-      ],
-      "correctAnswer": "swimming",
-      "difficulty": "beginner",
-      "explanation": "動名詞swimmingで「泳ぐこと」を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: What is your hobby?",
-      "hint": "動名詞「~すること」"
-    },
-    {
-      "id": "g2-u5-conv-002",
-      "type": "conversation",
-      "japanese": "A: 何をするのが好きですか? B: 本を読むことが好きです。",
-      "conversation": [
-        "A: What do you like doing?",
-        "B: I enjoy ____ books."
-      ],
-      "choices": [
-        "reading",
-        "read",
-        "to read"
-      ],
-      "correctAnswer": "reading",
-      "difficulty": "beginner",
-      "explanation": "enjoyの後ろは動名詞readingです。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you like doing?",
-      "hint": "enjoyの後ろは-ing"
-    },
-    {
-      "id": "g2-u5-conv-003",
-      "type": "conversation",
-      "japanese": "A: 彼女は何が好きですか? B: 彼女は料理をすることが好きです。",
-      "conversation": [
-        "A: What does she like?",
-        "B: She likes ____."
-      ],
-      "choices": [
-        "cooking",
-        "cook",
-        "to cook"
-      ],
-      "correctAnswer": "cooking",
-      "difficulty": "beginner",
-      "explanation": "動名詞cookingで「料理をすること」です。\n\nが正解です。\n\n【文脈理解】\n場面: A: What does she like?",
-      "hint": "動名詞-ing形"
-    },
-    {
-      "id": "g2-u5-conv-004",
-      "type": "conversation",
-      "japanese": "A: 自由時間には何をしますか? B: 音楽を聴くことが好きです。",
-      "conversation": [
-        "A: What do you do in your free time?",
-        "B: I enjoy ____ to music."
-      ],
-      "choices": [
-        "listening",
-        "listen",
-        "to listen"
-      ],
-      "correctAnswer": "listening",
-      "difficulty": "beginner",
-      "explanation": "enjoyの後ろは動名詞listeningです。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you do in your free time?",
-      "hint": "enjoyは動名詞を取る"
-    },
-    {
-      "id": "g2-u5-conv-005",
-      "type": "conversation",
-      "japanese": "A: 彼は何をするのが好きですか? B: 彼は走ることが好きです。",
-      "conversation": [
-        "A: What does he like doing?",
-        "B: He likes ____."
-      ],
-      "choices": [
-        "running",
-        "run",
-        "to run"
-      ],
-      "correctAnswer": "running",
-      "difficulty": "beginner",
-      "explanation": "動名詞runningで「走ること」を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: What does he like doing?",
-      "hint": "動名詞-ing形"
+        "choose",
+        "chooseing",
+        "chooses"
+      ]
     }
   ]
 }

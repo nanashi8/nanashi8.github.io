@@ -1,12 +1,12 @@
 {
   "unit": "Unit 2",
-  "title": "現在完了進行形",
-  "grammar": "have/has been + 動詞ing",
-  "totalQuestions": 60,
+  "title": "現在完了形（完了・継続・進行）",
+  "grammar": "have/has + 過去分詞（完了・継続）、have/has been + -ing",
+  "totalQuestions": 90,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 30,
+    "sentenceOrdering": 30,
+    "verbForm": 30
   },
   "questions": [
     {
@@ -20,8 +20,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2時間勉強しています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2時間勉強しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2時間勉強しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -36,8 +36,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は朝から働いています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は朝から働いています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は朝から働いています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -52,8 +52,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は30分待っています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分待っています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分待っています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -68,8 +68,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは3年間ここに住んでいます。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは3年間ここに住んでいます。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは3年間ここに住んでいます。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -84,8 +84,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは1時間話しています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1時間話しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1時間話しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -100,8 +100,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは何をしていましたか。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何をしていましたか。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何をしていましたか。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -116,8 +116,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日から寝ています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日から寝ています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日から寝ています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -132,8 +132,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は朝から料理しています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は朝から料理しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は朝から料理しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -149,7 +149,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は長い間これを探しています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は長い間これを探しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は長い間これを探しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -165,7 +165,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは1週間旅行しています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1週間旅行しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1週間旅行しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -181,7 +181,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は6時から勉強しています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は6時から勉強しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は6時から勉強しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -197,7 +197,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは2時間走っています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2時間走っています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2時間走っています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -213,7 +213,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は午後からピアノを弾いています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は午後からピアノを弾いています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は午後からピアノを弾いています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -229,7 +229,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は5年間英語を教えています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は5年間英語を教えています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は5年間英語を教えています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -245,7 +245,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは朝から雨が降っています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは朝から雨が降っています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは朝から雨が降っています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -261,7 +261,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどのくらいここにいますか。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいここにいますか。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいここにいますか。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -277,7 +277,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は1時間電話で話しています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は1時間電話で話しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は1時間電話で話しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -293,7 +293,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは先週から準備しています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週から準備しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週から準備しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -309,7 +309,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は30分歌っています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分歌っています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分歌っています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -325,7 +325,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日から待っています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日から待っています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日から待っています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm"
     },
@@ -340,7 +340,7 @@
       ],
       "correctAnswer": "studying",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【studying】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2時間勉強しています。」から、この形が適切です。\n\n❌ 【study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2時間勉強しています。」に合いません。\n\n❌ 【studyed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2時間勉強しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -355,7 +355,7 @@
       ],
       "correctAnswer": "working",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【working】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は朝から働いています。」から、この形が適切です。\n\n❌ 【work】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は朝から働いています。」に合いません。\n\n❌ 【worked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は朝から働いています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -370,7 +370,7 @@
       ],
       "correctAnswer": "waiting",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【waiting】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は一日中____している。」から、この形が適切です。\n\n❌ 【wait】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は一日中____している。」に合いません。\n\n❌ 【waited】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は一日中____している。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -385,7 +385,7 @@
       ],
       "correctAnswer": "living",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【living】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは3年間ここに住んでいます。」から、この形が適切です。\n\n❌ 【liv】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは3年間ここに住んでいます。」に合いません。\n\n❌ 【lived】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは3年間ここに住んでいます。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -400,7 +400,7 @@
       ],
       "correctAnswer": "talking",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【talking】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは1時間話しています。」から、この形が適切です。\n\n❌ 【talk】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1時間話しています。」に合いません。\n\n❌ 【talked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1時間話しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -415,7 +415,7 @@
       ],
       "correctAnswer": "sleeping",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sleeping】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日から寝ています。」から、この形が適切です。\n\n❌ 【sleep】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日から寝ています。」に合いません。\n\n❌ 【sleeped】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日から寝ています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -430,7 +430,7 @@
       ],
       "correctAnswer": "cooking",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cooking】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は朝から料理しています。」から、この形が適切です。\n\n❌ 【cook】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は朝から料理しています。」に合いません。\n\n❌ 【cooked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は朝から料理しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -445,7 +445,7 @@
       ],
       "correctAnswer": "looking",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【looking】 ← 正解\n  ✓ 正解理由: 日本語訳「私は長い間これを探しています。」から、この形が適切です。\n\n❌ 【look】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は長い間これを探しています。」に合いません。\n\n❌ 【looked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は長い間これを探しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -460,7 +460,7 @@
       ],
       "correctAnswer": "traveling",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【traveling】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは1週間旅行しています。」から、この形が適切です。\n\n❌ 【travel】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1週間旅行しています。」に合いません。\n\n❌ 【traveled】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1週間旅行しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -475,7 +475,7 @@
       ],
       "correctAnswer": "studying",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【studying】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は6時から勉強しています。」から、この形が適切です。\n\n❌ 【study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は6時から勉強しています。」に合いません。\n\n❌ 【studyed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は6時から勉強しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -490,7 +490,7 @@
       ],
       "correctAnswer": "running",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【running】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは2時間走っています。」から、この形が適切です。\n\n❌ 【runn】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2時間走っています。」に合いません。\n\n❌ 【runned】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2時間走っています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -505,7 +505,7 @@
       ],
       "correctAnswer": "playing",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【playing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は午後からピアノを弾いています。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は午後からピアノを弾いています。」に合いません。\n\n❌ 【played】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は午後からピアノを弾いています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -520,7 +520,7 @@
       ],
       "correctAnswer": "teaching",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【teaching】 ← 正解\n  ✓ 正解理由: 日本語訳「私は5年間英語を教えています。」から、この形が適切です。\n\n❌ 【teach】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は5年間英語を教えています。」に合いません。\n\n❌ 【teached】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は5年間英語を教えています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -535,7 +535,7 @@
       ],
       "correctAnswer": "talking",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【talking】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は1時間電話で話しています。」から、この形が適切です。\n\n❌ 【talk】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は1時間電話で話しています。」に合いません。\n\n❌ 【talked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は1時間電話で話しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -550,7 +550,7 @@
       ],
       "correctAnswer": "preparing",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【preparing】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは先週から準備しています。」から、この形が適切です。\n\n❌ 【prepar】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週から準備しています。」に合いません。\n\n❌ 【prepared】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週から準備しています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -565,7 +565,7 @@
       ],
       "correctAnswer": "singing",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【singing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は30分歌っています。」から、この形が適切です。\n\n❌ 【sing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分歌っています。」に合いません。\n\n❌ 【singed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分歌っています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -580,7 +580,7 @@
       ],
       "correctAnswer": "waiting",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【waiting】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日から待っています。」から、この形が適切です。\n\n❌ 【wait】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日から待っています。」に合いません。\n\n❌ 【waited】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日から待っています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -595,7 +595,7 @@
       ],
       "correctAnswer": "reading",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【reading】 ← 正解\n  ✓ 正解理由: 日本語訳「私は朝から読んでいます。」から、この形が適切です。\n\n❌ 【read】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は朝から読んでいます。」に合いません。\n\n❌ 【readed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は朝から読んでいます。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -610,7 +610,7 @@
       ],
       "correctAnswer": "swimming",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【swimming】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は1時間泳いでいます。」から、この形が適切です。\n\n❌ 【swimm】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は1時間泳いでいます。」に合いません。\n\n❌ 【swimmed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は1時間泳いでいます。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -625,7 +625,7 @@
       ],
       "correctAnswer": "drawing",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了進行形では動詞のing形を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【drawing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は午後から絵を描いています。」から、この形が適切です。\n\n❌ 【draw】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は午後から絵を描いています。」に合いません。\n\n❌ 【drawed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は午後から絵を描いています。」に合いません。",
       "hint": "been + 動詞ing",
       "type": "fillInBlank"
     },
@@ -643,7 +643,7 @@
       ],
       "correctOrder": "I have been studying for two hours",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は2時間勉強しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been studying for two hours.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は2時間勉強しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been studying for two hours.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -663,7 +663,7 @@
       ],
       "correctOrder": "He has been working since morning",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は朝から働いています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been working since morning.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は朝から働いています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been working since morning.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 6,
@@ -684,7 +684,7 @@
       ],
       "correctOrder": "She has been waiting for 30 minutes",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は30分待っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been waiting for 30 minutes.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は30分待っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been waiting for 30 minutes.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -706,7 +706,7 @@
       ],
       "correctOrder": "We have been living here for three years",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私たちは3年間ここに住んでいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have been living here for three years.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私たちは3年間ここに住んでいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have been living here for three years.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 8,
@@ -727,7 +727,7 @@
       ],
       "correctOrder": "They have been talking for an hour",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼らは1時間話しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have been talking for an hour.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼らは1時間話しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have been talking for an hour.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -747,7 +747,7 @@
       ],
       "correctOrder": "He has been sleeping since yesterday",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は昨日から寝ています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been sleeping since yesterday.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は昨日から寝ています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been sleeping since yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 6,
@@ -767,7 +767,7 @@
       ],
       "correctOrder": "She has been cooking since morning",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は朝から料理しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been cooking since morning.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は朝から料理しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been cooking since morning.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 6,
@@ -791,7 +791,7 @@
       ],
       "correctOrder": "I have been looking for this for a long time",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は長い間これを探しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been looking for this for a long time.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は長い間これを探しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been looking for this for a long time.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 10,
@@ -812,7 +812,7 @@
       ],
       "correctOrder": "They have been traveling for a week",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼らは1週間旅行しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have been traveling for a week.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼らは1週間旅行しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have been traveling for a week.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -833,7 +833,7 @@
       ],
       "correctOrder": "He has been studying since 6 o'clock",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は6時から勉強しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been studying since 6 o'clock.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は6時から勉強しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been studying since 6 o'clock.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -854,7 +854,7 @@
       ],
       "correctOrder": "We have been running for two hours",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私たちは2時間走っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have been running for two hours.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私たちは2時間走っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have been running for two hours.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -877,7 +877,7 @@
       ],
       "correctOrder": "She has been playing the piano since this afternoon",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は午後からピアノを弾いています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been playing the piano since this afternoon.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は午後からピアノを弾いています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been playing the piano since this afternoon.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 9,
@@ -899,7 +899,7 @@
       ],
       "correctOrder": "I have been teaching English for five years",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は5年間英語を教えています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been teaching English for five years.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は5年間英語を教えています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been teaching English for five years.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 8,
@@ -923,7 +923,7 @@
       ],
       "correctOrder": "He has been talking on the phone for an hour",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は1時間電話で話しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been talking on the phone for an hour.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は1時間電話で話しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been talking on the phone for an hour.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 10,
@@ -944,7 +944,7 @@
       ],
       "correctOrder": "We have been preparing since last week",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私たちは先週から準備しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have been preparing since last week.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私たちは先週から準備しています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have been preparing since last week.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -965,7 +965,7 @@
       ],
       "correctOrder": "She has been singing for 30 minutes",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は30分歌っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been singing for 30 minutes.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は30分歌っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been singing for 30 minutes.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -985,7 +985,7 @@
       ],
       "correctOrder": "They have been waiting since yesterday",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼らは昨日から待っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have been waiting since yesterday.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼らは昨日から待っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have been waiting since yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 6,
@@ -1005,7 +1005,7 @@
       ],
       "correctOrder": "I have been reading since morning",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は朝から読んでいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been reading since morning.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「私は朝から読んでいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have been reading since morning.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 6,
@@ -1026,7 +1026,7 @@
       ],
       "correctOrder": "He has been swimming for an hour",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は1時間泳いでいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been swimming for an hour.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼は1時間泳いでいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has been swimming for an hour.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
@@ -1047,12 +1047,500 @@
       ],
       "correctOrder": "She has been drawing since this afternoon",
       "difficulty": "intermediate",
-      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は午後から絵を描いています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been drawing since this afternoon.",
+      "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ingです。\n\n「彼女は午後から絵を描いています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been drawing since this afternoon.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has been + -ing",
       "grammarPoint": "現在完了進行形",
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "She has been drawing since this afternoon."
+    },
+    {
+      "id": "g3-u2-fib-021",
+      "type": "fillInBlank",
+      "japanese": "彼らは1時間ずっとサッカーをしています。",
+      "sentence": "They ____ been playing soccer for an hour.",
+      "choices": [
+        "have",
+        "has",
+        "are"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。They（複数）にはhaveを使います。for + 期間で継続を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは1時間ずっとサッカーをしています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1時間ずっとサッカーをしています。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは1時間ずっとサッカーをしています。」に合いません。",
+      "hint": "have been + -ing"
+    },
+    {
+      "id": "g3-u2-fib-022",
+      "type": "fillInBlank",
+      "japanese": "彼女は朝からずっと料理をしています。",
+      "sentence": "She has ____ cooking since this morning.",
+      "choices": [
+        "been",
+        "being",
+        "be"
+      ],
+      "correctAnswer": "been",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形の形：has been + 動詞ingです。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【been】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は朝からずっと料理をしています。」から、この形が適切です。\n\n❌ 【being】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は朝からずっと料理をしています。」に合いません。\n\n❌ 【be】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は朝からずっと料理をしています。」に合いません。",
+      "hint": "has been + -ing"
+    },
+    {
+      "id": "g3-u2-fib-023",
+      "type": "fillInBlank",
+      "japanese": "私は2時間ずっとテレビを見ています。",
+      "sentence": "I have been ____ TV for two hours.",
+      "choices": [
+        "watching",
+        "watch",
+        "watched"
+      ],
+      "correctAnswer": "watching",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。have been の後は動詞のing形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watching】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2時間ずっとテレビを見ています。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2時間ずっとテレビを見ています。」に合いません。\n\n❌ 【watched】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2時間ずっとテレビを見ています。」に合いません。",
+      "hint": "have been + 動詞ing"
+    },
+    {
+      "id": "g3-u2-fib-024",
+      "type": "fillInBlank",
+      "japanese": "彼は30分ずっと電話で話しています。",
+      "sentence": "He has been ____ on the phone for 30 minutes.",
+      "choices": [
+        "talking",
+        "talk",
+        "talked"
+      ],
+      "correctAnswer": "talking",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。has been の後は動詞のing形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【talking】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は30分ずっと電話で話しています。」から、この形が適切です。\n\n❌ 【talk】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は30分ずっと電話で話しています。」に合いません。\n\n❌ 【talked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は30分ずっと電話で話しています。」に合いません。",
+      "hint": "has been + 動詞ing"
+    },
+    {
+      "id": "g3-u2-fib-025",
+      "type": "fillInBlank",
+      "japanese": "私たちは今朝からずっと待っています。",
+      "sentence": "We have been ____ since this morning.",
+      "choices": [
+        "waiting",
+        "wait",
+        "waited"
+      ],
+      "correctAnswer": "waiting",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。have been の後は動詞のing形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【waiting】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは今朝からずっと待っています。」から、この形が適切です。\n\n❌ 【wait】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今朝からずっと待っています。」に合いません。\n\n❌ 【waited】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは今朝からずっと待っています。」に合いません。",
+      "hint": "have been + 動詞ing"
+    },
+    {
+      "id": "g3-u2-fib-026",
+      "type": "fillInBlank",
+      "japanese": "彼女は3時間ずっと本を読んでいます。",
+      "sentence": "She ____ been reading a book for three hours.",
+      "choices": [
+        "has",
+        "have",
+        "is"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "主語がShe（三人称単数）なのでhasを使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は3時間ずっと本を読んでいます。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は3時間ずっと本を読んでいます。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は3時間ずっと本を読んでいます。」に合いません。",
+      "hint": "She → has been + -ing"
+    },
+    {
+      "id": "g3-u2-fib-027",
+      "type": "fillInBlank",
+      "japanese": "彼らは昨日からずっと旅行しています。",
+      "sentence": "They have been ____ since yesterday.",
+      "choices": [
+        "traveling",
+        "travel",
+        "traveled"
+      ],
+      "correctAnswer": "traveling",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。have been の後は動詞のing形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【traveling】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日からずっと旅行しています。」から、この形が適切です。\n\n❌ 【travel】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日からずっと旅行しています。」に合いません。\n\n❌ 【traveled】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日からずっと旅行しています。」に合いません。",
+      "hint": "have been + 動詞ing"
+    },
+    {
+      "id": "g3-u2-fib-028",
+      "type": "fillInBlank",
+      "japanese": "彼は午後からずっと寝ています。",
+      "sentence": "He has been ____ since this afternoon.",
+      "choices": [
+        "sleeping",
+        "sleep",
+        "slept"
+      ],
+      "correctAnswer": "sleeping",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。has been の後は動詞のing形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sleeping】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は午後からずっと寝ています。」から、この形が適切です。\n\n❌ 【sleep】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は午後からずっと寝ています。」に合いません。\n\n❌ 【slept】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は午後からずっと寝ています。」に合いません。",
+      "hint": "has been + 動詞ing"
+    },
+    {
+      "id": "g3-u2-fib-029",
+      "type": "fillInBlank",
+      "japanese": "私は1時間ずっと走っています。",
+      "sentence": "I have been ____ for an hour.",
+      "choices": [
+        "running",
+        "run",
+        "ran"
+      ],
+      "correctAnswer": "running",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。have been の後は動詞のing形を使います。runはnを重ねてingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【running】 ← 正解\n  ✓ 正解理由: 日本語訳「私は1時間ずっと走っています。」から、この形が適切です。\n\n❌ 【run】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は1時間ずっと走っています。」に合いません。\n\n❌ 【ran】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は1時間ずっと走っています。」に合いません。",
+      "hint": "run → running"
+    },
+    {
+      "id": "g3-u2-fib-030",
+      "type": "fillInBlank",
+      "japanese": "彼女は先週からずっと練習しています。",
+      "sentence": "She has been ____ since last week.",
+      "choices": [
+        "practicing",
+        "practice",
+        "practiced"
+      ],
+      "correctAnswer": "practicing",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。has been の後は動詞のing形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【practicing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先週からずっと練習しています。」から、この形が適切です。\n\n❌ 【practice】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週からずっと練習しています。」に合いません。\n\n❌ 【practiced】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週からずっと練習しています。」に合いません。",
+      "hint": "has been + 動詞ing"
+    },
+    {
+      "id": "g3-u2-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは3時間ずっとゲームをしています。",
+      "words": [
+        "They",
+        "have",
+        "been",
+        "playing",
+        "games",
+        "for",
+        "three",
+        "hours"
+      ],
+      "correctAnswer": "They have been playing games for three hours.",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形の語順：主語 + have/has been + 動詞ing + for/since + 期間/時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "have been + -ing + for"
+    },
+    {
+      "id": "g3-u2-so-022",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は朝からずっと料理をしています。",
+      "words": [
+        "She",
+        "has",
+        "been",
+        "cooking",
+        "since",
+        "this",
+        "morning"
+      ],
+      "correctAnswer": "She has been cooking since this morning.",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形の語順：主語 + has been + 動詞ing + since + 時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "has been + -ing + since"
+    },
+    {
+      "id": "g3-u2-so-023",
+      "type": "sentenceOrdering",
+      "japanese": "私は2時間ずっと待っています。",
+      "words": [
+        "I",
+        "have",
+        "been",
+        "waiting",
+        "for",
+        "two",
+        "hours"
+      ],
+      "correctAnswer": "I have been waiting for two hours.",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形の語順：主語 + have been + 動詞ing + for + 期間です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "have been + -ing + for"
+    },
+    {
+      "id": "g3-u2-so-024",
+      "type": "sentenceOrdering",
+      "japanese": "彼は昨日からずっと働いています。",
+      "words": [
+        "He",
+        "has",
+        "been",
+        "working",
+        "since",
+        "yesterday"
+      ],
+      "correctAnswer": "He has been working since yesterday.",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形の語順：主語 + has been + 動詞ing + since + 時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "has been + -ing + since"
+    },
+    {
+      "id": "g3-u2-so-025",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは1時間ずっとテニスをしています。",
+      "words": [
+        "We",
+        "have",
+        "been",
+        "playing",
+        "tennis",
+        "for",
+        "an",
+        "hour"
+      ],
+      "correctAnswer": "We have been playing tennis for an hour.",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形の語順：主語 + have been + 動詞ing + for + 期間です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "have been + -ing + for"
+    },
+    {
+      "id": "g3-u2-so-026",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は今朝からずっと掃除をしています。",
+      "words": [
+        "She",
+        "has",
+        "been",
+        "cleaning",
+        "since",
+        "this",
+        "morning"
+      ],
+      "correctAnswer": "She has been cleaning since this morning.",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形の語順：主語 + has been + 動詞ing + since + 時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "has been + -ing + since"
+    },
+    {
+      "id": "g3-u2-so-027",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは30分ずっと歌っています。",
+      "words": [
+        "They",
+        "have",
+        "been",
+        "singing",
+        "for",
+        "thirty",
+        "minutes"
+      ],
+      "correctAnswer": "They have been singing for thirty minutes.",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形の語順：主語 + have been + 動詞ing + for + 期間です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "have been + -ing + for"
+    },
+    {
+      "id": "g3-u2-so-028",
+      "type": "sentenceOrdering",
+      "japanese": "彼は先週からずっと練習しています。",
+      "words": [
+        "He",
+        "has",
+        "been",
+        "practicing",
+        "since",
+        "last",
+        "week"
+      ],
+      "correctAnswer": "He has been practicing since last week.",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形の語順：主語 + has been + 動詞ing + since + 時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "has been + -ing + since"
+    },
+    {
+      "id": "g3-u2-so-029",
+      "type": "sentenceOrdering",
+      "japanese": "私は45分ずっと走っています。",
+      "words": [
+        "I",
+        "have",
+        "been",
+        "running",
+        "for",
+        "forty-five",
+        "minutes"
+      ],
+      "correctAnswer": "I have been running for forty-five minutes.",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形の語順：主語 + have been + 動詞ing + for + 期間です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "have been + -ing + for"
+    },
+    {
+      "id": "g3-u2-so-030",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は今日からずっと勉強しています。",
+      "words": [
+        "She",
+        "has",
+        "been",
+        "studying",
+        "since",
+        "today"
+      ],
+      "correctAnswer": "She has been studying since today.",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形の語順：主語 + has been + 動詞ing + since + 時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "has been + -ing + since"
+    },
+    {
+      "id": "g3-u2-vf-021",
+      "type": "verbForm",
+      "japanese": "彼は2時間ずっとゲームをしています。",
+      "verb": "play",
+      "sentence": "He has been ____ games for two hours.",
+      "correctAnswer": "playing",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。動詞の原形にingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【playing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は2時間ずっとゲームをしています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は2時間ずっとゲームをしています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は2時間ずっとゲームをしています。」に合いません。",
+      "hint": "play → playing",
+      "choices": [
+        "playing",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-022",
+      "type": "verbForm",
+      "japanese": "彼女は今朝からずっと歌っています。",
+      "verb": "sing",
+      "sentence": "She has been ____ since this morning.",
+      "correctAnswer": "singing",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。singにingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【singing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は今朝からずっと歌っています。」から、この形が適切です。",
+      "hint": "sing → singing",
+      "choices": [
+        "singing"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-023",
+      "type": "verbForm",
+      "japanese": "私たちは1時間ずっと泳いでいます。",
+      "verb": "swim",
+      "sentence": "We have been ____ for an hour.",
+      "correctAnswer": "swimming",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。swimはmを重ねてingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【swimming】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは1時間ずっと泳いでいます。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは1時間ずっと泳いでいます。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは1時間ずっと泳いでいます。」に合いません。",
+      "hint": "swim → swimming（m重ねる）",
+      "choices": [
+        "swimming",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-024",
+      "type": "verbForm",
+      "japanese": "彼は先週からずっと書いています。",
+      "verb": "write",
+      "sentence": "He has been ____ since last week.",
+      "correctAnswer": "writing",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。writeはeを取ってingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【writing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は先週からずっと書いています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先週からずっと書いています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先週からずっと書いています。」に合いません。",
+      "hint": "write → writing（eを取る）",
+      "choices": [
+        "writing",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-025",
+      "type": "verbForm",
+      "japanese": "彼女は30分ずっと踊っています。",
+      "verb": "dance",
+      "sentence": "She has been ____ for thirty minutes.",
+      "correctAnswer": "dancing",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。danceはeを取ってingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【dancing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は30分ずっと踊っています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分ずっと踊っています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は30分ずっと踊っています。」に合いません。",
+      "hint": "dance → dancing（eを取る）",
+      "choices": [
+        "dancing",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-026",
+      "type": "verbForm",
+      "japanese": "私は昨日からずっと走っています。",
+      "verb": "run",
+      "sentence": "I have been ____ since yesterday.",
+      "correctAnswer": "running",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。runはnを重ねてingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【running】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日からずっと走っています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日からずっと走っています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日からずっと走っています。」に合いません。",
+      "hint": "run → running（n重ねる）",
+      "choices": [
+        "running",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-027",
+      "type": "verbForm",
+      "japanese": "彼らは2時間ずっと話しています。",
+      "verb": "talk",
+      "sentence": "They have been ____ for two hours.",
+      "correctAnswer": "talking",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。talkにingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【talking】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは2時間ずっと話しています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは2時間ずっと話しています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは2時間ずっと話しています。」に合いません。",
+      "hint": "talk → talking",
+      "choices": [
+        "talking",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-028",
+      "type": "verbForm",
+      "japanese": "彼女は今朝からずっと座っています。",
+      "verb": "sit",
+      "sentence": "She has been ____ since this morning.",
+      "correctAnswer": "sitting",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。sitはtを重ねてingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sitting】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は今朝からずっと座っています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は今朝からずっと座っています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は今朝からずっと座っています。」に合いません。",
+      "hint": "sit → sitting（t重ねる）",
+      "choices": [
+        "sitting",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-029",
+      "type": "verbForm",
+      "japanese": "私たちは1時間ずっと探しています。",
+      "verb": "look",
+      "sentence": "We have been ____ for an hour.",
+      "correctAnswer": "looking",
+      "difficulty": "beginner",
+      "explanation": "現在完了進行形です。lookにingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【looking】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは1時間ずっと探しています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは1時間ずっと探しています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは1時間ずっと探しています。」に合いません。",
+      "hint": "look → looking",
+      "choices": [
+        "looking",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u2-vf-030",
+      "type": "verbForm",
+      "japanese": "彼は先週からずっと作っています。",
+      "verb": "make",
+      "sentence": "He has been ____ since last week.",
+      "correctAnswer": "making",
+      "difficulty": "intermediate",
+      "explanation": "現在完了進行形です。makeはeを取ってingをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【making】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は先週からずっと作っています。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先週からずっと作っています。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先週からずっと作っています。」に合いません。",
+      "hint": "make → making（eを取る）",
+      "choices": [
+        "making",
+        "",
+        "s"
+      ]
     }
   ]
 }

@@ -1,0 +1,1561 @@
+{
+  "enabled": true,
+  "unit": "Unit 7",
+  "title": "比較級・最上級",
+  "grammar": "-er/-est、more/most",
+  "totalQuestions": 85,
+  "questionTypes": {
+    "fillInBlank": 27,
+    "sentenceOrdering": 22,
+    "paraphrase": 18,
+    "verbForm": 10,
+    "conversation": 8
+  },
+  "questions": [
+    {
+      "id": "g2-u7-fib-001",
+      "type": "fillInBlank",
+      "japanese": "彼は私より背が高いです。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "beginner",
+      "explanation": "比較級: tall → taller。thanがあるので比較級を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-002",
+      "type": "fillInBlank",
+      "japanese": "これはあれより大きいです。",
+      "sentence": "This is ____ than that.",
+      "choices": [
+        "bigger",
+        "big",
+        "biggest"
+      ],
+      "correctAnswer": "bigger",
+      "difficulty": "beginner",
+      "explanation": "比較級: big → bigger。短い形容詞はerをつけます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-003",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より速く走ります。",
+      "sentence": "She runs ____ than me.",
+      "choices": [
+        "faster",
+        "fast",
+        "fastest"
+      ],
+      "correctAnswer": "faster",
+      "difficulty": "beginner",
+      "explanation": "比較級: fast → faster\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-004",
+      "type": "fillInBlank",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "sentence": "This book is ____ interesting than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "beginner",
+      "explanation": "長い形容詞にはmoreを使います。more interesting\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-005",
+      "type": "fillInBlank",
+      "japanese": "これはクラスで最も大きいです。",
+      "sentence": "This is the ____ in the class.",
+      "choices": [
+        "biggest",
+        "big",
+        "bigger"
+      ],
+      "correctAnswer": "biggest",
+      "difficulty": "beginner",
+      "explanation": "最上級: big → biggest。theとinがあるので最上級です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-006",
+      "type": "fillInBlank",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "sentence": "He is the ____ of the three.",
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "beginner",
+      "explanation": "最上級: tall → tallest。of the threeなので最上級を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-007",
+      "type": "fillInBlank",
+      "japanese": "これは最もおもしろい本です。",
+      "sentence": "This is the ____ interesting book.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "長い形容詞の最上級にはmostを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-008",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より若いです。",
+      "sentence": "She is ____ than me.",
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "beginner",
+      "explanation": "比較級: young → younger\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-009",
+      "type": "fillInBlank",
+      "japanese": "これはあれより安いです。",
+      "sentence": "This is ____ than that.",
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "beginner",
+      "explanation": "比較級: cheap → cheaper\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は最も速く走ります。",
+      "sentence": "He runs the ____.",
+      "choices": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "correctAnswer": "fastest",
+      "difficulty": "beginner",
+      "explanation": "最上級: fast → fastest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-011",
+      "type": "fillInBlank",
+      "japanese": "この問題はあれより難しいです。",
+      "sentence": "This problem is ____ difficult than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "beginner",
+      "explanation": "difficultは長い形容詞なのでmoreを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "sentence": "She is the ____ popular in the class.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "popularは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私は彼より年上です。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "older",
+        "old",
+        "oldest"
+      ],
+      "correctAnswer": "older",
+      "difficulty": "beginner",
+      "explanation": "比較級: old → older\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-014",
+      "type": "fillInBlank",
+      "japanese": "これは最も高価な車です。",
+      "sentence": "This is the ____ expensive car.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "expensiveは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼は私より強いです。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "stronger",
+        "strong",
+        "strongest"
+      ],
+      "correctAnswer": "stronger",
+      "difficulty": "beginner",
+      "explanation": "比較級: strong → stronger\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-016",
+      "type": "fillInBlank",
+      "japanese": "これは最も小さい箱です。",
+      "sentence": "This is the ____ box.",
+      "choices": [
+        "smallest",
+        "small",
+        "smaller"
+      ],
+      "correctAnswer": "smallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: small → smallest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-017",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より親切です。",
+      "sentence": "She is ____ than me.",
+      "choices": [
+        "kinder",
+        "kind",
+        "kindest"
+      ],
+      "correctAnswer": "kinder",
+      "difficulty": "intermediate",
+      "explanation": "比較級: kind → kinder\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-018",
+      "type": "fillInBlank",
+      "japanese": "これはより美しい花です。",
+      "sentence": "This is a ____ beautiful flower.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "beautifulは長い形容詞なのでmoreを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-019",
+      "type": "fillInBlank",
+      "japanese": "彼は最も賢い生徒です。",
+      "sentence": "He is the ____ student.",
+      "choices": [
+        "smartest",
+        "smart",
+        "smarter"
+      ],
+      "correctAnswer": "smartest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: smart → smartest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-020",
+      "type": "fillInBlank",
+      "japanese": "これはあれより新しいです。",
+      "sentence": "This is ____ than that.",
+      "choices": [
+        "newer",
+        "new",
+        "newest"
+      ],
+      "correctAnswer": "newer",
+      "difficulty": "intermediate",
+      "explanation": "比較級: new → newer\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-021",
+      "type": "fillInBlank",
+      "japanese": "彼女は最も美しいです。",
+      "sentence": "She is the ____ beautiful.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "beautifulの最上級はmostを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-022",
+      "type": "fillInBlank",
+      "japanese": "私は彼より忙しいです。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "busier",
+        "busy",
+        "busiest"
+      ],
+      "correctAnswer": "busier",
+      "difficulty": "intermediate",
+      "explanation": "比較級: busy → busier (yをiに変えてer)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-023",
+      "type": "fillInBlank",
+      "japanese": "これは最も重要な問題です。",
+      "sentence": "This is the ____ important problem.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "importantは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-024",
+      "type": "fillInBlank",
+      "japanese": "彼は私より幸せです。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "happier",
+        "happy",
+        "happiest"
+      ],
+      "correctAnswer": "happier",
+      "difficulty": "intermediate",
+      "explanation": "比較級: happy → happier (yをiに変えてer)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-025",
+      "type": "fillInBlank",
+      "japanese": "これは最も簡単な方法です。",
+      "sentence": "This is the ____ easy way.",
+      "choices": [
+        "easiest",
+        "easy",
+        "easier"
+      ],
+      "correctAnswer": "easiest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: easy → easiest (yをiに変えてest)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-026",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より上手に歌います。",
+      "sentence": "She sings ____ than me.",
+      "choices": [
+        "better",
+        "good",
+        "best"
+      ],
+      "correctAnswer": "better",
+      "difficulty": "intermediate",
+      "explanation": "不規則変化: good → better → best\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-027",
+      "type": "fillInBlank",
+      "japanese": "これは最も良い選択です。",
+      "sentence": "This is the ____ choice.",
+      "choices": [
+        "best",
+        "good",
+        "better"
+      ],
+      "correctAnswer": "best",
+      "difficulty": "intermediate",
+      "explanation": "不規則変化の最上級: good → best\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私より背が高いです。",
+      "words": [
+        "He",
+        "is",
+        "taller",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "taller",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級tallerとthanを使います。\n\n「彼は私より背が高いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより大きいです。",
+      "words": [
+        "This",
+        "is",
+        "bigger",
+        "than",
+        "that",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "bigger",
+        "than",
+        "that",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級biggerとthanです。\n\n「これはあれより大きいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より速く走ります。",
+      "words": [
+        "She",
+        "runs",
+        "faster",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "runs",
+        "faster",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級fasterを使います。\n\n「彼女は私より速く走ります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "words": [
+        "This",
+        "book",
+        "is",
+        "more",
+        "interesting",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "book",
+        "is",
+        "more",
+        "interesting",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "more interesting thanの語順です。\n\n「この本はあの本よりおもしろいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "これはクラスで最も大きいです。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "biggest",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "biggest",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the biggestとin the classです。\n\n「これはクラスで最も大きいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "words": [
+        "He",
+        "is",
+        "the",
+        "tallest",
+        "of",
+        "the",
+        "three",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "the",
+        "tallest",
+        "of",
+        "the",
+        "three",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the tallestとof the threeです。\n\n「彼は3人の中で最も背が高いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "これは最もおもしろい本です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "interesting",
+        "book",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "interesting",
+        "book",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the most interestingです。\n\n「これは最もおもしろい本です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より若いです。",
+      "words": [
+        "She",
+        "is",
+        "younger",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "younger",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級youngerとthanを使います。\n\n「彼女は私より若いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより安いです。",
+      "words": [
+        "This",
+        "is",
+        "cheaper",
+        "than",
+        "that",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "cheaper",
+        "than",
+        "that",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級cheaperです。\n\n「これはあれより安いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼は最も速く走ります。",
+      "words": [
+        "He",
+        "runs",
+        "the",
+        "fastest",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "runs",
+        "the",
+        "fastest",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the fastestを使います。\n\n「彼は最も速く走ります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "この問題はあれより難しいです。",
+      "words": [
+        "This",
+        "problem",
+        "is",
+        "more",
+        "difficult",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "problem",
+        "is",
+        "more",
+        "difficult",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "more difficult thanの語順です。\n\n「この問題はあれより難しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "words": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "popular",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "popular",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the most popularです。\n\n「彼女はクラスで最も人気があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼より年上です。",
+      "words": [
+        "I",
+        "am",
+        "older",
+        "than",
+        "him",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "am",
+        "older",
+        "than",
+        "him",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級olderとthanです。\n\n「私は彼より年上です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "これは最も高価な車です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "expensive",
+        "car",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "expensive",
+        "car",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the most expensiveです。\n\n「これは最も高価な車です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私より強いです。",
+      "words": [
+        "He",
+        "is",
+        "stronger",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "stronger",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級strongerを使います。\n\n「彼は私より強いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-016",
+      "type": "sentenceOrdering",
+      "japanese": "これは最も小さい箱です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "smallest",
+        "box",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "smallest",
+        "box",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the smallestです。\n\n「これは最も小さい箱です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-017",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より親切です。",
+      "words": [
+        "She",
+        "is",
+        "kinder",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "kinder",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級kinderとthanです。\n\n「彼女は私より親切です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-018",
+      "type": "sentenceOrdering",
+      "japanese": "これはより美しい花です。",
+      "words": [
+        "This",
+        "is",
+        "a",
+        "more",
+        "beautiful",
+        "flower",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "a",
+        "more",
+        "beautiful",
+        "flower",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "more beautifulの語順です。\n\n「これはより美しい花です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-019",
+      "type": "sentenceOrdering",
+      "japanese": "彼は最も賢い生徒です。",
+      "words": [
+        "He",
+        "is",
+        "the",
+        "smartest",
+        "student",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "the",
+        "smartest",
+        "student",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the smartestを使います。\n\n「彼は最も賢い生徒です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-020",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより新しいです。",
+      "words": [
+        "This",
+        "is",
+        "newer",
+        "than",
+        "that",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "newer",
+        "than",
+        "that",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級newerとthanです。\n\n「これはあれより新しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は最も美しいです。",
+      "words": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "beautiful",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "beautiful",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the most beautifulです。\n\n「彼女は最も美しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-022",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼より忙しいです。",
+      "words": [
+        "I",
+        "am",
+        "busier",
+        "than",
+        "him",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "am",
+        "busier",
+        "than",
+        "him",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級busierを使います。\n\n「私は彼より忙しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-pp-001",
+      "type": "paraphrase",
+      "japanese": "彼は私より背が高いです。",
+      "sentence": "He has more height than me.",
+      "targetSentence": "He is ____ than me.",
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "intermediate",
+      "explanation": "比較級tallerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-002",
+      "type": "paraphrase",
+      "japanese": "これはあれより大きいです。",
+      "sentence": "This has more size than that.",
+      "targetSentence": "This is ____ than that.",
+      "choices": [
+        "bigger",
+        "big",
+        "biggest"
+      ],
+      "correctAnswer": "bigger",
+      "difficulty": "intermediate",
+      "explanation": "比較級biggerで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-003",
+      "type": "paraphrase",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "sentence": "This book has more interest than that one.",
+      "targetSentence": "This book is ____ interesting than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "more interestingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-004",
+      "type": "paraphrase",
+      "japanese": "これはクラスで最も大きいです。",
+      "sentence": "This has the most size in the class.",
+      "targetSentence": "This is the ____ in the class.",
+      "choices": [
+        "biggest",
+        "big",
+        "bigger"
+      ],
+      "correctAnswer": "biggest",
+      "difficulty": "intermediate",
+      "explanation": "最上級biggestで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-005",
+      "type": "paraphrase",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "sentence": "He has the most height of the three.",
+      "targetSentence": "He is the ____ of the three.",
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級tallestです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-006",
+      "type": "paraphrase",
+      "japanese": "これは最もおもしろい本です。",
+      "sentence": "This book has the most interest.",
+      "targetSentence": "This is the ____ interesting book.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "最上級most interestingです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-007",
+      "type": "paraphrase",
+      "japanese": "彼女は私より若いです。",
+      "sentence": "She has less age than me.",
+      "targetSentence": "She is ____ than me.",
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "intermediate",
+      "explanation": "比較級youngerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-008",
+      "type": "paraphrase",
+      "japanese": "これはあれより安いです。",
+      "sentence": "This has a lower price than that.",
+      "targetSentence": "This is ____ than that.",
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "intermediate",
+      "explanation": "比較級cheaperです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-009",
+      "type": "paraphrase",
+      "japanese": "彼は最も速く走ります。",
+      "sentence": "He has the highest speed.",
+      "targetSentence": "He runs the ____.",
+      "choices": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "correctAnswer": "fastest",
+      "difficulty": "intermediate",
+      "explanation": "最上級fastestで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-010",
+      "type": "paraphrase",
+      "japanese": "この問題はあれより難しいです。",
+      "sentence": "This problem has more difficulty than that one.",
+      "targetSentence": "This problem is ____ difficult than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "more difficultで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-011",
+      "type": "paraphrase",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "sentence": "She has the most popularity in the class.",
+      "targetSentence": "She is the ____ popular in the class.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "最上級most popularです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-012",
+      "type": "paraphrase",
+      "japanese": "私は彼より年上です。",
+      "sentence": "I have more age than him.",
+      "targetSentence": "I am ____ than him.",
+      "choices": [
+        "older",
+        "old",
+        "oldest"
+      ],
+      "correctAnswer": "older",
+      "difficulty": "intermediate",
+      "explanation": "比較級olderで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-013",
+      "type": "paraphrase",
+      "japanese": "これは最も高価な車です。",
+      "sentence": "This car has the highest price.",
+      "targetSentence": "This is the ____ expensive car.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "最上級most expensiveです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-014",
+      "type": "paraphrase",
+      "japanese": "彼は私より強いです。",
+      "sentence": "He has more strength than me.",
+      "targetSentence": "He is ____ than me.",
+      "choices": [
+        "stronger",
+        "strong",
+        "strongest"
+      ],
+      "correctAnswer": "stronger",
+      "difficulty": "intermediate",
+      "explanation": "比較級strongerです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-015",
+      "type": "paraphrase",
+      "japanese": "これは最も小さい箱です。",
+      "sentence": "This box has the least size.",
+      "targetSentence": "This is the ____ box.",
+      "choices": [
+        "smallest",
+        "small",
+        "smaller"
+      ],
+      "correctAnswer": "smallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級smallestで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-016",
+      "type": "paraphrase",
+      "japanese": "彼女は私より親切です。",
+      "sentence": "She has more kindness than me.",
+      "targetSentence": "She is ____ than me.",
+      "choices": [
+        "kinder",
+        "kind",
+        "kindest"
+      ],
+      "correctAnswer": "kinder",
+      "difficulty": "intermediate",
+      "explanation": "比較級kinderです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-017",
+      "type": "paraphrase",
+      "japanese": "これはより美しい花です。",
+      "sentence": "This flower has more beauty.",
+      "targetSentence": "This is a ____ beautiful flower.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "more beautifulで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-018",
+      "type": "paraphrase",
+      "japanese": "彼は最も賢い生徒です。",
+      "sentence": "He has the most intelligence.",
+      "targetSentence": "He is the ____ student.",
+      "choices": [
+        "smartest",
+        "smart",
+        "smarter"
+      ],
+      "correctAnswer": "smartest",
+      "difficulty": "intermediate",
+      "explanation": "最上級smartestです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-vf-001",
+      "type": "verbForm",
+      "japanese": "彼は私より背が____です。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級tallerが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-002",
+      "type": "verbForm",
+      "japanese": "これはクラスで最も大き____です。",
+      "sentence": "This is the ____ in the class.",
+      "choices": [
+        "biggest",
+        "big",
+        "bigger"
+      ],
+      "correctAnswer": "biggest",
+      "difficulty": "intermediate",
+      "explanation": "theとinがあるので最上級biggestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-003",
+      "type": "verbForm",
+      "japanese": "この本はあの本よりおもしろ____です。",
+      "sentence": "This book is ____ interesting than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級moreです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-004",
+      "type": "verbForm",
+      "japanese": "彼は3人の中で最も背が高____です。",
+      "sentence": "He is the ____ of the three.",
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "intermediate",
+      "explanation": "of the threeなので最上級tallestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-005",
+      "type": "verbForm",
+      "japanese": "これは最もおもしろ____本です。",
+      "sentence": "This is the ____ interesting book.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "theがあるので最上級mostです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-006",
+      "type": "verbForm",
+      "japanese": "彼女は私より若____です。",
+      "sentence": "She is ____ than me.",
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "intermediate",
+      "explanation": "比較級youngerが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-007",
+      "type": "verbForm",
+      "japanese": "彼は最も速く走り____。",
+      "sentence": "He runs the ____.",
+      "choices": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "correctAnswer": "fastest",
+      "difficulty": "intermediate",
+      "explanation": "theがあるので最上級fastestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-008",
+      "type": "verbForm",
+      "japanese": "この問題はあれより難し____です。",
+      "sentence": "This problem is ____ difficult than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級moreです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-009",
+      "type": "verbForm",
+      "japanese": "彼女はクラスで最も人気が____ます。",
+      "sentence": "She is the ____ popular in the class.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "theとin the classがあるので最上級mostです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-010",
+      "type": "verbForm",
+      "japanese": "私は彼より年____です。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "older",
+        "old",
+        "oldest"
+      ],
+      "correctAnswer": "older",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級olderです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-001",
+      "type": "conversation",
+      "japanese": "A: 彼とあなたはどちらが背が高いですか? B: 彼の方が背が高いです。",
+      "conversation": [
+        "A: Who is taller, he or you?",
+        "B: He is ____ than me."
+      ],
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "beginner",
+      "explanation": "比較級tallerを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is taller, he or you?",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-002",
+      "type": "conversation",
+      "japanese": "A: これとあれはどちらが大きいですか? B: これの方が大きいです。",
+      "conversation": [
+        "A: Which is bigger, this or that?",
+        "B: This is ____ than that."
+      ],
+      "choices": [
+        "bigger",
+        "big",
+        "biggest"
+      ],
+      "correctAnswer": "bigger",
+      "difficulty": "beginner",
+      "explanation": "比較級biggerです。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is bigger, this or that?",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-003",
+      "type": "conversation",
+      "japanese": "A: クラスで誰が最も背が高いですか? B: 田中君が最も背が高いです。",
+      "conversation": [
+        "A: Who is the tallest in the class?",
+        "B: Tanaka is the ____."
+      ],
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "beginner",
+      "explanation": "最上級tallestを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is the tallest in the class?",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-004",
+      "type": "conversation",
+      "japanese": "A: これとあれはどちらがおもしろいですか? B: これの方がおもしろいです。",
+      "conversation": [
+        "A: Which is more interesting, this or that?",
+        "B: This is ____ interesting than that."
+      ],
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "beginner",
+      "explanation": "比較級moreを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is more interesting, this or that?",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-005",
+      "type": "conversation",
+      "japanese": "A: 3つの中でどれが最も小さいですか? B: これが最も小さいです。",
+      "conversation": [
+        "A: Which is the smallest of the three?",
+        "B: This is the ____."
+      ],
+      "choices": [
+        "smallest",
+        "small",
+        "smaller"
+      ],
+      "correctAnswer": "smallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級smallestです。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is the smallest of the three?",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-006",
+      "type": "conversation",
+      "japanese": "A: 彼女とあなたはどちらが若いですか? B: 彼女の方が若いです。",
+      "conversation": [
+        "A: Who is younger, she or you?",
+        "B: She is ____ than me."
+      ],
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "intermediate",
+      "explanation": "比較級youngerを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is younger, she or you?",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-007",
+      "type": "conversation",
+      "japanese": "A: 世界で最も高い山は何ですか? B: エベレストが最も高いです。",
+      "conversation": [
+        "A: What is the highest mountain in the world?",
+        "B: Mt. Everest is the ____."
+      ],
+      "choices": [
+        "highest",
+        "high",
+        "higher"
+      ],
+      "correctAnswer": "highest",
+      "difficulty": "intermediate",
+      "explanation": "最上級highestです。\n\nが正解です。\n\n【文脈理解】\n場面: A: What is the highest mountain in the world?",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-008",
+      "type": "conversation",
+      "japanese": "A: これとあれはどちらが安いですか? B: あれの方が安いです。",
+      "conversation": [
+        "A: Which is cheaper, this or that?",
+        "B: That is ____ than this."
+      ],
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "intermediate",
+      "explanation": "比較級cheaperを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is cheaper, this or that?",
+      "hint": "質問から比較級か最上級かを判断"
+    }
+  ]
+}

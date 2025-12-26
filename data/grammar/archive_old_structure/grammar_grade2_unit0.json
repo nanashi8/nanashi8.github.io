@@ -1,0 +1,1008 @@
+{
+  "unit": "Unit 0",
+  "title": "be動詞の過去形",
+  "grammar": "was/were、過去の状態表現",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g2-u0-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私は昨日幸せでした。",
+      "sentence": "I ____ happy yesterday.",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "主語がIなのでwasです。「私は昨日幸せでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "I → was"
+    },
+    {
+      "id": "g2-u0-fib-002",
+      "type": "fillInBlank",
+      "japanese": "彼らは昨晩家にいました。",
+      "sentence": "They ____ at home last night.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "主語がTheyなのでwereです。「彼らは昨晩家にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "They → were"
+    },
+    {
+      "id": "g2-u0-fib-003",
+      "type": "fillInBlank",
+      "japanese": "彼は昨日病気でした。",
+      "sentence": "He ____ sick yesterday.",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "主語がHeなのでwasです。「彼は昨日病気でした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "He → was"
+    },
+    {
+      "id": "g2-u0-fib-004",
+      "type": "fillInBlank",
+      "japanese": "あなたは先週忙しかった。",
+      "sentence": "You ____ busy last week.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "主語がYouなのでwereです。「あなたは先週忙しかった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "You → were"
+    },
+    {
+      "id": "g2-u0-fib-005",
+      "type": "fillInBlank",
+      "japanese": "彼女は昨日東京にいました。",
+      "sentence": "She ____ in Tokyo yesterday.",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "主語がSheなのでwasです。「彼女は昨日東京にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "She → was"
+    },
+    {
+      "id": "g2-u0-fib-006",
+      "type": "fillInBlank",
+      "japanese": "私たちは先週の日曜日に図書館にいました。",
+      "sentence": "We ____ in the library last Sunday.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "主語がWeなのでwereです。「私たちは先週の日曜日に図書館にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "We → were"
+    },
+    {
+      "id": "g2-u0-fib-007",
+      "type": "fillInBlank",
+      "japanese": "昨日は寒かった。",
+      "sentence": "It ____ cold yesterday.",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "主語がItなのでwasです。「昨日は寒かった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "It → was"
+    },
+    {
+      "id": "g2-u0-fib-008",
+      "type": "fillInBlank",
+      "japanese": "私は昨日疲れていませんでした。",
+      "sentence": "I ____ tired yesterday.",
+      "choices": [
+        "wasn't",
+        "weren't",
+        "am not"
+      ],
+      "correctAnswer": "wasn't",
+      "difficulty": "intermediate",
+      "explanation": "was not = wasn'tです。「私は昨日疲れていませんでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "wasn't"
+    },
+    {
+      "id": "g2-u0-fib-009",
+      "type": "fillInBlank",
+      "japanese": "彼らは昨日学校にいませんでした。",
+      "sentence": "They ____ at school yesterday.",
+      "choices": [
+        "weren't",
+        "wasn't",
+        "are not"
+      ],
+      "correctAnswer": "weren't",
+      "difficulty": "intermediate",
+      "explanation": "were not = weren'tです。「彼らは昨日学校にいませんでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "weren't"
+    },
+    {
+      "id": "g2-u0-fib-010",
+      "type": "fillInBlank",
+      "japanese": "あなたは昨日家にいましたか。",
+      "sentence": "____ you at home yesterday?",
+      "choices": [
+        "Were",
+        "Was",
+        "Are"
+      ],
+      "correctAnswer": "Were",
+      "difficulty": "intermediate",
+      "explanation": "主語がyouなのでWereです。「あなたは昨日家にいましたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "Were you"
+    },
+    {
+      "id": "g2-u0-fib-011",
+      "type": "fillInBlank",
+      "japanese": "彼女は昨日怒っていましたか。",
+      "sentence": "____ she angry yesterday?",
+      "choices": [
+        "Was",
+        "Were",
+        "Is"
+      ],
+      "correctAnswer": "Was",
+      "difficulty": "intermediate",
+      "explanation": "主語がsheなのでWasです。「彼女は昨日怒っていましたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "Was she"
+    },
+    {
+      "id": "g2-u0-fib-012",
+      "type": "fillInBlank",
+      "japanese": "先週末は天気が良かった。",
+      "sentence": "The weather ____ nice last weekend.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "advanced",
+      "explanation": "主語がThe weatherなのでwasです。「先週末は天気が良かった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "was"
+    },
+    {
+      "id": "g2-u0-fib-013",
+      "type": "fillInBlank",
+      "japanese": "両親は先月京都にいました。",
+      "sentence": "My parents ____ in Kyoto last month.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "advanced",
+      "explanation": "主語がMy parentsなのでwereです。「両親は先月京都にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "were"
+    },
+    {
+      "id": "g2-u0-fib-014",
+      "type": "fillInBlank",
+      "japanese": "彼は昨日幸せでしたか。",
+      "sentence": "____ he happy yesterday?",
+      "choices": [
+        "Was",
+        "Were",
+        "Is"
+      ],
+      "correctAnswer": "Was",
+      "difficulty": "advanced",
+      "explanation": "主語がheなのでWasです。「彼は昨日幸せでしたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "Was"
+    },
+    {
+      "id": "g2-u0-fib-015",
+      "type": "fillInBlank",
+      "japanese": "それらの本は面白かった。",
+      "sentence": "Those books ____ interesting.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "advanced",
+      "explanation": "主語がThose booksなのでwereです。「それらの本は面白かった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "hint": "were"
+    },
+    {
+      "id": "g2-u0-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私は昨日疲れていました。",
+      "words": [
+        "I",
+        "was",
+        "tired",
+        "yesterday"
+      ],
+      "correctAnswer": "I was tired yesterday.",
+      "difficulty": "beginner",
+      "explanation": "「私は昨日疲れていました」です。\n\n「私は昨日疲れていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I was tired yesterday.",
+      "hint": "I was",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼らはその時生徒でした。",
+      "words": [
+        "they",
+        "were",
+        "students",
+        "then"
+      ],
+      "correctAnswer": "They were students then.",
+      "difficulty": "beginner",
+      "explanation": "「彼らはその時生徒でした」です。\n\n「彼らはその時生徒でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They were students then.",
+      "hint": "They were",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼はロンドンにいました。",
+      "words": [
+        "he",
+        "was",
+        "in",
+        "London"
+      ],
+      "correctAnswer": "He was in London.",
+      "difficulty": "beginner",
+      "explanation": "「彼はロンドンにいました」です。\n\n「彼はロンドンにいました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He was in London.",
+      "hint": "He was",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "私たちはその時友達でした。",
+      "words": [
+        "we",
+        "were",
+        "friends",
+        "then"
+      ],
+      "correctAnswer": "We were friends then.",
+      "difficulty": "beginner",
+      "explanation": "「私たちはその時友達でした」です。\n\n「私たちはその時友達でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We were friends then.",
+      "hint": "We were",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は昨日親切でした。",
+      "words": [
+        "she",
+        "was",
+        "kind",
+        "yesterday"
+      ],
+      "correctAnswer": "She was kind yesterday.",
+      "difficulty": "beginner",
+      "explanation": "「彼女は昨日親切でした」です。\n\n「彼女は昨日親切でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She was kind yesterday.",
+      "hint": "She was",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は昨日お腹が空いていませんでした。",
+      "words": [
+        "I",
+        "wasn't",
+        "hungry",
+        "yesterday"
+      ],
+      "correctAnswer": "I wasn't hungry yesterday.",
+      "difficulty": "intermediate",
+      "explanation": "「私は昨日お腹が空いていませんでした」です。\n\n「私は昨日お腹が空いていませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I wasn't hungry yesterday.",
+      "hint": "wasn't",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは昨日ここにいませんでした。",
+      "words": [
+        "they",
+        "weren't",
+        "here",
+        "yesterday"
+      ],
+      "correctAnswer": "They weren't here yesterday.",
+      "difficulty": "intermediate",
+      "explanation": "「彼らは昨日ここにいませんでした」です。\n\n「彼らは昨日ここにいませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n場所の副詞 → 時の副詞の順序\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They weren't here yesterday.",
+      "hint": "weren't",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼は昨日病気でしたか。",
+      "words": [
+        "was",
+        "he",
+        "sick",
+        "yesterday"
+      ],
+      "correctAnswer": "Was he sick yesterday?",
+      "difficulty": "intermediate",
+      "explanation": "「彼は昨日病気でしたか」です。\n\n「彼は昨日病気でしたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Was he sick yesterday?",
+      "hint": "Was",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "あなたは家にいましたか。",
+      "words": [
+        "were",
+        "you",
+        "at",
+        "home"
+      ],
+      "correctAnswer": "Were you at home?",
+      "difficulty": "intermediate",
+      "explanation": "「あなたは家にいましたか」です。\n\n「あなたは家にいましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Were you at home?",
+      "hint": "Were",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "昨日は晴れていました。",
+      "words": [
+        "it",
+        "was",
+        "sunny",
+        "yesterday"
+      ],
+      "correctAnswer": "It was sunny yesterday.",
+      "difficulty": "intermediate",
+      "explanation": "「昨日は晴れていました」です。\n\n「昨日は晴れていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ It was sunny yesterday.",
+      "hint": "It was",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "過去の場所。",
+      "words": [
+        "she",
+        "was",
+        "in",
+        "the",
+        "park",
+        "yesterday"
+      ],
+      "correctAnswer": "She was in the park yesterday.",
+      "difficulty": "advanced",
+      "explanation": "「彼女は昨日公園にいました」です。\n\n「過去の場所。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She was in the park yesterday.",
+      "hint": "She was",
+      "wordCount": 6
+    },
+    {
+      "id": "g2-u0-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼らはその時とても幸せでした。",
+      "words": [
+        "they",
+        "were",
+        "very",
+        "happy",
+        "then"
+      ],
+      "correctAnswer": "They were very happy then.",
+      "difficulty": "advanced",
+      "explanation": "「彼らはその時とても幸せでした」です。\n\n「彼らはその時とても幸せでした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They were very happy then.",
+      "hint": "They were",
+      "wordCount": 5
+    },
+    {
+      "id": "g2-u0-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "そのテストは難しかったですか。",
+      "words": [
+        "was",
+        "the",
+        "test",
+        "difficult"
+      ],
+      "correctAnswer": "Was the test difficult?",
+      "difficulty": "advanced",
+      "explanation": "「そのテストは難しかったですか」です。\n\n「そのテストは難しかったですか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Was the test difficult?",
+      "hint": "Was",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは昨日準備ができていませんでした。",
+      "words": [
+        "we",
+        "weren't",
+        "ready",
+        "yesterday"
+      ],
+      "correctAnswer": "We weren't ready yesterday.",
+      "difficulty": "advanced",
+      "explanation": "「私たちは昨日準備ができていませんでした」です。\n\n「私たちは昨日準備ができていませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We weren't ready yesterday.",
+      "hint": "weren't",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "生徒たちは静かでしたか。",
+      "words": [
+        "were",
+        "the",
+        "students",
+        "quiet"
+      ],
+      "correctAnswer": "Were the students quiet?",
+      "difficulty": "advanced",
+      "explanation": "「生徒たちは静かでしたか」です。\n\n「生徒たちは静かでしたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Were the students quiet?",
+      "hint": "Were",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u0-para-001",
+      "type": "paraphrase",
+      "japanese": "私は忙しかった。",
+      "originalSentence": "I am busy.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "I was busy.",
+        "I were busy.",
+        "I am busy."
+      ],
+      "correctAnswer": "I was busy.",
+      "difficulty": "beginner",
+      "explanation": "am → wasです。「私は忙しかった」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "was"
+    },
+    {
+      "id": "g2-u0-para-002",
+      "type": "paraphrase",
+      "japanese": "彼らは幸せでした。",
+      "originalSentence": "They are happy.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "They were happy.",
+        "They was happy.",
+        "They are happy."
+      ],
+      "correctAnswer": "They were happy.",
+      "difficulty": "beginner",
+      "explanation": "are → wereです。「彼らは幸せでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "were"
+    },
+    {
+      "id": "g2-u0-para-003",
+      "type": "paraphrase",
+      "japanese": "彼は疲れていました。",
+      "originalSentence": "He is tired.",
+      "question": "過去形に書き換えなさい",
+      "choices": [
+        "He was tired.",
+        "He were tired.",
+        "He is tired."
+      ],
+      "correctAnswer": "He was tired.",
+      "difficulty": "beginner",
+      "explanation": "is → wasです。「彼は疲れていました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "was"
+    },
+    {
+      "id": "g2-u0-para-004",
+      "type": "paraphrase",
+      "japanese": "私は家にいませんでした。",
+      "originalSentence": "I was at home.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "I wasn't at home.",
+        "I weren't at home.",
+        "I am not at home."
+      ],
+      "correctAnswer": "I wasn't at home.",
+      "difficulty": "beginner",
+      "explanation": "was → wasn'tです。「私は家にいませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "wasn't"
+    },
+    {
+      "id": "g2-u0-para-005",
+      "type": "paraphrase",
+      "japanese": "彼らは先生ではありませんでした。",
+      "originalSentence": "They were teachers.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "They weren't teachers.",
+        "They wasn't teachers.",
+        "They are not teachers."
+      ],
+      "correctAnswer": "They weren't teachers.",
+      "difficulty": "beginner",
+      "explanation": "were → weren'tです。「彼らは先生ではありませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "weren't"
+    },
+    {
+      "id": "g2-u0-para-006",
+      "type": "paraphrase",
+      "japanese": "彼女は幸せでしたか。",
+      "originalSentence": "She was happy.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Was she happy?",
+        "Were she happy?",
+        "Is she happy?"
+      ],
+      "correctAnswer": "Was she happy?",
+      "difficulty": "intermediate",
+      "explanation": "Was she～?の語順です。「彼女は幸せでしたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "Was"
+    },
+    {
+      "id": "g2-u0-para-007",
+      "type": "paraphrase",
+      "japanese": "あなたは忙しかったですか。",
+      "originalSentence": "You were busy.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Were you busy?",
+        "Was you busy?",
+        "Are you busy?"
+      ],
+      "correctAnswer": "Were you busy?",
+      "difficulty": "intermediate",
+      "explanation": "Were you～?の語順です。「あなたは忙しかったですか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "Were"
+    },
+    {
+      "id": "g2-u0-para-008",
+      "type": "paraphrase",
+      "japanese": "彼は先生です。",
+      "originalSentence": "He was a teacher.",
+      "question": "現在形に書き換えなさい",
+      "choices": [
+        "He is a teacher.",
+        "He are a teacher.",
+        "He was a teacher."
+      ],
+      "correctAnswer": "He is a teacher.",
+      "difficulty": "intermediate",
+      "explanation": "was → isです。「彼は先生です」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "is"
+    },
+    {
+      "id": "g2-u0-para-009",
+      "type": "paraphrase",
+      "japanese": "私たちは友達です。",
+      "originalSentence": "We were friends.",
+      "question": "現在形に書き換えなさい",
+      "choices": [
+        "We are friends.",
+        "We is friends.",
+        "We were friends."
+      ],
+      "correctAnswer": "We are friends.",
+      "difficulty": "intermediate",
+      "explanation": "were → areです。「私たちは友達です」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "are"
+    },
+    {
+      "id": "g2-u0-para-010",
+      "type": "paraphrase",
+      "japanese": "はい、行きました。",
+      "originalSentence": "Was he at home?",
+      "question": "肯定で答えなさい",
+      "choices": [
+        "Yes, he was.",
+        "Yes, he were.",
+        "Yes, he is."
+      ],
+      "correctAnswer": "Yes, he was.",
+      "difficulty": "intermediate",
+      "explanation": "Was～?への答えはwasを使います。「はい、いました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "Yes, he was"
+    },
+    {
+      "id": "g2-u0-para-011",
+      "type": "paraphrase",
+      "japanese": "いいえ、行きませんでした。",
+      "originalSentence": "Were they late?",
+      "question": "否定で答えなさい",
+      "choices": [
+        "No, they weren't.",
+        "No, they wasn't.",
+        "No, they aren't."
+      ],
+      "correctAnswer": "No, they weren't.",
+      "difficulty": "advanced",
+      "explanation": "Were～?への否定の答えはweren'tです。「いいえ、遅れていませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "No, they weren't"
+    },
+    {
+      "id": "g2-u0-para-012",
+      "type": "paraphrase",
+      "japanese": "時制変更。",
+      "originalSentence": "I am a student now.",
+      "question": "「その時」に書き換えなさい",
+      "choices": [
+        "I was a student then.",
+        "I were a student then.",
+        "I am a student then."
+      ],
+      "correctAnswer": "I was a student then.",
+      "difficulty": "advanced",
+      "explanation": "now → then、am → wasです。「私はその時生徒でした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "then"
+    },
+    {
+      "id": "g2-u0-para-013",
+      "type": "paraphrase",
+      "japanese": "あなたは行かなかったのですか。",
+      "originalSentence": "She was sick.",
+      "question": "否定の疑問文に",
+      "choices": [
+        "Wasn't she sick?",
+        "Weren't she sick?",
+        "Isn't she sick?"
+      ],
+      "correctAnswer": "Wasn't she sick?",
+      "difficulty": "advanced",
+      "explanation": "Wasn't～?で否定疑問文です。「彼女は病気ではなかったですか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "Wasn't"
+    },
+    {
+      "id": "g2-u0-para-014",
+      "type": "paraphrase",
+      "japanese": "あなたはどこへ行きましたか。",
+      "originalSentence": "He was in Tokyo.",
+      "question": "Whereを使って疑問文に",
+      "choices": [
+        "Where was he?",
+        "Where were he?",
+        "Where is he?"
+      ],
+      "correctAnswer": "Where was he?",
+      "difficulty": "advanced",
+      "explanation": "Where was～?の語順です。「彼はどこにいましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "Where was"
+    },
+    {
+      "id": "g2-u0-para-015",
+      "type": "paraphrase",
+      "japanese": "あなたはいつ行きましたか。",
+      "originalSentence": "They were students.",
+      "question": "Whatを使って疑問文に",
+      "choices": [
+        "What were they?",
+        "What was they?",
+        "What are they?"
+      ],
+      "correctAnswer": "What were they?",
+      "difficulty": "advanced",
+      "explanation": "What were～?の語順です。「彼らは何でしたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
+      "hint": "What were"
+    },
+    {
+      "id": "g2-u0-vf-001",
+      "type": "verbForm",
+      "japanese": "私は昨日興奮していました。",
+      "sentence": "I ____ excited yesterday.",
+      "verb": "be",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "主語がIなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "I → was"
+    },
+    {
+      "id": "g2-u0-vf-002",
+      "type": "verbForm",
+      "japanese": "彼らは学校にいました。",
+      "sentence": "They ____ at school.",
+      "verb": "be",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "主語がTheyなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "They → were"
+    },
+    {
+      "id": "g2-u0-vf-003",
+      "type": "verbForm",
+      "japanese": "彼は昨日遅れました。",
+      "sentence": "He ____ late yesterday.",
+      "verb": "be",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "主語がHeなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "He → was"
+    },
+    {
+      "id": "g2-u0-vf-004",
+      "type": "verbForm",
+      "japanese": "あなたは先週遅れました。",
+      "sentence": "You ____ late last week.",
+      "verb": "be",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "主語がYouなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "You → were"
+    },
+    {
+      "id": "g2-u0-vf-005",
+      "type": "verbForm",
+      "japanese": "彼女は東京にいました。",
+      "sentence": "She ____ in Tokyo.",
+      "verb": "be",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "主語がSheなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "She → was"
+    },
+    {
+      "id": "g2-u0-vf-006",
+      "type": "verbForm",
+      "japanese": "私たちはその時友達でした。",
+      "sentence": "We ____ friends then.",
+      "verb": "be",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "主語がWeなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "We → were"
+    },
+    {
+      "id": "g2-u0-vf-007",
+      "type": "verbForm",
+      "japanese": "昨日は雨でした。",
+      "sentence": "It ____ rainy yesterday.",
+      "verb": "be",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "主語がItなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "It → was"
+    },
+    {
+      "id": "g2-u0-vf-008",
+      "type": "verbForm",
+      "japanese": "その本は面白かったです。",
+      "sentence": "The books ____ interesting.",
+      "verb": "be",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "advanced",
+      "explanation": "主語がThe booksなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "複数 → were"
+    },
+    {
+      "id": "g2-u0-vf-009",
+      "type": "verbForm",
+      "japanese": "その猫はかわいかったです。",
+      "sentence": "The cat ____ cute.",
+      "verb": "be",
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "advanced",
+      "explanation": "主語がThe catなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "単数 → was"
+    },
+    {
+      "id": "g2-u0-vf-010",
+      "type": "verbForm",
+      "japanese": "私の両親は大阪にいました。",
+      "sentence": "My parents ____ in Osaka.",
+      "verb": "be",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "advanced",
+      "explanation": "主語がMy parentsなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "hint": "複数 → were"
+    },
+    {
+      "id": "g2-u0-conv-001",
+      "type": "conversation",
+      "japanese": "過去の状態。",
+      "situation": "昨日の様子を聞く",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was your day?"
+        },
+        {
+          "speaker": "B",
+          "text": "It ____ great!"
+        }
+      ],
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "主語がItなのでwasです。「素晴らしかったです」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "was"
+    },
+    {
+      "id": "g2-u0-conv-002",
+      "type": "conversation",
+      "japanese": "過去の確認。",
+      "situation": "昨日の場所を確認",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Were you at home yesterday?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "beginner",
+      "explanation": "Were you～?への答えはI wasです。「はい、いました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "I was"
+    },
+    {
+      "id": "g2-u0-conv-003",
+      "type": "conversation",
+      "japanese": "過去の否定。",
+      "situation": "体調について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Was he tired yesterday?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, he ____."
+        }
+      ],
+      "choices": [
+        "wasn't",
+        "weren't",
+        "isn't"
+      ],
+      "correctAnswer": "wasn't",
+      "difficulty": "intermediate",
+      "explanation": "Wasへの否定の答えはwasn'tです。「いいえ、疲れていませんでした」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "wasn't"
+    },
+    {
+      "id": "g2-u0-conv-004",
+      "type": "conversation",
+      "japanese": "あなたの友達はどこにいましたか。",
+      "situation": "友達について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Where were your friends?"
+        },
+        {
+          "speaker": "B",
+          "text": "They ____ at the library."
+        }
+      ],
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "主語がTheyなのでwereです。「図書館にいました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "were"
+    },
+    {
+      "id": "g2-u0-conv-005",
+      "type": "conversation",
+      "japanese": "過去の天気。",
+      "situation": "天気について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How ____ the weather yesterday?"
+        },
+        {
+          "speaker": "B",
+          "text": "It was sunny."
+        }
+      ],
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "advanced",
+      "explanation": "主語がthe weatherなのでwasです。「昨日の天気はどうでしたか」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "hint": "was"
+    }
+  ]
+}

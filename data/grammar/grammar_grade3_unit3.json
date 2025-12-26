@@ -1,1283 +1,1163 @@
 {
   "unit": "Unit 3",
-  "title": "関係代名詞",
-  "grammar": "who/which/that",
+  "title": "不定詞の応用",
+  "grammar": "It is ... (for + 人) + to、let/help + 人 + 動詞原形",
+  "enabled": true,
   "totalQuestions": 70,
   "questionTypes": {
-    "fillInBlank": 23,
+    "fillInBlank": 25,
     "sentenceOrdering": 23,
-    "paraphrase": 3,
-    "verbForm": 20,
-    "conversation": 1
+    "paraphrase": 7,
+    "verbForm": 10,
+    "conversation": 5
   },
   "questions": [
     {
-      "id": "vf-g3-u3-001",
-      "japanese": "私には東京に住んでいる友人がいます。",
-      "sentence": "I have a friend ____ lives in Tokyo.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使います。whoの後ろにlivesが続き、「東京に住んでいる」友人を説明していります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-002",
-      "japanese": "私には京都に住んでいる友人がいます。",
-      "sentence": "I have a friend ____ lives in Kyoto.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使います。「I have a friend.」と「He/She lives in Kyoto.」をwhoでつなげた形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-003",
-      "japanese": "彼女には大阪で働いている兄がいます。",
-      "sentence": "She has a brother ____ works in Osaka.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(brother)で、関係代名詞が主語の役割をするのでwhoを使います。whoの後ろにworks(3人称単数)が続きます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-004",
-      "japanese": "これは私が昨日買った本です。",
-      "sentence": "This is the book ____ I bought yesterday.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使います。「I bought the book」をthatまたはwhichでつなげた形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-005",
-      "japanese": "これは私が先週買った本です。",
-      "sentence": "This is the book ____ I bought last week.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(book)で、目的格の関係代名詞that/whichを使います。目的格の関係代名詞は省略できるが、ここでは明示していります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-006",
-      "japanese": "あれは彼が先月書いた手紙です。",
-      "sentence": "That is the letter ____ he wrote last month.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(letter)で、関係代名詞がwroteの目的語になるのでthat/whichを使います。「he wrote the letter」をthatでつなげた形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-007",
-      "japanese": "彼女は英語を話す女性です。",
-      "sentence": "She is a woman ____ speaks English.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(woman)で、主格の関係代名詞whoを使います。whoの後ろにspeaks(3人称単数)が続きます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-008",
-      "japanese": "彼は日本語を話す男性です。",
-      "sentence": "He is a man ____ speaks Japanese.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "whom"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使います。whomは目的格なので不可です。whichは物・動物用です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-009",
-      "japanese": "私はフランス語を話す先生を知っています。",
-      "sentence": "I know a teacher ____ speaks French.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(teacher)で、主格の関係代名詞whoを使います。whoの後ろにspeaksが続きます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-010",
-      "japanese": "これは有名な建物です。",
-      "sentence": "This is a famous building ____ everyone knows.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(building)で、目的格の関係代名詞that/whichを使います。「everyone knows it」という関係になっていります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-011",
-      "japanese": "これは古い建物です。",
-      "sentence": "This is an old building ____ was built 100 years ago.",
-      "verb": "relative",
-      "choices": [
-        "which",
-        "who",
-        "that"
-      ],
-      "correctAnswer": "which",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(building)なので、関係代名詞はwhichまたはthatを使います。whichの方が改まった表現で、建物などの物にはwhichがよく使われります。whoは人専用なので×。whereは場所を表す関係副詞なので×。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm",
-      "hint": "先行詞は物 → which/that"
-    },
-    {
-      "id": "vf-g3-u3-012",
-      "japanese": "あれは新しい建物です。",
-      "sentence": "That is a new building ____ was just completed.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(building)で、主格の関係代名詞that/whichを使います。「完成したばかりの」建物を説明していります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-013",
-      "japanese": "私が読んだ本はとても面白かったです。",
-      "sentence": "The book ____ I read was very interesting.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(book)で、目的格の関係代名詞that/whichを使います。「I read the book」をthatでつなげた形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-014",
-      "japanese": "彼女が見た映画は感動的でした。",
-      "sentence": "The movie ____ she watched was touching.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(movie)で、目的格の関係代名詞that/whichを使います。「she watched the movie」という関係です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-015",
-      "japanese": "私たちが訪れた場所は美しかったです。",
-      "sentence": "The place ____ we visited was beautiful.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が場所(place)だが、関係代名詞がvisitedの目的語になるのでthat/whichを使います。whereではない点に注意してください。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-016",
-      "japanese": "英語を教えている先生は親切です。",
-      "sentence": "The teacher ____ teaches English is kind.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(teacher)で、主格の関係代名詞whoを使います。whoの後ろにteaches Englishが続きます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-017",
-      "japanese": "ピアノを弾いている少女は私の妹です。",
-      "sentence": "The girl ____ is playing the piano is my sister.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(girl)で、主格の関係代名詞whoを使います。whoの後ろに進行形is playingが続きます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-018",
-      "japanese": "公園で走っている犬は私のペットです。",
-      "sentence": "The dog ____ is running in the park is my pet.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が動物(dog)で、関係代名詞that/whichを使います。動物にはthatが一般的です。主格として使用です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-019",
-      "japanese": "机の上にある本は私のものです。",
-      "sentence": "The book ____ is on the desk is mine.",
-      "verb": "relative",
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が物(book)で、主格の関係代名詞that/whichを使います。「机の上にある」本を説明していります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u3-020",
-      "japanese": "窓の近くに立っている男性は私の父です。",
-      "sentence": "The man ____ is standing near the window is my father.",
-      "verb": "relative",
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使います。whoの後ろに進行形is standingが続きます。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "grammarPoint": "関係代名詞",
-      "type": "verbForm"
-    },
-    {
-      "id": "fb-g3-u3-001",
-      "japanese": "私には東京に住んでいる友人がいます。",
-      "sentence": "I have a friend ____ lives in Tokyo.",
-      "wordCount": 8,
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "id": "g3-u3-fib-001",
       "type": "fillInBlank",
-      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使います。whoの後ろにはlivesが続き、「東京に住んでいる」友人を説明していります。whichは物用なので×。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
-    },
-    {
-      "id": "fb-g3-u3-002",
-      "japanese": "私には京都に住んでいる友人がいます。",
-      "sentence": "I have a friend ____ lives in Kyoto.",
-      "wordCount": 8,
+      "japanese": "英語を勉強するのは重要です。",
+      "sentence": "It is important ____ study English.",
       "choices": [
-        "who",
-        "which",
-        "that"
+        "to",
+        "for",
+        "of"
       ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使います。「I have a friend.」と「He/She lives in Kyoto.」をwhoでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形で「～することは…だ」という意味です。\n\n正解は「to」です。\n\n【日本語】\n英語を勉強するのは重要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「英語を勉強するのは重要です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語を勉強するのは重要です。」に合いません。",
+      "hint": "It is + 形容詞 + to"
     },
     {
-      "id": "fb-g3-u3-003",
-      "japanese": "彼女には大阪で働いている兄がいます。",
-      "sentence": "She has a brother ____ works in Osaka.",
-      "wordCount": 8,
+      "id": "g3-u3-fib-002",
+      "type": "fillInBlank",
+      "japanese": "早起きするのは難しいです。",
+      "sentence": "It is difficult to ____ up early.",
       "choices": [
-        "who",
-        "which",
-        "that"
+        "get",
+        "gets",
+        "getting"
       ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(brother)で、関係代名詞が主語の役割をするのでwhoを使います。whoの後ろにworks(3人称単数)が続き、兄の行動を説明していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "correctAnswer": "get",
+      "difficulty": "beginner",
+      "explanation": "toの後は動詞の原形を使います。\n\n正解は「get」です。\n\n【日本語】\n早起きするのは難しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【get】 ← 正解\n  ✓ 正解理由: 日本語訳「早起きするのは難しいです。」から、この形が適切です。\n\n❌ 【gets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「早起きするのは難しいです。」に合いません。\n\n❌ 【getting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「早起きするのは難しいです。」に合いません。",
+      "hint": "to + 動詞の原形"
     },
     {
-      "id": "fb-g3-u3-004",
-      "japanese": "これは私が昨日買った本です。",
-      "sentence": "This is the book ____ I bought yesterday.",
-      "wordCount": 8,
+      "id": "g3-u3-fib-003",
+      "type": "fillInBlank",
+      "japanese": "私にとってこの本を読むのは簡単です。",
+      "sentence": "It is easy ____ me to read this book.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "for",
+        "to",
+        "of"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "for",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使います。「I bought the book yesterday.」をthatまたはwhichでつなげた形です。whoは人用なので×。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞で「（人）にとって～することは…だ」です。\n\n正解は「for」です。\n\n【日本語】\n私にとってこの本を読むのは簡単です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【for】 ← 正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「私にとってこの本を読むのは簡単です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私にとってこの本を読むのは簡単です。」に合いません。",
+      "hint": "for + 人 + to"
     },
     {
-      "id": "fb-g3-u3-005",
-      "japanese": "これは私が先週買った本です。",
-      "sentence": "This is the book ____ I bought last week.",
-      "wordCount": 9,
+      "id": "g3-u3-fib-004",
+      "type": "fillInBlank",
+      "japanese": "彼にとって泳ぐのは楽しいです。",
+      "sentence": "It is fun for him ____ swim.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "to",
+        "for",
+        "of"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "to",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(book)で、関係代名詞が目的語(I bought it)の役割をするのでthat/whichを使います。目的格の関係代名詞は省略できるが、ここでは明示していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "for + 人の後はto + 動詞の原形が続きます。\n\n正解は「to」です。\n\n【日本語】\n彼にとって泳ぐのは楽しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「彼にとって泳ぐのは楽しいです。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼にとって泳ぐのは楽しいです。」に合いません。",
+      "hint": "for + 人 + to"
     },
     {
-      "id": "fb-g3-u3-006",
-      "japanese": "あれは彼が先月書いた手紙です。",
-      "sentence": "That is the letter ____ he wrote last month.",
-      "wordCount": 9,
+      "id": "g3-u3-fib-005",
+      "type": "fillInBlank",
+      "japanese": "彼女にとって日本語を話すのは難しい。",
+      "sentence": "It is difficult for ____ to speak Japanese.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "her",
+        "she",
+        "hers"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "her",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(letter)で、関係代名詞がwroteの目的語(he wrote it)になるのでthat/whichを使います。「he wrote the letter」をthatでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "forの後は目的格（her）を使います。\n\n正解は「her」です。\n\n【日本語】\n彼女にとって日本語を話すのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【her】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女にとって日本語を話すのは難しい。」から、この形が適切です。\n\n❌ 【she】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女にとって日本語を話すのは難しい。」に合いません。\n\n❌ 【hers】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女にとって日本語を話すのは難しい。」に合いません。",
+      "hint": "for + 目的格"
     },
     {
-      "id": "fb-g3-u3-007",
-      "japanese": "彼女は英語を話す女性です。",
-      "sentence": "She is a woman ____ speaks English.",
-      "wordCount": 7,
+      "id": "g3-u3-fib-006",
+      "type": "fillInBlank",
+      "japanese": "私の母は私に部屋を掃除させました。",
+      "sentence": "My mother let me ____ my room.",
       "choices": [
-        "who",
-        "which",
-        "that"
+        "clean",
+        "to clean",
+        "cleaning"
       ],
-      "correctAnswer": "who",
+      "correctAnswer": "clean",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(woman)で、関係代名詞が主語(she speaks)の役割をするのでwhoを使います。「She is a woman.」と「She speaks English.」をwhoでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "let + 人 + 動詞の原形で「人に～させる」という意味です。toは不要です。\n\n正解は「clean」です。\n\n【日本語】\n私の母は私に部屋を掃除させました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【clean】 ← 正解\n  ✓ 正解理由: 日本語訳「私の母は私に部屋を掃除させました。」から、この形が適切です。\n\n❌ 【to clean】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私の母は私に部屋を掃除させました。」に合いません。\n\n❌ 【cleaning】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私の母は私に部屋を掃除させました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形"
     },
     {
-      "id": "fb-g3-u3-008",
-      "japanese": "彼は日本語を話す男性です。",
-      "sentence": "He is a man ____ speaks Japanese.",
-      "wordCount": 7,
+      "id": "g3-u3-fib-007",
+      "type": "fillInBlank",
+      "japanese": "彼女は私が宿題をするのを手伝ってくれました。",
+      "sentence": "She helped me ____ my homework.",
       "choices": [
-        "who",
-        "which",
-        "whom"
+        "do",
+        "to do",
+        "doing"
       ],
-      "correctAnswer": "who",
+      "correctAnswer": "do",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使います。whoの後ろにspeaks(3人称単数)が続き、「日本語を話す」男性を説明していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "help + 人 + 動詞の原形で「人が～するのを手伝う」です。toは省略できます。\n\n正解は「do」です。\n\n【日本語】\n彼女は私が宿題をするのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私が宿題をするのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私が宿題をするのを手伝ってくれました。」に合いません。\n\n❌ 【doing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私が宿題をするのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "fb-g3-u3-009",
-      "japanese": "私はフランス語を話す先生を知っています。",
-      "sentence": "I know a teacher ____ speaks French.",
-      "wordCount": 7,
+      "id": "g3-u3-fib-008",
+      "type": "fillInBlank",
+      "japanese": "先生は私たちに英語を話させました。",
+      "sentence": "The teacher let ____ speak English.",
       "choices": [
-        "who",
-        "which",
-        "that"
+        "us",
+        "we",
+        "our"
       ],
-      "correctAnswer": "who",
+      "correctAnswer": "us",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(teacher)で、関係代名詞が主語(he/she speaks)の役割をするのでwhoを使います。「I know a teacher.」と「He/She speaks French.」をwhoでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "letの後は目的格（us）を使います。\n\n正解は「us」です。\n\n【日本語】\n先生は私たちに英語を話させました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【us】 ← 正解\n  ✓ 正解理由: 日本語訳「先生は私たちに英語を話させました。」から、この形が適切です。\n\n❌ 【we】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに英語を話させました。」に合いません。\n\n❌ 【our】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに英語を話させました。」に合いません。",
+      "hint": "let + 目的格"
     },
     {
-      "id": "fb-g3-u3-010",
-      "japanese": "これは有名な建物です。",
-      "sentence": "This is a famous building ____ everyone knows.",
-      "wordCount": 8,
+      "id": "g3-u3-fib-009",
+      "type": "fillInBlank",
+      "japanese": "彼は私が荷物を運ぶのを手伝ってくれました。",
+      "sentence": "He helped me ____ the bag.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "carry",
+        "to carry",
+        "carrying"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "carry",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(building)で、関係代名詞がknowsの目的語(everyone knows it)になるのでthat/whichを使います。「Everyone knows the building.」をthatでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "help + 人 + 動詞の原形で「人が～するのを手伝う」です。\n\n正解は「carry」です。\n\n【日本語】\n彼は私が荷物を運ぶのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【carry】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私が荷物を運ぶのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to carry】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が荷物を運ぶのを手伝ってくれました。」に合いません。\n\n❌ 【carrying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が荷物を運ぶのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "fb-g3-u3-011",
-      "japanese": "これは古い建物です。",
-      "sentence": "This is an old building ____ was built 100 years ago.",
-      "wordCount": 11,
+      "id": "g3-u3-fib-010",
+      "type": "fillInBlank",
+      "japanese": "健康でいることは大切です。",
+      "sentence": "It is important ____ stay healthy.",
       "choices": [
-        "which",
-        "who",
-        "that"
+        "to",
+        "for",
+        "of"
       ],
-      "correctAnswer": "which",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "先行詞は物 → which/that",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(building)なので、関係代名詞はwhichまたはthatを使います。whichの方が改まった表現で、建物などの物にはwhichがよく使われります。whoは人専用なので×。whereは場所を表す関係副詞なので×。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形です。\n\n正解は「to」です。\n\n【日本語】\n健康でいることは大切です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「健康でいることは大切です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「健康でいることは大切です。」に合いません。",
+      "hint": "It is + 形容詞 + to"
     },
     {
-      "id": "fb-g3-u3-012",
-      "japanese": "あれは新しい建物です。",
-      "sentence": "That is a new building ____ was just completed.",
-      "wordCount": 9,
+      "id": "g3-u3-fib-011",
+      "type": "fillInBlank",
+      "japanese": "私たちにとって環境を守ることは必要です。",
+      "sentence": "It is necessary ____ us to protect the environment.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "for",
+        "to",
+        "of"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "for",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(building)で、主格の関係代名詞that/whichを使います。「That is a building.」と「It was just completed.」をthatでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞です。\n\n正解は「for」です。\n\n【日本語】\n私たちにとって環境を守ることは必要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【for】 ← 正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「私たちにとって環境を守ることは必要です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちにとって環境を守ることは必要です。」に合いません。",
+      "hint": "for + 人 + to"
     },
     {
-      "id": "fb-g3-u3-013",
-      "japanese": "私が読んだ本はとても面白かったです。",
-      "sentence": "The book ____ I read was very interesting.",
-      "wordCount": 8,
+      "id": "g3-u3-fib-012",
+      "type": "fillInBlank",
+      "japanese": "父は私に車を洗わせました。",
+      "sentence": "My father let me ____ the car.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "wash",
+        "to wash",
+        "washing"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "wash",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(book)で、関係代名詞がreadの目的語(I read it)になるのでthat/whichを使います。「I read the book.」をthatでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "let + 人 + 動詞の原形です。toは不要です。\n\n正解は「wash」です。\n\n【日本語】\n父は私に車を洗わせました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wash】 ← 正解\n  ✓ 正解理由: 日本語訳「父は私に車を洗わせました。」から、この形が適切です。\n\n❌ 【to wash】 ← 不正解\n  ✗ 不正解理由: 日本語訳「父は私に車を洗わせました。」に合いません。\n\n❌ 【washing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「父は私に車を洗わせました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形"
     },
     {
-      "id": "fb-g3-u3-014",
-      "japanese": "彼女が見た映画は感動的でした。",
-      "sentence": "The movie ____ she watched was touching.",
-      "wordCount": 7,
+      "id": "g3-u3-fib-013",
+      "type": "fillInBlank",
+      "japanese": "兄は私が数学を勉強するのを手伝ってくれました。",
+      "sentence": "My brother helped me ____ math.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "study",
+        "to study",
+        "studying"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "study",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(movie)で、関係代名詞がwatchedの目的語(she watched it)になるのでthat/whichを使います。「She watched the movie.」をthatでつなげた形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "explanation": "help + 人 + 動詞の原形です。\n\n正解は「study」です。\n\n【日本語】\n兄は私が数学を勉強するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「兄は私が数学を勉強するのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「兄は私が数学を勉強するのを手伝ってくれました。」に合いません。\n\n❌ 【studying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「兄は私が数学を勉強するのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "fb-g3-u3-015",
-      "japanese": "私たちが訪れた場所は美しかったです。",
-      "sentence": "The place ____ we visited was beautiful.",
-      "wordCount": 7,
+      "id": "g3-u3-fib-014",
+      "type": "fillInBlank",
+      "japanese": "この問題を解くのは難しい。",
+      "sentence": "It is hard ____ solve this problem.",
       "choices": [
-        "that",
-        "who",
-        "which"
+        "to",
+        "for",
+        "of"
       ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が場所を表す名詞(place)だが、関係代名詞がvisitedの目的語(we visited it)になるのでthat/whichを使います。whereは使わないです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形です。\n\n正解は「to」です。\n\n【日本語】\nこの問題を解くのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「この問題を解くのは難しい。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題を解くのは難しい。」に合いません。",
+      "hint": "It is + 形容詞 + to"
     },
     {
-      "id": "fb-g3-u3-016",
-      "japanese": "英語を教えている先生は親切です。",
-      "sentence": "The teacher ____ teaches English is kind.",
-      "wordCount": 7,
+      "id": "g3-u3-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼にとってピアノを弾くのは簡単です。",
+      "sentence": "It is easy for ____ to play the piano.",
       "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(teacher)で、主格の関係代名詞whoを使います。「The teacher teaches English.」を「先生は英語を教えている」と説明していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
-    },
-    {
-      "id": "fb-g3-u3-017",
-      "japanese": "ピアノを弾いている少女は私の妹です。",
-      "sentence": "The girl ____ is playing the piano is my sister.",
-      "wordCount": 10,
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(girl)で、主格の関係代名詞whoを使います。whoの後ろにis playingが続き、「ピアノを弾いている」少女を説明していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
-    },
-    {
-      "id": "fb-g3-u3-018",
-      "japanese": "公園で走っている犬は私のペットです。",
-      "sentence": "The dog ____ is running in the park is my pet.",
-      "wordCount": 11,
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が動物(dog)で、関係代名詞がthat/whichを使います。動物にはwhoも使えるがthatが一般的です。主格として「走っている」犬を説明していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
-    },
-    {
-      "id": "fb-g3-u3-019",
-      "japanese": "机の上にある本は私のものです。",
-      "sentence": "The book ____ is on the desk is mine.",
-      "wordCount": 9,
-      "choices": [
-        "that",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が物(book)で、主格の関係代名詞that/whichを使います。「The book is on the desk.」を「机の上にある本」と説明していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
-    },
-    {
-      "id": "fb-g3-u3-020",
-      "japanese": "窓の近くに立っている男性は私の父です。",
-      "sentence": "The man ____ is standing near the window is my father.",
-      "wordCount": 11,
-      "choices": [
-        "who",
-        "which",
-        "that"
-      ],
-      "correctAnswer": "who",
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank",
-      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使います。whoの後ろにis standingが続き、「窓の近くに立っている」男性を説明していります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法"
-    },
-    {
-      "id": "so-g3-u3-001",
-      "japanese": "私には東京に住んでいる友人がいます。",
-      "sentence": "I have a friend who lives in Tokyo.",
-      "words": [
-        "I",
-        "have",
-        "a",
-        "friend",
-        "who",
-        "lives",
-        "in",
-        "Tokyo."
-      ],
-      "correctAnswer": "I have a friend who lives in Tokyo.",
-      "wordCount": 8,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「friend」と「lives in Tokyo」をつなぐです。先行詞が人なのでwhoを使います。\n\n「私には東京に住んでいる友人がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have a friend who lives in Tokyo."
-    },
-    {
-      "id": "so-g3-u3-002",
-      "japanese": "私には京都に住んでいる友人がいます。",
-      "sentence": "I have a friend who lives in Kyoto.",
-      "words": [
-        "I",
-        "have",
-        "a",
-        "friend",
-        "who",
-        "lives",
-        "in",
-        "Kyoto."
-      ],
-      "correctAnswer": "I have a friend who lives in Kyoto.",
-      "wordCount": 8,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「friend」と「lives in Kyoto」をつなぐです。主格のwhoの後ろに動詞livesが続きます。\n\n「私には京都に住んでいる友人がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have a friend who lives in Kyoto."
-    },
-    {
-      "id": "so-g3-u3-003",
-      "japanese": "彼女には大阪で働いている兄がいます。",
-      "sentence": "She has a brother who works in Osaka.",
-      "words": [
-        "She",
-        "has",
-        "a",
-        "brother",
-        "who",
-        "works",
-        "in",
-        "Osaka."
-      ],
-      "correctAnswer": "She has a brother who works in Osaka.",
-      "wordCount": 8,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「brother」と「works in Osaka」をつなぐです。先行詞が人なので主格のwhoを使います。\n\n「彼女には大阪で働いている兄がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has a brother who works in Osaka."
-    },
-    {
-      "id": "so-g3-u3-004",
-      "japanese": "これは私が昨日買った本です。",
-      "sentence": "This is the book that I bought yesterday.",
-      "words": [
-        "This",
-        "is",
-        "the",
-        "book",
-        "that",
-        "I",
-        "bought",
-        "yesterday."
-      ],
-      "correctAnswer": "This is the book that I bought yesterday.",
-      "wordCount": 8,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「book」と「I bought yesterday」をつなぐです。先行詞が物なのでthat/whichを使います。\n\n「これは私が昨日買った本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is the book that I bought yesterday."
-    },
-    {
-      "id": "so-g3-u3-005",
-      "japanese": "これは私が先週買った本です。",
-      "sentence": "This is the book that I bought last week.",
-      "words": [
-        "This",
-        "is",
-        "the",
-        "book",
-        "that",
-        "I",
-        "bought",
-        "last",
-        "week."
-      ],
-      "correctAnswer": "This is the book that I bought last week.",
-      "wordCount": 9,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「book」と「I bought last week」をつなぐです。目的格の関係代名詞として機能していります。\n\n「これは私が先週買った本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is the book that I bought last week."
-    },
-    {
-      "id": "so-g3-u3-006",
-      "japanese": "あれは彼が先月書いた手紙です。",
-      "sentence": "That is the letter that he wrote last month.",
-      "words": [
-        "That",
-        "is",
-        "the",
-        "letter",
-        "that",
+        "him",
         "he",
-        "wrote",
-        "last",
-        "month."
+        "his"
       ],
-      "correctAnswer": "That is the letter that he wrote last month.",
-      "wordCount": 9,
+      "correctAnswer": "him",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「letter」と「he wrote last month」をつなぐです。目的格のthat/whichを使います。\n\n「あれは彼が先月書いた手紙です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is the letter that he wrote last month."
+      "explanation": "forの後は目的格（him）を使います。\n\n正解は「him」です。\n\n【日本語】\n彼にとってピアノを弾くのは簡単です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【him】 ← 正解\n  ✓ 正解理由: 日本語訳「彼にとってピアノを弾くのは簡単です。」から、この形が適切です。\n\n❌ 【he】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼にとってピアノを弾くのは簡単です。」に合いません。\n\n❌ 【his】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼にとってピアノを弾くのは簡単です。」に合いません。",
+      "hint": "for + 目的格"
     },
     {
-      "id": "so-g3-u3-007",
-      "japanese": "彼女は英語を話す女性です。",
-      "sentence": "She is a woman who speaks English.",
+      "id": "g3-u3-fib-016",
+      "type": "fillInBlank",
+      "japanese": "彼女は私に外で遊ばせてくれました。",
+      "sentence": "She let me ____ outside.",
+      "choices": [
+        "play",
+        "to play",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。\n\n正解は「play」です。\n\n【日本語】\n彼女は私に外で遊ばせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に外で遊ばせてくれました。」から、この形が適切です。\n\n❌ 【to play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に外で遊ばせてくれました。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に外で遊ばせてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-fib-017",
+      "type": "fillInBlank",
+      "japanese": "友達は私が宿題を終わらせるのを手伝ってくれました。",
+      "sentence": "My friend helped me ____ my homework.",
+      "choices": [
+        "finish",
+        "to finish",
+        "finishing"
+      ],
+      "correctAnswer": "finish",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形です。\n\n正解は「finish」です。\n\n【日本語】\n友達は私が宿題を終わらせるのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【finish】 ← 正解\n  ✓ 正解理由: 日本語訳「友達は私が宿題を終わらせるのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to finish】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友達は私が宿題を終わらせるのを手伝ってくれました。」に合いません。\n\n❌ 【finishing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友達は私が宿題を終わらせるのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-fib-018",
+      "type": "fillInBlank",
+      "japanese": "新しい言語を学ぶことは面白い。",
+      "sentence": "It is interesting ____ learn a new language.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形です。\n\n正解は「to」です。\n\n【日本語】\n新しい言語を学ぶことは面白い。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「新しい言語を学ぶことは面白い。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「新しい言語を学ぶことは面白い。」に合いません。",
+      "hint": "It is + 形容詞 + to"
+    },
+    {
+      "id": "g3-u3-fib-019",
+      "type": "fillInBlank",
+      "japanese": "私たちにとって早く走ることは困難です。",
+      "sentence": "It is difficult for ____ to run fast.",
+      "choices": [
+        "us",
+        "we",
+        "our"
+      ],
+      "correctAnswer": "us",
+      "difficulty": "intermediate",
+      "explanation": "forの後は目的格（us）を使います。\n\n正解は「us」です。\n\n【日本語】\n私たちにとって早く走ることは困難です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【us】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちにとって早く走ることは困難です。」から、この形が適切です。\n\n❌ 【we】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちにとって早く走ることは困難です。」に合いません。\n\n❌ 【our】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちにとって早く走ることは困難です。」に合いません。",
+      "hint": "for + 目的格"
+    },
+    {
+      "id": "g3-u3-fib-020",
+      "type": "fillInBlank",
+      "japanese": "母は私にケーキを作らせてくれました。",
+      "sentence": "My mother let me ____ a cake.",
+      "choices": [
+        "make",
+        "to make",
+        "making"
+      ],
+      "correctAnswer": "make",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。\n\n正解は「make」です。\n\n【日本語】\n母は私にケーキを作らせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【make】 ← 正解\n  ✓ 正解理由: 日本語訳「母は私にケーキを作らせてくれました。」から、この形が適切です。\n\n❌ 【to make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私にケーキを作らせてくれました。」に合いません。\n\n❌ 【making】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私にケーキを作らせてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-fib-021",
+      "type": "fillInBlank",
+      "japanese": "姉は私が料理するのを手伝ってくれました。",
+      "sentence": "My sister helped me ____ dinner.",
+      "choices": [
+        "cook",
+        "to cook",
+        "cooking"
+      ],
+      "correctAnswer": "cook",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形です。\n\n正解は「cook」です。\n\n【日本語】\n姉は私が料理するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cook】 ← 正解\n  ✓ 正解理由: 日本語訳「姉は私が料理するのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to cook】 ← 不正解\n  ✗ 不正解理由: 日本語訳「姉は私が料理するのを手伝ってくれました。」に合いません。\n\n❌ 【cooking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「姉は私が料理するのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-fib-022",
+      "type": "fillInBlank",
+      "japanese": "毎日運動することは良いことです。",
+      "sentence": "It is good ____ exercise every day.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形です。\n\n正解は「to」です。\n\n【日本語】\n毎日運動することは良いことです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「毎日運動することは良いことです。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「毎日運動することは良いことです。」に合いません。",
+      "hint": "It is + 形容詞 + to"
+    },
+    {
+      "id": "g3-u3-fib-023",
+      "type": "fillInBlank",
+      "japanese": "彼女にとって早起きすることは容易です。",
+      "sentence": "It is easy for her ____ get up early.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "for + 人の後はto + 動詞の原形です。\n\n正解は「to」です。\n\n【日本語】\n彼女にとって早起きすることは容易です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「彼女にとって早起きすることは容易です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女にとって早起きすることは容易です。」に合いません。",
+      "hint": "for + 人 + to"
+    },
+    {
+      "id": "g3-u3-fib-024",
+      "type": "fillInBlank",
+      "japanese": "先生は私たちに質問させてくれました。",
+      "sentence": "The teacher let us ____ questions.",
+      "choices": [
+        "ask",
+        "to ask",
+        "asking"
+      ],
+      "correctAnswer": "ask",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。\n\n正解は「ask」です。\n\n【日本語】\n先生は私たちに質問させてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【ask】 ← 正解\n  ✓ 正解理由: 日本語訳「先生は私たちに質問させてくれました。」から、この形が適切です。\n\n❌ 【to ask】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに質問させてくれました。」に合いません。\n\n❌ 【asking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに質問させてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-fib-025",
+      "type": "fillInBlank",
+      "japanese": "彼は私が重い箱を持つのを手伝ってくれました。",
+      "sentence": "He helped me ____ the heavy box.",
+      "choices": [
+        "carry",
+        "to carry",
+        "carrying"
+      ],
+      "correctAnswer": "carry",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形です。\n\n正解は「carry」です。\n\n【日本語】\n彼は私が重い箱を持つのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【carry】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私が重い箱を持つのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to carry】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が重い箱を持つのを手伝ってくれました。」に合いません。\n\n❌ 【carrying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が重い箱を持つのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "英語を勉強するのは重要です。",
+      "words": [
+        "It",
+        "is",
+        "important",
+        "to",
+        "study",
+        "English"
+      ],
+      "correctAnswer": "It is important to study English.",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n英語を勉強するのは重要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + to"
+    },
+    {
+      "id": "g3-u3-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "早起きするのは難しいです。",
+      "words": [
+        "It",
+        "is",
+        "difficult",
+        "to",
+        "get",
+        "up",
+        "early"
+      ],
+      "correctAnswer": "It is difficult to get up early.",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n早起きするのは難しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + to"
+    },
+    {
+      "id": "g3-u3-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "私にとってこの本を読むのは簡単です。",
+      "words": [
+        "It",
+        "is",
+        "easy",
+        "for",
+        "me",
+        "to",
+        "read",
+        "this",
+        "book"
+      ],
+      "correctAnswer": "It is easy for me to read this book.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n私にとってこの本を読むのは簡単です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + for + 人 + to"
+    },
+    {
+      "id": "g3-u3-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "彼にとって泳ぐのは楽しいです。",
+      "words": [
+        "It",
+        "is",
+        "fun",
+        "for",
+        "him",
+        "to",
+        "swim"
+      ],
+      "correctAnswer": "It is fun for him to swim.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n彼にとって泳ぐのは楽しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + for + 人 + to"
+    },
+    {
+      "id": "g3-u3-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "私の母は私に部屋を掃除させました。",
+      "words": [
+        "My",
+        "mother",
+        "let",
+        "me",
+        "clean",
+        "my",
+        "room"
+      ],
+      "correctAnswer": "My mother let me clean my room.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n私の母は私に部屋を掃除させました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "let + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私が宿題をするのを手伝ってくれました。",
       "words": [
         "She",
-        "is",
-        "a",
-        "woman",
-        "who",
-        "speaks",
-        "English."
+        "helped",
+        "me",
+        "do",
+        "my",
+        "homework"
       ],
-      "correctAnswer": "She is a woman who speaks English.",
-      "wordCount": 7,
+      "correctAnswer": "She helped me do my homework.",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「woman」と「speaks English」をつなぐです。先行詞が人で主格のwhoを使います。\n\n「彼女は英語を話す女性です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is a woman who speaks English."
+      "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n彼女は私が宿題をするのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "so-g3-u3-008",
-      "japanese": "彼は日本語を話す男性です。",
-      "sentence": "He is a man who speaks Japanese.",
-      "words": [
-        "He",
-        "is",
-        "a",
-        "man",
-        "who",
-        "speaks",
-        "Japanese."
-      ],
-      "correctAnswer": "He is a man who speaks Japanese.",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "id": "g3-u3-so-007",
       "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「man」と「speaks Japanese」をつなぐです。主格として「話す」男性を説明していります。\n\n「彼は日本語を話す男性です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He is a man who speaks Japanese."
+      "japanese": "健康でいることは大切です。",
+      "words": [
+        "It",
+        "is",
+        "important",
+        "to",
+        "stay",
+        "healthy"
+      ],
+      "correctAnswer": "It is important to stay healthy.",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n健康でいることは大切です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + to"
     },
     {
-      "id": "so-g3-u3-009",
-      "japanese": "私はフランス語を話す先生を知っています。",
-      "sentence": "I know a teacher who speaks French.",
-      "words": [
-        "I",
-        "know",
-        "a",
-        "teacher",
-        "who",
-        "speaks",
-        "French."
-      ],
-      "correctAnswer": "I know a teacher who speaks French.",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "id": "g3-u3-so-008",
       "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「teacher」と「speaks French」をつなぐです。先行詞が人で主格のwhoを使います。\n\n「私はフランス語を話す先生を知っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I know a teacher who speaks French."
+      "japanese": "私たちにとって環境を守ることは必要です。",
+      "words": [
+        "It",
+        "is",
+        "necessary",
+        "for",
+        "us",
+        "to",
+        "protect",
+        "the",
+        "environment"
+      ],
+      "correctAnswer": "It is necessary for us to protect the environment.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n私たちにとって環境を守ることは必要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + for + 人 + to"
     },
     {
-      "id": "so-g3-u3-010",
-      "japanese": "これは有名な建物です。",
-      "sentence": "This is a famous building that everyone knows.",
-      "words": [
-        "This",
-        "is",
-        "a",
-        "famous",
-        "building",
-        "that",
-        "everyone",
-        "knows."
-      ],
-      "correctAnswer": "This is a famous building that everyone knows.",
-      "wordCount": 8,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "id": "g3-u3-so-009",
       "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「building」と「everyone knows」をつなぐです。目的格として「みんなが知っている」建物を説明です。\n\n「これは有名な建物です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is a famous building that everyone knows."
+      "japanese": "父は私に車を洗わせました。",
+      "words": [
+        "My",
+        "father",
+        "let",
+        "me",
+        "wash",
+        "the",
+        "car"
+      ],
+      "correctAnswer": "My father let me wash the car.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n父は私に車を洗わせました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "let + 人 + 動詞の原形"
     },
     {
-      "id": "so-g3-u3-011",
-      "japanese": "これは古い建物です。",
-      "sentence": "This is an old building that was built 100 years ago.",
-      "words": [
-        "This",
-        "is",
-        "an",
-        "old",
-        "building",
-        "that",
-        "was",
-        "built",
-        "100",
-        "years",
-        "ago."
-      ],
-      "correctAnswer": "This is an old building that was built 100 years ago.",
-      "wordCount": 11,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "id": "g3-u3-so-010",
       "type": "sentenceOrdering",
-      "explanation": "関係代名詞whichを使って、「building」と「was built 100 years ago」をつなぐです。主格として建物を説明していります。\n\n「これは古い建物です。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is an old building that was built 100 years ago."
+      "japanese": "兄は私が数学を勉強するのを手伝ってくれました。",
+      "words": [
+        "My",
+        "brother",
+        "helped",
+        "me",
+        "study",
+        "math"
+      ],
+      "correctAnswer": "My brother helped me study math.",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n兄は私が数学を勉強するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "so-g3-u3-012",
-      "japanese": "あれは新しい建物です。",
-      "sentence": "That is a new building that was just completed.",
+      "id": "g3-u3-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "この問題を解くのは難しい。",
       "words": [
-        "That",
+        "It",
         "is",
+        "hard",
+        "to",
+        "solve",
+        "this",
+        "problem"
+      ],
+      "correctAnswer": "It is hard to solve this problem.",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\nこの問題を解くのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + to"
+    },
+    {
+      "id": "g3-u3-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼にとってピアノを弾くのは簡単です。",
+      "words": [
+        "It",
+        "is",
+        "easy",
+        "for",
+        "him",
+        "to",
+        "play",
+        "the",
+        "piano"
+      ],
+      "correctAnswer": "It is easy for him to play the piano.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n彼にとってピアノを弾くのは簡単です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + for + 人 + to"
+    },
+    {
+      "id": "g3-u3-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私に外で遊ばせてくれました。",
+      "words": [
+        "She",
+        "let",
+        "me",
+        "play",
+        "outside"
+      ],
+      "correctAnswer": "She let me play outside.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n彼女は私に外で遊ばせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "let + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "友達は私が宿題を終わらせるのを手伝ってくれました。",
+      "words": [
+        "My",
+        "friend",
+        "helped",
+        "me",
+        "finish",
+        "my",
+        "homework"
+      ],
+      "correctAnswer": "My friend helped me finish my homework.",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n友達は私が宿題を終わらせるのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "help + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "新しい言語を学ぶことは面白い。",
+      "words": [
+        "It",
+        "is",
+        "interesting",
+        "to",
+        "learn",
         "a",
         "new",
-        "building",
-        "that",
-        "was",
-        "just",
-        "completed."
+        "language"
       ],
-      "correctAnswer": "That is a new building that was just completed.",
-      "wordCount": 9,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「building」と「was just completed」をつなぐです。主格のthat/whichを使います。\n\n「あれは新しい建物です。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is a new building that was just completed."
+      "correctAnswer": "It is interesting to learn a new language.",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n新しい言語を学ぶことは面白い。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + to"
     },
     {
-      "id": "so-g3-u3-013",
-      "japanese": "私が読んだ本はとても面白かったです。",
-      "sentence": "The book that I read was very interesting.",
+      "id": "g3-u3-so-016",
+      "type": "sentenceOrdering",
+      "japanese": "私たちにとって早く走ることは困難です。",
       "words": [
-        "The",
-        "book",
-        "that",
-        "I",
-        "read",
-        "was",
-        "very",
-        "interesting."
+        "It",
+        "is",
+        "difficult",
+        "for",
+        "us",
+        "to",
+        "run",
+        "fast"
       ],
-      "correctAnswer": "The book that I read was very interesting.",
-      "wordCount": 8,
+      "correctAnswer": "It is difficult for us to run fast.",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「book」と「I read」をつなぐです。目的格の関係代名詞として機能していります。\n\n「私が読んだ本はとても面白かったです。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The book that I read was very interesting."
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n私たちにとって早く走ることは困難です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + for + 人 + to"
     },
     {
-      "id": "so-g3-u3-014",
-      "japanese": "彼女が見た映画は感動的でした。",
-      "sentence": "The movie that she watched was touching.",
+      "id": "g3-u3-so-017",
+      "type": "sentenceOrdering",
+      "japanese": "母は私にケーキを作らせてくれました。",
       "words": [
-        "The",
-        "movie",
-        "that",
-        "she",
-        "watched",
-        "was",
-        "touching."
+        "My",
+        "mother",
+        "let",
+        "me",
+        "make",
+        "a",
+        "cake"
       ],
-      "correctAnswer": "The movie that she watched was touching.",
-      "wordCount": 7,
+      "correctAnswer": "My mother let me make a cake.",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「movie」と「she watched」をつなぐです。目的格として映画を説明していります。\n\n「彼女が見た映画は感動的でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The movie that she watched was touching."
+      "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n母は私にケーキを作らせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "let + 人 + 動詞の原形"
     },
     {
-      "id": "so-g3-u3-015",
-      "japanese": "私たちが訪れた場所は美しかったです。",
-      "sentence": "The place that we visited was beautiful.",
+      "id": "g3-u3-so-018",
+      "type": "sentenceOrdering",
+      "japanese": "姉は私が料理するのを手伝ってくれました。",
       "words": [
-        "The",
-        "place",
-        "that",
-        "we",
-        "visited",
-        "was",
-        "beautiful."
+        "My",
+        "sister",
+        "helped",
+        "me",
+        "cook",
+        "dinner"
       ],
-      "correctAnswer": "The place that we visited was beautiful.",
-      "wordCount": 7,
+      "correctAnswer": "My sister helped me cook dinner.",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「place」と「we visited」をつなぐです。目的格のthat/whichを使う(whereではない)です。\n\n「私たちが訪れた場所は美しかったです。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The place that we visited was beautiful."
+      "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n姉は私が料理するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "so-g3-u3-016",
-      "japanese": "英語を教えている先生は親切です。",
-      "sentence": "The teacher who teaches English is kind.",
+      "id": "g3-u3-so-019",
+      "type": "sentenceOrdering",
+      "japanese": "毎日運動することは良いことです。",
+      "words": [
+        "It",
+        "is",
+        "good",
+        "to",
+        "exercise",
+        "every",
+        "day"
+      ],
+      "correctAnswer": "It is good to exercise every day.",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + to + 動詞の原形の語順です。\n\n【日本語】\n毎日運動することは良いことです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + to"
+    },
+    {
+      "id": "g3-u3-so-020",
+      "type": "sentenceOrdering",
+      "japanese": "彼女にとって早起きすることは容易です。",
+      "words": [
+        "It",
+        "is",
+        "easy",
+        "for",
+        "her",
+        "to",
+        "get",
+        "up",
+        "early"
+      ],
+      "correctAnswer": "It is easy for her to get up early.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n彼女にとって早起きすることは容易です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + for + 人 + to"
+    },
+    {
+      "id": "g3-u3-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "先生は私たちに質問させてくれました。",
       "words": [
         "The",
         "teacher",
-        "who",
-        "teaches",
-        "English",
-        "is",
-        "kind."
+        "let",
+        "us",
+        "ask",
+        "questions"
       ],
-      "correctAnswer": "The teacher who teaches English is kind.",
-      "wordCount": 7,
+      "correctAnswer": "The teacher let us ask questions.",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「teacher」と「teaches English」をつなぐです。主格として先生を説明していります。\n\n「英語を教えている先生は親切です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The teacher who teaches English is kind."
+      "explanation": "let + 人 + 動詞の原形の語順です。\n\n【日本語】\n先生は私たちに質問させてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "let + 人 + 動詞の原形"
     },
     {
-      "id": "so-g3-u3-017",
-      "japanese": "ピアノを弾いている少女は私の妹です。",
-      "sentence": "The girl who is playing the piano is my sister.",
+      "id": "g3-u3-so-022",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私が重い箱を持つのを手伝ってくれました。",
       "words": [
-        "The",
-        "girl",
-        "who",
-        "is",
-        "playing",
+        "He",
+        "helped",
+        "me",
+        "carry",
         "the",
-        "piano",
-        "is",
-        "my",
-        "sister."
+        "heavy",
+        "box"
       ],
-      "correctAnswer": "The girl who is playing the piano is my sister.",
-      "wordCount": 10,
+      "correctAnswer": "He helped me carry the heavy box.",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「girl」と「is playing the piano」をつなぐです。進行形の主格として少女を説明していります。\n\n「ピアノを弾いている少女は私の妹です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The girl who is playing the piano is my sister."
+      "explanation": "help + 人 + 動詞の原形の語順です。\n\n【日本語】\n彼は私が重い箱を持つのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "so-g3-u3-018",
-      "japanese": "公園で走っている犬は私のペットです。",
-      "sentence": "The dog that is running in the park is my pet.",
+      "id": "g3-u3-so-023",
+      "type": "sentenceOrdering",
+      "japanese": "彼女にとって日本語を話すのは難しい。",
       "words": [
-        "The",
-        "dog",
-        "that",
+        "It",
         "is",
-        "running",
-        "in",
-        "the",
-        "park",
-        "is",
-        "my",
-        "pet."
+        "difficult",
+        "for",
+        "her",
+        "to",
+        "speak",
+        "Japanese"
       ],
-      "correctAnswer": "The dog that is running in the park is my pet.",
-      "wordCount": 11,
+      "correctAnswer": "It is difficult for her to speak Japanese.",
       "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「dog」と「is running in the park」をつなぐです。動物にはthatを使うのが一般的です。\n\n「公園で走っている犬は私のペットです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The dog that is running in the park is my pet."
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の語順です。\n\n【日本語】\n彼女にとって日本語を話すのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "It is + 形容詞 + for + 人 + to"
     },
     {
-      "id": "so-g3-u3-019",
-      "japanese": "机の上にある本は私のものです。",
-      "sentence": "The book that is on the desk is mine.",
-      "words": [
-        "The",
-        "book",
-        "that",
-        "is",
-        "on",
-        "the",
-        "desk",
-        "is",
-        "mine."
-      ],
-      "correctAnswer": "The book that is on the desk is mine.",
-      "wordCount": 9,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞thatを使って、「book」と「is on the desk」をつなぐです。主格として本を説明していります。\n\n「机の上にある本は私のものです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The book that is on the desk is mine."
-    },
-    {
-      "id": "so-g3-u3-020",
-      "japanese": "窓の近くに立っている男性は私の父です。",
-      "sentence": "The man who is standing near the window is my father.",
-      "words": [
-        "The",
-        "man",
-        "who",
-        "is",
-        "standing",
-        "near",
-        "the",
-        "window",
-        "is",
-        "my",
-        "father."
-      ],
-      "correctAnswer": "The man who is standing near the window is my father.",
-      "wordCount": 11,
-      "difficulty": "intermediate",
-      "grammarPoint": "関係代名詞",
-      "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering",
-      "explanation": "関係代名詞whoを使って、「man」と「is standing near the window」をつなぐです。主格として男性を説明していります。\n\n「窓の近くに立っている男性は私の父です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The man who is standing near the window is my father."
-    },
-    {
-      "id": "g3-u3-omit-001",
-      "type": "fillInBlank",
-      "japanese": "私が昨日読んだ本は面白かったです。",
-      "sentence": "The book ____ I read yesterday was interesting.",
-      "choices": [
-        "which",
-        "who",
-        "where"
-      ],
-      "correctAnswer": "which",
-      "difficulty": "intermediate",
-      "explanation": "関係代名詞whichは目的格として使われています。省略も可能です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "物にはwhich"
-    },
-    {
-      "id": "g3-u3-omit-002",
-      "type": "fillInBlank",
-      "japanese": "私が会った少年（省略形で）。",
-      "sentence": "the boy ____ I met",
-      "choices": [
-        "(省略可)",
-        "who",
-        "which"
-      ],
-      "correctAnswer": "(省略可)",
-      "difficulty": "intermediate",
-      "explanation": "関係代名詞が目的格の時は省略できる構文として覚えてください。the boy (whom) I met = the boy I metです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "目的格は省略可"
-    },
-    {
-      "id": "g3-u3-omit-003",
-      "type": "sentenceOrdering",
-      "japanese": "彼女が買った車。",
-      "words": [
-        "the",
-        "car",
-        "she",
-        "bought"
-      ],
-      "correctAnswer": "the car she bought",
-      "difficulty": "intermediate",
-      "explanation": "関係代名詞の目的格(which/that)を省略した形として覚えてください。the car (which) she boughtです。\n\n「彼女が買った車。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ the car she bought",
-      "hint": "the car she",
-      "wordCount": 4
-    },
-    {
-      "id": "g3-u3-omit-004",
+      "id": "g3-u3-para-001",
       "type": "paraphrase",
-      "japanese": "私が探している本（the book, looking for）を省略形で。",
-      "originalSentence": "This is the book which I am looking for.",
-      "question": "This is the book ____.",
-      "correctAnswer": "I am looking for",
-      "difficulty": "advanced",
-      "explanation": "関係代名詞が目的格の時は省略できります。This is the book I am looking for.となります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:"
+      "japanese": "英語を勉強するのは重要です。",
+      "original": "It is important for study English.",
+      "correctAnswer": "It is important to study English.",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞の後はto + 動詞の原形を使います。forではありません。\n\n【日本語】\n英語を勉強するのは重要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "to + 動詞の原形"
     },
     {
-      "id": "g3-u3-omit-005",
-      "type": "fillInBlank",
-      "japanese": "私が見た映画は面白かった（省略形）。",
-      "sentence": "The movie ____ I saw was interesting.",
-      "choices": [
-        "(省略)",
-        "which",
-        "what"
-      ],
-      "correctAnswer": "(省略)",
+      "id": "g3-u3-para-002",
+      "type": "paraphrase",
+      "japanese": "私にとってこの本を読むのは簡単です。",
+      "original": "It is easy to me to read this book.",
+      "correctAnswer": "It is easy for me to read this book.",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞の目的格を省略した形として覚えてください。The movie I saw = The movie which I sawです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "省略可能"
+      "explanation": "人を示すときはfor + 人を使います。toではありません。\n\n【日本語】\n私にとってこの本を読むのは簡単です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "for + 人"
     },
     {
-      "id": "g3-u3-omit-006",
+      "id": "g3-u3-para-003",
+      "type": "paraphrase",
+      "japanese": "私の母は私に部屋を掃除させました。",
+      "original": "My mother let me to clean my room.",
+      "correctAnswer": "My mother let me clean my room.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。toは不要です。\n\n【日本語】\n私の母は私に部屋を掃除させました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "let + 人 + 動詞の原形（toなし）"
+    },
+    {
+      "id": "g3-u3-para-004",
+      "type": "paraphrase",
+      "japanese": "彼女は私が宿題をするのを手伝ってくれました。",
+      "original": "She helped me to doing my homework.",
+      "correctAnswer": "She helped me do my homework.",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形です。doingではありません。\n\n【日本語】\n彼女は私が宿題をするのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "help + 人 + 動詞の原形"
+    },
+    {
+      "id": "g3-u3-para-005",
+      "type": "paraphrase",
+      "japanese": "彼にとって泳ぐのは楽しいです。",
+      "original": "It is fun to him to swim.",
+      "correctAnswer": "It is fun for him to swim.",
+      "difficulty": "intermediate",
+      "explanation": "人を示すときはfor + 人を使います。\n\n【日本語】\n彼にとって泳ぐのは楽しいです。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "for + 人"
+    },
+    {
+      "id": "g3-u3-para-006",
+      "type": "paraphrase",
+      "japanese": "父は私に車を洗わせました。",
+      "original": "My father let me to wash the car.",
+      "correctAnswer": "My father let me wash the car.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。toは不要です。\n\n【日本語】\n父は私に車を洗わせました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "let + 人 + 動詞の原形（toなし）"
+    },
+    {
+      "id": "g3-u3-para-007",
+      "type": "paraphrase",
+      "japanese": "兄は私が数学を勉強するのを手伝ってくれました。",
+      "original": "My brother helped I study math.",
+      "correctAnswer": "My brother helped me study math.",
+      "difficulty": "intermediate",
+      "explanation": "helpの後は目的格（me）を使います。Iではありません。\n\n【日本語】\n兄は私が数学を勉強するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "help + 目的格"
+    },
+    {
+      "id": "g3-u3-vf-001",
+      "type": "verbForm",
+      "japanese": "泳ぐことは楽しい。",
+      "verb": "swim",
+      "sentence": "It is fun to ____.",
+      "correctAnswer": "swim",
+      "difficulty": "beginner",
+      "explanation": "toの後は動詞の原形を使います。\n\n【日本語】\n泳ぐことは楽しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【swim】 ← 正解\n  ✓ 正解理由: 日本語訳「泳ぐことは楽しい。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「泳ぐことは楽しい。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「泳ぐことは楽しい。」に合いません。",
+      "hint": "to + 動詞の原形",
+      "choices": [
+        "swim",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-002",
+      "type": "verbForm",
+      "japanese": "走ることは良い運動です。",
+      "verb": "run",
+      "sentence": "It is good exercise to ____.",
+      "correctAnswer": "run",
+      "difficulty": "beginner",
+      "explanation": "toの後は動詞の原形を使います。\n\n【日本語】\n走ることは良い運動です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【run】 ← 正解\n  ✓ 正解理由: 日本語訳「走ることは良い運動です。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走ることは良い運動です。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走ることは良い運動です。」に合いません。",
+      "hint": "to + 動詞の原形",
+      "choices": [
+        "run",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-003",
+      "type": "verbForm",
+      "japanese": "彼女は私に歌わせてくれました。",
+      "verb": "sing",
+      "sentence": "She let me ____.",
+      "correctAnswer": "sing",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。\n\n【日本語】\n彼女は私に歌わせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に歌わせてくれました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に歌わせてくれました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に歌わせてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形",
+      "choices": [
+        "sing",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-004",
+      "type": "verbForm",
+      "japanese": "彼は私が本を読むのを手伝ってくれました。",
+      "verb": "read",
+      "sentence": "He helped me ____ the book.",
+      "correctAnswer": "read",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形です。\n\n【日本語】\n彼は私が本を読むのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私が本を読むのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が本を読むのを手伝ってくれました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私が本を読むのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形",
+      "choices": [
+        "read",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-005",
+      "type": "verbForm",
+      "japanese": "書くことは重要です。",
+      "verb": "write",
+      "sentence": "It is important to ____.",
+      "correctAnswer": "write",
+      "difficulty": "beginner",
+      "explanation": "toの後は動詞の原形を使います。\n\n【日本語】\n書くことは重要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【write】 ← 正解\n  ✓ 正解理由: 日本語訳「書くことは重要です。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「書くことは重要です。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「書くことは重要です。」に合いません。",
+      "hint": "to + 動詞の原形",
+      "choices": [
+        "write",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-006",
+      "type": "verbForm",
+      "japanese": "先生は私たちに踊らせてくれました。",
+      "verb": "dance",
+      "sentence": "The teacher let us ____.",
+      "correctAnswer": "dance",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。\n\n【日本語】\n先生は私たちに踊らせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【dance】 ← 正解\n  ✓ 正解理由: 日本語訳「先生は私たちに踊らせてくれました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに踊らせてくれました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに踊らせてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形",
+      "choices": [
+        "dance",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-007",
+      "type": "verbForm",
+      "japanese": "彼女は私が料理するのを手伝ってくれました。",
+      "verb": "cook",
+      "sentence": "She helped me ____.",
+      "correctAnswer": "cook",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形です。\n\n【日本語】\n彼女は私が料理するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cook】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私が料理するのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私が料理するのを手伝ってくれました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私が料理するのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形",
+      "choices": [
+        "cook",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-008",
+      "type": "verbForm",
+      "japanese": "聞くことは大切です。",
+      "verb": "listen",
+      "sentence": "It is important to ____.",
+      "correctAnswer": "listen",
+      "difficulty": "beginner",
+      "explanation": "toの後は動詞の原形を使います。\n\n【日本語】\n聞くことは大切です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【listen】 ← 正解\n  ✓ 正解理由: 日本語訳「聞くことは大切です。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「聞くことは大切です。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「聞くことは大切です。」に合いません。",
+      "hint": "to + 動詞の原形",
+      "choices": [
+        "listen",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-009",
+      "type": "verbForm",
+      "japanese": "母は私に買い物に行かせてくれました。",
+      "verb": "go",
+      "sentence": "My mother let me ____ shopping.",
+      "correctAnswer": "go",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。\n\n【日本語】\n母は私に買い物に行かせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「母は私に買い物に行かせてくれました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私に買い物に行かせてくれました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私に買い物に行かせてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形",
+      "choices": [
+        "go",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-vf-010",
+      "type": "verbForm",
+      "japanese": "友達は私が選ぶのを手伝ってくれました。",
+      "verb": "choose",
+      "sentence": "My friend helped me ____.",
+      "correctAnswer": "choose",
+      "difficulty": "intermediate",
+      "explanation": "help + 人 + 動詞の原形です。\n\n【日本語】\n友達は私が選ぶのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【choose】 ← 正解\n  ✓ 正解理由: 日本語訳「友達は私が選ぶのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友達は私が選ぶのを手伝ってくれました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友達は私が選ぶのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形",
+      "choices": [
+        "choose",
+        "",
+        "s"
+      ]
+    },
+    {
+      "id": "g3-u3-conv-001",
       "type": "conversation",
-      "japanese": "あなたが話していた人（省略形）。",
-      "situation": "人について",
+      "japanese": "英語を学ぶことは重要です。",
       "dialogue": [
         {
           "speaker": "A",
-          "text": "Who is that?"
+          "text": "What do you think about learning English?"
         },
         {
           "speaker": "B",
-          "text": "That's the person ____ you were talking about."
+          "text": "It is important ____ learn English.",
+          "blank": true
         }
       ],
       "choices": [
-        "(省略可)",
-        "who",
-        "which"
+        "to",
+        "for",
+        "of"
       ],
-      "correctAnswer": "(省略可)",
-      "difficulty": "advanced",
-      "explanation": "関係代名詞が目的格の時は省略できります。the person (whom) you were talking aboutです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
-      "hint": "目的格省略"
-    },
-    {
-      "id": "g3-u3-omit-007",
-      "type": "sentenceOrdering",
-      "japanese": "私が作った料理。",
-      "words": [
-        "the",
-        "food",
-        "I",
-        "cooked"
-      ],
-      "correctAnswer": "the food I cooked",
+      "correctAnswer": "to",
       "difficulty": "beginner",
-      "explanation": "関係代名詞の目的格を省略した形です。the food (which) I cookedです。\n\n「私が作った料理。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ the food I cooked",
-      "hint": "the food I",
-      "wordCount": 4
+      "explanation": "It is + 形容詞 + to + 動詞の原形です。\n\n【日本語】\n英語を学ぶことは重要です。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【to】 ← 正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【for】 ← 不正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✗ 不正解理由: 日本語訳「英語を学ぶことは重要です。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語を学ぶことは重要です。」に合いません。",
+      "hint": "It is + 形容詞 + to"
     },
     {
-      "id": "g3-u3-omit-008",
-      "type": "fillInBlank",
-      "japanese": "彼が訪れた都市（省略形）。",
-      "sentence": "the city ____ he visited",
+      "id": "g3-u3-conv-002",
+      "type": "conversation",
+      "japanese": "父は私に手伝わせてくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did your father allow you to help?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, he let me ____ him.",
+          "blank": true
+        }
+      ],
       "choices": [
-        "(省略可)",
-        "which",
-        "where"
+        "help",
+        "to help",
+        "helping"
       ],
-      "correctAnswer": "(省略可)",
+      "correctAnswer": "help",
       "difficulty": "intermediate",
-      "explanation": "visitは他動詞なのでwhichが目的格となり省略可能です。the city (which) he visitedです。whereは不可です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "目的格省略"
+      "explanation": "let + 人 + 動詞の原形です。\n\n【日本語】\n父は私に手伝わせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【help】 ← 正解\n  ✓ 正解理由: 日本語訳「父は私に手伝わせてくれました。」から、この形が適切です。\n\n❌ 【to help】 ← 不正解\n  ✗ 不正解理由: 日本語訳「父は私に手伝わせてくれました。」に合いません。\n\n❌ 【helping】 ← 不正解\n  ✗ 不正解理由: 日本語訳「父は私に手伝わせてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形"
     },
     {
-      "id": "g3-u3-omit-009",
-      "type": "fillInBlank",
-      "japanese": "私が聞いた音楽は美しかったです。",
-      "sentence": "The music ____ I listened to was beautiful.",
+      "id": "g3-u3-conv-003",
+      "type": "conversation",
+      "japanese": "姉は私が勉強するのを手伝ってくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Who helped you with your homework?"
+        },
+        {
+          "speaker": "B",
+          "text": "My sister helped me ____.",
+          "blank": true
+        }
+      ],
       "choices": [
-        "that",
-        "who",
-        "when"
+        "study",
+        "to study",
+        "studying"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "study",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞thatは目的格として使われています。省略も可能です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "物にはthat/which"
+      "explanation": "help + 人 + 動詞の原形です。\n\n【日本語】\n姉は私が勉強するのを手伝ってくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「姉は私が勉強するのを手伝ってくれました。」から、この形が適切です。\n\n❌ 【to study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「姉は私が勉強するのを手伝ってくれました。」に合いません。\n\n❌ 【studying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「姉は私が勉強するのを手伝ってくれました。」に合いません。",
+      "hint": "help + 人 + 動詞の原形"
     },
     {
-      "id": "g3-u3-omit-010",
-      "type": "sentenceOrdering",
-      "japanese": "私が撮った写真。",
-      "words": [
-        "the",
-        "picture",
-        "I",
-        "took"
+      "id": "g3-u3-conv-004",
+      "type": "conversation",
+      "japanese": "私にとってピアノを弾くのは難しい。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you play the piano?"
+        },
+        {
+          "speaker": "B",
+          "text": "It is difficult ____ me to play it.",
+          "blank": true
+        }
       ],
-      "correctAnswer": "the picture I took",
-      "difficulty": "beginner",
-      "explanation": "関係代名詞の目的格を省略した形として覚えてください。the picture (which) I tookです。\n\n「私が撮った写真。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ the picture I took",
-      "hint": "the picture I",
-      "wordCount": 4
+      "choices": [
+        "for",
+        "to",
+        "of"
+      ],
+      "correctAnswer": "for",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞です。\n\n【日本語】\n私にとってピアノを弾くのは難しい。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【for】 ← 正解\n  語源: 古英語 for\n  用法: 期間、目的、対象\n  ニュアンス: 〜のために\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【to】 ← 不正解\n  語源: 古英語 tō\n  用法: 方向、到達点\n  ニュアンス: 移動の目的地\n  ✗ 不正解理由: 日本語訳「私にとってピアノを弾くのは難しい。」に合いません。\n\n❌ 【of】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私にとってピアノを弾くのは難しい。」に合いません。",
+      "hint": "for + 人 + to"
+    },
+    {
+      "id": "g3-u3-conv-005",
+      "type": "conversation",
+      "japanese": "母は私に外で遊ばせてくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did you play outside?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, my mother let me ____ outside.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "play",
+        "to play",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形です。\n\n【日本語】\n母は私に外で遊ばせてくれました。\n\n【文法ポイント】\nIt is ... (for + 人) + to、let/help + 人 + 動詞原形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「母は私に外で遊ばせてくれました。」から、この形が適切です。\n\n❌ 【to play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私に外で遊ばせてくれました。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「母は私に外で遊ばせてくれました。」に合いません。",
+      "hint": "let + 人 + 動詞の原形"
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "unit": "Unit 1",
-  "title": "現在完了",
-  "grammar": "have/has + 過去分詞",
-  "totalQuestions": 70,
+  "title": "現在完了形（経験用法）",
+  "grammar": "have/has + 過去分詞（経験）、SVOC、SVOO",
+  "totalQuestions": 100,
   "questionTypes": {
-    "fillInBlank": 25,
-    "sentenceOrdering": 23,
-    "paraphrase": 1,
+    "fillInBlank": 35,
+    "sentenceOrdering": 34,
+    "paraphrase": 5,
     "verbForm": 20,
-    "conversation": 1
+    "conversation": 6
   },
   "questions": [
     {
@@ -22,8 +22,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼に会ったことがあります。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼に会ったことがあります。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼に会ったことがあります。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -38,8 +38,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は東京に行ったことがあります。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京に行ったことがあります。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京に行ったことがあります。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -54,8 +54,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはその映画を見たことがあります。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその映画を見たことがあります。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその映画を見たことがあります。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -70,8 +70,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は宿題を終えました。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は宿題を終えました。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は宿題を終えました。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -86,8 +86,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らはもう昼食を食べました。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはもう昼食を食べました。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはもう昼食を食べました。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -102,8 +102,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私はこの本を読んだことがありません。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの本を読んだことがありません。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの本を読んだことがありません。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -118,8 +118,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はまだ来ていません。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はまだ来ていません。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はまだ来ていません。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -134,8 +134,8 @@
         "Do"
       ],
       "correctAnswer": "Have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Have】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは日本に行ったことがありますか。」から、この形が適切です。\n\n❌ 【Has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本に行ったことがありますか。」に合いません。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本に行ったことがありますか。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -150,8 +150,8 @@
         "Do"
       ],
       "correctAnswer": "Has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はその知らせを聞きましたか。」から、この形が適切です。\n\n❌ 【Have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -166,8 +166,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は3年間英語を勉強しています。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -182,8 +182,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は2時間待っています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2時間待っています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2時間待っています。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -198,8 +198,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはちょうど到着しました。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -214,8 +214,8 @@
         "had"
       ],
       "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はすでに出発しました。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はすでに出発しました。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はすでに出発しました。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -230,8 +230,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは京都を訪れたことがあります。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは京都を訪れたことがあります。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは京都を訪れたことがあります。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -246,8 +246,8 @@
         "had"
       ],
       "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "difficulty": "beginner",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼女に会ったことがありません。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に会ったことがありません。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に会ったことがありません。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -263,7 +263,7 @@
       ],
       "correctAnswer": "Have",
       "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Have】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは昼食を食べましたか。」から、この形が適切です。\n\n❌ 【Has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昼食を食べましたか。」に合いません。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昼食を食べましたか。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -279,7 +279,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は手紙を書き終えました。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は手紙を書き終えました。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は手紙を書き終えました。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -295,7 +295,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは長い間ここに住んでいます。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは長い間ここに住んでいます。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは長い間ここに住んでいます。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -311,7 +311,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は何度も失敗しました。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何度も失敗しました。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何度も失敗しました。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -327,7 +327,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
+      "explanation": "現在完了: have/has + 過去分詞です。経験・完了・継続を表します。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【have】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らはまだ決めていません。」から、この形が適切です。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはまだ決めていません。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはまだ決めていません。」に合いません。",
       "hint": "I/you/we/they→have, he/she/it→has",
       "type": "verbForm"
     },
@@ -342,7 +342,7 @@
       ],
       "correctAnswer": "met",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【met】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼に会ったことがあります。」から、この形が適切です。\n\n❌ 【meet】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼に会ったことがあります。」に合いません。\n\n❌ 【meets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼に会ったことがあります。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -357,7 +357,7 @@
       ],
       "correctAnswer": "been",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【been】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は東京に行ったことがあります。」から、この形が適切です。\n\n❌ 【be】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京に行ったことがあります。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京に行ったことがあります。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -372,7 +372,7 @@
       ],
       "correctAnswer": "seen",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【seen】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはその映画を見たことがあります。」から、この形が適切です。\n\n❌ 【see】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその映画を見たことがあります。」に合いません。\n\n❌ 【saw】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその映画を見たことがあります。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -387,7 +387,7 @@
       ],
       "correctAnswer": "finished",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【finished】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は宿題を終えました。」から、この形が適切です。\n\n❌ 【finish】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は宿題を終えました。」に合いません。\n\n❌ 【finishs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は宿題を終えました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -402,7 +402,7 @@
       ],
       "correctAnswer": "eaten",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【eaten】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らはもう昼食を食べました。」から、この形が適切です。\n\n❌ 【eat】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはもう昼食を食べました。」に合いません。\n\n❌ 【ate】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはもう昼食を食べました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -417,7 +417,7 @@
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「私はこの本を読んだことがありません。」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの本を読んだことがありません。」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの本を読んだことがありません。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -432,7 +432,7 @@
       ],
       "correctAnswer": "been",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【been】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは日本に行ったことがありますか。」から、この形が適切です。\n\n❌ 【be】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本に行ったことがありますか。」に合いません。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本に行ったことがありますか。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -447,7 +447,7 @@
       ],
       "correctAnswer": "heard",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【heard】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はその知らせを聞きましたか。」から、この形が適切です。\n\n❌ 【hear】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。\n\n❌ 【hears】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はその知らせを聞きましたか。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -462,7 +462,7 @@
       ],
       "correctAnswer": "studied",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【studied】 ← 正解\n  ✓ 正解理由: 日本語訳「私は3年間英語を勉強しています。」から、この形が適切です。\n\n❌ 【studi】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。\n\n❌ 【studis】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3年間英語を勉強しています。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -477,7 +477,7 @@
       ],
       "correctAnswer": "waited",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【waited】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は2時間待っています。」から、この形が適切です。\n\n❌ 【wait】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2時間待っています。」に合いません。\n\n❌ 【waits】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2時間待っています。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -492,7 +492,7 @@
       ],
       "correctAnswer": "arrived",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【arrived】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはちょうど到着しました。」から、この形が適切です。\n\n❌ 【arriv】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。\n\n❌ 【arrivs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはちょうど到着しました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -507,7 +507,7 @@
       ],
       "correctAnswer": "left",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【left】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はすでに出発しました。」から、この形が適切です。\n\n❌ 【leave】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はすでに出発しました。」に合いません。\n\n❌ 【leaves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はすでに出発しました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -522,7 +522,7 @@
       ],
       "correctAnswer": "visited",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【visited】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは京都を訪れたことがあります。」から、この形が適切です。\n\n❌ 【visit】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは京都を訪れたことがあります。」に合いません。\n\n❌ 【visits】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは京都を訪れたことがあります。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -537,7 +537,7 @@
       ],
       "correctAnswer": "met",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【met】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼女に会ったことがありません。」から、この形が適切です。\n\n❌ 【meet】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に会ったことがありません。」に合いません。\n\n❌ 【meets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に会ったことがありません。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -552,7 +552,7 @@
       ],
       "correctAnswer": "eaten",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【eaten】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは昼食を食べましたか。」から、この形が適切です。\n\n❌ 【eat】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昼食を食べましたか。」に合いません。\n\n❌ 【ate】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昼食を食べましたか。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -567,7 +567,7 @@
       ],
       "correctAnswer": "writing",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【writing】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は手紙を書き終えました。」から、この形が適切です。\n\n❌ 【writings】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は手紙を書き終えました。」に合いません。\n\n❌ 【writinging】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は手紙を書き終えました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -582,7 +582,7 @@
       ],
       "correctAnswer": "lived",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【lived】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは長い間ここに住んでいます。」から、この形が適切です。\n\n❌ 【liv】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは長い間ここに住んでいます。」に合いません。\n\n❌ 【livs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは長い間ここに住んでいます。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -597,7 +597,7 @@
       ],
       "correctAnswer": "failed",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【failed】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は何度も失敗しました。」から、この形が適切です。\n\n❌ 【fail】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何度も失敗しました。」に合いません。\n\n❌ 【fails】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何度も失敗しました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -612,7 +612,7 @@
       ],
       "correctAnswer": "forgotten",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【forgotten】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼の名前を忘れました。」から、この形が適切です。\n\n❌ 【forget】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼の名前を忘れました。」に合いません。\n\n❌ 【forgot】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼の名前を忘れました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -627,7 +627,7 @@
       ],
       "correctAnswer": "lost",
       "difficulty": "intermediate",
-      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "現在完了では過去分詞を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【lost】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はその鍵を失くしました。」から、この形が適切です。\n\n❌ 【lose】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はその鍵を失くしました。」に合いません。\n\n❌ 【loses】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はその鍵を失くしました。」に合いません。",
       "hint": "have/has + 過去分詞",
       "type": "fillInBlank"
     },
@@ -642,7 +642,7 @@
       ],
       "correctOrder": "I have met him",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は彼に会ったことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have met him.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は彼に会ったことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have met him.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
@@ -661,7 +661,7 @@
       ],
       "correctOrder": "She has been to Tokyo",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は東京に行ったことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been to Tokyo.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は東京に行ったことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has been to Tokyo.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -680,7 +680,7 @@
       ],
       "correctOrder": "We have seen that movie",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちはその映画を見たことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have seen that movie.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちはその映画を見たことがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have seen that movie.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -699,7 +699,7 @@
       ],
       "correctOrder": "He has finished his homework",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼は宿題を終えました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has finished his homework.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼は宿題を終えました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has finished his homework.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -718,7 +718,7 @@
       ],
       "correctOrder": "They have already eaten lunch",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らはもう昼食を食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have already eaten lunch.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らはもう昼食を食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have already eaten lunch.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -738,7 +738,7 @@
       ],
       "correctOrder": "I have never read this book",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私はこの本を読んだことがありません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have never read this book.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私はこの本を読んだことがありません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have never read this book.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 6,
@@ -757,7 +757,7 @@
       ],
       "correctOrder": "She has not come yet",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女はまだ来ていません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has not come yet.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女はまだ来ていません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has not come yet.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -776,7 +776,7 @@
       ],
       "correctOrder": "Have you been to Japan",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「あなたは日本に行ったことがありますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Have you been to Japan?",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「あなたは日本に行ったことがありますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Have you been to Japan?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -795,7 +795,7 @@
       ],
       "correctOrder": "Has he heard the news",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼はその知らせを聞きましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Has he heard the news?",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼はその知らせを聞きましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Has he heard the news?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -816,7 +816,7 @@
       ],
       "correctOrder": "I have studied English for three years",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は3年間英語を勉強しています。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have studied English for three years.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は3年間英語を勉強しています。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have studied English for three years.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 7,
@@ -836,7 +836,7 @@
       ],
       "correctOrder": "She has waited for two hours",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は2時間待っています。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has waited for two hours.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は2時間待っています。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has waited for two hours.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 6,
@@ -854,7 +854,7 @@
       ],
       "correctOrder": "We have just arrived",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちはちょうど到着しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have just arrived.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちはちょうど到着しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have just arrived.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
@@ -872,7 +872,7 @@
       ],
       "correctOrder": "He has already left",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼はすでに出発しました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has already left.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼はすでに出発しました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has already left.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
@@ -890,7 +890,7 @@
       ],
       "correctOrder": "They have visited Kyoto",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らは京都を訪れたことがあります。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have visited Kyoto.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らは京都を訪れたことがあります。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have visited Kyoto.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
@@ -909,7 +909,7 @@
       ],
       "correctOrder": "I have never met her",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は彼女に会ったことがありません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have never met her.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私は彼女に会ったことがありません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have never met her.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -927,7 +927,7 @@
       ],
       "correctOrder": "Have you eaten lunch",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「あなたは昼食を食べましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Have you eaten lunch?",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「あなたは昼食を食べましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Have you eaten lunch?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
@@ -947,7 +947,7 @@
       ],
       "correctOrder": "She has finished writing the letter",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は手紙を書き終えました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has finished writing the letter.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼女は手紙を書き終えました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has finished writing the letter.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 6,
@@ -969,7 +969,7 @@
       ],
       "correctOrder": "We have lived here for a long time",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちは長い間ここに住んでいます。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have lived here for a long time.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「私たちは長い間ここに住んでいます。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We have lived here for a long time.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 8,
@@ -988,7 +988,7 @@
       ],
       "correctOrder": "He has failed many times",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼は何度も失敗しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has failed many times.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼は何度も失敗しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has failed many times.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -1007,7 +1007,7 @@
       ],
       "correctOrder": "They have not decided yet",
       "difficulty": "intermediate",
-      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らはまだ決めていません。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have not decided yet.",
+      "explanation": "現在完了の語順: 主語 + have/has + 過去分詞です。\n\n「彼らはまだ決めていません。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They have not decided yet.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
@@ -1026,7 +1026,7 @@
       ],
       "correctAnswer": "How long",
       "difficulty": "intermediate",
-      "explanation": "How long + 現在完了形で「どのくらいの期間~していますか」と継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "How long + 現在完了形で「どのくらいの期間~していますか」と継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How long】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどのくらいの間東京に住んでいますか。」から、この形が適切です。\n\n❌ 【How many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間東京に住んでいますか。」に合いません。\n\n❌ 【How much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間東京に住んでいますか。」に合いません。",
       "hint": "期間を尋ねる"
     },
     {
@@ -1043,7 +1043,7 @@
       ],
       "correctAnswer": "How long have you studied English?",
       "difficulty": "intermediate",
-      "explanation": "How long + have/has + 過去分詞という疑問文として覚えてください。継続期間を尋ねります。\n\n「あなたはどのくらいの間英語を勉強していますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you studied English?",
+      "explanation": "How long + have/has + 過去分詞という疑問文として覚えてください。継続期間を尋ねります。\n\n「あなたはどのくらいの間英語を勉強していますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you studied English?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long have",
       "wordCount": 6
     },
@@ -1059,7 +1059,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "How longの疑問文で三人称単数の主語の時はhasを使うことです。How long has he worked here?です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "How longの疑問文で三人称単数の主語の時はhasを使うことです。How long has he worked here?です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はどのくらいの間ここで働いていますか。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はどのくらいの間ここで働いていますか。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はどのくらいの間ここで働いていますか。」に合いません。",
       "hint": "三人称単数"
     },
     {
@@ -1084,7 +1084,7 @@
       ],
       "correctAnswer": "How long",
       "difficulty": "intermediate",
-      "explanation": "How long + 現在完了形で継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面",
+      "explanation": "How long + 現在完了形で継続期間を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How long】 ← 正解\n  ✓ 正解理由: 日本語訳「どのくらいの間彼女を知っていますか。」から、この形が適切です。\n\n❌ 【How many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どのくらいの間彼女を知っていますか。」に合いません。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どのくらいの間彼女を知っていますか。」に合いません。",
       "hint": "期間を尋ねる"
     },
     {
@@ -1104,7 +1104,7 @@
       ],
       "correctAnswer": "How long has your father worked for this company?",
       "difficulty": "advanced",
-      "explanation": "How long + has + 主語 + 過去分詞という疑問文として覚えてください。\n\n「あなたのお父さんはどのくらいの間この会社で働いていますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long has your father worked for this company?",
+      "explanation": "How long + has + 主語 + 過去分詞という疑問文として覚えてください。\n\n「あなたのお父さんはどのくらいの間この会社で働いていますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long has your father worked for this company?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long has",
       "wordCount": 9
     },
@@ -1120,7 +1120,7 @@
       ],
       "correctAnswer": "been",
       "difficulty": "intermediate",
-      "explanation": "How long + have/has + been で状態の継続を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "How long + have/has + been で状態の継続を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【been】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らはどのくらいの間結婚していますか。」から、この形が適切です。\n\n❌ 【be】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはどのくらいの間結婚していますか。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らはどのくらいの間結婚していますか。」に合いません。",
       "hint": "be動詞の過去分詞"
     },
     {
@@ -1135,7 +1135,7 @@
       ],
       "correctAnswer": "How long",
       "difficulty": "beginner",
-      "explanation": "How long + have been で「どのくらいの間~にいますか」という疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "How long + have been で「どのくらいの間~にいますか」という疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How long】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどのくらいの間ここにいますか。」から、この形が適切です。\n\n❌ 【How many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間ここにいますか。」に合いません。\n\n❌ 【How much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどのくらいの間ここにいますか。」に合いません。",
       "hint": "期間を尋ねる"
     },
     {
@@ -1155,7 +1155,7 @@
       ],
       "correctAnswer": "How long have you lived in Japan?",
       "difficulty": "advanced",
-      "explanation": "How long + 現在完了で期間を尋ねます。不要な語: did, live（2語）\n\n「3年間日本に住んでいます。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you lived in Japan?",
+      "explanation": "How long + 現在完了で期間を尋ねます。不要な語: did, live（2語）\n\n「3年間日本に住んでいます。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you lived in Japan?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "how long have",
       "wordCount": 7,
       "unusedWords": 2
@@ -1174,7 +1174,7 @@
       ],
       "correctAnswer": "How long has she been sick?",
       "difficulty": "intermediate",
-      "explanation": "How long + has + been + 形容詞で状態の継続を尋ねる疑問文として覚えてください。\n\n「彼女はどのくらいの間病気ですか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long has she been sick?",
+      "explanation": "How long + has + been + 形容詞で状態の継続を尋ねる疑問文として覚えてください。\n\n「彼女はどのくらいの間病気ですか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long has she been sick?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long has been",
       "wordCount": 6
     },
@@ -1190,8 +1190,491 @@
       ],
       "correctAnswer": "has",
       "difficulty": "advanced",
-      "explanation": "How long + has + been + 動詞ing で動作の継続期間を尋ねる現在完了進行形の疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
+      "explanation": "How long + has + been + 動詞ing で動作の継続期間を尋ねる現在完了進行形の疑問文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「どのくらいの間雨が降っていますか。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どのくらいの間雨が降っていますか。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どのくらいの間雨が降っていますか。」に合いません。",
       "hint": "現在完了進行形"
+    },
+    {
+      "id": "g3-u1-fib-026",
+      "type": "fillInBlank",
+      "japanese": "彼女は私を幸せにしました。",
+      "sentence": "She made me ____.",
+      "choices": [
+        "happy",
+        "happily",
+        "happiness"
+      ],
+      "correctAnswer": "happy",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。make + O + C（形容詞）で「OをCにする」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【happy】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私を幸せにしました。」から、この形が適切です。\n\n❌ 【happily】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私を幸せにしました。」に合いません。\n\n❌ 【happiness】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私を幸せにしました。」に合いません。",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-fib-027",
+      "type": "fillInBlank",
+      "japanese": "その知らせは彼女を悲しくさせました。",
+      "sentence": "The news made her ____.",
+      "choices": [
+        "sad",
+        "sadly",
+        "sadness"
+      ],
+      "correctAnswer": "sad",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。make + O + C（形容詞）で「OをCにする」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sad】 ← 正解\n  ✓ 正解理由: 日本語訳「その知らせは彼女を悲しくさせました。」から、この形が適切です。\n\n❌ 【sadly】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その知らせは彼女を悲しくさせました。」に合いません。\n\n❌ 【sadness】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その知らせは彼女を悲しくさせました。」に合いません。",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-fib-028",
+      "type": "fillInBlank",
+      "japanese": "私たちは彼をトムと呼びます。",
+      "sentence": "We call him ____.",
+      "choices": [
+        "Tom",
+        "to Tom",
+        "Toming"
+      ],
+      "correctAnswer": "Tom",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。call + O + C（名詞）で「OをCと呼ぶ」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Tom】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは彼をトムと呼びます。」から、この形が適切です。\n\n❌ 【to Tom】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは彼をトムと呼びます。」に合いません。\n\n❌ 【Toming】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは彼をトムと呼びます。」に合いません。",
+      "hint": "call + 人 + 名前"
+    },
+    {
+      "id": "g3-u1-fib-029",
+      "type": "fillInBlank",
+      "japanese": "彼は私に本をくれました。",
+      "sentence": "He gave me a ____.",
+      "choices": [
+        "book",
+        "to book",
+        "books"
+      ],
+      "correctAnswer": "book",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。give + 人 + 物で「人に物を与える」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【book】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私に本をくれました。」から、この形が適切です。\n\n❌ 【to book】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私に本をくれました。」に合いません。\n\n❌ 【books】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私に本をくれました。」に合いません。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-030",
+      "type": "fillInBlank",
+      "japanese": "彼女は私に手紙を送りました。",
+      "sentence": "She sent me a ____.",
+      "choices": [
+        "letter",
+        "to letter",
+        "letters"
+      ],
+      "correctAnswer": "letter",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。send + 人 + 物で「人に物を送る」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【letter】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に手紙を送りました。」から、この形が適切です。\n\n❌ 【to letter】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に手紙を送りました。」に合いません。\n\n❌ 【letters】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に手紙を送りました。」に合いません。",
+      "hint": "send + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-031",
+      "type": "fillInBlank",
+      "japanese": "彼は私たちに面白い話を教えてくれました。",
+      "sentence": "He told us an interesting ____.",
+      "choices": [
+        "story",
+        "to story",
+        "stories"
+      ],
+      "correctAnswer": "story",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。tell + 人 + 物で「人に物を話す」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【story】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私たちに面白い話を教えてくれました。」から、この形が適切です。\n\n❌ 【to story】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私たちに面白い話を教えてくれました。」に合いません。\n\n❌ 【stories】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私たちに面白い話を教えてくれました。」に合いません。",
+      "hint": "tell + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-032",
+      "type": "fillInBlank",
+      "japanese": "私は彼女に誕生日プレゼントを買いました。",
+      "sentence": "I bought her a birthday ____.",
+      "choices": [
+        "present",
+        "to present",
+        "presents"
+      ],
+      "correctAnswer": "present",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。buy + 人 + 物で「人に物を買う」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【present】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼女に誕生日プレゼントを買いました。」から、この形が適切です。\n\n❌ 【to present】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に誕生日プレゼントを買いました。」に合いません。\n\n❌ 【presents】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女に誕生日プレゼントを買いました。」に合いません。",
+      "hint": "buy + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-033",
+      "type": "fillInBlank",
+      "japanese": "彼女は私に秘密を教えてくれました。",
+      "sentence": "She showed me her ____.",
+      "choices": [
+        "secret",
+        "to secret",
+        "secrets"
+      ],
+      "correctAnswer": "secret",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。show + 人 + 物で「人に物を見せる」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【secret】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に秘密を教えてくれました。」から、この形が適切です。\n\n❌ 【to secret】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に秘密を教えてくれました。」に合いません。\n\n❌ 【secrets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に秘密を教えてくれました。」に合いません。",
+      "hint": "show + 人 + 物"
+    },
+    {
+      "id": "g3-u1-fib-034",
+      "type": "fillInBlank",
+      "japanese": "その映画は私たちを興奮させました。",
+      "sentence": "The movie made us ____.",
+      "choices": [
+        "excited",
+        "exciting",
+        "excite"
+      ],
+      "correctAnswer": "excited",
+      "difficulty": "advanced",
+      "explanation": "SVOC構文です。感情を表す動詞の過去分詞（excited）を使い、「興奮した状態にさせる」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【excited】 ← 正解\n  ✓ 正解理由: 日本語訳「その映画は私たちを興奮させました。」から、この形が適切です。\n\n❌ 【exciting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は私たちを興奮させました。」に合いません。\n\n❌ 【excite】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は私たちを興奮させました。」に合いません。",
+      "hint": "make + 人 + 過去分詞"
+    },
+    {
+      "id": "g3-u1-fib-035",
+      "type": "fillInBlank",
+      "japanese": "先生は私たちに宿題を与えました。",
+      "sentence": "The teacher gave us ____.",
+      "choices": [
+        "homework",
+        "to homework",
+        "homeworks"
+      ],
+      "correctAnswer": "homework",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。give + 人 + 物で「人に物を与える」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【homework】 ← 正解\n  ✓ 正解理由: 日本語訳「先生は私たちに宿題を与えました。」から、この形が適切です。\n\n❌ 【to homework】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに宿題を与えました。」に合いません。\n\n❌ 【homeworks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私たちに宿題を与えました。」に合いません。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-024",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私を幸せにしました。",
+      "words": [
+        "She",
+        "made",
+        "me",
+        "happy"
+      ],
+      "correctAnswer": "She made me happy.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文：主語 + 動詞 + 目的語 + 補語の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "S + V + O + C"
+    },
+    {
+      "id": "g3-u1-so-025",
+      "type": "sentenceOrdering",
+      "japanese": "その知らせは彼を悲しくさせました。",
+      "words": [
+        "The",
+        "news",
+        "made",
+        "him",
+        "sad"
+      ],
+      "correctAnswer": "The news made him sad.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文：make + O + C（形容詞）で「OをCにする」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-so-026",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは彼をボブと呼びます。",
+      "words": [
+        "We",
+        "call",
+        "him",
+        "Bob"
+      ],
+      "correctAnswer": "We call him Bob.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文：call + O + C（名詞）で「OをCと呼ぶ」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "call + 人 + 名前"
+    },
+    {
+      "id": "g3-u1-so-027",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私に本をくれました。",
+      "words": [
+        "He",
+        "gave",
+        "me",
+        "a",
+        "book"
+      ],
+      "correctAnswer": "He gave me a book.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文：give + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-028",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私に手紙を送りました。",
+      "words": [
+        "She",
+        "sent",
+        "me",
+        "a",
+        "letter"
+      ],
+      "correctAnswer": "She sent me a letter.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文：send + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "send + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-029",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私たちに物語を話してくれました。",
+      "words": [
+        "He",
+        "told",
+        "us",
+        "a",
+        "story"
+      ],
+      "correctAnswer": "He told us a story.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文：tell + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "tell + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-030",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼女にプレゼントを買いました。",
+      "words": [
+        "I",
+        "bought",
+        "her",
+        "a",
+        "present"
+      ],
+      "correctAnswer": "I bought her a present.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文：buy + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "buy + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-031",
+      "type": "sentenceOrdering",
+      "japanese": "先生は私たちに宿題を与えました。",
+      "words": [
+        "The",
+        "teacher",
+        "gave",
+        "us",
+        "homework"
+      ],
+      "correctAnswer": "The teacher gave us homework.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文：give + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-032",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私に写真を見せてくれました。",
+      "words": [
+        "She",
+        "showed",
+        "me",
+        "her",
+        "photos"
+      ],
+      "correctAnswer": "She showed me her photos.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文：show + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "show + 人 + 物"
+    },
+    {
+      "id": "g3-u1-so-033",
+      "type": "sentenceOrdering",
+      "japanese": "その知らせは私たちを驚かせました。",
+      "words": [
+        "The",
+        "news",
+        "made",
+        "us",
+        "surprised"
+      ],
+      "correctAnswer": "The news made us surprised.",
+      "difficulty": "advanced",
+      "explanation": "SVOC構文：make + O + 過去分詞で「Oを驚いた状態にする」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "make + 人 + 過去分詞"
+    },
+    {
+      "id": "g3-u1-para-002",
+      "type": "paraphrase",
+      "japanese": "彼は私を幸せにしました。",
+      "original": "He made I happy.",
+      "correctAnswer": "He made me happy.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。目的語の位置には目的格（me）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "I → me（目的格）"
+    },
+    {
+      "id": "g3-u1-para-003",
+      "type": "paraphrase",
+      "japanese": "その話は私たちを悲しくさせました。",
+      "original": "The story made we sad.",
+      "correctAnswer": "The story made us sad.",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。目的語の位置には目的格（us）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "we → us（目的格）"
+    },
+    {
+      "id": "g3-u1-para-004",
+      "type": "paraphrase",
+      "japanese": "彼女は私に本をくれました。",
+      "original": "She gave I a book.",
+      "correctAnswer": "She gave me a book.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。目的語の位置には目的格（me）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "I → me（目的格）"
+    },
+    {
+      "id": "g3-u1-para-005",
+      "type": "paraphrase",
+      "japanese": "私は彼に手紙を送りました。",
+      "original": "I sent he a letter.",
+      "correctAnswer": "I sent him a letter.",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。目的語の位置には目的格（him）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "he → him（目的格）"
+    },
+    {
+      "id": "g3-u1-para-006",
+      "type": "paraphrase",
+      "japanese": "彼は私たちに物語を話してくれました。",
+      "original": "He told we a story.",
+      "correctAnswer": "He told us a story.",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。目的語の位置には目的格（us）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "we → us（目的格）"
+    },
+    {
+      "id": "g3-u1-conv-002",
+      "type": "conversation",
+      "japanese": "その音楽は私を幸せにしました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was the concert?"
+        },
+        {
+          "speaker": "B",
+          "text": "It made me ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "happy",
+        "happily",
+        "happiness"
+      ],
+      "correctAnswer": "happy",
+      "difficulty": "intermediate",
+      "explanation": "SVOC構文です。make + O + C（形容詞）を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【happy】 ← 正解\n  ✓ 正解理由: 日本語訳「その音楽は私を幸せにしました。」から、この形が適切です。\n\n❌ 【happily】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その音楽は私を幸せにしました。」に合いません。\n\n❌ 【happiness】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その音楽は私を幸せにしました。」に合いません。",
+      "hint": "make + 人 + 形容詞"
+    },
+    {
+      "id": "g3-u1-conv-003",
+      "type": "conversation",
+      "japanese": "彼は私にプレゼントをくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What did he give you?"
+        },
+        {
+          "speaker": "B",
+          "text": "He gave me a ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "present",
+        "to present",
+        "presents"
+      ],
+      "correctAnswer": "present",
+      "difficulty": "beginner",
+      "explanation": "SVOO構文です。give + 人 + 物の形です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【present】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私にプレゼントをくれました。」から、この形が適切です。\n\n❌ 【to present】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私にプレゼントをくれました。」に合いません。\n\n❌ 【presents】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私にプレゼントをくれました。」に合いません。",
+      "hint": "give + 人 + 物"
+    },
+    {
+      "id": "g3-u1-conv-004",
+      "type": "conversation",
+      "japanese": "先生は私に助言をくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did the teacher help you?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, she gave me some ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "advice",
+        "to advice",
+        "advices"
+      ],
+      "correctAnswer": "advice",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。adviceは不可算名詞なのでsをつけません。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【advice】 ← 正解\n  ✓ 正解理由: 日本語訳「先生は私に助言をくれました。」から、この形が適切です。\n\n❌ 【to advice】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私に助言をくれました。」に合いません。\n\n❌ 【advices】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先生は私に助言をくれました。」に合いません。",
+      "hint": "give + 人 + 物（advice = 不可算名詞）"
+    },
+    {
+      "id": "g3-u1-conv-005",
+      "type": "conversation",
+      "japanese": "その本は私を退屈にさせました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was the book?"
+        },
+        {
+          "speaker": "B",
+          "text": "It made me ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "bored",
+        "boring",
+        "bore"
+      ],
+      "correctAnswer": "bored",
+      "difficulty": "advanced",
+      "explanation": "SVOC構文です。感情を表す過去分詞（bored）を使い、「退屈な状態にした」を表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bored】 ← 正解\n  ✓ 正解理由: 日本語訳「その本は私を退屈にさせました。」から、この形が適切です。\n\n❌ 【boring】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その本は私を退屈にさせました。」に合いません。\n\n❌ 【bore】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その本は私を退屈にさせました。」に合いません。",
+      "hint": "make + 人 + 過去分詞"
+    },
+    {
+      "id": "g3-u1-conv-006",
+      "type": "conversation",
+      "japanese": "彼女は私に真実を教えてくれました。",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What did she tell you?"
+        },
+        {
+          "speaker": "B",
+          "text": "She told me the ____.",
+          "blank": true
+        }
+      ],
+      "choices": [
+        "truth",
+        "to truth",
+        "truths"
+      ],
+      "correctAnswer": "truth",
+      "difficulty": "intermediate",
+      "explanation": "SVOO構文です。tell + 人 + 物の形です。truthは不可算名詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【truth】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私に真実を教えてくれました。」から、この形が適切です。\n\n❌ 【to truth】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に真実を教えてくれました。」に合いません。\n\n❌ 【truths】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私に真実を教えてくれました。」に合いません。",
+      "hint": "tell + 人 + 物"
     }
   ]
 }

@@ -1,0 +1,1015 @@
+{
+  "unit": "Unit 6",
+  "title": "分詞（現在分詞・過去分詞）",
+  "grammar": "現在分詞・過去分詞の修飾",
+  "enabled": true,
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 20,
+    "sentenceOrdering": 20,
+    "verbForm": 20
+  },
+  "questions": [
+    {
+      "id": "g3u6-fill-1",
+      "type": "fillInBlank",
+      "japanese": "走っている少年は私の弟です。",
+      "sentence": "The _____ boy is my brother.",
+      "choices": [
+        "running",
+        "run",
+        "ran",
+        "to run"
+      ],
+      "correctAnswer": "running",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）は名詞を修飾します。",
+      "hint": "「走っている」は現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-2",
+      "type": "fillInBlank",
+      "japanese": "壊れた窓は修理されました。",
+      "sentence": "The _____ window was repaired.",
+      "choices": [
+        "broken",
+        "break",
+        "breaking",
+        "to break"
+      ],
+      "correctAnswer": "broken",
+      "difficulty": "basic",
+      "explanation": "過去分詞は「～された」という意味で名詞を修飾します。",
+      "hint": "「壊れた」は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-3",
+      "type": "fillInBlank",
+      "japanese": "眠っている赤ちゃんを見てください。",
+      "sentence": "Look at the _____ baby.",
+      "choices": [
+        "sleeping",
+        "sleep",
+        "slept",
+        "to sleep"
+      ],
+      "correctAnswer": "sleeping",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）は名詞を修飾します。",
+      "hint": "「眠っている」は現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-4",
+      "type": "fillInBlank",
+      "japanese": "書かれた手紙は机の上にあります。",
+      "sentence": "The _____ letter is on the desk.",
+      "choices": [
+        "written",
+        "write",
+        "writing",
+        "to write"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "basic",
+      "explanation": "過去分詞は「～された」という意味で名詞を修飾します。",
+      "hint": "「書かれた」は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-5",
+      "type": "fillInBlank",
+      "japanese": "泣いている女の子は私の妹です。",
+      "sentence": "The _____ girl is my sister.",
+      "choices": [
+        "crying",
+        "cry",
+        "cried",
+        "to cry"
+      ],
+      "correctAnswer": "crying",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）は名詞を修飾します。",
+      "hint": "「泣いている」は現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-6",
+      "type": "fillInBlank",
+      "japanese": "日本で作られた車はとても人気があります。",
+      "sentence": "Cars _____ in Japan are very popular.",
+      "choices": [
+        "made",
+        "make",
+        "making",
+        "to make"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "「作られた」は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-7",
+      "type": "fillInBlank",
+      "japanese": "公園で遊んでいる子供たちは元気です。",
+      "sentence": "The children _____ in the park are energetic.",
+      "choices": [
+        "playing",
+        "play",
+        "played",
+        "to play"
+      ],
+      "correctAnswer": "playing",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "「遊んでいる」は現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-8",
+      "type": "fillInBlank",
+      "japanese": "興奮した観客は立ち上がりました。",
+      "sentence": "The _____ audience stood up.",
+      "choices": [
+        "excited",
+        "excite",
+        "exciting",
+        "to excite"
+      ],
+      "correctAnswer": "excited",
+      "difficulty": "intermediate",
+      "explanation": "人の感情を表すときは過去分詞を使います。",
+      "hint": "人の感情は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-9",
+      "type": "fillInBlank",
+      "japanese": "これは興奮させる試合です。",
+      "sentence": "This is an _____ game.",
+      "choices": [
+        "exciting",
+        "excite",
+        "excited",
+        "to excite"
+      ],
+      "correctAnswer": "exciting",
+      "difficulty": "intermediate",
+      "explanation": "人を興奮させるものには現在分詞を使います。",
+      "hint": "人を～させるものは現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-10",
+      "type": "fillInBlank",
+      "japanese": "歌っている鳥の声が聞こえます。",
+      "sentence": "I can hear the _____ bird.",
+      "choices": [
+        "singing",
+        "sing",
+        "sang",
+        "to sing"
+      ],
+      "correctAnswer": "singing",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）は名詞を修飾します。",
+      "hint": "「歌っている」は現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-11",
+      "type": "fillInBlank",
+      "japanese": "落ちた葉は地面を覆いました。",
+      "sentence": "The _____ leaves covered the ground.",
+      "choices": [
+        "fallen",
+        "fall",
+        "falling",
+        "to fall"
+      ],
+      "correctAnswer": "fallen",
+      "difficulty": "basic",
+      "explanation": "過去分詞は「～した」という意味で名詞を修飾します。",
+      "hint": "「落ちた」は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-12",
+      "type": "fillInBlank",
+      "japanese": "テーブルの上に置かれた本は誰のですか。",
+      "sentence": "Whose is the book _____ on the table?",
+      "choices": [
+        "put",
+        "putting",
+        "puts",
+        "to put"
+      ],
+      "correctAnswer": "put",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "「置かれた」は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-13",
+      "type": "fillInBlank",
+      "japanese": "私はこの退屈な映画に飽きました。",
+      "sentence": "I'm _____ with this boring movie.",
+      "choices": [
+        "bored",
+        "bore",
+        "boring",
+        "to bore"
+      ],
+      "correctAnswer": "bored",
+      "difficulty": "intermediate",
+      "explanation": "人の感情を表すときは過去分詞を使います。",
+      "hint": "人の感情は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-14",
+      "type": "fillInBlank",
+      "japanese": "この本は驚くべき話です。",
+      "sentence": "This is an _____ story.",
+      "choices": [
+        "amazing",
+        "amaze",
+        "amazed",
+        "to amaze"
+      ],
+      "correctAnswer": "amazing",
+      "difficulty": "intermediate",
+      "explanation": "人を驚かせるものには現在分詞を使います。",
+      "hint": "人を～させるものは現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-15",
+      "type": "fillInBlank",
+      "japanese": "笑っている子供たちは幸せそうです。",
+      "sentence": "The _____ children look happy.",
+      "choices": [
+        "laughing",
+        "laugh",
+        "laughed",
+        "to laugh"
+      ],
+      "correctAnswer": "laughing",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）は名詞を修飾します。",
+      "hint": "「笑っている」は現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-16",
+      "type": "fillInBlank",
+      "japanese": "英語で書かれたこの本は難しいです。",
+      "sentence": "This book _____ in English is difficult.",
+      "choices": [
+        "written",
+        "write",
+        "writing",
+        "to write"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "「書かれた」は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-17",
+      "type": "fillInBlank",
+      "japanese": "私は驚いた表情で彼を見ました。",
+      "sentence": "I looked at him with a _____ expression.",
+      "choices": [
+        "surprised",
+        "surprise",
+        "surprising",
+        "to surprise"
+      ],
+      "correctAnswer": "surprised",
+      "difficulty": "intermediate",
+      "explanation": "人の感情を表すときは過去分詞を使います。",
+      "hint": "人の感情は過去分詞です"
+    },
+    {
+      "id": "g3u6-fill-18",
+      "type": "fillInBlank",
+      "japanese": "これは興味深いニュースです。",
+      "sentence": "This is _____ news.",
+      "choices": [
+        "interesting",
+        "interest",
+        "interested",
+        "to interest"
+      ],
+      "correctAnswer": "interesting",
+      "difficulty": "intermediate",
+      "explanation": "人を興味を持たせるものには現在分詞を使います。",
+      "hint": "人を～させるものは現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-19",
+      "type": "fillInBlank",
+      "japanese": "座っている女性は私の母です。",
+      "sentence": "The woman _____ there is my mother.",
+      "choices": [
+        "sitting",
+        "sit",
+        "sat",
+        "to sit"
+      ],
+      "correctAnswer": "sitting",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "「座っている」は現在分詞です"
+    },
+    {
+      "id": "g3u6-fill-20",
+      "type": "fillInBlank",
+      "japanese": "盗まれた自転車は見つかりました。",
+      "sentence": "The _____ bike was found.",
+      "choices": [
+        "stolen",
+        "steal",
+        "stealing",
+        "to steal"
+      ],
+      "correctAnswer": "stolen",
+      "difficulty": "basic",
+      "explanation": "過去分詞は「～された」という意味で名詞を修飾します。",
+      "hint": "「盗まれた」は過去分詞です"
+    },
+    {
+      "id": "g3u6-order-1",
+      "type": "sentenceOrdering",
+      "japanese": "走っている少年は私の弟です。",
+      "words": [
+        "The",
+        "running",
+        "boy",
+        "is",
+        "my",
+        "brother",
+        "."
+      ],
+      "correctAnswer": "The running boy is my brother.",
+      "difficulty": "basic",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "runningはboyの前です"
+    },
+    {
+      "id": "g3u6-order-2",
+      "type": "sentenceOrdering",
+      "japanese": "壊れた窓は修理されました。",
+      "words": [
+        "The",
+        "broken",
+        "window",
+        "was",
+        "repaired",
+        "."
+      ],
+      "correctAnswer": "The broken window was repaired.",
+      "difficulty": "basic",
+      "explanation": "過去分詞は名詞の前に置いて修飾します。",
+      "hint": "brokenはwindowの前です"
+    },
+    {
+      "id": "g3u6-order-3",
+      "type": "sentenceOrdering",
+      "japanese": "眠っている赤ちゃんを見てください。",
+      "words": [
+        "Look",
+        "at",
+        "the",
+        "sleeping",
+        "baby",
+        "."
+      ],
+      "correctAnswer": "Look at the sleeping baby.",
+      "difficulty": "basic",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "sleepingはbabyの前です"
+    },
+    {
+      "id": "g3u6-order-4",
+      "type": "sentenceOrdering",
+      "japanese": "公園で遊んでいる子供たちは元気です。",
+      "words": [
+        "The",
+        "children",
+        "playing",
+        "in",
+        "the",
+        "park",
+        "are",
+        "energetic",
+        "."
+      ],
+      "correctAnswer": "The children playing in the park are energetic.",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "playing以下はchildrenの後です"
+    },
+    {
+      "id": "g3u6-order-5",
+      "type": "sentenceOrdering",
+      "japanese": "日本で作られた車はとても人気があります。",
+      "words": [
+        "Cars",
+        "made",
+        "in",
+        "Japan",
+        "are",
+        "very",
+        "popular",
+        "."
+      ],
+      "correctAnswer": "Cars made in Japan are very popular.",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "made以下はCarsの後です"
+    },
+    {
+      "id": "g3u6-order-6",
+      "type": "sentenceOrdering",
+      "japanese": "興奮した観客は立ち上がりました。",
+      "words": [
+        "The",
+        "excited",
+        "audience",
+        "stood",
+        "up",
+        "."
+      ],
+      "correctAnswer": "The excited audience stood up.",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞は名詞の前に置いて修飾します。",
+      "hint": "excitedはaudienceの前です"
+    },
+    {
+      "id": "g3u6-order-7",
+      "type": "sentenceOrdering",
+      "japanese": "これは興奮させる試合です。",
+      "words": [
+        "This",
+        "is",
+        "an",
+        "exciting",
+        "game",
+        "."
+      ],
+      "correctAnswer": "This is an exciting game.",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "excitingはgameの前です"
+    },
+    {
+      "id": "g3u6-order-8",
+      "type": "sentenceOrdering",
+      "japanese": "歌っている鳥の声が聞こえます。",
+      "words": [
+        "I",
+        "can",
+        "hear",
+        "the",
+        "singing",
+        "bird",
+        "."
+      ],
+      "correctAnswer": "I can hear the singing bird.",
+      "difficulty": "basic",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "singingはbirdの前です"
+    },
+    {
+      "id": "g3u6-order-9",
+      "type": "sentenceOrdering",
+      "japanese": "落ちた葉は地面を覆いました。",
+      "words": [
+        "The",
+        "fallen",
+        "leaves",
+        "covered",
+        "the",
+        "ground",
+        "."
+      ],
+      "correctAnswer": "The fallen leaves covered the ground.",
+      "difficulty": "basic",
+      "explanation": "過去分詞は名詞の前に置いて修飾します。",
+      "hint": "fallenlはleavesの前です"
+    },
+    {
+      "id": "g3u6-order-10",
+      "type": "sentenceOrdering",
+      "japanese": "テーブルの上に置かれた本は誰のですか。",
+      "words": [
+        "Whose",
+        "is",
+        "the",
+        "book",
+        "put",
+        "on",
+        "the",
+        "table",
+        "?"
+      ],
+      "correctAnswer": "Whose is the book put on the table?",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "put以下はbookの後です"
+    },
+    {
+      "id": "g3u6-order-11",
+      "type": "sentenceOrdering",
+      "japanese": "私はこの退屈な映画に飽きました。",
+      "words": [
+        "I'm",
+        "bored",
+        "with",
+        "this",
+        "boring",
+        "movie",
+        "."
+      ],
+      "correctAnswer": "I'm bored with this boring movie.",
+      "difficulty": "intermediate",
+      "explanation": "人の感情はbored、物事の性質はboringです。",
+      "hint": "人はbored、物はboringです"
+    },
+    {
+      "id": "g3u6-order-12",
+      "type": "sentenceOrdering",
+      "japanese": "この本は驚くべき話です。",
+      "words": [
+        "This",
+        "is",
+        "an",
+        "amazing",
+        "story",
+        "."
+      ],
+      "correctAnswer": "This is an amazing story.",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "amazingはstoryの前です"
+    },
+    {
+      "id": "g3u6-order-13",
+      "type": "sentenceOrdering",
+      "japanese": "笑っている子供たちは幸せそうです。",
+      "words": [
+        "The",
+        "laughing",
+        "children",
+        "look",
+        "happy",
+        "."
+      ],
+      "correctAnswer": "The laughing children look happy.",
+      "difficulty": "basic",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "laughingはchildrenの前です"
+    },
+    {
+      "id": "g3u6-order-14",
+      "type": "sentenceOrdering",
+      "japanese": "英語で書かれたこの本は難しいです。",
+      "words": [
+        "This",
+        "book",
+        "written",
+        "in",
+        "English",
+        "is",
+        "difficult",
+        "."
+      ],
+      "correctAnswer": "This book written in English is difficult.",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "written以下はbookの後です"
+    },
+    {
+      "id": "g3u6-order-15",
+      "type": "sentenceOrdering",
+      "japanese": "私は驚いた表情で彼を見ました。",
+      "words": [
+        "I",
+        "looked",
+        "at",
+        "him",
+        "with",
+        "a",
+        "surprised",
+        "expression",
+        "."
+      ],
+      "correctAnswer": "I looked at him with a surprised expression.",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞は名詞の前に置いて修飾します。",
+      "hint": "surprisedはexpressionの前です"
+    },
+    {
+      "id": "g3u6-order-16",
+      "type": "sentenceOrdering",
+      "japanese": "これは興味深いニュースです。",
+      "words": [
+        "This",
+        "is",
+        "interesting",
+        "news",
+        "."
+      ],
+      "correctAnswer": "This is interesting news.",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "interestingはnewsの前です"
+    },
+    {
+      "id": "g3u6-order-17",
+      "type": "sentenceOrdering",
+      "japanese": "座っている女性は私の母です。",
+      "words": [
+        "The",
+        "woman",
+        "sitting",
+        "there",
+        "is",
+        "my",
+        "mother",
+        "."
+      ],
+      "correctAnswer": "The woman sitting there is my mother.",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞句は名詞の後ろに置いて修飾します。",
+      "hint": "sitting以下はwomanの後です"
+    },
+    {
+      "id": "g3u6-order-18",
+      "type": "sentenceOrdering",
+      "japanese": "盗まれた自転車は見つかりました。",
+      "words": [
+        "The",
+        "stolen",
+        "bike",
+        "was",
+        "found",
+        "."
+      ],
+      "correctAnswer": "The stolen bike was found.",
+      "difficulty": "basic",
+      "explanation": "過去分詞は名詞の前に置いて修飾します。",
+      "hint": "stolenはbikeの前です"
+    },
+    {
+      "id": "g3u6-order-19",
+      "type": "sentenceOrdering",
+      "japanese": "泣いている女の子は私の妹です。",
+      "words": [
+        "The",
+        "crying",
+        "girl",
+        "is",
+        "my",
+        "sister",
+        "."
+      ],
+      "correctAnswer": "The crying girl is my sister.",
+      "difficulty": "basic",
+      "explanation": "現在分詞は名詞の前に置いて修飾します。",
+      "hint": "cryingはgirlの前です"
+    },
+    {
+      "id": "g3u6-order-20",
+      "type": "sentenceOrdering",
+      "japanese": "書かれた手紙は机の上にあります。",
+      "words": [
+        "The",
+        "written",
+        "letter",
+        "is",
+        "on",
+        "the",
+        "desk",
+        "."
+      ],
+      "correctAnswer": "The written letter is on the desk.",
+      "difficulty": "basic",
+      "explanation": "過去分詞は名詞の前に置いて修飾します。",
+      "hint": "writtenはletterの前です"
+    },
+    {
+      "id": "g3u6-verb-1",
+      "type": "verbForm",
+      "japanese": "走っている少年は私の弟です。",
+      "sentence": "The _____ (run) boy is my brother.",
+      "choices": [
+        "running",
+        "run",
+        "ran",
+        "runs"
+      ],
+      "correctAnswer": "running",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。",
+      "hint": "ing形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-2",
+      "type": "verbForm",
+      "japanese": "壊れた窓は修理されました。",
+      "sentence": "The _____ (break) window was repaired.",
+      "choices": [
+        "broken",
+        "break",
+        "breaking",
+        "breaks"
+      ],
+      "correctAnswer": "broken",
+      "difficulty": "basic",
+      "explanation": "過去分詞で「～された」という意味になります。",
+      "hint": "過去分詞形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-3",
+      "type": "verbForm",
+      "japanese": "眠っている赤ちゃんを見てください。",
+      "sentence": "Look at the _____ (sleep) baby.",
+      "choices": [
+        "sleeping",
+        "sleep",
+        "slept",
+        "sleeps"
+      ],
+      "correctAnswer": "sleeping",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。",
+      "hint": "ing形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-4",
+      "type": "verbForm",
+      "japanese": "書かれた手紙は机の上にあります。",
+      "sentence": "The _____ (write) letter is on the desk.",
+      "choices": [
+        "written",
+        "write",
+        "writing",
+        "writes"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "basic",
+      "explanation": "過去分詞で「～された」という意味になります。",
+      "hint": "過去分詞形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-5",
+      "type": "verbForm",
+      "japanese": "泣いている女の子は私の妹です。",
+      "sentence": "The _____ (cry) girl is my sister.",
+      "choices": [
+        "crying",
+        "cry",
+        "cried",
+        "cries"
+      ],
+      "correctAnswer": "crying",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。",
+      "hint": "ing形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-6",
+      "type": "verbForm",
+      "japanese": "日本で作られた車はとても人気があります。",
+      "sentence": "Cars _____ (make) in Japan are very popular.",
+      "choices": [
+        "made",
+        "make",
+        "making",
+        "makes"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞で「～された」という意味になります。",
+      "hint": "過去分詞形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-7",
+      "type": "verbForm",
+      "japanese": "公園で遊んでいる子供たちは元気です。",
+      "sentence": "The children _____ (play) in the park are energetic.",
+      "choices": [
+        "playing",
+        "play",
+        "played",
+        "plays"
+      ],
+      "correctAnswer": "playing",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。",
+      "hint": "ing形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-8",
+      "type": "verbForm",
+      "japanese": "興奮した観客は立ち上がりました。",
+      "sentence": "The _____ (excite) audience stood up.",
+      "choices": [
+        "excited",
+        "excite",
+        "exciting",
+        "excites"
+      ],
+      "correctAnswer": "excited",
+      "difficulty": "intermediate",
+      "explanation": "人の感情を表すときは過去分詞を使います。",
+      "hint": "人の感情は過去分詞です"
+    },
+    {
+      "id": "g3u6-verb-9",
+      "type": "verbForm",
+      "japanese": "これは興奮させる試合です。",
+      "sentence": "This is an _____ (excite) game.",
+      "choices": [
+        "exciting",
+        "excite",
+        "excited",
+        "excites"
+      ],
+      "correctAnswer": "exciting",
+      "difficulty": "intermediate",
+      "explanation": "物事の性質を表すときは現在分詞を使います。",
+      "hint": "物事の性質は現在分詞です"
+    },
+    {
+      "id": "g3u6-verb-10",
+      "type": "verbForm",
+      "japanese": "歌っている鳥の声が聞こえます。",
+      "sentence": "I can hear the _____ (sing) bird.",
+      "choices": [
+        "singing",
+        "sing",
+        "sang",
+        "sings"
+      ],
+      "correctAnswer": "singing",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。",
+      "hint": "ing形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-11",
+      "type": "verbForm",
+      "japanese": "落ちた葉は地面を覆いました。",
+      "sentence": "The _____ (fall) leaves covered the ground.",
+      "choices": [
+        "fallen",
+        "fall",
+        "falling",
+        "falls"
+      ],
+      "correctAnswer": "fallen",
+      "difficulty": "basic",
+      "explanation": "過去分詞で「～した」という意味になります。",
+      "hint": "過去分詞形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-12",
+      "type": "verbForm",
+      "japanese": "テーブルの上に置かれた本は誰のですか。",
+      "sentence": "Whose is the book _____ (put) on the table?",
+      "choices": [
+        "put",
+        "putting",
+        "puts",
+        "putted"
+      ],
+      "correctAnswer": "put",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞で「～された」という意味になります。",
+      "hint": "過去分詞形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-13",
+      "type": "verbForm",
+      "japanese": "私はこの退屈な映画に飽きました。",
+      "sentence": "I'm _____ (bore) with this boring movie.",
+      "choices": [
+        "bored",
+        "bore",
+        "boring",
+        "bores"
+      ],
+      "correctAnswer": "bored",
+      "difficulty": "intermediate",
+      "explanation": "人の感情を表すときは過去分詞を使います。",
+      "hint": "人の感情は過去分詞です"
+    },
+    {
+      "id": "g3u6-verb-14",
+      "type": "verbForm",
+      "japanese": "この本は驚くべき話です。",
+      "sentence": "This is an _____ (amaze) story.",
+      "choices": [
+        "amazing",
+        "amaze",
+        "amazed",
+        "amazes"
+      ],
+      "correctAnswer": "amazing",
+      "difficulty": "intermediate",
+      "explanation": "物事の性質を表すときは現在分詞を使います。",
+      "hint": "物事の性質は現在分詞です"
+    },
+    {
+      "id": "g3u6-verb-15",
+      "type": "verbForm",
+      "japanese": "笑っている子供たちは幸せそうです。",
+      "sentence": "The _____ (laugh) children look happy.",
+      "choices": [
+        "laughing",
+        "laugh",
+        "laughed",
+        "laughs"
+      ],
+      "correctAnswer": "laughing",
+      "difficulty": "basic",
+      "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。",
+      "hint": "ing形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-16",
+      "type": "verbForm",
+      "japanese": "英語で書かれたこの本は難しいです。",
+      "sentence": "This book _____ (write) in English is difficult.",
+      "choices": [
+        "written",
+        "write",
+        "writing",
+        "writes"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "intermediate",
+      "explanation": "過去分詞で「～された」という意味になります。",
+      "hint": "過去分詞形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-17",
+      "type": "verbForm",
+      "japanese": "私は驚いた表情で彼を見ました。",
+      "sentence": "I looked at him with a _____ (surprise) expression.",
+      "choices": [
+        "surprised",
+        "surprise",
+        "surprising",
+        "surprises"
+      ],
+      "correctAnswer": "surprised",
+      "difficulty": "intermediate",
+      "explanation": "人の感情を表すときは過去分詞を使います。",
+      "hint": "人の感情は過去分詞です"
+    },
+    {
+      "id": "g3u6-verb-18",
+      "type": "verbForm",
+      "japanese": "これは興味深いニュースです。",
+      "sentence": "This is _____ (interest) news.",
+      "choices": [
+        "interesting",
+        "interest",
+        "interested",
+        "interests"
+      ],
+      "correctAnswer": "interesting",
+      "difficulty": "intermediate",
+      "explanation": "物事の性質を表すときは現在分詞を使います。",
+      "hint": "物事の性質は現在分詞です"
+    },
+    {
+      "id": "g3u6-verb-19",
+      "type": "verbForm",
+      "japanese": "座っている女性は私の母です。",
+      "sentence": "The woman _____ (sit) there is my mother.",
+      "choices": [
+        "sitting",
+        "sit",
+        "sat",
+        "sits"
+      ],
+      "correctAnswer": "sitting",
+      "difficulty": "intermediate",
+      "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。",
+      "hint": "ing形にしましょう"
+    },
+    {
+      "id": "g3u6-verb-20",
+      "type": "verbForm",
+      "japanese": "盗まれた自転車は見つかりました。",
+      "sentence": "The _____ (steal) bike was found.",
+      "choices": [
+        "stolen",
+        "steal",
+        "stealing",
+        "steals"
+      ],
+      "correctAnswer": "stolen",
+      "difficulty": "basic",
+      "explanation": "過去分詞で「～された」という意味になります。",
+      "hint": "過去分詞形にしましょう"
+    }
+  ]
+}

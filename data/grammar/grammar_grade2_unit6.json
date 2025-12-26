@@ -1,1549 +1,1370 @@
 {
   "enabled": true,
   "unit": "Unit 6",
-  "title": "接続詞",
-  "grammar": "when/if/because/that",
-  "totalQuestions": 80,
+  "title": "比較級・最上級",
+  "grammar": "-er / -est、more / most、as ... as",
+  "totalQuestions": 85,
   "questionTypes": {
-    "fillInBlank": 25,
-    "sentenceOrdering": 21,
-    "paraphrase": 17,
+    "fillInBlank": 27,
+    "sentenceOrdering": 22,
+    "paraphrase": 18,
     "verbForm": 10,
-    "conversation": 7
+    "conversation": 8
   },
   "questions": [
     {
-      "id": "g2-u6-fib-001",
+      "id": "g2-u7-fib-001",
       "type": "fillInBlank",
-      "japanese": "私は疲れているとき、早く寝ます。",
-      "sentence": "I go to bed early ____ I am tired.",
+      "japanese": "彼は私より背が高いです。",
+      "sentence": "He is ____ than me.",
       "choices": [
-        "when",
-        "if",
-        "because"
+        "taller",
+        "tall",
+        "tallest"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "taller",
       "difficulty": "beginner",
-      "explanation": "whenは「~するとき」という時を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
+      "explanation": "比較級: tall → taller。thanがあるので比較級を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【taller】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より背が高いです。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が高いです。」に合いません。\n\n❌ 【tallest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が高いです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u6-fib-002",
+      "id": "g2-u7-fib-002",
       "type": "fillInBlank",
-      "japanese": "雨が降ったら、家にいます。",
-      "sentence": "I will stay home ____ it rains.",
+      "japanese": "これはあれより大きいです。",
+      "sentence": "This is ____ than that.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "bigger",
+        "big",
+        "biggest"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "bigger",
       "difficulty": "beginner",
-      "explanation": "ifは「もし~ならば」という条件を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
+      "explanation": "比較級: big → bigger。短い形容詞はerをつけます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bigger】 ← 正解\n  ✓ 正解理由: 日本語訳「これはあれより大きいです。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより大きいです。」に合いません。\n\n❌ 【biggest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより大きいです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u6-fib-003",
+      "id": "g2-u7-fib-003",
       "type": "fillInBlank",
-      "japanese": "私は忙しいので、行けません。",
-      "sentence": "I can't go ____ I am busy.",
+      "japanese": "彼女は私より速く走ります。",
+      "sentence": "She runs ____ than me.",
       "choices": [
-        "because",
-        "when",
-        "if"
+        "faster",
+        "fast",
+        "fastest"
       ],
-      "correctAnswer": "because",
+      "correctAnswer": "faster",
       "difficulty": "beginner",
-      "explanation": "becauseは「~なので」という理由を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
+      "explanation": "比較級: fast → faster\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【faster】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より速く走ります。」から、この形が適切です。\n\n❌ 【fast】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より速く走ります。」に合いません。\n\n❌ 【fastest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より速く走ります。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u6-fib-004",
+      "id": "g2-u7-fib-004",
       "type": "fillInBlank",
-      "japanese": "彼女が来たとき、私は料理をしていました。",
-      "sentence": "I was cooking ____ she came.",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "sentence": "This book is ____ interesting than that one.",
       "choices": [
-        "when",
-        "if",
-        "that"
+        "more",
+        "most",
+        "much"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "more",
       "difficulty": "beginner",
-      "explanation": "whenは「~したとき」という時を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
+      "explanation": "長い形容詞にはmoreを使います。more interesting\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この本はあの本よりおもしろいです。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろいです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u6-fib-005",
+      "id": "g2-u7-fib-005",
       "type": "fillInBlank",
-      "japanese": "晴れたら、公園に行きましょう。",
-      "sentence": "Let's go to the park ____ it is sunny.",
+      "japanese": "これはクラスで最も大きいです。",
+      "sentence": "This is the ____ in the class.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "biggest",
+        "big",
+        "bigger"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "biggest",
       "difficulty": "beginner",
-      "explanation": "ifは条件「もし~ならば」を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
+      "explanation": "最上級: big → biggest。theとinがあるので最上級です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【biggest】 ← 正解\n  ✓ 正解理由: 日本語訳「これはクラスで最も大きいです。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大きいです。」に合いません。\n\n❌ 【bigger】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大きいです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u6-fib-006",
+      "id": "g2-u7-fib-006",
       "type": "fillInBlank",
-      "japanese": "私は疲れているので、休みたいです。",
-      "sentence": "I want to rest ____ I am tired.",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "sentence": "He is the ____ of the three.",
       "choices": [
-        "because",
-        "when",
-        "if"
+        "tallest",
+        "tall",
+        "taller"
       ],
-      "correctAnswer": "because",
+      "correctAnswer": "tallest",
       "difficulty": "beginner",
-      "explanation": "becauseは理由「~なので」を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
+      "explanation": "最上級: tall → tallest。of the threeなので最上級を使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【tallest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は3人の中で最も背が高いです。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3人の中で最も背が高いです。」に合いません。\n\n❌ 【taller】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3人の中で最も背が高いです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u6-fib-007",
+      "id": "g2-u7-fib-007",
       "type": "fillInBlank",
-      "japanese": "私は彼が正しいと思います。",
-      "sentence": "I think ____ he is right.",
+      "japanese": "これは最もおもしろい本です。",
+      "sentence": "This is the ____ interesting book.",
       "choices": [
-        "that",
-        "when",
-        "if"
+        "most",
+        "more",
+        "much"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "most",
       "difficulty": "beginner",
-      "explanation": "thatは「~ということ」という名詞節を導く接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
+      "explanation": "長い形容詞の最上級にはmostを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最もおもしろい本です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろい本です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろい本です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u6-fib-008",
+      "id": "g2-u7-fib-008",
       "type": "fillInBlank",
-      "japanese": "帰宅したら、宿題をします。",
-      "sentence": "I will do my homework ____ I get home.",
+      "japanese": "彼女は私より若いです。",
+      "sentence": "She is ____ than me.",
       "choices": [
-        "when",
-        "if",
-        "because"
-      ],
-      "correctAnswer": "when",
-      "difficulty": "beginner",
-      "explanation": "whenは「~するとき」という時を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-009",
-      "type": "fillInBlank",
-      "japanese": "寒かったら、コートを着てください。",
-      "sentence": "Please wear a coat ____ it is cold.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "beginner",
-      "explanation": "ifは条件を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-010",
-      "type": "fillInBlank",
-      "japanese": "私は病気なので、学校を休みました。",
-      "sentence": "I was absent from school ____ I was sick.",
-      "choices": [
-        "because",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "because",
-      "difficulty": "beginner",
-      "explanation": "becauseは理由を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-011",
-      "type": "fillInBlank",
-      "japanese": "彼女が来るとき、私に教えてください。",
-      "sentence": "Please tell me ____ she comes.",
-      "choices": [
-        "when",
-        "if",
-        "that"
-      ],
-      "correctAnswer": "when",
-      "difficulty": "beginner",
-      "explanation": "whenは「~するとき」という時を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-012",
-      "type": "fillInBlank",
-      "japanese": "時間があれば、手伝います。",
-      "sentence": "I will help you ____ I have time.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "beginner",
-      "explanation": "ifは「もし~ならば」という条件です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-013",
-      "type": "fillInBlank",
-      "japanese": "私は彼女が親切だと知っています。",
-      "sentence": "I know ____ she is kind.",
-      "choices": [
-        "that",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "beginner",
-      "explanation": "thatは名詞節を導く接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-014",
-      "type": "fillInBlank",
-      "japanese": "私は若いとき、よく泳ぎました。",
-      "sentence": "I often swam ____ I was young.",
-      "choices": [
-        "when",
-        "if",
-        "because"
-      ],
-      "correctAnswer": "when",
-      "difficulty": "beginner",
-      "explanation": "whenは「~のとき」という時を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-015",
-      "type": "fillInBlank",
-      "japanese": "暑かったら、窓を開けてください。",
-      "sentence": "Please open the window ____ it is hot.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "beginner",
-      "explanation": "ifは条件を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-016",
-      "type": "fillInBlank",
-      "japanese": "私は眠いので、早く寝ます。",
-      "sentence": "I will go to bed early ____ I am sleepy.",
-      "choices": [
-        "because",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "because",
-      "difficulty": "intermediate",
-      "explanation": "becauseは理由「~なので」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-017",
-      "type": "fillInBlank",
-      "japanese": "私は彼が来ると思います。",
-      "sentence": "I think ____ he will come.",
-      "choices": [
-        "that",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "thatは「~ということ」を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-018",
-      "type": "fillInBlank",
-      "japanese": "学校が終わったら、遊びましょう。",
-      "sentence": "Let's play ____ school is over.",
-      "choices": [
-        "when",
-        "if",
-        "because"
-      ],
-      "correctAnswer": "when",
-      "difficulty": "intermediate",
-      "explanation": "whenは「~したら/~するとき」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-019",
-      "type": "fillInBlank",
-      "japanese": "雨が降れば、試合は中止です。",
-      "sentence": "The game will be canceled ____ it rains.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "intermediate",
-      "explanation": "ifは条件「もし~ならば」を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-020",
-      "type": "fillInBlank",
-      "japanese": "私は頭が痛いので、薬を飲みました。",
-      "sentence": "I took medicine ____ I had a headache.",
-      "choices": [
-        "because",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "because",
-      "difficulty": "intermediate",
-      "explanation": "becauseは理由を表す接続詞です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-021",
-      "type": "fillInBlank",
-      "japanese": "彼が帰ってきたとき、私は驚きました。",
-      "sentence": "I was surprised ____ he came back.",
-      "choices": [
-        "when",
-        "if",
-        "that"
-      ],
-      "correctAnswer": "when",
-      "difficulty": "intermediate",
-      "explanation": "whenは「~したとき」という時を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-022",
-      "type": "fillInBlank",
-      "japanese": "明日晴れたら、ピクニックに行きます。",
-      "sentence": "We will go on a picnic ____ it is sunny tomorrow.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "intermediate",
-      "explanation": "ifは条件を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-023",
-      "type": "fillInBlank",
-      "japanese": "私は彼が正直だと信じています。",
-      "sentence": "I believe ____ he is honest.",
-      "choices": [
-        "that",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "thatは名詞節を導きます。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-024",
-      "type": "fillInBlank",
-      "japanese": "私は暇なとき、本を読みます。",
-      "sentence": "I read books ____ I am free.",
-      "choices": [
-        "when",
-        "if",
-        "because"
-      ],
-      "correctAnswer": "when",
-      "difficulty": "intermediate",
-      "explanation": "whenは「~のとき」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-fib-025",
-      "type": "fillInBlank",
-      "japanese": "お金があれば、新しい自転車を買います。",
-      "sentence": "I will buy a new bike ____ I have money.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "intermediate",
-      "explanation": "ifは「もし~ならば」という条件です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法",
-      "hint": "接続詞の意味を考えましょう"
-    },
-    {
-      "id": "g2-u6-so-001",
-      "type": "sentenceOrdering",
-      "japanese": "私は疲れているとき、早く寝ます。",
-      "words": [
-        "I",
-        "go",
-        "to",
-        "bed",
-        "early",
-        "when",
-        "I",
-        "am",
-        "tired",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "go",
-        "to",
-        "bed",
-        "early",
-        "when",
-        "I",
-        "am",
-        "tired",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "whenは「~するとき」という時を表す接続詞です。\n\n「私は疲れているとき、早く寝ます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-002",
-      "type": "sentenceOrdering",
-      "japanese": "雨が降ったら、家にいます。",
-      "words": [
-        "I",
-        "will",
-        "stay",
-        "home",
-        "if",
-        "it",
-        "rains",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "will",
-        "stay",
-        "home",
-        "if",
-        "it",
-        "rains",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "ifは条件「もし~ならば」を表します。\n\n「雨が降ったら、家にいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-003",
-      "type": "sentenceOrdering",
-      "japanese": "私は忙しいので、行けません。",
-      "words": [
-        "I",
-        "can't",
-        "go",
-        "because",
-        "I",
-        "am",
-        "busy",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "can't",
-        "go",
-        "because",
-        "I",
-        "am",
-        "busy",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "becauseは理由「~なので」を表します。\n\n「私は忙しいので、行けません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-004",
-      "type": "sentenceOrdering",
-      "japanese": "彼女が来たとき、私は料理をしていました。",
-      "words": [
-        "I",
-        "was",
-        "cooking",
-        "when",
-        "she",
-        "came",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "was",
-        "cooking",
-        "when",
-        "she",
-        "came",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "whenは「~したとき」という時を表します。\n\n「彼女が来たとき、私は料理をしていました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-005",
-      "type": "sentenceOrdering",
-      "japanese": "晴れたら、公園に行きましょう。",
-      "words": [
-        "Let's",
-        "go",
-        "to",
-        "the",
-        "park",
-        "if",
-        "it",
-        "is",
-        "sunny",
-        "."
-      ],
-      "correctOrder": [
-        "Let's",
-        "go",
-        "to",
-        "the",
-        "park",
-        "if",
-        "it",
-        "is",
-        "sunny",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "ifは条件を表す接続詞です。\n\n「晴れたら、公園に行きましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-006",
-      "type": "sentenceOrdering",
-      "japanese": "私は疲れているので、休みたいです。",
-      "words": [
-        "I",
-        "want",
-        "to",
-        "rest",
-        "because",
-        "I",
-        "am",
-        "tired",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "want",
-        "to",
-        "rest",
-        "because",
-        "I",
-        "am",
-        "tired",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "becauseは理由を表します。\n\n「私は疲れているので、休みたいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-007",
-      "type": "sentenceOrdering",
-      "japanese": "私は彼が正しいと思います。",
-      "words": [
-        "I",
-        "think",
-        "that",
-        "he",
-        "is",
-        "right",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "think",
-        "that",
-        "he",
-        "is",
-        "right",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "thatは名詞節を導く接続詞です。\n\n「私は彼が正しいと思います。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-008",
-      "type": "sentenceOrdering",
-      "japanese": "帰宅したら、宿題をします。",
-      "words": [
-        "I",
-        "will",
-        "do",
-        "my",
-        "homework",
-        "when",
-        "I",
-        "get",
-        "home",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "will",
-        "do",
-        "my",
-        "homework",
-        "when",
-        "I",
-        "get",
-        "home",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "whenは「~するとき」です。\n\n「帰宅したら、宿題をします。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-009",
-      "type": "sentenceOrdering",
-      "japanese": "寒かったら、コートを着てください。",
-      "words": [
-        "Please",
-        "wear",
-        "a",
-        "coat",
-        "if",
-        "it",
-        "is",
-        "cold",
-        "."
-      ],
-      "correctOrder": [
-        "Please",
-        "wear",
-        "a",
-        "coat",
-        "if",
-        "it",
-        "is",
-        "cold",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "ifは条件を表します。\n\n「寒かったら、コートを着てください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-010",
-      "type": "sentenceOrdering",
-      "japanese": "私は病気なので、学校を休みました。",
-      "words": [
-        "I",
-        "was",
-        "absent",
-        "from",
-        "school",
-        "because",
-        "I",
-        "was",
-        "sick",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "was",
-        "absent",
-        "from",
-        "school",
-        "because",
-        "I",
-        "was",
-        "sick",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "becauseは理由「~なので」です。\n\n「私は病気なので、学校を休みました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-011",
-      "type": "sentenceOrdering",
-      "japanese": "彼女が来るとき、私に教えてください。",
-      "words": [
-        "Please",
-        "tell",
-        "me",
-        "when",
-        "she",
-        "comes",
-        "."
-      ],
-      "correctOrder": [
-        "Please",
-        "tell",
-        "me",
-        "when",
-        "she",
-        "comes",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "whenは時を表す接続詞です。\n\n「彼女が来るとき、私に教えてください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-012",
-      "type": "sentenceOrdering",
-      "japanese": "時間があれば、手伝います。",
-      "words": [
-        "I",
-        "will",
-        "help",
-        "you",
-        "if",
-        "I",
-        "have",
-        "time",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "will",
-        "help",
-        "you",
-        "if",
-        "I",
-        "have",
-        "time",
-        "."
-      ],
-      "difficulty": "beginner",
-      "explanation": "ifは条件を表します。\n\n「時間があれば、手伝います。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-013",
-      "type": "sentenceOrdering",
-      "japanese": "私は彼女が親切だと知っています。",
-      "words": [
-        "I",
-        "know",
-        "that",
-        "she",
-        "is",
-        "kind",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "know",
-        "that",
-        "she",
-        "is",
-        "kind",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "thatは名詞節を導きます。\n\n「私は彼女が親切だと知っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-014",
-      "type": "sentenceOrdering",
-      "japanese": "私は若いとき、よく泳ぎました。",
-      "words": [
-        "I",
-        "often",
-        "swam",
-        "when",
-        "I",
-        "was",
+        "younger",
         "young",
-        "."
+        "youngest"
       ],
-      "correctOrder": [
+      "correctAnswer": "younger",
+      "difficulty": "beginner",
+      "explanation": "比較級: young → younger\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【younger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より若いです。」から、この形が適切です。\n\n❌ 【young】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若いです。」に合いません。\n\n❌ 【youngest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若いです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-009",
+      "type": "fillInBlank",
+      "japanese": "これはあれより安いです。",
+      "sentence": "This is ____ than that.",
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "beginner",
+      "explanation": "比較級: cheap → cheaper\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cheaper】 ← 正解\n  ✓ 正解理由: 日本語訳「これはあれより安いです。」から、この形が適切です。\n\n❌ 【cheap】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより安いです。」に合いません。\n\n❌ 【cheapest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより安いです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は最も速く走ります。",
+      "sentence": "He runs the ____.",
+      "choices": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "correctAnswer": "fastest",
+      "difficulty": "beginner",
+      "explanation": "最上級: fast → fastest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【fastest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は最も速く走ります。」から、この形が適切です。\n\n❌ 【fast】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も速く走ります。」に合いません。\n\n❌ 【faster】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も速く走ります。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-011",
+      "type": "fillInBlank",
+      "japanese": "この問題はあれより難しいです。",
+      "sentence": "This problem is ____ difficult than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "beginner",
+      "explanation": "difficultは長い形容詞なのでmoreを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この問題はあれより難しいです。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難しいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難しいです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "sentence": "She is the ____ popular in the class.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "popularは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はクラスで最も人気があります。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私は彼より年上です。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "older",
+        "old",
+        "oldest"
+      ],
+      "correctAnswer": "older",
+      "difficulty": "beginner",
+      "explanation": "比較級: old → older\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【older】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼より年上です。」から、この形が適切です。\n\n❌ 【old】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年上です。」に合いません。\n\n❌ 【oldest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年上です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-014",
+      "type": "fillInBlank",
+      "japanese": "これは最も高価な車です。",
+      "sentence": "This is the ____ expensive car.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "expensiveは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も高価な車です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も高価な車です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も高価な車です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼は私より強いです。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "stronger",
+        "strong",
+        "strongest"
+      ],
+      "correctAnswer": "stronger",
+      "difficulty": "beginner",
+      "explanation": "比較級: strong → stronger\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【stronger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より強いです。」から、この形が適切です。\n\n❌ 【strong】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より強いです。」に合いません。\n\n❌ 【strongest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より強いです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-016",
+      "type": "fillInBlank",
+      "japanese": "これは最も小さい箱です。",
+      "sentence": "This is the ____ box.",
+      "choices": [
+        "smallest",
+        "small",
+        "smaller"
+      ],
+      "correctAnswer": "smallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: small → smallest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【smallest】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も小さい箱です。」から、この形が適切です。\n\n❌ 【small】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も小さい箱です。」に合いません。\n\n❌ 【smaller】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も小さい箱です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-017",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より親切です。",
+      "sentence": "She is ____ than me.",
+      "choices": [
+        "kinder",
+        "kind",
+        "kindest"
+      ],
+      "correctAnswer": "kinder",
+      "difficulty": "intermediate",
+      "explanation": "比較級: kind → kinder\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【kinder】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より親切です。」から、この形が適切です。\n\n❌ 【kind】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。\n\n❌ 【kindest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-018",
+      "type": "fillInBlank",
+      "japanese": "これはより美しい花です。",
+      "sentence": "This is a ____ beautiful flower.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "beautifulは長い形容詞なのでmoreを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「これはより美しい花です。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはより美しい花です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはより美しい花です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-019",
+      "type": "fillInBlank",
+      "japanese": "彼は最も賢い生徒です。",
+      "sentence": "He is the ____ student.",
+      "choices": [
+        "smartest",
+        "smart",
+        "smarter"
+      ],
+      "correctAnswer": "smartest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: smart → smartest\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【smartest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は最も賢い生徒です。」から、この形が適切です。\n\n❌ 【smart】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も賢い生徒です。」に合いません。\n\n❌ 【smarter】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も賢い生徒です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-020",
+      "type": "fillInBlank",
+      "japanese": "これはあれより新しいです。",
+      "sentence": "This is ____ than that.",
+      "choices": [
+        "newer",
+        "new",
+        "newest"
+      ],
+      "correctAnswer": "newer",
+      "difficulty": "intermediate",
+      "explanation": "比較級: new → newer\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【newer】 ← 正解\n  ✓ 正解理由: 日本語訳「これはあれより新しいです。」から、この形が適切です。\n\n❌ 【new】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより新しいです。」に合いません。\n\n❌ 【newest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより新しいです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-021",
+      "type": "fillInBlank",
+      "japanese": "彼女は最も美しいです。",
+      "sentence": "She is the ____ beautiful.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "beautifulの最上級はmostを使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は最も美しいです。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は最も美しいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は最も美しいです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-022",
+      "type": "fillInBlank",
+      "japanese": "私は彼より忙しいです。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "busier",
+        "busy",
+        "busiest"
+      ],
+      "correctAnswer": "busier",
+      "difficulty": "intermediate",
+      "explanation": "比較級: busy → busier (yをiに変えてer)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【busier】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼より忙しいです。」から、この形が適切です。\n\n❌ 【busy】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より忙しいです。」に合いません。\n\n❌ 【busiest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より忙しいです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-023",
+      "type": "fillInBlank",
+      "japanese": "これは最も重要な問題です。",
+      "sentence": "This is the ____ important problem.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "importantは長い形容詞なので最上級はmostです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も重要な問題です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も重要な問題です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も重要な問題です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-024",
+      "type": "fillInBlank",
+      "japanese": "彼は私より幸せです。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "happier",
+        "happy",
+        "happiest"
+      ],
+      "correctAnswer": "happier",
+      "difficulty": "intermediate",
+      "explanation": "比較級: happy → happier (yをiに変えてer)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【happier】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より幸せです。」から、この形が適切です。\n\n❌ 【happy】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より幸せです。」に合いません。\n\n❌ 【happiest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より幸せです。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-025",
+      "type": "fillInBlank",
+      "japanese": "これは最も簡単な方法です。",
+      "sentence": "This is the ____ easy way.",
+      "choices": [
+        "easiest",
+        "easy",
+        "easier"
+      ],
+      "correctAnswer": "easiest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: easy → easiest (yをiに変えてest)\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【easiest】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も簡単な方法です。」から、この形が適切です。\n\n❌ 【easy】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も簡単な方法です。」に合いません。\n\n❌ 【easier】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も簡単な方法です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-026",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より上手に歌います。",
+      "sentence": "She sings ____ than me.",
+      "choices": [
+        "better",
+        "good",
+        "best"
+      ],
+      "correctAnswer": "better",
+      "difficulty": "intermediate",
+      "explanation": "不規則変化: good → better → best\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【better】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より上手に歌います。」から、この形が適切です。\n\n❌ 【good】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より上手に歌います。」に合いません。\n\n❌ 【best】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より上手に歌います。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-027",
+      "type": "fillInBlank",
+      "japanese": "これは最も良い選択です。",
+      "sentence": "This is the ____ choice.",
+      "choices": [
+        "best",
+        "good",
+        "better"
+      ],
+      "correctAnswer": "best",
+      "difficulty": "intermediate",
+      "explanation": "不規則変化の最上級: good → best\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【best】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も良い選択です。」から、この形が適切です。\n\n❌ 【good】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も良い選択です。」に合いません。\n\n❌ 【better】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も良い選択です。」に合いません。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私より背が高いです。",
+      "words": [
+        "He",
+        "is",
+        "taller",
+        "than",
+        "me"
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級tallerとthanを使います。\n\n「彼は私より背が高いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "He is taller than me ."
+    },
+    {
+      "id": "g2-u7-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより大きいです。",
+      "words": [
+        "This",
+        "is",
+        "bigger",
+        "than",
+        "that"
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級biggerとthanです。\n\n「これはあれより大きいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is bigger than that ."
+    },
+    {
+      "id": "g2-u7-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より速く走ります。",
+      "words": [
+        "She",
+        "runs",
+        "faster",
+        "than",
+        "me"
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級fasterを使います。\n\n「彼女は私より速く走ります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "She runs faster than me ."
+    },
+    {
+      "id": "g2-u7-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "words": [
+        "This",
+        "book",
+        "is",
+        "more",
+        "interesting",
+        "than",
+        "that",
+        "one"
+      ],
+      "difficulty": "beginner",
+      "explanation": "more interesting thanの語順です。\n\n「この本はあの本よりおもしろいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This book is more interesting than that one ."
+    },
+    {
+      "id": "g2-u7-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "これはクラスで最も大きいです。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "biggest",
+        "in",
+        "the",
+        "class"
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the biggestとin the classです。\n\n「これはクラスで最も大きいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is the biggest in the class ."
+    },
+    {
+      "id": "g2-u7-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "words": [
+        "He",
+        "is",
+        "the",
+        "tallest",
+        "of",
+        "the",
+        "three"
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the tallestとof the threeです。\n\n「彼は3人の中で最も背が高いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "He is the tallest of the three ."
+    },
+    {
+      "id": "g2-u7-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "これは最もおもしろい本です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "interesting",
+        "book"
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the most interestingです。\n\n「これは最もおもしろい本です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is the most interesting book ."
+    },
+    {
+      "id": "g2-u7-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より若いです。",
+      "words": [
+        "She",
+        "is",
+        "younger",
+        "than",
+        "me"
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級youngerとthanを使います。\n\n「彼女は私より若いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "She is younger than me ."
+    },
+    {
+      "id": "g2-u7-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより安いです。",
+      "words": [
+        "This",
+        "is",
+        "cheaper",
+        "than",
+        "that"
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級cheaperです。\n\n「これはあれより安いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is cheaper than that ."
+    },
+    {
+      "id": "g2-u7-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼は最も速く走ります。",
+      "words": [
+        "He",
+        "runs",
+        "the",
+        "fastest"
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the fastestを使います。\n\n「彼は最も速く走ります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "He runs the fastest ."
+    },
+    {
+      "id": "g2-u7-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "この問題はあれより難しいです。",
+      "words": [
+        "This",
+        "problem",
+        "is",
+        "more",
+        "difficult",
+        "than",
+        "that",
+        "one"
+      ],
+      "difficulty": "beginner",
+      "explanation": "more difficult thanの語順です。\n\n「この問題はあれより難しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This problem is more difficult than that one ."
+    },
+    {
+      "id": "g2-u7-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "words": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "popular",
+        "in",
+        "the",
+        "class"
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the most popularです。\n\n「彼女はクラスで最も人気があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "She is the most popular in the class ."
+    },
+    {
+      "id": "g2-u7-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼より年上です。",
+      "words": [
         "I",
-        "often",
-        "swam",
-        "when",
+        "am",
+        "older",
+        "than",
+        "him"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級olderとthanです。\n\n「私は彼より年上です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "I am older than him ."
+    },
+    {
+      "id": "g2-u7-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "これは最も高価な車です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "expensive",
+        "car"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the most expensiveです。\n\n「これは最も高価な車です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is the most expensive car ."
+    },
+    {
+      "id": "g2-u7-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私より強いです。",
+      "words": [
+        "He",
+        "is",
+        "stronger",
+        "than",
+        "me"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級strongerを使います。\n\n「彼は私より強いです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "He is stronger than me ."
+    },
+    {
+      "id": "g2-u7-so-016",
+      "type": "sentenceOrdering",
+      "japanese": "これは最も小さい箱です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "smallest",
+        "box"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the smallestです。\n\n「これは最も小さい箱です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is the smallest box ."
+    },
+    {
+      "id": "g2-u7-so-017",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より親切です。",
+      "words": [
+        "She",
+        "is",
+        "kinder",
+        "than",
+        "me"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級kinderとthanです。\n\n「彼女は私より親切です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "She is kinder than me ."
+    },
+    {
+      "id": "g2-u7-so-018",
+      "type": "sentenceOrdering",
+      "japanese": "これはより美しい花です。",
+      "words": [
+        "This",
+        "is",
+        "a",
+        "more",
+        "beautiful",
+        "flower"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "more beautifulの語順です。\n\n「これはより美しい花です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is a more beautiful flower ."
+    },
+    {
+      "id": "g2-u7-so-019",
+      "type": "sentenceOrdering",
+      "japanese": "彼は最も賢い生徒です。",
+      "words": [
+        "He",
+        "is",
+        "the",
+        "smartest",
+        "student"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the smartestを使います。\n\n「彼は最も賢い生徒です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "He is the smartest student ."
+    },
+    {
+      "id": "g2-u7-so-020",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより新しいです。",
+      "words": [
+        "This",
+        "is",
+        "newer",
+        "than",
+        "that"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級newerとthanです。\n\n「これはあれより新しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "This is newer than that ."
+    },
+    {
+      "id": "g2-u7-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は最も美しいです。",
+      "words": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "beautiful"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the most beautifulです。\n\n「彼女は最も美しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "She is the most beautiful ."
+    },
+    {
+      "id": "g2-u7-so-022",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼より忙しいです。",
+      "words": [
         "I",
-        "was",
+        "am",
+        "busier",
+        "than",
+        "him"
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級busierを使います。\n\n「私は彼より忙しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
+      "hint": "比較級・最上級の語順に注意",
+      "correctAnswer": "I am busier than him ."
+    },
+    {
+      "id": "g2-u7-pp-001",
+      "type": "paraphrase",
+      "japanese": "彼は私より背が高いです。",
+      "sentence": "He has more height than me.",
+      "targetSentence": "He is ____ than me.",
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "intermediate",
+      "explanation": "比較級tallerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【taller】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より背が高いです。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が高いです。」に合いません。\n\n❌ 【tallest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が高いです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-002",
+      "type": "paraphrase",
+      "japanese": "これはあれより大きいです。",
+      "sentence": "This has more size than that.",
+      "targetSentence": "This is ____ than that.",
+      "choices": [
+        "bigger",
+        "big",
+        "biggest"
+      ],
+      "correctAnswer": "bigger",
+      "difficulty": "intermediate",
+      "explanation": "比較級biggerで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bigger】 ← 正解\n  ✓ 正解理由: 日本語訳「これはあれより大きいです。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより大きいです。」に合いません。\n\n❌ 【biggest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより大きいです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-003",
+      "type": "paraphrase",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "sentence": "This book has more interest than that one.",
+      "targetSentence": "This book is ____ interesting than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "more interestingで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この本はあの本よりおもしろいです。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろいです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-004",
+      "type": "paraphrase",
+      "japanese": "これはクラスで最も大きいです。",
+      "sentence": "This has the most size in the class.",
+      "targetSentence": "This is the ____ in the class.",
+      "choices": [
+        "biggest",
+        "big",
+        "bigger"
+      ],
+      "correctAnswer": "biggest",
+      "difficulty": "intermediate",
+      "explanation": "最上級biggestで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【biggest】 ← 正解\n  ✓ 正解理由: 日本語訳「これはクラスで最も大きいです。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大きいです。」に合いません。\n\n❌ 【bigger】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大きいです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-005",
+      "type": "paraphrase",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "sentence": "He has the most height of the three.",
+      "targetSentence": "He is the ____ of the three.",
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級tallestです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【tallest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は3人の中で最も背が高いです。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3人の中で最も背が高いです。」に合いません。\n\n❌ 【taller】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3人の中で最も背が高いです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-006",
+      "type": "paraphrase",
+      "japanese": "これは最もおもしろい本です。",
+      "sentence": "This book has the most interest.",
+      "targetSentence": "This is the ____ interesting book.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "最上級most interestingです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最もおもしろい本です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろい本です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろい本です。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-007",
+      "type": "paraphrase",
+      "japanese": "彼女は私より若いです。",
+      "sentence": "She has less age than me.",
+      "targetSentence": "She is ____ than me.",
+      "choices": [
+        "younger",
         "young",
-        "."
+        "youngest"
       ],
+      "correctAnswer": "younger",
       "difficulty": "intermediate",
-      "explanation": "whenは「~のとき」という時を表します。\n\n「私は若いとき、よく泳ぎました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
+      "explanation": "比較級youngerで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【younger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より若いです。」から、この形が適切です。\n\n❌ 【young】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若いです。」に合いません。\n\n❌ 【youngest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若いです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-so-015",
-      "type": "sentenceOrdering",
-      "japanese": "暑かったら、窓を開けてください。",
-      "words": [
-        "Please",
-        "open",
-        "the",
-        "window",
-        "if",
-        "it",
-        "is",
-        "hot",
-        "."
-      ],
-      "correctOrder": [
-        "Please",
-        "open",
-        "the",
-        "window",
-        "if",
-        "it",
-        "is",
-        "hot",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "ifは条件を表す接続詞です。\n\n「暑かったら、窓を開けてください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-016",
-      "type": "sentenceOrdering",
-      "japanese": "私は眠いので、早く寝ます。",
-      "words": [
-        "I",
-        "will",
-        "go",
-        "to",
-        "bed",
-        "early",
-        "because",
-        "I",
-        "am",
-        "sleepy",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "will",
-        "go",
-        "to",
-        "bed",
-        "early",
-        "because",
-        "I",
-        "am",
-        "sleepy",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "becauseは理由を表します。\n\n「私は眠いので、早く寝ます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-017",
-      "type": "sentenceOrdering",
-      "japanese": "私は彼が来ると思います。",
-      "words": [
-        "I",
-        "think",
-        "that",
-        "he",
-        "will",
-        "come",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "think",
-        "that",
-        "he",
-        "will",
-        "come",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "thatは「~ということ」を表します。\n\n「私は彼が来ると思います。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-018",
-      "type": "sentenceOrdering",
-      "japanese": "学校が終わったら、遊びましょう。",
-      "words": [
-        "Let's",
-        "play",
-        "when",
-        "school",
-        "is",
-        "over",
-        "."
-      ],
-      "correctOrder": [
-        "Let's",
-        "play",
-        "when",
-        "school",
-        "is",
-        "over",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "whenは時を表します。\n\n「学校が終わったら、遊びましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-019",
-      "type": "sentenceOrdering",
-      "japanese": "雨が降れば、試合は中止です。",
-      "words": [
-        "The",
-        "game",
-        "will",
-        "be",
-        "canceled",
-        "if",
-        "it",
-        "rains",
-        "."
-      ],
-      "correctOrder": [
-        "The",
-        "game",
-        "will",
-        "be",
-        "canceled",
-        "if",
-        "it",
-        "rains",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "ifは条件を表します。\n\n「雨が降れば、試合は中止です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-020",
-      "type": "sentenceOrdering",
-      "japanese": "私は頭が痛いので、薬を飲みました。",
-      "words": [
-        "I",
-        "took",
-        "medicine",
-        "because",
-        "I",
-        "had",
-        "a",
-        "headache",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "took",
-        "medicine",
-        "because",
-        "I",
-        "had",
-        "a",
-        "headache",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "becauseは理由を表す接続詞です。\n\n「私は頭が痛いので、薬を飲みました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-so-021",
-      "type": "sentenceOrdering",
-      "japanese": "彼が帰ってきたとき、私は驚きました。",
-      "words": [
-        "I",
-        "was",
-        "surprised",
-        "when",
-        "he",
-        "came",
-        "back",
-        "."
-      ],
-      "correctOrder": [
-        "I",
-        "was",
-        "surprised",
-        "when",
-        "he",
-        "came",
-        "back",
-        "."
-      ],
-      "difficulty": "intermediate",
-      "explanation": "whenは「~したとき」という時を表します。\n\n「彼が帰ってきたとき、私は驚きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○",
-      "hint": "接続詞の位置に注意"
-    },
-    {
-      "id": "g2-u6-pp-001",
+      "id": "g2-u7-pp-008",
       "type": "paraphrase",
-      "japanese": "私は疲れているとき、早く寝ます。",
-      "sentence": "I go to bed early at the time I am tired.",
-      "targetSentence": "I go to bed early ____ I am tired.",
+      "japanese": "これはあれより安いです。",
+      "sentence": "This has a lower price than that.",
+      "targetSentence": "This is ____ than that.",
       "choices": [
-        "when",
-        "if",
-        "because"
+        "cheaper",
+        "cheap",
+        "cheapest"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "cheaper",
       "difficulty": "intermediate",
-      "explanation": "at the timeをwhenで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "比較級cheaperです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cheaper】 ← 正解\n  ✓ 正解理由: 日本語訳「これはあれより安いです。」から、この形が適切です。\n\n❌ 【cheap】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより安いです。」に合いません。\n\n❌ 【cheapest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはあれより安いです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-002",
+      "id": "g2-u7-pp-009",
       "type": "paraphrase",
-      "japanese": "雨が降ったら、家にいます。",
-      "sentence": "In case it rains, I will stay home.",
-      "targetSentence": "I will stay home ____ it rains.",
+      "japanese": "彼は最も速く走ります。",
+      "sentence": "He has the highest speed.",
+      "targetSentence": "He runs the ____.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "fastest",
+        "fast",
+        "faster"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "fastest",
       "difficulty": "intermediate",
-      "explanation": "in caseをifで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "最上級fastestで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【fastest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は最も速く走ります。」から、この形が適切です。\n\n❌ 【fast】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も速く走ります。」に合いません。\n\n❌ 【faster】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も速く走ります。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-003",
+      "id": "g2-u7-pp-010",
       "type": "paraphrase",
-      "japanese": "私は忙しいので、行けません。",
-      "sentence": "I can't go due to being busy.",
-      "targetSentence": "I can't go ____ I am busy.",
+      "japanese": "この問題はあれより難しいです。",
+      "sentence": "This problem has more difficulty than that one.",
+      "targetSentence": "This problem is ____ difficult than that one.",
       "choices": [
-        "because",
-        "when",
-        "if"
+        "more",
+        "most",
+        "much"
       ],
-      "correctAnswer": "because",
+      "correctAnswer": "more",
       "difficulty": "intermediate",
-      "explanation": "due toをbecauseで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "more difficultで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この問題はあれより難しいです。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難しいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難しいです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-004",
+      "id": "g2-u7-pp-011",
       "type": "paraphrase",
-      "japanese": "彼女が来たとき、私は料理をしていました。",
-      "sentence": "I was cooking at the time she came.",
-      "targetSentence": "I was cooking ____ she came.",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "sentence": "She has the most popularity in the class.",
+      "targetSentence": "She is the ____ popular in the class.",
       "choices": [
-        "when",
-        "if",
-        "that"
+        "most",
+        "more",
+        "much"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "most",
       "difficulty": "intermediate",
-      "explanation": "at the timeをwhenで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "最上級most popularです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はクラスで最も人気があります。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気があります。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-005",
+      "id": "g2-u7-pp-012",
       "type": "paraphrase",
-      "japanese": "晴れたら、公園に行きましょう。",
-      "sentence": "Let's go to the park in case it is sunny.",
-      "targetSentence": "Let's go to the park ____ it is sunny.",
+      "japanese": "私は彼より年上です。",
+      "sentence": "I have more age than him.",
+      "targetSentence": "I am ____ than him.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "older",
+        "old",
+        "oldest"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "older",
       "difficulty": "intermediate",
-      "explanation": "in caseをifで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "比較級olderで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【older】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼より年上です。」から、この形が適切です。\n\n❌ 【old】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年上です。」に合いません。\n\n❌ 【oldest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年上です。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-006",
+      "id": "g2-u7-pp-013",
       "type": "paraphrase",
-      "japanese": "私は疲れているので、休みたいです。",
-      "sentence": "I want to rest due to being tired.",
-      "targetSentence": "I want to rest ____ I am tired.",
+      "japanese": "これは最も高価な車です。",
+      "sentence": "This car has the highest price.",
+      "targetSentence": "This is the ____ expensive car.",
       "choices": [
-        "because",
-        "when",
-        "if"
+        "most",
+        "more",
+        "much"
       ],
-      "correctAnswer": "because",
+      "correctAnswer": "most",
       "difficulty": "intermediate",
-      "explanation": "due toをbecauseで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "最上級most expensiveです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も高価な車です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も高価な車です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も高価な車です。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-007",
+      "id": "g2-u7-pp-014",
       "type": "paraphrase",
-      "japanese": "私は彼が正しいと思います。",
-      "sentence": "I think he is right.",
-      "targetSentence": "I think ____ he is right.",
+      "japanese": "彼は私より強いです。",
+      "sentence": "He has more strength than me.",
+      "targetSentence": "He is ____ than me.",
       "choices": [
-        "that",
-        "when",
-        "if"
+        "stronger",
+        "strong",
+        "strongest"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "stronger",
       "difficulty": "intermediate",
-      "explanation": "名詞節を導くthatを補います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "比較級strongerです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【stronger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より強いです。」から、この形が適切です。\n\n❌ 【strong】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より強いです。」に合いません。\n\n❌ 【strongest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より強いです。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-008",
+      "id": "g2-u7-pp-015",
       "type": "paraphrase",
-      "japanese": "帰宅したら、宿題をします。",
-      "sentence": "I will do my homework after I get home.",
-      "targetSentence": "I will do my homework ____ I get home.",
+      "japanese": "これは最も小さい箱です。",
+      "sentence": "This box has the least size.",
+      "targetSentence": "This is the ____ box.",
       "choices": [
-        "when",
-        "if",
-        "because"
+        "smallest",
+        "small",
+        "smaller"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "smallest",
       "difficulty": "intermediate",
-      "explanation": "afterをwhenで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "最上級smallestで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【smallest】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最も小さい箱です。」から、この形が適切です。\n\n❌ 【small】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も小さい箱です。」に合いません。\n\n❌ 【smaller】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最も小さい箱です。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-009",
+      "id": "g2-u7-pp-016",
       "type": "paraphrase",
-      "japanese": "寒かったら、コートを着てください。",
-      "sentence": "Please wear a coat in case it is cold.",
-      "targetSentence": "Please wear a coat ____ it is cold.",
+      "japanese": "彼女は私より親切です。",
+      "sentence": "She has more kindness than me.",
+      "targetSentence": "She is ____ than me.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "kinder",
+        "kind",
+        "kindest"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "kinder",
       "difficulty": "intermediate",
-      "explanation": "in caseをifで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "比較級kinderです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【kinder】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より親切です。」から、この形が適切です。\n\n❌ 【kind】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。\n\n❌ 【kindest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より親切です。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-010",
+      "id": "g2-u7-pp-017",
       "type": "paraphrase",
-      "japanese": "私は病気なので、学校を休みました。",
-      "sentence": "I was absent from school due to being sick.",
-      "targetSentence": "I was absent from school ____ I was sick.",
+      "japanese": "これはより美しい花です。",
+      "sentence": "This flower has more beauty.",
+      "targetSentence": "This is a ____ beautiful flower.",
       "choices": [
-        "because",
-        "when",
-        "if"
+        "more",
+        "most",
+        "much"
       ],
-      "correctAnswer": "because",
+      "correctAnswer": "more",
       "difficulty": "intermediate",
-      "explanation": "due toをbecauseで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "more beautifulで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「これはより美しい花です。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはより美しい花です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはより美しい花です。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-011",
+      "id": "g2-u7-pp-018",
       "type": "paraphrase",
-      "japanese": "彼女が来るとき、私に教えてください。",
-      "sentence": "Please tell me at the time she comes.",
-      "targetSentence": "Please tell me ____ she comes.",
+      "japanese": "彼は最も賢い生徒です。",
+      "sentence": "He has the most intelligence.",
+      "targetSentence": "He is the ____ student.",
       "choices": [
-        "when",
-        "if",
-        "that"
+        "smartest",
+        "smart",
+        "smarter"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "smartest",
       "difficulty": "intermediate",
-      "explanation": "at the timeをwhenで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
+      "explanation": "最上級smartestです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【smartest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は最も賢い生徒です。」から、この形が適切です。\n\n❌ 【smart】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も賢い生徒です。」に合いません。\n\n❌ 【smarter】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も賢い生徒です。」に合いません。",
+      "hint": "比較級・最上級で言い換え"
     },
     {
-      "id": "g2-u6-pp-012",
-      "type": "paraphrase",
-      "japanese": "時間があれば、手伝います。",
-      "sentence": "I will help you in case I have time.",
-      "targetSentence": "I will help you ____ I have time.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "intermediate",
-      "explanation": "in caseをifで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
-    },
-    {
-      "id": "g2-u6-pp-013",
-      "type": "paraphrase",
-      "japanese": "私は彼女が親切だと知っています。",
-      "sentence": "I know she is kind.",
-      "targetSentence": "I know ____ she is kind.",
-      "choices": [
-        "that",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "名詞節を導くthatを補います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
-    },
-    {
-      "id": "g2-u6-pp-014",
-      "type": "paraphrase",
-      "japanese": "私は若いとき、よく泳ぎました。",
-      "sentence": "I often swam during the time I was young.",
-      "targetSentence": "I often swam ____ I was young.",
-      "choices": [
-        "when",
-        "if",
-        "because"
-      ],
-      "correctAnswer": "when",
-      "difficulty": "intermediate",
-      "explanation": "during the timeをwhenで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
-    },
-    {
-      "id": "g2-u6-pp-015",
-      "type": "paraphrase",
-      "japanese": "暑かったら、窓を開けてください。",
-      "sentence": "Please open the window in case it is hot.",
-      "targetSentence": "Please open the window ____ it is hot.",
-      "choices": [
-        "if",
-        "when",
-        "because"
-      ],
-      "correctAnswer": "if",
-      "difficulty": "intermediate",
-      "explanation": "in caseをifで言い換えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
-    },
-    {
-      "id": "g2-u6-pp-016",
-      "type": "paraphrase",
-      "japanese": "私は眠いので、早く寝ます。",
-      "sentence": "I will go to bed early due to being sleepy.",
-      "targetSentence": "I will go to bed early ____ I am sleepy.",
-      "choices": [
-        "because",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "because",
-      "difficulty": "intermediate",
-      "explanation": "due toをbecauseで表現します。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
-    },
-    {
-      "id": "g2-u6-pp-017",
-      "type": "paraphrase",
-      "japanese": "私は彼が来ると思います。",
-      "sentence": "I think he will come.",
-      "targetSentence": "I think ____ he will come.",
-      "choices": [
-        "that",
-        "when",
-        "if"
-      ],
-      "correctAnswer": "that",
-      "difficulty": "intermediate",
-      "explanation": "名詞節を導くthatを補います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:",
-      "hint": "接続詞で言い換え"
-    },
-    {
-      "id": "g2-u6-vf-001",
+      "id": "g2-u7-vf-001",
       "type": "verbForm",
-      "japanese": "私は疲れている____、早く寝ます。",
-      "sentence": "I go to bed early ____ I am tired.",
+      "japanese": "彼は私より背が____です。",
+      "sentence": "He is ____ than me.",
       "choices": [
-        "when",
-        "if",
-        "because"
+        "taller",
+        "tall",
+        "tallest"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "taller",
       "difficulty": "intermediate",
-      "explanation": "「~とき」という時を表すwhenが適切です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "thanがあるので比較級tallerが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【taller】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私より背が____です。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が____です。」に合いません。\n\n❌ 【tallest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私より背が____です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-002",
+      "id": "g2-u7-vf-002",
       "type": "verbForm",
-      "japanese": "雨が降____、家にいます。",
-      "sentence": "I will stay home ____ it rains.",
+      "japanese": "これはクラスで最も大き____です。",
+      "sentence": "This is the ____ in the class.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "biggest",
+        "big",
+        "bigger"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "biggest",
       "difficulty": "intermediate",
-      "explanation": "条件「もし~ならば」を表すifです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "theとinがあるので最上級biggestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【biggest】 ← 正解\n  ✓ 正解理由: 日本語訳「これはクラスで最も大き____です。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大き____です。」に合いません。\n\n❌ 【bigger】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはクラスで最も大き____です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-003",
+      "id": "g2-u7-vf-003",
       "type": "verbForm",
-      "japanese": "私は忙しい____、行けません。",
-      "sentence": "I can't go ____ I am busy.",
+      "japanese": "この本はあの本よりおもしろ____です。",
+      "sentence": "This book is ____ interesting than that one.",
       "choices": [
-        "because",
-        "when",
-        "if"
+        "more",
+        "most",
+        "much"
       ],
-      "correctAnswer": "because",
+      "correctAnswer": "more",
       "difficulty": "intermediate",
-      "explanation": "理由「~なので」を表すbecauseです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "thanがあるので比較級moreです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この本はあの本よりおもしろ____です。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろ____です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本はあの本よりおもしろ____です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-004",
+      "id": "g2-u7-vf-004",
       "type": "verbForm",
-      "japanese": "私は彼が正しい____思います。",
-      "sentence": "I think ____ he is right.",
+      "japanese": "彼は3人の中で最も背が高____です。",
+      "sentence": "He is the ____ of the three.",
       "choices": [
-        "that",
-        "when",
-        "if"
+        "tallest",
+        "tall",
+        "taller"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "tallest",
       "difficulty": "intermediate",
-      "explanation": "名詞節を導くthatが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "of the threeなので最上級tallestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【tallest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は3人の中で最も背が高____です。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3人の中で最も背が高____です。」に合いません。\n\n❌ 【taller】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3人の中で最も背が高____です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-005",
+      "id": "g2-u7-vf-005",
       "type": "verbForm",
-      "japanese": "晴れ____、公園に行きましょう。",
-      "sentence": "Let's go to the park ____ it is sunny.",
+      "japanese": "これは最もおもしろ____本です。",
+      "sentence": "This is the ____ interesting book.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "most",
+        "more",
+        "much"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "most",
       "difficulty": "intermediate",
-      "explanation": "条件を表すifが適切です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "theがあるので最上級mostです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「これは最もおもしろ____本です。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろ____本です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは最もおもしろ____本です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-006",
+      "id": "g2-u7-vf-006",
       "type": "verbForm",
-      "japanese": "彼女が来____、私は料理をしていました。",
-      "sentence": "I was cooking ____ she came.",
+      "japanese": "彼女は私より若____です。",
+      "sentence": "She is ____ than me.",
       "choices": [
-        "when",
-        "if",
-        "that"
+        "younger",
+        "young",
+        "youngest"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "younger",
       "difficulty": "intermediate",
-      "explanation": "時を表すwhenです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "比較級youngerが必要です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【younger】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は私より若____です。」から、この形が適切です。\n\n❌ 【young】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若____です。」に合いません。\n\n❌ 【youngest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は私より若____です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-007",
+      "id": "g2-u7-vf-007",
       "type": "verbForm",
-      "japanese": "私は病気____、学校を休みました。",
-      "sentence": "I was absent from school ____ I was sick.",
+      "japanese": "彼は最も速く走り____。",
+      "sentence": "He runs the ____.",
       "choices": [
-        "because",
-        "when",
-        "if"
+        "fastest",
+        "fast",
+        "faster"
       ],
-      "correctAnswer": "because",
+      "correctAnswer": "fastest",
       "difficulty": "intermediate",
-      "explanation": "理由を表すbecauseが適切です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "theがあるので最上級fastestです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【fastest】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は最も速く走り____。」から、この形が適切です。\n\n❌ 【fast】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も速く走り____。」に合いません。\n\n❌ 【faster】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は最も速く走り____。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-008",
+      "id": "g2-u7-vf-008",
       "type": "verbForm",
-      "japanese": "私は彼女が親切____知っています。",
-      "sentence": "I know ____ she is kind.",
+      "japanese": "この問題はあれより難し____です。",
+      "sentence": "This problem is ____ difficult than that one.",
       "choices": [
-        "that",
-        "when",
-        "if"
+        "more",
+        "most",
+        "much"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "more",
       "difficulty": "intermediate",
-      "explanation": "名詞節を導くthatです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "thanがあるので比較級moreです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「この問題はあれより難し____です。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難し____です。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この問題はあれより難し____です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-009",
+      "id": "g2-u7-vf-009",
       "type": "verbForm",
-      "japanese": "時間があ____、手伝います。",
-      "sentence": "I will help you ____ I have time.",
+      "japanese": "彼女はクラスで最も人気が____ます。",
+      "sentence": "She is the ____ popular in the class.",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "most",
+        "more",
+        "much"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "most",
       "difficulty": "intermediate",
-      "explanation": "条件「もし~ならば」を表すifです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "theとin the classがあるので最上級mostです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【most】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はクラスで最も人気が____ます。」から、この形が適切です。\n\n❌ 【more】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気が____ます。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はクラスで最も人気が____ます。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-vf-010",
+      "id": "g2-u7-vf-010",
       "type": "verbForm",
-      "japanese": "私は若い____、よく泳ぎました。",
-      "sentence": "I often swam ____ I was young.",
+      "japanese": "私は彼より年____です。",
+      "sentence": "I am ____ than him.",
       "choices": [
-        "when",
-        "if",
-        "because"
+        "older",
+        "old",
+        "oldest"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "older",
       "difficulty": "intermediate",
-      "explanation": "「~のとき」という時を表すwhenです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います",
-      "hint": "適切な接続詞を選びましょう"
+      "explanation": "thanがあるので比較級olderです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【older】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼より年____です。」から、この形が適切です。\n\n❌ 【old】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年____です。」に合いません。\n\n❌ 【oldest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼より年____です。」に合いません。",
+      "hint": "文脈から比較級か最上級かを判断"
     },
     {
-      "id": "g2-u6-conv-001",
+      "id": "g2-u7-conv-001",
       "type": "conversation",
-      "japanese": "A: いつ宿題をしますか? B: 帰宅したら、します。",
-      "conversation": [
-        "A: When will you do your homework?",
-        "B: I will do it ____ I get home."
-      ],
+      "japanese": "A: 彼とあなたはどちらが背が高いですか? B: 彼の方が背が高いです。",
       "choices": [
-        "when",
-        "if",
-        "because"
+        "taller",
+        "tall",
+        "tallest"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "taller",
       "difficulty": "beginner",
-      "explanation": "whenは「~するとき」を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: When will you do your homework?",
-      "hint": "文脈に合った接続詞を選びましょう"
+      "explanation": "比較級tallerを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is taller, he or you?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【taller】 ← 正解\n  ✓ 正解理由: 日本語訳「A: 彼とあなたはどちらが背が高いですか? B: 彼の方が背が高いです。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 彼とあなたはどちらが背が高いですか? B: 彼の方が背が高いです。」に合いません。\n\n❌ 【tallest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 彼とあなたはどちらが背が高いですか? B: 彼の方が背が高いです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: Who is taller, he or you?",
+        "B: He is ____ than me."
+      ]
     },
     {
-      "id": "g2-u6-conv-002",
+      "id": "g2-u7-conv-002",
       "type": "conversation",
-      "japanese": "A: なぜ遅れたのですか? B: 渋滞していたからです。",
-      "conversation": [
-        "A: Why were you late?",
-        "B: ____ there was traffic."
-      ],
+      "japanese": "A: これとあれはどちらが大きいですか? B: これの方が大きいです。",
       "choices": [
-        "Because",
-        "When",
-        "If"
+        "bigger",
+        "big",
+        "biggest"
       ],
-      "correctAnswer": "Because",
+      "correctAnswer": "bigger",
       "difficulty": "beginner",
-      "explanation": "becauseは理由を表す接続詞です。\n\nが正解です。\n\n【文脈理解】\n場面: A: Why were you late?",
-      "hint": "文脈に合った接続詞を選びましょう"
+      "explanation": "比較級biggerです。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is bigger, this or that?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bigger】 ← 正解\n  ✓ 正解理由: 日本語訳「A: これとあれはどちらが大きいですか? B: これの方が大きいです。」から、この形が適切です。\n\n❌ 【big】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: これとあれはどちらが大きいですか? B: これの方が大きいです。」に合いません。\n\n❌ 【biggest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: これとあれはどちらが大きいですか? B: これの方が大きいです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: Which is bigger, this or that?",
+        "B: This is ____ than that."
+      ]
     },
     {
-      "id": "g2-u6-conv-003",
+      "id": "g2-u7-conv-003",
       "type": "conversation",
-      "japanese": "A: 何を信じていますか? B: 努力は報われると信じています。",
-      "conversation": [
-        "A: What do you believe?",
-        "B: I believe ____ hard work pays off."
-      ],
+      "japanese": "A: クラスで誰が最も背が高いですか? B: 田中君が最も背が高いです。",
       "choices": [
-        "that",
-        "when",
-        "if"
+        "tallest",
+        "tall",
+        "taller"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "tallest",
       "difficulty": "beginner",
-      "explanation": "thatは名詞節を導きます。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you believe?",
-      "hint": "文脈に合った接続詞を選びましょう"
+      "explanation": "最上級tallestを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is the tallest in the class?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【tallest】 ← 正解\n  ✓ 正解理由: 日本語訳「A: クラスで誰が最も背が高いですか? B: 田中君が最も背が高いです。」から、この形が適切です。\n\n❌ 【tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: クラスで誰が最も背が高いですか? B: 田中君が最も背が高いです。」に合いません。\n\n❌ 【taller】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: クラスで誰が最も背が高いですか? B: 田中君が最も背が高いです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: Who is the tallest in the class?",
+        "B: Tanaka is the ____."
+      ]
     },
     {
-      "id": "g2-u6-conv-004",
+      "id": "g2-u7-conv-004",
       "type": "conversation",
-      "japanese": "A: 雨が降ったらどうしますか? B: 家にいます。",
-      "conversation": [
-        "A: What will you do if it rains?",
-        "B: I will stay home ____ it rains."
-      ],
+      "japanese": "A: これとあれはどちらがおもしろいですか? B: これの方がおもしろいです。",
       "choices": [
-        "if",
-        "when",
-        "because"
+        "more",
+        "most",
+        "much"
       ],
-      "correctAnswer": "if",
+      "correctAnswer": "more",
       "difficulty": "beginner",
-      "explanation": "ifは条件を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: What will you do if it rains?",
-      "hint": "文脈に合った接続詞を選びましょう"
+      "explanation": "比較級moreを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is more interesting, this or that?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【more】 ← 正解\n  ✓ 正解理由: 日本語訳「A: これとあれはどちらがおもしろいですか? B: これの方がおもしろいです。」から、この形が適切です。\n\n❌ 【most】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: これとあれはどちらがおもしろいですか? B: これの方がおもしろいです。」に合いません。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: これとあれはどちらがおもしろいですか? B: これの方がおもしろいです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: Which is more interesting, this or that?",
+        "B: This is ____ interesting than that."
+      ]
     },
     {
-      "id": "g2-u6-conv-005",
+      "id": "g2-u7-conv-005",
       "type": "conversation",
-      "japanese": "A: いつ日本に来ましたか? B: 子供のときに来ました。",
-      "conversation": [
-        "A: When did you come to Japan?",
-        "B: I came here ____ I was a child."
-      ],
+      "japanese": "A: 3つの中でどれが最も小さいですか? B: これが最も小さいです。",
       "choices": [
-        "when",
-        "if",
-        "because"
+        "smallest",
+        "small",
+        "smaller"
       ],
-      "correctAnswer": "when",
+      "correctAnswer": "smallest",
       "difficulty": "intermediate",
-      "explanation": "whenは「~のとき」という時を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: When did you come to Japan?",
-      "hint": "文脈に合った接続詞を選びましょう"
+      "explanation": "最上級smallestです。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is the smallest of the three?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【smallest】 ← 正解\n  ✓ 正解理由: 日本語訳「A: 3つの中でどれが最も小さいですか? B: これが最も小さいです。」から、この形が適切です。\n\n❌ 【small】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 3つの中でどれが最も小さいですか? B: これが最も小さいです。」に合いません。\n\n❌ 【smaller】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 3つの中でどれが最も小さいですか? B: これが最も小さいです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: Which is the smallest of the three?",
+        "B: This is the ____."
+      ]
     },
     {
-      "id": "g2-u6-conv-006",
+      "id": "g2-u7-conv-006",
       "type": "conversation",
-      "japanese": "A: なぜ英語を勉強しているのですか? B: 将来役立つと思うからです。",
-      "conversation": [
-        "A: Why are you studying English?",
-        "B: ____ I think it will be useful in the future."
-      ],
+      "japanese": "A: 彼女とあなたはどちらが若いですか? B: 彼女の方が若いです。",
       "choices": [
-        "Because",
-        "When",
-        "If"
+        "younger",
+        "young",
+        "youngest"
       ],
-      "correctAnswer": "Because",
+      "correctAnswer": "younger",
       "difficulty": "intermediate",
-      "explanation": "becauseは理由を表します。\n\nが正解です。\n\n【文脈理解】\n場面: A: Why are you studying English?",
-      "hint": "文脈に合った接続詞を選びましょう"
+      "explanation": "比較級youngerを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Who is younger, she or you?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【younger】 ← 正解\n  ✓ 正解理由: 日本語訳「A: 彼女とあなたはどちらが若いですか? B: 彼女の方が若いです。」から、この形が適切です。\n\n❌ 【young】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 彼女とあなたはどちらが若いですか? B: 彼女の方が若いです。」に合いません。\n\n❌ 【youngest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 彼女とあなたはどちらが若いですか? B: 彼女の方が若いです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: Who is younger, she or you?",
+        "B: She is ____ than me."
+      ]
     },
     {
-      "id": "g2-u6-conv-007",
+      "id": "g2-u7-conv-007",
       "type": "conversation",
-      "japanese": "A: 何を思いますか? B: 彼は親切だと思います。",
-      "conversation": [
-        "A: What do you think?",
-        "B: I think ____ he is kind."
-      ],
+      "japanese": "A: 世界で最も高い山は何ですか? B: エベレストが最も高いです。",
       "choices": [
-        "that",
-        "when",
-        "if"
+        "highest",
+        "high",
+        "higher"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": "highest",
       "difficulty": "intermediate",
-      "explanation": "thatは名詞節を導く接続詞です。\n\nが正解です。\n\n【文脈理解】\n場面: A: What do you think?",
-      "hint": "文脈に合った接続詞を選びましょう"
+      "explanation": "最上級highestです。\n\nが正解です。\n\n【文脈理解】\n場面: A: What is the highest mountain in the world?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【highest】 ← 正解\n  ✓ 正解理由: 日本語訳「A: 世界で最も高い山は何ですか? B: エベレストが最も高いです。」から、この形が適切です。\n\n❌ 【high】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 世界で最も高い山は何ですか? B: エベレストが最も高いです。」に合いません。\n\n❌ 【higher】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: 世界で最も高い山は何ですか? B: エベレストが最も高いです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: What is the highest mountain in the world?",
+        "B: Mt. Everest is the ____."
+      ]
+    },
+    {
+      "id": "g2-u7-conv-008",
+      "type": "conversation",
+      "japanese": "A: これとあれはどちらが安いですか? B: あれの方が安いです。",
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "intermediate",
+      "explanation": "比較級cheaperを使います。\n\nが正解です。\n\n【文脈理解】\n場面: A: Which is cheaper, this or that?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cheaper】 ← 正解\n  ✓ 正解理由: 日本語訳「A: これとあれはどちらが安いですか? B: あれの方が安いです。」から、この形が適切です。\n\n❌ 【cheap】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: これとあれはどちらが安いですか? B: あれの方が安いです。」に合いません。\n\n❌ 【cheapest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「A: これとあれはどちらが安いですか? B: あれの方が安いです。」に合いません。",
+      "hint": "質問から比較級か最上級かを判断",
+      "dialogue": [
+        "A: Which is cheaper, this or that?",
+        "B: That is ____ than this."
+      ]
     }
   ]
 }
