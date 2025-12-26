@@ -1637,23 +1637,68 @@ function ComprehensiveReadingView({
                       )}
 
                       <div className="flex flex-wrap gap-1.5 text-sm">
-                        {selectedSentenceDetails.grammarAnalysis
-                          .filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word))
-                          .map((analysis, idx) => (
-                            <div
-                              key={idx}
-                              className="inline-flex flex-col items-center"
-                              title={analysis.description}
-                            >
-                              <span className="font-medium text-base">{analysis.word}</span>
-                              <span
-                                className="text-xs grammar-tag-label mt-0.5"
-                                data-tag={analysis.tag}
-                              >
-                                {getGrammarTagLabel(analysis.tag)}
-                              </span>
-                            </div>
-                          ))}
+                        {(() => {
+                          const words = selectedSentenceDetails.grammarAnalysis.map(a => a.word);
+                          const phrasalExpressions = detectPhrasalExpressions(words);
+                          
+                          // 熟語の単語インデックスを収集
+                          const phrasalWordIndices = new Set<number>();
+                          phrasalExpressions.forEach(expr => {
+                            let startIdx = 0;
+                            while (startIdx < words.length) {
+                              const found = words.slice(startIdx).findIndex((w, i) => 
+                                expr.words.every((ew, ei) => words[startIdx + i + ei]?.toLowerCase() === ew.toLowerCase())
+                              );
+                              if (found !== -1) {
+                                const actualIdx = startIdx + found;
+                                expr.words.forEach((_, i) => phrasalWordIndices.add(actualIdx + i));
+                                break;
+                              }
+                              startIdx++;
+                            }
+                          });
+                          
+                          // 句の検出（前置詞句、副詞句など）
+                          const phrases = new Set<number>();
+                          selectedSentenceDetails.grammarAnalysis.forEach((analysis, idx) => {
+                            if (analysis.tag === 'Prep' || analysis.tag === 'Adv') {
+                              phrases.add(idx);
+                              // 次の単語も句に含める（前置詞+名詞など）
+                              if (idx + 1 < selectedSentenceDetails.grammarAnalysis.length) {
+                                phrases.add(idx + 1);
+                              }
+                            }
+                          });
+                          
+                          return selectedSentenceDetails.grammarAnalysis
+                            .filter((a) => !/^[.,!?;:\-—–"'()]$/.test(a.word))
+                            .map((analysis, idx) => {
+                              const isPhrasal = phrasalWordIndices.has(idx);
+                              const isPhrase = phrases.has(idx);
+                              
+                              return (
+                                <div
+                                  key={idx}
+                                  className="inline-flex flex-col items-center"
+                                  title={analysis.description}
+                                >
+                                  <span className={`font-medium text-base ${
+                                    isPhrasal ? 'border-b-2 border-yellow-500' : ''
+                                  } ${
+                                    isPhrase ? 'px-1' : ''
+                                  }`}>
+                                    {isPhrase && '＜'}{analysis.word}{isPhrase && '＞'}
+                                  </span>
+                                  <span
+                                    className="text-xs grammar-tag-label mt-0.5"
+                                    data-tag={analysis.tag}
+                                  >
+                                    {getGrammarTagLabel(analysis.tag)}
+                                  </span>
+                                </div>
+                              );
+                            });
+                        })()}
                       </div>
 
                       {/* 記号は非表示（冗長なため） */}
@@ -1686,7 +1731,7 @@ function ComprehensiveReadingView({
                                   key={idx}
                                   className="inline-flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded border border-yellow-200"
                                 >
-                                  <span className="font-medium text-sm">{expr.words.join(' ')}</span>
+                                  <span className="font-medium text-sm border-b-2 border-yellow-600">{expr.words.join(' ')}</span>
                                   <span className="text-xs text-gray-600">{dictMeaning}</span>
                                   {onAddWordToCustomSet &&
                                     onRemoveWordFromCustomSet &&
