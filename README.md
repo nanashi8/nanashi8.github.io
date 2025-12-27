@@ -246,7 +246,42 @@ npm run test:smoke     # Fast DOM-based smoke test
 - ✅ Smoke test stable (DOM-based approach)
 
 **Documentation**: [SSOT Enforcement Guide](.aitk/instructions/ssot-enforcement.instructions.md)
+### Passage Quality Evaluation System ⭐ NEW
 
+**Mandatory for all passage creation/editing** (2025-12-27):
+
+All reading passages must be evaluated using our 6-criteria, 120-point quality system before commit:
+
+```bash
+python3 scripts/validate_passage_sentence_quality.py \
+  public/data/passages-phrase-learning/your-passage.json \
+  --vocab public/data/vocabulary/all-words.csv \
+  --output scripts/output/quality_report.json
+```
+
+#### 6 Evaluation Criteria (20 points each)
+
+1. **English Quality** - Grammar, spelling, structure
+2. **Structure Accuracy** - Main/subordinate clauses, phrase positioning
+3. **Clause Classification** - Noun/adjective/adverb clauses, phrase types
+4. **Literal Translation Accuracy** - Word order correspondence, grammar elements
+5. **Japanese Translation Quality** - Natural Japanese, style consistency
+6. **Vocabulary Usage Rate** ⭐ **CRITICAL** - Learning vocabulary coverage
+
+**Minimum Requirements**:
+
+- Beginner: 80/120 points average
+- Intermediate: 85/120 points average
+- Advanced: 90/120 points average
+- Vocabulary coverage: 60%+ (ideal: 80%+)
+
+**Important**: Reading comprehension is the ultimate test of vocabulary learning outcomes. Vocabulary usage rate is the most critical metric for passage quality.
+
+**Enforcement**: [Passage Quality Enforcement Instructions](.aitk/instructions/passage-quality-enforcement.instructions.md)
+
+**Documentation**: 
+- [Passage Quality Evaluation Guide](docs/quality/PASSAGE_SENTENCE_QUALITY_GUIDE.md)
+- [Passage Creation Guidelines](docs/guidelines/passage/PASSAGE_CREATION_GUIDELINES.md)
 ---
 
 ## �🚀 Key Features

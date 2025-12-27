@@ -151,7 +151,8 @@ export interface UserProgress {
   results: QuizResult[];
   statistics: Statistics;
   questionSetStats: {
-    [setId: string]: QuestionSetStats;
+    // key format: `${mode}:${questionSetId}` (legacy: `questionSetId` only)
+    [statsKey: string]: QuestionSetStats;
   };
   categoryStats: {
     [category: string]: {

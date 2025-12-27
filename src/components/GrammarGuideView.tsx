@@ -21,7 +21,7 @@ export const GrammarGuideView: React.FC = () => {
           }`}
         >
           <span className="hidden sm:inline">📍 前置詞</span>
-          <span className="sm:hidden">📍</span>
+          <span className="sm:hidden">前置詞</span>
         </button>
         <button
           onClick={() => setActiveTab('punctuation')}
@@ -32,7 +32,7 @@ export const GrammarGuideView: React.FC = () => {
           }`}
         >
           <span className="hidden sm:inline">✏️ 記号</span>
-          <span className="sm:hidden">✏️</span>
+          <span className="sm:hidden">記号</span>
         </button>
         <button
           onClick={() => setActiveTab('tips')}
@@ -43,7 +43,7 @@ export const GrammarGuideView: React.FC = () => {
           }`}
         >
           <span className="hidden sm:inline">💡 読解コツ</span>
-          <span className="sm:hidden">💡</span>
+          <span className="sm:hidden">読解コツ</span>
         </button>
       </div>
 

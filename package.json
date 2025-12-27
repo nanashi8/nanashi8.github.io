@@ -46,6 +46,8 @@
     "test:unit:watch": "vitest --config vitest.config.ts --watch",
     "test:unit:fast": "SKIP_API_TESTS=true vitest --config vitest.config.ts run --no-coverage",
     "test:unit:critical": "SKIP_API_TESTS=true vitest --config vitest.config.ts run tests/integration --no-coverage",
+    "test": "npm run test:unit:fast",
+    "verify:fast": "npm run typecheck && npm run test:unit:fast",
     "test:python": "python3 -m pytest scripts/test_*.py -q --tb=no",
     "test:python:fast": "python3 -m pytest scripts/test_*.py -q --tb=no -x",
     "test:all:fast": "npm run test:python:fast && npm run test:unit:critical",

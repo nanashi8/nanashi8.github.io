@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Question } from '../types';
+import { Question, QuestionSet } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import {
   DifficultyLevel,
@@ -40,6 +40,7 @@ import { RequeuingDebugPanel } from './RequeuingDebugPanel';
 
 interface SpellingViewProps {
   questions: Question[];
+  questionSets?: QuestionSet[];
   _categoryList: string[];
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
@@ -62,6 +63,7 @@ interface SpellingViewProps {
 
 function SpellingView({
   questions,
+  questionSets,
   _categoryList,
   selectedCategory,
   onCategoryChange,
@@ -842,11 +844,7 @@ function SpellingView({
                 }
                 estimatedSpeed={adaptiveLearning.state.personalParams?.learningSpeed}
                 dataSource={
-                  selectedDataSource === 'all'
-                    ? '全問題集'
-                    : selectedDataSource === 'junior'
-                      ? '高校受験'
-                      : '高校受験標準'
+                  questionSets?.find((qs) => qs.id === selectedDataSource)?.name || '高校受験総合'
                 }
                 category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
                 difficulty={selectedDifficulty}
@@ -867,6 +865,48 @@ function SpellingView({
                   ✕ 閉じる
                 </button>
               </div>
+
+              {onDataSourceChange && (
+                <div className="filter-group">
+                  <label htmlFor="data-source-select-spelling">📚 問題集:</label>
+                  <select
+                    id="data-source-select-spelling"
+                    value={selectedDataSource}
+                    onChange={(e) => onDataSourceChange(e.target.value as DataSource)}
+                    className="select-input"
+                  >
+                    {questionSets && questionSets.length > 0 ? (
+                      questionSets.map((set) => (
+                        <option key={set.id} value={set.id}>
+                          {set.name}
+                        </option>
+                      ))
+                    ) : (
+                      <>
+                        <option value="all">高校受験総合</option>
+                        <option value="intermediate">高校受験標準</option>
+                        <option value="junior">高校受験上級</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+              )}
+
+              {onWordPhraseFilterChange && (
+                <div className="filter-group">
+                  <label htmlFor="word-phrase-filter-spelling">📖 単語/熟語:</label>
+                  <select
+                    id="word-phrase-filter-spelling"
+                    value={selectedWordPhraseFilter}
+                    onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
+                    className="select-input"
+                  >
+                    <option value="all">すべて</option>
+                    <option value="words-only">単語のみ</option>
+                    <option value="phrases-only">熟語のみ</option>
+                  </select>
+                </div>
+              )}
 
               <div className="filter-group">
                 <label htmlFor="category-select-spelling">📚 関連分野:</label>
@@ -899,38 +939,6 @@ function SpellingView({
                   <option value="advanced">上級</option>
                 </select>
               </div>
-
-              {onDataSourceChange && (
-                <div className="filter-group">
-                  <label htmlFor="data-source-select-spelling">📚 問題集:</label>
-                  <select
-                    id="data-source-select-spelling"
-                    value={selectedDataSource}
-                    onChange={(e) => onDataSourceChange(e.target.value as DataSource)}
-                    className="select-input"
-                  >
-                    <option value="all">すべて</option>
-                    <option value="junior">高校受験</option>
-                    <option value="intermediate">高校受験標準</option>
-                  </select>
-                </div>
-              )}
-
-              {onWordPhraseFilterChange && (
-                <div className="filter-group">
-                  <label htmlFor="word-phrase-filter-spelling">📖 単語/熟語:</label>
-                  <select
-                    id="word-phrase-filter-spelling"
-                    value={selectedWordPhraseFilter}
-                    onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
-                    className="select-input"
-                  >
-                    <option value="all">すべて</option>
-                    <option value="words-only">単語のみ</option>
-                    <option value="phrases-only">熟語のみ</option>
-                  </select>
-                </div>
-              )}
 
               {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
                 <div className="filter-group">

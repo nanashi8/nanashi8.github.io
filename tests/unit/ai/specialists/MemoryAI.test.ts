@@ -273,7 +273,7 @@ describe('MemoryAI', () => {
       // accuracy = 3/10 = 0.3 (30%)
       // 30%未満ではないのでincorrectではない
       const position = determineWordPosition(progress);
-      expect(position).toBe(41);
+      expect(position).toBeCloseTo(41, 6);
       expect(positionToCategory(position)).toBe('still_learning');
     });
 

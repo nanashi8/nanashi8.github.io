@@ -1,5 +1,32 @@
 # Reading Passage Creation Guidelines
 
+## 🚨 CRITICAL: Mandatory Quality Evaluation
+
+**Before creating or editing any passage, you MUST:**
+
+1. ✅ Read the [Passage Quality Evaluation Guide](../../quality/PASSAGE_SENTENCE_QUALITY_GUIDE.md)
+2. ✅ Run quality evaluation script after editing
+3. ✅ Ensure minimum score requirements are met
+4. ✅ Save evaluation results with passage
+
+**Enforcement**: This is enforced by [.aitk/instructions/passage-quality-enforcement.instructions.md](../../../../.aitk/instructions/passage-quality-enforcement.instructions.md)
+
+**Quality Evaluation Command**:
+```bash
+python3 scripts/validate_passage_sentence_quality.py \
+  public/data/passages-phrase-learning/your-passage.json \
+  --vocab public/data/vocabulary/all-words.csv \
+  --output scripts/output/quality_report.json
+```
+
+**Minimum Requirements**:
+- Beginner: 80/120 points average
+- Intermediate: 85/120 points average  
+- Advanced: 90/120 points average
+- Vocabulary coverage: 60%+ (ideal: 80%+)
+
+---
+
 ## Overview
 
 This document provides comprehensive guidelines for creating, editing, and maintaining reading passages for the English learning platform. All passages must meet these standards before publication.

@@ -8,7 +8,6 @@ import { useState } from 'react';
 type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
-type DataSource = 'all' | 'junior' | 'intermediate' | 'advanced' | 'standard' | string;
 
 export function useQuizFilters() {
   const [categoryList, setCategoryList] = useState<string[]>([]);
@@ -16,18 +15,6 @@ export function useQuizFilters() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<WordPhraseFilter>('all');
   const [selectedPhraseTypeFilter, setSelectedPhraseTypeFilter] = useState<PhraseTypeFilter>('all');
-
-  const [selectedDataSource, setSelectedDataSource] = useState<DataSource>(() => {
-    const saved = localStorage.getItem('selectedDataSource');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch {
-        return 'all';
-      }
-    }
-    return 'all';
-  });
 
   return {
     categoryList,
@@ -40,7 +27,5 @@ export function useQuizFilters() {
     setSelectedWordPhraseFilter,
     selectedPhraseTypeFilter,
     setSelectedPhraseTypeFilter,
-    selectedDataSource,
-    setSelectedDataSource,
   };
 }
