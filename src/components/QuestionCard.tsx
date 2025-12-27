@@ -295,6 +295,7 @@ function QuestionCard({
       const target = e.target as HTMLElement;
       if (
         target.closest('.choice-btn') ||
+        target.closest('.choice-wrapper') ||
         target.closest('.toggle-details-btn') ||
         target.closest('.rating-btn') ||
         target.closest('.inline-nav-btn') ||
@@ -303,6 +304,8 @@ function QuestionCard({
         return;
       }
       touchStartX.current = e.touches[0].clientX;
+      // タップ（touchmove無し）でも swipeDistance が巨大にならないよう初期化
+      touchEndX.current = touchStartX.current;
       isTouchingRef.current = true;
     };
 
@@ -316,6 +319,11 @@ function QuestionCard({
         // タッチ開始が記録されていない場合は何もしない
         isTouchingRef.current = false;
         return;
+      }
+
+      // 念のため（古い状態や予期せぬケース）
+      if (touchEndX.current === 0) {
+        touchEndX.current = touchStartX.current;
       }
 
       const swipeDistance = touchStartX.current - touchEndX.current;

@@ -503,6 +503,30 @@ export async function addQuizResult(result: QuizResult): Promise<void> {
 }
 
 // 統計情報の更新
+function makeQuestionSetStatsKey(mode: QuizResult['mode'], questionSetId: string): string {
+  return `${mode}:${questionSetId}`;
+}
+
+function parseQuestionSetStatsKey(
+  statsKey: string
+): { mode: QuizResult['mode']; questionSetId: string } | null {
+  const idx = statsKey.indexOf(':');
+  if (idx <= 0 || idx >= statsKey.length - 1) return null;
+  const mode = statsKey.slice(0, idx) as QuizResult['mode'];
+  const questionSetId = statsKey.slice(idx + 1);
+
+  // 既知のmodeのみ許可（旧形式キーはnull）
+  const isKnownMode =
+    mode === 'translation' ||
+    mode === 'spelling' ||
+    mode === 'reading' ||
+    mode === 'grammar' ||
+    mode === 'memorization';
+  if (!isKnownMode) return null;
+
+  return { mode, questionSetId };
+}
+
 function updateStatistics(progress: UserProgress, result: QuizResult): void {
   const stats = progress.statistics;
 
@@ -526,8 +550,9 @@ function updateStatistics(progress: UserProgress, result: QuizResult): void {
   stats.streakDays = calculateStreakDays(stats.studyDates);
 
   // 問題集ごとの統計
-  if (!progress.questionSetStats[result.questionSetId]) {
-    progress.questionSetStats[result.questionSetId] = {
+  const statsKey = makeQuestionSetStatsKey(result.mode, result.questionSetId);
+  if (!progress.questionSetStats[statsKey]) {
+    progress.questionSetStats[statsKey] = {
       attempts: 0,
       bestScore: 0,
       averageScore: 0,
@@ -536,14 +561,16 @@ function updateStatistics(progress: UserProgress, result: QuizResult): void {
     };
   }
 
-  const setStats = progress.questionSetStats[result.questionSetId];
+  const setStats = progress.questionSetStats[statsKey];
   setStats.attempts++;
   setStats.bestScore = Math.max(setStats.bestScore, result.percentage);
   setStats.lastAttempt = result.date;
   setStats.totalTimeSpent += result.timeSpent;
 
   // 問題集ごとの平均スコアを計算
-  const setResults = progress.results.filter((r) => r.questionSetId === result.questionSetId);
+  const setResults = progress.results.filter(
+    (r) => r.mode === result.mode && r.questionSetId === result.questionSetId
+  );
   const totalScore = setResults.reduce((sum, r) => sum + r.percentage, 0);
   setStats.averageScore = totalScore / setResults.length;
 }
@@ -2074,10 +2101,19 @@ export function resetStatsByModeDifficulty(
   });
 
   // questionSetStatsから該当するセットを削除
-  Object.keys(progress.questionSetStats).forEach((setId) => {
-    // セットIDに難易度が含まれているかチェック
-    if (setId.includes(difficulty)) {
-      delete progress.questionSetStats[setId];
+  Object.keys(progress.questionSetStats).forEach((statsKey) => {
+    const parsed = parseQuestionSetStatsKey(statsKey);
+    if (parsed) {
+      // 新形式: modeが一致し、セットIDに難易度が含まれるもののみ削除
+      if (parsed.mode === mode && parsed.questionSetId.includes(difficulty)) {
+        delete progress.questionSetStats[statsKey];
+      }
+      return;
+    }
+
+    // 旧形式(setIdのみ)は、従来通りdifficulty一致で削除（互換）
+    if (statsKey.includes(difficulty)) {
+      delete progress.questionSetStats[statsKey];
     }
   });
 

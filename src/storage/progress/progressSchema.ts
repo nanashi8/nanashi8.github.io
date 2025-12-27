@@ -1,6 +1,6 @@
 import type { UserProgress } from './types';
 
-export const CURRENT_PROGRESS_SCHEMA_VERSION = 1 as const;
+export const CURRENT_PROGRESS_SCHEMA_VERSION = 2 as const;
 
 export type ProgressSchemaMigrationResult =
   | {
@@ -53,6 +53,61 @@ export function migrateUserProgress(
   // v0 -> v1: schemaVersion導入（データ内容は既存の修復ロジックで担保）
   if (fromVersion < 1) {
     notes.push('Set schemaVersion (v0 -> v1)');
+  }
+
+  // v1 -> v2: questionSetStats を mode+questionSetId キーへ移行
+  if (fromVersion < 2) {
+    const rebuilt: UserProgress['questionSetStats'] = {} as UserProgress['questionSetStats'];
+    const sums = new Map<string, { sum: number; count: number }>();
+
+    for (const r of progress.results || []) {
+      if (!r || typeof r !== 'object') continue;
+      // QuizResult型に準拠している前提だが、念のため最小限の防御
+      const mode = (r as any).mode as string | undefined;
+      const questionSetId = (r as any).questionSetId as string | undefined;
+      const percentage = (r as any).percentage as number | undefined;
+      const date = (r as any).date as number | undefined;
+      const timeSpent = (r as any).timeSpent as number | undefined;
+
+      if (!mode || !questionSetId) continue;
+      const key = `${mode}:${questionSetId}`;
+
+      if (!rebuilt[key]) {
+        rebuilt[key] = {
+          attempts: 0,
+          bestScore: 0,
+          averageScore: 0,
+          lastAttempt: 0,
+          totalTimeSpent: 0,
+        };
+      }
+
+      const entry = rebuilt[key];
+      entry.attempts++;
+      if (typeof percentage === 'number' && Number.isFinite(percentage)) {
+        entry.bestScore = Math.max(entry.bestScore, percentage);
+        const acc = sums.get(key) || { sum: 0, count: 0 };
+        acc.sum += percentage;
+        acc.count += 1;
+        sums.set(key, acc);
+      }
+      if (typeof date === 'number' && Number.isFinite(date)) {
+        entry.lastAttempt = Math.max(entry.lastAttempt, date);
+      }
+      if (typeof timeSpent === 'number' && Number.isFinite(timeSpent)) {
+        entry.totalTimeSpent += timeSpent;
+      }
+    }
+
+    // 平均スコアを後段で確定
+    for (const [key, acc] of sums.entries()) {
+      if (!rebuilt[key]) continue;
+      rebuilt[key].averageScore = acc.count > 0 ? acc.sum / acc.count : 0;
+    }
+
+    progress.questionSetStats = rebuilt;
+    didMigrate = true;
+    notes.push('Migrate questionSetStats keying to mode:questionSetId (v1 -> v2)');
   }
 
   if (progress.schemaVersion !== CURRENT_PROGRESS_SCHEMA_VERSION) {

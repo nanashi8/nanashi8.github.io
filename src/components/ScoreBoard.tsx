@@ -571,7 +571,7 @@ function ScoreBoard({
           title="AIコメント"
         >
           <span className="hidden sm:inline">🤖 AI</span>
-          <span className="sm:hidden">🤖</span>
+          <span className="sm:hidden">AI</span>
         </button>
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
@@ -583,7 +583,7 @@ function ScoreBoard({
           title="プラン"
         >
           <span className="hidden sm:inline">📋 プラン</span>
-          <span className="sm:hidden">📋</span>
+          <span className="sm:hidden">プラン</span>
         </button>
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
@@ -612,7 +612,7 @@ function ScoreBoard({
                 : ''
             }`}
           >
-            📈
+            学習状況
           </span>
         </button>
         <button
@@ -625,7 +625,7 @@ function ScoreBoard({
           title="履歴"
         >
           <span className="hidden sm:inline">📜 履歴</span>
-          <span className="sm:hidden">📜</span>
+          <span className="sm:hidden">履歴</span>
         </button>
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
@@ -643,7 +643,7 @@ function ScoreBoard({
           title="学習設定"
         >
           <span className="hidden sm:inline">⚙️ 学習設定</span>
-          <span className="sm:hidden">⚙️</span>
+          <span className="sm:hidden">学習設定</span>
         </button>
       </div>
 

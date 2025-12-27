@@ -353,38 +353,6 @@ function TranslationView({
                 </button>
               </div>
 
-              <div className="filter-group">
-                <label htmlFor="category-select-quiz">📚 関連分野:</label>
-                <select
-                  id="category-select-quiz"
-                  value={selectedCategory}
-                  onChange={(e) => onCategoryChange(e.target.value)}
-                  className="select-input"
-                >
-                  <option value="all">全ての分野</option>
-                  {OFFICIAL_CATEGORIES.map((category) => (
-                    <option key={category} value={category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="difficulty-select-quiz">⭐ 難易度:</label>
-                <select
-                  id="difficulty-select-quiz"
-                  value={selectedDifficulty}
-                  onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
-                  className="select-input"
-                >
-                  <option value="all">全てのレベル</option>
-                  <option value="beginner">初級</option>
-                  <option value="intermediate">中級</option>
-                  <option value="advanced">上級</option>
-                </select>
-              </div>
-
               {onDataSourceChange && questionSets && (
                 <div className="filter-group">
                   <label htmlFor="data-source-select-quiz">📚 出題元:</label>
@@ -418,6 +386,38 @@ function TranslationView({
                   </select>
                 </div>
               )}
+
+              <div className="filter-group">
+                <label htmlFor="category-select-quiz">📚 関連分野:</label>
+                <select
+                  id="category-select-quiz"
+                  value={selectedCategory}
+                  onChange={(e) => onCategoryChange(e.target.value)}
+                  className="select-input"
+                >
+                  <option value="all">全ての分野</option>
+                  {OFFICIAL_CATEGORIES.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="difficulty-select-quiz">⭐ 難易度:</label>
+                <select
+                  id="difficulty-select-quiz"
+                  value={selectedDifficulty}
+                  onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
+                  className="select-input"
+                >
+                  <option value="all">全てのレベル</option>
+                  <option value="beginner">初級</option>
+                  <option value="intermediate">中級</option>
+                  <option value="advanced">上級</option>
+                </select>
+              </div>
 
               {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
                 <div className="filter-group">

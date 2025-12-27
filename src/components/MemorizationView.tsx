@@ -63,7 +63,7 @@ interface MemorizationViewProps {
 
 function MemorizationView({
   allQuestions,
-  questionSets: _questionSets, // 将来の拡張のため引数として残すが現在未使用
+  questionSets,
   customQuestionSets = [],
   onAddWordToCustomSet,
   onRemoveWordFromCustomSet,
@@ -342,9 +342,14 @@ function MemorizationView({
 
     let filtered = allQuestions;
 
-    // データソースフィルター
+    // データソース（問題セットID / 既存source）フィルター
     if (selectedDataSource !== 'all') {
-      // 将来的なデータ増加に対応
+      const set = questionSets.find((qs) => qs.id === selectedDataSource);
+      if (set) {
+        filtered = set.questions;
+      } else {
+        filtered = filtered.filter((q) => (q as any).source === selectedDataSource);
+      }
     }
 
     // 難易度フィルター
@@ -382,6 +387,7 @@ function MemorizationView({
     return filtered;
   }, [
     allQuestions,
+    questionSets,
     selectedDataSource,
     selectedDifficulty,
     selectedCategory,
@@ -432,14 +438,15 @@ function MemorizationView({
 
     const selectQuestions = async () => {
       try {
-        // データソースに基づいて問題を取得
-        const baseQuestions = allQuestions;
-
-        // データソースフィルター（現在はsource プロパティが 'junior' しかないため、実質的なフィルタリングは行わない）
-        // 将来的にデータが増えた場合、ここでフィルタリングを実装
+        // データソース（問題セットID / 既存source）に基づいて問題を取得
+        let baseQuestions = allQuestions;
         if (selectedDataSource !== 'all') {
-          // 現在は全て junior なので、フィルタリングなし
-          // 将来: standard/advanced/comprehensiveに対応
+          const set = questionSets.find((qs) => qs.id === selectedDataSource);
+          if (set) {
+            baseQuestions = set.questions;
+          } else {
+            baseQuestions = allQuestions.filter((q) => (q as any).source === selectedDataSource);
+          }
         }
 
         if (baseQuestions.length === 0) {
@@ -2054,30 +2061,33 @@ function MemorizationView({
                     onChange={(e) => setSelectedDataSource(e.target.value)}
                     className="w-full px-3 py-2 border rounded-lg"
                   >
-                    <option value="all">全問題集</option>
-                    <option value="standard">高校受験標準</option>
-                    <option value="advanced">高校受験上級</option>
-                    <option value="comprehensive">高校受験総合</option>
+                    <option value="all">高校受験総合</option>
+                    {questionSets
+                      .filter((qs) => qs.id !== 'all')
+                      .map((set) => (
+                        <option key={set.id} value={set.id}>
+                          {set.name}
+                        </option>
+                      ))}
                   </select>
                 </div>
 
                 <div>
                   <label
-                    htmlFor="memorization-difficulty"
+                    htmlFor="memorization-filter"
                     className="block text-sm font-medium mb-2 text-gray-700"
                   >
-                    📊 難易度:
+                    📝 単語・熟語:
                   </label>
                   <select
-                    id="memorization-difficulty"
-                    value={selectedDifficulty}
-                    onChange={(e) => setSelectedDifficulty(e.target.value)}
+                    id="memorization-filter"
+                    value={selectedWordPhraseFilter}
+                    onChange={(e) => setSelectedWordPhraseFilter(e.target.value)}
                     className="w-full px-3 py-2 border rounded-lg"
                   >
-                    <option value="all">全難易度</option>
-                    <option value="beginner">初級</option>
-                    <option value="intermediate">中級</option>
-                    <option value="advanced">上級</option>
+                    <option value="all">単語＋熟語</option>
+                    <option value="words">単語のみ</option>
+                    <option value="phrases">熟語のみ</option>
                   </select>
                 </div>
 
@@ -2105,20 +2115,21 @@ function MemorizationView({
 
                 <div>
                   <label
-                    htmlFor="memorization-filter"
+                    htmlFor="memorization-difficulty"
                     className="block text-sm font-medium mb-2 text-gray-700"
                   >
-                    📝 単語・熟語:
+                    📊 難易度:
                   </label>
                   <select
-                    id="memorization-filter"
-                    value={selectedWordPhraseFilter}
-                    onChange={(e) => setSelectedWordPhraseFilter(e.target.value)}
+                    id="memorization-difficulty"
+                    value={selectedDifficulty}
+                    onChange={(e) => setSelectedDifficulty(e.target.value)}
                     className="w-full px-3 py-2 border rounded-lg"
                   >
-                    <option value="all">単語＋熟語</option>
-                    <option value="words">単語のみ</option>
-                    <option value="phrases">熟語のみ</option>
+                    <option value="all">全難易度</option>
+                    <option value="beginner">初級</option>
+                    <option value="intermediate">中級</option>
+                    <option value="advanced">上級</option>
                   </select>
                 </div>
 

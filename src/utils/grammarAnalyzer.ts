@@ -603,8 +603,6 @@ const ADJECTIVES = new Set([
   'able',
   'ready',
   'usual',
-  'toast',
-  'juice',
 ]);
 
 const ADVERBS = new Set([
@@ -711,6 +709,21 @@ function classifyWord(word: string, index: number, words: string[]): GrammarTag 
     return 'Det';
   }
 
+  // 文頭の接続副詞（First, Then, Finally など）
+  if ((lower === 'first' || lower === 'then' || lower === 'finally') && index === 0) {
+    // カンマ等の句読点を飛ばして次の語を確認
+    let next = index + 1;
+    while (next < words.length && /^[.,!?;:]$/.test(words[next])) {
+      next++;
+    }
+    const nextLower = words[next]?.toLowerCase();
+
+    // "First, I ..." のような文頭副詞は Adv
+    if (nextLower && PRONOUNS.has(nextLower)) {
+      return 'Adv';
+    }
+  }
+
   // 形容詞
   if (ADJECTIVES.has(lower)) {
     return 'Adj';
@@ -766,6 +779,10 @@ export function analyzeSentence(sentence: string): GrammarAnalysisResult[] {
   const results: GrammarAnalysisResult[] = [];
   let foundVerb = false;
   let foundSubject = false;
+  let foundObjectOrComplement = false;
+  let lastVerbLower: string | null = null;
+
+  const BE_VERBS = new Set(['be', 'am', 'is', 'are', 'was', 'were', 'been', 'being']);
 
   for (let i = 0; i < words.length; i++) {
     const word = words[i];
@@ -790,9 +807,25 @@ export function analyzeSentence(sentence: string): GrammarAnalysisResult[] {
         tag = 'S';
         foundSubject = true;
       }
-      // 動詞の後ろなら目的語の可能性
-      else if (foundVerb && !foundSubject) {
-        tag = 'O';
+      // 主語+動詞が出現済みで、まだ目的語/補語がない場合は、最初の名詞っぽいUnknownを目的語/補語として扱う
+      else if (
+        foundVerb &&
+        foundSubject &&
+        !foundObjectOrComplement &&
+        !(i > 0 && PREPOSITIONS.has(words[i - 1].toLowerCase()))
+      ) {
+        tag = lastVerbLower && BE_VERBS.has(lastVerbLower) ? 'C' : 'O';
+        foundObjectOrComplement = true;
+      }
+      // 目的語/補語の並列（toast and juice など）: and/or の直後は同じ成分として扱う
+      else if (
+        foundVerb &&
+        foundSubject &&
+        foundObjectOrComplement &&
+        i > 0 &&
+        (words[i - 1].toLowerCase() === 'and' || words[i - 1].toLowerCase() === 'or')
+      ) {
+        tag = lastVerbLower && BE_VERBS.has(lastVerbLower) ? 'C' : 'O';
       }
       // 前置詞の後ろなら修飾語
       else if (i > 0 && PREPOSITIONS.has(words[i - 1].toLowerCase())) {
@@ -806,9 +839,15 @@ export function analyzeSentence(sentence: string): GrammarAnalysisResult[] {
 
     if (tag === 'V') {
       foundVerb = true;
+      lastVerbLower = word.toLowerCase();
+      // 動詞が来たら、次に来る目的語/補語を取り直す（簡易: 句読点や接続詞で区切らない）
+      foundObjectOrComplement = false;
     }
     if (tag === 'S') {
       foundSubject = true;
+    }
+    if (tag === 'O' || tag === 'C') {
+      foundObjectOrComplement = true;
     }
 
     results.push({
@@ -849,7 +888,6 @@ const PHRASAL_EXPRESSIONS: PhrasalExpression[] = [
   // 句動詞 (Phrasal Verbs) - 熟語として表示
   { words: ['wake', 'up'], meaning: '起きる', type: 'phrasal-verb' },
   { words: ['get', 'up'], meaning: '起床する', type: 'phrasal-verb' },
-  { words: ['wake', 'up'], meaning: '目を覚ます', type: 'phrasal-verb' },
   { words: ['brush', 'my', 'teeth'], meaning: '歯を磨く', type: 'phrasal-verb' },
   { words: ['wash', 'my', 'face'], meaning: '顔を洗う', type: 'phrasal-verb' },
   { words: ['have', 'breakfast'], meaning: '朝食を食べる', type: 'phrasal-verb' },

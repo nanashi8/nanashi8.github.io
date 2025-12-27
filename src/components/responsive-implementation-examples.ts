@@ -34,19 +34,19 @@
 <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2">
   <button className="px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium transition-all duration-200 rounded-t-lg border-b-2">
     <span className="hidden sm:inline">📋 プラン</span>
-    <span className="sm:hidden">📋</span>
+    <span className="sm:hidden">プラン</span>
   </button>
   <button className="px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium transition-all duration-200 rounded-t-lg border-b-2">
     <span className="hidden sm:inline">📈 学習状況</span>
-    <span className="sm:hidden">📈</span>
+    <span className="sm:hidden">学習状況</span>
   </button>
   <button className="px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium transition-all duration-200 rounded-t-lg border-b-2">
     <span className="hidden sm:inline">📜 履歴</span>
-    <span className="sm:hidden">📜</span>
+    <span className="sm:hidden">履歴</span>
   </button>
   <button className="col-span-2 sm:col-span-1 px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium transition-all duration-200 rounded-t-lg border-b-2">
     <span className="hidden sm:inline">⚙️ 学習設定</span>
-    <span className="sm:hidden">⚙️</span>
+    <span className="sm:hidden">学習設定</span>
   </button>
 </div>
 */
@@ -73,7 +73,7 @@
 
 // ❌ 修正前
 /*
-<button 
+<button
   className="w-full min-h-[56px] p-4 text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center"
   onClick={() => onAnswer(choice)}
 >
@@ -87,15 +87,15 @@ import { useResponsiveClick } from '../hooks/useResponsiveClick';
 
 const QuestionButton = ({ choice, isCorrect, isSelected, onAnswer }) => {
   const props = useResponsiveClick(() => onAnswer(choice));
-  
+
   return (
-    <button 
+    <button
       {...props}
       className={`
-        w-full min-h-11 sm:min-h-14 p-3 sm:p-4 
-        text-sm sm:text-base 
-        rounded-xl border-2 
-        transition-all duration-300 
+        w-full min-h-11 sm:min-h-14 p-3 sm:p-4
+        text-sm sm:text-base
+        rounded-xl border-2
+        transition-all duration-300
         flex flex-col items-center text-center
         touch-manipulation select-none
         ${!isSelected && !isCorrect ? 'hover:border-blue-600 hover:bg-gray-100 active:bg-gray-200:bg-gray-700' : ''}
@@ -167,13 +167,13 @@ const Label = ({ text }) => (
 const Label = ({ text, abbreviation }) => (
   <>
     <span className="hidden sm:inline">{text}</span>
-    <span className="sm:hidden">{abbreviation}</span>
+    <span className="sm:hidden">{text}</span>
   </>
 );
 
 // 使用例
 <Label text="ダウンロード" abbreviation="D" />
-// モバイルで: D
+// モバイルで: ダウンロード
 // デスクトップで: ダウンロード
 */
 

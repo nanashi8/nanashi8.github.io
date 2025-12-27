@@ -214,14 +214,40 @@ function App() {
     setSelectedWordPhraseFilter,
     selectedPhraseTypeFilter,
     setSelectedPhraseTypeFilter,
-    selectedDataSource,
-    setSelectedDataSource,
   } = useQuizFilters();
 
-  // 選択中の問題セット名を取得
+  // 出題元はタブごとに独立（連動させない）
+  const [selectedDataSourceTranslation, setSelectedDataSourceTranslation] = useState<DataSource>(
+    () => {
+      const saved = localStorage.getItem('selectedDataSource-translation');
+      if (saved) {
+        try {
+          return JSON.parse(saved);
+        } catch {
+          return 'all';
+        }
+      }
+      return 'all';
+    }
+  );
+
+  const [selectedDataSourceSpelling, setSelectedDataSourceSpelling] = useState<DataSource>(() => {
+    const saved = localStorage.getItem('selectedDataSource-spelling');
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch {
+        return 'all';
+      }
+    }
+    return 'all';
+  });
+
+  // 選択中の問題セット名を取得（デバッグ用途）
   const _getSelectedQuestionSetName = () => {
-    if (selectedDataSource === 'all') return '全問題集';
-    const set = questionSets.find((qs) => qs.id === selectedDataSource);
+    const selected = activeTab === 'spelling' ? selectedDataSourceSpelling : selectedDataSourceTranslation;
+    if (selected === 'all') return '全問題集';
+    const set = questionSets.find((qs) => qs.id === selected);
     return set ? set.name : '全問題集';
   };
 
@@ -644,9 +670,12 @@ function App() {
 
           setCategoryList(sortedCategories);
 
-          // 問題集を難易度別に分割
+          // 問題集を出題元（データソース）別に分割
+          // - 高校受験上級: high-school-entrance（source: 'junior'）
+          // - 高校受験標準: junior-high-intermediate（source: 'intermediate'）
+          // - 高校受験総合: 上記2つを統合（all）
           const allSet: QuestionSet = {
-            id: 'all-set',
+            id: 'all',
             name: '高校受験総合',
             questions: allQuestions,
             createdAt: Date.now(),
@@ -655,20 +684,18 @@ function App() {
           };
 
           const advancedSet: QuestionSet = {
-            id: 'advanced-set',
+            id: 'junior',
             name: '高校受験上級',
-            questions: allQuestions.filter((q) => q.difficulty === 'advanced'),
+            questions: allQuestions.filter((q) => (q as any).source === 'junior'),
             createdAt: Date.now(),
             isBuiltIn: true,
             source: 'high-school-entrance (単語2662 + 熟語96)',
           };
 
           const standardSet: QuestionSet = {
-            id: 'standard-set',
+            id: 'intermediate',
             name: '高校受験標準',
-            questions: allQuestions.filter(
-              (q) => q.difficulty === 'intermediate' || q.difficulty === 'beginner'
-            ),
+            questions: allQuestions.filter((q) => (q as any).source === 'intermediate'),
             createdAt: Date.now(),
             isBuiltIn: true,
             source: 'junior-high-intermediate (単語1579 + 熟語212)',
@@ -720,7 +747,7 @@ function App() {
       const { getCustomQuestionSets } = await import('./storage/progress/progressStorage');
       const customSets = await getCustomQuestionSets();
 
-      const mainSet = questionSets.find((qs) => qs.isBuiltIn);
+      const builtInSets = questionSets.filter((qs) => qs.isBuiltIn);
       const customQuestionSets: QuestionSet[] = customSets.map((cs) => ({
         id: cs.id,
         name: cs.name,
@@ -735,8 +762,8 @@ function App() {
               : '手動作成',
       }));
 
-      if (mainSet) {
-        setQuestionSets([mainSet, ...customQuestionSets]);
+      if (builtInSets.length > 0) {
+        setQuestionSets([...builtInSets, ...customQuestionSets]);
       }
     } catch (error) {
       logger.error('カスタム問題セットの再読み込みに失敗:', error);
@@ -755,10 +782,14 @@ function App() {
     localStorage.setItem('quiz-adaptive-mode', JSON.stringify(adaptiveMode));
   }, [adaptiveMode]);
 
-  // データソース選択の保存
+  // データソース選択の保存（タブごとに独立）
   useEffect(() => {
-    localStorage.setItem('selectedDataSource', selectedDataSource);
-  }, [selectedDataSource]);
+    localStorage.setItem('selectedDataSource-translation', JSON.stringify(selectedDataSourceTranslation));
+  }, [selectedDataSourceTranslation]);
+
+  useEffect(() => {
+    localStorage.setItem('selectedDataSource-spelling', JSON.stringify(selectedDataSourceSpelling));
+  }, [selectedDataSourceSpelling]);
 
   // 問題集・カテゴリ・難易度が変更された時、クイズ開始済みなら自動的に再開始
   useEffect(() => {
@@ -767,20 +798,47 @@ function App() {
       handleStartQuiz();
     }
   }, [
-    selectedDataSource,
+    activeTab,
+    selectedDataSourceTranslation,
+    selectedDataSourceSpelling,
     selectedCategory,
     selectedDifficulty,
     selectedWordPhraseFilter,
     selectedPhraseTypeFilter,
   ]);
 
+  // 保存済みの出題元が無効になっていたら安全にリセット
+  useEffect(() => {
+    if (!isDataLoaded) return;
+    const isValid = (ds: DataSource) => ds === 'all' || questionSets.some((qs) => qs.id === ds);
+
+    if (!isValid(selectedDataSourceTranslation)) {
+      setSelectedDataSourceTranslation('all');
+    }
+    if (!isValid(selectedDataSourceSpelling)) {
+      setSelectedDataSourceSpelling('all');
+    }
+  }, [
+    isDataLoaded,
+    questionSets,
+    selectedDataSourceTranslation,
+    selectedDataSourceSpelling,
+    setSelectedDataSourceTranslation,
+    setSelectedDataSourceSpelling,
+  ]);
+
   // 関連分野と難易度でフィルタリング
-  const getFilteredQuestions = (): Question[] => {
+  const getFilteredQuestions = (dataSource: DataSource): Question[] => {
     let filtered = allQuestions;
 
-    // データソースでフィルター
-    if (selectedDataSource !== 'all') {
-      filtered = filtered.filter((q) => (q as any).source === selectedDataSource);
+    // データソース（問題セットID / 既存source / カスタムセットID）でフィルター
+    if (dataSource !== 'all') {
+      const set = questionSets.find((qs) => qs.id === dataSource);
+      if (set) {
+        filtered = set.questions;
+      } else {
+        filtered = filtered.filter((q) => (q as any).source === dataSource);
+      }
     }
 
     // 関連分野でフィルター
@@ -858,7 +916,9 @@ function App() {
     // 学習設定を取得
     const studySettings = getStudySettings();
 
-    let filteredQuestions = getFilteredQuestions();
+    const activeDataSource: DataSource =
+      activeTab === 'spelling' ? selectedDataSourceSpelling : selectedDataSourceTranslation;
+    let filteredQuestions = getFilteredQuestions(activeDataSource);
 
     if (filteredQuestions.length === 0) {
       alert('指定された条件の問題が見つかりません');
@@ -1750,7 +1810,8 @@ function App() {
           }`}
           onClick={() => setActiveTab('memorization')}
         >
-          💡 暗記
+          <span className="hidden sm:inline">💡 暗記</span>
+          <span className="sm:hidden">暗記</span>
         </button>
         <button
           className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
@@ -1760,7 +1821,8 @@ function App() {
           }`}
           onClick={() => setActiveTab('translation')}
         >
-          📝 和訳
+          <span className="hidden sm:inline">📝 和訳</span>
+          <span className="sm:hidden">和訳</span>
         </button>
         <button
           className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
@@ -1770,7 +1832,8 @@ function App() {
           }`}
           onClick={() => setActiveTab('spelling')}
         >
-          ✏️ スペル
+          <span className="hidden sm:inline">✏️ スペル</span>
+          <span className="sm:hidden">スペル</span>
         </button>
         <button
           className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
@@ -1788,7 +1851,8 @@ function App() {
             _preloadHeavyComponents();
           }}
         >
-          📚 文法
+          <span className="hidden sm:inline">📚 文法</span>
+          <span className="sm:hidden">文法</span>
         </button>
         <button
           className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
@@ -1806,7 +1870,8 @@ function App() {
             _preloadHeavyComponents();
           }}
         >
-          📖 長文
+          <span className="hidden sm:inline">📖 長文</span>
+          <span className="sm:hidden">長文</span>
         </button>
         <button
           className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
@@ -1816,7 +1881,8 @@ function App() {
           }`}
           onClick={() => setActiveTab('settings')}
         >
-          ⚙️ 設定
+          <span className="hidden sm:inline">⚙️ 設定</span>
+          <span className="sm:hidden">設定</span>
         </button>
       </div>
 
@@ -1855,8 +1921,8 @@ function App() {
               onWordPhraseFilterChange={setSelectedWordPhraseFilter}
               selectedPhraseTypeFilter={selectedPhraseTypeFilter}
               onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
-              selectedDataSource={selectedDataSource}
-              onDataSourceChange={setSelectedDataSource}
+              selectedDataSource={selectedDataSourceTranslation}
+              onDataSourceChange={setSelectedDataSourceTranslation}
               questionSets={questionSets}
               onStartQuiz={handleStartQuiz}
               onAnswer={handleAnswer}
@@ -1883,6 +1949,7 @@ function App() {
           ) : activeTab === 'spelling' ? (
             <SpellingView
               questions={quizState.questions}
+              questionSets={questionSets}
               _categoryList={categoryList}
               selectedCategory={selectedCategory}
               onCategoryChange={handleCategoryChange}
@@ -1892,8 +1959,8 @@ function App() {
               onWordPhraseFilterChange={setSelectedWordPhraseFilter}
               selectedPhraseTypeFilter={selectedPhraseTypeFilter}
               onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
-              selectedDataSource={selectedDataSource}
-              onDataSourceChange={setSelectedDataSource}
+              selectedDataSource={selectedDataSourceSpelling}
+              onDataSourceChange={setSelectedDataSourceSpelling}
               onStartQuiz={handleStartQuiz}
               onReviewFocus={handleSpellingReviewFocus}
               isReviewFocusMode={reviewFocusMode}
@@ -1950,8 +2017,6 @@ function App() {
           ) : (
             <SettingsView
               allQuestions={allQuestions}
-              _selectedDataSource={selectedDataSource}
-              _onDataSourceChange={setSelectedDataSource}
               customQuestionSets={customQuestionState.sets}
               questionSets={questionSets}
               categoryList={categoryList}
