@@ -73,6 +73,9 @@ export interface ScheduleParams {
 
   /** finalPriority主因モード（variant=Cで使用、AICoordinatorのfinalPriorityを主軸にする） */
   finalPriorityMode?: boolean;
+
+  /** いもづる式学習モード（関連語を連鎖的に出題） */
+  useChainLearning?: boolean;
 }
 
 /**

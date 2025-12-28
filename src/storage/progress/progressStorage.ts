@@ -1305,6 +1305,32 @@ export async function updateWordProgress(
   const oldMasteryLevel = wordProgress.masteryLevel;
   wordProgress.masteryLevel = determineMasteryLevel(wordProgress);
 
+  // A/B評価（定着率優先）:
+  // - 1回答ごとに learning_outcome を記録
+  // - retentionRate は「この回答で新規に mastered 到達したか」を 0/1 で表現
+  //   -> avgRetentionRate を「1問あたりの新規定着獲得率」として比較可能
+  try {
+    const newlyMastered = oldMasteryLevel !== 'mastered' && wordProgress.masteryLevel === 'mastered';
+    // 非同期でログ（ブロッキングしない）
+    import('@/ai/experiments/ABTestManager').then(({ getABTestManager }) => {
+      const manager = getABTestManager();
+      const testId = 'chain_learning_retention_2025_01';
+      const variantId = manager.getVariant(testId);
+      if (!variantId) return;
+
+      import('@/ai/experiments/MetricsCollector').then(({ getMetricsCollector }) => {
+        getMetricsCollector().logLearningOutcome(testId, variantId, {
+          word,
+          isCorrect,
+          isStillLearning: Boolean(isStillLearning),
+          retentionRate: newlyMastered ? 1 : 0,
+        });
+      });
+    });
+  } catch {
+    // ignore
+  }
+
   // デバッグ: 習熟レベルの変化をログ出力
   if (oldMasteryLevel !== wordProgress.masteryLevel) {
     logger.log(
@@ -2243,6 +2269,8 @@ export async function resetAllProgress(): Promise<void> {
     ) {
       keysToRemove.push(key);
     }
+    // 教材パック関連は削除対象から除外（生徒が成績リセットしても教材は残す）
+    // localDataPackInstalledAt, localDataPackFileCount は保持
   }
 
   // 一括削除

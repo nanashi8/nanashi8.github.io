@@ -123,6 +123,43 @@ export const COMBINED_FEATURES_TEST: ABTestConfig = {
 };
 
 /**
+ * 実験4: いもづる式（局所並べ替え）の定着率効果測定
+ * - control: useChainLearning OFF
+ * - treatment: useChainLearning ON
+ *
+ * 指標（定着率優先）:
+ * - learning_outcome.retentionRate を 0/1（新規に mastered 到達したか）として記録し、
+ *   avgRetentionRate を「1問あたりの新規定着獲得率」として比較する。
+ */
+export const CHAIN_LEARNING_RETENTION_TEST: ABTestConfig = {
+  id: 'chain_learning_retention_2025_01',
+  name: 'Chain Learning Retention Impact',
+  description: 'いもづる式（語彙ネットワークの局所並べ替え）が定着（mastered到達）に与える影響を測定',
+  variants: [
+    {
+      id: 'control',
+      name: 'Control (Chain Learning OFF)',
+      weight: 50,
+      description: 'いもづる式なし（従来の出題順）',
+      features: {
+        useChainLearning: false,
+      },
+    },
+    {
+      id: 'treatment',
+      name: 'Treatment (Chain Learning ON)',
+      weight: 50,
+      description: 'いもづる式あり（TOP Nの局所並べ替え）',
+      features: {
+        useChainLearning: true,
+      },
+    },
+  ],
+  startDate: new Date('2025-01-01'),
+  active: true,
+};
+
+/**
  * ABテストを初期化
  */
 export function initializeABTests(): void {
@@ -132,6 +169,7 @@ export function initializeABTests(): void {
   manager.registerTest(CALIBRATION_DASHBOARD_TEST);
   manager.registerTest(PRIORITY_EXPLANATION_TEST);
   manager.registerTest(COMBINED_FEATURES_TEST);
+  manager.registerTest(CHAIN_LEARNING_RETENTION_TEST);
 }
 
 /**

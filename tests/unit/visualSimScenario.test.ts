@@ -31,16 +31,16 @@ function extractSummary(output: string) {
 
 describe('visual-random-simulation scenarios', () => {
   it('heavy_miss produces more red than perfect', () => {
-    const heavy = run('node scripts/visual-random-simulation.ts --scenario heavy_miss --runs 1');
-    const perf = run('node scripts/visual-random-simulation.ts --scenario perfect --runs 1');
+    const heavy = run('node scripts/visual-random-simulation.ts --scenario heavy_miss --runs 1 --seed 1');
+    const perf = run('node scripts/visual-random-simulation.ts --scenario perfect --runs 1 --seed 1');
     const h = extractSummary(heavy);
     const p = extractSummary(perf);
     expect(h.red).toBeGreaterThanOrEqual(p.red);
   });
 
   it('perfect has higher efficiency than heavy_miss', () => {
-    const heavy = run('node scripts/visual-random-simulation.ts --scenario heavy_miss --runs 1');
-    const perf = run('node scripts/visual-random-simulation.ts --scenario perfect --runs 1');
+    const heavy = run('node scripts/visual-random-simulation.ts --scenario heavy_miss --runs 1 --seed 1');
+    const perf = run('node scripts/visual-random-simulation.ts --scenario perfect --runs 1 --seed 1');
     function extractEfficiency(out: string) {
       const m = out.match(/💡 学習効率: (\d+)%/);
       return m ? Number(m[1]) : 0;
@@ -49,7 +49,7 @@ describe('visual-random-simulation scenarios', () => {
   });
 
   it('varied scenario shows mixed categories', () => {
-    const varied = run('node scripts/visual-random-simulation.ts --scenario varied --runs 1');
+    const varied = run('node scripts/visual-random-simulation.ts --scenario varied --runs 1 --seed 1');
     const v = extractSummary(varied);
     expect(v.red + v.yellow + v.white + v.green).toBeGreaterThan(0);
     expect(v.red).toBeGreaterThanOrEqual(0);
