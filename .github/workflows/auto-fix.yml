@@ -39,37 +39,38 @@ jobs:
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-fix lint issues" && git push)
         continue-on-error: true
 
-  auto-update-dependencies:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'schedule'
-    steps:
-      - uses: actions/checkout@v4
+  # 依存更新はDependabotに一本化したため無効化
+  # auto-update-dependencies:
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name == 'schedule'
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
+  #     - uses: actions/setup-node@v4
+  #       with:
+  #         node-version: '18'
 
-      - name: Update dependencies
-        run: |
-          npm update
-          npm audit fix || true
+  #     - name: Update dependencies
+  #       run: |
+  #         npm update
+  #         npm audit fix || true
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: auto-update dependencies"
-          title: "🤖 Auto-update dependencies"
-          body: |
-            ## 自動依存関係更新
-            
-            このPRは自動的に生成されました。
-            
-            - npm updateを実行
-            - npm audit fixを実行
-            
-            問題がなければ自動的にマージされます。
-          labels: |
-            dependencies
-            auto-merge
-          branch: auto-update-deps
+  #     - name: Create Pull Request
+  #       uses: peter-evans/create-pull-request@v5
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+  #         commit-message: "chore: auto-update dependencies"
+  #         title: "🤖 Auto-update dependencies"
+  #         body: |
+  #           ## 自動依存関係更新
+  #           
+  #           このPRは自動的に生成されました。
+  #           
+  #           - npm updateを実行
+  #           - npm audit fixを実行
+  #           
+  #           問題がなければ自動的にマージされます。
+  #         labels: |
+  #           dependencies
+  #           auto-merge
+  #         branch: auto-update-deps

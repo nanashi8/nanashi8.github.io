@@ -8,7 +8,8 @@ updates:
       day: "monday"
       time: "09:00"
       timezone: "Asia/Tokyo"
-    open-pull-requests-limit: 10
+    # PR数を制限（溜まりすぎ防止）
+    open-pull-requests-limit: 5
     labels:
       - "dependencies"
       - "auto-merge"
@@ -17,7 +18,13 @@ updates:
       include: "scope"
     reviewers:
       - "nanashi8"
-    # 自動マージを有効化
+    # セキュリティ更新を優先
+    groups:
+      security-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "security"
     pull-request-branch-name:
       separator: "-"
 
@@ -25,11 +32,12 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "monday"
       time: "09:00"
       timezone: "Asia/Tokyo"
-    open-pull-requests-limit: 5
+    # Actions更新は月1回に抑制
+    open-pull-requests-limit: 3
     labels:
       - "dependencies"
       - "github-actions"
