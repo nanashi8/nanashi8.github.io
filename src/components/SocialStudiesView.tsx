@@ -14,6 +14,11 @@ import {
   updateSocialStudiesProgress,
   getSocialStudiesTermProgress,
 } from '@/storage/progress/socialStudiesProgress';
+import {
+  loadRelationships,
+  getRelatedTerms,
+  type RelatedTermRecommendation,
+} from '@/storage/socialStudiesRelations';
 
 interface SocialStudiesViewProps {
   /** 現在のデータソース */
@@ -46,6 +51,9 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // いもづる式学習
+  const [relatedTerms, setRelatedTerms] = useState<RelatedTermRecommendation[]>([]);
+
   // フィルター
   const [selectedField, setSelectedField] = useState<SocialStudiesField | 'all'>('all');
   const [sortOrder, setSortOrder] = useState<SortOrder>('priority');
@@ -67,6 +75,10 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
 
       const data: SocialStudiesQuestion[] = await response.json();
       setQuestions(data);
+
+      // 関連情報を読み込み（いもづる式学習用）
+      await loadRelationships(dataSource);
+
       setLoading(false);
     } catch (err) {
       console.error('社会科データ読み込みエラー:', err);
@@ -158,6 +170,10 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
       isCorrect,
       false
     );
+
+    // 関連語句を取得（いもづる式学習）
+    const related = getRelatedTerms(currentQuestion.term, 3);
+    setRelatedTerms(related);
   };
 
   const handleDontKnow = () => {
@@ -176,11 +192,16 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
       false,
       true // isDontKnow: true
     );
+
+    // 関連語句を取得（いもづる式学習）
+    const related = getRelatedTerms(currentQuestion.term, 3);
+    setRelatedTerms(related);
   };
 
   const handleNext = () => {
     setSelectedAnswer(null);
     setIsAnswered(false);
+    setRelatedTerms([]);
     setCurrentIndex((currentIndex + 1) % filteredQuestions.length);
   };
 
@@ -366,6 +387,51 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
                     >
                       {matter.trim()}
                     </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* いもづる式学習: 推薦関連語句 */}
+            {relatedTerms.length > 0 && (
+              <div className="mt-4 p-3 bg-purple-50 rounded-lg border border-purple-200">
+                <h4 className="text-sm font-bold text-purple-800 mb-2">
+                  🔍 次に学ぶとよい語句
+                </h4>
+                <div className="space-y-2">
+                  {relatedTerms.map((rec, idx) => {
+                    const progress = getSocialStudiesTermProgress(rec.term);
+                    const positionBadge = progress
+                      ? progress.position <= 20
+                        ? '✅ 習得済み'
+                        : progress.position <= 40
+                          ? '📚 定着中'
+                          : progress.position <= 70
+                            ? '📖 学習中'
+                            : '❓ 苦手'
+                      : '🆕 未学習';
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex items-start justify-between p-2 bg-white rounded border border-purple-100"
+                      >
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium text-purple-900">{rec.term}</span>
+                            <span className="text-xs text-purple-600">{positionBadge}</span>
+                          </div>
+                          <p className="text-xs text-gray-600 mt-1">{rec.reason}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                <p className="text-xs text-purple-600 mt-2">
+                  💡 ヒント: これらの語句を学習すると、理解が深まります
+                </p>
+              </div>
+            )}
                   ))}
                 </div>
               </div>
