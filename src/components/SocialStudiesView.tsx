@@ -207,6 +207,17 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
     setCurrentIndex((currentIndex + 1) % filteredQuestions.length);
   };
 
+  // 学習効率メトリクス（フック呼び出しは条件分岐の前に配置）
+  const efficiencyMetrics = useMemo(() => {
+    try {
+      const progressData = loadSocialStudiesProgressSync();
+      return socialStudiesEfficiencyAI.calculateOverallMetrics(progressData);
+    } catch (err) {
+      console.error('効率メトリクス計算エラー:', err);
+      return null;
+    }
+  }, [totalAnswered]); // 回答時に再計算
+
   // ===== レンダリング =====
   if (loading) {
     return (
@@ -235,17 +246,6 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
   const currentQuestion = filteredQuestions[currentIndex];
   const correctRate =
     totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
-
-  // 学習効率メトリクス
-  const efficiencyMetrics = useMemo(() => {
-    try {
-      const progressData = loadSocialStudiesProgressSync();
-      return socialStudiesEfficiencyAI.calculateOverallMetrics(progressData);
-    } catch (err) {
-      console.error('効率メトリクス計算エラー:', err);
-      return null;
-    }
-  }, [totalAnswered]); // 回答時に再計算
 
   return (
     <div className="social-studies-view max-w-4xl mx-auto p-4">

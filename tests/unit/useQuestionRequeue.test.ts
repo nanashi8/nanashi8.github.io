@@ -57,7 +57,7 @@ describe('useQuestionRequeue', () => {
     } as any);
   });
 
-  it('近い将来に同一IDが存在する場合、挿入せず skip ログを残す（SSOT position を優先）', () => {
+  it('暗記モードの分からない(>=70)は、近すぎる将来に同一IDが存在する場合でも minGap まで後ろへ移動する（SSOT position を優先）', () => {
     setProgressForWord('apple', {
       memorizationPosition: 80,
       memorizationAttempts: 5,
@@ -71,15 +71,19 @@ describe('useQuestionRequeue', () => {
     const { result } = renderHook(() => useQuestionRequeue<any>());
 
     const currentQuestion = { word: 'apple', position: 10 };
-    const questions = [
-      { word: 'q0', position: 0 },
-      { word: 'apple', position: 20 }, // upcoming内に同一ID
-      { word: 'q2', position: 0 },
-    ];
+    // minGap(=10) を満たせる長さにする（apple を「近すぎる位置」に置き、後ろへ移動されることを確認）
+    const questions = Array.from({ length: 30 }, (_, i) => ({ word: `q${i}`, position: 0 }));
+    questions[1] = { word: 'apple', position: 20 };
 
     const returned = result.current.reAddQuestion(currentQuestion, questions, 0, 'memorization');
 
-    expect(returned).toBe(questions);
+    // 追加ではなく「移動」なので長さは変わらない
+    expect(returned).toHaveLength(questions.length);
+    // 暗記モードの分からないは minGap=10 なので、index 10 以降に配置される
+    const nextAppleIndex = returned.findIndex((q: any, idx: number) => idx > 0 && q?.word === 'apple');
+    expect(nextAppleIndex).toBeGreaterThanOrEqual(10);
+    // 重複は増えない
+    expect(returned.filter((q: any) => q.word === 'apple')).toHaveLength(1);
 
     const stored = localStorage.getItem('debug_requeue_events');
     expect(stored).not.toBeNull();
@@ -89,12 +93,14 @@ describe('useQuestionRequeue', () => {
     expect(logs).toHaveLength(1);
 
     const entry = logs[0];
-    expect(entry.decision).toBe('skipped_exists_nearby');
+    expect(entry.decision).toBe('inserted');
     // question.position(10)ではなく、SSOT（memorizationPosition=80）を採用して判断できていること
     expect(entry.questionPosition).toBe(10);
     expect(entry.ssotPosition).toBe(80);
     expect(entry.effectivePosition).toBe(80);
     expect(entry.reason).toBe('incorrect_like');
+    expect(entry.movedExisting).toBe(true);
+    expect(entry.note).toBe('moved_due_to_min_gap');
   });
 
   it('重複がなければ挿入し、position-aware で高Position群の近くに寄せる（insert ログ）', () => {

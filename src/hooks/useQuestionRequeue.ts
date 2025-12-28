@@ -185,8 +185,11 @@ export function useQuestionRequeue<
         // 解消に向かわず詰まるため、必要なら既存の出題位置を繰り上げる。
         if (isIncorrectLike) {
           const desiredInsertPosition = Math.min(currentIndex + plannedOffset, questions.length);
+          const minAllowedIndex = currentIndex + minGapForMode;
+          const isTooSoonForMinGap = minGapForMode > 0 && existingNearbyAbsIndex < minAllowedIndex;
           // 既に想定より早く（または同等の位置に）出現するなら、ここでは何もしない
-          if (existingNearbyAbsIndex <= desiredInsertPosition) {
+          // ※ただし暗記モード minGap の範囲内にある場合は、振動防止のため後ろへ移動する
+          if (existingNearbyAbsIndex <= desiredInsertPosition && !isTooSoonForMinGap) {
             pushRequeueDebugLog({
               timestamp: new Date().toISOString(),
               mode: mode ?? 'unknown',
@@ -249,6 +252,7 @@ export function useQuestionRequeue<
             insertAt,
             originalInsertAt: existingNearbyAbsIndex,
             movedExisting: true,
+            note: isTooSoonForMinGap ? 'moved_due_to_min_gap' : 'moved_existing_earlier',
             questionPosition: questionPosition ?? null,
             ssotPosition: ssotPosition ?? null,
             effectivePosition: effectivePosition ?? null,
