@@ -580,10 +580,10 @@ function ScoreBoard({
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
           onClick={() => setActiveTab('plan')}
-          title="プラン"
+          title="計画"
         >
-          <span className="hidden sm:inline">📋 プラン</span>
-          <span className="sm:hidden">プラン</span>
+          <span className="hidden sm:inline">📋 計画</span>
+          <span className="sm:hidden">計画</span>
         </button>
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
@@ -727,6 +727,29 @@ function ScoreBoard({
                           ? '熟語のみ'
                           : '単語・熟語'}
                   </span>
+                </>
+              )}
+            </div>
+
+            {/* 計画タブ: 学習効率（ユーザー指示により表示） */}
+            <div className="plan-text-line">
+              <span className="stat-text-label">📈 定着率: {retentionData.retentionRate}%</span>
+              {typeof estimatedSpeed === 'number' && (
+                <>
+                  <span className="stat-text-divider">｜</span>
+                  <span className="stat-text-label">推定速度: {estimatedSpeed.toFixed(2)}</span>
+                </>
+              )}
+              {typeof forgettingRate === 'number' && (
+                <>
+                  <span className="stat-text-divider">｜</span>
+                  <span className="stat-text-label">忘却率: {forgettingRate.toFixed(2)}</span>
+                </>
+              )}
+              {learningPhase && (
+                <>
+                  <span className="stat-text-divider">｜</span>
+                  <span className="stat-text-label">フェーズ: {learningPhase}</span>
                 </>
               )}
             </div>

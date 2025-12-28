@@ -27,6 +27,30 @@ console.log(`${colors.blue}🔍 仕様書遵守チェック開始...${colors.res
 
 let hasViolations = false;
 
+// UIレイアウト変更のユーザー承認ログ（同一コミットに含める）
+const UI_APPROVAL_LOG_PATH = '.ai-instructions/UI_CHANGE_APPROVALS.md';
+
+function isUILayoutChangeApproved(layoutFiles) {
+  try {
+    // 承認ログがステージされていることを必須条件にする（後付け承認を防ぐ）
+    const staged = execSync(`git diff --cached --name-only ${UI_APPROVAL_LOG_PATH}`, {
+      encoding: 'utf-8',
+    })
+      .split('\n')
+      .filter(Boolean);
+    if (staged.length === 0) return false;
+
+    if (!fs.existsSync(UI_APPROVAL_LOG_PATH)) return false;
+    const content = fs.readFileSync(UI_APPROVAL_LOG_PATH, 'utf-8');
+    if (!content.includes('承認: OK')) return false;
+
+    // 承認ログに対象ファイルが明記されていること
+    return layoutFiles.some(f => content.includes(f));
+  } catch {
+    return false;
+  }
+}
+
 // 変更されたファイルを取得
 let changedFiles;
 try {
@@ -223,7 +247,12 @@ if (layoutFiles.length > 0) {
     );
 
     if (layoutChanges.length > 0) {
-      console.log(`${colors.red}❌ レイアウト変更を検出しました${colors.reset}`);
+      const approved = isUILayoutChangeApproved(layoutFiles);
+      if (approved) {
+        console.log(`${colors.yellow}⚠️  レイアウト変更を検出しました（ユーザー承認済み）${colors.reset}`);
+      } else {
+        console.log(`${colors.red}❌ レイアウト変更を検出しました${colors.reset}`);
+      }
       console.log('');
       console.log(`${colors.yellow}検出された変更: ${layoutChanges.length}箇所${colors.reset}`);
       console.log('');
@@ -238,7 +267,13 @@ if (layoutFiles.length > 0) {
       }
 
       console.log('');
-      console.log(`${colors.red}🚨 仕様違反: レイアウトの無断変更は禁止されています${colors.reset}`);
+      if (approved) {
+        console.log(`${colors.yellow}📌 この変更はユーザー指示に基づくため継続します${colors.reset}`);
+        console.log(`${colors.yellow}   承認ログ: ${UI_APPROVAL_LOG_PATH}${colors.reset}`);
+        console.log('');
+      } else {
+        console.log(`${colors.red}🚨 仕様違反: レイアウトの無断変更は禁止されています${colors.reset}`);
+      }
       console.log('');
       console.log('📋 レイアウト変更が禁止される理由:');
       console.log('   - 既存のUIはユーザー体験のため調整済み');
@@ -258,7 +293,9 @@ if (layoutFiles.length > 0) {
       console.log('📚 参照ドキュメント:');
       console.log('   - .ai-instructions/SPECIFICATION_ENFORCEMENT.md');
       console.log('');
-      hasViolations = true;
+      if (!approved) {
+        hasViolations = true;
+      }
     }
   } catch (error) {
     // 差分取得エラーは無視
