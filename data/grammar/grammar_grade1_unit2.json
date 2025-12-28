@@ -16,11 +16,7 @@
       "type": "fillInBlank",
       "japanese": "彼は英語を勉強します。",
       "sentence": "He ____ English.",
-      "choices": [
-        "studies",
-        "study",
-        "studys"
-      ],
+      "choices": ["studies", "study", "studys"],
       "correctAnswer": "studies",
       "difficulty": "beginner",
       "explanation": "三人称単数（he/she/it）の現在形は動詞に-s/-esを付けます。studyは子音+yなので-iesです。×studysは誤りです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【studies】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は英語を勉強します。」から、この形が適切です。\n\n❌ 【study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は英語を勉強します。」に合いません。\n\n❌ 【studys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は英語を勉強します。」に合いません。",
@@ -31,11 +27,7 @@
       "type": "fillInBlank",
       "japanese": "彼女はサッカーをします。",
       "sentence": "She ____ soccer.",
-      "choices": [
-        "plays",
-        "play",
-        "plaies"
-      ],
+      "choices": ["plays", "play", "plaies"],
       "correctAnswer": "plays",
       "difficulty": "beginner",
       "explanation": "playは母音+yなので-sを付けるだけです。×plaiesは誤りです。三人称単数の基本パターンです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【plays】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はサッカーをします。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はサッカーをします。」に合いません。\n\n❌ 【plaies】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はサッカーをします。」に合いません。",
@@ -46,11 +38,7 @@
       "type": "fillInBlank",
       "japanese": "彼は学校へ行きます。",
       "sentence": "He ____ to school.",
-      "choices": [
-        "goes",
-        "go",
-        "gos"
-      ],
+      "choices": ["goes", "go", "gos"],
       "correctAnswer": "goes",
       "difficulty": "beginner",
       "explanation": "-o で終わる動詞は-esを付けます。go→goesです。×gosは誤りです。頻出の不規則パターンです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【goes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は学校へ行きます。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は学校へ行きます。」に合いません。\n\n❌ 【gos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は学校へ行きます。」に合いません。",
@@ -61,11 +49,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は本を持っています。",
       "sentence": "She ____ a book.",
-      "choices": [
-        "has",
-        "have",
-        "haves"
-      ],
+      "choices": ["has", "have", "haves"],
       "correctAnswer": "has",
       "difficulty": "beginner",
       "explanation": "haveの三人称単数形はhas（不規則）です。×havesは誤りです。最重要の不規則変化です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は本を持っています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は本を持っています。」に合いません。\n\n❌ 【haves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は本を持っています。」に合いません。",
@@ -76,11 +60,7 @@
       "type": "fillInBlank",
       "japanese": "トムはテニスが好きです。",
       "sentence": "Tom ____ tennis.",
-      "choices": [
-        "likes",
-        "like",
-        "liks"
-      ],
+      "choices": ["likes", "like", "liks"],
       "correctAnswer": "likes",
       "difficulty": "beginner",
       "explanation": "人名（Tom）は三人称単数なので-sを付けます。like→likesです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【likes】 ← 正解\n  ✓ 正解理由: 日本語訳「トムはテニスが好きです。」から、この形が適切です。\n\n❌ 【like】 ← 不正解\n  ✗ 不正解理由: 日本語訳「トムはテニスが好きです。」に合いません。\n\n❌ 【liks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「トムはテニスが好きです。」に合いません。",
@@ -91,11 +71,7 @@
       "type": "fillInBlank",
       "japanese": "彼はテレビを見ます。",
       "sentence": "He ____ TV.",
-      "choices": [
-        "watches",
-        "watch",
-        "watchs"
-      ],
+      "choices": ["watches", "watch", "watchs"],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
       "explanation": "-chで終わる動詞は-esを付けます。watch→watchesです。-sh/-ch/-x/-s/-oは-esパターンです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watches】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はテレビを見ます。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はテレビを見ます。」に合いません。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はテレビを見ます。」に合いません。",
@@ -108,11 +84,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は音楽を聞きません。",
       "sentence": "She ____ listen to music.",
-      "choices": [
-        "doesn't",
-        "don't",
-        "isn't"
-      ],
+      "choices": ["doesn't", "don't", "isn't"],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
       "explanation": "三人称単数の否定文はdoesn't + 原形です。×don'tはI/You/We/They用。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【doesn't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は音楽を聞きません。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は音楽を聞きません。」に合いません。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は音楽を聞きません。」に合いません。",
@@ -123,11 +95,7 @@
       "type": "fillInBlank",
       "japanese": "彼は野球をしますか。",
       "sentence": "____ he play baseball?",
-      "choices": [
-        "Does",
-        "Do",
-        "Is"
-      ],
+      "choices": ["Does", "Do", "Is"],
       "correctAnswer": "Does",
       "difficulty": "intermediate",
       "explanation": "三人称単数の疑問文はDoes + 主語 + 原形です。答えはYes, he does. / No, he doesn't.です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は野球をしますか。」から、この形が適切です。\n\n❌ 【Do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は野球をしますか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は野球をしますか。」に合いません。",
@@ -140,11 +108,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は毎日宿題をします。",
       "sentence": "She ____ her homework every day.",
-      "choices": [
-        "does",
-        "do",
-        "dose"
-      ],
+      "choices": ["does", "do", "dose"],
       "correctAnswer": "does",
       "difficulty": "intermediate",
       "explanation": "doの三人称単数形はdoes（不規則）です。do homework（宿題をする）は熟語として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は毎日宿題をします。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は毎日宿題をします。」に合いません。\n\n❌ 【dose】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は毎日宿題をします。」に合いません。",
@@ -155,11 +119,7 @@
       "type": "fillInBlank",
       "japanese": "彼は朝早く起きます。",
       "sentence": "He ____ up early in the morning.",
-      "choices": [
-        "gets",
-        "get",
-        "getes"
-      ],
+      "choices": ["gets", "get", "getes"],
       "correctAnswer": "gets",
       "difficulty": "intermediate",
       "explanation": "get up（起きる）は熟語です。getは通常の-sパターンです。get→getsです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【gets】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は朝早く起きます。」から、この形が適切です。\n\n❌ 【get】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は朝早く起きます。」に合いません。\n\n❌ 【getes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は朝早く起きます。」に合いません。",
@@ -170,11 +130,7 @@
       "type": "fillInBlank",
       "japanese": "彼女はバスで学校へ行きます。",
       "sentence": "She ____ to school by bus.",
-      "choices": [
-        "goes",
-        "go",
-        "went"
-      ],
+      "choices": ["goes", "go", "went"],
       "correctAnswer": "goes",
       "difficulty": "intermediate",
       "explanation": "go to school by busの組み合わせです。goの三人称単数形はgoesです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【goes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はバスで学校へ行きます。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はバスで学校へ行きます。」に合いません。\n\n❌ 【went】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はバスで学校へ行きます。」に合いません。",
@@ -185,11 +141,7 @@
       "type": "fillInBlank",
       "japanese": "彼は夕食後皿を洗います。",
       "sentence": "He ____ the dishes after dinner.",
-      "choices": [
-        "washes",
-        "wash",
-        "washs"
-      ],
+      "choices": ["washes", "wash", "washs"],
       "correctAnswer": "washes",
       "difficulty": "advanced",
       "explanation": "-shで終わる動詞は-esを付けます。wash the dishes（皿を洗う）は日常表現です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【washes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は夕食後皿を洗います。」から、この形が適切です。\n\n❌ 【wash】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は夕食後皿を洗います。」に合いません。\n\n❌ 【washs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は夕食後皿を洗います。」に合いません。",
@@ -200,11 +152,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は放課後図書館で勉強しますか。",
       "sentence": "Does she ____ in the library after school?",
-      "choices": [
-        "study",
-        "studies",
-        "studied"
-      ],
+      "choices": ["study", "studies", "studied"],
       "correctAnswer": "study",
       "difficulty": "advanced",
       "explanation": "Doesの後は必ず原形です。×studiesは誤りです。疑問文では動詞は原形のままです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は放課後図書館で勉強しますか。」から、この形が適切です。\n\n❌ 【studies】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は放課後図書館で勉強しますか。」に合いません。\n\n❌ 【studied】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は放課後図書館で勉強しますか。」に合いません。",
@@ -215,11 +163,7 @@
       "type": "fillInBlank",
       "japanese": "彼は英語を話しません。",
       "sentence": "He doesn't ____ English.",
-      "choices": [
-        "speak",
-        "speaks",
-        "speaking"
-      ],
+      "choices": ["speak", "speaks", "speaking"],
       "correctAnswer": "speak",
       "difficulty": "advanced",
       "explanation": "doesn'tの後は原形です。×speaksは誤りです。否定文でも動詞は原形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【speak】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は英語を話しません。」から、この形が適切です。\n\n❌ 【speaks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は英語を話しません。」に合いません。\n\n❌ 【speaking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は英語を話しません。」に合いません。",
@@ -232,11 +176,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は毎朝6時に起きます。",
       "sentence": "She ____ at six every morning.",
-      "choices": [
-        "gets up",
-        "get up",
-        "getes up"
-      ],
+      "choices": ["gets up", "get up", "getes up"],
       "correctAnswer": "gets up",
       "difficulty": "advanced",
       "explanation": "get upは句動詞（2語で1つの動詞）です。三人称単数ではgets upとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【gets up】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は毎朝6時に起きます。」から、この形が適切です。\n\n❌ 【get up】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は毎朝6時に起きます。」に合いません。\n\n❌ 【getes up】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は毎朝6時に起きます。」に合いません。",
@@ -246,11 +186,7 @@
       "id": "g1-u2-so-001",
       "type": "sentenceOrdering",
       "japanese": "彼は日本語を勉強します。",
-      "words": [
-        "Japanese",
-        "he",
-        "studies"
-      ],
+      "words": ["Japanese", "he", "studies"],
       "correctAnswer": "He studies Japanese.",
       "difficulty": "beginner",
       "explanation": "三人称単数の基本語順：He + studies（動詞-s/-es）+ 目的語です。\n\n「彼は日本語を勉強します。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He studies Japanese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -263,11 +199,7 @@
       "id": "g1-u2-so-002",
       "type": "sentenceOrdering",
       "japanese": "彼女はバレーボールをします。",
-      "words": [
-        "volleyball",
-        "plays",
-        "she"
-      ],
+      "words": ["volleyball", "plays", "she"],
       "correctAnswer": "She plays volleyball.",
       "difficulty": "beginner",
       "explanation": "She plays ～の語順です。playは母音+yなので-sのみです。\n\n「彼女はバレーボールをします。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She plays volleyball.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -278,13 +210,7 @@
       "id": "g1-u2-so-003",
       "type": "sentenceOrdering",
       "japanese": "彼は公園へ行きます。",
-      "words": [
-        "to",
-        "the",
-        "park",
-        "he",
-        "goes"
-      ],
+      "words": ["to", "the", "park", "he", "goes"],
       "correctAnswer": "He goes to the park.",
       "difficulty": "beginner",
       "explanation": "go→goesの不規則パターンです。go to ～の基本語順です。\n\n「彼は公園へ行きます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He goes to the park.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -295,12 +221,7 @@
       "id": "g1-u2-so-004",
       "type": "sentenceOrdering",
       "japanese": "彼女は猫を飼っています。",
-      "words": [
-        "cat",
-        "a",
-        "she",
-        "has"
-      ],
+      "words": ["cat", "a", "she", "has"],
       "correctAnswer": "She has a cat.",
       "difficulty": "beginner",
       "explanation": "have→hasの不規則変化です。a catは「1匹の猫」です。\n\n「彼女は猫を飼っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has a cat.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -311,11 +232,7 @@
       "id": "g1-u2-so-005",
       "type": "sentenceOrdering",
       "japanese": "トムはテニスが好きです。",
-      "words": [
-        "tennis",
-        "Tom",
-        "likes"
-      ],
+      "words": ["tennis", "Tom", "likes"],
       "correctAnswer": "Tom likes tennis.",
       "difficulty": "beginner",
       "explanation": "人名も三人称単数です。Tom likes ～の語順です。\n\n「トムはテニスが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Tom likes tennis.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -326,11 +243,7 @@
       "id": "g1-u2-so-006",
       "type": "sentenceOrdering",
       "japanese": "彼は映画を見ます。",
-      "words": [
-        "movies",
-        "watches",
-        "he"
-      ],
+      "words": ["movies", "watches", "he"],
       "correctAnswer": "He watches movies.",
       "difficulty": "intermediate",
       "explanation": "watch→watches（-ch→-es）です。watch moviesは「映画を見る」です。\n\n「彼は映画を見ます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He watches movies.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -341,14 +254,7 @@
       "id": "g1-u2-so-007",
       "type": "sentenceOrdering",
       "japanese": "彼女はラジオを聞きません。",
-      "words": [
-        "to",
-        "the",
-        "radio",
-        "listen",
-        "she",
-        "doesn't"
-      ],
+      "words": ["to", "the", "radio", "listen", "she", "doesn't"],
       "correctAnswer": "She doesn't listen to the radio.",
       "difficulty": "intermediate",
       "explanation": "否定文：She doesn't + 原形です。listen to the radioはセットです。\n\n「彼女はラジオを聞きません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She doesn't listen to the radio.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -359,12 +265,7 @@
       "id": "g1-u2-so-008",
       "type": "sentenceOrdering",
       "japanese": "彼はサッカーをしますか。",
-      "words": [
-        "soccer",
-        "play",
-        "he",
-        "does"
-      ],
+      "words": ["soccer", "play", "he", "does"],
       "correctAnswer": "Does he play soccer?",
       "difficulty": "intermediate",
       "explanation": "疑問文：Does + 主語 + 原形です。文末に?です。\n\n「彼はサッカーをしますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Does he play soccer?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -375,14 +276,7 @@
       "id": "g1-u2-so-009",
       "type": "sentenceOrdering",
       "japanese": "彼女は毎日掃除をします。",
-      "words": [
-        "cleaning",
-        "the",
-        "every",
-        "day",
-        "she",
-        "does"
-      ],
+      "words": ["cleaning", "the", "every", "day", "she", "does"],
       "correctAnswer": "She does the cleaning every day.",
       "difficulty": "intermediate",
       "explanation": "do→doesの不規則変化です。do the cleaningは「掃除をする」です。\n\n「彼女は毎日掃除をします。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She does the cleaning every day.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -395,15 +289,7 @@
       "id": "g1-u2-so-010",
       "type": "sentenceOrdering",
       "japanese": "彼は夜遅く寝ます。",
-      "words": [
-        "to",
-        "bed",
-        "late",
-        "at",
-        "night",
-        "he",
-        "goes"
-      ],
+      "words": ["to", "bed", "late", "at", "night", "he", "goes"],
       "correctAnswer": "He goes to bed late at night.",
       "difficulty": "intermediate",
       "explanation": "go to bed lateで「遅く寝る」です。at nightは時を表します。\n\n「彼は夜遅く寝ます。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He goes to bed late at night.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -414,14 +300,7 @@
       "id": "g1-u2-so-011",
       "type": "sentenceOrdering",
       "japanese": "彼女は電車で学校へ行きます。",
-      "words": [
-        "to",
-        "school",
-        "by",
-        "train",
-        "she",
-        "goes"
-      ],
+      "words": ["to", "school", "by", "train", "she", "goes"],
       "correctAnswer": "She goes to school by train.",
       "difficulty": "intermediate",
       "explanation": "go to school by trainの語順です。交通手段は文末です。\n\n「彼女は電車で学校へ行きます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She goes to school by train.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -432,14 +311,7 @@
       "id": "g1-u2-so-012",
       "type": "sentenceOrdering",
       "japanese": "彼は毎週窓を洗います。",
-      "words": [
-        "the",
-        "windows",
-        "every",
-        "week",
-        "he",
-        "washes"
-      ],
+      "words": ["the", "windows", "every", "week", "he", "washes"],
       "correctAnswer": "He washes the windows every week.",
       "difficulty": "advanced",
       "explanation": "wash→washes（-sh→-es）です。wash the windowsは家事表現です。\n\n「彼は毎週窓を洗います。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He washes the windows every week.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -450,13 +322,7 @@
       "id": "g1-u2-so-013",
       "type": "sentenceOrdering",
       "japanese": "彼女は家で勉強しますか。",
-      "words": [
-        "at",
-        "home",
-        "study",
-        "she",
-        "does"
-      ],
+      "words": ["at", "home", "study", "she", "does"],
       "correctAnswer": "Does she study at home?",
       "difficulty": "advanced",
       "explanation": "Does + 主語 + 原形の語順です。at homeは「家で」です。\n\n「彼女は家で勉強しますか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Does she study at home?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -467,12 +333,7 @@
       "id": "g1-u2-so-014",
       "type": "sentenceOrdering",
       "japanese": "彼は中国語を話しません。",
-      "words": [
-        "Chinese",
-        "speak",
-        "he",
-        "doesn't"
-      ],
+      "words": ["Chinese", "speak", "he", "doesn't"],
       "correctAnswer": "He doesn't speak Chinese.",
       "difficulty": "advanced",
       "explanation": "doesn't + 原形の語順です。speak Chineseで「中国語を話す」です。\n\n「彼は中国語を話しません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He doesn't speak Chinese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -485,16 +346,7 @@
       "id": "g1-u2-so-015",
       "type": "sentenceOrdering",
       "japanese": "彼女は毎晩10時に寝ます。",
-      "words": [
-        "to",
-        "bed",
-        "at",
-        "ten",
-        "every",
-        "night",
-        "she",
-        "goes"
-      ],
+      "words": ["to", "bed", "at", "ten", "every", "night", "she", "goes"],
       "correctAnswer": "She goes to bed at ten every night.",
       "difficulty": "advanced",
       "explanation": "句動詞goes to bedの語順です。at ten（10時に）→every night（毎晩）の順です。\n\n「彼女は毎晩10時に寝ます。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She goes to bed at ten every night.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -603,11 +455,7 @@
       "japanese": "はい、彼は音楽が好きです。",
       "originalSentence": "Does he play tennis?",
       "question": "Yesで答えなさい",
-      "choices": [
-        "Yes, he does.",
-        "Yes, he do.",
-        "Yes, he is."
-      ],
+      "choices": ["Yes, he does.", "Yes, he do.", "Yes, he is."],
       "correctAnswer": "Yes, he does.",
       "difficulty": "intermediate",
       "explanation": "Does he～?にはYes, he does. / No, he doesn't.で答えります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Yes, he does.】 ← 正解\n  ✓ 正解理由: 日本語訳「はい、彼は音楽が好きです。」から、この形が適切です。\n\n❌ 【Yes, he do.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、彼は音楽が好きです。」に合いません。\n\n❌ 【Yes, he is.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、彼は音楽が好きです。」に合いません。",
@@ -619,11 +467,7 @@
       "japanese": "主語の変更（You→She）。",
       "originalSentence": "You have a pen.",
       "question": "主語をSheに変えて書き換えなさい",
-      "choices": [
-        "She has a pen.",
-        "She have a pen.",
-        "She haves a pen."
-      ],
+      "choices": ["She has a pen.", "She have a pen.", "She haves a pen."],
       "correctAnswer": "She has a pen.",
       "difficulty": "intermediate",
       "explanation": "have→hasの不規則変化です。三人称単数の最重要パターンです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【She has a pen.】 ← 正解\n  ✓ 正解理由: 日本語訳「主語の変更（You→She）。」から、この形が適切です。\n\n❌ 【She have a pen.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「主語の変更（You→She）。」に合いません。\n\n❌ 【She haves a pen.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「主語の変更（You→She）。」に合いません。",
@@ -749,11 +593,7 @@
       "japanese": "彼は数学を勉強します。",
       "sentence": "He ____ math.",
       "verb": "study",
-      "choices": [
-        "studies",
-        "study",
-        "studys"
-      ],
+      "choices": ["studies", "study", "studys"],
       "correctAnswer": "studies",
       "difficulty": "beginner",
       "explanation": "studyの三人称単数形はstudies（子音+y→-ies）です。最頻出の変化パターンです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【studies】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は数学を勉強します。」から、この形が適切です。\n\n❌ 【study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は数学を勉強します。」に合いません。\n\n❌ 【studys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は数学を勉強します。」に合いません。",
@@ -765,11 +605,7 @@
       "japanese": "彼女はバレーボールをします。",
       "sentence": "She ____ volleyball.",
       "verb": "play",
-      "choices": [
-        "plays",
-        "play",
-        "plaies"
-      ],
+      "choices": ["plays", "play", "plaies"],
       "correctAnswer": "plays",
       "difficulty": "beginner",
       "explanation": "playの三人称単数形はplays（母音+y→-s）です。×-iesにしないこと。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【plays】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はバレーボールをします。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はバレーボールをします。」に合いません。\n\n❌ 【plaies】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はバレーボールをします。」に合いません。",
@@ -781,11 +617,7 @@
       "japanese": "彼は図書館へ行きます。",
       "sentence": "He ____ to the library.",
       "verb": "go",
-      "choices": [
-        "goes",
-        "go",
-        "gos"
-      ],
+      "choices": ["goes", "go", "gos"],
       "correctAnswer": "goes",
       "difficulty": "beginner",
       "explanation": "goの三人称単数形はgoes（-o→-es）です。頻出の不規則パターンです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【goes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は図書館へ行きます。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は図書館へ行きます。」に合いません。\n\n❌ 【gos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は図書館へ行きます。」に合いません。",
@@ -799,11 +631,7 @@
       "japanese": "彼女は犬を飼っています。",
       "sentence": "She ____ a dog.",
       "verb": "have",
-      "choices": [
-        "has",
-        "have",
-        "haves"
-      ],
+      "choices": ["has", "have", "haves"],
       "correctAnswer": "has",
       "difficulty": "beginner",
       "explanation": "haveの三人称単数形はhas（完全不規則）です。最重要の不規則変化です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は犬を飼っています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は犬を飼っています。」に合いません。\n\n❌ 【haves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は犬を飼っています。」に合いません。",
@@ -817,11 +645,7 @@
       "japanese": "彼は映画を見ます。",
       "sentence": "He ____ movies.",
       "verb": "watch",
-      "choices": [
-        "watches",
-        "watch",
-        "watchs"
-      ],
+      "choices": ["watches", "watch", "watchs"],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
       "explanation": "watchの三人称単数形はwatches（-ch→-es）です。-sh/-ch/-x/-s/-oは-esパターンです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watches】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は映画を見ます。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は映画を見ます。」に合いません。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は映画を見ます。」に合いません。",
@@ -833,11 +657,7 @@
       "japanese": "彼女はラジオを聞きますか。",
       "sentence": "Does she ____ to the radio?",
       "verb": "listen",
-      "choices": [
-        "listen",
-        "listens",
-        "listening"
-      ],
+      "choices": ["listen", "listens", "listening"],
       "correctAnswer": "listen",
       "difficulty": "intermediate",
       "explanation": "Doesの後は必ず原形です。×listensは誤りです。疑問文では-s/-esを付けないです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【listen】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はラジオを聞きますか。」から、この形が適切です。\n\n❌ 【listens】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はラジオを聞きますか。」に合いません。\n\n❌ 【listening】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はラジオを聞きますか。」に合いません。",
@@ -849,11 +669,7 @@
       "japanese": "彼はバスケをしません。",
       "sentence": "He doesn't ____ basketball.",
       "verb": "play",
-      "choices": [
-        "play",
-        "plays",
-        "playing"
-      ],
+      "choices": ["play", "plays", "playing"],
       "correctAnswer": "play",
       "difficulty": "intermediate",
       "explanation": "doesn'tの後は原形です。×playsは誤りです。否定文でも-s/-esを付けないです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はバスケをしません。」から、この形が適切です。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はバスケをしません。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はバスケをしません。」に合いません。",
@@ -865,11 +681,7 @@
       "japanese": "彼女は料理をします。",
       "sentence": "She ____ the cooking.",
       "verb": "do",
-      "choices": [
-        "does",
-        "do",
-        "dose"
-      ],
+      "choices": ["does", "do", "dose"],
       "correctAnswer": "does",
       "difficulty": "intermediate",
       "explanation": "doの三人称単数形はdoes（不規則）です。do the cooking（料理をする）は熟語として覚えてください。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は料理をします。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は料理をします。」に合いません。\n\n❌ 【dose】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は料理をします。」に合いません。",
@@ -881,11 +693,7 @@
       "japanese": "彼は車を洗います。",
       "sentence": "He ____ his car.",
       "verb": "wash",
-      "choices": [
-        "washes",
-        "wash",
-        "washs"
-      ],
+      "choices": ["washes", "wash", "washs"],
       "correctAnswer": "washes",
       "difficulty": "advanced",
       "explanation": "washの三人称単数形はwashes（-sh→-es）です。wash the carは日常表現です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【washes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は車を洗います。」から、この形が適切です。\n\n❌ 【wash】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は車を洗います。」に合いません。\n\n❌ 【washs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は車を洗います。」に合いません。",
@@ -897,11 +705,7 @@
       "japanese": "彼女は日本語を話しますか。",
       "sentence": "Does she ____ Japanese?",
       "verb": "speak",
-      "choices": [
-        "speak",
-        "speaks",
-        "spoken"
-      ],
+      "choices": ["speak", "speaks", "spoken"],
       "correctAnswer": "speak",
       "difficulty": "advanced",
       "explanation": "Doesの後は原形speakです。speak Japaneseで「日本語を話す」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【speak】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は日本語を話しますか。」から、この形が適切です。\n\n❌ 【speaks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は日本語を話しますか。」に合いません。\n\n❌ 【spoken】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は日本語を話しますか。」に合いません。",
@@ -922,11 +726,7 @@
           "text": "He ____ the guitar."
         }
       ],
-      "choices": [
-        "plays",
-        "play",
-        "is play"
-      ],
+      "choices": ["plays", "play", "is play"],
       "correctAnswer": "plays",
       "difficulty": "beginner",
       "explanation": "your brother（あなたの兄）は三人称単数なので-sを付けます。What does～?は三人称の行動を尋ねる表現です。play the guitar「ギターを弾く」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【plays】 ← 正解\n  ✓ 正解理由: 日本語訳「友人について話す。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人について話す。」に合いません。\n\n❌ 【is play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人について話す。」に合いません。",
@@ -947,11 +747,7 @@
           "text": "Yes, she ____."
         }
       ],
-      "choices": [
-        "does",
-        "do",
-        "is"
-      ],
+      "choices": ["does", "do", "is"],
       "correctAnswer": "does",
       "difficulty": "beginner",
       "explanation": "Does she～?にはYes, she does. / No, she doesn't.で答えります。動詞の繰り返しを避けてdoesを使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「家族の習慣を尋ねる。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「家族の習慣を尋ねる。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「家族の習慣を尋ねる。」に合いません。",
@@ -972,11 +768,7 @@
           "text": "She ____ to school by bike."
         }
       ],
-      "choices": [
-        "goes",
-        "go",
-        "is go"
-      ],
+      "choices": ["goes", "go", "is go"],
       "correctAnswer": "goes",
       "difficulty": "intermediate",
       "explanation": "How does～?は方法を尋ねる三人称の疑問文です。She goesで答えります。by bikeは交通手段です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【goes】 ← 正解\n  ✓ 正解理由: 日本語訳「友人の通学方法を尋ねる。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人の通学方法を尋ねる。」に合いません。\n\n❌ 【is go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人の通学方法を尋ねる。」に合いません。",
@@ -999,11 +791,7 @@
           "text": "No, he ____."
         }
       ],
-      "choices": [
-        "doesn't",
-        "don't",
-        "didn't"
-      ],
+      "choices": ["doesn't", "don't", "didn't"],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
       "explanation": "Does he～?の否定の答えはNo, he doesn't.です。every dayは習慣を表します。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【doesn't】 ← 正解\n  ✓ 正解理由: 日本語訳「友人の習慣を尋ねる。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人の習慣を尋ねる。」に合いません。\n\n❌ 【didn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「友人の習慣を尋ねる。」に合いません。",
@@ -1024,11 +812,7 @@
           "text": "He usually ____ the piano."
         }
       ],
-      "choices": [
-        "plays",
-        "play",
-        "played"
-      ],
+      "choices": ["plays", "play", "played"],
       "correctAnswer": "plays",
       "difficulty": "advanced",
       "explanation": "What does～do?は「何をするか」を尋ねります。usuallyは頻度副詞で動詞の前に置きます。play the piano「ピアノを弾く」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【plays】 ← 正解\n  ✓ 正解理由: 日本語訳「兄弟の活動を尋ねる。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「兄弟の活動を尋ねる。」に合いません。\n\n❌ 【played】 ← 不正解\n  ✗ 不正解理由: 日本語訳「兄弟の活動を尋ねる。」に合いません。",
@@ -1041,11 +825,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは学生ですよね。",
       "sentence": "You are a student, ____ you?",
-      "choices": [
-        "aren't",
-        "isn't",
-        "don't"
-      ],
+      "choices": ["aren't", "isn't", "don't"],
       "correctAnswer": "aren't",
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「肯定文, 否定疑問?」の形です。You are → aren't youとする構文として覚えてください。「~ですよね」という確認の意味です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【aren't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは学生ですよね。」から、この形が適切です。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは学生ですよね。」に合いません。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは学生ですよね。」に合いません。",
@@ -1056,11 +836,7 @@
       "type": "fillInBlank",
       "japanese": "彼は医者ですよね。",
       "sentence": "He is a doctor, ____ he?",
-      "choices": [
-        "isn't",
-        "aren't",
-        "doesn't"
-      ],
+      "choices": ["isn't", "aren't", "doesn't"],
       "correctAnswer": "isn't",
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えてください。He is → isn't heとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【isn't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は医者ですよね。」から、この形が適切です。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は医者ですよね。」に合いません。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は医者ですよね。」に合いません。",
@@ -1070,13 +846,7 @@
       "id": "g1-u2-tag-003",
       "type": "sentenceOrdering",
       "japanese": "彼らは友達ですよね。",
-      "words": [
-        "they",
-        "are",
-        "friends",
-        "aren't",
-        "they"
-      ],
+      "words": ["they", "are", "friends", "aren't", "they"],
       "correctAnswer": "They are friends, aren't they?",
       "difficulty": "intermediate",
       "explanation": "付加疑問文という構文として覚えてください。They are → aren't theyと続けります。\n\n「彼らは友達ですよね。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They are friends, aren't they?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1088,11 +858,7 @@
       "type": "fillInBlank",
       "japanese": "それは簡単じゃないですよね。",
       "sentence": "It isn't easy, ____ it?",
-      "choices": [
-        "is",
-        "isn't",
-        "doesn't"
-      ],
+      "choices": ["is", "isn't", "doesn't"],
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「否定文, 肯定疑問?」の形になる構文として覚えてください。isn't → isとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「それは簡単じゃないですよね。」から、この形が適切です。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「それは簡単じゃないですよね。」に合いません。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「それは簡単じゃないですよね。」に合いません。",
@@ -1105,11 +871,7 @@
       "type": "fillInBlank",
       "japanese": "あなたたちは忙しいですよね。",
       "sentence": "You are busy, ____ you?",
-      "choices": [
-        "aren't",
-        "isn't",
-        "don't"
-      ],
+      "choices": ["aren't", "isn't", "don't"],
       "correctAnswer": "aren't",
       "difficulty": "beginner",
       "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えてください。You are → aren't youです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【aren't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたたちは忙しいですよね。」から、この形が適切です。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたたちは忙しいですよね。」に合いません。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたたちは忙しいですよね。」に合いません。",
@@ -1119,14 +881,7 @@
       "id": "g1-u2-tag-006",
       "type": "sentenceOrdering",
       "japanese": "彼女は先生じゃないですよね。",
-      "words": [
-        "she",
-        "isn't",
-        "a",
-        "teacher",
-        "is",
-        "she"
-      ],
+      "words": ["she", "isn't", "a", "teacher", "is", "she"],
       "correctAnswer": "She isn't a teacher, is she?",
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えてください。isn't → isです。\n\n「彼女は先生じゃないですよね。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She isn't a teacher, is she?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1140,11 +895,7 @@
       "type": "fillInBlank",
       "japanese": "これは彼のペンですよね。",
       "sentence": "This is his pen, ____ it?",
-      "choices": [
-        "isn't",
-        "aren't",
-        "doesn't"
-      ],
+      "choices": ["isn't", "aren't", "doesn't"],
       "correctAnswer": "isn't",
       "difficulty": "intermediate",
       "explanation": "付加疑問文という構文として覚えてください。This is → isn't itとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【isn't】 ← 正解\n  ✓ 正解理由: 日本語訳「これは彼のペンですよね。」から、この形が適切です。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは彼のペンですよね。」に合いません。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは彼のペンですよね。」に合いません。",
@@ -1165,11 +916,7 @@
           "text": "Yes, I am."
         }
       ],
-      "choices": [
-        "aren't",
-        "isn't",
-        "don't"
-      ],
+      "choices": ["aren't", "isn't", "don't"],
       "correctAnswer": "aren't",
       "difficulty": "beginner",
       "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【aren't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは日本人ですよね。」から、この形が適切です。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本人ですよね。」に合いません。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは日本人ですよね。」に合いません。",
@@ -1182,11 +929,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは遅刻していないですよね。",
       "sentence": "We aren't late, ____ we?",
-      "choices": [
-        "are",
-        "aren't",
-        "do"
-      ],
+      "choices": ["are", "aren't", "do"],
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えてください。aren't → areとなります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは遅刻していないですよね。」から、この形が適切です。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは遅刻していないですよね。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは遅刻していないですよね。」に合いません。",
@@ -1198,14 +941,7 @@
       "id": "g1-u2-tag-010",
       "type": "sentenceOrdering",
       "japanese": "あれは彼女の自転車ですよね。",
-      "words": [
-        "that",
-        "is",
-        "her",
-        "bike",
-        "isn't",
-        "it"
-      ],
+      "words": ["that", "is", "her", "bike", "isn't", "it"],
       "correctAnswer": "That is her bike, isn't it?",
       "difficulty": "intermediate",
       "explanation": "付加疑問文という構文として覚えてください。That is → isn't itです。\n\n「あれは彼女の自転車ですよね。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is her bike, isn't it?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1217,11 +953,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは英語を勉強しますよね。",
       "sentence": "You study English, ____ you?",
-      "choices": [
-        "don't",
-        "doesn't",
-        "aren't"
-      ],
+      "choices": ["don't", "doesn't", "aren't"],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
       "explanation": "一般動詞の付加疑問文は「肯定文, don't/doesn't...?」という構文として覚えてください。You study → don't youです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【don't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは英語を勉強しますよね。」から、この形が適切です。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは英語を勉強しますよね。」に合いません。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは英語を勉強しますよね。」に合いません。",
@@ -1232,11 +964,7 @@
       "type": "fillInBlank",
       "japanese": "彼はサッカーをしますよね。",
       "sentence": "He plays soccer, ____ he?",
-      "choices": [
-        "doesn't",
-        "don't",
-        "isn't"
-      ],
+      "choices": ["doesn't", "don't", "isn't"],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
       "explanation": "三人称単数の付加疑問文は「肯定文, doesn't...?」という構文として覚えてください。He plays → doesn't heです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【doesn't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はサッカーをしますよね。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はサッカーをしますよね。」に合いません。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はサッカーをしますよね。」に合いません。",
@@ -1246,13 +974,7 @@
       "id": "g1-u2-tag-013",
       "type": "sentenceOrdering",
       "japanese": "彼女は音楽が好きですよね。",
-      "words": [
-        "she",
-        "likes",
-        "music",
-        "doesn't",
-        "she"
-      ],
+      "words": ["she", "likes", "music", "doesn't", "she"],
       "correctAnswer": "She likes music, doesn't she?",
       "difficulty": "intermediate",
       "explanation": "三人称単数の付加疑問文という構文として覚えてください。likes → doesn'tです。\n\n「彼女は音楽が好きですよね。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She likes music, doesn't she?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1264,11 +986,7 @@
       "type": "fillInBlank",
       "japanese": "あなたはテレビを見ないですよね。",
       "sentence": "You don't watch TV, ____ you?",
-      "choices": [
-        "do",
-        "don't",
-        "are"
-      ],
+      "choices": ["do", "don't", "are"],
       "correctAnswer": "do",
       "difficulty": "intermediate",
       "explanation": "否定文の付加疑問文は「否定文, do/does...?」という構文として覚えてください。don't → doです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはテレビを見ないですよね。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはテレビを見ないですよね。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはテレビを見ないですよね。」に合いません。",
@@ -1279,11 +997,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは毎日走りますよね。",
       "sentence": "They run every day, ____ they?",
-      "choices": [
-        "don't",
-        "doesn't",
-        "aren't"
-      ],
+      "choices": ["don't", "doesn't", "aren't"],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
       "explanation": "複数の付加疑問文は「肯定文, don't...?」という構文として覚えてください。They run → don't theyです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【don't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは毎日走りますよね。」から、この形が適切です。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは毎日走りますよね。」に合いません。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは毎日走りますよね。」に合いません。",
@@ -1295,14 +1009,7 @@
       "id": "g1-u2-tag-016",
       "type": "sentenceOrdering",
       "japanese": "彼は朝食を食べないですよね。",
-      "words": [
-        "he",
-        "doesn't",
-        "eat",
-        "breakfast",
-        "does",
-        "he"
-      ],
+      "words": ["he", "doesn't", "eat", "breakfast", "does", "he"],
       "correctAnswer": "He doesn't eat breakfast, does he?",
       "difficulty": "intermediate",
       "explanation": "否定文の付加疑問文は「否定文, does...?」という構文として覚えてください。\n\n「彼は朝食を食べないですよね。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He doesn't eat breakfast, does he?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1314,11 +1021,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは犬を飼っていますよね。",
       "sentence": "You have a dog, ____ you?",
-      "choices": [
-        "don't",
-        "doesn't",
-        "haven't"
-      ],
+      "choices": ["don't", "doesn't", "haven't"],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
       "explanation": "一般動詞haveの付加疑問文は「肯定文, don't...?」という構文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【don't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは犬を飼っていますよね。」から、この形が適切です。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは犬を飼っていますよね。」に合いません。\n\n❌ 【haven't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは犬を飼っていますよね。」に合いません。",
@@ -1339,11 +1042,7 @@
           "text": "Yes, she does."
         }
       ],
-      "choices": [
-        "doesn't",
-        "don't",
-        "isn't"
-      ],
+      "choices": ["doesn't", "don't", "isn't"],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
       "explanation": "三人称単数の付加疑問文という構文として覚えてください。speaks → doesn'tです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【doesn't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は日本語を話しますよね。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は日本語を話しますよね。」に合いません。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は日本語を話しますよね。」に合いません。",
@@ -1356,11 +1055,7 @@
       "type": "fillInBlank",
       "japanese": "あなたたちは学校に行きますよね。",
       "sentence": "You go to school, ____ you?",
-      "choices": [
-        "don't",
-        "doesn't",
-        "aren't"
-      ],
+      "choices": ["don't", "doesn't", "aren't"],
       "correctAnswer": "don't",
       "difficulty": "beginner",
       "explanation": "一般動詞の付加疑問文は「肯定文, don't...?」という構文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【don't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたたちは学校に行きますよね。」から、この形が適切です。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたたちは学校に行きますよね。」に合いません。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたたちは学校に行きますよね。」に合いません。",
@@ -1370,14 +1065,7 @@
       "id": "g1-u2-tag-020",
       "type": "sentenceOrdering",
       "japanese": "彼は野球をしないですよね。",
-      "words": [
-        "he",
-        "doesn't",
-        "play",
-        "baseball",
-        "does",
-        "he"
-      ],
+      "words": ["he", "doesn't", "play", "baseball", "does", "he"],
       "correctAnswer": "He doesn't play baseball, does he?",
       "difficulty": "intermediate",
       "explanation": "否定文の付加疑問文という構文として覚えてください。doesn't → doesです。\n\n「彼は野球をしないですよね。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He doesn't play baseball, does he?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1389,11 +1077,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは本を読みますよね。",
       "sentence": "You read books, ____ you?",
-      "choices": [
-        "don't",
-        "doesn't",
-        "aren't"
-      ],
+      "choices": ["don't", "doesn't", "aren't"],
       "correctAnswer": "don't",
       "difficulty": "beginner",
       "explanation": "一般動詞の付加疑問文という構文として覚えてください。You read → don't youです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【don't】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは本を読みますよね。」から、この形が適切です。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは本を読みますよね。」に合いません。\n\n❌ 【aren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは本を読みますよね。」に合いません。",
@@ -1404,11 +1088,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は早く起きないですよね。",
       "sentence": "She doesn't get up early, ____ she?",
-      "choices": [
-        "does",
-        "doesn't",
-        "is"
-      ],
+      "choices": ["does", "doesn't", "is"],
       "correctAnswer": "does",
       "difficulty": "intermediate",
       "explanation": "否定文の付加疑問文は「否定文, does...?」という構文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は早く起きないですよね。」から、この形が適切です。\n\n❌ 【doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は早く起きないですよね。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は早く起きないですよね。」に合いません。",
@@ -1418,13 +1098,7 @@
       "id": "g1-u2-tag-023",
       "type": "sentenceOrdering",
       "japanese": "彼らはここに住んでいますよね。",
-      "words": [
-        "they",
-        "live",
-        "here",
-        "don't",
-        "they"
-      ],
+      "words": ["they", "live", "here", "don't", "they"],
       "correctAnswer": "They live here, don't they?",
       "difficulty": "intermediate",
       "explanation": "一般動詞の付加疑問文という構文として覚えてください。live → don'tです。\n\n「彼らはここに住んでいますよね。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They live here, don't they?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1448,11 +1122,7 @@
           "text": "No, I don't."
         }
       ],
-      "choices": [
-        "do",
-        "don't",
-        "are"
-      ],
+      "choices": ["do", "don't", "are"],
       "correctAnswer": "do",
       "difficulty": "intermediate",
       "explanation": "否定文の付加疑問文は「否定文, do...?」という構文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは車を運転しないですよね。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは車を運転しないですよね。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは車を運転しないですよね。」に合いません。",
@@ -1463,11 +1133,7 @@
       "type": "fillInBlank",
       "japanese": "彼は数学を勉強しますよね。",
       "sentence": "He studies math, ____ he?",
-      "choices": [
-        "doesn't",
-        "don't",
-        "isn't"
-      ],
+      "choices": ["doesn't", "don't", "isn't"],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
       "explanation": "三人称単数の付加疑問文という構文として覚えてください。studies → doesn'tです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【doesn't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は数学を勉強しますよね。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は数学を勉強しますよね。」に合いません。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は数学を勉強しますよね。」に合いません。",
@@ -1478,11 +1144,7 @@
       "type": "fillInBlank",
       "japanese": "公園に行きましょうよ。",
       "sentence": "Let's go to the park, ____ we?",
-      "choices": [
-        "shall",
-        "will",
-        "do"
-      ],
+      "choices": ["shall", "will", "do"],
       "correctAnswer": "shall",
       "difficulty": "advanced",
       "explanation": "Let's の付加疑問文は shall we? という構文として覚えてください。Let's go → shall we?は決まった形です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【shall】 ← 正解\n  ✓ 正解理由: 日本語訳「公園に行きましょうよ。」から、この形が適切です。\n\n❌ 【will】 ← 不正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✗ 不正解理由: 日本語訳「公園に行きましょうよ。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「公園に行きましょうよ。」に合いません。",
@@ -1492,14 +1154,7 @@
       "id": "g1-u2-tag-027",
       "type": "sentenceOrdering",
       "japanese": "一緒に昼食を食べましょうよ。",
-      "words": [
-        "let's",
-        "have",
-        "lunch",
-        "together",
-        "shall",
-        "we"
-      ],
+      "words": ["let's", "have", "lunch", "together", "shall", "we"],
       "correctAnswer": "Let's have lunch together, shall we?",
       "difficulty": "advanced",
       "explanation": "Let's の付加疑問文は shall we? という構文として覚えてください。\n\n「一緒に昼食を食べましょうよ。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Let's have lunch together, shall we?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1511,11 +1166,7 @@
       "type": "fillInBlank",
       "japanese": "窓を開けてくれませんか。",
       "sentence": "Open the window, ____ you?",
-      "choices": [
-        "will",
-        "shall",
-        "do"
-      ],
+      "choices": ["will", "shall", "do"],
       "correctAnswer": "will",
       "difficulty": "advanced",
       "explanation": "命令文の付加疑問文は will you? という構文として覚えてください。Open → will you?で丁寧な依頼になります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【will】 ← 正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【shall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を開けてくれませんか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を開けてくれませんか。」に合いません。",
@@ -1528,11 +1179,7 @@
       "type": "fillInBlank",
       "japanese": "映画を見ましょうよ。",
       "sentence": "Let's watch a movie, ____ we?",
-      "choices": [
-        "shall",
-        "will",
-        "do"
-      ],
+      "choices": ["shall", "will", "do"],
       "correctAnswer": "shall",
       "difficulty": "advanced",
       "explanation": "Let's の付加疑問文は shall we? という構文として覚えてください。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【shall】 ← 正解\n  ✓ 正解理由: 日本語訳「映画を見ましょうよ。」から、この形が適切です。\n\n❌ 【will】 ← 不正解\n  語源: 古英語 willan\n  用法: 未来・意志\n  ニュアンス: 〜するだろう、つもり\n  ✗ 不正解理由: 日本語訳「映画を見ましょうよ。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「映画を見ましょうよ。」に合いません。",
@@ -1544,12 +1191,7 @@
       "id": "g1-u2-tag-030",
       "type": "sentenceOrdering",
       "japanese": "静かにしてくれませんか。",
-      "words": [
-        "be",
-        "quiet",
-        "will",
-        "you"
-      ],
+      "words": ["be", "quiet", "will", "you"],
       "correctAnswer": "Be quiet, will you?",
       "difficulty": "advanced",
       "explanation": "命令文の付加疑問文は will you? という構文として覚えてください。\n\n「静かにしてくれませんか。」です。\n\n【文法ポイント】\n助動詞の使用、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Be quiet, will you?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",

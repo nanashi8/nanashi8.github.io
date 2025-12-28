@@ -17,12 +17,7 @@
       "type": "fillInBlank",
       "japanese": "走っている少年は私の弟です。",
       "sentence": "The _____ boy is my brother.",
-      "choices": [
-        "running",
-        "run",
-        "ran",
-        "to run"
-      ],
+      "choices": ["running", "run", "ran", "to run"],
       "correctAnswer": "running",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）は名詞を修飾します。\n\n正解は「running」です。\n\n【日本語】\n走っている少年は私の弟です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【running】 ← 正解\n  ✓ 正解理由: 日本語訳「走っている少年は私の弟です。」から、この形が適切です。\n\n❌ 【run】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走っている少年は私の弟です。」に合いません。\n\n❌ 【ran】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走っている少年は私の弟です。」に合いません。\n\n❌ 【to run】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走っている少年は私の弟です。」に合いません。",
@@ -33,12 +28,7 @@
       "type": "fillInBlank",
       "japanese": "壊れた窓は修理されました。",
       "sentence": "The _____ window was repaired.",
-      "choices": [
-        "broken",
-        "break",
-        "breaking",
-        "to break"
-      ],
+      "choices": ["broken", "break", "breaking", "to break"],
       "correctAnswer": "broken",
       "difficulty": "beginner",
       "explanation": "過去分詞は「～された」という意味で名詞を修飾します。\n\n正解は「broken」です。\n\n【日本語】\n壊れた窓は修理されました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【broken】 ← 正解\n  ✓ 正解理由: 日本語訳「壊れた窓は修理されました。」から、この形が適切です。\n\n❌ 【break】 ← 不正解\n  ✗ 不正解理由: 日本語訳「壊れた窓は修理されました。」に合いません。\n\n❌ 【breaking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「壊れた窓は修理されました。」に合いません。\n\n❌ 【to break】 ← 不正解\n  ✗ 不正解理由: 日本語訳「壊れた窓は修理されました。」に合いません。",
@@ -51,12 +41,7 @@
       "type": "fillInBlank",
       "japanese": "眠っている赤ちゃんを見てください。",
       "sentence": "Look at the _____ baby.",
-      "choices": [
-        "sleeping",
-        "sleep",
-        "slept",
-        "to sleep"
-      ],
+      "choices": ["sleeping", "sleep", "slept", "to sleep"],
       "correctAnswer": "sleeping",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）は名詞を修飾します。\n\n正解は「sleeping」です。\n\n【日本語】\n眠っている赤ちゃんを見てください。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sleeping】 ← 正解\n  ✓ 正解理由: 日本語訳「眠っている赤ちゃんを見てください。」から、この形が適切です。\n\n❌ 【sleep】 ← 不正解\n  ✗ 不正解理由: 日本語訳「眠っている赤ちゃんを見てください。」に合いません。\n\n❌ 【slept】 ← 不正解\n  ✗ 不正解理由: 日本語訳「眠っている赤ちゃんを見てください。」に合いません。\n\n❌ 【to sleep】 ← 不正解\n  ✗ 不正解理由: 日本語訳「眠っている赤ちゃんを見てください。」に合いません。",
@@ -69,12 +54,7 @@
       "type": "fillInBlank",
       "japanese": "書かれた手紙は机の上にあります。",
       "sentence": "The _____ letter is on the desk.",
-      "choices": [
-        "written",
-        "write",
-        "writing",
-        "to write"
-      ],
+      "choices": ["written", "write", "writing", "to write"],
       "correctAnswer": "written",
       "difficulty": "beginner",
       "explanation": "過去分詞は「～された」という意味で名詞を修飾します。\n\n正解は「written」です。\n\n【日本語】\n書かれた手紙は机の上にあります。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【written】 ← 正解\n  ✓ 正解理由: 日本語訳「書かれた手紙は机の上にあります。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「書かれた手紙は机の上にあります。」に合いません。\n\n❌ 【writing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「書かれた手紙は机の上にあります。」に合いません。\n\n❌ 【to write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「書かれた手紙は机の上にあります。」に合いません。",
@@ -87,12 +67,7 @@
       "type": "fillInBlank",
       "japanese": "泣いている女の子は私の妹です。",
       "sentence": "The _____ girl is my sister.",
-      "choices": [
-        "crying",
-        "cry",
-        "cried",
-        "to cry"
-      ],
+      "choices": ["crying", "cry", "cried", "to cry"],
       "correctAnswer": "crying",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）は名詞を修飾します。\n\n正解は「crying」です。\n\n【日本語】\n泣いている女の子は私の妹です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【crying】 ← 正解\n  ✓ 正解理由: 日本語訳「泣いている女の子は私の妹です。」から、この形が適切です。\n\n❌ 【cry】 ← 不正解\n  ✗ 不正解理由: 日本語訳「泣いている女の子は私の妹です。」に合いません。\n\n❌ 【cried】 ← 不正解\n  ✗ 不正解理由: 日本語訳「泣いている女の子は私の妹です。」に合いません。\n\n❌ 【to cry】 ← 不正解\n  ✗ 不正解理由: 日本語訳「泣いている女の子は私の妹です。」に合いません。",
@@ -103,12 +78,7 @@
       "type": "fillInBlank",
       "japanese": "日本で作られた車はとても人気があります。",
       "sentence": "Cars _____ in Japan are very popular.",
-      "choices": [
-        "made",
-        "make",
-        "making",
-        "to make"
-      ],
+      "choices": ["made", "make", "making", "to make"],
       "correctAnswer": "made",
       "difficulty": "intermediate",
       "explanation": "過去分詞句は名詞の後ろに置いて修飾します。\n\n正解は「made」です。\n\n【日本語】\n日本で作られた車はとても人気があります。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【made】 ← 正解\n  ✓ 正解理由: 日本語訳「日本で作られた車はとても人気があります。」から、この形が適切です。\n\n❌ 【make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「日本で作られた車はとても人気があります。」に合いません。\n\n❌ 【making】 ← 不正解\n  ✗ 不正解理由: 日本語訳「日本で作られた車はとても人気があります。」に合いません。\n\n❌ 【to make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「日本で作られた車はとても人気があります。」に合いません。",
@@ -119,12 +89,7 @@
       "type": "fillInBlank",
       "japanese": "公園で遊んでいる子供たちは元気です。",
       "sentence": "The children _____ in the park are energetic.",
-      "choices": [
-        "playing",
-        "play",
-        "played",
-        "to play"
-      ],
+      "choices": ["playing", "play", "played", "to play"],
       "correctAnswer": "playing",
       "difficulty": "intermediate",
       "explanation": "現在分詞句は名詞の後ろに置いて修飾します。\n\n正解は「playing」です。\n\n【日本語】\n公園で遊んでいる子供たちは元気です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【playing】 ← 正解\n  ✓ 正解理由: 日本語訳「公園で遊んでいる子供たちは元気です。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「公園で遊んでいる子供たちは元気です。」に合いません。\n\n❌ 【played】 ← 不正解\n  ✗ 不正解理由: 日本語訳「公園で遊んでいる子供たちは元気です。」に合いません。\n\n❌ 【to play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「公園で遊んでいる子供たちは元気です。」に合いません。",
@@ -137,12 +102,7 @@
       "type": "fillInBlank",
       "japanese": "興奮した観客は立ち上がりました。",
       "sentence": "The _____ audience stood up.",
-      "choices": [
-        "excited",
-        "excite",
-        "exciting",
-        "to excite"
-      ],
+      "choices": ["excited", "excite", "exciting", "to excite"],
       "correctAnswer": "excited",
       "difficulty": "intermediate",
       "explanation": "人の感情を表すときは過去分詞を使います。\n\n正解は「excited」です。\n\n【日本語】\n興奮した観客は立ち上がりました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【excited】 ← 正解\n  ✓ 正解理由: 日本語訳「興奮した観客は立ち上がりました。」から、この形が適切です。\n\n❌ 【excite】 ← 不正解\n  ✗ 不正解理由: 日本語訳「興奮した観客は立ち上がりました。」に合いません。\n\n❌ 【exciting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「興奮した観客は立ち上がりました。」に合いません。\n\n❌ 【to excite】 ← 不正解\n  ✗ 不正解理由: 日本語訳「興奮した観客は立ち上がりました。」に合いません。",
@@ -155,12 +115,7 @@
       "type": "fillInBlank",
       "japanese": "これは興奮させる試合です。",
       "sentence": "This is an _____ game.",
-      "choices": [
-        "exciting",
-        "excite",
-        "excited",
-        "to excite"
-      ],
+      "choices": ["exciting", "excite", "excited", "to excite"],
       "correctAnswer": "exciting",
       "difficulty": "intermediate",
       "explanation": "人を興奮させるものには現在分詞を使います。\n\n正解は「exciting」です。\n\n【日本語】\nこれは興奮させる試合です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【exciting】 ← 正解\n  ✓ 正解理由: 日本語訳「これは興奮させる試合です。」から、この形が適切です。\n\n❌ 【excite】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは興奮させる試合です。」に合いません。\n\n❌ 【excited】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは興奮させる試合です。」に合いません。\n\n❌ 【to excite】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは興奮させる試合です。」に合いません。",
@@ -173,12 +128,7 @@
       "type": "fillInBlank",
       "japanese": "歌っている鳥の声が聞こえます。",
       "sentence": "I can hear the _____ bird.",
-      "choices": [
-        "singing",
-        "sing",
-        "sang",
-        "to sing"
-      ],
+      "choices": ["singing", "sing", "sang", "to sing"],
       "correctAnswer": "singing",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）は名詞を修飾します。\n\n正解は「singing」です。\n\n【日本語】\n歌っている鳥の声が聞こえます。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【singing】 ← 正解\n  ✓ 正解理由: 日本語訳「歌っている鳥の声が聞こえます。」から、この形が適切です。\n\n❌ 【sing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「歌っている鳥の声が聞こえます。」に合いません。\n\n❌ 【sang】 ← 不正解\n  ✗ 不正解理由: 日本語訳「歌っている鳥の声が聞こえます。」に合いません。\n\n❌ 【to sing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「歌っている鳥の声が聞こえます。」に合いません。",
@@ -191,12 +141,7 @@
       "type": "fillInBlank",
       "japanese": "落ちた葉は地面を覆いました。",
       "sentence": "The _____ leaves covered the ground.",
-      "choices": [
-        "fallen",
-        "fall",
-        "falling",
-        "to fall"
-      ],
+      "choices": ["fallen", "fall", "falling", "to fall"],
       "correctAnswer": "fallen",
       "difficulty": "beginner",
       "explanation": "過去分詞は「～した」という意味で名詞を修飾します。\n\n正解は「fallen」です。\n\n【日本語】\n落ちた葉は地面を覆いました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【fallen】 ← 正解\n  ✓ 正解理由: 日本語訳「落ちた葉は地面を覆いました。」から、この形が適切です。\n\n❌ 【fall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「落ちた葉は地面を覆いました。」に合いません。\n\n❌ 【falling】 ← 不正解\n  ✗ 不正解理由: 日本語訳「落ちた葉は地面を覆いました。」に合いません。\n\n❌ 【to fall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「落ちた葉は地面を覆いました。」に合いません。",
@@ -207,12 +152,7 @@
       "type": "fillInBlank",
       "japanese": "テーブルの上に置かれた本は誰のですか。",
       "sentence": "Whose is the book _____ on the table?",
-      "choices": [
-        "put",
-        "putting",
-        "puts",
-        "to put"
-      ],
+      "choices": ["put", "putting", "puts", "to put"],
       "correctAnswer": "put",
       "difficulty": "intermediate",
       "explanation": "過去分詞句は名詞の後ろに置いて修飾します。\n\n正解は「put」です。\n\n【日本語】\nテーブルの上に置かれた本は誰のですか。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【put】 ← 正解\n  ✓ 正解理由: 日本語訳「テーブルの上に置かれた本は誰のですか。」から、この形が適切です。\n\n❌ 【putting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「テーブルの上に置かれた本は誰のですか。」に合いません。\n\n❌ 【puts】 ← 不正解\n  ✗ 不正解理由: 日本語訳「テーブルの上に置かれた本は誰のですか。」に合いません。\n\n❌ 【to put】 ← 不正解\n  ✗ 不正解理由: 日本語訳「テーブルの上に置かれた本は誰のですか。」に合いません。",
@@ -225,12 +165,7 @@
       "type": "fillInBlank",
       "japanese": "私はこの退屈な映画に飽きました。",
       "sentence": "I'm _____ with this boring movie.",
-      "choices": [
-        "bored",
-        "bore",
-        "boring",
-        "to bore"
-      ],
+      "choices": ["bored", "bore", "boring", "to bore"],
       "correctAnswer": "bored",
       "difficulty": "intermediate",
       "explanation": "人の感情を表すときは過去分詞を使います。\n\n正解は「bored」です。\n\n【日本語】\n私はこの退屈な映画に飽きました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bored】 ← 正解\n  ✓ 正解理由: 日本語訳「私はこの退屈な映画に飽きました。」から、この形が適切です。\n\n❌ 【bore】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの退屈な映画に飽きました。」に合いません。\n\n❌ 【boring】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの退屈な映画に飽きました。」に合いません。\n\n❌ 【to bore】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの退屈な映画に飽きました。」に合いません。",
@@ -243,12 +178,7 @@
       "type": "fillInBlank",
       "japanese": "この本は驚くべき話です。",
       "sentence": "This is an _____ story.",
-      "choices": [
-        "amazing",
-        "amaze",
-        "amazed",
-        "to amaze"
-      ],
+      "choices": ["amazing", "amaze", "amazed", "to amaze"],
       "correctAnswer": "amazing",
       "difficulty": "intermediate",
       "explanation": "人を驚かせるものには現在分詞を使います。\n\n正解は「amazing」です。\n\n【日本語】\nこの本は驚くべき話です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【amazing】 ← 正解\n  ✓ 正解理由: 日本語訳「この本は驚くべき話です。」から、この形が適切です。\n\n❌ 【amaze】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は驚くべき話です。」に合いません。\n\n❌ 【amazed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は驚くべき話です。」に合いません。\n\n❌ 【to amaze】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本は驚くべき話です。」に合いません。",
@@ -261,12 +191,7 @@
       "type": "fillInBlank",
       "japanese": "笑っている子供たちは幸せそうです。",
       "sentence": "The _____ children look happy.",
-      "choices": [
-        "laughing",
-        "laugh",
-        "laughed",
-        "to laugh"
-      ],
+      "choices": ["laughing", "laugh", "laughed", "to laugh"],
       "correctAnswer": "laughing",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）は名詞を修飾します。\n\n正解は「laughing」です。\n\n【日本語】\n笑っている子供たちは幸せそうです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【laughing】 ← 正解\n  ✓ 正解理由: 日本語訳「笑っている子供たちは幸せそうです。」から、この形が適切です。\n\n❌ 【laugh】 ← 不正解\n  ✗ 不正解理由: 日本語訳「笑っている子供たちは幸せそうです。」に合いません。\n\n❌ 【laughed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「笑っている子供たちは幸せそうです。」に合いません。\n\n❌ 【to laugh】 ← 不正解\n  ✗ 不正解理由: 日本語訳「笑っている子供たちは幸せそうです。」に合いません。",
@@ -277,12 +202,7 @@
       "type": "fillInBlank",
       "japanese": "英語で書かれたこの本は難しいです。",
       "sentence": "This book _____ in English is difficult.",
-      "choices": [
-        "written",
-        "write",
-        "writing",
-        "to write"
-      ],
+      "choices": ["written", "write", "writing", "to write"],
       "correctAnswer": "written",
       "difficulty": "intermediate",
       "explanation": "過去分詞句は名詞の後ろに置いて修飾します。\n\n正解は「written」です。\n\n【日本語】\n英語で書かれたこの本は難しいです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【written】 ← 正解\n  ✓ 正解理由: 日本語訳「英語で書かれたこの本は難しいです。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語で書かれたこの本は難しいです。」に合いません。\n\n❌ 【writing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語で書かれたこの本は難しいです。」に合いません。\n\n❌ 【to write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語で書かれたこの本は難しいです。」に合いません。",
@@ -295,12 +215,7 @@
       "type": "fillInBlank",
       "japanese": "私は驚いた表情で彼を見ました。",
       "sentence": "I looked at him with a _____ expression.",
-      "choices": [
-        "surprised",
-        "surprise",
-        "surprising",
-        "to surprise"
-      ],
+      "choices": ["surprised", "surprise", "surprising", "to surprise"],
       "correctAnswer": "surprised",
       "difficulty": "intermediate",
       "explanation": "人の感情を表すときは過去分詞を使います。\n\n正解は「surprised」です。\n\n【日本語】\n私は驚いた表情で彼を見ました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【surprised】 ← 正解\n  ✓ 正解理由: 日本語訳「私は驚いた表情で彼を見ました。」から、この形が適切です。\n\n❌ 【surprise】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は驚いた表情で彼を見ました。」に合いません。\n\n❌ 【surprising】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は驚いた表情で彼を見ました。」に合いません。\n\n❌ 【to surprise】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は驚いた表情で彼を見ました。」に合いません。",
@@ -313,12 +228,7 @@
       "type": "fillInBlank",
       "japanese": "これは興味深いニュースです。",
       "sentence": "This is _____ news.",
-      "choices": [
-        "interesting",
-        "interest",
-        "interested",
-        "to interest"
-      ],
+      "choices": ["interesting", "interest", "interested", "to interest"],
       "correctAnswer": "interesting",
       "difficulty": "intermediate",
       "explanation": "人を興味を持たせるものには現在分詞を使います。\n\n正解は「interesting」です。\n\n【日本語】\nこれは興味深いニュースです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【interesting】 ← 正解\n  ✓ 正解理由: 日本語訳「これは興味深いニュースです。」から、この形が適切です。\n\n❌ 【interest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは興味深いニュースです。」に合いません。\n\n❌ 【interested】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは興味深いニュースです。」に合いません。\n\n❌ 【to interest】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは興味深いニュースです。」に合いません。",
@@ -331,12 +241,7 @@
       "type": "fillInBlank",
       "japanese": "座っている女性は私の母です。",
       "sentence": "The woman _____ there is my mother.",
-      "choices": [
-        "sitting",
-        "sit",
-        "sat",
-        "to sit"
-      ],
+      "choices": ["sitting", "sit", "sat", "to sit"],
       "correctAnswer": "sitting",
       "difficulty": "intermediate",
       "explanation": "現在分詞句は名詞の後ろに置いて修飾します。\n\n正解は「sitting」です。\n\n【日本語】\n座っている女性は私の母です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sitting】 ← 正解\n  ✓ 正解理由: 日本語訳「座っている女性は私の母です。」から、この形が適切です。\n\n❌ 【sit】 ← 不正解\n  ✗ 不正解理由: 日本語訳「座っている女性は私の母です。」に合いません。\n\n❌ 【sat】 ← 不正解\n  ✗ 不正解理由: 日本語訳「座っている女性は私の母です。」に合いません。\n\n❌ 【to sit】 ← 不正解\n  ✗ 不正解理由: 日本語訳「座っている女性は私の母です。」に合いません。",
@@ -347,12 +252,7 @@
       "type": "fillInBlank",
       "japanese": "盗まれた自転車は見つかりました。",
       "sentence": "The _____ bike was found.",
-      "choices": [
-        "stolen",
-        "steal",
-        "stealing",
-        "to steal"
-      ],
+      "choices": ["stolen", "steal", "stealing", "to steal"],
       "correctAnswer": "stolen",
       "difficulty": "beginner",
       "explanation": "過去分詞は「～された」という意味で名詞を修飾します。\n\n正解は「stolen」です。\n\n【日本語】\n盗まれた自転車は見つかりました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【stolen】 ← 正解\n  ✓ 正解理由: 日本語訳「盗まれた自転車は見つかりました。」から、この形が適切です。\n\n❌ 【steal】 ← 不正解\n  ✗ 不正解理由: 日本語訳「盗まれた自転車は見つかりました。」に合いません。\n\n❌ 【stealing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「盗まれた自転車は見つかりました。」に合いません。\n\n❌ 【to steal】 ← 不正解\n  ✗ 不正解理由: 日本語訳「盗まれた自転車は見つかりました。」に合いません。",
@@ -362,14 +262,7 @@
       "id": "g3u6-order-1",
       "type": "sentenceOrdering",
       "japanese": "走っている少年は私の弟です。",
-      "words": [
-        "The",
-        "running",
-        "boy",
-        "is",
-        "my",
-        "brother"
-      ],
+      "words": ["The", "running", "boy", "is", "my", "brother"],
       "correctAnswer": "The running boy is my brother.",
       "difficulty": "beginner",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\n走っている少年は私の弟です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -381,13 +274,7 @@
       "id": "g3u6-order-2",
       "type": "sentenceOrdering",
       "japanese": "壊れた窓は修理されました。",
-      "words": [
-        "The",
-        "broken",
-        "window",
-        "was",
-        "repaired"
-      ],
+      "words": ["The", "broken", "window", "was", "repaired"],
       "correctAnswer": "The broken window was repaired.",
       "difficulty": "beginner",
       "explanation": "過去分詞は名詞の前に置いて修飾します。\n\n【日本語】\n壊れた窓は修理されました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -399,13 +286,7 @@
       "id": "g3u6-order-3",
       "type": "sentenceOrdering",
       "japanese": "眠っている赤ちゃんを見てください。",
-      "words": [
-        "Look",
-        "at",
-        "the",
-        "sleeping",
-        "baby"
-      ],
+      "words": ["Look", "at", "the", "sleeping", "baby"],
       "correctAnswer": "Look at the sleeping baby.",
       "difficulty": "beginner",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\n眠っている赤ちゃんを見てください。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -438,15 +319,7 @@
       "id": "g3u6-order-5",
       "type": "sentenceOrdering",
       "japanese": "日本で作られた車はとても人気があります。",
-      "words": [
-        "Cars",
-        "made",
-        "in",
-        "Japan",
-        "are",
-        "very",
-        "popular"
-      ],
+      "words": ["Cars", "made", "in", "Japan", "are", "very", "popular"],
       "correctAnswer": "Cars made in Japan are very popular.",
       "difficulty": "intermediate",
       "explanation": "過去分詞句は名詞の後ろに置いて修飾します。\n\n【日本語】\n日本で作られた車はとても人気があります。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -456,13 +329,7 @@
       "id": "g3u6-order-6",
       "type": "sentenceOrdering",
       "japanese": "興奮した観客は立ち上がりました。",
-      "words": [
-        "The",
-        "excited",
-        "audience",
-        "stood",
-        "up"
-      ],
+      "words": ["The", "excited", "audience", "stood", "up"],
       "correctAnswer": "The excited audience stood up.",
       "difficulty": "intermediate",
       "explanation": "過去分詞は名詞の前に置いて修飾します。\n\n【日本語】\n興奮した観客は立ち上がりました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -472,13 +339,7 @@
       "id": "g3u6-order-7",
       "type": "sentenceOrdering",
       "japanese": "これは興奮させる試合です。",
-      "words": [
-        "This",
-        "is",
-        "an",
-        "exciting",
-        "game"
-      ],
+      "words": ["This", "is", "an", "exciting", "game"],
       "correctAnswer": "This is an exciting game.",
       "difficulty": "intermediate",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\nこれは興奮させる試合です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -490,14 +351,7 @@
       "id": "g3u6-order-8",
       "type": "sentenceOrdering",
       "japanese": "歌っている鳥の声が聞こえます。",
-      "words": [
-        "I",
-        "can",
-        "hear",
-        "the",
-        "singing",
-        "bird"
-      ],
+      "words": ["I", "can", "hear", "the", "singing", "bird"],
       "correctAnswer": "I can hear the singing bird.",
       "difficulty": "beginner",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\n歌っている鳥の声が聞こえます。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -507,14 +361,7 @@
       "id": "g3u6-order-9",
       "type": "sentenceOrdering",
       "japanese": "落ちた葉は地面を覆いました。",
-      "words": [
-        "The",
-        "fallen",
-        "leaves",
-        "covered",
-        "the",
-        "ground"
-      ],
+      "words": ["The", "fallen", "leaves", "covered", "the", "ground"],
       "correctAnswer": "The fallen leaves covered the ground.",
       "difficulty": "beginner",
       "explanation": "過去分詞は名詞の前に置いて修飾します。\n\n【日本語】\n落ちた葉は地面を覆いました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -526,16 +373,7 @@
       "id": "g3u6-order-10",
       "type": "sentenceOrdering",
       "japanese": "テーブルの上に置かれた本は誰のですか。",
-      "words": [
-        "Whose",
-        "is",
-        "the",
-        "book",
-        "put",
-        "on",
-        "the",
-        "table"
-      ],
+      "words": ["Whose", "is", "the", "book", "put", "on", "the", "table"],
       "correctAnswer": "Whose is the book put on the table?",
       "difficulty": "intermediate",
       "explanation": "過去分詞句は名詞の後ろに置いて修飾します。\n\n【日本語】\nテーブルの上に置かれた本は誰のですか。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -547,14 +385,7 @@
       "id": "g3u6-order-11",
       "type": "sentenceOrdering",
       "japanese": "私はこの退屈な映画に飽きました。",
-      "words": [
-        "I'm",
-        "bored",
-        "with",
-        "this",
-        "boring",
-        "movie"
-      ],
+      "words": ["I'm", "bored", "with", "this", "boring", "movie"],
       "correctAnswer": "I'm bored with this boring movie.",
       "difficulty": "intermediate",
       "explanation": "人の感情はbored、物事の性質はboringです。\n\n【日本語】\n私はこの退屈な映画に飽きました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -566,13 +397,7 @@
       "id": "g3u6-order-12",
       "type": "sentenceOrdering",
       "japanese": "この本は驚くべき話です。",
-      "words": [
-        "This",
-        "is",
-        "an",
-        "amazing",
-        "story"
-      ],
+      "words": ["This", "is", "an", "amazing", "story"],
       "correctAnswer": "This is an amazing story.",
       "difficulty": "intermediate",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\nこの本は驚くべき話です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -584,13 +409,7 @@
       "id": "g3u6-order-13",
       "type": "sentenceOrdering",
       "japanese": "笑っている子供たちは幸せそうです。",
-      "words": [
-        "The",
-        "laughing",
-        "children",
-        "look",
-        "happy"
-      ],
+      "words": ["The", "laughing", "children", "look", "happy"],
       "correctAnswer": "The laughing children look happy.",
       "difficulty": "beginner",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\n笑っている子供たちは幸せそうです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -600,15 +419,7 @@
       "id": "g3u6-order-14",
       "type": "sentenceOrdering",
       "japanese": "英語で書かれたこの本は難しいです。",
-      "words": [
-        "This",
-        "book",
-        "written",
-        "in",
-        "English",
-        "is",
-        "difficult"
-      ],
+      "words": ["This", "book", "written", "in", "English", "is", "difficult"],
       "correctAnswer": "This book written in English is difficult.",
       "difficulty": "intermediate",
       "explanation": "過去分詞句は名詞の後ろに置いて修飾します。\n\n【日本語】\n英語で書かれたこの本は難しいです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -641,12 +452,7 @@
       "id": "g3u6-order-16",
       "type": "sentenceOrdering",
       "japanese": "これは興味深いニュースです。",
-      "words": [
-        "This",
-        "is",
-        "interesting",
-        "news"
-      ],
+      "words": ["This", "is", "interesting", "news"],
       "correctAnswer": "This is interesting news.",
       "difficulty": "intermediate",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\nこれは興味深いニュースです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -658,15 +464,7 @@
       "id": "g3u6-order-17",
       "type": "sentenceOrdering",
       "japanese": "座っている女性は私の母です。",
-      "words": [
-        "The",
-        "woman",
-        "sitting",
-        "there",
-        "is",
-        "my",
-        "mother"
-      ],
+      "words": ["The", "woman", "sitting", "there", "is", "my", "mother"],
       "correctAnswer": "The woman sitting there is my mother.",
       "difficulty": "intermediate",
       "explanation": "現在分詞句は名詞の後ろに置いて修飾します。\n\n【日本語】\n座っている女性は私の母です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -678,13 +476,7 @@
       "id": "g3u6-order-18",
       "type": "sentenceOrdering",
       "japanese": "盗まれた自転車は見つかりました。",
-      "words": [
-        "The",
-        "stolen",
-        "bike",
-        "was",
-        "found"
-      ],
+      "words": ["The", "stolen", "bike", "was", "found"],
       "correctAnswer": "The stolen bike was found.",
       "difficulty": "beginner",
       "explanation": "過去分詞は名詞の前に置いて修飾します。\n\n【日本語】\n盗まれた自転車は見つかりました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -696,14 +488,7 @@
       "id": "g3u6-order-19",
       "type": "sentenceOrdering",
       "japanese": "泣いている女の子は私の妹です。",
-      "words": [
-        "The",
-        "crying",
-        "girl",
-        "is",
-        "my",
-        "sister"
-      ],
+      "words": ["The", "crying", "girl", "is", "my", "sister"],
       "correctAnswer": "The crying girl is my sister.",
       "difficulty": "beginner",
       "explanation": "現在分詞は名詞の前に置いて修飾します。\n\n【日本語】\n泣いている女の子は私の妹です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -715,15 +500,7 @@
       "id": "g3u6-order-20",
       "type": "sentenceOrdering",
       "japanese": "書かれた手紙は机の上にあります。",
-      "words": [
-        "The",
-        "written",
-        "letter",
-        "is",
-        "on",
-        "the",
-        "desk"
-      ],
+      "words": ["The", "written", "letter", "is", "on", "the", "desk"],
       "correctAnswer": "The written letter is on the desk.",
       "difficulty": "beginner",
       "explanation": "過去分詞は名詞の前に置いて修飾します。\n\n【日本語】\n書かれた手紙は机の上にあります。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -734,9 +511,7 @@
       "type": "verbForm",
       "japanese": "走っている少年は私の弟です。",
       "sentence": "The _____ (run) boy is my brother.",
-      "choices": [
-        "running"
-      ],
+      "choices": ["running"],
       "correctAnswer": "running",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。\n\n【日本語】\n走っている少年は私の弟です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【running】 ← 正解\n  ✓ 正解理由: 日本語訳「走っている少年は私の弟です。」から、この形が適切です。",
@@ -749,9 +524,7 @@
       "type": "verbForm",
       "japanese": "壊れた窓は修理されました。",
       "sentence": "The _____ (break) window was repaired.",
-      "choices": [
-        "broken"
-      ],
+      "choices": ["broken"],
       "correctAnswer": "broken",
       "difficulty": "beginner",
       "explanation": "過去分詞で「～された」という意味になります。\n\n【日本語】\n壊れた窓は修理されました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【broken】 ← 正解\n  ✓ 正解理由: 日本語訳「壊れた窓は修理されました。」から、この形が適切です。",
@@ -762,9 +535,7 @@
       "type": "verbForm",
       "japanese": "眠っている赤ちゃんを見てください。",
       "sentence": "Look at the _____ (sleep) baby.",
-      "choices": [
-        "sleeping"
-      ],
+      "choices": ["sleeping"],
       "correctAnswer": "sleeping",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。\n\n【日本語】\n眠っている赤ちゃんを見てください。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sleeping】 ← 正解\n  ✓ 正解理由: 日本語訳「眠っている赤ちゃんを見てください。」から、この形が適切です。",
@@ -777,11 +548,7 @@
       "type": "verbForm",
       "japanese": "書かれた手紙は机の上にあります。",
       "sentence": "The _____ (write) letter is on the desk.",
-      "choices": [
-        "written",
-        "write",
-        "wrote"
-      ],
+      "choices": ["written", "write", "wrote"],
       "correctAnswer": "written",
       "difficulty": "beginner",
       "explanation": "過去分詞で「～された」という意味になります。\n\n【日本語】\n書かれた手紙は机の上にあります。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【written】 ← 正解\n  ✓ 正解理由: 日本語訳「書かれた手紙は机の上にあります。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「書かれた手紙は机の上にあります。」に合いません。\n\n❌ 【wrote】 ← 不正解\n  ✗ 不正解理由: 日本語訳「書かれた手紙は机の上にあります。」に合いません。",
@@ -792,9 +559,7 @@
       "type": "verbForm",
       "japanese": "泣いている女の子は私の妹です。",
       "sentence": "The _____ (cry) girl is my sister.",
-      "choices": [
-        "crying"
-      ],
+      "choices": ["crying"],
       "correctAnswer": "crying",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。\n\n【日本語】\n泣いている女の子は私の妹です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【crying】 ← 正解\n  ✓ 正解理由: 日本語訳「泣いている女の子は私の妹です。」から、この形が適切です。",
@@ -805,11 +570,7 @@
       "type": "verbForm",
       "japanese": "日本で作られた車はとても人気があります。",
       "sentence": "Cars _____ (make) in Japan are very popular.",
-      "choices": [
-        "made",
-        "make",
-        "makes"
-      ],
+      "choices": ["made", "make", "makes"],
       "correctAnswer": "made",
       "difficulty": "intermediate",
       "explanation": "過去分詞で「～された」という意味になります。\n\n【日本語】\n日本で作られた車はとても人気があります。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【made】 ← 正解\n  ✓ 正解理由: 日本語訳「日本で作られた車はとても人気があります。」から、この形が適切です。\n\n❌ 【make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「日本で作られた車はとても人気があります。」に合いません。\n\n❌ 【makes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「日本で作られた車はとても人気があります。」に合いません。",
@@ -822,9 +583,7 @@
       "type": "verbForm",
       "japanese": "公園で遊んでいる子供たちは元気です。",
       "sentence": "The children _____ (play) in the park are energetic.",
-      "choices": [
-        "playing"
-      ],
+      "choices": ["playing"],
       "correctAnswer": "playing",
       "difficulty": "intermediate",
       "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。\n\n【日本語】\n公園で遊んでいる子供たちは元気です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【playing】 ← 正解\n  ✓ 正解理由: 日本語訳「公園で遊んでいる子供たちは元気です。」から、この形が適切です。",
@@ -835,11 +594,7 @@
       "type": "verbForm",
       "japanese": "興奮した観客は立ち上がりました。",
       "sentence": "The _____ (excite) audience stood up.",
-      "choices": [
-        "excited",
-        "excit",
-        "exciting"
-      ],
+      "choices": ["excited", "excit", "exciting"],
       "correctAnswer": "excited",
       "difficulty": "intermediate",
       "explanation": "人の感情を表すときは過去分詞を使います。\n\n【日本語】\n興奮した観客は立ち上がりました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【excited】 ← 正解\n  ✓ 正解理由: 日本語訳「興奮した観客は立ち上がりました。」から、この形が適切です。\n\n❌ 【excit】 ← 不正解\n  ✗ 不正解理由: 日本語訳「興奮した観客は立ち上がりました。」に合いません。\n\n❌ 【exciting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「興奮した観客は立ち上がりました。」に合いません。",
@@ -852,9 +607,7 @@
       "type": "verbForm",
       "japanese": "これは興奮させる試合です。",
       "sentence": "This is an _____ (excite) game.",
-      "choices": [
-        "exciting"
-      ],
+      "choices": ["exciting"],
       "correctAnswer": "exciting",
       "difficulty": "intermediate",
       "explanation": "物事の性質を表すときは現在分詞を使います。\n\n【日本語】\nこれは興奮させる試合です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【exciting】 ← 正解\n  ✓ 正解理由: 日本語訳「これは興奮させる試合です。」から、この形が適切です。",
@@ -865,9 +618,7 @@
       "type": "verbForm",
       "japanese": "歌っている鳥の声が聞こえます。",
       "sentence": "I can hear the _____ (sing) bird.",
-      "choices": [
-        "singing"
-      ],
+      "choices": ["singing"],
       "correctAnswer": "singing",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。\n\n【日本語】\n歌っている鳥の声が聞こえます。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【singing】 ← 正解\n  ✓ 正解理由: 日本語訳「歌っている鳥の声が聞こえます。」から、この形が適切です。",
@@ -878,9 +629,7 @@
       "type": "verbForm",
       "japanese": "落ちた葉は地面を覆いました。",
       "sentence": "The _____ (fall) leaves covered the ground.",
-      "choices": [
-        "fallen"
-      ],
+      "choices": ["fallen"],
       "correctAnswer": "fallen",
       "difficulty": "beginner",
       "explanation": "過去分詞で「～した」という意味になります。\n\n【日本語】\n落ちた葉は地面を覆いました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【fallen】 ← 正解\n  ✓ 正解理由: 日本語訳「落ちた葉は地面を覆いました。」から、この形が適切です。",
@@ -891,9 +640,7 @@
       "type": "verbForm",
       "japanese": "テーブルの上に置かれた本は誰のですか。",
       "sentence": "Whose is the book _____ (put) on the table?",
-      "choices": [
-        "put"
-      ],
+      "choices": ["put"],
       "correctAnswer": "put",
       "difficulty": "intermediate",
       "explanation": "過去分詞で「～された」という意味になります。\n\n【日本語】\nテーブルの上に置かれた本は誰のですか。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【put】 ← 正解\n  ✓ 正解理由: 日本語訳「テーブルの上に置かれた本は誰のですか。」から、この形が適切です。",
@@ -904,11 +651,7 @@
       "type": "verbForm",
       "japanese": "私はこの退屈な映画に飽きました。",
       "sentence": "I'm _____ (bore) with this boring movie.",
-      "choices": [
-        "bored",
-        "bor",
-        "boring"
-      ],
+      "choices": ["bored", "bor", "boring"],
       "correctAnswer": "bored",
       "difficulty": "intermediate",
       "explanation": "人の感情を表すときは過去分詞を使います。\n\n【日本語】\n私はこの退屈な映画に飽きました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bored】 ← 正解\n  ✓ 正解理由: 日本語訳「私はこの退屈な映画に飽きました。」から、この形が適切です。\n\n❌ 【bor】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの退屈な映画に飽きました。」に合いません。\n\n❌ 【boring】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はこの退屈な映画に飽きました。」に合いません。",
@@ -919,9 +662,7 @@
       "type": "verbForm",
       "japanese": "この本は驚くべき話です。",
       "sentence": "This is an _____ (amaze) story.",
-      "choices": [
-        "amazing"
-      ],
+      "choices": ["amazing"],
       "correctAnswer": "amazing",
       "difficulty": "intermediate",
       "explanation": "物事の性質を表すときは現在分詞を使います。\n\n【日本語】\nこの本は驚くべき話です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【amazing】 ← 正解\n  ✓ 正解理由: 日本語訳「この本は驚くべき話です。」から、この形が適切です。",
@@ -932,9 +673,7 @@
       "type": "verbForm",
       "japanese": "笑っている子供たちは幸せそうです。",
       "sentence": "The _____ (laugh) children look happy.",
-      "choices": [
-        "laughing"
-      ],
+      "choices": ["laughing"],
       "correctAnswer": "laughing",
       "difficulty": "beginner",
       "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。\n\n【日本語】\n笑っている子供たちは幸せそうです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【laughing】 ← 正解\n  ✓ 正解理由: 日本語訳「笑っている子供たちは幸せそうです。」から、この形が適切です。",
@@ -947,11 +686,7 @@
       "type": "verbForm",
       "japanese": "英語で書かれたこの本は難しいです。",
       "sentence": "This book _____ (write) in English is difficult.",
-      "choices": [
-        "written",
-        "write",
-        "wrote"
-      ],
+      "choices": ["written", "write", "wrote"],
       "correctAnswer": "written",
       "difficulty": "intermediate",
       "explanation": "過去分詞で「～された」という意味になります。\n\n【日本語】\n英語で書かれたこの本は難しいです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【written】 ← 正解\n  ✓ 正解理由: 日本語訳「英語で書かれたこの本は難しいです。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語で書かれたこの本は難しいです。」に合いません。\n\n❌ 【wrote】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語で書かれたこの本は難しいです。」に合いません。",
@@ -962,11 +697,7 @@
       "type": "verbForm",
       "japanese": "私は驚いた表情で彼を見ました。",
       "sentence": "I looked at him with a _____ (surprise) expression.",
-      "choices": [
-        "surprised",
-        "surpris",
-        "surprising"
-      ],
+      "choices": ["surprised", "surpris", "surprising"],
       "correctAnswer": "surprised",
       "difficulty": "intermediate",
       "explanation": "人の感情を表すときは過去分詞を使います。\n\n【日本語】\n私は驚いた表情で彼を見ました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【surprised】 ← 正解\n  ✓ 正解理由: 日本語訳「私は驚いた表情で彼を見ました。」から、この形が適切です。\n\n❌ 【surpris】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は驚いた表情で彼を見ました。」に合いません。\n\n❌ 【surprising】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は驚いた表情で彼を見ました。」に合いません。",
@@ -977,9 +708,7 @@
       "type": "verbForm",
       "japanese": "これは興味深いニュースです。",
       "sentence": "This is _____ (interest) news.",
-      "choices": [
-        "interesting"
-      ],
+      "choices": ["interesting"],
       "correctAnswer": "interesting",
       "difficulty": "intermediate",
       "explanation": "物事の性質を表すときは現在分詞を使います。\n\n【日本語】\nこれは興味深いニュースです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【interesting】 ← 正解\n  ✓ 正解理由: 日本語訳「これは興味深いニュースです。」から、この形が適切です。",
@@ -990,9 +719,7 @@
       "type": "verbForm",
       "japanese": "座っている女性は私の母です。",
       "sentence": "The woman _____ (sit) there is my mother.",
-      "choices": [
-        "sitting"
-      ],
+      "choices": ["sitting"],
       "correctAnswer": "sitting",
       "difficulty": "intermediate",
       "explanation": "現在分詞（動詞ing形）で「～している」という意味になります。\n\n【日本語】\n座っている女性は私の母です。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sitting】 ← 正解\n  ✓ 正解理由: 日本語訳「座っている女性は私の母です。」から、この形が適切です。",
@@ -1003,9 +730,7 @@
       "type": "verbForm",
       "japanese": "盗まれた自転車は見つかりました。",
       "sentence": "The _____ (steal) bike was found.",
-      "choices": [
-        "stolen"
-      ],
+      "choices": ["stolen"],
       "correctAnswer": "stolen",
       "difficulty": "beginner",
       "explanation": "過去分詞で「～された」という意味になります。\n\n【日本語】\n盗まれた自転車は見つかりました。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\nto不定詞の形に注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【stolen】 ← 正解\n  ✓ 正解理由: 日本語訳「盗まれた自転車は見つかりました。」から、この形が適切です。",
@@ -1016,11 +741,7 @@
       "type": "fillInBlank",
       "japanese": "私は彼がどこに住んでいるか知りません。",
       "sentence": "I don't know ____ he lives.",
-      "choices": [
-        "where",
-        "what",
-        "when"
-      ],
+      "choices": ["where", "what", "when"],
       "correctAnswer": "where",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「どこに」という場所を尋ねるのでwhereを使います。\n\n正解は「where」です。\n\n【日本語】\n私は彼がどこに住んでいるか知りません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼がどこに住んでいるか知りません。」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼がどこに住んでいるか知りません。」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼がどこに住んでいるか知りません。」に合いません。",
@@ -1031,11 +752,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは彼女が何を欲しがっているか知っていますか？",
       "sentence": "Do you know ____ she wants?",
-      "choices": [
-        "what",
-        "where",
-        "who"
-      ],
+      "choices": ["what", "where", "who"],
       "correctAnswer": "what",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「何を」という物を尋ねるのでwhatを使います。\n\n正解は「what」です。\n\n【日本語】\nあなたは彼女が何を欲しがっているか知っていますか？\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは彼女が何を欲しがっているか知っていますか？」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは彼女が何を欲しがっているか知っていますか？」に合いません。\n\n❌ 【who】 ← 不正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✗ 不正解理由: 文法的・文脈的に不適切です。",
@@ -1048,11 +765,7 @@
       "type": "fillInBlank",
       "japanese": "私は彼がいつ来るか分かりません。",
       "sentence": "I don't know ____ he will come.",
-      "choices": [
-        "when",
-        "where",
-        "what"
-      ],
+      "choices": ["when", "where", "what"],
       "correctAnswer": "when",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「いつ」という時を尋ねるのでwhenを使います。\n\n正解は「when」です。\n\n【日本語】\n私は彼がいつ来るか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼がいつ来るか分かりません。」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼がいつ来るか分かりません。」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼がいつ来るか分かりません。」に合いません。",
@@ -1063,11 +776,7 @@
       "type": "fillInBlank",
       "japanese": "彼は誰がそれをしたか知っています。",
       "sentence": "He knows ____ did it.",
-      "choices": [
-        "who",
-        "what",
-        "where"
-      ],
+      "choices": ["who", "what", "where"],
       "correctAnswer": "who",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「誰が」という人を尋ねるのでwhoを使います。\n\n正解は「who」です。\n\n【日本語】\n彼は誰がそれをしたか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【who】 ← 正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰がそれをしたか知っています。」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰がそれをしたか知っています。」に合いません。",
@@ -1078,11 +787,7 @@
       "type": "fillInBlank",
       "japanese": "彼女はなぜ彼が怒っているか分かりません。",
       "sentence": "She doesn't know ____ he is angry.",
-      "choices": [
-        "why",
-        "when",
-        "what"
-      ],
+      "choices": ["why", "when", "what"],
       "correctAnswer": "why",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「なぜ」という理由を尋ねるのでwhyを使います。\n\n正解は「why」です。\n\n【日本語】\n彼女はなぜ彼が怒っているか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【why】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はなぜ彼が怒っているか分かりません。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はなぜ彼が怒っているか分かりません。」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はなぜ彼が怒っているか分かりません。」に合いません。",
@@ -1095,11 +800,7 @@
       "type": "fillInBlank",
       "japanese": "私たちはどうやってそこに行くか分かりません。",
       "sentence": "We don't know ____ to get there.",
-      "choices": [
-        "how",
-        "what",
-        "where"
-      ],
+      "choices": ["how", "what", "where"],
       "correctAnswer": "how",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「どうやって」という方法を尋ねるのでhowを使います。\n\n正解は「how」です。\n\n【日本語】\n私たちはどうやってそこに行くか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【how】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはどうやってそこに行くか分かりません。」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはどうやってそこに行くか分かりません。」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはどうやってそこに行くか分かりません。」に合いません。",
@@ -1112,11 +813,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは彼らがどこで会ったか知っていますか？",
       "sentence": "Do you know ____ they met?",
-      "choices": [
-        "where",
-        "when",
-        "what"
-      ],
+      "choices": ["where", "when", "what"],
       "correctAnswer": "where",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「どこで」という場所を尋ねるのでwhereを使います。\n\n正解は「where」です。\n\n【日本語】\nあなたは彼らがどこで会ったか知っていますか？\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは彼らがどこで会ったか知っていますか？」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは彼らがどこで会ったか知っていますか？」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは彼らがどこで会ったか知っていますか？」に合いません。",
@@ -1129,11 +826,7 @@
       "type": "fillInBlank",
       "japanese": "彼は何時に電車が出発するか知っています。",
       "sentence": "He knows ____ time the train leaves.",
-      "choices": [
-        "what",
-        "where",
-        "when"
-      ],
+      "choices": ["what", "where", "when"],
       "correctAnswer": "what",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「何時に」という時刻を尋ねるのでwhat timeを使います。\n\n正解は「what」です。\n\n【日本語】\n彼は何時に電車が出発するか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は何時に電車が出発するか知っています。」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何時に電車が出発するか知っています。」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何時に電車が出発するか知っています。」に合いません。",
@@ -1146,11 +839,7 @@
       "type": "fillInBlank",
       "japanese": "私はどちらが正しいか分かりません。",
       "sentence": "I don't know ____ is correct.",
-      "choices": [
-        "which",
-        "what",
-        "who"
-      ],
+      "choices": ["which", "what", "who"],
       "correctAnswer": "which",
       "difficulty": "advanced",
       "explanation": "間接疑問文です。「どちらが」という選択を尋ねるのでwhichを使います。\n\n正解は「which」です。\n\n【日本語】\n私はどちらが正しいか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【which】 ← 正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はどちらが正しいか分かりません。」に合いません。\n\n❌ 【who】 ← 不正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✗ 不正解理由: 文法的・文脈的に不適切です。",
@@ -1163,11 +852,7 @@
       "type": "fillInBlank",
       "japanese": "彼女はいくらかかるか知りたいです。",
       "sentence": "She wants to know how ____ it costs.",
-      "choices": [
-        "much",
-        "many",
-        "long"
-      ],
+      "choices": ["much", "many", "long"],
       "correctAnswer": "much",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「いくら」という金額を尋ねるのでhow muchを使います。\n\n正解は「much」です。\n\n【日本語】\n彼女はいくらかかるか知りたいです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【much】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はいくらかかるか知りたいです。」から、この形が適切です。\n\n❌ 【many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はいくらかかるか知りたいです。」に合いません。\n\n❌ 【long】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はいくらかかるか知りたいです。」に合いません。",
@@ -1178,11 +863,7 @@
       "type": "fillInBlank",
       "japanese": "私は彼女がどのくらい長く待っているか知りません。",
       "sentence": "I don't know how ____ she has been waiting.",
-      "choices": [
-        "long",
-        "much",
-        "many"
-      ],
+      "choices": ["long", "much", "many"],
       "correctAnswer": "long",
       "difficulty": "advanced",
       "explanation": "間接疑問文です。「どのくらい長く」という期間を尋ねるのでhow longを使います。\n\n正解は「long」です。\n\n【日本語】\n私は彼女がどのくらい長く待っているか知りません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【long】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼女がどのくらい長く待っているか知りません。」から、この形が適切です。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女がどのくらい長く待っているか知りません。」に合いません。\n\n❌ 【many】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女がどのくらい長く待っているか知りません。」に合いません。",
@@ -1193,11 +874,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは彼が誰と話しているか知っていますか？",
       "sentence": "Do you know ____ he is talking to?",
-      "choices": [
-        "who",
-        "what",
-        "where"
-      ],
+      "choices": ["who", "what", "where"],
       "correctAnswer": "who",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「誰と」という人を尋ねるのでwhoを使います。\n\n正解は「who」です。\n\n【日本語】\nあなたは彼が誰と話しているか知っていますか？\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【who】 ← 正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは彼が誰と話しているか知っていますか？」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは彼が誰と話しているか知っていますか？」に合いません。",
@@ -1210,11 +887,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は何が起こったか知っています。",
       "sentence": "She knows ____ happened.",
-      "choices": [
-        "what",
-        "who",
-        "where"
-      ],
+      "choices": ["what", "who", "where"],
       "correctAnswer": "what",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「何が」という物事を尋ねるのでwhatを使います。\n\n正解は「what」です。\n\n【日本語】\n彼女は何が起こったか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は何が起こったか知っています。」から、この形が適切です。\n\n❌ 【who】 ← 不正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✗ 不正解理由: 文法的・文脈的に不適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は何が起こったか知っています。」に合いません。",
@@ -1225,11 +898,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは彼がどこから来たか知りません。",
       "sentence": "We don't know ____ he came from.",
-      "choices": [
-        "where",
-        "when",
-        "what"
-      ],
+      "choices": ["where", "when", "what"],
       "correctAnswer": "where",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「どこから」という場所を尋ねるのでwhereを使います。\n\n正解は「where」です。\n\n【日本語】\n私たちは彼がどこから来たか知りません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは彼がどこから来たか知りません。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは彼がどこから来たか知りません。」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは彼がどこから来たか知りません。」に合いません。",
@@ -1242,11 +911,7 @@
       "type": "fillInBlank",
       "japanese": "彼は何人の生徒がいるか知っています。",
       "sentence": "He knows how ____ students there are.",
-      "choices": [
-        "many",
-        "much",
-        "long"
-      ],
+      "choices": ["many", "much", "long"],
       "correctAnswer": "many",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「何人の」という数を尋ねるのでhow manyを使います。\n\n正解は「many」です。\n\n【日本語】\n彼は何人の生徒がいるか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【many】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は何人の生徒がいるか知っています。」から、この形が適切です。\n\n❌ 【much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何人の生徒がいるか知っています。」に合いません。\n\n❌ 【long】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は何人の生徒がいるか知っています。」に合いません。",
@@ -1256,14 +921,7 @@
       "id": "g3-u4-so-021",
       "type": "sentenceOrdering",
       "japanese": "私は彼がどこに住んでいるか知りません。",
-      "words": [
-        "I",
-        "don't",
-        "know",
-        "where",
-        "he",
-        "lives"
-      ],
+      "words": ["I", "don't", "know", "where", "he", "lives"],
       "correctAnswer": "I don't know where he lives.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順：主語 + 動詞 + 疑問詞 + 主語 + 動詞です。疑問詞の後は平叙文の語順になります。\n\n【日本語】\n私は彼がどこに住んでいるか知りません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1275,14 +933,7 @@
       "id": "g3-u4-so-022",
       "type": "sentenceOrdering",
       "japanese": "あなたは彼女が何を欲しがっているか知っていますか？",
-      "words": [
-        "Do",
-        "you",
-        "know",
-        "what",
-        "she",
-        "wants"
-      ],
+      "words": ["Do", "you", "know", "what", "she", "wants"],
       "correctAnswer": "Do you know what she wants?",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。疑問詞の後は平叙文の語順になります。\n\n【日本語】\nあなたは彼女が何を欲しがっているか知っていますか？\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1294,15 +945,7 @@
       "id": "g3-u4-so-023",
       "type": "sentenceOrdering",
       "japanese": "私は彼がいつ来るか分かりません。",
-      "words": [
-        "I",
-        "don't",
-        "know",
-        "when",
-        "he",
-        "will",
-        "come"
-      ],
+      "words": ["I", "don't", "know", "when", "he", "will", "come"],
       "correctAnswer": "I don't know when he will come.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。whenの後は平叙文の語順になります。\n\n【日本語】\n私は彼がいつ来るか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1312,13 +955,7 @@
       "id": "g3-u4-so-024",
       "type": "sentenceOrdering",
       "japanese": "彼は誰がそれをしたか知っています。",
-      "words": [
-        "He",
-        "knows",
-        "who",
-        "did",
-        "it"
-      ],
+      "words": ["He", "knows", "who", "did", "it"],
       "correctAnswer": "He knows who did it.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。whoが主語の場合はwho + 動詞の語順になります。\n\n【日本語】\n彼は誰がそれをしたか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1330,15 +967,7 @@
       "id": "g3-u4-so-025",
       "type": "sentenceOrdering",
       "japanese": "彼女はなぜ彼が怒っているか分かりません。",
-      "words": [
-        "She",
-        "doesn't",
-        "know",
-        "why",
-        "he",
-        "is",
-        "angry"
-      ],
+      "words": ["She", "doesn't", "know", "why", "he", "is", "angry"],
       "correctAnswer": "She doesn't know why he is angry.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。whyの後は平叙文の語順になります。\n\n【日本語】\n彼女はなぜ彼が怒っているか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1348,15 +977,7 @@
       "id": "g3-u4-so-026",
       "type": "sentenceOrdering",
       "japanese": "私たちはどうやってそこに行くか分かりません。",
-      "words": [
-        "We",
-        "don't",
-        "know",
-        "how",
-        "to",
-        "get",
-        "there"
-      ],
+      "words": ["We", "don't", "know", "how", "to", "get", "there"],
       "correctAnswer": "We don't know how to get there.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。how to + 動詞の原形で「どうやって～するか」を表します。\n\n【日本語】\n私たちはどうやってそこに行くか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1368,15 +989,7 @@
       "id": "g3-u4-so-027",
       "type": "sentenceOrdering",
       "japanese": "彼は何時に電車が出発するか知っています。",
-      "words": [
-        "He",
-        "knows",
-        "what",
-        "time",
-        "the",
-        "train",
-        "leaves"
-      ],
+      "words": ["He", "knows", "what", "time", "the", "train", "leaves"],
       "correctAnswer": "He knows what time the train leaves.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。what timeの後は平叙文の語順になります。\n\n【日本語】\n彼は何時に電車が出発するか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1388,14 +1001,7 @@
       "id": "g3-u4-so-028",
       "type": "sentenceOrdering",
       "japanese": "あなたは彼らがどこで会ったか知っていますか？",
-      "words": [
-        "Do",
-        "you",
-        "know",
-        "where",
-        "they",
-        "met"
-      ],
+      "words": ["Do", "you", "know", "where", "they", "met"],
       "correctAnswer": "Do you know where they met?",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。whereの後は平叙文の語順になります。\n\n【日本語】\nあなたは彼らがどこで会ったか知っていますか？\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1405,14 +1011,7 @@
       "id": "g3-u4-so-029",
       "type": "sentenceOrdering",
       "japanese": "私はどちらが正しいか分かりません。",
-      "words": [
-        "I",
-        "don't",
-        "know",
-        "which",
-        "is",
-        "correct"
-      ],
+      "words": ["I", "don't", "know", "which", "is", "correct"],
       "correctAnswer": "I don't know which is correct.",
       "difficulty": "advanced",
       "explanation": "間接疑問文の語順です。whichが主語の場合はwhich + 動詞の語順になります。\n\n【日本語】\n私はどちらが正しいか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1424,16 +1023,7 @@
       "id": "g3-u4-so-030",
       "type": "sentenceOrdering",
       "japanese": "彼女はいくらかかるか知りたいです。",
-      "words": [
-        "She",
-        "wants",
-        "to",
-        "know",
-        "how",
-        "much",
-        "it",
-        "costs"
-      ],
+      "words": ["She", "wants", "to", "know", "how", "much", "it", "costs"],
       "correctAnswer": "She wants to know how much it costs.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。how muchの後は平叙文の語順になります。\n\n【日本語】\n彼女はいくらかかるか知りたいです。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1465,12 +1055,7 @@
       "id": "g3-u4-so-032",
       "type": "sentenceOrdering",
       "japanese": "彼女は何が起こったか知っています。",
-      "words": [
-        "She",
-        "knows",
-        "what",
-        "happened"
-      ],
+      "words": ["She", "knows", "what", "happened"],
       "correctAnswer": "She knows what happened.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。whatが主語の場合はwhat + 動詞の語順になります。\n\n【日本語】\n彼女は何が起こったか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1482,15 +1067,7 @@
       "id": "g3-u4-so-033",
       "type": "sentenceOrdering",
       "japanese": "彼は何人の生徒がいるか知っています。",
-      "words": [
-        "He",
-        "knows",
-        "how",
-        "many",
-        "students",
-        "there",
-        "are"
-      ],
+      "words": ["He", "knows", "how", "many", "students", "there", "are"],
       "correctAnswer": "He knows how many students there are.",
       "difficulty": "intermediate",
       "explanation": "間接疑問文の語順です。how manyの後はthere are構文を使います。\n\n【日本語】\n彼は何人の生徒がいるか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1593,11 +1170,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "where",
-        "what",
-        "when"
-      ],
+      "choices": ["where", "what", "when"],
       "correctAnswer": "where",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「どこに」という場所を尋ねるのでwhereを使います。\n\n【日本語】\n私は彼がどこに住んでいるか知りません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【where】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼がどこに住んでいるか知りません。」から、この形が適切です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼がどこに住んでいるか知りません。」に合いません。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼がどこに住んでいるか知りません。」に合いません。",
@@ -1618,11 +1191,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "when",
-        "where",
-        "what"
-      ],
+      "choices": ["when", "where", "what"],
       "correctAnswer": "when",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「いつ」という時を尋ねるのでwhenを使います。\n\n【日本語】\n私は彼女がいつ来るか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【when】 ← 正解\n  ✓ 正解理由: 日本語訳「私は彼女がいつ来るか分かりません。」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女がいつ来るか分かりません。」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は彼女がいつ来るか分かりません。」に合いません。",
@@ -1645,11 +1214,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "who",
-        "what",
-        "where"
-      ],
+      "choices": ["who", "what", "where"],
       "correctAnswer": "who",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「誰が」という人を尋ねるのでwhoを使います。\n\n【日本語】\n彼は誰がそれをしたか知っています。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【who】 ← 正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰がそれをしたか知っています。」に合いません。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰がそれをしたか知っています。」に合いません。",
@@ -1672,11 +1237,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "why",
-        "when",
-        "what"
-      ],
+      "choices": ["why", "when", "what"],
       "correctAnswer": "why",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「なぜ」という理由を尋ねるのでwhyを使います。\n\n【日本語】\n彼女はなぜ彼が怒っているか分かりません。\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【why】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はなぜ彼が怒っているか分かりません。」から、この形が適切です。\n\n❌ 【when】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はなぜ彼が怒っているか分かりません。」に合いません。\n\n❌ 【what】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はなぜ彼が怒っているか分かりません。」に合いません。",
@@ -1697,11 +1258,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "what",
-        "where",
-        "who"
-      ],
+      "choices": ["what", "where", "who"],
       "correctAnswer": "what",
       "difficulty": "intermediate",
       "explanation": "間接疑問文です。「何を」という物を尋ねるのでwhatを使います。\n\n【日本語】\nあなたは彼女が何を欲しがっているか知っていますか？\n\n【文法ポイント】\n間接疑問文、現在分詞・過去分詞の修飾\n\n【注意】\n疑問詞の使い分けに注意しましょう。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【what】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは彼女が何を欲しがっているか知っていますか？」から、この形が適切です。\n\n❌ 【where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは彼女が何を欲しがっているか知っていますか？」に合いません。\n\n❌ 【who】 ← 不正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✗ 不正解理由: 文法的・文脈的に不適切です。",

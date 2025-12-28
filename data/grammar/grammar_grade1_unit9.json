@@ -16,11 +16,7 @@
       "type": "fillInBlank",
       "japanese": "私は昨日東京へ行きました。",
       "sentence": "I ____ to Tokyo yesterday.",
-      "choices": [
-        "went",
-        "go",
-        "goes"
-      ],
+      "choices": ["went", "go", "goes"],
       "correctAnswer": "went",
       "difficulty": "beginner",
       "explanation": "goの過去形はwentです。「私は昨日東京へ行きました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【went】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日東京へ行きました。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日東京へ行きました。」に合いません。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日東京へ行きました。」に合いません。",
@@ -33,11 +29,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は先週ここに来ました。",
       "sentence": "She ____ here last week.",
-      "choices": [
-        "came",
-        "come",
-        "comes"
-      ],
+      "choices": ["came", "come", "comes"],
       "correctAnswer": "came",
       "difficulty": "beginner",
       "explanation": "comeの過去形はcameです。「彼女は先週ここに来ました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【came】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先週ここに来ました。」から、この形が適切です。\n\n❌ 【come】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週ここに来ました。」に合いません。\n\n❌ 【comes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週ここに来ました。」に合いません。",
@@ -48,11 +40,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは昨日映画を見ました。",
       "sentence": "We ____ a movie yesterday.",
-      "choices": [
-        "saw",
-        "see",
-        "sees"
-      ],
+      "choices": ["saw", "see", "sees"],
       "correctAnswer": "saw",
       "difficulty": "beginner",
       "explanation": "seeの過去形はsawです。「私たちは昨日映画を見ました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【saw】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは昨日映画を見ました。」から、この形が適切です。\n\n❌ 【see】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨日映画を見ました。」に合いません。\n\n❌ 【sees】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨日映画を見ました。」に合いません。",
@@ -65,11 +53,7 @@
       "type": "fillInBlank",
       "japanese": "彼は今朝朝食を食べました。",
       "sentence": "He ____ breakfast this morning.",
-      "choices": [
-        "ate",
-        "eat",
-        "eats"
-      ],
+      "choices": ["ate", "eat", "eats"],
       "correctAnswer": "ate",
       "difficulty": "beginner",
       "explanation": "eatの過去形はateです。「彼は今朝朝食を食べました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【ate】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は今朝朝食を食べました。」から、この形が適切です。\n\n❌ 【eat】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は今朝朝食を食べました。」に合いません。\n\n❌ 【eats】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は今朝朝食を食べました。」に合いません。",
@@ -80,11 +64,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは昨日ケーキを作りました。",
       "sentence": "They ____ a cake yesterday.",
-      "choices": [
-        "made",
-        "make",
-        "makes"
-      ],
+      "choices": ["made", "make", "makes"],
       "correctAnswer": "made",
       "difficulty": "beginner",
       "explanation": "makeの過去形はmadeです。「彼らは昨日ケーキを作りました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【made】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日ケーキを作りました。」から、この形が適切です。\n\n❌ 【make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日ケーキを作りました。」に合いません。\n\n❌ 【makes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日ケーキを作りました。」に合いません。",
@@ -97,11 +77,7 @@
       "type": "fillInBlank",
       "japanese": "私は昨晩楽しい時間を過ごしました。",
       "sentence": "I ____ a good time last night.",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
+      "choices": ["had", "have", "has"],
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "explanation": "haveの過去形はhadです。「私は昨晩楽しい時間を過ごしました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【had】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨晩楽しい時間を過ごしました。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨晩楽しい時間を過ごしました。」に合いません。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨晩楽しい時間を過ごしました。」に合いません。",
@@ -112,11 +88,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は昨日プレゼントをもらいました。",
       "sentence": "She ____ a present yesterday.",
-      "choices": [
-        "got",
-        "get",
-        "gets"
-      ],
+      "choices": ["got", "get", "gets"],
       "correctAnswer": "got",
       "difficulty": "intermediate",
       "explanation": "getの過去形はgotです。「彼女は昨日プレゼントをもらいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【got】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨日プレゼントをもらいました。」から、この形が適切です。\n\n❌ 【get】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日プレゼントをもらいました。」に合いません。\n\n❌ 【gets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日プレゼントをもらいました。」に合いません。",
@@ -127,11 +99,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは先週の日曜日に写真を撮りました。",
       "sentence": "We ____ pictures last Sunday.",
-      "choices": [
-        "took",
-        "take",
-        "takes"
-      ],
+      "choices": ["took", "take", "takes"],
       "correctAnswer": "took",
       "difficulty": "intermediate",
       "explanation": "takeの過去形はtookです。「私たちは先週の日曜日に写真を撮りました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【took】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは先週の日曜日に写真を撮りました。」から、この形が適切です。\n\n❌ 【take】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週の日曜日に写真を撮りました。」に合いません。\n\n❌ 【takes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週の日曜日に写真を撮りました。」に合いません。",
@@ -142,11 +110,7 @@
       "type": "fillInBlank",
       "japanese": "彼は昨日新しいパソコンを買いました。",
       "sentence": "He ____ a new computer yesterday.",
-      "choices": [
-        "bought",
-        "buy",
-        "buys"
-      ],
+      "choices": ["bought", "buy", "buys"],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
       "explanation": "buyの過去形はboughtです。「彼は昨日新しいパソコンを買いました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bought】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日新しいパソコンを買いました。」から、この形が適切です。\n\n❌ 【buy】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日新しいパソコンを買いました。」に合いません。\n\n❌ 【buys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日新しいパソコンを買いました。」に合いません。",
@@ -157,11 +121,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは先月その本を読みました。",
       "sentence": "They ____ the book last month.",
-      "choices": [
-        "read",
-        "reads",
-        "reading"
-      ],
+      "choices": ["read", "reads", "reading"],
       "correctAnswer": "read",
       "difficulty": "intermediate",
       "explanation": "readの過去形はread（発音が違う）です。「彼らは先月その本を読みました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは先月その本を読みました。」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは先月その本を読みました。」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは先月その本を読みました。」に合いません。",
@@ -174,11 +134,7 @@
       "type": "fillInBlank",
       "japanese": "私は昨日手紙を書きました。",
       "sentence": "I ____ a letter yesterday.",
-      "choices": [
-        "wrote",
-        "write",
-        "writes"
-      ],
+      "choices": ["wrote", "write", "writes"],
       "correctAnswer": "wrote",
       "difficulty": "intermediate",
       "explanation": "writeの過去形はwroteです。「私は昨日手紙を書きました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wrote】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日手紙を書きました。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日手紙を書きました。」に合いません。\n\n❌ 【writes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日手紙を書きました。」に合いません。",
@@ -191,11 +147,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は昨日答えを知っていました。",
       "sentence": "She ____ the answer yesterday.",
-      "choices": [
-        "knew",
-        "know",
-        "knows"
-      ],
+      "choices": ["knew", "know", "knows"],
       "correctAnswer": "knew",
       "difficulty": "advanced",
       "explanation": "knowの過去形はknewです。「彼女は昨日答えを知っていました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【knew】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨日答えを知っていました。」から、この形が適切です。\n\n❌ 【know】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日答えを知っていました。」に合いません。\n\n❌ 【knows】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日答えを知っていました。」に合いません。",
@@ -206,11 +158,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは先週彼に贈り物をあげました。",
       "sentence": "We ____ him a gift last week.",
-      "choices": [
-        "gave",
-        "give",
-        "gives"
-      ],
+      "choices": ["gave", "give", "gives"],
       "correctAnswer": "gave",
       "difficulty": "advanced",
       "explanation": "giveの過去形はgaveです。「私たちは先週彼に贈り物をあげました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【gave】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは先週彼に贈り物をあげました。」から、この形が適切です。\n\n❌ 【give】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週彼に贈り物をあげました。」に合いません。\n\n❌ 【gives】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週彼に贈り物をあげました。」に合いません。",
@@ -221,11 +169,7 @@
       "type": "fillInBlank",
       "japanese": "彼は昨日の朝公園で走りました。",
       "sentence": "He ____ in the park yesterday morning.",
-      "choices": [
-        "ran",
-        "run",
-        "runs"
-      ],
+      "choices": ["ran", "run", "runs"],
       "correctAnswer": "ran",
       "difficulty": "advanced",
       "explanation": "runの過去形はranです。「彼は昨日の朝公園で走りました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【ran】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日の朝公園で走りました。」から、この形が適切です。\n\n❌ 【run】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日の朝公園で走りました。」に合いません。\n\n❌ 【runs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日の朝公園で走りました。」に合いません。",
@@ -236,11 +180,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは昨晩鍵を見つけました。",
       "sentence": "They ____ the key last night.",
-      "choices": [
-        "found",
-        "find",
-        "finds"
-      ],
+      "choices": ["found", "find", "finds"],
       "correctAnswer": "found",
       "difficulty": "advanced",
       "explanation": "findの過去形はfoundです。「彼らは昨晩鍵を見つけました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【found】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨晩鍵を見つけました。」から、この形が適切です。\n\n❌ 【find】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩鍵を見つけました。」に合いません。\n\n❌ 【finds】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩鍵を見つけました。」に合いません。",
@@ -252,12 +192,7 @@
       "id": "g1-u9-so-001",
       "type": "sentenceOrdering",
       "japanese": "私は昨日家に帰りました。",
-      "words": [
-        "I",
-        "went",
-        "home",
-        "yesterday"
-      ],
+      "words": ["I", "went", "home", "yesterday"],
       "correctAnswer": "I went home yesterday.",
       "difficulty": "beginner",
       "explanation": "「私は昨日家に帰りました」です。go → wentです。\n\n「私は昨日家に帰りました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I went home yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -270,12 +205,7 @@
       "id": "g1-u9-so-002",
       "type": "sentenceOrdering",
       "japanese": "彼女は日本に来ました。",
-      "words": [
-        "she",
-        "came",
-        "to",
-        "Japan"
-      ],
+      "words": ["she", "came", "to", "Japan"],
       "correctAnswer": "She came to Japan.",
       "difficulty": "beginner",
       "explanation": "「彼女は日本に来ました」です。come → cameです。\n\n「彼女は日本に来ました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She came to Japan.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -286,12 +216,7 @@
       "id": "g1-u9-so-003",
       "type": "sentenceOrdering",
       "japanese": "私たちは昨日彼に会いました。",
-      "words": [
-        "we",
-        "saw",
-        "him",
-        "yesterday"
-      ],
+      "words": ["we", "saw", "him", "yesterday"],
       "correctAnswer": "We saw him yesterday.",
       "difficulty": "beginner",
       "explanation": "「私たちは昨日彼に会いました」です。see → sawです。\n\n「私たちは昨日彼に会いました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We saw him yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -304,12 +229,7 @@
       "id": "g1-u9-so-004",
       "type": "sentenceOrdering",
       "japanese": "彼は昨日昼食を食べました。",
-      "words": [
-        "he",
-        "had",
-        "lunch",
-        "yesterday"
-      ],
+      "words": ["he", "had", "lunch", "yesterday"],
       "correctAnswer": "He had lunch yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼は昨日昼食を食べました」です。have → hadです。\n\n「彼は昨日昼食を食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He had lunch yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -322,12 +242,7 @@
       "id": "g1-u9-so-005",
       "type": "sentenceOrdering",
       "japanese": "彼らは昨日クッキーを作りました。",
-      "words": [
-        "they",
-        "made",
-        "cookies",
-        "yesterday"
-      ],
+      "words": ["they", "made", "cookies", "yesterday"],
       "correctAnswer": "They made cookies yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼らは昨日クッキーを作りました」です。make → madeです。\n\n「彼らは昨日クッキーを作りました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They made cookies yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -338,13 +253,7 @@
       "id": "g1-u9-so-006",
       "type": "sentenceOrdering",
       "japanese": "私は昨日この写真を撮りました。",
-      "words": [
-        "I",
-        "took",
-        "this",
-        "picture",
-        "yesterday"
-      ],
+      "words": ["I", "took", "this", "picture", "yesterday"],
       "correctAnswer": "I took this picture yesterday.",
       "difficulty": "intermediate",
       "explanation": "「私は昨日この写真を撮りました」です。take → tookです。\n\n「私は昨日この写真を撮りました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I took this picture yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -355,12 +264,7 @@
       "id": "g1-u9-so-007",
       "type": "sentenceOrdering",
       "japanese": "彼女は本を買いました。",
-      "words": [
-        "she",
-        "bought",
-        "a",
-        "book"
-      ],
+      "words": ["she", "bought", "a", "book"],
       "correctAnswer": "She bought a book.",
       "difficulty": "intermediate",
       "explanation": "「彼女は本を買いました」です。buy → boughtです。\n\n「彼女は本を買いました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She bought a book.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -371,13 +275,7 @@
       "id": "g1-u9-so-008",
       "type": "sentenceOrdering",
       "japanese": "私たちは昨晩ピザを食べました。",
-      "words": [
-        "we",
-        "ate",
-        "pizza",
-        "last",
-        "night"
-      ],
+      "words": ["we", "ate", "pizza", "last", "night"],
       "correctAnswer": "We ate pizza last night.",
       "difficulty": "intermediate",
       "explanation": "「私たちは昨晩ピザを食べました」です。eat → ateです。\n\n「私たちは昨晩ピザを食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We ate pizza last night.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -390,13 +288,7 @@
       "id": "g1-u9-so-009",
       "type": "sentenceOrdering",
       "japanese": "彼は昨日早く起きました。",
-      "words": [
-        "he",
-        "got",
-        "up",
-        "early",
-        "yesterday"
-      ],
+      "words": ["he", "got", "up", "early", "yesterday"],
       "correctAnswer": "He got up early yesterday.",
       "difficulty": "intermediate",
       "explanation": "「彼は昨日早く起きました」です。get → gotです。\n\n「彼は昨日早く起きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He got up early yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -407,13 +299,7 @@
       "id": "g1-u9-so-010",
       "type": "sentenceOrdering",
       "japanese": "彼らは昨日その物語を読みました。",
-      "words": [
-        "they",
-        "read",
-        "the",
-        "story",
-        "yesterday"
-      ],
+      "words": ["they", "read", "the", "story", "yesterday"],
       "correctAnswer": "They read the story yesterday.",
       "difficulty": "intermediate",
       "explanation": "「彼らは昨日その物語を読みました」です。read → readです。\n\n「彼らは昨日その物語を読みました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They read the story yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -424,14 +310,7 @@
       "id": "g1-u9-so-011",
       "type": "sentenceOrdering",
       "japanese": "私は今朝メールを書きました。",
-      "words": [
-        "I",
-        "wrote",
-        "an",
-        "email",
-        "this",
-        "morning"
-      ],
+      "words": ["I", "wrote", "an", "email", "this", "morning"],
       "correctAnswer": "I wrote an email this morning.",
       "difficulty": "advanced",
       "explanation": "「私は今朝メールを書きました」です。write → wroteです。\n\n「私は今朝メールを書きました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I wrote an email this morning.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -442,13 +321,7 @@
       "id": "g1-u9-so-012",
       "type": "sentenceOrdering",
       "japanese": "彼女は私にプレゼントをくれました。",
-      "words": [
-        "she",
-        "gave",
-        "me",
-        "a",
-        "present"
-      ],
+      "words": ["she", "gave", "me", "a", "present"],
       "correctAnswer": "She gave me a present.",
       "difficulty": "advanced",
       "explanation": "「彼女は私にプレゼントをくれました」です。give → gaveです。\n\n「彼女は私にプレゼントをくれました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She gave me a present.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -459,14 +332,7 @@
       "id": "g1-u9-so-013",
       "type": "sentenceOrdering",
       "japanese": "私たちは昨日公園で走りました。",
-      "words": [
-        "we",
-        "ran",
-        "in",
-        "the",
-        "park",
-        "yesterday"
-      ],
+      "words": ["we", "ran", "in", "the", "park", "yesterday"],
       "correctAnswer": "We ran in the park yesterday.",
       "difficulty": "advanced",
       "explanation": "「私たちは昨日公園で走りました」です。run → ranです。\n\n「私たちは昨日公園で走りました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We ran in the park yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -477,13 +343,7 @@
       "id": "g1-u9-so-014",
       "type": "sentenceOrdering",
       "japanese": "彼は昨日真実を知っていました。",
-      "words": [
-        "he",
-        "knew",
-        "the",
-        "truth",
-        "yesterday"
-      ],
+      "words": ["he", "knew", "the", "truth", "yesterday"],
       "correctAnswer": "He knew the truth yesterday.",
       "difficulty": "advanced",
       "explanation": "「彼は昨日真実を知っていました」です。know → knewです。\n\n「彼は昨日真実を知っていました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He knew the truth yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -494,13 +354,7 @@
       "id": "g1-u9-so-015",
       "type": "sentenceOrdering",
       "japanese": "彼らは昨日宝物を見つけました。",
-      "words": [
-        "they",
-        "found",
-        "a",
-        "treasure",
-        "yesterday"
-      ],
+      "words": ["they", "found", "a", "treasure", "yesterday"],
       "correctAnswer": "They found a treasure yesterday.",
       "difficulty": "advanced",
       "explanation": "「彼らは昨日宝物を見つけました」です。find → foundです。\n\n「彼らは昨日宝物を見つけました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They found a treasure yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -529,11 +383,7 @@
       "japanese": "彼女は家に帰りました。",
       "originalSentence": "She comes home.",
       "question": "過去形に書き換えなさい",
-      "choices": [
-        "She came home.",
-        "She comed home.",
-        "She coming home."
-      ],
+      "choices": ["She came home.", "She comed home.", "She coming home."],
       "correctAnswer": "She came home.",
       "difficulty": "beginner",
       "explanation": "come → cameです。「彼女は家に帰りました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【She came home.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は家に帰りました。」から、この形が適切です。\n\n❌ 【She comed home.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は家に帰りました。」に合いません。\n\n❌ 【She coming home.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は家に帰りました。」に合いません。",
@@ -563,11 +413,7 @@
       "japanese": "私たちは夕食を食べました。",
       "originalSentence": "We eat dinner.",
       "question": "過去形に書き換えなさい",
-      "choices": [
-        "We ate dinner.",
-        "We eated dinner.",
-        "We eating dinner."
-      ],
+      "choices": ["We ate dinner.", "We eated dinner.", "We eating dinner."],
       "correctAnswer": "We ate dinner.",
       "difficulty": "beginner",
       "explanation": "eat → ateです。「私たちは夕食を食べました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【We ate dinner.】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは夕食を食べました。」から、この形が適切です。\n\n❌ 【We eated dinner.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは夕食を食べました。」に合いません。\n\n❌ 【We eating dinner.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは夕食を食べました。」に合いません。",
@@ -579,11 +425,7 @@
       "japanese": "彼は計画を立てました。",
       "originalSentence": "He makes a plan.",
       "question": "過去形に書き換えなさい",
-      "choices": [
-        "He made a plan.",
-        "He maked a plan.",
-        "He making a plan."
-      ],
+      "choices": ["He made a plan.", "He maked a plan.", "He making a plan."],
       "correctAnswer": "He made a plan.",
       "difficulty": "beginner",
       "explanation": "make → madeです。「彼は計画を立てました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【He made a plan.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は計画を立てました。」から、この形が適切です。\n\n❌ 【He maked a plan.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は計画を立てました。」に合いません。\n\n❌ 【He making a plan.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は計画を立てました。」に合いません。",
@@ -595,11 +437,7 @@
       "japanese": "私はペンを買います。",
       "originalSentence": "I bought a pen yesterday.",
       "question": "現在形に書き換えなさい",
-      "choices": [
-        "I buy a pen.",
-        "I buys a pen.",
-        "I buying a pen."
-      ],
+      "choices": ["I buy a pen.", "I buys a pen.", "I buying a pen."],
       "correctAnswer": "I buy a pen.",
       "difficulty": "intermediate",
       "explanation": "bought → buyです。yesterdayを取ります。「私はペンを買います」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I buy a pen.】 ← 正解\n  ✓ 正解理由: 日本語訳「私はペンを買います。」から、この形が適切です。\n\n❌ 【I buys a pen.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はペンを買います。」に合いません。\n\n❌ 【I buying a pen.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はペンを買います。」に合いません。",
@@ -611,11 +449,7 @@
       "japanese": "彼女は犬を飼っています。",
       "originalSentence": "She had a dog last year.",
       "question": "現在形に書き換えなさい",
-      "choices": [
-        "She has a dog.",
-        "She have a dog.",
-        "She having a dog."
-      ],
+      "choices": ["She has a dog.", "She have a dog.", "She having a dog."],
       "correctAnswer": "She has a dog.",
       "difficulty": "intermediate",
       "explanation": "had → has（三人称単数）です。「彼女は犬を飼っています」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【She has a dog.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は犬を飼っています。」から、この形が適切です。\n\n❌ 【She have a dog.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は犬を飼っています。」に合いません。\n\n❌ 【She having a dog.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は犬を飼っています。」に合いません。",
@@ -677,11 +511,7 @@
       "japanese": "はい、食べました。",
       "originalSentence": "Did you have breakfast?",
       "question": "肯定で答えなさい",
-      "choices": [
-        "Yes, I did.",
-        "Yes, I do.",
-        "Yes, I had."
-      ],
+      "choices": ["Yes, I did.", "Yes, I do.", "Yes, I had."],
       "correctAnswer": "Yes, I did.",
       "difficulty": "advanced",
       "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Yes, I did.】 ← 正解\n  ✓ 正解理由: 日本語訳「はい、食べました。」から、この形が適切です。\n\n❌ 【Yes, I do.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、食べました。」に合いません。\n\n❌ 【Yes, I had.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、食べました。」に合いません。",
@@ -693,11 +523,7 @@
       "japanese": "いいえ、行きませんでした。",
       "originalSentence": "Did she go there?",
       "question": "否定で答えなさい",
-      "choices": [
-        "No, she didn't.",
-        "No, she doesn't.",
-        "No, she not."
-      ],
+      "choices": ["No, she didn't.", "No, she doesn't.", "No, she not."],
       "correctAnswer": "No, she didn't.",
       "difficulty": "advanced",
       "explanation": "Didへの否定の答えはdidn'tです。「いいえ、行きませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【No, she didn't.】 ← 正解\n  ✓ 正解理由: 日本語訳「いいえ、行きませんでした。」から、この形が適切です。\n\n❌ 【No, she doesn't.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いいえ、行きませんでした。」に合いません。\n\n❌ 【No, she not.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いいえ、行きませんでした。」に合いません。",
@@ -759,11 +585,7 @@
       "japanese": "私は昨日大阪へ行きました。",
       "sentence": "I ____ to Osaka yesterday.",
       "verb": "go",
-      "choices": [
-        "went",
-        "go",
-        "goed"
-      ],
+      "choices": ["went", "go", "goed"],
       "correctAnswer": "went",
       "difficulty": "beginner",
       "explanation": "goの過去形はwentです。「私は昨日大阪へ行きました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【went】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日大阪へ行きました。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日大阪へ行きました。」に合いません。\n\n❌ 【goed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日大阪へ行きました。」に合いません。",
@@ -775,11 +597,7 @@
       "japanese": "彼女は先週私の家に来ました。",
       "sentence": "She ____ to my house last week.",
       "verb": "come",
-      "choices": [
-        "came",
-        "come",
-        "comed"
-      ],
+      "choices": ["came", "come", "comed"],
       "correctAnswer": "came",
       "difficulty": "beginner",
       "explanation": "comeの過去形はcameです。「彼女は先週私の家に来ました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【came】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先週私の家に来ました。」から、この形が適切です。\n\n❌ 【come】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週私の家に来ました。」に合いません。\n\n❌ 【comed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週私の家に来ました。」に合いません。",
@@ -793,11 +611,7 @@
       "japanese": "彼らは昨日鳥を見ました。",
       "sentence": "They ____ a bird yesterday.",
       "verb": "see",
-      "choices": [
-        "saw",
-        "see",
-        "seed"
-      ],
+      "choices": ["saw", "see", "seed"],
       "correctAnswer": "saw",
       "difficulty": "beginner",
       "explanation": "seeの過去形はsawです。「彼らは昨日鳥を見ました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【saw】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日鳥を見ました。」から、この形が適切です。\n\n❌ 【see】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日鳥を見ました。」に合いません。\n\n❌ 【seed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日鳥を見ました。」に合いません。",
@@ -809,11 +623,7 @@
       "japanese": "私たちは昨夜寿司を食べました。",
       "sentence": "We ____ sushi last night.",
       "verb": "eat",
-      "choices": [
-        "ate",
-        "eat",
-        "eated"
-      ],
+      "choices": ["ate", "eat", "eated"],
       "correctAnswer": "ate",
       "difficulty": "beginner",
       "explanation": "eatの過去形はateです。「私たちは昨晩寿司を食べました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【ate】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは昨夜寿司を食べました。」から、この形が適切です。\n\n❌ 【eat】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨夜寿司を食べました。」に合いません。\n\n❌ 【eated】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨夜寿司を食べました。」に合いません。",
@@ -825,11 +635,7 @@
       "japanese": "彼は昨日ロボットを作りました。",
       "sentence": "He ____ a robot yesterday.",
       "verb": "make",
-      "choices": [
-        "made",
-        "make",
-        "maked"
-      ],
+      "choices": ["made", "make", "maked"],
       "correctAnswer": "made",
       "difficulty": "intermediate",
       "explanation": "makeの過去形はmadeです。「彼は昨日ロボットを作りました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【made】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日ロボットを作りました。」から、この形が適切です。\n\n❌ 【make】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日ロボットを作りました。」に合いません。\n\n❌ 【maked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日ロボットを作りました。」に合いません。",
@@ -841,11 +647,7 @@
       "japanese": "私は昨夜夢を見ました。",
       "sentence": "I ____ a dream last night.",
       "verb": "have",
-      "choices": [
-        "had",
-        "have",
-        "haved"
-      ],
+      "choices": ["had", "have", "haved"],
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "explanation": "haveの過去形はhadです。「私は昨晩夢を見ました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【had】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨夜夢を見ました。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨夜夢を見ました。」に合いません。\n\n❌ 【haved】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨夜夢を見ました。」に合いません。",
@@ -857,11 +659,7 @@
       "japanese": "彼女は昨日写真を撮りました。",
       "sentence": "She ____ a photo yesterday.",
       "verb": "take",
-      "choices": [
-        "took",
-        "take",
-        "taked"
-      ],
+      "choices": ["took", "take", "taked"],
       "correctAnswer": "took",
       "difficulty": "intermediate",
       "explanation": "takeの過去形はtookです。「彼女は昨日写真を撮りました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【took】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨日写真を撮りました。」から、この形が適切です。\n\n❌ 【take】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日写真を撮りました。」に合いません。\n\n❌ 【taked】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日写真を撮りました。」に合いません。",
@@ -873,11 +671,7 @@
       "japanese": "彼らは昨日新しい靴を買いました。",
       "sentence": "They ____ new shoes yesterday.",
       "verb": "buy",
-      "choices": [
-        "bought",
-        "buy",
-        "buyed"
-      ],
+      "choices": ["bought", "buy", "buyed"],
       "correctAnswer": "bought",
       "difficulty": "advanced",
       "explanation": "buyの過去形はboughtです。「彼らは昨日新しい靴を買いました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bought】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日新しい靴を買いました。」から、この形が適切です。\n\n❌ 【buy】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日新しい靴を買いました。」に合いません。\n\n❌ 【buyed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日新しい靴を買いました。」に合いません。",
@@ -889,11 +683,7 @@
       "japanese": "私たちは昨日物語を読みました。",
       "sentence": "We ____ a story yesterday.",
       "verb": "read",
-      "choices": [
-        "read",
-        "reads",
-        "readed"
-      ],
+      "choices": ["read", "reads", "readed"],
       "correctAnswer": "read",
       "difficulty": "advanced",
       "explanation": "readの過去形はread（発音違い）です。「私たちは昨日物語を読みました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは昨日物語を読みました。」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨日物語を読みました。」に合いません。\n\n❌ 【readed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨日物語を読みました。」に合いません。",
@@ -905,11 +695,7 @@
       "japanese": "彼は昨日歌を書きました。",
       "sentence": "He ____ a song yesterday.",
       "verb": "write",
-      "choices": [
-        "wrote",
-        "write",
-        "writed"
-      ],
+      "choices": ["wrote", "write", "writed"],
       "correctAnswer": "wrote",
       "difficulty": "advanced",
       "explanation": "writeの過去形はwroteです。「彼は昨日歌を書きました」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wrote】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日歌を書きました。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日歌を書きました。」に合いません。\n\n❌ 【writed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日歌を書きました。」に合いません。",
@@ -930,11 +716,7 @@
           "text": "I ____ to the library."
         }
       ],
-      "choices": [
-        "went",
-        "go",
-        "goes"
-      ],
+      "choices": ["went", "go", "goes"],
       "correctAnswer": "went",
       "difficulty": "beginner",
       "explanation": "Didで聞かれたら過去形で答えります。「図書館へ行きました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【went】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の行動を尋ねる。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の行動を尋ねる。」に合いません。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の行動を尋ねる。」に合いません。",
@@ -955,11 +737,7 @@
           "text": "Yes, I ____."
         }
       ],
-      "choices": [
-        "did",
-        "do",
-        "had"
-      ],
+      "choices": ["did", "do", "had"],
       "correctAnswer": "did",
       "difficulty": "beginner",
       "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【did】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の確認。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の確認。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の確認。」に合いません。",
@@ -980,11 +758,7 @@
           "text": "No, I ____."
         }
       ],
-      "choices": [
-        "didn't",
-        "don't",
-        "wasn't"
-      ],
+      "choices": ["didn't", "don't", "wasn't"],
       "correctAnswer": "didn't",
       "difficulty": "intermediate",
       "explanation": "Didへの否定の答えはdidn'tです。「いいえ、見ませんでした」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【didn't】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の否定。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。\n\n❌ 【wasn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。",
@@ -1005,11 +779,7 @@
           "text": "I ____ a new bag."
         }
       ],
-      "choices": [
-        "bought",
-        "buy",
-        "buys"
-      ],
+      "choices": ["bought", "buy", "buys"],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
       "explanation": "Didで聞かれたら過去形で答えります。「新しいバッグを買いました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【bought】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の経験を語る。」から、この形が適切です。\n\n❌ 【buy】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の経験を語る。」に合いません。\n\n❌ 【buys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の経験を語る。」に合いません。",
@@ -1032,11 +802,7 @@
           "text": "I went to Kyoto."
         }
       ],
-      "choices": [
-        "go",
-        "went",
-        "goes"
-      ],
+      "choices": ["go", "went", "goes"],
       "correctAnswer": "go",
       "difficulty": "advanced",
       "explanation": "didの後ろは原形です。「あなたはどこへ行きましたか」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の詳細を尋ねる。」から、この形が適切です。\n\n❌ 【went】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の詳細を尋ねる。」に合いません。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の詳細を尋ねる。」に合いません。",

@@ -16,11 +16,7 @@
       "type": "fillInBlank",
       "japanese": "ドアを開けなさい。",
       "sentence": "____ the door.",
-      "choices": [
-        "Open",
-        "Opens",
-        "Opening"
-      ],
+      "choices": ["Open", "Opens", "Opening"],
       "correctAnswer": "Open",
       "difficulty": "beginner",
       "explanation": "命令文は動詞の原形で始まります。Open the door.で「ドアを開けなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Open】 ← 正解\n  ✓ 正解理由: 日本語訳「ドアを開けなさい。」から、この形が適切です。\n\n❌ 【Opens】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ドアを開けなさい。」に合いません。\n\n❌ 【Opening】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ドアを開けなさい。」に合いません。",
@@ -33,11 +29,7 @@
       "type": "fillInBlank",
       "japanese": "静かにしなさい。",
       "sentence": "____ quiet.",
-      "choices": [
-        "Be",
-        "Are",
-        "Is"
-      ],
+      "choices": ["Be", "Are", "Is"],
       "correctAnswer": "Be",
       "difficulty": "beginner",
       "explanation": "be動詞の命令形はBeです。Be quiet.で「静かにしなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Be】 ← 正解\n  ✓ 正解理由: 日本語訳「静かにしなさい。」から、この形が適切です。\n\n❌ 【Are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「静かにしなさい。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「静かにしなさい。」に合いません。",
@@ -48,11 +40,7 @@
       "type": "fillInBlank",
       "japanese": "ここに来なさい。",
       "sentence": "____ here.",
-      "choices": [
-        "Come",
-        "Comes",
-        "Coming"
-      ],
+      "choices": ["Come", "Comes", "Coming"],
       "correctAnswer": "Come",
       "difficulty": "beginner",
       "explanation": "命令文は動詞の原形です。Come here.で「ここに来なさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Come】 ← 正解\n  ✓ 正解理由: 日本語訳「ここに来なさい。」から、この形が適切です。\n\n❌ 【Comes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここに来なさい。」に合いません。\n\n❌ 【Coming】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここに来なさい。」に合いません。",
@@ -63,11 +51,7 @@
       "type": "fillInBlank",
       "japanese": "走らないでください。",
       "sentence": "____ run.",
-      "choices": [
-        "Don't",
-        "Doesn't",
-        "Not"
-      ],
+      "choices": ["Don't", "Doesn't", "Not"],
       "correctAnswer": "Don't",
       "difficulty": "beginner",
       "explanation": "否定の命令文はDon't + 原形です。Don't run.で「走らないで」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Don't】 ← 正解\n  ✓ 正解理由: 日本語訳「走らないでください。」から、この形が適切です。\n\n❌ 【Doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走らないでください。」に合いません。\n\n❌ 【Not】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走らないでください。」に合いません。",
@@ -78,11 +62,7 @@
       "type": "fillInBlank",
       "japanese": "一緒にサッカーをしましょう。",
       "sentence": "____ play soccer.",
-      "choices": [
-        "Let's",
-        "Let",
-        "Lets"
-      ],
+      "choices": ["Let's", "Let", "Lets"],
       "correctAnswer": "Let's",
       "difficulty": "beginner",
       "explanation": "勧誘の命令文はLet's + 原形です。Let's play soccer.で「サッカーをしましょう」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Let's】 ← 正解\n  ✓ 正解理由: 日本語訳「一緒にサッカーをしましょう。」から、この形が適切です。\n\n❌ 【Let】 ← 不正解\n  ✗ 不正解理由: 日本語訳「一緒にサッカーをしましょう。」に合いません。\n\n❌ 【Lets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「一緒にサッカーをしましょう。」に合いません。",
@@ -93,11 +73,7 @@
       "type": "fillInBlank",
       "japanese": "この本を読みなさい。",
       "sentence": "____ this book.",
-      "choices": [
-        "Read",
-        "Reads",
-        "Reading"
-      ],
+      "choices": ["Read", "Reads", "Reading"],
       "correctAnswer": "Read",
       "difficulty": "intermediate",
       "explanation": "命令文は動詞の原形で始まります。Read this book.で「この本を読みなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Read】 ← 正解\n  ✓ 正解理由: 日本語訳「この本を読みなさい。」から、この形が適切です。\n\n❌ 【Reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本を読みなさい。」に合いません。\n\n❌ 【Reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この本を読みなさい。」に合いません。",
@@ -108,11 +84,7 @@
       "type": "fillInBlank",
       "japanese": "遅れないでください。",
       "sentence": "Don't ____ late.",
-      "choices": [
-        "be",
-        "are",
-        "is"
-      ],
+      "choices": ["be", "are", "is"],
       "correctAnswer": "be",
       "difficulty": "intermediate",
       "explanation": "Don'tの後ろは動詞の原形です。Don't be late.で「遅れないで」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【be】 ← 正解\n  ✓ 正解理由: 日本語訳「遅れないでください。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅れないでください。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅れないでください。」に合いません。",
@@ -123,11 +95,7 @@
       "type": "fillInBlank",
       "japanese": "窓を閉めなさい。",
       "sentence": "____ the box.",
-      "choices": [
-        "Close",
-        "Closes",
-        "Closing"
-      ],
+      "choices": ["Close", "Closes", "Closing"],
       "correctAnswer": "Close",
       "difficulty": "intermediate",
       "explanation": "命令文は動詞の原形で始まります。Close the box.で「箱を閉めなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Close】 ← 正解\n  ✓ 正解理由: 日本語訳「窓を閉めなさい。」から、この形が適切です。\n\n❌ 【Closes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を閉めなさい。」に合いません。\n\n❌ 【Closing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を閉めなさい。」に合いません。",
@@ -140,11 +108,7 @@
       "type": "fillInBlank",
       "japanese": "心配しないでください。",
       "sentence": "____ worry.",
-      "choices": [
-        "Don't",
-        "Doesn't",
-        "Not"
-      ],
+      "choices": ["Don't", "Doesn't", "Not"],
       "correctAnswer": "Don't",
       "difficulty": "intermediate",
       "explanation": "否定の命令文です。Don't worry.で「心配しないで」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Don't】 ← 正解\n  ✓ 正解理由: 日本語訳「心配しないでください。」から、この形が適切です。\n\n❌ 【Doesn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「心配しないでください。」に合いません。\n\n❌ 【Not】 ← 不正解\n  ✗ 不正解理由: 日本語訳「心配しないでください。」に合いません。",
@@ -155,11 +119,7 @@
       "type": "fillInBlank",
       "japanese": "一緒に勉強しましょう。",
       "sentence": "Let's ____ together.",
-      "choices": [
-        "study",
-        "studies",
-        "studying"
-      ],
+      "choices": ["study", "studies", "studying"],
       "correctAnswer": "study",
       "difficulty": "intermediate",
       "explanation": "Let'sの後ろは動詞の原形です。Let's study together.で「一緒に勉強しましょう」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「一緒に勉強しましょう。」から、この形が適切です。\n\n❌ 【studies】 ← 不正解\n  ✗ 不正解理由: 日本語訳「一緒に勉強しましょう。」に合いません。\n\n❌ 【studying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「一緒に勉強しましょう。」に合いません。",
@@ -170,11 +130,7 @@
       "type": "fillInBlank",
       "japanese": "親切にしなさい。",
       "sentence": "____ nice.",
-      "choices": [
-        "Be",
-        "Is",
-        "Are"
-      ],
+      "choices": ["Be", "Is", "Are"],
       "correctAnswer": "Be",
       "difficulty": "intermediate",
       "explanation": "be動詞の命令形はBeです。Be nice.で「いい子にしなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Be】 ← 正解\n  ✓ 正解理由: 日本語訳「親切にしなさい。」から、この形が適切です。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「親切にしなさい。」に合いません。\n\n❌ 【Are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「親切にしなさい。」に合いません。",
@@ -185,11 +141,7 @@
       "type": "fillInBlank",
       "japanese": "ここで写真を撮らないでください。",
       "sentence": "Don't ____ pictures here.",
-      "choices": [
-        "take",
-        "takes",
-        "taking"
-      ],
+      "choices": ["take", "takes", "taking"],
       "correctAnswer": "take",
       "difficulty": "advanced",
       "explanation": "Don't + 原形です。Don't take pictures here.で「ここで写真を撮らないで」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【take】 ← 正解\n  ✓ 正解理由: 日本語訳「ここで写真を撮らないでください。」から、この形が適切です。\n\n❌ 【takes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここで写真を撮らないでください。」に合いません。\n\n❌ 【taking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここで写真を撮らないでください。」に合いません。",
@@ -200,11 +152,7 @@
       "type": "fillInBlank",
       "japanese": "公園へ行きましょう。",
       "sentence": "Let's ____ to the park.",
-      "choices": [
-        "go",
-        "goes",
-        "going"
-      ],
+      "choices": ["go", "goes", "going"],
       "correctAnswer": "go",
       "difficulty": "advanced",
       "explanation": "Let's + 原形です。Let's go to the park.で「公園へ行きましょう」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「公園へ行きましょう。」から、この形が適切です。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「公園へ行きましょう。」に合いません。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「公園へ行きましょう。」に合いません。",
@@ -215,11 +163,7 @@
       "type": "fillInBlank",
       "japanese": "早く起きなさい。",
       "sentence": "____ up early.",
-      "choices": [
-        "Get",
-        "Gets",
-        "Getting"
-      ],
+      "choices": ["Get", "Gets", "Getting"],
       "correctAnswer": "Get",
       "difficulty": "advanced",
       "explanation": "get upで「起きる」です。Get up early.で「早く起きなさい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Get】 ← 正解\n  ✓ 正解理由: 日本語訳「早く起きなさい。」から、この形が適切です。\n\n❌ 【Gets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「早く起きなさい。」に合いません。\n\n❌ 【Getting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「早く起きなさい。」に合いません。",
@@ -230,11 +174,7 @@
       "type": "fillInBlank",
       "japanese": "あきらめないでください。",
       "sentence": "Don't ____ up.",
-      "choices": [
-        "give",
-        "gives",
-        "giving"
-      ],
+      "choices": ["give", "gives", "giving"],
       "correctAnswer": "give",
       "difficulty": "advanced",
       "explanation": "give upで「あきらめる」です。Don't give up.で「あきらめないで」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【give】 ← 正解\n  ✓ 正解理由: 日本語訳「あきらめないでください。」から、この形が適切です。\n\n❌ 【gives】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あきらめないでください。」に合いません。\n\n❌ 【giving】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あきらめないでください。」に合いません。",
@@ -244,10 +184,7 @@
       "id": "g1-u7-so-001",
       "type": "sentenceOrdering",
       "japanese": "座りなさい。",
-      "words": [
-        "sit",
-        "down"
-      ],
+      "words": ["sit", "down"],
       "correctAnswer": "Sit down.",
       "difficulty": "beginner",
       "explanation": "sit downで「座る」です。命令文は原形で始まります。\n\n「座りなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Sit down.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -260,10 +197,7 @@
       "id": "g1-u7-so-002",
       "type": "sentenceOrdering",
       "japanese": "立ちなさい。",
-      "words": [
-        "stand",
-        "up"
-      ],
+      "words": ["stand", "up"],
       "correctAnswer": "Stand up.",
       "difficulty": "beginner",
       "explanation": "stand upで「立つ」です。Stand up.で「立ちなさい」です。\n\n「立ちなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Stand up.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -276,10 +210,7 @@
       "id": "g1-u7-so-003",
       "type": "sentenceOrdering",
       "japanese": "静かにしなさい。",
-      "words": [
-        "be",
-        "quiet"
-      ],
+      "words": ["be", "quiet"],
       "correctAnswer": "Be quiet.",
       "difficulty": "beginner",
       "explanation": "be動詞の命令形です。Be quiet.で「静かにしなさい」です。\n\n「静かにしなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Be quiet.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -290,10 +221,7 @@
       "id": "g1-u7-so-004",
       "type": "sentenceOrdering",
       "japanese": "話さないでください。",
-      "words": [
-        "don't",
-        "talk"
-      ],
+      "words": ["don't", "talk"],
       "correctAnswer": "Don't talk.",
       "difficulty": "beginner",
       "explanation": "否定の命令文です。Don't talk.で「話さないで」です。\n\n「話さないでください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Don't talk.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -304,10 +232,7 @@
       "id": "g1-u7-so-005",
       "type": "sentenceOrdering",
       "japanese": "一緒に行きましょう。",
-      "words": [
-        "let's",
-        "go"
-      ],
+      "words": ["let's", "go"],
       "correctAnswer": "Let's go.",
       "difficulty": "beginner",
       "explanation": "Let's goで「行きましょう」です。勧誘の表現です。\n\n「一緒に行きましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Let's go.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -320,11 +245,7 @@
       "id": "g1-u7-so-006",
       "type": "sentenceOrdering",
       "japanese": "この本を読みなさい。",
-      "words": [
-        "read",
-        "this",
-        "book"
-      ],
+      "words": ["read", "this", "book"],
       "correctAnswer": "Read this book.",
       "difficulty": "intermediate",
       "explanation": "命令文の語順です。Read this book.で「この本を読みなさい」です。\n\n「この本を読みなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Read this book.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -335,10 +256,7 @@
       "id": "g1-u7-so-007",
       "type": "sentenceOrdering",
       "japanese": "窓を開けなさい。",
-      "words": [
-        "don't",
-        "shout"
-      ],
+      "words": ["don't", "shout"],
       "correctAnswer": "Don't shout.",
       "difficulty": "intermediate",
       "explanation": "shoutは「叫ぶ」です。Don't shout.で「叫ばないで」です。\n\n「窓を開けなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Don't shout.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -349,11 +267,7 @@
       "id": "g1-u7-so-008",
       "type": "sentenceOrdering",
       "japanese": "遅れないでください。",
-      "words": [
-        "don't",
-        "be",
-        "late"
-      ],
+      "words": ["don't", "be", "late"],
       "correctAnswer": "Don't be late.",
       "difficulty": "intermediate",
       "explanation": "Don't be late.で「遅れないで」です。Don't + be + 形容詞です。\n\n「遅れないでください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Don't be late.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -366,11 +280,7 @@
       "id": "g1-u7-so-009",
       "type": "sentenceOrdering",
       "japanese": "一緒に食べましょう。",
-      "words": [
-        "let's",
-        "eat",
-        "together"
-      ],
+      "words": ["let's", "eat", "together"],
       "correctAnswer": "Let's eat together.",
       "difficulty": "intermediate",
       "explanation": "Let's eat together.で「一緒に食べましょう」です。\n\n「一緒に食べましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Let's eat together.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -381,11 +291,7 @@
       "id": "g1-u7-so-010",
       "type": "sentenceOrdering",
       "japanese": "ここで走らないでください。",
-      "words": [
-        "don't",
-        "run",
-        "here"
-      ],
+      "words": ["don't", "run", "here"],
       "correctAnswer": "Don't run here.",
       "difficulty": "intermediate",
       "explanation": "Don't run here.で「ここで走らないで」です。\n\n「ここで走らないでください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Don't run here.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -396,10 +302,7 @@
       "id": "g1-u7-so-011",
       "type": "sentenceOrdering",
       "japanese": "英語を話しなさい。",
-      "words": [
-        "speak",
-        "English"
-      ],
+      "words": ["speak", "English"],
       "correctAnswer": "Speak English.",
       "difficulty": "advanced",
       "explanation": "Speak English.で「英語を話しなさい」です。\n\n「英語を話しなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Speak English.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -412,10 +315,7 @@
       "id": "g1-u7-so-012",
       "type": "sentenceOrdering",
       "japanese": "心配しないでください。",
-      "words": [
-        "don't",
-        "worry"
-      ],
+      "words": ["don't", "worry"],
       "correctAnswer": "Don't worry.",
       "difficulty": "advanced",
       "explanation": "Don't worry.で「心配しないで」です。よく使う表現です。\n\n「心配しないでください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Don't worry.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -426,11 +326,7 @@
       "id": "g1-u7-so-013",
       "type": "sentenceOrdering",
       "japanese": "一緒にテニスをしましょう。",
-      "words": [
-        "let's",
-        "play",
-        "tennis"
-      ],
+      "words": ["let's", "play", "tennis"],
       "correctAnswer": "Let's play tennis.",
       "difficulty": "advanced",
       "explanation": "Let's play tennis.で「テニスをしましょう」です。\n\n「一緒にテニスをしましょう。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Let's play tennis.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -441,12 +337,7 @@
       "id": "g1-u7-so-014",
       "type": "sentenceOrdering",
       "japanese": "宿題を忘れないでください。",
-      "words": [
-        "don't",
-        "forget",
-        "your",
-        "homework"
-      ],
+      "words": ["don't", "forget", "your", "homework"],
       "correctAnswer": "Don't forget your homework.",
       "difficulty": "advanced",
       "explanation": "Don't forget your homework.で「宿題を忘れないで」です。\n\n「宿題を忘れないでください。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Don't forget your homework.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -457,12 +348,7 @@
       "id": "g1-u7-so-015",
       "type": "sentenceOrdering",
       "japanese": "親切にしなさい。",
-      "words": [
-        "be",
-        "kind",
-        "to",
-        "others"
-      ],
+      "words": ["be", "kind", "to", "others"],
       "correctAnswer": "Be kind to others.",
       "difficulty": "advanced",
       "explanation": "Be kind to others.で「他の人に親切にしなさい」です。\n\n「親切にしなさい。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Be kind to others.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -477,11 +363,7 @@
       "japanese": "ドアを開けなさい。",
       "originalSentence": "You open the door.",
       "question": "命令文に書き換えなさい",
-      "choices": [
-        "Open the door.",
-        "Opens the door.",
-        "Opening the door."
-      ],
+      "choices": ["Open the door.", "Opens the door.", "Opening the door."],
       "correctAnswer": "Open the door.",
       "difficulty": "beginner",
       "explanation": "主語を取り、動詞を原形にです。Open the door.で「ドアを開けなさい」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Open the door.】 ← 正解\n  ✓ 正解理由: 日本語訳「ドアを開けなさい。」から、この形が適切です。\n\n❌ 【Opens the door.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ドアを開けなさい。」に合いません。\n\n❌ 【Opening the door.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ドアを開けなさい。」に合いません。",
@@ -493,11 +375,7 @@
       "japanese": "走らないでください。",
       "originalSentence": "Run.",
       "question": "否定の命令文に書き換えなさい",
-      "choices": [
-        "Don't run.",
-        "Not run.",
-        "No run."
-      ],
+      "choices": ["Don't run.", "Not run.", "No run."],
       "correctAnswer": "Don't run.",
       "difficulty": "beginner",
       "explanation": "Don'tを文頭に付けます。Don't run.で「走らないで」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Don't run.】 ← 正解\n  ✓ 正解理由: 日本語訳「走らないでください。」から、この形が適切です。\n\n❌ 【Not run.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走らないでください。」に合いません。\n\n❌ 【No run.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「走らないでください。」に合いません。",
@@ -509,11 +387,7 @@
       "japanese": "寝なさい。",
       "originalSentence": "Don't sleep.",
       "question": "肯定の命令文に書き換えなさい",
-      "choices": [
-        "Sleep.",
-        "Sleeps.",
-        "Sleeping."
-      ],
+      "choices": ["Sleep.", "Sleeps.", "Sleeping."],
       "correctAnswer": "Sleep.",
       "difficulty": "beginner",
       "explanation": "Don'tを取ります。Sleep.で「寝なさい」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Sleep.】 ← 正解\n  ✓ 正解理由: 日本語訳「寝なさい。」から、この形が適切です。\n\n❌ 【Sleeps.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「寝なさい。」に合いません。\n\n❌ 【Sleeping.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「寝なさい。」に合いません。",
@@ -541,11 +415,7 @@
       "japanese": "幸せでいなさい。",
       "originalSentence": "You are happy.",
       "question": "命令文に書き換えなさい",
-      "choices": [
-        "Be happy.",
-        "Are happy.",
-        "Is happy."
-      ],
+      "choices": ["Be happy.", "Are happy.", "Is happy."],
       "correctAnswer": "Be happy.",
       "difficulty": "beginner",
       "explanation": "be動詞の命令形はBeです。Be happy.で「楽しくやりなさい」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Be happy.】 ← 正解\n  ✓ 正解理由: 日本語訳「幸せでいなさい。」から、この形が適切です。\n\n❌ 【Are happy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「幸せでいなさい。」に合いません。\n\n❌ 【Is happy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「幸せでいなさい。」に合いません。",
@@ -557,11 +427,7 @@
       "japanese": "ここに座らないでください。",
       "originalSentence": "You sit here.",
       "question": "否定の命令文に書き換えなさい",
-      "choices": [
-        "Don't sit here.",
-        "Not sit here.",
-        "Doesn't sit here."
-      ],
+      "choices": ["Don't sit here.", "Not sit here.", "Doesn't sit here."],
       "correctAnswer": "Don't sit here.",
       "difficulty": "intermediate",
       "explanation": "Don't + 原形です。Don't sit here.で「ここに座らないで」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Don't sit here.】 ← 正解\n  ✓ 正解理由: 日本語訳「ここに座らないでください。」から、この形が適切です。\n\n❌ 【Not sit here.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここに座らないでください。」に合いません。\n\n❌ 【Doesn't sit here.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここに座らないでください。」に合いません。",
@@ -607,11 +473,7 @@
       "japanese": "ここで走ってはいけません。",
       "originalSentence": "Do not cry.",
       "question": "短縮形に書き換えなさい",
-      "choices": [
-        "Don't cry.",
-        "Doesn't cry.",
-        "Not cry."
-      ],
+      "choices": ["Don't cry.", "Doesn't cry.", "Not cry."],
       "correctAnswer": "Don't cry.",
       "difficulty": "intermediate",
       "explanation": "Do not = Don'tです。Don't cry.で「泣かないで」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Don't cry.】 ← 正解\n  ✓ 正解理由: 日本語訳「ここで走ってはいけません。」から、この形が適切です。\n\n❌ 【Doesn't cry.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここで走ってはいけません。」に合いません。\n\n❌ 【Not cry.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここで走ってはいけません。」に合いません。",
@@ -623,11 +485,7 @@
       "japanese": "注意しなさい。",
       "originalSentence": "You are careful.",
       "question": "命令文に書き換えなさい",
-      "choices": [
-        "Be careful.",
-        "Are careful.",
-        "Is careful."
-      ],
+      "choices": ["Be careful.", "Are careful.", "Is careful."],
       "correctAnswer": "Be careful.",
       "difficulty": "intermediate",
       "explanation": "be動詞の命令形です。Be careful.で「注意しなさい」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Be careful.】 ← 正解\n  ✓ 正解理由: 日本語訳「注意しなさい。」から、この形が適切です。\n\n❌ 【Are careful.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「注意しなさい。」に合いません。\n\n❌ 【Is careful.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「注意しなさい。」に合いません。",
@@ -657,11 +515,7 @@
       "japanese": "うるさくしないでください。",
       "originalSentence": "Be noisy.",
       "question": "否定の命令文に書き換えなさい",
-      "choices": [
-        "Don't be noisy.",
-        "Not be noisy.",
-        "Doesn't be noisy."
-      ],
+      "choices": ["Don't be noisy.", "Not be noisy.", "Doesn't be noisy."],
       "correctAnswer": "Don't be noisy.",
       "difficulty": "advanced",
       "explanation": "Don't be + 形容詞です。Don't be noisy.で「うるさくしないで」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Don't be noisy.】 ← 正解\n  ✓ 正解理由: 日本語訳「うるさくしないでください。」から、この形が適切です。\n\n❌ 【Not be noisy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「うるさくしないでください。」に合いません。\n\n❌ 【Doesn't be noisy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「うるさくしないでください。」に合いません。",
@@ -723,11 +577,7 @@
       "japanese": "窓を開けなさい。",
       "sentence": "____ the window.",
       "verb": "open",
-      "choices": [
-        "Open",
-        "Opens",
-        "Opening"
-      ],
+      "choices": ["Open", "Opens", "Opening"],
       "correctAnswer": "Open",
       "difficulty": "beginner",
       "explanation": "命令文は動詞の原形です。Open the window.で「窓を開けなさい」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Open】 ← 正解\n  ✓ 正解理由: 日本語訳「窓を開けなさい。」から、この形が適切です。\n\n❌ 【Opens】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を開けなさい。」に合いません。\n\n❌ 【Opening】 ← 不正解\n  ✗ 不正解理由: 日本語訳「窓を開けなさい。」に合いません。",
@@ -739,11 +589,7 @@
       "japanese": "英語を話しなさい。",
       "sentence": "____ English.",
       "verb": "speak",
-      "choices": [
-        "Speak",
-        "Speaks",
-        "Speaking"
-      ],
+      "choices": ["Speak", "Speaks", "Speaking"],
       "correctAnswer": "Speak",
       "difficulty": "beginner",
       "explanation": "命令文は原形で始まります。Speak English.で「英語を話しなさい」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Speak】 ← 正解\n  ✓ 正解理由: 日本語訳「英語を話しなさい。」から、この形が適切です。\n\n❌ 【Speaks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語を話しなさい。」に合いません。\n\n❌ 【Speaking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「英語を話しなさい。」に合いません。",
@@ -755,11 +601,7 @@
       "japanese": "親切にしなさい。",
       "sentence": "____ kind.",
       "verb": "be",
-      "choices": [
-        "Be",
-        "Are",
-        "Is"
-      ],
+      "choices": ["Be", "Are", "Is"],
       "correctAnswer": "Be",
       "difficulty": "beginner",
       "explanation": "be動詞の命令形はBeです。Be kind.で「親切にしなさい」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Be】 ← 正解\n  ✓ 正解理由: 日本語訳「親切にしなさい。」から、この形が適切です。\n\n❌ 【Are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「親切にしなさい。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「親切にしなさい。」に合いません。",
@@ -771,11 +613,7 @@
       "japanese": "ここに座らないで。",
       "sentence": "Don't ____ here.",
       "verb": "sit",
-      "choices": [
-        "sit",
-        "sits",
-        "sitting"
-      ],
+      "choices": ["sit", "sits", "sitting"],
       "correctAnswer": "sit",
       "difficulty": "beginner",
       "explanation": "Don'tの後ろは原形です。Don't sit here.で「ここに座らないで」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sit】 ← 正解\n  ✓ 正解理由: 日本語訳「ここに座らないで。」から、この形が適切です。\n\n❌ 【sits】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここに座らないで。」に合いません。\n\n❌ 【sitting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ここに座らないで。」に合いません。",
@@ -787,11 +625,7 @@
       "japanese": "サッカーをしましょう。",
       "sentence": "Let's ____ soccer.",
       "verb": "play",
-      "choices": [
-        "play",
-        "plays",
-        "playing"
-      ],
+      "choices": ["play", "plays", "playing"],
       "correctAnswer": "play",
       "difficulty": "intermediate",
       "explanation": "Let'sの後ろは原形です。Let's play soccer.で「サッカーをしましょう」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「サッカーをしましょう。」から、この形が適切です。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「サッカーをしましょう。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「サッカーをしましょう。」に合いません。",
@@ -805,11 +639,7 @@
       "japanese": "宿題をしなさい。",
       "sentence": "____ your homework.",
       "verb": "do",
-      "choices": [
-        "Do",
-        "Does",
-        "Doing"
-      ],
+      "choices": ["Do", "Does", "Doing"],
       "correctAnswer": "Do",
       "difficulty": "intermediate",
       "explanation": "命令文は原形です。Do your homework.で「宿題をしなさい」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Do】 ← 正解\n  ✓ 正解理由: 日本語訳「宿題をしなさい。」から、この形が適切です。\n\n❌ 【Does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「宿題をしなさい。」に合いません。\n\n❌ 【Doing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「宿題をしなさい。」に合いません。",
@@ -821,11 +651,7 @@
       "japanese": "遅れないでください。",
       "sentence": "Don't ____ angry.",
       "verb": "be",
-      "choices": [
-        "be",
-        "are",
-        "is"
-      ],
+      "choices": ["be", "are", "is"],
       "correctAnswer": "be",
       "difficulty": "intermediate",
       "explanation": "Don'tの後ろも原形です。Don't be angry.で「怒らないで」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【be】 ← 正解\n  ✓ 正解理由: 日本語訳「遅れないでください。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅れないでください。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅れないでください。」に合いません。",
@@ -839,11 +665,7 @@
       "japanese": "遅く起きなさい。",
       "sentence": "____ up late.",
       "verb": "get",
-      "choices": [
-        "Get",
-        "Gets",
-        "Getting"
-      ],
+      "choices": ["Get", "Gets", "Getting"],
       "correctAnswer": "Get",
       "difficulty": "advanced",
       "explanation": "get upで「起きる」です。Get up late.で「遅く起きなさい（遅くまで寝ていなさい）」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Get】 ← 正解\n  ✓ 正解理由: 日本語訳「遅く起きなさい。」から、この形が適切です。\n\n❌ 【Gets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅く起きなさい。」に合いません。\n\n❌ 【Getting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遅く起きなさい。」に合いません。",
@@ -857,11 +679,7 @@
       "japanese": "学校へ行きましょう。",
       "sentence": "Let's ____ to school.",
       "verb": "go",
-      "choices": [
-        "go",
-        "goes",
-        "going"
-      ],
+      "choices": ["go", "goes", "going"],
       "correctAnswer": "go",
       "difficulty": "advanced",
       "explanation": "Let's + 原形です。Let's go to school.で「学校へ行きましょう」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「学校へ行きましょう。」から、この形が適切です。\n\n❌ 【goes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校へ行きましょう。」に合いません。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校へ行きましょう。」に合いません。",
@@ -873,11 +691,7 @@
       "japanese": "座らないで。",
       "sentence": "Don't ____ down.",
       "verb": "sit",
-      "choices": [
-        "give",
-        "gives",
-        "giving"
-      ],
+      "choices": ["give", "gives", "giving"],
       "correctAnswer": "give",
       "difficulty": "advanced",
       "explanation": "sit downで「座る」です。Don't sit down.で「座らないで」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【give】 ← 正解\n  ✓ 正解理由: 日本語訳「座らないで。」から、この形が適切です。\n\n❌ 【gives】 ← 不正解\n  ✗ 不正解理由: 日本語訳「座らないで。」に合いません。\n\n❌ 【giving】 ← 不正解\n  ✗ 不正解理由: 日本語訳「座らないで。」に合いません。",
@@ -900,11 +714,7 @@
           "text": "____."
         }
       ],
-      "choices": [
-        "OK",
-        "Yes, I do",
-        "Yes, I am"
-      ],
+      "choices": ["OK", "Yes, I do", "Yes, I am"],
       "correctAnswer": "OK",
       "difficulty": "beginner",
       "explanation": "命令文への返答はOKやAll rightです。「わかりました」の意味です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【OK】 ← 正解\n  ✓ 正解理由: 日本語訳「依頼に応える。」から、この形が適切です。\n\n❌ 【Yes, I do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「依頼に応える。」に合いません。\n\n❌ 【Yes, I am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「依頼に応える。」に合いません。",
@@ -925,11 +735,7 @@
           "text": "____, let's."
         }
       ],
-      "choices": [
-        "Yes",
-        "OK",
-        "Sure"
-      ],
+      "choices": ["Yes", "OK", "Sure"],
       "correctAnswer": "Yes",
       "difficulty": "beginner",
       "explanation": "Let's～への肯定の答えはYes, let's.です。「はい、そうしましょう」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Yes】 ← 正解\n  ✓ 正解理由: 日本語訳「勧誘に応える。」から、この形が適切です。\n\n❌ 【OK】 ← 不正解\n  ✗ 不正解理由: 日本語訳「勧誘に応える。」に合いません。\n\n❌ 【Sure】 ← 不正解\n  ✗ 不正解理由: 日本語訳「勧誘に応える。」に合いません。",
@@ -950,11 +756,7 @@
           "text": "____, let's not."
         }
       ],
-      "choices": [
-        "No",
-        "Not",
-        "Don't"
-      ],
+      "choices": ["No", "Not", "Don't"],
       "correctAnswer": "No",
       "difficulty": "intermediate",
       "explanation": "Let's～を断るときはNo, let's not.です。「いいえ、やめましょう」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【No】 ← 正解\n  ✓ 正解理由: 日本語訳「勧誘を断る。」から、この形が適切です。\n\n❌ 【Not】 ← 不正解\n  ✗ 不正解理由: 日本語訳「勧誘を断る。」に合いません。\n\n❌ 【Don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「勧誘を断る。」に合いません。",
@@ -975,11 +777,7 @@
           "text": "I'm ____."
         }
       ],
-      "choices": [
-        "sorry",
-        "OK",
-        "fine"
-      ],
+      "choices": ["sorry", "OK", "fine"],
       "correctAnswer": "sorry",
       "difficulty": "intermediate",
       "explanation": "注意を受けたときはI'm sorry.で謝りまします。「すみません」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sorry】 ← 正解\n  ✓ 正解理由: 日本語訳「注意を受ける。」から、この形が適切です。\n\n❌ 【OK】 ← 不正解\n  ✗ 不正解理由: 日本語訳「注意を受ける。」に合いません。\n\n❌ 【fine】 ← 不正解\n  ✗ 不正解理由: 日本語訳「注意を受ける。」に合いません。",
@@ -1000,11 +798,7 @@
           "text": "Sure."
         }
       ],
-      "choices": [
-        "help",
-        "helps",
-        "helping"
-      ],
+      "choices": ["help", "helps", "helping"],
       "correctAnswer": "help",
       "difficulty": "advanced",
       "explanation": "Please + 原形で丁寧な依頼です。Please help me.で「手伝ってください」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【help】 ← 正解\n  ✓ 正解理由: 日本語訳「丁寧な依頼。」から、この形が適切です。\n\n❌ 【helps】 ← 不正解\n  ✗ 不正解理由: 日本語訳「丁寧な依頼。」に合いません。\n\n❌ 【helping】 ← 不正解\n  ✗ 不正解理由: 日本語訳「丁寧な依頼。」に合いません。",
