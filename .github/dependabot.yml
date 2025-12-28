@@ -10,6 +10,14 @@ updates:
       timezone: "Asia/Tokyo"
     # PR数を制限（溜まりすぎ防止）
     open-pull-requests-limit: 5
+    # メジャーバージョン更新を無視（破壊的変更リスク高）
+    ignore:
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@sentry/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "vite"
+        update-types: ["version-update:semver-major"]
     labels:
       - "dependencies"
       - "auto-merge"
