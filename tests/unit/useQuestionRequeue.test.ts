@@ -223,7 +223,8 @@ describe('useQuestionRequeue', () => {
     const { result } = renderHook(() => useQuestionRequeue<any>());
 
     const currentQuestion = { word: 'apple', position: 10 };
-    // 既存の apple を十分後方に置き、minGap(=10) に従って「近すぎない位置」へ繰り上げられることを確認する。
+    // 既存の apple を「探索ウィンドウ内」かつ desiredInsertPosition より後方に置き、
+    // minGap(=10) に従って「近すぎない位置」へ繰り上げられることを確認する。
     const questions = [
       { word: 'q0', position: 0 },
       { word: 'q1', position: 0 },
@@ -240,6 +241,7 @@ describe('useQuestionRequeue', () => {
       { word: 'q12', position: 0 },
       { word: 'q13', position: 0 },
       { word: 'q14', position: 0 },
+      { word: 'apple', position: 20 }, // 既存（ウィンドウ内・desired(=index10)より後方）
       { word: 'q15', position: 0 },
       { word: 'q16', position: 0 },
       { word: 'q17', position: 0 },
@@ -250,9 +252,8 @@ describe('useQuestionRequeue', () => {
       { word: 'q22', position: 0 },
       { word: 'q23', position: 0 },
       { word: 'q24', position: 0 },
-      { word: 'apple', position: 20 }, // 既存（十分後方）
+      { word: 'q25', position: 0 },
       { word: 'q26', position: 0 },
-      { word: 'q27', position: 0 },
     ];
 
     const returned = result.current.reAddQuestion(currentQuestion, questions, 0, 'memorization');
