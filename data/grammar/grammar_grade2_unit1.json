@@ -299,7 +299,7 @@
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来を表す文",
       "explanation": "willの後は必ず動詞の原形を使います。\n\n「彼らは今晩パーティーを開きます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They will have a party tonight.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. They will have a party tonight.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼らは今晩パーティーを開きます。"
     },
     {
@@ -344,7 +344,7 @@
       "grammarPoint": "will + be",
       "hint": "未来の状態",
       "explanation": "未来の状態を表すときは will be を使います。\n\n「彼は来年高校生になります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will be a high school student next year.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. He will be a high school student next year.",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。彼は来年高校生になります。"
     },
     {
@@ -424,7 +424,7 @@
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来の予定",
       "explanation": "take a testで「テストを受ける」という意味です。\n\n「彼は明日テストを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He will take a test tomorrow.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. He will take a test tomorrow.",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼は明日テストを受けます。"
     },
     {
@@ -464,7 +464,7 @@
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来の行動",
       "explanation": "その場で決めたことにはwillを使います。\n\n「彼女は今晩夕食を作ります。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will cook dinner tonight.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She will cook dinner tonight.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は今晩夕食を作ります。"
     },
     {
@@ -546,7 +546,7 @@
       "grammarPoint": "will + 動詞の原形",
       "hint": "未来の予定",
       "explanation": "have a lessonで「レッスンを受ける」という意味です。\n\n「彼女は来週ピアノのレッスンを受けます。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She will have a piano lesson next week.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. She will have a piano lesson next week.",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼女は来週ピアノのレッスンを受けます。"
     },
     {

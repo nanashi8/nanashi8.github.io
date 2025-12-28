@@ -275,7 +275,7 @@
       "explanation": "That is ～の基本語順です。遠くの単数を指します。\n\n「あれは学校です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is a school.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "That is ～",
       "wordCount": 4,
-      "passage": "We study English every day. We do homework after dinner. That is a school.",
+      "passage": "We study English every day. We do homework after dinner. ____ ____ ____ ____.",
       "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。あれは学校です。"
     },
     {
@@ -293,7 +293,7 @@
       "explanation": "These are ～の語順です。近くの複数を指します。be動詞はareです。\n\n「これらは私の本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are my books.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "These are ～",
       "wordCount": 4,
-      "passage": "My name is Ken. I live in Osaka with my family. I like English. These are my books.",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ ____ ____ ____.",
       "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。これらは私の本です。"
     },
     {
@@ -326,7 +326,7 @@
       "explanation": "疑問詞What + is + this?の語順です。「これは何？」です。\n\n「これは何ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What is this?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "What is ～?",
       "wordCount": 4,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. What is this?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____?",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。これは何ですか。"
     },
     {
@@ -406,7 +406,7 @@
       "explanation": "I have many ～の語順です。manyは必ず複数形と使います。\n\n「彼女は多くの友達がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has many friends.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I have many ～",
       "wordCount": 4,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She has many friends.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は多くの友達がいます。"
     },
     {

@@ -302,7 +302,7 @@
       "explanation": "数えられない名詞はisを使います。\n\n「冷蔵庫に牛乳があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "There is/are + 名詞 + 場所",
       "correctAnswer": "There is milk in the fridge .",
-      "passage": "My name is Ken. I live in Osaka with my family. I like English. There is milk in the fridge.",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。冷蔵庫に牛乳があります。"
     },
     {
@@ -446,7 +446,7 @@
       "explanation": "There is a glassの語順です。\n\n「テーブルの上にコップがあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "There is/are + 名詞 + 場所",
       "correctAnswer": "There is a glass on the table .",
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. There is a glass on the table.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。テーブルの上にコップがあります。"
     },
     {
@@ -500,7 +500,7 @@
       "explanation": "There is a chairの語順です。\n\n「窓の近くに椅子があります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "There is/are + 名詞 + 場所",
       "correctAnswer": "There is a chair near the window .",
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. There is a chair near the window.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。窓の近くに椅子があります。"
     },
     {
@@ -520,7 +520,7 @@
       "explanation": "複数starsなのでareです。\n\n「空に星がたくさんあります。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "There is/are + 名詞 + 場所",
       "correctAnswer": "There are many stars in the sky .",
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. There are many stars in the sky.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。空に星がたくさんあります。"
     },
     {

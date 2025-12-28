@@ -263,7 +263,7 @@
       "explanation": "「私は昨日家に帰りました」です。go → wentです。\n\n「私は昨日家に帰りました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I went home yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "went",
       "wordCount": 4,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. I went home yesterday.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私は昨日家に帰りました。"
     },
     {
@@ -297,7 +297,7 @@
       "explanation": "「私たちは昨日彼に会いました」です。see → sawです。\n\n「私たちは昨日彼に会いました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We saw him yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "saw",
       "wordCount": 4,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. We saw him yesterday.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私たちは昨日彼に会いました。"
     },
     {
@@ -315,7 +315,7 @@
       "explanation": "「彼は昨日昼食を食べました」です。have → hadです。\n\n「彼は昨日昼食を食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He had lunch yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "had",
       "wordCount": 4,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. He had lunch yesterday.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼は昨日昼食を食べました。"
     },
     {
@@ -383,7 +383,7 @@
       "explanation": "「私たちは昨晩ピザを食べました」です。eat → ateです。\n\n「私たちは昨晩ピザを食べました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We ate pizza last night.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "ate",
       "wordCount": 5,
-      "passage": "My name is Ken. I live in Osaka with my family. I like English. We ate pizza last night.",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ ____ ____ ____ ____.",
       "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私たちは昨晩ピザを食べました。"
     },
     {

@@ -516,7 +516,7 @@
       ],
       "correctAnswer": "She knows what to do.",
       "explanation": "正解: She knows what to do.\n日本語訳: 彼女は何をすべきか知っています。\n文法ポイント: what to doは「何をすべきか」を表す決まった表現です。\nよくある間違い: whatとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She knows what to do.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。",
       "japanese": "彼女は何をすべきか知っています。"
     },
@@ -534,7 +534,7 @@
       ],
       "correctAnswer": "I don't know where to go.",
       "explanation": "正解: I don't know where to go.\n日本語訳: どこへ行けばよいか分かりません。\n文法ポイント: where to goで「どこへ行くべきか」を表します。\nよくある間違い: whereとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I don't know where to go.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。",
       "japanese": "どこへ行けばよいか分かりません。"
     },
@@ -553,7 +553,7 @@
       ],
       "correctAnswer": "Please tell me how to use this.",
       "explanation": "正解: Please tell me how to use this.\n日本語訳: これの使い方を教えてください。\n文法ポイント: tell + 人 + 疑問詞 + to不定詞の語順です。\nよくある間違い: meの後に疑問詞+to不定詞を置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Please tell me how to use this.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。",
       "japanese": "これの使い方を教えてください。"
     },
@@ -571,7 +571,7 @@
       ],
       "correctAnswer": "She showed me what to buy.",
       "explanation": "正解: She showed me what to buy.\n日本語訳: 彼女は何を買うべきか教えてくれました。\n文法ポイント: show + 人 + what to + 動詞の語順です。\nよくある間違い: meの後にwhat to buyを置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She showed me what to buy.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。",
       "japanese": "彼女は何を買うべきか教えてくれました。"
     },
@@ -620,7 +620,7 @@
       ],
       "correctAnswer": "I learned how to cook pasta.",
       "explanation": "正解: I learned how to cook pasta.\n日本語訳: 私はパスタの作り方を学びました。\n文法ポイント: learn + how to + 動詞 + 目的語の語順です。\nよくある間違い: pastaは目的語として最後に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I learned how to cook pasta.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。",
       "japanese": "私はパスタの作り方を学びました。"
     },
@@ -639,7 +639,7 @@
       ],
       "correctAnswer": "The question is how to solve this.",
       "explanation": "正解: The question is how to solve this.\n日本語訳: 問題はこれをどう解決するかです。\n文法ポイント: 疑問詞+to不定詞は補語としても使えます。\nよくある間違い: isの後に疑問詞+to不定詞を置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The question is how to solve this.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。",
       "japanese": "問題はこれをどう解決するかです。"
     },
@@ -658,7 +658,7 @@
       ],
       "correctAnswer": "I don't know which one to choose.",
       "explanation": "正解: I don't know which one to choose.\n日本語訳: どれを選べばよいか分かりません。\n文法ポイント: which + 名詞 + to + 動詞の語順です。\nよくある間違い: which oneは1つの塊です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I don't know which one to choose.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。",
       "japanese": "どれを選べばよいか分かりません。"
     },
@@ -708,7 +708,7 @@
       ],
       "correctAnswer": "I wonder what to wear tomorrow.",
       "explanation": "正解: I wonder what to wear tomorrow.\n日本語訳: 明日何を着ようか迷っています。\n文法ポイント: wonder + what to + 動詞の語順です。\nよくある間違い: tomorrowは最後に置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I wonder what to wear tomorrow.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。",
       "japanese": "明日何を着ようか迷っています。"
     },
@@ -791,7 +791,7 @@
       ],
       "correctAnswer": "I forgot where to turn.",
       "explanation": "正解: I forgot where to turn.\n日本語訳: どこで曲がるか忘れました。\n文法ポイント: forget + 疑問詞 + to不定詞も使えます。\nよくある間違い: whereとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I forgot where to turn.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。",
       "japanese": "どこで曲がるか忘れました。"
     },
@@ -836,7 +836,7 @@
       "id": "g2u5_051",
       "type": "verbForm",
       "difficulty": "beginner",
-      "sentence": "I know how to (play) the piano.",
+      "sentence": "I know how to (____) the piano.",
       "correctAnswer": "play",
       "baseForm": "play",
       "explanation": "正解: play\n日本語訳: 私はピアノの弾き方を知っています。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: playsやplayingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -851,7 +851,7 @@
       "id": "g2u5_052",
       "type": "verbForm",
       "difficulty": "beginner",
-      "sentence": "She doesn't know what to (do).",
+      "sentence": "She doesn't know what to (____).",
       "correctAnswer": "do",
       "baseForm": "do",
       "explanation": "正解: do\n日本語訳: 彼女は何をすべきか分かりません。\n文法ポイント: what toの後は必ず動詞の原形を使います。\nよくある間違い: doesやdoingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【doing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【dos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -860,7 +860,7 @@
         "doing",
         "dos"
       ],
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She doesn't know what to (do).",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She doesn't know what to (____).",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。",
       "japanese": "彼女は何をすべきか分かりません。"
     },
@@ -868,7 +868,7 @@
       "id": "g2u5_053",
       "type": "verbForm",
       "difficulty": "beginner",
-      "sentence": "I don't know where to (go).",
+      "sentence": "I don't know where to (____).",
       "correctAnswer": "go",
       "baseForm": "go",
       "explanation": "正解: go\n日本語訳: どこへ行けばよいか分かりません。\n文法ポイント: where toの後は必ず動詞の原形を使います。\nよくある間違い: goesやgoingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【go】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【going】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【gos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -877,7 +877,7 @@
         "going",
         "gos"
       ],
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I don't know where to (go).",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I don't know where to (____).",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。",
       "japanese": "どこへ行けばよいか分かりません。"
     },
@@ -885,7 +885,7 @@
       "id": "g2u5_054",
       "type": "verbForm",
       "difficulty": "intermediate",
-      "sentence": "Please tell me how to (use) this machine.",
+      "sentence": "Please tell me how to (____) this machine.",
       "correctAnswer": "use",
       "baseForm": "use",
       "explanation": "正解: use\n日本語訳: この機械の使い方を教えてください。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: usesやusingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【use】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【useing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【uses】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -894,7 +894,7 @@
         "useing",
         "uses"
       ],
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. Please tell me how to (use) this machine.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. Please tell me how to (____) this machine.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。",
       "japanese": "この機械の使い方を教えてください。"
     },
@@ -902,7 +902,7 @@
       "id": "g2u5_055",
       "type": "verbForm",
       "difficulty": "intermediate",
-      "sentence": "She showed me what to (buy).",
+      "sentence": "She showed me what to (____).",
       "correctAnswer": "buy",
       "baseForm": "buy",
       "explanation": "正解: buy\n日本語訳: 彼女は何を買うべきか教えてくれました。\n文法ポイント: what toの後は必ず動詞の原形を使います。\nよくある間違い: buysやbuyingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【buy】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【buying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【buys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -917,7 +917,7 @@
       "id": "g2u5_056",
       "type": "verbForm",
       "difficulty": "intermediate",
-      "sentence": "We decided when to (leave).",
+      "sentence": "We decided when to (____).",
       "correctAnswer": "leave",
       "baseForm": "leave",
       "explanation": "正解: leave\n日本語訳: 私たちはいつ出発するか決めました。\n文法ポイント: when toの後は必ず動詞の原形を使います。\nよくある間違い: leavesやleavingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【leave】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【leaveing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【leaves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -926,7 +926,7 @@
         "leaveing",
         "leaves"
       ],
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We decided when to (leave).",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We decided when to (____).",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。",
       "japanese": "私たちはいつ出発するか決めました。"
     },
@@ -934,7 +934,7 @@
       "id": "g2u5_057",
       "type": "verbForm",
       "difficulty": "intermediate",
-      "sentence": "He asked me where to (meet).",
+      "sentence": "He asked me where to (____).",
       "correctAnswer": "meet",
       "baseForm": "meet",
       "explanation": "正解: meet\n日本語訳: 彼はどこで会うか私に尋ねました。\n文法ポイント: where toの後は必ず動詞の原形を使います。\nよくある間違い: meetsやmeetingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【meet】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【meeting】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【meets】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -949,7 +949,7 @@
       "id": "g2u5_058",
       "type": "verbForm",
       "difficulty": "advanced",
-      "sentence": "I learned how to (cook) Italian food.",
+      "sentence": "I learned how to (____) Italian food.",
       "correctAnswer": "cook",
       "baseForm": "cook",
       "explanation": "正解: cook\n日本語訳: 私はイタリア料理の作り方を学びました。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: cooksやcookingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cook】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【cooking】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【cooks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -964,7 +964,7 @@
       "id": "g2u5_059",
       "type": "verbForm",
       "difficulty": "advanced",
-      "sentence": "The question is how to (solve) this problem.",
+      "sentence": "The question is how to (____) this problem.",
       "correctAnswer": "solve",
       "baseForm": "solve",
       "explanation": "正解: solve\n日本語訳: 問題はこれをどう解決するかです。\n文法ポイント: how toの後は必ず動詞の原形を使います。\nよくある間違い: solvesやsolvingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【solve】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【solveing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【solves】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -973,7 +973,7 @@
         "solveing",
         "solves"
       ],
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The question is how to (solve) this problem.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The question is how to (____) this problem.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。",
       "japanese": "問題はこれをどう解決するかです。"
     },
@@ -981,7 +981,7 @@
       "id": "g2u5_060",
       "type": "verbForm",
       "difficulty": "advanced",
-      "sentence": "I can't decide which one to (choose).",
+      "sentence": "I can't decide which one to (____).",
       "correctAnswer": "choose",
       "baseForm": "choose",
       "explanation": "正解: choose\n日本語訳: どれを選べばよいか決められません。\n文法ポイント: which + 名詞 + toの後は必ず動詞の原形を使います。\nよくある間違い: choosesやchoosingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【choose】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【chooseing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【chooses】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -990,7 +990,7 @@
         "chooseing",
         "chooses"
       ],
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I can't decide which one to (choose).",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I can't decide which one to (____).",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。",
       "japanese": "どれを選べばよいか決められません。"
     }

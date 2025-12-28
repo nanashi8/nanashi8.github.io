@@ -271,7 +271,7 @@
       "explanation": "Who are you?で「あなたは誰ですか」です。疑問詞Whoを文頭にです。\n\n「あなたは誰ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Who are you?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Who are ～?",
       "wordCount": 4,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Who are you?",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____?",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。あなたは誰ですか。"
     },
     {
@@ -306,7 +306,7 @@
       "explanation": "When do you～?で「いつ～しますか」です。一般動詞の疑問文です。\n\n「いつテニスをしますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ When do you play tennis?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "When do you ～?",
       "wordCount": 6,
-      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. When do you play tennis?",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. ____ ____ ____ ____ ____?",
       "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。いつテニスをしますか。"
     },
     {
@@ -462,7 +462,7 @@
       "explanation": "How long does it take to～?で「～までどのくらいかかりますか」です。\n\n「駅までどのくらいかかりますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long does it take to the station?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long does it take ～?",
       "wordCount": 9,
-      "passage": "We travel by train. The train is fast. I like looking out of the window. How long does it take to the station?",
+      "passage": "We travel by train. The train is fast. I like looking out of the window. ____ ____ ____ ____ ____ ____ ____ ____?",
       "passageJapanese": "電車で旅行します。電車は速いです。窓の外を見るのが好きです。駅までどのくらいかかりますか。"
     },
     {
@@ -1083,7 +1083,7 @@
       "explanation": "How + 形容詞という疑問文として覚えてください。How far = 「どのくらい遠い」で距離を尋ねります。\n\n「東京までどのくらい遠いですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How far is it to Tokyo?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How far",
       "wordCount": 6,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. How far is it to Tokyo?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____ ____?",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。東京までどのくらい遠いですか。"
     },
     {
@@ -1127,7 +1127,7 @@
       "explanation": "How + 形容詞という疑問文として覚えてください。How high = 「どのくらい高い」で高さを尋ねります。\n\n「この建物はどのくらい高いですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How high is this building?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How high",
       "wordCount": 5,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. How high is this building?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____?",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。この建物はどのくらい高いですか。"
     }
   ]

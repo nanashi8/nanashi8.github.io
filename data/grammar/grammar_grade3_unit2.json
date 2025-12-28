@@ -190,7 +190,7 @@
       "explanation": "現在完了進行形: have/has been + 動詞ingです。動作の継続を強調です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【has】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は6時から勉強しています。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は6時から勉強しています。」に合いません。\n\n❌ 【had】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は6時から勉強しています。」に合いません。",
       "hint": "have/has been + -ing",
       "type": "verbForm",
-      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. He ____ been studying since 6 o'clock.",
+      "passage": "Our school ____ many clubs. Students can join different activities. The music club is popular. He ____ been studying since 6 o'clock.",
       "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。彼は6時から勉強しています。"
     },
     {
@@ -689,7 +689,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "I have been studying for two hours.",
-      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. I have been studying for two hours.",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。私は2時間勉強しています。"
     },
     {
@@ -795,7 +795,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "He has been sleeping since yesterday.",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. He has been sleeping since yesterday.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼は昨日から寝ています。"
     },
     {
@@ -841,7 +841,7 @@
       "wordCount": 10,
       "type": "sentenceOrdering",
       "correctAnswer": "I have been looking for this for a long time.",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I have been looking for this for a long time.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私は長い間これを探しています。"
     },
     {
@@ -864,7 +864,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "They have been traveling for a week.",
-      "passage": "Last summer, I visited Kyoto. The city has many historical temples. I learned a lot about Japanese culture. They have been traveling for a week.",
+      "passage": "Last summer, I visited Kyoto. The city has many historical temples. I learned a lot about Japanese culture. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "去年の夏、京都を訪れました。その町には多くの歴史的な寺院があります。日本文化についてたくさん学びました。彼らは1週間旅行しています。"
     },
     {
@@ -887,7 +887,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "He has been studying since 6 o'clock.",
-      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. He has been studying since 6 o'clock.",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。彼は6時から勉強しています。"
     },
     {
@@ -933,7 +933,7 @@
       "wordCount": 9,
       "type": "sentenceOrdering",
       "correctAnswer": "She has been playing the piano since this afternoon.",
-      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. She has been playing the piano since this afternoon.",
+      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "ピアノを弾くのが好きです。毎晩練習します。幼い頃、母が教えてくれました。彼女は午後からピアノを弾いています。"
     },
     {
@@ -1084,7 +1084,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "He has been swimming for an hour.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He has been swimming for an hour.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は1時間泳いでいます。"
     },
     {
@@ -1107,7 +1107,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "She has been drawing since this afternoon.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She has been drawing since this afternoon.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女は午後から絵を描いています。"
     },
     {
@@ -1288,7 +1288,7 @@
       "difficulty": "intermediate",
       "explanation": "現在完了進行形の語順：主語 + have/has been + 動詞ing + for/since + 期間/時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have been + -ing + for",
-      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. They have been playing games for three hours.",
+      "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "ピアノを弾くのが好きです。毎晩練習します。幼い頃、母が教えてくれました。彼らは3時間ずっとゲームをしています。"
     },
     {
@@ -1362,7 +1362,7 @@
       "difficulty": "beginner",
       "explanation": "現在完了進行形の語順：主語 + have been + 動詞ing + for + 期間です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "have been + -ing + for",
-      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. We have been playing tennis for an hour.",
+      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "写真撮影が趣味です。自然の写真を撮ります。先月、山に行きました。私たちは1時間ずっとテニスをしています。"
     },
     {
@@ -1382,7 +1382,7 @@
       "difficulty": "intermediate",
       "explanation": "現在完了進行形の語順：主語 + has been + 動詞ing + since + 時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "has been + -ing + since",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She has been cleaning since this morning.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女は今朝からずっと掃除をしています。"
     },
     {
@@ -1420,7 +1420,7 @@
       "difficulty": "intermediate",
       "explanation": "現在完了進行形の語順：主語 + has been + 動詞ing + since + 時点です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "has been + -ing + since",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He has been practicing since last week.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は先週からずっと練習しています。"
     },
     {

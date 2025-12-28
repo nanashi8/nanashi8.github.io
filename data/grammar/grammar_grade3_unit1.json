@@ -682,7 +682,7 @@
       "wordCount": 4,
       "type": "sentenceOrdering",
       "correctAnswer": "I have met him.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I have met him.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私は彼に会ったことがあります。"
     },
     {
@@ -722,7 +722,7 @@
       "wordCount": 5,
       "type": "sentenceOrdering",
       "correctAnswer": "We have seen that movie.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. We have seen that movie.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私たちはその映画を見たことがあります。"
     },
     {
@@ -743,7 +743,7 @@
       "wordCount": 5,
       "type": "sentenceOrdering",
       "correctAnswer": "He has finished his homework.",
-      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. He has finished his homework.",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. ____ ____ ____ ____ ____.",
       "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。彼は宿題を終えました。"
     },
     {
@@ -803,7 +803,7 @@
       "wordCount": 5,
       "type": "sentenceOrdering",
       "correctAnswer": "She has not come yet.",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She has not come yet.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女はまだ来ていません。"
     },
     {
@@ -864,7 +864,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "I have studied English for three years.",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I have studied English for three years.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私は3年間英語を勉強しています。"
     },
     {
@@ -886,7 +886,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "She has waited for two hours.",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She has waited for two hours.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は2時間待っています。"
     },
     {
@@ -906,7 +906,7 @@
       "wordCount": 4,
       "type": "sentenceOrdering",
       "correctAnswer": "We have just arrived.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. We have just arrived.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私たちはちょうど到着しました。"
     },
     {
@@ -926,7 +926,7 @@
       "wordCount": 4,
       "type": "sentenceOrdering",
       "correctAnswer": "He has already left.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He has already left.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼はすでに出発しました。"
     },
     {
@@ -983,7 +983,7 @@
       "wordCount": 4,
       "type": "sentenceOrdering",
       "correctAnswer": "Have you eaten lunch?",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Have you eaten lunch?",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____?",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あなたは昼食を食べましたか。"
     },
     {
@@ -1005,7 +1005,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "She has finished writing the letter.",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She has finished writing the letter.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は手紙を書き終えました。"
     },
     {
@@ -1048,7 +1048,7 @@
       "wordCount": 5,
       "type": "sentenceOrdering",
       "correctAnswer": "He has failed many times.",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He has failed many times.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は何度も失敗しました。"
     },
     {
@@ -1104,7 +1104,7 @@
       "explanation": "How long + have/has + 過去分詞という疑問文として覚えてください。継続期間を尋ねります。\n\n「あなたはどのくらいの間英語を勉強していますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long have you studied English?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long have",
       "wordCount": 6,
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. How long have you studied English?",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____?",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あなたはどのくらいの間英語を勉強していますか。"
     },
     {
@@ -1227,7 +1227,7 @@
       "hint": "how long have",
       "wordCount": 7,
       "unusedWords": 2,
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. How long have you lived in Japan?",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____?",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。3年間日本に住んでいます。"
     },
     {
@@ -1486,7 +1486,7 @@
       "difficulty": "beginner",
       "explanation": "SVOO構文：give + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "give + 人 + 物",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He gave me a book.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は私に本をくれました。"
     },
     {
@@ -1504,7 +1504,7 @@
       "difficulty": "beginner",
       "explanation": "SVOO構文：send + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "send + 人 + 物",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She sent me a letter.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女は私に手紙を送りました。"
     },
     {
@@ -1522,7 +1522,7 @@
       "difficulty": "intermediate",
       "explanation": "SVOO構文：tell + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "tell + 人 + 物",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He told us a story.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は私たちに物語を話してくれました。"
     },
     {
@@ -1572,7 +1572,7 @@
       "difficulty": "intermediate",
       "explanation": "SVOO構文：show + 人 + 物の語順です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "show + 人 + 物",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She showed me her photos.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は私に写真を見せてくれました。"
     },
     {
@@ -1590,7 +1590,7 @@
       "difficulty": "advanced",
       "explanation": "SVOC構文：make + O + 過去分詞で「Oを驚いた状態にする」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "make + 人 + 過去分詞",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The news made us surprised.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その知らせは私たちを驚かせました。"
     },
     {

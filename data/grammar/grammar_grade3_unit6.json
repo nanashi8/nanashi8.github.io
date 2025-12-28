@@ -158,7 +158,7 @@
       "difficulty": "beginner",
       "explanation": "couldの後は動詞の原形を使います。\n\n正解は「play」です。\n\n【日本語】\n私がピアノを弾けたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「私がピアノを弾けたらなあ。」から、この形が適切です。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私がピアノを弾けたらなあ。」に合いません。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私がピアノを弾けたらなあ。」に合いません。",
       "hint": "could + 動詞の原形",
-      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. I wish I could ____ the piano.",
+      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids ____ there on weekends. I wish I could ____ the piano.",
       "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにグラウンドがあります。週末には多くの子供たちがそこで遊びます。私がピアノを弾けたらなあ。"
     },
     {
@@ -192,7 +192,7 @@
       "difficulty": "beginner",
       "explanation": "I wish I hadで「～を持っていたらなあ」です。\n\n正解は「had」です。\n\n【日本語】\n私が車を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【had】 ← 正解\n  ✓ 正解理由: 日本語訳「私が車を持っていたらなあ。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私が車を持っていたらなあ。」に合いません。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私が車を持っていたらなあ。」に合いません。",
       "hint": "I wish I had",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I wish I ____ a car.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We ____ a picnic there. I wish I ____ a car.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私が車を持っていたらなあ。"
     },
     {
@@ -324,7 +324,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I hadで「～があったらなあ」です。\n\n正解は「had」です。\n\n【日本語】\n私がもっと時間があったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【had】 ← 正解\n  ✓ 正解理由: 日本語訳「私がもっと時間があったらなあ。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私がもっと時間があったらなあ。」に合いません。\n\n❌ 【has】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私がもっと時間があったらなあ。」に合いません。",
       "hint": "I wish I had",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I wish I ____ more time.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We ____ a picnic there. I wish I ____ more time.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私がもっと時間があったらなあ。"
     },
     {
@@ -455,7 +455,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私が飛べたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish I could + 動詞",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I wish I could fly.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私が飛べたらなあ。"
     },
     {
@@ -478,7 +478,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし私が金持ちなら、新しい車を買うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. If I were rich, I would buy a new car.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____, ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。もし私が金持ちなら、新しい車を買うのに。"
     },
     {
@@ -499,7 +499,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし時間があれば、あなたを手伝うのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. If I had time, I would help you.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____, ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。もし時間があれば、あなたを手伝うのに。"
     },
     {
@@ -535,7 +535,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I had + 名詞の語順です。\n\n【日本語】\n私がもっとお金を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish I had + 名詞",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I wish I had more money.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私がもっとお金を持っていたらなあ。"
     },
     {
@@ -558,7 +558,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼が学生なら、割引が受けられるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. If he were a student, he would get a discount.",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. ____ ____ ____ ____ ____, ____ ____ ____ ____ ____.",
       "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。もし彼が学生なら、割引が受けられるのに。"
     },
     {
@@ -580,7 +580,7 @@
       "difficulty": "intermediate",
       "explanation": "If I were you, I would + 動詞の原形の語順です。\n\n【日本語】\nもし私があなただったら、それをしないでしょう。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If I were you, would + 動詞",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. If I were you, I would not do it.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____, ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。もし私があなただったら、それをしないでしょう。"
     },
     {
@@ -600,7 +600,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私がピアノを弾けたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish I could + 動詞",
-      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. I wish I could play the piano.",
+      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにグラウンドがあります。週末には多くの子供たちがそこで遊びます。私がピアノを弾けたらなあ。"
     },
     {
@@ -623,7 +623,7 @@
       "difficulty": "advanced",
       "explanation": "仮定法過去の否定形です。If + didn't + 動詞の原形を使います。\n\n【日本語】\nもし雨が降らなければ、ピクニックに行くのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + didn't + 動詞",
-      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. If it didn't rain, we would go on a picnic.",
+      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. ____ ____ ____ ____, ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "春が一番好きな季節です。どこでも花が咲きます。桜は特に美しいです。もし雨が降らなければ、ピクニックに行くのに。"
     },
     {
@@ -642,7 +642,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I had + 名詞の語順です。\n\n【日本語】\n私が車を持っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish I had + 名詞",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I wish I had a car.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私が車を持っていたらなあ。"
     },
     {
@@ -663,7 +663,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼女がここにいたら、幸せなのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. If she were here, I would be happy.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____, ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。もし彼女がここにいたら、幸せなのに。"
     },
     {
@@ -681,7 +681,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish + 主語 + 過去形の語順です。\n\n【日本語】\n私がもっと若かったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish + 主語 + 過去形",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I wish I were younger.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私がもっと若かったらなあ。"
     },
     {
@@ -704,7 +704,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし私が彼の電話番号を知っていたら、電話するのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. If I knew his phone number, I would call him.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____, ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。もし私が彼の電話番号を知っていたら、電話するのに。"
     },
     {
@@ -722,7 +722,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私が泳げたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish I could + 動詞",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I wish I could swim.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私が泳げたらなあ。"
     },
     {
@@ -746,7 +746,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし明日晴れなら、ビーチに行くのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. If it were sunny tomorrow, we would go to the beach.",
+      "passage": "Spring is my favorite season. Flowers bloom everywhere. Cherry blossoms are especially beautiful. ____ ____ ____ ____ ____, ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "春が一番好きな季節です。どこでも花が咲きます。桜は特に美しいです。もし明日晴れなら、ビーチに行くのに。"
     },
     {
@@ -782,7 +782,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼が来たら、楽しいのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. If he came, we would have fun.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____, ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。もし彼が来たら、楽しいのに。"
     },
     {
@@ -801,7 +801,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I had + 名詞の語順です。\n\n【日本語】\n私がもっと時間があったらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish I had + 名詞",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I wish I had more time.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私がもっと時間があったらなあ。"
     },
     {
@@ -823,7 +823,7 @@
       "difficulty": "intermediate",
       "explanation": "If + 主語 + 過去形, 主語 + would + 動詞の原形の語順です。\n\n【日本語】\nもし彼女が医者なら、助けてくれるのに。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "If + 過去形, would + 動詞",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. If she were a doctor, she would help us.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____, ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。もし彼女が医者なら、助けてくれるのに。"
     },
     {
@@ -842,7 +842,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish I could + 動詞の原形の語順です。\n\n【日本語】\n私が歌えたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish I could + 動詞",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I wish I could sing well.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私が歌えたらなあ。"
     },
     {
@@ -880,7 +880,7 @@
       "difficulty": "intermediate",
       "explanation": "I wish + 主語 + 過去形の語順です。\n\n【日本語】\n私が彼の住所を知っていたらなあ。\n\n【文法ポイント】\nI wish I could/had、If + 主語 + were/過去形\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I wish + 主語 + 過去形",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I wish I knew his address.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私が彼の住所を知っていたらなあ。"
     },
     {

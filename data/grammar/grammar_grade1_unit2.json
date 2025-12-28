@@ -256,7 +256,7 @@
       "explanation": "三人称単数の基本語順：He + studies（動詞-s/-es）+ 目的語です。\n\n「彼は日本語を勉強します。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He studies Japanese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "He studies ～",
       "wordCount": 3,
-      "passage": "My name is Ken. I live in Osaka with my family. I like English. He studies Japanese.",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ ____ ____.",
       "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。彼は日本語を勉強します。"
     },
     {
@@ -388,7 +388,7 @@
       "explanation": "do→doesの不規則変化です。do the cleaningは「掃除をする」です。\n\n「彼女は毎日掃除をします。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She does the cleaning every day.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "She does ～",
       "wordCount": 6,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She does the cleaning every day.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は毎日掃除をします。"
     },
     {
@@ -478,7 +478,7 @@
       "explanation": "doesn't + 原形の語順です。speak Chineseで「中国語を話す」です。\n\n「彼は中国語を話しません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He doesn't speak Chinese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "doesn't + 原形",
       "wordCount": 4,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. He doesn't speak Chinese.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼は中国語を話しません。"
     },
     {
@@ -1132,7 +1132,7 @@
       "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えてください。isn't → isです。\n\n「彼女は先生じゃないですよね。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She isn't a teacher, is she?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "is she",
       "wordCount": 6,
-      "passage": "We study English every day. We do homework after dinner. She isn't a teacher, is she?",
+      "passage": "We study English every day. We do homework after dinner. ____ ____ ____ ____, ____ ____?",
       "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。彼女は先生じゃないですよね。"
     },
     {
@@ -1430,7 +1430,7 @@
       "explanation": "一般動詞の付加疑問文という構文として覚えてください。live → don'tです。\n\n「彼らはここに住んでいますよね。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They live here, don't they?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "don't they",
       "wordCount": 5,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. They live here, don't they?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____, ____ ____?",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼らはここに住んでいますよね。"
     },
     {

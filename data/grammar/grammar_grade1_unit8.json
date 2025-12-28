@@ -264,7 +264,7 @@
       "explanation": "「私は昨日歩きました」です。walk + ed = walkedです。\n\n「私は昨日歩きました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I walked yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "主語 + 過去形",
       "wordCount": 3,
-      "passage": "My name is Ken. I live in Osaka with my family. I like English. I walked yesterday.",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ ____ ____.",
       "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。私は昨日歩きました。"
     },
     {
@@ -362,7 +362,7 @@
       "explanation": "「彼女は質問をしました」です。ask + ed = askedです。\n\n「彼女は質問をしました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She asked a question.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "過去形",
       "wordCount": 4,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She asked a question.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は質問をしました。"
     },
     {
@@ -431,7 +431,7 @@
       "explanation": "「私は今朝歯を磨きました」です。brush + ed = brushedです。\n\n「私は今朝歯を磨きました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I brushed my teeth this morning.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "brushed teeth",
       "wordCount": 6,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. I brushed my teeth this morning.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。私は今朝歯を磨きました。"
     },
     {
@@ -450,7 +450,7 @@
       "explanation": "「彼女は学校に早く着きました」です。arrive + d = arrivedです。\n\n「彼女は学校に早く着きました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She arrived at school early.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "arrived at",
       "wordCount": 5,
-      "passage": "We study English every day. We do homework after dinner. She arrived at school early.",
+      "passage": "We study English every day. We do homework after dinner. ____ ____ ____ ____ ____.",
       "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。彼女は学校に早く着きました。"
     },
     {
@@ -468,7 +468,7 @@
       "explanation": "「彼らは何度も挑戦しました」です。try → y を i に変えて ed = triedです。\n\n「彼らは何度も挑戦しました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They tried many times.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "y→ied",
       "wordCount": 4,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. They tried many times.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼らは何度も挑戦しました。"
     },
     {
@@ -487,7 +487,7 @@
       "explanation": "「私たちは注意深く通りを渡りました」です。cross + ed = crossedです。\n\n「私たちは注意深く通りを渡りました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We crossed the street carefully.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "crossed",
       "wordCount": 5,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. We crossed the street carefully.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。私たちは注意深く通りを渡りました。"
     },
     {
@@ -506,7 +506,7 @@
       "explanation": "「彼はすぐに間違いに気づきました」です。notice + d = noticedです。\n\n「彼はすぐに間違いに気づきました。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He noticed the mistake immediately.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "noticed",
       "wordCount": 5,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. He noticed the mistake immediately.",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____ ____ ____.",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。彼はすぐに間違いに気づきました。"
     },
     {

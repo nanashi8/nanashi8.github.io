@@ -114,7 +114,7 @@
       "explanation": "先行詞が物(letter)で、関係代名詞がwroteの目的語になるのでthat/whichを使います。「he wrote the letter」をthatでつなげた形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【that】 ← 正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【who】 ← 不正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✗ 不正解理由: 文法的・文脈的に不適切です。\n\n❌ 【which】 ← 不正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. That is the letter ____ he wrote last month.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ is the letter ____ he wrote last month.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。あれは彼が先月書いた手紙です。"
     },
     {
@@ -217,7 +217,7 @@
       "explanation": "先行詞が物(building)で、主格の関係代名詞that/whichを使います。「完成したばかりの」建物を説明していります。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【that】 ← 正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【who】 ← 不正解\n  語源: 古英語 hwā\n  用法: 人を先行詞とする主格・目的格\n  ニュアンス: 主に主格で使用。口語で最も自然\n  ✗ 不正解理由: 文法的・文脈的に不適切です。\n\n❌ 【which】 ← 不正解\n  語源: 古英語 hwilc\n  用法: 物・動物を先行詞とする\n  ニュアンス: 非制限用法（カンマあり）でも使用可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. That is a new building ____ was just completed.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ is a new building ____ was just completed.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あれは新しい建物です。"
     },
     {
@@ -747,7 +747,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「friend」と「lives in Tokyo」をつなぐです。先行詞が人なのでwhoを使います。\n\n「私には東京に住んでいる友人がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have a friend who lives in Tokyo.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I have a friend who lives in Tokyo.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私には東京に住んでいる友人がいます。"
     },
     {
@@ -771,7 +771,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「friend」と「lives in Kyoto」をつなぐです。主格のwhoの後ろに動詞livesが続きます。\n\n「私には京都に住んでいる友人がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have a friend who lives in Kyoto.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I have a friend who lives in Kyoto.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私には京都に住んでいる友人がいます。"
     },
     {
@@ -795,7 +795,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「brother」と「works in Osaka」をつなぐです。先行詞が人なので主格のwhoを使います。\n\n「彼女には大阪で働いている兄がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has a brother who works in Osaka.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She has a brother who works in Osaka.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女には大阪で働いている兄がいます。"
     },
     {
@@ -819,7 +819,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「book」と「I bought yesterday」をつなぐです。先行詞が物なのでthat/whichを使います。\n\n「これは私が昨日買った本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is the book that I bought yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This is the book that I bought yesterday.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。これは私が昨日買った本です。"
     },
     {
@@ -867,7 +867,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「letter」と「he wrote last month」をつなぐです。目的格のthat/whichを使います。\n\n「あれは彼が先月書いた手紙です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is the letter that he wrote last month.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. That is the letter that he wrote last month.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。あれは彼が先月書いた手紙です。"
     },
     {
@@ -890,7 +890,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「woman」と「speaks English」をつなぐです。先行詞が人で主格のwhoを使います。\n\n「彼女は英語を話す女性です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is a woman who speaks English.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She is a woman who speaks English.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は英語を話す女性です。"
     },
     {
@@ -913,7 +913,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「man」と「speaks Japanese」をつなぐです。主格として「話す」男性を説明していります。\n\n「彼は日本語を話す男性です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He is a man who speaks Japanese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. He is a man who speaks Japanese.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は日本語を話す男性です。"
     },
     {
@@ -958,7 +958,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「building」と「everyone knows」をつなぐです。目的格として「みんなが知っている」建物を説明です。\n\n「これは有名な建物です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is a famous building that everyone knows.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This is a famous building that everyone knows.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これは有名な建物です。"
     },
     {
@@ -985,7 +985,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whichを使って、「building」と「was built 100 years ago」をつなぐです。主格として建物を説明していります。\n\n「これは古い建物です。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is an old building that was built 100 years ago.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This is an old building that was built 100 years ago.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これは古い建物です。"
     },
     {
@@ -1010,7 +1010,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「building」と「was just completed」をつなぐです。主格のthat/whichを使います。\n\n「あれは新しい建物です。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is a new building that was just completed.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. That is a new building that was just completed.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。あれは新しい建物です。"
     },
     {
@@ -1034,7 +1034,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「book」と「I read」をつなぐです。目的格の関係代名詞として機能していります。\n\n「私が読んだ本はとても面白かったです。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The book that I read was very interesting.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The book that I read was very interesting.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私が読んだ本はとても面白かったです。"
     },
     {
@@ -1057,7 +1057,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「movie」と「she watched」をつなぐです。目的格として映画を説明していります。\n\n「彼女が見た映画は感動的でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The movie that she watched was touching.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The movie that she watched was touching.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女が見た映画は感動的でした。"
     },
     {
@@ -1101,7 +1101,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「teacher」と「teaches English」をつなぐです。主格として先生を説明していります。\n\n「英語を教えている先生は親切です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The teacher who teaches English is kind.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. The teacher who teaches English is kind.",
+      "passage": "Our school has many clubs. Students can join different activities. The music club is popular. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブは人気です。英語を教えている先生は親切です。"
     },
     {
@@ -1127,7 +1127,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「girl」と「is playing the piano」をつなぐです。進行形の主格として少女を説明していります。\n\n「ピアノを弾いている少女は私の妹です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The girl who is playing the piano is my sister.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. The girl who is playing the piano is my sister.",
+      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. ____ ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにグラウンドがあります。週末には多くの子供たちがそこで遊びます。ピアノを弾いている少女は私の妹です。"
     },
     {
@@ -1154,7 +1154,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「dog」と「is running in the park」をつなぐです。動物にはthatを使うのが一般的です。\n\n「公園で走っている犬は私のペットです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The dog that is running in the park is my pet.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The dog that is running in the park is my pet.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。公園で走っている犬は私のペットです。"
     },
     {
@@ -1179,7 +1179,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞thatを使って、「book」と「is on the desk」をつなぐです。主格として本を説明していります。\n\n「机の上にある本は私のものです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The book that is on the desk is mine.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. The book that is on the desk is mine.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。机の上にある本は私のものです。"
     },
     {
@@ -1206,7 +1206,7 @@
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "sentenceOrdering",
       "explanation": "関係代名詞whoを使って、「man」と「is standing near the window」をつなぐです。主格として男性を説明していります。\n\n「窓の近くに立っている男性は私の父です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ The man who is standing near the window is my father.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The man who is standing near the window is my father.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。窓の近くに立っている男性は私の父です。"
     },
     {
@@ -1326,7 +1326,7 @@
       "explanation": "関係代名詞の目的格を省略した形です。the food (which) I cookedです。\n\n「私が作った料理。」です。\n\n【文法ポイント】\n過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ the food I cooked\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "the food I",
       "wordCount": 4,
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. the food I cooked",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私が作った料理。"
     },
     {
@@ -1378,7 +1378,7 @@
       "explanation": "関係代名詞の目的格を省略した形として覚えてください。the picture (which) I tookです。\n\n「私が撮った写真。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ the picture I took\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "the picture I",
       "wordCount": 4,
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. the picture I took",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私が撮った写真。"
     }
   ]

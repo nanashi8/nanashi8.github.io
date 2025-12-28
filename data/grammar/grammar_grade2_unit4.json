@@ -262,7 +262,7 @@
       "grammarPoint": "must + 動詞の原形",
       "hint": "mustの語順",
       "explanation": "mustは助動詞で、主語の後に置き、その後に動詞の原形を続けます。\n\n「私は毎日宿題をしなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I must do my homework every day.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. I must do my homework every day.",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。私は毎日宿題をしなければなりません。"
     },
     {
@@ -282,7 +282,7 @@
       "grammarPoint": "have to + 動詞の原形",
       "hint": "have toの語順",
       "explanation": "have toの後は動詞の原形を続けます。\n\n「あなたは早く起きなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ You have to get up early.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. You have to get up early.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。あなたは早く起きなければなりません。"
     },
     {
@@ -300,7 +300,7 @@
       "grammarPoint": "must + 動詞の原形",
       "hint": "mustの後",
       "explanation": "mustの後は必ず動詞の原形を使います。\n\n「彼は今日働かなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He must work today.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. He must work today.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼は今日働かなければなりません。"
     },
     {
@@ -338,7 +338,7 @@
       "grammarPoint": "has to + 動詞の原形",
       "hint": "三人称単数",
       "explanation": "主語がsheなので、have toはhas toになります。\n\n「彼女は薬を飲まなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has to take medicine.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She has to take medicine.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。彼女は薬を飲まなければなりません。"
     },
     {
@@ -360,7 +360,7 @@
       "grammarPoint": "have to + 動詞の原形",
       "hint": "have toの語順",
       "explanation": "have toの後に動詞の原形goを続けます。\n\n「私は明日早く学校に行かなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have to go to school early tomorrow.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. I have to go to school early tomorrow.",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。私は明日早く学校に行かなければなりません。"
     },
     {
@@ -379,7 +379,7 @@
       "grammarPoint": "must + 動詞の原形",
       "hint": "mustの語順",
       "explanation": "mustの後は動詞の原形followを使います。\n\n「あなたたちは規則に従わなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ You must follow the rules.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. You must follow the rules.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。あなたたちは規則に従わなければなりません。"
     },
     {
@@ -416,7 +416,7 @@
       "grammarPoint": "must be",
       "hint": "be on time",
       "explanation": "be on timeで「時間を守る」という意味です。\n\n「私たちは時間を守らなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We must be on time.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We must be on time.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちは時間を守らなければなりません。"
     },
     {
@@ -490,7 +490,7 @@
       "grammarPoint": "must + 動詞の原形",
       "hint": "mustの語順",
       "explanation": "シンプルな義務の文です。\n\n「彼は英語を勉強しなければなりません。」です。\n\n【文法ポイント】\n助動詞の使用\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He must study English.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. He must study English.",
+      "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. ____ ____ ____ ____.",
       "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。彼は英語を勉強しなければなりません。"
     },
     {
@@ -529,7 +529,7 @@
       "grammarPoint": "has to + 動詞の原形",
       "hint": "三人称単数",
       "explanation": "主語がsheなのでhas toを使います。\n\n「彼女は毎日練習しなければなりません。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has to practice every day.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. She has to practice every day.",
+      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "写真撮影が趣味です。自然の写真を撮ります。先月、山に行きました。彼女は毎日練習しなければなりません。"
     },
     {
@@ -1329,7 +1329,7 @@
       "explanation": "動名詞Swimmingが文の主語になっています。「泳ぐこと」= Swimming\n\n「泳ぐことは楽しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "動名詞を主語に",
       "correctAnswer": "Swimming is fun .",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. Swimming is fun .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。泳ぐことは楽しいです。"
     },
     {
@@ -1346,7 +1346,7 @@
       "explanation": "動名詞句Reading booksが主語です。\n\n「本を読むことは重要です。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Reading books is ~",
       "correctAnswer": "Reading books is important .",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Reading books is important .",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。本を読むことは重要です。"
     },
     {
@@ -1435,7 +1435,7 @@
       "explanation": "drawing picturesで「絵を描くこと」という動名詞句です。\n\n「私は絵を描くことが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I like ~ing",
       "correctAnswer": "I like drawing pictures .",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I like drawing pictures .",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。私は絵を描くことが好きです。"
     },
     {
@@ -1451,7 +1451,7 @@
       "explanation": "動名詞shoppingがenjoyの目的語です。\n\n「彼女は買い物をすることが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "She enjoys ~ing",
       "correctAnswer": "She enjoys shopping .",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She enjoys shopping .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女は買い物をすることが好きです。"
     },
     {
@@ -1498,7 +1498,7 @@
       "explanation": "動名詞句Taking picturesが主語です。\n\n「写真を撮ることは楽しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Taking pictures is ~",
       "correctAnswer": "Taking pictures is fun .",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Taking pictures is fun .",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。写真を撮ることは楽しいです。"
     },
     {
@@ -1515,7 +1515,7 @@
       "explanation": "playing soccerで「サッカーをすること」です。\n\n「私はサッカーをすることが好きです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I like ~ing",
       "correctAnswer": "I like playing soccer .",
-      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. I like playing soccer .",
+      "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. ____ ____ ____ ____.",
       "passageJapanese": "写真撮影が趣味です。自然の写真を撮ります。先月、山に行きました。私はサッカーをすることが好きです。"
     },
     {
@@ -1547,7 +1547,7 @@
       "explanation": "動名詞句Playing the guitarが主語になっています。\n\n「ギターを弾くことは楽しいです。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Playing the guitar is ~",
       "correctAnswer": "Playing the guitar is fun .",
-      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. Playing the guitar is fun .",
+      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. ____ ____ ____ ____ ____.",
       "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにグラウンドがあります。週末には多くの子供たちがそこで遊びます。ギターを弾くことは楽しいです。"
     },
     {

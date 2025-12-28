@@ -687,7 +687,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "English is spoken around the world.",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. English is spoken around the world.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。英語は世界中で話されています。"
     },
     {
@@ -709,7 +709,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "This book is read by many people.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This book is read by many people.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。この本は多くの人に読まれています。"
     },
     {
@@ -730,7 +730,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "The letter was written by her.",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The letter was written by her.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その手紙は彼女によって書かれました。"
     },
     {
@@ -808,7 +808,7 @@
       "wordCount": 7,
       "type": "sentenceOrdering",
       "correctAnswer": "This song is loved by young people.",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This song is loved by young people.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。この歌は若者に愛されています。"
     },
     {
@@ -847,7 +847,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "The window was broken by him.",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The window was broken by him.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その窓は彼によって壊されました。"
     },
     {
@@ -868,7 +868,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "These photos were taken last year.",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. These photos were taken last year.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。これらの写真は去年撮られました。"
     },
     {
@@ -887,7 +887,7 @@
       "wordCount": 4,
       "type": "sentenceOrdering",
       "correctAnswer": "The door is opened.",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The door is opened.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その扉は開けられています。"
     },
     {
@@ -907,7 +907,7 @@
       "wordCount": 5,
       "type": "sentenceOrdering",
       "correctAnswer": "This computer is not used.",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This computer is not used.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。このコンピューターは使われていません。"
     },
     {
@@ -945,7 +945,7 @@
       "wordCount": 4,
       "type": "sentenceOrdering",
       "correctAnswer": "Many trees were planted.",
-      "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. Many trees were planted.",
+      "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. ____ ____ ____ ____.",
       "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。多くの木が植えられました。"
     },
     {
@@ -984,7 +984,7 @@
       "wordCount": 6,
       "type": "sentenceOrdering",
       "correctAnswer": "This room is cleaned every day.",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This room is cleaned every day.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この部屋は毎日掃除されます。"
     },
     {
@@ -1045,7 +1045,7 @@
       "wordCount": 8,
       "type": "sentenceOrdering",
       "correctAnswer": "The painting was painted by a famous artist.",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The painting was painted by a famous artist.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その絵は有名な画家によって描かれました。"
     },
     {
@@ -1301,7 +1301,7 @@
       "difficulty": "intermediate",
       "explanation": "過去形の受動態です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その映画は先月公開されました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は先月公開されました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その映画は先月公開されました。」に合いません。",
       "hint": "be動詞 + 過去分詞",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The movie ____ released last month.",
+      "passage": "Last Sunday, my family went to the park. The weather ____ nice. We had a picnic there. The movie ____ released last month.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その映画は先月公開されました。"
     },
     {
@@ -1321,7 +1321,7 @@
       "explanation": "be動詞 + 過去分詞の語順です。\n\n「この本は多くの人に読まれています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
       "correctAnswer": "This book is read by many people .",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. This book is read by many people .",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。この本は多くの人に読まれています。"
     },
     {
@@ -1477,7 +1477,7 @@
       "explanation": "was + 過去分詞writtenの語順です。\n\n「この手紙は彼女によって書かれました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
       "correctAnswer": "This letter was written by her .",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This letter was written by her .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この手紙は彼女によって書かれました。"
     },
     {
@@ -1495,7 +1495,7 @@
       "explanation": "was + 過去分詞solvedです。\n\n「この問題は簡単に解決されました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
       "correctAnswer": "This problem was solved easily .",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. This problem was solved easily .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。この問題は簡単に解決されました。"
     },
     {
@@ -1531,7 +1531,7 @@
       "explanation": "is + 過去分詞likedです。\n\n「彼女は皆に好かれています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
       "correctAnswer": "She is liked by everyone .",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She is liked by everyone .",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼女は皆に好かれています。"
     },
     {
@@ -1550,7 +1550,7 @@
       "explanation": "is + 過去分詞cleanedの語順です。\n\n「この部屋は毎日掃除されています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
       "correctAnswer": "This room is cleaned every day .",
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This room is cleaned every day .",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この部屋は毎日掃除されています。"
     },
     {
@@ -1569,7 +1569,7 @@
       "explanation": "was + 過去分詞releasedです。\n\n「その映画は先月公開されました。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be動詞 + 過去分詞 + by ~",
       "correctAnswer": "The movie was released last month .",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. The movie was released last month .",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。その映画は先月公開されました。"
     },
     {
@@ -1949,7 +1949,7 @@
       "difficulty": "intermediate",
       "explanation": "過去形の受動態です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その建物は1900年に建てられました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1900年に建てられました。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その建物は1900年に建てられました。」に合いません。",
       "hint": "時制と単複で判断",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The building ____ built in 1900.",
+      "passage": "Last Sunday, my family went to the park. The weather ____ nice. We had a picnic there. The building ____ built in 1900.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。その建物は1900年に建てられました。"
     },
     {

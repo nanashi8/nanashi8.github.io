@@ -258,7 +258,7 @@
       ],
       "correctAnswer": "I am going to study tomorrow.",
       "explanation": "正解: I am going to study tomorrow.\n日本語訳: 私は明日勉強するつもりです。\n文法ポイント: be going to + 動詞の原形の語順です。\nよくある間違い: goingとtoは離さないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. I am going to study tomorrow.",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。",
       "japanese": "私は明日勉強するつもりです。"
     },
@@ -293,7 +293,7 @@
       ],
       "correctAnswer": "We are going to have a party.",
       "explanation": "正解: We are going to have a party.\n日本語訳: 私たちはパーティーを開く予定です。\n文法ポイント: be going to + 動詞の原形 + 目的語の語順です。\nよくある間違い: have a partyは1つのまとまりです。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. We are going to have a party.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。",
       "japanese": "私たちはパーティーを開く予定です。"
     },
@@ -301,7 +301,7 @@
       "id": "g3u0_019",
       "type": "verbForm",
       "difficulty": "beginner",
-      "sentence": "I will (play) tennis tomorrow.",
+      "sentence": "I will (____) tennis tomorrow.",
       "correctAnswer": "play",
       "baseForm": "play",
       "explanation": "正解: play\n日本語訳: 私は明日テニスをします。\n文法ポイント: willの後は必ず動詞の原形を使います。\nよくある間違い: playsやplayingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【play】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【playing】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -310,7 +310,7 @@
         "playing",
         "plays"
       ],
-      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids play there on weekends. I will (play) tennis tomorrow.",
+      "passage": "Soccer is the most popular sport in our town. We have a field near the school. Many kids ____ there on weekends. I will (____) tennis tomorrow.",
       "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにグラウンドがあります。週末には多くの子供たちがそこで遊びます。",
       "japanese": "私は明日テニスをします。"
     },
@@ -318,7 +318,7 @@
       "id": "g3u0_020",
       "type": "verbForm",
       "difficulty": "intermediate",
-      "sentence": "She is going to (watch) a movie tonight.",
+      "sentence": "She is going to (____) a movie tonight.",
       "correctAnswer": "watch",
       "baseForm": "watch",
       "explanation": "正解: watch\n日本語訳: 彼女は今夜映画を見る予定です。\n文法ポイント: be going toの後は必ず動詞の原形を使います。\nよくある間違い: watchesやwatchingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watch】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【watching】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -327,7 +327,7 @@
         "watching",
         "watchs"
       ],
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She is going to (watch) a movie tonight.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. She is going to (____) a movie tonight.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。",
       "japanese": "彼女は今夜映画を見る予定です。"
     },
@@ -460,7 +460,7 @@
       ],
       "correctAnswer": "If it is sunny, we will go out.",
       "explanation": "正解: If it is sunny, we will go out.\n日本語訳: もし晴れたら、私たちは外出します。\n文法ポイント: if節の後にコンマを置き、主節を続けます。\nよくある間違い: if節では未来のことも現在形で表します。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. If it is sunny, we will go out.",
+      "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. ____ ____ ____ ____, ____ ____ ____ ____.",
       "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。",
       "japanese": "もし晴れたら、私たちは外出します。"
     },
@@ -478,7 +478,7 @@
       ],
       "correctAnswer": "I think that she is kind.",
       "explanation": "正解: I think that she is kind.\n日本語訳: 私は彼女が親切だと思います。\n文法ポイント: that節は「〜ということ」を表し、thinkの目的語になります。\nよくある間違い: thatは省略可能ですが、入れるのが正式です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. I think that she is kind.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。",
       "japanese": "私は彼女が親切だと思います。"
     },
@@ -609,7 +609,7 @@
       ],
       "correctAnswer": "She went to the store to buy milk.",
       "explanation": "正解: She went to the store to buy milk.\n日本語訳: 彼女は牛乳を買うために店に行きました。\n文法ポイント: to the store（場所）とto buy（目的）を区別します。\nよくある間違い: 最初のtoは前置詞、2つ目のtoは不定詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. She went to the store to buy milk.",
+      "passage": "Sarah is a student. She loves reading books. After school, she goes to the library. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "サラは学生です。本を読むのが好きです。放課後、図書館に行きます。",
       "japanese": "彼女は牛乳を買うために店に行きました。"
     },
@@ -633,7 +633,7 @@
       "id": "g3u0_039",
       "type": "verbForm",
       "difficulty": "beginner",
-      "sentence": "I need to (study) for the test.",
+      "sentence": "I need to (____) for the test.",
       "correctAnswer": "study",
       "baseForm": "study",
       "explanation": "正解: study\n日本語訳: 私はテストのために勉強する必要があります。\n文法ポイント: toの後は動詞の原形を使います。\nよくある間違い: studiesやstudyingにしないでください。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【study】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【studying】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【studys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -648,7 +648,7 @@
       "id": "g3u0_040",
       "type": "verbForm",
       "difficulty": "intermediate",
-      "sentence": "I have many books to (read).",
+      "sentence": "I have many books to (____).",
       "correctAnswer": "read",
       "baseForm": "read",
       "explanation": "正解: read\n日本語訳: 私は読むべき本がたくさんあります。\n文法ポイント: 不定詞の形容詞的用法で、toの後は動詞の原形を使います。\nよくある間違い: readingは現在分詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「」に合いません。",
@@ -926,7 +926,7 @@
       ],
       "correctAnswer": "This is bigger than that.",
       "explanation": "正解: This is bigger than that.\n日本語訳: これはあれより大きいです。\n文法ポイント: 比較級 + than ~の語順です。\nよくある間違い: thanの後に比較対象を置きます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This is bigger than that.",
+      "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ ____ ____ ____ ____.",
       "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。",
       "japanese": "これはあれより大きいです。"
     },
@@ -946,7 +946,7 @@
       ],
       "correctAnswer": "She is the tallest girl in her class.",
       "explanation": "正解: She is the tallest girl in her class.\n日本語訳: 彼女はクラスで最も背が高い女の子です。\n文法ポイント: the + 最上級 + in/of ~の語順です。\nよくある間違い: 最上級には必ずtheを付けます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. She is the tallest girl in her class.",
+      "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. ____ ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。",
       "japanese": "彼女はクラスで最も背が高い女の子です。"
     },
@@ -1116,7 +1116,7 @@
       ],
       "correctAnswer": "The house was built 100 years ago.",
       "explanation": "正解: The house was built 100 years ago.\n日本語訳: その家は100年前に建てられました。\n文法ポイント: be動詞 + 過去分詞 + 時を表す語句の語順です。\nよくある間違い: years agoは2語で1つの時を表す表現です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. The house was built 100 years ago.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。",
       "japanese": "その家は100年前に建てられました。"
     },

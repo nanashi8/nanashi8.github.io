@@ -1,0 +1,38 @@
+[
+  {
+    "sourceTerm": "北海道",
+    "targetTerm": "石狩平野",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "石狩平野",
+    "targetTerm": "北海道",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "三権分立",
+    "targetTerm": "国会",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "国会",
+    "targetTerm": "三権分立",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "石狩平野",
+    "targetTerm": "北海道",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "北海道",
+    "targetTerm": "石狩平野",
+    "strength": 70,
+    "relationType": "related"
+  }
+]
