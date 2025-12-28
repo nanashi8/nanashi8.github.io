@@ -142,7 +142,18 @@ export function useQuestionRequeue<
         ? Math.min(alreadyRequeuedSoon * 2, 12)
         : Math.min(alreadyRequeuedSoon, 8);
 
-      const plannedOffset = baseOffset + extraDelay + pressureDelay;
+      const plannedOffsetRaw = baseOffset + extraDelay + pressureDelay;
+
+      // 🚫 振動対策（暗記タブ限定）:
+      // 分からない(>=70)が「1〜2問後」に戻ると連打時に体感振動が発生しやすい。
+      // Position階層やインターリーブには触れず、再挿入の“近さ”だけを抑制する。
+      const minGapForMode = (() => {
+        if (mode !== 'memorization') return 0;
+        if (isIncorrectLike) return 10;
+        return 0;
+      })();
+
+      const plannedOffset = Math.max(plannedOffsetRaw, minGapForMode);
 
       const pushRequeueDebugLog = (entry: Record<string, unknown>) => {
         try {
@@ -187,7 +198,9 @@ export function useQuestionRequeue<
               windowEnd,
               baseOffset,
               extraDelay,
+              plannedOffsetRaw,
               plannedOffset,
+              minGapForMode,
               questionPosition: questionPosition ?? null,
               ssotPosition: ssotPosition ?? null,
               effectivePosition: effectivePosition ?? null,
@@ -230,7 +243,9 @@ export function useQuestionRequeue<
             currentIndex,
             baseOffset,
             extraDelay,
+            plannedOffsetRaw,
             plannedOffset,
+            minGapForMode,
             insertAt,
             originalInsertAt: existingNearbyAbsIndex,
             movedExisting: true,
@@ -255,7 +270,9 @@ export function useQuestionRequeue<
           windowEnd,
           baseOffset,
           extraDelay,
+          plannedOffsetRaw,
           plannedOffset,
+          minGapForMode,
           questionPosition: questionPosition ?? null,
           ssotPosition: ssotPosition ?? null,
           effectivePosition: effectivePosition ?? null,
@@ -371,7 +388,9 @@ export function useQuestionRequeue<
         currentIndex,
         baseOffset,
         extraDelay,
+        plannedOffsetRaw,
         plannedOffset,
+        minGapForMode,
         insertAt: insertPosition,
         originalInsertAt: originalInsertPosition,
         positionAwareAdjusted,
