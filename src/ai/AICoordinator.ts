@@ -57,11 +57,11 @@ export class AICoordinator {
     };
 
     // Phase 4.5: ML初期化を自動実行（バックグラウンド）
-    this.initializeMLModels().catch(err => {
+    this.initializeMLModels().catch((err) => {
       console.warn('[AICoordinator] ML initialization failed, using rules only', err);
     });
 
-    // 🧪 Week 4: ML有効化チェック（localStorage設定から）
+    // 🧪 Week 4: MLは常時有効（UIスイッチ撤去に伴い固定ON）
     this.checkAndEnableML();
   }
 
@@ -71,18 +71,8 @@ export class AICoordinator {
    */
   private checkAndEnableML(): void {
     try {
-      // Vite環境ではlocalStorageが利用可能
-      if (typeof localStorage === 'undefined') {
-        console.warn('[AICoordinator] localStorage not available');
-        return;
-      }
-      const mlEnabled = localStorage.getItem('ab_ml_enabled') === 'true';
-      if (mlEnabled) {
-        console.log('✅ [AICoordinator] ML enabled by user setting');
-        this.enableML();
-      } else {
-        console.log('ℹ️ [AICoordinator] ML disabled by user setting');
-      }
+      // UIスイッチ撤去により、MLは常時有効
+      this.enableML();
     } catch (error) {
       console.warn('[AICoordinator] Failed to check ML setting', error);
     }
