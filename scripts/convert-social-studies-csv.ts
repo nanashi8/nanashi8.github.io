@@ -1,3 +1,5 @@
+/// <reference types="node" />
+
 /**
  * 社会科CSV→JSON変換スクリプト
  *
@@ -7,10 +9,9 @@
  * 実行方法:
  *   npm run convert-social-studies
  */
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -83,7 +84,7 @@ function parseCSV(content: string): CSVRow[] {
     for (let j = 0; j < header.length; j++) {
       row[header[j]] = values[j];
     }
-    rows.push(row as CSVRow);
+    rows.push(row as unknown as CSVRow);
   }
 
   return rows;
@@ -256,7 +257,7 @@ function main() {
   const dataPacksDir = path.join(__dirname, '../local-data-packs');
   const csvFiles = fs
     .readdirSync(dataPacksDir)
-    .filter((f) => f.startsWith('social-studies') && f.endsWith('.csv'));
+    .filter((f: string) => f.startsWith('social-studies') && f.endsWith('.csv'));
 
   if (csvFiles.length === 0) {
     console.error('❌ CSVファイルが見つかりません');

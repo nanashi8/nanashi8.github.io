@@ -16,11 +16,7 @@
       "type": "fillInBlank",
       "japanese": "私は学生です。",
       "sentence": "I ____ a student.",
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "beginner",
       "explanation": "主語Iにはamです。×I is/areは誤りです。be動詞は主語によって決まります：I→am、he/she/it→is、you/we/they→areです。自己紹介の基本パターンです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「私は学生です。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は学生です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は学生です。」に合いません。",
@@ -31,11 +27,7 @@
       "type": "fillInBlank",
       "japanese": "彼は私の兄です。",
       "sentence": "He ____ my brother.",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "主語heはisを使います。家族紹介の基本表現です。my brother/sisterは「兄弟姉妹」を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は私の兄です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私の兄です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は私の兄です。」に合いません。",
@@ -48,11 +40,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは学生です。",
       "sentence": "You ____ a student.",
-      "choices": [
-        "are",
-        "am",
-        "is"
-      ],
+      "choices": ["are", "am", "is"],
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "主語youは単数でも複数でもareです。×You isは絶対に誤り。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは学生です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは学生です。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは学生です。」に合いません。",
@@ -63,11 +51,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは日本人です。",
       "sentence": "We ____ Japanese.",
-      "choices": [
-        "are",
-        "am",
-        "is"
-      ],
+      "choices": ["are", "am", "is"],
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "複数主語weはareです。Japaneseは「日本人/日本の」の両方の意味があります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは日本人です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは日本人です。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは日本人です。」に合いません。",
@@ -78,11 +62,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は先生です。",
       "sentence": "She ____ a teacher.",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "主語sheはisです。職業を表す基本パターンです。a teacher/a doctor/a studentなどです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先生です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先生です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先生です。」に合いません。",
@@ -93,11 +73,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは友達です。",
       "sentence": "They ____ friends.",
-      "choices": [
-        "are",
-        "am",
-        "is"
-      ],
+      "choices": ["are", "am", "is"],
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "複数主語theyはareです。friendsは複数形（友達が複数いる）です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは友達です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは友達です。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは友達です。」に合いません。",
@@ -108,11 +84,7 @@
       "type": "fillInBlank",
       "japanese": "これは私の本です。",
       "sentence": "This ____ my book.",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "thisは単数なのでisです。物を指し示す基本表現です。×This areは誤りです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「これは私の本です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは私の本です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは私の本です。」に合いません。",
@@ -123,11 +95,7 @@
       "type": "fillInBlank",
       "japanese": "私は13歳です。",
       "sentence": "I ____ thirteen years old.",
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "intermediate",
       "explanation": "年齢表現「be動詞 + 数字 + years old」です。自己紹介でよく使います。I'm 13.と短縮可能です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「私は13歳です。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は13歳です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は13歳です。」に合いません。",
@@ -138,11 +106,7 @@
       "type": "fillInBlank",
       "japanese": "私は日本出身です。",
       "sentence": "I ____ from Japan.",
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "intermediate",
       "explanation": "出身地「be from ～」は頻出です。from Tokyoのように都市名も可です。Where are you from?で出身地を尋ねります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「私は日本出身です。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は日本出身です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は日本出身です。」に合いません。",
@@ -155,11 +119,7 @@
       "type": "fillInBlank",
       "japanese": "彼は今家にいます。",
       "sentence": "He ____ at home now.",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "場所「be at/in + 場所」です。at homeは熟語で「家に」です。nowで現在の状況を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は今家にいます。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は今家にいます。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は今家にいます。」に合いません。",
@@ -170,11 +130,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは同じクラスです。",
       "sentence": "We ____ in the same class.",
-      "choices": [
-        "are",
-        "am",
-        "is"
-      ],
+      "choices": ["are", "am", "is"],
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "sameは「同じ」で必ずtheを付けます。in the same class/schoolは学校でよく使う表現です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは同じクラスです。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは同じクラスです。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは同じクラスです。」に合いません。",
@@ -185,11 +141,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは正しいです。",
       "sentence": "You ____ right.",
-      "choices": [
-        "are",
-        "am",
-        "is"
-      ],
+      "choices": ["are", "am", "is"],
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "You are right.は「あなたは正しい」という構文として覚えてください。反対はYou are wrong.（間違っている）です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは正しいです。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは正しいです。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは正しいです。」に合いません。",
@@ -202,11 +154,7 @@
       "type": "fillInBlank",
       "japanese": "彼は数学が得意です。",
       "sentence": "He ____ good at math.",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "advanced",
       "explanation": "熟語「be good at ～」=「～が得意」です。受験頻出です。atの後は科目名や活動（sports/English/playing pianoなど）です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は数学が得意です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は数学が得意です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は数学が得意です。」に合いません。",
@@ -217,11 +165,7 @@
       "type": "fillInBlank",
       "japanese": "私は英語に興味があります。",
       "sentence": "I ____ interested in English.",
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "advanced",
       "explanation": "熟語「be interested in ～」=「～に興味がある」です。likeよりフォーマルです。趣味や関心を表します。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「私は英語に興味があります。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は英語に興味があります。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は英語に興味があります。」に合いません。",
@@ -232,11 +176,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は有名な歌手です。",
       "sentence": "She ____ a famous singer.",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "advanced",
       "explanation": "「a + 形容詞 + 名詞」の語順です。famousは「有名な」です。He is a good student.のように形容詞が入りまします。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は有名な歌手です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は有名な歌手です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は有名な歌手です。」に合いません。",
@@ -246,12 +186,7 @@
       "id": "g1-u0-so-001",
       "type": "sentenceOrdering",
       "japanese": "私は学生です。",
-      "words": [
-        "student",
-        "I",
-        "a",
-        "am"
-      ],
+      "words": ["student", "I", "a", "am"],
       "correctAnswer": "I am a student.",
       "difficulty": "beginner",
       "explanation": "基本語順：主語(I) + be動詞(am) + 補語(a student)です。英語は主語から始めります。\n\n「私は学生です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am a student.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -262,11 +197,7 @@
       "id": "g1-u0-so-002",
       "type": "sentenceOrdering",
       "japanese": "彼は親切です。",
-      "words": [
-        "kind",
-        "is",
-        "he"
-      ],
+      "words": ["kind", "is", "he"],
       "correctAnswer": "He is kind.",
       "difficulty": "beginner",
       "explanation": "主語 + be動詞 + 形容詞の基本パターンです。形容詞は補語として使います。\n\n「彼は親切です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He is kind.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -277,11 +208,7 @@
       "id": "g1-u0-so-003",
       "type": "sentenceOrdering",
       "japanese": "あなたたちは友達です。",
-      "words": [
-        "friends",
-        "are",
-        "you"
-      ],
+      "words": ["friends", "are", "you"],
       "correctAnswer": "You are friends.",
       "difficulty": "beginner",
       "explanation": "You are ～の語順です。friendsは複数形です。\n\n「あなたたちは友達です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ You are friends.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -292,12 +219,7 @@
       "id": "g1-u0-so-004",
       "type": "sentenceOrdering",
       "japanese": "これは私のペンです。",
-      "words": [
-        "pen",
-        "my",
-        "is",
-        "this"
-      ],
+      "words": ["pen", "my", "is", "this"],
       "correctAnswer": "This is my pen.",
       "difficulty": "beginner",
       "explanation": "This is ～で物を指し示します。my + 名詞で所有を表します。\n\n「これは私のペンです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is my pen.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -308,11 +230,7 @@
       "id": "g1-u0-so-005",
       "type": "sentenceOrdering",
       "japanese": "私たちは日本人です。",
-      "words": [
-        "Japanese",
-        "are",
-        "we"
-      ],
+      "words": ["Japanese", "are", "we"],
       "correctAnswer": "We are Japanese.",
       "difficulty": "beginner",
       "explanation": "We are ～の語順です。Japaneseは大文字で始める（国籍・言語は大文字）です。\n\n「私たちは日本人です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We are Japanese.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -323,12 +241,7 @@
       "id": "g1-u0-so-006",
       "type": "sentenceOrdering",
       "japanese": "彼女は先生です。",
-      "words": [
-        "teacher",
-        "a",
-        "is",
-        "she"
-      ],
+      "words": ["teacher", "a", "is", "she"],
       "correctAnswer": "She is a teacher.",
       "difficulty": "beginner",
       "explanation": "She is a ～の語順です。職業名にはaを付ける（a teacher/a doctor）です。\n\n「彼女は先生です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is a teacher.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -339,11 +252,7 @@
       "id": "g1-u0-so-007",
       "type": "sentenceOrdering",
       "japanese": "彼らは学生です。",
-      "words": [
-        "students",
-        "are",
-        "they"
-      ],
+      "words": ["students", "are", "they"],
       "correctAnswer": "They are students.",
       "difficulty": "beginner",
       "explanation": "They are ～の語順です。複数なのでstudentsと複数形にすります。\n\n「彼らは学生です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They are students.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -354,13 +263,7 @@
       "id": "g1-u0-so-008",
       "type": "sentenceOrdering",
       "japanese": "私は13歳です。",
-      "words": [
-        "old",
-        "thirteen",
-        "am",
-        "years",
-        "I"
-      ],
+      "words": ["old", "thirteen", "am", "years", "I"],
       "correctAnswer": "I am thirteen years old.",
       "difficulty": "intermediate",
       "explanation": "年齢表現は「be動詞 + 数字 + years old」の順です。thirteenは13です。\n\n「私は13歳です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am thirteen years old.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -371,12 +274,7 @@
       "id": "g1-u0-so-009",
       "type": "sentenceOrdering",
       "japanese": "彼は東京出身です。",
-      "words": [
-        "Tokyo",
-        "from",
-        "is",
-        "he"
-      ],
+      "words": ["Tokyo", "from", "is", "he"],
       "correctAnswer": "He is from Tokyo.",
       "difficulty": "intermediate",
       "explanation": "「be from + 場所」で出身地です。Tokyoのような都市名も使えります。\n\n「彼は東京出身です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He is from Tokyo.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -387,13 +285,7 @@
       "id": "g1-u0-so-010",
       "type": "sentenceOrdering",
       "japanese": "私は今学校にいます。",
-      "words": [
-        "school",
-        "at",
-        "now",
-        "am",
-        "I"
-      ],
+      "words": ["school", "at", "now", "am", "I"],
       "correctAnswer": "I am at school now.",
       "difficulty": "intermediate",
       "explanation": "「be at + 場所」で位置です。nowは文末に置くことが多いです。\n\n「私は今学校にいます。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am at school now.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -404,12 +296,7 @@
       "id": "g1-u0-so-011",
       "type": "sentenceOrdering",
       "japanese": "これらは私の本です。",
-      "words": [
-        "books",
-        "my",
-        "are",
-        "these"
-      ],
+      "words": ["books", "my", "are", "these"],
       "correctAnswer": "These are my books.",
       "difficulty": "intermediate",
       "explanation": "Theseは複数なのでareです。booksも複数形です。my booksで「私の本たち」です。\n\n「これらは私の本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are my books.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -420,14 +307,7 @@
       "id": "g1-u0-so-012",
       "type": "sentenceOrdering",
       "japanese": "私たちは同じクラスです。",
-      "words": [
-        "class",
-        "same",
-        "the",
-        "in",
-        "are",
-        "we"
-      ],
+      "words": ["class", "same", "the", "in", "are", "we"],
       "correctAnswer": "We are in the same class.",
       "difficulty": "intermediate",
       "explanation": "「in the same class」はひとまとまりです。sameの前には必ずtheを付けます。\n\n「私たちは同じクラスです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We are in the same class.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -438,13 +318,7 @@
       "id": "g1-u0-so-013",
       "type": "sentenceOrdering",
       "japanese": "彼は数学が得意です。",
-      "words": [
-        "math",
-        "at",
-        "good",
-        "is",
-        "he"
-      ],
+      "words": ["math", "at", "good", "is", "he"],
       "correctAnswer": "He is good at math.",
       "difficulty": "advanced",
       "explanation": "熟語「be good at ～」は語順を守りまします。good atの間に他の語は入らないです。\n\n「彼は数学が得意です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He is good at math.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -455,16 +329,7 @@
       "id": "g1-u0-so-014",
       "type": "sentenceOrdering",
       "japanese": "私は野球部員です。",
-      "words": [
-        "team",
-        "baseball",
-        "the",
-        "of",
-        "member",
-        "a",
-        "am",
-        "I"
-      ],
+      "words": ["team", "baseball", "the", "of", "member", "a", "am", "I"],
       "correctAnswer": "I am a member of the baseball team.",
       "difficulty": "advanced",
       "explanation": "「a member of ～」=「～の一員」です。theは特定のチームを指すので必要です。\n\n「私は野球部員です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I am a member of the baseball team.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -475,19 +340,13 @@
       "id": "g1-u0-so-015",
       "type": "sentenceOrdering",
       "japanese": "彼女は英語に興味があります。",
-      "words": [
-        "English",
-        "in",
-        "interested",
-        "is",
-        "she"
-      ],
+      "words": ["English", "in", "interested", "is", "she"],
       "correctAnswer": "She is interested in English.",
       "difficulty": "advanced",
       "explanation": "熟語「be interested in ～」の語順です。interestedとinは必ずセットです。\n\n「彼女は英語に興味があります。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She is interested in English.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "be interested in ～",
       "wordCount": 5,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She is interested in English.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は英語に興味があります。"
     },
     {
@@ -528,11 +387,7 @@
       "japanese": "これは本です（this→it）。",
       "originalSentence": "This is a book.",
       "question": "Thisの代わりにItを使って書き換えなさい",
-      "choices": [
-        "It is a book.",
-        "It are a book.",
-        "It a book."
-      ],
+      "choices": ["It is a book.", "It are a book.", "It a book."],
       "correctAnswer": "It is a book.",
       "difficulty": "beginner",
       "explanation": "thisもitも単数なのでisです。aを忘れずにです。×It areは誤りです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【It is a book.】 ← 正解\n  ✓ 正解理由: 日本語訳「これは本です（this→it）。」から、この形が適切です。\n\n❌ 【It are a book.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは本です（this→it）。」に合いません。\n\n❌ 【It a book.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは本です（this→it）。」に合いません。",
@@ -544,11 +399,7 @@
       "japanese": "私は日本人です（短縮形）。",
       "originalSentence": "I am Japanese.",
       "question": "短縮形に書き換えなさい",
-      "choices": [
-        "I'm Japanese.",
-        "I'am Japanese.",
-        "Im Japanese."
-      ],
+      "choices": ["I'm Japanese.", "I'am Japanese.", "Im Japanese."],
       "correctAnswer": "I'm Japanese.",
       "difficulty": "beginner",
       "explanation": "I am → I'mです。アポストロフィ(')の位置に注意してください。×I'amは誤りです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I'm Japanese.】 ← 正解\n  ✓ 正解理由: 日本語訳「私は日本人です（短縮形）。」から、この形が適切です。\n\n❌ 【I'am Japanese.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は日本人です（短縮形）。」に合いません。\n\n❌ 【Im Japanese.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は日本人です（短縮形）。」に合いません。",
@@ -576,11 +427,7 @@
       "japanese": "私は忙しいです（短縮否定形）。",
       "originalSentence": "I am busy.",
       "question": "短縮形の否定文に書き換えなさい",
-      "choices": [
-        "I'm not busy.",
-        "I amn't busy.",
-        "I not busy."
-      ],
+      "choices": ["I'm not busy.", "I amn't busy.", "I not busy."],
       "correctAnswer": "I'm not busy.",
       "difficulty": "intermediate",
       "explanation": "I am notは通常I'm notと短縮です。×amn'tは存在しない。ain'tは非標準的です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I'm not busy.】 ← 正解\n  ✓ 正解理由: 日本語訳「私は忙しいです（短縮否定形）。」から、この形が適切です。\n\n❌ 【I amn't busy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は忙しいです（短縮否定形）。」に合いません。\n\n❌ 【I not busy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は忙しいです（短縮否定形）。」に合いません。",
@@ -592,11 +439,7 @@
       "japanese": "彼女は親切ではないのですか。",
       "originalSentence": "She is kind.",
       "question": "否定疑問文「彼女は親切ではないのですか」に書き換えなさい",
-      "choices": [
-        "Isn't she kind?",
-        "Is she not kind?",
-        "She isn't kind?"
-      ],
+      "choices": ["Isn't she kind?", "Is she not kind?", "She isn't kind?"],
       "correctAnswer": "Isn't she kind?",
       "difficulty": "intermediate",
       "explanation": "否定疑問文は「Isn't/Aren't + 主語」です。驚きや確認で使います。Is she not kind?も可だが口語ではIsn'tです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Isn't she kind?】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は親切ではないのですか。」から、この形が適切です。\n\n❌ 【Is she not kind?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は親切ではないのですか。」に合いません。\n\n❌ 【She isn't kind?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は親切ではないのですか。」に合いません。",
@@ -608,11 +451,7 @@
       "japanese": "あなたは正しい（You→He）。",
       "originalSentence": "You are right.",
       "question": "主語をHeに変えて書き換えなさい",
-      "choices": [
-        "He is right.",
-        "He are right.",
-        "He am right."
-      ],
+      "choices": ["He is right.", "He are right.", "He am right."],
       "correctAnswer": "He is right.",
       "difficulty": "intermediate",
       "explanation": "主語が変わるとbe動詞も変わります。You are → He isです。×He areは誤りです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【He is right.】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは正しい（You→He）。」から、この形が適切です。\n\n❌ 【He are right.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは正しい（You→He）。」に合いません。\n\n❌ 【He am right.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは正しい（You→He）。」に合いません。",
@@ -624,11 +463,7 @@
       "japanese": "私たちは友達です（短縮形）。",
       "originalSentence": "We are friends.",
       "question": "短縮形に書き換えなさい",
-      "choices": [
-        "We're friends.",
-        "We'are friends.",
-        "Wer friends."
-      ],
+      "choices": ["We're friends.", "We'are friends.", "Wer friends."],
       "correctAnswer": "We're friends.",
       "difficulty": "intermediate",
       "explanation": "We are → We'reです。They are → They'reです。アポストロフィの位置に注意してください。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【We're friends.】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは友達です（短縮形）。」から、この形が適切です。\n\n❌ 【We'are friends.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは友達です（短縮形）。」に合いません。\n\n❌ 【Wer friends.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは友達です（短縮形）。」に合いません。",
@@ -658,11 +493,7 @@
       "japanese": "これらは本です（These→They）。",
       "originalSentence": "These are books.",
       "question": "Theseの代わりにTheyを使って書き換えなさい",
-      "choices": [
-        "They are books.",
-        "They is books.",
-        "They books."
-      ],
+      "choices": ["They are books.", "They is books.", "They books."],
       "correctAnswer": "They are books.",
       "difficulty": "intermediate",
       "explanation": "TheseもTheyも複数なのでareです。booksも複数形のままです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【They are books.】 ← 正解\n  ✓ 正解理由: 日本語訳「これらは本です（These→They）。」から、この形が適切です。\n\n❌ 【They is books.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です（These→They）。」に合いません。\n\n❌ 【They books.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です（These→They）。」に合いません。",
@@ -674,11 +505,7 @@
       "japanese": "彼は医者ですか。",
       "originalSentence": "He is a doctor.",
       "question": "疑問文とYesの答えを作りなさい（疑問文のみ選択）",
-      "choices": [
-        "Is he a doctor?",
-        "Are he a doctor?",
-        "He is a doctor?"
-      ],
+      "choices": ["Is he a doctor?", "Are he a doctor?", "He is a doctor?"],
       "correctAnswer": "Is he a doctor?",
       "difficulty": "intermediate",
       "explanation": "He is → Is heです。答えはYes, he is. / No, he isn't.です。×Doesはbe動詞では使わない。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Is he a doctor?】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は医者ですか。」から、この形が適切です。\n\n❌ 【Are he a doctor?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は医者ですか。」に合いません。\n\n❌ 【He is a doctor?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は医者ですか。」に合いません。",
@@ -738,11 +565,7 @@
       "japanese": "私は学生です。",
       "sentence": "I ____ a student.",
       "verb": "be",
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "beginner",
       "explanation": "主語Iにはamです。I am = I'mです。be動詞の原形beは助動詞canなどと一緒の時だけ使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「私は学生です。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は学生です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は学生です。」に合いません。",
@@ -754,11 +577,7 @@
       "japanese": "彼は親切です。",
       "sentence": "He ____ kind.",
       "verb": "be",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "主語he/she/itにはisです。性格を表す形容詞の前にbe動詞です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は親切です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は親切です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は親切です。」に合いません。",
@@ -770,11 +589,7 @@
       "japanese": "あなたたちは学生です。",
       "sentence": "You ____ students.",
       "verb": "be",
-      "choices": [
-        "are",
-        "am",
-        "is"
-      ],
+      "choices": ["are", "am", "is"],
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "主語you/we/theyにはareです。youは単数でも複数でもareです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたたちは学生です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたたちは学生です。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたたちは学生です。」に合いません。",
@@ -786,11 +601,7 @@
       "japanese": "私たちは友達です。",
       "sentence": "We ____ friends.",
       "verb": "be",
-      "choices": [
-        "are",
-        "am",
-        "is"
-      ],
+      "choices": ["are", "am", "is"],
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "複数主語weにはareです。friendsも複数形です。We are = We'reです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは友達です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは友達です。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは友達です。」に合いません。",
@@ -802,11 +613,7 @@
       "japanese": "彼女は先生です。",
       "sentence": "She ____ a teacher.",
       "verb": "be",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "主語sheにはisです。職業を表す表現です。She is = She'sです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先生です。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先生です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先生です。」に合いません。",
@@ -818,11 +625,7 @@
       "japanese": "あなたは学生ですか。",
       "sentence": "____ you a student?",
       "verb": "be",
-      "choices": [
-        "Are",
-        "Am",
-        "Is"
-      ],
+      "choices": ["Are", "Am", "Is"],
       "correctAnswer": "Are",
       "difficulty": "intermediate",
       "explanation": "疑問文は「be動詞 + 主語」です。You are → Are youです。文頭は大文字です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Are】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは学生ですか。」から、この形が適切です。\n\n❌ 【Am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは学生ですか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは学生ですか。」に合いません。",
@@ -834,11 +637,7 @@
       "japanese": "彼は先生ですか。",
       "sentence": "____ he a teacher?",
       "verb": "be",
-      "choices": [
-        "Is",
-        "Am",
-        "Are"
-      ],
+      "choices": ["Is", "Am", "Are"],
       "correctAnswer": "Is",
       "difficulty": "intermediate",
       "explanation": "He is → Is heです。答えはYes, he is. / No, he isn't.です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は先生ですか。」から、この形が適切です。\n\n❌ 【Am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先生ですか。」に合いません。\n\n❌ 【Are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先生ですか。」に合いません。",
@@ -850,11 +649,7 @@
       "japanese": "彼らは学生ですか。",
       "sentence": "____ they students?",
       "verb": "be",
-      "choices": [
-        "Are",
-        "Am",
-        "Is"
-      ],
+      "choices": ["Are", "Am", "Is"],
       "correctAnswer": "Are",
       "difficulty": "intermediate",
       "explanation": "They are → Are theyです。複数でもareです。答えはYes, they are. / No, they aren't.です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Are】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは学生ですか。」から、この形が適切です。\n\n❌ 【Am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは学生ですか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは学生ですか。」に合いません。",
@@ -868,11 +663,7 @@
       "japanese": "私は学生ではありません。",
       "sentence": "I ____ not a student.",
       "verb": "be",
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "intermediate",
       "explanation": "否定文「be動詞 + not」です。I am not = I'm notです。×I amn'tは存在しない。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「私は学生ではありません。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は学生ではありません。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は学生ではありません。」に合いません。",
@@ -884,11 +675,7 @@
       "japanese": "彼は忙しくありません。",
       "sentence": "He ____ not busy.",
       "verb": "be",
-      "choices": [
-        "is",
-        "am",
-        "are"
-      ],
+      "choices": ["is", "am", "are"],
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "explanation": "He is not = He isn'tです。短縮形は口語でよく使います。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は忙しくありません。」から、この形が適切です。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は忙しくありません。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は忙しくありません。」に合いません。",
@@ -934,11 +721,7 @@
           "text": "Yes, I ____."
         }
       ],
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "beginner",
       "explanation": "Are youで聞かれたらI amで答えります。主語が変わることに注意してください。Yes, I am. / No, I'm not.が基本です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「はい、私は学生です。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、私は学生です。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、私は学生です。」に合いません。",
@@ -959,11 +742,7 @@
           "text": "I'm ____ Japan."
         }
       ],
-      "choices": [
-        "from",
-        "in",
-        "at"
-      ],
+      "choices": ["from", "in", "at"],
       "correctAnswer": "from",
       "difficulty": "intermediate",
       "explanation": "出身地は「be from ～」で表します。Where are you from?は初対面でよく使う質問です。I'm from Tokyo.のように都市名も可です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【from】 ← 正解\n  ✓ 正解理由: 日本語訳「出身地を尋ねる会話。」から、この形が適切です。\n\n❌ 【in】 ← 不正解\n  語源: 古英語 in\n  用法: 場所（空間内）、期間、状態\n  ニュアンス: 空間的・時間的内部\n  ✗ 不正解理由: 日本語訳「出身地を尋ねる会話。」に合いません。\n\n❌ 【at】 ← 不正解\n  語源: 古英語 æt\n  用法: 場所（点）、時刻、状態\n  ニュアンス: 特定の地点・時刻\n  ✗ 不正解理由: 日本語訳「出身地を尋ねる会話。」に合いません。",
@@ -984,11 +763,7 @@
           "text": "Yes, I ____."
         }
       ],
-      "choices": [
-        "am",
-        "is",
-        "are"
-      ],
+      "choices": ["am", "is", "are"],
       "correctAnswer": "am",
       "difficulty": "intermediate",
       "explanation": "「Are you ready?」=「準備はいい？」出発前や何かを始める前に使う決まり文句です。答えはYes, I am. / Not yet.などです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【am】 ← 正解\n  ✓ 正解理由: 日本語訳「準備確認の会話。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「準備確認の会話。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「準備確認の会話。」に合いません。",
@@ -1009,11 +784,7 @@
           "text": "Yes, ____ is."
         }
       ],
-      "choices": [
-        "it",
-        "this",
-        "that"
-      ],
+      "choices": ["it", "this", "that"],
       "correctAnswer": "it",
       "difficulty": "advanced",
       "explanation": "Is this/that～?にはit isで答えります。×Yes, this is.は誤りです。物を指すときはitを使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【it】 ← 正解\n  ✓ 正解理由: 日本語訳「はい、そうです。」から、この形が適切です。\n\n❌ 【this】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、そうです。」に合いません。\n\n❌ 【that】 ← 不正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。",

@@ -90,7 +90,9 @@
 
 ### 7. property-naming-error
 
-**修正前**: `**修正前**: ` actualCorrect !== log.progress.correctCount``**修正後**:`**修正後**: `attempts: progress.memorizationAttempts`
+**修正前**: `actualCorrect !== log.progress.correctCount`
+
+**修正後**: `attempts: progress.memorizationAttempts`
 **影響ファイル**: ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md, docs/GIT_HISTORY_LEARNING_REPORT.md, src/ai/scheduler/QuestionScheduler.ts, src/ai/specialists/GamificationAI.ts, src/components/GrammarQuizView.tsx, src/components/MemorizationView.tsx, src/components/RequeuingDebugPanel.tsx, src/components/SpellingView.tsx, src/hooks/useQuestionRequeue.ts, src/utils/DebugTracer.ts, src/utils/debugStorage.ts, tests/integration/interleaveRatioTolerance.spec.ts, tests/unit/gamificationAI.interleaveByCategory.test.ts
 
 ### 8. logic-error

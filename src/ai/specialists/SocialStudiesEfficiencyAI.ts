@@ -125,7 +125,7 @@ export class SocialStudiesEfficiencyAI {
     const now = Date.now();
     const last24Hours = now - 24 * 60 * 60 * 1000;
     const recentMastered = allProgress.filter(
-      (tp) => tp.position <= 20 && tp.lastAnswered > last24Hours
+      (tp) => tp.position <= 20 && tp.lastAnswered.getTime() > last24Hours
     );
     const learningSpeed = recentMastered.length; // 語/日
 
@@ -144,8 +144,7 @@ export class SocialStudiesEfficiencyAI {
       (sum, tp) => sum + tp.correctCount + tp.incorrectCount,
       0
     );
-    const averageAttempts =
-      masteredTerms.length > 0 ? totalAttempts / masteredTerms.length : 0;
+    const averageAttempts = masteredTerms.length > 0 ? totalAttempts / masteredTerms.length : 0;
 
     // 効率スコア（0-100）
     const efficiencyScore = this.calculateEfficiencyScore({
@@ -195,11 +194,12 @@ export class SocialStudiesEfficiencyAI {
    * 分野別の学習効率を分析
    */
   analyzeFieldEfficiency(progressData: SocialStudiesProgressData): FieldEfficiency[] {
-    const fieldMap = new Map<string, typeof progressData.termProgress[string][]>();
+    type TermProgress = SocialStudiesProgressData['termProgress'][string];
+    const fieldMap = new Map<string, TermProgress[]>();
 
     // 分野ごとに語句をグループ化
     Object.values(progressData.termProgress).forEach((tp) => {
-      const field = tp.field || 'その他';
+      const field = (tp.field as unknown as string) || 'その他';
       if (!fieldMap.has(field)) {
         fieldMap.set(field, []);
       }
@@ -215,10 +215,7 @@ export class SocialStudiesEfficiencyAI {
       const retentionRate =
         attemptedTerms.length > 0 ? masteredTerms.length / attemptedTerms.length : 0;
 
-      const totalAttempts = terms.reduce(
-        (sum, tp) => sum + tp.correctCount + tp.incorrectCount,
-        0
-      );
+      const totalAttempts = terms.reduce((sum, tp) => sum + tp.correctCount + tp.incorrectCount, 0);
       const learningSpeed =
         masteredTerms.length > 0 ? masteredTerms.length / (totalAttempts / 10) : 0;
 
@@ -244,7 +241,7 @@ export class SocialStudiesEfficiencyAI {
    */
   measureChainLearningEffect(
     progressData: SocialStudiesProgressData,
-    relationshipType: 'cause' | 'chronological' | 'random'
+    _relationshipType: 'cause' | 'chronological' | 'random'
   ): ChainLearningEffect {
     // TODO: 将来的に学習履歴を記録して効果測定を実装
     // 現時点では基本的な統計のみ

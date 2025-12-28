@@ -16,11 +16,7 @@
       "type": "fillInBlank",
       "japanese": "これは何ですか。",
       "sentence": "____ is this?",
-      "choices": [
-        "What",
-        "Who",
-        "When"
-      ],
+      "choices": ["What", "Who", "When"],
       "correctAnswer": "What",
       "difficulty": "beginner",
       "explanation": "「何」と尋ねるときはWhatを使います。What is this?で「これは何ですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What】 ← 正解\n  ✓ 正解理由: 日本語訳「これは何ですか。」から、この形が適切です。\n\n❌ 【Who】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは何ですか。」に合いません。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは何ですか。」に合いません。",
@@ -31,11 +27,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは誰ですか。",
       "sentence": "____ are you?",
-      "choices": [
-        "Who",
-        "What",
-        "Where"
-      ],
+      "choices": ["Who", "What", "Where"],
       "correctAnswer": "Who",
       "difficulty": "beginner",
       "explanation": "「誰」と尋ねるときはWhoを使います。Who are you?で「あなたは誰ですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Who】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは誰ですか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは誰ですか。」に合いません。\n\n❌ 【Where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは誰ですか。」に合いません。",
@@ -46,11 +38,7 @@
       "type": "fillInBlank",
       "japanese": "あなたはどこの出身ですか。",
       "sentence": "____ are you from?",
-      "choices": [
-        "Where",
-        "What",
-        "Who"
-      ],
+      "choices": ["Where", "What", "Who"],
       "correctAnswer": "Where",
       "difficulty": "beginner",
       "explanation": "「どこ」と尋ねるときはWhereを使います。Where are you from?で「どこの出身ですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Where】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどこの出身ですか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどこの出身ですか。」に合いません。\n\n❌ 【Who】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどこの出身ですか。」に合いません。",
@@ -61,11 +49,7 @@
       "type": "fillInBlank",
       "japanese": "いつ学校に行きますか。",
       "sentence": "____ do you go to school?",
-      "choices": [
-        "When",
-        "Where",
-        "What"
-      ],
+      "choices": ["When", "Where", "What"],
       "correctAnswer": "When",
       "difficulty": "beginner",
       "explanation": "「いつ」と尋ねるときはWhenを使います。When do you～?で「いつ～しますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【When】 ← 正解\n  ✓ 正解理由: 日本語訳「いつ学校に行きますか。」から、この形が適切です。\n\n❌ 【Where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いつ学校に行きますか。」に合いません。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いつ学校に行きますか。」に合いません。",
@@ -76,11 +60,7 @@
       "type": "fillInBlank",
       "japanese": "ご機嫌いかがですか。",
       "sentence": "How ____ you?",
-      "choices": [
-        "are",
-        "is",
-        "do"
-      ],
+      "choices": ["are", "is", "do"],
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "「どう・どのように」と尋ねるときはHowを使います。How are you?で「元気ですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「ご機嫌いかがですか。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ご機嫌いかがですか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「ご機嫌いかがですか。」に合いません。",
@@ -91,11 +71,7 @@
       "type": "fillInBlank",
       "japanese": "これは誰のペンですか。",
       "sentence": "____ pen is this?",
-      "choices": [
-        "Whose",
-        "Who",
-        "What"
-      ],
+      "choices": ["Whose", "Who", "What"],
       "correctAnswer": "Whose",
       "difficulty": "intermediate",
       "explanation": "「誰の」と尋ねるときはWhoseを使います。Whose～is this?で「これは誰の～ですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Whose】 ← 正解\n  ✓ 正解理由: 日本語訳「これは誰のペンですか。」から、この形が適切です。\n\n❌ 【Who】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは誰のペンですか。」に合いません。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは誰のペンですか。」に合いません。",
@@ -106,11 +82,7 @@
       "type": "fillInBlank",
       "japanese": "どちらの本が好きですか。",
       "sentence": "____ book do you like?",
-      "choices": [
-        "Which",
-        "What",
-        "Who"
-      ],
+      "choices": ["Which", "What", "Who"],
       "correctAnswer": "Which",
       "difficulty": "intermediate",
       "explanation": "「どちら」と尋ねるときはWhichを使います。Which～do you like?で「どの～が好きですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Which】 ← 正解\n  ✓ 正解理由: 日本語訳「どちらの本が好きですか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どちらの本が好きですか。」に合いません。\n\n❌ 【Who】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どちらの本が好きですか。」に合いません。",
@@ -121,11 +93,7 @@
       "type": "fillInBlank",
       "japanese": "何時に起きますか。",
       "sentence": "____ time do you get up?",
-      "choices": [
-        "What",
-        "When",
-        "Which"
-      ],
+      "choices": ["What", "When", "Which"],
       "correctAnswer": "What",
       "difficulty": "intermediate",
       "explanation": "「何時」はWhat timeで表します。What time do you～?で「何時に～しますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What】 ← 正解\n  ✓ 正解理由: 日本語訳「何時に起きますか。」から、この形が適切です。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「何時に起きますか。」に合いません。\n\n❌ 【Which】 ← 不正解\n  ✗ 不正解理由: 日本語訳「何時に起きますか。」に合いません。",
@@ -136,11 +104,7 @@
       "type": "fillInBlank",
       "japanese": "どこで昼食を食べますか。",
       "sentence": "____ do you eat lunch?",
-      "choices": [
-        "Where",
-        "When",
-        "What"
-      ],
+      "choices": ["Where", "When", "What"],
       "correctAnswer": "Where",
       "difficulty": "intermediate",
       "explanation": "「どこで」はWhereで尋ねります。Where do you～?で「どこで～しますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Where】 ← 正解\n  ✓ 正解理由: 日本語訳「どこで昼食を食べますか。」から、この形が適切です。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どこで昼食を食べますか。」に合いません。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どこで昼食を食べますか。」に合いません。",
@@ -153,11 +117,7 @@
       "type": "fillInBlank",
       "japanese": "何人の生徒がいますか。",
       "sentence": "____ many students are there?",
-      "choices": [
-        "How",
-        "What",
-        "Who"
-      ],
+      "choices": ["How", "What", "Who"],
       "correctAnswer": "How",
       "difficulty": "intermediate",
       "explanation": "「いくつ・何人」はHow manyで尋ねります。How many～are there?で「何人いますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How】 ← 正解\n  ✓ 正解理由: 日本語訳「何人の生徒がいますか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「何人の生徒がいますか。」に合いません。\n\n❌ 【Who】 ← 不正解\n  ✗ 不正解理由: 日本語訳「何人の生徒がいますか。」に合いません。",
@@ -168,11 +128,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は何色が好きですか。",
       "sentence": "____ color does she like?",
-      "choices": [
-        "What",
-        "Which",
-        "How"
-      ],
+      "choices": ["What", "Which", "How"],
       "correctAnswer": "What",
       "difficulty": "advanced",
       "explanation": "「何色」はWhat colorで表します。What color does～?で「何色が好きですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は何色が好きですか。」から、この形が適切です。\n\n❌ 【Which】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は何色が好きですか。」に合いません。\n\n❌ 【How】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は何色が好きですか。」に合いません。",
@@ -183,11 +139,7 @@
       "type": "fillInBlank",
       "japanese": "学校までどのくらいかかりますか。",
       "sentence": "____ long does it take to school?",
-      "choices": [
-        "How",
-        "What",
-        "When"
-      ],
+      "choices": ["How", "What", "When"],
       "correctAnswer": "How",
       "difficulty": "advanced",
       "explanation": "「どのくらい」はHow longで尋ねります。How long does it take?で「どのくらいかかりますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How】 ← 正解\n  ✓ 正解理由: 日本語訳「学校までどのくらいかかりますか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校までどのくらいかかりますか。」に合いません。\n\n❌ 【When】 ← 不正解\n  ✗ 不正解理由: 日本語訳「学校までどのくらいかかりますか。」に合いません。",
@@ -200,11 +152,7 @@
       "type": "fillInBlank",
       "japanese": "彼は誰と話していますか。",
       "sentence": "____ is he talking to?",
-      "choices": [
-        "Who",
-        "What",
-        "Where"
-      ],
+      "choices": ["Who", "What", "Where"],
       "correctAnswer": "Who",
       "difficulty": "advanced",
       "explanation": "「誰と」はWhoで尋ねります。Who is～talking to?で「誰と話していますか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Who】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は誰と話していますか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰と話していますか。」に合いません。\n\n❌ 【Where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は誰と話していますか。」に合いません。",
@@ -217,11 +165,7 @@
       "type": "fillInBlank",
       "japanese": "いくらですか。",
       "sentence": "____ much is it?",
-      "choices": [
-        "How",
-        "What",
-        "Which"
-      ],
+      "choices": ["How", "What", "Which"],
       "correctAnswer": "How",
       "difficulty": "advanced",
       "explanation": "「いくら」はHow muchで尋ねります。How much is it?で「いくらですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How】 ← 正解\n  ✓ 正解理由: 日本語訳「いくらですか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いくらですか。」に合いません。\n\n❌ 【Which】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いくらですか。」に合いません。",
@@ -232,11 +176,7 @@
       "type": "fillInBlank",
       "japanese": "あなたの誕生日はいつですか。",
       "sentence": "____ is your birthday?",
-      "choices": [
-        "When",
-        "What",
-        "Where"
-      ],
+      "choices": ["When", "What", "Where"],
       "correctAnswer": "When",
       "difficulty": "advanced",
       "explanation": "「いつ」と尋ねるときはWhenを使います。When is～?で「～はいつですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【When】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたの誕生日はいつですか。」から、この形が適切です。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの誕生日はいつですか。」に合いません。\n\n❌ 【Where】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの誕生日はいつですか。」に合いません。",
@@ -246,11 +186,7 @@
       "id": "g1-u4-so-001",
       "type": "sentenceOrdering",
       "japanese": "これは何ですか。",
-      "words": [
-        "this",
-        "what",
-        "is"
-      ],
+      "words": ["this", "what", "is"],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
       "explanation": "What is this?で「これは何ですか」です。疑問詞Whatを文頭にです。\n\n「これは何ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What is this?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -261,29 +197,20 @@
       "id": "g1-u4-so-002",
       "type": "sentenceOrdering",
       "japanese": "あなたは誰ですか。",
-      "words": [
-        "you",
-        "who",
-        "are"
-      ],
+      "words": ["you", "who", "are"],
       "correctAnswer": "Who are you?",
       "difficulty": "beginner",
       "explanation": "Who are you?で「あなたは誰ですか」です。疑問詞Whoを文頭にです。\n\n「あなたは誰ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Who are you?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Who are ～?",
       "wordCount": 4,
-      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. Who are you?",
+      "passage": "On Sunday, my family goes to the park. We take pictures and eat lunch there. ____ ____ ____?",
       "passageJapanese": "日曜日、家族で公園に行きます。写真を撮って、そこで昼ごはんを食べます。あなたは誰ですか。"
     },
     {
       "id": "g1-u4-so-003",
       "type": "sentenceOrdering",
       "japanese": "あなたはどこの出身ですか。",
-      "words": [
-        "from",
-        "you",
-        "where",
-        "are"
-      ],
+      "words": ["from", "you", "where", "are"],
       "correctAnswer": "Where are you from?",
       "difficulty": "beginner",
       "explanation": "Where are you from?で「どこの出身ですか」です。fromは最後にです。\n\n「あなたはどこの出身ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Where are you from?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -294,30 +221,20 @@
       "id": "g1-u4-so-004",
       "type": "sentenceOrdering",
       "japanese": "いつテニスをしますか。",
-      "words": [
-        "play",
-        "you",
-        "when",
-        "do",
-        "tennis"
-      ],
+      "words": ["play", "you", "when", "do", "tennis"],
       "correctAnswer": "When do you play tennis?",
       "difficulty": "beginner",
       "explanation": "When do you～?で「いつ～しますか」です。一般動詞の疑問文です。\n\n「いつテニスをしますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ When do you play tennis?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "When do you ～?",
       "wordCount": 6,
-      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. When do you play tennis?",
+      "passage": "I enjoy music. I listen to songs at home. Sometimes I sing with my sister. ____ ____ ____ ____ ____?",
       "passageJapanese": "音楽が好きです。家で歌を聞きます。ときどき妹と歌います。いつテニスをしますか。"
     },
     {
       "id": "g1-u4-so-005",
       "type": "sentenceOrdering",
       "japanese": "ご機嫌いかがですか。",
-      "words": [
-        "you",
-        "how",
-        "are"
-      ],
+      "words": ["you", "how", "are"],
       "correctAnswer": "How are you?",
       "difficulty": "beginner",
       "explanation": "How are you?で「元気ですか・ご機嫌いかがですか」です。基本の挨拶です。\n\n「ご機嫌いかがですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How are you?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -328,12 +245,7 @@
       "id": "g1-u4-so-006",
       "type": "sentenceOrdering",
       "japanese": "彼は何が好きですか。",
-      "words": [
-        "like",
-        "he",
-        "what",
-        "does"
-      ],
+      "words": ["like", "he", "what", "does"],
       "correctAnswer": "What does he like?",
       "difficulty": "intermediate",
       "explanation": "What does he～?で「彼は何を～しますか」です。三人称単数なのでdoesです。\n\n「彼は何が好きですか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What does he like?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -344,12 +256,7 @@
       "id": "g1-u4-so-007",
       "type": "sentenceOrdering",
       "japanese": "どこに住んでいますか。",
-      "words": [
-        "live",
-        "you",
-        "where",
-        "do"
-      ],
+      "words": ["live", "you", "where", "do"],
       "correctAnswer": "Where do you live?",
       "difficulty": "intermediate",
       "explanation": "Where do you～?で「どこで～しますか」です。住んでいる場所を尋ねります。\n\n「どこに住んでいますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Where do you live?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -360,15 +267,7 @@
       "id": "g1-u4-so-008",
       "type": "sentenceOrdering",
       "japanese": "何時に寝ますか。",
-      "words": [
-        "to",
-        "bed",
-        "you",
-        "what",
-        "time",
-        "do",
-        "go"
-      ],
+      "words": ["to", "bed", "you", "what", "time", "do", "go"],
       "correctAnswer": "What time do you go to bed?",
       "difficulty": "intermediate",
       "explanation": "What time do you～?で「何時に～しますか」です。go to bedで「寝る」です。\n\n「何時に寝ますか。」です。\n\n【文法ポイント】\n過去形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What time do you go to bed?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -379,12 +278,7 @@
       "id": "g1-u4-so-009",
       "type": "sentenceOrdering",
       "japanese": "これは誰のかばんですか。",
-      "words": [
-        "bag",
-        "whose",
-        "this",
-        "is"
-      ],
+      "words": ["bag", "whose", "this", "is"],
       "correctAnswer": "Whose bag is this?",
       "difficulty": "intermediate",
       "explanation": "Whose～is this?で「これは誰の～ですか」です。所有を尋ねります。\n\n「これは誰のかばんですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Whose bag is this?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -395,14 +289,7 @@
       "id": "g1-u4-so-010",
       "type": "sentenceOrdering",
       "japanese": "何人の兄弟がいますか。",
-      "words": [
-        "brothers",
-        "many",
-        "you",
-        "how",
-        "do",
-        "have"
-      ],
+      "words": ["brothers", "many", "you", "how", "do", "have"],
       "correctAnswer": "How many brothers do you have?",
       "difficulty": "intermediate",
       "explanation": "How many～do you have?で「何人～がいますか」です。数を尋ねります。\n\n「何人の兄弟がいますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How many brothers do you have?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -413,13 +300,7 @@
       "id": "g1-u4-so-011",
       "type": "sentenceOrdering",
       "japanese": "彼女は何色が好きですか。",
-      "words": [
-        "color",
-        "she",
-        "what",
-        "does",
-        "like"
-      ],
+      "words": ["color", "she", "what", "does", "like"],
       "correctAnswer": "What color does she like?",
       "difficulty": "advanced",
       "explanation": "What color does～?で「何色が好きですか」です。三人称単数なのでdoesです。\n\n「彼女は何色が好きですか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What color does she like?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -430,13 +311,7 @@
       "id": "g1-u4-so-012",
       "type": "sentenceOrdering",
       "japanese": "どちらのスポーツが好きですか。",
-      "words": [
-        "sport",
-        "you",
-        "which",
-        "do",
-        "like"
-      ],
+      "words": ["sport", "you", "which", "do", "like"],
       "correctAnswer": "Which sport do you like?",
       "difficulty": "advanced",
       "explanation": "Which～do you like?で「どちらの～が好きですか」です。選択を尋ねります。\n\n「どちらのスポーツが好きですか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Which sport do you like?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -447,35 +322,20 @@
       "id": "g1-u4-so-013",
       "type": "sentenceOrdering",
       "japanese": "駅までどのくらいかかりますか。",
-      "words": [
-        "long",
-        "it",
-        "how",
-        "does",
-        "take",
-        "to",
-        "the",
-        "station"
-      ],
+      "words": ["long", "it", "how", "does", "take", "to", "the", "station"],
       "correctAnswer": "How long does it take to the station?",
       "difficulty": "advanced",
       "explanation": "How long does it take to～?で「～までどのくらいかかりますか」です。\n\n「駅までどのくらいかかりますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How long does it take to the station?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How long does it take ～?",
       "wordCount": 9,
-      "passage": "We travel by train. The train is fast. I like looking out of the window. How long does it take to the station?",
+      "passage": "We travel by train. The train is fast. I like looking out of the window. ____ ____ ____ ____ ____ ____ ____ ____?",
       "passageJapanese": "電車で旅行します。電車は速いです。窓の外を見るのが好きです。駅までどのくらいかかりますか。"
     },
     {
       "id": "g1-u4-so-014",
       "type": "sentenceOrdering",
       "japanese": "彼は誰と勉強しますか。",
-      "words": [
-        "study",
-        "he",
-        "who",
-        "does",
-        "with"
-      ],
+      "words": ["study", "he", "who", "does", "with"],
       "correctAnswer": "Who does he study with?",
       "difficulty": "advanced",
       "explanation": "Who does he～with?で「誰と～しますか」です。withは最後にです。\n\n「彼は誰と勉強しますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Who does he study with?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -486,13 +346,7 @@
       "id": "g1-u4-so-015",
       "type": "sentenceOrdering",
       "japanese": "このペンはいくらですか。",
-      "words": [
-        "much",
-        "this",
-        "pen",
-        "how",
-        "is"
-      ],
+      "words": ["much", "this", "pen", "how", "is"],
       "correctAnswer": "How much is this pen?",
       "difficulty": "advanced",
       "explanation": "How much is～?で「～はいくらですか」です。値段を尋ねります。\n\n「このペンはいくらですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How much is this pen?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -505,11 +359,7 @@
       "japanese": "これは何ですか。",
       "originalSentence": "This is a pen.",
       "question": "「これは何ですか」の疑問文に書き換えなさい",
-      "choices": [
-        "What is this?",
-        "This is what?",
-        "What this is?"
-      ],
+      "choices": ["What is this?", "This is what?", "What this is?"],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
       "explanation": "What is this?で「これは何ですか」です。疑問詞Whatを文頭にです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What is this?】 ← 正解\n  ✓ 正解理由: 日本語訳「これは何ですか。」から、この形が適切です。\n\n❌ 【This is what?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは何ですか。」に合いません。\n\n❌ 【What this is?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは何ですか。」に合いません。",
@@ -521,11 +371,7 @@
       "japanese": "彼女は誰ですか。",
       "originalSentence": "She is my teacher.",
       "question": "「彼女は誰ですか」の疑問文に書き換えなさい",
-      "choices": [
-        "Who is she?",
-        "She is who?",
-        "Who she is?"
-      ],
+      "choices": ["Who is she?", "She is who?", "Who she is?"],
       "correctAnswer": "Who is she?",
       "difficulty": "beginner",
       "explanation": "Who is she?で「彼女は誰ですか」です。人を尋ねるときはWhoです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Who is she?】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は誰ですか。」から、この形が適切です。\n\n❌ 【She is who?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は誰ですか。」に合いません。\n\n❌ 【Who she is?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は誰ですか。」に合いません。",
@@ -537,11 +383,7 @@
       "japanese": "彼はどこで～しますか。",
       "originalSentence": "He lives in Tokyo.",
       "question": "「どこに住んでいますか」の疑問文に書き換えなさい",
-      "choices": [
-        "Where does he live?",
-        "He lives where?",
-        "Where he lives?"
-      ],
+      "choices": ["Where does he live?", "He lives where?", "Where he lives?"],
       "correctAnswer": "Where does he live?",
       "difficulty": "beginner",
       "explanation": "Where does he～?で「彼はどこで～しますか」です。場所を尋ねります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Where does he live?】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はどこで～しますか。」から、この形が適切です。\n\n❌ 【He lives where?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はどこで～しますか。」に合いません。\n\n❌ 【Where he lives?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はどこで～しますか。」に合いません。",
@@ -617,11 +459,7 @@
       "japanese": "どちらが好きですか。",
       "originalSentence": "I like the red one.",
       "question": "「どちらが好きですか」の疑問文に書き換えなさい",
-      "choices": [
-        "Which do you like?",
-        "You like which?",
-        "Which you like?"
-      ],
+      "choices": ["Which do you like?", "You like which?", "Which you like?"],
       "correctAnswer": "Which do you like?",
       "difficulty": "intermediate",
       "explanation": "Which do you like?で「どちらが好きですか」です。選択を尋ねります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Which do you like?】 ← 正解\n  ✓ 正解理由: 日本語訳「どちらが好きですか。」から、この形が適切です。\n\n❌ 【You like which?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どちらが好きですか。」に合いません。\n\n❌ 【Which you like?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「どちらが好きですか。」に合いません。",
@@ -729,11 +567,7 @@
       "japanese": "How oldへの変換。",
       "originalSentence": "She is twelve years old.",
       "question": "「何歳ですか」の疑問文に書き換えなさい",
-      "choices": [
-        "How old is she?",
-        "She is how old?",
-        "How old she is?"
-      ],
+      "choices": ["How old is she?", "She is how old?", "How old she is?"],
       "correctAnswer": "How old is she?",
       "difficulty": "advanced",
       "explanation": "How old is～?で「～は何歳ですか」です。年齢を尋ねります。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How old is she?】 ← 正解\n  ✓ 正解理由: 日本語訳「How oldへの変換。」から、この形が適切です。\n\n❌ 【She is how old?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How oldへの変換。」に合いません。\n\n❌ 【How old she is?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How oldへの変換。」に合いません。",
@@ -747,11 +581,7 @@
       "japanese": "あなたは何が好きですか。",
       "sentence": "What ____ you like?",
       "verb": "do",
-      "choices": [
-        "do",
-        "does",
-        "are"
-      ],
+      "choices": ["do", "does", "are"],
       "correctAnswer": "do",
       "difficulty": "beginner",
       "explanation": "一般動詞の疑問文はdo/doesを使います。youなのでdoです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは何が好きですか。」から、この形が適切です。\n\n❌ 【does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何が好きですか。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何が好きですか。」に合いません。",
@@ -763,11 +593,7 @@
       "japanese": "彼女はどこに住んでいますか。",
       "sentence": "Where ____ she live?",
       "verb": "does",
-      "choices": [
-        "does",
-        "do",
-        "is"
-      ],
+      "choices": ["does", "do", "is"],
       "correctAnswer": "does",
       "difficulty": "beginner",
       "explanation": "三人称単数の疑問文はdoesを使います。sheなのでdoesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女はどこに住んでいますか。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はどこに住んでいますか。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女はどこに住んでいますか。」に合いません。",
@@ -779,11 +605,7 @@
       "japanese": "あの男性は誰ですか。",
       "sentence": "Who ____ that man?",
       "verb": "is",
-      "choices": [
-        "is",
-        "are",
-        "do"
-      ],
+      "choices": ["is", "are", "do"],
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "be動詞の疑問文はbe動詞をそのまま使います。that manは単数なのでisです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「あの男性は誰ですか。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あの男性は誰ですか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あの男性は誰ですか。」に合いません。",
@@ -795,11 +617,7 @@
       "japanese": "彼らは何を欲しがっていますか。",
       "sentence": "What ____ these?",
       "verb": "are",
-      "choices": [
-        "are",
-        "is",
-        "do"
-      ],
+      "choices": ["are", "is", "do"],
       "correctAnswer": "are",
       "difficulty": "beginner",
       "explanation": "theseは複数なのでbe動詞はareです。What are these?で「これらは何ですか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは何を欲しがっていますか。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは何を欲しがっていますか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは何を欲しがっていますか。」に合いません。",
@@ -813,11 +631,7 @@
       "japanese": "彼はいつ起きますか。",
       "sentence": "When ____ he play soccer?",
       "verb": "does",
-      "choices": [
-        "does",
-        "do",
-        "is"
-      ],
+      "choices": ["does", "do", "is"],
       "correctAnswer": "does",
       "difficulty": "intermediate",
       "explanation": "三人称単数の疑問文はdoesを使います。heなのでdoesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はいつ起きますか。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はいつ起きますか。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はいつ起きますか。」に合いません。",
@@ -831,11 +645,7 @@
       "japanese": "あなたはどうやって学校へ行きますか。",
       "sentence": "How ____ you go to school?",
       "verb": "do",
-      "choices": [
-        "do",
-        "does",
-        "are"
-      ],
+      "choices": ["do", "does", "are"],
       "correctAnswer": "do",
       "difficulty": "intermediate",
       "explanation": "一般動詞の疑問文です。youなのでdoです。How do you～?で「どうやって～しますか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどうやって学校へ行きますか。」から、この形が適切です。\n\n❌ 【does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどうやって学校へ行きますか。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどうやって学校へ行きますか。」に合いません。",
@@ -849,11 +659,7 @@
       "japanese": "あなたの友達はどこ出身ですか。",
       "sentence": "Where ____ your friends from?",
       "verb": "are",
-      "choices": [
-        "are",
-        "is",
-        "do"
-      ],
+      "choices": ["are", "is", "do"],
       "correctAnswer": "are",
       "difficulty": "intermediate",
       "explanation": "friendsは複数なのでareです。Where are～from?で「～はどこ出身ですか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたの友達はどこ出身ですか。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの友達はどこ出身ですか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの友達はどこ出身ですか。」に合いません。",
@@ -867,11 +673,7 @@
       "japanese": "彼女は何時に起きますか。",
       "sentence": "What time ____ she get up?",
       "verb": "does",
-      "choices": [
-        "does",
-        "do",
-        "is"
-      ],
+      "choices": ["does", "do", "is"],
       "correctAnswer": "does",
       "difficulty": "advanced",
       "explanation": "三人称単数の疑問文です。sheなのでdoesです。What time does～?で「何時に～しますか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【does】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は何時に起きますか。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は何時に起きますか。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は何時に起きますか。」に合いません。",
@@ -883,11 +685,7 @@
       "japanese": "あなたは何冊の本を持っていますか。",
       "sentence": "How many ____ there in your family?",
       "verb": "are",
-      "choices": [
-        "are",
-        "is",
-        "do"
-      ],
+      "choices": ["are", "is", "do"],
       "correctAnswer": "are",
       "difficulty": "advanced",
       "explanation": "How many～are there?で「何人いますか」です。複数なのでareです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【are】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは何冊の本を持っていますか。」から、この形が適切です。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何冊の本を持っていますか。」に合いません。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何冊の本を持っていますか。」に合いません。",
@@ -899,11 +697,7 @@
       "japanese": "あなたはどちらのスポーツが好きですか。",
       "sentence": "Which sport ____ you like?",
       "verb": "do",
-      "choices": [
-        "do",
-        "does",
-        "are"
-      ],
+      "choices": ["do", "does", "are"],
       "correctAnswer": "do",
       "difficulty": "advanced",
       "explanation": "一般動詞の疑問文です。youなのでdoです。Which～do you like?で「どちらが好きですか」です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【do】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどちらのスポーツが好きですか。」から、この形が適切です。\n\n❌ 【does】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどちらのスポーツが好きですか。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどちらのスポーツが好きですか。」に合いません。",
@@ -924,11 +718,7 @@
           "text": "I have ____ notebook."
         }
       ],
-      "choices": [
-        "a",
-        "an",
-        "the"
-      ],
+      "choices": ["a", "an", "the"],
       "correctAnswer": "a",
       "difficulty": "beginner",
       "explanation": "What do you have?（何を持っていますか）に対する答えです。notebookは子音で始まるのでaです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【a】 ← 正解\n  用法: 不定冠詞（子音で始まる）\n  ニュアンス: 特定されていない一つ\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【an】 ← 不正解\n  用法: 不定冠詞（母音で始まる）\n  ニュアンス: 特定されていない一つ\n  ✗ 不正解理由: 日本語訳「Whatで尋ねる。」に合いません。\n\n❌ 【the】 ← 不正解\n  用法: 定冠詞（特定のもの）\n  ニュアンス: 話し手と聞き手が特定できる\n  ✗ 不正解理由: 日本語訳「Whatで尋ねる。」に合いません。",
@@ -949,11 +739,7 @@
           "text": "I'm ____ Japan."
         }
       ],
-      "choices": [
-        "from",
-        "in",
-        "at"
-      ],
+      "choices": ["from", "in", "at"],
       "correctAnswer": "from",
       "difficulty": "beginner",
       "explanation": "Where are you from?（どこ出身ですか）にはI'm from～で答えります。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【from】 ← 正解\n  ✓ 正解理由: 日本語訳「Whereで答える。」から、この形が適切です。\n\n❌ 【in】 ← 不正解\n  語源: 古英語 in\n  用法: 場所（空間内）、期間、状態\n  ニュアンス: 空間的・時間的内部\n  ✗ 不正解理由: 日本語訳「Whereで答える。」に合いません。\n\n❌ 【at】 ← 不正解\n  語源: 古英語 æt\n  用法: 場所（点）、時刻、状態\n  ニュアンス: 特定の地点・時刻\n  ✗ 不正解理由: 日本語訳「Whereで答える。」に合いません。",
@@ -974,11 +760,7 @@
           "text": "It's ____ May."
         }
       ],
-      "choices": [
-        "in",
-        "on",
-        "at"
-      ],
+      "choices": ["in", "on", "at"],
       "correctAnswer": "in",
       "difficulty": "intermediate",
       "explanation": "月を表すときは前置詞inを使います。in Mayで「5月に」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【in】 ← 正解\n  語源: 古英語 in\n  用法: 場所（空間内）、期間、状態\n  ニュアンス: 空間的・時間的内部\n  ✓ 正解理由: 文法的・意味的に最適です。\n\n❌ 【on】 ← 不正解\n  語源: 古英語 on\n  用法: 接触、曜日・日付、テーマ\n  ニュアンス: 物理的接触や特定の日\n  ✗ 不正解理由: 日本語訳「Whenで答える。」に合いません。\n\n❌ 【at】 ← 不正解\n  語源: 古英語 æt\n  用法: 場所（点）、時刻、状態\n  ニュアンス: 特定の地点・時刻\n  ✗ 不正解理由: 日本語訳「Whenで答える。」に合いません。",
@@ -999,11 +781,7 @@
           "text": "I have ____."
         }
       ],
-      "choices": [
-        "five",
-        "a five",
-        "the five"
-      ],
+      "choices": ["five", "a five", "the five"],
       "correctAnswer": "five",
       "difficulty": "intermediate",
       "explanation": "How many～?（いくつ）には数で答えります。fiveで「5冊」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【five】 ← 正解\n  ✓ 正解理由: 日本語訳「How manyで答える。」から、この形が適切です。\n\n❌ 【a five】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How manyで答える。」に合いません。\n\n❌ 【the five】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How manyで答える。」に合いません。",
@@ -1024,11 +802,7 @@
           "text": "It's ____ yen."
         }
       ],
-      "choices": [
-        "500",
-        "a 500",
-        "the 500"
-      ],
+      "choices": ["500", "a 500", "the 500"],
       "correctAnswer": "500",
       "difficulty": "advanced",
       "explanation": "How much is～?（いくらですか）には値段で答えります。500 yenで「500円」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【500】 ← 正解\n  ✓ 正解理由: 日本語訳「How muchで答える。」から、この形が適切です。\n\n❌ 【a 500】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How muchで答える。」に合いません。\n\n❌ 【the 500】 ← 不正解\n  ✗ 不正解理由: 日本語訳「How muchで答える。」に合いません。",
@@ -1039,11 +813,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは何歳ですか。",
       "sentence": "____ ____ are you?",
-      "choices": [
-        "How old",
-        "What old",
-        "How age"
-      ],
+      "choices": ["How old", "What old", "How age"],
       "correctAnswer": "How old",
       "difficulty": "beginner",
       "explanation": "How + 形容詞で「どのくらい~」と程度を尋ねる疑問文として覚えてください。How old = 「何歳」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How old】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは何歳ですか。」から、この形が適切です。\n\n❌ 【What old】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何歳ですか。」に合いません。\n\n❌ 【How age】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何歳ですか。」に合いません。",
@@ -1056,11 +826,7 @@
       "type": "fillInBlank",
       "japanese": "あなたの背はどのくらいですか。",
       "sentence": "____ ____ are you?",
-      "choices": [
-        "How tall",
-        "What tall",
-        "How height"
-      ],
+      "choices": ["How tall", "What tall", "How height"],
       "correctAnswer": "How tall",
       "difficulty": "beginner",
       "explanation": "How + 形容詞という疑問文の形として覚えてください。How tall = 「身長はどのくらい」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How tall】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたの背はどのくらいですか。」から、この形が適切です。\n\n❌ 【What tall】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの背はどのくらいですか。」に合いません。\n\n❌ 【How height】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの背はどのくらいですか。」に合いません。",
@@ -1070,20 +836,13 @@
       "id": "g1-u4-howadj-003",
       "type": "sentenceOrdering",
       "japanese": "東京までどのくらい遠いですか。",
-      "words": [
-        "how",
-        "far",
-        "is",
-        "it",
-        "to",
-        "Tokyo"
-      ],
+      "words": ["how", "far", "is", "it", "to", "Tokyo"],
       "correctAnswer": "How far is it to Tokyo?",
       "difficulty": "intermediate",
       "explanation": "How + 形容詞という疑問文として覚えてください。How far = 「どのくらい遠い」で距離を尋ねります。\n\n「東京までどのくらい遠いですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How far is it to Tokyo?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How far",
       "wordCount": 6,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. How far is it to Tokyo?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____ ____?",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。東京までどのくらい遠いですか。"
     },
     {
@@ -1101,11 +860,7 @@
           "text": "It's very fast."
         }
       ],
-      "choices": [
-        "How fast",
-        "What fast",
-        "How speed"
-      ],
+      "choices": ["How fast", "What fast", "How speed"],
       "correctAnswer": "How fast",
       "difficulty": "intermediate",
       "explanation": "How + 形容詞で程度を尋ねる疑問文として覚えてください。How fast = 「どのくらい速い」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How fast】 ← 正解\n  ✓ 正解理由: 日本語訳「この車はどのくらい速いですか。」から、この形が適切です。\n\n❌ 【What fast】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この車はどのくらい速いですか。」に合いません。\n\n❌ 【How speed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「この車はどのくらい速いですか。」に合いません。",
@@ -1115,19 +870,13 @@
       "id": "g1-u4-howadj-005",
       "type": "sentenceOrdering",
       "japanese": "この建物はどのくらい高いですか。",
-      "words": [
-        "how",
-        "high",
-        "is",
-        "this",
-        "building"
-      ],
+      "words": ["how", "high", "is", "this", "building"],
       "correctAnswer": "How high is this building?",
       "difficulty": "intermediate",
       "explanation": "How + 形容詞という疑問文として覚えてください。How high = 「どのくらい高い」で高さを尋ねります。\n\n「この建物はどのくらい高いですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How high is this building?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "How high",
       "wordCount": 5,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. How high is this building?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____ ____?",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。この建物はどのくらい高いですか。"
     }
   ]

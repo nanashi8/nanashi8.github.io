@@ -16,11 +16,7 @@
       "type": "fillInBlank",
       "japanese": "これは私のペンです。",
       "sentence": "____ is my pen.",
-      "choices": [
-        "This",
-        "That",
-        "These"
-      ],
+      "choices": ["This", "That", "These"],
       "correctAnswer": "This",
       "difficulty": "beginner",
       "explanation": "近くのもの（単数）を指すときはthisを使います。遠くはthat、複数はthese/thoseです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【This】 ← 正解\n  ✓ 正解理由: 日本語訳「これは私のペンです。」から、この形が適切です。\n\n❌ 【That】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは私のペンです。」に合いません。\n\n❌ 【These】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは私のペンです。」に合いません。",
@@ -31,11 +27,7 @@
       "type": "fillInBlank",
       "japanese": "あれは学校です。",
       "sentence": "____ is a school.",
-      "choices": [
-        "That",
-        "This",
-        "Those"
-      ],
+      "choices": ["That", "This", "Those"],
       "correctAnswer": "That",
       "difficulty": "beginner",
       "explanation": "遠くのもの（単数）を指すときはthatを使います。近くはthisです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【That】 ← 正解\n  ✓ 正解理由: 日本語訳「あれは学校です。」から、この形が適切です。\n\n❌ 【This】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれは学校です。」に合いません。\n\n❌ 【Those】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれは学校です。」に合いません。",
@@ -46,11 +38,7 @@
       "type": "fillInBlank",
       "japanese": "これらは本です。",
       "sentence": "____ are books.",
-      "choices": [
-        "These",
-        "This",
-        "Those"
-      ],
+      "choices": ["These", "This", "Those"],
       "correctAnswer": "These",
       "difficulty": "beginner",
       "explanation": "近くのもの（複数）を指すときはtheseを使います。be動詞もareになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【These】 ← 正解\n  ✓ 正解理由: 日本語訳「これらは本です。」から、この形が適切です。\n\n❌ 【This】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です。」に合いません。\n\n❌ 【Those】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です。」に合いません。",
@@ -63,11 +51,7 @@
       "type": "fillInBlank",
       "japanese": "あれらは車です。",
       "sentence": "____ are cars.",
-      "choices": [
-        "Those",
-        "That",
-        "These"
-      ],
+      "choices": ["Those", "That", "These"],
       "correctAnswer": "Those",
       "difficulty": "beginner",
       "explanation": "遠くのもの（複数）を指すときはthoseを使います。be動詞もareになります。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Those】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは車です。」から、この形が適切です。\n\n❌ 【That】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。\n\n❌ 【These】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。",
@@ -80,11 +64,7 @@
       "type": "fillInBlank",
       "japanese": "私は3冊の本を持っています。",
       "sentence": "I have three ____.",
-      "choices": [
-        "books",
-        "book",
-        "bookes"
-      ],
+      "choices": ["books", "book", "bookes"],
       "correctAnswer": "books",
       "difficulty": "beginner",
       "explanation": "複数を表すときは名詞に-sを付けます。threeは複数なので必ず-sです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【books】 ← 正解\n  ✓ 正解理由: 日本語訳「私は3冊の本を持っています。」から、この形が適切です。\n\n❌ 【book】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3冊の本を持っています。」に合いません。\n\n❌ 【bookes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は3冊の本を持っています。」に合いません。",
@@ -97,11 +77,7 @@
       "type": "fillInBlank",
       "japanese": "これは何ですか。",
       "sentence": "What ____ this?",
-      "choices": [
-        "is",
-        "are",
-        "am"
-      ],
+      "choices": ["is", "are", "am"],
       "correctAnswer": "is",
       "difficulty": "beginner",
       "explanation": "What is this?で「これは何ですか」です。thisは単数なのでisです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【is】 ← 正解\n  ✓ 正解理由: 日本語訳「これは何ですか。」から、この形が適切です。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは何ですか。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これは何ですか。」に合いません。",
@@ -112,11 +88,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は2人の兄弟がいます。",
       "sentence": "She has two ____.",
-      "choices": [
-        "brothers",
-        "brother",
-        "brotheres"
-      ],
+      "choices": ["brothers", "brother", "brotheres"],
       "correctAnswer": "brothers",
       "difficulty": "intermediate",
       "explanation": "twoは複数なので-sを付けます。brother→brothersです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【brothers】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は2人の兄弟がいます。」から、この形が適切です。\n\n❌ 【brother】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2人の兄弟がいます。」に合いません。\n\n❌ 【brotheres】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は2人の兄弟がいます。」に合いません。",
@@ -127,11 +99,7 @@
       "type": "fillInBlank",
       "japanese": "あれらは何ですか。",
       "sentence": "What are ____?",
-      "choices": [
-        "those",
-        "that",
-        "these"
-      ],
+      "choices": ["those", "that", "these"],
       "correctAnswer": "those",
       "difficulty": "intermediate",
       "explanation": "areと使うのはthese/thoseです。遠くを指すのでthoseです。What are those?で「あれらは何ですか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【those】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは何ですか。」から、この形が適切です。\n\n❌ 【that】 ← 不正解\n  語源: 古英語 þæt\n  用法: 人・物すべてに使える（制限用法）\n  ニュアンス: 口語で最も一般的。カンマ後は不可\n  ✗ 不正解理由: 文法的・文脈的に不適切です。\n\n❌ 【these】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは何ですか。」に合いません。",
@@ -142,11 +110,7 @@
       "type": "fillInBlank",
       "japanese": "私は多くの友達がいます。",
       "sentence": "I have many ____.",
-      "choices": [
-        "friends",
-        "friend",
-        "friendes"
-      ],
+      "choices": ["friends", "friend", "friendes"],
       "correctAnswer": "friends",
       "difficulty": "intermediate",
       "explanation": "manyは「たくさんの」で必ず複数形と使います。friend→friendsです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【friends】 ← 正解\n  ✓ 正解理由: 日本語訳「私は多くの友達がいます。」から、この形が適切です。\n\n❌ 【friend】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は多くの友達がいます。」に合いません。\n\n❌ 【friendes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は多くの友達がいます。」に合いません。",
@@ -157,11 +121,7 @@
       "type": "fillInBlank",
       "japanese": "彼は3匹の犬を飼っています。",
       "sentence": "He has three ____.",
-      "choices": [
-        "dogs",
-        "dog",
-        "doges"
-      ],
+      "choices": ["dogs", "dog", "doges"],
       "correctAnswer": "dogs",
       "difficulty": "intermediate",
       "explanation": "threeは複数を表します。dog→dogsです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【dogs】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は3匹の犬を飼っています。」から、この形が適切です。\n\n❌ 【dog】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3匹の犬を飼っています。」に合いません。\n\n❌ 【doges】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は3匹の犬を飼っています。」に合いません。",
@@ -172,11 +132,7 @@
       "type": "fillInBlank",
       "japanese": "これらはトマトです。",
       "sentence": "These are ____.",
-      "choices": [
-        "tomatoes",
-        "tomatos",
-        "tomato"
-      ],
+      "choices": ["tomatoes", "tomatos", "tomato"],
       "correctAnswer": "tomatoes",
       "difficulty": "advanced",
       "explanation": "-oで終わる名詞は-esを付けます。tomato→tomatoesです。potato→potatoesも同様です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【tomatoes】 ← 正解\n  ✓ 正解理由: 日本語訳「これらはトマトです。」から、この形が適切です。\n\n❌ 【tomatos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらはトマトです。」に合いません。\n\n❌ 【tomato】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらはトマトです。」に合いません。",
@@ -189,11 +145,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は多くの時計を持っています。",
       "sentence": "She has many ____.",
-      "choices": [
-        "watches",
-        "watchs",
-        "watch"
-      ],
+      "choices": ["watches", "watchs", "watch"],
       "correctAnswer": "watches",
       "difficulty": "advanced",
       "explanation": "-chで終わる名詞は-esを付けます。watch→watchesです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watches】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は多くの時計を持っています。」から、この形が適切です。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は多くの時計を持っています。」に合いません。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は多くの時計を持っています。」に合いません。",
@@ -204,11 +156,7 @@
       "type": "fillInBlank",
       "japanese": "私は2つの箱を持っています。",
       "sentence": "I have two ____.",
-      "choices": [
-        "boxes",
-        "boxs",
-        "box"
-      ],
+      "choices": ["boxes", "boxs", "box"],
       "correctAnswer": "boxes",
       "difficulty": "advanced",
       "explanation": "-xで終わる名詞は-esを付けます。box→boxesです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【boxes】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2つの箱を持っています。」から、この形が適切です。\n\n❌ 【boxs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの箱を持っています。」に合いません。\n\n❌ 【box】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの箱を持っています。」に合いません。",
@@ -219,11 +167,7 @@
       "type": "fillInBlank",
       "japanese": "彼は4人の子供がいます。",
       "sentence": "He has four ____.",
-      "choices": [
-        "children",
-        "childs",
-        "childrens"
-      ],
+      "choices": ["children", "childs", "childrens"],
       "correctAnswer": "children",
       "difficulty": "advanced",
       "explanation": "child（子供）の複数形はchildren（不規則変化）です。×childsは誤りです。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【children】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は4人の子供がいます。」から、この形が適切です。\n\n❌ 【childs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は4人の子供がいます。」に合いません。\n\n❌ 【childrens】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は4人の子供がいます。」に合いません。",
@@ -234,11 +178,7 @@
       "type": "fillInBlank",
       "japanese": "あれらは私の写真です。",
       "sentence": "Those are my ____.",
-      "choices": [
-        "photos",
-        "photoes",
-        "photo"
-      ],
+      "choices": ["photos", "photoes", "photo"],
       "correctAnswer": "photos",
       "difficulty": "advanced",
       "explanation": "photoの複数形はphotosです。-oで終わるが例外で-sのみです。piano→pianosも同様です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【photos】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは私の写真です。」から、この形が適切です。\n\n❌ 【photoes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは私の写真です。」に合いません。\n\n❌ 【photo】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは私の写真です。」に合いません。",
@@ -248,12 +188,7 @@
       "id": "g1-u3-so-001",
       "type": "sentenceOrdering",
       "japanese": "これは私のペンです。",
-      "words": [
-        "my",
-        "pen",
-        "this",
-        "is"
-      ],
+      "words": ["my", "pen", "this", "is"],
       "correctAnswer": "This is my pen.",
       "difficulty": "beginner",
       "explanation": "This is ～の基本語順です。近くの単数を指します。\n\n「これは私のペンです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ This is my pen.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -264,48 +199,33 @@
       "id": "g1-u3-so-002",
       "type": "sentenceOrdering",
       "japanese": "あれは学校です。",
-      "words": [
-        "school",
-        "a",
-        "that",
-        "is"
-      ],
+      "words": ["school", "a", "that", "is"],
       "correctAnswer": "That is a school.",
       "difficulty": "beginner",
       "explanation": "That is ～の基本語順です。遠くの単数を指します。\n\n「あれは学校です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is a school.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "That is ～",
       "wordCount": 4,
-      "passage": "We study English every day. We do homework after dinner. That is a school.",
+      "passage": "We study English every day. We do homework after dinner. ____ ____ ____ ____.",
       "passageJapanese": "毎日英語を勉強します。夕食の後で宿題をします。あれは学校です。"
     },
     {
       "id": "g1-u3-so-003",
       "type": "sentenceOrdering",
       "japanese": "これらは私の本です。",
-      "words": [
-        "books",
-        "my",
-        "are",
-        "these"
-      ],
+      "words": ["books", "my", "are", "these"],
       "correctAnswer": "These are my books.",
       "difficulty": "beginner",
       "explanation": "These are ～の語順です。近くの複数を指します。be動詞はareです。\n\n「これらは私の本です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are my books.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "These are ～",
       "wordCount": 4,
-      "passage": "My name is Ken. I live in Osaka with my family. I like English. These are my books.",
+      "passage": "My name is Ken. I live in Osaka with my family. I like English. ____ ____ ____ ____.",
       "passageJapanese": "ぼくの名前はケンです。家族と大阪に住んでいます。英語が好きです。これらは私の本です。"
     },
     {
       "id": "g1-u3-so-004",
       "type": "sentenceOrdering",
       "japanese": "あれらは新しい車です。",
-      "words": [
-        "new",
-        "cars",
-        "are",
-        "those"
-      ],
+      "words": ["new", "cars", "are", "those"],
       "correctAnswer": "Those are new cars.",
       "difficulty": "beginner",
       "explanation": "Those are ～の語順です。遠くの複数を指します。be動詞はareです。\n\n「あれらは新しい車です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Those are new cars.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -316,29 +236,20 @@
       "id": "g1-u3-so-005",
       "type": "sentenceOrdering",
       "japanese": "これは何ですか。",
-      "words": [
-        "this",
-        "what",
-        "is"
-      ],
+      "words": ["this", "what", "is"],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
       "explanation": "疑問詞What + is + this?の語順です。「これは何？」です。\n\n「これは何ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What is this?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "What is ～?",
       "wordCount": 4,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. What is this?",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____?",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。これは何ですか。"
     },
     {
       "id": "g1-u3-so-006",
       "type": "sentenceOrdering",
       "japanese": "私は4本のペンを持っています。",
-      "words": [
-        "pens",
-        "four",
-        "I",
-        "have"
-      ],
+      "words": ["pens", "four", "I", "have"],
       "correctAnswer": "I have four pens.",
       "difficulty": "intermediate",
       "explanation": "I have + 数 + 複数形の語順です。three booksで「3冊の本」です。\n\n「私は4本のペンを持っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I have four pens.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -349,11 +260,7 @@
       "id": "g1-u3-so-007",
       "type": "sentenceOrdering",
       "japanese": "これらは何ですか。",
-      "words": [
-        "are",
-        "what",
-        "these"
-      ],
+      "words": ["are", "what", "these"],
       "correctAnswer": "What are these?",
       "difficulty": "intermediate",
       "explanation": "What are ～?の語順です。複数を尋ねるときはareです。\n\n「これらは何ですか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ What are these?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -364,12 +271,7 @@
       "id": "g1-u3-so-008",
       "type": "sentenceOrdering",
       "japanese": "彼女は2人の兄弟がいます。",
-      "words": [
-        "brothers",
-        "two",
-        "she",
-        "has"
-      ],
+      "words": ["brothers", "two", "she", "has"],
       "correctAnswer": "She has two brothers.",
       "difficulty": "intermediate",
       "explanation": "She has + 数 + 複数形です。two brothersで「2人の兄弟」です。\n\n「彼女は2人の兄弟がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has two brothers.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -380,11 +282,7 @@
       "id": "g1-u3-so-009",
       "type": "sentenceOrdering",
       "japanese": "これらはりんごです。",
-      "words": [
-        "apples",
-        "are",
-        "these"
-      ],
+      "words": ["apples", "are", "these"],
       "correctAnswer": "These are apples.",
       "difficulty": "intermediate",
       "explanation": "These are ～の語順です。apple→applesの複数形です。\n\n「これらはりんごです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are apples.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -395,30 +293,20 @@
       "id": "g1-u3-so-010",
       "type": "sentenceOrdering",
       "japanese": "彼女は多くの友達がいます。",
-      "words": [
-        "friends",
-        "many",
-        "she",
-        "has"
-      ],
+      "words": ["friends", "many", "she", "has"],
       "correctAnswer": "She has many friends.",
       "difficulty": "intermediate",
       "explanation": "I have many ～の語順です。manyは必ず複数形と使います。\n\n「彼女は多くの友達がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has many friends.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "I have many ～",
       "wordCount": 4,
-      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. She has many friends.",
+      "passage": "Emi is a student. She goes to school by bike. After school, she plays with friends. ____ ____ ____ ____.",
       "passageJapanese": "エミは学生です。自転車で学校に行きます。放課後、友達と遊びます。彼女は多くの友達がいます。"
     },
     {
       "id": "g1-u3-so-011",
       "type": "sentenceOrdering",
       "japanese": "あれは私の学校です。",
-      "words": [
-        "my",
-        "school",
-        "that",
-        "is"
-      ],
+      "words": ["my", "school", "that", "is"],
       "correctAnswer": "That is my school.",
       "difficulty": "intermediate",
       "explanation": "That is my ～の語順です。所有格myを使います。\n\n「あれは私の学校です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ That is my school.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -429,12 +317,7 @@
       "id": "g1-u3-so-012",
       "type": "sentenceOrdering",
       "japanese": "これらは赤いトマトです。",
-      "words": [
-        "red",
-        "tomatoes",
-        "are",
-        "these"
-      ],
+      "words": ["red", "tomatoes", "are", "these"],
       "correctAnswer": "These are red tomatoes.",
       "difficulty": "advanced",
       "explanation": "tomato→tomatoesの複数形（-o→-es）です。\n\n「これらは赤いトマトです。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ These are red tomatoes.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -445,12 +328,7 @@
       "id": "g1-u3-so-013",
       "type": "sentenceOrdering",
       "japanese": "彼は2人の子供がいます。",
-      "words": [
-        "children",
-        "two",
-        "he",
-        "has"
-      ],
+      "words": ["children", "two", "he", "has"],
       "correctAnswer": "He has two children.",
       "difficulty": "advanced",
       "explanation": "child→childrenの不規則複数形です。\n\n「彼は2人の子供がいます。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He has two children.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -461,12 +339,7 @@
       "id": "g1-u3-so-014",
       "type": "sentenceOrdering",
       "japanese": "彼女は3つの箱を持っています。",
-      "words": [
-        "boxes",
-        "three",
-        "she",
-        "has"
-      ],
+      "words": ["boxes", "three", "she", "has"],
       "correctAnswer": "She has three boxes.",
       "difficulty": "advanced",
       "explanation": "box→boxesの複数形（-x→-es）です。\n\n「彼女は3つの箱を持っています。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She has three boxes.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -477,12 +350,7 @@
       "id": "g1-u3-so-015",
       "type": "sentenceOrdering",
       "japanese": "あれらは彼女の時計です。",
-      "words": [
-        "her",
-        "watches",
-        "are",
-        "those"
-      ],
+      "words": ["her", "watches", "are", "those"],
       "correctAnswer": "Those are her watches.",
       "difficulty": "advanced",
       "explanation": "watch→watchesの複数形（-ch→-es）です。所有格herを使います。\n\n「あれらは彼女の時計です。」です。\n\n【文法ポイント】\nbe動詞の現在形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Those are her watches.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -495,11 +363,7 @@
       "japanese": "これらは本です。",
       "originalSentence": "This is a book.",
       "question": "複数形に書き換えなさい",
-      "choices": [
-        "These are books.",
-        "This are books.",
-        "These is books."
-      ],
+      "choices": ["These are books.", "This are books.", "These is books."],
       "correctAnswer": "These are books.",
       "difficulty": "beginner",
       "explanation": "this→these、is→are、a book→booksのすべてを複数形に変えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【These are books.】 ← 正解\n  ✓ 正解理由: 日本語訳「これらは本です。」から、この形が適切です。\n\n❌ 【This are books.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です。」に合いません。\n\n❌ 【These is books.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは本です。」に合いません。",
@@ -511,11 +375,7 @@
       "japanese": "あれらは車です。",
       "originalSentence": "That is a car.",
       "question": "複数形に書き換えなさい",
-      "choices": [
-        "Those are cars.",
-        "That are cars.",
-        "Those is cars."
-      ],
+      "choices": ["Those are cars.", "That are cars.", "Those is cars."],
       "correctAnswer": "Those are cars.",
       "difficulty": "beginner",
       "explanation": "that→those、is→are、a car→carsのすべてを複数形に変えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Those are cars.】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは車です。」から、この形が適切です。\n\n❌ 【That are cars.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。\n\n❌ 【Those is cars.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。",
@@ -527,11 +387,7 @@
       "japanese": "これはペンです。",
       "originalSentence": "These are pens.",
       "question": "単数形に書き換えなさい",
-      "choices": [
-        "This is a pen.",
-        "These is a pen.",
-        "This are a pen."
-      ],
+      "choices": ["This is a pen.", "These is a pen.", "This are a pen."],
       "correctAnswer": "This is a pen.",
       "difficulty": "beginner",
       "explanation": "these→this、are→is、pens→a penのすべてを単数形に変えます。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【This is a pen.】 ← 正解\n  ✓ 正解理由: 日本語訳「これはペンです。」から、この形が適切です。\n\n❌ 【These is a pen.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはペンです。」に合いません。\n\n❌ 【This are a pen.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これはペンです。」に合いません。",
@@ -543,11 +399,7 @@
       "japanese": "あれは私のバッグです。",
       "originalSentence": "This is my bag.",
       "question": "「あれは」に変えて書き換えなさい",
-      "choices": [
-        "That is my bag.",
-        "Those is my bag.",
-        "That are my bag."
-      ],
+      "choices": ["That is my bag.", "Those is my bag.", "That are my bag."],
       "correctAnswer": "That is my bag.",
       "difficulty": "intermediate",
       "explanation": "this（これ）→that（あれ）に変えます。単数なのでisです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【That is my bag.】 ← 正解\n  ✓ 正解理由: 日本語訳「あれは私のバッグです。」から、この形が適切です。\n\n❌ 【Those is my bag.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれは私のバッグです。」に合いません。\n\n❌ 【That are my bag.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれは私のバッグです。」に合いません。",
@@ -559,11 +411,7 @@
       "japanese": "これらは何ですか。",
       "originalSentence": "These are dogs.",
       "question": "「これらは何ですか」の疑問文に書き換えなさい",
-      "choices": [
-        "What are these?",
-        "What these are?",
-        "These are what?"
-      ],
+      "choices": ["What are these?", "What these are?", "These are what?"],
       "correctAnswer": "What are these?",
       "difficulty": "intermediate",
       "explanation": "What are these?で「これらは何ですか」です。疑問詞Whatを文頭に、複数なのでareです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What are these?】 ← 正解\n  ✓ 正解理由: 日本語訳「これらは何ですか。」から、この形が適切です。\n\n❌ 【What these are?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは何ですか。」に合いません。\n\n❌ 【These are what?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「これらは何ですか。」に合いません。",
@@ -575,11 +423,7 @@
       "japanese": "あれらは何ですか。",
       "originalSentence": "Those are books.",
       "question": "「あれらは何ですか」の疑問文に書き換えなさい",
-      "choices": [
-        "What are those?",
-        "What those are?",
-        "Those are what?"
-      ],
+      "choices": ["What are those?", "What those are?", "Those are what?"],
       "correctAnswer": "What are those?",
       "difficulty": "intermediate",
       "explanation": "What are those?で「あれらは何ですか」です。複数なのでareです。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What are those?】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは何ですか。」から、この形が適切です。\n\n❌ 【What those are?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは何ですか。」に合いません。\n\n❌ 【Those are what?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは何ですか。」に合いません。",
@@ -641,11 +485,7 @@
       "japanese": "私は2つの箱を持っています。",
       "originalSentence": "I have a box.",
       "question": "「2つの」を加えて書き換えなさい",
-      "choices": [
-        "I have two boxes.",
-        "I have two boxs.",
-        "I have two box."
-      ],
+      "choices": ["I have two boxes.", "I have two boxs.", "I have two box."],
       "correctAnswer": "I have two boxes.",
       "difficulty": "advanced",
       "explanation": "box→boxes（-x→-es）です。twoは複数形と使います。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I have two boxes.】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2つの箱を持っています。」から、この形が適切です。\n\n❌ 【I have two boxs.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの箱を持っています。」に合いません。\n\n❌ 【I have two box.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの箱を持っています。」に合いません。",
@@ -739,11 +579,7 @@
       "japanese": "私たちは3冊の本を持っています。",
       "sentence": "We have three ____.",
       "verb": "book",
-      "choices": [
-        "books",
-        "book",
-        "bookes"
-      ],
+      "choices": ["books", "book", "bookes"],
       "correctAnswer": "books",
       "difficulty": "beginner",
       "explanation": "通常の名詞は-sを付けて複数形にすります。book→booksです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【books】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは3冊の本を持っています。」から、この形が適切です。\n\n❌ 【book】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは3冊の本を持っています。」に合いません。\n\n❌ 【bookes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは3冊の本を持っています。」に合いません。",
@@ -755,11 +591,7 @@
       "japanese": "あれらは車です。",
       "sentence": "Those are ____.",
       "verb": "car",
-      "choices": [
-        "cars",
-        "car",
-        "cares"
-      ],
+      "choices": ["cars", "car", "cares"],
       "correctAnswer": "cars",
       "difficulty": "beginner",
       "explanation": "car→carsの規則変化です。-sを付けるだけです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cars】 ← 正解\n  ✓ 正解理由: 日本語訳「あれらは車です。」から、この形が適切です。\n\n❌ 【car】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。\n\n❌ 【cares】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あれらは車です。」に合いません。",
@@ -771,11 +603,7 @@
       "japanese": "彼らは2つの箱を持っています。",
       "sentence": "They have two ____.",
       "verb": "box",
-      "choices": [
-        "boxes",
-        "boxs",
-        "box"
-      ],
+      "choices": ["boxes", "boxs", "box"],
       "correctAnswer": "boxes",
       "difficulty": "intermediate",
       "explanation": "-xで終わる名詞は-esを付けます。box→boxesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【boxes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは2つの箱を持っています。」から、この形が適切です。\n\n❌ 【boxs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは2つの箱を持っています。」に合いません。\n\n❌ 【box】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは2つの箱を持っています。」に合いません。",
@@ -787,11 +615,7 @@
       "japanese": "彼はたくさんの腕時計を持っています。",
       "sentence": "He has many ____.",
       "verb": "watch",
-      "choices": [
-        "watches",
-        "watchs",
-        "watch"
-      ],
+      "choices": ["watches", "watchs", "watch"],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
       "explanation": "-chで終わる名詞は-esを付けます。watch→watchesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watches】 ← 正解\n  ✓ 正解理由: 日本語訳「彼はたくさんの腕時計を持っています。」から、この形が適切です。\n\n❌ 【watchs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はたくさんの腕時計を持っています。」に合いません。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼はたくさんの腕時計を持っています。」に合いません。",
@@ -805,11 +629,7 @@
       "japanese": "私はトマトが好きです。",
       "sentence": "I like ____.",
       "verb": "tomato",
-      "choices": [
-        "tomatoes",
-        "tomatos",
-        "tomato"
-      ],
+      "choices": ["tomatoes", "tomatos", "tomato"],
       "correctAnswer": "tomatoes",
       "difficulty": "intermediate",
       "explanation": "-oで終わる名詞は-esを付けます。tomato→tomatoesです。potato→potatoesも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【tomatoes】 ← 正解\n  ✓ 正解理由: 日本語訳「私はトマトが好きです。」から、この形が適切です。\n\n❌ 【tomatos】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はトマトが好きです。」に合いません。\n\n❌ 【tomato】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私はトマトが好きです。」に合いません。",
@@ -821,11 +641,7 @@
       "japanese": "私は2つの都市を訪れました。",
       "sentence": "I visited two ____.",
       "verb": "city",
-      "choices": [
-        "cities",
-        "citys",
-        "city"
-      ],
+      "choices": ["cities", "citys", "city"],
       "correctAnswer": "cities",
       "difficulty": "intermediate",
       "explanation": "子音+yで終わる名詞はyをiに変えて-esを付けます。city→citiesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【cities】 ← 正解\n  ✓ 正解理由: 日本語訳「私は2つの都市を訪れました。」から、この形が適切です。\n\n❌ 【citys】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの都市を訪れました。」に合いません。\n\n❌ 【city】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は2つの都市を訪れました。」に合いません。",
@@ -839,11 +655,7 @@
       "japanese": "彼らは3人の子供がいます。",
       "sentence": "They have three ____.",
       "verb": "child",
-      "choices": [
-        "children",
-        "childs",
-        "child"
-      ],
+      "choices": ["children", "childs", "child"],
       "correctAnswer": "children",
       "difficulty": "advanced",
       "explanation": "child→children（不規則変化）です。最重要の不規則複数形です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【children】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは3人の子供がいます。」から、この形が適切です。\n\n❌ 【childs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは3人の子供がいます。」に合いません。\n\n❌ 【child】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは3人の子供がいます。」に合いません。",
@@ -855,11 +667,7 @@
       "japanese": "私たちは2台のピアノを持っています。",
       "sentence": "We have two ____.",
       "verb": "piano",
-      "choices": [
-        "pianos",
-        "pianoes",
-        "piano"
-      ],
+      "choices": ["pianos", "pianoes", "piano"],
       "correctAnswer": "pianos",
       "difficulty": "advanced",
       "explanation": "piano→pianos（-oで終わるが例外で-sのみ）です。photo→photosも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【pianos】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは2台のピアノを持っています。」から、この形が適切です。\n\n❌ 【pianoes】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2台のピアノを持っています。」に合いません。\n\n❌ 【piano】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは2台のピアノを持っています。」に合いません。",
@@ -873,11 +681,7 @@
       "japanese": "彼女は皿を洗います。",
       "sentence": "She washes the ____.",
       "verb": "dish",
-      "choices": [
-        "dishes",
-        "dishs",
-        "dish"
-      ],
+      "choices": ["dishes", "dishs", "dish"],
       "correctAnswer": "dishes",
       "difficulty": "advanced",
       "explanation": "-shで終わる名詞は-esを付けます。dish→dishesです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【dishes】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は皿を洗います。」から、この形が適切です。\n\n❌ 【dishs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は皿を洗います。」に合いません。\n\n❌ 【dish】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は皿を洗います。」に合いません。",
@@ -889,11 +693,7 @@
       "japanese": "その木はたくさんの葉を持っています。",
       "sentence": "The tree has many ____.",
       "verb": "leaf",
-      "choices": [
-        "leaves",
-        "leafs",
-        "leaf"
-      ],
+      "choices": ["leaves", "leafs", "leaf"],
       "correctAnswer": "leaves",
       "difficulty": "advanced",
       "explanation": "-fで終わる名詞はfをvに変えて-esを付けます。leaf→leavesです。knife→knivesも同様です。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【leaves】 ← 正解\n  ✓ 正解理由: 日本語訳「その木はたくさんの葉を持っています。」から、この形が適切です。\n\n❌ 【leafs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その木はたくさんの葉を持っています。」に合いません。\n\n❌ 【leaf】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その木はたくさんの葉を持っています。」に合いません。",
@@ -916,11 +716,7 @@
           "text": "____ is my notebook."
         }
       ],
-      "choices": [
-        "This",
-        "That",
-        "These"
-      ],
+      "choices": ["This", "That", "These"],
       "correctAnswer": "This",
       "difficulty": "beginner",
       "explanation": "What is this?（これは何？）に対する答えです。近くの単数なのでThisです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【This】 ← 正解\n  ✓ 正解理由: 日本語訳「近くのものを指す。」から、この形が適切です。\n\n❌ 【That】 ← 不正解\n  ✗ 不正解理由: 日本語訳「近くのものを指す。」に合いません。\n\n❌ 【These】 ← 不正解\n  ✗ 不正解理由: 日本語訳「近くのものを指す。」に合いません。",
@@ -943,11 +739,7 @@
           "text": "____ are my bags."
         }
       ],
-      "choices": [
-        "Those",
-        "That",
-        "These"
-      ],
+      "choices": ["Those", "That", "These"],
       "correctAnswer": "Those",
       "difficulty": "beginner",
       "explanation": "What are those?（あれらは何？）に対する答えです。遠くの複数なのでThoseです。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Those】 ← 正解\n  ✓ 正解理由: 日本語訳「遠くのものを尋ねる。」から、この形が適切です。\n\n❌ 【That】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遠くのものを尋ねる。」に合いません。\n\n❌ 【These】 ← 不正解\n  ✗ 不正解理由: 日本語訳「遠くのものを尋ねる。」に合いません。",
@@ -968,11 +760,7 @@
           "text": "I have ____ books."
         }
       ],
-      "choices": [
-        "five",
-        "a five",
-        "fives"
-      ],
+      "choices": ["five", "a five", "fives"],
       "correctAnswer": "five",
       "difficulty": "intermediate",
       "explanation": "How many～?（いくつ？）に数で答えります。数詞は複数形の前に置きます。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【five】 ← 正解\n  ✓ 正解理由: 日本語訳「数を答える。」から、この形が適切です。\n\n❌ 【a five】 ← 不正解\n  ✗ 不正解理由: 日本語訳「数を答える。」に合いません。\n\n❌ 【fives】 ← 不正解\n  ✗ 不正解理由: 日本語訳「数を答える。」に合いません。",
@@ -993,11 +781,7 @@
           "text": "Yes, ____ are."
         }
       ],
-      "choices": [
-        "they",
-        "these",
-        "it"
-      ],
+      "choices": ["they", "these", "it"],
       "correctAnswer": "they",
       "difficulty": "intermediate",
       "explanation": "Are these～?に対する答えです。these/thoseはtheyで受けります。Yes, they are.で答えります。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【they】 ← 正解\n  ✓ 正解理由: 日本語訳「複数のものについて話す。」から、この形が適切です。\n\n❌ 【these】 ← 不正解\n  ✗ 不正解理由: 日本語訳「複数のものについて話す。」に合いません。\n\n❌ 【it】 ← 不正解\n  ✗ 不正解理由: 日本語訳「複数のものについて話す。」に合いません。",
@@ -1018,11 +802,7 @@
           "text": "Yes, I have two ____."
         }
       ],
-      "choices": [
-        "children",
-        "childs",
-        "child"
-      ],
+      "choices": ["children", "childs", "child"],
       "correctAnswer": "children",
       "difficulty": "advanced",
       "explanation": "child（子供）の複数形はchildren（不規則）です。twoは複数形と使います。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【children】 ← 正解\n  ✓ 正解理由: 日本語訳「はい、私は2人の子供がいます。」から、この形が適切です。\n\n❌ 【childs】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、私は2人の子供がいます。」に合いません。\n\n❌ 【child】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、私は2人の子供がいます。」に合いません。",
@@ -1033,11 +813,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは何冊の本を持っていますか。",
       "sentence": "____ ____ books do you have?",
-      "choices": [
-        "How many",
-        "How much",
-        "What"
-      ],
+      "choices": ["How many", "How much", "What"],
       "correctAnswer": "How many",
       "difficulty": "beginner",
       "explanation": "How many + 複数名詞で「いくつの~」と数を尋ねる疑問文として覚えてください。可算名詞の数を聞く時に使います。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How many】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは何冊の本を持っていますか。」から、この形が適切です。\n\n❌ 【How much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何冊の本を持っていますか。」に合いません。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは何冊の本を持っていますか。」に合いません。",
@@ -1047,14 +823,7 @@
       "id": "g1-u3-howmany-002",
       "type": "sentenceOrdering",
       "japanese": "あなたには何人の兄弟がいますか。",
-      "words": [
-        "how",
-        "many",
-        "brothers",
-        "do",
-        "you",
-        "have"
-      ],
+      "words": ["how", "many", "brothers", "do", "you", "have"],
       "correctAnswer": "How many brothers do you have?",
       "difficulty": "beginner",
       "explanation": "How many + 複数名詞という疑問文の語順として覚えてください。「何人の兄弟」です。\n\n「あなたには何人の兄弟がいますか。」です。\n\n【文法ポイント】\n疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How many brothers do you have?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1066,11 +835,7 @@
       "type": "fillInBlank",
       "japanese": "教室には何人の生徒がいますか。",
       "sentence": "How many ____ are there in the classroom?",
-      "choices": [
-        "students",
-        "student",
-        "a student"
-      ],
+      "choices": ["students", "student", "a student"],
       "correctAnswer": "students",
       "difficulty": "beginner",
       "explanation": "How manyの後は必ず複数形の名詞を使うことを覚えてください。studentsが正解です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【students】 ← 正解\n  ✓ 正解理由: 日本語訳「教室には何人の生徒がいますか。」から、この形が適切です。\n\n❌ 【student】 ← 不正解\n  ✗ 不正解理由: 日本語訳「教室には何人の生徒がいますか。」に合いません。\n\n❌ 【a student】 ← 不正解\n  ✗ 不正解理由: 日本語訳「教室には何人の生徒がいますか。」に合いません。",
@@ -1091,11 +856,7 @@
           "text": "I want three apples."
         }
       ],
-      "choices": [
-        "How many",
-        "How much",
-        "What"
-      ],
+      "choices": ["How many", "How much", "What"],
       "correctAnswer": "How many",
       "difficulty": "beginner",
       "explanation": "How many + 複数名詞で数を尋ねる疑問文として覚えてください。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【How many】 ← 正解\n  ✓ 正解理由: 日本語訳「何個のりんごが欲しいですか。」から、この形が適切です。\n\n❌ 【How much】 ← 不正解\n  ✗ 不正解理由: 日本語訳「何個のりんごが欲しいですか。」に合いません。\n\n❌ 【What】 ← 不正解\n  ✗ 不正解理由: 日本語訳「何個のりんごが欲しいですか。」に合いません。",
@@ -1105,16 +866,7 @@
       "id": "g1-u3-howmany-005",
       "type": "sentenceOrdering",
       "japanese": "テーブルの上に何本のペンがありますか。",
-      "words": [
-        "how",
-        "many",
-        "pens",
-        "are",
-        "there",
-        "on",
-        "the",
-        "table"
-      ],
+      "words": ["how", "many", "pens", "are", "there", "on", "the", "table"],
       "correctAnswer": "How many pens are there on the table?",
       "difficulty": "intermediate",
       "explanation": "How many + 複数名詞 + are there で「~がいくつありますか」という疑問文として覚えてください。\n\n「テーブルの上に何本のペンがありますか。」です。\n\n【文法ポイント】\nbe動詞の現在形、疑問文\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ How many pens are there on the table?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",

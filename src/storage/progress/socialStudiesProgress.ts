@@ -13,7 +13,7 @@ const STORAGE_KEY = 'social-studies-progress';
 /**
  * 社会科進捗データ全体
  */
-interface SocialStudiesProgressData {
+export interface SocialStudiesProgressData {
   termProgress: Record<string, SocialStudiesProgress>;
   lastUpdated: number;
   version: number;

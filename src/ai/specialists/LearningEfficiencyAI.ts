@@ -28,7 +28,7 @@ export class LearningEfficiencyAI {
    */
   calculateOverallMetrics(
     wordProgress: Record<string, WordProgress>,
-    recentHistory: LearningHistoryEntry[]
+    _recentHistory: LearningHistoryEntry[]
   ): LearningEfficiencyMetrics {
     const allWords = Object.values(wordProgress);
 
@@ -58,8 +58,7 @@ export class LearningEfficiencyAI {
 
     // 平均試行回数
     const totalAttempts = allWords.reduce((sum, wp) => sum + (wp.totalAttempts ?? 0), 0);
-    const averageAttempts =
-      masteredWords.length > 0 ? totalAttempts / masteredWords.length : 0;
+    const averageAttempts = masteredWords.length > 0 ? totalAttempts / masteredWords.length : 0;
 
     // 効率スコア（0-100）
     const efficiencyScore = this.calculateEfficiencyScore({
@@ -329,7 +328,7 @@ export class LearningEfficiencyAI {
         // 未着手だが得意分野 → 高優先度
         reason = `${cluster.clusterName}分野は得意です。新しい単語を覚えやすいでしょう`;
         priority = 80;
-        expectedRetentionRate = 0.70;
+        expectedRetentionRate = 0.7;
       } else if (masteredRate >= 0.5) {
         // 半分定着済み → 中優先度
         reason = `${cluster.clusterName}分野は半分定着しています。もう一息です`;
@@ -339,12 +338,12 @@ export class LearningEfficiencyAI {
         // 苦手分野 → 低優先度（但し重要）
         reason = `${cluster.clusterName}分野は苦手ですが、いもづる式学習で克服できます`;
         priority = 40;
-        expectedRetentionRate = 0.50;
+        expectedRetentionRate = 0.5;
       } else {
         // 中間的な分野
         reason = `${cluster.clusterName}分野はバランスよく学習できます`;
         priority = 55;
-        expectedRetentionRate = 0.60;
+        expectedRetentionRate = 0.6;
       }
 
       recommendations.push({

@@ -224,10 +224,49 @@ if (layoutFiles.length > 0) {
     let layoutChanges = [];
     const diffLines = diff.split('\n');
 
+    // フォーマッタ等による「空白のみの差分」をレイアウト変更として誤検出しない
+    const normalizeDiffLine = (l) => l.slice(1).replace(/\s+/g, ' ').trim();
+    const removedNormalized = new Set();
+    const addedNormalized = new Set();
+
+    // className の値が同一で、JSXの折り返し/整形だけが変わったケースを除外
+    const classNameValuePattern = /className=["']([^"']+)["']/;
+    const normalizeClassNameValue = (v) => v.replace(/\s+/g, ' ').trim();
+    const removedClassNames = new Set();
+    const addedClassNames = new Set();
+
+    diffLines.forEach((line) => {
+      if (!line.startsWith('-') && !line.startsWith('+')) return;
+      if (line.startsWith('---') || line.startsWith('+++')) return;
+      const normalized = normalizeDiffLine(line);
+      if (!normalized) return;
+      if (line.startsWith('-')) removedNormalized.add(normalized);
+      if (line.startsWith('+')) addedNormalized.add(normalized);
+
+      const m = line.match(classNameValuePattern);
+      if (m) {
+        const classValue = normalizeClassNameValue(m[1]);
+        if (line.startsWith('-')) removedClassNames.add(classValue);
+        if (line.startsWith('+')) addedClassNames.add(classValue);
+      }
+    });
+
     diffLines.forEach((line, index) => {
       // 削除行または追加行のみチェック
       if (!line.startsWith('-') && !line.startsWith('+')) return;
       if (line.startsWith('---') || line.startsWith('+++')) return;
+
+      // 反対側に同一内容（空白正規化後）が存在する場合は、空白差分とみなしてスキップ
+      const normalized = normalizeDiffLine(line);
+      if (line.startsWith('-') && addedNormalized.has(normalized)) return;
+      if (line.startsWith('+') && removedNormalized.has(normalized)) return;
+
+      // className の値が両側に同一で存在する場合は、整形による差分としてスキップ
+      const cm = line.match(classNameValuePattern);
+      if (cm) {
+        const classValue = normalizeClassNameValue(cm[1]);
+        if (removedClassNames.has(classValue) && addedClassNames.has(classValue)) return;
+      }
 
       layoutPatterns.forEach(pattern => {
         if (pattern.test(line)) {

@@ -16,11 +16,7 @@
       "type": "fillInBlank",
       "japanese": "私は昨日幸せでした。",
       "sentence": "I ____ happy yesterday.",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "主語がIなのでwasです。「私は昨日幸せでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日幸せでした。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日幸せでした。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日幸せでした。」に合いません。",
@@ -31,11 +27,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは昨晩家にいました。",
       "sentence": "They ____ at home last night.",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "beginner",
       "explanation": "主語がTheyなのでwereです。「彼らは昨晩家にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨晩家にいました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩家にいました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨晩家にいました。」に合いません。",
@@ -48,11 +40,7 @@
       "type": "fillInBlank",
       "japanese": "彼は昨日病気でした。",
       "sentence": "He ____ sick yesterday.",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "主語がHeなのでwasです。「彼は昨日病気でした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日病気でした。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日病気でした。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日病気でした。」に合いません。",
@@ -63,11 +51,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは先週忙しかった。",
       "sentence": "You ____ busy last week.",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "beginner",
       "explanation": "主語がYouなのでwereです。「あなたは先週忙しかった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは先週忙しかった。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは先週忙しかった。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは先週忙しかった。」に合いません。",
@@ -80,11 +64,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は昨日東京にいました。",
       "sentence": "She ____ in Tokyo yesterday.",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "主語がSheなのでwasです。「彼女は昨日東京にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨日東京にいました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日東京にいました。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日東京にいました。」に合いません。",
@@ -95,11 +75,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは先週の日曜日に図書館にいました。",
       "sentence": "We ____ in the library last Sunday.",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "explanation": "主語がWeなのでwereです。「私たちは先週の日曜日に図書館にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは先週の日曜日に図書館にいました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週の日曜日に図書館にいました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは先週の日曜日に図書館にいました。」に合いません。",
@@ -110,11 +86,7 @@
       "type": "fillInBlank",
       "japanese": "昨日は寒かった。",
       "sentence": "It ____ cold yesterday.",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "主語がItなのでwasです。「昨日は寒かった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「昨日は寒かった。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日は寒かった。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日は寒かった。」に合いません。",
@@ -127,11 +99,7 @@
       "type": "fillInBlank",
       "japanese": "私は昨日疲れていませんでした。",
       "sentence": "I ____ tired yesterday.",
-      "choices": [
-        "wasn't",
-        "weren't",
-        "am not"
-      ],
+      "choices": ["wasn't", "weren't", "am not"],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
       "explanation": "was not = wasn'tです。「私は昨日疲れていませんでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wasn't】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日疲れていませんでした。」から、この形が適切です。\n\n❌ 【weren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日疲れていませんでした。」に合いません。\n\n❌ 【am not】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日疲れていませんでした。」に合いません。",
@@ -144,11 +112,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは昨日学校にいませんでした。",
       "sentence": "They ____ at school yesterday.",
-      "choices": [
-        "weren't",
-        "wasn't",
-        "are not"
-      ],
+      "choices": ["weren't", "wasn't", "are not"],
       "correctAnswer": "weren't",
       "difficulty": "intermediate",
       "explanation": "were not = weren'tです。「彼らは昨日学校にいませんでした」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【weren't】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは昨日学校にいませんでした。」から、この形が適切です。\n\n❌ 【wasn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日学校にいませんでした。」に合いません。\n\n❌ 【are not】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは昨日学校にいませんでした。」に合いません。",
@@ -159,11 +123,7 @@
       "type": "fillInBlank",
       "japanese": "あなたは昨日家にいましたか。",
       "sentence": "____ you at home yesterday?",
-      "choices": [
-        "Were",
-        "Was",
-        "Are"
-      ],
+      "choices": ["Were", "Was", "Are"],
       "correctAnswer": "Were",
       "difficulty": "intermediate",
       "explanation": "主語がyouなのでWereです。「あなたは昨日家にいましたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Were】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは昨日家にいましたか。」から、この形が適切です。\n\n❌ 【Was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昨日家にいましたか。」に合いません。\n\n❌ 【Are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは昨日家にいましたか。」に合いません。",
@@ -174,11 +134,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は昨日怒っていましたか。",
       "sentence": "____ she angry yesterday?",
-      "choices": [
-        "Was",
-        "Were",
-        "Is"
-      ],
+      "choices": ["Was", "Were", "Is"],
       "correctAnswer": "Was",
       "difficulty": "intermediate",
       "explanation": "主語がsheなのでWasです。「彼女は昨日怒っていましたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨日怒っていましたか。」から、この形が適切です。\n\n❌ 【Were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日怒っていましたか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨日怒っていましたか。」に合いません。",
@@ -191,11 +147,7 @@
       "type": "fillInBlank",
       "japanese": "先週末は天気が良かった。",
       "sentence": "The weather ____ nice last weekend.",
-      "choices": [
-        "was",
-        "were",
-        "is"
-      ],
+      "choices": ["was", "were", "is"],
       "correctAnswer": "was",
       "difficulty": "advanced",
       "explanation": "主語がThe weatherなのでwasです。「先週末は天気が良かった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「先週末は天気が良かった。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先週末は天気が良かった。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「先週末は天気が良かった。」に合いません。",
@@ -206,11 +158,7 @@
       "type": "fillInBlank",
       "japanese": "両親は先月京都にいました。",
       "sentence": "My parents ____ in Kyoto last month.",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "advanced",
       "explanation": "主語がMy parentsなのでwereです。「両親は先月京都にいました」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「両親は先月京都にいました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「両親は先月京都にいました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「両親は先月京都にいました。」に合いません。",
@@ -221,11 +169,7 @@
       "type": "fillInBlank",
       "japanese": "彼は昨日幸せでしたか。",
       "sentence": "____ he happy yesterday?",
-      "choices": [
-        "Was",
-        "Were",
-        "Is"
-      ],
+      "choices": ["Was", "Were", "Is"],
       "correctAnswer": "Was",
       "difficulty": "advanced",
       "explanation": "主語がheなのでWasです。「彼は昨日幸せでしたか」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日幸せでしたか。」から、この形が適切です。\n\n❌ 【Were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日幸せでしたか。」に合いません。\n\n❌ 【Is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日幸せでしたか。」に合いません。",
@@ -236,11 +180,7 @@
       "type": "fillInBlank",
       "japanese": "それらの本は面白かった。",
       "sentence": "Those books ____ interesting.",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "advanced",
       "explanation": "主語がThose booksなのでwereです。「それらの本は面白かった」です。\n\nが正解です。\n\n【理由】\n文法的に「」が適切です。\n\n【文法ポイント】\n基本文法\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「それらの本は面白かった。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「それらの本は面白かった。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「それらの本は面白かった。」に合いません。",
@@ -250,12 +190,7 @@
       "id": "g2-u0-so-001",
       "type": "sentenceOrdering",
       "japanese": "私は昨日疲れていました。",
-      "words": [
-        "I",
-        "was",
-        "tired",
-        "yesterday"
-      ],
+      "words": ["I", "was", "tired", "yesterday"],
       "correctAnswer": "I was tired yesterday.",
       "difficulty": "beginner",
       "explanation": "「私は昨日疲れていました」です。\n\n「私は昨日疲れていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I was tired yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -266,12 +201,7 @@
       "id": "g2-u0-so-002",
       "type": "sentenceOrdering",
       "japanese": "彼らはその時生徒でした。",
-      "words": [
-        "they",
-        "were",
-        "students",
-        "then"
-      ],
+      "words": ["they", "were", "students", "then"],
       "correctAnswer": "They were students then.",
       "difficulty": "beginner",
       "explanation": "「彼らはその時生徒でした」です。\n\n「彼らはその時生徒でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They were students then.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -282,12 +212,7 @@
       "id": "g2-u0-so-003",
       "type": "sentenceOrdering",
       "japanese": "彼はロンドンにいました。",
-      "words": [
-        "he",
-        "was",
-        "in",
-        "London"
-      ],
+      "words": ["he", "was", "in", "London"],
       "correctAnswer": "He was in London.",
       "difficulty": "beginner",
       "explanation": "「彼はロンドンにいました」です。\n\n「彼はロンドンにいました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ He was in London.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -298,30 +223,20 @@
       "id": "g2-u0-so-004",
       "type": "sentenceOrdering",
       "japanese": "私たちはその時友達でした。",
-      "words": [
-        "we",
-        "were",
-        "friends",
-        "then"
-      ],
+      "words": ["we", "were", "friends", "then"],
       "correctAnswer": "We were friends then.",
       "difficulty": "beginner",
       "explanation": "「私たちはその時友達でした」です。\n\n「私たちはその時友達でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We were friends then.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "We were",
       "wordCount": 4,
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We were friends then.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちはその時友達でした。"
     },
     {
       "id": "g2-u0-so-005",
       "type": "sentenceOrdering",
       "japanese": "彼女は昨日親切でした。",
-      "words": [
-        "she",
-        "was",
-        "kind",
-        "yesterday"
-      ],
+      "words": ["she", "was", "kind", "yesterday"],
       "correctAnswer": "She was kind yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼女は昨日親切でした」です。\n\n「彼女は昨日親切でした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She was kind yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -332,66 +247,46 @@
       "id": "g2-u0-so-006",
       "type": "sentenceOrdering",
       "japanese": "私は昨日お腹が空いていませんでした。",
-      "words": [
-        "I",
-        "wasn't",
-        "hungry",
-        "yesterday"
-      ],
+      "words": ["I", "wasn't", "hungry", "yesterday"],
       "correctAnswer": "I wasn't hungry yesterday.",
       "difficulty": "intermediate",
       "explanation": "「私は昨日お腹が空いていませんでした」です。\n\n「私は昨日お腹が空いていませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ I wasn't hungry yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "wasn't",
       "wordCount": 4,
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. I wasn't hungry yesterday.",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____.",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。私は昨日お腹が空いていませんでした。"
     },
     {
       "id": "g2-u0-so-007",
       "type": "sentenceOrdering",
       "japanese": "彼らは昨日ここにいませんでした。",
-      "words": [
-        "they",
-        "weren't",
-        "here",
-        "yesterday"
-      ],
+      "words": ["they", "weren't", "here", "yesterday"],
       "correctAnswer": "They weren't here yesterday.",
       "difficulty": "intermediate",
       "explanation": "「彼らは昨日ここにいませんでした」です。\n\n「彼らは昨日ここにいませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【語順ルール】\n場所の副詞 → 時の副詞の順序\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They weren't here yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "weren't",
       "wordCount": 4,
-      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. They weren't here yesterday.",
+      "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. ____ ____ ____ ____.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼らは昨日ここにいませんでした。"
     },
     {
       "id": "g2-u0-so-008",
       "type": "sentenceOrdering",
       "japanese": "彼は昨日病気でしたか。",
-      "words": [
-        "was",
-        "he",
-        "sick",
-        "yesterday"
-      ],
+      "words": ["was", "he", "sick", "yesterday"],
       "correctAnswer": "Was he sick yesterday?",
       "difficulty": "intermediate",
       "explanation": "「彼は昨日病気でしたか」です。\n\n「彼は昨日病気でしたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Was he sick yesterday?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
       "hint": "Was",
       "wordCount": 4,
-      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. Was he sick yesterday?",
+      "passage": "Last Sunday, my family went to the park. The weather was nice. We had a picnic there. ____ ____ ____ ____?",
       "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は良かったです。そこでピクニックをしました。彼は昨日病気でしたか。"
     },
     {
       "id": "g2-u0-so-009",
       "type": "sentenceOrdering",
       "japanese": "あなたは家にいましたか。",
-      "words": [
-        "were",
-        "you",
-        "at",
-        "home"
-      ],
+      "words": ["were", "you", "at", "home"],
       "correctAnswer": "Were you at home?",
       "difficulty": "intermediate",
       "explanation": "「あなたは家にいましたか」です。\n\n「あなたは家にいましたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Were you at home?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -402,12 +297,7 @@
       "id": "g2-u0-so-010",
       "type": "sentenceOrdering",
       "japanese": "昨日は晴れていました。",
-      "words": [
-        "it",
-        "was",
-        "sunny",
-        "yesterday"
-      ],
+      "words": ["it", "was", "sunny", "yesterday"],
       "correctAnswer": "It was sunny yesterday.",
       "difficulty": "intermediate",
       "explanation": "「昨日は晴れていました」です。\n\n「昨日は晴れていました。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ It was sunny yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -418,14 +308,7 @@
       "id": "g2-u0-so-011",
       "type": "sentenceOrdering",
       "japanese": "過去の場所。",
-      "words": [
-        "she",
-        "was",
-        "in",
-        "the",
-        "park",
-        "yesterday"
-      ],
+      "words": ["she", "was", "in", "the", "park", "yesterday"],
       "correctAnswer": "She was in the park yesterday.",
       "difficulty": "advanced",
       "explanation": "「彼女は昨日公園にいました」です。\n\n「過去の場所。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ She was in the park yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -436,13 +319,7 @@
       "id": "g2-u0-so-012",
       "type": "sentenceOrdering",
       "japanese": "彼らはその時とても幸せでした。",
-      "words": [
-        "they",
-        "were",
-        "very",
-        "happy",
-        "then"
-      ],
+      "words": ["they", "were", "very", "happy", "then"],
       "correctAnswer": "They were very happy then.",
       "difficulty": "advanced",
       "explanation": "「彼らはその時とても幸せでした」です。\n\n「彼らはその時とても幸せでした。」です。\n\n【文法ポイント】\nbe動詞の過去形\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ They were very happy then.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -453,12 +330,7 @@
       "id": "g2-u0-so-013",
       "type": "sentenceOrdering",
       "japanese": "そのテストは難しかったですか。",
-      "words": [
-        "was",
-        "the",
-        "test",
-        "difficult"
-      ],
+      "words": ["was", "the", "test", "difficult"],
       "correctAnswer": "Was the test difficult?",
       "difficulty": "advanced",
       "explanation": "「そのテストは難しかったですか」です。\n\n「そのテストは難しかったですか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Was the test difficult?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -469,12 +341,7 @@
       "id": "g2-u0-so-014",
       "type": "sentenceOrdering",
       "japanese": "私たちは昨日準備ができていませんでした。",
-      "words": [
-        "we",
-        "weren't",
-        "ready",
-        "yesterday"
-      ],
+      "words": ["we", "weren't", "ready", "yesterday"],
       "correctAnswer": "We weren't ready yesterday.",
       "difficulty": "advanced",
       "explanation": "「私たちは昨日準備ができていませんでした」です。\n\n「私たちは昨日準備ができていませんでした。」です。\n\n【文法ポイント】\n基本的な文構造\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ We weren't ready yesterday.\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -485,12 +352,7 @@
       "id": "g2-u0-so-015",
       "type": "sentenceOrdering",
       "japanese": "生徒たちは静かでしたか。",
-      "words": [
-        "were",
-        "the",
-        "students",
-        "quiet"
-      ],
+      "words": ["were", "the", "students", "quiet"],
       "correctAnswer": "Were the students quiet?",
       "difficulty": "advanced",
       "explanation": "「生徒たちは静かでしたか」です。\n\n「生徒たちは静かでしたか。」です。\n\n【文法ポイント】\n疑問文\n\n【語順ルール】\n疑問文の語順: 助動詞/be動詞 + 主語 + 動詞\n\n【よくある間違い】\n× 語順を間違えないように注意\n○ Were the students quiet?\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -503,11 +365,7 @@
       "japanese": "私は忙しかった。",
       "originalSentence": "I am busy.",
       "question": "過去形に書き換えなさい",
-      "choices": [
-        "I was busy.",
-        "I were busy.",
-        "I am busy."
-      ],
+      "choices": ["I was busy.", "I were busy.", "I am busy."],
       "correctAnswer": "I was busy.",
       "difficulty": "beginner",
       "explanation": "am → wasです。「私は忙しかった」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【I was busy.】 ← 正解\n  ✓ 正解理由: 日本語訳「私は忙しかった。」から、この形が適切です。\n\n❌ 【I were busy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は忙しかった。」に合いません。\n\n❌ 【I am busy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は忙しかった。」に合いません。",
@@ -519,11 +377,7 @@
       "japanese": "彼らは幸せでした。",
       "originalSentence": "They are happy.",
       "question": "過去形に書き換えなさい",
-      "choices": [
-        "They were happy.",
-        "They was happy.",
-        "They are happy."
-      ],
+      "choices": ["They were happy.", "They was happy.", "They are happy."],
       "correctAnswer": "They were happy.",
       "difficulty": "beginner",
       "explanation": "are → wereです。「彼らは幸せでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【They were happy.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは幸せでした。」から、この形が適切です。\n\n❌ 【They was happy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは幸せでした。」に合いません。\n\n❌ 【They are happy.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは幸せでした。」に合いません。",
@@ -535,11 +389,7 @@
       "japanese": "彼は疲れていました。",
       "originalSentence": "He is tired.",
       "question": "過去形に書き換えなさい",
-      "choices": [
-        "He was tired.",
-        "He were tired.",
-        "He is tired."
-      ],
+      "choices": ["He was tired.", "He were tired.", "He is tired."],
       "correctAnswer": "He was tired.",
       "difficulty": "beginner",
       "explanation": "is → wasです。「彼は疲れていました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【He was tired.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は疲れていました。」から、この形が適切です。\n\n❌ 【He were tired.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は疲れていました。」に合いません。\n\n❌ 【He is tired.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は疲れていました。」に合いません。",
@@ -583,11 +433,7 @@
       "japanese": "彼女は幸せでしたか。",
       "originalSentence": "She was happy.",
       "question": "疑問文に書き換えなさい",
-      "choices": [
-        "Was she happy?",
-        "Were she happy?",
-        "Is she happy?"
-      ],
+      "choices": ["Was she happy?", "Were she happy?", "Is she happy?"],
       "correctAnswer": "Was she happy?",
       "difficulty": "intermediate",
       "explanation": "Was she～?の語順です。「彼女は幸せでしたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Was she happy?】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は幸せでしたか。」から、この形が適切です。\n\n❌ 【Were she happy?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は幸せでしたか。」に合いません。\n\n❌ 【Is she happy?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は幸せでしたか。」に合いません。",
@@ -601,11 +447,7 @@
       "japanese": "あなたは忙しかったですか。",
       "originalSentence": "You were busy.",
       "question": "疑問文に書き換えなさい",
-      "choices": [
-        "Were you busy?",
-        "Was you busy?",
-        "Are you busy?"
-      ],
+      "choices": ["Were you busy?", "Was you busy?", "Are you busy?"],
       "correctAnswer": "Were you busy?",
       "difficulty": "intermediate",
       "explanation": "Were you～?の語順です。「あなたは忙しかったですか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Were you busy?】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは忙しかったですか。」から、この形が適切です。\n\n❌ 【Was you busy?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは忙しかったですか。」に合いません。\n\n❌ 【Are you busy?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは忙しかったですか。」に合いません。",
@@ -617,11 +459,7 @@
       "japanese": "彼は先生です。",
       "originalSentence": "He was a teacher.",
       "question": "現在形に書き換えなさい",
-      "choices": [
-        "He is a teacher.",
-        "He are a teacher.",
-        "He was a teacher."
-      ],
+      "choices": ["He is a teacher.", "He are a teacher.", "He was a teacher."],
       "correctAnswer": "He is a teacher.",
       "difficulty": "intermediate",
       "explanation": "was → isです。「彼は先生です」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【He is a teacher.】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は先生です。」から、この形が適切です。\n\n❌ 【He are a teacher.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先生です。」に合いません。\n\n❌ 【He was a teacher.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は先生です。」に合いません。",
@@ -633,11 +471,7 @@
       "japanese": "私たちは友達です。",
       "originalSentence": "We were friends.",
       "question": "現在形に書き換えなさい",
-      "choices": [
-        "We are friends.",
-        "We is friends.",
-        "We were friends."
-      ],
+      "choices": ["We are friends.", "We is friends.", "We were friends."],
       "correctAnswer": "We are friends.",
       "difficulty": "intermediate",
       "explanation": "were → areです。「私たちは友達です」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【We are friends.】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは友達です。」から、この形が適切です。\n\n❌ 【We is friends.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは友達です。」に合いません。\n\n❌ 【We were friends.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは友達です。」に合いません。",
@@ -649,11 +483,7 @@
       "japanese": "はい、行きました。",
       "originalSentence": "Was he at home?",
       "question": "肯定で答えなさい",
-      "choices": [
-        "Yes, he was.",
-        "Yes, he were.",
-        "Yes, he is."
-      ],
+      "choices": ["Yes, he was.", "Yes, he were.", "Yes, he is."],
       "correctAnswer": "Yes, he was.",
       "difficulty": "intermediate",
       "explanation": "Was～?への答えはwasを使います。「はい、いました」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Yes, he was.】 ← 正解\n  ✓ 正解理由: 日本語訳「はい、行きました。」から、この形が適切です。\n\n❌ 【Yes, he were.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、行きました。」に合いません。\n\n❌ 【Yes, he is.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「はい、行きました。」に合いません。",
@@ -665,11 +495,7 @@
       "japanese": "いいえ、行きませんでした。",
       "originalSentence": "Were they late?",
       "question": "否定で答えなさい",
-      "choices": [
-        "No, they weren't.",
-        "No, they wasn't.",
-        "No, they aren't."
-      ],
+      "choices": ["No, they weren't.", "No, they wasn't.", "No, they aren't."],
       "correctAnswer": "No, they weren't.",
       "difficulty": "advanced",
       "explanation": "Were～?への否定の答えはweren'tです。「いいえ、遅れていませんでした」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【No, they weren't.】 ← 正解\n  ✓ 正解理由: 日本語訳「いいえ、行きませんでした。」から、この形が適切です。\n\n❌ 【No, they wasn't.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いいえ、行きませんでした。」に合いません。\n\n❌ 【No, they aren't.】 ← 不正解\n  ✗ 不正解理由: 日本語訳「いいえ、行きませんでした。」に合いません。",
@@ -697,11 +523,7 @@
       "japanese": "あなたは行かなかったのですか。",
       "originalSentence": "She was sick.",
       "question": "否定の疑問文に",
-      "choices": [
-        "Wasn't she sick?",
-        "Weren't she sick?",
-        "Isn't she sick?"
-      ],
+      "choices": ["Wasn't she sick?", "Weren't she sick?", "Isn't she sick?"],
       "correctAnswer": "Wasn't she sick?",
       "difficulty": "advanced",
       "explanation": "Wasn't～?で否定疑問文です。「彼女は病気ではなかったですか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Wasn't she sick?】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは行かなかったのですか。」から、この形が適切です。\n\n❌ 【Weren't she sick?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは行かなかったのですか。」に合いません。\n\n❌ 【Isn't she sick?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは行かなかったのですか。」に合いません。",
@@ -713,11 +535,7 @@
       "japanese": "あなたはどこへ行きましたか。",
       "originalSentence": "He was in Tokyo.",
       "question": "Whereを使って疑問文に",
-      "choices": [
-        "Where was he?",
-        "Where were he?",
-        "Where is he?"
-      ],
+      "choices": ["Where was he?", "Where were he?", "Where is he?"],
       "correctAnswer": "Where was he?",
       "difficulty": "advanced",
       "explanation": "Where was～?の語順です。「彼はどこにいましたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【Where was he?】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはどこへ行きましたか。」から、この形が適切です。\n\n❌ 【Where were he?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどこへ行きましたか。」に合いません。\n\n❌ 【Where is he?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはどこへ行きましたか。」に合いません。",
@@ -731,11 +549,7 @@
       "japanese": "あなたはいつ行きましたか。",
       "originalSentence": "They were students.",
       "question": "Whatを使って疑問文に",
-      "choices": [
-        "What were they?",
-        "What was they?",
-        "What are they?"
-      ],
+      "choices": ["What were they?", "What was they?", "What are they?"],
       "correctAnswer": "What were they?",
       "difficulty": "advanced",
       "explanation": "What were～?の語順です。「彼らは何でしたか」です。\n\n【変換ポイント】\n構文の言い換え\n\n【詳細】\n元の文: \n変換後:\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【What were they?】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたはいつ行きましたか。」から、この形が適切です。\n\n❌ 【What was they?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはいつ行きましたか。」に合いません。\n\n❌ 【What are they?】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたはいつ行きましたか。」に合いません。",
@@ -747,11 +561,7 @@
       "japanese": "私は昨日興奮していました。",
       "sentence": "I ____ excited yesterday.",
       "verb": "be",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "主語がIなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日興奮していました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日興奮していました。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日興奮していました。」に合いません。",
@@ -763,11 +573,7 @@
       "japanese": "彼らは学校にいました。",
       "sentence": "They ____ at school.",
       "verb": "be",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "beginner",
       "explanation": "主語がTheyなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは学校にいました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは学校にいました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは学校にいました。」に合いません。",
@@ -779,11 +585,7 @@
       "japanese": "彼は昨日遅れました。",
       "sentence": "He ____ late yesterday.",
       "verb": "be",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "主語がHeなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は昨日遅れました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日遅れました。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は昨日遅れました。」に合いません。",
@@ -795,11 +597,7 @@
       "japanese": "あなたは先週遅れました。",
       "sentence": "You ____ late last week.",
       "verb": "be",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "beginner",
       "explanation": "主語がYouなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたは先週遅れました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは先週遅れました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたは先週遅れました。」に合いません。",
@@ -811,11 +609,7 @@
       "japanese": "彼女は東京にいました。",
       "sentence": "She ____ in Tokyo.",
       "verb": "be",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "主語がSheなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は東京にいました。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京にいました。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は東京にいました。」に合いません。",
@@ -829,11 +623,7 @@
       "japanese": "私たちはその時友達でした。",
       "sentence": "We ____ friends then.",
       "verb": "be",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "explanation": "主語がWeなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちはその時友達でした。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその時友達でした。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちはその時友達でした。」に合いません。",
@@ -847,11 +637,7 @@
       "japanese": "昨日は雨でした。",
       "sentence": "It ____ rainy yesterday.",
       "verb": "be",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "intermediate",
       "explanation": "主語がItなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「昨日は雨でした。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日は雨でした。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日は雨でした。」に合いません。",
@@ -863,11 +649,7 @@
       "japanese": "その本は面白かったです。",
       "sentence": "The books ____ interesting.",
       "verb": "be",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "advanced",
       "explanation": "主語がThe booksなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「その本は面白かったです。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その本は面白かったです。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その本は面白かったです。」に合いません。",
@@ -879,11 +661,7 @@
       "japanese": "その猫はかわいかったです。",
       "sentence": "The cat ____ cute.",
       "verb": "be",
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "advanced",
       "explanation": "主語がThe catなのでwasです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「その猫はかわいかったです。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その猫はかわいかったです。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「その猫はかわいかったです。」に合いません。",
@@ -895,11 +673,7 @@
       "japanese": "私の両親は大阪にいました。",
       "sentence": "My parents ____ in Osaka.",
       "verb": "be",
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "advanced",
       "explanation": "主語がMy parentsなのでwereです。\n\n→  です。\n\n【変化ルール】\n不規則変化:  → \n\n【使い方】\n文中での役割に応じて使います\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「私の両親は大阪にいました。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私の両親は大阪にいました。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私の両親は大阪にいました。」に合いません。",
@@ -920,11 +694,7 @@
           "text": "It ____ great!"
         }
       ],
-      "choices": [
-        "was",
-        "were",
-        "is"
-      ],
+      "choices": ["was", "were", "is"],
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "主語がItなのでwasです。「素晴らしかったです」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の状態。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の状態。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の状態。」に合いません。",
@@ -945,11 +715,7 @@
           "text": "Yes, I ____."
         }
       ],
-      "choices": [
-        "was",
-        "were",
-        "am"
-      ],
+      "choices": ["was", "were", "am"],
       "correctAnswer": "was",
       "difficulty": "beginner",
       "explanation": "Were you～?への答えはI wasです。「はい、いました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の確認。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の確認。」に合いません。\n\n❌ 【am】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の確認。」に合いません。",
@@ -970,11 +736,7 @@
           "text": "No, he ____."
         }
       ],
-      "choices": [
-        "wasn't",
-        "weren't",
-        "isn't"
-      ],
+      "choices": ["wasn't", "weren't", "isn't"],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
       "explanation": "Wasへの否定の答えはwasn'tです。「いいえ、疲れていませんでした」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wasn't】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の否定。」から、この形が適切です。\n\n❌ 【weren't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。\n\n❌ 【isn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の否定。」に合いません。",
@@ -997,11 +759,7 @@
           "text": "They ____ at the library."
         }
       ],
-      "choices": [
-        "were",
-        "was",
-        "are"
-      ],
+      "choices": ["were", "was", "are"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "explanation": "主語がTheyなのでwereです。「図書館にいました」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【were】 ← 正解\n  ✓ 正解理由: 日本語訳「あなたの友達はどこにいましたか。」から、この形が適切です。\n\n❌ 【was】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの友達はどこにいましたか。」に合いません。\n\n❌ 【are】 ← 不正解\n  ✗ 不正解理由: 日本語訳「あなたの友達はどこにいましたか。」に合いません。",
@@ -1022,11 +780,7 @@
           "text": "It was sunny."
         }
       ],
-      "choices": [
-        "was",
-        "were",
-        "is"
-      ],
+      "choices": ["was", "were", "is"],
       "correctAnswer": "was",
       "difficulty": "advanced",
       "explanation": "主語がthe weatherなのでwasです。「昨日の天気はどうでしたか」です。\n\nが正解です。\n\n【文脈理解】\n日常的な会話の場面\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【was】 ← 正解\n  ✓ 正解理由: 日本語訳「過去の天気。」から、この形が適切です。\n\n❌ 【were】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の天気。」に合いません。\n\n❌ 【is】 ← 不正解\n  ✗ 不正解理由: 日本語訳「過去の天気。」に合いません。",
@@ -1037,11 +791,7 @@
       "type": "fillInBlank",
       "japanese": "私は昨日テニスをしました。",
       "sentence": "I ____ tennis yesterday.",
-      "choices": [
-        "played",
-        "play",
-        "plays"
-      ],
+      "choices": ["played", "play", "plays"],
       "correctAnswer": "played",
       "difficulty": "beginner",
       "explanation": "playの過去形はplayedです。yesterdayがあるので過去形を使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【played】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日テニスをしました。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日テニスをしました。」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日テニスをしました。」に合いません。",
@@ -1054,11 +804,7 @@
       "type": "fillInBlank",
       "japanese": "彼は学校に歩いて行きました。",
       "sentence": "He ____ to school.",
-      "choices": [
-        "walked",
-        "walk",
-        "walks"
-      ],
+      "choices": ["walked", "walk", "walks"],
       "correctAnswer": "walked",
       "difficulty": "beginner",
       "explanation": "walkの過去形はwalkedです。規則動詞なので-edをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【walked】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は学校に歩いて行きました。」から、この形が適切です。\n\n❌ 【walk】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は学校に歩いて行きました。」に合いません。\n\n❌ 【walks】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は学校に歩いて行きました。」に合いません。",
@@ -1069,11 +815,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは英語を勉強しました。",
       "sentence": "We ____ English last week.",
-      "choices": [
-        "studied",
-        "study",
-        "studies"
-      ],
+      "choices": ["studied", "study", "studies"],
       "correctAnswer": "studied",
       "difficulty": "beginner",
       "explanation": "studyの過去形はstudiedです。yで終わる動詞はyをiに変えて-edをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【studied】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは英語を勉強しました。」から、この形が適切です。\n\n❌ 【study】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは英語を勉強しました。」に合いません。\n\n❌ 【studies】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは英語を勉強しました。」に合いません。",
@@ -1084,11 +826,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は昨夜本を読みました。",
       "sentence": "She ____ a book last night.",
-      "choices": [
-        "read",
-        "reads",
-        "reading"
-      ],
+      "choices": ["read", "reads", "reading"],
       "correctAnswer": "read",
       "difficulty": "intermediate",
       "explanation": "readの過去形はreadです。スペルは同じですが発音が変わります（リード→レッド）。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【read】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は昨夜本を読みました。」から、この形が適切です。\n\n❌ 【reads】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨夜本を読みました。」に合いません。\n\n❌ 【reading】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は昨夜本を読みました。」に合いません。",
@@ -1099,11 +837,7 @@
       "type": "fillInBlank",
       "japanese": "彼らは朝食を食べました。",
       "sentence": "They ____ breakfast this morning.",
-      "choices": [
-        "ate",
-        "eat",
-        "eated"
-      ],
+      "choices": ["ate", "eat", "eated"],
       "correctAnswer": "ate",
       "difficulty": "intermediate",
       "explanation": "eatの過去形はateです。不規則動詞なので暗記が必要です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【ate】 ← 正解\n  ✓ 正解理由: 日本語訳「彼らは朝食を食べました。」から、この形が適切です。\n\n❌ 【eat】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは朝食を食べました。」に合いません。\n\n❌ 【eated】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼らは朝食を食べました。」に合いません。",
@@ -1114,11 +848,7 @@
       "type": "fillInBlank",
       "japanese": "私は公園に行きました。",
       "sentence": "I ____ to the park yesterday.",
-      "choices": [
-        "went",
-        "go",
-        "goed"
-      ],
+      "choices": ["went", "go", "goed"],
       "correctAnswer": "went",
       "difficulty": "beginner",
       "explanation": "goの過去形はwentです。頻出の不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【went】 ← 正解\n  ✓ 正解理由: 日本語訳「私は公園に行きました。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は公園に行きました。」に合いません。\n\n❌ 【goed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は公園に行きました。」に合いません。",
@@ -1129,11 +859,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は友達に会いました。",
       "sentence": "She ____ her friend last week.",
-      "choices": [
-        "met",
-        "meet",
-        "meeted"
-      ],
+      "choices": ["met", "meet", "meeted"],
       "correctAnswer": "met",
       "difficulty": "intermediate",
       "explanation": "meetの過去形はmetです。不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【met】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は友達に会いました。」から、この形が適切です。\n\n❌ 【meet】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は友達に会いました。」に合いません。\n\n❌ 【meeted】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は友達に会いました。」に合いません。",
@@ -1144,11 +870,7 @@
       "type": "fillInBlank",
       "japanese": "私たちは映画を見ました。",
       "sentence": "We ____ a movie yesterday.",
-      "choices": [
-        "watched",
-        "watch",
-        "watches"
-      ],
+      "choices": ["watched", "watch", "watches"],
       "correctAnswer": "watched",
       "difficulty": "beginner",
       "explanation": "watchの過去形はwatchedです。規則動詞なので-edをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【watched】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは映画を見ました。」から、この形が適切です。\n\n❌ 【watch】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは映画を見ました。」に合いません。\n\n❌ 【watches】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは映画を見ました。」に合いません。",
@@ -1159,11 +881,7 @@
       "type": "fillInBlank",
       "japanese": "彼は手紙を書きました。",
       "sentence": "He ____ a letter to his friend.",
-      "choices": [
-        "wrote",
-        "write",
-        "writed"
-      ],
+      "choices": ["wrote", "write", "writed"],
       "correctAnswer": "wrote",
       "difficulty": "intermediate",
       "explanation": "writeの過去形はwroteです。不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【wrote】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は手紙を書きました。」から、この形が適切です。\n\n❌ 【write】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は手紙を書きました。」に合いません。\n\n❌ 【writed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は手紙を書きました。」に合いません。",
@@ -1174,11 +892,7 @@
       "type": "fillInBlank",
       "japanese": "彼女は音楽を聴きました。",
       "sentence": "She ____ to music last night.",
-      "choices": [
-        "listened",
-        "listen",
-        "listens"
-      ],
+      "choices": ["listened", "listen", "listens"],
       "correctAnswer": "listened",
       "difficulty": "beginner",
       "explanation": "listenの過去形はlistenedです。規則動詞なので-edをつけます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【listened】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は音楽を聴きました。」から、この形が適切です。\n\n❌ 【listen】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は音楽を聴きました。」に合いません。\n\n❌ 【listens】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は音楽を聴きました。」に合いません。",
@@ -1188,12 +902,7 @@
       "id": "g2-u0-so-016",
       "type": "sentenceOrdering",
       "japanese": "私は昨日サッカーをしました。",
-      "words": [
-        "I",
-        "soccer",
-        "yesterday",
-        "played"
-      ],
+      "words": ["I", "soccer", "yesterday", "played"],
       "correctAnswer": "I played soccer yesterday.",
       "difficulty": "beginner",
       "explanation": "「私は昨日サッカーをしました」は「I played soccer yesterday.」です。過去形playedを使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1203,13 +912,7 @@
       "id": "g2-u0-so-017",
       "type": "sentenceOrdering",
       "japanese": "彼女は図書館で勉強しました。",
-      "words": [
-        "She",
-        "in",
-        "the",
-        "library",
-        "studied"
-      ],
+      "words": ["She", "in", "the", "library", "studied"],
       "correctAnswer": "She studied in the library.",
       "difficulty": "beginner",
       "explanation": "「彼女は図書館で勉強しました」は「She studied in the library.」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1219,13 +922,7 @@
       "id": "g2-u0-so-018",
       "type": "sentenceOrdering",
       "japanese": "私たちは昨夜テレビを見ました。",
-      "words": [
-        "We",
-        "TV",
-        "watched",
-        "last",
-        "night"
-      ],
+      "words": ["We", "TV", "watched", "last", "night"],
       "correctAnswer": "We watched TV last night.",
       "difficulty": "beginner",
       "explanation": "「私たちは昨夜テレビを見ました」は「We watched TV last night.」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1235,14 +932,7 @@
       "id": "g2-u0-so-019",
       "type": "sentenceOrdering",
       "japanese": "彼は公園で野球をしました。",
-      "words": [
-        "He",
-        "baseball",
-        "in",
-        "the",
-        "park",
-        "played"
-      ],
+      "words": ["He", "baseball", "in", "the", "park", "played"],
       "correctAnswer": "He played baseball in the park.",
       "difficulty": "intermediate",
       "explanation": "「彼は公園で野球をしました」は「He played baseball in the park.」です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1252,14 +942,7 @@
       "id": "g2-u0-so-020",
       "type": "sentenceOrdering",
       "japanese": "彼女は朝早く起きました。",
-      "words": [
-        "She",
-        "up",
-        "early",
-        "got",
-        "this",
-        "morning"
-      ],
+      "words": ["She", "up", "early", "got", "this", "morning"],
       "correctAnswer": "She got up early this morning.",
       "difficulty": "intermediate",
       "explanation": "「彼女は朝早く起きました」は「She got up early this morning.」です。get upは「起きる」という意味の句動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━",
@@ -1329,11 +1012,7 @@
       "difficulty": "intermediate",
       "explanation": "meetの過去形はmetです。不規則動詞なので暗記が必要です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【met】 ← 正解\n  ✓ 正解理由: 日本語訳「私は昨日友達に会いました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日友達に会いました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私は昨日友達に会いました。」に合いません。",
       "hint": "meet-met-met",
-      "choices": [
-        "met",
-        "",
-        "s"
-      ]
+      "choices": ["met", "", "s"]
     },
     {
       "id": "g2-u0-vf-012",
@@ -1345,11 +1024,7 @@
       "difficulty": "intermediate",
       "explanation": "makeの過去形はmadeです。不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【made】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は先週ケーキを作りました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週ケーキを作りました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は先週ケーキを作りました。」に合いません。",
       "hint": "make-made-made",
-      "choices": [
-        "made",
-        "",
-        "s"
-      ]
+      "choices": ["made", "", "s"]
     },
     {
       "id": "g2-u0-vf-013",
@@ -1361,11 +1036,7 @@
       "difficulty": "intermediate",
       "explanation": "haveの過去形はhadです。have a good timeで「楽しい時間を過ごす」という意味です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【had】 ← 正解\n  ✓ 正解理由: 日本語訳「私たちは昨夜楽しい時間を過ごしました。」から、この形が適切です。\n\n❌ 【have】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨夜楽しい時間を過ごしました。」に合いません。\n\n❌ 【haved】 ← 不正解\n  ✗ 不正解理由: 日本語訳「私たちは昨夜楽しい時間を過ごしました。」に合いません。",
       "hint": "have-had-had",
-      "choices": [
-        "had",
-        "have",
-        "haved"
-      ],
+      "choices": ["had", "have", "haved"],
       "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We ____ a good time last night.",
       "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちは昨夜楽しい時間を過ごしました。"
     },
@@ -1379,11 +1050,7 @@
       "difficulty": "intermediate",
       "explanation": "runの過去形はranです。不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【ran】 ← 正解\n  ✓ 正解理由: 日本語訳「彼は速く走りました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は速く走りました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼は速く走りました。」に合いません。",
       "hint": "run-ran-run",
-      "choices": [
-        "ran",
-        "",
-        "s"
-      ]
+      "choices": ["ran", "", "s"]
     },
     {
       "id": "g2-u0-vf-015",
@@ -1395,11 +1062,7 @@
       "difficulty": "intermediate",
       "explanation": "singの過去形はsangです。不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【sang】 ← 正解\n  ✓ 正解理由: 日本語訳「彼女は歌を歌いました。」から、この形が適切です。\n\n❌ 【】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は歌を歌いました。」に合いません。\n\n❌ 【s】 ← 不正解\n  ✗ 不正解理由: 日本語訳「彼女は歌を歌いました。」に合いません。",
       "hint": "sing-sang-sung",
-      "choices": [
-        "sang",
-        "",
-        "s"
-      ]
+      "choices": ["sang", "", "s"]
     },
     {
       "id": "g2-u0-conv-006",
@@ -1416,11 +1079,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "played",
-        "play",
-        "plays"
-      ],
+      "choices": ["played", "play", "plays"],
       "correctAnswer": "played",
       "difficulty": "beginner",
       "explanation": "過去の出来事を聞かれているので過去形playedを使います。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【played】 ← 正解\n  ✓ 正解理由: 日本語訳「週末は何をしましたか？/サッカーをしました。」から、この形が適切です。\n\n❌ 【play】 ← 不正解\n  ✗ 不正解理由: 日本語訳「週末は何をしましたか？/サッカーをしました。」に合いません。\n\n❌ 【plays】 ← 不正解\n  ✗ 不正解理由: 日本語訳「週末は何をしましたか？/サッカーをしました。」に合いません。",
@@ -1441,11 +1100,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "went",
-        "go",
-        "goed"
-      ],
+      "choices": ["went", "go", "goed"],
       "correctAnswer": "went",
       "difficulty": "beginner",
       "explanation": "goの過去形はwentです。頻出の不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【went】 ← 正解\n  ✓ 正解理由: 日本語訳「昨日どこに行きましたか？/図書館に行きました。」から、この形が適切です。\n\n❌ 【go】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日どこに行きましたか？/図書館に行きました。」に合いません。\n\n❌ 【goed】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日どこに行きましたか？/図書館に行きました。」に合いません。",
@@ -1466,11 +1121,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "ate",
-        "eat",
-        "eated"
-      ],
+      "choices": ["ate", "eat", "eated"],
       "correctAnswer": "ate",
       "difficulty": "intermediate",
       "explanation": "eatの過去形はateです。不規則動詞です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【ate】 ← 正解\n  ✓ 正解理由: 日本語訳「昨夜何を食べましたか？/ピザを食べました。」から、この形が適切です。\n\n❌ 【eat】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨夜何を食べましたか？/ピザを食べました。」に合いません。\n\n❌ 【eated】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨夜何を食べましたか？/ピザを食べました。」に合いません。",
@@ -1491,11 +1142,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "did",
-        "do",
-        "done"
-      ],
+      "choices": ["did", "do", "done"],
       "correctAnswer": "did",
       "difficulty": "beginner",
       "explanation": "Did you...?の質問にはYes, I did.で答えます。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【did】 ← 正解\n  ✓ 正解理由: 日本語訳「宿題をしましたか？/はい、しました。」から、この形が適切です。\n\n❌ 【do】 ← 不正解\n  ✗ 不正解理由: 日本語訳「宿題をしましたか？/はい、しました。」に合いません。\n\n❌ 【done】 ← 不正解\n  ✗ 不正解理由: 日本語訳「宿題をしましたか？/はい、しました。」に合いません。",
@@ -1516,11 +1163,7 @@
           "blank": true
         }
       ],
-      "choices": [
-        "didn't",
-        "don't",
-        "wasn't"
-      ],
+      "choices": ["didn't", "don't", "wasn't"],
       "correctAnswer": "didn't",
       "difficulty": "beginner",
       "explanation": "Did you...?の否定の答えはNo, I didn't.です。\n\n━━━━━━━━━━━━━━━━━━━━━━\n📚 選択肢の詳細解説\n━━━━━━━━━━━━━━━━━━━━━━\n\n✅ 【didn't】 ← 正解\n  ✓ 正解理由: 日本語訳「昨日彼女に会いましたか？/いいえ、会いませんでした。」から、この形が適切です。\n\n❌ 【don't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日彼女に会いましたか？/いいえ、会いませんでした。」に合いません。\n\n❌ 【wasn't】 ← 不正解\n  ✗ 不正解理由: 日本語訳「昨日彼女に会いましたか？/いいえ、会いませんでした。」に合いません。",

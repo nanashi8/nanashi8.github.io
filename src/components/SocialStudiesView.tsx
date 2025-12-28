@@ -32,11 +32,7 @@ interface QuizChoice {
   isCorrect: boolean;
 }
 
-type SortOrder =
-  | 'priority'
-  | 'random'
-  | 'chronological-asc'
-  | 'chronological-desc';
+type SortOrder = 'priority' | 'random' | 'chronological-asc' | 'chronological-desc';
 
 /**
  * 社会科学習ビュー
@@ -244,8 +240,7 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
   }
 
   const currentQuestion = filteredQuestions[currentIndex];
-  const correctRate =
-    totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+  const correctRate = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
 
   return (
     <div className="social-studies-view max-w-4xl mx-auto p-4">
@@ -289,6 +284,8 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
           {/* フィルター */}
           <div className="flex items-center gap-2">
             <select
+              title="分野で絞り込む"
+              aria-label="分野で絞り込む"
               value={selectedField}
               onChange={(e) => setSelectedField(e.target.value as SocialStudiesField | 'all')}
               className="px-3 py-2 border border-gray-300 rounded-md text-sm"
@@ -316,6 +313,8 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
             </select>
 
             <select
+              title="並び順"
+              aria-label="並び順"
               value={sortOrder}
               onChange={(e) => setSortOrder(e.target.value as SortOrder)}
               className="px-3 py-2 border border-gray-300 rounded-md text-sm"
@@ -431,9 +430,7 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
             {/* いもづる式学習: 推薦関連語句 */}
             {relatedTerms.length > 0 && (
               <div className="mt-4 p-3 bg-purple-50 rounded-lg border border-purple-200">
-                <h4 className="text-sm font-bold text-purple-800 mb-2">
-                  🔍 次に学ぶとよい語句
-                </h4>
+                <h4 className="text-sm font-bold text-purple-800 mb-2">🔍 次に学ぶとよい語句</h4>
                 <div className="space-y-2">
                   {relatedTerms.map((rec, idx) => {
                     const progress = getSocialStudiesTermProgress(rec.term);

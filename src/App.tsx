@@ -86,10 +86,7 @@ import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
 import GrammarQuizView from './components/GrammarQuizView';
 import MemorizationView from './components/MemorizationView';
-import GrammarGuideView from './components/GrammarGuideView';
-import DictionaryView from './components/DictionaryView';
 import FloatingPanel from './components/FloatingPanel';
-import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
 import SocialStudiesView from './components/SocialStudiesView';
 import LoadingIndicator from './components/LoadingIndicator';
@@ -247,7 +244,8 @@ function App() {
 
   // 選択中の問題セット名を取得（デバッグ用途）
   const _getSelectedQuestionSetName = () => {
-    const selected = activeTab === 'spelling' ? selectedDataSourceSpelling : selectedDataSourceTranslation;
+    const selected =
+      activeTab === 'spelling' ? selectedDataSourceSpelling : selectedDataSourceTranslation;
     if (selected === 'all') return '全問題集';
     const set = questionSets.find((qs) => qs.id === selected);
     return set ? set.name : '全問題集';
@@ -310,8 +308,7 @@ function App() {
   } = useQuestionRequeue<Question>();
 
   // 🎯 和訳タブ: 暗記/スペル同等の途中再吸引トリガー
-  const [translationAnswerCountSinceSchedule, setTranslationAnswerCountSinceSchedule] =
-    useState(0);
+  const [translationAnswerCountSinceSchedule, setTranslationAnswerCountSinceSchedule] = useState(0);
   const [translationNeedsRescheduling, setTranslationNeedsRescheduling] = useState(false);
   const [translationReschedulingReason, setTranslationReschedulingReason] = useState<string | null>(
     null
@@ -786,7 +783,10 @@ function App() {
 
   // データソース選択の保存（タブごとに独立）
   useEffect(() => {
-    localStorage.setItem('selectedDataSource-translation', JSON.stringify(selectedDataSourceTranslation));
+    localStorage.setItem(
+      'selectedDataSource-translation',
+      JSON.stringify(selectedDataSourceTranslation)
+    );
   }, [selectedDataSourceTranslation]);
 
   useEffect(() => {

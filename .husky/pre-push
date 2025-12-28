@@ -2,6 +2,22 @@
 
 echo "🚀 Pre-push チェック開始..."
 
+echo "🔎 品質チェック（strict）..."
+npm run quality:strict || {
+	echo "❌ 品質チェックに失敗しました"
+	echo "💡 ローカルで npm run quality:strict を実行して修正してください"
+	echo "💡 強制的にプッシュする場合は git push --no-verify を使用してください（非推奨）"
+	exit 1
+}
+
+echo "🧪 ユニットテスト（fast）..."
+npm test || {
+	echo "❌ テストに失敗しました"
+	echo "💡 ローカルで npm test を実行して修正してください"
+	echo "💡 強制的にプッシュする場合は git push --no-verify を使用してください（非推奨）"
+	exit 1
+}
+
 # 🔥 緊急対応: スモークテストが5分以上かかる問題のため一時的に無効化
 # TODO: Playwright設定を最適化してから再有効化
 echo "⚠️  スモークテスト一時無効化中 (パフォーマンス問題調査中)"

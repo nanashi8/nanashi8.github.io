@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run quality:strict && npm test && npm run build && gh-pages -d dist",
     "build:beta": "vite build --base=/beta/ --outDir dist-beta",
     "deploy:beta": "npm run build:beta && gh-pages -d dist-beta -a --dest beta -m 'Deploy beta preview'",
     "preview:beta": "npm run build:beta && vite preview --outDir dist-beta --port 4174",
