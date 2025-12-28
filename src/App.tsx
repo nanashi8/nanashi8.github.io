@@ -91,6 +91,7 @@ import DictionaryView from './components/DictionaryView';
 import FloatingPanel from './components/FloatingPanel';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
+import SocialStudiesView from './components/SocialStudiesView';
 import LoadingIndicator from './components/LoadingIndicator';
 import './App.css';
 
@@ -107,6 +108,7 @@ type Tab =
   | 'spelling'
   | 'grammar'
   | 'reading'
+  | 'social-studies'
   | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
@@ -1875,6 +1877,17 @@ function App() {
         </button>
         <button
           className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'social-studies'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          }`}
+          onClick={() => setActiveTab('social-studies')}
+        >
+          <span className="hidden sm:inline">🌏 社会</span>
+          <span className="sm:hidden">社会</span>
+        </button>
+        <button
+          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'settings'
               ? 'bg-white text-blue-600 border-blue-600'
               : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
@@ -1969,6 +1982,8 @@ function App() {
               onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             />
+          ) : activeTab === 'social-studies' ? (
+            <SocialStudiesView dataSource="social-studies-sample" />
           ) : activeTab === 'reading' ? (
             <ComprehensiveReadingView
               customQuestionSets={customQuestionState.sets}
