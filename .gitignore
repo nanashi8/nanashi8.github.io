@@ -74,6 +74,10 @@ remaining_*.txt
 word_analysis.json
 etymology_enhancement_needed.json
 
+# Local data packs (private, do not commit)
+# 教師配布用/検証用の教材パックJSONはここに置く（リポジトリに公開しない）
+local-data-packs/
+
 # Output directories
 scripts/output/
 **/output/

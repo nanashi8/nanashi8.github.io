@@ -55,6 +55,13 @@ import { GamificationAI } from '@/ai/specialists/GamificationAI';
 import { generateContextualSequence } from '@/ai/optimization/contextualLearningAI';
 import { isIncorrectWordCategory, isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
 import { DebugTracer } from '@/utils/DebugTracer';
+import {
+  getStrengthLookupForScheduling,
+  getVocabularyNetworkForScheduling,
+  recordVocabularyNetworkSchedulerPerf,
+  startVocabularyNetworkPrecomputeIfNeeded,
+} from '@/ai/utils/vocabularyNetwork';
+import { getABTestManager } from '@/ai/experiments/ABTestManager';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;
@@ -104,12 +111,26 @@ export class QuestionScheduler {
   async schedule(params: ScheduleParams): Promise<ScheduleResult> {
     const startTime = performance.now();
 
+    // A/B: いもづる式（局所並べ替え）のON/OFFを割当
+    // - 呼び出し側が明示指定した場合は尊重
+    // - 未指定の場合のみ、AB割当から自動決定（デフォルトOFF）
+    if (typeof params.useChainLearning !== 'boolean') {
+      params = {
+        ...params,
+        useChainLearning: getABTestManager().isFeatureEnabled(
+          'chain_learning_retention_2025_01',
+          'useChainLearning'
+        ),
+      };
+    }
+
     const debugInfo = {
       timestamp: new Date().toISOString(),
       mode: params.mode,
       questionCount: params.questions.length,
       useMetaAI: params.useMetaAI,
       hybridMode: params.hybridMode || false,
+      useChainLearning: params.useChainLearning,
       firstQuestions: params.questions.slice(0, 10).map((q) => q.word),
     };
 
@@ -1305,7 +1326,111 @@ export class QuestionScheduler {
       // localStorage失敗は無視
     }
 
+    if (_params.useChainLearning) {
+      return this.applyChainLearningWithinTopN(interleaved, _params);
+    }
+
     return interleaved;
+  }
+
+  /**
+   * いもづる式（語彙ネットワーク）による“局所的な並べ替え”
+   * - Position降順/インターリーブの大枠は維持
+   * - TOP数十問のみ、同一Position帯の範囲内で関連語が近くなるように並べ替える
+   * - ネットワークが未保存でも軽量に生成し、保存はアイドル時に回す
+   */
+  private applyChainLearningWithinTopN(
+    interleaved: PrioritizedQuestion[],
+    params: ScheduleParams
+  ): PrioritizedQuestion[] {
+    const t0 = typeof performance !== 'undefined' && typeof performance.now === 'function'
+      ? performance.now()
+      : Date.now();
+
+    const maxReorder = 80;
+    const topCount = Math.min(maxReorder, interleaved.length);
+    if (topCount <= 2) return interleaved;
+
+    getVocabularyNetworkForScheduling(params.questions);
+    startVocabularyNetworkPrecomputeIfNeeded(params.questions);
+    const lookup = getStrengthLookupForScheduling(params.questions);
+
+    const top = interleaved.slice(0, topCount);
+    const tail = interleaved.slice(topCount);
+
+    const bucketOf = (pq: PrioritizedQuestion) => Math.floor(pq.position / 10);
+    const getStrength = (a: string, b: string): number => {
+      const s1 = lookup.get(a)?.get(b) ?? 0;
+      const s2 = lookup.get(b)?.get(a) ?? 0;
+      return Math.max(s1, s2);
+    };
+
+    const reordered: PrioritizedQuestion[] = [];
+    let i = 0;
+    const touchedBuckets = new Set<number>();
+    let usedReorder = false;
+    while (i < top.length) {
+      const bucket = bucketOf(top[i]);
+      touchedBuckets.add(bucket);
+      let j = i + 1;
+      while (j < top.length && bucketOf(top[j]) === bucket) {
+        j++;
+      }
+
+      const segment = top.slice(i, j);
+      if (segment.length <= 2) {
+        reordered.push(...segment);
+        i = j;
+        continue;
+      }
+
+      // まずは元の先頭を起点に、貪欲に“次に最も関係が強い語”を繋ぐ
+      const remaining = segment.slice(1);
+      const segmentOut: PrioritizedQuestion[] = [segment[0]];
+
+      let totalLink = 0;
+      while (remaining.length > 0) {
+        const prev = segmentOut[segmentOut.length - 1].question.word;
+        let bestIdx = 0;
+        let bestStrength = -1;
+
+        for (let k = 0; k < remaining.length; k++) {
+          const cand = remaining[k].question.word;
+          const strength = getStrength(prev, cand);
+          if (strength > bestStrength) {
+            bestStrength = strength;
+            bestIdx = k;
+          }
+        }
+
+        totalLink += Math.max(0, bestStrength);
+        segmentOut.push(remaining.splice(bestIdx, 1)[0]);
+      }
+
+      // 関連が全く取れない場合は、元の順序を維持
+      if (totalLink === 0) {
+        reordered.push(...segment);
+      } else {
+        usedReorder = true;
+        reordered.push(...segmentOut);
+      }
+
+      i = j;
+    }
+
+    const out = [...reordered, ...tail];
+
+    const t1 = typeof performance !== 'undefined' && typeof performance.now === 'function'
+      ? performance.now()
+      : Date.now();
+    recordVocabularyNetworkSchedulerPerf({
+      ms: t1 - t0,
+      topCount,
+      buckets: touchedBuckets.size,
+      usedReorder,
+    });
+
+    return out;
   }
 
   /**
@@ -2452,4 +2577,5 @@ export class QuestionScheduler {
 
     return position;
   }
+
 }

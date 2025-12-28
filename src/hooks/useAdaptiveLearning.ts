@@ -31,6 +31,7 @@ import {
   DEFAULT_HYBRID_STRATEGY,
 } from '../strategies/hybridQuestionSelector';
 import { logger } from '@/utils/logger';
+import { updateVocabularyNetworkFromAnswer } from '@/ai/utils/vocabularyNetwork';
 import { getWordProgress } from '../progressStorage';
 
 /**
@@ -139,6 +140,7 @@ export function useAdaptiveLearning(
   const retentionAlgoRef = useRef<MemoryRetentionManager | null>(null);
   const paramEstimatorRef = useRef<PersonalParameterEstimator | null>(null);
   const questionSelectorRef = useRef<HybridQuestionSelector | null>(null);
+  const previousAnsweredWordRef = useRef<string | null>(null);
 
   // セッション状態
   const [sessionQuestionCount, setSessionQuestionCount] = useState(0);
@@ -299,6 +301,12 @@ export function useAdaptiveLearning(
   const recordAnswer = useCallback(
     (word: string, isCorrect: boolean, responseTime: number) => {
       try {
+        // 語彙ネットワーク（個人別）の軽量更新: 直前語とのペアのみ
+        // ※保存はアイドル時に行われるので、ここでは同期で安全な範囲だけ触る
+        const prev = previousAnsweredWordRef.current ?? undefined;
+        updateVocabularyNetworkFromAnswer({ word, previousWord: prev, isCorrect });
+        previousAnsweredWordRef.current = word;
+
         // フェーズ判定
         if (phaseDetectorRef.current) {
           const wordProgress = getWordProgress(word);
@@ -365,6 +373,7 @@ export function useAdaptiveLearning(
     logger.info('[useAdaptiveLearning] Resetting adaptive learning algorithms');
 
     setSessionQuestionCount(0);
+    previousAnsweredWordRef.current = null;
     setState({
       currentPhase: null,
       personalParams: null,
