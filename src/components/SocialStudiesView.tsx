@@ -10,6 +10,10 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import type { SocialStudiesQuestion, SocialStudiesField } from '@/types/socialStudies';
+import {
+  updateSocialStudiesProgress,
+  getSocialStudiesTermProgress,
+} from '@/storage/progress/socialStudiesProgress';
 
 interface SocialStudiesViewProps {
   /** 現在のデータソース */
@@ -21,7 +25,11 @@ interface QuizChoice {
   isCorrect: boolean;
 }
 
-type SortOrder = 'random' | 'chronological-asc' | 'chronological-desc';
+type SortOrder =
+  | 'priority'
+  | 'random'
+  | 'chronological-asc'
+  | 'chronological-desc';
 
 /**
  * 社会科学習ビュー
@@ -40,7 +48,7 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
 
   // フィルター
   const [selectedField, setSelectedField] = useState<SocialStudiesField | 'all'>('all');
-  const [sortOrder, setSortOrder] = useState<SortOrder>('random');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('priority');
 
   // ===== データ読み込み =====
   useEffect(() => {
@@ -77,7 +85,18 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
     }
 
     // ソート
-    if (sortOrder === 'chronological-asc') {
+    if (sortOrder === 'priority') {
+      // 優先順位ソート（Position降順: 苦手な問題を優先）
+      filtered = [...filtered].sort((a, b) => {
+        const progressA = getSocialStudiesTermProgress(a.term);
+        const progressB = getSocialStudiesTermProgress(b.term);
+
+        const posA = progressA?.position ?? 35; // 未学習は中間値
+        const posB = progressB?.position ?? 35;
+
+        return posB - posA; // 降順（Positionが高い = 苦手を優先）
+      });
+    } else if (sortOrder === 'chronological-asc') {
       filtered = [...filtered].sort((a, b) => (a.year || 9999) - (b.year || 9999));
     } else if (sortOrder === 'chronological-desc') {
       filtered = [...filtered].sort((a, b) => (b.year || 0) - (a.year || 0));
@@ -126,9 +145,19 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
     setTotalAnswered(totalAnswered + 1);
 
     const currentQuestion = filteredQuestions[currentIndex];
-    if (answer === currentQuestion.term) {
+    const isCorrect = answer === currentQuestion.term;
+
+    if (isCorrect) {
       setScore(score + 1);
     }
+
+    // 進捗を更新（Position 0-100管理）
+    updateSocialStudiesProgress(
+      currentQuestion.term,
+      currentQuestion.relatedFields.split('|')[0].trim(),
+      isCorrect,
+      false
+    );
   };
 
   const handleDontKnow = () => {
@@ -137,6 +166,16 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
     setSelectedAnswer('分からない');
     setIsAnswered(true);
     setTotalAnswered(totalAnswered + 1);
+
+    const currentQuestion = filteredQuestions[currentIndex];
+
+    // 進捗を更新（「分からない」は不正解として扱う）
+    updateSocialStudiesProgress(
+      currentQuestion.term,
+      currentQuestion.relatedFields.split('|')[0].trim(),
+      false,
+      true // isDontKnow: true
+    );
   };
 
   const handleNext = () => {
@@ -212,7 +251,8 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
               </optgroup>
               <optgroup label="公民">
                 <option value="公民-政治">政治</option>
-                <option value="公民-経済">経済</option>
+                <option valuepriority">優先順位（苦手優先）</option>
+              <option value="="公民-経済">経済</option>
                 <option value="公民-国際">国際</option>
                 <option value="公民-人権">人権</option>
               </optgroup>

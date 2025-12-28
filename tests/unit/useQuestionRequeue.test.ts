@@ -111,17 +111,29 @@ describe('useQuestionRequeue', () => {
     const { result } = renderHook(() => useQuestionRequeue<any>());
 
     const currentQuestion = { word: 'apple', position: 10 };
+    // 暗記モードの分からない(>=70)は振動対策で最小10問先に挿入される。
+    // position-aware も維持されることを確認するため、高Position群を scanStart(=10) 以降に配置する。
     const questions = [
       { word: 'q0', position: 0 },
       { word: 'q1', position: 0 },
       { word: 'q2', position: 0 },
       { word: 'q3', position: 0 },
       { word: 'q4', position: 0 },
-      { word: 'high', position: 60 }, // 高Position群
+      { word: 'q5', position: 0 },
       { word: 'q6', position: 0 },
       { word: 'q7', position: 0 },
       { word: 'q8', position: 0 },
       { word: 'q9', position: 0 },
+      { word: 'q10', position: 0 },
+      { word: 'q11', position: 0 },
+      { word: 'q12', position: 0 },
+      { word: 'q13', position: 0 },
+      { word: 'high', position: 60 }, // 高Position群（scanStart以降）
+      { word: 'q15', position: 0 },
+      { word: 'q16', position: 0 },
+      { word: 'q17', position: 0 },
+      { word: 'q18', position: 0 },
+      { word: 'q19', position: 0 },
     ];
 
     const returned = result.current.reAddQuestion(currentQuestion, questions, 0, 'memorization');
@@ -129,8 +141,9 @@ describe('useQuestionRequeue', () => {
     expect(returned).not.toBe(questions);
     expect(returned).toHaveLength(questions.length + 1);
 
-    // baseOffset=1, originalInsertAt=1 だが、高Position群(index 5)の直後に寄せて index 6 に入る
-    expect(returned[6].word).toBe('apple');
+    // baseOffset=1 でも暗記モードは最小10問先。
+    // originalInsertAt=10 から scanStart=10.. の範囲で高Position群(index 14)を見つけ、直後(index 15)に寄せる。
+    expect(returned[15].word).toBe('apple');
 
     const stored = localStorage.getItem('debug_requeue_events');
     expect(stored).not.toBeNull();
@@ -140,8 +153,8 @@ describe('useQuestionRequeue', () => {
 
     const entry = logs[0];
     expect(entry.decision).toBe('inserted');
-    expect(entry.originalInsertAt).toBe(1);
-    expect(entry.insertAt).toBe(6);
+    expect(entry.originalInsertAt).toBe(10);
+    expect(entry.insertAt).toBe(15);
     expect(entry.positionAwareAdjusted).toBe(true);
     expect(entry.ssotPosition).toBe(80);
     expect(entry.effectivePosition).toBe(80);
@@ -196,7 +209,7 @@ describe('useQuestionRequeue', () => {
     expect(logs[1].reason).toBe('still_learning_like');
   });
 
-  it('分からない(>=70)は近くに既存があれば、重複追加せず繰り上げて解消に向かう（move existing）', () => {
+  it('分からない(>=70)は既に将来に存在する場合、重複追加せず（必要なら）適度な距離まで繰り上げる（move existing）', () => {
     setProgressForWord('apple', {
       memorizationPosition: 80,
       memorizationAttempts: 5,
@@ -210,6 +223,7 @@ describe('useQuestionRequeue', () => {
     const { result } = renderHook(() => useQuestionRequeue<any>());
 
     const currentQuestion = { word: 'apple', position: 10 };
+    // 既存の apple を十分後方に置き、minGap(=10) に従って「近すぎない位置」へ繰り上げられることを確認する。
     const questions = [
       { word: 'q0', position: 0 },
       { word: 'q1', position: 0 },
@@ -218,16 +232,35 @@ describe('useQuestionRequeue', () => {
       { word: 'q4', position: 0 },
       { word: 'q5', position: 0 },
       { word: 'q6', position: 0 },
-      { word: 'apple', position: 20 }, // 近くに既存（ただしすぐ次ではない）
+      { word: 'q7', position: 0 },
       { word: 'q8', position: 0 },
+      { word: 'q9', position: 0 },
+      { word: 'q10', position: 0 },
+      { word: 'q11', position: 0 },
+      { word: 'q12', position: 0 },
+      { word: 'q13', position: 0 },
+      { word: 'q14', position: 0 },
+      { word: 'q15', position: 0 },
+      { word: 'q16', position: 0 },
+      { word: 'q17', position: 0 },
+      { word: 'q18', position: 0 },
+      { word: 'q19', position: 0 },
+      { word: 'q20', position: 0 },
+      { word: 'q21', position: 0 },
+      { word: 'q22', position: 0 },
+      { word: 'q23', position: 0 },
+      { word: 'q24', position: 0 },
+      { word: 'apple', position: 20 }, // 既存（十分後方）
+      { word: 'q26', position: 0 },
+      { word: 'q27', position: 0 },
     ];
 
     const returned = result.current.reAddQuestion(currentQuestion, questions, 0, 'memorization');
 
     // 追加ではなく「移動」なので長さは変わらない
     expect(returned).toHaveLength(questions.length);
-    // baseOffset=1（Math.random=0）なので、index 1 に繰り上がる
-    expect(returned[1].word).toBe('apple');
+    // 暗記モードの分からないは minGap=10 なので、index 10 に繰り上がる
+    expect(returned[10].word).toBe('apple');
     // 旧位置には残らない（重複しない）
     expect(returned.filter((q: any) => q.word === 'apple')).toHaveLength(1);
 
