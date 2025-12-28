@@ -20,6 +20,7 @@ import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractio
 import { getBreatherTrivia } from '../englishTrivia';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 import { computeAttemptCounts } from './scoreBoard/attemptCounts';
+import { loadEfficiencyProfile } from '../storage/learningEfficiency';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'; // クイズモードを追加
@@ -104,6 +105,15 @@ function ScoreBoard({
   const [activeTab, setActiveTab] = useState<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'>(
     'ai'
   );
+
+  const efficiencyProfile = useMemo(() => {
+    try {
+      if (typeof window === 'undefined') return null;
+      return loadEfficiencyProfile();
+    } catch {
+      return null;
+    }
+  }, [onAnswerTime]);
 
   const [isLearningTabPulsing, setIsLearningTabPulsing] = useState(false);
   const pulseTimerRef = useRef<number | null>(null);
@@ -539,6 +549,37 @@ function ScoreBoard({
   // 定着率をstateから取得
   const { retentionRate: _retentionRate } = retentionData;
 
+  // 計画タブ: 定着率の目標（UI仕様）
+  const retentionGoalPercent = 80;
+  const retentionPercent = retentionData.retentionRate;
+  const retentionProgressToGoalPercent = Math.min(
+    100,
+    Math.round((retentionPercent / retentionGoalPercent) * 100)
+  );
+
+  const relatedFieldEffectPercent = useMemo(() => {
+    if (!efficiencyProfile) return null;
+    if (!category || category === '全分野') return null;
+
+    const categoryEfficiency = efficiencyProfile.categoryEfficiencies.find(
+      (ce) => ce.category === category
+    );
+    if (!categoryEfficiency) return null;
+
+    const diff =
+      (categoryEfficiency.retentionRate - efficiencyProfile.overallMetrics.retentionRate) * 100;
+    if (!Number.isFinite(diff)) return null;
+    return Math.round(diff);
+  }, [efficiencyProfile, category]);
+
+  const chainLearningEffectPercent = useMemo(() => {
+    if (!efficiencyProfile) return null;
+    if (!efficiencyProfile.chainLearningEffect?.usedChainLearning) return null;
+    const diff = efficiencyProfile.chainLearningEffect.effectDifference * 100;
+    if (!Number.isFinite(diff)) return null;
+    return Math.round(diff);
+  }, [efficiencyProfile]);
+
   // 詳細な定着率統計をstateから取得
   const detailedStats = detailedStatsData;
 
@@ -587,36 +628,6 @@ function ScoreBoard({
         </button>
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
-            activeTab === 'breakdown'
-              ? 'bg-primary text-white border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
-          }`}
-          onClick={() => setActiveTab('breakdown')}
-          title="学習状況"
-        >
-          <span
-            className={`hidden sm:inline ${
-              isLearningTabPulsing
-                ? 'animate-pulse drop-shadow-sm ' +
-                  (activeTab === 'breakdown' ? '' : 'text-primary')
-                : ''
-            }`}
-          >
-            📈 学習状況
-          </span>
-          <span
-            className={`sm:hidden ${
-              isLearningTabPulsing
-                ? 'animate-pulse drop-shadow-sm ' +
-                  (activeTab === 'breakdown' ? '' : 'text-primary')
-                : ''
-            }`}
-          >
-            学習状況
-          </span>
-        </button>
-        <button
-          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'history'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -626,6 +637,36 @@ function ScoreBoard({
         >
           <span className="hidden sm:inline">📜 履歴</span>
           <span className="sm:hidden">履歴</span>
+        </button>
+        <button
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            activeTab === 'breakdown'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
+          }`}
+          onClick={() => setActiveTab('breakdown')}
+          title="効率"
+        >
+          <span
+            className={`hidden sm:inline ${
+              isLearningTabPulsing
+                ? 'animate-pulse drop-shadow-sm ' +
+                  (activeTab === 'breakdown' ? '' : 'text-primary')
+                : ''
+            }`}
+          >
+            効率
+          </span>
+          <span
+            className={`sm:hidden ${
+              isLearningTabPulsing
+                ? 'animate-pulse drop-shadow-sm ' +
+                  (activeTab === 'breakdown' ? '' : 'text-primary')
+                : ''
+            }`}
+          >
+            効率
+          </span>
         </button>
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
@@ -640,10 +681,10 @@ function ScoreBoard({
               setActiveTab('settings');
             }
           }}
-          title="学習設定"
+          title="設定"
         >
-          <span className="hidden sm:inline">⚙️ 学習設定</span>
-          <span className="sm:hidden">学習設定</span>
+          <span className="hidden sm:inline">⚙️ 設定</span>
+          <span className="sm:hidden">設定</span>
         </button>
       </div>
 
@@ -731,24 +772,61 @@ function ScoreBoard({
               )}
             </div>
 
+            {/* 計画タブ: 定着率 + 目標バー（UI仕様） */}
+            <div className="plan-text-line">
+              <span className="stat-text-label">📈 定着率: {retentionPercent}%</span>
+              <span className="stat-text-divider">｜</span>
+              <span className="stat-text-label">{retentionGoalPercent}%目標</span>
+            </div>
+            <div className="mt-1 mb-2">
+              <div className="w-full bg-gray-200 rounded h-2">
+                <div
+                  className="bg-primary h-2 rounded"
+                  style={{ width: `${retentionProgressToGoalPercent}%` }}
+                />
+              </div>
+            </div>
+
             {/* 計画タブ: 学習効率（ユーザー指示により表示） */}
             <div className="plan-text-line">
-              <span className="stat-text-label">📈 定着率: {retentionData.retentionRate}%</span>
+              {typeof relatedFieldEffectPercent === 'number' && (
+                <span className="stat-text-label">
+                  ✨関連分野別の効果:{relatedFieldEffectPercent >= 0 ? '+' : ''}
+                  {relatedFieldEffectPercent}%
+                </span>
+              )}
+              {typeof relatedFieldEffectPercent === 'number' &&
+                typeof chainLearningEffectPercent === 'number' && (
+                  <span className="stat-text-divider">｜</span>
+                )}
+              {typeof chainLearningEffectPercent === 'number' && (
+                <span className="stat-text-label">
+                  いもづる式学習の効果:{chainLearningEffectPercent >= 0 ? '+' : ''}
+                  {chainLearningEffectPercent}%
+                </span>
+              )}
+            </div>
+
+            {/* 計画タブ: 推定指標（既存） */}
+            <div className="plan-text-line">
               {typeof estimatedSpeed === 'number' && (
                 <>
-                  <span className="stat-text-divider">｜</span>
                   <span className="stat-text-label">推定速度: {estimatedSpeed.toFixed(2)}</span>
                 </>
               )}
               {typeof forgettingRate === 'number' && (
                 <>
-                  <span className="stat-text-divider">｜</span>
+                  {typeof estimatedSpeed === 'number' && (
+                    <span className="stat-text-divider">｜</span>
+                  )}
                   <span className="stat-text-label">忘却率: {forgettingRate.toFixed(2)}</span>
                 </>
               )}
               {learningPhase && (
                 <>
-                  <span className="stat-text-divider">｜</span>
+                  {(typeof estimatedSpeed === 'number' || typeof forgettingRate === 'number') && (
+                    <span className="stat-text-divider">｜</span>
+                  )}
                   <span className="stat-text-label">フェーズ: {learningPhase}</span>
                 </>
               )}

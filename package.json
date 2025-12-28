@@ -14,6 +14,8 @@
     "validate:grammar": "python3 scripts/validate_grammar_advanced.py",
     "validate:grammar:analyze": "python3 scripts/analyze_grammar_data_quality.py",
     "validate:grammar:explanations": "tsx tools/validate-grammar-explanations.ts",
+    "validate:social-studies": "python3 scripts/validate-social-studies.py local-data-packs/social-studies*.csv",
+    "convert:social-studies": "tsx scripts/convert-social-studies-csv.ts",
     "check:data-quality": "bash scripts/check-data-quality.sh",
     "check:grammar-quality": "npm run validate:grammar && npm run validate:grammar:analyze && npm run validate:grammar:explanations",
     "check:no-dark-mode": "node scripts/check-no-dark-mode.mjs",

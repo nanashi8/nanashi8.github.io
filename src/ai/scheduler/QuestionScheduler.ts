@@ -194,8 +194,11 @@ export class QuestionScheduler {
     // 4. 振動防止フィルター適用
     const filtered = this.applyAntiVibration(prioritized, context);
 
+    // 4.5 学習上限（語数上限）適用
+    const limited = this.applyLearningLimits(filtered, params, context);
+
     // 5. ソート・バランス調整
-    const sorted = this.sortAndBalance(filtered, params, context);
+    const sorted = this.sortAndBalance(limited, params, context);
 
     // 6. 後処理
     const questions = this.postProcess(sorted, context);
@@ -1095,6 +1098,55 @@ export class QuestionScheduler {
   }
 
   /**
+   * 学習上限（語数上限）を適用
+   *
+   * 目的:
+   * - 上限到達時に「新規（attempts=0）」の混入を抑止し、復習（attempts>0）中心にする
+   * - Position降順ソートやGamificationAIのインターリーブ自体は破壊しない
+   */
+  private applyLearningLimits(
+    questions: PrioritizedQuestion[],
+    params: ScheduleParams,
+    context: ScheduleContext
+  ): PrioritizedQuestion[] {
+    const learningLimit = params.limits?.learningLimit ?? null;
+    const reviewLimit = params.limits?.reviewLimit ?? null;
+
+    if (learningLimit === null && reviewLimit === null && !context.isReviewFocusMode) {
+      return questions;
+    }
+
+    const stillLearningCount = questions.reduce((acc, pq) => {
+      const attempts = pq.status?.attempts ?? 0;
+      if (attempts <= 0) return acc;
+      if (pq.position >= 40 && pq.position < 70) return acc + 1;
+      return acc;
+    }, 0);
+
+    const incorrectCount = questions.reduce((acc, pq) => {
+      const attempts = pq.status?.attempts ?? 0;
+      if (attempts <= 0) return acc;
+      if (pq.position >= 70) return acc + 1;
+      return acc;
+    }, 0);
+
+    const overLearningLimit = learningLimit !== null && stillLearningCount >= learningLimit;
+    const overReviewLimit = reviewLimit !== null && incorrectCount >= reviewLimit;
+    const shouldReviewOnly = context.isReviewFocusMode || overLearningLimit || overReviewLimit;
+
+    if (!shouldReviewOnly) return questions;
+
+    // 復習（attempts>0）を優先し、新規（attempts=0）を除外
+    const reviewOnly = questions.filter((pq) => {
+      const attempts = pq.status?.attempts ?? 0;
+      return attempts > 0 && pq.position >= 40;
+    });
+
+    // フォールバック: もし復習語が存在しない場合は、元の候補を返す
+    return reviewOnly.length > 0 ? reviewOnly : questions;
+  }
+
+  /**
    * ソート・バランス調整
    * 注: category = 学習状態（分からない/まだまだ/未学習/定着済）
    */
@@ -1343,9 +1395,10 @@ export class QuestionScheduler {
     interleaved: PrioritizedQuestion[],
     params: ScheduleParams
   ): PrioritizedQuestion[] {
-    const t0 = typeof performance !== 'undefined' && typeof performance.now === 'function'
-      ? performance.now()
-      : Date.now();
+    const t0 =
+      typeof performance !== 'undefined' && typeof performance.now === 'function'
+        ? performance.now()
+        : Date.now();
 
     const maxReorder = 80;
     const topCount = Math.min(maxReorder, interleaved.length);
@@ -1420,9 +1473,10 @@ export class QuestionScheduler {
 
     const out = [...reordered, ...tail];
 
-    const t1 = typeof performance !== 'undefined' && typeof performance.now === 'function'
-      ? performance.now()
-      : Date.now();
+    const t1 =
+      typeof performance !== 'undefined' && typeof performance.now === 'function'
+        ? performance.now()
+        : Date.now();
     recordVocabularyNetworkSchedulerPerf({
       ms: t1 - t0,
       topCount,
@@ -2577,5 +2631,4 @@ export class QuestionScheduler {
 
     return position;
   }
-
 }

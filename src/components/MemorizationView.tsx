@@ -122,14 +122,8 @@ function MemorizationView({
   const [abConsecutiveCritical, setAbConsecutiveCritical] = useState<number>(0);
   const [abFallbackApplied, setAbFallbackApplied] = useState<boolean>(false);
   const [_abConsecutiveDivergence, _setAbConsecutiveDivergence] = useState<number>(0);
-  const [abMlEnabled, setAbMlEnabled] = useState<boolean>(() => {
-    // ML有効化フラグ（localStorage設定から取得、デフォルトfalse）
-    try {
-      return localStorage.getItem('ab_ml_enabled') === 'true';
-    } catch {
-      return false;
-    }
-  });
+  // 🧪 Week 4: MLは常時ON（UIスイッチ撤去に伴い固定）
+  const abMlEnabled = true;
 
   // 復習モード
   const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
@@ -220,13 +214,9 @@ function MemorizationView({
   const [scheduler] = useState(() => {
     const s = new QuestionScheduler();
     // 🤖 Phase 2: AI統合を有効化（オプトイン）
-    // 開発環境でAI統合をテストする場合はtrueに設定
-    const enableAI =
-      import.meta.env.DEV || localStorage.getItem('enable-ai-coordination') === 'true';
-    if (enableAI) {
-      s.enableAICoordination(true);
-      logger.info('🤖 [MemorizationView] AI統合が有効化されました');
-    }
+    // UIスイッチ撤去に伴い、暗記タブでは常時有効
+    s.enableAICoordination(true);
+    logger.info('🤖 [MemorizationView] AI統合が有効化されました');
     return s;
   });
 
@@ -1064,7 +1054,9 @@ function MemorizationView({
             duration: 0,
           },
           useMetaAI: true,
+          isReviewFocusMode,
           hybridMode: abVariant === 'A' || abVariant === 'B',
+          finalPriorityMode: abVariant === 'C',
         });
 
         setQuestions((prev) => {
@@ -1668,7 +1660,7 @@ function MemorizationView({
               startedAt: abSessionStartedAt,
               endedAt,
               durationSec,
-              mlEnabled: abMlEnabled, // 🧪 Week 4: ML有効フラグを記録
+              mlEnabled: true, // 🧪 Week 4: MLは固定ON
             };
 
             appendSessionLog(log);
@@ -2138,9 +2130,7 @@ function MemorizationView({
                   <label className="block text-sm font-medium mb-3 text-gray-700">
                     🎯 出題繰り返し設定:
                   </label>
-                  <p className="text-xs text-gray-500 mb-3">
-                    未入力の場合は無制限に出題します（推奨：Leitnerシステム方式）
-                  </p>
+                  <p className="text-xs text-gray-500 mb-3">未入力の場合は無制限に出題します</p>
                   <div className="space-y-3">
                     <div>
                       <label className="flex items-center mb-2">
@@ -2306,42 +2296,7 @@ function MemorizationView({
                   </div>
                 </div>
 
-                {/* 🧪 Week 4: ML ON/OFF切替 */}
-                <div className="border-t pt-4 mt-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        🤖 機械学習（ML）
-                      </label>
-                      <p className="text-xs text-gray-500">
-                        個人の学習パターンに適応（実験的機能）
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => {
-                        try {
-                          const newValue = !abMlEnabled;
-                          localStorage.setItem('ab_ml_enabled', String(newValue));
-                          setAbMlEnabled(newValue);
-                          alert(
-                            newValue
-                              ? 'ML機能を有効にしました。設定を反映するにはページをリロードしてください。'
-                              : 'ML機能を無効にしました。設定を反映するにはページをリロードしてください。'
-                          );
-                        } catch {
-                          alert('設定の保存に失敗しました');
-                        }
-                      }}
-                      className={`px-4 py-2 rounded-lg font-medium transition ${
-                        abMlEnabled
-                          ? 'bg-blue-500 text-white hover:bg-blue-600'
-                          : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
-                      }`}
-                    >
-                      {abMlEnabled ? 'ON' : 'OFF'}
-                    </button>
-                  </div>
-                </div>
+                {/* MLは常時ON（UIスイッチ撤去） */}
               </div>
             </div>
           )}
