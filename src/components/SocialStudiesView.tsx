@@ -13,12 +13,14 @@ import type { SocialStudiesQuestion, SocialStudiesField } from '@/types/socialSt
 import {
   updateSocialStudiesProgress,
   getSocialStudiesTermProgress,
+  loadSocialStudiesProgressSync,
 } from '@/storage/progress/socialStudiesProgress';
 import {
   loadRelationships,
   getRelatedTerms,
   type RelatedTermRecommendation,
 } from '@/storage/socialStudiesRelations';
+import { socialStudiesEfficiencyAI } from '@/ai/specialists/SocialStudiesEfficiencyAI';
 
 interface SocialStudiesViewProps {
   /** 現在のデータソース */
@@ -234,6 +236,17 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
   const correctRate =
     totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
 
+  // 学習効率メトリクス
+  const efficiencyMetrics = useMemo(() => {
+    try {
+      const progressData = loadSocialStudiesProgressSync();
+      return socialStudiesEfficiencyAI.calculateOverallMetrics(progressData);
+    } catch (err) {
+      console.error('効率メトリクス計算エラー:', err);
+      return null;
+    }
+  }, [totalAnswered]); // 回答時に再計算
+
   return (
     <div className="social-studies-view max-w-4xl mx-auto p-4">
       {/* ヘッダー: スコアとフィルター */}
@@ -248,6 +261,30 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
               {score} / {totalAnswered}問正解
             </div>
           </div>
+
+          {/* 学習効率表示 */}
+          {efficiencyMetrics && totalAnswered > 0 && (
+            <div className="flex items-center gap-4 text-sm">
+              <div className="flex items-center gap-1">
+                <span className="text-gray-600">定着率:</span>
+                <span className="font-medium text-green-600">
+                  {Math.round(efficiencyMetrics.retentionRate * 100)}%
+                </span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-gray-600">学習速度:</span>
+                <span className="font-medium text-purple-600">
+                  {efficiencyMetrics.learningSpeed}語/日
+                </span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-gray-600">効率:</span>
+                <span className="font-medium text-orange-600">
+                  {Math.round(efficiencyMetrics.efficiencyScore)}点
+                </span>
+              </div>
+            </div>
+          )}
 
           {/* フィルター */}
           <div className="flex items-center gap-2">
@@ -272,8 +309,7 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
               </optgroup>
               <optgroup label="公民">
                 <option value="公民-政治">政治</option>
-                <option valuepriority">優先順位（苦手優先）</option>
-              <option value="="公民-経済">経済</option>
+                <option value="公民-経済">経済</option>
                 <option value="公民-国際">国際</option>
                 <option value="公民-人権">人権</option>
               </optgroup>
