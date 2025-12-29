@@ -1,118 +1,350 @@
 [
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "民主主義",
+    "reading": "みんしゅしゅぎ",
+    "matter": "政治",
+    "question": "国民が政治の主権者である政治の仕組みは？",
+    "explanation": "国民が主権を持ち、政治に参加する制度。選挙で代表者を選び、多数決で決定する。基本的人権の尊重と法の支配が基礎。議会制民主主義が一般的。",
+    "relatedMatters": "国民主権|選挙|議会",
+    "relatedFields": "公民-政治",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "独裁政治|社会主義"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "国民主権",
+    "reading": "こくみんしゅけん",
+    "matter": "政治",
+    "question": "国の政治を最終的に決定する権力が国民にあることは？",
+    "explanation": "日本国憲法の三大原則の一つ。国民が主権を持ち、選挙で代表を選び政治を行う。天皇は象徴であり、政治権力を持たない。国民投票で憲法改正も可能。",
+    "relatedMatters": "日本国憲法|選挙|天皇",
+    "relatedFields": "公民-政治",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "天皇主権|独裁制"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "三権分立",
+    "reading": "さんけんぶんりつ",
+    "matter": "政治",
+    "question": "国の権力を立法・行政・司法に分ける仕組みは？",
+    "explanation": "権力の集中を防ぐため、立法権（国会）・行政権（内閣）・司法権（裁判所）に分ける。互いに抑制と均衡を保ち、独裁を防ぐ。モンテスキューが提唱した原理。",
+    "relatedMatters": "国会|内閣|裁判所",
+    "relatedFields": "公民-政治",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "二権分立|集権制"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "国会",
+    "reading": "こっかい",
+    "matter": "政治",
+    "question": "国の唯一の立法機関は？",
+    "explanation": "日本の立法機関で、法律を制定する。衆議院と参議院の二院制。衆議院は解散があり、予算先議権・内閣不信任権を持つ。参議院は任期6年で3年ごとに半数改選。",
+    "relatedMatters": "立法権|衆議院|参議院",
+    "relatedFields": "公民-政治",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "内閣|裁判所"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "内閣",
+    "reading": "ないかく",
+    "matter": "政治",
+    "question": "行政権を持ち、政治を実際に行う機関は？",
+    "explanation": "内閣総理大臣と国務大臣で構成される行政機関。法律を執行し、政策を実施する。総理大臣は国会議員の中から国会が指名。内閣は国会に対して連帯責任を負う。",
+    "relatedMatters": "行政権|内閣総理大臣|国務大臣",
+    "relatedFields": "公民-政治",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "国会|裁判所"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "裁判所",
+    "reading": "さいばんしょ",
+    "matter": "政治",
+    "question": "司法権を持ち、法律に基づいて裁判を行う機関は？",
+    "explanation": "争いを法律に基づいて解決する機関。最高裁判所と下級裁判所（高等・地方・家庭・簡易裁判所）がある。法律が憲法に違反していないか審査する違憲立法審査権を持つ。",
+    "relatedMatters": "司法権|最高裁判所|違憲審査権",
+    "relatedFields": "公民-政治",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "国会|内閣"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "選挙",
+    "reading": "せんきょ",
+    "matter": "政治",
+    "question": "国民が代表者を選ぶ制度は？",
+    "explanation": "民主主義の基本。満18歳以上の国民に選挙権がある。普通選挙・平等選挙・秘密選挙・直接選挙が原則。衆議院は小選挙区比例代表並立制、参議院は選挙区制と比例代表制。",
+    "relatedMatters": "選挙権|普通選挙|18歳",
+    "relatedFields": "公民-政治",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "指名|世襲"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "地方自治",
+    "reading": "ちほうじち",
+    "matter": "政治",
+    "question": "地方公共団体が自主的に政治を行うことは？",
+    "explanation": "都道府県・市町村が独自に行う政治。首長と議員を住民が直接選挙で選ぶ。条例を制定し、地域の特性に応じた政策を実施。住民投票やリコール制度もある。",
+    "relatedMatters": "都道府県|市町村|条例",
+    "relatedFields": "公民-政治",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "中央集権|国政"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "人権",
+    "reading": "じんけん",
+    "matter": "政治",
+    "question": "人間が生まれながらに持つ権利は？",
+    "explanation": "すべての人が生まれながらに持つ基本的な権利。日本国憲法で基本的人権の尊重が保障される。自由権・平等権・社会権・参政権・請求権がある。公共の福祉により制限される場合もある。",
+    "relatedMatters": "基本的人権|自由権|平等権",
+    "relatedFields": "公民-人権",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "義務|責任"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "平等権",
+    "reading": "びょうどうけん",
+    "matter": "政治",
+    "question": "すべての人が差別されずに平等に扱われる権利は？",
+    "explanation": "性別・人種・信条・社会的身分などによる差別を禁止。法の下の平等を保障。男女雇用機会均等法、障害者差別解消法などで具体化。部落差別・在日外国人差別の解消も課題。",
+    "relatedMatters": "法の下の平等|差別禁止|男女平等",
+    "relatedFields": "公民-人権",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "自由権|社会権"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "資本主義",
+    "reading": "しほんしゅぎ",
+    "matter": "経済",
+    "question": "私有財産と自由競争を基本とする経済体制は？",
+    "explanation": "生産手段を個人が所有し、利潤追求を目的とする経済体制。市場経済・自由競争が原則。しかし独占・格差などの問題もあり、政府による修正が必要。日本は修正資本主義。",
+    "relatedMatters": "市場経済|自由競争|私有財産",
+    "relatedFields": "公民-経済",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "社会主義|共産主義"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "市場経済",
+    "reading": "しじょうけいざい",
+    "matter": "経済",
+    "question": "需要と供給によって価格が決まる経済の仕組みは？",
+    "explanation": "商品の価格が需要と供給の関係で決まる経済。価格の自動調節機能（見えざる手）が働く。競争により効率的な生産が促進される。しかし市場の失敗もあり、政府の介入が必要。",
+    "relatedMatters": "需要と供給|価格|見えざる手",
+    "relatedFields": "公民-経済",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "計画経済|統制経済"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "通貨",
+    "reading": "つうか",
+    "matter": "経済",
+    "question": "物やサービスの交換に使われるお金は？",
+    "explanation": "商品の交換を仲介する手段。日本では日本銀行が発行する日本銀行券（紙幣）と、政府が発行する硬貨がある。価値の尺度・交換の手段・価値の保存の機能を持つ。",
+    "relatedMatters": "日本銀行|紙幣|硬貨",
+    "relatedFields": "公民-経済",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "物々交換|商品券"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "日本銀行",
+    "reading": "にほんぎんこう",
+    "matter": "経済",
+    "question": "日本の中央銀行は？",
+    "explanation": "日本唯一の中央銀行で、日本銀行券（お札）を発行する。金融政策を行い、景気を調整。政府の銀行・銀行の銀行としても機能。物価の安定と金融システムの安定が目的。",
+    "relatedMatters": "中央銀行|紙幣|金融政策",
+    "relatedFields": "公民-経済",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "民間銀行|証券会社"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "財政",
+    "reading": "ざいせい",
+    "matter": "経済",
+    "question": "国や地方公共団体の収入と支出は？",
+    "explanation": "政府の経済活動。税金を主な収入源とし、公共サービスや社会保障に支出。景気調整機能もある。国債発行により財政赤字を補填するが、累積債務が問題となっている。",
+    "relatedMatters": "税金|国債|歳入歳出",
+    "relatedFields": "公民-経済",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "家計|企業会計"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "税金",
+    "reading": "ぜいきん",
+    "matter": "経済",
+    "question": "国民が国や地方公共団体に納める金銭は？",
+    "explanation": "公共サービスの財源。直接税（所得税・法人税など）と間接税（消費税など）がある。累進課税制度で所得の再分配機能。納税は国民の義務（憲法第30条）。",
+    "relatedMatters": "直接税|間接税|消費税",
+    "relatedFields": "公民-経済",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "寄付|手数料"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "社会保障",
+    "reading": "しゃかいほしょう",
+    "matter": "経済",
+    "question": "病気・失業・老齢などに備える公的な制度は？",
+    "explanation": "国民の生活を保障する制度。社会保険（年金・医療・介護・雇用・労災）、公的扶助（生活保護）、社会福祉、公衆衛生の4つの柱。高齢化で財源確保が課題。",
+    "relatedMatters": "年金|医療保険|生活保護",
+    "relatedFields": "公民-経済",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "民間保険|貯蓄"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "労働基本権",
+    "reading": "ろうどうきほんけん",
+    "matter": "経済",
+    "question": "労働者の権利を守る憲法上の権利は？",
+    "explanation": "憲法第28条で保障される労働三権。団結権（労働組合結成）・団体交渉権（使用者と交渉）・団体行動権（ストライキ）。労働者の地位向上と労働条件改善が目的。",
+    "relatedMatters": "労働三権|労働組合|ストライキ",
+    "relatedFields": "公民-経済",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "経営権|資本権"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "公害",
+    "reading": "こうがい",
+    "matter": "経済",
+    "question": "企業活動などが原因で起こる環境や健康への被害は？",
+    "explanation": "事業活動により環境が損なわれ、健康被害が生じること。四大公害病（水俣病・新潟水俣病・イタイイタイ病・四日市ぜんそく）が発生。公害対策基本法で規制され、環境アセスメントが実施される。",
+    "relatedMatters": "四大公害病|水俣病|環境汚染",
+    "relatedFields": "公民-経済",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "自然災害|事故"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "国際連合",
+    "reading": "こくさいれんごう",
+    "matter": "国際",
+    "question": "第二次世界大戦後に設立された国際平和機構は？",
+    "explanation": "1945年設立の国際機関。本部はニューヨーク。国際平和と安全の維持が目的。安全保障理事会（常任理事国5・非常任理事国10）・総会・事務局などで構成。PKO活動も実施。",
+    "relatedMatters": "国連|安全保障理事会|PKO",
+    "relatedFields": "公民-国際",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "国際連盟|NATO"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "安全保障理事会",
+    "reading": "あんぜんほしょうりじかい",
+    "matter": "国際",
+    "question": "国連で平和維持の中心的役割を果たす機関は？",
+    "explanation": "国連の主要機関で、国際平和と安全の維持を担当。常任理事国5カ国（米・英・仏・露・中）と非常任理事国10カ国で構成。常任理事国は拒否権を持つ。",
+    "relatedMatters": "国連|常任理事国|拒否権",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "総会|事務局"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "PKO",
+    "reading": "ピーケーオー",
+    "matter": "国際",
+    "question": "国連平和維持活動の略称は？",
+    "explanation": "紛争地域で停戦監視や人道支援を行う国連の活動。武力行使は自衛に限定。日本は1992年のPKO協力法により参加可能に。カンボジアをはじめ、アフリカなどで活動。",
+    "relatedMatters": "国連|平和維持|停戦監視",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "NATO|軍事同盟"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "難民",
+    "reading": "なんみん",
+    "matter": "国際",
+    "question": "紛争や迫害から逃れて国外に逃れた人々は？",
+    "explanation": "戦争・迫害・紛争などで母国を追われた人々。国連難民高等弁務官事務所（UNHCR）が保護・支援。シリア・アフガニスタン・南スーダンなどから多数発生。受け入れが国際問題。",
+    "relatedMatters": "UNHCR|紛争|迫害",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "移民|亡命者"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "貧困問題",
+    "reading": "ひんこんもんだい",
+    "matter": "国際",
+    "question": "発展途上国で深刻な経済的困窮は？",
+    "explanation": "発展途上国で多くの人が極度の貧困状態にある。食料不足・教育機会の欠如・医療不足が深刻。南北問題とも呼ばれる。SDGsで「貧困をなくそう」が第1目標。",
+    "relatedMatters": "発展途上国|南北問題|SDGs",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "富裕層|経済格差"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "南北問題",
+    "reading": "なんぼくもんだい",
+    "matter": "国際",
+    "question": "先進国と発展途上国の経済格差の問題は？",
+    "explanation": "北半球の先進国と南半球の発展途上国との経済格差。植民地支配の歴史や貿易条件の不利が原因。ODA（政府開発援助）やフェアトレードで格差解消を目指す。",
+    "relatedMatters": "先進国|発展途上国|経済格差",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "東西問題|人口問題"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "ODA",
+    "reading": "オーディーエー",
+    "matter": "国際",
+    "question": "政府開発援助の略称は？",
+    "explanation": "先進国政府が発展途上国に行う経済援助。無償資金協力・技術協力・有償資金協力（円借款）がある。インフラ整備・教育・医療分野を支援。日本も主要援助国の一つ。",
+    "relatedMatters": "政府開発援助|経済援助|技術協力",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "民間援助|軍事援助"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "核兵器",
+    "reading": "かくへいき",
+    "matter": "国際",
+    "question": "放射能による大量破壊兵器は？",
+    "explanation": "原子爆弾・水素爆弾などの大量破壊兵器。広島・長崎への原爆投下で日本は唯一の被爆国。核拡散防止条約（NPT）で拡散を防止。日本は非核三原則（持たず・作らず・持ち込ませず）を掲げる。",
+    "relatedMatters": "原爆|被爆国|非核三原則",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "通常兵器|化学兵器"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "地球温暖化",
+    "reading": "ちきゅうおんだんか",
+    "matter": "国際",
+    "question": "温室効果ガスによる気温上昇問題は？",
+    "explanation": "二酸化炭素などの温室効果ガスにより地球の平均気温が上昇。海面上昇・異常気象の原因。京都議定書・パリ協定で国際的に対策。再生可能エネルギーへの転換が課題。",
+    "relatedMatters": "温室効果ガス|パリ協定|異常気象",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "オゾン層|酸性雨"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "フェアトレード",
+    "reading": "フェアトレード",
+    "matter": "国際",
+    "question": "発展途上国の生産者に適正な価格を支払う貿易は？",
+    "explanation": "発展途上国の生産者に公正な対価を支払う貿易。適正価格での継続的取引により、生産者の生活改善と自立を支援。コーヒー・チョコレート・コットン製品などで広がる。",
+    "relatedMatters": "公正貿易|適正価格|発展途上国支援",
+    "relatedFields": "公民-国際",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "自由貿易|保護貿易"
   }
 ]

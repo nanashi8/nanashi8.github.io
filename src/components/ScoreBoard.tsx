@@ -150,6 +150,15 @@ function ScoreBoard({
     if (currentWord) {
       const personality = (localStorage.getItem('aiPersonality') ||
         'kind-teacher') as AIPersonality;
+
+      // 暗記モードではフラッシュカードとして使うため、語源や豆知識を表示
+      if (mode === 'memorization') {
+        const trivia = getBreatherTrivia(personality, currentWord);
+        setQuestionComment(trivia || '');
+        setAnswerComment('');
+        return;
+      }
+
       const wordData = getWordDetailedData(currentWord);
 
       // 問題の履歴情報に基づいてコメントを生成
@@ -265,6 +274,12 @@ function ScoreBoard({
 
   // 回答時に動的なAIコメントを生成
   useEffect(() => {
+    // 暗記モードではフラッシュカードとして使うため、コメント不要
+    if (mode === 'memorization') {
+      setAnswerComment('');
+      return;
+    }
+
     // 回答情報がない場合はスキップ
     if (lastAnswerCorrect === undefined || !lastAnswerWord) {
       return;
@@ -364,6 +379,7 @@ function ScoreBoard({
   const masteredRef = useRef<HTMLDivElement>(null);
   const learningRef = useRef<HTMLDivElement>(null);
   const strugglingRef = useRef<HTMLDivElement>(null);
+  const retentionGoalProgressRef = useRef<HTMLDivElement>(null);
 
   // 学習プラン設定（和訳・スペル用）
   const [learningLimit, setLearningLimit] = useState<number | null>(() => {
@@ -557,6 +573,12 @@ function ScoreBoard({
     Math.round((retentionPercent / retentionGoalPercent) * 100)
   );
 
+  useEffect(() => {
+    if (!retentionGoalProgressRef.current) return;
+    const clamped = Math.max(0, Math.min(100, retentionProgressToGoalPercent));
+    retentionGoalProgressRef.current.style.width = `${clamped}%`;
+  }, [retentionProgressToGoalPercent]);
+
   const relatedFieldEffectPercent = useMemo(() => {
     if (!efficiencyProfile) return null;
     if (!category || category === '全分野') return null;
@@ -600,10 +622,10 @@ function ScoreBoard({
 
   return (
     <div className="score-board-compact">
-      {/* タブナビゲーション: Tailwind レスポンシブで自動最適化 */}
-      <div className="score-board-tabs grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2">
+      {/* タブナビゲーション: モバイルでも横一列に並べる */}
+      <div className="score-board-tabs grid grid-cols-5 gap-0.5 sm:gap-2">
         <button
-          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'ai'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -615,7 +637,7 @@ function ScoreBoard({
           <span className="sm:hidden">AI</span>
         </button>
         <button
-          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'plan'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -627,7 +649,7 @@ function ScoreBoard({
           <span className="sm:hidden">計画</span>
         </button>
         <button
-          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'history'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -639,7 +661,7 @@ function ScoreBoard({
           <span className="sm:hidden">履歴</span>
         </button>
         <button
-          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'breakdown'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -669,7 +691,7 @@ function ScoreBoard({
           </span>
         </button>
         <button
-          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'settings'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -782,7 +804,7 @@ function ScoreBoard({
               <div className="w-full bg-gray-200 rounded h-2">
                 <div
                   className="bg-primary h-2 rounded"
-                  style={{ width: `${retentionProgressToGoalPercent}%` }}
+                  ref={retentionGoalProgressRef}
                 />
               </div>
             </div>

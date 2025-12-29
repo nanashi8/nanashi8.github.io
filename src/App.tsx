@@ -1983,7 +1983,7 @@ function App() {
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             />
           ) : activeTab === 'social-studies' ? (
-            <SocialStudiesView dataSource="social-studies-sample" />
+            <SocialStudiesView dataSource="social-studies-geography-30" />
           ) : activeTab === 'reading' ? (
             <ComprehensiveReadingView
               customQuestionSets={customQuestionState.sets}

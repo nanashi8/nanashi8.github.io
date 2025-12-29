@@ -71,7 +71,7 @@ describe('useQuestionRequeue', () => {
     const { result } = renderHook(() => useQuestionRequeue<any>());
 
     const currentQuestion = { word: 'apple', position: 10 };
-    // minGap(=10) を満たせる長さにする（apple を「近すぎる位置」に置き、後ろへ移動されることを確認）
+    // minGap(=10+consecutiveIncorrect) を満たせる長さにする（apple を「近すぎる位置」に置き、後ろへ移動されることを確認）
     const questions = Array.from({ length: 30 }, (_, i) => ({ word: `q${i}`, position: 0 }));
     questions[1] = { word: 'apple', position: 20 };
 
@@ -79,9 +79,9 @@ describe('useQuestionRequeue', () => {
 
     // 追加ではなく「移動」なので長さは変わらない
     expect(returned).toHaveLength(questions.length);
-    // 暗記モードの分からないは minGap=10 なので、index 10 以降に配置される
+    // consecutiveIncorrect=2 → minGap=12
     const nextAppleIndex = returned.findIndex((q: any, idx: number) => idx > 0 && q?.word === 'apple');
-    expect(nextAppleIndex).toBeGreaterThanOrEqual(10);
+    expect(nextAppleIndex).toBeGreaterThanOrEqual(12);
     // 重複は増えない
     expect(returned.filter((q: any) => q.word === 'apple')).toHaveLength(1);
 
@@ -117,7 +117,7 @@ describe('useQuestionRequeue', () => {
     const { result } = renderHook(() => useQuestionRequeue<any>());
 
     const currentQuestion = { word: 'apple', position: 10 };
-    // 暗記モードの分からない(>=70)は振動対策で最小10問先に挿入される。
+    // consecutiveIncorrect=1 → minGap=11
     // position-aware も維持されることを確認するため、高Position群を scanStart(=10) 以降に配置する。
     const questions = [
       { word: 'q0', position: 0 },
@@ -147,8 +147,8 @@ describe('useQuestionRequeue', () => {
     expect(returned).not.toBe(questions);
     expect(returned).toHaveLength(questions.length + 1);
 
-    // baseOffset=1 でも暗記モードは最小10問先。
-    // originalInsertAt=10 から scanStart=10.. の範囲で高Position群(index 14)を見つけ、直後(index 15)に寄せる。
+    // baseOffset=1 でも暗記モードは最小11問先。
+    // originalInsertAt=11 から scanStart=11.. の範囲で高Position群(index 14)を見つけ、直後(index 15)に寄せる。
     expect(returned[15].word).toBe('apple');
 
     const stored = localStorage.getItem('debug_requeue_events');
@@ -159,7 +159,7 @@ describe('useQuestionRequeue', () => {
 
     const entry = logs[0];
     expect(entry.decision).toBe('inserted');
-    expect(entry.originalInsertAt).toBe(10);
+    expect(entry.originalInsertAt).toBe(11);
     expect(entry.insertAt).toBe(15);
     expect(entry.positionAwareAdjusted).toBe(true);
     expect(entry.ssotPosition).toBe(80);
@@ -230,7 +230,7 @@ describe('useQuestionRequeue', () => {
 
     const currentQuestion = { word: 'apple', position: 10 };
     // 既存の apple を「探索ウィンドウ内」かつ desiredInsertPosition より後方に置き、
-    // minGap(=10) に従って「近すぎない位置」へ繰り上げられることを確認する。
+    // consecutiveIncorrect=2 → minGap=12 に従って「近すぎない位置」へ繰り上げられることを確認する。
     const questions = [
       { word: 'q0', position: 0 },
       { word: 'q1', position: 0 },
@@ -266,8 +266,8 @@ describe('useQuestionRequeue', () => {
 
     // 追加ではなく「移動」なので長さは変わらない
     expect(returned).toHaveLength(questions.length);
-    // 暗記モードの分からないは minGap=10 なので、index 10 に繰り上がる
-    expect(returned[10].word).toBe('apple');
+    // 暗記モードの分からないは minGap=12 なので、index 12 に繰り上がる
+    expect(returned[12].word).toBe('apple');
     // 旧位置には残らない（重複しない）
     expect(returned.filter((q: any) => q.word === 'apple')).toHaveLength(1);
 

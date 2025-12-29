@@ -95,17 +95,23 @@ export function useQuestionRequeue<
         ? Number(questionRawPosition)
         : undefined;
 
-      const ssotPosition = (() => {
-        if (!mode) return undefined;
+      const ssot = (() => {
+        if (!mode) return { position: undefined as number | undefined, wordProgress: undefined as any };
         try {
           const progress = loadProgressSync();
           const wordKey = String((question as any).word ?? qid ?? '');
           const wp = progress?.wordProgress?.[wordKey];
-          return wp ? determineWordPosition(wp, mode) : 35;
+          return {
+            position: wp ? determineWordPosition(wp, mode) : 35,
+            wordProgress: wp,
+          };
         } catch {
-          return undefined;
+          return { position: undefined as number | undefined, wordProgress: undefined as any };
         }
       })();
+
+      const ssotPosition = ssot.position;
+      const ssotWordProgress = ssot.wordProgress;
 
       const effectivePosition = ssotPosition ?? questionPosition;
       const reAddedQuestion = {
@@ -149,7 +155,14 @@ export function useQuestionRequeue<
       // Position階層やインターリーブには触れず、再挿入の“近さ”だけを抑制する。
       const minGapForMode = (() => {
         if (mode !== 'memorization') return 0;
-        if (isIncorrectLike) return 10;
+        if (isIncorrectLike) {
+          // SSOT の consecutiveIncorrect が大きいほど「近すぎる再出題」を避ける。
+          // - 再スケジューリングで reAddedCount が失われても効く
+          // - 上限は 60 問先（出題が消えるのを防ぐ）
+          const streakRaw = (ssotWordProgress as any)?.consecutiveIncorrect;
+          const streak = Number.isFinite(Number(streakRaw)) ? Math.max(0, Number(streakRaw)) : 0;
+          return Math.min(10 + streak, 60);
+        }
         return 0;
       })();
 
@@ -187,9 +200,27 @@ export function useQuestionRequeue<
           const desiredInsertPosition = Math.min(currentIndex + plannedOffset, questions.length);
           const minAllowedIndex = currentIndex + minGapForMode;
           const isTooSoonForMinGap = minGapForMode > 0 && existingNearbyAbsIndex < minAllowedIndex;
-          // 既に想定より早く（または同等の位置に）出現するなら、ここでは何もしない
-          // ※ただし暗記モード minGap の範囲内にある場合は、振動防止のため後ろへ移動する
-          if (existingNearbyAbsIndex <= desiredInsertPosition && !isTooSoonForMinGap) {
+          
+          // 🔍 スキップ判定の詳細ログ
+          const skipReasonDetails = {
+            existingAtIndex: existingNearbyAbsIndex,
+            existingOffset: existingNearbyAbsIndex - currentIndex,
+            desiredInsertPosition,
+            desiredOffset: plannedOffset,
+            minAllowedIndex,
+            minGap: minGapForMode,
+            isTooSoonForMinGap,
+            wouldSkip: !isTooSoonForMinGap && existingNearbyAbsIndex <= desiredInsertPosition,
+            skipReason: isTooSoonForMinGap 
+              ? 'too_soon_must_move'
+              : (existingNearbyAbsIndex <= desiredInsertPosition 
+                  ? 'already_at_good_position'
+                  : 'existing_too_far_will_move'),
+          };
+          
+          // 🚨 重要: minGap範囲内（近すぎる）なら必ず移動する（振動防止の核心）
+          // minGap範囲外で、かつ希望位置より早ければスキップ
+          if (!isTooSoonForMinGap && existingNearbyAbsIndex <= desiredInsertPosition) {
             pushRequeueDebugLog({
               timestamp: new Date().toISOString(),
               mode: mode ?? 'unknown',
@@ -201,16 +232,28 @@ export function useQuestionRequeue<
               windowEnd,
               baseOffset,
               extraDelay,
+              pressureDelay,
               plannedOffsetRaw,
               plannedOffset,
               minGapForMode,
+              skipDetails: skipReasonDetails,
               questionPosition: questionPosition ?? null,
               ssotPosition: ssotPosition ?? null,
               effectivePosition: effectivePosition ?? null,
+              consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
               reAddedCountBefore: currentReaddCount,
               note: 'already_scheduled_soon',
-              existingNearbyAbsIndex,
             });
+            if (import.meta.env.DEV) {
+              console.log(`🔄 [useQuestionRequeue] スキップ: ${String(qid)}`, {
+                skipReason: skipReasonDetails.skipReason,
+                existingOffset: skipReasonDetails.existingOffset,
+                desiredOffset: skipReasonDetails.desiredOffset,
+                minGap: minGapForMode,
+                isTooSoonForMinGap,
+                position: effectivePosition,
+              });
+            }
             return questions;
           }
 
@@ -236,6 +279,18 @@ export function useQuestionRequeue<
             ...removed.slice(insertAt),
           ];
 
+          const moveReasonDetails = {
+            existingAtIndex: existingNearbyAbsIndex,
+            existingOffset: existingNearbyAbsIndex - currentIndex,
+            desiredInsertPosition,
+            desiredOffset: plannedOffset,
+            minAllowedIndex,
+            minGap: minGapForMode,
+            isTooSoonForMinGap,
+            wasMoved: true,
+            moveReason: isTooSoonForMinGap ? 'moved_due_to_min_gap' : 'moved_existing_earlier',
+          };
+          
           pushRequeueDebugLog({
             timestamp: new Date().toISOString(),
             mode: mode ?? 'unknown',
@@ -246,9 +301,11 @@ export function useQuestionRequeue<
             currentIndex,
             baseOffset,
             extraDelay,
+            pressureDelay,
             plannedOffsetRaw,
             plannedOffset,
             minGapForMode,
+            moveDetails: moveReasonDetails,
             insertAt,
             originalInsertAt: existingNearbyAbsIndex,
             movedExisting: true,
@@ -256,9 +313,20 @@ export function useQuestionRequeue<
             questionPosition: questionPosition ?? null,
             ssotPosition: ssotPosition ?? null,
             effectivePosition: effectivePosition ?? null,
+            consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
             reAddedCountBefore: existingQuestion?.reAddedCount ?? null,
             reAddedCountAfter: movedReaddCount,
           });
+          if (import.meta.env.DEV) {
+            console.log(`🔄 [useQuestionRequeue] 既存問題を移動: ${String(qid)}`, {
+              moveReason: moveReasonDetails.moveReason,
+              from: existingNearbyAbsIndex,
+              to: insertAt,
+              offset: insertAt - currentIndex,
+              minGap: minGapForMode,
+              position: effectivePosition,
+            });
+          }
 
           return nextQuestions;
         }
@@ -274,19 +342,29 @@ export function useQuestionRequeue<
           windowEnd,
           baseOffset,
           extraDelay,
+          pressureDelay,
           plannedOffsetRaw,
           plannedOffset,
           minGapForMode,
+          skipDetails: {
+            existingAtIndex: existingNearbyAbsIndex,
+            existingOffset: existingNearbyAbsIndex - currentIndex,
+            desiredOffset: plannedOffset,
+            skipReason: 'not_incorrect_like_already_nearby',
+          },
           questionPosition: questionPosition ?? null,
           ssotPosition: ssotPosition ?? null,
           effectivePosition: effectivePosition ?? null,
+          consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
           reAddedCountBefore: currentReaddCount,
         });
         if (import.meta.env.DEV) {
-          console.log('🔄 [useQuestionRequeue] 重複スキップ: 既に次の10問以内に存在', {
-            word: String(qid),
-            currentIndex,
-            windowEnd,
+          console.log(`🔄 [useQuestionRequeue] スキップ: ${String(qid)}`, {
+            skipReason: 'not_incorrect_like_already_nearby',
+            existingOffset: existingNearbyAbsIndex - currentIndex,
+            desiredOffset: plannedOffset,
+            position: effectivePosition,
+            isIncorrectLike,
           });
         }
         return questions;
@@ -373,12 +451,18 @@ export function useQuestionRequeue<
         // KPI記録失敗は無視（開発用機能のため本番動作に影響なし）
       }
 
-      if (import.meta.env.DEV && isIncorrectLike) {
-        console.log('🔴 [強制装置] 分からない問題を再出題（ただし繰り返し不正解ほど間隔延長）:', {
+      if (import.meta.env.DEV) {
+        console.log(`${isIncorrectLike ? '🔴' : '🟡'} [useQuestionRequeue] 挿入:`, {
           word: String(qid),
           baseOffset,
           extraDelay,
+          pressureDelay,
           plannedOffset,
+          minGap: minGapForMode,
+          insertOffset: insertPosition - currentIndex,
+          position: effectivePosition,
+          consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
+          isIncorrectLike,
         });
       }
 
@@ -395,12 +479,20 @@ export function useQuestionRequeue<
         plannedOffsetRaw,
         plannedOffset,
         minGapForMode,
+        insertDetails: {
+          desiredInsertPosition: insertPosition,
+          actualInsertAt: insertPosition,
+          insertOffset: insertPosition - currentIndex,
+          positionAwareAdjusted,
+          originalInsertAt: originalInsertPosition,
+        },
         insertAt: insertPosition,
         originalInsertAt: originalInsertPosition,
         positionAwareAdjusted,
         questionPosition: questionPosition ?? null,
         ssotPosition: ssotPosition ?? null,
         effectivePosition: effectivePosition ?? null,
+        consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
         reAddedCountBefore: currentReaddCount,
         reAddedCountAfter: currentReaddCount + 1,
       });

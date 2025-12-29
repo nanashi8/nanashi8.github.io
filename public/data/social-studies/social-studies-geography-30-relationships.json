@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "sourceTerm": "北海道",
+    "targetTerm": "石狩平野",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "石狩平野",
+    "targetTerm": "北海道",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "東北地方",
+    "targetTerm": "稲作",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "稲作",
+    "targetTerm": "東北地方",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "石狩平野",
+    "targetTerm": "稲作",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "稲作",
+    "targetTerm": "石狩平野",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "アジア",
+    "targetTerm": "中国",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "中国",
+    "targetTerm": "アジア",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "アジア",
+    "targetTerm": "インド",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "インド",
+    "targetTerm": "アジア",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "北アメリカ",
+    "targetTerm": "アメリカ合衆国",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "アメリカ合衆国",
+    "targetTerm": "北アメリカ",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "南アメリカ",
+    "targetTerm": "ブラジル",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "ブラジル",
+    "targetTerm": "南アメリカ",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "酪農",
+    "targetTerm": "北海道",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "北海道",
+    "targetTerm": "酪農",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "環境問題",
+    "targetTerm": "地球温暖化",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "地球温暖化",
+    "targetTerm": "環境問題",
+    "strength": 70,
+    "relationType": "related"
+  }
+]

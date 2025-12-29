@@ -1,1 +1,728 @@
-[]
+[
+  {
+    "sourceTerm": "縄文時代",
+    "targetTerm": "弥生時代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "弥生時代",
+    "targetTerm": "縄文時代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "弥生時代",
+    "targetTerm": "縄文時代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "縄文時代",
+    "targetTerm": "弥生時代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "弥生時代",
+    "targetTerm": "古墳時代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "古墳時代",
+    "targetTerm": "弥生時代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "邪馬台国",
+    "targetTerm": "古墳時代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "古墳時代",
+    "targetTerm": "邪馬台国",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "室町幕府",
+    "targetTerm": "応仁の乱",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "応仁の乱",
+    "targetTerm": "室町幕府",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "江戸幕府",
+    "targetTerm": "参勤交代",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "参勤交代",
+    "targetTerm": "江戸幕府",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "江戸幕府",
+    "targetTerm": "鎖国",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "鎖国",
+    "targetTerm": "江戸幕府",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "廃藩置県",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "明治維新",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "明治維新",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "廃藩置県",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "応仁の乱",
+    "targetTerm": "戦国大名",
+    "strength": 67,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "戦国大名",
+    "targetTerm": "織田信長",
+    "strength": 66,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "戦国大名",
+    "targetTerm": "豊臣秀吉",
+    "strength": 63,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "織田信長",
+    "targetTerm": "豊臣秀吉",
+    "strength": 97,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関ヶ原の戦い",
+    "targetTerm": "江戸幕府",
+    "strength": 97,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関ヶ原の戦い",
+    "targetTerm": "参勤交代",
+    "strength": 65,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関ヶ原の戦い",
+    "targetTerm": "鎖国",
+    "strength": 61,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関ヶ原の戦い",
+    "targetTerm": "徳川綱吉",
+    "strength": 54,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "江戸幕府",
+    "targetTerm": "参勤交代",
+    "strength": 68,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "江戸幕府",
+    "targetTerm": "鎖国",
+    "strength": 64,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "江戸幕府",
+    "targetTerm": "徳川綱吉",
+    "strength": 57,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "参勤交代",
+    "targetTerm": "鎖国",
+    "strength": 96,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "参勤交代",
+    "targetTerm": "徳川綱吉",
+    "strength": 89,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "鎖国",
+    "targetTerm": "徳川綱吉",
+    "strength": 93,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "享保の改革",
+    "targetTerm": "国学",
+    "strength": 86,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "ペリー",
+    "targetTerm": "日米修好通商条約",
+    "strength": 95,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "ペリー",
+    "targetTerm": "明治維新",
+    "strength": 85,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "ペリー",
+    "targetTerm": "廃藩置県",
+    "strength": 82,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "ペリー",
+    "targetTerm": "文明開化",
+    "strength": 85,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "ペリー",
+    "targetTerm": "自由民権運動",
+    "strength": 79,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "ペリー",
+    "targetTerm": "大日本帝国憲法",
+    "strength": 64,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "ペリー",
+    "targetTerm": "日清戦争",
+    "strength": 59,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日米修好通商条約",
+    "targetTerm": "明治維新",
+    "strength": 90,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日米修好通商条約",
+    "targetTerm": "廃藩置県",
+    "strength": 87,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日米修好通商条約",
+    "targetTerm": "文明開化",
+    "strength": 90,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日米修好通商条約",
+    "targetTerm": "自由民権運動",
+    "strength": 84,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日米修好通商条約",
+    "targetTerm": "大日本帝国憲法",
+    "strength": 69,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日米修好通商条約",
+    "targetTerm": "日清戦争",
+    "strength": 64,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日米修好通商条約",
+    "targetTerm": "日露戦争",
+    "strength": 54,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "廃藩置県",
+    "strength": 97,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "明治維新",
+    "strength": 100,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "自由民権運動",
+    "strength": 94,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "大日本帝国憲法",
+    "strength": 79,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "日清戦争",
+    "strength": 74,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "日露戦争",
+    "strength": 64,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "第一次世界大戦",
+    "strength": 54,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "明治維新",
+    "targetTerm": "大正デモクラシー",
+    "strength": 56,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "廃藩置県",
+    "strength": 97,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "自由民権運動",
+    "strength": 97,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "大日本帝国憲法",
+    "strength": 82,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "日清戦争",
+    "strength": 77,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "日露戦争",
+    "strength": 67,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "第一次世界大戦",
+    "strength": 57,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "廃藩置県",
+    "targetTerm": "大正デモクラシー",
+    "strength": 59,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "自由民権運動",
+    "strength": 94,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "大日本帝国憲法",
+    "strength": 79,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "日清戦争",
+    "strength": 74,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "日露戦争",
+    "strength": 64,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "第一次世界大戦",
+    "strength": 54,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "文明開化",
+    "targetTerm": "大正デモクラシー",
+    "strength": 56,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "自由民権運動",
+    "targetTerm": "大日本帝国憲法",
+    "strength": 85,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "自由民権運動",
+    "targetTerm": "日清戦争",
+    "strength": 80,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "自由民権運動",
+    "targetTerm": "日露戦争",
+    "strength": 70,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "自由民権運動",
+    "targetTerm": "第一次世界大戦",
+    "strength": 60,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "自由民権運動",
+    "targetTerm": "大正デモクラシー",
+    "strength": 62,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "自由民権運動",
+    "targetTerm": "関東大震災",
+    "strength": 51,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大日本帝国憲法",
+    "targetTerm": "日清戦争",
+    "strength": 95,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大日本帝国憲法",
+    "targetTerm": "日露戦争",
+    "strength": 85,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大日本帝国憲法",
+    "targetTerm": "第一次世界大戦",
+    "strength": 75,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大日本帝国憲法",
+    "targetTerm": "大正デモクラシー",
+    "strength": 77,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大日本帝国憲法",
+    "targetTerm": "関東大震災",
+    "strength": 66,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大日本帝国憲法",
+    "targetTerm": "満州事変",
+    "strength": 58,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日清戦争",
+    "targetTerm": "日露戦争",
+    "strength": 90,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日清戦争",
+    "targetTerm": "第一次世界大戦",
+    "strength": 80,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日清戦争",
+    "targetTerm": "大正デモクラシー",
+    "strength": 82,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日清戦争",
+    "targetTerm": "関東大震災",
+    "strength": 71,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日清戦争",
+    "targetTerm": "満州事変",
+    "strength": 63,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日清戦争",
+    "targetTerm": "太平洋戦争",
+    "strength": 53,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日露戦争",
+    "targetTerm": "第一次世界大戦",
+    "strength": 90,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日露戦争",
+    "targetTerm": "大正デモクラシー",
+    "strength": 92,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日露戦争",
+    "targetTerm": "関東大震災",
+    "strength": 81,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日露戦争",
+    "targetTerm": "満州事変",
+    "strength": 73,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日露戦争",
+    "targetTerm": "太平洋戦争",
+    "strength": 63,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日露戦争",
+    "targetTerm": "日本国憲法",
+    "strength": 58,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日露戦争",
+    "targetTerm": "サンフランシスコ平和条約",
+    "strength": 53,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大正デモクラシー",
+    "targetTerm": "第一次世界大戦",
+    "strength": 98,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "第一次世界大戦",
+    "targetTerm": "関東大震災",
+    "strength": 91,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "第一次世界大戦",
+    "targetTerm": "満州事変",
+    "strength": 83,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "第一次世界大戦",
+    "targetTerm": "太平洋戦争",
+    "strength": 73,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "第一次世界大戦",
+    "targetTerm": "日本国憲法",
+    "strength": 68,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "第一次世界大戦",
+    "targetTerm": "サンフランシスコ平和条約",
+    "strength": 63,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "第一次世界大戦",
+    "targetTerm": "高度経済成長",
+    "strength": 59,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大正デモクラシー",
+    "targetTerm": "関東大震災",
+    "strength": 89,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大正デモクラシー",
+    "targetTerm": "満州事変",
+    "strength": 81,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大正デモクラシー",
+    "targetTerm": "太平洋戦争",
+    "strength": 71,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大正デモクラシー",
+    "targetTerm": "日本国憲法",
+    "strength": 66,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大正デモクラシー",
+    "targetTerm": "サンフランシスコ平和条約",
+    "strength": 61,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "大正デモクラシー",
+    "targetTerm": "高度経済成長",
+    "strength": 57,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関東大震災",
+    "targetTerm": "満州事変",
+    "strength": 92,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関東大震災",
+    "targetTerm": "太平洋戦争",
+    "strength": 82,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関東大震災",
+    "targetTerm": "日本国憲法",
+    "strength": 77,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関東大震災",
+    "targetTerm": "サンフランシスコ平和条約",
+    "strength": 72,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "関東大震災",
+    "targetTerm": "高度経済成長",
+    "strength": 68,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "満州事変",
+    "targetTerm": "太平洋戦争",
+    "strength": 90,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "満州事変",
+    "targetTerm": "日本国憲法",
+    "strength": 85,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "満州事変",
+    "targetTerm": "サンフランシスコ平和条約",
+    "strength": 80,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "満州事変",
+    "targetTerm": "高度経済成長",
+    "strength": 76,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "太平洋戦争",
+    "targetTerm": "日本国憲法",
+    "strength": 95,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "太平洋戦争",
+    "targetTerm": "サンフランシスコ平和条約",
+    "strength": 90,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "太平洋戦争",
+    "targetTerm": "高度経済成長",
+    "strength": 86,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日本国憲法",
+    "targetTerm": "サンフランシスコ平和条約",
+    "strength": 95,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "日本国憲法",
+    "targetTerm": "高度経済成長",
+    "strength": 91,
+    "relationType": "chronological_before"
+  },
+  {
+    "sourceTerm": "サンフランシスコ平和条約",
+    "targetTerm": "高度経済成長",
+    "strength": 96,
+    "relationType": "chronological_before"
+  }
+]

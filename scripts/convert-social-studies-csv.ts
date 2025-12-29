@@ -64,13 +64,27 @@ interface CSVRow {
 
 // ===== CSV解析 =====
 
+// ヘッダーマッピング（英語→日本語）
+const HEADER_MAP: Record<string, string> = {
+  'term': '語句',
+  'reading': '読み',
+  'matter': '事項',
+  'question': '問題文',
+  'explanation': '説明',
+  'relatedMatters': '関連事項',
+  'relatedFields': '関連分野',
+  'difficulty': '難易度',
+  'year': '年代',
+  'choiceHints': '選択肢生成ヒント'
+};
+
 function parseCSV(content: string): CSVRow[] {
   const lines = content.split('\n').filter((line) => line.trim() !== '');
   if (lines.length < 2) {
     throw new Error('CSVファイルにデータがありません');
   }
 
-  const header = lines[0].split(',');
+  const header = lines[0].split(',').map(h => h.trim());
   const rows: CSVRow[] = [];
 
   for (let i = 1; i < lines.length; i++) {
@@ -82,7 +96,9 @@ function parseCSV(content: string): CSVRow[] {
 
     const row: Record<string, string> = {};
     for (let j = 0; j < header.length; j++) {
-      row[header[j]] = values[j];
+      // 英語ヘッダーなら日本語に変換、そうでなければそのまま
+      const key = HEADER_MAP[header[j]] || header[j];
+      row[key] = values[j];
     }
     rows.push(row as unknown as CSVRow);
   }
@@ -157,6 +173,37 @@ function generateChronologicalRelations(
 
 // ===== CSV→JSON変換 =====
 
+// difficulty文字列→数値マッピング
+function parseDifficulty(diffStr: string): number {
+  const normalized = diffStr.trim().toLowerCase();
+  if (normalized === 'beginner' || normalized === '初級' || normalized === '1') return 1;
+  if (normalized === 'intermediate' || normalized === '中級' || normalized === '3') return 3;
+  if (normalized === 'advanced' || normalized === '上級' || normalized === '5') return 5;
+  // 数値の場合
+  const num = parseInt(diffStr, 10);
+  if (!isNaN(num) && num >= 1 && num <= 5) return num;
+  // デフォルト
+  return 3;
+}
+
+// 年代文字列→数値変換（紀元前、西暦、年号など）
+function parseYear(yearStr: string): number | undefined {
+  if (!yearStr || yearStr.trim() === '') return undefined;
+  const trimmed = yearStr.trim();
+  
+  // 「紀元前1万年」「紀元前300年」などの処理
+  if (trimmed.includes('紀元前')) {
+    const match = trimmed.match(/紀元前(\d+)/);
+    if (match) return -parseInt(match[1], 10);
+  }
+  
+  // 普通の数値（4桁の西暦など）
+  const num = parseInt(trimmed, 10);
+  if (!isNaN(num)) return num;
+  
+  return undefined;
+}
+
 function convertCSVRow(row: CSVRow): SocialStudiesQuestion {
   const question: SocialStudiesQuestion = {
     term: row['語句'],
@@ -166,15 +213,15 @@ function convertCSVRow(row: CSVRow): SocialStudiesQuestion {
     explanation: row['説明'],
     relatedMatters: row['関連事項'],
     relatedFields: row['関連分野'],
-    difficulty: parseInt(row['難易度'], 10),
+    difficulty: parseDifficulty(row['難易度']),
     source: 'junior',
     choiceHints: row['選択肢生成ヒント'],
   };
 
   // 年代（歴史のみ）
-  const year = row['年代'];
-  if (year && year.trim() !== '') {
-    question.year = parseInt(year, 10);
+  const year = parseYear(row['年代']);
+  if (year !== undefined) {
+    question.year = year;
   }
 
   return question;

@@ -4,6 +4,7 @@ import type { DataSource } from '../App';
 import type { CustomQuestionSet } from '../types/customQuestions';
 import LearningPlanView from './LearningPlanView';
 import GrammarGuideView from './GrammarGuideView';
+import StudyReferenceView from './StudyReferenceView';
 import DictionaryView from './DictionaryView';
 import StatsView from './StatsView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
@@ -21,7 +22,7 @@ interface SettingsViewProps {
   onQuestionSetsUpdated?: () => Promise<void>;
 }
 
-type SettingsTab = 'settings' | 'reference' | 'dictionary' | 'stats';
+type SettingsTab = 'settings' | 'reference' | 'grammar' | 'dictionary' | 'stats';
 
 function SettingsView({
   allQuestions,
@@ -160,7 +161,17 @@ function SettingsView({
           }`}
           onClick={() => setActiveSubTab('reference')}
         >
-          🔖 参考
+          📖 参考書
+        </button>
+        <button
+          className={`px-4 py-3 font-semibold transition-all duration-200 border-b-4 ${
+            activeSubTab === 'grammar'
+              ? 'text-blue-600 border-blue-600'
+              : 'text-gray-600 border-transparent hover:text-blue-600 hover:border-blue-300'
+          }`}
+          onClick={() => setActiveSubTab('grammar')}
+        >
+          📝 文法
         </button>
         <button
           className={`px-4 py-3 font-semibold transition-all duration-200 border-b-4 ${
@@ -186,6 +197,8 @@ function SettingsView({
 
       {/* サブタブコンテンツ */}
       {activeSubTab === 'reference' ? (
+        <StudyReferenceView />
+      ) : activeSubTab === 'grammar' ? (
         <GrammarGuideView />
       ) : activeSubTab === 'dictionary' ? (
         <DictionaryView />

@@ -1,1 +1,158 @@
-[]
+[
+  {
+    "sourceTerm": "民主主義",
+    "targetTerm": "国民主権",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "国民主権",
+    "targetTerm": "民主主義",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "民主主義",
+    "targetTerm": "選挙",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "選挙",
+    "targetTerm": "民主主義",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "国民主権",
+    "targetTerm": "選挙",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "選挙",
+    "targetTerm": "国民主権",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "三権分立",
+    "targetTerm": "国会",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "国会",
+    "targetTerm": "三権分立",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "三権分立",
+    "targetTerm": "内閣",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "内閣",
+    "targetTerm": "三権分立",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "三権分立",
+    "targetTerm": "裁判所",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "裁判所",
+    "targetTerm": "三権分立",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "人権",
+    "targetTerm": "平等権",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "平等権",
+    "targetTerm": "人権",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "資本主義",
+    "targetTerm": "市場経済",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "市場経済",
+    "targetTerm": "資本主義",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "通貨",
+    "targetTerm": "日本銀行",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "日本銀行",
+    "targetTerm": "通貨",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "財政",
+    "targetTerm": "税金",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "税金",
+    "targetTerm": "財政",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "国際連合",
+    "targetTerm": "安全保障理事会",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "安全保障理事会",
+    "targetTerm": "国際連合",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "国際連合",
+    "targetTerm": "PKO",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "PKO",
+    "targetTerm": "国際連合",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "貧困問題",
+    "targetTerm": "南北問題",
+    "strength": 70,
+    "relationType": "related"
+  },
+  {
+    "sourceTerm": "南北問題",
+    "targetTerm": "貧困問題",
+    "strength": 70,
+    "relationType": "related"
+  }
+]
