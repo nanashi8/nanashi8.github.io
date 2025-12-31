@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { RuleEngine, Violation } from '../src/engine/RuleEngine';
+import { RuleEngine } from '../src/engine/RuleEngine';
 import { Instruction, Rule } from '../src/loader/InstructionsLoader';
 
 // Mock vscode module

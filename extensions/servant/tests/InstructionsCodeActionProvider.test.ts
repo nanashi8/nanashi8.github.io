@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { InstructionsCodeActionProvider } from '../src/providers/InstructionsCodeActionProvider';
 import { InstructionsLoader } from '../src/loader/InstructionsLoader';
 import { RuleEngine } from '../src/engine/RuleEngine';

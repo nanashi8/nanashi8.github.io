@@ -110,7 +110,7 @@ export class DiagnosticRelatedInformation {
 }
 
 export const languages = {
-  createDiagnosticCollection: (name: string) => ({
+  createDiagnosticCollection: (_name: string) => ({
     set: () => {},
     clear: () => {},
     dispose: () => {}
@@ -123,11 +123,11 @@ export const workspace = {
     getText: () => '',
     fileName: 'test.ts',
     lineCount: 10,
-    lineAt: (line: number) => ({ text: '' }),
-    positionAt: (offset: number) => ({ line: 0, character: 0 }),
+    lineAt: (_line: number) => ({ text: '' }),
+    positionAt: (_offset: number) => ({ line: 0, character: 0 }),
     uri
   }),
-  asRelativePath: (uri: any) => 'test.ts',
+  asRelativePath: (_uri: any) => 'test.ts',
   createFileSystemWatcher: () => ({
     onDidChange: () => ({ dispose: () => {} }),
     onDidCreate: () => ({ dispose: () => {} }),

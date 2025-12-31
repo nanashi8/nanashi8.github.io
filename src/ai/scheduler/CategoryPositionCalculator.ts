@@ -23,7 +23,6 @@
 import type { WordProgress } from '@/storage/progress/types';
 import type { LearningCategory, CategoryPosition } from './types';
 import { PositionCalculator } from './PositionCalculator';
-import { logger } from '@/utils/logger';
 
 export interface CategoryPositionOptions {
   /** 基本Position計算器（既存のPositionCalculatorを使用） */

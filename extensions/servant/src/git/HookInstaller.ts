@@ -222,7 +222,7 @@ exit 0
       const content = await readFile(hookPath, 'utf8');
       // Servant/Instructions Validatorのシグネチャをチェック（後方互換）
       return content.includes('Servant VSCode Extension') || content.includes('Instructions Validator');
-    } catch (error) {
+    } catch {
       return false;
     }
   }

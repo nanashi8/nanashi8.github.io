@@ -1,9 +1,7 @@
-import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 import { NeuralDependencyGraph } from './NeuralDependencyGraph';
 import { NeuralLearningEngine, PropagationResult } from './NeuralLearningEngine';
-import { AIPerformanceMetrics } from '../learning/AIEvaluator';
 
 /**
  * ワークフローパターン

@@ -79,7 +79,7 @@ describe('NeuralDependencyGraph', () => {
     // await graph.buildGraph();
 
     // 手動でノードとエッジを追加
-    const testNode = {
+    const _testNode = {
       filePath: 'test.ts',
       entropy: 4.5,
       activationLevel: 0.8,

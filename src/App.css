@@ -816,7 +816,7 @@
   padding: 16px;
   background: var(--bg-secondary);
   border-radius: 8px;
-  min-height: 120px;
+  min-height: 110px;
 }
 
 .plan-text-line {

@@ -1,7 +1,6 @@
-import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
-import { NeuralDependencyGraph, NeuralNode, NeuralEdge } from './NeuralDependencyGraph';
+import { NeuralDependencyGraph } from './NeuralDependencyGraph';
 
 /**
  * 伝播結果
@@ -69,7 +68,7 @@ export class NeuralLearningEngine {
    * 順伝播（Forward Propagation）
    * 起点ファイルから影響を受けるファイルを計算
    */
-  public propagateForward(startFile: string, taskType?: string): PropagationResult {
+  public propagateForward(startFile: string, _taskType?: string): PropagationResult {
     const startTime = Date.now();
     console.log(`🧠 [NeuralLearning] Forward propagation from ${startFile}`);
 
@@ -236,11 +235,10 @@ export class NeuralLearningEngine {
   /**
    * 指定ファイルをインポートしているファイルを探す
    */
-  private findImporters(targetFile: string): string[] {
+  private findImporters(_targetFile: string): string[] {
     const importers: string[] = [];
 
     // 全ノードをチェック
-    const stats = this.graph.getStats();
     // statsから全ノードを取得する代わりに、全エッジをチェック
     // TODO: より効率的な実装
 
@@ -371,7 +369,7 @@ export class NeuralLearningEngine {
           convergence = history[history.length - 1].convergenceScore;
         }
       }
-    } catch (error) {
+    } catch {
       // ignore
     }
 

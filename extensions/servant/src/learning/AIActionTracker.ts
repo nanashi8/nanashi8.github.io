@@ -224,7 +224,6 @@ export class AIActionTracker {
     let errorCount = 0;
     let warningCount = 0;
     let infoCount = 0;
-    let weightedScore = 0;
 
     try {
       for (const [uri, diags] of vscode.languages.getDiagnostics()) {
@@ -234,13 +233,10 @@ export class AIActionTracker {
         for (const d of diags) {
           if (d.severity === vscode.DiagnosticSeverity.Error) {
             errorCount += 1;
-            weightedScore += AIActionTracker.DIAGNOSTIC_WEIGHTS.ERROR;
           } else if (d.severity === vscode.DiagnosticSeverity.Warning) {
             warningCount += 1;
-            weightedScore += AIActionTracker.DIAGNOSTIC_WEIGHTS.WARNING;
           } else if (d.severity === vscode.DiagnosticSeverity.Information) {
             infoCount += 1;
-            weightedScore += AIActionTracker.DIAGNOSTIC_WEIGHTS.INFO;
           }
         }
       }
@@ -394,7 +390,7 @@ export class AIActionTracker {
       const linesDeleted = deleteMatch ? parseInt(deleteMatch[1], 10) : 0;
 
       return { linesAdded, linesDeleted };
-    } catch (error) {
+    } catch {
       // Git未使用やエラー時はフォールバック（概算）
       const estimatedLines = files.length * 10;
       return {

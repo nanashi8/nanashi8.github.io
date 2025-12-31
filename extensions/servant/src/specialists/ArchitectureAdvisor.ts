@@ -1,4 +1,3 @@
-import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -452,7 +451,7 @@ export class ArchitectureAdvisor {
   /**
    * 重複コード検出（簡易版）
    */
-  private async detectDuplicateCode(files: string[]): Promise<number> {
+  private async detectDuplicateCode(_files: string[]): Promise<number> {
     // TODO: より高度な実装
     return 0;
   }
@@ -478,7 +477,7 @@ export class ArchitectureAdvisor {
             files.push(relativePath);
           }
         }
-      } catch (err) {
+      } catch {
         // Skip inaccessible directories
       }
     };

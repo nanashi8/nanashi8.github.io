@@ -212,8 +212,8 @@ export class SlotAllocator {
    */
   private calculateSlots(
     slotConfig: BatchSlotConfig,
-    totalSlots: number,
-    categorizedWords: Record<LearningCategory, string[]>
+    _totalSlots: number,
+    _categorizedWords: Record<LearningCategory, string[]>
   ): Record<LearningCategory, number> {
     return {
       new: Math.floor(totalSlots * slotConfig.newRatio),
@@ -230,8 +230,8 @@ export class SlotAllocator {
    */
   private redistributeSurplus(
     allocatedSlots: Record<LearningCategory, number>,
-    categorizedWords: Record<LearningCategory, string[]>,
-    totalSlots: number
+    _categorizedWords: Record<LearningCategory, string[]>,
+    _totalSlots: number
   ): Record<LearningCategory, number> {
     const finalSlots = { ...allocatedSlots };
     let surplus = 0;

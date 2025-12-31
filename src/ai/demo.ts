@@ -70,7 +70,7 @@ export async function demo1_BasicAIIntegration() {
 export function demo2_CustomConfiguration() {
   console.log('=== Demo 2: Custom Configuration ===');
 
-  const scheduler = new QuestionScheduler();
+  const _scheduler = new QuestionScheduler();
 
   // AI統合を有効化
 

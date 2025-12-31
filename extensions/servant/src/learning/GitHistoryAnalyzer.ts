@@ -1,7 +1,5 @@
-import * as vscode from 'vscode';
 import { exec } from 'child_process';
 import { promisify } from 'util';
-import * as path from 'path';
 import { FailurePattern, FileHotspot } from './FailurePattern';
 import type { Notifier } from '../ui/Notifier';
 

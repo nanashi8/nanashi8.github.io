@@ -18,7 +18,6 @@
 
 import type { WordProgress } from '@/storage/progress/types';
 import type { LearningCategory, CategoryStats } from './types';
-import { logger } from '@/utils/logger';
 
 export interface CategoryClassifierOptions {
   /** 最低試行回数（この回数未満は正答率を信用しない） */

@@ -61,7 +61,6 @@ import {
 import { getABTestManager } from '@/ai/experiments/ABTestManager';
 import { BatchManager } from './BatchManager';
 import { SlotAllocator } from './SlotAllocator';
-import type { SlotAllocationParams } from './SlotAllocator';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;

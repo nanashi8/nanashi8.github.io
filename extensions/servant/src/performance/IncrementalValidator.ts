@@ -1,12 +1,12 @@
 import * as vscode from 'vscode';
 import * as crypto from 'crypto';
-import { ValidationCache, CachedResult } from './ValidationCache';
+import { ValidationCache } from './ValidationCache';
 import { RuleEngine, Violation } from '../engine/RuleEngine';
 import { InstructionsLoader } from '../loader/InstructionsLoader';
 
 /**
  * IncrementalValidator
- * 
+ *
  * 変更されたファイルのみを検証し、パフォーマンスを向上させる。
  * - ファイル変更検出
  * - キャッシュ統合
@@ -34,7 +34,7 @@ export class IncrementalValidator {
 
   /**
    * ファイルを増分検証
-   * 
+   *
    * @param files - 検証するファイルパス配列
    * @returns 検証結果
    */
@@ -55,12 +55,12 @@ export class IncrementalValidator {
 
         // キャッシュをチェック
         const cached = await this.cache.get(filePath, content);
-        
+
         if (cached) {
           // キャッシュヒット
           cacheHits++;
           this.outputChannel.appendLine(`[Incremental] Cache hit: ${filePath}`);
-          
+
           // CachedResultをViolation[]に変換
           const violations: Violation[] = cached.violations.map(v => ({
             range: new vscode.Range(v.line, 0, v.line, 100),
@@ -68,25 +68,25 @@ export class IncrementalValidator {
             severity: v.severity as 'error' | 'warning',
             ruleId: 'cached'
           }));
-          
+
           results.set(filePath, violations);
         } else {
           // キャッシュミス - 新規検証
           cacheMisses++;
           this.outputChannel.appendLine(`[Incremental] Cache miss: ${filePath}`);
-          
+
           const instructions = this.instructionsLoader.getInstructions();
           const violations = this.ruleEngine.validate(document, instructions);
-          
+
           results.set(filePath, violations);
-          
+
           // キャッシュに保存
           const cachedViolations = violations.map(v => ({
             line: v.range.start.line,
             message: v.message,
             severity: v.severity as 'error' | 'warning'
           }));
-          
+
           await this.cache.set(filePath, content, cachedViolations);
         }
       } catch (error) {
@@ -103,7 +103,7 @@ export class IncrementalValidator {
 
   /**
    * 変更されたファイルを検出
-   * 
+   *
    * @param files - チェックするファイル配列
    * @returns 変更されたファイルのみ
    */
@@ -122,7 +122,7 @@ export class IncrementalValidator {
 
   /**
    * ファイルが変更されたかチェック
-   * 
+   *
    * @param filePath - ファイルパス
    * @returns 変更されていればtrue
    */
@@ -131,7 +131,7 @@ export class IncrementalValidator {
       const uri = vscode.Uri.file(filePath);
       const document = await vscode.workspace.openTextDocument(uri);
       const content = document.getText();
-      
+
       const currentHash = this.generateHash(content);
       const previousHash = this.fileHashes.get(filePath);
 
@@ -141,7 +141,7 @@ export class IncrementalValidator {
       }
 
       return false;
-    } catch (error) {
+    } catch {
       // エラーの場合は変更ありとして扱う
       return true;
     }

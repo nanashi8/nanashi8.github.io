@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { RuleEngine, Violation } from '../engine/RuleEngine';
+import { RuleEngine } from '../engine/RuleEngine';
 import { InstructionsLoader } from '../loader/InstructionsLoader';
 import { Notifier } from '../ui/Notifier';
 
@@ -14,9 +14,9 @@ export class InstructionsCodeActionProvider implements vscode.CodeActionProvider
 
   async provideCodeActions(
     document: vscode.TextDocument,
-    range: vscode.Range | vscode.Selection,
+    _range: vscode.Range | vscode.Selection,
     context: vscode.CodeActionContext,
-    token: vscode.CancellationToken
+    _token: vscode.CancellationToken
   ): Promise<vscode.CodeAction[]> {
     const actions: vscode.CodeAction[] = [];
 
@@ -272,7 +272,7 @@ export function registerQuickFixCommands(
   context.subscriptions.push(
     vscode.commands.registerCommand(
       'servant.showSplitGuidance',
-      (uri: vscode.Uri, range: vscode.Range) => {
+      (_uri: vscode.Uri, _range: vscode.Range) => {
         const message =
           '💡 Position分割ガイダンス:\n\n' +
           '1. 各Positionを別々のファイルに移動\n' +
@@ -299,7 +299,7 @@ export function registerQuickFixCommands(
   context.subscriptions.push(
     vscode.commands.registerCommand(
       'servant.showSingleFileGuidance',
-      (uri: vscode.Uri) => {
+      (_uri: vscode.Uri) => {
         const message =
           '💡 単一ファイル完結ガイダンス:\n\n' +
           '1. 修正は1つのファイルで完結させる\n' +

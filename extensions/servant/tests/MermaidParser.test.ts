@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { MermaidParser, DecisionTree, DecisionNode, DecisionPath } from '../src/parser/MermaidParser';
+import { MermaidParser } from '../src/parser/MermaidParser';
 
 describe('MermaidParser', () => {
   let parser: MermaidParser;

@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { OptimizationEngine, TaskState, WorkflowPattern } from './OptimizationEngine';
+import { OptimizationEngine, TaskState } from './OptimizationEngine';
 import { simpleGit, SimpleGit } from 'simple-git';
 import type { AIAction } from '../learning/AIActionTracker';
 

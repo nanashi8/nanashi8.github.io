@@ -229,7 +229,7 @@ export class NeuralDependencyGraph {
     let content = '';
     try {
       content = fs.readFileSync(fullPath, 'utf-8');
-    } catch (error) {
+    } catch {
       return edges;
     }
 
@@ -297,7 +297,7 @@ export class NeuralDependencyGraph {
    * エッジの重みを計算
    * w = α*import + β*coChange + γ*mutualInfo + δ*semantic
    */
-  private calculateEdgeWeight(from: string, to: string): number {
+  private calculateEdgeWeight(_from: string, _to: string): number {
     const alpha = 0.4;  // インポート強度の重み
     const beta = 0.3;   // 同時変更率の重み
     const gamma = 0.2;  // 相互情報量の重み

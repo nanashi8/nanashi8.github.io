@@ -1,4 +1,3 @@
-import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 import { AIAction } from './AIActionTracker';
@@ -231,7 +230,7 @@ export class AIEvaluator {
 
     // 短時間（5分以内）に3回以上変更されたファイルをカウント
     let oscillationCount = 0;
-    for (const [file, timestamps] of fileTimestamps) {
+    for (const [, timestamps] of fileTimestamps) {
       timestamps.sort((a, b) => a - b);
       for (let i = 0; i < timestamps.length - 2; i++) {
         const diff = timestamps[i + 2] - timestamps[i];

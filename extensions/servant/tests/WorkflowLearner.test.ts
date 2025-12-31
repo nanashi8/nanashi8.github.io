@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { WorkflowLearner, TaskClassification } from '../src/neural/WorkflowLearner';
+import { WorkflowLearner } from '../src/neural/WorkflowLearner';
 import { OptimizationEngine, TaskState } from '../src/neural/OptimizationEngine';
 import { NeuralDependencyGraph } from '../src/neural/NeuralDependencyGraph';
 import { NeuralLearningEngine } from '../src/neural/NeuralLearningEngine';

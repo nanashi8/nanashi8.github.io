@@ -3,7 +3,6 @@ import { OptimizationEngine, TaskState } from '../src/neural/OptimizationEngine'
 import { NeuralDependencyGraph } from '../src/neural/NeuralDependencyGraph';
 import { NeuralLearningEngine } from '../src/neural/NeuralLearningEngine';
 import * as fs from 'fs';
-import * as path from 'path';
 
 // fsモックを準備
 vi.mock('fs');

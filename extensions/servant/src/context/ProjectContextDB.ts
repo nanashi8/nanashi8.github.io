@@ -378,7 +378,7 @@ export class ProjectContextDB {
   /**
    * コード例を検索
    */
-  private async findCodeExamples(task: string): Promise<CodeExample[]> {
+  private async findCodeExamples(_task: string): Promise<CodeExample[]> {
     // 簡易実装: 実際には類似コードを検索
     return [];
   }

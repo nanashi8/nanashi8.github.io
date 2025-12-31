@@ -66,7 +66,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
       try {
         const mlSignal = await this.analyzeByML(input);
         return this.mergeSignals(ruleSignal, mlSignal, input);
-      } catch (error) {
+      } catch {
         // エラーログは抑制（ルールベースで続行）
       }
     }

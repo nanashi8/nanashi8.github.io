@@ -9,7 +9,6 @@ const readFile = promisify(fs.readFile);
 const mkdir = promisify(fs.mkdir);
 const unlink = promisify(fs.unlink);
 const readdir = promisify(fs.readdir);
-const stat = promisify(fs.stat);
 
 export interface CachedResult {
   violations: Array<{
@@ -112,7 +111,7 @@ export class ValidationCache {
         this.setInMemory(cacheKey, diskResult);
         return diskResult;
       }
-    } catch (error) {
+    } catch {
       // ディスクキャッシュ読み込みエラーは無視
     }
 
@@ -200,7 +199,7 @@ export class ValidationCache {
     try {
       const content = await readFile(filePath, 'utf8');
       return JSON.parse(content);
-    } catch (error) {
+    } catch {
       return null;
     }
   }
@@ -243,14 +242,9 @@ export class ValidationCache {
       const files = await readdir(this.diskCachePath);
       for (const file of files) {
         const fullPath = path.join(this.diskCachePath, file);
-        const content = await readFile(fullPath, 'utf8');
-        const cached = JSON.parse(content) as CachedResult;
-
-        // ファイルパスが含まれているかチェック（キャッシュキーから）
-        // 実際はキャッシュキーをメタデータとして保存すべきだが、簡略化のため省略
         await unlink(fullPath);
       }
-    } catch (error) {
+    } catch {
       // エラーは無視
     }
   }
@@ -268,7 +262,7 @@ export class ValidationCache {
       for (const file of files) {
         await unlink(path.join(this.diskCachePath, file));
       }
-    } catch (error) {
+    } catch {
       // エラーは無視
     }
   }
