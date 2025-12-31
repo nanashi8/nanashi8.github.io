@@ -86,6 +86,7 @@ scripts/output/
 docs/archive/
 docs/references/
 docs/templates/
+docs/private/
 
 # Old reports
 *_REPORT.txt

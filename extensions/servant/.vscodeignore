@@ -1,0 +1,27 @@
+# Exclude source and test files from VSIX (runtime uses dist/)
+src/**
+tests/**
+
+# Local debug artifacts
+test-violation.md
+
+# Tooling / configs
+*.ts
+*.map
+vitest.config.*
+tsconfig*.json
+eslint.config.*
+
+# Repo/meta
+.gitignore
+
+# Docs that aren't needed at runtime
+PHASE*_COMPLETION_REPORT.md
+docs/**
+
+# OS/editor noise
+.DS_Store
+.vscode/**
+
+# Keep node_modules for now (no bundling yet)
+# If/when bundling is added, exclude node_modules/** here.

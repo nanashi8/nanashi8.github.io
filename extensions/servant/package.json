@@ -1,0 +1,301 @@
+{
+  "name": "servant",
+  "displayName": "Servant",
+  "description": "プロジェクト内に住むAIサーバント。設計方針を監視し、AI作業時にプロジェクト情報をネットワークで収集・提供して効率化します",
+  "version": "0.3.0",
+  "publisher": "nanashi8",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanashi8/nanashi8.github.io.git",
+    "directory": "extensions/servant"
+  },
+  "bugs": {
+    "url": "https://github.com/nanashi8/nanashi8.github.io/issues"
+  },
+  "homepage": "https://github.com/nanashi8/nanashi8.github.io/tree/main/extensions/servant#readme",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Linters",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "servant",
+    "copilot",
+    "instructions",
+    "policy",
+    "validation",
+    "code-quality",
+    "architecture",
+    "ai-guard",
+    "git-hooks",
+    "pre-commit",
+    "quick-fix",
+    "cache"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:markdown",
+    "onLanguage:json"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "servant.validate",
+        "title": "Servant: Validate Instructions"
+      },
+      {
+        "command": "servant.validateBeforeCommit",
+        "title": "Servant: Validate Before Commit"
+      },
+      {
+        "command": "servant.installHooks",
+        "title": "Servant: Install Git Hooks"
+      },
+      {
+        "command": "servant.uninstallHooks",
+        "title": "Servant: Uninstall Git Hooks"
+      },
+      {
+        "command": "servant.indexProject",
+        "title": "Servant: Index Project for AI"
+      },
+      {
+        "command": "servant.showProjectMap",
+        "title": "Servant: Show Project Knowledge Map"
+      },
+      {
+        "command": "servant.learnFromHistory",
+        "title": "Servant: Learn from Git History"
+      },
+      {
+        "command": "servant.showHotspots",
+        "title": "Servant: Show Problem Hotspots"
+      },
+      {
+        "command": "servant.showLearningStats",
+        "title": "Servant: Show Learning Statistics"
+      },
+      {
+        "command": "servant.resetLearning",
+        "title": "Servant: Reset Learning Data"
+      },
+      {
+        "command": "servant.showAIStats",
+        "title": "Servant: Show AI Action Statistics"
+      },
+      {
+        "command": "servant.showRecentAIActions",
+        "title": "Servant: Show Recent AI Actions"
+      },
+      {
+        "command": "servant.resetAITracking",
+        "title": "Servant: Reset AI Tracking Data"
+      },
+      {
+        "command": "servant.evaluateAI",
+        "title": "Servant: Evaluate AI Performance"
+      },
+      {
+        "command": "servant.showAITrend",
+        "title": "Servant: Show AI Performance Trend"
+      },
+      {
+        "command": "servant.buildNeuralGraph",
+        "title": "Servant: Build Neural Dependency Graph"
+      },
+      {
+        "command": "servant.showNeuralGraph",
+        "title": "Servant: Show Neural Graph Statistics"
+      },
+      {
+        "command": "servant.propagateForward",
+        "title": "Servant: Propagate Forward from Active File"
+      },
+      {
+        "command": "servant.showNeuralLearningStats",
+        "title": "Servant: Show Neural Learning Statistics"
+      },
+      {
+        "command": "servant.learnFromGit",
+        "title": "Servant: Learn Workflow from Git History"
+      },
+      {
+        "command": "servant.optimizeCurrentTask",
+        "title": "Servant: Optimize Current Task"
+      },
+      {
+        "command": "servant.showOptimizationStats",
+        "title": "Servant: Show Optimization Statistics"
+      },
+      {
+        "command": "servant.analyzeArchitecture",
+        "title": "Servant: Analyze Project Architecture"
+      }
+    ],
+    "configuration": {
+      "title": "Servant",
+      "properties": {
+        "servant.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable Servant"
+        },
+        "servant.severity": {
+          "type": "string",
+          "enum": ["error", "warning", "information", "hint"],
+          "default": "error",
+          "description": "Diagnostic severity for CRITICAL violations"
+        },
+        "servant.preCommit.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable pre-commit validation"
+        },
+        "servant.preCommit.strictMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Block commits even for warnings (not just errors)"
+        },
+        "servant.preCommit.autoFix": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically apply Quick Fixes before commit"
+        },
+        "servant.preCommit.ignorePatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["node_modules", "dist", "build", ".git"],
+          "description": "File patterns to ignore in pre-commit validation"
+        },
+        "servant.commitMsg.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable commit message validation"
+        },
+        "servant.performance.enableCache": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable validation result caching for better performance"
+        },
+        "servant.performance.cacheLocation": {
+          "type": "string",
+          "default": ".vscode/cache",
+          "description": "Location for cache files (relative to workspace root)"
+        },
+        "servant.performance.maxCacheSize": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum number of cache entries in memory"
+        },
+        "servant.performance.enableIncremental": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable incremental validation (only validate changed files)"
+        },
+        "servant.performance.largeFileThreshold": {
+          "type": "number",
+          "default": 1048576,
+          "description": "File size threshold for large file handling (in bytes)"
+        },
+        "servant.ai.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AI-powered code analysis and suggestions"
+        },
+        "servant.ai.autoFix": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically apply AI-generated fixes"
+        },
+        "servant.ai.model": {
+          "type": "string",
+          "default": "copilot-gpt-4",
+          "description": "AI model to use for analysis"
+        },
+        "servant.ai.contextCollection": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically collect project context when AI starts working"
+        },
+        "servant.ai.projectIndexing": {
+          "type": "boolean",
+          "default": true,
+          "description": "Build knowledge graph of project structure for AI assistance"
+        },
+        "servant.ai.relatedFileSuggestions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Suggest related files when AI is working"
+        },
+        "servant.notifications.mode": {
+          "type": "string",
+          "enum": ["quiet", "standard", "strict"],
+          "default": "quiet",
+          "description": "Notification verbosity mode (quiet: minimal interruptions)"
+        },
+        "servant.notifications.cooldownMs": {
+          "type": "number",
+          "default": 60000,
+          "description": "Cooldown in milliseconds for repeated notifications (0 to disable)"
+        },
+        "servant.learning.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable adaptive learning from failures"
+        },
+        "servant.learning.cycleSize": {
+          "type": "number",
+          "default": 15,
+          "description": "Number of validations before automatic learning"
+        },
+        "servant.learning.autoUpdateInstructions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically update Instructions after learning"
+        },
+        "servant.learning.gitHistoryLimit": {
+          "type": "number",
+          "default": 100,
+          "description": "Number of recent commits to analyze"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vscode/vsce": "^2.22.0"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.0.0",
+    "simple-git": "^3.21.0"
+  }
+}
