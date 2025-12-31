@@ -37,6 +37,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run Git History Learning
+        run: |
+          echo "🧠 Git履歴から学習中..."
+          node scripts/learn-from-git-history.mjs
+
+      - name: Run AI Failure Learning
+        run: |
+          echo "🛡️ AI失敗履歴から学習中..."
+          node scripts/learn-from-ai-failures.mjs || echo "ℹ️ AI失敗履歴なし（スキップ）"
+
       - name: Check if learning is needed
         id: check
         run: |
@@ -83,16 +93,17 @@ jobs:
 
             COMMITS_COUNT=${{ steps.check.outputs.commits_since }}
 
+            COMMIT_DATE=$(date '+%Y-%m-%d %H:%M:%S')
             git commit -m "chore(auto-learn): サーバント自動学習（${COMMITS_COUNT}コミット分）
-
-🧠 自動学習実行:
-- 前回の学習から${COMMITS_COUNT}コミット
-- 失敗パターンデータベース更新
-- Instructions自動更新
-- 学習レポート生成
-
-🤖 実行トリガー: GitHub Actions
-📅 実行日時: $(date '+%Y-%m-%d %H:%M:%S')"
+            
+            自動学習実行:
+            - 前回の学習から${COMMITS_COUNT}コミット
+            - 失敗パターンデータベース更新
+            - Instructions自動更新
+            - 学習レポート生成
+            
+            実行トリガー: GitHub Actions
+            実行日時: ${COMMIT_DATE}"
 
             git push
 
@@ -109,7 +120,6 @@ jobs:
           echo "📊 **学習コミット数**: ${{ steps.check.outputs.commits_since }}件" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          # 学習レポートから情報抽出
           if [ -f "docs/GIT_HISTORY_LEARNING_REPORT.md" ]; then
             echo "### 📋 学習結果" >> $GITHUB_STEP_SUMMARY
             head -30 docs/GIT_HISTORY_LEARNING_REPORT.md >> $GITHUB_STEP_SUMMARY

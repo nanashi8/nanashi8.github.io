@@ -17,7 +17,6 @@ export async function demo1_BasicAIIntegration() {
   const scheduler = new QuestionScheduler();
 
   // AI統合を有効化
-  scheduler.enableAICoordination(true);
 
   // サンプル問題データ（デモ用に簡略化）
   const sampleQuestions = [
@@ -59,7 +58,6 @@ export async function demo1_BasicAIIntegration() {
       duration: 600000, // 10分
       consecutiveCorrect: 2,
     },
-    useMetaAI: true,
   });
 
   console.log('Scheduled Questions:', result.scheduledQuestions.length);
@@ -75,7 +73,6 @@ export function demo2_CustomConfiguration() {
   const scheduler = new QuestionScheduler();
 
   // AI統合を有効化
-  scheduler.enableAICoordination(true);
 
   // 設定のカスタマイズ（実際には内部APIアクセスが必要）
   console.log('カスタム設定:');
@@ -165,7 +162,6 @@ export function MemorizationTab() {
   const [scheduler] = useState(() => {
     const s = new QuestionScheduler();
     // AI統合を有効化
-    s.enableAICoordination(true);
     return s;
   });
 
@@ -184,7 +180,6 @@ export function MemorizationTab() {
         consecutiveIncorrect: consecutiveIncorrectCount,
       },
       recentAnswers: getRecentAnswers(),
-      useMetaAI: true,
     });
 
     // AI推奨アクションを表示（オプション）

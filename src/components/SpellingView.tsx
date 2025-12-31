@@ -179,7 +179,6 @@ function SpellingView({
     const enableAI =
       import.meta.env.DEV || localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
-      s.enableAICoordination(true);
       logger.info('🤖 [SpellingView] AI統合が有効化されました');
     }
     return s;
@@ -274,6 +273,7 @@ function SpellingView({
       const scheduleResult = await scheduler.schedule({
         questions: questions,
         mode: 'spelling',
+        useCategorySlots: true,
         limits: {
           learningLimit: learningLimit,
           reviewLimit: reviewLimit,
@@ -285,7 +285,6 @@ function SpellingView({
           mastered: sessionStats.mastered || 0,
           duration: Date.now() - quizStartTimeRef.current,
         },
-        useMetaAI: true, // ✅ 常時有効
         isReviewFocusMode: isReviewFocusMode || false,
       });
 
@@ -336,6 +335,7 @@ function SpellingView({
         const scheduleResult = await scheduler.schedule({
           questions: remaining,
           mode: 'spelling',
+          useCategorySlots: true,
           limits: {
             learningLimit: learningLimit,
             reviewLimit: reviewLimit,
@@ -347,7 +347,6 @@ function SpellingView({
             mastered: sessionStats.mastered || 0,
             duration: Date.now() - quizStartTimeRef.current,
           },
-          useMetaAI: true,
           isReviewFocusMode: isReviewFocusMode || false,
         });
 
@@ -517,7 +516,8 @@ function SpellingView({
         currentQuestion,
         spellingState.questions,
         spellingState.currentIndex,
-        'spelling'
+        'spelling',
+        { outcome: 'incorrect' }
       );
       questionsAfterRequeue = updated;
       if (updated !== spellingState.questions) {

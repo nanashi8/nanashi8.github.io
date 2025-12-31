@@ -849,10 +849,14 @@
 
 /* 全タブコンテンツの高さを統一 */
 .ai-comment-container,
-.plan-text-line,
 .retention-breakdown-container,
 .history-compact,
 .settings-tab-container {
+  min-height: 110px;
+}
+
+/* 計画タブ全体の高さを統一 */
+.plan-tab-content {
   min-height: 110px;
 }
 

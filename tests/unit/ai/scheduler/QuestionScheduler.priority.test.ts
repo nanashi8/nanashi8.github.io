@@ -71,7 +71,8 @@ describe('QuestionScheduler - Priority Calculation', () => {
 
       const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      expect(priority).toBe(45);
+      // baseScore = 50 - (0.4 * 30) = 38
+      expect(priority).toBe(38);
     });
 
     it('未出題（attempts=0）はnew（Position 35）', () => {
@@ -122,7 +123,8 @@ describe('QuestionScheduler - Priority Calculation', () => {
 
       const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      expect(priority).toBe(10);
+      // goal-first: consecutiveCorrect>=3 -> Position 5
+      expect(priority).toBe(5);
     });
 
     it('時間経過ブースト（最大+15）がPositionに反映される', () => {
@@ -150,8 +152,8 @@ describe('QuestionScheduler - Priority Calculation', () => {
 
       const priority = scheduler.recalculatePriorityAfterAnswer("test", progress, "memorization");
 
-      // baseScore(accuracy=0.7)=29 + timeBoost(10日→+15)=44
-      expect(priority).toBe(44);
+      // baseScore(accuracy=0.7)=29 + timeBoost(10日→+20)=49
+      expect(priority).toBe(49);
     });
 
     it('解答直後は savedPosition を無視して再計算する', () => {

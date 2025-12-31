@@ -186,7 +186,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     const enableAI =
       import.meta.env.DEV || localStorage.getItem('enable-ai-coordination') === 'true';
     if (enableAI) {
-      s.enableAICoordination(true);
       logger.info('🤖 [GrammarQuizView] AI統合が有効化されました');
     }
     return s;
@@ -546,6 +545,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       const scheduleResult = await scheduler.schedule({
         questions: scheduleInputs,
         mode: 'grammar',
+        useCategorySlots: true,
         limits: {
           learningLimit: learningLimit,
           reviewLimit: reviewLimit,
@@ -557,7 +557,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           mastered: sessionStats.mastered || 0,
           duration: 0,
         },
-        useMetaAI: true, // ✅ 常時有効
         isReviewFocusMode: isReviewFocusMode,
       });
 
@@ -682,6 +681,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         const scheduleResult = await scheduler.schedule({
           questions: scheduleInputs,
           mode: 'grammar',
+          useCategorySlots: true,
           limits: {
             learningLimit: learningLimit,
             reviewLimit: reviewLimit,
@@ -693,7 +693,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             mastered: sessionStats.mastered || 0,
             duration: 0,
           },
-          useMetaAI: true,
           isReviewFocusMode: isReviewFocusMode,
         });
 
@@ -1068,7 +1067,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         currentQuestion,
         currentQuestions,
         currentQuestionIndex,
-        'grammar'
+        'grammar',
+        { outcome: 'incorrect' }
       );
       questionsAfterRequeue = updated;
       if (updated !== currentQuestions) {

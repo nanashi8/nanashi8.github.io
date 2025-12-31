@@ -480,12 +480,33 @@ export class AdaptiveEducationalAINetwork {
    */
   private saveState(): void {
     try {
+      const maxSignals = this.config.maxActiveSignals ?? 10;
       const saveData = {
         ...this.state,
+        // 保存サイズを抑制（QuotaExceeded で全体が壊れるのを防ぐ）
+        activeSignals: Array.isArray(this.state.activeSignals)
+          ? this.state.activeSignals.slice(-maxSignals)
+          : [],
         effectiveness: Array.from(this.state.effectiveness.entries()),
       };
 
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(saveData));
+      const json = JSON.stringify(saveData);
+
+      // 目安: 200KB を超える場合は縮小版で保存
+      if (json.length > 200_000) {
+        const minimal = {
+          enabled: this.state.enabled,
+          currentStrategy: this.state.currentStrategy,
+          sessionStats: this.state.sessionStats,
+          lastUpdated: this.state.lastUpdated,
+          activeSignals: [],
+          effectiveness: Array.from(this.state.effectiveness.entries()),
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(minimal));
+        return;
+      }
+
+      localStorage.setItem(STORAGE_KEY, json);
 
       logger.debug('State saved to storage');
     } catch (error) {

@@ -5,6 +5,15 @@ applyTo: '**'
 
 # 仕様書遵守強制ルール
 
+## 🚨 最優先確認事項
+
+**コード修正前に必ず以下を確認してください：**
+
+1. **modification-enforcement.instructions.md** - 修正前の強制チェックリスト【最優先】
+2. **batch-system-enforcement.instructions.md** - バッチ方式の絶対原則
+3. **position-hierarchy-enforcement.instructions.md** - Position階層の不変条件
+4. **category-slots-enforcement.instructions.md** - カテゴリースロット方式
+
 ## 🚨 絶対原則
 
 **ユーザーの明示的な指示がない限り、既存の仕様・設定値を変更してはならない**
@@ -201,7 +210,6 @@ git checkout HEAD -- <ファイル>
 
 ## 📚 関連ドキュメント
 
-- [CRITICAL_RULES.md](../../../.ai-instructions/CRITICAL_RULES.md) - 絶対禁止事項
 - [CSS修正ルール](./css-modification-rules.instructions.md) - CSS変更の詳細
 - [work-management](./work-management.instructions.md) - 作業管理ルール
 

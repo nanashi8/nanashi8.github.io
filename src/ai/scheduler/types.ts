@@ -62,9 +62,6 @@ export interface ScheduleParams {
   /** セッション統計 */
   sessionStats: SessionStats;
 
-  /** メタAI統合層（QuestionScheduler）を使用するか */
-  useMetaAI?: boolean;
-
   /** 復習集中モードか */
   isReviewFocusMode?: boolean;
 
@@ -76,6 +73,9 @@ export interface ScheduleParams {
 
   /** いもづる式学習モード（関連語を連鎖的に出題） */
   useChainLearning?: boolean;
+
+  /** カテゴリーベーススロットシステムを使用（新実装） */
+  useCategorySlots?: boolean;
 }
 
 /**
@@ -96,9 +96,6 @@ export interface ScheduleContext {
 
   /** 認知負荷（0-1） */
   cognitiveLoad: number;
-
-  /** メタAI統合を使用するか */
-  useMetaAI: boolean;
 
   /** 復習集中モード */
   isReviewFocusMode: boolean;
@@ -242,4 +239,71 @@ export interface ScheduleResult {
     signalsDetected: DetectedSignal[];
     randomSkipApplied?: boolean; // 🔥 ランダム飛ばし機能の適用フラグ
   };
+}
+
+/**
+ * 学習カテゴリー
+ *
+ * 回答結果に基づいて動的に分類される学習段階
+ */
+export type LearningCategory = 'new' | 'incorrect' | 'still_learning' | 'mastered';
+
+/**
+ * カテゴリー別Position
+ *
+ * 各カテゴリー内での相対的な優先度（0-100）
+ */
+export interface CategoryPosition {
+  /** 学習カテゴリー */
+  category: LearningCategory;
+
+  /** カテゴリー内でのPosition値（0-100、高いほど優先） */
+  positionInCategory: number;
+
+  /** メタデータの結びつき強度（いもづる式学習用、0-100） */
+  relatedStrength?: number;
+
+  /** カテゴリー判定の根拠 */
+  reason?: string;
+}
+
+/**
+ * バッチスロット設定
+ *
+ * 各カテゴリーの出題枠の割合を定義
+ */
+export interface BatchSlotConfig {
+  /** 新規語の出題枠比率（0-1） */
+  newRatio: number;
+
+  /** 分からない語の出題枠比率（0-1） */
+  incorrectRatio: number;
+
+  /** まだまだ語の出題枠比率（0-1） */
+  stillLearningRatio: number;
+
+  /** 定着済の出題枠比率（0-1） */
+  masteredRatio: number;
+
+  /** いもづる式学習の優先枠比率（0-1、各カテゴリー内で適用） */
+  chainLearningRatio?: number;
+}
+
+/**
+ * カテゴリー別統計
+ *
+ * バッチ内の各カテゴリーの語数と状態
+ */
+export interface CategoryStats {
+  /** カテゴリー別の語数 */
+  counts: Record<LearningCategory, number>;
+
+  /** カテゴリー別の割り当てスロット数 */
+  allocatedSlots: Record<LearningCategory, number>;
+
+  /** 余剰スロット数 */
+  surplusSlots: number;
+
+  /** スロット不足があるか */
+  hasShortage: boolean;
 }

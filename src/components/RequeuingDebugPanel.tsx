@@ -17,6 +17,14 @@ interface RequeuedWord {
   timestamp: number;
 }
 
+interface AnswerHistory {
+  word: string;
+  answer: 'correct' | 'still_learning' | 'incorrect';
+  countedAs: 'mastered' | 'still_learning' | 'incorrect';
+  position: number;
+  timestamp: number;
+}
+
 interface DebugPanelProps {
   mode: ScheduleMode;
   currentIndex: number;
@@ -27,6 +35,9 @@ interface DebugPanelProps {
   }>;
   requeuedWords?: RequeuedWord[];
   initialExpanded?: boolean;
+  answerHistory?: AnswerHistory[];
+  onClose?: () => void;
+  onClearHistory?: () => void;
 }
 
 function toFiniteNumber(value: unknown, fallback: number): number {
@@ -102,6 +113,9 @@ export function RequeuingDebugPanel({
   questions,
   requeuedWords: _requeuedWords = [],
   initialExpanded = true, // デフォルトで展開状態
+  answerHistory = [],
+  onClose,
+  onClearHistory,
 }: DebugPanelProps) {
   const [isExpanded, setIsExpanded] = useState(initialExpanded);
   const [aiEvaluations, setAIEvaluations] = useState<any[]>([]);
@@ -133,6 +147,127 @@ export function RequeuingDebugPanel({
   // コピー機能（マークダウン形式で詳細に）
   const handleCopy = () => {
     const timestamp = new Date().toISOString();
+
+    // categorySlots（SlotAllocator）出力を取得（コピペ用）
+    const { value: categorySlotsValue, key: categorySlotsKey } = readDebugJSON<any>(
+      'debug_categorySlots_output',
+      { mode }
+    );
+    const categorySlotsSection = (() => {
+      const header = '## 🎯 カテゴリースロット方式：5段階パイプライン\n\n';
+      if (!categorySlotsValue) {
+        return (
+          header +
+          `⚠️ debug_categorySlots_output_${mode} がありません（まだスケジュールされていない / フォールバックした可能性）\n`
+        );
+      }
+
+      const stats = categorySlotsValue?.stats || {};
+      const top30 = categorySlotsValue?.top30 || [];
+
+      // 5段階を可視化
+      const stages = [
+        '### ① カテゴリ分類（Position計算）',
+        '',
+        '**全単語を4カテゴリに分類**:',
+        `- 🔴 分からない (Position≥70): ${stats.incorrect || 0}語`,
+        `- 🟡 まだまだ (Position 40-69, attempts>0): ${stats.still_learning || 0}語`,
+        `- 🔵 新規 (Position 20-39): ${stats.new || 0}語`,
+        `- ✅ 定着済 (Position <20): ${stats.mastered || 0}語`,
+        '',
+        '---',
+        '',
+        '### ② 振動防止（DTA: Direct Time Adjustment）',
+        '',
+        '**直近10語にPosition -30ペナルティ**:',
+        ...(top30
+          .filter((item: any) => item.wasRecent)
+          .slice(0, 10)
+          .map((item: any, i: number) => `${i + 1}. **${item.word}** - Position ${item.position.toFixed(0)} (ペナルティ後) → カテゴリ: ${item.category}`)
+          .concat(top30.filter((item: any) => item.wasRecent).length === 0 ? ['_(直近語なし)_'] : [])
+        ),
+        '',
+        '⚠️ **重要**: ペナルティ後もカテゴリ帯の最低値（incorrect=70, still_learning=40, new=20）でクランプされ、カテゴリは維持されます。',
+        '',
+        '---',
+        '',
+        '### ③ スロット割当（カテゴリ比率）',
+        '',
+        '**バッチ最大100語を各カテゴリに配分**:',
+        `- 🔴 incorrect: ${stats.incorrect || 0}語 / 上限40%`,
+        `- 🟡 still_learning: ${stats.still_learning || 0}語 / 残りの50%`,
+        `- 🔵 new: ${stats.new || 0}語 / 残り`,
+        `- ✅ mastered: ${stats.mastered || 0}語 / 余り`,
+        '',
+        '各スロット内で **Position降順** ソート後、**いもづる式学習**（関連語近接配置）を適用。',
+        '',
+        '---',
+        '',
+        '### ④ ゲーミフィケーション（スロット間並び替え）',
+        '',
+        '**GamificationAI.interleaveByCategory() で交互配置**:',
+        '- incorrect連続を避けるため、[incorrect 3-5問 → new 1問] パターンで交互配置',
+        `- 実行: ${stats.interleavedByCategory ? '✅ 実施済み' : '❌ 未実施'}`,
+        '',
+        '---',
+        '',
+        '### ⑤ 確定バッチ（出題予定TOP30）',
+        '',
+        '| # | 単語 | Position | カテゴリ | 出題回数 | 直近語 |',
+        '|---|------|----------|----------|----------|--------|',
+        ...top30.map((item: any, i: number) => {
+          const catEmoji = item.category === 'incorrect' ? '🔴' : item.category === 'still_learning' ? '🟡' : item.category === 'new' ? '🔵' : '✅';
+          const recentMarker = item.wasRecent ? '⚠️' : '';
+          return `| ${i + 1} | **${item.word}** | ${item.position.toFixed(0)} | ${catEmoji} ${item.category} | ${categorySlotsValue?.top30AttemptsMap?.[item.word] ?? '?'}回 | ${recentMarker} |`;
+        }),
+        '',
+        '**統計**:',
+        `- 総数: ${stats.total || 0}語`,
+        `- 重複除外: ${stats.duplicatesRemoved || 0}語`,
+        `- いもづる式学習: ${stats.chainLearning ? '有効' : '無効'}`,
+        '',
+        '---',
+        '',
+        '### 📋 JSON詳細（デバッグ用）',
+        '',
+        `- storageKey: ${categorySlotsKey ?? `debug_categorySlots_output_${mode}`}`,
+        '',
+        '<details>',
+        '<summary>JSONを展開</summary>',
+        '',
+        '```json',
+        JSON.stringify(categorySlotsValue, null, 2),
+        '```',
+        '',
+        '</details>',
+      ].join('\n');
+
+      return header + stages;
+    })();
+
+    // useCategorySlots フラグの状態を取得（MemorizationView から）
+    const useCategorySlotsInfo = (() => {
+      try {
+        // デバッグ用にlocalStorageに保存されているか確認
+        const saved = localStorage.getItem('debug_useCategorySlots');
+        if (saved) return JSON.parse(saved);
+      } catch {}
+      // デフォルトはtrue（現在のハードコード）
+      return { enabled: true, source: 'hardcoded' };
+    })();
+
+    // 再出題ログから最近のinserted/skippedを集計
+    const requeueStats = (() => {
+      try {
+        const logs = JSON.parse(localStorage.getItem(`debug_requeue_log_${mode}`) || '[]');
+        const recent = logs.slice(-50); // 最新50件
+        const inserted = recent.filter((log: any) => log.action === 'inserted').length;
+        const skipped = recent.filter((log: any) => log.action?.startsWith('skipped')).length;
+        return { inserted, skipped, total: recent.length };
+      } catch {
+        return { inserted: 0, skipped: 0, total: 0 };
+      }
+    })();
 
     // スコアボード情報を取得
     const allProgress = loadProgressSync();
@@ -277,6 +412,23 @@ export function RequeuingDebugPanel({
 **生成日時**: ${timestamp}
     **mode**: ${mode}
 **現在位置**: ${currentIndex + 1} / ${totalQuestions} 問目
+
+---
+
+## ⚙️ スケジューリング設定
+
+**出題方式**: ${useCategorySlotsInfo.enabled ? '✅ カテゴリースロット方式' : '❌ 従来方式'}
+- useCategorySlots: **${useCategorySlotsInfo.enabled ? 'true' : 'false'}** ${useCategorySlotsInfo.source === 'hardcoded' ? '(ハードコード)' : ''}
+- 再出題差し込み: ${useCategorySlotsInfo.enabled ? '**無効**（バッチ内各語1回保証）' : '**有効**（誤答/まだまだを再挿入）'}
+
+**直近50件の再出題ログ**:
+- 挿入（inserted）: ${requeueStats.inserted}回 ${useCategorySlotsInfo.enabled && requeueStats.inserted > 0 ? '⚠️ **警告: 本来0であるべき**' : ''}
+- スキップ（skipped）: ${requeueStats.skipped}回
+- 総ログ数: ${requeueStats.total}回
+
+${useCategorySlotsInfo.enabled && requeueStats.inserted > 0 ? '🚨 **重大な問題**: useCategorySlots=true にもかかわらず再出題差し込みが発生しています！\n→ 修正が反映されていないか、別経路で差し込みが起きている可能性があります。\n' : ''}
+${!useCategorySlotsInfo.enabled && requeueStats.inserted > 0 ? '✅ 従来方式では再出題差し込みが正常に動作しています。\n' : ''}
+${useCategorySlotsInfo.enabled && requeueStats.inserted === 0 && requeueStats.skipped > 0 ? '✅ 再出題差し込みが正常に無効化されています（全てスキップ）。\n' : ''}
 
 ---
 
@@ -2297,6 +2449,10 @@ ${(() => {
 
 ---
 
+${categorySlotsSection}
+
+---
+
 _このレポートをコピーしてGitHub Copilot Chatで分析できます_
 `.trim();
 
@@ -2426,6 +2582,27 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
       <div className="sticky top-0 bg-blue-600 text-white p-3 flex justify-between items-center">
         <h3 className="font-bold">🔍 再出題デバッグパネル</h3>
         <div className="flex gap-2">
+          {onClearHistory && answerHistory.length > 0 && (
+            <button
+              onClick={onClearHistory}
+              className="px-2 py-1 rounded bg-orange-500 hover:bg-orange-700 text-xs"
+              title="回答履歴をクリア"
+            >
+              🗑️
+            </button>
+          )}
+          <button
+            onClick={() => {
+              if (confirm('LocalStorageをクリアして再読み込みしますか？\n古いキャッシュデータを完全に削除します。')) {
+                localStorage.clear();
+                window.location.reload();
+              }
+            }}
+            className="px-2 py-1 rounded bg-purple-500 hover:bg-purple-700 text-xs font-bold"
+            title="LocalStorageクリア＆リロード（古いキャッシュを削除）"
+          >
+            🔄
+          </button>
           <button
             onClick={handleCopy}
             className={`px-3 py-1 rounded ${copySuccess ? 'bg-green-500' : 'bg-blue-500 hover:bg-blue-700'}`}
@@ -2434,8 +2611,9 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             {copySuccess ? '✓ コピー完了' : '📋 コピー'}
           </button>
           <button
-            onClick={() => setIsExpanded(false)}
+            onClick={onClose || (() => setIsExpanded(false))}
             className="text-white hover:bg-blue-700 px-2 py-1 rounded"
+            title="閉じる (Cmd/Ctrl + D)"
           >
             ✕
           </button>
@@ -2443,6 +2621,74 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
       </div>
 
       <div className="p-4 space-y-4 text-sm">
+        {/* ℹ️ ヘルプ */}
+        <div className="bg-blue-50 p-2 rounded border border-blue-200 text-xs">
+          <strong>💡 キーボードショートカット:</strong> Cmd/Ctrl + D でパネル開閉
+        </div>
+
+        {/* 📸 解答直後スナップショット */}
+        {(() => {
+          try {
+            const snapshots = JSON.parse(localStorage.getItem('debug_answer_snapshots') || '[]');
+            if (snapshots.length === 0) return null;
+
+            return (
+              <div className="bg-purple-50 p-3 rounded border-2 border-purple-300">
+                <div className="flex justify-between items-center mb-2">
+                  <p className="font-semibold text-purple-800">📸 解答直後スナップショット（最新10件）</p>
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem('debug_answer_snapshots');
+                      window.location.reload();
+                    }}
+                    className="px-2 py-1 text-xs bg-purple-500 hover:bg-purple-700 text-white rounded"
+                  >
+                    クリア
+                  </button>
+                </div>
+                <div className="space-y-2 max-h-60 overflow-y-auto">
+                  {snapshots.map((snap: any, idx: number) => {
+                    const isIncorrect = snap.categoryAfter === 'incorrect';
+                    const isStillLearning = snap.categoryAfter === 'still_learning';
+                    const bgColor = isIncorrect
+                      ? 'bg-red-100 border-red-300'
+                      : isStillLearning
+                      ? 'bg-yellow-100 border-yellow-300'
+                      : 'bg-green-100 border-green-300';
+
+                    return (
+                      <div key={idx} className={`p-2 rounded border ${bgColor} text-xs`}>
+                        <div className="font-mono font-bold">
+                          {snap.word}
+                          <span className="ml-2 text-gray-600">
+                            ({new Date(snap.timestamp).toLocaleTimeString('ja-JP')})
+                          </span>
+                        </div>
+                        <div className="mt-1 space-y-1">
+                          <div>
+                            回答: <strong>{snap.answerType}</strong>
+                          </div>
+                          <div>
+                            Position: {snap.positionBefore} → <strong>{snap.positionAfter}</strong>
+                          </div>
+                          <div>
+                            カテゴリ: {snap.categoryBefore} → <strong>{snap.categoryAfter}</strong>
+                          </div>
+                          <div className="text-gray-600">
+                            進捗: {snap.currentIndex}/{snap.totalQuestions}問
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          } catch {
+            return null;
+          }
+        })()}
+
         {/* 🧪 A/Bテスト情報（JSON形式でコピペしやすく） */}
         {(() => {
           try {
@@ -2539,6 +2785,116 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             </div>
           );
         })()}
+
+        {/* 📊 回答履歴（最新20件） + 振動検出 */}
+        {answerHistory.length > 0 && (
+          <div className="bg-green-50 p-3 rounded border-2 border-green-300">
+            <p className="font-semibold text-green-800">📊 回答履歴（最新20件）</p>
+
+            {/* 振動検出 */}
+            {(() => {
+              const recent = answerHistory.slice(-20);
+              const vibrations: Array<{ word: string; positions: number[]; gap: number }> = [];
+              const lastSeen = new Map<string, number>();
+
+              recent.forEach((h, idx) => {
+                if (lastSeen.has(h.word)) {
+                  const prevIdx = lastSeen.get(h.word)!;
+                  const gap = idx - prevIdx;
+                  if (gap <= 10) { // 10問以内に再出題
+                    const existing = vibrations.find(v => v.word === h.word);
+                    if (existing) {
+                      existing.positions.push(idx);
+                      existing.gap = Math.min(existing.gap, gap);
+                    } else {
+                      vibrations.push({ word: h.word, positions: [prevIdx, idx], gap });
+                    }
+                  }
+                }
+                lastSeen.set(h.word, idx);
+              });
+
+              if (vibrations.length > 0) {
+                return (
+                  <div className="mt-2 mb-3 bg-red-100 border-2 border-red-500 p-2 rounded">
+                    <p className="font-bold text-red-800">🚨 振動検出!</p>
+                    <div className="mt-1 space-y-1 text-xs">
+                      {vibrations.map((v, i) => (
+                        <div key={i} className="text-red-700">
+                          <span className="font-semibold">{v.word}</span>: {v.gap}問後に再出題 (位置: {v.positions.join(', ')})
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <div className="mt-2 mb-3 bg-green-100 border border-green-500 p-2 rounded text-xs text-green-700">
+                  ✅ 振動なし（直近20問で同じ語が10問以内に再出題されていません）
+                </div>
+              );
+            })()}
+
+            <div className="mt-2 space-y-2 max-h-60 overflow-y-auto">
+              {answerHistory
+                .slice(-20)
+                .reverse()
+                .map((history, idx) => {
+                  const actualIndex = answerHistory.length - idx; // 最新が1
+                  const answerLabel =
+                    history.answer === 'correct'
+                      ? '✅ 知ってる'
+                      : history.answer === 'still_learning'
+                        ? '🟡 まだまだ'
+                        : '❌ 分からない';
+                  const countLabel =
+                    history.countedAs === 'mastered'
+                      ? '✅ 定着済'
+                      : history.countedAs === 'still_learning'
+                        ? '🟡 まだまだ'
+                        : '🔴 分からない';
+                  const answerColor =
+                    history.answer === 'correct'
+                      ? 'bg-green-100 text-green-800'
+                      : history.answer === 'still_learning'
+                        ? 'bg-yellow-100 text-yellow-800'
+                        : 'bg-red-100 text-red-800';
+                  const countColor =
+                    history.countedAs === 'mastered'
+                      ? 'bg-green-100 text-green-800'
+                      : history.countedAs === 'still_learning'
+                        ? 'bg-yellow-100 text-yellow-800'
+                        : 'bg-red-100 text-red-800';
+
+                  return (
+                    <div key={idx} className="bg-white p-2 rounded shadow-sm text-xs">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center gap-2">
+                          <span className="bg-gray-700 text-white px-2 py-0.5 rounded text-xs font-bold">#{actualIndex}</span>
+                          <span className="font-semibold">{history.word}</span>
+                        </div>
+                        <span className="text-gray-500">
+                          Pos: {history.position.toFixed(0)}
+                        </span>
+                      </div>
+                      <div className="mt-1 flex gap-2">
+                        <span className={`px-2 py-0.5 rounded ${answerColor}`}>
+                          {answerLabel}
+                        </span>
+                        <span>→</span>
+                        <span className={`px-2 py-0.5 rounded ${countColor}`}>
+                          {countLabel}にカウント
+                        </span>
+                      </div>
+                      <div className="text-gray-500 text-xs mt-1">
+                        {new Date(history.timestamp).toLocaleTimeString('ja-JP')}
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        )}
 
         {/* スコアボード */}
         {(() => {

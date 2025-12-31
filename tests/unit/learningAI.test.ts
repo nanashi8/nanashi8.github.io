@@ -460,7 +460,6 @@ describe('学習AIネットワーク - 21問目以降の出題順序テスト', 
       isReviewFocusMode: false,
       learningLimit: 10,
       reviewLimit: 10,
-      useMetaAI: true, // 14AIを起動！
       sessionContext: {
         recentErrors: 7, // 最近7問ミス → 認知負荷シグナル
         sessionLength: 15, // 15分経過 → 疲労シグナル
@@ -549,7 +548,6 @@ describe('学習AIネットワーク - 21問目以降の出題順序テスト', 
         isReviewFocusMode: false,
         learningLimit: 10,
         reviewLimit: 10,
-        useMetaAI: true,
         sessionContext: { recentErrors: 5, sessionLength: 12, sessionDuration: safety * 30 },
       });
 

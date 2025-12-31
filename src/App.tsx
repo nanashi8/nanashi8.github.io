@@ -366,6 +366,7 @@ function App() {
         const scheduleResult = await translationScheduler.schedule({
           questions: remaining,
           mode: 'translation',
+          useCategorySlots: true,
           limits: {
             learningLimit: null,
             reviewLimit: null,
@@ -377,7 +378,6 @@ function App() {
             mastered: sessionStats.mastered || 0,
             duration: Date.now() - quizStartTimeRef.current,
           },
-          useMetaAI: true,
           isReviewFocusMode: reviewFocusMode,
           hybridMode: true,
         });
@@ -1182,6 +1182,7 @@ function App() {
       const hybridResult = await translationScheduler.schedule({
         questions: filteredQuestions,
         mode: 'translation',
+        useCategorySlots: true,
         limits: {
           learningLimit: null, // 和訳タブは上限なし
           reviewLimit: null,
@@ -1193,7 +1194,6 @@ function App() {
           mastered: sessionStats.mastered || 0,
           duration: 0,
         },
-        useMetaAI: true,
         isReviewFocusMode: reviewFocusMode,
         hybridMode: true, // 既存AI優先度を尊重
       });
@@ -1540,7 +1540,8 @@ function App() {
         currentQuestion,
         quizState.questions,
         quizState.currentIndex,
-        'translation'
+        'translation',
+        { outcome: 'incorrect' }
       );
       questionsAfterRequeue = updated;
     }

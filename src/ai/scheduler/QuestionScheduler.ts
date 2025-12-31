@@ -40,11 +40,8 @@ import { logger } from '@/utils/logger';
 import { writeDebugJSON } from '@/utils/debugStorage';
 import { AICoordinator } from '../AICoordinator';
 import type { SessionStats as AISessionStats } from '../types';
-import {
-  determineWordPosition,
-  getSavedPositionDecisionForDebug,
-  positionToCategory,
-} from '../utils/categoryDetermination';
+import { positionToCategory } from '../utils/categoryDetermination';
+import { PositionCalculator, type LearningMode } from './PositionCalculator';
 import { MemoryAI } from '@/ai/specialists/MemoryAI';
 import { CognitiveLoadAI } from '@/ai/specialists/CognitiveLoadAI';
 import { ErrorPredictionAI } from '@/ai/specialists/ErrorPredictionAI';
@@ -62,44 +59,39 @@ import {
   startVocabularyNetworkPrecomputeIfNeeded,
 } from '@/ai/utils/vocabularyNetwork';
 import { getABTestManager } from '@/ai/experiments/ABTestManager';
+import { BatchManager } from './BatchManager';
+import { SlotAllocator } from './SlotAllocator';
+import type { SlotAllocationParams } from './SlotAllocator';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;
   private recentAnswersCache: Map<string, RecentAnswer[]> = new Map();
-  public aiCoordinator: AICoordinator | null = null;
-  private useAICoordinator: boolean = false;
+  public readonly aiCoordinator: AICoordinator;
+  private slotAllocator: SlotAllocator; // 🆕 カテゴリーベーススロットシステム
+  private batchManager: BatchManager | null = null; // ⚡ BatchManagerキャッシュ
+  private lastProgressDataFetch: number = 0; // ⚡ 最終取得時刻
+  private cachedProgressData: Record<string, any> | null = null; // ⚡ キャッシュ
 
-  // 🔥 ランダム飛ばし機能（オブザーバー提案）
-  private incorrectSkipQueue: PrioritizedQuestion[] = []; // incorrect待機キュー
-  private skipCounter: number = 0; // 飛ばしカウンター
-  private skipTarget: number = 0; // 目標飛ばし回数
+  private incorrectSkipQueue: PrioritizedQuestion[] = [];
+  private skipCounter: number = 0;
+  private skipTarget: number = 0;
+
+  private static get isVerboseDebug(): boolean {
+    return import.meta.env.DEV && localStorage.getItem('debug-scheduler-verbose') === 'true';
+  }
 
   constructor() {
     this.antiVibration = new AntiVibrationFilter();
+    this.aiCoordinator = new AICoordinator({ debugMode: import.meta.env.DEV });
+    this.slotAllocator = new SlotAllocator(); // 🆕 SlotAllocatorインスタンス
   }
 
-  /**
-   * 重み付きランダムで飛ばし回数を決定
-   * 2問: 40%, 3問: 30%, 4問: 20%, 5問: 10%
-   */
   private getRandomSkipCount(): number {
     const random = Math.random();
     if (random < 0.4) return 2;
     if (random < 0.7) return 3;
     if (random < 0.9) return 4;
     return 5;
-  }
-
-  /**
-   * AI統合機能を有効化（オプトイン）
-   */
-  enableAICoordination(enable: boolean = true): void {
-    this.useAICoordinator = enable;
-    if (enable && !this.aiCoordinator) {
-      this.aiCoordinator = new AICoordinator({
-        debugMode: import.meta.env.DEV,
-      });
-    }
   }
 
   /**
@@ -110,6 +102,62 @@ export class QuestionScheduler {
    */
   async schedule(params: ScheduleParams): Promise<ScheduleResult> {
     const startTime = performance.now();
+
+    // 🆕 バッチモード: アクティブな単語のみにフィルタリング
+    // ⚡ パフォーマンス最適化: インスタンス再利用、progressDataキャッシュ（5秒）
+    if (BatchManager.isEnabled()) {
+      // BatchManagerインスタンスを再利用
+      if (!this.batchManager) {
+        this.batchManager = new BatchManager();
+      }
+
+      // progressDataを5秒間キャッシュ（頻繁なlocalStorage読み取りを削減）
+      const now = Date.now();
+      if (!this.cachedProgressData || now - this.lastProgressDataFetch > 5000) {
+        this.cachedProgressData = loadProgressSync().wordProgress || {};
+        this.lastProgressDataFetch = now;
+      }
+      const progressData = this.cachedProgressData;
+
+      this.batchManager.initialize(params.questions, {
+        batchSize: 100,
+        clearThreshold: 0.7,
+        mode: params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar',
+        reset: false, // ← 既存設定を優先
+      });
+
+      const activeWords = this.batchManager.getActiveWords();
+
+      // ⚡ 軽量チェック: 50問に1回だけバッチ追加をチェック
+      const shouldCheck = params.sessionStats?.correct
+        ? params.sessionStats.correct % 50 === 0
+        : false;
+
+      if (shouldCheck) {
+        const added = this.batchManager.checkAndAddNextBatch(progressData);
+        if (added && localStorage.getItem('debug-batch-mode') === 'true') {
+          logger.info('[QuestionScheduler] 次バッチが追加されました');
+        }
+      }
+
+      // アクティブな単語のみをフィルタリング
+      const activeSet = new Set(activeWords);
+      params = {
+        ...params,
+        questions: params.questions.filter((q) => activeSet.has(q.word)),
+      };
+
+      // デバッグログは100問に1回のみ
+      if (shouldCheck && localStorage.getItem('debug-batch-mode') === 'true') {
+        const status = this.batchManager.getStatus(progressData);
+        logger.info('[QuestionScheduler] バッチステータス', {
+          currentBatch: status.currentBatch,
+          activeCount: status.activeCount,
+          clearedCount: status.clearedCount,
+          clearRate: `${(status.clearRate * 100).toFixed(1)}%`,
+        });
+      }
+    }
 
     // A/B: いもづる式（局所並べ替え）のON/OFFを割当
     // - 呼び出し側が明示指定した場合は尊重
@@ -128,7 +176,6 @@ export class QuestionScheduler {
       timestamp: new Date().toISOString(),
       mode: params.mode,
       questionCount: params.questions.length,
-      useMetaAI: params.useMetaAI,
       hybridMode: params.hybridMode || false,
       useChainLearning: params.useChainLearning,
       firstQuestions: params.questions.slice(0, 10).map((q) => q.word),
@@ -141,7 +188,7 @@ export class QuestionScheduler {
       const existing = JSON.parse(localStorage.getItem('debug_scheduler_calls') || '[]');
       existing.push(debugInfo);
       if (existing.length > 10) existing.shift(); // 最新10件のみ保持
-      localStorage.setItem('debug_scheduler_calls', JSON.stringify(existing));
+      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_scheduler_calls', JSON.stringify(existing));
     } catch {
       // ignore
     }
@@ -171,6 +218,32 @@ export class QuestionScheduler {
       // Debug log removed to reduce console noise
     }
 
+    // 🆕 カテゴリーベーススロットシステム（新実装）
+    // 明示指定（params.useCategorySlots）がある場合は、他モードより優先して適用する。
+    if (params.useCategorySlots) {
+      console.log('🎯 [QuestionScheduler] カテゴリースロット方式を開始します', {
+        mode: params.mode,
+        questionsCount: params.questions.length,
+        timestamp: new Date().toISOString(),
+      });
+      try {
+        const result = await this.scheduleCategorySlots(params, startTime);
+        console.log('✅ [QuestionScheduler] カテゴリースロット方式が正常に完了しました', {
+          mode: params.mode,
+          resultSize: result.scheduledQuestions.length,
+          processingTime: `${result.processingTime.toFixed(2)}ms`,
+        });
+        return result;
+      } catch (error) {
+        console.error('❌ [QuestionScheduler] カテゴリースロット方式でエラーが発生しました:', error);
+        logger.warn('[QuestionScheduler] カテゴリースロット方式に失敗したためフォールバックします', {
+          mode: params.mode,
+          error: String(error),
+        });
+        // 続行して通常のメタAI経路へ
+      }
+    }
+
     // ハイブリッドモード: 既存AIの順序を尊重
     if (params.hybridMode) {
       return this.scheduleHybridMode(params, startTime);
@@ -184,8 +257,7 @@ export class QuestionScheduler {
     // 1. コンテキスト構築
     const context = this.buildContext(params);
 
-    // 2. シグナル検出（メタAI統合）
-    const signals = params.useMetaAI ? this.detectSignals(context) : [];
+    const signals = this.detectSignals(context);
 
     // 3. 優先度計算（DTA統合 + Position分散）
     // ⚠️ calculatePriorities()内でapplyInterleavingAdjustment()を呼び出し済み
@@ -194,11 +266,11 @@ export class QuestionScheduler {
     // 4. 振動防止フィルター適用
     const filtered = this.applyAntiVibration(prioritized, context);
 
-    // 4.5 学習上限（語数上限）適用
-    const limited = this.applyLearningLimits(filtered, params, context);
+    // 4.5 学習上限（語数上限）← 廃止（バッチモードに移行）
+    // const limited = this.applyLearningLimits(filtered, params, context);
 
     // 5. ソート・バランス調整
-    const sorted = this.sortAndBalance(limited, params, context);
+    const sorted = this.sortAndBalance(filtered, params, context);
 
     // 6. 後処理
     const questions = this.postProcess(sorted, context);
@@ -235,6 +307,30 @@ export class QuestionScheduler {
       20
     );
 
+    // 8. 🔒 強制装置: sortAndBalance() → postProcess() の順序整合性検証
+    const sortedTop10Positions = sorted.slice(0, 10).map((pq) => pq.position);
+    const questionsTop10Positions = questions
+      .slice(0, 10)
+      .map((q) => sorted.find((pq) => pq.question.word === q.word)?.position ?? 0);
+
+    // TOP10の順序が一致しているか検証
+    const orderMismatch = !sortedTop10Positions.every(
+      (pos, idx) => pos === questionsTop10Positions[idx]
+    );
+
+    if (orderMismatch && import.meta.env.DEV) {
+      console.error(
+        '🚨 [QuestionScheduler] CRITICAL: postProcess()がsortAndBalance()の順序を破壊しました！',
+        {
+          sortedTop10: sorted.slice(0, 10).map((pq) => ({ word: pq.question.word, pos: pq.position })),
+          questionsTop10: questions.slice(0, 10).map((q) => ({
+            word: q.word,
+            pos: sorted.find((pq) => pq.question.word === q.word)?.position ?? 0,
+          })),
+        }
+      );
+    }
+
     const processingTime = performance.now() - startTime;
 
     const resultDebug = {
@@ -242,6 +338,7 @@ export class QuestionScheduler {
       top10Positions: sorted
         .slice(0, 10)
         .map((pq) => ({ word: pq.question.word, position: pq.position })),
+      orderMismatch,
     };
 
     logger.info(`[QuestionScheduler] スケジューリング完了`, {
@@ -259,7 +356,7 @@ export class QuestionScheduler {
         ...resultDebug,
       });
       if (existing.length > 10) existing.shift();
-      localStorage.setItem('debug_scheduler_results', JSON.stringify(existing));
+      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_scheduler_results', JSON.stringify(existing));
     } catch {
       // ignore
     }
@@ -350,7 +447,6 @@ export class QuestionScheduler {
       recentAnswers,
       timeOfDay,
       cognitiveLoad,
-      useMetaAI: params.useMetaAI || false,
       isReviewFocusMode: params.isReviewFocusMode || false,
       sessionStartTime: Date.now() - (params.sessionStats.duration || 0),
       wordProgress,
@@ -385,12 +481,11 @@ export class QuestionScheduler {
 
       Object.entries(progress.wordProgress || {}).forEach(([word, data]: [string, any]) => {
         if (data.lastStudied > 0) {
-          const bucket = positionToCategory(
-            determineWordPosition(
-              data,
-              mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
-            )
+          const calculator = new PositionCalculator(
+            mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
           );
+          const position = calculator.calculate(data);
+          const bucket = PositionCalculator.categoryOf(position);
           answers.push({
             word,
             correct: !isIncorrectWordCategory(bucket),
@@ -672,7 +767,7 @@ export class QuestionScheduler {
       return (isNew && pq.position >= 60) || (isStill && pq.position < 60);
     });
 
-    if (import.meta.env.DEV && hierarchyViolation.length > 0) {
+    if (QuestionScheduler.isVerboseDebug && hierarchyViolation.length > 0) {
       console.error(
         `❌ [Position階層違反] 「あっちを立てればこっちが立たず」検出: ${hierarchyViolation.length}語`
       );
@@ -685,72 +780,76 @@ export class QuestionScheduler {
     }
 
     // localStorage保存（デバッグパネル用）
-    try {
-      const snapshot = {
-        mode,
-        questionsCount,
-        stillInBoostedZone,
-        newInBoostedZone,
-        violations: hierarchyViolation.map((pq) => ({
-          word: pq.question.word,
-          position: pq.position,
-          attempts: pq.attempts ?? 0,
-          type: (pq.attempts ?? 0) === 0 ? 'new_exceeds_60' : 'still_below_60',
-        })),
-        violationCount: hierarchyViolation.length,
-        isValid: hierarchyViolation.length === 0,
-        timestamp: new Date().toISOString(),
-      };
+    if (QuestionScheduler.isVerboseDebug) {
+      try {
+        const snapshot = {
+          mode,
+          questionsCount,
+          stillInBoostedZone,
+          newInBoostedZone,
+          violations: hierarchyViolation.map((pq) => ({
+            word: pq.question.word,
+            position: pq.position,
+            attempts: pq.attempts ?? 0,
+            type: (pq.attempts ?? 0) === 0 ? 'new_exceeds_60' : 'still_below_60',
+          })),
+          violationCount: hierarchyViolation.length,
+          isValid: hierarchyViolation.length === 0,
+          timestamp: new Date().toISOString(),
+        };
 
-      // legacy
-      localStorage.setItem('debug_position_hierarchy_validation', JSON.stringify(snapshot));
-      // by-mode
-      localStorage.setItem(`debug_position_hierarchy_validation_${mode}`, JSON.stringify(snapshot));
-    } catch {
-      // localStorage失敗は無視
+        // legacy
+        localStorage.setItem('debug_position_hierarchy_validation', JSON.stringify(snapshot));
+        // by-mode
+        localStorage.setItem(`debug_position_hierarchy_validation_${mode}`, JSON.stringify(snapshot));
+      } catch {
+        // localStorage失敗は無視
+      }
     }
 
     // Position変更があった問題を記録 (すでにGamificationAIから返ってくる)
 
     // localStorage保存
-    try {
-      const snapshot = {
-        mode,
-        questionsCount,
-        timestamp: new Date().toISOString(),
-        before,
-        after,
-        stillChanged,
-        changed,
-        summary: {
-          stillBoosted: stillChanged.length,
-          newBoosted: changed.length,
-          working: stillChanged.length > 0 || changed.length > 0,
-        },
-      };
-
-      // legacy
-      localStorage.setItem('debug_position_interleaving', JSON.stringify(snapshot));
-      // by-mode
-      const byModeKey = `debug_position_interleaving_${mode}`;
-      localStorage.setItem(byModeKey, JSON.stringify(snapshot));
-      // history
-      const historyKey = `debug_position_interleaving_history_${mode}`;
+    if (QuestionScheduler.isVerboseDebug) {
       try {
-        const existingRaw = localStorage.getItem(historyKey);
-        const existing = JSON.parse(existingRaw || '[]');
-        const arr = Array.isArray(existing) ? existing : [];
-        arr.push(snapshot);
-        while (arr.length > 5) arr.shift();
-        localStorage.setItem(historyKey, JSON.stringify(arr));
+        const snapshot = {
+          mode,
+          questionsCount,
+          timestamp: new Date().toISOString(),
+          before,
+          after,
+          stillChanged,
+          changed,
+          summary: {
+            stillBoosted: stillChanged.length,
+            newBoosted: changed.length,
+            working: stillChanged.length > 0 || changed.length > 0,
+          },
+        };
+
+        // legacy
+        localStorage.setItem('debug_position_interleaving', JSON.stringify(snapshot));
+        // by-mode
+        const byModeKey = `debug_position_interleaving_${mode}`;
+        localStorage.setItem(byModeKey, JSON.stringify(snapshot));
+        // history
+        const historyKey = `debug_position_interleaving_history_${mode}`;
+        try {
+          const existingRaw = localStorage.getItem(historyKey);
+          const existing = JSON.parse(existingRaw || '[]');
+          const arr = Array.isArray(existing) ? existing : [];
+          arr.push(snapshot);
+          while (arr.length > 5) arr.shift();
+          localStorage.setItem(historyKey, JSON.stringify(arr));
+        } catch {
+          // ignore
+        }
       } catch {
-        // ignore
+        // localStorage失敗は無視
       }
-    } catch {
-      // localStorage失敗は無視
     }
 
-    if (import.meta.env.DEV) {
+    if (QuestionScheduler.isVerboseDebug) {
       console.log('🎮 [GamificationAI] Position分散前:', before);
       console.log('🎮 [GamificationAI] Position分散後:', after);
       if (stillChanged.length > 0) {
@@ -789,24 +888,26 @@ export class QuestionScheduler {
       gamificationAI.boostStillLearningQuestions(result);
 
     // localStorage保存
-    try {
-      const snapshot = {
-        mode,
-        questionsCount,
-        timestamp: new Date().toISOString(),
-        boosted: stillLearningChanges.length,
-        changes: stillLearningChanges,
-        working: stillLearningChanges.length > 0,
-      };
-      // legacy
-      localStorage.setItem('debug_still_learning_boost', JSON.stringify(snapshot));
-      // by-mode
-      localStorage.setItem(`debug_still_learning_boost_${mode}`, JSON.stringify(snapshot));
-    } catch {
-      // localStorage失敗は無視
+    if (QuestionScheduler.isVerboseDebug) {
+      try {
+        const snapshot = {
+          mode,
+          questionsCount,
+          timestamp: new Date().toISOString(),
+          boosted: stillLearningChanges.length,
+          changes: stillLearningChanges,
+          working: stillLearningChanges.length > 0,
+        };
+        // legacy
+        localStorage.setItem('debug_still_learning_boost', JSON.stringify(snapshot));
+        // by-mode
+        localStorage.setItem(`debug_still_learning_boost_${mode}`, JSON.stringify(snapshot));
+      } catch {
+        // localStorage失敗は無視
+      }
     }
 
-    if (import.meta.env.DEV && stillLearningChanges.length > 0) {
+    if (QuestionScheduler.isVerboseDebug && stillLearningChanges.length > 0) {
       console.log(
         '🎯 [GamificationAI] まだまだ語ブースト:',
         stillLearningChanges.slice(0, 10).map((c) => ({
@@ -846,7 +947,7 @@ export class QuestionScheduler {
       });
       // 最新30件のみ保持
       if (logs.length > 30) logs.shift();
-      localStorage.setItem('debug_function_calls', JSON.stringify(logs));
+      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_function_calls', JSON.stringify(logs));
     } catch {
       // localStorage失敗は無視
     }
@@ -947,61 +1048,25 @@ export class QuestionScheduler {
    */
   private getWordStatusFromCache(
     word: string,
-    mode: string,
+    mode: LearningMode,
     progressCache: any
   ): WordStatus | null {
     if (!progressCache || !progressCache.wordProgress) return null;
 
     const wordProgress = progressCache.wordProgress[word];
-    if (!wordProgress) {
-      // 🐛 DEBUG: LocalStorageに存在するはずの単語が見つからない場合
-      // （大量ログを避けるため、ここでは出力しない）
-      return null;
-    }
+    if (!wordProgress) return null;
 
-    // ✅ AI担当関数に委譲: Position = 0-100スコア（7つのAI評価統合済み）
-    // ✅ モード別Position優先: タブごとに独立した学習進度を管理
-    const position = determineWordPosition(
-      wordProgress,
-      mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
-    );
-
-    // Position範囲からcategoryを派生（後方互換性）
-    const bucket = positionToCategory(position);
-
-    // 🎯 モード別の試行回数を取得（重要！）
-    // まだまだ・分からないの判定には、そのタブでの実際の試行回数を使う
-    let modeAttempts = 0;
-    let modeCorrect = 0;
-    switch (mode) {
-      case 'memorization':
-        modeAttempts = wordProgress.memorizationAttempts || 0;
-        modeCorrect = wordProgress.memorizationCorrect || 0;
-        break;
-      case 'translation':
-        modeAttempts = wordProgress.translationAttempts || 0;
-        modeCorrect = wordProgress.translationCorrect || 0;
-        break;
-      case 'spelling':
-        modeAttempts = wordProgress.spellingAttempts || 0;
-        modeCorrect = wordProgress.spellingCorrect || 0;
-        break;
-      case 'grammar':
-        modeAttempts = wordProgress.grammarAttempts || 0;
-        modeCorrect = wordProgress.grammarCorrect || 0;
-        break;
-      default:
-        // フォールバック: 総合値
-        modeAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount || 0);
-        modeCorrect = wordProgress.correctCount || 0;
-    }
+    const calculator = new PositionCalculator(mode);
+    const position = calculator.calculate(wordProgress);
+    const stats = calculator.getStats(wordProgress);
+    const category = PositionCalculator.categoryOf(position);
 
     return {
-      category: bucket,
+      category,
       position,
       lastStudied: wordProgress.lastStudied || 0,
-      attempts: modeAttempts, // ✅ モード別試行回数
-      correct: modeCorrect, // ✅ モード別正解回数
+      attempts: stats.attempts,
+      correct: stats.correct,
       streak: wordProgress.consecutiveCorrect || 0,
       forgettingRisk: 0,
       reviewInterval: 1,
@@ -1017,15 +1082,11 @@ export class QuestionScheduler {
       const wordProgress = progress.wordProgress?.[word];
       if (!wordProgress) return null;
 
-      // ✅ AI担当関数に委譲: Position = 0-100スコア（7つのAI評価統合済み）
-      // ✅ モード別Position優先: タブごとに独立した学習進度を管理
-      const position = determineWordPosition(
-        wordProgress,
+      const calculator = new PositionCalculator(
         mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
       );
-
-      // Position範囲からcategoryを派生（後方互換性）
-      const bucket = positionToCategory(position);
+      const position = calculator.calculate(wordProgress);
+      const bucket = PositionCalculator.categoryOf(position);
 
       // ✅ デバッグ: AI判定結果
       if (import.meta.env.DEV) {
@@ -1100,50 +1161,18 @@ export class QuestionScheduler {
   /**
    * 学習上限（語数上限）を適用
    *
-   * 目的:
-   * - 上限到達時に「新規（attempts=0）」の混入を抑止し、復習（attempts>0）中心にする
-   * - Position降順ソートやGamificationAIのインターリーブ自体は破壊しない
+   * 🚫 廃止: バッチ管理システムに移行
+   * 理由: バッチモードでは100語ずつ追加したいため、語数上限は不要
+   *
+   * @deprecated バッチモード（BatchManager）を使用してください
    */
   private applyLearningLimits(
     questions: PrioritizedQuestion[],
-    params: ScheduleParams,
-    context: ScheduleContext
+    _params: ScheduleParams,
+    _context: ScheduleContext
   ): PrioritizedQuestion[] {
-    const learningLimit = params.limits?.learningLimit ?? null;
-    const reviewLimit = params.limits?.reviewLimit ?? null;
-
-    if (learningLimit === null && reviewLimit === null && !context.isReviewFocusMode) {
-      return questions;
-    }
-
-    const stillLearningCount = questions.reduce((acc, pq) => {
-      const attempts = pq.status?.attempts ?? 0;
-      if (attempts <= 0) return acc;
-      if (pq.position >= 40 && pq.position < 70) return acc + 1;
-      return acc;
-    }, 0);
-
-    const incorrectCount = questions.reduce((acc, pq) => {
-      const attempts = pq.status?.attempts ?? 0;
-      if (attempts <= 0) return acc;
-      if (pq.position >= 70) return acc + 1;
-      return acc;
-    }, 0);
-
-    const overLearningLimit = learningLimit !== null && stillLearningCount >= learningLimit;
-    const overReviewLimit = reviewLimit !== null && incorrectCount >= reviewLimit;
-    const shouldReviewOnly = context.isReviewFocusMode || overLearningLimit || overReviewLimit;
-
-    if (!shouldReviewOnly) return questions;
-
-    // 復習（attempts>0）を優先し、新規（attempts=0）を除外
-    const reviewOnly = questions.filter((pq) => {
-      const attempts = pq.status?.attempts ?? 0;
-      return attempts > 0 && pq.position >= 40;
-    });
-
-    // フォールバック: もし復習語が存在しない場合は、元の候補を返す
-    return reviewOnly.length > 0 ? reviewOnly : questions;
+    // 語数上限を廃止し、全ての問題を返す
+    return questions;
   }
 
   /**
@@ -1182,7 +1211,7 @@ export class QuestionScheduler {
     );
 
     // 🔍 デバッグ: カテゴリ分類結果
-    if (import.meta.env.DEV) {
+    if (QuestionScheduler.isVerboseDebug) {
       console.log('🔍 [sortAndBalance] カテゴリ分類結果:', {
         incorrect: incorrectQuestions.length,
         stillLearning: stillLearningQuestions.length,
@@ -1238,12 +1267,12 @@ export class QuestionScheduler {
       return (a.originalIndex || 0) - (b.originalIndex || 0);
     });
 
-    // 🎮 カテゴリ別インターリーブ（まだまだ語とPosition引き上げ新規語を交互配置）
-    const gamificationAI = new GamificationAI();
-    const interleaved = gamificationAI.interleaveByCategory(sorted);
+    // 🎮 GamificationAI: カテゴリ別インターリーブ（苦手語4問→新規1問）
+    // 重要: Position降順ソートを前提に、ランダム化は行わない（テスト/UXの安定性）
+    const interleaved = new GamificationAI().interleaveByCategory(sorted);
 
     // 🎯 吸引確認: まだまだ・分からない語がTOP30に何語含まれるか検証
-    if (import.meta.env.DEV) {
+    if (QuestionScheduler.isVerboseDebug) {
       const strugglingInSorted = sorted.filter(
         (pq) => pq.position >= 40 && (pq.attempts ?? 0) > 0
       ).length;
@@ -1272,7 +1301,7 @@ export class QuestionScheduler {
     }
 
     // デバッグ: 学習段階分布（開発環境のみ）
-    if (import.meta.env.DEV) {
+    if (QuestionScheduler.isVerboseDebug) {
       const top20 = interleaved.slice(0, Math.min(20, interleaved.length));
       const positionDistribution = {
         分からない: top20.filter((pq) => pq.position >= 70).length,
@@ -1307,7 +1336,7 @@ export class QuestionScheduler {
         category: pq.status?.category,
         attempts: pq.attempts ?? pq.status?.attempts ?? 0,
       }));
-      localStorage.setItem('debug_sortAndBalance_output', JSON.stringify(top30));
+      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_sortAndBalance_output', JSON.stringify(top30));
 
       // 📊 追加: TOP100も保存して、まだまだ語が何位にいるか確認
       const top100 = interleaved.slice(0, 100).map((pq, idx) => ({
@@ -1333,46 +1362,48 @@ export class QuestionScheduler {
         (item) => item.position >= 40 && item.position < 70 && item.attempts > 0
       );
 
-      const snapshot = {
-        timestamp: new Date().toISOString(),
-        mode: _params.mode,
-        questionsCount: questions.length,
-        interleavedCount: interleaved.length,
-        top100,
-        top600,
-        top600Count: top600.length,
-        stillLearningInTop100: stillLearningInTop100.length,
-        stillLearningInTop600: stillLearningInTop600.length,
-        stillLearningWordsInTop100: stillLearningInTop100.map(
-          (item) => `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`
-        ),
-        stillLearningWordsInTop600: stillLearningInTop600
-          .slice(0, 20)
-          .map(
+      if (QuestionScheduler.isVerboseDebug) {
+        const snapshot = {
+          timestamp: new Date().toISOString(),
+          mode: _params.mode,
+          questionsCount: questions.length,
+          interleavedCount: interleaved.length,
+          top100,
+          top600,
+          top600Count: top600.length,
+          stillLearningInTop100: stillLearningInTop100.length,
+          stillLearningInTop600: stillLearningInTop600.length,
+          stillLearningWordsInTop100: stillLearningInTop100.map(
             (item) => `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`
           ),
-        position50Count: top600.filter((item) => item.position === 50 && item.attempts === 0)
-          .length,
-      };
+          stillLearningWordsInTop600: stillLearningInTop600
+            .slice(0, 20)
+            .map(
+              (item) => `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`
+            ),
+          position50Count: top600.filter((item) => item.position === 50 && item.attempts === 0)
+            .length,
+        };
 
-      // 旧キー（互換用）: 最新の1件（モード混在で上書きされ得るので、読む側はmode別キー推奨）
-      localStorage.setItem('debug_sortAndBalance_top100', JSON.stringify(snapshot));
+        // 旧キー（互換用）: 最新の1件（モード混在で上書きされ得るので、読む側はmode別キー推奨）
+        localStorage.setItem('debug_sortAndBalance_top100', JSON.stringify(snapshot));
 
-      // 新キー: mode別に保存（モード違いの上書きを防止）
-      const byModeKey = `debug_sortAndBalance_top100_${_params.mode}`;
-      localStorage.setItem(byModeKey, JSON.stringify(snapshot));
+        // 新キー: mode別に保存（モード違いの上書きを防止）
+        const byModeKey = `debug_sortAndBalance_top100_${_params.mode}`;
+        localStorage.setItem(byModeKey, JSON.stringify(snapshot));
 
-      // 新キー: mode別に短い履歴を保持（同一mode内のミニ実行(30問など)でも、必要なスナップショットを選べる）
-      const historyKey = `debug_sortAndBalance_top100_history_${_params.mode}`;
-      try {
-        const existingRaw = localStorage.getItem(historyKey);
-        const existing = JSON.parse(existingRaw || '[]');
-        const arr = Array.isArray(existing) ? existing : [];
-        arr.push(snapshot);
-        while (arr.length > 5) arr.shift();
-        localStorage.setItem(historyKey, JSON.stringify(arr));
-      } catch {
-        // ignore
+        // 新キー: mode別に短い履歴を保持（同一mode内のミニ実行(30問など)でも、必要なスナップショットを選べる）
+        const historyKey = `debug_sortAndBalance_top100_history_${_params.mode}`;
+        try {
+          const existingRaw = localStorage.getItem(historyKey);
+          const existing = JSON.parse(existingRaw || '[]');
+          const arr = Array.isArray(existing) ? existing : [];
+          arr.push(snapshot);
+          while (arr.length > 5) arr.shift();
+          localStorage.setItem(historyKey, JSON.stringify(arr));
+        } catch {
+          // ignore
+        }
       }
     } catch {
       // localStorage失敗は無視
@@ -1492,7 +1523,7 @@ export class QuestionScheduler {
    */
   private scheduleHybridMode(params: ScheduleParams, startTime: number): ScheduleResult {
     const context = this.buildContext(params);
-    const signals = params.useMetaAI ? this.detectSignals(context) : [];
+    const signals = this.detectSignals(context);
 
     // 既存の順序を保持したまま優先度を付与（hybridMode=false に変更してPosition分散を有効化）
     const prioritized = this.calculatePriorities(params.questions, context, signals, false);
@@ -1563,7 +1594,7 @@ export class QuestionScheduler {
       vibrationScore,
       incorrectCount: incorrectQuestions.length,
       stillLearningCount: stillLearningQuestions.length,
-      aiEnabled: this.useAICoordinator,
+      aiEnabled: this.aiCoordinator,
       totalCount: questions.length,
     });
 
@@ -1584,7 +1615,7 @@ export class QuestionScheduler {
     startTime: number
   ): Promise<ScheduleResult> {
     const context = this.buildContext(params);
-    const signals = params.useMetaAI ? this.detectSignals(context) : [];
+    const signals = this.detectSignals(context);
 
     // ⚡ AICoordinator用: 全単語の進捗（specialist AI が allProgress を前提にする）
     const progressCache = this.loadProgressCache();
@@ -1614,10 +1645,10 @@ export class QuestionScheduler {
     let incorrectCount = 0;
     let newCount = 0;
     for (const wp of Object.values(allProgress)) {
-      const pos = determineWordPosition(
-        wp,
+      const calculator = new PositionCalculator(
         params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
       );
+      const pos = calculator.calculate(wp);
       if (pos >= 70) incorrectCount++;
       else if (pos >= 40) stillLearningCount++;
       else if (pos >= 20) newCount++;
@@ -1640,7 +1671,7 @@ export class QuestionScheduler {
     };
 
     // AICoordinatorが必須
-    if (!this.useAICoordinator || !this.aiCoordinator) {
+    if (!this.aiCoordinator) {
       logger.warn(
         '[QuestionScheduler FinalPriority] AICoordinatorが未初期化、ハイブリッドモードにフォールバック'
       );
@@ -1655,10 +1686,10 @@ export class QuestionScheduler {
         if (!wp) return false;
         const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
         if (attempts <= 0) return false;
-        const pos = determineWordPosition(
-          wp,
+        const calculator = new PositionCalculator(
           params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
         );
+        const pos = calculator.calculate(wp);
         return pos >= 40;
       });
 
@@ -1682,10 +1713,9 @@ export class QuestionScheduler {
       // Position決定（モード別）
       const position =
         cachedStatus?.position ??
-        determineWordPosition(
-          wordProgress,
+        new PositionCalculator(
           params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
-        );
+        ).calculate(wordProgress);
 
       // status（モード別attempts/カテゴリを優先）
       let fallbackAttempts = 0;
@@ -1957,24 +1987,7 @@ export class QuestionScheduler {
     // 再構成すると「新規が前に来ない（分からない連打で新規が消える）」状態を作る。
     // そのため、順序が“厳密なPosition帯域の単調並び”になっていない場合は、後処理の
     // 並べ替え（関連語グループ化）をスキップして既存順序を返す。
-    const bandIndex = (pos: number) => {
-      if (pos >= 70) return 0;
-      if (pos >= 60) return 1;
-      if (pos >= 40) return 2;
-      if (pos >= 20) return 3;
-      return 4;
-    };
-
-    let isInterleavedAcrossBands = false;
-    let prevBand = -1;
-    for (const pq of questions) {
-      const b = bandIndex(pq.position);
-      if (prevBand !== -1 && b < prevBand) {
-        isInterleavedAcrossBands = true;
-        break;
-      }
-      prevBand = b;
-    }
+    const isInterleavedAcrossBands = true; // 強制的にtrue（関連語グループ化を無効化）
 
     // デバッグ用: postProcessの挙動を保存（パネルで原因切り分けに使う）
     // NOTE: mode別キーも併記して、translation等の30問テストで上書きされないようにする
@@ -2281,16 +2294,7 @@ export class QuestionScheduler {
 
     const position = this.determinePositionAfterAnswer(progress, mode);
 
-    // デバッグ用: savedPositionを考慮した通常計算結果も採取（savedPosition固定が原因の切り分け用）
-    const positionWithSavedPosition = determineWordPosition(progress, mode);
-    const savedDecision = getSavedPositionDecisionForDebug(progress, mode);
-
-    // 時間経過計算（デバッグ用）
-    const daysSinceLastStudy =
-      (Date.now() - (progress.lastStudied || Date.now())) / (1000 * 60 * 60 * 24);
-
-    // Position範囲からcategoryを派生（デバッグ表示用）
-    const bucket = positionToCategory(position);
+    const bucket = PositionCalculator.categoryOf(position);
 
     // 正答率を計算
     const totalAttempts = progress.correctCount + progress.incorrectCount;
@@ -2328,9 +2332,7 @@ export class QuestionScheduler {
         mode,
         positionBefore,
         positionAfter: position,
-        positionWithSavedPosition,
-        category: bucket,
-        savedPositionDebug: savedDecision,
+
         progress: {
           correctCount: progress.correctCount,
           incorrectCount: progress.incorrectCount,
@@ -2348,23 +2350,23 @@ export class QuestionScheduler {
       logs.push(answerLog);
       // 最新20件のみ保持
       if (logs.length > 20) logs.shift();
-      localStorage.setItem('debug_answer_logs', JSON.stringify(logs));
+      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_answer_logs', JSON.stringify(logs));
     } catch {
       // localStorage失敗は無視
     }
 
-    // デバッグ用: AI評価をlocalStorageに記録
     if (import.meta.env.DEV) {
-      const aiProposals = this.calculateAIEvaluations(progress, position, daysSinceLastStudy);
+      const daysSince = (Date.now() - (progress.lastStudied || Date.now())) / (1000 * 60 * 60 * 24);
+      const aiProposals = this.calculateAIEvaluations(progress, position, daysSince);
       this.recordAIEvaluation(word, {
         category: bucket,
         position,
-        aiProposals, // ✅ 7つのAI提案を記録
+        aiProposals,
         consecutiveCorrect: progress.consecutiveCorrect || 0,
         consecutiveIncorrect: progress.consecutiveIncorrect || 0,
         accuracy: progress.accuracyRate || 0,
         attempts: totalAttempts,
-        daysSince: daysSinceLastStudy,
+        daysSince,
         timestamp: new Date().toISOString(),
       });
     }
@@ -2443,42 +2445,18 @@ export class QuestionScheduler {
     }
   }
 
-  /**
-   * Position計算（統一ユーティリティを使用）
-   * @returns Position スコア（0-100）
-   */
   private determinePosition(
     progress: WordProgress,
     mode: 'memorization' | 'translation' | 'spelling' | 'grammar' = 'memorization'
   ): number {
-    return determineWordPosition(progress, mode);
+    return new PositionCalculator(mode).calculate(progress);
   }
 
-  /**
-   * 解答直後のPosition再計算専用。
-   * 直前に保存された tab別Position（savedPosition）があると determineWordPosition() が早期returnし、
-   * 「まだまだ/分からない」など今回の解答結果が反映されないことがあるため、ここでは無視して計算する。
-   */
   private determinePositionAfterAnswer(
     progress: WordProgress,
     mode: 'memorization' | 'translation' | 'spelling' | 'grammar' = 'memorization'
   ): number {
-    const progressForCalc: WordProgress = { ...progress };
-    switch (mode) {
-      case 'memorization':
-        progressForCalc.memorizationPosition = undefined;
-        break;
-      case 'translation':
-        progressForCalc.translationPosition = undefined;
-        break;
-      case 'spelling':
-        progressForCalc.spellingPosition = undefined;
-        break;
-      case 'grammar':
-        progressForCalc.grammarPosition = undefined;
-        break;
-    }
-    return determineWordPosition(progressForCalc, mode);
+    return new PositionCalculator(mode).calculate(progress, { ignoreSaved: true });
   }
 
   /**
@@ -2630,5 +2608,492 @@ export class QuestionScheduler {
     }
 
     return position;
+  }
+
+  /**
+   * 🆕 新規語優先モード - 新規語を主体に、分からない語を15-30%混合
+   *
+   * 学習戦略:
+   * - 新規語を最優先で出題（70-85%）
+   * - 分からない語を15-30%混合（定着確認・攻略用）
+   * - まだまだ語は後半で復習
+   *
+   * インターリーブパターン:
+   * [新規3-5語] → [分からない1語] → [新規3-5語] → [分からない1語] → ...
+   */
+  private sortByNewWordsFirst(
+    sorted: PrioritizedQuestion[],
+    _params: ScheduleParams,
+    _context: ScheduleContext
+  ): PrioritizedQuestion[] {
+    // 🎲 Fisher-Yates シャッフル（同一Position内でABC順を防ぐ）
+    const shuffle = <T>(array: T[]): T[] => {
+      const result = [...array];
+      for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
+      }
+      return result;
+    };
+
+    // 1. グループ分け + シャッフル（各グループ内でランダム化）
+    const newWords = shuffle(
+      sorted.filter((pq) => (pq.attempts ?? 0) === 0 && pq.position >= 20)
+    );
+    const incorrect = shuffle(sorted.filter((pq) => pq.position >= 70));
+    const stillLearning = shuffle(
+      sorted.filter(
+        (pq) => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
+      )
+    );
+    const mastered = shuffle(sorted.filter((pq) => pq.position < 20));
+
+    if (QuestionScheduler.isVerboseDebug) {
+      console.log('🆕 [新規語優先モード] グループ分け:', {
+        newWords: newWords.length,
+        incorrect: incorrect.length,
+        stillLearning: stillLearning.length,
+        mastered: mastered.length,
+      });
+    }
+
+    // 2. 比率計算: 全体のうち15-30%を分からない語に
+    const totalCount = sorted.length;
+    const incorrectRatio = Math.random() * 0.15 + 0.15; // 15-30%
+    const incorrectTarget = Math.floor(totalCount * incorrectRatio);
+    const incorrectToMix = incorrect.slice(0, incorrectTarget);
+    const remainingIncorrect = incorrect.slice(incorrectTarget);
+
+    if (QuestionScheduler.isVerboseDebug) {
+      console.log('🎯 [新規語優先モード] 分からない語の混合比率:', {
+        ratio: `${(incorrectRatio * 100).toFixed(1)}%`,
+        target: incorrectTarget,
+        toMix: incorrectToMix.length,
+        remaining: remainingIncorrect.length,
+      });
+    }
+
+    // 3. インターリーブ: [新規3-5語, 分からない1語] のパターン
+    const result: PrioritizedQuestion[] = [];
+    const newWordsQueue = [...newWords];
+    const incorrectQueue = [...incorrectToMix];
+
+    while (newWordsQueue.length > 0 || incorrectQueue.length > 0) {
+      // 新規語を3-5語追加
+      const newBatchSize = Math.floor(Math.random() * 3) + 3; // 3-5
+      for (let i = 0; i < newBatchSize && newWordsQueue.length > 0; i++) {
+        result.push(newWordsQueue.shift()!);
+      }
+
+      // 分からない語を1語追加
+      if (incorrectQueue.length > 0) {
+        result.push(incorrectQueue.shift()!);
+      }
+    }
+
+    // 4. 残りを追加（Position降順を維持）
+    result.push(...remainingIncorrect);
+    result.push(...stillLearning);
+    result.push(...mastered);
+
+    if (QuestionScheduler.isVerboseDebug) {
+      const top10 = result.slice(0, 10).map((pq) => ({
+        word: pq.question.word,
+        position: pq.position,
+        attempts: pq.attempts ?? 0,
+        type:
+          (pq.attempts ?? 0) === 0 && pq.position >= 20
+            ? '新規'
+            : pq.position >= 70
+              ? '分からない'
+              : pq.position >= 40
+                ? 'まだまだ'
+                : '定着済',
+      }));
+      console.log('🎯 [新規語優先モード] TOP10:', top10);
+    }
+
+    return result;
+  }
+
+  /**
+   * カテゴリーベーススロットシステム
+   *
+   * 仕様:
+   * 1. 全問をカテゴリ別に分類（incorrect/still_learning/new/mastered）
+   * 2. カテゴリごとにスロット数を決定
+   * 3. 各カテゴリ内でPosition降順にソート
+   * 4. いもづる式学習: スロット内で関連語を近くに配置
+   * 5. スロット数分だけ取り出して結合
+   */
+  private async scheduleCategorySlots(
+    params: ScheduleParams,
+    startTime: number
+  ): Promise<ScheduleResult> {
+    const progressMap = loadProgressSync().wordProgress || {};
+    const calculator = new PositionCalculator(
+      params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
+    );
+
+    // 0. 振動防止: 直近10語のSetを作成（優先順位を下げる）
+    const recentWords = this.getRecentWords(params.mode as any, 10);
+    const recentSet = new Set(recentWords);
+
+    if (import.meta.env.DEV && recentWords.length > 0) {
+      logger.info('[QuestionScheduler] 振動防止（DTA）', {
+        recentWords: recentWords.length,
+        words: recentWords,
+      });
+      console.log('🚫 [振動防止] 直近10語（Position -30ペナルティ）:');
+      recentWords.forEach((w, i) => {
+        console.log(`  ${i + 1}. ${w}`);
+      });
+    }
+
+    // 1. 全問にPositionを計算（直近語はPosition -30ペナルティ）
+    type Classified = {
+      question: Question;
+      position: number;
+      category: 'incorrect' | 'still_learning' | 'new' | 'mastered';
+    };
+
+    const minPositionForCategory = (
+      category: Classified['category']
+    ): number => {
+      switch (category) {
+        case 'incorrect':
+          return 70;
+        case 'still_learning':
+          return 40;
+        case 'new':
+          return 20;
+        case 'mastered':
+          return 0;
+        default:
+          return 0;
+      }
+    };
+
+    const classified: Classified[] = params.questions.map((q) => {
+      const wp = progressMap[q.word];
+      const basePosition = wp ? calculator.calculate(wp) : 35; // 未学習は new の標準値
+      const category = PositionCalculator.categoryOf(basePosition);
+
+      let position = basePosition;
+      // 振動防止: 直近10語はPosition -30（優先順位を下げる）
+      // 重要: カテゴリ境界を跨いで「incorrect→still_learning」等にならないよう、カテゴリ帯の最低値でクランプする
+      if (recentSet.has(q.word)) {
+        position = Math.max(minPositionForCategory(category), basePosition - 30);
+      }
+
+      return { question: q, position, category };
+    });
+
+    // 2. カテゴリ別に分類
+    const byCategory: Record<string, Classified[]> = {
+      incorrect: classified.filter((c) => c.category === 'incorrect'),
+      still_learning: classified.filter((c) => c.category === 'still_learning'),
+      new: classified.filter((c) => c.category === 'new'),
+      mastered: classified.filter((c) => c.category === 'mastered'),
+    };
+
+    // 3. 各カテゴリ内でPosition降順ソート
+    Object.keys(byCategory).forEach((cat) => {
+      byCategory[cat].sort((a, b) => b.position - a.position);
+    });
+
+    // 4. スロット割当（バッチサイズ最大100語）
+    const totalSlots = Math.min(params.questions.length, 100);
+    const incorrectCount = byCategory.incorrect.length;
+    const stillCount = byCategory.still_learning.length;
+    const newCount = byCategory.new.length;
+
+    // 優先順位: incorrect > still_learning > new > mastered
+    const slots = {
+      incorrect: Math.min(incorrectCount, Math.floor(totalSlots * 0.4)),
+      still_learning: 0,
+      new: 0,
+      mastered: 0,
+    };
+
+    let remaining = totalSlots - slots.incorrect;
+    slots.still_learning = Math.min(stillCount, Math.floor(remaining * 0.5));
+    remaining -= slots.still_learning;
+    slots.new = Math.min(newCount, remaining);
+    remaining -= slots.new;
+    slots.mastered = remaining; // 余りは mastered
+
+    // 5. いもづる式学習: カテゴリ内で関連語を近くに配置
+    const applyChainLearning = (items: Classified[]): Classified[] => {
+      if (!params.useChainLearning || items.length <= 2) return items;
+
+      const { getStrengthLookupForScheduling } = require('@/ai/utils/vocabularyNetwork');
+      const lookup = getStrengthLookupForScheduling(params.questions);
+      const getStrength = (a: string, b: string): number => {
+        const s1 = lookup.get(a)?.get(b) ?? 0;
+        const s2 = lookup.get(b)?.get(a) ?? 0;
+        return Math.max(s1, s2);
+      };
+
+      // Position帯（10刻み）ごとに分割して、帯内で関連語を近くに
+      const buckets = new Map<number, Classified[]>();
+      items.forEach((item) => {
+        const bucket = Math.floor(item.position / 10);
+        if (!buckets.has(bucket)) buckets.set(bucket, []);
+        buckets.get(bucket)!.push(item);
+      });
+
+      const reordered: Classified[] = [];
+      buckets.forEach((band) => {
+        if (band.length <= 1) {
+          reordered.push(...band);
+          return;
+        }
+
+        // 貪欲法: 最初の語から、関連度が高い順に次を選ぶ
+        const remaining = [...band];
+        const selected: Classified[] = [remaining.shift()!];
+
+        while (remaining.length > 0) {
+          const last = selected[selected.length - 1];
+          let bestIdx = 0;
+          let bestStrength = getStrength(last.question.word, remaining[0].question.word);
+
+          for (let i = 1; i < remaining.length; i++) {
+            const strength = getStrength(last.question.word, remaining[i].question.word);
+            if (strength > bestStrength) {
+              bestStrength = strength;
+              bestIdx = i;
+            }
+          }
+
+          selected.push(remaining[bestIdx]);
+          remaining.splice(bestIdx, 1);
+        }
+
+        reordered.push(...selected);
+      });
+
+      return reordered;
+    };
+
+    // 6. 各スロット内でPosition降順ソート＋いもづる式学習
+    // 📌 重複排除: 各カテゴリ内で同じ語が重複しないよう、word でユニーク化
+    const dedupeByWord = (items: Classified[]): Classified[] => {
+      const seen = new Set<string>();
+      return items.filter((item) => {
+        if (seen.has(item.question.word)) return false;
+        seen.add(item.question.word);
+        return true;
+      });
+    };
+
+    const processedSlots: Record<string, Classified[]> = {
+      incorrect: applyChainLearning(
+        dedupeByWord(byCategory.incorrect.slice(0, slots.incorrect).sort((a, b) => b.position - a.position))
+      ),
+      still_learning: applyChainLearning(
+        dedupeByWord(byCategory.still_learning.slice(0, slots.still_learning).sort((a, b) => b.position - a.position))
+      ),
+      new: applyChainLearning(
+        dedupeByWord(byCategory.new.slice(0, slots.new).sort((a, b) => b.position - a.position))
+      ),
+      mastered: applyChainLearning(
+        dedupeByWord(byCategory.mastered.slice(0, slots.mastered).sort((a, b) => b.position - a.position))
+      ),
+    };
+
+    // 7. スロット間をGamificationで交互配置（incorrect連続を防ぐ）
+    // 🛡️ 実行時検証: still_learning語がPosition 60-69範囲内か
+    if (import.meta.env.DEV) {
+      const stillLearning = processedSlots.still_learning || [];
+      const violations = stillLearning.filter(
+        (c) => c.position < 40 || c.position >= 70
+      );
+      if (violations.length > 0) {
+        console.error('🚨 Position階層違反（まだまだ語）:', violations);
+        logger.error('[QuestionScheduler] Position階層違反', {
+          violationCount: violations.length,
+          violations: violations.map((v) => ({
+            word: v.question.word,
+            position: v.position,
+            category: v.category,
+          })),
+        });
+        // DEVモードでは例外をthrow（問題を早期検知）
+        throw new Error(
+          `Position階層違反: まだまだ語が40-69範囲外（${violations.length}語）`
+        );
+      }
+    }
+
+    type PQ = { position: number; attempts?: number; question: Question };
+    const allWithCategory: PQ[] = [
+      ...processedSlots.incorrect.map((c) => ({
+        position: c.position,
+        attempts: (progressMap[c.question.word]?.memorizationAttempts ?? 0) > 0 ? 1 : 0,
+        question: c.question,
+      })),
+      ...processedSlots.still_learning.map((c) => ({
+        position: c.position,
+        attempts: (progressMap[c.question.word]?.memorizationAttempts ?? 0) > 0 ? 1 : 0,
+        question: c.question,
+      })),
+      ...processedSlots.new.map((c) => ({
+        position: c.position,
+        attempts: 0,
+        question: c.question,
+      })),
+      ...processedSlots.mastered.map((c) => ({
+        position: c.position,
+        attempts: (progressMap[c.question.word]?.memorizationAttempts ?? 0) > 0 ? 1 : 0,
+        question: c.question,
+      })),
+    ];
+
+    const gamificationAI = new GamificationAI();
+    const interleaved = gamificationAI.interleaveByCategory(allWithCategory);
+
+    // 📌 バッチ全体で重複排除（念のため最終確認）
+    const seen = new Set<string>();
+    const result = interleaved
+      .map((pq) => pq.question)
+      .filter((q) => {
+        if (seen.has(q.word)) {
+          if (import.meta.env.DEV) {
+            console.warn(`⚠️ [重複検出] ${q.word} がバッチ内で2回目の出題 → 除外`);
+          }
+          return false;
+        }
+        seen.add(q.word);
+        return true;
+      });
+
+    // 📊 デバッグ用統計
+    const stats = {
+      total: result.length,
+      incorrect: slots.incorrect,
+      still_learning: slots.still_learning,
+      new: slots.new,
+      mastered: slots.mastered,
+      chainLearning: params.useChainLearning || false,
+      interleavedByCategory: true,
+      duplicatesRemoved: interleaved.length - result.length,
+    };
+
+    const processingTime = performance.now() - startTime;
+
+    if (import.meta.env.DEV) {
+      logger.info('[QuestionScheduler] カテゴリースロット方式', {
+        allocated: result.length,
+        processingTime: `${processingTime.toFixed(2)}ms`,
+        stats,
+      });
+
+      // 🔍 出題順序を明示的にログ出力（振動検出用）
+      console.log('📝 [出題順序] 先頭30問:');
+      result.slice(0, 30).forEach((q, i) => {
+        const c = classified.find((x) => x.question.word === q.word);
+        const wasRecent = recentSet.has(q.word);
+        console.log(
+          `  ${(i + 1).toString().padStart(2)}. ${q.word.padEnd(20)} | Pos: ${c?.position.toFixed(0).padStart(3)} | Cat: ${c?.category.padEnd(15)} ${wasRecent ? '⚠️ 直近' : ''}`
+        );
+      });
+
+      const top30 = result.slice(0, 30).map((q, i) => {
+        const c = classified.find((x) => x.question.word === q.word);
+        return {
+          rank: i + 1,
+          word: q.word,
+          category: c?.category,
+          position: c?.position,
+          wasRecent: recentSet.has(q.word),
+        };
+      });
+      // 出題回数マップ（デバッグパネルで表示用）
+      const top30AttemptsMap: Record<string, number> = {};
+      result.slice(0, 30).forEach((q) => {
+        const wp = progressMap[q.word];
+        if (wp) {
+          const mode = params.mode;
+          const attempts =
+            mode === 'memorization'
+              ? wp.memorizationAttempts || 0
+              : mode === 'translation'
+                ? wp.translationAttempts || 0
+                : mode === 'spelling'
+                  ? wp.spellingAttempts || 0
+                  : wp.grammarAttempts || 0;
+          top30AttemptsMap[q.word] = attempts;
+        }
+      });
+      writeDebugJSON(
+        'debug_categorySlots_output',
+        { timestamp: new Date().toISOString(), mode: params.mode, stats, top30, top30AttemptsMap },
+        { mode: params.mode }
+      );
+    }
+
+    // 🚨 強制検証: バッチ内で連続する同一単語を検出（振動の原因）
+    if (import.meta.env.DEV) {
+      for (let i = 0; i < result.length - 1; i++) {
+        if (result[i].word === result[i + 1].word) {
+          const errorMsg = `🚨🚨🚨 [致命的エラー] バッチ内で連続重複を検出: "${result[i].word}" が位置${i}と${i + 1}で連続出題！`;
+          console.error(errorMsg);
+          logger.error('[QuestionScheduler] バッチ内連続重複検出', {
+            word: result[i].word,
+            position1: i,
+            position2: i + 1,
+            batchSize: result.length,
+            mode: params.mode,
+          });
+          // DEVモードでは例外をthrow（即座に問題を検知）
+          throw new Error(errorMsg);
+        }
+      }
+
+      // 念のため全体の重複チェックも実施
+      const allWords = result.map((q) => q.word);
+      const uniqueWords = new Set(allWords);
+      if (allWords.length !== uniqueWords.size) {
+        const duplicates = allWords.filter((word, index) => allWords.indexOf(word) !== index);
+        const errorMsg = `🚨 [警告] バッチ内に重複語あり（非連続）: ${[...new Set(duplicates)].join(', ')}`;
+        console.error(errorMsg);
+        logger.error('[QuestionScheduler] バッチ内重複検出（非連続）', {
+          duplicates: [...new Set(duplicates)],
+          batchSize: result.length,
+          uniqueSize: uniqueWords.size,
+          mode: params.mode,
+        });
+      } else {
+        console.log(`✅ [検証成功] バッチ内に重複なし（${result.length}問、全ユニーク）`);
+      }
+    }
+
+    return {
+      scheduledQuestions: result,
+      vibrationScore: 0,
+      processingTime,
+      signalCount: 0,
+    };
+  }
+
+  /**
+   * 直近出題語を取得
+   */
+  private getRecentWords(
+    mode: 'memorization' | 'translation' | 'spelling' | 'grammar',
+    count: number = 10
+  ): string[] {
+    const recentAnswers = this.getRecentAnswers(mode);
+    const words: string[] = [];
+    const seen = new Set<string>();
+    for (const a of recentAnswers) {
+      if (seen.has(a.word)) continue;
+      seen.add(a.word);
+      words.push(a.word);
+      if (words.length >= count) break;
+    }
+    return words;
   }
 }

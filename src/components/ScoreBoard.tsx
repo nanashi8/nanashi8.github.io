@@ -107,13 +107,15 @@ function ScoreBoard({
   );
 
   const efficiencyProfile = useMemo(() => {
+    // 重いLocalStorage読込は「計画」タブ表示中のみ実行
+    if (activeTab !== 'plan') return null;
     try {
       if (typeof window === 'undefined') return null;
       return loadEfficiencyProfile();
     } catch {
       return null;
     }
-  }, [onAnswerTime]);
+  }, [activeTab, onAnswerTime]);
 
   const [isLearningTabPulsing, setIsLearningTabPulsing] = useState(false);
   const pulseTimerRef = useRef<number | null>(null);
@@ -151,10 +153,9 @@ function ScoreBoard({
       const personality = (localStorage.getItem('aiPersonality') ||
         'kind-teacher') as AIPersonality;
 
-      // 暗記モードではフラッシュカードとして使うため、語源や豆知識を表示
+      // 暗記モードではフラッシュカードとして使うため、AIコメント不要
       if (mode === 'memorization') {
-        const trivia = getBreatherTrivia(personality, currentWord);
-        setQuestionComment(trivia || '');
+        setQuestionComment('');
         setAnswerComment('');
         return;
       }
@@ -431,6 +432,10 @@ function ScoreBoard({
     if (mode === 'grammar') {
       const { retentionRate, appearedCount } = getGrammarRetentionRateWithAI();
       return { retentionRate, appearedCount };
+    } else if (mode === 'memorization') {
+      // 暗記モードは初期表示（AIタブ）で重い全体集計を避ける。
+      // 必要なタブ（計画/効率）を開いたタイミングで更新する。
+      return { retentionRate: 0, appearedCount: 0 };
     } else {
       const { retentionRate, appearedCount } = getRetentionRateWithAI();
       return { retentionRate, appearedCount };
@@ -441,7 +446,27 @@ function ScoreBoard({
     if (mode === 'grammar') {
       return getGrammarDetailedRetentionStats();
     } else if (mode === 'memorization') {
-      return getMemorizationDetailedRetentionStats();
+      // 暗記モードは初期表示（AIタブ）で重い全体集計を避ける。
+      // 必要なタブ（計画/効率）を開いたタイミングで更新する。
+      return {
+        totalWords: 0,
+        appearedWords: 0,
+        masteredCount: 0,
+        learningCount: 0,
+        strugglingCount: 0,
+        basicRetentionRate: 0,
+        weightedRetentionRate: 0,
+        masteredPercentage: 0,
+        learningPercentage: 0,
+        strugglingPercentage: 0,
+        masteredWords: 0,
+        learningWords: 0,
+        newWords: 0,
+        retentionRate: 0,
+        averageAttempts: 0,
+        categoryBreakdown: {},
+        difficultyBreakdown: {},
+      };
     } else {
       return getDetailedRetentionStats();
     }
@@ -453,6 +478,17 @@ function ScoreBoard({
 
   // 出題回数別の統計
   const attemptCounts = useMemo(() => {
+    // breakdown以外では表示に不要なので計算しない（暗記のテンポ時の負荷軽減）
+    if (activeTab !== 'breakdown') {
+      return {
+        once: 0,
+        twice: 0,
+        three: 0,
+        four: 0,
+        five: 0,
+        sixOrMore: 0,
+      };
+    }
     const progress = loadProgressSync();
     const wordProgress = progress.wordProgress || {};
     return computeAttemptCounts({
@@ -460,7 +496,7 @@ function ScoreBoard({
       currentWord,
       wordProgress,
     });
-  }, [mode, currentWord, onAnswerTime]);
+  }, [activeTab, mode, currentWord, onAnswerTime]);
 
   // 文法モード用の単元別統計（タイトル付き）
   const [grammarUnitStats, setGrammarUnitStats] = useState<
@@ -492,6 +528,11 @@ function ScoreBoard({
 
   // 定着率と詳細統計を更新（回答時のみ - onAnswerTimeが変化した時）
   useEffect(() => {
+    // 暗記モードは回答テンポが速いので、表示中タブに応じて重い集計を遅延する。
+    if (mode === 'memorization' && activeTab !== 'plan' && activeTab !== 'breakdown') {
+      return;
+    }
+
     // onAnswerTimeが0の場合は初期状態なのでスキップしない（暗記タブ対応）
     if (mode === 'grammar') {
       const { retentionRate, appearedCount } = getGrammarRetentionRateWithAI();
@@ -510,7 +551,7 @@ function ScoreBoard({
       setRetentionData({ retentionRate, appearedCount });
       setDetailedStatsData(getDetailedRetentionStats());
     }
-  }, [onAnswerTime, mode]); // 回答時のみ更新
+  }, [onAnswerTime, mode, activeTab]); // 回答時のみ更新（暗記はタブ表示に応じて遅延）
 
   // 履歴タブ用: 現在の単語データを更新
   useEffect(() => {
@@ -523,6 +564,7 @@ function ScoreBoard({
 
   // Update progress bar widths using CSS variables and data attributes
   useEffect(() => {
+    if (activeTab !== 'breakdown') return;
     if (masteredRef.current) {
       const masteredWidth = Math.round(detailedStatsData.masteredPercentage);
       masteredRef.current.style.setProperty('--segment-width', String(masteredWidth));
@@ -574,10 +616,11 @@ function ScoreBoard({
   );
 
   useEffect(() => {
+    if (activeTab !== 'plan') return;
     if (!retentionGoalProgressRef.current) return;
     const clamped = Math.max(0, Math.min(100, retentionProgressToGoalPercent));
     retentionGoalProgressRef.current.style.width = `${clamped}%`;
-  }, [retentionProgressToGoalPercent]);
+  }, [retentionProgressToGoalPercent, activeTab]);
 
   const relatedFieldEffectPercent = useMemo(() => {
     if (!efficiencyProfile) return null;
@@ -749,8 +792,9 @@ function ScoreBoard({
       {activeTab === 'plan' && (
         <div className="score-board-content">
           <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
-            {/* 全モード共通のプラン詳細表示 */}
-            <div className="plan-text-line">
+            <div className="plan-tab-content">
+              {/* 全モード共通のプラン詳細表示 */}
+              <div className="plan-text-line">
               <span className="stat-text-label">📚 {dataSource || '全問題集'}</span>
               <span className="stat-text-divider">｜</span>
               <span className="stat-text-label">{category || '全分野'}</span>
@@ -800,10 +844,10 @@ function ScoreBoard({
               <span className="stat-text-divider">｜</span>
               <span className="stat-text-label">{retentionGoalPercent}%目標</span>
             </div>
-            <div className="mt-1 mb-2">
-              <div className="w-full bg-gray-200 rounded h-2">
+            <div className="mt-1 mb-2 max-w-full">
+              <div className="w-full bg-gray-200 rounded h-2 overflow-hidden">
                 <div
-                  className="bg-primary h-2 rounded"
+                  className="bg-primary h-2 rounded transition-all duration-300"
                   ref={retentionGoalProgressRef}
                 />
               </div>
@@ -1003,6 +1047,7 @@ function ScoreBoard({
                 </div>
               </div>
             )}
+            </div>
           </div>
         </div>
       )}

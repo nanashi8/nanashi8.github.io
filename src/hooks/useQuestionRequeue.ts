@@ -25,7 +25,27 @@ type LearningMode = 'memorization' | 'translation' | 'spelling' | 'grammar';
 // 統計型は呼び出し側の型パラメータに任せる
 interface UseQuestionRequeueResult<T extends RequeuableQuestion, TStats = any> {
   // 再追加処理
-  reAddQuestion: (question: T, questions: T[], currentIndex: number, mode?: LearningMode) => T[];
+  reAddQuestion: (
+    question: T,
+    questions: T[],
+    currentIndex: number,
+    mode?: LearningMode,
+    options?: {
+      /**
+       * 絶対インデックスでの挿入位置を指定（暗記タブの「予約枠」など用途）。
+       * 指定された場合でも、重複抑制（既に将来に存在するなら追加せず移動）と
+       * memorization の minGap は維持されます（必要なら後ろへ調整）。
+       */
+      insertAtIndex?: number;
+
+      /**
+       * 呼び出し側の解答結果ヒント。
+       * progressStorage（SSOT）にまだ反映されていない瞬間でも、
+       * 誤答/まだまだの意図どおりに再出題間隔を決められるようにする。
+       */
+      outcome?: 'incorrect' | 'still_learning';
+    }
+  ) => T[];
 
   // フラグクリア処理
   clearExpiredFlags: (questions: T[], currentIndex: number) => T[];
@@ -78,7 +98,16 @@ export function useQuestionRequeue<
    * 🎯 Position-aware: 新たに高Positionになった単語は他の高Position単語の近くに配置
    */
   const reAddQuestion = useCallback(
-    (question: T, questions: T[], currentIndex: number, mode?: LearningMode): T[] => {
+    (
+      question: T,
+      questions: T[],
+      currentIndex: number,
+      mode?: LearningMode,
+      options?: { 
+        insertAtIndex?: number;
+        outcome?: 'incorrect' | 'still_learning';
+      }
+    ): T[] => {
       // nullガード
       if (!questions || !Array.isArray(questions)) {
         console.warn('[useQuestionRequeue] questions is null or not an array');
@@ -122,8 +151,23 @@ export function useQuestionRequeue<
 
       const currentReaddCount = question.reAddedCount || 0;
 
-      // 可能ならPositionから「分からない/まだまだ」を推定（なければ still_learning 相当として扱う）
-      const isIncorrectLike = effectivePosition !== undefined && effectivePosition >= 70;
+      // 可能ならPositionから「分からない/まだまだ」を推定。
+      // ただし、progressStorage（SSOT）更新前の瞬間は誤判定しやすいので、
+      // 呼び出し側が解答結果を知っている場合はそれを優先する。
+      const outcomeHint = options?.outcome;
+      const incorrectLikeDecision = (() => {
+        if (outcomeHint === 'incorrect') {
+          return { isIncorrectLike: true, decidedBy: 'outcome' as const };
+        }
+        if (outcomeHint === 'still_learning') {
+          return { isIncorrectLike: false, decidedBy: 'outcome' as const };
+        }
+        return {
+          isIncorrectLike: effectivePosition !== undefined && effectivePosition >= 70,
+          decidedBy: 'position' as const,
+        };
+      })();
+      const isIncorrectLike = incorrectLikeDecision.isIncorrectLike;
 
       // 🔒 強制装置: 再出題位置を決定
       // 初回は比較的早めに再出題するが、連続で「分からない」が続くほど間隔を少しずつ延ばす
@@ -141,9 +185,15 @@ export function useQuestionRequeue<
       const pressureWindowSize = 12;
       const pressureWindowEnd = Math.min(currentIndex + 1 + pressureWindowSize, questions.length);
       const upcomingForPressure = questions.slice(currentIndex + 1, pressureWindowEnd);
-      const alreadyRequeuedSoon = upcomingForPressure.filter(
-        (q: any) => !!q?.sessionPriority
-      ).length;
+      const alreadyRequeuedSoon = upcomingForPressure.filter((q: any) => {
+        // MemorizationView などで sessionPriority が「数問先まで」でクリアされるため、
+        // sessionPriority だけに依存すると“詰まり”を見逃して再出題が前半に偏る。
+        // reAddedCount はクリアされないので、こちらも圧力検知の対象にする。
+        const hasSessionPriority = !!q?.sessionPriority;
+        const reAddedCount = Number((q as any)?.reAddedCount ?? 0);
+        const isReAdded = Number.isFinite(reAddedCount) && reAddedCount > 0;
+        return hasSessionPriority || isReAdded;
+      }).length;
       const pressureDelay = isIncorrectLike
         ? Math.min(alreadyRequeuedSoon * 2, 12)
         : Math.min(alreadyRequeuedSoon, 8);
@@ -168,8 +218,31 @@ export function useQuestionRequeue<
 
       const plannedOffset = Math.max(plannedOffsetRaw, minGapForMode);
 
+      // ✅ 予約枠などで「絶対インデックス挿入」が指定された場合は plannedOffset を上書き
+      // - ただし memorization の minGap は維持（近すぎるなら後ろへ調整）
+      const desiredAbsoluteInsertRaw = options?.insertAtIndex;
+      const desiredAbsoluteInsert =
+        typeof desiredAbsoluteInsertRaw === 'number' && Number.isFinite(desiredAbsoluteInsertRaw)
+          ? Math.max(currentIndex + 1, Math.floor(desiredAbsoluteInsertRaw))
+          : null;
+      const enforcedAbsoluteInsert = (() => {
+        if (desiredAbsoluteInsert === null) return null;
+        const minAllowedIndex = currentIndex + minGapForMode;
+        const clampedToLength = Math.min(desiredAbsoluteInsert, questions.length);
+        return minGapForMode > 0 ? Math.max(clampedToLength, minAllowedIndex) : clampedToLength;
+      })();
+
+      const plannedOffsetWithOverride =
+        enforcedAbsoluteInsert !== null
+          ? Math.max(1, enforcedAbsoluteInsert - currentIndex)
+          : plannedOffset;
+
       const pushRequeueDebugLog = (entry: Record<string, unknown>) => {
         try {
+          // デバッグログは通常時の体感を重くするため、明示的なオプトインが必要
+          if (!import.meta.env.DEV) return;
+          if (typeof window === 'undefined') return;
+          if (localStorage.getItem('debug-scheduler-verbose') !== 'true') return;
           const key = 'debug_requeue_events';
           const stored = localStorage.getItem(key);
           const logs = stored ? JSON.parse(stored) : [];
@@ -182,8 +255,11 @@ export function useQuestionRequeue<
         }
       };
 
-      // 直近ウィンドウに同一IDがあれば重複再追加しない（実際の挿入予定位置に合わせて探索範囲も拡張）
-      const windowSize = Math.min(30, Math.max(10, plannedOffset + 5));
+      // 直近ウィンドウに同一IDがあれば重複再追加しない。
+      // 重要: plannedOffset（特に暗記の minGap=最大60）より探索が短いと、
+      // 「既に将来に存在する同一語」を見逃して重複挿入 → 体感の振動/固まりを誘発する。
+      // plannedOffset に合わせて探索範囲を十分に広げる（上限は保守的に 120 で固定）。
+      const windowSize = Math.min(120, Math.max(10, plannedOffsetWithOverride + 5));
       const windowEnd = Math.min(currentIndex + windowSize + 1, questions.length);
       const upcoming = questions.slice(currentIndex + 1, windowEnd);
       const existingNearbyRelIndex = upcoming.findIndex((q: any) => {
@@ -197,27 +273,30 @@ export function useQuestionRequeue<
         // ✅ 分からない(>=70)は「既に近くに存在する」理由で永遠に再出題が抑制されると、
         // 解消に向かわず詰まるため、必要なら既存の出題位置を繰り上げる。
         if (isIncorrectLike) {
-          const desiredInsertPosition = Math.min(currentIndex + plannedOffset, questions.length);
+          const desiredInsertPosition = Math.min(
+            currentIndex + plannedOffsetWithOverride,
+            questions.length
+          );
           const minAllowedIndex = currentIndex + minGapForMode;
           const isTooSoonForMinGap = minGapForMode > 0 && existingNearbyAbsIndex < minAllowedIndex;
-          
+
           // 🔍 スキップ判定の詳細ログ
           const skipReasonDetails = {
             existingAtIndex: existingNearbyAbsIndex,
             existingOffset: existingNearbyAbsIndex - currentIndex,
             desiredInsertPosition,
-            desiredOffset: plannedOffset,
+            desiredOffset: plannedOffsetWithOverride,
             minAllowedIndex,
             minGap: minGapForMode,
             isTooSoonForMinGap,
             wouldSkip: !isTooSoonForMinGap && existingNearbyAbsIndex <= desiredInsertPosition,
-            skipReason: isTooSoonForMinGap 
+            skipReason: isTooSoonForMinGap
               ? 'too_soon_must_move'
-              : (existingNearbyAbsIndex <= desiredInsertPosition 
+              : (existingNearbyAbsIndex <= desiredInsertPosition
                   ? 'already_at_good_position'
                   : 'existing_too_far_will_move'),
           };
-          
+
           // 🚨 重要: minGap範囲内（近すぎる）なら必ず移動する（振動防止の核心）
           // minGap範囲外で、かつ希望位置より早ければスキップ
           if (!isTooSoonForMinGap && existingNearbyAbsIndex <= desiredInsertPosition) {
@@ -235,11 +314,14 @@ export function useQuestionRequeue<
               pressureDelay,
               plannedOffsetRaw,
               plannedOffset,
+              plannedOffsetWithOverride,
               minGapForMode,
               skipDetails: skipReasonDetails,
               questionPosition: questionPosition ?? null,
               ssotPosition: ssotPosition ?? null,
               effectivePosition: effectivePosition ?? null,
+              outcomeHint: outcomeHint ?? null,
+              incorrectLikeDecidedBy: incorrectLikeDecision.decidedBy,
               consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
               reAddedCountBefore: currentReaddCount,
               note: 'already_scheduled_soon',
@@ -283,14 +365,14 @@ export function useQuestionRequeue<
             existingAtIndex: existingNearbyAbsIndex,
             existingOffset: existingNearbyAbsIndex - currentIndex,
             desiredInsertPosition,
-            desiredOffset: plannedOffset,
+            desiredOffset: plannedOffsetWithOverride,
             minAllowedIndex,
             minGap: minGapForMode,
             isTooSoonForMinGap,
             wasMoved: true,
             moveReason: isTooSoonForMinGap ? 'moved_due_to_min_gap' : 'moved_existing_earlier',
           };
-          
+
           pushRequeueDebugLog({
             timestamp: new Date().toISOString(),
             mode: mode ?? 'unknown',
@@ -304,6 +386,7 @@ export function useQuestionRequeue<
             pressureDelay,
             plannedOffsetRaw,
             plannedOffset,
+            plannedOffsetWithOverride,
             minGapForMode,
             moveDetails: moveReasonDetails,
             insertAt,
@@ -313,6 +396,8 @@ export function useQuestionRequeue<
             questionPosition: questionPosition ?? null,
             ssotPosition: ssotPosition ?? null,
             effectivePosition: effectivePosition ?? null,
+            outcomeHint: outcomeHint ?? null,
+            incorrectLikeDecidedBy: incorrectLikeDecision.decidedBy,
             consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
             reAddedCountBefore: existingQuestion?.reAddedCount ?? null,
             reAddedCountAfter: movedReaddCount,
@@ -345,16 +430,19 @@ export function useQuestionRequeue<
           pressureDelay,
           plannedOffsetRaw,
           plannedOffset,
+          plannedOffsetWithOverride,
           minGapForMode,
           skipDetails: {
             existingAtIndex: existingNearbyAbsIndex,
             existingOffset: existingNearbyAbsIndex - currentIndex,
-            desiredOffset: plannedOffset,
+            desiredOffset: plannedOffsetWithOverride,
             skipReason: 'not_incorrect_like_already_nearby',
           },
           questionPosition: questionPosition ?? null,
           ssotPosition: ssotPosition ?? null,
           effectivePosition: effectivePosition ?? null,
+          outcomeHint: outcomeHint ?? null,
+          incorrectLikeDecidedBy: incorrectLikeDecision.decidedBy,
           consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
           reAddedCountBefore: currentReaddCount,
         });
@@ -362,7 +450,7 @@ export function useQuestionRequeue<
           console.log(`🔄 [useQuestionRequeue] スキップ: ${String(qid)}`, {
             skipReason: 'not_incorrect_like_already_nearby',
             existingOffset: existingNearbyAbsIndex - currentIndex,
-            desiredOffset: plannedOffset,
+            desiredOffset: plannedOffsetWithOverride,
             position: effectivePosition,
             isIncorrectLike,
           });
@@ -370,7 +458,7 @@ export function useQuestionRequeue<
         return questions;
       }
 
-      let insertPosition = Math.min(currentIndex + plannedOffset, questions.length);
+      let insertPosition = Math.min(currentIndex + plannedOffsetWithOverride, questions.length);
 
       const originalInsertPosition = insertPosition;
       let positionAwareAdjusted = false;
@@ -379,7 +467,8 @@ export function useQuestionRequeue<
       // キュー後半に高Position単語が埋もれている場合、それらの近くに配置
       // ❗分からない(>=70)も高Position群に寄せたいが、30問先へ飛ぶのは避けたいので
       // スキャン範囲を短くする（still_learning_like は従来どおり30問スキャン）。
-      if (effectivePosition !== undefined && effectivePosition >= 40) {
+      // 予約枠（絶対インデックス指定）がある場合は、枠の意図を優先してここでの補正はしない。
+      if (enforcedAbsoluteInsert === null && effectivePosition !== undefined && effectivePosition >= 40) {
         // 挿入位置から前方をスキャン（軽量なO(10..30)操作）
         const scanStart = Math.max(insertPosition, currentIndex + 1);
         const scanLimit = isIncorrectLike ? 10 : 30;
@@ -400,40 +489,45 @@ export function useQuestionRequeue<
           insertPosition = lastHighPositionIdx + 1;
           positionAwareAdjusted = insertPosition !== originalPosition;
 
-          // 📊 Position-aware挿入ログをlocalStorageに記録
-          try {
-            const log = {
-              timestamp: new Date().toISOString(),
-              word: String(qid),
-              position: effectivePosition,
-              baseOffset,
-              extraDelay,
-              originalInsert: originalPosition,
-              adjustedInsert: insertPosition,
-              currentIndex,
-              nearbyHighPositions: questions
-                .slice(scanStart, scanEnd)
-                .filter((q) => {
-                  const pos = (q as any).position;
-                  return pos !== undefined && pos >= 40;
-                })
-                .map((q) => ({
-                  word: (q as any).word || (q as any).id,
-                  position: (q as any).position,
-                })),
-            };
+          const isVerboseSchedulerDebug =
+            import.meta.env.DEV &&
+            typeof window !== 'undefined' &&
+            localStorage.getItem('debug-scheduler-verbose') === 'true';
 
-            const stored = localStorage.getItem('debug_position_aware_insertions');
-            const logs = stored ? JSON.parse(stored) : [];
-            logs.push(log);
-            // 最新30件のみ保持
-            if (logs.length > 30) logs.shift();
-            localStorage.setItem('debug_position_aware_insertions', JSON.stringify(logs));
-          } catch {
-            // localStorage失敗は無視
-          }
+          if (isVerboseSchedulerDebug) {
+            // 📊 Position-aware挿入ログをlocalStorageに記録
+            try {
+              const log = {
+                timestamp: new Date().toISOString(),
+                word: String(qid),
+                position: effectivePosition,
+                baseOffset,
+                extraDelay,
+                originalInsert: originalPosition,
+                adjustedInsert: insertPosition,
+                currentIndex,
+                nearbyHighPositions: questions
+                  .slice(scanStart, scanEnd)
+                  .filter((q) => {
+                    const pos = (q as any).position;
+                    return pos !== undefined && pos >= 40;
+                  })
+                  .map((q) => ({
+                    word: (q as any).word || (q as any).id,
+                    position: (q as any).position,
+                  })),
+              };
 
-          if (import.meta.env.DEV) {
+              const stored = localStorage.getItem('debug_position_aware_insertions');
+              const logs = stored ? JSON.parse(stored) : [];
+              logs.push(log);
+              // 最新30件のみ保持
+              if (logs.length > 30) logs.shift();
+              localStorage.setItem('debug_position_aware_insertions', JSON.stringify(logs));
+            } catch {
+              // localStorage失敗は無視
+            }
+
             console.log('🎯 [Position-aware] 高Position単語群に割り込み配置', {
               word: String(qid),
               position: effectivePosition,
@@ -458,8 +552,11 @@ export function useQuestionRequeue<
           extraDelay,
           pressureDelay,
           plannedOffset,
+          plannedOffsetWithOverride,
           minGap: minGapForMode,
           insertOffset: insertPosition - currentIndex,
+          requestedInsertAtIndex: options?.insertAtIndex ?? null,
+          enforcedAbsoluteInsert: enforcedAbsoluteInsert ?? null,
           position: effectivePosition,
           consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
           isIncorrectLike,
@@ -478,6 +575,7 @@ export function useQuestionRequeue<
         extraDelay,
         plannedOffsetRaw,
         plannedOffset,
+        plannedOffsetWithOverride,
         minGapForMode,
         insertDetails: {
           desiredInsertPosition: insertPosition,
@@ -485,6 +583,8 @@ export function useQuestionRequeue<
           insertOffset: insertPosition - currentIndex,
           positionAwareAdjusted,
           originalInsertAt: originalInsertPosition,
+          requestedInsertAtIndex: options?.insertAtIndex ?? null,
+          enforcedAbsoluteInsert: enforcedAbsoluteInsert ?? null,
         },
         insertAt: insertPosition,
         originalInsertAt: originalInsertPosition,
@@ -492,6 +592,8 @@ export function useQuestionRequeue<
         questionPosition: questionPosition ?? null,
         ssotPosition: ssotPosition ?? null,
         effectivePosition: effectivePosition ?? null,
+        outcomeHint: outcomeHint ?? null,
+        incorrectLikeDecidedBy: incorrectLikeDecision.decidedBy,
         consecutiveIncorrect: (ssotWordProgress as any)?.consecutiveIncorrect ?? 0,
         reAddedCountBefore: currentReaddCount,
         reAddedCountAfter: currentReaddCount + 1,

@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-12-30",
+  "metadata": {
+    "totalFailures": 1,
+    "totalRecoveries": 1,
+    "averageAttemptsToSuccess": 2,
+    "mostCommonFailureTypes": [],
+    "learningRate": 0.1
+  },
+  "failurePatterns": {},
+  "conversationFailures": [
+    {
+      "id": "session-1767102112121",
+      "timestamp": "2025-12-30T13:41:52.121Z",
+      "userRequest": "バッチ完全消化後の次バッチ生成を実装",
+      "attempts": [
+        {
+          "attemptNumber": 1,
+          "timestamp": "2025-12-30T13:44:03.957Z",
+          "changes": [
+            "src/components/MemorizationView.tsx"
+          ],
+          "userFeedback": "（検証用）まだ直していないが、バッチ確定後に配列を変更しないことを再確認",
+          "failureReason": "バッチ方式の原則違反",
+          "success": false
+        },
+        {
+          "attemptNumber": 2,
+          "timestamp": "2025-12-30T13:44:03.990Z",
+          "changes": [],
+          "userFeedback": "Success",
+          "failureReason": null,
+          "success": true,
+          "solutionDescription": "（検証用）ガード→セッション→学習の導線を通した"
+        }
+      ],
+      "status": "success",
+      "totalAttempts": 2,
+      "solutionDescription": "（検証用）ガード→セッション→学習の導線を通した",
+      "learningPoints": [
+        "頻出失敗: バッチ方式の原則違反",
+        "バッチ方式の原則理解不足 - batch-system-enforcement.instructions.mdを確認"
+      ]
+    }
+  ],
+  "preventionRules": {
+    "rules": [
+      {
+        "id": "enforce-batch-rules",
+        "name": "バッチ方式強制",
+        "condition": "バッチ関連のコードを変更する場合",
+        "action": "batch-system-enforcement.instructions.mdを確認し、3原則を遵守",
+        "severity": "critical",
+        "occurrences": 1
+      }
+    ]
+  },
+  "successPatterns": {
+    "patterns": [
+      {
+        "timestamp": "2025-12-30T13:44:03.991Z",
+        "userRequest": "バッチ完全消化後の次バッチ生成を実装",
+        "solution": "（検証用）ガード→セッション→学習の導線を通した",
+        "attempts": 2,
+        "learningPoints": [
+          "頻出失敗: バッチ方式の原則違反",
+          "バッチ方式の原則理解不足 - batch-system-enforcement.instructions.mdを確認"
+        ]
+      }
+    ]
+  }
+}

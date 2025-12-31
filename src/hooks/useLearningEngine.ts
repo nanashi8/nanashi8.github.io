@@ -73,7 +73,9 @@ export function useLearningEngine<T extends { [key: string]: any }>(
       }
 
       // ステップ1: 不正解問題を再追加（次の3-5問内）
-      const questionsWithReAdd = reAddQuestion(currentQuestion, questions, currentIndex, config.mode);
+      const questionsWithReAdd = reAddQuestion(currentQuestion, questions, currentIndex, config.mode, {
+        outcome: 'incorrect',
+      });
 
       // ステップ2: 定期的な優先度ソート（3問ごと）
       // 復翕モード時は毎回ソートして復習問題を最優先（スキップ連打対応）

@@ -268,6 +268,36 @@ export class DebugTracer {
       // LocalStorageアクセスエラーを無視
     }
 
+    // 🚨 振動検出（calculatePrioritiesの呼び出し頻度チェック）
+    const calculatePrioritiesSpans = spans.filter(
+      (s) => s.name === 'QuestionScheduler.calculatePriorities'
+    );
+    if (calculatePrioritiesSpans.length > 0) {
+      const firstTime = calculatePrioritiesSpans[0].startTime;
+      const lastTime =
+        calculatePrioritiesSpans[calculatePrioritiesSpans.length - 1].startTime ||
+        calculatePrioritiesSpans[calculatePrioritiesSpans.length - 1].startTime;
+      const durationMs = lastTime - firstTime;
+      const durationSec = durationMs / 1000;
+      const callsPerSecond = durationSec > 0 ? calculatePrioritiesSpans.length / durationSec : 0;
+
+      summary += '## 🚨 振動検出（calculatePriorities呼び出し頻度）\n\n';
+      summary += `- **総呼び出し回数**: ${calculatePrioritiesSpans.length}回\n`;
+      summary += `- **期間**: ${durationSec.toFixed(2)}秒\n`;
+      summary += `- **呼び出し頻度**: ${callsPerSecond.toFixed(2)}回/秒\n\n`;
+
+      if (callsPerSecond > 5) {
+        summary += `🔴 **異常検出**: calculatePrioritiesが ${callsPerSecond.toFixed(1)}回/秒 で呼ばれています！\n`;
+        summary +=
+          '**原因候補**: useEffectの依存配列、またはstate更新による無限ループの可能性があります。\n\n';
+      } else if (callsPerSecond > 2) {
+        summary += `⚠️ **警告**: calculatePrioritiesが ${callsPerSecond.toFixed(1)}回/秒 で呼ばれています。\n`;
+        summary += '**推奨**: 呼び出し回数が多すぎる可能性があります。\n\n';
+      } else {
+        summary += `✅ **正常**: 呼び出し頻度は正常範囲内です。\n\n`;
+      }
+    }
+
     summary += '## 🎫 データフロー追跡（スパンベース）\n\n';
     summary += '| スパン | 開始時刻 | 所要時間 | まだまだ語 | 総単語数 | 状態 |\n';
     summary += '|---|---|---|---|---|---|\n';

@@ -58,6 +58,76 @@ const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 9999; // 保存する最大結果数（容量削減）
 const MAX_RESPONSE_TIMES = 3; // 応答時間履歴の最大保存数（容量削減）
 
+// LocalStorageへのフォールバック保存は、暗記タブの高速回答時に
+// JSON.stringify + setItem が同期で走り体感を重くするため、間引き・制限する。
+// 主要な永続化は saveProgressData(IndexedDB) が担う。
+const LOCAL_STORAGE_FALLBACK_MIN_INTERVAL_MS = 30_000;
+const LOCAL_STORAGE_FALLBACK_MAX_WORD_PROGRESS_COUNT = 1200;
+
+let localStorageFallbackLastWriteAt = 0;
+let localStorageFallbackTimer: ReturnType<typeof setTimeout> | null = null;
+let localStorageFallbackPending: UserProgress | null = null;
+
+function scheduleLocalStorageFallbackSave(progress: UserProgress): void {
+  if (typeof localStorage === 'undefined') return;
+
+  const wordCount = Object.keys(progress.wordProgress ?? {}).length;
+  // wordProgressが巨大な場合、LocalStorage保存を完全に止めると
+  // リロード直後に loadProgressSync() が空になり、
+  // - スコアボードの集計
+  // - QuestionSchedulerのカテゴリ判定（useCategorySlots含む）
+  // が崩れる。
+  // そのため「最近学習語を優先して上限までトリムしたスナップショット」を保存する。
+  const progressForLocalStorage: UserProgress = (() => {
+    if (wordCount <= LOCAL_STORAGE_FALLBACK_MAX_WORD_PROGRESS_COUNT) return progress;
+
+    const entries = Object.entries(progress.wordProgress ?? {});
+    const prioritized = entries
+      .filter(([, wp]) => {
+        const lastStudied = (wp as any)?.lastStudied ?? 0;
+        const totalAttempts = (wp as any)?.totalAttempts ?? 0;
+        return lastStudied > 0 || totalAttempts > 0;
+      })
+      .sort((a, b) => {
+        const aLast = (a[1] as any)?.lastStudied ?? 0;
+        const bLast = (b[1] as any)?.lastStudied ?? 0;
+        return bLast - aLast;
+      });
+
+    const fallbackBase = prioritized.length > 0 ? prioritized : entries;
+    const trimmed = fallbackBase.slice(0, LOCAL_STORAGE_FALLBACK_MAX_WORD_PROGRESS_COUNT);
+
+    return {
+      ...progress,
+      wordProgress: Object.fromEntries(trimmed) as any,
+    };
+  })();
+
+  localStorageFallbackPending = progressForLocalStorage;
+
+  const now = Date.now();
+  const waitMs = Math.max(
+    0,
+    LOCAL_STORAGE_FALLBACK_MIN_INTERVAL_MS - (now - localStorageFallbackLastWriteAt)
+  );
+
+  if (localStorageFallbackTimer) return;
+
+  localStorageFallbackTimer = setTimeout(() => {
+    localStorageFallbackTimer = null;
+    const pending = localStorageFallbackPending;
+    localStorageFallbackPending = null;
+    if (!pending) return;
+
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(pending));
+      localStorageFallbackLastWriteAt = Date.now();
+    } catch (e) {
+      logger.warn('LocalStorage保存失敗（容量不足の可能性）:', e);
+    }
+  }, waitMs);
+}
+
 const MIGRATION_BACKUP_KEY = 'backup_progress_before_migration';
 
 async function backupStoredProgressBeforeMigration(params: {
@@ -387,11 +457,7 @@ export async function saveProgress(progress: UserProgress): Promise<void> {
     updateProgressCache(progress);
 
     // LocalStorageにも保存（フォールバック用）
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-    } catch (e) {
-      logger.warn('LocalStorage保存失敗（容量不足の可能性）:', e);
-    }
+    scheduleLocalStorageFallbackSave(progress);
 
     // UserProgressをProgressDataに変換して保存
     const progressData: import('@/types/storage').ProgressData = {

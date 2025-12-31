@@ -31,6 +31,7 @@ describe('useQuestionRequeue', () => {
 
   beforeEach(() => {
     localStorage.clear();
+    localStorage.setItem('debug-scheduler-verbose', 'true');
     vi.clearAllMocks();
     mathRandomSpy = vi.spyOn(Math, 'random').mockReturnValue(0);
   });
@@ -167,6 +168,46 @@ describe('useQuestionRequeue', () => {
     expect(entry.reason).toBe('incorrect_like');
   });
 
+  it('insertAtIndex 指定がある場合、その枠を優先して挿入し（minGap は維持）、position-aware 補正は行わない', () => {
+    setProgressForWord('apple', {
+      memorizationPosition: 80,
+      memorizationAttempts: 1,
+      memorizationCorrect: 0,
+      memorizationStillLearning: 0,
+      consecutiveCorrect: 0,
+      consecutiveIncorrect: 0, // minGap=10
+      lastStudied: Date.now(),
+    });
+
+    const { result } = renderHook(() => useQuestionRequeue<any>());
+
+    const currentQuestion = { word: 'apple', position: 10 };
+    const questions = Array.from({ length: 25 }, (_, i) => ({ word: `q${i}`, position: 0 }));
+    // position-aware が有効なら high 近傍へ寄せられる可能性がある配置
+    questions[14] = { word: 'high', position: 60 };
+
+    const requestedInsertAtIndex = 12;
+    const returned = result.current.reAddQuestion(currentQuestion, questions, 0, 'memorization', {
+      insertAtIndex: requestedInsertAtIndex,
+    });
+
+    expect(returned).toHaveLength(questions.length + 1);
+    expect(returned[requestedInsertAtIndex].word).toBe('apple');
+
+    const stored = localStorage.getItem('debug_requeue_events');
+    expect(stored).not.toBeNull();
+    const logs = JSON.parse(stored as string);
+    expect(logs).toHaveLength(1);
+
+    const entry = logs[0];
+    expect(entry.decision).toBe('inserted');
+    expect(entry.positionAwareAdjusted).toBe(false);
+    expect(entry.plannedOffsetWithOverride).toBe(12);
+    expect(entry.insertAt).toBe(12);
+    expect(entry.insertDetails?.requestedInsertAtIndex).toBe(12);
+    expect(entry.insertDetails?.enforcedAbsoluteInsert).toBe(12);
+  });
+
   it('一度 skip されても、進行後には insert される（永久に抑制されない）', () => {
     setProgressForWord('apple', {
       memorizationPosition: 65,
@@ -213,6 +254,44 @@ describe('useQuestionRequeue', () => {
     expect(logs[0].decision).toBe('skipped_exists_nearby');
     expect(logs[1].decision).toBe('inserted');
     expect(logs[1].reason).toBe('still_learning_like');
+  });
+
+  it('SSOT更新前でも、outcome=incorrect を渡せば incorrect_like として扱う（同一語の即戻り誤判定を防ぐ）', () => {
+    // SSOT上は低Position（incorrectではない）
+    setProgressForWord('apple', {
+      memorizationPosition: 10,
+      memorizationAttempts: 1,
+      memorizationCorrect: 0,
+      memorizationStillLearning: 0,
+      consecutiveCorrect: 0,
+      consecutiveIncorrect: 0,
+      lastStudied: Date.now(),
+    });
+
+    const { result } = renderHook(() => useQuestionRequeue<any>());
+
+    const currentQuestion = { word: 'apple', position: 10 };
+    const questions = Array.from({ length: 25 }, (_, i) => ({ word: `q${i}`, position: 0 }));
+
+    const returned = result.current.reAddQuestion(currentQuestion, questions, 0, 'memorization', {
+      outcome: 'incorrect',
+    });
+
+    // 暗記モードは minGap=10 を維持するため、最低でも10問先へ
+    expect(returned).toHaveLength(questions.length + 1);
+    expect(returned[10].word).toBe('apple');
+
+    const stored = localStorage.getItem('debug_requeue_events');
+    expect(stored).not.toBeNull();
+
+    const logs = JSON.parse(stored as string);
+    expect(logs).toHaveLength(1);
+    expect(logs[0].decision).toBe('inserted');
+    expect(logs[0].reason).toBe('incorrect_like');
+    expect(logs[0].outcomeHint).toBe('incorrect');
+    expect(logs[0].incorrectLikeDecidedBy).toBe('outcome');
+    // position自体は低いままでも、outcomeで誤答扱いできていること
+    expect(logs[0].effectivePosition).toBe(10);
   });
 
   it('分からない(>=70)は既に将来に存在する場合、重複追加せず（必要なら）適度な距離まで繰り上げる（move existing）', () => {

@@ -26,6 +26,11 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
   readonly name = 'Gamification AI';
   readonly icon = '🎮';
 
+  // 詳細ログフラグ（DEV時に膨大なログを抑制するため、明示的なオプトインが必要）
+  private static get isVerboseDebug(): boolean {
+    return import.meta.env.DEV && localStorage.getItem('debug-scheduler-verbose') === 'true';
+  }
+
   /**
    * Position提案（統合レイヤー用）
    *
@@ -74,22 +79,21 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     const newBoostable = questions.filter((pq) => pq.position >= 25 && pq.position < 40);
 
     // 🔍 デバッグログ
-    const isDevMode = import.meta.env?.DEV ?? false;
 
-    if (isDevMode) {
+    if (GamificationAI.isVerboseDebug) {
       console.log(
         `🎮 [GamificationAI] インターリーブ調整開始: まだまだ${struggling.length}語, 新規${newOnes.length}語, 引き上げ候補(Pos≥25)${newBoostable.length}語`
       );
     }
 
     if (struggling.length === 0) {
-      if (isDevMode)
+      if (GamificationAI.isVerboseDebug)
         console.log('ℹ️ [GamificationAI] まだまだ0語 → Position分散スキップ（正常動作）');
       return { result: questions, changed: [] };
     }
 
     if (newOnes.length === 0) {
-      if (isDevMode) console.log('⚠️ [GamificationAI] 新規0語 → Position分散スキップ');
+      if (GamificationAI.isVerboseDebug) console.log('⚠️ [GamificationAI] 新規0語 → Position分散スキップ');
       return { result: questions, changed: [] };
     }
 
@@ -123,7 +127,7 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
 
       const actualBoost = Math.min(toBoost, sortedNew.length);
 
-      if (isDevMode) {
+      if (GamificationAI.isVerboseDebug) {
         console.log(
           `✅ [GamificationAI] ${actualBoost}語をPosition +${boostAmount} (比率${(boostRatio * 100).toFixed(0)}%, 候補${sortedNew.length}語)`
         );
@@ -137,7 +141,7 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
 
         changed.push({ word, before, after: sortedNew[i].position });
 
-        if (isDevMode && i < 5) {
+        if (GamificationAI.isVerboseDebug && i < 5) {
           console.log(`  • ${word}: ${before.toFixed(0)} → ${sortedNew[i].position.toFixed(0)}`);
         }
       }
@@ -148,32 +152,40 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
         const isBoosted = pq.position >= 40;
         return isNew && isBoosted && pq.position >= 60; // 新規がPosition 60以上になっている
       });
-      if (violatingNew.length > 0 && isDevMode) {
+      if (violatingNew.length > 0 && GamificationAI.isVerboseDebug) {
         console.error(`❌ [Position階層違反] 新規語がPosition 60以上: ${violatingNew.length}語`);
         console.error('🚨 これは「あっちを立てればこっちが立たず」の原因です');
       }
 
       // localStorage保存（デバッグパネル用）
-      try {
-        localStorage.setItem(
-          'debug_position_hierarchy_new',
-          JSON.stringify({
-            violations: violatingNew.map((pq) => ({
-              word: pq.question?.word || '(unknown)',
-              position: pq.position,
-              type: 'new_exceeds_60',
-            })),
-            totalNew: questions.filter((pq) => (pq.attempts ?? 0) === 0 && pq.position >= 40)
-              .length,
-            violationCount: violatingNew.length,
-            timestamp: new Date().toISOString(),
-          })
-        );
-      } catch {
-        // localStorage失敗は無視
+      if (GamificationAI.isVerboseDebug) {
+        try {
+          localStorage.setItem(
+            'debug_position_hierarchy_new',
+            JSON.stringify({
+              violations: violatingNew.map((pq) => ({
+                word: pq.question?.word || '(unknown)',
+                position: pq.position,
+                type: 'new_exceeds_60',
+              })),
+              totalNew: questions.filter((pq) => (pq.attempts ?? 0) === 0 && pq.position >= 40)
+                .length,
+              violationCount: violatingNew.length,
+              timestamp: new Date().toISOString(),
+            })
+          );
+        } catch {
+          // localStorage失敗は無視
+        }
+      }
+
+      if (GamificationAI.isVerboseDebug) {
+        console.log(`✅ [GamificationAI] ${changed.length}語のPosition調整完了`);
       }
     } else {
-      if (isDevMode) console.warn('⚠️ [GamificationAI] boostRatio=0 or newOnes=0 → 調整なし');
+      if (GamificationAI.isVerboseDebug) {
+        console.warn('⚠️ [GamificationAI] boostRatio=0 or newOnes=0 → 調整なし');
+      }
     }
 
     return { result: questions, changed };
@@ -197,12 +209,11 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     );
     const incorrect = questions.filter((pq) => pq.position >= 70 && (pq.attempts ?? 0) > 0);
 
-    const isDevMode = import.meta.env?.DEV ?? false;
 
     // 🎯 分からないが0になったら「まだまだ集中モード」発動
     const isFocusMode = incorrect.length === 0 && stillLearning.length > 0;
 
-    if (isDevMode) {
+    if (GamificationAI.isVerboseDebug) {
       console.log(
         `🎯 [GamificationAI] まだまだ語ブースト開始: ${stillLearning.length}語 ${isFocusMode ? '【集中モード】' : '【通常モード】'}`
       );
@@ -214,7 +225,7 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     }
 
     if (stillLearning.length === 0) {
-      if (isDevMode)
+      if (GamificationAI.isVerboseDebug)
         console.log('ℹ️ [GamificationAI] まだまだ語0語 → ブーストスキップ（正常動作）');
       return { result: questions, changed: [] };
     }
@@ -244,7 +255,7 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
 
       changed.push({ word, before, after: sq.position });
 
-      if (isDevMode && changed.length <= 5) {
+      if (GamificationAI.isVerboseDebug && changed.length <= 5) {
         console.log(`  • ${word}: ${before.toFixed(0)} → ${sq.position.toFixed(0)}`);
       }
     }
@@ -255,7 +266,7 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     const violatingStill = stillLearning.filter(
       (sq) => sq.position < expectedMin || sq.position > expectedMax
     );
-    if (violatingStill.length > 0 && isDevMode) {
+    if (violatingStill.length > 0 && GamificationAI.isVerboseDebug) {
       console.error(
         `❌ [Position階層違反] まだまだ語がPosition ${expectedMin}-${expectedMax}範囲外: ${violatingStill.length}語`
       );
@@ -267,41 +278,43 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
     }
 
     // localStorage保存（デバッグパネル用）
-    try {
-      localStorage.setItem(
-        'debug_position_hierarchy_still',
-        JSON.stringify({
-          mode: isFocusMode ? 'focus' : 'normal',
-          targetRange: `${expectedMin}-${expectedMax}`,
-          violations: violatingStill.map((sq) => ({
-            word: sq.question?.word || '(unknown)',
-            position: sq.position,
-            type:
-              sq.position < expectedMin
-                ? `still_below_${expectedMin}`
-                : `still_above_${expectedMax}`,
-          })),
-          totalStill: stillLearning.length,
-          violationCount: violatingStill.length,
-          timestamp: new Date().toISOString(),
-        })
-      );
+    if (GamificationAI.isVerboseDebug) {
+      try {
+        localStorage.setItem(
+          'debug_position_hierarchy_still',
+          JSON.stringify({
+            mode: isFocusMode ? 'focus' : 'normal',
+            targetRange: `${expectedMin}-${expectedMax}`,
+            violations: violatingStill.map((sq) => ({
+              word: sq.question?.word || '(unknown)',
+              position: sq.position,
+              type:
+                sq.position < expectedMin
+                  ? `still_below_${expectedMin}`
+                  : `still_above_${expectedMax}`,
+            })),
+            totalStill: stillLearning.length,
+            violationCount: violatingStill.length,
+            timestamp: new Date().toISOString(),
+          })
+        );
 
-      // まだまだ語のブースト結果を保存（デバッグパネル用）
-      localStorage.setItem(
-        'debug_still_learning_boost',
-        JSON.stringify({
-          boosted: changed.length,
-          changes: changed,
-          working: changed.length > 0,
-          timestamp: new Date().toISOString(),
-        })
-      );
-    } catch {
-      // localStorage失敗は無視
+        // まだまだ語のブースト結果を保存（デバッグパネル用）
+        localStorage.setItem(
+          'debug_still_learning_boost',
+          JSON.stringify({
+            boosted: changed.length,
+            changes: changed,
+            working: changed.length > 0,
+            timestamp: new Date().toISOString(),
+          })
+        );
+      } catch {
+        // localStorage失敗は無視
+      }
     }
 
-    if (isDevMode) {
+    if (GamificationAI.isVerboseDebug) {
       console.log(
         `✅ [GamificationAI] まだまだ語${stillLearning.length}語をPosition 60-69に引き上げ完了（最優先）`
       );
@@ -320,87 +333,51 @@ export class GamificationAI extends MLEnhancedSpecialistAI<GamificationSignal> {
    * @returns インターリーブ済みの問題リスト
    */
   interleaveByCategory<
-    T extends { position: number; attempts?: number; question?: { word: string } },
+    T extends { position: number; attempts?: number; question?: { word: string }; consecutiveIncorrect?: number },
   >(questions: T[]): T[] {
-    const isDevMode = import.meta.env?.DEV ?? false;
 
-    // 定着率優先: 新規混入比率は20%を目標に安定化（乱数でブレないよう固定サイクル）
-    // 例: 1 / (4 + 1) = 0.20
-    const targetNewRatio = 0.2;
-    const strugglingPerNew = Math.max(1, Math.round((1 - targetNewRatio) / targetNewRatio));
-
-    // 苦手語（分からない Position≥70 + まだまだ Position 40-70, attempts > 0）を抽出
+    // 苦手語（分からない + まだまだ）: Position>=40 かつ attempts>0
     const struggling = questions.filter((pq) => pq.position >= 40 && (pq.attempts ?? 0) > 0);
 
-    // Position引き上げ新規語（Position 40-60, attempts = 0）を抽出
+    // 新規語: まずPosition引き上げ済み新規（40-59, attempts=0）を優先
     const boostedNew = questions.filter(
       (pq) => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) === 0
     );
+    const otherNew = questions.filter((pq) => (pq.attempts ?? 0) === 0 && pq.position < 40);
+    const allNew = [...boostedNew, ...otherNew];
 
-    // その他の問題（Position < 40）
-    const others = questions.filter((pq) => pq.position < 40);
+    // どちらもない場合は入力をそのまま返す
+    if (struggling.length === 0 && allNew.length === 0) return questions;
+    if (allNew.length === 0) return struggling;
+    if (struggling.length === 0) return allNew;
 
-    if (isDevMode) {
+    if (GamificationAI.isVerboseDebug) {
       console.log(
-        `🎮 [GamificationAI] カテゴリ別インターリーブ: 苦手語${struggling.length}語（分からない+まだまだ）, Position引き上げ新規${boostedNew.length}語, その他${others.length}語`
+        `🎮 [GamificationAI] カテゴリ別インターリーブ: 苦手語${struggling.length}語, 新規語${allNew.length}語（引き上げ${boostedNew.length}語）`
       );
     }
 
-    // 苦手語も新規語もない場合は、元のリストを返す
-    if (struggling.length === 0 && boostedNew.length === 0) {
-      if (isDevMode)
-        console.log(
-          'ℹ️ [GamificationAI] インターリーブ対象なし（苦手語・Position引き上げ新規語ともに0）'
-        );
-      return questions;
-    }
+    // パターン: [苦手語4問, 新規1問]（≈20%新規）
+    const result: T[] = [];
+    let s = 0;
+    let n = 0;
 
-    // 苦手語のみの場合は、苦手語を先頭に配置
-    if (boostedNew.length === 0) {
-      if (isDevMode)
-        console.log('ℹ️ [GamificationAI] Position引き上げ新規語なし → 苦手語のみ優先配置');
-      return [...struggling, ...others];
-    }
-
-    // 新規語のみの場合は、新規語を先頭に配置
-    if (struggling.length === 0) {
-      if (isDevMode)
-        console.log('ℹ️ [GamificationAI] 苦手語なし → Position引き上げ新規語のみ優先配置');
-      return [...boostedNew, ...others];
-    }
-
-    // 交互配置パターン: [苦手語4問, 新規1問]（苦手語が主、新規が従）
-    const interleaved: T[] = [];
-    let strugIdx = 0;
-    let newIdx = 0;
-
-    while (strugIdx < struggling.length || newIdx < boostedNew.length) {
-      // 苦手語を4問追加（主）
-      const strugCount = Math.min(strugglingPerNew, struggling.length - strugIdx);
-      for (let i = 0; i < strugCount; i++) {
-        interleaved.push(struggling[strugIdx++]);
+    while (s < struggling.length || n < allNew.length) {
+      for (let i = 0; i < 4 && s < struggling.length; i++) {
+        result.push(struggling[s++]);
       }
-
-      // 新規語を1問追加（従）
-      if (newIdx < boostedNew.length) {
-        interleaved.push(boostedNew[newIdx++]);
+      if (n < allNew.length) {
+        result.push(allNew[n++]);
       }
-    }
-
-    // その他の問題を後ろに追加
-    const result = [...interleaved, ...others];
-
-    if (isDevMode) {
-      console.log(
-        `✅ [GamificationAI] インターリーブ完了: TOP10 = ${result
-          .slice(0, 10)
-          .map((q) => {
-            const word = q.question?.word || '?';
-            const category = (q.attempts ?? 0) > 0 ? '苦手' : '新規';
-            return `${word}(${category})`;
-          })
-          .join(', ')}`
-      );
+      if (s >= struggling.length && n >= allNew.length) break;
+      if (s >= struggling.length && n < allNew.length) {
+        // 苦手語が尽きた場合は新規を残り全て追加
+        while (n < allNew.length) result.push(allNew[n++]);
+      }
+      if (n >= allNew.length && s < struggling.length) {
+        // 新規が尽きた場合は苦手語を残り全て追加
+        while (s < struggling.length) result.push(struggling[s++]);
+      }
     }
 
     return result;

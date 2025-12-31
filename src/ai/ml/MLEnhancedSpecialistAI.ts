@@ -44,20 +44,30 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
   // 初期化警告の抑制フラグ
   private static initWarningShown: Set<string> = new Set();
 
+  // 重いログのスパム抑制（コンソールが埋まるのを防ぐ）
+  private static slowInferenceLastLogAt: Map<string, number> = new Map();
+  private static learningErrorLastLogAt: Map<string, number> = new Map();
+  private static disablePersonalWeightsPersistence: boolean = false;
+
   /**
    * ハイブリッド分析（ルールベース + ML）
+   * ⚡ パフォーマンス最適化: ML分析のスキップ条件を厳密化
    */
   async analyze(input: AIAnalysisInput): Promise<TSignal> {
     // 1. ルールベース分析（常に実行）
     const ruleSignal = this.analyzeByRules(input);
 
     // 2. ML分析（条件を満たす場合のみ）
-    if (this.canUseML(input)) {
+    // ⚡ 最適化: attempts < 50 の場合はML不要（データ不足）
+    const attempts = input.progress?.memorizationAttempts || input.progress?.totalAttempts || 0;
+    const skipML = attempts < 50;
+
+    if (!skipML && this.canUseML(input)) {
       try {
         const mlSignal = await this.analyzeByML(input);
         return this.mergeSignals(ruleSignal, mlSignal, input);
       } catch (error) {
-        logger.warn(`[${this.name}] ML analysis failed, using rules only`, error);
+        // エラーログは抑制（ルールベースで続行）
       }
     }
 
@@ -193,13 +203,33 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     }
 
     try {
+      // オンライン学習の頻度を抑制（体感パフォーマンス優先）
+      const now = Date.now();
+      if (this.mlState.lastTrainedAt && now - this.mlState.lastTrainedAt < 15_000) {
+        return;
+      }
+
       const features = this.extractFeatures(input);
-      const label = this.outcomeToLabel(outcome);
+      const label = this.normalizeLabelToOutputDim(this.outcomeToLabel(outcome));
+      const outputDim = this.getOutputDimension();
+
+      if (!Array.isArray(features) || features.length !== this.getFeatureDimension()) {
+        // 形が崩れている場合は学習しない（例外連打で重くなるのを防ぐ）
+        return;
+      }
+
+      if (label.length !== outputDim) {
+        // normalize で揃うはずだが、念のため防御
+        return;
+      }
+
+      const x = tf.tensor2d([features], [1, features.length]);
+      const y = tf.tensor2d([label], [1, outputDim]);
 
       // 1エポックのみ学習（オンライン学習）
       const history = await this.mlModel.fit(
-        tf.tensor2d([features]),
-        tf.tensor2d([label]),
+        x,
+        y,
         {
           epochs: 1,
           verbose: 0,
@@ -207,8 +237,11 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
         }
       );
 
+      x.dispose();
+      y.dispose();
+
       this.mlState.trainingCount++;
-      this.mlState.lastTrainedAt = Date.now();
+      this.mlState.lastTrainedAt = now;
 
       if (history.history.acc) {
         this.mlState.accuracy = history.history.acc[0] as number;
@@ -220,7 +253,13 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
         logger.debug(`[${this.name}] Weights saved (${this.mlState.trainingCount} trainings)`);
       }
     } catch (error) {
-      logger.error(`[${this.name}] Learning failed`, error);
+      // 形状不一致などは同じ例外が連打されやすいので、ログをレート制限
+      const now = Date.now();
+      const last = MLEnhancedSpecialistAI.learningErrorLastLogAt.get(this.id) ?? 0;
+      if (now - last > 10_000) {
+        MLEnhancedSpecialistAI.learningErrorLastLogAt.set(this.id, now);
+        logger.error(`[${this.name}] Learning failed`, error);
+      }
     }
   }
 
@@ -245,9 +284,17 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     // Week 5: 性能計測終了
     const inferenceTime = performance.now() - startTime;
 
-    // 50ms超えで警告（Week 5性能目標）
-    if (inferenceTime > 50 && import.meta.env.DEV) {
-      console.warn(`[${this.name}] Inference slow: ${inferenceTime.toFixed(2)}ms`);
+    // 推論が重い場合の警告（ただしスパム抑制）
+    if (import.meta.env.DEV) {
+      const thresholdMs = 150;
+      if (inferenceTime > thresholdMs) {
+        const now = Date.now();
+        const last = MLEnhancedSpecialistAI.slowInferenceLastLogAt.get(this.id) ?? 0;
+        if (now - last > 10_000) {
+          MLEnhancedSpecialistAI.slowInferenceLastLogAt.set(this.id, now);
+          console.warn(`[${this.name}] Inference slow: ${inferenceTime.toFixed(2)}ms`);
+        }
+      }
     }
 
     return {
@@ -276,15 +323,28 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     const progress = input.progress;
     if (!progress) return false;
 
-    // 最低10回の試行が必要
-    return (progress.memorizationAttempts ?? 0) >= 10;
+    // 最低30回の試行が必要（ML推論が重いため、十分なデータがある単語に限定）
+    return (progress.memorizationAttempts ?? 0) >= 30;
   }
 
   /**
    * 学習結果をラベルに変換
    */
   protected outcomeToLabel(outcome: MLLearningOutcome): number[] {
-    return [outcome.wasCorrect ? 0 : 1]; // 誤答確率
+    // デフォルト: 「誤答っぽさ」を出力次元に合わせて展開（形状不一致で学習が壊れるのを防ぐ）
+    const scalar = outcome.wasCorrect ? 0 : 1;
+    return Array(this.getOutputDimension()).fill(scalar);
+  }
+
+  private normalizeLabelToOutputDim(label: number[]): number[] {
+    const outputDim = this.getOutputDimension();
+    if (!Array.isArray(label)) return Array(outputDim).fill(0);
+    if (label.length === outputDim) return label;
+    if (label.length === 1) return Array(outputDim).fill(label[0] ?? 0);
+    if (label.length < outputDim) {
+      return [...label, ...Array(outputDim - label.length).fill(0)];
+    }
+    return label.slice(0, outputDim);
   }
 
   /**
@@ -309,6 +369,9 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
   protected async savePersonalWeights(): Promise<void> {
     if (!this.mlModel) return;
 
+    // localStorage の容量制限により、学習重みの保存が全体を壊すことがあるため抑制
+    if (MLEnhancedSpecialistAI.disablePersonalWeightsPersistence) return;
+
     try {
       const weights = this.mlModel.getWeights();
       const serialized = await this.serializeWeights(weights);
@@ -323,8 +386,25 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
         },
       };
 
-      localStorage.setItem(`ml-weights-${this.id}`, JSON.stringify(data));
+      const key = `ml-weights-${this.id}`;
+      const json = JSON.stringify(data);
+
+      // 1キーが大きすぎると他の保存（AdaptiveNetwork等）が QuotaExceeded で壊れる
+      // 目安: 200KB を超える場合は保存しない
+      if (json.length > 200_000) {
+        // 既存があれば削除して空きを作る
+        try {
+          localStorage.removeItem(key);
+        } catch {
+          // ignore
+        }
+        return;
+      }
+
+      localStorage.setItem(key, json);
     } catch (error) {
+      // QuotaExceeded は全体パフォーマンス/安定性に直結するため、以後の保存を止める
+      MLEnhancedSpecialistAI.disablePersonalWeightsPersistence = true;
       logger.error(`[${this.name}] Failed to save weights`, error);
     }
   }
@@ -336,6 +416,16 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     try {
       const saved = localStorage.getItem(`ml-weights-${this.id}`);
       if (!saved || !this.mlModel) return;
+
+      // 大きすぎる重みは読み込むだけで重く、またlocalStorageを圧迫するので破棄
+      if (saved.length > 200_000) {
+        try {
+          localStorage.removeItem(`ml-weights-${this.id}`);
+        } catch {
+          // ignore
+        }
+        return;
+      }
 
       const data: SerializedWeights = JSON.parse(saved);
       const weights = await this.deserializeWeights(data.weights);

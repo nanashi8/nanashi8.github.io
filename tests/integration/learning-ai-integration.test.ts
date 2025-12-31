@@ -323,7 +323,6 @@ describe('学習AI統合テスト', () => {
           mastered: 0,
           duration: 0,
         },
-        useMetaAI: true,
         isReviewFocusMode: false,
       });
 
@@ -423,7 +422,6 @@ describe('学習AI統合テスト', () => {
           mastered: 0,
           duration: 0,
         },
-        useMetaAI: true,
         isReviewFocusMode: false,
       });
 
@@ -521,7 +519,6 @@ describe('学習AI統合テスト', () => {
           mastered: 0,
           duration: 0,
         },
-        useMetaAI: true,
         isReviewFocusMode: false,
       });
 
@@ -695,7 +692,6 @@ describe('学習AI統合テスト', () => {
           mastered: 0,
           duration: 60000,
         },
-        useMetaAI: true,
         isReviewFocusMode: false,
       });
 
@@ -732,7 +728,6 @@ describe('学習AI統合テスト', () => {
           mastered: 0,
           duration: 0,
         },
-        useMetaAI: true,
         isReviewFocusMode: true, // 復習モード
       });
 
@@ -772,7 +767,6 @@ describe('学習AI統合テスト', () => {
         mode: 'memorization',
         limits: { learningLimit: 10, reviewLimit: 10 },
         sessionStats: { correct: 0, incorrect: 0, still_learning: 0, mastered: 0, duration: 0 },
-        useMetaAI: true,
         isReviewFocusMode: false,
       });
 
@@ -798,7 +792,6 @@ describe('学習AI統合テスト', () => {
         mode: 'memorization',
         limits: { learningLimit: 10, reviewLimit: 10 },
         sessionStats: { correct: 0, incorrect: 1, still_learning: 0, mastered: 0, duration: 1000 },
-        useMetaAI: true,
         isReviewFocusMode: false,
       });
 
