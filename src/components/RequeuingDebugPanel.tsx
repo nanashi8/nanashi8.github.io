@@ -180,12 +180,16 @@ export function RequeuingDebugPanel({
         '### ② 振動防止（DTA: Direct Time Adjustment）',
         '',
         '**直近10語にPosition -30ペナルティ**:',
-        ...(top30
+        ...top30
           .filter((item: any) => item.wasRecent)
           .slice(0, 10)
-          .map((item: any, i: number) => `${i + 1}. **${item.word}** - Position ${item.position.toFixed(0)} (ペナルティ後) → カテゴリ: ${item.category}`)
-          .concat(top30.filter((item: any) => item.wasRecent).length === 0 ? ['_(直近語なし)_'] : [])
-        ),
+          .map(
+            (item: any, i: number) =>
+              `${i + 1}. **${item.word}** - Position ${item.position.toFixed(0)} (ペナルティ後) → カテゴリ: ${item.category}`
+          )
+          .concat(
+            top30.filter((item: any) => item.wasRecent).length === 0 ? ['_(直近語なし)_'] : []
+          ),
         '',
         '⚠️ **重要**: ペナルティ後もカテゴリ帯の最低値（incorrect=70, still_learning=40, new=20）でクランプされ、カテゴリは維持されます。',
         '',
@@ -216,7 +220,14 @@ export function RequeuingDebugPanel({
         '| # | 単語 | Position | カテゴリ | 出題回数 | 直近語 |',
         '|---|------|----------|----------|----------|--------|',
         ...top30.map((item: any, i: number) => {
-          const catEmoji = item.category === 'incorrect' ? '🔴' : item.category === 'still_learning' ? '🟡' : item.category === 'new' ? '🔵' : '✅';
+          const catEmoji =
+            item.category === 'incorrect'
+              ? '🔴'
+              : item.category === 'still_learning'
+                ? '🟡'
+                : item.category === 'new'
+                  ? '🔵'
+                  : '✅';
           const recentMarker = item.wasRecent ? '⚠️' : '';
           return `| ${i + 1} | **${item.word}** | ${item.position.toFixed(0)} | ${catEmoji} ${item.category} | ${categorySlotsValue?.top30AttemptsMap?.[item.word] ?? '?'}回 | ${recentMarker} |`;
         }),
@@ -251,7 +262,9 @@ export function RequeuingDebugPanel({
         // デバッグ用にlocalStorageに保存されているか確認
         const saved = localStorage.getItem('debug_useCategorySlots');
         if (saved) return JSON.parse(saved);
-      } catch {}
+      } catch {
+        // ignore parse errors
+      }
       // デフォルトはtrue（現在のハードコード）
       return { enabled: true, source: 'hardcoded' };
     })();
@@ -2593,7 +2606,11 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
           )}
           <button
             onClick={() => {
-              if (confirm('LocalStorageをクリアして再読み込みしますか？\n古いキャッシュデータを完全に削除します。')) {
+              if (
+                confirm(
+                  'LocalStorageをクリアして再読み込みしますか？\n古いキャッシュデータを完全に削除します。'
+                )
+              ) {
                 localStorage.clear();
                 window.location.reload();
               }
@@ -2635,7 +2652,9 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
             return (
               <div className="bg-purple-50 p-3 rounded border-2 border-purple-300">
                 <div className="flex justify-between items-center mb-2">
-                  <p className="font-semibold text-purple-800">📸 解答直後スナップショット（最新10件）</p>
+                  <p className="font-semibold text-purple-800">
+                    📸 解答直後スナップショット（最新10件）
+                  </p>
                   <button
                     onClick={() => {
                       localStorage.removeItem('debug_answer_snapshots');
@@ -2653,8 +2672,8 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     const bgColor = isIncorrect
                       ? 'bg-red-100 border-red-300'
                       : isStillLearning
-                      ? 'bg-yellow-100 border-yellow-300'
-                      : 'bg-green-100 border-green-300';
+                        ? 'bg-yellow-100 border-yellow-300'
+                        : 'bg-green-100 border-green-300';
 
                     return (
                       <div key={idx} className={`p-2 rounded border ${bgColor} text-xs`}>
@@ -2801,8 +2820,9 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                 if (lastSeen.has(h.word)) {
                   const prevIdx = lastSeen.get(h.word)!;
                   const gap = idx - prevIdx;
-                  if (gap <= 10) { // 10問以内に再出題
-                    const existing = vibrations.find(v => v.word === h.word);
+                  if (gap <= 10) {
+                    // 10問以内に再出題
+                    const existing = vibrations.find((v) => v.word === h.word);
                     if (existing) {
                       existing.positions.push(idx);
                       existing.gap = Math.min(existing.gap, gap);
@@ -2821,7 +2841,8 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     <div className="mt-1 space-y-1 text-xs">
                       {vibrations.map((v, i) => (
                         <div key={i} className="text-red-700">
-                          <span className="font-semibold">{v.word}</span>: {v.gap}問後に再出題 (位置: {v.positions.join(', ')})
+                          <span className="font-semibold">{v.word}</span>: {v.gap}問後に再出題
+                          (位置: {v.positions.join(', ')})
                         </div>
                       ))}
                     </div>
@@ -2870,17 +2891,15 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                     <div key={idx} className="bg-white p-2 rounded shadow-sm text-xs">
                       <div className="flex justify-between items-center">
                         <div className="flex items-center gap-2">
-                          <span className="bg-gray-700 text-white px-2 py-0.5 rounded text-xs font-bold">#{actualIndex}</span>
+                          <span className="bg-gray-700 text-white px-2 py-0.5 rounded text-xs font-bold">
+                            #{actualIndex}
+                          </span>
                           <span className="font-semibold">{history.word}</span>
                         </div>
-                        <span className="text-gray-500">
-                          Pos: {history.position.toFixed(0)}
-                        </span>
+                        <span className="text-gray-500">Pos: {history.position.toFixed(0)}</span>
                       </div>
                       <div className="mt-1 flex gap-2">
-                        <span className={`px-2 py-0.5 rounded ${answerColor}`}>
-                          {answerLabel}
-                        </span>
+                        <span className={`px-2 py-0.5 rounded ${answerColor}`}>{answerLabel}</span>
                         <span>→</span>
                         <span className={`px-2 py-0.5 rounded ${countColor}`}>
                           {countLabel}にカウント

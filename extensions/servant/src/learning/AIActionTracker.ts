@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
+import { execSync } from 'child_process';
 
 /**
  * ワークフロー学習インターフェース（循環参照回避）
@@ -82,7 +83,7 @@ export class AIActionTracker {
   private static readonly DIAGNOSTIC_WEIGHTS = {
     ERROR: 10,
     WARNING: 1,
-    INFO: 0.1
+    INFO: 0.1,
   };
 
   constructor(workspaceRoot: string) {
@@ -123,7 +124,7 @@ export class AIActionTracker {
 
     return {
       actions: [],
-      lastUpdated: new Date().toISOString()
+      lastUpdated: new Date().toISOString(),
     };
   }
 
@@ -192,7 +193,7 @@ export class AIActionTracker {
     }
 
     this.idleTimer = setTimeout(() => {
-      this.autoEndCurrentAction().catch(err => {
+      this.autoEndCurrentAction().catch((err) => {
         console.error('[AIActionTracker] Auto endAction failed:', err);
       });
     }, AIActionTracker.AUTO_END_IDLE_MS);
@@ -283,7 +284,7 @@ export class AIActionTracker {
       linesDeleted: 0,
       success: false,
       compileErrors: 0,
-      violations: 0
+      violations: 0,
     };
 
     this.changedFilesSinceLastSave.clear();
@@ -324,8 +325,12 @@ export class AIActionTracker {
     await this.saveLog();
 
     console.log(`🤖 [AIActionTracker] Ended action: ${this.currentAction.id}`);
-    console.log(`   Files: ${this.currentAction.changedFiles.length}, +${linesAdded}/-${linesDeleted}`);
-    console.log(`   Success: ${options.success}, Errors: ${options.compileErrors}, Violations: ${options.violations}`);
+    console.log(
+      `   Files: ${this.currentAction.changedFiles.length}, +${linesAdded}/-${linesDeleted}`
+    );
+    console.log(
+      `   Success: ${options.success}, Errors: ${options.compileErrors}, Violations: ${options.violations}`
+    );
 
     this.currentAction = null;
     this.changedFilesSinceLastSave.clear();
@@ -369,7 +374,6 @@ export class AIActionTracker {
     }
 
     try {
-      const { execSync } = require('child_process');
       const workspaceRoot = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
       if (!workspaceRoot) {
         return { linesAdded: 0, linesDeleted: 0 };
@@ -379,7 +383,7 @@ export class AIActionTracker {
       const output = execSync('git diff --shortstat HEAD', {
         cwd: workspaceRoot,
         encoding: 'utf-8',
-        timeout: 5000
+        timeout: 5000,
       }).trim();
 
       // 出力例: " 3 files changed, 45 insertions(+), 12 deletions(-)"
@@ -395,7 +399,7 @@ export class AIActionTracker {
       const estimatedLines = files.length * 10;
       return {
         linesAdded: estimatedLines,
-        linesDeleted: Math.floor(estimatedLines * 0.3)
+        linesDeleted: Math.floor(estimatedLines * 0.3),
       };
     }
   }
@@ -408,11 +412,9 @@ export class AIActionTracker {
     branchName?: string;
     files?: string[];
   }): AIAction['type'] {
-    const text = [
-      context.commitMessage || '',
-      context.branchName || '',
-      ...(context.files || [])
-    ].join(' ').toLowerCase();
+    const text = [context.commitMessage || '', context.branchName || '', ...(context.files || [])]
+      .join(' ')
+      .toLowerCase();
 
     if (text.includes('fix') || text.includes('bug')) {
       return 'bug-fix';
@@ -455,16 +457,16 @@ export class AIActionTracker {
         avgCompileErrors: 0,
         typeDistribution: {
           'bug-fix': 0,
-          'feature': 0,
-          'refactor': 0,
-          'test': 0,
-          'docs': 0,
-          'unknown': 0
-        }
+          feature: 0,
+          refactor: 0,
+          test: 0,
+          docs: 0,
+          unknown: 0,
+        },
       };
     }
 
-    const successCount = this.log.actions.filter(a => a.success).length;
+    const successCount = this.log.actions.filter((a) => a.success).length;
     const totalLines = this.log.actions.reduce((sum, a) => sum + a.linesAdded, 0);
     const totalDeleted = this.log.actions.reduce((sum, a) => sum + a.linesDeleted, 0);
     const totalViolations = this.log.actions.reduce((sum, a) => sum + a.violations, 0);
@@ -472,14 +474,14 @@ export class AIActionTracker {
 
     const typeDistribution: Record<AIAction['type'], number> = {
       'bug-fix': 0,
-      'feature': 0,
-      'refactor': 0,
-      'test': 0,
-      'docs': 0,
-      'unknown': 0
+      feature: 0,
+      refactor: 0,
+      test: 0,
+      docs: 0,
+      unknown: 0,
     };
 
-    this.log.actions.forEach(action => {
+    this.log.actions.forEach((action) => {
       typeDistribution[action.type]++;
     });
 
@@ -490,7 +492,7 @@ export class AIActionTracker {
       avgLinesDeleted: totalDeleted / this.log.actions.length,
       avgViolations: totalViolations / this.log.actions.length,
       avgCompileErrors: totalErrors / this.log.actions.length,
-      typeDistribution
+      typeDistribution,
     };
   }
 
@@ -514,7 +516,7 @@ export class AIActionTracker {
   async reset(): Promise<void> {
     this.log = {
       actions: [],
-      lastUpdated: new Date().toISOString()
+      lastUpdated: new Date().toISOString(),
     };
     await this.saveLog();
     console.log('🤖 [AIActionTracker] Reset all actions');

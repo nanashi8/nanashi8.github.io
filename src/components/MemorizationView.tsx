@@ -80,7 +80,9 @@ function MemorizationView({
         'debug_useCategorySlots',
         JSON.stringify({ enabled: useCategorySlots, source: 'hardcoded', timestamp: Date.now() })
       );
-    } catch {}
+    } catch {
+      // ignore storage errors
+    }
   }, [useCategorySlots]);
 
   // 学習設定
@@ -327,7 +329,12 @@ function MemorizationView({
 
     // 🐛 DEBUG: sessionStats更新を記録
     if (import.meta.env.DEV && localStorage.getItem('debug-verbose') === 'true') {
-      console.log('🔄 [Ref更新] currentIndex:', currentIndex, 'currentQuestion:', currentQuestion?.word);
+      console.log(
+        '🔄 [Ref更新] currentIndex:',
+        currentIndex,
+        'currentQuestion:',
+        currentQuestion?.word
+      );
     }
   }, [currentIndex, currentQuestion?.word, sessionStats]);
 
@@ -385,38 +392,34 @@ function MemorizationView({
     minOffset: number;
   } | null>(null);
 
-  const ensureRequeueSlots = useCallback(
-    (currentIndex: number, questionsLength: number) => {
-      const lookahead = 30;
-      const minOffset = 3;
-      const ratio =
-        requeueSlotsMetaRef.current?.ratio ?? (0.15 + Math.random() * (0.30 - 0.15));
+  const ensureRequeueSlots = useCallback((currentIndex: number, questionsLength: number) => {
+    const lookahead = 30;
+    const minOffset = 3;
+    const ratio = requeueSlotsMetaRef.current?.ratio ?? 0.15 + Math.random() * (0.3 - 0.15);
 
-      const windowEnd = Math.min(currentIndex + lookahead, questionsLength);
-      const candidateStart = Math.min(currentIndex + minOffset, windowEnd);
+    const windowEnd = Math.min(currentIndex + lookahead, questionsLength);
+    const candidateStart = Math.min(currentIndex + minOffset, windowEnd);
 
-      const candidates: number[] = [];
-      for (let i = candidateStart; i <= windowEnd; i++) candidates.push(i);
-      if (candidates.length === 0) {
-        requeueSlotsRef.current = [];
-        requeueSlotsMetaRef.current = { ratio, lookahead, minOffset };
-        return;
-      }
-
-      const desiredCount = Math.max(1, Math.round(candidates.length * ratio));
-      const targetCount = Math.min(desiredCount, candidates.length);
-
-      const picked = new Set<number>();
-      while (picked.size < targetCount) {
-        const idx = candidates[Math.floor(Math.random() * candidates.length)];
-        picked.add(idx);
-      }
-
-      requeueSlotsRef.current = Array.from(picked).sort((a, b) => a - b);
+    const candidates: number[] = [];
+    for (let i = candidateStart; i <= windowEnd; i++) candidates.push(i);
+    if (candidates.length === 0) {
+      requeueSlotsRef.current = [];
       requeueSlotsMetaRef.current = { ratio, lookahead, minOffset };
-    },
-    []
-  );
+      return;
+    }
+
+    const desiredCount = Math.max(1, Math.round(candidates.length * ratio));
+    const targetCount = Math.min(desiredCount, candidates.length);
+
+    const picked = new Set<number>();
+    while (picked.size < targetCount) {
+      const idx = candidates[Math.floor(Math.random() * candidates.length)];
+      picked.add(idx);
+    }
+
+    requeueSlotsRef.current = Array.from(picked).sort((a, b) => a - b);
+    requeueSlotsMetaRef.current = { ratio, lookahead, minOffset };
+  }, []);
 
   const claimRequeueSlotIndex = useCallback(
     (currentIndex: number, questionsLength: number): number | null => {
@@ -486,7 +489,10 @@ function MemorizationView({
 
   // ✅ 解答後にlocalStorageから統計を再計算（正確な分からない/まだまだカウント）
   // ⚡ パフォーマンス最適化: 5秒間キャッシュ、デバッグログはフラグで制御
-  const statsCache = useRef<{ data: ReturnType<typeof calculateSessionStats>; timestamp: number } | null>(null);
+  const statsCache = useRef<{
+    data: ReturnType<typeof calculateSessionStats>;
+    timestamp: number;
+  } | null>(null);
 
   useEffect(() => {
     if (lastAnswerTime === 0) return; // 初回スキップ
@@ -676,22 +682,34 @@ function MemorizationView({
       const changes: string[] = [];
 
       if (prevDepsRef.current.selectedDifficulty !== selectedDifficulty) {
-        changes.push(`selectedDifficulty: ${prevDepsRef.current.selectedDifficulty} → ${selectedDifficulty}`);
+        changes.push(
+          `selectedDifficulty: ${prevDepsRef.current.selectedDifficulty} → ${selectedDifficulty}`
+        );
       }
       if (prevDepsRef.current.selectedCategory !== selectedCategory) {
-        changes.push(`selectedCategory: ${prevDepsRef.current.selectedCategory} → ${selectedCategory}`);
+        changes.push(
+          `selectedCategory: ${prevDepsRef.current.selectedCategory} → ${selectedCategory}`
+        );
       }
       if (prevDepsRef.current.selectedWordPhraseFilter !== selectedWordPhraseFilter) {
-        changes.push(`selectedWordPhraseFilter: ${prevDepsRef.current.selectedWordPhraseFilter} → ${selectedWordPhraseFilter}`);
+        changes.push(
+          `selectedWordPhraseFilter: ${prevDepsRef.current.selectedWordPhraseFilter} → ${selectedWordPhraseFilter}`
+        );
       }
       if (prevDepsRef.current.selectedDataSource !== selectedDataSource) {
-        changes.push(`selectedDataSource: ${prevDepsRef.current.selectedDataSource} → ${selectedDataSource}`);
+        changes.push(
+          `selectedDataSource: ${prevDepsRef.current.selectedDataSource} → ${selectedDataSource}`
+        );
       }
       if (prevDepsRef.current.allQuestionsCount !== allQuestions.length) {
-        changes.push(`allQuestionsCount: ${prevDepsRef.current.allQuestionsCount} → ${allQuestions.length}`);
+        changes.push(
+          `allQuestionsCount: ${prevDepsRef.current.allQuestionsCount} → ${allQuestions.length}`
+        );
       }
       if (prevDepsRef.current.isReviewFocusMode !== isReviewFocusMode) {
-        changes.push(`isReviewFocusMode: ${prevDepsRef.current.isReviewFocusMode} → ${isReviewFocusMode}`);
+        changes.push(
+          `isReviewFocusMode: ${prevDepsRef.current.isReviewFocusMode} → ${isReviewFocusMode}`
+        );
       }
 
       console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
@@ -700,7 +718,7 @@ function MemorizationView({
 
       if (changes.length > 0) {
         console.log(`🔍 変更された依存配列:`);
-        changes.forEach(change => console.log(`   - ${change}`));
+        changes.forEach((change) => console.log(`   - ${change}`));
       } else {
         console.log(`⚠️  変更なし（初回実行またはReact再マウント）`);
       }
@@ -1015,9 +1033,13 @@ function MemorizationView({
           const uniqueWords = new Set(allWords);
           if (allWords.length !== uniqueWords.size) {
             const duplicates = allWords.filter((word, index) => allWords.indexOf(word) !== index);
-            console.error(`🚨 [MemorizationView] スケジューラーバッチに重複語あり（非連続）: ${[...new Set(duplicates)].join(', ')}`);
+            console.error(
+              `🚨 [MemorizationView] スケジューラーバッチに重複語あり（非連続）: ${[...new Set(duplicates)].join(', ')}`
+            );
           } else {
-            console.log(`✅ [MemorizationView] スケジューラーバッチ検証成功（${sortedQuestions.length}問、全ユニーク）`);
+            console.log(
+              `✅ [MemorizationView] スケジューラーバッチ検証成功（${sortedQuestions.length}問、全ユニーク）`
+            );
           }
         }
 
@@ -1289,7 +1311,9 @@ function MemorizationView({
     // バッチ完全消化後、次のバッチ生成時に最新のPosition情報を反映
     if (useCategorySlots) {
       if (needsRescheduling && import.meta.env.DEV) {
-        console.log('⏸️ [バッチ方式] バッチ途中の再スケジューリング要求を保留（次のバッチ生成時に反映）');
+        console.log(
+          '⏸️ [バッチ方式] バッチ途中の再スケジューリング要求を保留（次のバッチ生成時に反映）'
+        );
       }
       return;
     }
@@ -1657,7 +1681,11 @@ function MemorizationView({
       // 📊 デバッグパネル用: 回答履歴を記録
       // ✅ 修正: 押したボタンに基づいて直接カウント（Position判定に依存しない）
       const answerType = isCorrect ? 'correct' : isStillLearning ? 'still_learning' : 'incorrect';
-      const countedCategory = isCorrect ? 'mastered' : isStillLearning ? 'still_learning' : 'incorrect';
+      const countedCategory = isCorrect
+        ? 'mastered'
+        : isStillLearning
+          ? 'still_learning'
+          : 'incorrect';
       setAnswerHistory((prev) => [
         ...prev,
         {
@@ -1733,7 +1761,11 @@ function MemorizationView({
                 const answerSnapshot = {
                   timestamp: new Date().toISOString(),
                   word: answeredQuestion.word,
-                  answerType: isCorrect ? 'correct' : isStillLearning ? 'still_learning' : 'incorrect',
+                  answerType: isCorrect
+                    ? 'correct'
+                    : isStillLearning
+                      ? 'still_learning'
+                      : 'incorrect',
                   positionBefore: (answeredQuestion as any).position,
                   positionAfter: posAfter,
                   categoryBefore,
@@ -2112,7 +2144,9 @@ function MemorizationView({
           }
 
           if (safeIndex < questionsForNextIndex.length) {
-            console.log(`✅ [振動修正] ${safeIndex}番目へ強制移動: ${questionsForNextIndex[safeIndex].word}`);
+            console.log(
+              `✅ [振動修正] ${safeIndex}番目へ強制移動: ${questionsForNextIndex[safeIndex].word}`
+            );
             nextIndex = safeIndex;
           } else {
             console.error('❌ [振動修正失敗] これ以上スキップできません');

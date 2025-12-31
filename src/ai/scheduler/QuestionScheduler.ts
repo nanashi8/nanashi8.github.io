@@ -188,7 +188,8 @@ export class QuestionScheduler {
       const existing = JSON.parse(localStorage.getItem('debug_scheduler_calls') || '[]');
       existing.push(debugInfo);
       if (existing.length > 10) existing.shift(); // 最新10件のみ保持
-      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_scheduler_calls', JSON.stringify(existing));
+      if (QuestionScheduler.isVerboseDebug)
+        localStorage.setItem('debug_scheduler_calls', JSON.stringify(existing));
     } catch {
       // ignore
     }
@@ -235,11 +236,17 @@ export class QuestionScheduler {
         });
         return result;
       } catch (error) {
-        console.error('❌ [QuestionScheduler] カテゴリースロット方式でエラーが発生しました:', error);
-        logger.warn('[QuestionScheduler] カテゴリースロット方式に失敗したためフォールバックします', {
-          mode: params.mode,
-          error: String(error),
-        });
+        console.error(
+          '❌ [QuestionScheduler] カテゴリースロット方式でエラーが発生しました:',
+          error
+        );
+        logger.warn(
+          '[QuestionScheduler] カテゴリースロット方式に失敗したためフォールバックします',
+          {
+            mode: params.mode,
+            error: String(error),
+          }
+        );
         // 続行して通常のメタAI経路へ
       }
     }
@@ -322,7 +329,9 @@ export class QuestionScheduler {
       console.error(
         '🚨 [QuestionScheduler] CRITICAL: postProcess()がsortAndBalance()の順序を破壊しました！',
         {
-          sortedTop10: sorted.slice(0, 10).map((pq) => ({ word: pq.question.word, pos: pq.position })),
+          sortedTop10: sorted
+            .slice(0, 10)
+            .map((pq) => ({ word: pq.question.word, pos: pq.position })),
           questionsTop10: questions.slice(0, 10).map((q) => ({
             word: q.word,
             pos: sorted.find((pq) => pq.question.word === q.word)?.position ?? 0,
@@ -356,7 +365,8 @@ export class QuestionScheduler {
         ...resultDebug,
       });
       if (existing.length > 10) existing.shift();
-      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_scheduler_results', JSON.stringify(existing));
+      if (QuestionScheduler.isVerboseDebug)
+        localStorage.setItem('debug_scheduler_results', JSON.stringify(existing));
     } catch {
       // ignore
     }
@@ -801,7 +811,10 @@ export class QuestionScheduler {
         // legacy
         localStorage.setItem('debug_position_hierarchy_validation', JSON.stringify(snapshot));
         // by-mode
-        localStorage.setItem(`debug_position_hierarchy_validation_${mode}`, JSON.stringify(snapshot));
+        localStorage.setItem(
+          `debug_position_hierarchy_validation_${mode}`,
+          JSON.stringify(snapshot)
+        );
       } catch {
         // localStorage失敗は無視
       }
@@ -947,7 +960,8 @@ export class QuestionScheduler {
       });
       // 最新30件のみ保持
       if (logs.length > 30) logs.shift();
-      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_function_calls', JSON.stringify(logs));
+      if (QuestionScheduler.isVerboseDebug)
+        localStorage.setItem('debug_function_calls', JSON.stringify(logs));
     } catch {
       // localStorage失敗は無視
     }
@@ -1336,7 +1350,8 @@ export class QuestionScheduler {
         category: pq.status?.category,
         attempts: pq.attempts ?? pq.status?.attempts ?? 0,
       }));
-      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_sortAndBalance_output', JSON.stringify(top30));
+      if (QuestionScheduler.isVerboseDebug)
+        localStorage.setItem('debug_sortAndBalance_output', JSON.stringify(top30));
 
       // 📊 追加: TOP100も保存して、まだまだ語が何位にいるか確認
       const top100 = interleaved.slice(0, 100).map((pq, idx) => ({
@@ -1379,7 +1394,8 @@ export class QuestionScheduler {
           stillLearningWordsInTop600: stillLearningInTop600
             .slice(0, 20)
             .map(
-              (item) => `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`
+              (item) =>
+                `${item.rank}位: ${item.word} (Position ${item.position}, ${item.attempts}回)`
             ),
           position50Count: top600.filter((item) => item.position === 50 && item.attempts === 0)
             .length,
@@ -2350,7 +2366,8 @@ export class QuestionScheduler {
       logs.push(answerLog);
       // 最新20件のみ保持
       if (logs.length > 20) logs.shift();
-      if (QuestionScheduler.isVerboseDebug) localStorage.setItem('debug_answer_logs', JSON.stringify(logs));
+      if (QuestionScheduler.isVerboseDebug)
+        localStorage.setItem('debug_answer_logs', JSON.stringify(logs));
     } catch {
       // localStorage失敗は無視
     }
@@ -2637,14 +2654,10 @@ export class QuestionScheduler {
     };
 
     // 1. グループ分け + シャッフル（各グループ内でランダム化）
-    const newWords = shuffle(
-      sorted.filter((pq) => (pq.attempts ?? 0) === 0 && pq.position >= 20)
-    );
+    const newWords = shuffle(sorted.filter((pq) => (pq.attempts ?? 0) === 0 && pq.position >= 20));
     const incorrect = shuffle(sorted.filter((pq) => pq.position >= 70));
     const stillLearning = shuffle(
-      sorted.filter(
-        (pq) => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0
-      )
+      sorted.filter((pq) => pq.position >= 40 && pq.position < 70 && (pq.attempts ?? 0) > 0)
     );
     const mastered = shuffle(sorted.filter((pq) => pq.position < 20));
 
@@ -2757,9 +2770,7 @@ export class QuestionScheduler {
       category: 'incorrect' | 'still_learning' | 'new' | 'mastered';
     };
 
-    const minPositionForCategory = (
-      category: Classified['category']
-    ): number => {
+    const minPositionForCategory = (category: Classified['category']): number => {
       switch (category) {
         case 'incorrect':
           return 70;
@@ -2827,7 +2838,6 @@ export class QuestionScheduler {
     const applyChainLearning = (items: Classified[]): Classified[] => {
       if (!params.useChainLearning || items.length <= 2) return items;
 
-      const { getStrengthLookupForScheduling } = require('@/ai/utils/vocabularyNetwork');
       const lookup = getStrengthLookupForScheduling(params.questions);
       const getStrength = (a: string, b: string): number => {
         const s1 = lookup.get(a)?.get(b) ?? 0;
@@ -2890,16 +2900,24 @@ export class QuestionScheduler {
 
     const processedSlots: Record<string, Classified[]> = {
       incorrect: applyChainLearning(
-        dedupeByWord(byCategory.incorrect.slice(0, slots.incorrect).sort((a, b) => b.position - a.position))
+        dedupeByWord(
+          byCategory.incorrect.slice(0, slots.incorrect).sort((a, b) => b.position - a.position)
+        )
       ),
       still_learning: applyChainLearning(
-        dedupeByWord(byCategory.still_learning.slice(0, slots.still_learning).sort((a, b) => b.position - a.position))
+        dedupeByWord(
+          byCategory.still_learning
+            .slice(0, slots.still_learning)
+            .sort((a, b) => b.position - a.position)
+        )
       ),
       new: applyChainLearning(
         dedupeByWord(byCategory.new.slice(0, slots.new).sort((a, b) => b.position - a.position))
       ),
       mastered: applyChainLearning(
-        dedupeByWord(byCategory.mastered.slice(0, slots.mastered).sort((a, b) => b.position - a.position))
+        dedupeByWord(
+          byCategory.mastered.slice(0, slots.mastered).sort((a, b) => b.position - a.position)
+        )
       ),
     };
 
@@ -2907,9 +2925,7 @@ export class QuestionScheduler {
     // 🛡️ 実行時検証: still_learning語がPosition 60-69範囲内か
     if (import.meta.env.DEV) {
       const stillLearning = processedSlots.still_learning || [];
-      const violations = stillLearning.filter(
-        (c) => c.position < 40 || c.position >= 70
-      );
+      const violations = stillLearning.filter((c) => c.position < 40 || c.position >= 70);
       if (violations.length > 0) {
         console.error('🚨 Position階層違反（まだまだ語）:', violations);
         logger.error('[QuestionScheduler] Position階層違反', {
@@ -2921,9 +2937,7 @@ export class QuestionScheduler {
           })),
         });
         // DEVモードでは例外をthrow（問題を早期検知）
-        throw new Error(
-          `Position階層違反: まだまだ語が40-69範囲外（${violations.length}語）`
-        );
+        throw new Error(`Position階層違反: まだまだ語が40-69範囲外（${violations.length}語）`);
       }
     }
 
