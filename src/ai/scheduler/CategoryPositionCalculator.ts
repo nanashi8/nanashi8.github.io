@@ -30,7 +30,10 @@ export interface CategoryPositionOptions {
 }
 
 export class CategoryPositionCalculator {
-  private calculatorCache: Map<'memorization' | 'translation' | 'spelling' | 'grammar', PositionCalculator>;
+  private calculatorCache: Map<
+    'memorization' | 'translation' | 'spelling' | 'grammar',
+    PositionCalculator
+  >;
 
   constructor(options?: CategoryPositionOptions) {
     this.calculatorCache = new Map();
@@ -123,7 +126,9 @@ export class CategoryPositionCalculator {
     });
 
     // Position降順でソート
-    return wordPositions.sort((a, b) => b.position.positionInCategory - a.position.positionInCategory);
+    return wordPositions.sort(
+      (a, b) => b.position.positionInCategory - a.position.positionInCategory
+    );
   }
 
   /**
@@ -202,7 +207,8 @@ export class CategoryPositionCalculator {
    * - userDifficultyRating(1-3) の「難しい」を+2程度
    */
   private calculateMetadataBonus(wordProgress: WordProgress): number {
-    const difficultyScore = typeof wordProgress.difficultyScore === 'number' ? wordProgress.difficultyScore : 0;
+    const difficultyScore =
+      typeof wordProgress.difficultyScore === 'number' ? wordProgress.difficultyScore : 0;
     const difficultyBonus = Math.round((Math.max(0, Math.min(100, difficultyScore)) / 100) * 10);
 
     const rating = wordProgress.userDifficultyRating;
@@ -214,12 +220,13 @@ export class CategoryPositionCalculator {
   /**
    * 新規語のPosition計算
    *
-   * 基本Positionのまま（バッチ順など）
+   * ランダム化により出題順序をシャッフル
    */
   private calculateNewPosition(_wordProgress: WordProgress, basePosition: number): number {
-    // 新規語は基本Positionをそのまま使用
-    // バッチ順序やAICoordinatorの推奨を尊重
-    return basePosition;
+    // 新規語は基本Positionにランダム要素を追加してシャッフル
+    // ±10のランダム値を加算することで、ABC順を崩す
+    const randomOffset = Math.random() * 20 - 10; // -10 ~ +10
+    return basePosition + randomOffset;
   }
 
   /**
