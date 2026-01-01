@@ -428,8 +428,6 @@ function ScoreBoard({
     return saved ? parseInt(saved) : 20; // デフォルト20%
   });
 
-  const [showPlanSettings, setShowPlanSettings] = useState(false);
-
   // 和訳・スペル・文法タブ用: 上限達成時に自動的に復習モードをオンにする
   useEffect(() => {
     if (
@@ -834,18 +832,6 @@ function ScoreBoard({
                           ? '発展'
                           : difficulty}
                 </span>
-                {(mode === 'translation' || mode === 'spelling' || mode === 'memorization') && (
-                  <>
-                    <span className="stat-text-divider">｜</span>
-                    <button
-                      onClick={() => setShowPlanSettings(true)}
-                      className="stat-text-label cursor-pointer hover:text-primary transition-colors"
-                      title="出題繰り返し設定"
-                    >
-                      ⚙️ 上限設定
-                    </button>
-                  </>
-                )}
                 {wordPhraseFilter && (
                   <>
                     <span className="stat-text-divider">｜</span>
@@ -921,166 +907,6 @@ function ScoreBoard({
                   </>
                 )}
               </div>
-              {showPlanSettings && (mode === 'translation' || mode === 'spelling') && (
-                <div className="plan-settings-modal">
-                  <div className="plan-settings-content">
-                    <h4>🎯 出題繰り返し設定</h4>
-                    <p className="plan-settings-description">0を選択すると無制限に出題します</p>
-                    <div className="plan-setting-item">
-                      <label>学習中の語数上限:</label>
-                      <select
-                        aria-label="学習中の語数上限"
-                        value={learningLimit || 0}
-                        onChange={(e) => {
-                          const value = parseInt(e.target.value);
-                          const finalValue = value === 0 ? null : value;
-                          setLearningLimit(finalValue);
-                          if (finalValue === null) {
-                            localStorage.removeItem(`learning-limit-${mode}`);
-                          } else {
-                            localStorage.setItem(`learning-limit-${mode}`, finalValue.toString());
-                          }
-                        }}
-                        className="select-input"
-                      >
-                        <option value={0}>設定無し</option>
-                        <option value={5}>5</option>
-                        <option value={10}>10</option>
-                        <option value={20}>20</option>
-                        <option value={30}>30</option>
-                        <option value={50}>50</option>
-                        <option value={100}>100</option>
-                        <option value={150}>150</option>
-                        <option value={200}>200</option>
-                      </select>
-                      <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
-                    </div>
-                    <div className="plan-setting-item">
-                      <label>要復習の語数上限:</label>
-                      <select
-                        aria-label="要復習の語数上限"
-                        value={reviewLimit || 0}
-                        onChange={(e) => {
-                          const value = parseInt(e.target.value);
-                          const finalValue = value === 0 ? null : value;
-                          setReviewLimit(finalValue);
-                          if (finalValue === null) {
-                            localStorage.removeItem(`review-limit-${mode}`);
-                          } else {
-                            localStorage.setItem(`review-limit-${mode}`, finalValue.toString());
-                          }
-                        }}
-                        className="select-input"
-                      >
-                        <option value={0}>設定無し</option>
-                        <option value={5}>5</option>
-                        <option value={10}>10</option>
-                        <option value={20}>20</option>
-                        <option value={30}>30</option>
-                        <option value={50}>50</option>
-                        <option value={100}>100</option>
-                        <option value={150}>150</option>
-                        <option value={200}>200</option>
-                      </select>
-                      <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
-                    </div>
-                    <button
-                      className="plan-settings-close"
-                      onClick={() => setShowPlanSettings(false)}
-                    >
-                      閉じる
-                    </button>
-                  </div>
-                </div>
-              )}
-              {showPlanSettings && mode === 'memorization' && (
-                <div className="plan-settings-modal">
-                  <div className="plan-settings-content">
-                    <h4>🎯 バッチ数設定</h4>
-                    <p className="plan-settings-description">
-                      バッチ数内でカテゴリー別に出題されます
-                    </p>
-                    <div className="plan-setting-item">
-                      <label>バッチ数:</label>
-                      <select
-                        aria-label="バッチ数"
-                        value={batchSize || 0}
-                        onChange={(e) => {
-                          const value = parseInt(e.target.value);
-                          const finalValue = value === 0 ? null : value;
-                          setBatchSize(finalValue);
-                          if (finalValue === null) {
-                            localStorage.removeItem('memorization-batch-size');
-                          } else {
-                            localStorage.setItem('memorization-batch-size', finalValue.toString());
-                          }
-                        }}
-                        className="select-input"
-                      >
-                        <option value={0}>設定無し</option>
-                        <option value={10}>10</option>
-                        <option value={20}>20</option>
-                        <option value={30}>30</option>
-                        <option value={50}>50</option>
-                        <option value={75}>75</option>
-                        <option value={100}>100</option>
-                        <option value={150}>150</option>
-                        <option value={200}>200</option>
-                        <option value={300}>300</option>
-                        <option value={500}>500</option>
-                      </select>
-                      <p className="setting-help">
-                        1回の学習で出題される語数（設定無しの場合は全語出題）
-                      </p>
-                    </div>
-                    <div className="plan-setting-item">
-                      <label>分からない・まだまだの上限:</label>
-                      <select
-                        aria-label="分からない・まだまだの上限"
-                        value={reviewRatioLimit || 20}
-                        onChange={(e) => {
-                          const value = parseInt(e.target.value);
-                          setReviewRatioLimit(value);
-                          localStorage.setItem('memorization-review-ratio-limit', value.toString());
-                        }}
-                        className="select-input"
-                      >
-                        <option value={10}>10%</option>
-                        <option value={20}>20%</option>
-                        <option value={30}>30%</option>
-                        <option value={40}>40%</option>
-                        <option value={50}>50%</option>
-                      </select>
-                      <p className="setting-help">
-                        バッチ内の分からない・まだまだの合計上限（上限到達で40%に増加、未出題30%に抑制）
-                      </p>
-                    </div>
-                    <p className="plan-settings-info">
-                      📊 カテゴリー別配分（基本）:
-                      <br />
-                      • 分からない: 20%
-                      <br />
-                      • まだまだ: 20%
-                      <br />
-                      • 覚えてる: 10%
-                      <br />
-                      • 未出題: 50%
-                      <br />
-                      <br />
-                      ⚠️ 上限到達時:
-                      <br />
-                      • 分からない・まだまだ: 40%
-                      <br />• 未出題: 30%
-                    </p>
-                    <button
-                      className="plan-settings-close"
-                      onClick={() => setShowPlanSettings(false)}
-                    >
-                      閉じる
-                    </button>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -1483,9 +1309,146 @@ function ScoreBoard({
         <div className="score-board-content">
           <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="settings-tab-container">
-              <div className="word-detail-empty">
-                <p>このタブの設定は学習設定パネルから行えます</p>
-              </div>
+              <h3 className="text-lg font-bold mb-4">⚙️ 出題設定</h3>
+
+              {/* 暗記タブ用設定 */}
+              {mode === 'memorization' && (
+                <div className="settings-section">
+                  <h4 className="font-bold mb-2">🎯 暗記モード - バッチ数設定</h4>
+                  <p className="text-sm text-gray-600 mb-3">
+                    バッチ数内でカテゴリー別に出題されます
+                  </p>
+
+                  <div className="plan-setting-item mb-4">
+                    <label>バッチ数:</label>
+                    <select
+                      aria-label="バッチ数"
+                      value={batchSize || 0}
+                      onChange={(e) => {
+                        const value = parseInt(e.target.value);
+                        const finalValue = value === 0 ? null : value;
+                        setBatchSize(finalValue);
+                        if (finalValue === null) {
+                          localStorage.removeItem('memorization-batch-size');
+                        } else {
+                          localStorage.setItem('memorization-batch-size', finalValue.toString());
+                        }
+                      }}
+                      className="select-input"
+                    >
+                      <option value={0}>設定無し</option>
+                      <option value={10}>10</option>
+                      <option value={20}>20</option>
+                      <option value={30}>30</option>
+                      <option value={50}>50</option>
+                      <option value={75}>75</option>
+                      <option value={100}>100</option>
+                      <option value={150}>150</option>
+                      <option value={200}>200</option>
+                      <option value={300}>300</option>
+                      <option value={500}>500</option>
+                    </select>
+                    <p className="setting-help">
+                      1回の学習で出題される語数（設定無しの場合は全語出題）
+                    </p>
+                  </div>
+
+                  <div className="plan-setting-item mb-4">
+                    <label>分からない・まだまだの上限:</label>
+                    <select
+                      aria-label="分からない・まだまだの上限"
+                      value={reviewRatioLimit || 20}
+                      onChange={(e) => {
+                        const value = parseInt(e.target.value);
+                        setReviewRatioLimit(value);
+                        localStorage.setItem('memorization-review-ratio-limit', value.toString());
+                      }}
+                      className="select-input"
+                    >
+                      <option value={10}>10%</option>
+                      <option value={20}>20%</option>
+                      <option value={30}>30%</option>
+                      <option value={40}>40%</option>
+                      <option value={50}>50%</option>
+                    </select>
+                    <p className="setting-help">
+                      バッチ内の分からない・まだまだの合計上限（上限到達で40%に増加、未出題30%に抑制）
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 border border-blue-200 rounded p-3 text-sm">
+                    <p className="font-bold mb-2">📊 カテゴリー別配分（基本）:</p>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>分からない: 20%</li>
+                      <li>まだまだ: 20%</li>
+                      <li>覚えてる: 10%</li>
+                      <li>未出題: 50%</li>
+                    </ul>
+                    <p className="font-bold mt-3 mb-2">⚠️ 上限到達時:</p>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>分からない・まだまだ: 40%</li>
+                      <li>未出題: 30%</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {/* 和訳・スペル・文法タブ用設定 */}
+              {(mode === 'translation' || mode === 'spelling' || mode === 'grammar') && (
+                <div className="settings-section">
+                  <h4 className="font-bold mb-2">
+                    🎯 {mode === 'translation' ? '和訳' : mode === 'spelling' ? 'スペル' : '文法'}
+                    モード - バッチ数設定
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-3">
+                    1回の学習で出題される語数を設定します
+                  </p>
+
+                  <div className="plan-setting-item mb-4">
+                    <label>バッチ数:</label>
+                    <select
+                      aria-label="バッチ数"
+                      value={batchSize || 0}
+                      onChange={(e) => {
+                        const value = parseInt(e.target.value);
+                        const finalValue = value === 0 ? null : value;
+                        setBatchSize(finalValue);
+                        if (finalValue === null) {
+                          localStorage.removeItem(`${mode}-batch-size`);
+                        } else {
+                          localStorage.setItem(`${mode}-batch-size`, finalValue.toString());
+                        }
+                      }}
+                      className="select-input"
+                    >
+                      <option value={0}>設定無し</option>
+                      <option value={10}>10</option>
+                      <option value={20}>20</option>
+                      <option value={30}>30</option>
+                      <option value={50}>50</option>
+                      <option value={75}>75</option>
+                      <option value={100}>100</option>
+                      <option value={150}>150</option>
+                      <option value={200}>200</option>
+                      <option value={300}>300</option>
+                      <option value={500}>500</option>
+                    </select>
+                    <p className="setting-help">
+                      1回の学習で出題される語数（設定無しの場合は全語出題）
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 border border-blue-200 rounded p-3 text-sm">
+                    <p className="font-bold mb-2">💡 ヒント:</p>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>少ない数（10-30）: 集中して短時間で学習</li>
+                      <li>中程度（50-100）: バランスの良い学習</li>
+                      <li>多い数（150-500）: じっくり長時間学習</li>
+                      <li>設定無し: すべての語を出題</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
