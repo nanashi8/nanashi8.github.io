@@ -194,12 +194,22 @@ export function getQuestionStatus(
     }
 
     // カテゴリ判定
-    // 🟢 覚えてる/定着: 新規単語1発正解（暗記モードのみ）or 連続3回以上 or 正答率80%以上で連続2回
-    if (
-      (mode === 'memorization' && attempts === 1 && correct === 1) || // 新規単語を1発で正解
-      streak >= 3 ||
-      (streak >= 2 && accuracy >= 80)
-    ) {
+    // 🟢 覚えてる/定着判定
+    if (mode === 'memorization' && attempts === 1 && correct === 1) {
+      // 暗記モード: 新規単語を1発で正解 → 即座に覚えてる
+      return {
+        category: 'mastered',
+        priority: 5,
+        lastStudied,
+        attempts,
+        correct,
+        streak,
+        forgettingRisk,
+        reviewInterval,
+        accuracy,
+      };
+    } else if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
+      // まだまだから昇格: 連続3回以上 or 正答率80%以上で連続2回
       return {
         category: 'mastered',
         priority: 5,

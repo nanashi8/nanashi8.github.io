@@ -221,12 +221,22 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
       const forgettingRisk = calculateForgettingRisk(lastStudied, reviewInterval, accuracy);
 
       // カテゴリ判定
-      // 🟢 覚えてる: 新規単語1発正解 or 連続3回以上 or 正答率80%以上で連続2回
-      if (
-        (attempts === 1 && correct === 1) || // 新規単語を1発で正解
-        streak >= 3 ||
-        (streak >= 2 && accuracy >= 80)
-      ) {
+      // 🟢 覚えてる判定
+      if (attempts === 1 && correct === 1) {
+        // 新規単語を1発で正解 → 即座に覚えてる
+        return {
+          category: 'mastered',
+          priority: 5,
+          lastStudied,
+          attempts,
+          correct,
+          streak,
+          forgettingRisk,
+          reviewInterval,
+          accuracy,
+        };
+      } else if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
+        // まだまだから昇格: 連続3回以上 or 正答率80%以上で連続2回
         return {
           category: 'mastered',
           priority: 5,
