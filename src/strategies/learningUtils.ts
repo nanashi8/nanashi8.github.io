@@ -194,8 +194,12 @@ export function getQuestionStatus(
     }
 
     // カテゴリ判定
-    // 🟢 覚えてる/定着: 連続3回以上 or 正答率80%以上で連続2回
-    if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
+    // 🟢 覚えてる/定着: 新規単語1発正解（暗記モードのみ）or 連続3回以上 or 正答率80%以上で連続2回
+    if (
+      (mode === 'memorization' && attempts === 1 && correct === 1) || // 新規単語を1発で正解
+      streak >= 3 ||
+      (streak >= 2 && accuracy >= 80)
+    ) {
       return {
         category: 'mastered',
         priority: 5,
