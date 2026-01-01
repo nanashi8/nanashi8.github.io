@@ -1263,7 +1263,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 sessionIncorrect={sessionStats.incorrect}
                 sessionReview={sessionStats.review}
                 sessionMastered={sessionStats.mastered}
-                sessionStats={sessionStats}
                 onReviewFocus={handleReviewFocus}
                 isReviewFocusMode={isReviewFocusMode}
                 onShowSettings={() => setShowSettings(true)}

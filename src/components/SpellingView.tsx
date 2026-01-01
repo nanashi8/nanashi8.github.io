@@ -819,7 +819,6 @@ function SpellingView({
                 sessionIncorrect={sessionStats.incorrect}
                 sessionReview={sessionStats.review}
                 sessionMastered={sessionStats.mastered}
-                sessionStats={sessionStats}
                 onReviewFocus={onReviewFocus}
                 isReviewFocusMode={isReviewFocusMode}
                 onShowSettings={() => setShowSettings(true)}
