@@ -92,16 +92,36 @@ function MemorizationView({
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<string>('all');
 
-  // 学習上限設定（LocalStorageから読み込み）
-  const [stillLearningLimit, setStillLearningLimit] = useState<number | null>(() => {
-    const saved = localStorage.getItem('memorization-still-learning-limit');
-    return saved ? parseInt(saved) : null;
-  });
+  // 🆕 バッチ数設定（LocalStorageから読み込み、ScoreBoardで設定）
+  const batchSize = (() => {
+    try {
+      const saved = localStorage.getItem('memorization-batch-size');
+      return saved ? parseInt(saved) : null;
+    } catch {
+      return null;
+    }
+  })();
 
-  const [incorrectLimit, setIncorrectLimit] = useState<number | null>(() => {
-    const saved = localStorage.getItem('memorization-incorrect-limit');
-    return saved ? parseInt(saved) : null;
-  });
+  // 🆕 分からない・まだまだの上限比率（10-50%、ScoreBoardで設定）
+  const reviewRatioLimit = (() => {
+    try {
+      const saved = localStorage.getItem('memorization-review-ratio-limit');
+      return saved ? parseInt(saved) : 20; // デフォルト20%
+    } catch {
+      return 20;
+    }
+  })();
+
+  // 廃止: 学習上限設定（バッチ数設定に統合）
+  // const [stillLearningLimit, setStillLearningLimit] = useState<number | null>(() => {
+  //   const saved = localStorage.getItem('memorization-still-learning-limit');
+  //   return saved ? parseInt(saved) : null;
+  // });
+
+  // const [incorrectLimit, setIncorrectLimit] = useState<number | null>(() => {
+  //   const saved = localStorage.getItem('memorization-incorrect-limit');
+  //   return saved ? parseInt(saved) : null;
+  // });
 
   // カード表示設定（永続化）
   const [cardState, setCardState] = useState<MemorizationCardState>({
@@ -990,10 +1010,13 @@ function MemorizationView({
           questions: candidateQuestions,
           mode: 'memorization',
           useCategorySlots,
-          limits: {
-            learningLimit: stillLearningLimit,
-            reviewLimit: incorrectLimit,
-          },
+          // 🆕 バッチ数設定（設定なしの場合は全語出題）
+          batchSize: batchSize || undefined,
+          // 廃止: limits（バッチ数設定と動的上限システムに統合）
+          // limits: {
+          //   learningLimit: stillLearningLimit,
+          //   reviewLimit: incorrectLimit,
+          // },
           sessionStats: {
             correct: sessionStatsRef.current.correct,
             incorrect: sessionStatsRef.current.incorrect,
@@ -1284,17 +1307,17 @@ function MemorizationView({
     }
   };
 
-  // 上限達成時に自動的に復習モードをオンにする
-  useEffect(() => {
-    if (
-      (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
-      (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit)
-    ) {
-      if (!isReviewFocusMode) {
-        setIsReviewFocusMode(true);
-      }
-    }
-  }, [sessionStats, stillLearningLimit, incorrectLimit, isReviewFocusMode]);
+  // 廃止: 上限達成時の自動復習モード（バッチ数設定と動的上限システムで管理）
+  // useEffect(() => {
+  //   if (
+  //     (stillLearningLimit !== null && sessionStats.still_learning >= stillLearningLimit) ||
+  //     (incorrectLimit !== null && sessionStats.incorrect >= incorrectLimit)
+  //   ) {
+  //     if (!isReviewFocusMode) {
+  //       setIsReviewFocusMode(true);
+  //     }
+  //   }
+  // }, [sessionStats, stillLearningLimit, incorrectLimit, isReviewFocusMode]);
 
   // 🔒 強制装置削除: questions依存配列により無限ループを引き起こすため削除
   // sessionStatsの再計算は解答時（handleAnswer）に実施
@@ -1422,10 +1445,13 @@ function MemorizationView({
           questions: rescheduleTarget,
           mode: 'memorization',
           useCategorySlots,
-          limits: {
-            learningLimit: stillLearningLimit ?? null,
-            reviewLimit: incorrectLimit ?? null,
-          },
+          // 🆕 バッチ数設定（設定なしの場合は全語出題）
+          batchSize: batchSize || undefined,
+          // 廃止: limits（バッチ数設定と動的上限システムに統合）
+          // limits: {
+          //   learningLimit: stillLearningLimit ?? null,
+          //   reviewLimit: incorrectLimit ?? null,
+          // },
           sessionStats: {
             correct: sessionStats.correct,
             incorrect: sessionStats.incorrect,
@@ -1480,8 +1506,8 @@ function MemorizationView({
     needsRescheduling,
     isLoading,
     questions,
-    stillLearningLimit,
-    incorrectLimit,
+    batchSize, // 🆕 バッチ数設定
+    reviewRatioLimit, // 🆕 上限比率
     sessionStats,
     abVariant,
     scheduler,
@@ -2245,8 +2271,8 @@ function MemorizationView({
       sessionId,
       consecutiveViews,
       sessionStats,
-      stillLearningLimit,
-      incorrectLimit,
+      batchSize, // 🆕 バッチ数設定
+      reviewRatioLimit, // 🆕 上限比率
     ]
   );
 
@@ -2679,105 +2705,12 @@ function MemorizationView({
                   </select>
                 </div>
 
-                {/* 出題上限設定 */}
+                {/* 廃止: 出題上限設定（ScoreBoardのバッチ数設定に統合） */}
+                {/* バッチ数設定と動的上限システムはScoreBoard内の「計画」タブで設定可能 */}
                 <div className="border-t pt-4">
-                  <label className="block text-sm font-medium mb-3 text-gray-700">
-                    🎯 出題繰り返し設定:
-                  </label>
-                  <p className="text-xs text-gray-500 mb-3">未入力の場合は無制限に出題します</p>
-                  <div className="space-y-3">
-                    <div>
-                      <label className="flex items-center mb-2">
-                        <input
-                          type="checkbox"
-                          checked={stillLearningLimit !== null}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              setStillLearningLimit(50);
-                              localStorage.setItem('memorization-still-learning-limit', '50');
-                            } else {
-                              setStillLearningLimit(null);
-                              localStorage.removeItem('memorization-still-learning-limit');
-                            }
-                          }}
-                          className="mr-2 w-4 h-4"
-                        />
-                        <span className="text-sm">🟡 まだまだの語数上限を設定</span>
-                      </label>
-                      {stillLearningLimit !== null && (
-                        <div className="ml-6">
-                          <select
-                            value={stillLearningLimit}
-                            title="まだまだの語数上限"
-                            onChange={(e) => {
-                              const value = parseInt(e.target.value);
-                              setStillLearningLimit(value);
-                              localStorage.setItem(
-                                'memorization-still-learning-limit',
-                                value.toString()
-                              );
-                            }}
-                            className="w-full px-3 py-2 border rounded-lg bg-white"
-                          >
-                            {[5, 10, 20, 30, 50, 100, 150, 200].map((num) => (
-                              <option key={num} value={num}>
-                                {num}
-                              </option>
-                            ))}
-                          </select>
-                          <p className="text-xs text-gray-500 mt-1">
-                            この数に達したら、復習モードに自動で切り替わります
-                          </p>
-                        </div>
-                      )}
-                    </div>
-
-                    <div>
-                      <label className="flex items-center mb-2">
-                        <input
-                          type="checkbox"
-                          checked={incorrectLimit !== null}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              setIncorrectLimit(30);
-                              localStorage.setItem('memorization-incorrect-limit', '30');
-                            } else {
-                              setIncorrectLimit(null);
-                              localStorage.removeItem('memorization-incorrect-limit');
-                            }
-                          }}
-                          className="mr-2 w-4 h-4"
-                        />
-                        <span className="text-sm">🔴 分からないの語数上限を設定</span>
-                      </label>
-                      {incorrectLimit !== null && (
-                        <div className="ml-6">
-                          <select
-                            value={incorrectLimit}
-                            title="分からないの語数上限"
-                            onChange={(e) => {
-                              const value = parseInt(e.target.value);
-                              setIncorrectLimit(value);
-                              localStorage.setItem(
-                                'memorization-incorrect-limit',
-                                value.toString()
-                              );
-                            }}
-                            className="w-full px-3 py-2 border rounded-lg bg-white"
-                          >
-                            {[5, 10, 20, 30, 50, 100, 150, 200].map((num) => (
-                              <option key={num} value={num}>
-                                {num}
-                              </option>
-                            ))}
-                          </select>
-                          <p className="text-xs text-gray-500 mt-1">
-                            この数に達したら、復習モードに自動で切り替わります
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                  <p className="text-sm text-gray-600">
+                    💡 バッチ数設定と出題上限は、スコアボードの「📊 計画」タブから設定できます
+                  </p>
                 </div>
 
                 <div className="border-t pt-4">

@@ -29,13 +29,23 @@ export interface SlotConfigManagerOptions {
 
 /**
  * モード別のデフォルトスロット設定
+ * 
+ * 【暗記モード】（2025年1月更新）
+ * - 分からない: 20%
+ * - まだまだ: 20%
+ * - 覚えてる: 10%
+ * - 未出題: 50%
+ * 
+ * ※ 上限到達時は動的に変化:
+ * - 分からない+まだまだ: 40%に増加
+ * - 未出題: 30%に抑制
  */
 const DEFAULT_SLOT_CONFIGS: Record<string, BatchSlotConfig> = {
   memorization: {
-    newRatio: 0.7, // 新規語70%
-    incorrectRatio: 0.15, // 分からない15%
-    stillLearningRatio: 0.1, // まだまだ10%
-    masteredRatio: 0.05, // 定着済5%
+    newRatio: 0.5, // 未出題50%
+    incorrectRatio: 0.2, // 分からない20%
+    stillLearningRatio: 0.2, // まだまだ20%
+    masteredRatio: 0.1, // 覚えてる10%
     chainLearningRatio: 0.3, // いもづる式30%（各カテゴリー内）
   },
   translation: {

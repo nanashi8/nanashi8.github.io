@@ -98,7 +98,12 @@ export class SlotAllocator {
     const startTime = performance.now();
 
     // 1. スロット設定を取得
-    const slotConfig = params.slotConfig || this.configManager.getSlotConfig(params.mode);
+    let slotConfig = params.slotConfig || this.configManager.getSlotConfig(params.mode);
+
+    // 🆕 動的上限システム: 分からない・まだまだの上限チェック
+    if (params.mode === 'memorization') {
+      slotConfig = this.applyDynamicLimits(slotConfig, params.progressMap, params.totalSlots);
+    }
 
     // 2. 単語をカテゴリー別に分類
     const categorizedWords = this.categorizeWords(params.questions, params.progressMap, params.mode);
@@ -213,7 +218,7 @@ export class SlotAllocator {
   private calculateSlots(
     slotConfig: BatchSlotConfig,
     totalSlots: number,
-    categorizedWords: Record<LearningCategory, string[]>
+    _categorizedWords: Record<LearningCategory, string[]>
   ): Record<LearningCategory, number> {
     return {
       new: Math.floor(totalSlots * slotConfig.newRatio),
@@ -231,7 +236,7 @@ export class SlotAllocator {
   private redistributeSurplus(
     allocatedSlots: Record<LearningCategory, number>,
     categorizedWords: Record<LearningCategory, string[]>,
-    totalSlots: number
+    _totalSlots: number
   ): Record<LearningCategory, number> {
     const finalSlots = { ...allocatedSlots };
     let surplus = 0;
@@ -616,5 +621,85 @@ export class SlotAllocator {
     }
 
     return details;
+  }
+
+  /**
+   * 🆕 動的上限システム: 分からない・まだまだの上限チェック
+   * 
+   * 上限到達時の配分:
+   * - 分からない+まだまだ: 40%
+   * - 未出題: 30%
+   * - 覚えてる: 10%（変化なし）
+   * 
+   * @param baseConfig ベーススロット設定
+   * @param progressMap 進捗マップ
+   * @param totalSlots 総スロット数
+   * @returns 調整後のスロット設定
+   */
+  private applyDynamicLimits(
+    baseConfig: BatchSlotConfig,
+    progressMap: Record<string, WordProgress>,
+    totalSlots: number
+  ): BatchSlotConfig {
+    // LocalStorageから上限比率を取得（デフォルト20%）
+    const reviewLimitRatio = (() => {
+      try {
+        const saved = localStorage.getItem('memorization-review-ratio-limit');
+        return saved ? parseInt(saved) / 100 : 0.2;
+      } catch {
+        return 0.2;
+      }
+    })();
+
+    // 現在の分からない・まだまだの語数をカウント
+    const reviewWordCount = Object.values(progressMap).filter((progress) => {
+      const category = this.classifier.determineCategory(progress, 'memorization');
+      return category === 'incorrect' || category === 'still_learning';
+    }).length;
+
+    const reviewRatio = totalSlots > 0 ? reviewWordCount / totalSlots : 0;
+
+    // 上限に達していない場合は基本設定を返す
+    if (reviewRatio < reviewLimitRatio) {
+      if (this.debugMode) {
+        logger.info('[SlotAllocator] 動的上限: 未到達', {
+          reviewWordCount,
+          totalSlots,
+          reviewRatio: `${(reviewRatio * 100).toFixed(1)}%`,
+          reviewLimitRatio: `${(reviewLimitRatio * 100).toFixed(1)}%`,
+        });
+      }
+      return baseConfig;
+    }
+
+    // 上限到達: 配分を変更
+    const adjustedConfig: BatchSlotConfig = {
+      ...baseConfig,
+      incorrectRatio: 0.2, // 分からない20%
+      stillLearningRatio: 0.2, // まだまだ20%
+      newRatio: 0.3, // 未出題30%（抑制）
+      masteredRatio: 0.1, // 覚えてる10%（固定）
+    };
+
+    if (this.debugMode) {
+      logger.info('[SlotAllocator] 動的上限: 到達 → 配分変更', {
+        reviewWordCount,
+        totalSlots,
+        reviewRatio: `${(reviewRatio * 100).toFixed(1)}%`,
+        reviewLimitRatio: `${(reviewLimitRatio * 100).toFixed(1)}%`,
+        before: {
+          incorrect: `${(baseConfig.incorrectRatio * 100).toFixed(0)}%`,
+          stillLearning: `${(baseConfig.stillLearningRatio * 100).toFixed(0)}%`,
+          new: `${(baseConfig.newRatio * 100).toFixed(0)}%`,
+        },
+        after: {
+          incorrect: '20%',
+          stillLearning: '20%',
+          new: '30%',
+        },
+      });
+    }
+
+    return adjustedConfig;
   }
 }

@@ -2812,8 +2812,13 @@ export class QuestionScheduler {
       byCategory[cat].sort((a, b) => b.position - a.position);
     });
 
-    // 4. スロット割当（バッチサイズ最大100語）
-    const totalSlots = Math.min(params.questions.length, 100);
+    // 4. スロット割当（🆕 バッチサイズ設定対応）
+    // - バッチサイズ設定がある場合: その値を使用
+    // - 設定なしの場合: 従来通り最大100語
+    const totalSlots = params.batchSize
+      ? Math.min(params.questions.length, params.batchSize)
+      : Math.min(params.questions.length, 100);
+    
     const incorrectCount = byCategory.incorrect.length;
     const stillCount = byCategory.still_learning.length;
     const newCount = byCategory.new.length;
