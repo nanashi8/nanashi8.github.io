@@ -220,13 +220,26 @@ export class CategoryPositionCalculator {
   /**
    * 新規語のPosition計算
    *
-   * ランダム化により出題順序をシャッフル
+   * 頭文字ベースの分散 + ランダム化により出題順序を最適化
+   * 同じ頭文字の単語が連続しないよう、異なる範囲に配置
    */
-  private calculateNewPosition(_wordProgress: WordProgress, basePosition: number): number {
-    // 新規語は基本Positionにランダム要素を追加してシャッフル
-    // ±10のランダム値を加算することで、ABC順を崩す
-    const randomOffset = Math.random() * 20 - 10; // -10 ~ +10
-    return basePosition + randomOffset;
+  private calculateNewPosition(wordProgress: WordProgress, _basePosition: number): number {
+    const word = wordProgress.word.toLowerCase();
+
+    // 頭文字を取得（アルファベット以外は'#'として扱う）
+    const firstChar = word.match(/[a-z]/) ? word.charAt(0) : '#';
+
+    // 頭文字のcharCodeを0-25の範囲に正規化（a=0, b=1, ..., z=25, その他=26）
+    const charCode = firstChar === '#' ? 26 : firstChar.charCodeAt(0) - 'a'.charCodeAt(0);
+
+    // 頭文字ごとに異なる範囲（0-100を27分割）に基本位置を設定
+    const baseRange = (charCode * 100) / 27;
+
+    // 同じ頭文字内でもランダムに分散（範囲内で±15のバラつき）
+    const randomOffset = (Math.random() - 0.5) * 30;
+
+    // 最終的なPositionを計算（0-100にクランプ）
+    return Math.max(0, Math.min(100, baseRange + randomOffset));
   }
 
   /**
