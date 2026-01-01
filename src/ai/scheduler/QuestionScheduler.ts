@@ -2818,7 +2818,7 @@ export class QuestionScheduler {
     const totalSlots = params.batchSize
       ? Math.min(params.questions.length, params.batchSize)
       : Math.min(params.questions.length, 100);
-    
+
     const incorrectCount = byCategory.incorrect.length;
     const stillCount = byCategory.still_learning.length;
     const newCount = byCategory.new.length;

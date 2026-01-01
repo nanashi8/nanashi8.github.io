@@ -3,7 +3,7 @@
 export class Range {
   public start: any;
   public end: any;
-  
+
   constructor(startLineOrStart: number | any, startCharacterOrEnd?: number | any, endLine?: number, endCharacter?: number) {
     // 2引数の場合: Range(start, end)
     if (typeof startLineOrStart === 'object') {
@@ -30,7 +30,7 @@ export class Diagnostic {
   public source?: string;
   public code?: string | number;
   public relatedInformation?: any[];
-  
+
   constructor(
     range: Range,
     message: string,

@@ -20,7 +20,7 @@ graph TD
 
       expect(tree.nodes.size).toBe(3);
       expect(tree.rootId).toBe('A');
-      
+
       const nodeA = tree.nodes.get('A');
       expect(nodeA?.label).toBe('Start');
       expect(nodeA?.type).toBe('action');
@@ -39,16 +39,16 @@ graph TD
       const tree = parser.parse(mermaidCode);
 
       expect(tree.nodes.size).toBe(4);
-      
+
       const nodeB = tree.nodes.get('B');
       expect(nodeB?.type).toBe('decision');
       expect(nodeB?.label).toBe('再現可能?');
       expect(nodeB?.children.length).toBe(2);
-      
+
       // Yes条件
       const yesEdge = nodeB?.children.find(e => e.condition === 'Yes');
       expect(yesEdge?.targetId).toBe('C');
-      
+
       // No条件
       const noEdge = nodeB?.children.find(e => e.condition === 'No');
       expect(noEdge?.targetId).toBe('D');
@@ -71,10 +71,10 @@ graph TD
       const tree = parser.parse(mermaidCode);
 
       expect(tree.nodes.size).toBeGreaterThanOrEqual(8);
-      
+
       const nodeC = tree.nodes.get('C');
       expect(nodeC?.type).toBe('decision');
-      
+
       const nodeF = tree.nodes.get('F');
       expect(nodeF?.type).toBe('decision');
       expect(nodeF?.children.length).toBe(4);
@@ -131,7 +131,7 @@ graph TD
       expect(path.path).toContain('C');
       expect(path.path).toContain('E');
       expect(path.path).toContain('F');
-      
+
       expect(path.recommendations.length).toBeGreaterThan(0);
       expect(path.recommendations).toContain('TypeScript修正');
     });
@@ -154,7 +154,7 @@ graph TD
       expect(path.path).toContain('A');
       expect(path.path).toContain('B');
       expect(path.path).toContain('D');
-      
+
       expect(path.recommendations).toContain('再現手順を要求');
     });
 

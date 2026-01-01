@@ -7,7 +7,7 @@ vi.mock('vscode', () => {
   class Range {
     constructor(public start: any, public end: any) {}
   }
-  
+
   return {
     Range,
     DiagnosticSeverity: {
@@ -22,7 +22,7 @@ vi.mock('vscode', () => {
 const mockDocument = (text: string, fileName: string = 'test.ts') => {
   // 先頭・末尾の空白を除去
   const trimmedText = text.trim();
-  
+
   return {
     getText: () => trimmedText,
     fileName,
@@ -54,7 +54,7 @@ describe('RuleEngine', () => {
         word.position = 0;
       `;
       const doc = mockDocument(text);
-      
+
       const instruction: Instruction = {
         id: 'position-invariant-conditions',
         filePath: '',
@@ -62,9 +62,9 @@ describe('RuleEngine', () => {
         priority: 'critical',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBeGreaterThan(0);
       expect(violations[0].message).toContain('CRITICAL');
       expect(violations[0].message).toContain('Magic Number');
@@ -77,7 +77,7 @@ describe('RuleEngine', () => {
         word.position = Position.HIGH_PRIORITY;
       `;
       const doc = mockDocument(text);
-      
+
       const instruction: Instruction = {
         id: 'position-invariant-conditions',
         filePath: '',
@@ -85,9 +85,9 @@ describe('RuleEngine', () => {
         priority: 'critical',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBe(0);
     });
 
@@ -97,7 +97,7 @@ describe('RuleEngine', () => {
         Position.NEUTRAL++;
       `;
       const doc = mockDocument(text);
-      
+
       const instruction: Instruction = {
         id: 'position-invariant-conditions',
         filePath: '',
@@ -105,9 +105,9 @@ describe('RuleEngine', () => {
         priority: 'critical',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBeGreaterThan(0);
       expect(violations[0].message).toContain('直接変更禁止');
       expect(violations[0].suggestedFix).toContain('PositionCalculator');
@@ -120,7 +120,7 @@ describe('RuleEngine', () => {
         updatePosition(word); // バッチ方式違反
       `;
       const doc = mockDocument(text);
-      
+
       const instruction: Instruction = {
         id: 'batch-processing-principles',
         filePath: '',
@@ -128,9 +128,9 @@ describe('RuleEngine', () => {
         priority: 'critical',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBeGreaterThan(0);
       expect(violations[0].message).toContain('バッチ方式原則1');
       expect(violations[0].severity).toBe('error');
@@ -141,7 +141,7 @@ describe('RuleEngine', () => {
         category = 'mastered'; // Position初期化忘れ
       `;
       const doc = mockDocument(text);
-      
+
       const instruction: Instruction = {
         id: 'batch-processing-principles',
         filePath: '',
@@ -149,9 +149,9 @@ describe('RuleEngine', () => {
         priority: 'critical',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBeGreaterThan(0);
       expect(violations[0].message).toContain('Position初期化');
       expect(violations[0].severity).toBe('warning');
@@ -163,7 +163,7 @@ describe('RuleEngine', () => {
         position = Position.NEUTRAL; // 正しい実装
       `;
       const doc = mockDocument(text);
-      
+
       const instruction: Instruction = {
         id: 'batch-processing-principles',
         filePath: '',
@@ -171,13 +171,13 @@ describe('RuleEngine', () => {
         priority: 'critical',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
-      const categoryViolations = violations.filter(v => 
+
+      const categoryViolations = violations.filter(v =>
         v.message.includes('カテゴリー変更')
       );
-      
+
       expect(categoryViolations.length).toBe(0);
     });
   });
@@ -190,7 +190,7 @@ describe('RuleEngine', () => {
         }
       `;
       const doc = mockDocument(text, 'src/calculator.ts');
-      
+
       const instruction: Instruction = {
         id: 'mandatory-spec-check',
         filePath: '',
@@ -198,9 +198,9 @@ describe('RuleEngine', () => {
         priority: 'high',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBeGreaterThan(0);
       expect(violations[0].message).toContain('仕様書を確認');
       expect(violations[0].severity).toBe('information');
@@ -214,7 +214,7 @@ describe('RuleEngine', () => {
         }
       `;
       const doc = mockDocument(text, 'src/calculator.ts');
-      
+
       const instruction: Instruction = {
         id: 'mandatory-spec-check',
         filePath: '',
@@ -222,9 +222,9 @@ describe('RuleEngine', () => {
         priority: 'high',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBe(0);
     });
 
@@ -234,7 +234,7 @@ describe('RuleEngine', () => {
         describe('test', () => {});
       `;
       const doc = mockDocument(text, 'src/calculator.test.ts');
-      
+
       const instruction: Instruction = {
         id: 'mandatory-spec-check',
         filePath: '',
@@ -242,9 +242,9 @@ describe('RuleEngine', () => {
         priority: 'high',
         rules: []
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBe(0);
     });
   });
@@ -255,14 +255,14 @@ describe('RuleEngine', () => {
         console.log('debug'); // 本番環境で禁止
       `;
       const doc = mockDocument(text);
-      
+
       const rule: Rule = {
         type: 'MUST_NOT',
         pattern: 'console\\.log',
         message: 'console.log使用禁止。loggerを使用してください',
         severity: 'error'
       };
-      
+
       const instruction: Instruction = {
         id: 'logging-rules',
         filePath: '',
@@ -270,9 +270,9 @@ describe('RuleEngine', () => {
         priority: 'medium',
         rules: [rule]
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBeGreaterThan(0);
       expect(violations[0].message).toContain('console.log使用禁止');
     });
@@ -284,14 +284,14 @@ describe('RuleEngine', () => {
         }
       `;
       const doc = mockDocument(text);
-      
+
       const rule: Rule = {
         type: 'MUST_NOT',
         pattern: 'debugger',
         message: 'debuggerステートメント使用禁止',
         severity: 'error'
       };
-      
+
       const instruction: Instruction = {
         id: 'debug-rules',
         filePath: '',
@@ -299,9 +299,9 @@ describe('RuleEngine', () => {
         priority: 'high',
         rules: [rule]
       };
-      
+
       const violations = engine.validate(doc as any, [instruction]);
-      
+
       expect(violations.length).toBeGreaterThan(0);
       expect(violations[0].message).toContain('debugger');
     });

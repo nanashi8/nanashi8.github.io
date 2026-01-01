@@ -625,12 +625,12 @@ export class SlotAllocator {
 
   /**
    * 🆕 動的上限システム: 分からない・まだまだの上限チェック
-   * 
+   *
    * 上限到達時の配分:
    * - 分からない+まだまだ: 40%
    * - 未出題: 30%
    * - 覚えてる: 10%（変化なし）
-   * 
+   *
    * @param baseConfig ベーススロット設定
    * @param progressMap 進捗マップ
    * @param totalSlots 総スロット数
