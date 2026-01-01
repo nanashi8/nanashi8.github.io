@@ -394,17 +394,6 @@ function ScoreBoard({
   const strugglingRef = useRef<HTMLDivElement>(null);
   const retentionGoalProgressRef = useRef<HTMLDivElement>(null);
 
-  // 学習プラン設定（和訳・スペル用）
-  const [learningLimit, setLearningLimit] = useState<number | null>(() => {
-    const saved = localStorage.getItem(`learning-limit-${mode}`);
-    return saved ? parseInt(saved) : null;
-  });
-
-  const [reviewLimit, setReviewLimit] = useState<number | null>(() => {
-    const saved = localStorage.getItem(`review-limit-${mode}`);
-    return saved ? parseInt(saved) : null;
-  });
-
   // 暗記タブ用の学習プラン設定（廃止：バッチ数設定に移行）
   // const [stillLearningLimit, setStillLearningLimit] = useState<number | null>(() => {
   //   const saved = localStorage.getItem('memorization-still-learning-limit');
@@ -427,27 +416,6 @@ function ScoreBoard({
     const saved = localStorage.getItem('memorization-review-ratio-limit');
     return saved ? parseInt(saved) : 20; // デフォルト20%
   });
-
-  // 和訳・スペル・文法タブ用: 上限達成時に自動的に復習モードをオンにする
-  useEffect(() => {
-    if (
-      (mode === 'translation' || mode === 'spelling' || mode === 'grammar') &&
-      sessionStats &&
-      onReviewFocus
-    ) {
-      const { incorrect, review } = sessionStats;
-      const totalNeedReview = incorrect + review;
-
-      if (
-        (learningLimit !== null && totalNeedReview >= learningLimit) ||
-        (reviewLimit !== null && review >= reviewLimit)
-      ) {
-        if (!isReviewFocusMode) {
-          onReviewFocus();
-        }
-      }
-    }
-  }, [sessionStats, learningLimit, reviewLimit, isReviewFocusMode, mode, onReviewFocus]);
 
   // 定着率と統計データをstateで管理
   const [retentionData, setRetentionData] = useState(() => {
