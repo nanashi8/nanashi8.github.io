@@ -23,6 +23,7 @@
  */
 
 import type { WordProgress } from '@/storage/progress/types';
+import { determineWordPosition } from '@/ai/utils/categoryDetermination';
 
 export type LearningMode = 'memorization' | 'translation' | 'spelling' | 'grammar';
 
@@ -51,7 +52,6 @@ type ModeStats = {
  * 各学習モード（暗記・和訳・スペル・文法）は独自のStrategyを持つ
  */
 interface PositionStrategy {
-  calculate(progress: WordProgress | null | undefined): number;
   extractStats(progress: WordProgress | null | undefined): ModeStats;
   getSavedPosition(progress: WordProgress | null | undefined): number | undefined;
 }
@@ -60,10 +60,6 @@ interface PositionStrategy {
  * 暗記モードのPosition計算Strategy
  */
 class MemorizationStrategy implements PositionStrategy {
-  calculate(progress: WordProgress | null | undefined): number {
-    return calculatePosition(progress, this.extractStats(progress));
-  }
-
   extractStats(progress: WordProgress | null | undefined): ModeStats {
     return {
       attempts: progress?.memorizationAttempts || 0,
@@ -81,10 +77,6 @@ class MemorizationStrategy implements PositionStrategy {
  * 和訳モードのPosition計算Strategy
  */
 class TranslationStrategy implements PositionStrategy {
-  calculate(progress: WordProgress | null | undefined): number {
-    return calculatePosition(progress, this.extractStats(progress));
-  }
-
   extractStats(progress: WordProgress | null | undefined): ModeStats {
     return {
       attempts: progress?.translationAttempts || 0,
@@ -102,10 +94,6 @@ class TranslationStrategy implements PositionStrategy {
  * スペルモードのPosition計算Strategy
  */
 class SpellingStrategy implements PositionStrategy {
-  calculate(progress: WordProgress | null | undefined): number {
-    return calculatePosition(progress, this.extractStats(progress));
-  }
-
   extractStats(progress: WordProgress | null | undefined): ModeStats {
     return {
       attempts: progress?.spellingAttempts || 0,
@@ -123,10 +111,6 @@ class SpellingStrategy implements PositionStrategy {
  * 文法モードのPosition計算Strategy
  */
 class GrammarStrategy implements PositionStrategy {
-  calculate(progress: WordProgress | null | undefined): number {
-    return calculatePosition(progress, this.extractStats(progress));
-  }
-
   extractStats(progress: WordProgress | null | undefined): ModeStats {
     return {
       attempts: progress?.grammarAttempts || 0,
@@ -148,71 +132,6 @@ const STRATEGIES: Record<LearningMode, PositionStrategy> = {
 };
 
 /**
- * Position計算のコア関数
- *
- * 計算ロジック:
- * 1. ゴールファースト判定: 連続3回正解 → Position 5 (mastered)
- * 2. 連続不正解ペナルティ: 3回 → 85, 2回 → 75
- * 3. 基本スコア: 50 - 正答率×30 + 連続不正解×10
- * 4. 時間ブースト: 最終学習からの経過日数×2 (最大20)
- * 5. まだまだ語の自動昇格: 正答率70%以上 & 3回以上挑戦 → Position上限35
- *
- * @param progress - 単語の進捗情報
- * @param modeStats - mode別の統計（attempts/correct/stillLearning）
- * @returns Position (0-100)
- */
-function calculatePosition(progress: WordProgress | null | undefined, modeStats: ModeStats): number {
-  const { attempts, correct, stillLearning } = modeStats;
-  const consecutiveCorrect = progress?.consecutiveCorrect || 0;
-  const consecutiveIncorrect = progress?.consecutiveIncorrect || 0;
-
-  // ✅ 初出題の場合: ボタン押下に応じて各カテゴリーの標準値に設定
-  if (attempts === 1) {
-    // 1回目の解答結果を判定
-    if (consecutiveCorrect === 1 && correct === 1) {
-      // 「覚えてる」を押した → mastered (定着済み) の標準値
-      return 15; // POSITION_VALUES.MASTERED_ALMOST
-    } else if (stillLearning === 1) {
-      // 「まだまだ」を押した → still_learning (学習中) の標準値
-      return 50; // POSITION_VALUES.STILL_LEARNING_DEFAULT
-    } else if (consecutiveIncorrect === 1) {
-      // 「分からない」を押した → incorrect (要復習) の標準値
-      return 70; // POSITION_VALUES.INCORRECT_MEDIUM
-    }
-  }
-
-  // 未挑戦の単語: デフォルト Position 35 (new範囲)
-  if (attempts === 0) return 35;
-
-  // ゴールファースト判定: 連続3回正解 → 即座に定着判定
-  if (consecutiveCorrect >= 3 && correct >= 3) return 5;
-
-  const accuracy = attempts > 0 ? correct / attempts : 0;
-
-  // 連続不正解ペナルティ
-  if (consecutiveIncorrect >= 3) return 85;
-  if (consecutiveIncorrect >= 2) return 75;
-
-  // 基本スコア計算
-  const baseScore = 50 - accuracy * 30 + consecutiveIncorrect * 10;
-
-  // 時間ブースト: 最終学習からの経過日数
-  const daysSince =
-    (Date.now() - (progress?.lastStudied || Date.now())) / (1000 * 60 * 60 * 24);
-  const timeBoost = Math.min(daysSince * 2, 20);
-
-  let position = baseScore + timeBoost;
-
-  // まだまだ語の自動昇格: 正答率70%以上 & 挑戦3回以上 → Position上限35
-  // 理由: 「まだまだ」判定だが実質的に定着しているため、新規語と同等に扱う
-  if (accuracy >= 0.7 && stillLearning > 0 && attempts >= 3) {
-    position = Math.min(position, 35);
-  }
-
-  return Math.max(0, Math.min(100, position));
-}
-
-/**
  * PositionCalculator - 学習モード別のPosition計算を統括
  *
  * 機能:
@@ -221,9 +140,11 @@ function calculatePosition(progress: WordProgress | null | undefined, modeStats:
  * - Position → Category 変換
  */
 export class PositionCalculator {
+  private readonly mode: LearningMode;
   private readonly strategy: PositionStrategy;
 
   constructor(mode: LearningMode) {
+    this.mode = mode;
     this.strategy = STRATEGIES[mode];
   }
 
@@ -242,23 +163,7 @@ export class PositionCalculator {
     progress: WordProgress | null | undefined,
     options: { ignoreSaved?: boolean } = {}
   ): number {
-    if (!options.ignoreSaved) {
-      const saved = this.strategy.getSavedPosition(progress);
-      if (saved !== undefined) {
-        const stats = this.strategy.extractStats(progress);
-        const consecutiveCorrect = progress?.consecutiveCorrect || 0;
-        // まだまだ語の自動昇格判定: 実質的に定着している場合は再計算
-        const shouldOverride =
-          stats.attempts >= 3 &&
-          stats.correct >= 3 &&
-          consecutiveCorrect >= 2 &&
-          saved >= 40;
-
-        if (!shouldOverride) return saved;
-      }
-    }
-
-    return this.strategy.calculate(progress);
+    return determineWordPosition(progress, this.mode, { ignoreSaved: options.ignoreSaved });
   }
 
   /**

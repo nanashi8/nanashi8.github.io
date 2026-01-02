@@ -205,6 +205,21 @@ if git diff --cached --name-only | grep -E 'public/data/.*\.(csv|json)$' > /dev/
   echo "✅ データ品質チェック完了"
 fi
 
+# 4.5. 長文読解: 文法タグ健全性チェック（every + time noun が O になる再発防止）
+# 関連ファイルが変更された場合のみ実行（高速だが無駄なスキャンを避ける）
+if git diff --cached --name-only | grep -E '(src/utils/grammarAnalyzer\.ts|src/components/ComprehensiveReadingView\.tsx|scripts/check-reading-grammar-tags\.ts|public/data/passages-original/|public/data/passages/pasasges-original/)' > /dev/null; then
+  echo "📖 長文読解: 文法タグ健全性チェック実行中..."
+  npm run check:reading-grammar-tags || {
+    echo ""
+    echo "❌ 長文読解の文法タグ健全性チェックに失敗しました"
+    echo "💡 every morning/day/... は M（修飾語）である必要があります"
+    echo "💡 詳細: npm run check:reading-grammar-tags"
+    exit 1
+  }
+  echo "✅ 長文読解チェック完了"
+  echo ""
+fi
+
 # 5. CSSチェック（CSSファイルが変更されている場合）
 if git diff --cached --name-only | grep '\.css$' > /dev/null; then
   echo "🎨 CSSチェック実行中..."

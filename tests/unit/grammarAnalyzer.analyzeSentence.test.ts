@@ -42,4 +42,26 @@ describe('grammarAnalyzer.analyzeSentence', () => {
     expect(byWord('and')?.tag).toBe('Conj');
     expect(byWord('juice')?.tag).toBe('O');
   });
+
+  it('treats "every + time noun" as M (frequency expression), not O', () => {
+    const result = analyzeSentence('I wake up at seven every morning.');
+    const byWord = (w: string) => result.find((r) => r.word === w);
+
+    expect(byWord('I')?.tag).toBe('S');
+    expect(byWord('wake')?.tag).toBe('V');
+    expect(byWord('at')?.tag).toBe('Prep');
+
+    // key assertion: morning should not be treated as the object
+    expect(byWord('morning')?.tag).toBe('M');
+  });
+
+  it('does not change object cases like "every movie"', () => {
+    const result = analyzeSentence('I like every movie.');
+    const byWord = (w: string) => result.find((r) => r.word === w);
+
+    expect(byWord('I')?.tag).toBe('S');
+    expect(byWord('like')?.tag).toBe('V');
+    expect(byWord('every')?.tag).toBe('Det');
+    expect(byWord('movie')?.tag).toBe('O');
+  });
 });

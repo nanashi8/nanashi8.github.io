@@ -26,6 +26,8 @@ interface AnswerHistory {
 }
 
 interface DebugPanelProps {
+  subject?: 'english' | 'social';
+  allDataSourceLabel?: string;
   mode: ScheduleMode;
   currentIndex: number;
   totalQuestions: number;
@@ -106,7 +108,99 @@ function readPostProcessMeta(desiredMode: ScheduleMode): any | null {
   return readDebugJSON<any>('debug_postProcess_meta', { mode: desiredMode }).value;
 }
 
+function safeReadSocialProgressSummary(params: {
+  currentWord: string | undefined;
+  deckWords: string[];
+}): {
+  storageKey: string;
+  storedTerms: number;
+  lastUpdated?: number;
+  version?: number;
+  deckStats: {
+    new: number;
+    incorrect: number;
+    stillLearning: number;
+    learning: number;
+    mastered: number;
+  };
+  current?: {
+    position: number;
+    correctCount: number;
+    incorrectCount: number;
+    field?: string;
+    nextReviewDate?: string;
+    lastAnswered?: string;
+  };
+} {
+  const storageKey = 'social-studies-progress';
+
+  const empty = {
+    storageKey,
+    storedTerms: 0,
+    deckStats: { new: params.deckWords.length, incorrect: 0, stillLearning: 0, learning: 0, mastered: 0 },
+  };
+
+  try {
+    const raw = localStorage.getItem(storageKey);
+    if (!raw) return empty;
+
+    const data = JSON.parse(raw) as any;
+    const termProgress = (data?.termProgress ?? {}) as Record<string, any>;
+    const storedTerms = Object.keys(termProgress).length;
+
+    const deckStats = {
+      new: 0,
+      incorrect: 0,
+      stillLearning: 0,
+      learning: 0,
+      mastered: 0,
+    };
+
+    for (const w of params.deckWords) {
+      const p = termProgress[w];
+      if (!p || typeof p.position !== 'number') {
+        deckStats.new++;
+        continue;
+      }
+      const pos = p.position;
+      if (pos >= 71) deckStats.incorrect++;
+      else if (pos >= 41) deckStats.stillLearning++;
+      else if (pos >= 21) deckStats.learning++;
+      else deckStats.mastered++;
+    }
+
+    const currentWord = params.currentWord;
+    const currentProgress = currentWord ? termProgress[currentWord] : null;
+    const current =
+      currentProgress && typeof currentProgress.position === 'number'
+        ? {
+            position: Number(currentProgress.position),
+            correctCount: toFiniteNumber(currentProgress.correctCount, 0),
+            incorrectCount: toFiniteNumber(currentProgress.incorrectCount, 0),
+            field: typeof currentProgress.field === 'string' ? currentProgress.field : undefined,
+            nextReviewDate: currentProgress.nextReviewDate
+              ? String(currentProgress.nextReviewDate)
+              : undefined,
+            lastAnswered: currentProgress.lastAnswered ? String(currentProgress.lastAnswered) : undefined,
+          }
+        : undefined;
+
+    return {
+      storageKey,
+      storedTerms,
+      lastUpdated: typeof data?.lastUpdated === 'number' ? data.lastUpdated : undefined,
+      version: typeof data?.version === 'number' ? data.version : undefined,
+      deckStats,
+      current,
+    };
+  } catch {
+    return empty;
+  }
+}
+
 export function RequeuingDebugPanel({
+  subject = 'english',
+  allDataSourceLabel,
   mode,
   currentIndex,
   totalQuestions,
@@ -2642,6 +2736,37 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
         <div className="bg-blue-50 p-2 rounded border border-blue-200 text-xs">
           <strong>💡 キーボードショートカット:</strong> Cmd/Ctrl + D でパネル開閉
         </div>
+
+        {/* 🧭 社会（暗記）: 進捗サマリ（console不要） */}
+        {subject === 'social' && mode === 'memorization' && (() => {
+          const deckWords = questions.map((q) => q.word).filter(Boolean);
+          const currentWord = questions[currentIndex]?.word;
+          const summary = safeReadSocialProgressSummary({ currentWord, deckWords });
+          return (
+            <div className="bg-emerald-50 p-3 rounded border border-emerald-200 text-xs">
+              <p className="font-semibold text-emerald-800 mb-1">🧭 社会（暗記）デバッグ</p>
+              <div className="font-mono text-[11px] text-emerald-900">
+                storageKey: {summary.storageKey}
+              </div>
+              {allDataSourceLabel && (
+                <div className="text-emerald-900">データ: {allDataSourceLabel}</div>
+              )}
+              <div className="text-emerald-900">
+                デッキ: {totalQuestions} / 保存済み: {summary.storedTerms}
+                {summary.version != null ? ` / v${summary.version}` : ''}
+              </div>
+              <div className="text-emerald-900">
+                分布(デッキ内): new {summary.deckStats.new}, incorrect {summary.deckStats.incorrect}, still {summary.deckStats.stillLearning}, learning {summary.deckStats.learning}, mastered {summary.deckStats.mastered}
+              </div>
+              {summary.current && currentWord && (
+                <div className="mt-1 text-emerald-900">
+                  現在: {currentWord} / Pos {summary.current.position.toFixed(0)} / ○{summary.current.correctCount} ×{summary.current.incorrectCount}
+                  {summary.current.field ? ` / ${summary.current.field}` : ''}
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* 📸 解答直後スナップショット */}
         {(() => {

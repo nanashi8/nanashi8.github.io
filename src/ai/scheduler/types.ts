@@ -79,6 +79,13 @@ export interface ScheduleParams {
 
   /** カテゴリーベーススロットシステムを使用（新実装） */
   useCategorySlots?: boolean;
+
+  /**
+   * 🆕 進捗データの上書き（wordProgress相当）
+   * - 既定は loadProgressSync().wordProgress を使用
+   * - 多教科対応などで、別ストレージの進捗をスケジューラーに渡したい場合に使用
+   */
+  progressOverride?: Record<string, any>;
 }
 
 /**

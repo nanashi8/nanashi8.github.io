@@ -31,12 +31,14 @@ export interface Question {
   relatedFields: string; // 関連分野（表示用・CSVから読み込み）
   category?: string; // 関連分野（フィルター用・内部処理）
   difficulty: string; // 難易度（CSVから読み込み）
-  source?: 'junior' | 'intermediate'; // データソース（high-school-entrance / junior-high-intermediate）
+  source?: 'junior' | 'intermediate' | 'history' | 'geography' | 'civics'; // データソース
   type?: 'word' | 'phrase'; // 単語か熟語か（オプショナル、将来の拡張用）
   isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）
   sessionPriority?: number; // セッション内優先度（再追加時に設定、次の3問で最優先）
   reAddedCount?: number; // 再追加回数（セッション内で何回再追加されたか）
   grade?: number; // 学年情報（オプショナル、AI分析用）
+  // 社会科専用フィールド
+  termType?: '人物名' | '出来事' | '地名' | '制度概念' | 'その他'; // 語句の種別（選択肢生成用）
 }
 
 // バリデーション用のヘルパー関数

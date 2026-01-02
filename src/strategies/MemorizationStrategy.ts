@@ -10,7 +10,6 @@ import {
   LearningLimits,
   QuestionStatus,
 } from './QuestionSelectionStrategy';
-import { calculateOptimalInterval, calculateForgettingRisk } from './learningUtils';
 import { logger } from '@/utils/logger';
 import {
   isIncorrectWordCategory,
@@ -179,108 +178,8 @@ export class MemorizationStrategy extends BaseQuestionStrategy<Question> {
    * @private
    */
   private getEnhancedWordStatus(word: string): QuestionStatus | null {
-    const key = 'english-progress';
-    const stored = localStorage.getItem(key);
-    if (!stored) return null;
-
-    try {
-      const progress = JSON.parse(stored);
-      const wordProgress = progress.wordProgress?.[word];
-      if (!wordProgress) return null;
-
-      const attempts = wordProgress.memorizationAttempts || 0;
-      const correct = wordProgress.memorizationCorrect || 0;
-      const stillLearning = wordProgress.memorizationStillLearning || 0;
-      const streak = wordProgress.memorizationStreak || 0;
-      const lastStudied = wordProgress.lastStudied || 0;
-
-      // 間隔反復学習用データ
-      const easinessFactor = wordProgress.easinessFactor || 2.5;
-      const reviewInterval =
-        wordProgress.reviewInterval || calculateOptimalInterval(streak, easinessFactor);
-
-      if (attempts === 0) {
-        return {
-          category: 'new',
-          priority: 3,
-          lastStudied,
-          attempts,
-          correct,
-          streak,
-          forgettingRisk: 0,
-          reviewInterval: 0,
-          accuracy: 0,
-        };
-      }
-
-      // まだまだを0.5回の正解として計算（正答率50%以上になるように）
-      const effectiveCorrect = correct + stillLearning * 0.5;
-      const accuracy = attempts > 0 ? (effectiveCorrect / attempts) * 100 : 0;
-
-      // 忘却リスクを計算
-      const forgettingRisk = calculateForgettingRisk(lastStudied, reviewInterval, accuracy);
-
-      // カテゴリ判定
-      // 🟢 覚えてる判定
-      if (attempts === 1 && correct === 1) {
-        // 新規単語を1発で正解 → 即座に覚えてる
-        return {
-          category: 'mastered',
-          priority: 5,
-          lastStudied,
-          attempts,
-          correct,
-          streak,
-          forgettingRisk,
-          reviewInterval,
-          accuracy,
-        };
-      } else if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
-        // まだまだから昇格: 連続3回以上 or 正答率80%以上で連続2回
-        return {
-          category: 'mastered',
-          priority: 5,
-          lastStudied,
-          attempts,
-          correct,
-          streak,
-          forgettingRisk,
-          reviewInterval,
-          accuracy,
-        };
-      }
-      // 🟡 まだまだ: 正答率50%以上 or まだまだボタンを押したことがある
-      else if (accuracy >= 50 || stillLearning > 0) {
-        return {
-          category: 'still_learning',
-          priority: 2,
-          lastStudied,
-          attempts,
-          correct,
-          streak,
-          forgettingRisk,
-          reviewInterval,
-          accuracy,
-        };
-      }
-      // 🔴 分からない: 正答率50%未満 and まだまだボタンを押したことがない
-      else {
-        return {
-          category: 'incorrect',
-          priority: 1,
-          lastStudied,
-          attempts,
-          correct,
-          streak,
-          forgettingRisk,
-          reviewInterval,
-          accuracy,
-        };
-      }
-    } catch (error) {
-      logger.error('統計情報の取得エラー:', error);
-      return null;
-    }
+    // ✅ learningUtils.getQuestionStatus（暗記タブSSOT: determineWordPosition）へ統一
+    return this.getQuestionStatusForWord(word);
   }
 
   /**

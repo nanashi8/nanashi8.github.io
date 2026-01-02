@@ -180,6 +180,31 @@ export function generateChoices(
 }
 
 /**
+ * 語句から細分類を推測（山/川/湖/海/県/市など）
+ */
+function inferSubCategory(word: string): string | null {
+  // 地名の細分類
+  if (word.endsWith('山') || word.includes('山脈')) return '山地';
+  if (word.endsWith('川') || word.includes('川')) return '河川';
+  if (word.endsWith('湖')) return '湖';
+  if (word.endsWith('海') || word.includes('洋')) return '海洋';
+  if (word.endsWith('半島')) return '半島';
+  if (word.endsWith('島')) return '島';
+  if (word.endsWith('平野') || word.endsWith('盆地') || word.endsWith('台地')) return '平地';
+  if (word.endsWith('県') || word.endsWith('道') || word.endsWith('府')) return '都道府県';
+  if (word.endsWith('市') || word.endsWith('町') || word.endsWith('村')) return '都市';
+
+  // 人物名は名前パターンで推測（姓名の組み合わせが多い）
+  // 歴史上の人物は「〇〇〇〇（4文字前後）」が多く、現代人とは異なる
+  if (word.length >= 3 && word.length <= 6 && /^[ぁ-ん]+$/.test(word)) {
+    // ひらがなのみで3-6文字なら人物名の可能性（読み）
+    return null; // termTypeで既に分類されているのでnull
+  }
+
+  return null;
+}
+
+/**
  * 選択肢とそれに対応するQuestionオブジェクトを生成
  * 正解1つ + 誤答2つ + 「分からない」の4択
  */
@@ -190,17 +215,55 @@ export function generateChoicesWithQuestions(
 ): Array<{ text: string; question: Question | null }> {
   const wrongQuestions: Question[] = [];
   const otherQuestions = allQuestions.filter((_, idx) => idx !== currentIndex);
-  const shuffledOthers = shuffle(otherQuestions);
 
-  // 誤答を2つ選択（3つから2つに変更）
-  for (let i = 0; i < shuffledOthers.length && wrongQuestions.length < 2; i++) {
-    const wrongQuestion = shuffledOthers[i];
-    if (
-      wrongQuestion.meaning !== currentQuestion.meaning &&
-      !wrongQuestions.some((q) => q.meaning === wrongQuestion.meaning)
-    ) {
-      wrongQuestions.push(wrongQuestion);
+  const isSocialStudies = Boolean(currentQuestion.termType);
+  const candidatePools = (() => {
+    if (!isSocialStudies) {
+      return { primary: shuffle(otherQuestions), secondary: [] as Question[] };
     }
+
+    // 社会科の場合、細分類で絞り込み（山なら山、川なら川）
+    const subCategory = inferSubCategory(currentQuestion.word);
+
+    if (subCategory) {
+      // 細分類が推測できた場合、同じ細分類を最優先
+      const sameSubCategory = otherQuestions.filter(
+        (q) => q.termType === currentQuestion.termType && inferSubCategory(q.word) === subCategory
+      );
+      const sameTypeOther = otherQuestions.filter(
+        (q) => q.termType === currentQuestion.termType && inferSubCategory(q.word) !== subCategory
+      );
+      const otherType = otherQuestions.filter((q) => q.termType !== currentQuestion.termType);
+
+      return {
+        primary: shuffle(sameSubCategory),
+        secondary: shuffle([...sameTypeOther, ...otherType]),
+      };
+    } else {
+      // 細分類が推測できない場合は従来通り種別で絞る
+      const sameType = otherQuestions.filter((q) => q.termType === currentQuestion.termType);
+      const otherType = otherQuestions.filter((q) => q.termType !== currentQuestion.termType);
+      return { primary: shuffle(sameType), secondary: shuffle(otherType) };
+    }
+  })();
+
+  // 誤答を2つ選択（正解と同じ意味は除外 / 意味の重複も除外）
+  const tryPickWrong = (candidates: Question[]) => {
+    for (let i = 0; i < candidates.length && wrongQuestions.length < 2; i++) {
+      const wrongQuestion = candidates[i];
+      if (
+        wrongQuestion.meaning !== currentQuestion.meaning &&
+        !wrongQuestions.some((q) => q.meaning === wrongQuestion.meaning)
+      ) {
+        wrongQuestions.push(wrongQuestion);
+      }
+    }
+  };
+
+  // 社会科は「同じ種別 → 足りなければ他種別」の順で抽出
+  tryPickWrong(candidatePools.primary);
+  if (wrongQuestions.length < 2) {
+    tryPickWrong(candidatePools.secondary);
   }
 
   // 誤答が足りない場合はダミーを追加

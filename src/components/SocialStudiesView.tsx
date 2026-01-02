@@ -1,60 +1,147 @@
 /**
- * 社会科学習ビュー
+ * 社会科学習ビュー（CSV対応版）
  *
- * 地理・歴史・公民の一問一答形式
- * - 3択 + 「分からない」形式
- * - 詳細解説 + 関連事項表示
- * - 時系列ソート対応（歴史のみ）
- * - いもづる式学習（因果関係・時系列重視）
+ * 地理・歴史・公民の三択形式
+ * - 3択形式（同じ種別から選択肢生成）
+ * - 詳細解説表示
+ * - CSV形式データ対応
  */
 
-import React, { useState, useEffect, useMemo } from 'react';
-import type { SocialStudiesQuestion, SocialStudiesField } from '@/types/socialStudies';
+import React, { useEffect, useMemo, useState } from 'react';
+import type { Question } from '../types';
 import {
-  updateSocialStudiesProgress,
-  getSocialStudiesTermProgress,
-  loadSocialStudiesProgressSync,
-} from '@/storage/progress/socialStudiesProgress';
-import {
-  loadRelationships,
-  getRelatedTerms,
-  type RelatedTermRecommendation,
-} from '@/storage/socialStudiesRelations';
-import { socialStudiesEfficiencyAI } from '@/ai/specialists/SocialStudiesEfficiencyAI';
+  loadSocialStudiesCSV,
+  SOCIAL_STUDIES_DATA_SOURCES,
+} from '../utils/socialStudiesLoader';
+import { useSessionStats } from '../hooks/useSessionStats';
+import ScoreBoard from './ScoreBoard';
+import QuestionCard from './QuestionCard';
 
 interface SocialStudiesViewProps {
   /** 現在のデータソース */
   dataSource?: string;
 }
 
-interface QuizChoice {
-  text: string;
-  isCorrect: boolean;
+function normalizeRelatedFields(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.map((v) => String(v).trim()).filter(Boolean);
+  }
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    if (!trimmed) return [];
+    return trimmed
+      .split('|')
+      .map((s) => s.trim())
+      .filter(Boolean);
+  }
+  return [];
 }
-
-type SortOrder = 'priority' | 'random' | 'chronological-asc' | 'chronological-desc';
 
 /**
  * 社会科学習ビュー
  */
-function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudiesViewProps) {
+function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStudiesViewProps) {
   // ===== 状態管理 =====
-  const [questions, setQuestions] = useState<SocialStudiesQuestion[]>([]);
+  const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [choices, setChoices] = useState<QuizChoice[]>([]);
+  const [answered, setAnswered] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showSettings, setShowSettings] = useState(false);
 
-  // いもづる式学習
-  const [relatedTerms, setRelatedTerms] = useState<RelatedTermRecommendation[]>([]);
+  const isClassical = dataSource.includes('classical');
 
-  // フィルター
-  const [selectedField, setSelectedField] = useState<SocialStudiesField | 'all'>('all');
-  const [sortOrder, setSortOrder] = useState<SortOrder>('priority');
+  // 学習設定（社会のみ: 暗記タブと揃える）
+  const [selectedDataSource, setSelectedDataSource] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const questionSets = useMemo(() => {
+    const bySource = new Map<string, number>();
+    for (const q of allQuestions) {
+      const source = (q as any).source ? String((q as any).source) : 'junior';
+      bySource.set(source, (bySource.get(source) ?? 0) + 1);
+    }
+
+    const nameForSource = (source: string): string => {
+      switch (source) {
+        case 'history':
+          return '歴史';
+        case 'geography':
+          return '地理';
+        case 'civics':
+          return '公民';
+        case 'junior':
+          return '中学（総合）';
+        default:
+          return `社会（${source}）`;
+      }
+    };
+
+    return Array.from(bySource.entries())
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([source, count]) => ({ id: source, name: nameForSource(source), count }));
+  }, [allQuestions]);
+
+  const availableCategories = useMemo(() => {
+    const categories = new Set<string>();
+    allQuestions.forEach((q) => {
+      normalizeRelatedFields((q as any).relatedFields).forEach((field) => categories.add(field));
+    });
+    return Array.from(categories).sort();
+  }, [allQuestions]);
+
+  const questions = useMemo(() => {
+    // 国語（古文）三択は、現状の設定（バッチ/不正解上限）だけに留める
+    if (isClassical) return allQuestions;
+
+    let filtered = allQuestions;
+
+    // 出題元フィルター（source）
+    if (selectedDataSource !== 'all') {
+      filtered = filtered.filter((q) => String((q as any).source || '') === selectedDataSource);
+    }
+
+    // 関連分野フィルター（relatedFields）
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter((q) =>
+        normalizeRelatedFields((q as any).relatedFields).includes(selectedCategory)
+      );
+    }
+
+    return filtered;
+  }, [allQuestions, isClassical, selectedCategory, selectedDataSource]);
+
+  // 🆕 バッチ数設定（LocalStorageから読み込み）
+  const batchSize = (() => {
+    try {
+      // 社会（三択）は暗記タブと同一キーに揃える
+      const key = isClassical ? 'japanese-translation-batch-size' : 'memorization-batch-size';
+      const saved = localStorage.getItem(key);
+      return saved ? parseInt(saved) : null;
+    } catch {
+      return null;
+    }
+  })();
+
+  // 🆕 不正解の上限比率（10-50%）
+  const reviewRatioLimit = (() => {
+    try {
+      // 社会（三択）は暗記タブと同一キーに揃える
+      const key = isClassical
+        ? 'japanese-translation-review-ratio-limit'
+        : 'memorization-review-ratio-limit';
+      const saved = localStorage.getItem(key);
+      return saved ? parseInt(saved) : 20; // デフォルト20%
+    } catch {
+      return 20;
+    }
+  })();
+
+  // タブ固有のセッション統計を管理
+  const { sessionStats, setSessionStats, resetStats: resetSessionStats } = useSessionStats('translation');
 
   // ===== データ読み込み =====
   useEffect(() => {
@@ -66,16 +153,31 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
       setLoading(true);
       setError(null);
 
-      const response = await fetch(`/data/social-studies/${dataSource}.json`);
-      if (!response.ok) {
-        throw new Error(`データの読み込みに失敗しました: ${response.statusText}`);
-      }
+      const data = await loadSocialStudiesCSV(dataSource);
 
-      const data: SocialStudiesQuestion[] = await response.json();
-      setQuestions(data);
+      // データの入れ替え処理を分ける
+      // - 社会科: word=語句（答え）, meaning=意味（問題文）→ 入れ替えが必要
+      // - 古文: word=古語（問題）, meaning=現代語訳（答え）→ 入れ替え不要
+      const processedData = isClassical
+        ? data.map((q) => ({
+            ...q,
+            // 古文は入れ替えせず、解説のみ調整
+            etymology: `${q.etymology}\n\n【語句】${q.word} (${q.reading})\n【意味】${q.meaning}`,
+          }))
+        : data.map((q) => ({
+            ...q,
+            // 社会科は入れ替え（QuestionCardは英語用のため）
+            word: q.meaning,    // 問題文として表示
+            meaning: q.word,    // 選択肢として表示
+            etymology: `${q.etymology}\n\n正解: ${q.word} (${q.reading})`,
+          }));
 
-      // 関連情報を読み込み（いもづる式学習用）
-      await loadRelationships(dataSource);
+      setAllQuestions(processedData);
+      setCurrentIndex(0);
+      setAnswered(false);
+      setSelectedAnswer(null);
+      setScore(0);
+      setTotalAnswered(0);
 
       setLoading(false);
     } catch (err) {
@@ -85,396 +187,304 @@ function SocialStudiesView({ dataSource = 'social-studies-sample' }: SocialStudi
     }
   };
 
-  // ===== フィルター・ソート処理 =====
-  const filteredQuestions = useMemo(() => {
-    let filtered = questions;
-
-    // 分野フィルター
-    if (selectedField !== 'all') {
-      filtered = filtered.filter((q) => q.relatedFields.includes(selectedField));
-    }
-
-    // ソート
-    if (sortOrder === 'priority') {
-      // 優先順位ソート（Position降順: 苦手な問題を優先）
-      filtered = [...filtered].sort((a, b) => {
-        const progressA = getSocialStudiesTermProgress(a.term);
-        const progressB = getSocialStudiesTermProgress(b.term);
-
-        const posA = progressA?.position ?? 35; // 未学習は中間値
-        const posB = progressB?.position ?? 35;
-
-        return posB - posA; // 降順（Positionが高い = 苦手を優先）
-      });
-    } else if (sortOrder === 'chronological-asc') {
-      filtered = [...filtered].sort((a, b) => (a.year || 9999) - (b.year || 9999));
-    } else if (sortOrder === 'chronological-desc') {
-      filtered = [...filtered].sort((a, b) => (b.year || 0) - (a.year || 0));
-    } else {
-      // ランダムソート
-      filtered = [...filtered].sort(() => Math.random() - 0.5);
-    }
-
-    return filtered;
-  }, [questions, selectedField, sortOrder]);
-
-  // ===== 選択肢生成 =====
-  useEffect(() => {
-    if (filteredQuestions.length === 0) return;
-    generateChoices();
-  }, [currentIndex, filteredQuestions]);
-
-  const generateChoices = () => {
-    if (filteredQuestions.length === 0) return;
-
-    const currentQuestion = filteredQuestions[currentIndex];
-    const correctAnswer = currentQuestion.term;
-
-    // 選択肢ヒントから誤答を生成
-    const hints = currentQuestion.choiceHints.split('|').map((h) => h.trim());
-    const incorrectChoices = hints.slice(0, 2); // 最大2つの誤答
-
-    // 選択肢を作成
-    const newChoices: QuizChoice[] = [
-      { text: correctAnswer, isCorrect: true },
-      ...incorrectChoices.map((text) => ({ text, isCorrect: false })),
-    ];
-
-    // シャッフル
-    newChoices.sort(() => Math.random() - 0.5);
-
-    setChoices(newChoices);
-  };
-
   // ===== 回答処理 =====
-  const handleAnswer = (answer: string) => {
-    if (isAnswered) return;
+  const handleAnswer = (answer: string, correct: string) => {
+    if (answered) return;
 
     setSelectedAnswer(answer);
-    setIsAnswered(true);
-    setTotalAnswered(totalAnswered + 1);
+    setAnswered(true);
 
-    const currentQuestion = filteredQuestions[currentIndex];
-    const isCorrect = answer === currentQuestion.term;
+    const isCorrect = answer === correct;
+    setTotalAnswered((prev) => prev + 1);
+    setScore((prev) => (isCorrect ? prev + 1 : prev));
 
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-
-    // 進捗を更新（Position 0-100管理）
-    updateSocialStudiesProgress(
-      currentQuestion.term,
-      currentQuestion.relatedFields.split('|')[0].trim(),
-      isCorrect,
-      false
-    );
-
-    // 関連語句を取得（いもづる式学習）
-    const related = getRelatedTerms(currentQuestion.term, 3);
-    setRelatedTerms(related);
+    // セッション統計を更新（英語三択と同じ粒度）
+    setSessionStats((prev) => ({
+      ...prev,
+      correct: prev.correct + (isCorrect ? 1 : 0),
+      incorrect: prev.incorrect + (!isCorrect ? 1 : 0),
+      newQuestions: prev.newQuestions + 1,
+    }));
   };
 
-  const handleDontKnow = () => {
-    if (isAnswered) return;
-
-    setSelectedAnswer('分からない');
-    setIsAnswered(true);
-    setTotalAnswered(totalAnswered + 1);
-
-    const currentQuestion = filteredQuestions[currentIndex];
-
-    // 進捗を更新（「分からない」は不正解として扱う）
-    updateSocialStudiesProgress(
-      currentQuestion.term,
-      currentQuestion.relatedFields.split('|')[0].trim(),
-      false,
-      true // isDontKnow: true
-    );
-
-    // 関連語句を取得（いもづる式学習）
-    const related = getRelatedTerms(currentQuestion.term, 3);
-    setRelatedTerms(related);
-  };
-
+  // ===== 次の問題へ =====
   const handleNext = () => {
+    if (questions.length === 0) return;
+    setCurrentIndex((prev) => (prev + 1) % questions.length);
     setSelectedAnswer(null);
-    setIsAnswered(false);
-    setRelatedTerms([]);
-    setCurrentIndex((currentIndex + 1) % filteredQuestions.length);
+    setAnswered(false);
   };
 
-  // 学習効率メトリクス（フック呼び出しは条件分岐の前に配置）
-  const efficiencyMetrics = useMemo(() => {
-    try {
-      const progressData = loadSocialStudiesProgressSync();
-      return socialStudiesEfficiencyAI.calculateOverallMetrics(progressData);
-    } catch (err) {
-      console.error('効率メトリクス計算エラー:', err);
-      return null;
+  // ===== 前の問題へ =====
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => Math.max(prev - 1, 0));
+    setSelectedAnswer(null);
+    setAnswered(false);
+  };
+
+  // スキップ（回答前にNextを押した場合）: 英語三択と同じく正解扱いで進める
+  const handleSkip = () => {
+    if (questions.length === 0) return;
+
+    setScore((prev) => prev + 1);
+    setTotalAnswered((prev) => prev + 1);
+
+    setSessionStats((prev) => ({
+      ...prev,
+      correct: prev.correct + 1,
+      mastered: prev.mastered + 1,
+    }));
+
+    setCurrentIndex((prev) => (prev + 1) % questions.length);
+    setSelectedAnswer(null);
+    setAnswered(false);
+  };
+
+  const handleNextOrSkip = () => {
+    if (answered) {
+      handleNext();
+    } else {
+      handleSkip();
     }
-  }, [totalAnswered]); // 回答時に再計算
+  };
+
+  // ===== リセット =====
+  const handleReset = () => {
+    setCurrentIndex(0);
+    setSelectedAnswer(null);
+    setAnswered(false);
+    setScore(0);
+    setTotalAnswered(0);
+    resetSessionStats();
+  };
+
+  // フィルター変更時は、出題状態をリセット（暗記タブと同様の挙動に揃える）
+  useEffect(() => {
+    if (isClassical) return;
+    setCurrentIndex(0);
+    setSelectedAnswer(null);
+    setAnswered(false);
+    setScore(0);
+    setTotalAnswered(0);
+    resetSessionStats();
+  }, [isClassical, resetSessionStats, selectedCategory, selectedDataSource]);
+
+  // 絞り込みでインデックスが範囲外になった場合の安全策
+  useEffect(() => {
+    if (currentIndex < questions.length) return;
+    setCurrentIndex(0);
+    setSelectedAnswer(null);
+    setAnswered(false);
+  }, [currentIndex, questions.length]);
 
   // ===== レンダリング =====
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-lg text-gray-600">読み込み中...</div>
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">読み込み中...</p>
+        </div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-lg text-red-600">エラー: {error}</div>
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="text-center text-red-600">
+          <p className="text-lg font-semibold mb-2">エラーが発生しました</p>
+          <p>{error}</p>
+        </div>
       </div>
     );
   }
 
-  if (filteredQuestions.length === 0) {
+  if (questions.length === 0) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-lg text-gray-600">問題がありません</div>
+      <div className="flex items-center justify-center min-h-[400px]">
+        <p className="text-gray-600">問題が見つかりませんでした</p>
       </div>
     );
   }
 
-  const currentQuestion = filteredQuestions[currentIndex];
-  const correctRate = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+  const currentQuestion = questions[currentIndex];
 
   return (
-    <div className="social-studies-view max-w-4xl mx-auto p-4">
-      {/* ヘッダー: スコアとフィルター */}
-      <div className="mb-6 bg-white rounded-lg shadow-md p-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          {/* スコア表示 */}
-          <div className="flex items-center gap-4">
-            <div className="text-lg font-bold">
-              正解率: <span className="text-blue-600">{correctRate}%</span>
-            </div>
-            <div className="text-sm text-gray-600">
-              {score} / {totalAnswered}問正解
-            </div>
-          </div>
-
-          {/* 学習効率表示 */}
-          {efficiencyMetrics && totalAnswered > 0 && (
-            <div className="flex items-center gap-4 text-sm">
-              <div className="flex items-center gap-1">
-                <span className="text-gray-600">定着率:</span>
-                <span className="font-medium text-green-600">
-                  {Math.round(efficiencyMetrics.retentionRate * 100)}%
-                </span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="text-gray-600">学習速度:</span>
-                <span className="font-medium text-purple-600">
-                  {efficiencyMetrics.learningSpeed}語/日
-                </span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="text-gray-600">効率:</span>
-                <span className="font-medium text-orange-600">
-                  {Math.round(efficiencyMetrics.efficiencyScore)}点
-                </span>
-              </div>
-            </div>
-          )}
-
-          {/* フィルター */}
-          <div className="flex items-center gap-2">
-            <select
-              title="分野で絞り込む"
-              aria-label="分野で絞り込む"
-              value={selectedField}
-              onChange={(e) => setSelectedField(e.target.value as SocialStudiesField | 'all')}
-              className="px-3 py-2 border border-gray-300 rounded-md text-sm"
-            >
-              <option value="all">全分野</option>
-              <optgroup label="歴史">
-                <option value="歴史-古代">古代</option>
-                <option value="歴史-中世">中世</option>
-                <option value="歴史-近世">近世</option>
-                <option value="歴史-近代">近代</option>
-                <option value="歴史-現代">現代</option>
-              </optgroup>
-              <optgroup label="地理">
-                <option value="地理-日本">日本</option>
-                <option value="地理-世界">世界</option>
-                <option value="地理-産業">産業</option>
-                <option value="地理-環境">環境</option>
-              </optgroup>
-              <optgroup label="公民">
-                <option value="公民-政治">政治</option>
-                <option value="公民-経済">経済</option>
-                <option value="公民-国際">国際</option>
-                <option value="公民-人権">人権</option>
-              </optgroup>
-            </select>
-
-            <select
-              title="並び順"
-              aria-label="並び順"
-              value={sortOrder}
-              onChange={(e) => setSortOrder(e.target.value as SortOrder)}
-              className="px-3 py-2 border border-gray-300 rounded-md text-sm"
-            >
-              <option value="random">ランダム</option>
-              <option value="chronological-asc">時系列（古→新）</option>
-              <option value="chronological-desc">時系列（新→古）</option>
-            </select>
-          </div>
+    <div className="quiz-view">
+      <div className="mb-4 flex justify-center">
+        <div className="w-full max-w-4xl">
+          <ScoreBoard
+            mode="translation"
+            currentScore={score}
+            totalAnswered={totalAnswered}
+            sessionCorrect={sessionStats?.correct}
+            sessionIncorrect={sessionStats?.incorrect}
+            sessionReview={sessionStats?.review}
+            sessionMastered={sessionStats?.mastered}
+            currentWord={currentQuestion?.word}
+            dataSource={
+              SOCIAL_STUDIES_DATA_SOURCES.find((s) => s.filename === dataSource)?.name ||
+              '社会'
+            }
+            onShowSettings={() => setShowSettings(true)}
+          />
         </div>
       </div>
 
-      {/* 問題カード */}
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-        {/* 問題番号と分野 */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-sm text-gray-500">
-            問題 {currentIndex + 1} / {filteredQuestions.length}
+      {/* 学習設定パネル */}
+      {showSettings && (
+        <div className="mb-4 bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-xl font-bold">📊 学習設定</h3>
+            <button
+              onClick={() => setShowSettings(false)}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              ✕ 閉じる
+            </button>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
-              {currentQuestion.relatedFields}
-            </span>
-            {currentQuestion.year && (
-              <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
-                {currentQuestion.year}年
-              </span>
+
+          <div className="space-y-4">
+            {/* 社会（暗記タブと同一の設定） */}
+            {!isClassical && (
+              <>
+                <div>
+                  <label
+                    htmlFor="memorization-datasource"
+                    className="block text-sm font-medium mb-2 text-gray-700"
+                  >
+                    📖 出題元:
+                  </label>
+                  <select
+                    id="memorization-datasource"
+                    value={selectedDataSource}
+                    onChange={(e) => setSelectedDataSource(e.target.value)}
+                    className="w-full px-3 py-2 border rounded-lg"
+                  >
+                    <option value="all">
+                      {SOCIAL_STUDIES_DATA_SOURCES.find((s) => s.filename === dataSource)?.name ||
+                        '社会（総合）'}
+                    </option>
+                    {questionSets.map((set) => (
+                      <option key={set.id} value={set.id}>
+                        {set.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="memorization-category"
+                    className="block text-sm font-medium mb-2 text-gray-700"
+                  >
+                    🏷️ 関連分野:
+                  </label>
+                  <select
+                    id="memorization-category"
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full px-3 py-2 border rounded-lg"
+                  >
+                    <option value="all">全分野</option>
+                    {availableCategories.map((category) => (
+                      <option key={category} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </>
             )}
-          </div>
-        </div>
 
-        {/* 問題文 */}
-        <div className="mb-6">
-          <p className="text-xl font-bold text-gray-800 mb-2">{currentQuestion.question}</p>
-          {currentQuestion.matter && (
-            <p className="text-sm text-gray-600">（{currentQuestion.matter}）</p>
-          )}
-        </div>
-
-        {/* 選択肢 */}
-        <div className="space-y-3 mb-6">
-          {choices.map((choice, index) => {
-            const isSelected = selectedAnswer === choice.text;
-            const isCorrect = choice.isCorrect;
-            const showResult = isAnswered;
-
-            let buttonClass =
-              'w-full p-4 text-left border-2 rounded-lg transition-all duration-200 ';
-            if (!showResult) {
-              buttonClass += 'border-gray-300 hover:border-blue-500 hover:bg-blue-50';
-            } else if (isSelected && isCorrect) {
-              buttonClass += 'border-green-500 bg-green-50';
-            } else if (isSelected && !isCorrect) {
-              buttonClass += 'border-red-500 bg-red-50';
-            } else if (isCorrect) {
-              buttonClass += 'border-green-500 bg-green-50';
-            } else {
-              buttonClass += 'border-gray-300 bg-gray-50';
-            }
-
-            return (
-              <button
-                key={index}
-                onClick={() => handleAnswer(choice.text)}
-                disabled={isAnswered}
-                className={buttonClass}
+            {/* バッチ数設定 */}
+            <div className="border-t pt-4">
+              <label
+                htmlFor="translation-batch-size"
+                className="block text-sm font-medium mb-2 text-gray-700"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-medium">{choice.text}</span>
-                  {showResult && isCorrect && <span className="text-green-600">✓ 正解</span>}
-                  {showResult && isSelected && !isCorrect && (
-                    <span className="text-red-600">✗ 不正解</span>
-                  )}
-                </div>
-              </button>
-            );
-          })}
-        </div>
+                📦 バッチ数:
+              </label>
+              <select
+                id="translation-batch-size"
+                value={batchSize ?? ''}
+                onChange={(e) => {
+                  const value = e.target.value === '' ? null : parseInt(e.target.value);
+                  const key = isClassical ? 'japanese-translation-batch-size' : 'memorization-batch-size';
+                  try {
+                    if (value === null) {
+                      localStorage.removeItem(key);
+                    } else {
+                      localStorage.setItem(key, String(value));
+                    }
+                    window.location.reload();
+                  } catch {
+                    // ignore storage errors
+                  }
+                }}
+                className="w-full px-3 py-2 border rounded-lg"
+              >
+                <option value="">制限なし</option>
+                <option value="10">10問</option>
+                <option value="20">20問</option>
+                <option value="30">30問</option>
+                <option value="50">50問</option>
+                <option value="100">100問</option>
+                <option value="200">200問</option>
+              </select>
+            </div>
 
-        {/* 「分からない」ボタン */}
-        {!isAnswered && (
-          <button
-            onClick={handleDontKnow}
-            className="w-full p-3 border-2 border-gray-400 rounded-lg text-gray-700 hover:bg-gray-100 transition-all duration-200"
-          >
-            分からない
-          </button>
-        )}
-
-        {/* 解説表示（回答後） */}
-        {isAnswered && (
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-            <h3 className="text-lg font-bold mb-2 text-gray-800">📝 解説</h3>
-            <p className="text-gray-700 mb-4">{currentQuestion.explanation}</p>
-
-            {/* 関連事項 */}
-            {currentQuestion.relatedMatters && (
-              <div className="mt-4">
-                <h4 className="text-sm font-bold text-gray-700 mb-2">🔗 関連事項</h4>
-                <div className="flex flex-wrap gap-2">
-                  {currentQuestion.relatedMatters.split('|').map((matter, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full border border-blue-200"
-                    >
-                      {matter.trim()}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* いもづる式学習: 推薦関連語句 */}
-            {relatedTerms.length > 0 && (
-              <div className="mt-4 p-3 bg-purple-50 rounded-lg border border-purple-200">
-                <h4 className="text-sm font-bold text-purple-800 mb-2">🔍 次に学ぶとよい語句</h4>
-                <div className="space-y-2">
-                  {relatedTerms.map((rec, idx) => {
-                    const progress = getSocialStudiesTermProgress(rec.term);
-                    const positionBadge = progress
-                      ? progress.position <= 20
-                        ? '✅ 習得済み'
-                        : progress.position <= 40
-                          ? '📚 定着中'
-                          : progress.position <= 70
-                            ? '📖 学習中'
-                            : '❓ 苦手'
-                      : '🆕 未学習';
-
-                    return (
-                      <div
-                        key={idx}
-                        className="flex items-start justify-between p-2 bg-white rounded border border-purple-100"
-                      >
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2">
-                            <span className="font-medium text-purple-900">{rec.term}</span>
-                            <span className="text-xs text-purple-600">{positionBadge}</span>
-                          </div>
-                          <p className="text-xs text-gray-600 mt-1">{rec.reason}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-                <p className="text-xs text-purple-600 mt-2">
-                  💡 ヒント: これらの語句を学習すると、理解が深まります
-                </p>
-              </div>
-            )}
+            {/* 不正解の上限 */}
+            <div>
+              <label
+                htmlFor="translation-review-ratio-limit"
+                className="block text-sm font-medium mb-2 text-gray-700"
+              >
+                ❌ 不正解の上限:
+              </label>
+              <select
+                id="translation-review-ratio-limit"
+                value={reviewRatioLimit}
+                onChange={(e) => {
+                  const value = parseInt(e.target.value);
+                  const key = isClassical
+                    ? 'japanese-translation-review-ratio-limit'
+                    : 'memorization-review-ratio-limit';
+                  try {
+                    localStorage.setItem(key, String(value));
+                    window.location.reload();
+                  } catch {
+                    // ignore storage errors
+                  }
+                }}
+                className="w-full px-3 py-2 border rounded-lg"
+              >
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+                <option value="40">40%</option>
+                <option value="50">50%</option>
+              </select>
+            </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* 次へボタン */}
-        <button
-          onClick={handleNext}
-          className="mt-6 w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all duration-200"
-        >
-          次の問題へ →
-        </button>
+      <div className="flex justify-center">
+        <div className="w-full max-w-4xl px-4">
+          <QuestionCard
+            question={currentQuestion}
+            questionNumber={currentIndex + 1}
+            allQuestions={questions}
+            currentIndex={currentIndex}
+            answered={answered}
+            selectedAnswer={selectedAnswer}
+            onAnswer={(answer, correct) => handleAnswer(answer, correct)}
+            onNext={handleNextOrSkip}
+            onPrevious={handlePrevious}
+          />
+        </div>
       </div>
     </div>
   );

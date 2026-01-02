@@ -9,7 +9,6 @@ import {
   DataSource,
 } from '../App';
 import ScoreBoard from './ScoreBoard';
-import LearningLimitsInput from './LearningLimitsInput';
 import AddToCustomButton from './AddToCustomButton';
 import {
   addQuizResult,
@@ -26,7 +25,6 @@ import {
 import { generateId } from '../utils';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import { logger } from '@/utils/logger';
-import { useLearningLimits } from '../hooks/useLearningLimits';
 import { useSpellingGame } from '../hooks/useSpellingGame';
 import { useSessionStats } from '../hooks/useSessionStats';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
@@ -83,9 +81,25 @@ function SpellingView({
   onRemoveWordFromCustomSet,
   onOpenCustomSetManagement,
 }: SpellingViewProps) {
-  // 学習中・要復習の上限設定（カスタムフック使用） - 最初に呼び出す
-  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
-    useLearningLimits('spelling');
+  // 🆕 バッチ数設定（LocalStorageから読み込み）
+  const batchSize = (() => {
+    try {
+      const saved = localStorage.getItem('spelling-batch-size');
+      return saved ? parseInt(saved) : null;
+    } catch {
+      return null;
+    }
+  })();
+
+  // 🆕 不正解の上限比率（10-50%）
+  const reviewRatioLimit = (() => {
+    try {
+      const saved = localStorage.getItem('spelling-review-ratio-limit');
+      return saved ? parseInt(saved) : 20; // デフォルト20%
+    } catch {
+      return 20;
+    }
+  })();
 
   // ソート済み問題（QuestionSchedulerによる出題順序管理）
   const [sortedQuestions, setSortedQuestions] = useState<Question[]>([]);
@@ -105,8 +119,8 @@ function SpellingView({
     updateScore,
   } = useSpellingGame(sortedQuestions);
 
-  // セッション統計（カスタムフック）
-  const { sessionStats, setSessionStats, resetStats, updateStats } = useSessionStats();
+  // セッション統計（カスタムフック）- スペルタブ専用
+  const { sessionStats, setSessionStats, resetStats, updateStats } = useSessionStats('spelling');
 
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.SPELLING);
@@ -274,10 +288,6 @@ function SpellingView({
         questions: questions,
         mode: 'spelling',
         useCategorySlots: true,
-        limits: {
-          learningLimit: learningLimit,
-          reviewLimit: reviewLimit,
-        },
         sessionStats: {
           correct: sessionStats.correct,
           incorrect: sessionStats.incorrect,
@@ -309,7 +319,7 @@ function SpellingView({
     };
 
     initializeQuestions();
-  }, [questions, learningLimit, reviewLimit, isReviewFocusMode, scheduler]);
+  }, [questions, isReviewFocusMode, scheduler]);
 
   // 🎯 暗記タブ同等: 途中の自動再スケジューリング（現在位置以降のみ）
   useEffect(() => {
@@ -336,10 +346,6 @@ function SpellingView({
           questions: remaining,
           mode: 'spelling',
           useCategorySlots: true,
-          limits: {
-            learningLimit: learningLimit,
-            reviewLimit: reviewLimit,
-          },
           sessionStats: {
             correct: sessionStats.correct,
             incorrect: sessionStats.incorrect,
@@ -381,8 +387,6 @@ function SpellingView({
     spellingState.currentIndex,
     spellingState.questions,
     scheduler,
-    learningLimit,
-    reviewLimit,
     sessionStats,
     isReviewFocusMode,
     answerCountSinceSchedule,
@@ -961,13 +965,61 @@ function SpellingView({
                 </div>
               )}
 
-              <LearningLimitsInput
-                learningLimit={learningLimit}
-                reviewLimit={reviewLimit}
-                onLearningLimitChange={setLearningLimit}
-                onReviewLimitChange={setReviewLimit}
-                idPrefix="spelling-quiz-"
-              />
+              {/* バッチ数設定 */}
+              <div className="filter-group" style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+                <label htmlFor="spelling-batch-size">📦 バッチ数:</label>
+                <select
+                  id="spelling-batch-size"
+                  value={batchSize ?? ''}
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    try {
+                      if (value === null) {
+                        localStorage.removeItem('spelling-batch-size');
+                      } else {
+                        localStorage.setItem('spelling-batch-size', String(value));
+                      }
+                      window.location.reload();
+                    } catch {
+                      // ignore storage errors
+                    }
+                  }}
+                  className="select-input"
+                >
+                  <option value="">制限なし</option>
+                  <option value="10">10問</option>
+                  <option value="20">20問</option>
+                  <option value="30">30問</option>
+                  <option value="50">50問</option>
+                  <option value="100">100問</option>
+                  <option value="200">200問</option>
+                </select>
+              </div>
+
+              {/* 不正解の上限 */}
+              <div className="filter-group">
+                <label htmlFor="spelling-review-ratio-limit">❌ 不正解の上限:</label>
+                <select
+                  id="spelling-review-ratio-limit"
+                  value={reviewRatioLimit}
+                  onChange={(e) => {
+                    const value = parseInt(e.target.value);
+                    try {
+                      localStorage.setItem('spelling-review-ratio-limit', String(value));
+                      window.location.reload();
+                    } catch {
+                      // ignore storage errors
+                    }
+                  }}
+                  className="select-input"
+                >
+                  <option value="10">10%</option>
+                  <option value="20">20%</option>
+                  <option value="30">30%</option>
+                  <option value="40">40%</option>
+                  <option value="50">50%</option>
+                </select>
+              </div>
             </div>
           )}
 

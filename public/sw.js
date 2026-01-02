@@ -48,6 +48,22 @@ self.addEventListener('activate', (event) => {
 
 // フェッチ: ネットワーク優先＋キャッシュフォールバック
 self.addEventListener('fetch', (event) => {
+  // 開発サーバー（Vite HMR）のリクエストは無視
+  try {
+    const url = new URL(event.request.url);
+
+    // Vite開発サーバーの特殊リクエストはService Workerでインターセプトしない
+    if (
+      url.pathname.startsWith('/@') || // @vite/client, @react-refresh など
+      url.pathname.startsWith('/src/') || // ソースファイル直接アクセス
+      url.pathname.includes('?') && url.searchParams.has('t') // Vite HMRのタイムスタンプクエリ
+    ) {
+      return; // Service Workerを通さない
+    }
+  } catch {
+    // URL解析失敗は通常フローへ
+  }
+
   // ローカル教材: /data/** はローカル教材キャッシュを最優先で返す（全タブ対応の差し替え）
   try {
     const url = new URL(event.request.url);

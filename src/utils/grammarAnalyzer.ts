@@ -776,6 +776,22 @@ export function analyzeSentence(sentence: string): GrammarAnalysisResult[] {
   // 文を単語に分割（句読点、ダッシュも含む）
   const words = sentence.match(/\b[\w']+\b|[.,!?;:\-—–"'()]/g) || [];
 
+  // 頻度表現: "every + 時間名詞" は目的語ではなく修飾語（M）として扱う
+  // 例: every morning / every day / every night / every week
+  // NOTE: "every movie" のような目的語はここでは対象外にする
+  const EVERY_TIME_NOUNS = new Set([
+    'morning',
+    'afternoon',
+    'evening',
+    'night',
+    'day',
+    'week',
+    'month',
+    'year',
+    'weekend',
+    'weekends',
+  ]);
+
   const results: GrammarAnalysisResult[] = [];
   let foundVerb = false;
   let foundSubject = false;
@@ -806,6 +822,10 @@ export function analyzeSentence(sentence: string): GrammarAnalysisResult[] {
       if (i === 0 && /^[A-Z]/.test(word) && !foundSubject) {
         tag = 'S';
         foundSubject = true;
+      }
+      // every + (morning/day/...) は頻度表現なので修飾語
+      else if (i > 0 && words[i - 1].toLowerCase() === 'every' && EVERY_TIME_NOUNS.has(word.toLowerCase())) {
+        tag = 'M';
       }
       // 主語+動詞が出現済みで、まだ目的語/補語がない場合は、最初の名詞っぽいUnknownを目的語/補語として扱う
       else if (

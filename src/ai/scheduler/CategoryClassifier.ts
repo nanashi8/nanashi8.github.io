@@ -18,6 +18,7 @@
 
 import type { WordProgress } from '@/storage/progress/types';
 import type { LearningCategory, CategoryStats } from './types';
+import { determineWordPosition, positionToCategory } from '@/ai/utils/categoryDetermination';
 
 export interface CategoryClassifierOptions {
   /** 最低試行回数（この回数未満は正答率を信用しない） */
@@ -37,18 +38,10 @@ export interface CategoryClassifierOptions {
 }
 
 export class CategoryClassifier {
-  private options: Required<CategoryClassifierOptions>;
   private categoryCache: Map<string, { category: LearningCategory; timestamp: number; signature: string }>;
   private cacheTimeout: number = 10000; // 10秒間キャッシュ（パフォーマンス改善）
 
-  constructor(options?: CategoryClassifierOptions) {
-    this.options = {
-      minAttempts: options?.minAttempts ?? 5,
-      masteredThreshold: options?.masteredThreshold ?? 3,
-      stillLearningMinAccuracy: options?.stillLearningMinAccuracy ?? 50,
-      stillLearningMaxAccuracy: options?.stillLearningMaxAccuracy ?? 80,
-      incorrectThreshold: options?.incorrectThreshold ?? 50,
-    };
+  constructor(_options?: CategoryClassifierOptions) {
     this.categoryCache = new Map();
   }
 
@@ -66,78 +59,16 @@ export class CategoryClassifier {
     const cacheKey = `${wordProgress.word}-${mode}`;
     const cached = this.categoryCache.get(cacheKey);
 
-    const modeStats = this.getModeStats(wordProgress, mode);
-    const consecutiveCorrect = wordProgress.consecutiveCorrect || 0;
-    const consecutiveIncorrect = wordProgress.consecutiveIncorrect || 0;
-    const savedPosition = this.getSavedPosition(wordProgress, mode);
-    const signature = `${modeStats.attempts}/${modeStats.correct}/${modeStats.stillLearning}/${consecutiveCorrect}/${consecutiveIncorrect}/${savedPosition ?? 'x'}`;
+    const position = determineWordPosition(wordProgress, mode);
+    const category = positionToCategory(position) as LearningCategory;
+    const signature = `${position}`;
 
-    // キャッシュヒット（5秒以内）
     if (cached && Date.now() - cached.timestamp < this.cacheTimeout && cached.signature === signature) {
       return cached.category;
     }
 
-    // モード別の試行回数・正解数を取得
-    const { attempts, correct } = modeStats;
-
-    // 未挑戦 → 新規
-    if (attempts === 0) {
-      this.cacheResult(cacheKey, 'new', signature);
-      return 'new';
-    }
-
-    // ✅ 初回解答（attempts=1）は保存済みPosition（例: 15/50/70）からカテゴリを確定
-    // 閾値境界での揺れを避け、解答ボタンに対応したカテゴリへ確実に分類する。
-    if (attempts === 1 && typeof savedPosition === 'number') {
-      const decided =
-        savedPosition >= 70
-          ? 'incorrect'
-          : savedPosition >= 40
-            ? 'still_learning'
-            : 'mastered';
-      this.cacheResult(cacheKey, decided, signature);
-      return decided;
-    }
-
-    // 連続3回以上正解 → 定着済
-    if (consecutiveCorrect >= this.options.masteredThreshold) {
-      this.cacheResult(cacheKey, 'mastered', signature);
-      return 'mastered';
-    }
-
-    // 試行回数が少ない場合は正答率を信用せず、連続正解数のみで判定
-    if (attempts < this.options.minAttempts) {
-      if (consecutiveCorrect >= 2) {
-        this.cacheResult(cacheKey, 'still_learning', signature);
-        return 'still_learning';
-      }
-      if (consecutiveCorrect === 1) {
-        this.cacheResult(cacheKey, 'still_learning', signature);
-        return 'still_learning';
-      }
-      // 連続正解0 → 分からない
-      this.cacheResult(cacheKey, 'incorrect', signature);
-      return 'incorrect';
-    }
-
-    // 正答率で判定（試行回数が十分な場合）
-    const accuracy = (correct / attempts) * 100;
-
-    if (accuracy >= this.options.stillLearningMaxAccuracy) {
-      // 正答率80%以上 → 定着済（ただし連続正解が足りない）
-      this.cacheResult(cacheKey, 'mastered', signature);
-      return 'mastered';
-    }
-
-    if (accuracy >= this.options.stillLearningMinAccuracy) {
-      // 正答率50-80% → まだまだ
-      this.cacheResult(cacheKey, 'still_learning', signature);
-      return 'still_learning';
-    }
-
-    // 正答率50%未満 → 分からない
-    this.cacheResult(cacheKey, 'incorrect', signature);
-    return 'incorrect';
+    this.cacheResult(cacheKey, category, signature);
+    return category;
   }
 
   /**
@@ -237,64 +168,6 @@ export class CategoryClassifier {
 
     for (const key of toDelete) {
       this.categoryCache.delete(key);
-    }
-  }
-
-  /**
-   * モード別の統計を取得
-   */
-  private getModeStats(
-    wordProgress: WordProgress,
-    mode: 'memorization' | 'translation' | 'spelling' | 'grammar'
-  ): { attempts: number; correct: number; stillLearning: number } {
-    switch (mode) {
-      case 'memorization':
-        return {
-          attempts: wordProgress.memorizationAttempts || 0,
-          correct: wordProgress.memorizationCorrect || 0,
-          stillLearning: wordProgress.memorizationStillLearning || 0,
-        };
-      case 'translation':
-        return {
-          attempts: wordProgress.translationAttempts || 0,
-          correct: wordProgress.translationCorrect || 0,
-          stillLearning: 0,
-        };
-      case 'spelling':
-        return {
-          attempts: wordProgress.spellingAttempts || 0,
-          correct: wordProgress.spellingCorrect || 0,
-          stillLearning: 0,
-        };
-      case 'grammar':
-        return {
-          attempts: wordProgress.grammarAttempts || 0,
-          correct: wordProgress.grammarCorrect || 0,
-          stillLearning: 0,
-        };
-      default:
-        return { attempts: 0, correct: 0, stillLearning: 0 };
-    }
-  }
-
-  /**
-   * モード別の保存済みPositionを取得
-   */
-  private getSavedPosition(
-    wordProgress: WordProgress,
-    mode: 'memorization' | 'translation' | 'spelling' | 'grammar'
-  ): number | undefined {
-    switch (mode) {
-      case 'memorization':
-        return wordProgress.memorizationPosition;
-      case 'translation':
-        return wordProgress.translationPosition;
-      case 'spelling':
-        return wordProgress.spellingPosition;
-      case 'grammar':
-        return wordProgress.grammarPosition;
-      default:
-        return undefined;
     }
   }
 

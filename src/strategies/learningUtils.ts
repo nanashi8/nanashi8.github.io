@@ -5,6 +5,8 @@
 
 import { logger } from '@/utils/logger';
 import { isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
+import type { WordProgress } from '@/storage/progress/types';
+import { determineWordPosition, positionToCategory } from '@/ai/utils/categoryDetermination';
 
 /**
  * 適応型間隔反復学習：個人の学習速度に最適化（SuperMemo SM-2アルゴリズムベース）
@@ -144,23 +146,38 @@ export function getQuestionStatus(
 
   try {
     const progress = JSON.parse(stored);
-    const wordProgress = progress.wordProgress?.[word];
+    const wordProgress = progress.wordProgress?.[word] as WordProgress | undefined;
     if (!wordProgress) return null;
 
-    // モードに応じた統計情報のキーを取得
-    const modeKey =
+    // ✅ WordProgressの正規フィールドを使用（暗記タブと同じ）
+    const attempts =
       mode === 'memorization'
-        ? 'memorization'
+        ? wordProgress.memorizationAttempts || 0
         : mode === 'translation'
-          ? 'quiz'
+          ? wordProgress.translationAttempts || 0
           : mode === 'spelling'
-            ? 'spelling'
-            : 'grammar';
+            ? wordProgress.spellingAttempts || 0
+            : wordProgress.grammarAttempts || 0;
 
-    const attempts = wordProgress[`${modeKey}Attempts`] || 0;
-    const correct = wordProgress[`${modeKey}Correct`] || 0;
-    const stillLearning = wordProgress[`${modeKey}StillLearning`] || 0;
-    const streak = wordProgress[`${modeKey}Streak`] || 0;
+    const correct =
+      mode === 'memorization'
+        ? wordProgress.memorizationCorrect || 0
+        : mode === 'translation'
+          ? wordProgress.translationCorrect || 0
+          : mode === 'spelling'
+            ? wordProgress.spellingCorrect || 0
+            : wordProgress.grammarCorrect || 0;
+
+    const stillLearning = mode === 'memorization' ? wordProgress.memorizationStillLearning || 0 : 0;
+
+    const streak =
+      mode === 'memorization'
+        ? wordProgress.memorizationStreak || 0
+        : mode === 'translation'
+          ? wordProgress.translationStreak || 0
+          : mode === 'spelling'
+            ? wordProgress.spellingStreak || 0
+            : wordProgress.grammarStreak || 0;
     const lastStudied = wordProgress.lastStudied || 0;
 
     // 間隔反復学習用データ（暗記モードのみ）
@@ -193,63 +210,24 @@ export function getQuestionStatus(
       forgettingRisk = calculateForgettingRisk(lastStudied, reviewInterval, accuracy);
     }
 
-    // カテゴリ判定
-    // 🟢 覚えてる/定着判定
-    if (mode === 'memorization' && attempts === 1 && correct === 1) {
-      // 暗記モード: 新規単語を1発で正解 → 即座に覚えてる
-      return {
-        category: 'mastered',
-        priority: 5,
-        lastStudied,
-        attempts,
-        correct,
-        streak,
-        forgettingRisk,
-        reviewInterval,
-        accuracy,
-      };
-    } else if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
-      // まだまだから昇格: 連続3回以上 or 正答率80%以上で連続2回
-      return {
-        category: 'mastered',
-        priority: 5,
-        lastStudied,
-        attempts,
-        correct,
-        streak,
-        forgettingRisk,
-        reviewInterval,
-        accuracy,
-      };
-    }
-    // 🟡 まだまだ/学習中: 正答率50%以上 or まだまだボタンを押したことがある
-    else if (accuracy >= 50 || stillLearning > 0) {
-      return {
-        category: 'still_learning',
-        priority: 2,
-        lastStudied,
-        attempts,
-        correct,
-        streak,
-        forgettingRisk,
-        reviewInterval,
-        accuracy,
-      };
-    }
-    // 🔴 分からない/要復習: 正答率50%未満 and まだまだボタンを押したことがない
-    else {
-      return {
-        category: 'incorrect',
-        priority: 1,
-        lastStudied,
-        attempts,
-        correct,
-        streak,
-        forgettingRisk,
-        reviewInterval,
-        accuracy,
-      };
-    }
+    // ✅ カテゴリ判定は暗記タブSSOT（Position判定）に統一
+    const position = determineWordPosition(wordProgress, mode);
+    const category = positionToCategory(position);
+
+    const priority =
+      category === 'incorrect' ? 1 : category === 'still_learning' ? 2 : category === 'new' ? 3 : 5;
+
+    return {
+      category,
+      priority,
+      lastStudied,
+      attempts,
+      correct,
+      streak,
+      forgettingRisk,
+      reviewInterval,
+      accuracy,
+    };
   } catch (error) {
     logger.error('統計情報の取得エラー:', error);
     return null;

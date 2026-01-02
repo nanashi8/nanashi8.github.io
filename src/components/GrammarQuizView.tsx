@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import './GrammarQuizView.css';
 import ScoreBoard from './ScoreBoard';
-import LearningLimitsInput from './LearningLimitsInput';
-import { useLearningLimits } from '../hooks/useLearningLimits';
+import { useSessionStats } from '../hooks/useSessionStats';
 import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { useAdaptiveNetwork } from '../hooks/useAdaptiveNetwork';
@@ -59,6 +58,15 @@ function buildPunctuationAwareBlankTemplate(answer: string | undefined | null): 
     .replace(/\(\s+/g, '(')
     .replace(/\s+\)/g, ')')
     .replace(/\s+([.,!?;:])/g, '$1')
+    .trim();
+}
+
+function fillBlankSentence(sentence: string, filled: string): string {
+  const replacement = filled.trim();
+  if (!replacement) return sentence;
+  return sentence
+    .replace(/____+/g, replacement)
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
@@ -209,9 +217,25 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [correctStreak, setCorrectStreak] = useState<number>(0);
   const [incorrectStreak, setIncorrectStreak] = useState<number>(0);
 
-  // 学習中・要復習の上限設定（カスタムフック使用）
-  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
-    useLearningLimits('grammar');
+  // 🆕 バッチ数設定（LocalStorageから読み込み）
+  const batchSize = (() => {
+    try {
+      const saved = localStorage.getItem('grammar-batch-size');
+      return saved ? parseInt(saved) : null;
+    } catch {
+      return null;
+    }
+  })();
+
+  // 🆕 不正解の上限比率（10-50%）
+  const reviewRatioLimit = (() => {
+    try {
+      const saved = localStorage.getItem('grammar-review-ratio-limit');
+      return saved ? parseInt(saved) : 20; // デフォルト20%
+    } catch {
+      return 20;
+    }
+  })();
 
   // 復習モード
   const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
@@ -246,16 +270,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setShowHint(false);
       setScore(0);
       setTotalAnswered(0);
-      setSessionStats({
-        correct: 0,
-        incorrect: 0,
-        review: 0,
-        mastered: 0,
-        newQuestions: 0,
-        reviewQuestions: 0,
-        consecutiveNew: 0,
-        consecutiveReview: 0,
-      });
+      resetSessionStats();
       setCorrectStreak(0);
       setIncorrectStreak(0);
       console.log('✅ [文法タブ] 学習記録をリセットしました');
@@ -330,16 +345,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [showHint, setShowHint] = useState(false);
   const [score, setScore] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
-  const [sessionStats, setSessionStats] = useState({
-    correct: 0,
-    incorrect: 0,
-    review: 0,
-    mastered: 0,
-    newQuestions: 0,
-    reviewQuestions: 0,
-    consecutiveNew: 0,
-    consecutiveReview: 0,
-  });
+  // セッション統計（カスタムフック）- 文法タブ専用
+  const { sessionStats, setSessionStats, resetStats: resetSessionStats } = useSessionStats('grammar');
   const [error, setError] = useState<string | null>(null);
 
   const currentQuestion = currentQuestions[currentQuestionIndex];
@@ -546,10 +553,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         questions: scheduleInputs,
         mode: 'grammar',
         useCategorySlots: true,
-        limits: {
-          learningLimit: learningLimit,
-          reviewLimit: reviewLimit,
-        },
         sessionStats: {
           correct: sessionStats.correct,
           incorrect: sessionStats.incorrect,
@@ -682,10 +685,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           questions: scheduleInputs,
           mode: 'grammar',
           useCategorySlots: true,
-          limits: {
-            learningLimit: learningLimit,
-            reviewLimit: reviewLimit,
-          },
           sessionStats: {
             correct: sessionStats.correct,
             incorrect: sessionStats.incorrect,
@@ -733,8 +732,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     currentQuestions,
     currentQuestionIndex,
     scheduler,
-    learningLimit,
-    reviewLimit,
     sessionStats,
     isReviewFocusMode,
     answerCountSinceSchedule,
@@ -962,10 +959,18 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setNeedsRescheduling(true);
     }
 
-    // 自動読み上げが有効な場合、問題と正解の英文を読み上げ
-    if (autoReadAloud && currentQuestion.sentence) {
+    // 自動読み上げが有効な場合、正解時は穴埋め済みの英文を読み上げ
+    const baseSentenceToRead =
+      (currentQuestion as any).question ||
+      (currentQuestion as any).targetSentence ||
+      currentQuestion.sentence;
+
+    if (autoReadAloud && baseSentenceToRead) {
       setTimeout(() => {
-        const utterance = new SpeechSynthesisUtterance(currentQuestion.sentence);
+        const textToRead = isCorrect
+          ? fillBlankSentence(String(baseSentenceToRead), answer)
+          : String(baseSentenceToRead);
+        const utterance = new SpeechSynthesisUtterance(textToRead);
         utterance.lang = 'en-US';
         utterance.rate = 0.9;
         window.speechSynthesis.speak(utterance);
@@ -1379,13 +1384,61 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 </select>
               </div>
 
-              <LearningLimitsInput
-                learningLimit={learningLimit}
-                reviewLimit={reviewLimit}
-                onLearningLimitChange={setLearningLimit}
-                onReviewLimitChange={setReviewLimit}
-                idPrefix="grammar-quiz-"
-              />
+              {/* バッチ数設定 */}
+              <div className="filter-group" style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+                <label htmlFor="grammar-batch-size">📦 バッチ数:</label>
+                <select
+                  id="grammar-batch-size"
+                  value={batchSize ?? ''}
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    try {
+                      if (value === null) {
+                        localStorage.removeItem('grammar-batch-size');
+                      } else {
+                        localStorage.setItem('grammar-batch-size', String(value));
+                      }
+                      window.location.reload();
+                    } catch {
+                      // ignore storage errors
+                    }
+                  }}
+                  className="select-input"
+                >
+                  <option value="">制限なし</option>
+                  <option value="10">10問</option>
+                  <option value="20">20問</option>
+                  <option value="30">30問</option>
+                  <option value="50">50問</option>
+                  <option value="100">100問</option>
+                  <option value="200">200問</option>
+                </select>
+              </div>
+
+              {/* 不正解の上限 */}
+              <div className="filter-group">
+                <label htmlFor="grammar-review-ratio-limit">❌ 不正解の上限:</label>
+                <select
+                  id="grammar-review-ratio-limit"
+                  value={reviewRatioLimit}
+                  onChange={(e) => {
+                    const value = parseInt(e.target.value);
+                    try {
+                      localStorage.setItem('grammar-review-ratio-limit', String(value));
+                      window.location.reload();
+                    } catch {
+                      // ignore storage errors
+                    }
+                  }}
+                  className="select-input"
+                >
+                  <option value="10">10%</option>
+                  <option value="20">20%</option>
+                  <option value="30">30%</option>
+                  <option value="40">40%</option>
+                  <option value="50">50%</option>
+                </select>
+              </div>
 
               {/* 自動次へ設定 */}
               <div className="filter-group">

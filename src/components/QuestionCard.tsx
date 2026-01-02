@@ -164,10 +164,32 @@ function QuestionCard({
     });
   };
 
-  // 不正解時に全ての選択肢の詳細を自動で開く（設定でON/OFF可能）
+  // 回答後に選択肢の詳細を自動で開く（設定でON/OFF可能）
   useEffect(() => {
-    const autoShowDetails = localStorage.getItem('autoShowDetails') !== 'false'; // デフォルトはtrue
-    if (answered && selectedAnswer && selectedAnswer !== question.meaning && autoShowDetails) {
+    if (!answered || !selectedAnswer) return;
+
+    const savedIncorrect = localStorage.getItem('autoShowDetailsOnIncorrect');
+    const savedCorrect = localStorage.getItem('autoShowDetailsOnCorrect');
+
+    // 旧設定キー（不正解時の自動表示）との後方互換
+    const legacyAutoShowDetails = localStorage.getItem('autoShowDetails');
+
+    const autoShowOnIncorrect =
+      savedIncorrect !== null
+        ? savedIncorrect === 'true'
+        : legacyAutoShowDetails !== null
+          ? legacyAutoShowDetails !== 'false'
+          : true; // デフォルトはtrue
+
+    const autoShowOnCorrect = savedCorrect !== null ? savedCorrect === 'true' : false; // デフォルトはfalse
+
+    const isCorrect = selectedAnswer === question.meaning;
+
+    // 設定に応じて詳細を開く
+    const shouldShow =
+      (!isCorrect && autoShowOnIncorrect) || (isCorrect && autoShowOnCorrect);
+
+    if (shouldShow) {
       // 全ての選択肢を開く
       setExpandedChoices(new Set(choicesWithQuestions.map((_, idx) => idx)));
     }

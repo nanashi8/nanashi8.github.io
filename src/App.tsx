@@ -89,6 +89,7 @@ import MemorizationView from './components/MemorizationView';
 import FloatingPanel from './components/FloatingPanel';
 import SettingsView from './components/SettingsView';
 import SocialStudiesView from './components/SocialStudiesView';
+import SocialMemorizationView from './components/SocialMemorizationView';
 import LoadingIndicator from './components/LoadingIndicator';
 import './App.css';
 
@@ -99,9 +100,23 @@ import { initStorageStrategy } from './storage/manager/storageManager';
 // プリロード用
 import { preloadHeavyComponents as _preloadHeavyComponents } from './utils/lazyLoader';
 
+// 教科タブ（最上位）
+type SubjectTab = 'japanese' | 'math' | 'english' | 'science' | 'social' | 'settings';
+
+// 国語サブタブ
+type JapaneseTab = 'memorization' | 'multiple-choice';
+
+// 英語サブタブ
+type EnglishTab = 'memorization' | 'multiple-choice' | 'spelling' | 'grammar' | 'reading';
+
+// 社会サブタブ
+type SocialTab = 'memorization' | 'multiple-choice';
+
+// 後方互換性のため保持（内部処理用）
 type Tab =
   | 'memorization'
   | 'translation'
+  | 'multiple-choice'
   | 'spelling'
   | 'grammar'
   | 'reading'
@@ -167,7 +182,30 @@ function checkLocalStorageSize() {
 }
 
 function App() {
-  const [activeTab, setActiveTab] = useState<Tab>('translation');
+  // 教科タブ（最上位）
+  const [activeSubject, setActiveSubject] = useState<SubjectTab>('english');
+
+  // 国語サブタブ
+  const [activeJapaneseTab, setActiveJapaneseTab] = useState<JapaneseTab>('multiple-choice');
+
+  // 英語サブタブ
+  const [activeEnglishTab, setActiveEnglishTab] = useState<EnglishTab>('multiple-choice');
+
+  // 社会サブタブ
+  const [activeSocialTab, setActiveSocialTab] = useState<SocialTab>('multiple-choice');
+
+  // 後方互換性のため計算されたactiveTabを保持
+  const activeTab: Tab =
+    activeSubject === 'english'
+      ? activeEnglishTab === 'multiple-choice'
+        ? 'translation'
+        : activeEnglishTab
+      : activeSubject === 'social'
+        ? 'social-studies'
+        : activeSubject === 'settings'
+          ? 'settings'
+          : 'translation';
+
   const [isLoadingTab, setIsLoadingTab] = useState(false);
 
   // 全問題データ（high-school-entrance-words.csvから読み込み）
@@ -1803,102 +1841,198 @@ function App() {
       {/* 読み込み中インジケータ */}
       <LoadingIndicator isVisible={isLoadingTab} message="読み込み中..." />
 
-      {/* タブメニュー - 中学生向け親しみやすいデザイン */}
-      <div className="flex gap-0 bg-gray-100 shadow-md py-1 sm:py-2">
+      {/* 教科タブメニュー（最上位） - コンパクトで1段表示 */}
+      <div className="flex gap-0 bg-gray-200 shadow-sm py-0.5 sm:py-1">
         <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'memorization'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          className={`flex-1 min-w-0 truncate py-1.5 sm:py-2 px-1 sm:px-2 text-[10px] sm:text-sm font-semibold transition-all duration-200 ${
+            activeSubject === 'japanese'
+              ? 'bg-white text-blue-600 border-b-2 border-blue-600'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-50'
           }`}
-          onClick={() => setActiveTab('memorization')}
+          onClick={() => setActiveSubject('japanese')}
         >
-          <span className="hidden sm:inline">💡 暗記</span>
-          <span className="sm:hidden">暗記</span>
+          国語
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'translation'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          className={`flex-1 min-w-0 truncate py-1.5 sm:py-2 px-1 sm:px-2 text-[10px] sm:text-sm font-semibold transition-all duration-200 ${
+            activeSubject === 'math'
+              ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
+              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
           }`}
-          onClick={() => setActiveTab('translation')}
+          disabled
+          title="準備中"
         >
-          <span className="hidden sm:inline">📝 和訳</span>
-          <span className="sm:hidden">和訳</span>
+          数学
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'spelling'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          className={`flex-1 min-w-0 truncate py-1.5 sm:py-2 px-1 sm:px-2 text-[10px] sm:text-sm font-semibold transition-all duration-200 ${
+            activeSubject === 'english'
+              ? 'bg-white text-blue-600 border-b-2 border-blue-600'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-50'
           }`}
-          onClick={() => setActiveTab('spelling')}
+          onClick={() => setActiveSubject('english')}
         >
-          <span className="hidden sm:inline">✏️ スペル</span>
-          <span className="sm:hidden">スペル</span>
+          英語
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'grammar'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          className={`flex-1 min-w-0 truncate py-1.5 sm:py-2 px-1 sm:px-2 text-[10px] sm:text-sm font-semibold transition-all duration-200 ${
+            activeSubject === 'science'
+              ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
+              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
           }`}
-          onClick={() => {
-            setActiveTab('grammar');
-            // 読み込み中を表示
-            setIsLoadingTab(true);
-            // 1.5秒後に自動で消す（最小限のUI反応時間）
-            setTimeout(() => setIsLoadingTab(false), 1500);
-            // バックグラウンドでプリロード
-            _preloadHeavyComponents();
-          }}
+          disabled
+          title="準備中"
         >
-          <span className="hidden sm:inline">📚 文法</span>
-          <span className="sm:hidden">文法</span>
+          理科
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'reading'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          className={`flex-1 min-w-0 truncate py-1.5 sm:py-2 px-1 sm:px-2 text-[10px] sm:text-sm font-semibold transition-all duration-200 ${
+            activeSubject === 'social'
+              ? 'bg-white text-blue-600 border-b-2 border-blue-600'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-50'
           }`}
-          onClick={() => {
-            setActiveTab('reading');
-            // 読み込み中を表示
-            setIsLoadingTab(true);
-            // 1.5秒後に自動で消す（最小限のUI反応時間）
-            setTimeout(() => setIsLoadingTab(false), 1500);
-            // バックグラウンドでプリロード
-            _preloadHeavyComponents();
-          }}
+          onClick={() => setActiveSubject('social')}
         >
-          <span className="hidden sm:inline">📖 長文</span>
-          <span className="sm:hidden">長文</span>
+          社会
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'social-studies'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
+          className={`flex-1 min-w-0 truncate py-1.5 sm:py-2 px-1 sm:px-2 text-[10px] sm:text-sm font-semibold transition-all duration-200 ${
+            activeSubject === 'settings'
+              ? 'bg-white text-blue-600 border-b-2 border-blue-600'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-50'
           }`}
-          onClick={() => setActiveTab('social-studies')}
+          onClick={() => setActiveSubject('settings')}
         >
-          <span className="hidden sm:inline">🌏 社会</span>
-          <span className="sm:hidden">社会</span>
-        </button>
-        <button
-          className={`flex-1 min-w-0 truncate py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
-            activeTab === 'settings'
-              ? 'bg-white text-blue-600 border-blue-600'
-              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
-          }`}
-          onClick={() => setActiveTab('settings')}
-        >
-          <span className="hidden sm:inline">⚙️ 設定</span>
-          <span className="sm:hidden">設定</span>
+          設定
         </button>
       </div>
+
+      {/* 英語サブタブメニュー */}
+      {activeSubject === 'english' && (
+        <div className="flex gap-0 bg-gray-100 shadow-md py-1 sm:py-2">
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-1 sm:px-2 text-[11px] sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeEnglishTab === 'memorization'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => setActiveEnglishTab('memorization')}
+          >
+            <span className="hidden sm:inline">💡 暗記</span>
+            <span className="sm:hidden">暗記</span>
+          </button>
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-1 sm:px-2 text-[11px] sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeEnglishTab === 'multiple-choice'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => setActiveEnglishTab('multiple-choice')}
+          >
+            <span className="hidden sm:inline">📝 三択</span>
+            <span className="sm:hidden">三択</span>
+          </button>
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-1 sm:px-2 text-[11px] sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeEnglishTab === 'spelling'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => setActiveEnglishTab('spelling')}
+          >
+            <span className="hidden sm:inline">✏️ スペル</span>
+            <span className="sm:hidden">スペル</span>
+          </button>
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-1 sm:px-2 text-[11px] sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeEnglishTab === 'grammar'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => {
+              setActiveEnglishTab('grammar');
+              setIsLoadingTab(true);
+              setTimeout(() => setIsLoadingTab(false), 1500);
+              _preloadHeavyComponents();
+            }}
+          >
+            <span className="hidden sm:inline">📚 文法</span>
+            <span className="sm:hidden">文法</span>
+          </button>
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-1 sm:px-2 text-[11px] sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeEnglishTab === 'reading'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => {
+              setActiveEnglishTab('reading');
+              setIsLoadingTab(true);
+              setTimeout(() => setIsLoadingTab(false), 1500);
+              _preloadHeavyComponents();
+            }}
+          >
+            <span className="hidden sm:inline">📖 長文</span>
+            <span className="sm:hidden">長文</span>
+          </button>
+        </div>
+      )}
+
+      {/* 国語サブタブメニュー */}
+      {activeSubject === 'japanese' && (
+        <div className="flex gap-0 bg-gray-100 shadow-md py-1 sm:py-2">
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeJapaneseTab === 'memorization'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => setActiveJapaneseTab('memorization')}
+          >
+            <span className="hidden sm:inline">💡 暗記</span>
+            <span className="sm:hidden">暗記</span>
+          </button>
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeJapaneseTab === 'multiple-choice'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => setActiveJapaneseTab('multiple-choice')}
+          >
+            <span className="hidden sm:inline">📝 三択</span>
+            <span className="sm:hidden">三択</span>
+          </button>
+        </div>
+      )}
+
+      {/* 社会サブタブメニュー */}
+      {activeSubject === 'social' && (
+        <div className="flex gap-0 bg-gray-100 shadow-md py-1 sm:py-2">
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeSocialTab === 'memorization'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => setActiveSocialTab('memorization')}
+          >
+            <span className="hidden sm:inline">💡 暗記</span>
+            <span className="sm:hidden">暗記</span>
+          </button>
+          <button
+            className={`flex-1 min-w-0 truncate py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
+              activeSocialTab === 'multiple-choice'
+                ? 'bg-white text-blue-600 border-blue-600'
+                : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100'
+            }`}
+            onClick={() => setActiveSocialTab('multiple-choice')}
+          >
+            <span className="hidden sm:inline">📝 三択</span>
+            <span className="sm:hidden">三択</span>
+          </button>
+        </div>
+      )}
 
       {/* カスタム問題セット管理パネル */}
       <FloatingPanel
@@ -1914,7 +2048,8 @@ function App() {
       {/* コンテンツエリア */}
       <div className="p-2 md:p-6 bg-gray-50">
         <div className="max-w-app mx-auto">
-          {activeTab === 'memorization' ? (
+          {/* 英語タブのコンテンツ */}
+          {activeSubject === 'english' && activeEnglishTab === 'memorization' && (
             <MemorizationView
               allQuestions={allQuestions}
               questionSets={questionSets}
@@ -1923,7 +2058,10 @@ function App() {
               onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             />
-          ) : activeTab === 'translation' ? (
+          )}
+
+          {/* 英語 - 三択タブ */}
+          {activeSubject === 'english' && activeEnglishTab === 'multiple-choice' && (
             <TranslationView
               quizState={quizState}
               _categoryList={categoryList}
@@ -1945,7 +2083,6 @@ function App() {
               onSkip={handleSkip}
               onDifficultyRate={handleDifficultyRate}
               onReviewFocus={handleReviewFocus}
-              sessionStats={sessionStats}
               isReviewFocusMode={reviewFocusMode}
               errorPrediction={
                 quizState.questions.length > 0 &&
@@ -1960,7 +2097,10 @@ function App() {
               onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             />
-          ) : activeTab === 'spelling' ? (
+          )}
+
+          {/* 英語 - スペルタブ */}
+          {activeSubject === 'english' && activeEnglishTab === 'spelling' && (
             <SpellingView
               questions={quizState.questions}
               questionSets={questionSets}
@@ -1983,9 +2123,15 @@ function App() {
               onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             />
-          ) : activeTab === 'social-studies' ? (
-            <SocialStudiesView dataSource="social-studies-geography-30" />
-          ) : activeTab === 'reading' ? (
+          )}
+
+          {/* 英語 - 文法タブ */}
+          {activeSubject === 'english' && activeEnglishTab === 'grammar' && (
+            <GrammarQuizView />
+          )}
+
+          {/* 英語 - 長文タブ */}
+          {activeSubject === 'english' && activeEnglishTab === 'reading' && (
             <ComprehensiveReadingView
               customQuestionSets={customQuestionState.sets}
               onAddWordToCustomSet={handleAddWordToCustomSet}
@@ -2028,19 +2174,20 @@ function App() {
                 alert(`✅ 問題集「${setName}」を作成しました（${words.length}語）`);
               }}
             />
-          ) : activeTab === 'grammar' ? (
-            <GrammarQuizView />
-          ) : (
+          )}
+
+          {/* 設定（全教科共通） */}
+          {activeSubject === 'settings' && (
             <SettingsView
               allQuestions={allQuestions}
               customQuestionSets={customQuestionState.sets}
               questionSets={questionSets}
               categoryList={categoryList}
-              onResetComplete={() => setActiveTab('settings')}
+              onResetComplete={() => setActiveSubject('settings')}
               onQuestionSetsUpdated={reloadQuestionSets}
               onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
               onStartSession={(_mode, questions) => {
-                // セッションの単語でクイズを開始
+                // セッションの単語でクイズを開始（英語三択へ遷移）
                 setQuizState({
                   questions,
                   currentIndex: 0,
@@ -2052,9 +2199,30 @@ function App() {
                 quizStartTimeRef.current = Date.now();
                 questionStartTimeRef.current = Date.now();
                 incorrectWordsRef.current = [];
-                setActiveTab('translation');
+                setActiveSubject('english');
+                setActiveEnglishTab('multiple-choice');
               }}
             />
+          )}
+
+          {/* 国語 - 暗記タブ */}
+          {activeSubject === 'japanese' && activeJapaneseTab === 'memorization' && (
+            <SocialMemorizationView dataSource="classical-words.csv" />
+          )}
+
+          {/* 国語 - 三択タブ */}
+          {activeSubject === 'japanese' && activeJapaneseTab === 'multiple-choice' && (
+            <SocialStudiesView dataSource="classical-words.csv" />
+          )}
+
+          {/* 社会 - 三択タブ */}
+          {activeSubject === 'social' && activeSocialTab === 'multiple-choice' && (
+            <SocialStudiesView dataSource="all-social-studies.csv" />
+          )}
+
+          {/* 社会 - 暗記タブ */}
+          {activeSubject === 'social' && activeSocialTab === 'memorization' && (
+            <SocialMemorizationView dataSource="all-social-studies.csv" />
           )}
         </div>
       </div>

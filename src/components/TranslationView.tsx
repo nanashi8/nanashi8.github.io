@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { QuizState, Question, QuestionSet } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import {
@@ -13,11 +13,11 @@ import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 import { RequeuingDebugPanel } from './RequeuingDebugPanel';
 import { useQuestionRequeue } from '../hooks/useQuestionRequeue';
-import LearningLimitsInput from './LearningLimitsInput';
-import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
 import { useAdaptiveLearning } from '../hooks/useAdaptiveLearning';
 import { QuestionCategory } from '../strategies/memoryAcquisitionAlgorithm';
+import { useSessionStats } from '../hooks/useSessionStats';
+import { speakEnglish } from '@/features/speech/speechSynthesis';
 
 interface TranslationViewProps {
   quizState: QuizState;
@@ -40,12 +40,6 @@ interface TranslationViewProps {
   onSkip?: () => void | Promise<void>;
   onDifficultyRate?: (rating: number) => void;
   onReviewFocus?: () => void;
-  sessionStats?: {
-    correct: number;
-    incorrect: number;
-    review: number;
-    mastered: number;
-  };
   isReviewFocusMode?: boolean;
   errorPrediction?: ErrorPrediction;
   customQuestionSets?: CustomQuestionSet[];
@@ -75,7 +69,6 @@ function TranslationView({
   onSkip,
   onDifficultyRate,
   onReviewFocus,
-  sessionStats,
   isReviewFocusMode = false,
   errorPrediction,
   customQuestionSets = [],
@@ -92,6 +85,9 @@ function TranslationView({
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showDebugPanel, setShowDebugPanel] = useState(false);
 
+  // タブ固有のセッション統計を管理
+  const { sessionStats, setSessionStats, resetStats: resetSessionStats } = useSessionStats('translation');
+
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
 
@@ -104,9 +100,17 @@ function TranslationView({
   // 適応型学習フック（問題選択と記録に使用）
   const adaptiveLearning = useAdaptiveLearning(QuestionCategory.TRANSLATION);
 
-  // 学習中・要復習の上限設定（カスタムフック使用）
-  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
-    useLearningLimits('translation');
+  // バッチ数設定
+  const [batchSize, setBatchSize] = useState<number | null>(() => {
+    const saved = localStorage.getItem('translation-batch-size');
+    return saved ? parseInt(saved) : null;
+  });
+
+  // 不正解の上限設定
+  const [incorrectLimit, setIncorrectLimit] = useState<number>(() => {
+    const saved = localStorage.getItem('translation-incorrect-limit');
+    return saved ? parseInt(saved) : 20; // デフォルト20%
+  });
 
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
@@ -125,6 +129,33 @@ function TranslationView({
     return saved !== 'false'; // デフォルトはtrue
   });
 
+  // 正解時詳細自動表示の設定
+  const [autoShowDetailsOnCorrect, setAutoShowDetailsOnCorrect] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoShowDetailsOnCorrect');
+    return saved === 'true'; // デフォルトはfalse
+  });
+
+  // 自動発音の設定
+  const [autoPlayAudio, setAutoPlayAudio] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoPlayAudio');
+    return saved === 'true'; // デフォルトはfalse
+  });
+
+  // 自動発音: 次の問題に遷移したときに発音
+  useEffect(() => {
+    if (autoPlayAudio && currentQuestion && !answered) {
+      // 少し遅延させてから発音（UIが更新されてから）
+      const timer = setTimeout(() => {
+        try {
+          speakEnglish(currentQuestion.word, { rate: 0.85 });
+        } catch (error) {
+          logger.error('[TranslationView] 自動発音失敗', error);
+        }
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [currentQuestion, autoPlayAudio, answered]);
+
   // デバッグ: 成績リセット
   const handleResetProgress = async () => {
     if (!confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) return;
@@ -133,6 +164,9 @@ function TranslationView({
       // resetAllProgressを使用して完全リセット（成績タブと同じ処理）
       const { resetAllProgress } = await import('../progressStorage');
       await resetAllProgress();
+
+      // セッション統計もリセット
+      resetSessionStats();
 
       logger.info('[TranslationView] 成績リセット完了');
       alert('学習記録をリセットしました');
@@ -436,13 +470,54 @@ function TranslationView({
                 </div>
               )}
 
-              <LearningLimitsInput
-                learningLimit={learningLimit}
-                reviewLimit={reviewLimit}
-                onLearningLimitChange={setLearningLimit}
-                onReviewLimitChange={setReviewLimit}
-                idPrefix="quiz-"
-              />
+              {/* バッチ数設定 */}
+              <div className="filter-group">
+                <label htmlFor="batch-size-select-quiz">📊 バッチ数:</label>
+                <select
+                  id="batch-size-select-quiz"
+                  value={batchSize || 0}
+                  onChange={(e) => {
+                    const value = parseInt(e.target.value);
+                    const finalValue = value === 0 ? null : value;
+                    setBatchSize(finalValue);
+                    if (finalValue === null) {
+                      localStorage.removeItem('translation-batch-size');
+                    } else {
+                      localStorage.setItem('translation-batch-size', finalValue.toString());
+                    }
+                  }}
+                  className="select-input"
+                >
+                  <option value={0}>設定無し</option>
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                  <option value={30}>30</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                  <option value={200}>200</option>
+                </select>
+              </div>
+
+              {/* 不正解の上限設定 */}
+              <div className="filter-group">
+                <label htmlFor="incorrect-limit-select-quiz">⚠️ 不正解の上限:</label>
+                <select
+                  id="incorrect-limit-select-quiz"
+                  value={incorrectLimit}
+                  onChange={(e) => {
+                    const value = parseInt(e.target.value);
+                    setIncorrectLimit(value);
+                    localStorage.setItem('translation-incorrect-limit', value.toString());
+                  }}
+                  className="select-input"
+                >
+                  <option value={10}>10%</option>
+                  <option value={20}>20%</option>
+                  <option value={30}>30%</option>
+                  <option value={40}>40%</option>
+                  <option value={50}>50%</option>
+                </select>
+              </div>
 
               {/* 自動次へ設定 */}
               <div className="filter-group">
@@ -485,7 +560,7 @@ function TranslationView({
                 </div>
               )}
 
-              {/* 不正解時詳細自動表示設定 */}
+              {/* 不正解時詳細表示設定 */}
               <div className="filter-group">
                 <div className="checkbox-row">
                   <input
@@ -499,6 +574,42 @@ function TranslationView({
                   />
                   <label htmlFor="auto-show-details-toggle" className="checkbox-label">
                     不正解時自動で詳細を開く：{autoShowDetails ? '有効' : '無効'}
+                  </label>
+                </div>
+              </div>
+
+              {/* 正解時詳細表示設定 */}
+              <div className="filter-group">
+                <div className="checkbox-row">
+                  <input
+                    type="checkbox"
+                    id="auto-show-details-correct-toggle"
+                    checked={autoShowDetailsOnCorrect}
+                    onChange={(e) => {
+                      setAutoShowDetailsOnCorrect(e.target.checked);
+                      localStorage.setItem('autoShowDetailsOnCorrect', e.target.checked.toString());
+                    }}
+                  />
+                  <label htmlFor="auto-show-details-correct-toggle" className="checkbox-label">
+                    正解時自動で詳細を開く：{autoShowDetailsOnCorrect ? '有効' : '無効'}
+                  </label>
+                </div>
+              </div>
+
+              {/* 自動発音設定 */}
+              <div className="filter-group">
+                <div className="checkbox-row">
+                  <input
+                    type="checkbox"
+                    id="auto-play-audio-toggle"
+                    checked={autoPlayAudio}
+                    onChange={(e) => {
+                      setAutoPlayAudio(e.target.checked);
+                      localStorage.setItem('autoPlayAudio', e.target.checked.toString());
+                    }}
+                  />
+                  <label htmlFor="auto-play-audio-toggle" className="checkbox-label">
+                    自動で発音する：{autoPlayAudio ? '有効' : '無効'}
                   </label>
                 </div>
               </div>

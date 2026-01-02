@@ -61,6 +61,7 @@ import {
 import { getABTestManager } from '@/ai/experiments/ABTestManager';
 import { BatchManager } from './BatchManager';
 import { SlotAllocator } from './SlotAllocator';
+import { SlotConfigManager } from './SlotConfigManager';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;
@@ -77,6 +78,11 @@ export class QuestionScheduler {
 
   private static get isVerboseDebug(): boolean {
     return import.meta.env.DEV && localStorage.getItem('debug-scheduler-verbose') === 'true';
+  }
+
+  private static getProgressMapFromParams(params: ScheduleParams): Record<string, any> {
+    if (params.progressOverride) return params.progressOverride;
+    return loadProgressSync().wordProgress || {};
   }
 
   constructor() {
@@ -112,11 +118,16 @@ export class QuestionScheduler {
 
       // progressDataを5秒間キャッシュ（頻繁なlocalStorage読み取りを削減）
       const now = Date.now();
-      if (!this.cachedProgressData || now - this.lastProgressDataFetch > 5000) {
-        this.cachedProgressData = loadProgressSync().wordProgress || {};
-        this.lastProgressDataFetch = now;
-      }
-      const progressData = this.cachedProgressData;
+      // progressOverride が指定されている場合はキャッシュではなく常にそちらを優先
+      const progressData = params.progressOverride
+        ? params.progressOverride
+        : (() => {
+            if (!this.cachedProgressData || now - this.lastProgressDataFetch > 5000) {
+              this.cachedProgressData = loadProgressSync().wordProgress || {};
+              this.lastProgressDataFetch = now;
+            }
+            return this.cachedProgressData;
+          })();
 
       this.batchManager.initialize(params.questions, {
         batchSize: 100,
@@ -436,18 +447,14 @@ export class QuestionScheduler {
       hour < 12 ? 'morning' : hour < 17 ? 'afternoon' : hour < 21 ? 'evening' : 'night';
 
     const cognitiveLoad = this.calculateCognitiveLoad(params.sessionStats);
-    const recentAnswers = this.getRecentAnswers(params.mode);
+    const recentAnswers = this.getRecentAnswers(params.mode, params.progressOverride);
 
-    // 単語別の学習進捗を読み込み
-    const progress = loadProgressSync();
+    // 単語別の学習進捗を読み込み（override対応）
+    const progressMap = QuestionScheduler.getProgressMapFromParams(params);
     const wordProgress: Record<string, any> = {};
-    if (progress && progress.wordProgress) {
-      for (const question of params.questions) {
-        const wp = progress.wordProgress[question.word];
-        if (wp) {
-          wordProgress[question.word] = wp;
-        }
-      }
+    for (const question of params.questions) {
+      const wp = progressMap[question.word];
+      if (wp) wordProgress[question.word] = wp;
     }
 
     return {
@@ -478,17 +485,17 @@ export class QuestionScheduler {
   /**
    * 最近の解答履歴を取得（最大100件）
    */
-  private getRecentAnswers(mode: string): RecentAnswer[] {
+  private getRecentAnswers(mode: string, progressOverride?: Record<string, any>): RecentAnswer[] {
     // キャッシュチェック
-    if (this.recentAnswersCache.has(mode)) {
+    if (this.recentAnswersCache.has(mode) && !progressOverride) {
       return this.recentAnswersCache.get(mode)!;
     }
 
     try {
-      const progress = loadProgressSync();
+      const progressMap = progressOverride ?? (loadProgressSync().wordProgress || {});
       const answers: RecentAnswer[] = [];
 
-      Object.entries(progress.wordProgress || {}).forEach(([word, data]: [string, any]) => {
+      Object.entries(progressMap || {}).forEach(([word, data]: [string, any]) => {
         if (data.lastStudied > 0) {
           const calculator = new PositionCalculator(
             mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
@@ -504,12 +511,12 @@ export class QuestionScheduler {
         }
       });
 
-      // タイムスタンプ降順でソート（最新100件を保持）
       answers.sort((a, b) => b.timestamp - a.timestamp);
       const recentAnswers = answers.slice(0, 100);
 
-      // キャッシュに保存
-      this.recentAnswersCache.set(mode, recentAnswers);
+      if (!progressOverride) {
+        this.recentAnswersCache.set(mode, recentAnswers);
+      }
 
       return recentAnswers;
     } catch (error) {
@@ -2742,7 +2749,7 @@ export class QuestionScheduler {
     params: ScheduleParams,
     startTime: number
   ): Promise<ScheduleResult> {
-    const progressMap = loadProgressSync().wordProgress || {};
+    const progressMap = QuestionScheduler.getProgressMapFromParams(params);
     const calculator = new PositionCalculator(
       params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
     );
@@ -2822,21 +2829,48 @@ export class QuestionScheduler {
     const incorrectCount = byCategory.incorrect.length;
     const stillCount = byCategory.still_learning.length;
     const newCount = byCategory.new.length;
+    const masteredCount = byCategory.mastered.length;
 
-    // 優先順位: incorrect > still_learning > new > mastered
+    // 4.5 スロット配分（SSOT: SlotConfigManager）
+    // 要求仕様（暗記）:
+    // - 分からない（要復習）: 20%
+    // - まだまだ（学習中）: 20%
+    // - 覚えてる（定着済）: 10%
+    // - 未出題: 残り
+    const slotConfig = new SlotConfigManager({ debugMode: import.meta.env.DEV }).getSlotConfig(
+      params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
+    );
+
     const slots = {
-      incorrect: Math.min(incorrectCount, Math.floor(totalSlots * 0.4)),
-      still_learning: 0,
+      incorrect: Math.min(incorrectCount, Math.floor(totalSlots * slotConfig.incorrectRatio)),
+      still_learning: Math.min(stillCount, Math.floor(totalSlots * slotConfig.stillLearningRatio)),
+      mastered: Math.min(masteredCount, Math.floor(totalSlots * slotConfig.masteredRatio)),
       new: 0,
-      mastered: 0,
     };
 
-    let remaining = totalSlots - slots.incorrect;
-    slots.still_learning = Math.min(stillCount, Math.floor(remaining * 0.5));
-    remaining -= slots.still_learning;
+    // 未出題は「残り」を基本とする
+    let remaining = totalSlots - (slots.incorrect + slots.still_learning + slots.mastered);
+    if (remaining < 0) remaining = 0;
     slots.new = Math.min(newCount, remaining);
     remaining -= slots.new;
-    slots.mastered = remaining; // 余りは mastered
+
+    // それでも余る場合（例: 未出題が不足）には、在庫があるカテゴリに再配分
+    if (remaining > 0) {
+      const addTo = (key: 'incorrect' | 'still_learning' | 'mastered' | 'new', available: number) => {
+        if (remaining <= 0) return;
+        const canAdd = Math.max(0, available - slots[key]);
+        if (canAdd <= 0) return;
+        const toAdd = Math.min(remaining, canAdd);
+        slots[key] += toAdd;
+        remaining -= toAdd;
+      };
+
+      // 既存の学習設計に合わせ、復習系を優先して埋める
+      addTo('incorrect', incorrectCount);
+      addTo('still_learning', stillCount);
+      addTo('mastered', masteredCount);
+      addTo('new', newCount);
+    }
 
     // 5. いもづる式学習: カテゴリ内で関連語を近くに配置
     const applyChainLearning = (items: Classified[]): Classified[] => {

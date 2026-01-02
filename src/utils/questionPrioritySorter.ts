@@ -15,6 +15,7 @@ import { calculateTimeBasedPriority } from '@/ai/nodes/TimeBasedPriorityAI';
 import { AdaptiveEducationalAINetwork } from '@/ai/meta/AdaptiveEducationalAINetwork';
 import type { QuestionContext } from '@/ai/meta/types';
 import type { WordCategory } from '@/ai/types';
+import { determineWordPosition, positionToCategory } from '@/ai/utils/categoryDetermination';
 import {
   isIncorrectWordCategory,
   isMasteredWordCategory,
@@ -100,7 +101,7 @@ function calculateOptimalInterval(streak: number, easinessFactor: number = 2.5):
 /**
  * 語句の学習状況を取得
  */
-function getWordStatus(word: string, mode: string): WordStatus | null {
+function getWordStatus(word: string, mode: SortOptions['mode']): WordStatus | null {
   const key = 'english-progress';
   const stored = localStorage.getItem(key);
   if (!stored) return null;
@@ -110,15 +111,34 @@ function getWordStatus(word: string, mode: string): WordStatus | null {
     const wordProgress = progress.wordProgress?.[word];
     if (!wordProgress) return null;
 
-    // モード別の統計を取得
-    const _modeKey = mode === 'memorization' ? 'memorization' : 'default';
     const attempts =
-      mode === 'memorization' ? wordProgress.memorizationAttempts || 0 : wordProgress.attempts || 0;
+      mode === 'memorization'
+        ? wordProgress.memorizationAttempts || 0
+        : mode === 'translation'
+          ? wordProgress.translationAttempts || 0
+          : mode === 'spelling'
+            ? wordProgress.spellingAttempts || 0
+            : wordProgress.grammarAttempts || 0;
+
     const correct =
-      mode === 'memorization' ? wordProgress.memorizationCorrect || 0 : wordProgress.correct || 0;
+      mode === 'memorization'
+        ? wordProgress.memorizationCorrect || 0
+        : mode === 'translation'
+          ? wordProgress.translationCorrect || 0
+          : mode === 'spelling'
+            ? wordProgress.spellingCorrect || 0
+            : wordProgress.grammarCorrect || 0;
+
     const stillLearning = mode === 'memorization' ? wordProgress.memorizationStillLearning || 0 : 0;
+
     const streak =
-      mode === 'memorization' ? wordProgress.memorizationStreak || 0 : wordProgress.streak || 0;
+      mode === 'memorization'
+        ? wordProgress.memorizationStreak || 0
+        : mode === 'translation'
+          ? wordProgress.translationStreak || 0
+          : mode === 'spelling'
+            ? wordProgress.spellingStreak || 0
+            : wordProgress.grammarStreak || 0;
     const lastStudied = wordProgress.lastStudied || 0;
 
     const easinessFactor = wordProgress.easinessFactor || 2.5;
@@ -142,41 +162,21 @@ function getWordStatus(word: string, mode: string): WordStatus | null {
     const accuracy = attempts > 0 ? (effectiveCorrect / attempts) * 100 : 0;
     const forgettingRisk = calculateForgettingRisk(lastStudied, reviewInterval, accuracy);
 
-    // カテゴリ判定
-    if (streak >= 3 || (streak >= 2 && accuracy >= 80)) {
-      return {
-        category: 'mastered',
-        priority: 5,
-        lastStudied,
-        attempts,
-        correct,
-        streak,
-        forgettingRisk,
-        reviewInterval,
-      };
-    } else if (accuracy >= 50 || stillLearning > 0) {
-      return {
-        category: 'still_learning',
-        priority: 2,
-        lastStudied,
-        attempts,
-        correct,
-        streak,
-        forgettingRisk,
-        reviewInterval,
-      };
-    } else {
-      return {
-        category: 'incorrect',
-        priority: 1,
-        lastStudied,
-        attempts,
-        correct,
-        streak,
-        forgettingRisk,
-        reviewInterval,
-      };
-    }
+    const position = determineWordPosition(wordProgress, mode);
+    const category = positionToCategory(position);
+    const priority =
+      category === 'incorrect' ? 1 : category === 'still_learning' ? 2 : category === 'new' ? 3 : 5;
+
+    return {
+      category,
+      priority,
+      lastStudied,
+      attempts,
+      correct,
+      streak,
+      forgettingRisk,
+      reviewInterval,
+    };
   } catch (error) {
     logger.error('統計情報の取得エラー:', error);
     return null;

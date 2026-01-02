@@ -9,7 +9,6 @@ import {
   getGrammarDetailedRetentionStats,
   getMemorizationDetailedRetentionStats,
   getGrammarUnitStatsWithTitles,
-  getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData,
   loadProgressSync,
 } from '../progressStorage';
@@ -20,7 +19,6 @@ import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractio
 import { getBreatherTrivia } from '../englishTrivia';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 import { computeAttemptCounts } from './scoreBoard/attemptCounts';
-import { loadEfficiencyProfile } from '../storage/learningEfficiency';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'; // クイズモードを追加
@@ -95,12 +93,12 @@ function ScoreBoard({
   learningStatusTabPulseKey,
 }: ScoreBoardProps) {
   // activeTabをlocalStorageに永続化（再マウント時も保持）
-  const [activeTab, setActiveTab] = useState<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'>(
+  const [activeTab, setActiveTab] = useState<'ai' | 'breakdown' | 'history' | 'settings'>(
     () => {
       const saved = localStorage.getItem('scoreboard-active-tab');
-      const validTabs = ['ai', 'plan', 'breakdown', 'history', 'settings'] as const;
+      const validTabs = ['ai', 'breakdown', 'history', 'settings'] as const;
       return validTabs.includes(saved as (typeof validTabs)[number])
-        ? (saved as 'ai' | 'plan' | 'breakdown' | 'history' | 'settings')
+        ? (saved as 'ai' | 'breakdown' | 'history' | 'settings')
         : 'ai';
     }
   );
@@ -109,17 +107,6 @@ function ScoreBoard({
   useEffect(() => {
     localStorage.setItem('scoreboard-active-tab', activeTab);
   }, [activeTab]);
-
-  const efficiencyProfile = useMemo(() => {
-    // 重いLocalStorage読込は「計画」タブ表示中のみ実行
-    if (activeTab !== 'plan') return null;
-    try {
-      if (typeof window === 'undefined') return null;
-      return loadEfficiencyProfile();
-    } catch {
-      return null;
-    }
-  }, [activeTab, onAnswerTime]);
 
   const [isLearningTabPulsing, setIsLearningTabPulsing] = useState(false);
   const pulseTimerRef = useRef<number | null>(null);
@@ -384,7 +371,6 @@ function ScoreBoard({
   const masteredRef = useRef<HTMLDivElement>(null);
   const learningRef = useRef<HTMLDivElement>(null);
   const strugglingRef = useRef<HTMLDivElement>(null);
-  const retentionGoalProgressRef = useRef<HTMLDivElement>(null);
 
   // 暗記タブ用の学習プラン設定（廃止：バッチ数設定に移行）
   // const [stillLearningLimit, setStillLearningLimit] = useState<number | null>(() => {
@@ -407,6 +393,17 @@ function ScoreBoard({
   const [reviewRatioLimit, setReviewRatioLimit] = useState<number>(() => {
     const saved = localStorage.getItem('memorization-review-ratio-limit');
     return saved ? parseInt(saved) : 20; // デフォルト20%
+  });
+
+  // 🆕 選択肢の詳細表示タイミング設定
+  const [autoShowDetailsOnIncorrect, setAutoShowDetailsOnIncorrect] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoShowDetailsOnIncorrect');
+    return saved !== null ? saved === 'true' : true; // デフォルトはtrue
+  });
+
+  const [autoShowDetailsOnCorrect, setAutoShowDetailsOnCorrect] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoShowDetailsOnCorrect');
+    return saved !== null ? saved === 'true' : false; // デフォルトはfalse
   });
 
   // 定着率と統計データをstateで管理
@@ -511,7 +508,7 @@ function ScoreBoard({
   // 定着率と詳細統計を更新（回答時のみ - onAnswerTimeが変化した時）
   useEffect(() => {
     // 暗記モードは回答テンポが速いので、表示中タブに応じて重い集計を遅延する。
-    if (mode === 'memorization' && activeTab !== 'plan' && activeTab !== 'breakdown') {
+    if (mode === 'memorization' && activeTab !== 'breakdown') {
       return;
     }
 
@@ -597,36 +594,6 @@ function ScoreBoard({
     Math.round((retentionPercent / retentionGoalPercent) * 100)
   );
 
-  useEffect(() => {
-    if (activeTab !== 'plan') return;
-    if (!retentionGoalProgressRef.current) return;
-    const clamped = Math.max(0, Math.min(100, retentionProgressToGoalPercent));
-    retentionGoalProgressRef.current.style.width = `${clamped}%`;
-  }, [retentionProgressToGoalPercent, activeTab]);
-
-  const relatedFieldEffectPercent = useMemo(() => {
-    if (!efficiencyProfile) return null;
-    if (!category || category === '全分野') return null;
-
-    const categoryEfficiency = efficiencyProfile.categoryEfficiencies.find(
-      (ce) => ce.category === category
-    );
-    if (!categoryEfficiency) return null;
-
-    const diff =
-      (categoryEfficiency.retentionRate - efficiencyProfile.overallMetrics.retentionRate) * 100;
-    if (!Number.isFinite(diff)) return null;
-    return Math.round(diff);
-  }, [efficiencyProfile, category]);
-
-  const chainLearningEffectPercent = useMemo(() => {
-    if (!efficiencyProfile) return null;
-    if (!efficiencyProfile.chainLearningEffect?.usedChainLearning) return null;
-    const diff = efficiencyProfile.chainLearningEffect.effectDifference * 100;
-    if (!Number.isFinite(diff)) return null;
-    return Math.round(diff);
-  }, [efficiencyProfile]);
-
   // 詳細な定着率統計をstateから取得
   const detailedStats = detailedStatsData;
 
@@ -636,10 +603,9 @@ function ScoreBoard({
     [currentScore, totalAnswered]
   );
 
-  // タブの配列（AI、学習プラン、学習状況、履歴、学習設定）- 全モード共通
-  const _tabs: Array<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'> = [
+  // タブの配列（AI、学習状況、履歴、学習設定）- 全モード共通
+  const _tabs: Array<'ai' | 'breakdown' | 'history' | 'settings'> = [
     'ai',
-    'plan',
     'breakdown',
     'history',
     'settings',
@@ -648,9 +614,9 @@ function ScoreBoard({
   return (
     <div className="score-board-compact">
       {/* タブナビゲーション: モバイルでも横一列に並べる */}
-      <div className="score-board-tabs grid grid-cols-5 gap-0.5 sm:gap-2">
+      <div className="score-board-tabs grid grid-cols-4 gap-0 sm:gap-2">
         <button
-          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-0.5 sm:px-4 py-0.5 sm:py-2 text-[9px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'ai'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -662,19 +628,7 @@ function ScoreBoard({
           <span className="sm:hidden">AI</span>
         </button>
         <button
-          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
-            activeTab === 'plan'
-              ? 'bg-primary text-white border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
-          }`}
-          onClick={() => setActiveTab('plan')}
-          title="計画"
-        >
-          <span className="hidden sm:inline">📋 計画</span>
-          <span className="sm:hidden">計画</span>
-        </button>
-        <button
-          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-0.5 sm:px-4 py-0.5 sm:py-2 text-[9px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'history'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -686,7 +640,7 @@ function ScoreBoard({
           <span className="sm:hidden">履歴</span>
         </button>
         <button
-          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-0.5 sm:px-4 py-0.5 sm:py-2 text-[9px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'breakdown'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -716,7 +670,7 @@ function ScoreBoard({
           </span>
         </button>
         <button
-          className={`px-1 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+          className={`px-0.5 sm:px-4 py-0.5 sm:py-2 text-[9px] sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'settings'
               ? 'bg-primary text-white border-primary'
               : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
@@ -764,108 +718,6 @@ function ScoreBoard({
                       .trim()}
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* 学習プランタブ */}
-      {activeTab === 'plan' && (
-        <div className="score-board-content">
-          <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
-            <div className="plan-tab-content">
-              {/* 全モード共通のプラン詳細表示 */}
-              <div className="plan-text-line">
-                <span className="stat-text-label">📚 {dataSource || '全問題集'}</span>
-                <span className="stat-text-divider">｜</span>
-                <span className="stat-text-label">{category || '全分野'}</span>
-                <span className="stat-text-divider">｜</span>
-                <span className="stat-text-label">
-                  {difficulty === 'all'
-                    ? '全難易度'
-                    : difficulty === 'basic'
-                      ? '基礎'
-                      : difficulty === 'standard'
-                        ? '標準'
-                        : difficulty === 'advanced'
-                          ? '発展'
-                          : difficulty}
-                </span>
-                {wordPhraseFilter && (
-                  <>
-                    <span className="stat-text-divider">｜</span>
-                    <span className="stat-text-label">
-                      {wordPhraseFilter === 'all'
-                        ? '単語・熟語'
-                        : wordPhraseFilter === 'word'
-                          ? '単語のみ'
-                          : wordPhraseFilter === 'phrase'
-                            ? '熟語のみ'
-                            : '単語・熟語'}
-                    </span>
-                  </>
-                )}
-              </div>
-
-              {/* 計画タブ: 定着率 + 目標バー（UI仕様） */}
-              <div className="plan-text-line">
-                <span className="stat-text-label">📈 定着率: {retentionPercent}%</span>
-                <span className="stat-text-divider">｜</span>
-                <span className="stat-text-label">{retentionGoalPercent}%目標</span>
-              </div>
-              <div className="mt-1 mb-2 max-w-full">
-                <div className="w-full bg-gray-200 rounded h-2 overflow-hidden">
-                  <div
-                    className="bg-primary h-2 rounded transition-all duration-300"
-                    ref={retentionGoalProgressRef}
-                  />
-                </div>
-              </div>
-
-              {/* 計画タブ: 学習効率（ユーザー指示により表示） */}
-              <div className="plan-text-line">
-                {typeof relatedFieldEffectPercent === 'number' && (
-                  <span className="stat-text-label">
-                    ✨関連分野別の効果:{relatedFieldEffectPercent >= 0 ? '+' : ''}
-                    {relatedFieldEffectPercent}%
-                  </span>
-                )}
-                {typeof relatedFieldEffectPercent === 'number' &&
-                  typeof chainLearningEffectPercent === 'number' && (
-                    <span className="stat-text-divider">｜</span>
-                  )}
-                {typeof chainLearningEffectPercent === 'number' && (
-                  <span className="stat-text-label">
-                    いもづる式学習の効果:{chainLearningEffectPercent >= 0 ? '+' : ''}
-                    {chainLearningEffectPercent}%
-                  </span>
-                )}
-              </div>
-
-              {/* 計画タブ: 推定指標（既存） */}
-              <div className="plan-text-line">
-                {typeof estimatedSpeed === 'number' && (
-                  <>
-                    <span className="stat-text-label">推定速度: {estimatedSpeed.toFixed(2)}</span>
-                  </>
-                )}
-                {typeof forgettingRate === 'number' && (
-                  <>
-                    {typeof estimatedSpeed === 'number' && (
-                      <span className="stat-text-divider">｜</span>
-                    )}
-                    <span className="stat-text-label">忘却率: {forgettingRate.toFixed(2)}</span>
-                  </>
-                )}
-                {learningPhase && (
-                  <>
-                    {(typeof estimatedSpeed === 'number' || typeof forgettingRate === 'number') && (
-                      <span className="stat-text-divider">｜</span>
-                    )}
-                    <span className="stat-text-label">フェーズ: {learningPhase}</span>
-                  </>
-                )}
               </div>
             </div>
           </div>
@@ -1271,88 +1123,6 @@ function ScoreBoard({
             <div className="settings-tab-container">
               <h3 className="text-lg font-bold mb-4">⚙️ 出題設定</h3>
 
-              {/* 暗記タブ用設定 */}
-              {mode === 'memorization' && (
-                <div className="settings-section">
-                  <h4 className="font-bold mb-2">🎯 暗記モード - バッチ数設定</h4>
-                  <p className="text-sm text-gray-600 mb-3">
-                    バッチ数内でカテゴリー別に出題されます
-                  </p>
-
-                  <div className="plan-setting-item mb-4">
-                    <label>バッチ数:</label>
-                    <select
-                      aria-label="バッチ数"
-                      value={batchSize || 0}
-                      onChange={(e) => {
-                        const value = parseInt(e.target.value);
-                        const finalValue = value === 0 ? null : value;
-                        setBatchSize(finalValue);
-                        if (finalValue === null) {
-                          localStorage.removeItem('memorization-batch-size');
-                        } else {
-                          localStorage.setItem('memorization-batch-size', finalValue.toString());
-                        }
-                      }}
-                      className="select-input"
-                    >
-                      <option value={0}>設定無し</option>
-                      <option value={10}>10</option>
-                      <option value={20}>20</option>
-                      <option value={30}>30</option>
-                      <option value={50}>50</option>
-                      <option value={75}>75</option>
-                      <option value={100}>100</option>
-                      <option value={150}>150</option>
-                      <option value={200}>200</option>
-                      <option value={300}>300</option>
-                      <option value={500}>500</option>
-                    </select>
-                    <p className="setting-help">
-                      1回の学習で出題される語数（設定無しの場合は全語出題）
-                    </p>
-                  </div>
-
-                  <div className="plan-setting-item mb-4">
-                    <label>分からない・まだまだの上限:</label>
-                    <select
-                      aria-label="分からない・まだまだの上限"
-                      value={reviewRatioLimit || 20}
-                      onChange={(e) => {
-                        const value = parseInt(e.target.value);
-                        setReviewRatioLimit(value);
-                        localStorage.setItem('memorization-review-ratio-limit', value.toString());
-                      }}
-                      className="select-input"
-                    >
-                      <option value={10}>10%</option>
-                      <option value={20}>20%</option>
-                      <option value={30}>30%</option>
-                      <option value={40}>40%</option>
-                      <option value={50}>50%</option>
-                    </select>
-                    <p className="setting-help">
-                      バッチ内の分からない・まだまだの合計上限（上限到達で40%に増加、未出題30%に抑制）
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 border border-blue-200 rounded p-3 text-sm">
-                    <p className="font-bold mb-2">📊 カテゴリー別配分（基本）:</p>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>分からない: 20%</li>
-                      <li>まだまだ: 20%</li>
-                      <li>覚えてる: 10%</li>
-                      <li>未出題: 50%</li>
-                    </ul>
-                    <p className="font-bold mt-3 mb-2">⚠️ 上限到達時:</p>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>分からない・まだまだ: 40%</li>
-                      <li>未出題: 30%</li>
-                    </ul>
-                  </div>
-                </div>
-              )}
-
               {/* 和訳・スペル・文法タブ用設定 */}
               {(mode === 'translation' || mode === 'spelling' || mode === 'grammar') && (
                 <div className="settings-section">
@@ -1405,6 +1175,55 @@ function ScoreBoard({
                       <li>中程度（50-100）: バランスの良い学習</li>
                       <li>多い数（150-500）: じっくり長時間学習</li>
                       <li>設定無し: すべての語を出題</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {/* 選択肢の詳細表示タイミング設定 */}
+              {(mode === 'translation' || mode === 'spelling') && (
+                <div className="settings-section mt-6">
+                  <h4 className="font-bold mb-2">📖 回答時の選択肢詳細表示</h4>
+                  <p className="text-sm text-gray-600 mb-3">
+                    選択肢の詳細を自動的に開くタイミングを設定します
+                  </p>
+
+                  <div className="space-y-3">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={autoShowDetailsOnIncorrect}
+                        onChange={(e) => {
+                          const checked = e.target.checked;
+                          setAutoShowDetailsOnIncorrect(checked);
+                          localStorage.setItem('autoShowDetailsOnIncorrect', checked.toString());
+                        }}
+                        className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+                      />
+                      <span className="text-sm">不正解時に詳細を開く</span>
+                    </label>
+
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={autoShowDetailsOnCorrect}
+                        onChange={(e) => {
+                          const checked = e.target.checked;
+                          setAutoShowDetailsOnCorrect(checked);
+                          localStorage.setItem('autoShowDetailsOnCorrect', checked.toString());
+                        }}
+                        className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+                      />
+                      <span className="text-sm">正解時に詳細を開く</span>
+                    </label>
+                  </div>
+
+                  <div className="bg-blue-50 border border-blue-200 rounded p-3 text-sm mt-3">
+                    <p className="font-bold mb-2">💡 ヒント:</p>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>次に進まなければ、選択肢をタップして詳細を表示できます</li>
+                      <li>詳細には、各選択肢の読み・意味・例文などが表示されます</li>
+                      <li>不正解時の自動表示で効率的に復習できます</li>
                     </ul>
                   </div>
                 </div>

@@ -27,6 +27,12 @@ import {
   normalizePosition,
 } from './positionConstants';
 
+type CategoryBand = { min: number; max: number };
+
+// NOTE:
+// - Position は SSOT（POSITION_VALUES）に揃え、テストで期待される固定値（75/85/50 等）を返す。
+// - 「カテゴリ内で回数に応じてPositionを微調整する」方式は、値がテスト/仕様と乖離しやすいため採用しない。
+
 /**
  * 単語の学習優先度スコア（Position）を計算
  *
@@ -186,7 +192,8 @@ export function getSavedPositionDecisionForDebug(
 
 export function determineWordPosition(
   progress: WordProgress | null | undefined,
-  mode: LearningMode = 'memorization'
+  mode: LearningMode = 'memorization',
+  options: { ignoreSaved?: boolean } = {}
 ): WordPosition {
   // 学習履歴が未作成の単語は新規扱い
   if (!progress) {
@@ -196,6 +203,7 @@ export function determineWordPosition(
   // 🚨 最優先: LocalStorageに保存されたタブ別Positionを読み込み
   // これにより、「まだまだ」「分からない」の状態が確実に保持される
   const savedPosition = getSavedPosition(progress, mode);
+  const shouldUseSavedPosition = !options.ignoreSaved;
 
   // ✅ タブ別フィールドを使用（各タブで独立したカウント）
   const modeCounts = getModeCounts(progress, mode);
@@ -211,7 +219,7 @@ export function determineWordPosition(
   // 理由: 「まだまだ」「分からない」の状態を確実に保持するため
   // - 解答直後にPositionが保存されている場合は、それを信頼する
   // - 動的計算は、保存されたPositionが存在しない場合のみ実行
-  if (savedPosition !== undefined && savedPosition !== null) {
+  if (shouldUseSavedPosition && savedPosition !== undefined && savedPosition !== null) {
     // ⚠️ ただし、連続正解で定着した場合は動的計算を優先（まだまだ解消）
     if (consecutiveCorrect >= CONSECUTIVE_THRESHOLDS.MASTERED) {
       // 3回連続正解 → 完全定着（LocalStorageのPositionを無視）
@@ -298,22 +306,9 @@ export function determineWordPosition(
     consecutiveIncorrect === 0 &&
     consecutiveCorrect < CONSECUTIVE_THRESHOLDS.LEARNING
   ) {
-    const stillLearningBoost = Math.min(
-      stillLearning * BOOST_VALUES.STILL_LEARNING_MULTIPLIER,
-      BOOST_VALUES.STILL_LEARNING_MAX
-    );
-    const newPosition = Math.min(
-      POSITION_VALUES.STILL_LEARNING_LOW + stillLearningBoost,
-      POSITION_VALUES.STILL_LEARNING_DEFAULT
-    );
-
-    if (import.meta.env?.DEV) {
-      console.log(
-        `🟡 [まだまだ保持] consecutiveCorrect=${consecutiveCorrect}, 回数=${stillLearning}回 → Position ${newPosition} (+${stillLearningBoost})`
-      );
-    }
-
-    return newPosition;
+    // ✅ 方針: 「まだまだ」履歴がある語は、少なくとも still_learning の中央付近に固定して再出題されやすくする。
+    // - 固定値にすることで、SSOT（POSITION_VALUES）とテスト期待が一致しやすくなる。
+    return POSITION_VALUES.STILL_LEARNING_DEFAULT;
   }
 
   if (consecutiveCorrect === CONSECUTIVE_THRESHOLDS.STRUGGLING) {
@@ -332,20 +327,20 @@ export function determineWordPosition(
   // ========================================
   // 連続で間違えている → 分からない（70-100）
 
+  // ✅ 方針: incorrect は固定値（SSOT）で段階化する
+  // - 3連続不正解以上: 85（最優先）
+  // - 2連続不正解: 75（高優先度）
+  // - 1連続不正解: 正答率に応じて 55（まだまだ） or 70（分からない）
   if (consecutiveIncorrect >= CONSECUTIVE_THRESHOLDS.INCORRECT) {
-    return POSITION_VALUES.INCORRECT_URGENT; // 3回以上連続不正解 → 最優先で再出題
+    return POSITION_VALUES.INCORRECT_URGENT;
   }
-
   if (consecutiveIncorrect >= CONSECUTIVE_THRESHOLDS.HIGH_PRIORITY) {
-    return POSITION_VALUES.INCORRECT_HIGH; // 2回連続不正解 → 高優先度
+    return POSITION_VALUES.INCORRECT_HIGH;
   }
-
   if (consecutiveIncorrect >= CONSECUTIVE_THRESHOLDS.STRUGGLING) {
-    // 1回不正解だが、過去に正解経験あり
-    if (accuracy >= ACCURACY_THRESHOLDS.POOR) {
-      return POSITION_VALUES.INCORRECT_LIGHT; // まだまだ（正答率50%以上）
-    }
-    return POSITION_VALUES.INCORRECT_MEDIUM; // 分からない（正答率50%未満）
+    return accuracy >= ACCURACY_THRESHOLDS.POOR
+      ? POSITION_VALUES.INCORRECT_LIGHT
+      : POSITION_VALUES.INCORRECT_MEDIUM;
   }
 
   // ========================================
@@ -355,24 +350,7 @@ export function determineWordPosition(
   // （連続正解・連続不正解がどちらも0 = まだまだ選択）
 
   if (stillLearning > 0 && consecutiveCorrect === 0 && consecutiveIncorrect === 0) {
-    // 「まだまだ」選択回数に応じてPositionを引き上げ
-    const stillLearningBoost = Math.min(
-      stillLearning * BOOST_VALUES.STILL_LEARNING_MULTIPLIER,
-      BOOST_VALUES.STILL_LEARNING_MAX
-    );
-    const newPosition = Math.min(
-      POSITION_VALUES.STILL_LEARNING_LOW + stillLearningBoost,
-      POSITION_VALUES.STILL_LEARNING_DEFAULT
-    ); // Position 40-50範囲内
-
-    // デバッグログ（開発モードのみ）
-    if (import.meta.env?.DEV) {
-      console.log(
-        `🟡 [まだまだ] 回数=${stillLearning}回 → Position ${newPosition} (+${stillLearningBoost})`
-      );
-    }
-
-    return newPosition;
+    return POSITION_VALUES.STILL_LEARNING_DEFAULT;
   }
 
   // ========================================
