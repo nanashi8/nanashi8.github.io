@@ -26,7 +26,7 @@ interface AnswerHistory {
 }
 
 interface DebugPanelProps {
-  subject?: 'english' | 'social';
+  subject?: 'english' | 'social' | 'japanese';
   allDataSourceLabel?: string;
   mode: ScheduleMode;
   currentIndex: number;
@@ -137,7 +137,13 @@ function safeReadSocialProgressSummary(params: {
   const empty = {
     storageKey,
     storedTerms: 0,
-    deckStats: { new: params.deckWords.length, incorrect: 0, stillLearning: 0, learning: 0, mastered: 0 },
+    deckStats: {
+      new: params.deckWords.length,
+      incorrect: 0,
+      stillLearning: 0,
+      learning: 0,
+      mastered: 0,
+    },
   };
 
   try {
@@ -181,7 +187,9 @@ function safeReadSocialProgressSummary(params: {
             nextReviewDate: currentProgress.nextReviewDate
               ? String(currentProgress.nextReviewDate)
               : undefined,
-            lastAnswered: currentProgress.lastAnswered ? String(currentProgress.lastAnswered) : undefined,
+            lastAnswered: currentProgress.lastAnswered
+              ? String(currentProgress.lastAnswered)
+              : undefined,
           }
         : undefined;
 
@@ -2738,35 +2746,40 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
         </div>
 
         {/* 🧭 社会（暗記）: 進捗サマリ（console不要） */}
-        {subject === 'social' && mode === 'memorization' && (() => {
-          const deckWords = questions.map((q) => q.word).filter(Boolean);
-          const currentWord = questions[currentIndex]?.word;
-          const summary = safeReadSocialProgressSummary({ currentWord, deckWords });
-          return (
-            <div className="bg-emerald-50 p-3 rounded border border-emerald-200 text-xs">
-              <p className="font-semibold text-emerald-800 mb-1">🧭 社会（暗記）デバッグ</p>
-              <div className="font-mono text-[11px] text-emerald-900">
-                storageKey: {summary.storageKey}
-              </div>
-              {allDataSourceLabel && (
-                <div className="text-emerald-900">データ: {allDataSourceLabel}</div>
-              )}
-              <div className="text-emerald-900">
-                デッキ: {totalQuestions} / 保存済み: {summary.storedTerms}
-                {summary.version != null ? ` / v${summary.version}` : ''}
-              </div>
-              <div className="text-emerald-900">
-                分布(デッキ内): new {summary.deckStats.new}, incorrect {summary.deckStats.incorrect}, still {summary.deckStats.stillLearning}, learning {summary.deckStats.learning}, mastered {summary.deckStats.mastered}
-              </div>
-              {summary.current && currentWord && (
-                <div className="mt-1 text-emerald-900">
-                  現在: {currentWord} / Pos {summary.current.position.toFixed(0)} / ○{summary.current.correctCount} ×{summary.current.incorrectCount}
-                  {summary.current.field ? ` / ${summary.current.field}` : ''}
+        {subject === 'social' &&
+          mode === 'memorization' &&
+          (() => {
+            const deckWords = questions.map((q) => q.word).filter(Boolean);
+            const currentWord = questions[currentIndex]?.word;
+            const summary = safeReadSocialProgressSummary({ currentWord, deckWords });
+            return (
+              <div className="bg-emerald-50 p-3 rounded border border-emerald-200 text-xs">
+                <p className="font-semibold text-emerald-800 mb-1">🧭 社会（暗記）デバッグ</p>
+                <div className="font-mono text-[11px] text-emerald-900">
+                  storageKey: {summary.storageKey}
                 </div>
-              )}
-            </div>
-          );
-        })()}
+                {allDataSourceLabel && (
+                  <div className="text-emerald-900">データ: {allDataSourceLabel}</div>
+                )}
+                <div className="text-emerald-900">
+                  デッキ: {totalQuestions} / 保存済み: {summary.storedTerms}
+                  {summary.version != null ? ` / v${summary.version}` : ''}
+                </div>
+                <div className="text-emerald-900">
+                  分布(デッキ内): new {summary.deckStats.new}, incorrect{' '}
+                  {summary.deckStats.incorrect}, still {summary.deckStats.stillLearning}, learning{' '}
+                  {summary.deckStats.learning}, mastered {summary.deckStats.mastered}
+                </div>
+                {summary.current && currentWord && (
+                  <div className="mt-1 text-emerald-900">
+                    現在: {currentWord} / Pos {summary.current.position.toFixed(0)} / ○
+                    {summary.current.correctCount} ×{summary.current.incorrectCount}
+                    {summary.current.field ? ` / ${summary.current.field}` : ''}
+                  </div>
+                )}
+              </div>
+            );
+          })()}
 
         {/* 📸 解答直後スナップショット */}
         {(() => {
