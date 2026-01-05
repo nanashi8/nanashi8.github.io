@@ -25,11 +25,10 @@ export async function quickFixCommit(outputChannel: vscode.OutputChannel): Promi
 
     // unstaged変更も含める（git status --short）
     // NOTE: execAsyncは現在未使用だが、将来的にgit status取得に使用予定
-    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { exec } = require('child_process');
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { promisify } = require('util');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const _execAsync = promisify(exec);
 
     let unstagedFiles: string[] = [];
