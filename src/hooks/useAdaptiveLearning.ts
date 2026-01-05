@@ -33,7 +33,6 @@ import {
 import { logger } from '@/utils/logger';
 import { updateVocabularyNetworkFromAnswer } from '@/ai/utils/vocabularyNetwork';
 import { getWordProgress } from '../progressStorage';
-import { estimateConfidence5 } from '@/ai/utils/answerConfidence5';
 
 /**
  * WordProgressをQuestionStatusに変換

@@ -74,7 +74,7 @@ export class GitIntegration {
     try {
       const { stdout } = await this.execGit(workspaceRoot, ['rev-parse', '--is-inside-work-tree']);
       return stdout.trim() === 'true';
-    } catch (_error) {
+    } catch {
       this.outputChannel.appendLine(`[Git] Not a git repository (root=${workspaceRoot})`);
       return false;
     }
@@ -124,8 +124,11 @@ export class GitIntegration {
       }
 
       // 相対パスを絶対パスに変換
-      const relativePaths = stdout.trim().split('\n').filter(p => p.length > 0);
-      const absolutePaths = relativePaths.map(p => path.join(workspaceRoot, p));
+      const relativePaths = stdout
+        .trim()
+        .split('\n')
+        .filter((p) => p.length > 0);
+      const absolutePaths = relativePaths.map((p) => path.join(workspaceRoot, p));
 
       this.outputChannel.appendLine(`[Git] Found ${absolutePaths.length} staged files`);
       return absolutePaths;
@@ -154,7 +157,7 @@ export class GitIntegration {
    * @returns .instructions.mdファイルのみの配列
    */
   filterInstructionsFiles(files: string[]): string[] {
-    return files.filter(file => file.endsWith('.instructions.md'));
+    return files.filter((file) => file.endsWith('.instructions.md'));
   }
 
   /**
@@ -328,7 +331,7 @@ export class GitIntegration {
           commitsLast30Days: 0,
           commitsLast7Days: 0,
           lastCommitDate: null,
-          changeFrequency: 0
+          changeFrequency: 0,
         };
       }
 
@@ -357,17 +360,19 @@ export class GitIntegration {
         commitsLast30Days,
         commitsLast7Days,
         lastCommitDate,
-        changeFrequency
+        changeFrequency,
       };
     } catch (error) {
-      this.outputChannel.appendLine(`[Git] Error getting file change stats for ${filePath}: ${error}`);
+      this.outputChannel.appendLine(
+        `[Git] Error getting file change stats for ${filePath}: ${error}`
+      );
       return {
         filePath,
         totalCommits: 0,
         commitsLast30Days: 0,
         commitsLast7Days: 0,
         lastCommitDate: null,
-        changeFrequency: 0
+        changeFrequency: 0,
       };
     }
   }
@@ -402,12 +407,15 @@ export class GitIntegration {
       const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
 
       // ファイルごとの集計
-      const fileCounts = new Map<string, {
-        total: number;
-        last30: number;
-        last7: number;
-        lastDate: Date | null;
-      }>();
+      const fileCounts = new Map<
+        string,
+        {
+          total: number;
+          last30: number;
+          last7: number;
+          lastDate: Date | null;
+        }
+      >();
 
       let currentDate: Date | null = null;
 
@@ -431,7 +439,7 @@ export class GitIntegration {
             total: 0,
             last30: 0,
             last7: 0,
-            lastDate: null
+            lastDate: null,
           });
         }
 
@@ -462,7 +470,7 @@ export class GitIntegration {
           commitsLast30Days: count.last30,
           commitsLast7Days: count.last7,
           lastCommitDate: count.lastDate,
-          changeFrequency
+          changeFrequency,
         });
       }
 

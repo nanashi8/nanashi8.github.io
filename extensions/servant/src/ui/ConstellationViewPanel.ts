@@ -166,7 +166,7 @@ export class ConstellationViewPanel {
 
       const document = await vscode.workspace.openTextDocument(fullPath);
       await vscode.window.showTextDocument(document);
-    } catch (_error) {
+    } catch {
       vscode.window.showErrorMessage(`ファイルを開けません: ${filePath}`);
     }
   }

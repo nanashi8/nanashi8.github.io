@@ -1,6 +1,6 @@
 import * as path from 'path';
 import type { NeuralDependencyGraph, NeuralNode } from '../neural/NeuralDependencyGraph';
-import type { GoalManager, Goal } from '../goals/GoalManager';
+import type { GoalManager } from '../goals/GoalManager';
 
 /**
  * 3D座標
@@ -109,7 +109,7 @@ export class ConstellationDataGenerator {
           edges.push({
             from,
             to: edge.to,
-            strength: edge.weight
+            strength: edge.weight,
           });
         }
       }
@@ -117,15 +117,15 @@ export class ConstellationDataGenerator {
 
     // 統計計算
     const avgPriority = nodes.reduce((sum, n) => sum + n.priority, 0) / (nodes.length || 1);
-    const highPriorityNodes = nodes.filter(n => n.priority >= 0.8).length;
-    const mediumPriorityNodes = nodes.filter(n => n.priority >= 0.6 && n.priority < 0.8).length;
-    const lowPriorityNodes = nodes.filter(n => n.priority < 0.6).length;
+    const highPriorityNodes = nodes.filter((n) => n.priority >= 0.8).length;
+    const mediumPriorityNodes = nodes.filter((n) => n.priority >= 0.6 && n.priority < 0.8).length;
+    const lowPriorityNodes = nodes.filter((n) => n.priority < 0.6).length;
 
     return {
       goal: {
         name: mainGoal.name,
         description: mainGoal.description,
-        position: { x: 0, y: 0, z: 0 }
+        position: { x: 0, y: 0, z: 0 },
       },
       nodes,
       edges,
@@ -135,8 +135,8 @@ export class ConstellationDataGenerator {
         avgPriority,
         highPriorityNodes,
         mediumPriorityNodes,
-        lowPriorityNodes
-      }
+        lowPriorityNodes,
+      },
     };
   }
 
@@ -159,8 +159,8 @@ export class ConstellationDataGenerator {
         changeFrequency: node.changeFrequency,
         activationLevel: node.activationLevel,
         entropy: node.entropy,
-        lastModified: node.lastModified
-      }
+        lastModified: node.lastModified,
+      },
     };
   }
 
@@ -187,7 +187,7 @@ export class ConstellationDataGenerator {
     return {
       x: radius * Math.cos(theta) * Math.sin(phi),
       y: radius * Math.cos(phi),
-      z: radius * Math.sin(theta) * Math.sin(phi)
+      z: radius * Math.sin(theta) * Math.sin(phi),
     };
   }
 
@@ -215,8 +215,13 @@ export class ConstellationDataGenerator {
     const lower = filePath.toLowerCase();
 
     // AI/学習系
-    if (lower.includes('/models/') || lower.includes('/specialists/') ||
-        lower.includes('ai') || lower.includes('learning') || lower.includes('scheduler')) {
+    if (
+      lower.includes('/models/') ||
+      lower.includes('/specialists/') ||
+      lower.includes('ai') ||
+      lower.includes('learning') ||
+      lower.includes('scheduler')
+    ) {
       return 'AI';
     }
 
@@ -226,14 +231,22 @@ export class ConstellationDataGenerator {
     }
 
     // データ/ストレージ
-    if (lower.includes('/storage/') || lower.includes('/data/') ||
-        lower.includes('storage') || lower.includes('database')) {
+    if (
+      lower.includes('/storage/') ||
+      lower.includes('/data/') ||
+      lower.includes('storage') ||
+      lower.includes('database')
+    ) {
       return 'Data';
     }
 
     // テスト
-    if (lower.includes('/tests/') || lower.includes('/test/') ||
-        lower.includes('.test.') || lower.includes('.spec.')) {
+    if (
+      lower.includes('/tests/') ||
+      lower.includes('/test/') ||
+      lower.includes('.test.') ||
+      lower.includes('.spec.')
+    ) {
       return 'Test';
     }
 
@@ -280,9 +293,7 @@ export class ConstellationDataGenerator {
    */
   public getTopPriorityNodes(n: number = 10): ConstellationNode[] {
     const data = this.generate();
-    return data.nodes
-      .sort((a, b) => b.priority - a.priority)
-      .slice(0, n);
+    return data.nodes.sort((a, b) => b.priority - a.priority).slice(0, n);
   }
 
   /**
@@ -291,7 +302,7 @@ export class ConstellationDataGenerator {
   public getFrequentlyChangedNodes(threshold: number = 0.7): ConstellationNode[] {
     const data = this.generate();
     return data.nodes
-      .filter(n => n.metadata.changeFrequency >= threshold)
+      .filter((n) => n.metadata.changeFrequency >= threshold)
       .sort((a, b) => b.metadata.changeFrequency - a.metadata.changeFrequency);
   }
 
@@ -301,7 +312,7 @@ export class ConstellationDataGenerator {
   public getRiskyNodes(): ConstellationNode[] {
     const data = this.generate();
     return data.nodes
-      .filter(n => n.metadata.changeFrequency > 0.7 && n.priority > 0.7)
+      .filter((n) => n.metadata.changeFrequency > 0.7 && n.priority > 0.7)
       .sort((a, b) => {
         const riskA = a.metadata.changeFrequency * a.priority;
         const riskB = b.metadata.changeFrequency * b.priority;
@@ -321,15 +332,13 @@ export class ConstellationDataGenerator {
         edges.push({
           from,
           to: edge.to,
-          strength: edge.weight
+          strength: edge.weight,
         });
       }
     }
 
     // 重みでソートして上位N件を返す
-    return edges
-      .sort((a, b) => b.strength - a.strength)
-      .slice(0, n);
+    return edges.sort((a, b) => b.strength - a.strength).slice(0, n);
   }
 
   /**
@@ -351,7 +360,7 @@ export class ConstellationDataGenerator {
    * @returns 線の半径（0.1-0.5）
    */
   public getEdgeRadius(weight: number): number {
-    return 0.1 + (weight * 0.4); // 0.1〜0.5
+    return 0.1 + weight * 0.4; // 0.1〜0.5
   }
 
   /**
@@ -396,7 +405,7 @@ export class ConstellationDataGenerator {
       relatedEdges.push({
         from: nodeId,
         to: edge.to,
-        strength: edge.weight
+        strength: edge.weight,
       });
     }
 
@@ -407,7 +416,7 @@ export class ConstellationDataGenerator {
           relatedEdges.push({
             from,
             to: nodeId,
-            strength: edge.weight
+            strength: edge.weight,
           });
         }
       }

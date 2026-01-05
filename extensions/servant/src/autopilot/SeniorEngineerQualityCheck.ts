@@ -25,9 +25,9 @@ export class SeniorEngineerQualityCheck {
         maintainability: { score: 100, issues: [], strengths: [] },
         readability: { score: 100, issues: [], strengths: [] },
         testing: { score: 100, issues: [], strengths: [] },
-        documentation: { score: 100, issues: [], strengths: [] }
+        documentation: { score: 100, issues: [], strengths: [] },
       },
-      recommendations: []
+      recommendations: [],
     };
 
     // 各観点から評価
@@ -59,7 +59,7 @@ export class SeniorEngineerQualityCheck {
         severity: 'warning',
         message: '変更ファイル数が多すぎます（20+）',
         impact: '関心の分離が不十分な可能性があります',
-        suggestion: '機能ごとにPRを分割することを検討してください'
+        suggestion: '機能ごとにPRを分割することを検討してください',
       });
       category.score -= 15;
     } else if (files.length <= 5) {
@@ -73,7 +73,7 @@ export class SeniorEngineerQualityCheck {
         severity: 'warning',
         message: `${domains.size} 個の異なる領域にまたがる変更`,
         impact: '密結合の可能性があります',
-        suggestion: '共通ロジックを抽出し、依存関係を整理してください'
+        suggestion: '共通ロジックを抽出し、依存関係を整理してください',
       });
       category.score -= 10;
     } else if (domains.size === 1) {
@@ -81,17 +81,21 @@ export class SeniorEngineerQualityCheck {
     }
 
     // 3. テストコードと実装コードの比率
-    const testFiles = files.filter(f =>
-      f.includes('/tests/') || f.includes('/test/') || f.includes('.test.') || f.includes('.spec.')
+    const testFiles = files.filter(
+      (f) =>
+        f.includes('/tests/') ||
+        f.includes('/test/') ||
+        f.includes('.test.') ||
+        f.includes('.spec.')
     );
-    const implFiles = files.filter(f => !testFiles.includes(f));
+    const implFiles = files.filter((f) => !testFiles.includes(f));
 
     if (implFiles.length > 0 && testFiles.length === 0) {
       category.issues.push({
         severity: 'error',
         message: '実装コードに対応するテストが追加されていません',
         impact: 'リグレッションリスクが高まります',
-        suggestion: '変更した機能に対するテストを必ず追加してください'
+        suggestion: '変更した機能に対するテストを必ず追加してください',
       });
       category.score -= 25;
     } else if (testFiles.length > 0) {
@@ -104,7 +108,7 @@ export class SeniorEngineerQualityCheck {
         severity: 'critical',
         message: `コンパイルエラー: ${action.compileErrors} 件`,
         impact: 'コードが動作しません',
-        suggestion: '最優先で修正してください'
+        suggestion: '最優先で修正してください',
       });
       category.score -= 50;
     }
@@ -114,7 +118,7 @@ export class SeniorEngineerQualityCheck {
         severity: 'warning',
         message: `Lint違反: ${action.violations} 件`,
         impact: 'コード品質基準を満たしていません',
-        suggestion: 'Lint違反を解消してください'
+        suggestion: 'Lint違反を解消してください',
       });
       category.score -= Math.min(20, action.violations * 2);
     }
@@ -136,7 +140,7 @@ export class SeniorEngineerQualityCheck {
         severity: 'warning',
         message: `ファイルあたりの変更行数が多い（平均 ${Math.round(avgLinesPerFile)} 行）`,
         impact: 'レビューが困難で、バグが混入しやすくなります',
-        suggestion: '変更を論理的な単位で分割してください'
+        suggestion: '変更を論理的な単位で分割してください',
       });
       category.score -= 15;
     } else if (avgLinesPerFile < 20) {
@@ -150,17 +154,17 @@ export class SeniorEngineerQualityCheck {
     }
 
     // 3. 設定ファイル・ドキュメントの更新
-    const configFiles = files.filter(f =>
-      f.includes('package.json') || f.includes('.config.') || f.includes('tsconfig')
+    const _configFiles = files.filter(
+      (f) => f.includes('package.json') || f.includes('.config.') || f.includes('tsconfig')
     );
-    const docFiles = files.filter(f => f.endsWith('.md'));
+    const docFiles = files.filter((f) => f.endsWith('.md'));
 
     if (files.length > 10 && docFiles.length === 0) {
       category.issues.push({
         severity: 'info',
         message: '大きな変更ですが、ドキュメントが更新されていません',
         impact: 'チームメンバーが変更内容を理解しにくくなります',
-        suggestion: 'README やドキュメントの更新を検討してください'
+        suggestion: 'README やドキュメントの更新を検討してください',
       });
       category.score -= 5;
     }
@@ -191,14 +195,18 @@ export class SeniorEngineerQualityCheck {
     const files = action.changedFiles || [];
     const category = report.categories.testing;
 
-    const testFiles = files.filter(f =>
-      f.includes('/tests/') || f.includes('/test/') || f.includes('.test.') || f.includes('.spec.')
+    const testFiles = files.filter(
+      (f) =>
+        f.includes('/tests/') ||
+        f.includes('/test/') ||
+        f.includes('.test.') ||
+        f.includes('.spec.')
     );
 
     // 1. テストの存在
     if (testFiles.length === 0 && files.length > 0) {
-      const hasImplementation = files.some(f =>
-        f.endsWith('.ts') || f.endsWith('.tsx') || f.endsWith('.js') || f.endsWith('.jsx')
+      const hasImplementation = files.some(
+        (f) => f.endsWith('.ts') || f.endsWith('.tsx') || f.endsWith('.js') || f.endsWith('.jsx')
       );
 
       if (hasImplementation) {
@@ -206,7 +214,7 @@ export class SeniorEngineerQualityCheck {
           severity: 'error',
           message: 'テストが追加されていません',
           impact: '品質保証が不十分です',
-          suggestion: 'ユニットテストまたは統合テストを追加してください'
+          suggestion: 'ユニットテストまたは統合テストを追加してください',
         });
         category.score -= 30;
       }
@@ -214,9 +222,10 @@ export class SeniorEngineerQualityCheck {
       category.strengths.push(`テストファイル: ${testFiles.length} 件`);
 
       // 2. テストと実装のバランス
-      const implFiles = files.filter(f =>
-        !testFiles.includes(f) &&
-        (f.endsWith('.ts') || f.endsWith('.tsx') || f.endsWith('.js') || f.endsWith('.jsx'))
+      const implFiles = files.filter(
+        (f) =>
+          !testFiles.includes(f) &&
+          (f.endsWith('.ts') || f.endsWith('.tsx') || f.endsWith('.js') || f.endsWith('.jsx'))
       );
 
       if (testFiles.length >= implFiles.length * 0.5) {
@@ -225,7 +234,7 @@ export class SeniorEngineerQualityCheck {
     }
 
     // 3. E2Eテストの考慮
-    const e2eTests = testFiles.filter(f => f.includes('e2e') || f.includes('playwright'));
+    const e2eTests = testFiles.filter((f) => f.includes('e2e') || f.includes('playwright'));
     if (e2eTests.length > 0) {
       category.strengths.push('E2Eテストを含む');
     }
@@ -238,8 +247,8 @@ export class SeniorEngineerQualityCheck {
     const files = action.changedFiles || [];
     const category = report.categories.documentation;
 
-    const docFiles = files.filter(f => f.endsWith('.md'));
-    const instructionFiles = files.filter(f => f.includes('.instructions.md'));
+    const docFiles = files.filter((f) => f.endsWith('.md'));
+    const instructionFiles = files.filter((f) => f.includes('.instructions.md'));
 
     // 1. ドキュメントの存在
     if (docFiles.length === 0 && files.length > 10) {
@@ -247,7 +256,7 @@ export class SeniorEngineerQualityCheck {
         severity: 'warning',
         message: '大規模な変更ですが、ドキュメントが更新されていません',
         impact: 'チームの知識共有が不十分になります',
-        suggestion: 'READMEや設計ドキュメントの更新を検討してください'
+        suggestion: 'READMEや設計ドキュメントの更新を検討してください',
       });
       category.score -= 15;
     } else if (docFiles.length > 0) {
@@ -260,7 +269,7 @@ export class SeniorEngineerQualityCheck {
     }
 
     // 3. DECISIONS.md の確認
-    const hasDecisions = files.some(f => f.includes('DECISIONS.md'));
+    const hasDecisions = files.some((f) => f.includes('DECISIONS.md'));
     if (hasDecisions) {
       category.strengths.push('意思決定を記録（DECISIONS.md）');
     } else if (files.length > 5) {
@@ -268,7 +277,7 @@ export class SeniorEngineerQualityCheck {
         severity: 'info',
         message: 'DECISIONS.md が更新されていません',
         impact: '設計判断が記録されません',
-        suggestion: '重要な設計判断を DECISIONS.md に記録してください'
+        suggestion: '重要な設計判断を DECISIONS.md に記録してください',
       });
       category.score -= 5;
     }
@@ -279,23 +288,24 @@ export class SeniorEngineerQualityCheck {
    */
   private calculateOverallScore(report: QualityReport): void {
     const categories = Object.values(report.categories);
-    const avgScore = categories.reduce((sum, cat) => sum + Math.max(0, cat.score), 0) / categories.length;
+    const avgScore =
+      categories.reduce((sum, cat) => sum + Math.max(0, cat.score), 0) / categories.length;
     report.overallScore = Math.round(avgScore);
 
     // 推奨事項の生成
-    categories.forEach(cat => {
-      cat.issues.forEach(issue => {
+    categories.forEach((cat) => {
+      cat.issues.forEach((issue) => {
         if (issue.severity === 'critical' || issue.severity === 'error') {
           report.recommendations.push({
             priority: 'high',
             action: issue.suggestion,
-            reason: issue.message
+            reason: issue.message,
           });
         } else if (issue.severity === 'warning') {
           report.recommendations.push({
             priority: 'medium',
             action: issue.suggestion,
-            reason: issue.message
+            reason: issue.message,
           });
         }
       });
@@ -307,9 +317,9 @@ export class SeniorEngineerQualityCheck {
    */
   private reportQuality(report: QualityReport): void {
     this.outputChannel.appendLine('');
-    this.outputChannel.appendLine('=' .repeat(80));
+    this.outputChannel.appendLine('='.repeat(80));
     this.outputChannel.appendLine('🎓 上級SE視点: コード品質評価レポート');
-    this.outputChannel.appendLine('=' .repeat(80));
+    this.outputChannel.appendLine('='.repeat(80));
     this.outputChannel.appendLine('');
 
     // 総合スコア
@@ -323,21 +333,28 @@ export class SeniorEngineerQualityCheck {
       maintainability: '保守性',
       readability: '可読性',
       testing: 'テスト戦略',
-      documentation: 'ドキュメンテーション'
+      documentation: 'ドキュメンテーション',
     };
 
     Object.entries(report.categories).forEach(([key, cat]) => {
       const catScore = Math.max(0, cat.score);
       const catIcon = catScore >= 80 ? '✅' : catScore >= 60 ? '⚠️' : '❌';
 
-      this.outputChannel.appendLine(`${catIcon} ${categoryNames[key as keyof typeof categoryNames]}: ${catScore}/100`);
+      this.outputChannel.appendLine(
+        `${catIcon} ${categoryNames[key as keyof typeof categoryNames]}: ${catScore}/100`
+      );
 
       if (cat.issues.length > 0) {
         this.outputChannel.appendLine('   問題:');
-        cat.issues.forEach(issue => {
-          const issueIcon = issue.severity === 'critical' ? '🔴' :
-                           issue.severity === 'error' ? '❌' :
-                           issue.severity === 'warning' ? '⚠️' : 'ℹ️';
+        cat.issues.forEach((issue) => {
+          const issueIcon =
+            issue.severity === 'critical'
+              ? '🔴'
+              : issue.severity === 'error'
+                ? '❌'
+                : issue.severity === 'warning'
+                  ? '⚠️'
+                  : 'ℹ️';
           this.outputChannel.appendLine(`   ${issueIcon} ${issue.message}`);
           this.outputChannel.appendLine(`      影響: ${issue.impact}`);
           this.outputChannel.appendLine(`      対策: ${issue.suggestion}`);
@@ -346,7 +363,7 @@ export class SeniorEngineerQualityCheck {
 
       if (cat.strengths.length > 0) {
         this.outputChannel.appendLine('   強み:');
-        cat.strengths.forEach(strength => {
+        cat.strengths.forEach((strength) => {
           this.outputChannel.appendLine(`   ✨ ${strength}`);
         });
       }
@@ -358,8 +375,8 @@ export class SeniorEngineerQualityCheck {
     if (report.recommendations.length > 0) {
       this.outputChannel.appendLine('🎯 優先推奨事項:');
 
-      const highPriority = report.recommendations.filter(r => r.priority === 'high');
-      const mediumPriority = report.recommendations.filter(r => r.priority === 'medium');
+      const highPriority = report.recommendations.filter((r) => r.priority === 'high');
+      const mediumPriority = report.recommendations.filter((r) => r.priority === 'medium');
 
       if (highPriority.length > 0) {
         this.outputChannel.appendLine('   🔴 高優先度:');
@@ -387,11 +404,13 @@ export class SeniorEngineerQualityCheck {
     } else if (report.overallScore >= 60) {
       this.outputChannel.appendLine('   ⚠️ いくつか改善点があります。推奨事項を確認してください。');
     } else {
-      this.outputChannel.appendLine('   ❌ 品質基準を満たしていません。重大な問題を修正してください。');
+      this.outputChannel.appendLine(
+        '   ❌ 品質基準を満たしていません。重大な問題を修正してください。'
+      );
     }
 
     this.outputChannel.appendLine('');
-    this.outputChannel.appendLine('=' .repeat(80));
+    this.outputChannel.appendLine('='.repeat(80));
     this.outputChannel.appendLine('');
   }
 
@@ -401,7 +420,7 @@ export class SeniorEngineerQualityCheck {
   private analyzeDomainCoupling(files: string[]): Set<string> {
     const domains = new Set<string>();
 
-    files.forEach(file => {
+    files.forEach((file) => {
       // パスから領域を推定
       if (file.includes('/components/')) domains.add('UI');
       else if (file.includes('/ai/')) domains.add('AI');
