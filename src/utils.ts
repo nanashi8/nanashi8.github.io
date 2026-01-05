@@ -183,6 +183,11 @@ export function generateChoices(
  * 語句から細分類を推測（山/川/湖/海/県/市など）
  */
 function inferSubCategory(word: string): string | null {
+  // wordがundefinedまたは空文字の場合は早期リターン
+  if (!word || typeof word !== 'string') {
+    return null;
+  }
+
   // 地名の細分類
   if (word.endsWith('山') || word.includes('山脈')) return '山地';
   if (word.endsWith('川') || word.includes('川')) return '河川';
@@ -218,7 +223,7 @@ export function generateChoicesWithQuestions(
 
   const isSocialStudies = Boolean(currentQuestion.termType);
   const candidatePools = (() => {
-    if (!isSocialStudies) {
+    if (!isSocialStudies || !currentQuestion.word) {
       return { primary: shuffle(otherQuestions), secondary: [] as Question[] };
     }
 

@@ -1,732 +1,140 @@
-# English Learning Web Application
+# English Learning Web App
 
 [![CSS Quality Check](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
 [![Build Check](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
 [![Grammar Data Quality](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml)
 [![Document Link Validation](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml)
-[![No Symptomatic Fixes](https://img.shields.io/badge/code%20quality-no%20symptomatic%20fixes-brightgreen)](docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md)
 
-An English learning application built with TypeScript + React, implementing an adaptive learning system that integrates 8 specialized algorithms.
+English learning web app built with TypeScript + React + Vite. It focuses on adaptive scheduling (spaced repetition, forgetting curve, and session signals) to decide what to ask next.
 
-🎯 [Demo Site](https://nanashi8.github.io/) | 📚 [Documentation](docs/) | 🔧 [Algorithm Integration Guide](docs/AI_INTEGRATION_GUIDE.md)
+- Demo: https://nanashi8.github.io/
+- Docs: [docs/](docs/)
+- Japanese README: [README_JP.md](README_JP.md)
 
----
+## A short tour (our work)
 
-## 🚨 Important Notice for Developers
+This repository intentionally keeps the app, learning datasets, quality gates, and AI-assisted workflow docs together. The goal is long-term maintainability: make it hard to “silently break” scheduling, UI, or data as the project grows.
 
-### ⚠️ [CRITICAL] Absolutely No "Fix-on-Fix" Allowed
+- The scheduling core is a meta layer that coordinates specialist signals via a Position (0-100) model: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts), [src/ai/specialists/](src/ai/specialists/)
+- Layout is guarded by “immutable UI specs”, responsive implementation patterns, and visual regression testing guidance: [docs/development/UI_IMMUTABLE_SPECIFICATIONS.md](docs/development/UI_IMMUTABLE_SPECIFICATIONS.md), [docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md](docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md), [docs/development/VISUAL_REGRESSION_TESTING.md](docs/development/VISUAL_REGRESSION_TESTING.md)
+- Change quality is enforced through a single aggregated gate (typecheck/lint/doc checks) and an opt-in pre-commit guard: [package.json](package.json), [scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh)
+- To keep AI-assisted edits consistent, the repo includes an instruction hierarchy and task-type workflows: [.aitk/instructions/README.md](.aitk/instructions/README.md), [docs/references/AI_WORKFLOW_INSTRUCTIONS.md](docs/references/AI_WORKFLOW_INSTRUCTIONS.md)
 
-This project **completely prohibits "fixing a fix"**.
+## Quick start
 
-#### Enforcement Mechanism
+Requirements:
+
+- Node.js 20 (see [.nvmrc](.nvmrc))
 
 ```bash
-# Install pre-commit hook (one-time setup)
-ln -sf ../../scripts/pre-commit-fix-check.sh .git/hooks/pre-commit
-
-# Automatic validation before commit:
-# - Fix-on-fix pattern detection
-# - Symptomatic fix keyword detection
-# - Short-term re-modification detection
-# - Type definition change impact analysis
-# - Condition branch accumulation detection
+npm install
+npm run dev
 ```
 
-#### Mandatory Checklist Before Any Fix
+Open http://localhost:5173
 
-- [ ] Have you identified the root cause?
-- [ ] Have you completely mapped out the impact scope?
-- [ ] Have you listed all related files?
-- [ ] Have you prepared test cases?
-- [ ] Will this fix break other parts?
+## Key features
 
-**Details**:
+- Adaptive question ordering via the meta scheduler (see [src/ai/scheduler/](src/ai/scheduler/))
+- “Specialist” signals (memory / cognitive load / prediction / engagement, etc.) coordinated in [src/ai/AICoordinator.ts](src/ai/AICoordinator.ts)
+- Spaced repetition + forgetting curve modeling in [src/ai/specialists/](src/ai/specialists/)
+- Random short-delay re-asking after mistakes (to reduce immediate short-term recall effects)
+- Local-first persistence via `localStorage`
 
-- [No Fix-on-Fix Policy](.aitk/instructions/no-fix-on-fix.instructions.md)
-- [No Symptomatic Fixes Policy](docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md)
+Note: The core scheduling is primarily rule/heuristics-based. This repo also contains optional ML experiments (see [src/ai/ml/](src/ai/ml/)), but they are not required to run the app.
 
----
+## AI coordination flag
 
-## 📖 Table of Contents
+In development (`npm run dev`), AI coordination is enabled automatically.
 
-- [System Overview](#system-overview)
-- [8-AI System Architecture](#8-ai-system-architecture)
-- [Key Features](#key-features)
-- [Tech Stack](#tech-stack)
-- [Setup Guide](#setup-guide)
-- [Documentation System](#documentation-system)
+For production builds, enable it in the browser console:
 
----
-
-## 🎯 System Overview
-
-### Concept
-
-An English learning system equipped with adaptive question algorithms that respond to individual learning patterns. It achieves integrated learning management through 7 specialized algorithms and 1 meta-algorithm (QuestionScheduler).
-
-**Technical Note**: This system is implemented using learning psychology (forgetting curve, spaced repetition) and rule-based algorithms, not machine learning-based AI.
-
-### Implemented Features
-
-#### Priority-Based Review System
-
-- Priority bonus for incorrect words (+50~90)
-- Random interval re-questioning (re-question after 2-5 questions)
-- Oscillation prevention mechanism (suppress re-questioning within 1 minute)
-
-#### Learning State Detection and Adjustment
-
-- Fatigue signal detection (after 20+ minutes of learning)
-- Struggling signal detection (error rate 40%+)
-- Overlearning signal detection (10+ consecutive correct answers)
-- Boredom signal detection (consecutive same difficulty level)
-
-#### Time-Based Review Optimization
-
-- DTA (Time-Dependent Adjustment) for forgetting curve
-- Priority adjustment based on time elapsed since last learning
-- Adaptation to individual forgetting patterns
-
----
-
-## 🔧 8-Hybrid AI System Architecture
-
-### System Configuration
-
-This system consists of 7 specialized AIs and 1 meta AI integration layer. Each AI performs independent evaluation, and the meta AI (QuestionScheduler) determines the final question order.
-
-**🧠 Hybrid AI Implementation** (Phase 4: In Development)
-
-- **Rule-Based Layer**: Ebbinghaus forgetting curve, SM-2 spaced repetition algorithm
-- **Machine Learning Layer**: TensorFlow.js, neural networks, personalized adaptive learning
-- **Integration Method**: Weight adjustment based on data volume (Rule 30-70% + ML 30-70%)
-- **Learning Method**: Online learning (real-time improvement)
-
-**Current Status**:
-
-- ✅ Phase 1-3: Rule-based algorithms (Complete)
-- 🔄 Phase 4: ML feature integration (In Progress)
-
-### Operation Flow
-
-1. Each specialized algorithm generates priority signals for each word
-2. AlgorithmCoordinator aggregates signals
-3. QuestionScheduler determines question order through integrated calculation
-4. Learning results feedback adjusts parameters of each algorithm
-
-### 7 Specialized AIs (Implementation Status)
-
-| AI                         | Main Functions                                           | Implementation File                                                                  |
-| -------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| 🧠 **Memory AI**           | Memory retention evaluation, forgetting risk calculation | [`src/ai/specialists/MemoryAI.ts`](src/ai/specialists/MemoryAI.ts)                   |
-| 💤 **Cognitive Load AI**   | Cognitive load measurement, fatigue detection            | [`src/ai/specialists/CognitiveLoadAI.ts`](src/ai/specialists/CognitiveLoadAI.ts)     |
-| 🔮 **Error Prediction AI** | Error pattern analysis and prediction                    | [`src/ai/specialists/ErrorPredictionAI.ts`](src/ai/specialists/ErrorPredictionAI.ts) |
-| 🎯 **Learning Style AI**   | Learning style profiling                                 | [`src/ai/specialists/LearningStyleAI.ts`](src/ai/specialists/LearningStyleAI.ts)     |
-| 📚 **Linguistic AI**       | Linguistic difficulty evaluation                         | [`src/ai/specialists/LinguisticAI.ts`](src/ai/specialists/LinguisticAI.ts)           |
-| 🌍 **Contextual AI**       | Environment and time factor analysis                     | [`src/ai/specialists/ContextualAI.ts`](src/ai/specialists/ContextualAI.ts)           |
-| 🎮 **Gamification AI**     | Motivation management                                    | [`src/ai/specialists/GamificationAI.ts`](src/ai/specialists/GamificationAI.ts)       |
-
-**Integration Layer**: [`src/ai/coordinator/AICoordinator.ts`](src/ai/coordinator/AICoordinator.ts)
-
-### QuestionScheduler - Meta AI Integration Layer
-
-Achieved a Documentation-Implementation Consistency Score of 100/100.
-
-#### Implemented Features
-
-**4-Tab Unified Question Engine**
-
-- Same algorithm used for all modes: memorization, translation, spelling, grammar
-- Shared learning data and consistency guarantee across modes
-
-**5 Types of Signal Detection**
-
-- Fatigue: 20+ minutes of learning with increasing errors
-- Struggling: Error rate 40%+
-- Overlearning: 10+ consecutive correct answers
-- Boredom: Consecutive same difficulty level
-- Optimal: Good learning state
-
-**DTA (Time-Dependent Adjustment)**
-
-- Considers time elapsed since last learning
-- Dynamic adjustment adapting to individual forgetting patterns
-
-**Oscillation Prevention System**
-
-- Suppresses re-questioning of correctly answered questions within 1 minute
-- Real-time monitoring with vibrationScore (0-100)
-
-**Certainty Guarantee Mechanism**
-
-- Priority placement for incorrect words (+50~90 bonus)
-- Secondary placement for still_learning (+25 bonus)
-- Maintains review priority even under DTA or signal influence
-
----
-
-## � Quality Assurance System
-
-### SSOT (Single Source of Truth) Enforcement
-
-**Position-Based Architecture** (Implemented December 2025):
-
-- `Position` (0-100) is the single source of truth for word mastery state
-- All category judgments derived from Position via `positionToCategory()`
-- Eliminates duplicate logic across codebase
-
-```typescript
-// ✅ CORRECT: Position-first approach
-const position = determineWordPosition(progress, mode); // 0-100
-const category = positionToCategory(position); // 'incorrect' | 'still_learning' | ...
-
-// ❌ FORBIDDEN: Direct category assignment
-if (consecutiveIncorrect >= 2) {
-  category = 'incorrect'; // SSOT violation detected by quality gate
-}
-```
-
-**Automated Detection**:
-
-- `scripts/check-symptomatic-fixes.sh` detects SSOT violations
-- Integrated into `quality:check` and CI pipeline
-- Blocks commits with duplicate logic or direct category manipulation
-
-**Predicate Helpers** (`wordCategoryPredicates.ts`):
-
-```typescript
-import { isIncorrectWordCategory, isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
-
-// ✅ Use helper functions for category checks
-if (isIncorrectWordCategory(category)) { ... }
-
-// ❌ Direct string comparison blocked by quality gate
-if (category === 'incorrect') { ... }
-```
-
-### Quality Gate Pipeline
-
-**Basic Gate** (Required for all commits):
-
-```bash
-npm run quality:check  # Runs all checks below
-```
-
-1. **Markdown Lint**: Documentation quality (`lint:md`)
-2. **Type Check**: TypeScript compilation (`typecheck`)
-3. **ESLint**: Code style and errors (`lint:errors-only`)
-4. **CSS Lint**: Stylesheet quality (`lint:css`)
-5. **Symptomatic Fixes Check**: SSOT violation detection
-
-**Strict Gate** (For production releases):
-
-```bash
-npm run quality:strict  # Zero warnings policy
-```
-
-- All basic checks + max-warnings 0 enforcement
-- Unused variable detection
-- Comprehensive code quality validation
-
-**Smoke Test** (Integration validation):
-
-```bash
-npm run test:smoke     # Fast DOM-based smoke test
-```
-
-- Visual regression removed (snapshot instability)
-- DOM layout and interaction verification
-- Sub-2 second execution time
-
-**Current Status** (2025-12-25):
-
-- ✅ All quality gates passing
-- ✅ SSOT violations eliminated (20+ files refactored)
-- ✅ Unused variables resolved (56 warnings → 0)
-- ✅ Smoke test stable (DOM-based approach)
-
-**Documentation**: [SSOT Enforcement Guide](.aitk/instructions/ssot-enforcement.instructions.md)
-### Passage Quality Evaluation System ⭐ NEW
-
-**Mandatory for all passage creation/editing** (2025-12-27):
-
-All reading passages must be evaluated using our 6-criteria, 120-point quality system before commit:
-
-```bash
-python3 scripts/validate_passage_sentence_quality.py \
-  public/data/passages-phrase-learning/your-passage.json \
-  --vocab public/data/vocabulary/all-words.csv \
-  --output scripts/output/quality_report.json
-```
-
-#### 6 Evaluation Criteria (20 points each)
-
-1. **English Quality** - Grammar, spelling, structure
-2. **Structure Accuracy** - Main/subordinate clauses, phrase positioning
-3. **Clause Classification** - Noun/adjective/adverb clauses, phrase types
-4. **Literal Translation Accuracy** - Word order correspondence, grammar elements
-5. **Japanese Translation Quality** - Natural Japanese, style consistency
-6. **Vocabulary Usage Rate** ⭐ **CRITICAL** - Learning vocabulary coverage
-
-**Minimum Requirements**:
-
-- Beginner: 80/120 points average
-- Intermediate: 85/120 points average
-- Advanced: 90/120 points average
-- Vocabulary coverage: 60%+ (ideal: 80%+)
-
-**Important**: Reading comprehension is the ultimate test of vocabulary learning outcomes. Vocabulary usage rate is the most critical metric for passage quality.
-
-**Enforcement**: [Passage Quality Enforcement Instructions](.aitk/instructions/passage-quality-enforcement.instructions.md)
-
-**Documentation**: 
-- [Passage Quality Evaluation Guide](docs/quality/PASSAGE_SENTENCE_QUALITY_GUIDE.md)
-- [Passage Creation Guidelines](docs/guidelines/passage/PASSAGE_CREATION_GUIDELINES.md)
----
-
-## �🚀 Key Features
-
-### Random Interval Re-questioning (Implemented December 2025)
-
-#### Challenge
-
-Immediate re-questioning causes correct answers from short-term memory, making it impossible to measure true memory retention.
-
-#### Implementation Method
-
-Add incorrect words to waiting queue and re-question after 2-5 questions with weighted randomization:
-
-```typescript
-// Weighted distribution
-40%: After 2 questions
-30%: After 3 questions
-20%: After 4 questions
-10%: After 5 questions
-```
-
-#### Effects
-
-- Separation of short-term and long-term memory
-- Coexistence with oscillation prevention system
-- Maintenance of natural learning rhythm
-
-**Details**: [random-skip-feature.md](docs/features/random-skip-feature.md)
-
-### Documentation Management System
-
-Maintains over 8,800 lines of detailed specifications, enabling feature recovery within 7.5 hours through a comprehensive documentation system.
-
-**Phase 1 Completion Memorial**: Consolidated all Magic numbers in Position calculation into [positionConstants.ts](src/ai/utils/positionConstants.ts) (2025-12-23)
-
-| Document                                                                                 | Content                                       |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------- |
-| [Complete Specification](docs/specifications/QUESTION_SCHEDULER_SPEC.md)                 | Algorithm details (1,669 lines)               |
-| [Type Definition Reference](docs/references/QUESTION_SCHEDULER_TYPES.md)                 | 11 type definitions (901 lines)               |
-| [Recovery Manual](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)                            | Step-by-step recovery procedure (1,080 lines) |
-| [API Reference](docs/references/QUESTION_SCHEDULER_API.md)                               | Implementer's API (594 lines)                 |
-| [Complete Learning System Roadmap](docs/development/COMPLETE_LEARNING_SYSTEM_ROADMAP.md) | Phase 1-6 implementation plan (62.5 hours)    |
-
-**Verification System**:
-
-- Automated verification script (30 check items, 30-second execution)
-- GitHub Actions integration
-- Continuous consistency checking
-
-### Documentation Quality Assurance
-
-Maintains documentation quality through a 3-layer automatic verification system:
-
-#### Level 1: Real-time Verification
-
-- Immediate detection of broken links with VS Code integration
-- Fragment (#anchor) validation
-
-#### Level 2: Commit-time Verification
-
-- Naming convention check via Pre-commit Hook
-- Blocks commits that violate rules
-
-#### Level 3: PR-time Verification
-
-- Full link validation via GitHub Actions (684 links, 5 seconds)
-- Merge control by broken link threshold (80 locations)
-
-**Current Status**:
-
-- Number of documents: 306 files
-- Total links: 684
-- Broken links: 76 (71% reduction from initial 263)
-- Verification time: 5 seconds
-
-**Details**: [EFFICIENT_DOC_WORKFLOW.md](docs/processes/EFFICIENT_DOC_WORKFLOW.md)
-
-### Enabling AI Features
-
-Automatically enabled in development environment (`npm run dev`). For production, enable with the following steps:
-
-```javascript
-// Execute in browser console (F12)
+```js
 localStorage.setItem('enable-ai-coordination', 'true');
 location.reload();
 ```
 
-Logs like the following will be output to the console:
+See [docs/HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md).
 
-```text
-🤖 [MemorizationView] AI integration enabled
-🧠 Memory AI Signal for question_id=123:
-  - forgettingRisk: 120 (priority adjustment: +35)
-💤 Cognitive Load AI Signal:
-  - fatigueScore: 0.3 (consecutive errors: 3 times)
-🤖 Meta AI: Final Priority=260 (HIGH PRIORITY)
-```
-
-**Details**: [HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md)
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-
-- **TypeScript**: Complete type safety
-- **React 18**: Latest Hooks patterns
-- **Vite**: Ultra-fast build
-- **Tailwind CSS**: Utility-first
-
-### AI/Machine Learning
-
-- **7 Specialized AIs**: Memory, Cognitive Load, Error Prediction, Learning Style, Linguistic, Contextual, Gamification
-- **QuestionScheduler (Meta AI)**: Signal integration and question order determination
-
-### Data Management
-
-- **localStorage**: Client-side persistence
-- **CSV format**: 7-column data compatibility
-
-### Quality Assurance
-
-- **Vitest**: Unit tests (85%+ coverage)
-- **Playwright**: E2E tests
-- **ESLint + Prettier**: Code quality
-- **Stylelint**: CSS quality
-- **Markdownlint**: Documentation quality
-
-### CI/CD
-
-- **GitHub Actions**: Automated testing, building, deployment
-- **GitHub Pages**: Static site hosting
-- **Pre-commit Hooks**: Pre-commit verification
-
-### Documentation Management
-
-- **Pre-commit Hook**: Naming convention enforcement (`.husky/check-doc-naming`)
-- **GitHub Actions**: Link validation (`.github/workflows/link-checker.yml`)
-- **VS Code Integration**: Real-time Markdown validation
-- **npm Scripts**: `docs:analyze`, `docs:check`, `docs:stats`
-
----
-
-## 💻 Setup Guide
-
-### System Requirements
-
-- Node.js 16 or higher
-- npm or yarn
-
-### Installation Steps
+## Common commands
 
 ```bash
-# Clone repository
-git clone https://github.com/nanashi8/nanashi8.github.io.git
-cd nanashi8.github.io
+# Unit tests (fast preset)
+npm test
 
-# Install dependencies
-npm install
+# Full typecheck + lint + doc checks (recommended before PR)
+npm run quality:check
 
-# Start development server (AI features auto-enabled)
-npm run dev
-
-# Open http://localhost:5173 in browser
-```
-
-### Main Commands
-
-```bash
-# Build
+# Build / preview
 npm run build
-
-# Preview
 npm run preview
-
-# Run tests
-npm run test:unit          # Unit tests
-npm run test:smoke         # Smoke tests
-npm run test:all           # All tests
-
-# Code quality check
-npm run quality:check      # Type check + Lint
-npm run quality:strict     # Strict check
-
-# Documentation management
-npm run docs:stats         # Show statistics
-npm run docs:analyze       # Link analysis
-npm run docs:check         # Full check
 ```
 
-### Directory Structure
-
-```
-nanashi8.github.io/
-├── src/                    # Source code
-│   ├── ai/                 # 8-AI System
-│   │   ├── specialists/    # 7 specialized AIs
-│   │   ├── coordinator/    # AI integration layer
-│   │   └── scheduler/      # QuestionScheduler
-│   ├── components/         # React components
-│   ├── hooks/              # Custom hooks
-│   ├── storage/            # Data persistence
-│   └── types/              # TypeScript type definitions
-├── docs/                   # Documentation (306 files)
-│   ├── specifications/     # Specifications
-│   ├── guidelines/         # Guidelines
-│   ├── how-to/             # How-to guides
-│   ├── references/         # References
-│   └── processes/          # Processes
-├── tests/                  # Test code
-├── scripts/                # Automation scripts
-├── .github/workflows/      # CI/CD pipeline
-├── .husky/                 # Git Hooks
-└── .aitk/instructions/     # AI development support
-```
-
----
-
-## 📚 Documentation System
-
-### System Overview
+More scripts are in [package.json](package.json) (data validation, Playwright smoke/visual tests, etc.).
 
-Consists of 306 files with over 8,800 lines of specifications. Implements an automated verification system to maintain documentation-implementation consistency.
+## Repository layout
 
-#### QuestionScheduler Related (Consistency 100/100)
+- [src/](src/) - React app and adaptive scheduling logic
+- [public/data/](public/data/) - learning datasets
+- [docs/](docs/) - specifications, guides, and reports
+- [scripts/](scripts/) - automation and validators (some require Python)
+- [tests/](tests/) - unit/integration/simulation tests
+- [extensions/](extensions/) - VS Code extension(s) and tooling (see [extensions/servant/](extensions/servant/))
 
-| Document                                                                     | Content                               |
-| ---------------------------------------------------------------------------- | ------------------------------------- |
-| [QUESTION_SCHEDULER_SPEC.md](docs/specifications/QUESTION_SCHEDULER_SPEC.md) | Algorithm specification (1,669 lines) |
-| [QUESTION_SCHEDULER_RECOVERY.md](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md) | Recovery manual (1,080 lines)         |
-| [QUESTION_SCHEDULER_TYPES.md](docs/references/QUESTION_SCHEDULER_TYPES.md)   | Type definitions (901 lines)          |
-| [QUESTION_SCHEDULER_API.md](docs/references/QUESTION_SCHEDULER_API.md)       | API reference (594 lines)             |
-| [META_AI_INTEGRATION_GUIDE.md](docs/guidelines/META_AI_INTEGRATION_GUIDE.md) | Integration guide                     |
+## Contributing / quality
 
-#### AI Integration Related
+- Please follow the project’s quality policies (e.g., [docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md](docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md)).
+- Run `npm run quality:check` before submitting changes.
+- This README is maintained collaboratively by the project owner and AI assistance (GitHub Copilot / GPT-5.2), with links to concrete implementation files.
 
-| Document                                                       | Content                                    |
-| -------------------------------------------------------------- | ------------------------------------------ |
-| [AI_INTEGRATION_GUIDE.md](docs/AI_INTEGRATION_GUIDE.md)        | Technical details and implementation guide |
-| [HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md)                | Usage guide                                |
-| [AI_PROJECT_COMPLETE.md](docs/AI_PROJECT_COMPLETE.md)          | Phase 1-4 summary (408 lines)              |
-| [random-skip-feature.md](docs/features/random-skip-feature.md) | Random re-questioning feature              |
+## Catalog (overview)
 
-#### Documentation Management
+This repo mixes a web app, learning datasets, and tooling around them.
 
-| Document                                                                       | Content                               |
-| ------------------------------------------------------------------------------ | ------------------------------------- |
-| [EFFICIENT_DOC_WORKFLOW.md](docs/processes/EFFICIENT_DOC_WORKFLOW.md)          | Efficiency workflow                   |
-| [DOCUMENT_NAMING_CONVENTION.md](docs/guidelines/DOCUMENT_NAMING_CONVENTION.md) | Naming conventions                    |
-| [DOCUSAURUS_SETUP_GUIDE.md](docs/how-to/DOCUSAURUS_SETUP_GUIDE.md)             | SSG setup guide (under consideration) |
-| [LINK_FIX_COMPLETION_REPORT.md](docs/reports/LINK_FIX_COMPLETION_REPORT.md)    | Link fix results                      |
+- **Learning app (TypeScript + React + Vite)**
+  - The meta scheduler is the main entry point for deciding “what to ask next”: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts)
+  - Multiple specialist heuristics/signals are coordinated in: [src/ai/AICoordinator.ts](src/ai/AICoordinator.ts)
+  - Memory / retention algorithms (spaced repetition + forgetting curve style scoring): [src/strategies/memoryAcquisitionAlgorithm.ts](src/strategies/memoryAcquisitionAlgorithm.ts), [src/strategies/memoryRetentionAlgorithm.ts](src/strategies/memoryRetentionAlgorithm.ts)
+  - Interleaving (mixing categories to avoid monotony) is handled by: [src/ai/specialists/GamificationAI.ts](src/ai/specialists/GamificationAI.ts)
+  - Progress is stored locally (localStorage-based): [src/storage/progress/progressStorage.ts](src/storage/progress/progressStorage.ts)
+  - Rule/heuristics-based scheduling is the default; the repo also contains optional ML experiments: [src/ai/ml/](src/ai/ml/)
 
-#### AI Development Support Instructions
+- **Datasets (public/data)**
+  - Vocabulary / grammar / reading-related datasets and derived files: [public/data/](public/data/)
+  - Validators and conversion scripts live under: [scripts/](scripts/) and [tools/](tools/)
+  - Data quality policies and references are documented under: [docs/guidelines/](docs/guidelines/)
 
-| Document                                                                                                  | Content                             |
-| --------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| [documentation-enforcement.instructions.md](.aitk/instructions/documentation-enforcement.instructions.md) | Documentation quality enforcement   |
-| [meta-ai-priority.instructions.md](.aitk/instructions/meta-ai-priority.instructions.md)                   | QuestionScheduler priority handling |
-| [efficiency-guard.instructions.md](.aitk/instructions/efficiency-guard.instructions.md)                   | Efficiency guard                    |
+- **Quality gates and testing**
+  - A single command runs typecheck + linters + doc and rule checks: `npm run quality:check`
+  - Playwright smoke/visual tests and simulation tests exist under: [tests/](tests/)
 
-### Comparison with Other Projects
+- **Advanced initiatives (examples)**
+  In a repo that mixes app code, datasets, and automation, regressions can spread “quietly” across scheduling, UI, and data. This project tries to make those breakages easier to detect and harder to introduce.
+  The pattern is: document constraints, add guardrails, and keep claims grounded in concrete files so AI-assisted edits stay reviewable.
 
-| Item                          | This Project      | Kubernetes | React         | TypeScript   |
-| ----------------------------- | ----------------- | ---------- | ------------- | ------------ |
-| Naming Convention Enforcement | ✅ Pre-commit     | ✅ Manual  | ✅ Manual     | ✅ Manual    |
-| Link Validation CI            | ✅ GitHub Actions | ✅ Hugo    | ✅ Docusaurus | ✅ VitePress |
-| Real-time Validation          | ✅ VS Code        | ❌         | ✅            | ✅           |
-| Auto-fix                      | ✅ Scripts        | ❌         | ❌            | ❌           |
-| Number of Documents           | 306               | ~2000      | ~500          | ~300         |
-| Verification Time             | 5 sec             | 3-5 min    | 1-2 min       | 10-30 sec    |
+  - “8 AI systems” architecture (7 specialist AIs + 1 meta integrator) for deciding “what to ask next” via coordinated signals: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts), [src/ai/specialists/](src/ai/specialists/), [src/ai/meta/](src/ai/meta/)
+  - Optional pre-commit guard that nudges changes to start from instruction/spec checks (useful in a repo mixing app + data + tooling): [scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh), [scripts/ai-guard-check.mjs](scripts/ai-guard-check.mjs)
+  - UI constraints and design rules are documented to keep review/AI-assisted edits consistent over time: [docs/development/UI_IMMUTABLE_SPECIFICATIONS.md](docs/development/UI_IMMUTABLE_SPECIFICATIONS.md), [docs/development/UI_DEVELOPMENT_GUIDELINES.md](docs/development/UI_DEVELOPMENT_GUIDELINES.md), [docs/development/DESIGN_SYSTEM_RULES.md](docs/development/DESIGN_SYSTEM_RULES.md)
+  - Layout regression guardrails (responsive implementation patterns + visual regression testing guide/templates): [docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md](docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md), [docs/development/VISUAL_REGRESSION_TESTING.md](docs/development/VISUAL_REGRESSION_TESTING.md), [tests/smoke.spec.ts](tests/smoke.spec.ts)
+  - Governance for AI-assisted development (instruction hierarchy + task-type workflow docs): [.aitk/instructions/README.md](.aitk/instructions/README.md), [docs/references/AI_WORKFLOW_INSTRUCTIONS.md](docs/references/AI_WORKFLOW_INSTRUCTIONS.md)
+  - Automated detection of disallowed styling patterns (example checker): [scripts/check-no-dark-mode.mjs](scripts/check-no-dark-mode.mjs)
 
----
+- **VS Code extension (optional)**
+  - Project-local helper extension for enforcing project instructions and assisting workflow tasks: [extensions/servant/](extensions/servant/)
+  - Instruction validation with diagnostics/Quick Fixes (rules are loaded from `.instructions.md` files)
+  - Git hook integration (opt-in): can install `pre-commit` / `commit-msg` hooks; the generated `pre-commit` prefers the repo-local guard script ([scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh)) when present
+  - Spec/decision workflow helpers (examples): `Servant: Review Required Instructions`, `Servant: Record Spec Check`, `Servant: Open Working Spec`, `Servant: Append Decision Log`
+  - Convenience commit helper: `Servant: 🚀 Quick Fix Commit (DECISIONS追記→コミット)` appends to [docs/specifications/DECISIONS.md](docs/specifications/DECISIONS.md) and runs `git add`/`git commit`
+  - See the extension README for the full command list and settings: [extensions/servant/README.md](extensions/servant/README.md)
 
-## 🎓 Learning Content
+  It is not required to run the web app.
 
-### Included Data
+## License
 
-- Junior high school English words: 1,200 words (HORIZON-based)
-- Junior high school English phrases: 300 phrases
-- Grammar questions: 500 questions (5-choice format)
-- Reading comprehension: 100 passages (under consideration)
+This repository does not include a top-level license file at the root.
 
-### Data Format
+Permission notes (summary):
+- Non-commercial use (including personal and educational use as teaching/learning materials) is permitted.
+- Commercial use is not permitted without prior permission (contact the repository owner to discuss terms).
 
-Customizable in CSV format (7 columns):
-
-```csv
-word,meaning,category,difficulty,choice1,choice2,choice3
-apple,りんご,fruit,easy,orange,banana,grape
-```
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome.
-
-### Steps
-
-1. Fork this repository
-2. Create a Feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the Branch (`git push origin feature/your-feature`)
-5. Create a Pull Request
-
-### Coding Conventions
-
-- TypeScript: Strict type checking (`strict: true`)
-- ESLint: Maintain 0 errors, 0 warnings
-- Prettier: Auto-formatting
-- Naming: camelCase (variables/functions), PascalCase (components/types)
-
-### Documentation Conventions
-
-- Naming: specifications/ use numbered kebab-case, guidelines/ use UPPER_SNAKE_CASE
-- Links: Use relative paths
-- Front Matter: YAML format
-
----
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) for details
-
----
-
-## 📞 Contact
-
-- GitHub: [@nanashi8](https://github.com/nanashi8)
-- Issues: [GitHub Issues](https://github.com/nanashi8/nanashi8.github.io/issues)
-
----
-
-## 🚧 Development Roadmap
-
-### Phase 1: Constants Extraction ✅ **Complete** (2025-12-23)
-
-**Results**:
-
-- Complete magic numbers reduction (20+ → 0)
-- New file: [`positionConstants.ts`](src/ai/utils/positionConstants.ts) (200 lines, 8 constant groups, 4 helper functions)
-- Updated file: [`categoryDetermination.ts`](src/ai/utils/categoryDetermination.ts) (all magic numbers → constants replacement)
-- Test coverage: All 24 test cases passing
-
-**Improvement Effects**:
-
-- 📊 Readability: `if (consecutiveCorrect >= 3)` → `if (consecutiveCorrect >= CONSECUTIVE_THRESHOLDS.MASTERED)`
-- 🔧 Maintainability: Only 1 file needs modification when changing thresholds
-- ✅ Quality: 0 type errors, all tests passing
-
----
-
-### Phase 4: Memory Science Integration ✅ **Complete** (2025-12-24)
-
-**Results**:
-
-- SuperMemo SM-2 full implementation (250 lines)
-- Ebbinghaus forgetting curve implementation (280 lines)
-- Long-term memory transition strategy (4 stages, 300 lines)
-- MemoryAI integration enhancement (Phase 4 feature integration)
-- Type extensions: WordProgress (SM-2 fields), MemorySignal (Phase 4 extensions)
-
-**New Files**:
-
-1. [`SM2Algorithm.ts`](src/ai/specialists/memory/SM2Algorithm.ts) - SuperMemo SM-2 full implementation
-2. [`ForgettingCurveModel.ts`](src/ai/specialists/memory/ForgettingCurveModel.ts) - Ebbinghaus forgetting curve
-3. [`LongTermMemoryStrategy.ts`](src/ai/specialists/memory/LongTermMemoryStrategy.ts) - 4-stage memory transition
-
-**Updated Files**:
-
-- [`MemoryAI.ts`](src/ai/specialists/MemoryAI.ts) - 3 module integration, analyze() and proposePosition() enhancement
-- [`types.ts`](src/ai/types.ts) - MemorySignal type extension (sm2Data, retention, memoryStage)
-- [`progress/types.ts`](src/storage/progress/types.ts) - WordProgress type extension (easeFactor, repetitions, memoryStage)
-
-**Improvement Effects**:
-
-- 🧠 Memory Science: SM-2 spaced repetition algorithm, scientific review timing with Ebbinghaus forgetting curve
-- 📈 Predicted Retention: Accurate prediction of memory retention and review recommendations
-- 🎯 Staged Learning: WORKING_MEMORY → SHORT_TERM → CONSOLIDATING → LONG_TERM
-- 💯 Expected Score: 72 points → **107 points** (upper limit 93 points)
-
----
-
-### Phase 5: Emotional Support ✅ **Complete** (2025-12-24)
-
-**Goal**: Maintain learner motivation and provide human-like support (+25%)
-
-**Results**:
-
-- EmotionalAI implementation (310 lines) - Frustration detection, confidence calculation, fatigue estimation
-- ScaffoldingSystem implementation (250 lines) - Gradual hint provision (4 levels)
-- UI component implementation (3 files)
-  - EncouragementDisplay (encouragement messages)
-  - HintDisplay (gradual hint display)
-  - encouragement.css (animations)
-
-**New Files**:
-
-1. [`EmotionalAI.ts`](src/ai/specialists/EmotionalAI.ts) - Emotional state monitoring and support (310 lines)
-2. [`ScaffoldingSystem.ts`](src/ai/specialists/scaffolding/ScaffoldingSystem.ts) - Gradual guidance (250 lines)
-3. [`EncouragementDisplay.tsx`](src/components/quiz/EncouragementDisplay.tsx) - Encouragement UI (145 lines)
-4. [`HintDisplay.tsx`](src/components/quiz/HintDisplay.tsx) - Hint UI (165 lines)
-5. [`encouragement.css`](src/styles/encouragement.css) - Animations (140 lines)
-
-**Implemented Features**:
-
-- 💪 Frustration Detection: Auto-detection of consecutive errors (3+), prolonged stagnation
-- 🎯 Confidence Calculation: Calculate confidence level from consecutive correct (5+), accuracy (80%+)
-- 😴 Fatigue Estimation: Estimate fatigue from session time (45+ min), question count (50+)
-- 💡 Gradual Hints: 4 levels (none → light → medium → strong)
-  - Level 1: First letter + part of speech
-  - Level 2: First 3 letters + character count
-  - Level 3: Masked (every other letter) + example sentence
-- 💬 Encouragement Messages: 4 types (support/praise/mastery/standard)
-- 🔄 Position Adjustment: Difficulty adjustment for motivation maintenance (-15 ~ +5)
-- 🎨 UI Animations: Fade-in, slide-down, bounce, pulse
-
-**Improvement Effects**:
-
-- 📚 Motivation Maintenance: Appropriate support and encouragement during struggles
-- 🎓 Gradual Learning: Optimal hint provision based on error count
-- ⏰ Fatigue Management: Break recommendations during long learning sessions (5-minute breaks)
-- ✨ Positive Reinforcement: Appropriate praise during good performance and mastery achievement celebration
-- 💯 Expected Score: 72 points + 25% = **97 points** (achieved upper limit 93 points)
-
----
-
-### Phase 2-6: Future Plans
-
-Detailed plan: [`COMPLETE_LEARNING_SYSTEM_ROADMAP.md`](docs/development/COMPLETE_LEARNING_SYSTEM_ROADMAP.md)
-
-| Phase       | Content                                           | Effort       | Score Improvement | Status          |
-| ----------- | ------------------------------------------------- | ------------ | ----------------- | --------------- |
-| Phase 2     | Strategy Pattern Introduction                     | 12 hours     | -                 | 📋 Planning     |
-| Phase 3     | AI Integration Enhancement                        | 8 hours      | -                 | 📋 Planning     |
-| **Phase 4** | **Memory Science Integration (SM-2, Ebbinghaus)** | **18 hours** | **+35%**          | ✅ **Complete** |
-| **Phase 5** | **Emotional Support (EmotionalAI)**               | **12 hours** | **+25%**          | ✅ **Complete** |
-| Phase 6     | Diverse Review Methods                            | 10 hours     | +15%              | 📋 Planning     |
-
-**Achievement**: Phase 1 + Phase 4 + Phase 5 complete (greatly exceeded target 93 points!) 🎉
-
----
-
-**Last Updated**: 2025-12-24  
-**Version**: 3.3.0  
-**Status**: Active Development - Phase 1, 4, 5 complete; Phase 2, 3, 6 planned
+The VS Code extension under [extensions/servant/](extensions/servant/) has its own license: [extensions/servant/LICENSE](extensions/servant/LICENSE).

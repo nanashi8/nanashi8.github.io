@@ -966,7 +966,7 @@ function SpellingView({
               )}
 
               {/* バッチ数設定 */}
-              <div className="filter-group" style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+              <div className="filter-group filter-group--section">
                 <label htmlFor="spelling-batch-size">📦 バッチ数:</label>
                 <select
                   id="spelling-batch-size"

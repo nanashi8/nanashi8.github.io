@@ -1,6 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
+import fs from 'node:fs';
+import os from 'node:os';
 
 function stripAnsi(text: string): string {
   // eslint-disable-next-line no-control-regex
@@ -12,15 +14,43 @@ describe('ai-guard-check.mjs (smoke / regression)', () => {
     const repoRoot = process.cwd();
     const scriptPath = path.join(repoRoot, 'scripts', 'ai-guard-check.mjs');
 
+    // Specチェックが無いと exit 2 になるため、テスト用に fresh な記録を用意
+    const specDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ai-guard-spec-check-'));
+    const specPath = path.join(specDir, 'spec-check.json');
+    fs.writeFileSync(
+      specPath,
+      JSON.stringify(
+        {
+          recordedAt: new Date().toISOString(),
+          requiredInstructions: [
+            '.aitk/instructions/mandatory-spec-check.instructions.md',
+            '.aitk/instructions/meta-ai-priority.instructions.md',
+            '.aitk/instructions/ai-failure-prevention.instructions.md',
+            '.aitk/instructions/batch-system-enforcement.instructions.md',
+          ],
+          note: 'unit-test',
+        },
+        null,
+        2
+      )
+    );
+
     const result = spawnSync(process.execPath, [scriptPath, '（テスト）ガード出力の回帰検証', 'src/components/MemorizationView.tsx'], {
       cwd: repoRoot,
       encoding: 'utf-8',
       env: {
         ...process.env,
+        AI_GUARD_SPEC_CHECK_FILE: specPath,
         // 色付きでもstripするが、CIログを読みやすくするため
         NO_COLOR: '1',
       },
     });
+
+    try {
+      fs.unlinkSync(specPath);
+    } catch {
+      // ignore
+    }
 
     expect(result.status).toBe(0);
 

@@ -2,7 +2,7 @@
 
 > **プロジェクト全体の設計指針**
 >
-> 最終更新: 2025年12月22日
+> 最終更新: 2026年1月5日
 
 ## 🎯 設計哲学
 
@@ -16,6 +16,7 @@
 - 学習段階（Position）判定: `src/ai/utils/categoryDetermination.ts` の `determineWordPosition()`
 - データ永続化: `src/storage/progress/progressStorage.ts`
 - AI評価: `src/ai/scheduler/QuestionScheduler.ts`
+- 自信度（5段階）推定: `src/ai/utils/answerConfidence5.ts`（深層学習モデルは `src/ai/ml/AnswerConfidenceModel.ts`）
 
 **禁止事項**:
 - ❌ 同じロジックを複数箇所にコピー&ペースト
@@ -166,6 +167,20 @@ src/
 ---
 
 ## 🔧 実装ガイドライン
+
+### 回答ログと自信度（5段階）
+
+**目的**: 学習AI（SM-2等）が利用できる「自信度(1-5)」を、回答速度・回答日時・学習履歴から推定して記録する。
+
+**SSOT**:
+- 推定ロジック: `src/ai/utils/answerConfidence5.ts`
+- 深層学習モデル（オンライン学習・軽量）: `src/ai/ml/AnswerConfidenceModel.ts`
+- 保存の入口: `src/storage/progress/progressStorage.ts` の `updateWordProgress()`
+- 保存先: `WordProgress.learningHistory[]` の `confidence5` / `confidenceScore01` / `confidenceSource`
+
+**仕様（重要）**:
+- **不正解は分布を出さない**: 不正解は常に `confidence5 = 1` として扱い、推定の揺れを許さない。
+- 推定は失敗しても学習体験を阻害しない（フォールバックあり）。
 
 ### 新機能追加時の手順
 

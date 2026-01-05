@@ -86,7 +86,8 @@ function TranslationView({
   const [showDebugPanel, setShowDebugPanel] = useState(false);
 
   // タブ固有のセッション統計を管理
-  const { sessionStats, setSessionStats, resetStats: resetSessionStats } = useSessionStats('translation');
+  const { sessionStats, setSessionStats: _setSessionStats, resetStats: resetSessionStats } =
+    useSessionStats('translation');
 
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());

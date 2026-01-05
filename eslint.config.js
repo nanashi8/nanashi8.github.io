@@ -17,6 +17,11 @@ export default tseslint.config(
     rules: {
       // 型安全性は別フェーズで強化するため、警告を排除
       '@typescript-eslint/no-explicit-any': 'off',
+      // 一部環境で no-unused-expressions がオプション無しだとクラッシュするため明示
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
+      ],
       // 未使用変数は段階的に解消。まずは警告から再有効化
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       // フックの最適化は後続フェーズ

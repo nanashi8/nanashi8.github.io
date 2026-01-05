@@ -1,9 +1,9 @@
-import { exec } from 'child_process';
+import { execFile } from 'child_process';
 import { promisify } from 'util';
 import { FailurePattern, FileHotspot } from './FailurePattern';
 import type { Notifier } from '../ui/Notifier';
 
-const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
 
 /**
  * コミット解析結果
@@ -42,13 +42,34 @@ export class GitHistoryAnalyzer {
     this.notifier = notifier;
   }
 
+  private resolveGitExecutable(): string {
+    const envGit = process.env.GIT_EXECUTABLE;
+    if (envGit && envGit.trim().length > 0) {
+      return envGit;
+    }
+
+    if (process.platform === 'darwin') {
+      return '/usr/bin/git';
+    }
+
+    return 'git';
+  }
+
+  private execGit(args: string[]): Promise<{ stdout: string; stderr: string }> {
+    const git = this.resolveGitExecutable();
+    return execFileAsync(git, ['-C', this.workspaceRoot, ...args]) as unknown as Promise<{
+      stdout: string;
+      stderr: string;
+    }>;
+  }
+
   /**
    * Git リポジトリかどうかをチェック
    */
   async isGitRepository(): Promise<boolean> {
     try {
-      await execAsync('git rev-parse --git-dir', { cwd: this.workspaceRoot });
-      return true;
+      const { stdout } = await this.execGit(['rev-parse', '--is-inside-work-tree']);
+      return stdout.trim() === 'true';
     } catch {
       return false;
     }
@@ -67,10 +88,11 @@ export class GitHistoryAnalyzer {
 
     try {
       // コミット履歴を取得（ハッシュ、日時、作成者、メッセージ）
-      const { stdout } = await execAsync(
-        `git log -${limit} --pretty=format:"%H|%aI|%an|%s"`,
-        { cwd: this.workspaceRoot }
-      );
+      const { stdout } = await this.execGit([
+        'log',
+        `-${limit}`,
+        '--pretty=format:%H|%aI|%an|%s',
+      ]);
 
       const lines = stdout.trim().split('\n');
 
@@ -107,10 +129,13 @@ export class GitHistoryAnalyzer {
    */
   private async getChangedFiles(hash: string): Promise<string[]> {
     try {
-      const { stdout } = await execAsync(
-        `git diff-tree --no-commit-id --name-only -r ${hash}`,
-        { cwd: this.workspaceRoot }
-      );
+      const { stdout } = await this.execGit([
+        'diff-tree',
+        '--no-commit-id',
+        '--name-only',
+        '-r',
+        hash,
+      ]);
 
       return stdout.trim().split('\n').filter(f => f.length > 0);
     } catch {

@@ -166,7 +166,7 @@ export async function loadSocialStudiesCSV(filename: string): Promise<Question[]
 /**
  * 種別ごとに問題をグループ化
  */
-function groupQuestionsByType(questions: Question[]): QuestionsByType {
+function _groupQuestionsByType(questions: Question[]): QuestionsByType {
   const grouped: QuestionsByType = {
     人物名: [],
     出来事: [],

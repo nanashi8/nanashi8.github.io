@@ -27,8 +27,6 @@ import {
   normalizePosition,
 } from './positionConstants';
 
-type CategoryBand = { min: number; max: number };
-
 // NOTE:
 // - Position は SSOT（POSITION_VALUES）に揃え、テストで期待される固定値（75/85/50 等）を返す。
 // - 「カテゴリ内で回数に応じてPositionを微調整する」方式は、値がテスト/仕様と乖離しやすいため採用しない。

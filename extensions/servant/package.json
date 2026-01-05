@@ -2,7 +2,7 @@
   "name": "servant",
   "displayName": "Servant",
   "description": "プロジェクト内に住むAIサーバント。設計方針を監視し、AI作業時にプロジェクト情報をネットワークで収集・提供して効率化します",
-  "version": "0.3.0",
+  "version": "0.3.7",
   "publisher": "nanashi8",
   "license": "MIT",
   "repository": {
@@ -16,6 +16,12 @@
   "homepage": "https://github.com/nanashi8/nanashi8.github.io/tree/main/extensions/servant#readme",
   "engines": {
     "vscode": "^1.80.0"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true,
+      "description": "Restricted Mode では最小機能（ステータス表示と信頼案内）のみ動作します。フル機能にはワークスペースの信頼が必要です。"
+    }
   },
   "categories": [
     "Linters",
@@ -38,6 +44,10 @@
     "cache"
   ],
   "activationEvents": [
+    "*",
+    "onStartupFinished",
+    "onCommand:servant.showConstellation",
+    "onCommand:servant.installHooks",
     "onLanguage:typescript",
     "onLanguage:javascript",
     "onLanguage:markdown",
@@ -53,6 +63,14 @@
       {
         "command": "servant.validateBeforeCommit",
         "title": "Servant: Validate Before Commit"
+      },
+      {
+        "command": "servant.recordSpecCheck",
+        "title": "Servant: Record Spec Check"
+      },
+      {
+        "command": "servant.reviewRequiredInstructions",
+        "title": "Servant: Review Required Instructions"
       },
       {
         "command": "servant.installHooks",
@@ -77,6 +95,10 @@
       {
         "command": "servant.showHotspots",
         "title": "Servant: Show Problem Hotspots"
+      },
+      {
+        "command": "servant.showAIHotspots",
+        "title": "Servant: Show AI Hotspots (from action log)"
       },
       {
         "command": "servant.showLearningStats",
@@ -135,8 +157,44 @@
         "title": "Servant: Show Optimization Statistics"
       },
       {
+        "command": "servant.showConstellation",
+        "title": "Servant: 🌟 Show Constellation View"
+      },
+      {
         "command": "servant.analyzeArchitecture",
         "title": "Servant: Analyze Project Architecture"
+      },
+      {
+        "command": "servant.autopilot.showLastReport",
+        "title": "Servant: Show Autopilot Last Report"
+      },
+      {
+        "command": "servant.autopilot.adjust",
+        "title": "Servant: Adjust Autopilot Preflight"
+      },
+      {
+        "command": "servant.autopilot.review",
+        "title": "Servant: Review Autopilot (Deliberation)"
+      },
+      {
+        "command": "servant.autopilot.ingestPostReviewFromClipboard",
+        "title": "Servant: Ingest Autopilot Post-Review (from Clipboard)"
+      },
+      {
+        "command": "servant.specBook.open",
+        "title": "Servant: Open Working Spec"
+      },
+      {
+        "command": "servant.specBook.appendDecision",
+        "title": "Servant: Append Decision Log"
+      },
+      {
+        "command": "servant.context.build",
+        "title": "Servant: Build AI Context Packet"
+      },
+      {
+        "command": "servant.quickFixCommit",
+        "title": "Servant: 🚀 Quick Fix Commit (DECISIONS追記→コミット)"
       }
     ],
     "configuration": {
@@ -147,9 +205,19 @@
           "default": true,
           "description": "Enable/disable Servant"
         },
+        "servant.terminalStatus.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show Servant status updates in an integrated terminal (yellow text)"
+        },
         "servant.severity": {
           "type": "string",
-          "enum": ["error", "warning", "information", "hint"],
+          "enum": [
+            "error",
+            "warning",
+            "information",
+            "hint"
+          ],
           "default": "error",
           "description": "Diagnostic severity for CRITICAL violations"
         },
@@ -173,8 +241,28 @@
           "items": {
             "type": "string"
           },
-          "default": ["node_modules", "dist", "build", ".git"],
+          "default": [
+            "node_modules",
+            "dist",
+            "build",
+            ".git"
+          ],
           "description": "File patterns to ignore in pre-commit validation"
+        },
+        "servant.guard.runRepoScriptsBeforeCommit": {
+          "type": "boolean",
+          "default": false,
+          "description": "(Optional) Run repo-local scripts/pre-commit-ai-guard.sh inside VS Code when running 'Servant: Validate Before Commit'. Disabled by default to avoid double-running."
+        },
+        "servant.specCheck.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Require recording mandatory instruction review before allowing commits"
+        },
+        "servant.specCheck.maxAgeHours": {
+          "type": "number",
+          "default": 24,
+          "description": "Maximum age (hours) of spec-check record before it expires"
         },
         "servant.commitMsg.enabled": {
           "type": "boolean",
@@ -200,6 +288,56 @@
           "type": "boolean",
           "default": true,
           "description": "Enable incremental validation (only validate changed files)"
+        },
+        "servant.autopilot.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Servant Autopilot (proactive guidance + post-review prompts)"
+        },
+        "servant.autopilot.autoOptimizeOnStart": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically generate best-next-step suggestions when work starts"
+        },
+        "servant.autopilot.proactiveSpecCheck": {
+          "type": "boolean",
+          "default": true,
+          "description": "Proactively remind spec-check freshness while editing (without running heavy checks)"
+        },
+        "servant.autopilot.askPostReview": {
+          "type": "boolean",
+          "default": true,
+          "description": "Ask short post-review questions to improve next attempts"
+        },
+        "servant.autopilot.promptMode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "always",
+            "never"
+          ],
+          "default": "auto",
+          "description": "How strongly Autopilot prompts before work (auto=non-blocking on high risk/large work; always=requires approval)"
+        },
+        "servant.autopilot.revealOutputOnStart": {
+          "type": "boolean",
+          "default": true,
+          "description": "Always reveal Output panel on work start (preserve focus)"
+        },
+        "servant.autopilot.largeWorkThresholdFiles": {
+          "type": "number",
+          "default": 20,
+          "description": "Treat work as large when modified files count reaches this threshold"
+        },
+        "servant.autopilot.closedLoopReplanOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable closed-loop replanning on save (save → incremental validate → replan suggestions)"
+        },
+        "servant.autopilot.closedLoopThrottleMs": {
+          "type": "number",
+          "default": 8000,
+          "description": "Throttle interval (ms) for closed-loop replanning on save"
         },
         "servant.performance.largeFileThreshold": {
           "type": "number",
@@ -238,7 +376,11 @@
         },
         "servant.notifications.mode": {
           "type": "string",
-          "enum": ["quiet", "standard", "strict"],
+          "enum": [
+            "quiet",
+            "standard",
+            "strict"
+          ],
           "default": "quiet",
           "description": "Notification verbosity mode (quiet: minimal interruptions)"
         },
@@ -266,19 +408,67 @@
           "type": "number",
           "default": 100,
           "description": "Number of recent commits to analyze"
+        },
+        "servant.specBook.specPath": {
+          "type": "string",
+          "default": "docs/specifications/WORKING_SPEC.md",
+          "description": "Path to the enforced working spec (relative to workspace root)"
+        },
+        "servant.specBook.decisionsPath": {
+          "type": "string",
+          "default": "docs/specifications/DECISIONS.md",
+          "description": "Path to the decision log (relative to workspace root)"
+        },
+        "servant.specBook.enforceDecisionOnUIChange": {
+          "type": "boolean",
+          "default": true,
+          "description": "Warn (or block in strict mode) if UI-related files change without updating the decision log"
+        },
+        "servant.context.outputPath": {
+          "type": "string",
+          "default": ".aitk/context/AI_CONTEXT.md",
+          "description": "Path to the generated AI context packet (relative to workspace root)"
+        },
+        "servant.context.enforceBeforeCommit": {
+          "type": "boolean",
+          "default": true,
+          "description": "Warn (or block in strict mode) if AI context packet is missing or stale at pre-commit"
+        },
+        "servant.context.autoBuildOnStartup": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically (silently) build AI context packet on extension startup"
+        },
+        "servant.context.autoBuildOnSpecChange": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically (silently) rebuild AI context packet when spec/instructions change"
+        },
+        "servant.context.autoBuildThrottleMs": {
+          "type": "number",
+          "default": 15000,
+          "description": "Throttle interval (ms) for automatic AI context packet generation"
+        },
+        "servant.context.maxAgeMinutes": {
+          "type": "number",
+          "default": 120,
+          "description": "Max age (minutes) for AI context packet freshness before pre-commit warns/blocks"
         }
       }
     }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "typecheck": "tsc -p ./ --noEmit",
+    "clean:dist": "node ./scripts/clean-dist.mjs",
+    "bundle": "node ./scripts/esbuild.mjs",
+    "compile": "npm run typecheck && npm run clean:dist && npm run bundle",
+    "watch": "node ./scripts/esbuild.mjs --watch",
     "pretest": "npm run compile",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "eslint src --ext ts",
+    "lint": "eslint src",
     "package": "vsce package"
   },
   "devDependencies": {
@@ -289,6 +479,7 @@
     "@vitest/coverage-v8": "^1.0.0",
     "@vscode/test-electron": "^2.3.8",
     "eslint": "^8.54.0",
+    "esbuild": "^0.20.2",
     "typescript": "^5.3.0",
     "vitest": "^1.0.0",
     "@vscode/vsce": "^2.22.0"

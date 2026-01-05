@@ -54,9 +54,80 @@ function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStud
 
   const isClassical = dataSource.includes('classical');
 
+  const classicalBatchSizeCandidates = [10, 20, 30, 50, 75, 100, 150, 200, 300, 500];
+
   // 学習設定（社会のみ: 暗記タブと揃える）
   const [selectedDataSource, setSelectedDataSource] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // 国語（古文・漢文）用のCSV出題元切替
+  const classicalJapaneseDataSources = [
+    { id: 'all', name: '古文総合' },
+    { id: 'vocabulary', name: '古文単語' },
+    { id: 'knowledge', name: '古文知識' },
+    { id: 'grammar', name: '古文文法' },
+    { id: 'kanbun', name: '漢文総合' },
+    { id: 'kanbun-practice', name: '漢文実践' },
+  ] as const;
+
+  const classicalSourceStorageKey = 'japanese-classical-source';
+  const [classicalSourceId, setClassicalSourceId] = useState<string>(() => {
+    if (!isClassical) return 'all';
+    try {
+      return localStorage.getItem(classicalSourceStorageKey) || 'all';
+    } catch {
+      return 'all';
+    }
+  });
+
+  // 自動次へ設定（正解時）
+  const [autoNext, setAutoNext] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem('translation-autoNext');
+      return saved === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  const [autoNextDelay, setAutoNextDelay] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem('translation-autoNextDelay');
+      return saved ? parseInt(saved) : 1500;
+    } catch {
+      return 1500;
+    }
+  });
+
+  // 不正解時自動で詳細を開く
+  const [autoShowDetails, setAutoShowDetails] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem('translation-autoShowDetails');
+      return saved === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  // 正解時自動で詳細を開く
+  const [autoShowDetailsOnCorrect, setAutoShowDetailsOnCorrect] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem('translation-autoShowDetailsOnCorrect');
+      return saved === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  // 自動発音（国語では音声ボタンがあれば対応）
+  const [autoPlayAudio, setAutoPlayAudio] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem('translation-autoPlayAudio');
+      return saved === 'true';
+    } catch {
+      return false;
+    }
+  });
 
   const questionSets = useMemo(() => {
     const bySource = new Map<string, number>();
@@ -143,17 +214,53 @@ function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStud
   // タブ固有のセッション統計を管理
   const { sessionStats, setSessionStats, resetStats: resetSessionStats } = useSessionStats('translation');
 
+  // 国語時のCSV出題元切替に対応：実際に読み込むファイル名を計算
+  const actualDataSource = useMemo(() => {
+    if (!isClassical) return dataSource;
+    const match = classicalJapaneseDataSources.find((s) => s.id === classicalSourceId);
+    const filename =
+      match?.id === 'all'
+        ? 'classical-words.csv'
+        : match?.id === 'vocabulary'
+          ? 'classical-vocabulary.csv'
+          : match?.id === 'knowledge'
+            ? 'classical-knowledge.csv'
+            : match?.id === 'grammar'
+              ? 'classical-grammar.csv'
+              : match?.id === 'kanbun'
+                ? 'kanbun-words.csv'
+                : match?.id === 'kanbun-practice'
+                  ? 'kanbun-practice.csv'
+                  : dataSource;
+    return filename;
+  }, [isClassical, classicalSourceId, dataSource]);
+
+  // 国語CSV切替イベントを監視
+  useEffect(() => {
+    if (!isClassical) return;
+    const handler = () => {
+      try {
+        const newId = localStorage.getItem(classicalSourceStorageKey) || 'all';
+        setClassicalSourceId(newId);
+      } catch {
+        setClassicalSourceId('all');
+      }
+    };
+    window.addEventListener('japanese-classical-source-changed', handler);
+    return () => window.removeEventListener('japanese-classical-source-changed', handler);
+  }, [isClassical]);
+
   // ===== データ読み込み =====
   useEffect(() => {
     loadQuestions();
-  }, [dataSource]);
+  }, [actualDataSource]);
 
   const loadQuestions = async () => {
     try {
       setLoading(true);
       setError(null);
 
-      const data = await loadSocialStudiesCSV(dataSource);
+      const data = await loadSocialStudiesCSV(actualDataSource);
 
       // データの入れ替え処理を分ける
       // - 社会科: word=語句（答え）, meaning=意味（問題文）→ 入れ替えが必要
@@ -249,7 +356,7 @@ function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStud
   };
 
   // ===== リセット =====
-  const handleReset = () => {
+  const _handleReset = () => {
     setCurrentIndex(0);
     setSelectedAnswer(null);
     setAnswered(false);
@@ -316,6 +423,7 @@ function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStud
         <div className="w-full max-w-4xl">
           <ScoreBoard
             mode="translation"
+            storageKeyPrefix={isClassical ? 'japanese' : undefined}
             currentScore={score}
             totalAnswered={totalAnswered}
             sessionCorrect={sessionStats?.correct}
@@ -346,6 +454,39 @@ function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStud
           </div>
 
           <div className="space-y-4">
+            {/* 国語（古文）のCSV出題元切替 */}
+            {isClassical && (
+              <div>
+                <label
+                  htmlFor="japanese-classical-datasource-quiz"
+                  className="block text-sm font-medium mb-2 text-gray-700"
+                >
+                  📖 出題元:
+                </label>
+                <select
+                  id="japanese-classical-datasource-quiz"
+                  value={classicalSourceId}
+                  onChange={(e) => {
+                    const nextId = e.target.value;
+                    setClassicalSourceId(nextId);
+                    try {
+                      localStorage.setItem(classicalSourceStorageKey, nextId);
+                    } catch {
+                      // ignore
+                    }
+                    window.dispatchEvent(new Event('japanese-classical-source-changed'));
+                  }}
+                  className="w-full px-3 py-2 border rounded-lg"
+                >
+                  {classicalJapaneseDataSources.map((s) => (
+                    <option key={s.id} value={s.id}>
+                      {s.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+
             {/* 社会（暗記タブと同一の設定） */}
             {!isClassical && (
               <>
@@ -430,8 +571,21 @@ function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStud
                 <option value="20">20問</option>
                 <option value="30">30問</option>
                 <option value="50">50問</option>
-                <option value="100">100問</option>
-                <option value="200">200問</option>
+                {!isClassical && (
+                  <>
+                    <option value="100">100問</option>
+                    <option value="200">200問</option>
+                  </>
+                )}
+                {isClassical &&
+                  classicalBatchSizeCandidates
+                    .filter((value) => value > 50)
+                    .filter((value) => value <= questions.length)
+                    .map((value) => (
+                      <option key={value} value={value}>
+                        {value}問
+                      </option>
+                    ))}
               </select>
             </div>
 
@@ -466,6 +620,113 @@ function SocialStudiesView({ dataSource = 'all-social-studies.csv' }: SocialStud
                 <option value="40">40%</option>
                 <option value="50">50%</option>
               </select>
+            </div>
+
+            {/* 正解時自動で次へ */}
+            <div className="border-t pt-4">
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id="auto-next-toggle"
+                  checked={autoNext}
+                  onChange={(e) => {
+                    setAutoNext(e.target.checked);
+                    localStorage.setItem('translation-autoNext', e.target.checked.toString());
+                  }}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="auto-next-toggle" className="text-sm font-medium text-gray-700">
+                  ✅ 正解時自動で次へ：{autoNext ? '有効' : '無効'}
+                </label>
+              </div>
+            </div>
+
+            {/* 正解時自動次へ遅延時間 */}
+            {autoNext && (
+              <div>
+                <label
+                  htmlFor="auto-next-delay"
+                  className="block text-sm font-medium mb-2 text-gray-700"
+                >
+                  ⏱️ 次への遅延時間：
+                </label>
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="range"
+                    id="auto-next-delay"
+                    min="500"
+                    max="3000"
+                    step="100"
+                    value={autoNextDelay}
+                    onChange={(e) => {
+                      const delay = parseInt(e.target.value, 10);
+                      setAutoNextDelay(delay);
+                      localStorage.setItem('translation-autoNextDelay', delay.toString());
+                    }}
+                    className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  />
+                  <span className="text-sm font-medium text-gray-700 min-w-[3rem] text-right">
+                    {(autoNextDelay / 1000).toFixed(1)}秒
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {/* 不正解時自動で詳細を開く */}
+            <div className="border-t pt-4">
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id="auto-show-details-toggle"
+                  checked={autoShowDetails}
+                  onChange={(e) => {
+                    setAutoShowDetails(e.target.checked);
+                    localStorage.setItem('translation-autoShowDetails', e.target.checked.toString());
+                  }}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="auto-show-details-toggle" className="text-sm font-medium text-gray-700">
+                  ❌ 不正解時自動で詳細を開く：{autoShowDetails ? '有効' : '無効'}
+                </label>
+              </div>
+            </div>
+
+            {/* 正解時自動で詳細を開く */}
+            <div>
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id="auto-show-details-correct-toggle"
+                  checked={autoShowDetailsOnCorrect}
+                  onChange={(e) => {
+                    setAutoShowDetailsOnCorrect(e.target.checked);
+                    localStorage.setItem('translation-autoShowDetailsOnCorrect', e.target.checked.toString());
+                  }}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="auto-show-details-correct-toggle" className="text-sm font-medium text-gray-700">
+                  ✅ 正解時自動で詳細を開く：{autoShowDetailsOnCorrect ? '有効' : '無効'}
+                </label>
+              </div>
+            </div>
+
+            {/* 自動発音 */}
+            <div>
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id="auto-play-audio-toggle"
+                  checked={autoPlayAudio}
+                  onChange={(e) => {
+                    setAutoPlayAudio(e.target.checked);
+                    localStorage.setItem('translation-autoPlayAudio', e.target.checked.toString());
+                  }}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="auto-play-audio-toggle" className="text-sm font-medium text-gray-700">
+                  🔊 自動で発音する：{autoPlayAudio ? '有効' : '無効'}
+                </label>
+              </div>
             </div>
           </div>
         </div>

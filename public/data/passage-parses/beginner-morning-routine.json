@@ -1,0 +1,756 @@
+{
+  "passageId": "beginner-morning-routine",
+  "generatedAt": "2026-01-02T11:53:13.831773+00:00",
+  "sentences": [
+    {
+      "id": 1,
+      "text": "I wake up",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "I",
+          "lemma": "I",
+          "upos": "PRON",
+          "xpos": "PRP",
+          "head": 2,
+          "deprel": "nsubj",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": 2,
+          "text": "wake",
+          "lemma": "wake",
+          "upos": "VERB",
+          "xpos": "VBP",
+          "head": 0,
+          "deprel": "root",
+          "start": 2,
+          "end": 6
+        },
+        {
+          "id": 3,
+          "text": "up",
+          "lemma": "up",
+          "upos": "ADP",
+          "xpos": "RP",
+          "head": 2,
+          "deprel": "compound:prt",
+          "start": 7,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "at seven every morning.",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "at",
+          "lemma": "at",
+          "upos": "ADP",
+          "xpos": "IN",
+          "head": 2,
+          "deprel": "case",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "id": 2,
+          "text": "seven",
+          "lemma": "seven",
+          "upos": "NUM",
+          "xpos": "CD",
+          "head": 0,
+          "deprel": "root",
+          "start": 3,
+          "end": 8
+        },
+        {
+          "id": 3,
+          "text": "every",
+          "lemma": "every",
+          "upos": "DET",
+          "xpos": "DT",
+          "head": 4,
+          "deprel": "det",
+          "start": 9,
+          "end": 14
+        },
+        {
+          "id": 4,
+          "text": "morning",
+          "lemma": "morning",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 2,
+          "deprel": "nmod:unmarked",
+          "start": 15,
+          "end": 22
+        },
+        {
+          "id": 5,
+          "text": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "xpos": ".",
+          "head": 2,
+          "deprel": "punct",
+          "start": 22,
+          "end": 23
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "First,",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "First",
+          "lemma": "first",
+          "upos": "ADV",
+          "xpos": "RB",
+          "head": 0,
+          "deprel": "root",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "id": 2,
+          "text": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "xpos": ",",
+          "head": 1,
+          "deprel": "punct",
+          "start": 5,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "I brush my teeth",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "I",
+          "lemma": "I",
+          "upos": "PRON",
+          "xpos": "PRP",
+          "head": 2,
+          "deprel": "nsubj",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": 2,
+          "text": "brush",
+          "lemma": "brush",
+          "upos": "VERB",
+          "xpos": "VBP",
+          "head": 0,
+          "deprel": "root",
+          "start": 2,
+          "end": 7
+        },
+        {
+          "id": 3,
+          "text": "my",
+          "lemma": "my",
+          "upos": "PRON",
+          "xpos": "PRP$",
+          "head": 4,
+          "deprel": "nmod:poss",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": 4,
+          "text": "teeth",
+          "lemma": "tooth",
+          "upos": "NOUN",
+          "xpos": "NNS",
+          "head": 2,
+          "deprel": "obj",
+          "start": 11,
+          "end": 16
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "and wash my face.",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "and",
+          "lemma": "and",
+          "upos": "CCONJ",
+          "xpos": "CC",
+          "head": 2,
+          "deprel": "cc",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "id": 2,
+          "text": "wash",
+          "lemma": "wash",
+          "upos": "VERB",
+          "xpos": "VB",
+          "head": 0,
+          "deprel": "root",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "id": 3,
+          "text": "my",
+          "lemma": "my",
+          "upos": "PRON",
+          "xpos": "PRP$",
+          "head": 4,
+          "deprel": "nmod:poss",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "id": 4,
+          "text": "face",
+          "lemma": "face",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 2,
+          "deprel": "obj",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "id": 5,
+          "text": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "xpos": ".",
+          "head": 2,
+          "deprel": "punct",
+          "start": 16,
+          "end": 17
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Then I eat breakfast",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "Then",
+          "lemma": "then",
+          "upos": "ADV",
+          "xpos": "RB",
+          "head": 3,
+          "deprel": "advmod",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "id": 2,
+          "text": "I",
+          "lemma": "I",
+          "upos": "PRON",
+          "xpos": "PRP",
+          "head": 3,
+          "deprel": "nsubj",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": 3,
+          "text": "eat",
+          "lemma": "eat",
+          "upos": "VERB",
+          "xpos": "VBP",
+          "head": 0,
+          "deprel": "root",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "id": 4,
+          "text": "breakfast",
+          "lemma": "breakfast",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 3,
+          "deprel": "obj",
+          "start": 11,
+          "end": 20
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "with my family.",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "with",
+          "lemma": "with",
+          "upos": "ADP",
+          "xpos": "IN",
+          "head": 3,
+          "deprel": "case",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "id": 2,
+          "text": "my",
+          "lemma": "my",
+          "upos": "PRON",
+          "xpos": "PRP$",
+          "head": 3,
+          "deprel": "nmod:poss",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": 3,
+          "text": "family",
+          "lemma": "family",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 0,
+          "deprel": "root",
+          "start": 8,
+          "end": 14
+        },
+        {
+          "id": 4,
+          "text": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "xpos": ".",
+          "head": 3,
+          "deprel": "punct",
+          "start": 14,
+          "end": 15
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "I usually have toast and juice.",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "I",
+          "lemma": "I",
+          "upos": "PRON",
+          "xpos": "PRP",
+          "head": 3,
+          "deprel": "nsubj",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": 2,
+          "text": "usually",
+          "lemma": "usually",
+          "upos": "ADV",
+          "xpos": "RB",
+          "head": 3,
+          "deprel": "advmod",
+          "start": 2,
+          "end": 9
+        },
+        {
+          "id": 3,
+          "text": "have",
+          "lemma": "have",
+          "upos": "VERB",
+          "xpos": "VBP",
+          "head": 0,
+          "deprel": "root",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "id": 4,
+          "text": "toast",
+          "lemma": "toast",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 3,
+          "deprel": "obj",
+          "start": 15,
+          "end": 20
+        },
+        {
+          "id": 5,
+          "text": "and",
+          "lemma": "and",
+          "upos": "CCONJ",
+          "xpos": "CC",
+          "head": 6,
+          "deprel": "cc",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "id": 6,
+          "text": "juice",
+          "lemma": "juice",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 4,
+          "deprel": "conj",
+          "start": 25,
+          "end": 30
+        },
+        {
+          "id": 7,
+          "text": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "xpos": ".",
+          "head": 3,
+          "deprel": "punct",
+          "start": 30,
+          "end": 31
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "After breakfast,",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "After",
+          "lemma": "after",
+          "upos": "ADP",
+          "xpos": "IN",
+          "head": 2,
+          "deprel": "case",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "id": 2,
+          "text": "breakfast",
+          "lemma": "breakfast",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 0,
+          "deprel": "root",
+          "start": 6,
+          "end": 15
+        },
+        {
+          "id": 3,
+          "text": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "xpos": ",",
+          "head": 2,
+          "deprel": "punct",
+          "start": 15,
+          "end": 16
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "I get my bag ready.",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "I",
+          "lemma": "I",
+          "upos": "PRON",
+          "xpos": "PRP",
+          "head": 2,
+          "deprel": "nsubj",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": 2,
+          "text": "get",
+          "lemma": "get",
+          "upos": "VERB",
+          "xpos": "VBP",
+          "head": 0,
+          "deprel": "root",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "id": 3,
+          "text": "my",
+          "lemma": "my",
+          "upos": "PRON",
+          "xpos": "PRP$",
+          "head": 4,
+          "deprel": "nmod:poss",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "id": 4,
+          "text": "bag",
+          "lemma": "bag",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 2,
+          "deprel": "obj",
+          "start": 9,
+          "end": 12
+        },
+        {
+          "id": 5,
+          "text": "ready",
+          "lemma": "ready",
+          "upos": "ADJ",
+          "xpos": "JJ",
+          "head": 2,
+          "deprel": "xcomp",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "id": 6,
+          "text": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "xpos": ".",
+          "head": 2,
+          "deprel": "punct",
+          "start": 18,
+          "end": 19
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "I check homework",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "I",
+          "lemma": "I",
+          "upos": "PRON",
+          "xpos": "PRP",
+          "head": 2,
+          "deprel": "nsubj",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": 2,
+          "text": "check",
+          "lemma": "check",
+          "upos": "VERB",
+          "xpos": "VBP",
+          "head": 0,
+          "deprel": "root",
+          "start": 2,
+          "end": 7
+        },
+        {
+          "id": 3,
+          "text": "homework",
+          "lemma": "homework",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 2,
+          "deprel": "obj",
+          "start": 8,
+          "end": 16
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "and put books inside.",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "and",
+          "lemma": "and",
+          "upos": "CCONJ",
+          "xpos": "CC",
+          "head": 2,
+          "deprel": "cc",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "id": 2,
+          "text": "put",
+          "lemma": "put",
+          "upos": "VERB",
+          "xpos": "VB",
+          "head": 0,
+          "deprel": "root",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": 3,
+          "text": "books",
+          "lemma": "book",
+          "upos": "NOUN",
+          "xpos": "NNS",
+          "head": 2,
+          "deprel": "obj",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "id": 4,
+          "text": "inside",
+          "lemma": "inside",
+          "upos": "ADV",
+          "xpos": "RB",
+          "head": 2,
+          "deprel": "advmod",
+          "start": 14,
+          "end": 20
+        },
+        {
+          "id": 5,
+          "text": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "xpos": ".",
+          "head": 2,
+          "deprel": "punct",
+          "start": 20,
+          "end": 21
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Finally,",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "Finally",
+          "lemma": "finally",
+          "upos": "ADV",
+          "xpos": "RB",
+          "head": 0,
+          "deprel": "root",
+          "start": 0,
+          "end": 7
+        },
+        {
+          "id": 2,
+          "text": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "xpos": ",",
+          "head": 1,
+          "deprel": "punct",
+          "start": 7,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "I walk to school",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "I",
+          "lemma": "I",
+          "upos": "PRON",
+          "xpos": "PRP",
+          "head": 2,
+          "deprel": "nsubj",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": 2,
+          "text": "walk",
+          "lemma": "walk",
+          "upos": "VERB",
+          "xpos": "VBP",
+          "head": 0,
+          "deprel": "root",
+          "start": 2,
+          "end": 6
+        },
+        {
+          "id": 3,
+          "text": "to",
+          "lemma": "to",
+          "upos": "ADP",
+          "xpos": "IN",
+          "head": 4,
+          "deprel": "case",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": 4,
+          "text": "school",
+          "lemma": "school",
+          "upos": "NOUN",
+          "xpos": "NN",
+          "head": 2,
+          "deprel": "obl",
+          "start": 10,
+          "end": 16
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "with friends.",
+      "tokens": [
+        {
+          "id": 1,
+          "text": "with",
+          "lemma": "with",
+          "upos": "ADP",
+          "xpos": "IN",
+          "head": 2,
+          "deprel": "case",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "id": 2,
+          "text": "friends",
+          "lemma": "friend",
+          "upos": "NOUN",
+          "xpos": "NNS",
+          "head": 0,
+          "deprel": "root",
+          "start": 5,
+          "end": 12
+        },
+        {
+          "id": 3,
+          "text": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "xpos": ".",
+          "head": 2,
+          "deprel": "punct",
+          "start": 12,
+          "end": 13
+        }
+      ]
+    }
+  ]
+}

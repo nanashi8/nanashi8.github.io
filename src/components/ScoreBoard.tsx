@@ -22,6 +22,7 @@ import { computeAttemptCounts } from './scoreBoard/attemptCounts';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'; // クイズモードを追加
+  storageKeyPrefix?: string; // LocalStorageキーの接頭辞（例: 'japanese'）
   currentScore?: number; // 現在のスコア
   totalAnswered?: number; // 現在の回答数
   sessionCorrect?: number; // セッション内の正解数
@@ -64,6 +65,7 @@ interface ScoreBoardProps {
 
 function ScoreBoard({
   mode = 'translation', // デフォルトは和訳モード
+  storageKeyPrefix,
   currentScore = 0,
   totalAnswered = 0,
   sessionCorrect = 0,
@@ -82,16 +84,18 @@ function ScoreBoard({
   learningPhase,
   estimatedSpeed,
   forgettingRate,
-  dataSource = '',
+  dataSource: _dataSource = '',
   category = '',
   difficulty = '',
-  wordPhraseFilter = '',
+  wordPhraseFilter: _wordPhraseFilter = '',
   grammarUnit,
   _currentQuestionTimesShown,
   onResetProgress,
   onDebugRequeue,
   learningStatusTabPulseKey,
 }: ScoreBoardProps) {
+  const storageKey = (suffix: string) =>
+    storageKeyPrefix ? `${storageKeyPrefix}-${suffix}` : suffix;
   // activeTabをlocalStorageに永続化（再マウント時も保持）
   const [activeTab, setActiveTab] = useState<'ai' | 'breakdown' | 'history' | 'settings'>(
     () => {
@@ -385,13 +389,13 @@ function ScoreBoard({
 
   // 🆕 バッチ数設定（暗記モード専用）
   const [batchSize, setBatchSize] = useState<number | null>(() => {
-    const saved = localStorage.getItem('memorization-batch-size');
+    const saved = localStorage.getItem(storageKey('memorization-batch-size'));
     return saved ? parseInt(saved) : null;
   });
 
   // 🆕 分からない・まだまだの上限比率（10-50%）
-  const [reviewRatioLimit, setReviewRatioLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('memorization-review-ratio-limit');
+  const [_reviewRatioLimit, _setReviewRatioLimit] = useState<number>(() => {
+    const saved = localStorage.getItem(storageKey('memorization-review-ratio-limit'));
     return saved ? parseInt(saved) : 20; // デフォルト20%
   });
 
@@ -589,7 +593,7 @@ function ScoreBoard({
   // 計画タブ: 定着率の目標（UI仕様）
   const retentionGoalPercent = 80;
   const retentionPercent = retentionData.retentionRate;
-  const retentionProgressToGoalPercent = Math.min(
+  const _retentionProgressToGoalPercent = Math.min(
     100,
     Math.round((retentionPercent / retentionGoalPercent) * 100)
   );
@@ -1144,9 +1148,9 @@ function ScoreBoard({
                         const finalValue = value === 0 ? null : value;
                         setBatchSize(finalValue);
                         if (finalValue === null) {
-                          localStorage.removeItem(`${mode}-batch-size`);
+                          localStorage.removeItem(storageKey(`${mode}-batch-size`));
                         } else {
-                          localStorage.setItem(`${mode}-batch-size`, finalValue.toString());
+                          localStorage.setItem(storageKey(`${mode}-batch-size`), finalValue.toString());
                         }
                       }}
                       className="select-input"

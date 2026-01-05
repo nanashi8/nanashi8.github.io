@@ -69,16 +69,41 @@ export class NeuralLearningEngine {
    * 起点ファイルから影響を受けるファイルを計算
    */
   public propagateForward(startFile: string, _taskType?: string): PropagationResult {
+    return this.propagateForwardFromSeeds([{ file: startFile, activation: 1.0 }]);
+  }
+
+  /**
+   * 順伝播（Forward Propagation）: 複数seed対応
+   * 信号ログ等の複数起点を同時に「発火」させて伝播する。
+   */
+  public propagateForwardFromSeeds(
+    seeds: Array<{ file: string; activation: number }>,
+    _taskType?: string
+  ): PropagationResult {
     const startTime = Date.now();
-    console.log(`🧠 [NeuralLearning] Forward propagation from ${startFile}`);
+    const seedSummary = seeds
+      .map((s) => `${s.file}:${Math.round(s.activation * 1000) / 1000}`)
+      .slice(0, 8)
+      .join(', ');
+    console.log(`🧠 [NeuralLearning] Forward propagation (seeds) ${seedSummary}`);
 
     const affectedFiles = new Map<string, number>();
     const propagationPaths: Array<{ path: string[]; finalActivation: number }> = [];
 
-    // 起点ノードの活性化
-    const startNode = this.graph.getNode(startFile);
-    if (!startNode) {
-      console.warn(`Node not found: ${startFile}`);
+    const queue: Array<{ file: string; activation: number; depth: number; path: string[] }> = [];
+
+    for (const seed of seeds) {
+      const node = this.graph.getNode(seed.file);
+      if (!node) continue;
+      const a = Math.max(0, Math.min(1, seed.activation));
+      const existing = affectedFiles.get(seed.file) || 0;
+      if (a > existing) {
+        affectedFiles.set(seed.file, a);
+      }
+      queue.push({ file: seed.file, activation: a, depth: 0, path: [seed.file] });
+    }
+
+    if (queue.length === 0) {
       return {
         affectedFiles,
         propagationPaths,
@@ -86,46 +111,46 @@ export class NeuralLearningEngine {
       };
     }
 
-    // 初期活性化を設定
-    affectedFiles.set(startFile, 1.0);
-
-    // BFS（幅優先探索）で伝播
-    const visited = new Set<string>();
-    const queue: Array<{ file: string; activation: number; depth: number; path: string[] }> = [
-      { file: startFile, activation: 1.0, depth: 0, path: [startFile] }
-    ];
-
+    // 優先度付き（activation最大を先に処理）
     while (queue.length > 0) {
-      const current = queue.shift()!;
+      let bestIndex = 0;
+      for (let i = 1; i < queue.length; i++) {
+        if (queue[i].activation > queue[bestIndex].activation) bestIndex = i;
+      }
+      const current = queue.splice(bestIndex, 1)[0];
 
-      if (visited.has(current.file) || current.depth >= this.maxDepth) {
+      if (current.depth >= this.maxDepth) {
         continue;
       }
-      visited.add(current.file);
 
-      // 接続先に伝播
+      // 既により高い活性が確定しているならスキップ
+      const bestKnown = affectedFiles.get(current.file) || 0;
+      if (current.activation + 1e-6 < bestKnown) {
+        continue;
+      }
+
       const connections = this.graph.getConnections(current.file);
       for (const edge of connections) {
         const targetNode = this.graph.getNode(edge.to);
         if (!targetNode) continue;
 
-        // 活性化を計算
-        const weightedInput = current.activation * edge.weight;
-        const newActivation = this.sigmoid(weightedInput);
+        // NOTE: 以前は sigmoid(x) を使っていたが、x>=0 のため常に 0.5 以上になり、
+        // 関連ファイルのスコアが飽和してランキングの分解能が落ちやすい。
+        // ここでは「重みの乗算 + 深さ減衰」で近い依存ほど高くなるようにする。
+        const nextDepth = current.depth + 1;
+        const depthDecay = Math.pow(0.75, nextDepth);
+        const newActivation = Math.max(0, Math.min(1, current.activation * edge.weight * depthDecay));
 
-        // 既存の活性化と比較して高い方を採用
         const existingActivation = affectedFiles.get(edge.to) || 0;
-        if (newActivation > existingActivation) {
+        if (newActivation > existingActivation + 1e-6) {
           affectedFiles.set(edge.to, newActivation);
 
-          // パスを記録
           const newPath = [...current.path, edge.to];
           propagationPaths.push({
             path: newPath,
             finalActivation: newActivation
           });
 
-          // キューに追加
           queue.push({
             file: edge.to,
             activation: newActivation,
@@ -137,7 +162,9 @@ export class NeuralLearningEngine {
     }
 
     const computationTime = Date.now() - startTime;
-    console.log(`🧠 [NeuralLearning] Forward propagation complete: ${affectedFiles.size} files affected in ${computationTime}ms`);
+    console.log(
+      `🧠 [NeuralLearning] Forward propagation complete: ${affectedFiles.size} files affected in ${computationTime}ms`
+    );
 
     return {
       affectedFiles,
@@ -159,10 +186,10 @@ export class NeuralLearningEngine {
     const errorSeverity = this.calculateErrorSeverity(feedback);
 
     // 逆方向に伝播して原因ファイルを特定
-    const causeFiles = this.traceCauses(feedback.failureFile, errorSeverity);
+    const { causeFiles, causeEdges } = this.traceCauses(feedback.failureFile, errorSeverity);
 
     // 重みを更新
-    await this.updateWeights(causeFiles, errorSeverity);
+    await this.updateWeights(causeFiles, causeEdges, errorSeverity);
 
     // エポック判定（10回のフィードバックで1エポック）
     if (this.feedbackCount >= 10) {
@@ -189,8 +216,15 @@ export class NeuralLearningEngine {
   /**
    * 原因ファイルを追跡
    */
-  private traceCauses(failureFile: string, errorSeverity: number): Map<string, number> {
+  private traceCauses(
+    failureFile: string,
+    errorSeverity: number
+  ): {
+    causeFiles: Map<string, number>;
+    causeEdges: Map<string, { from: string; to: string; blame: number }>;
+  } {
     const causes = new Map<string, number>();
+    const causeEdges = new Map<string, { from: string; to: string; blame: number }>();
     const visited = new Set<string>();
 
     // 失敗ファイル自身が最大の原因
@@ -216,6 +250,14 @@ export class NeuralLearningEngine {
         // 減衰した責任を伝播
         const decayedBlame = current.blame * 0.5; // 深さごとに半減
 
+        // importer -> current のエッジを「原因の伝播経路」として記録
+        // （同一エッジが複数回出た場合は強いblameを優先）
+        const edgeKey = `${importer}→${current.file}`;
+        const existingEdge = causeEdges.get(edgeKey);
+        if (!existingEdge || decayedBlame > existingEdge.blame) {
+          causeEdges.set(edgeKey, { from: importer, to: current.file, blame: decayedBlame });
+        }
+
         const existingBlame = causes.get(importer) || 0;
         if (decayedBlame > existingBlame) {
           causes.set(importer, decayedBlame);
@@ -229,20 +271,18 @@ export class NeuralLearningEngine {
       }
     }
 
-    return causes;
+    return { causeFiles: causes, causeEdges };
   }
 
   /**
    * 指定ファイルをインポートしているファイルを探す
    */
-  private findImporters(_targetFile: string): string[] {
-    const importers: string[] = [];
+  private findImporters(targetFile: string): string[] {
+    if (!this.graph.getNode(targetFile)) {
+      return [];
+    }
 
-    // 全ノードをチェック
-    // statsから全ノードを取得する代わりに、全エッジをチェック
-    // TODO: より効率的な実装
-
-    return importers;
+    return this.graph.getImporters(targetFile);
   }
 
   /**
@@ -250,6 +290,7 @@ export class NeuralLearningEngine {
    */
   private async updateWeights(
     causeFiles: Map<string, number>,
+    causeEdges: Map<string, { from: string; to: string; blame: number }>,
     errorSeverity: number
   ): Promise<void> {
     console.log(`🧠 [NeuralLearning] Updating weights for ${causeFiles.size} cause files`);
@@ -257,20 +298,20 @@ export class NeuralLearningEngine {
     let totalWeightChange = 0;
     let updateCount = 0;
 
-    for (const [file, blame] of causeFiles) {
-      const connections = this.graph.getConnections(file);
+    // 逆伝播で辿ったエッジ（importer -> current）だけを更新する
+    // ※エッジが見つからない場合はスキップ（グラフ未更新/未構築など）
+    for (const { from, to, blame } of causeEdges.values()) {
+      const connections = this.graph.getConnections(from);
+      const edge = connections.find((e) => e.to === to);
+      if (!edge) continue;
 
-      for (const edge of connections) {
-        // 重みを減少（失敗したパスの重みを下げる）
-        const weightChange = -this.learningRate * blame * errorSeverity;
-        const newWeight = Math.max(0.1, Math.min(1.0, edge.weight + weightChange)); // 0.1-1.0の範囲に制限
+      // 重みを減少（失敗したパスの重みを下げる）
+      const weightChange = -this.learningRate * blame * errorSeverity;
+      const newWeight = Math.max(0.1, Math.min(1.0, edge.weight + weightChange));
+      edge.weight = newWeight;
 
-        // 重み更新
-        edge.weight = newWeight;
-
-        totalWeightChange += Math.abs(weightChange);
-        updateCount++;
-      }
+      totalWeightChange += Math.abs(weightChange);
+      updateCount++;
     }
 
     // グラフを保存

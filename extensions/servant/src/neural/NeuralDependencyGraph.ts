@@ -1,6 +1,8 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
+import type { GoalManager } from '../goals/GoalManager';
+import type { GitIntegration } from '../git/GitIntegration';
 
 /**
  * グラフのノード（ファイル）
@@ -20,6 +22,10 @@ export interface NeuralNode {
   importCount: number;
   /** エクスポート数 */
   exportCount: number;
+  /** ゴールとの距離（0=中心、1=遠い） */
+  goalDistance: number;
+  /** 優先度スコア（0-1、高いほど重要） */
+  priorityScore: number;
 }
 
 /**
@@ -77,7 +83,7 @@ export class NeuralDependencyGraph {
   public async buildGraph(): Promise<void> {
     console.log('🧠 [NeuralGraph] Building dependency graph...');
 
-    // TypeScript/JavaScript ファイルを収集
+    // プロジェクト掌握のため、コード + 仕様/ガイド(Markdown) + 設定(JSON) も対象に含める
     const files = await this.collectSourceFiles();
 
     // ノードを作成
@@ -102,21 +108,27 @@ export class NeuralDependencyGraph {
    * ソースファイルを収集
    */
   private async collectSourceFiles(): Promise<string[]> {
-    const files: string[] = [];
-    const pattern = '**/*.{ts,tsx,js,jsx}';
+    const files = new Set<string>();
 
-    const uris = await vscode.workspace.findFiles(
-      pattern,
-      '**/node_modules/**',
-      1000
-    );
+    const includePatterns = [
+      '**/*.{ts,tsx,js,jsx}',
+      'docs/**/*.md',
+      '.aitk/instructions/**/*.md',
+      'package.json',
+      '**/*.{json}'
+    ];
 
-    for (const uri of uris) {
-      const relativePath = vscode.workspace.asRelativePath(uri);
-      files.push(relativePath);
+    const exclude = '{**/node_modules/**,**/dist/**,**/build/**,**/.git/**,**/coverage/**,**/playwright-report/**,**/test-results/**}';
+
+    for (const pattern of includePatterns) {
+      const uris = await vscode.workspace.findFiles(pattern, exclude, 5000);
+      for (const uri of uris) {
+        const relativePath = vscode.workspace.asRelativePath(uri);
+        files.add(relativePath.replace(/\\/g, '/'));
+      }
     }
 
-    return files;
+    return Array.from(files);
   }
 
   /**
@@ -154,7 +166,9 @@ export class NeuralDependencyGraph {
       changeFrequency,
       lastModified: stats ? stats.mtime.toISOString() : new Date().toISOString(),
       importCount,
-      exportCount
+      exportCount,
+      goalDistance: 1.0, // デフォルト値（後で計算）
+      priorityScore: 0.0 // デフォルト値（後で計算）
     };
   }
 
@@ -233,28 +247,142 @@ export class NeuralDependencyGraph {
       return edges;
     }
 
-    // インポート文を抽出
-    const imports = this.extractImports(content);
+    // 1) コードの import 依存
+    if (/\.(ts|tsx|js|jsx)$/.test(file)) {
+      const imports = this.extractImports(content);
 
-    for (const importPath of imports) {
-      const targetFile = this.resolveImportPath(file, importPath);
+      for (const importPath of imports) {
+        const targetFile = this.resolveImportPath(file, importPath);
 
-      if (targetFile && this.nodes.has(targetFile)) {
-        const weight = this.calculateEdgeWeight(file, targetFile);
+        if (targetFile && this.nodes.has(targetFile)) {
+          const weight = this.calculateEdgeWeight(file, targetFile);
 
+          edges.push({
+            from: file,
+            to: targetFile,
+            weight,
+            importStrength: 0.8, // 直接インポート
+            coChangeRate: 0, // TODO: Git履歴から計算
+            mutualInformation: 0, // TODO: 実装
+            semanticSimilarity: 0 // TODO: 実装
+          });
+        }
+      }
+    }
+
+    // 2) Markdown のリンク依存（仕様/ガイドの結線）
+    if (file.endsWith('.md')) {
+      const links = this.extractMarkdownLinks(content);
+      for (const link of links) {
+        const target = this.resolveDocLikePath(file, link);
+        if (target && this.nodes.has(target)) {
+          const weight = 0.35; // ドキュメントリンクは弱い結合（実装依存より低い）
+          edges.push({
+            from: file,
+            to: target,
+            weight,
+            importStrength: 0.3,
+            coChangeRate: 0,
+            mutualInformation: 0,
+            semanticSimilarity: 0
+          });
+        }
+      }
+    }
+
+    // 3) パス参照っぽい文字列（docs/specifications/... 等）を弱い結合として扱う
+    const pathRefs = this.extractPathLikeReferences(content);
+    for (const ref of pathRefs) {
+      const target = this.resolveDocLikePath(file, ref);
+      if (target && this.nodes.has(target)) {
+        const weight = 0.2;
         edges.push({
           from: file,
-          to: targetFile,
+          to: target,
           weight,
-          importStrength: 0.8, // 直接インポート
-          coChangeRate: 0, // TODO: Git履歴から計算
-          mutualInformation: 0, // TODO: 実装
-          semanticSimilarity: 0 // TODO: 実装
+          importStrength: 0.2,
+          coChangeRate: 0,
+          mutualInformation: 0,
+          semanticSimilarity: 0
         });
       }
     }
 
     return edges;
+  }
+
+  /**
+   * Markdown リンクを抽出（ローカルパスのみ）
+   * - [text](path)
+   * - ![alt](path)
+   */
+  private extractMarkdownLinks(content: string): string[] {
+    const results: string[] = [];
+    const linkRegex = /!?\[[^\]]*\]\(([^)]+)\)/g;
+    let match;
+    while ((match = linkRegex.exec(content)) !== null) {
+      const raw = String(match[1] ?? '').trim();
+      if (!raw) continue;
+      if (/^(https?:|mailto:)/i.test(raw)) continue;
+
+      // "path#anchor" のアンカーを除去
+      const noAnchor = raw.split('#')[0].trim();
+      if (!noAnchor) continue;
+
+      results.push(noAnchor);
+    }
+    return results;
+  }
+
+  /**
+   * docs/ や src/ などに見えるパス参照を抽出（弱い結合）
+   */
+  private extractPathLikeReferences(content: string): string[] {
+    const results = new Set<string>();
+    // 最小: ルート相対っぽい参照を拾う（過検出しすぎない）
+    const regex = /(?:^|\s)(\.?\/?(?:docs|src|tests|extensions|\.aitk)\/[A-Za-z0-9_./-]+)(?=\s|$)/g;
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      const p = String(match[1] ?? '').trim().replace(/\\/g, '/');
+      if (!p) continue;
+      // 末尾の句読点などを除去
+      const cleaned = p.replace(/[),.]*$/g, '');
+      results.add(cleaned);
+    }
+    return Array.from(results);
+  }
+
+  /**
+   * import 以外の「ファイルっぽいパス」を解決
+   * - 相対: 現在ファイルのディレクトリ基準
+   * - ルート相対っぽい: workspaceRoot 基準（先頭の / は除く）
+   */
+  private resolveDocLikePath(fromFile: string, rawPath: string): string | null {
+    const p0 = rawPath.trim().replace(/\\/g, '/');
+    if (!p0) return null;
+
+    const normalized = p0.startsWith('/') ? p0.slice(1) : p0;
+    const fromDir = path.dirname(fromFile).replace(/\\/g, '/');
+
+    const candidates: string[] = [];
+    if (normalized.startsWith('.')) {
+      candidates.push(path.normalize(path.join(fromDir, normalized)).replace(/\\/g, '/'));
+    } else {
+      // docs/... などはワークスペース相対として扱う
+      candidates.push(normalized);
+      // 念のため、相対としても解釈（md内で "../" を落とした参照など）
+      candidates.push(path.normalize(path.join(fromDir, normalized)).replace(/\\/g, '/'));
+    }
+
+    const exts = ['', '.md', '.ts', '.tsx', '.js', '.jsx', '.json'];
+    for (const base of candidates) {
+      for (const ext of exts) {
+        const withExt = base + ext;
+        if (this.nodes.has(withExt)) return withExt;
+      }
+    }
+
+    return null;
   }
 
   /**
@@ -329,6 +457,32 @@ export class NeuralDependencyGraph {
    */
   public getConnections(file: string): NeuralEdge[] {
     return this.edges.get(file) || [];
+  }
+
+  /**
+   * 指定ファイルを参照している（＝このファイルへ向かうエッジを持つ）ファイル一覧を取得
+   * - `edges: Map<from, edge[]>` から `edge.to === targetFile` を逆引きする
+   * - 返却は「最も強い接続（weight最大）」順
+   */
+  public getImporters(targetFile: string): string[] {
+    const bestWeightByImporter = new Map<string, number>();
+
+    for (const [from, edgeList] of this.edges) {
+      if (from === targetFile) continue;
+
+      for (const edge of edgeList) {
+        if (edge.to !== targetFile) continue;
+
+        const prev = bestWeightByImporter.get(from);
+        if (prev === undefined || edge.weight > prev) {
+          bestWeightByImporter.set(from, edge.weight);
+        }
+      }
+    }
+
+    return Array.from(bestWeightByImporter.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([file]) => file);
   }
 
   /**
@@ -472,5 +626,90 @@ export class NeuralDependencyGraph {
 
     await this.saveGraph();
     console.log('🧠 [NeuralGraph] Graph updated');
+  }
+
+  /**
+   * 全ノードの優先度スコアを計算
+   * @param goalManager ゴールマネージャー
+   */
+  public computePriorityScores(goalManager: GoalManager): void {
+    console.log('🎯 [NeuralGraph] Computing priority scores...');
+
+    // 1. 全ノードのgoalDistanceを計算
+    for (const [filePath, node] of this.nodes) {
+      node.goalDistance = goalManager.calculateGoalDistance(filePath);
+    }
+
+    // 2. 正規化用の最大値を取得
+    let maxImport = 0;
+    let maxEdgeWeight = 0;
+
+    for (const node of this.nodes.values()) {
+      maxImport = Math.max(maxImport, node.importCount);
+    }
+
+    for (const edgeList of this.edges.values()) {
+      const sum = edgeList.reduce((acc, e) => acc + e.weight, 0);
+      maxEdgeWeight = Math.max(maxEdgeWeight, sum);
+    }
+
+    // 0除算回避
+    maxImport = maxImport || 1;
+    maxEdgeWeight = maxEdgeWeight || 1;
+
+    // 3. priorityScoreを計算
+    for (const [filePath, node] of this.nodes) {
+      const edgeWeightSum = (this.edges.get(filePath) || [])
+        .reduce((acc, e) => acc + e.weight, 0);
+
+      // 重み付き合計
+      const score =
+        (1.0 - node.goalDistance) * 0.4 +           // ゴールへの近さ（逆転）
+        node.activationLevel * 0.2 +                // 最近の使用頻度
+        (node.importCount / maxImport) * 0.15 +     // インポート数（依存される度合い）
+        node.entropy * 0.1 +                        // 複雑度
+        node.changeFrequency * 0.1 +                // 変更頻度
+        (edgeWeightSum / maxEdgeWeight) * 0.05;     // エッジ重み合計
+
+      node.priorityScore = Math.max(0, Math.min(1, score));
+    }
+
+    console.log(`🎯 [NeuralGraph] Priority scores computed for ${this.nodes.size} nodes`);
+  }
+
+  /**
+   * Git履歴から変更頻度を更新
+   * @param gitIntegration Git統合
+   */
+  public async updateChangeFrequencies(gitIntegration: GitIntegration): Promise<void> {
+    console.log('📊 [NeuralGraph] Updating change frequencies from Git history...');
+
+    const stats = await gitIntegration.getAllFileChangeStats(this.workspaceRoot);
+
+    let updatedCount = 0;
+    for (const [filePath, node] of this.nodes) {
+      const stat = stats.get(filePath);
+      if (stat) {
+        node.changeFrequency = stat.changeFrequency;
+        updatedCount++;
+      }
+    }
+
+    await this.saveGraph();
+    console.log(`📊 [NeuralGraph] Updated change frequencies for ${updatedCount}/${this.nodes.size} nodes`);
+  }
+
+  /**
+   * 全ノードを取得
+   */
+  public getNodes(): Map<string, NeuralNode> {
+    return this.nodes;
+  }
+
+  /**
+   * 全エッジを取得
+   */
+  public getEdges(): Map<string, NeuralEdge[]> {
+    return this.edges;
   }
 }

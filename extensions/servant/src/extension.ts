@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
+import * as fs from 'fs';
 import { InstructionsLoader } from './loader/InstructionsLoader';
 import { DecisionTreeLoader } from './loader/DecisionTreeLoader';
 import { InstructionsDiagnosticsProvider } from './providers/InstructionsDiagnosticsProvider';
@@ -17,11 +18,23 @@ import { AIEvaluator } from './learning/AIEvaluator';
 import { FeedbackCollector } from './learning/FeedbackCollector';
 import { NeuralDependencyGraph } from './neural/NeuralDependencyGraph';
 import { NeuralLearningEngine } from './neural/NeuralLearningEngine';
+import { NeuralSignalStore } from './neural/NeuralSignalStore';
 import { OptimizationEngine, TaskState } from './neural/OptimizationEngine';
 import { WorkflowLearner } from './neural/WorkflowLearner';
 import { ProjectContextDB } from './context/ProjectContextDB';
 import { ArchitectureAdvisor } from './specialists/ArchitectureAdvisor';
 import { Notifier } from './ui/Notifier';
+import { AutopilotController } from './autopilot/AutopilotController';
+import { ConstellationViewPanel } from './ui/ConstellationViewPanel';
+import { quickFixCommit } from './commands/quickFixCommit';
+import {
+  recordSpecCheck,
+  computeRequiredInstructionsForFiles,
+  BASELINE_REQUIRED_INSTRUCTIONS,
+  isSpecCheckFresh,
+  loadSpecCheckRecord,
+} from './guard/SpecCheck';
+import { ScriptsGuardRunner } from './guard/ScriptsGuardRunner';
 
 let outputChannel: vscode.OutputChannel;
 
@@ -33,14 +46,229 @@ export function activate(context: vscode.ExtensionContext) {
 
   const notifier = new Notifier(outputChannel);
 
+  // 統合ターミナルにステータスを表示（任意）
+  let servantTerminal: vscode.Terminal | null = null;
+  const escapeForSingleQuotes = (s: string): string => s.replace(/'/g, `'"'"'`);
+  const writeTerminalYellow = (message: string) => {
+    const enabled = vscode.workspace
+      .getConfiguration('servant')
+      .get<boolean>('terminalStatus.enabled', false);
+    if (!enabled) return;
+
+    if (!servantTerminal) {
+      servantTerminal = vscode.window.createTerminal({ name: 'Servant' });
+      context.subscriptions.push(servantTerminal);
+    }
+
+    // 目に入るようにターミナルは表示するが、フォーカスは奪わない
+    servantTerminal.show(true);
+
+    const safe = escapeForSingleQuotes(message);
+    // ANSI yellow: \x1b[33m ... \x1b[0m
+    servantTerminal.sendText(`printf '\\x1b[33m${safe}\\x1b[0m\\n'`);
+  };
+
+  writeTerminalYellow(`[Servant] Activated: ${new Date().toLocaleString('ja-JP')}`);
+
+  // 保存イベントの「動いてる感」ログ（スパム抑制つき）
+  let saveEventCount = 0;
+  const lastSaveLoggedAtByFile = new Map<string, number>();
+  const SAVE_LOG_THROTTLE_MS = 2000;
+
+  // Servant稼働状況（enable/disable）をステータスバーに表示
+  const servantStatusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 110);
+  let lastServantEnabled: boolean | null = null;
+  const updateServantStatusBar = () => {
+    const enabled = isEnabled();
+    servantStatusBar.text = enabled ? 'Servant: ON' : 'Servant: OFF';
+    servantStatusBar.tooltip = enabled
+      ? 'Servantは有効です（設定: servant.enable）'
+      : 'Servantは無効です（設定: servant.enable を true にすると有効化）';
+    servantStatusBar.backgroundColor = enabled
+      ? undefined
+      : new vscode.ThemeColor('statusBarItem.warningBackground');
+    servantStatusBar.show();
+
+    if (lastServantEnabled === null || lastServantEnabled !== enabled) {
+      writeTerminalYellow(`[Servant] Status: ${enabled ? 'ON' : 'OFF'} (servant.enable)`);
+      lastServantEnabled = enabled;
+    }
+  };
+  updateServantStatusBar();
+  context.subscriptions.push(servantStatusBar);
+
+  // 天体儀ステータスバー（🌟アイコン、常時表示）
+  // priority を最高レベル（10000）に設定して、右端に確実に表示
+  const constellationStatusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 10000);
+  constellationStatusBar.text = '🌟 天体儀';
+  constellationStatusBar.tooltip = 'プロジェクト全体像（天体儀ビュー）を開く';
+  constellationStatusBar.command = 'servant.showConstellation';
+  constellationStatusBar.show();
+  context.subscriptions.push(constellationStatusBar);
+
+  // Restricted Mode（未信頼ワークスペース）では、拡張は通常「起動しない」扱いになる。
+  // ただしユーザー体験としては🌟が見えないのが致命的なので、最小限の導線だけ提供して終了する。
+  if (!vscode.workspace.isTrusted) {
+    outputChannel.appendLine('[Servant] Workspace is not trusted (Restricted Mode).');
+
+    servantStatusBar.text = 'Servant: TRUST';
+    servantStatusBar.tooltip = 'ワークスペースが未信頼のため、Servantのフル機能は無効です。信頼すると有効化されます。';
+    servantStatusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.warningBackground');
+    servantStatusBar.show();
+
+    constellationStatusBar.tooltip = 'ワークスペースを信頼すると天体儀が有効になります';
+
+    // 🌟クリックで信頼導線を出す（この時点では他コマンドは登録しない）
+    const showConstellationCommand = vscode.commands.registerCommand('servant.showConstellation', async () => {
+      const choice = await vscode.window.showWarningMessage(
+        '天体儀を表示するには、このワークスペースを信頼する必要があります。',
+        'ワークスペースを信頼'
+      );
+      if (choice === 'ワークスペースを信頼') {
+        await vscode.commands.executeCommand('workbench.action.manageWorkspaceTrust');
+      }
+    });
+    context.subscriptions.push(showConstellationCommand);
+
+    return;
+  }
+
   // ワークスペースルート取得
-  const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
-  if (!workspaceFolder) {
+  const workspaceFolders = vscode.workspace.workspaceFolders;
+  if (!workspaceFolders || workspaceFolders.length === 0) {
     notifier.critical('No workspace folder found');
     return;
   }
 
-  const workspaceRoot = workspaceFolder.uri.fsPath;
+  const existsGitMarker = (dir: string): boolean => {
+    try {
+      const gitPath = path.join(dir, '.git');
+      if (!fs.existsSync(gitPath)) return false;
+
+      const stat = fs.lstatSync(gitPath);
+      // Worktree/submodule style: .git is a file (gitdir: ...)
+      if (stat.isFile()) return true;
+
+      if (stat.isDirectory()) {
+        // Standard repo style: .git/HEAD exists
+        return fs.existsSync(path.join(gitPath, 'HEAD'));
+      }
+
+      return false;
+    } catch {
+      return false;
+    }
+  };
+
+  const resolveWorkspaceRoot = (dir: string): string => {
+    if (existsGitMarker(dir)) return dir;
+
+    let entries: fs.Dirent[] = [];
+    try {
+      entries = fs.readdirSync(dir, { withFileTypes: true });
+    } catch {
+      return dir;
+    }
+
+    const candidates: string[] = [];
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const name = entry.name;
+      if (name === 'node_modules' || name === '.git' || name.startsWith('.')) continue;
+
+      const child = path.join(dir, name);
+      if (existsGitMarker(child)) {
+        candidates.push(child);
+      }
+    }
+
+    if (candidates.length === 1) return candidates[0];
+    if (candidates.length === 0) return dir;
+
+    // Heuristic: prefer a repo that looks like a JS project and/or contains this extension.
+    const score = (p: string): number => {
+      let s = 0;
+      if (fs.existsSync(path.join(p, 'package.json'))) s += 2;
+      if (fs.existsSync(path.join(p, 'extensions', 'servant', 'package.json'))) s += 3;
+      if (fs.existsSync(path.join(p, 'vite.config.ts'))) s += 1;
+      return s;
+    };
+
+    candidates.sort((a, b) => score(b) - score(a));
+    return candidates[0];
+  };
+
+  const rootScore = (p: string): number => {
+    let s = 0;
+    if (existsGitMarker(p)) s += 5;
+    if (fs.existsSync(path.join(p, 'package.json'))) s += 2;
+    if (fs.existsSync(path.join(p, 'extensions', 'servant', 'package.json'))) s += 3;
+    if (fs.existsSync(path.join(p, 'vite.config.ts'))) s += 1;
+    return s;
+  };
+
+  const resolvedRoots = workspaceFolders
+    .map((wf) => wf.uri.fsPath)
+    .map((raw) => ({ raw, resolved: resolveWorkspaceRoot(raw) }));
+
+  // Pick best resolved root (handles multi-root + parent-folder workspace)
+  let workspaceRoot = resolvedRoots[0].resolved;
+  let workspaceRootRaw = resolvedRoots[0].raw;
+  let best = rootScore(workspaceRoot);
+  for (const item of resolvedRoots) {
+    const s = rootScore(item.resolved);
+    if (s > best) {
+      best = s;
+      workspaceRoot = item.resolved;
+      workspaceRootRaw = item.raw;
+    }
+  }
+
+  outputChannel.appendLine(`[Servant] Workspace root: ${workspaceRoot}`);
+  if (workspaceRoot !== workspaceRootRaw) {
+    outputChannel.appendLine(`[Servant] Workspace root adjusted: ${workspaceRootRaw} -> ${workspaceRoot}`);
+  }
+
+  // 保存イベントをターミナルに出す（成長/稼働の可視化用）
+  context.subscriptions.push(
+    vscode.workspace.onDidSaveTextDocument((doc) => {
+      const fsPath = doc.uri.fsPath;
+      const now = Date.now();
+
+      // ローカル完結の「信号」記録（ターミナル表示の有無に依存させない）
+      try {
+        if (fsPath.startsWith(workspaceRoot)) {
+          const rel = path.relative(workspaceRoot, fsPath).replace(/\\/g, '/');
+          if (rel && !rel.startsWith('..')) {
+            const store = new NeuralSignalStore(workspaceRoot);
+            store.record({
+              timestamp: new Date().toISOString(),
+              type: 'save',
+              target: rel,
+              strength: 0.25,
+            });
+          }
+        }
+      } catch {
+        // ignore
+      }
+
+      const terminalEnabled = vscode.workspace
+        .getConfiguration('servant')
+        .get<boolean>('terminalStatus.enabled', false);
+      if (!terminalEnabled) return;
+
+      const last = lastSaveLoggedAtByFile.get(fsPath) ?? 0;
+      if (now - last < SAVE_LOG_THROTTLE_MS) return;
+      lastSaveLoggedAtByFile.set(fsPath, now);
+
+      saveEventCount += 1;
+      const relPath = path.isAbsolute(fsPath) ? path.relative(workspaceRoot, fsPath) : fsPath;
+      writeTerminalYellow(
+        `[Servant] Saved #${saveEventCount}: ${relPath} (${isEnabled() ? 'ON' : 'OFF'})`
+      );
+    })
+  );
 
   // Instructions Loaderの初期化
   const loader = new InstructionsLoader(context);
@@ -94,6 +322,23 @@ export function activate(context: vscode.ExtensionContext) {
     notifier
   );
 
+  // Autopilot: コマンド暗記ゼロで「事前誘導→事後レビュー」を回す
+  const autopilot = new AutopilotController(
+    workspaceRoot,
+    outputChannel,
+    notifier,
+    gitIntegration,
+    loader,
+    aiTracker,
+    aiEvaluator,
+    feedbackCollector,
+    optimizationEngine,
+    workflowLearner,
+    incrementalValidator,
+    neuralGraph  // Constellation用にグラフを渡す
+  );
+  autopilot.start(context);
+
   // Diagnostics Providerの初期化
   const diagnosticsProvider = new InstructionsDiagnosticsProvider(loader, treeLoader, context);
 
@@ -124,6 +369,8 @@ export function activate(context: vscode.ExtensionContext) {
       return;
     }
 
+    writeTerminalYellow(`[Servant] Validate: ${editor.document.uri.fsPath}`);
+
     const violations = await diagnosticsProvider.validate(editor.document.uri);
 
     const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
@@ -148,16 +395,61 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     notifier.commandInfo('Instructions validation completed');
+    writeTerminalYellow(`[Servant] Validate done: ${violations.length} issues`);
   };
 
   const validateBeforeCommit = async () => {
     outputChannel.appendLine('[Command] Validate before commit triggered');
+
+    writeTerminalYellow('[Servant] Validate Before Commit: start');
 
     // staged filesを取得
     const stagedFiles = await gitIntegration.getStagedFilesFromSCM();
     if (stagedFiles.length === 0) {
       notifier.commandInfo('No staged files to validate');
       return;
+    }
+
+    // Optional: run repo-local pre-commit guard script inside VS Code.
+    // Default is disabled to avoid double-running (the git hook already prefers repo guard).
+    const runRepoGuard = vscode.workspace
+      .getConfiguration('servant')
+      .get<boolean>('guard.runRepoScriptsBeforeCommit', false);
+
+    if (runRepoGuard) {
+      const guardRunner = new ScriptsGuardRunner({ kind: 'pre-commit-ai-guard' });
+      const guardResult = await guardRunner.run({
+        workspaceRoot,
+      });
+
+      if (!guardResult.success) {
+        if (aiTracker.hasActiveAction()) {
+          const errorCount = guardResult.violations.filter((v) => v.severity === 'error').length;
+          const warningCount = guardResult.violations.filter((v) => v.severity === 'warning').length;
+          await aiTracker.endAction({
+            success: false,
+            error: 'Repo guard failed',
+            compileErrors: errorCount,
+            violations: warningCount
+          });
+        }
+
+        const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
+        if (learningEnabled) {
+          for (const v of guardResult.violations) {
+            await adaptiveGuard.recordViolation({
+              rule: 'repo-guard',
+              category: 'preCommit',
+              filePath: v.file ?? 'scripts/pre-commit-ai-guard.sh',
+              message: v.message
+            });
+          }
+        }
+
+        await preCommitValidator.showViolations(guardResult);
+        writeTerminalYellow('[Servant] Validate Before Commit: FAIL (repo guard)');
+        throw new Error('Repo guard failed');
+      }
     }
 
     // 検証実行
@@ -190,15 +482,488 @@ export function activate(context: vscode.ExtensionContext) {
           });
         }
       }
+
+      // Phase 9.2: pre-commit失敗を逆伝播学習の信号として取り込む（ベストエフォート）
+      // - グラフ未構築の場合も、ユーザー要望により自動で構築してから発火する
+      if (result.violations.length > 0) {
+        try {
+          // 1) グラフをロード（無ければ自動構築）
+          let loaded = await neuralGraph.loadGraph();
+          if (!loaded) {
+            outputChannel.appendLine('[NeuralLearning] Neural graph not found. Building automatically...');
+            await neuralGraph.buildGraph();
+
+            // Constellationデータ生成（ゴール・優先度・変更頻度）
+            const goalManager = new (await import('./goals/GoalManager.js')).GoalManager(workspaceRoot);
+            await neuralGraph.updateChangeFrequencies(gitIntegration);
+            neuralGraph.computePriorityScores(goalManager);
+            await neuralGraph.saveGraph();
+
+            loaded = true;
+            outputChannel.appendLine('[NeuralLearning] Neural graph build complete (with Constellation data)');
+          }
+
+          if (loaded) {
+            // 2) file別に集約して逆伝播
+            const byFile = new Map<string, { errors: number; warnings: number; messages: string[] }>();
+            for (const v of result.violations) {
+              const absOrRel = v.file;
+              const rel = path.isAbsolute(absOrRel) ? path.relative(workspaceRoot, absOrRel) : absOrRel;
+              const normalized = rel.replace(/\\/g, '/');
+              if (!normalized || normalized.startsWith('..')) continue;
+
+              const entry = byFile.get(normalized) ?? { errors: 0, warnings: 0, messages: [] };
+              if (v.severity === 'error') entry.errors++;
+              else entry.warnings++;
+              if (entry.messages.length < 3) entry.messages.push(v.message);
+              byFile.set(normalized, entry);
+            }
+
+            for (const [failureFile, agg] of byFile.entries()) {
+              await neuralLearning.propagateBackward({
+                failureFile,
+                error: agg.messages.join(' / ') || 'Pre-commit validation failed',
+                violations: agg.warnings,
+                compileErrors: agg.errors
+              });
+            }
+          }
+        } catch (e) {
+          outputChannel.appendLine(`[NeuralLearning] Backpropagation failed (ignored): ${e}`);
+        }
+      }
     }
 
     // 結果表示
     await preCommitValidator.showViolations(result);
 
+    writeTerminalYellow(
+      `[Servant] Validate Before Commit: ${result.success ? 'OK' : 'FAIL'} (${result.violations.length} issues)`
+    );
+
     // エラーがあればコマンド失敗として返す（Git hookから使用される）
     if (!result.success) {
       throw new Error('Validation failed');
     }
+  };
+
+  const recordSpecCheckCommandImpl = async () => {
+    const note = await vscode.window.showInputBox({
+      title: 'Record Spec Check',
+      prompt: '今回の作業内容（任意）を入力してください',
+      placeHolder: '例: UD解析の接続点テスト追加 / QuestionScheduler調査'
+    });
+
+    // キャンセルは何もしない
+    if (note === undefined) {
+      return;
+    }
+
+    recordSpecCheck(workspaceRoot, note);
+    notifier.commandInfo('✅ Specチェックを記録しました（.aitk/spec-check.json）');
+  };
+
+  const reviewRequiredInstructionsCommandImpl = async () => {
+    const stagedFiles = await gitIntegration.getStagedFiles(workspaceRoot);
+    const enforce = stagedFiles.length > 0;
+
+    // staged が無い場合でも baseline は提示する（作業開始導線として）
+    const required = enforce
+      ? computeRequiredInstructionsForFiles(workspaceRoot, stagedFiles, loader.getInstructions())
+      : Array.from(BASELINE_REQUIRED_INSTRUCTIONS);
+
+    // 指示書を順に開く（不足チェックの“照会”を自動化）
+    for (const relPath of required) {
+      const abs = path.join(workspaceRoot, relPath);
+      try {
+        const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(abs));
+        await vscode.window.showTextDocument(doc, { preview: true, preserveFocus: true });
+      } catch {
+        // ファイルが無い場合でも継続（ガードは SpecCheck 側で行われる）
+      }
+    }
+
+    const note = await vscode.window.showInputBox({
+      title: 'Review Required Instructions',
+      prompt: '確認した指示書/作業内容（任意）を入力してください（stagedがある場合はその対象に対する記録になります）',
+      placeHolder: '例: ReadingPassageViewの追加に伴う指示書確認'
+    });
+
+    if (note === undefined) {
+      return;
+    }
+
+    recordSpecCheck(workspaceRoot, note, { requiredInstructions: required });
+    notifier.commandInfo('✅ 必須指示書の確認として Specチェックを記録しました');
+  };
+
+  const getSpecBookPaths = () => {
+    const config = vscode.workspace.getConfiguration('servant');
+
+    const specRelOrAbs = (config.get<string>('specBook.specPath', 'docs/specifications/WORKING_SPEC.md') ?? '').trim();
+    const decisionsRelOrAbs = (config.get<string>('specBook.decisionsPath', 'docs/specifications/DECISIONS.md') ?? '').trim();
+
+    const effectiveSpec = specRelOrAbs.length > 0 ? specRelOrAbs : 'docs/specifications/WORKING_SPEC.md';
+    const effectiveDecisions = decisionsRelOrAbs.length > 0 ? decisionsRelOrAbs : 'docs/specifications/DECISIONS.md';
+
+    const specAbs = path.isAbsolute(effectiveSpec) ? effectiveSpec : path.join(workspaceRoot, effectiveSpec);
+    const decisionsAbs = path.isAbsolute(effectiveDecisions) ? effectiveDecisions : path.join(workspaceRoot, effectiveDecisions);
+
+    return { specAbs, decisionsAbs };
+  };
+
+  const ensureFileExists = (absPath: string, initialContent: string) => {
+    const dir = path.dirname(absPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    if (!fs.existsSync(absPath)) {
+      fs.writeFileSync(absPath, initialContent, 'utf-8');
+    }
+  };
+
+  const openSpecBookCommandImpl = async () => {
+    const { specAbs } = getSpecBookPaths();
+    ensureFileExists(
+      specAbs,
+      [
+        '# WORKING SPEC\n',
+        '\n',
+        '- このファイルは「強制力が働く仕様書（作業の正）」です。\n',
+        '- 変更は最小の差分で行い、理由は DECISIONS.md に追記します。\n',
+      ].join('')
+    );
+
+    const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(specAbs));
+    await vscode.window.showTextDocument(doc, { preview: false });
+    notifier.commandInfo('📖 Working Spec を開きました');
+  };
+
+  const appendDecisionLogCommandImpl = async () => {
+    const { decisionsAbs } = getSpecBookPaths();
+    ensureFileExists(
+      decisionsAbs,
+      [
+        '# DECISIONS\n',
+        '\n',
+        '- ここは仕様の変更理由・矛盾解消・運用決定のログです。\n',
+        '- 形式: `- YYYY-MM-DDTHH:mm:ss.sssZ: 決定内容`\n',
+        '\n'
+      ].join('')
+    );
+
+    const note = await vscode.window.showInputBox({
+      title: 'Append Decision Log',
+      prompt: '決定した内容（1行）を入力してください',
+      placeHolder: '例: Working Specは docs/specifications/WORKING_SPEC.md を正とする'
+    });
+
+    if (note === undefined) {
+      return;
+    }
+
+    const trimmed = note.trim();
+    if (trimmed.length === 0) {
+      notifier.commandError('空の決定は追記できません');
+      return;
+    }
+
+    const line = `- ${new Date().toISOString()}: ${trimmed}\n`;
+    fs.appendFileSync(decisionsAbs, line, 'utf-8');
+
+    // 「決定した」という行為自体もSpecチェックとしてローカル記録しておく（ゴミではなく行動ログ）
+    recordSpecCheck(workspaceRoot, `DecisionLog: ${trimmed}`);
+
+    // 信号としても記録（発火モデルの材料）
+    try {
+      const store = new NeuralSignalStore(workspaceRoot);
+      store.record({
+        timestamp: new Date().toISOString(),
+        type: 'decision:append',
+        target: vscode.workspace.asRelativePath(decisionsAbs).replace(/\\/g, '/'),
+        strength: 0.9,
+        meta: { note: trimmed }
+      });
+    } catch {
+      // ignore
+    }
+
+    const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(decisionsAbs));
+    await vscode.window.showTextDocument(doc, { preview: false, preserveFocus: true });
+    notifier.commandInfo('✅ 決定ログへ追記しました');
+  };
+
+  const buildAIContextPacket = async (options?: { openEditor?: boolean; notify?: boolean }) => {
+    const openEditor = options?.openEditor ?? false;
+    const notify = options?.notify ?? false;
+
+    const config = vscode.workspace.getConfiguration('servant');
+    const outputRelOrAbs = (config.get<string>('context.outputPath', '.aitk/context/AI_CONTEXT.md') ?? '').trim();
+    const outputAbs = path.isAbsolute(outputRelOrAbs) ? outputRelOrAbs : path.join(workspaceRoot, outputRelOrAbs);
+
+    const { specAbs, decisionsAbs } = getSpecBookPaths();
+
+    const dir = path.dirname(outputAbs);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    const stagedFiles = await gitIntegration.getStagedFiles(workspaceRoot);
+
+    // 信号: コンテキスト生成
+    try {
+      const store = new NeuralSignalStore(workspaceRoot);
+      store.record({
+        timestamp: new Date().toISOString(),
+        type: 'context:build',
+        strength: 0.6,
+        meta: { stagedCount: stagedFiles.length }
+      });
+    } catch {
+      // ignore
+    }
+
+    const requiredInstructions = stagedFiles.length
+      ? computeRequiredInstructionsForFiles(workspaceRoot, stagedFiles, loader.getInstructions())
+      : Array.from(BASELINE_REQUIRED_INSTRUCTIONS);
+
+    const maxAgeHours = config.get<number>('specCheck.maxAgeHours', 24);
+    const freshness = isSpecCheckFresh(workspaceRoot, maxAgeHours, requiredInstructions);
+    const specCheckRecord = loadSpecCheckRecord(workspaceRoot);
+
+    const safeReadTail = (absPath: string, maxChars: number): string => {
+      try {
+        if (!fs.existsSync(absPath)) return '(missing)';
+        const content = fs.readFileSync(absPath, 'utf-8');
+        if (content.length <= maxChars) return content;
+        return content.slice(-maxChars);
+      } catch {
+        return '(unreadable)';
+      }
+    };
+
+    const nowIso = new Date().toISOString();
+    const specRel = vscode.workspace.asRelativePath(specAbs);
+    const decisionsRel = vscode.workspace.asRelativePath(decisionsAbs);
+    const outputRel = vscode.workspace.asRelativePath(outputAbs);
+
+    const lines: string[] = [];
+    lines.push('# AI CONTEXT PACKET');
+    lines.push('');
+    lines.push(`- generatedAt: ${nowIso}`);
+    lines.push('');
+    lines.push('## Single Source of Truth');
+    lines.push('');
+    lines.push(`- WORKING_SPEC: ${specRel}`);
+    lines.push(`- DECISIONS: ${decisionsRel}`);
+    lines.push('');
+    lines.push('## Staged Files');
+    lines.push('');
+
+    // --- Related extraction (Neural Graph) ---
+    let startNode: string | null = null;
+    let startNodeSource: 'signals' | 'activeEditor' | 'stagedFiles' | 'none' = 'none';
+
+    const signalStore = new NeuralSignalStore(workspaceRoot);
+    const hotTargets = signalStore.getHotTargets({ windowHours: 24 });
+    for (const h of hotTargets) {
+      const abs = path.join(workspaceRoot, h.target);
+      if (fs.existsSync(abs)) {
+        startNode = h.target.replace(/\\/g, '/');
+        startNodeSource = 'signals';
+        break;
+      }
+    }
+
+    const editor = vscode.window.activeTextEditor;
+    if (!startNode && editor) {
+      startNode = vscode.workspace.asRelativePath(editor.document.uri).replace(/\\/g, '/');
+      startNodeSource = 'activeEditor';
+    } else if (!startNode && stagedFiles.length > 0) {
+      const first = stagedFiles[0];
+      const rel = path.isAbsolute(first) ? path.relative(workspaceRoot, first) : first;
+      startNode = rel.replace(/\\/g, '/');
+      startNodeSource = 'stagedFiles';
+    }
+
+    // Signals section (final startNodeSource reflected)
+    lines.push('## Signals (Recent, Decayed)');
+    lines.push('');
+    lines.push(`- windowHours: 24`);
+    lines.push(`- candidates: ${hotTargets.length}`);
+    lines.push(`- startNodeSource: ${startNodeSource}`);
+    if (hotTargets.length === 0) {
+      lines.push('- (none)');
+    } else {
+      for (const h of hotTargets.slice(0, 10)) {
+        lines.push(`- ${h.target} (hot=${h.score})`);
+      }
+    }
+    lines.push('');
+
+    if (startNode) {
+      try {
+        // グラフが未構築でも、ここで必ず最新化する（ローカル完結の掌握）
+        await neuralGraph.buildGraph();
+
+        // 発火モデル: hotTargets + startNode を seed として伝播
+        const seeds: Array<{ file: string; activation: number; source: string; signalTypes?: string }> = [];
+        // NOTE: 上位hot targetが存在しない/削除済みの場合、正規化が潰れてseedが弱くなる。
+        // 実在ファイルだけで maxHot を計算して分解能を保つ。
+        const existingHotScores: number[] = [];
+        for (const h of hotTargets.slice(0, 10)) {
+          const abs = path.join(workspaceRoot, h.target);
+          if (fs.existsSync(abs)) existingHotScores.push(h.score);
+        }
+        const maxHot = existingHotScores.length > 0 ? Math.max(...existingHotScores) : 0;
+
+        for (const h of hotTargets.slice(0, 5)) {
+          const abs = path.join(workspaceRoot, h.target);
+          if (!fs.existsSync(abs)) continue;
+          const normalized = maxHot > 0 ? h.score / maxHot : 0;
+
+          // signal type 内訳を文字列化
+          const typeSummary = h.signalTypes
+            .slice(0, 3)
+            .map((st) => `${st.type}:${st.contribution.toFixed(2)}`)
+            .join(', ');
+
+          seeds.push({
+            file: h.target.replace(/\\/g, '/'),
+            activation: Math.max(0, Math.min(1, normalized)),
+            source: 'signal',
+            signalTypes: typeSummary
+          });
+        }
+
+        // staged files を弱seedとして追加（作業中の文脈を反映）
+        for (const f of stagedFiles.slice(0, 5)) {
+          const rel = path.isAbsolute(f) ? path.relative(workspaceRoot, f) : f;
+          const normalizedRel = rel.replace(/\\/g, '/');
+          const abs = path.join(workspaceRoot, normalizedRel);
+          if (!normalizedRel || normalizedRel.startsWith('..')) continue;
+          if (!fs.existsSync(abs)) continue;
+          if (seeds.some((s) => s.file === normalizedRel)) continue;
+          // startNodeは後で必ず入るので、重複は避ける
+          if (startNode && normalizedRel === startNode) continue;
+          seeds.push({ file: normalizedRel, activation: 0.15, source: 'stagedFiles' });
+        }
+
+        // startNode を必ず含める（active/staged の場合に特に重要）
+        if (!seeds.some((s) => s.file === startNode)) {
+          seeds.unshift({ file: startNode, activation: 1.0, source: startNodeSource });
+        }
+
+        const propagation = neuralLearning.propagateForwardFromSeeds(
+          seeds.map((s) => ({ file: s.file, activation: s.activation }))
+        );
+
+        const seedSet = new Set(seeds.map((s) => s.file));
+
+        const related = Array.from(propagation.affectedFiles.entries())
+          .filter(([file]) => !seedSet.has(file))
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 15);
+
+        lines.push('## Related (Neural Propagation)');
+        lines.push('');
+        lines.push(`- startNode: ${startNode}`);
+        lines.push(`- seeds: ${seeds.length}`);
+        lines.push(`- affectedFiles: ${propagation.affectedFiles.size}`);
+        lines.push(`- computationTimeMs: ${propagation.computationTime}`);
+        lines.push('');
+
+        lines.push('### Seeds');
+        lines.push('');
+        for (const s of seeds) {
+          const extra = s.signalTypes ? `, signals=[${s.signalTypes}]` : '';
+          lines.push(`- ${s.file} (activation=${s.activation.toFixed(3)}, source=${s.source}${extra})`);
+        }
+        lines.push('');
+
+        if (related.length === 0) {
+          lines.push('- (no related files detected)');
+        } else {
+          for (const [file, score] of related) {
+            lines.push(`- ${file} (activation=${score.toFixed(3)})`);
+          }
+        }
+        lines.push('');
+      } catch (error) {
+        lines.push('## Related (Neural Propagation)');
+        lines.push('');
+        lines.push(`- startNode: ${startNode}`);
+        lines.push(`- error: ${String(error)}`);
+        lines.push('');
+      }
+    }
+    if (stagedFiles.length === 0) {
+      lines.push('- (none)');
+    } else {
+      for (const f of stagedFiles) {
+        const rel = path.isAbsolute(f) ? path.relative(workspaceRoot, f) : f;
+        lines.push(`- ${rel.replace(/\\/g, '/')}`);
+      }
+    }
+    lines.push('');
+    lines.push('## Required Instructions (Enforced)');
+    lines.push('');
+    for (const p of requiredInstructions) {
+      lines.push(`- ${p}`);
+    }
+    lines.push('');
+    lines.push('## SpecCheck Freshness');
+    lines.push('');
+    if (freshness.ok) {
+      lines.push(`- ok: true`);
+      lines.push(`- recordedAt: ${freshness.recordedAt}`);
+      lines.push(`- ageHours: ${freshness.ageHours.toFixed(2)}`);
+    } else {
+      lines.push(`- ok: false`);
+      lines.push(`- reason: ${freshness.reason}`);
+      if (freshness.ageHours !== undefined) lines.push(`- ageHours: ${freshness.ageHours.toFixed(2)}`);
+      if (freshness.reason === 'missing_required_instructions' && freshness.missingInstructions?.length) {
+        lines.push('');
+        lines.push('### Missing Instructions');
+        lines.push('');
+        for (const m of freshness.missingInstructions) {
+          lines.push(`- ${m}`);
+        }
+      }
+    }
+    lines.push('');
+    lines.push('## Latest SpecCheck Record (Raw)');
+    lines.push('');
+    lines.push('```json');
+    lines.push(JSON.stringify(specCheckRecord ?? null, null, 2));
+    lines.push('```');
+    lines.push('');
+    lines.push('## Recent DECISIONS (Tail)');
+    lines.push('');
+    lines.push('```');
+    lines.push(safeReadTail(decisionsAbs, 4000));
+    lines.push('```');
+    lines.push('');
+    lines.push('## Notes');
+    lines.push('');
+    lines.push('- This packet is generated locally (no external model).');
+    lines.push(`- Output path: ${outputRel}`);
+    lines.push('');
+
+    fs.writeFileSync(outputAbs, lines.join('\n') + '\n', 'utf-8');
+
+    if (openEditor) {
+      const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(outputAbs));
+      await vscode.window.showTextDocument(doc, { preview: false });
+    }
+    if (notify) {
+      notifier.commandInfo('📦 AI Context Packet を生成しました');
+    }
+  };
+
+  const buildAIContextPacketCommandImpl = async () => {
+    await buildAIContextPacket({ openEditor: true, notify: true });
   };
 
   const installHooks = async () => {
@@ -245,6 +1010,16 @@ export function activate(context: vscode.ExtensionContext) {
   const validateBeforeCommitCommand = vscode.commands.registerCommand('servant.validateBeforeCommit', validateBeforeCommit);
   const validateBeforeCommitCommandLegacy = vscode.commands.registerCommand('instructionsValidator.validateBeforeCommit', validateBeforeCommit);
 
+  // コマンド登録: Specチェック記録
+  const recordSpecCheckCommand = vscode.commands.registerCommand('servant.recordSpecCheck', recordSpecCheckCommandImpl);
+  const recordSpecCheckCommandLegacy = vscode.commands.registerCommand('instructionsValidator.recordSpecCheck', recordSpecCheckCommandImpl);
+
+  // コマンド登録: 必須指示書の照会 + Specチェック記録
+  const reviewRequiredInstructionsCommand = vscode.commands.registerCommand(
+    'servant.reviewRequiredInstructions',
+    reviewRequiredInstructionsCommandImpl
+  );
+
   // コマンド登録: Git hooks インストール（servant + 互換エイリアス）
   const installHooksCommand = vscode.commands.registerCommand('servant.installHooks', installHooks);
   const installHooksCommandLegacy = vscode.commands.registerCommand('instructionsValidator.installHooks', installHooks);
@@ -253,14 +1028,84 @@ export function activate(context: vscode.ExtensionContext) {
   const uninstallHooksCommand = vscode.commands.registerCommand('servant.uninstallHooks', uninstallHooks);
   const uninstallHooksCommandLegacy = vscode.commands.registerCommand('instructionsValidator.uninstallHooks', uninstallHooks);
 
+  // コマンド登録: 強制仕様書/決定ログ（正の場所）
+  const openSpecBookCommand = vscode.commands.registerCommand('servant.specBook.open', openSpecBookCommandImpl);
+  const appendDecisionLogCommand = vscode.commands.registerCommand(
+    'servant.specBook.appendDecision',
+    appendDecisionLogCommandImpl
+  );
+
+  // コマンド登録: AIコンテキストパック生成（ローカル完結の“配達”）
+  const buildAIContextPacketCommand = vscode.commands.registerCommand(
+    'servant.context.build',
+    buildAIContextPacketCommandImpl
+  );
+
+  // 🚀 ワンクリック修正コマンド
+  const quickFixCommitCommand = vscode.commands.registerCommand(
+    'servant.quickFixCommit',
+    () => quickFixCommit(outputChannel)
+  );
+
   // ファイル変更監視
   const watcher = vscode.workspace.createFileSystemWatcher(
     '**/*.{ts,tsx,js,jsx,md,json}'
   );
 
+  // AI_CONTEXT 自動配達（起動時/仕様変更時）
+  let instructionsLoaded = false;
+  let contextBuildTimer: NodeJS.Timeout | null = null;
+  let lastContextBuildAt = 0;
+
+  const isContextSourceFile = (uri: vscode.Uri): boolean => {
+    const rel = vscode.workspace.asRelativePath(uri).replace(/\\/g, '/');
+    const cfg = vscode.workspace.getConfiguration('servant');
+    const specPath = (cfg.get<string>('specBook.specPath', 'docs/specifications/WORKING_SPEC.md') ?? '').replace(/\\/g, '/');
+    const decisionsPath = (cfg.get<string>('specBook.decisionsPath', 'docs/specifications/DECISIONS.md') ?? '').replace(/\\/g, '/');
+
+    if (!rel) return false;
+    if (rel === specPath || rel === decisionsPath) return true;
+    if (rel.startsWith('.aitk/instructions/')) return true;
+    if (rel === '.aitk/failure-patterns.json') return true;
+    return false;
+  };
+
+  const scheduleAutoContextBuild = (reason: 'startup' | 'spec-change') => {
+    const cfg = vscode.workspace.getConfiguration('servant');
+    const enabled = cfg.get<boolean>(
+      reason === 'startup' ? 'context.autoBuildOnStartup' : 'context.autoBuildOnSpecChange',
+      true
+    );
+    if (!enabled) return;
+    if (!instructionsLoaded) return;
+
+    const throttleMs = cfg.get<number>('context.autoBuildThrottleMs', 15000);
+    const now = Date.now();
+    const waitMs = Math.max(0, throttleMs - (now - lastContextBuildAt));
+
+    if (contextBuildTimer) {
+      clearTimeout(contextBuildTimer);
+      contextBuildTimer = null;
+    }
+
+    contextBuildTimer = setTimeout(async () => {
+      contextBuildTimer = null;
+      lastContextBuildAt = Date.now();
+      try {
+        await buildAIContextPacket({ openEditor: false, notify: false });
+      } catch {
+        // ignore (best-effort)
+      }
+    }, waitMs);
+  };
+
   watcher.onDidChange(async (uri) => {
     if (isEnabled()) {
       await diagnosticsProvider.validate(uri);
+    }
+
+    if (isContextSourceFile(uri)) {
+      scheduleAutoContextBuild('spec-change');
     }
   });
 
@@ -268,11 +1113,29 @@ export function activate(context: vscode.ExtensionContext) {
     if (isEnabled()) {
       await diagnosticsProvider.validate(uri);
     }
+
+    if (isContextSourceFile(uri)) {
+      scheduleAutoContextBuild('spec-change');
+    }
   });
 
   // 設定変更監視
   const configWatcher = vscode.workspace.onDidChangeConfiguration(e => {
     if (e.affectsConfiguration('servant') || e.affectsConfiguration('instructionsValidator')) {
+      updateServantStatusBar();
+
+      // ターミナル通知をONに切り替えた直後は、現在状態を明示的に出す
+      if (e.affectsConfiguration('servant.terminalStatus.enabled')) {
+        const enabledNow = isEnabled();
+        // updateServantStatusBar() は enable の変化が無いと出力しないので、ここで補う
+        const terminalEnabled = vscode.workspace
+          .getConfiguration('servant')
+          .get<boolean>('terminalStatus.enabled', false);
+        if (terminalEnabled) {
+          writeTerminalYellow(`[Servant] Terminal status enabled. Current: ${enabledNow ? 'ON' : 'OFF'}`);
+        }
+      }
+
       // 再検証
       const editor = vscode.window.activeTextEditor;
       if (editor && isEnabled()) {
@@ -330,6 +1193,37 @@ export function activate(context: vscode.ExtensionContext) {
       }
     } catch (error) {
       notifier.commandError(`ホットスポット検出エラー: ${error}`);
+    }
+  });
+
+  const showAIHotspotsCommand = vscode.commands.registerCommand('servant.showAIHotspots', async () => {
+    try {
+      const hotspots = aiTracker.getFileHotspots({ minCount: 2, limit: 15 });
+
+      if (hotspots.length === 0) {
+        notifier.commandInfo('AIアクション由来のホットスポットは検出されませんでした');
+        return;
+      }
+
+      const items = hotspots.map(h => ({
+        label: `$(warning) ${h.file}`,
+        description: `変更: ${h.changeCount}回, 違反あり: ${h.violationActions}回`,
+        hotspot: h
+      }));
+
+      const selected = await vscode.window.showQuickPick(items, {
+        placeHolder: 'AIアクションログ由来の重点レビュー対象（ホットスポット）'
+      });
+
+      if (selected) {
+        const targetPath = path.isAbsolute(selected.hotspot.file)
+          ? selected.hotspot.file
+          : path.join(workspaceRoot, selected.hotspot.file);
+        const uri = vscode.Uri.file(targetPath);
+        await vscode.window.showTextDocument(uri);
+      }
+    } catch (error) {
+      notifier.commandError(`AIホットスポット表示エラー: ${error}`);
     }
   });
 
@@ -533,6 +1427,86 @@ export function activate(context: vscode.ExtensionContext) {
     } else if (metrics.overallScore >= 80) {
       notifier.commandInfo(`✅ AI処理が良好です！総合スコア: ${metrics.overallScore}/100`);
     }
+  });
+
+  const autopilotShowLastReportCommand = vscode.commands.registerCommand(
+    'servant.autopilot.showLastReport',
+    async () => {
+      const latest = feedbackCollector.getLatestFeedback();
+      if (!latest) {
+        notifier.commandInfo('Autopilotレポートがまだありません');
+        return;
+      }
+      feedbackCollector.showFeedback(latest, outputChannel);
+    }
+  );
+
+  const autopilotAdjustCommand = vscode.commands.registerCommand('servant.autopilot.adjust', async () => {
+    const config = vscode.workspace.getConfiguration('servant');
+
+    const promptModePick = await vscode.window.showQuickPick(
+      [
+        {
+          label: '自動（高リスク/大作業だけ強め）',
+          description: '普段は静か、必要時だけ強めに確認',
+          value: 'auto' as const
+        },
+        {
+          label: '常に強め（毎回確認）',
+          description: '開始時に必ず確認を出す',
+          value: 'always' as const
+        },
+        {
+          label: '強め通知しない（Output中心）',
+          description: 'Output/ステータスバーのみ。モーダル確認なし',
+          value: 'never' as const
+        }
+      ],
+      {
+        title: 'Servant Autopilot: 事前調整',
+        placeHolder: '強め通知の方針を選んでください'
+      }
+    );
+
+    if (!promptModePick) return;
+    await config.update('autopilot.promptMode', promptModePick.value, vscode.ConfigurationTarget.Workspace);
+
+    const revealPick = await vscode.window.showQuickPick(
+      [
+        { label: '常にOutputを表示する（おすすめ）', value: true },
+        { label: 'Outputは表示しない（必要時に自分で開く）', value: false }
+      ],
+      {
+        title: 'Servant Autopilot: 事前調整',
+        placeHolder: '作業開始時にOutputを自動で開きますか？'
+      }
+    );
+
+    if (!revealPick) return;
+    await config.update('autopilot.revealOutputOnStart', revealPick.value, vscode.ConfigurationTarget.Workspace);
+
+    const currentThreshold = config.get<number>('autopilot.largeWorkThresholdFiles', 20);
+    const thresholdInput = await vscode.window.showInputBox({
+      title: 'Servant Autopilot: 事前調整',
+      prompt: '「大作業」と判定する変更ファイル数（この数以上で強めになります）',
+      value: String(currentThreshold),
+      validateInput: (value) => {
+        if (value.trim() === '') return '数値を入力してください';
+        const n = Number(value);
+        if (!Number.isFinite(n) || n <= 0) return '1以上の数値を入力してください';
+        if (!Number.isInteger(n)) return '整数を入力してください';
+        return undefined;
+      }
+    });
+
+    if (thresholdInput === undefined) return;
+    await config.update(
+      'autopilot.largeWorkThresholdFiles',
+      Number(thresholdInput),
+      vscode.ConfigurationTarget.Workspace
+    );
+
+    notifier.commandInfo('✅ Autopilotの事前調整を更新しました');
   });
 
   // Phase 9: ニューラルグラフコマンド
@@ -796,6 +1770,67 @@ export function activate(context: vscode.ExtensionContext) {
     outputChannel.show();
   });
 
+  // Phase 6: Constellation天体儀ビューコマンド
+  const showConstellationCommand = vscode.commands.registerCommand('servant.showConstellation', async () => {
+    try {
+      // グラフの読み込み（または自動構築）
+      let loaded = await neuralGraph.loadGraph();
+      if (!loaded) {
+        const answer = await vscode.window.showInformationMessage(
+          '🌟 天体儀データがまだありません。プロジェクトをスキャンしますか？',
+          'スキャンする',
+          'キャンセル'
+        );
+
+        if (answer !== 'スキャンする') {
+          return;
+        }
+
+        await vscode.window.withProgress({
+          location: vscode.ProgressLocation.Notification,
+          title: '🌟 天体儀データを生成中...',
+          cancellable: false
+        }, async (progress) => {
+          progress.report({ increment: 30, message: 'プロジェクトをスキャン中...' });
+          await neuralGraph.buildGraph();
+
+          progress.report({ increment: 30, message: 'ゴール距離を計算中...' });
+          const { GoalManager } = await import('./goals/GoalManager.js');
+          const goalManager = new GoalManager(workspaceRoot);
+
+          progress.report({ increment: 20, message: '変更頻度を分析中...' });
+          await neuralGraph.updateChangeFrequencies(gitIntegration);
+
+          progress.report({ increment: 20, message: '優先度スコアを計算中...' });
+          neuralGraph.computePriorityScores(goalManager);
+          await neuralGraph.saveGraph();
+        });
+
+        loaded = true;
+        notifier.commandInfo('✅ 天体儀データを生成しました');
+      }
+
+      // ConstellationDataGenerator とGoalManagerを初期化
+      const { GoalManager } = await import('./goals/GoalManager.js');
+      const { ConstellationDataGenerator } = await import('./constellation/ConstellationDataGenerator.js');
+
+      const goalManager = new GoalManager(workspaceRoot);
+      const generator = new ConstellationDataGenerator(neuralGraph, goalManager);
+
+      // WebView Panelを開く
+      ConstellationViewPanel.createOrShow(
+        context.extensionUri,
+        neuralGraph,
+        goalManager,
+        generator
+      );
+
+    } catch (error) {
+      notifier.commandError(`天体儀の表示に失敗: ${error}`);
+      outputChannel.appendLine(`[Constellation] Error: ${error}`);
+    }
+  });
+
   // Phase 11: アーキテクチャアドバイザーコマンド
   const analyzeArchitectureCommand = vscode.commands.registerCommand('servant.analyzeArchitecture', async () => {
     vscode.window.withProgress({
@@ -858,12 +1893,20 @@ export function activate(context: vscode.ExtensionContext) {
     validateCommandLegacy,
     validateBeforeCommitCommand,
     validateBeforeCommitCommandLegacy,
+    recordSpecCheckCommand,
+    recordSpecCheckCommandLegacy,
+    reviewRequiredInstructionsCommand,
     installHooksCommand,
     installHooksCommandLegacy,
     uninstallHooksCommand,
     uninstallHooksCommandLegacy,
+    openSpecBookCommand,
+    appendDecisionLogCommand,
+    buildAIContextPacketCommand,
+    quickFixCommitCommand,
     learnFromHistoryCommand,
     showHotspotsCommand,
+    showAIHotspotsCommand,
     showLearningStatsCommand,
     resetLearningCommand,
     indexProjectCommand,
@@ -872,6 +1915,8 @@ export function activate(context: vscode.ExtensionContext) {
     showRecentAIActionsCommand,
     resetAITrackingCommand,
     evaluateAICommand,
+    autopilotAdjustCommand,
+    autopilotShowLastReportCommand,
     showAITrendCommand,
     buildNeuralGraphCommand,
     showNeuralGraphCommand,
@@ -880,6 +1925,7 @@ export function activate(context: vscode.ExtensionContext) {
     learnFromGitCommand,
     optimizeCurrentTaskCommand,
     showOptimizationStatsCommand,
+    showConstellationCommand,
     analyzeArchitectureCommand,
     editorWatcher,
     codeActionDisposable,
@@ -892,6 +1938,10 @@ export function activate(context: vscode.ExtensionContext) {
     loader.load(),
     treeLoader.load()
   ]).then(async () => {
+    instructionsLoaded = true;
+    // 起動時にAI_CONTEXTを自動生成（ベストエフォート・無通知・エディタを開かない）
+    scheduleAutoContextBuild('startup');
+
     // Phase 7: プロジェクトインデックス自動構築
     const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
     if (learningEnabled) {

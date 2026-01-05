@@ -13,8 +13,11 @@ import {
 } from '@/features/speech/speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 import { logger } from '@/utils/logger';
+import { loadSentenceReadingPatterns, loadParagraphReadingPatterns } from '@/utils/readingTechniquesLoader';
+import type { SentenceReadingPattern, ParagraphReadingPattern } from '@/types/readingTechniques';
 import {
   analyzeSentence,
+  analyzeSentenceWithDependency,
   GrammarAnalysisResult,
   GrammarTag,
   detectPhrasalExpressions,
@@ -22,6 +25,11 @@ import {
   detectGrammarPatterns,
   GrammarPattern,
 } from '../utils/grammarAnalyzer';
+import type { DependencyParsedPassage } from '@/types/passage';
+import {
+  findDependencySentenceByText,
+  loadDependencyParsedPassage,
+} from '@/utils/dependencyParseLoader';
 import AddToCustomButton from './AddToCustomButton';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
@@ -1206,8 +1214,45 @@ function ComprehensiveReadingView({
     grammarAnalysis: GrammarAnalysisResult[];
     showMeanings: boolean;
   } | null>(null);
+  const [dependencyParsedPassage, setDependencyParsedPassage] = useState<DependencyParsedPassage | null>(
+    null
+  );
   const [showReadingDebugPanel, setShowReadingDebugPanel] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [sentencePatterns, setSentencePatterns] = useState<SentenceReadingPattern[]>([]);
+  const [paragraphPatterns, setParagraphPatterns] = useState<ParagraphReadingPattern[]>([]);
+
+  // 文・段落パターンデータを初期化時に読み込み
+  useEffect(() => {
+    Promise.all([
+      loadSentenceReadingPatterns(),
+      loadParagraphReadingPatterns(),
+    ]).then(([sentenceData, paragraphData]) => {
+      if (sentenceData?.patterns) {
+        setSentencePatterns(sentenceData.patterns);
+      }
+      if (paragraphData?.patterns) {
+        setParagraphPatterns(paragraphData.patterns);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    if (!selectedPassageId) {
+      setDependencyParsedPassage(null);
+      return;
+    }
+
+    void loadDependencyParsedPassage(selectedPassageId).then((parsed) => {
+      if (cancelled) return;
+      setDependencyParsedPassage(parsed);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedPassageId]);
 
   // 分からない単語のマーク状態のみをLocalStorageに保存（軽量）
   useEffect(() => {
@@ -2259,7 +2304,12 @@ function ComprehensiveReadingView({
                                 className={`sentence-clickable ${selectedSentenceIndex === idx ? 'selected-reading' : ''}`}
                                 onClick={() => {
                                   setSelectedSentenceIndex(idx);
-                                  const grammarAnalysis = analyzeSentence(sentence);
+                                  const depSentence = dependencyParsedPassage
+                                    ? findDependencySentenceByText(dependencyParsedPassage, sentence)
+                                    : null;
+                                  const grammarAnalysis = depSentence
+                                    ? analyzeSentenceWithDependency(sentence, depSentence.tokens)
+                                    : analyzeSentence(sentence);
                                   setSelectedSentenceDetails({
                                     text: sentence,
                                     grammarAnalysis,
@@ -2301,7 +2351,12 @@ function ComprehensiveReadingView({
                                 className={`sentence-clickable ${selectedSentenceIndex === idx ? 'selected-reading' : ''}`}
                                 onClick={() => {
                                   setSelectedSentenceIndex(idx);
-                                  const grammarAnalysis = analyzeSentence(line);
+                                  const depSentence = dependencyParsedPassage
+                                    ? findDependencySentenceByText(dependencyParsedPassage, line)
+                                    : null;
+                                  const grammarAnalysis = depSentence
+                                    ? analyzeSentenceWithDependency(line, depSentence.tokens)
+                                    : analyzeSentence(line);
                                   setSelectedSentenceDetails({
                                     text: line,
                                     grammarAnalysis,
@@ -2365,7 +2420,12 @@ function ComprehensiveReadingView({
                                 className={`sentence-clickable ${selectedSentenceIndex === idx ? 'selected-reading' : ''}`}
                                 onClick={() => {
                                   setSelectedSentenceIndex(idx);
-                                  const grammarAnalysis = analyzeSentence(sentence);
+                                  const depSentence = dependencyParsedPassage
+                                    ? findDependencySentenceByText(dependencyParsedPassage, sentence)
+                                    : null;
+                                  const grammarAnalysis = depSentence
+                                    ? analyzeSentenceWithDependency(sentence, depSentence.tokens)
+                                    : analyzeSentence(sentence);
                                   setSelectedSentenceDetails({
                                     text: sentence,
                                     grammarAnalysis,
@@ -2986,6 +3046,161 @@ function ComprehensiveReadingView({
                       );
                     })()}
 
+                    {/* 読解のヒント（文パターン） */}
+                    {(() => {
+                      if (sentencePatterns.length === 0) return null;
+
+                      const text = selectedSentenceDetails.text.toLowerCase();
+
+                      // キーワードベースで関連パターンを検出（最大2つまで）
+                      const keywords: Record<string, string[]> = {
+                        'but|however|although|though|yet|nevertheless': ['S1', 'S4', 'S5', 'S18', 'S81'],
+                        'because|since|as|so that': ['S8', 'S19', 'S83'],
+                        'if|unless|provided|as long as': ['S10', 'S96', 'S99'],
+                        'which|who|whom|that.*?who|that.*?which': ['S11', 'S12', 'S13'],
+                        'not only.*?but also|both.*?and': ['S16', 'S95'],
+                        'compare|than|more.*?than|less.*?than': ['S17', 'S73', 'S74', 'S90'],
+                        'it is|it was.*?that': ['S71'],
+                        'never|rarely|seldom|hardly': ['S72'],
+                        'to be|in order to|so that': ['S76', 'S83'],
+                        'may|might|could|would|should': ['S82', 'S89', 'S91', 'S99'],
+                        'while|whereas|on the other hand': ['S18', 'S84'],
+                        'for example|such as|like': ['S91'],
+                        'overall|in short|in sum': ['S80'],
+                        'far from|by no means': ['S95', 'S98'],
+                      };
+
+                      const matched: SentenceReadingPattern[] = [];
+                      for (const [pattern, ids] of Object.entries(keywords)) {
+                        if (new RegExp(pattern, 'i').test(text)) {
+                          for (const id of ids) {
+                            const p = sentencePatterns.find((sp) => sp.id === id);
+                            if (p && !matched.some((m) => m.id === p.id)) {
+                              matched.push(p);
+                              if (matched.length >= 2) break;
+                            }
+                          }
+                        }
+                        if (matched.length >= 2) break;
+                      }
+
+                      if (matched.length === 0) return null;
+
+                      return (
+                        <div className="mt-2">
+                          <h5 className="text-xs font-semibold mb-1 text-gray-700">💡 読解のヒント</h5>
+                          <div className="space-y-2">
+                            {matched.map((pattern) => (
+                              <div
+                                key={pattern.id}
+                                className="bg-yellow-50 p-2 rounded border border-yellow-200"
+                              >
+                                <div className="text-sm font-semibold text-yellow-800 mb-1">
+                                  {pattern.title}
+                                </div>
+                                <div className="text-xs text-gray-700 mb-1">
+                                  {pattern.gist}
+                                </div>
+                                {pattern.steps.length > 0 && (
+                                  <div className="text-xs text-gray-600">
+                                    <div className="font-semibold mb-0.5">手順:</div>
+                                    <ul className="list-disc list-inside space-y-0.5">
+                                      {pattern.steps.map((step, idx) => (
+                                        <li key={idx}>{step}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })()}
+
+                    {/* 段落構造のヒント */}
+                    {(() => {
+                      if (paragraphPatterns.length === 0) return null;
+
+                      const text = selectedSentenceDetails.text.toLowerCase();
+                      const isFirstSentence = selectedSentenceIndex === 0;
+
+                      // 段落の役割を示すキーワードで検出（最大1つ）
+                      const paragraphKeywords: Record<string, string[]> = {
+                        '^(first|to begin|firstly|initially)': ['P1', 'P2'],
+                        '(however|but|yet|nevertheless|on the other hand)': ['P3', 'P10', 'P11', 'P71'],
+                        '(for example|for instance|such as)': ['P4', 'P70'],
+                        '(therefore|thus|consequently|as a result|in conclusion)': ['P5', 'P50', 'P51'],
+                        '(moreover|furthermore|in addition|additionally)': ['P6', 'P75'],
+                        '(in contrast|while|whereas)': ['P7', 'P8'],
+                        '(because|since|due to|owing to)': ['P9'],
+                        '(although|though|even though|despite)': ['P10'],
+                        '(first.*second.*third|firstly.*secondly)': ['P15'],
+                        '(overall|in short|in sum|to sum up)': ['P16', 'P17', 'P79'],
+                        '(the main point|the key|most important)': ['P18', 'P73'],
+                        '(this suggests|this means|this indicates)': ['P19', 'P84'],
+                        '(some argue|critics say|opponents claim)': ['P71'],
+                        '(one way|another approach|a solution)': ['P20'],
+                      };
+
+                      const matched: ParagraphReadingPattern[] = [];
+
+                      // 導入文の場合
+                      if (isFirstSentence && !matched.length) {
+                        const p = paragraphPatterns.find((pp) => pp.id === 'P1');
+                        if (p) matched.push(p);
+                      }
+
+                      // キーワードマッチ
+                      if (!matched.length) {
+                        for (const [pattern, ids] of Object.entries(paragraphKeywords)) {
+                          if (new RegExp(pattern, 'i').test(text)) {
+                            for (const id of ids) {
+                              const p = paragraphPatterns.find((pp) => pp.id === id);
+                              if (p && !matched.some((m) => m.id === p.id)) {
+                                matched.push(p);
+                                break;
+                              }
+                            }
+                            if (matched.length >= 1) break;
+                          }
+                        }
+                      }
+
+                      if (matched.length === 0) return null;
+
+                      return (
+                        <div className="mt-2">
+                          <h5 className="text-xs font-semibold mb-1 text-gray-700">📚 段落構造のヒント</h5>
+                          <div className="space-y-2">
+                            {matched.map((pattern) => (
+                              <div
+                                key={pattern.id}
+                                className="bg-blue-50 p-2 rounded border border-blue-200"
+                              >
+                                <div className="text-sm font-semibold text-blue-800 mb-1">
+                                  {pattern.title}
+                                </div>
+                                <div className="text-xs text-gray-700 mb-1">
+                                  {pattern.gist}
+                                </div>
+                                {pattern.steps.length > 0 && (
+                                  <div className="text-xs text-gray-600">
+                                    <div className="font-semibold mb-0.5">手順:</div>
+                                    <ul className="list-disc list-inside space-y-0.5">
+                                      {pattern.steps.map((step, idx) => (
+                                        <li key={idx}>{step}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })()}
+
                     {import.meta.env.DEV &&
                       showReadingDebugPanel &&
                       (() => {
@@ -3352,7 +3567,12 @@ function ComprehensiveReadingView({
                       const handleSentenceClick = (idx: number) => {
                         setSelectedSentenceIndex(idx);
                         const sentence = allSentences[idx];
-                        const grammarAnalysis = analyzeSentence(sentence);
+                        const depSentence = dependencyParsedPassage
+                          ? findDependencySentenceByText(dependencyParsedPassage, sentence)
+                          : null;
+                        const grammarAnalysis = depSentence
+                          ? analyzeSentenceWithDependency(sentence, depSentence.tokens)
+                          : analyzeSentence(sentence);
                         setSelectedSentenceDetails({
                           text: sentence,
                           grammarAnalysis,

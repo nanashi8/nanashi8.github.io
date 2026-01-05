@@ -33,6 +33,7 @@ import {
 import { logger } from '@/utils/logger';
 import { updateVocabularyNetworkFromAnswer } from '@/ai/utils/vocabularyNetwork';
 import { getWordProgress } from '../progressStorage';
+import { estimateConfidence5 } from '@/ai/utils/answerConfidence5';
 
 /**
  * WordProgressをQuestionStatusに変換
@@ -328,7 +329,7 @@ export function useAdaptiveLearning(
         if (retentionAlgoRef.current) {
           retentionAlgoRef.current.recordReview(word, {
             isCorrect,
-            confidence: isCorrect ? 3 : 0, // 正解時は中程度の自信、不正解時は0
+            confidence: isCorrect ? 3 : 1, // 不正解は常に1固定（1-5スケール）
             responseTime,
             timestamp: Date.now(),
           });

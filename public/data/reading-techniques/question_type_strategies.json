@@ -1,0 +1,807 @@
+{
+  "version": 1,
+  "language": "ja",
+  "licenseNote": "All examples are original. No direct quotes from exams or websites.",
+  "strategies": [
+    {
+      "id": "Q01",
+      "title": "主旨（Main Idea）: 反復テーマ+結論段落で確定",
+      "gist": "主旨は“繰り返されるテーマ”と“結論の一般化”の交点で決まる。",
+      "steps": ["各段落のキーワードを2語ずつ拾う", "結論段落の一般化を抜く", "広すぎ/狭すぎの選択肢を除外"],
+      "pitfalls": ["印象的な例で主旨を決める", "1段落だけで主旨を決める"],
+      "miniExampleEn": "The passage repeatedly discusses trust in institutions and ends by arguing transparency builds it."
+    },
+    {
+      "id": "Q02",
+      "title": "要旨（Summary）: 構造を残して詳細を落とす",
+      "gist": "要旨は“骨格（問題→原因→提案など）”を保持し、固有の数字・例を捨てる。",
+      "steps": ["本文全体の枠組み（problem-solution等）を決める", "各段落を1行要約", "例・数字・固有名詞を削って結合"],
+      "pitfalls": ["例を残して骨格を落とす"],
+      "miniExampleEn": "Problem: delays. Cause: unclear roles. Solution: standard checklists."
+    },
+    {
+      "id": "Q03",
+      "title": "推論（Inference）: 根拠2つ+限定語を保持",
+      "gist": "推論は最低2つの根拠から。限定語（some/often）を落とすと誤りになりやすい。",
+      "steps": ["根拠文を2つ抜く", "共通して言えることを1文にする", "限定語を保ったまま結論にする"],
+      "pitfalls": ["根拠1つで飛躍", "限定語を落として断定"],
+      "miniExampleEn": "Because errors fell and reviews increased, the process likely improved quality."
+    },
+    {
+      "id": "Q04",
+      "title": "指示語（Reference）: 名詞候補+文候補で確定",
+      "gist": "this/that/these は物だけでなく“直前の主張や出来事”を受けることがある。",
+      "steps": ["直前2文から候補を列挙（名詞/文）", "意味が通る方を選ぶ", "選んだ候補で文全体が自然か再確認"],
+      "pitfalls": ["最寄り名詞に機械的に結ぶ"],
+      "miniExampleEn": "The team missed the deadline. This harmed customer trust. (This=missing the deadline)"
+    },
+    {
+      "id": "Q05",
+      "title": "語彙推測（Vocabulary in Context）: 定義/言い換え/対比で取る",
+      "gist": "未知語は辞書ではなく本文から。定義・言い換え・対比が主な手掛かり。",
+      "steps": ["周辺の言い換えマーカーを探す", "品詞と役割を確定", "矛盾しない意味を仮置きして通読"],
+      "pitfalls": ["単語単体で推測"],
+      "miniExampleEn": "The valley was arid—in other words, it received little rain."
+    },
+    {
+      "id": "Q06",
+      "title": "筆者態度（Tone/Attitude）: 評価語+対象をセットで取る",
+      "gist": "評価語だけでなく“何を評価しているか”を取ると誤答が減る。",
+      "steps": ["評価語（unfortunately等）をマーク", "評価対象（policy/result等）を特定", "賛成/批判/慎重/中立に分類"],
+      "pitfalls": ["評価語だけ覚えて対象を落とす"],
+      "miniExampleEn": "The author calls the plan 'short-sighted,' criticizing quick wins."
+    },
+    {
+      "id": "Q07",
+      "title": "目的（Purpose）: 導入の問題意識→結論の提案で確定",
+      "gist": "目的は explain/argue/warn/compare の動詞で言える。導入と結論で固める。",
+      "steps": ["導入の問い/問題を一語化", "結論の提案/警告を一語化", "目的動詞を選ぶ"],
+      "pitfalls": ["中盤の例で目的を決める"],
+      "miniExampleEn": "Intro asks why shortages happen; conclusion urges better planning (purpose=argue for planning)."
+    },
+    {
+      "id": "Q08",
+      "title": "挿入文（Sentence Insertion）: 接続の“接着剤”で選ぶ",
+      "gist": "前後が自然につながるかで決まる。指示語・同義語・因果・対比が接着剤。",
+      "steps": ["空所前後のキーワードを抜く", "候補文の接続語/指示語を確認", "先行詞・因果・対比が成立する位置に置く"],
+      "pitfalls": ["文単体の意味だけで選ぶ"],
+      "miniExampleEn": "If the candidate begins with 'These measures,' it must follow a sentence introducing measures."
+    },
+    {
+      "id": "Q09",
+      "title": "段落挿入（Paragraph Insertion）: 機能ラベルを合わせる",
+      "gist": "挿入段落が例/反論/結論のどれかで置き場所が決まる。",
+      "steps": ["挿入段落の機能（例/反論/結論）を判定", "周囲段落の機能の流れを確認", "必要な機能が欠けている位置に入れる"],
+      "pitfalls": ["内容が面白い位置に置く"],
+      "miniExampleEn": "A paragraph starting with 'For example,' usually follows a general claim."
+    },
+    {
+      "id": "Q10",
+      "title": "段落整序（Paragraph Order）: 接続語ペア+名詞連鎖",
+      "gist": "整序は接続語ペア（on the one hand...）と名詞の反復でつなぐ。",
+      "steps": ["ペア表現を探す", "段落末→次段落冒頭の名詞反復を探す", "不自然な話題ジャンプを除外"],
+      "pitfalls": ["内容の雰囲気だけで並べる"],
+      "miniExampleEn": "Paragraph A ends with 'trust'; Paragraph B begins 'This trust...'"
+    },
+    {
+      "id": "Q11",
+      "title": "具体情報（Detail）: 位置を先に特定してから読む",
+      "gist": "細部問題は“探し方”が9割。キーワードを言い換えで探す。",
+      "steps": ["設問キーワードを同義語に言い換える", "本文で同義語/反復を探す", "該当文の前後1文も確認して範囲を確定"],
+      "pitfalls": ["最初から全本文を精読して時間切れ"],
+      "miniExampleEn": "Question uses 'reduce'; passage may say 'cut' or 'lower'."
+    },
+    {
+      "id": "Q12",
+      "title": "言い換え選択（Paraphrase）: 関係一致（因果/対比/譲歩）で判定",
+      "gist": "単語一致より、因果/対比/譲歩などの関係が保たれているかを見る。",
+      "steps": ["元文の関係ラベルを付ける", "選択肢が同関係を保持しているか確認", "限定語（some/may）を保持しているか確認"],
+      "pitfalls": ["単語が似ているだけで選ぶ"],
+      "miniExampleEn": "Although it rained, we went. (contrast must remain)"
+    },
+    {
+      "id": "Q13",
+      "title": "空所補充（Cloze）: 論理マーカーで空所の機能を決める",
+      "gist": "空所は“入る文の役割”が先。対比/因果/追加/具体化のどれが必要か決める。",
+      "steps": ["空所の前後を見て必要機能を判定", "候補の接続語（however/therefore等）を照合", "代名詞の先行詞があるか確認"],
+      "pitfalls": ["単語レベルで合うものを入れる"],
+      "miniExampleEn": "If the next sentence starts with 'Therefore,' the blank likely needs a cause."
+    },
+    {
+      "id": "Q14",
+      "title": "タイトル選択（Best Title）: 主旨+範囲で切る",
+      "gist": "タイトルは主旨を短く、範囲を守って言い切る。過度に一般化したものは避ける。",
+      "steps": ["主旨を10〜12語で要約", "対象範囲（何について）を固定", "広すぎ/狭すぎの候補を除外"],
+      "pitfalls": ["一部段落だけをタイトルにする"],
+      "miniExampleEn": "A title about 'city transit reforms' is better than 'modern life'."
+    },
+    {
+      "id": "Q15",
+      "title": "段落要約（Best Summary of Paragraph）: トピック文+末尾一般化",
+      "gist": "段落の要約は“トピック文”か“末尾の一般化”が核。例は落として一般化を残す。",
+      "steps": ["冒頭2文と末尾1文を読む", "一般化を1文にする", "例・数字を削る"],
+      "pitfalls": ["例を残して一般化を落とす"],
+      "miniExampleEn": "Topic: sleep stabilizes memory; details explain how."
+    },
+    {
+      "id": "Q16",
+      "title": "表現の意味（Function of a Sentence）: 段落機能ラベルで判定",
+      "gist": "その文が“何の役割”か（定義/例/反論/結論）で答えが決まる。",
+      "steps": ["対象文の直前後で段落の流れを見る", "役割ラベルを付ける", "役割に一致する選択肢を選ぶ"],
+      "pitfalls": ["内容の好き嫌いで役割を決める"],
+      "miniExampleEn": "A sentence beginning 'For example' functions as illustration."
+    },
+    {
+      "id": "Q17",
+      "title": "例外・限定（EXCEPT/NOT）: 否定スコープを先に確定",
+      "gist": "EXCEPT/NOT系は否定が鍵。否定がかかる範囲（語/句/文）を先に確定する。",
+      "steps": ["否定語（not/except）をマーク", "否定スコープを括る", "本文の一般化と例外を分けて照合"],
+      "pitfalls": ["否定を落として逆を選ぶ"],
+      "miniExampleEn": "Not all users prefer the update. (partial negation)"
+    },
+    {
+      "id": "Q18",
+      "title": "著者の主張（Author's Claim）: but/however以降を優先",
+      "gist": "他者意見→but/however→筆者主張の型が多い。筆者側を拾う。",
+      "steps": ["他者意見マーカーを探す", "but/however以降を筆者側として要約", "評価語が一致するか確認"],
+      "pitfalls": ["他者意見を筆者意見と誤認"],
+      "miniExampleEn": "Some argue X; however, the author says Y."
+    },
+    {
+      "id": "Q19",
+      "title": "主張の根拠（Evidence）: claim-evidence を線で結ぶ",
+      "gist": "根拠問題は“どの文がどの主張を支えるか”を線で結ぶと崩れない。",
+      "steps": ["主張文を特定", "根拠文（data/example）を特定", "主張↔根拠を1対1で対応づける"],
+      "pitfalls": ["根拠を一般化しすぎて別主張に流用"],
+      "miniExampleEn": "Claim: training helps. Evidence: errors decreased after training."
+    },
+    {
+      "id": "Q20",
+      "title": "段落の役割（Role of a Paragraph）: 一言ラベルで答える",
+      "gist": "段落は主張/理由/例/反論/まとめのどれか。機能ラベルがそのまま解答になる。",
+      "steps": ["段落冒頭と末尾を読む", "機能ラベルを付ける", "全体型（problem-solution等）と整合させる"],
+      "pitfalls": ["段落の情報を全部同じ重さで扱う"],
+      "miniExampleEn": "Paragraph 2 provides evidence supporting the claim in Paragraph 1."
+    },
+    {
+      "id": "Q21",
+      "title": "TRUE（正しいもの）: 本文と“同じ範囲”の言い換えだけ残す",
+      "gist": "TRUE系は“本文に書いてあること”の言い換え。範囲が広がる/狭まる候補を落とす。",
+      "steps": ["設問で対象範囲（誰/何/条件）を固定", "各選択肢の限定語（some/often等）を確認", "本文の該当箇所に戻って一致を確認"],
+      "pitfalls": ["雰囲気一致で選ぶ", "限定語の消失を見逃す"],
+      "miniExampleEn": "Passage: 'Some cities improved buses.' True choice should not say 'All cities improved transit.'"
+    },
+    {
+      "id": "Q22",
+      "title": "NOT TRUE / EXCEPT（誤り）: 否定のスコープを先に確定",
+      "gist": "誤り探しは否定が核。何を否定するか（語/句/文）を先に確定してから照合する。",
+      "steps": ["NOT/EXCEPT を丸で囲む", "本文の対応箇所を各選択肢ごとに特定", "1語の限定違い（only/always等）を重点チェック"],
+      "pitfalls": ["NOT を読み落とす", "本文に戻らず記憶で判断"],
+      "miniExampleEn": "Three choices match details; one adds 'always' where the passage says 'often'."
+    },
+    {
+      "id": "Q23",
+      "title": "best supported by（最も支持される）: 直接根拠があるものを選ぶ",
+      "gist": "支持問題は“推論量が最小”のものが正解になりやすい。本文の直接文を引けるかで決める。",
+      "steps": ["各選択肢に対応する本文1〜2文を探す", "直接一致（言い換え）か、飛躍があるか判定", "飛躍が最も少ないものを選ぶ"],
+      "pitfalls": ["自分の常識で補って支持してしまう"],
+      "miniExampleEn": "If the passage states 'costs fell after training,' support is strongest for 'training reduced costs,' not for 'training improves all skills.'"
+    },
+    {
+      "id": "Q24",
+      "title": "imply/suggest（含意）: if-thenにして飛躍を止める",
+      "gist": "含意は断定ではない。前提→結論を if-then で書き、限定語を保持する。",
+      "steps": ["前提となる本文事実を抜く", "if-then で含意を1行化", "断定語（always/never等）の選択肢を除外"],
+      "pitfalls": ["含意を断定にする"],
+      "miniExampleEn": "If remote workers get feedback quickly, they may perform better. (not 'will always')"
+    },
+    {
+      "id": "Q25",
+      "title": "目的語/代名詞の指示対象（it/this/they）: 文候補も含めて確定",
+      "gist": "指示対象は名詞だけでなく“直前の出来事/主張”を受ける場合がある。",
+      "steps": ["候補を名詞と文（出来事）で2つ出す", "意味が自然な方を選ぶ", "選んだ対象で次の文が自然につながるか確認"],
+      "pitfalls": ["最寄り名詞だけで決める"],
+      "miniExampleEn": "The team skipped reviews. This increased errors. (This=skipping reviews)"
+    },
+    {
+      "id": "Q26",
+      "title": "function of a sentence（文の役割）: 段落内の位置とマーカーで決める",
+      "gist": "文の役割は“段落で何をしているか”。for example=例、however=対比、in summary=結論。",
+      "steps": ["文頭のディスコースマーカーを確認", "直前が主張か例かを確認", "役割（例/反論/定義/結論）をラベル化"],
+      "pitfalls": ["内容の良し悪しで役割を決める"],
+      "miniExampleEn": "A sentence beginning 'For example,' functions as illustration supporting a claim."
+    },
+    {
+      "id": "Q27",
+      "title": "function of a phrase/word（語句の機能）: 修飾対象を特定して答える",
+      "gist": "語句機能は“何を修飾/限定/評価しているか”で決まる。",
+      "steps": ["対象語句を含む文で骨格（S+V）を作る", "語句がどこにかかるか（動詞/名詞/節）を判定", "修飾対象を言える選択肢を選ぶ"],
+      "pitfalls": ["訳語だけで機能を決める"],
+      "miniExampleEn": "In 'only the manager approved,' only limits 'the manager,' not the action itself."
+    },
+    {
+      "id": "Q28",
+      "title": "best place to add（追加位置）: 先行詞・因果・対比の3条件で決める",
+      "gist": "追加文は接続条件が満たされる位置が1つに絞れる。先行詞、因果、対比をチェック。",
+      "steps": ["追加文の指示語/接続語をマーク", "先行詞がある位置を探す", "因果/対比の前後関係が自然か確認"],
+      "pitfalls": ["追加文の内容が面白い位置に入れる"],
+      "miniExampleEn": "If the sentence starts with 'Therefore,' it should follow a cause, not precede it."
+    },
+    {
+      "id": "Q29",
+      "title": "best title（最適タイトル）: 主旨+対象範囲+トーンで絞る",
+      "gist": "タイトルは主旨を短く、対象範囲を守り、筆者トーン（批判/提案/説明）と一致させる。",
+      "steps": ["主旨を一文で作る", "対象範囲（topic）を固定", "トーン語（warning/benefits等）を一致させる"],
+      "pitfalls": ["本文にない一般論タイトルを選ぶ"],
+      "miniExampleEn": "A passage arguing for transit reform fits 'Why Cities Need Better Buses,' not 'Modern Technology'."
+    },
+    {
+      "id": "Q30",
+      "title": "best summary（最適要約）: 骨格を保持し、固有の例は落とす",
+      "gist": "要約は『問題→原因→提案/結論』などの骨格が最重要。数字・固有名詞・細例は削る。",
+      "steps": ["段落ごとに1行要約", "重複を統合して骨格にする", "例や数値を削って一般化を残す"],
+      "pitfalls": ["例を残して主張を落とす"],
+      "miniExampleEn": "Summary should keep the claim and evidence type, not every specific statistic."
+    },
+    {
+      "id": "Q31",
+      "title": "主張 vs 例（Claim vs Example）: for example の前後で一般化を回収",
+      "gist": "例そのものではなく“例が示す一般化”が主張。例の前後の一般化文が狙われやすい。",
+      "steps": ["for example の範囲を括る", "例の直前/直後の一般化を抜く", "一般化に一致する選択肢を選ぶ"],
+      "pitfalls": ["例の細部で答える"],
+      "miniExampleEn": "Example: dolphins hunt in groups. Claim: some animals cooperate."
+    },
+    {
+      "id": "Q32",
+      "title": "対比問題（Contrast）: 比較軸を一語で固定",
+      "gist": "対比は“何の観点で比べるか”を固定すると選択肢が切れる。",
+      "steps": ["however/but/unlike を検出", "比較軸（cost/safety等）を一語で決める", "軸がずれている選択肢を除外"],
+      "pitfalls": ["対比語の片側だけ読む"],
+      "miniExampleEn": "Cheap but fragile: axis=durability vs price."
+    },
+    {
+      "id": "Q33",
+      "title": "因果問題（Cause/Effect）: because/therefore の矢印を描く",
+      "gist": "因果は原因→結果の矢印で整理すると根拠が明確になる。",
+      "steps": ["原因側と結果側を分ける", "矢印で1行化", "結果だけを言う選択肢が原因を捏造していないか確認"],
+      "pitfalls": ["背景説明と原因を混同"],
+      "miniExampleEn": "Because the soil was dry → seeds failed to sprout."
+    },
+    {
+      "id": "Q34",
+      "title": "人物・立場（Who says what）: 他者意見と筆者意見を分離",
+      "gist": "some argue / critics claim の意見は筆者と限らない。but/however以降が筆者側になりやすい。",
+      "steps": ["発話主（critics/researchers/author）を特定", "筆者の評価語がどこにあるか確認", "誰の意見か一致する選択肢を選ぶ"],
+      "pitfalls": ["他者意見を筆者意見と誤認"],
+      "miniExampleEn": "Critics say X; the author responds Y."
+    },
+    {
+      "id": "Q35",
+      "title": "数字・割合（Data）: 結論文→必要な数値だけ拾う",
+      "gist": "数値段落は“何を示すか”が先。show/indicate/suggest を含む結論文を抜く。",
+      "steps": ["結論動詞（show/indicate等）を探す", "示す内容を一文で書く", "根拠として必要な数値だけ拾う"],
+      "pitfalls": ["数値の暗記に時間を使う"],
+      "miniExampleEn": "Chart shows decline → policy likely reduced waste."
+    },
+    {
+      "id": "Q36",
+      "title": "語句挿入（Word/Phrase Insertion）: 文法位置（品詞）で候補を切る",
+      "gist": "語句挿入は意味よりまず文法。空所の前後から必要な品詞・構造を決める。",
+      "steps": ["空所前後で品詞/構造を判定", "候補を文法で絞る", "最後に意味と文脈で確定"],
+      "pitfalls": ["意味だけで入れて文法崩壊"],
+      "miniExampleEn": "After an article 'a', the blank likely needs an adjective or noun."
+    },
+    {
+      "id": "Q37",
+      "title": "文法推論（Grammar-based）: 代名詞先行詞と時制整合で落とす",
+      "gist": "文法推論は“整合性”で誤りが出る。代名詞先行詞、時制、主語一致を確認。",
+      "steps": ["代名詞の先行詞があるか確認", "時制・助動詞が前後と整合するか確認", "主語と動詞の一致を確認"],
+      "pitfalls": ["意味が近いからOKにする"],
+      "miniExampleEn": "A choice using past perfect without a past reference is suspicious."
+    },
+    {
+      "id": "Q38",
+      "title": "空所前後の“語の反復”で候補を絞る",
+      "gist": "空所補充・挿入は反復語が鍵。直前語を受ける同義語・指示語を探す。",
+      "steps": ["空所前後のキーワードを2語ずつ抽出", "候補文の同義語/指示語を照合", "話題が自然に連続するものを選ぶ"],
+      "pitfalls": ["反復を無視して話題が飛ぶ文を選ぶ"],
+      "miniExampleEn": "If surrounding sentences focus on 'costs,' a candidate about 'safety' may be off-topic."
+    },
+    {
+      "id": "Q39",
+      "title": "例外選択（Which is NOT mentioned）: “言及”の有無を本文で確認",
+      "gist": "mentioned系は推測禁止。本文に明示があるかどうかだけで判定する。",
+      "steps": ["各選択肢キーワードの同義語を作る", "本文で該当箇所を探す", "明示がないものを選ぶ"],
+      "pitfalls": ["ありそうだから選ぶ"],
+      "miniExampleEn": "If the passage lists time and cost but not safety, 'safety' is NOT mentioned."
+    },
+    {
+      "id": "Q40",
+      "title": "語の意味（closest meaning）: 置換して文意が保たれるかで判断",
+      "gist": "closest meaning は“同じ文脈機能”かどうか。候補語に置換して文意が保たれるかで決める。",
+      "steps": ["対象語の前後（最低1文）で意味を取る", "候補語に置換して違和感がないか確認", "範囲限定（少し/かなり）を落とさない候補を選ぶ"],
+      "pitfalls": ["辞書の第一義で選ぶ"],
+      "miniExampleEn": "If 'stabilize' fits the context, a choice meaning 'make steady' is better than 'stop completely'."
+    },
+    {
+      "id": "Q41",
+      "title": "罠（too broad）: 本文の対象を“全体化”する選択肢を落とす",
+      "gist": "本文が限定しているのに、選択肢が all/always/anyone などで全体化している罠。",
+      "steps": ["本文の対象（範囲）を一語で固定", "選択肢の全体化語（all/always/every）をチェック", "本文が同じ強さで言っているか確認"],
+      "pitfalls": ["“だいたい合ってる”で全体化を許す"],
+      "miniExampleEn": "Passage: 'Some teams benefit.' Trap: 'All teams benefit.'"
+    },
+    {
+      "id": "Q42",
+      "title": "罠（too narrow）: 例を主張にしてしまう選択肢を落とす",
+      "gist": "本文の主張が一般化なのに、選択肢が特定例・一部条件に狭まっている罠。",
+      "steps": ["本文の一般化文を探す", "選択肢が具体例や固有条件に閉じていないか確認", "一般化と同じ抽象度の候補を残す"],
+      "pitfalls": ["覚えている例に引っ張られる"],
+      "miniExampleEn": "Passage: 'Some animals cooperate.' Trap: 'Dolphins cooperate.'"
+    },
+    {
+      "id": "Q43",
+      "title": "罠（因果逆転）: 原因と結果を入れ替えた選択肢を落とす",
+      "gist": "because/therefore の矢印を逆にした罠。時間順と因果を混同させる。",
+      "steps": ["本文の因果矢印をA→Bで書く", "選択肢がB→Aになっていないか確認", "背景説明と原因を分けて再確認"],
+      "pitfalls": ["“どちらも起きた”で因果を曖昧にする"],
+      "miniExampleEn": "Passage: 'Because roads closed, deliveries delayed.' Trap: 'Delays caused road closures.'"
+    },
+    {
+      "id": "Q44",
+      "title": "罠（比較軸ズレ）: 比較対象は同じでも“観点”が違う選択肢を落とす",
+      "gist": "本文は durability の比較なのに、選択肢が price の比較にすり替えるなど“軸ズレ”の罠。",
+      "steps": ["本文の比較軸（cost/safety等）を一語で固定", "選択肢の軸が一致しているか確認", "軸がずれた候補を除外"],
+      "pitfalls": ["対象が同じなら正しいと感じる"],
+      "miniExampleEn": "Passage contrasts durability; trap discusses speed."
+    },
+    {
+      "id": "Q45",
+      "title": "罠（限定語消失）: some/may/often が落ちた断定を落とす",
+      "gist": "本文が慎重なのに、選択肢が断定（will/always）に変わる罠。",
+      "steps": ["本文の限定語（may/often/some）をマーク", "選択肢に同等の限定が残っているか確認", "限定が消えた候補を除外"],
+      "pitfalls": ["限定語を軽視して断定で覚える"],
+      "miniExampleEn": "Passage: 'may reduce' Trap: 'will reduce'."
+    },
+    {
+      "id": "Q46",
+      "title": "罠（量のすり替え）: more/less の対象が変わっている選択肢を落とす",
+      "gist": "増減は“何が”増える/減るが重要。対象のすり替えは典型罠。",
+      "steps": ["本文で増減対象（errors/costs等）を特定", "選択肢の増減対象が同じか確認", "基準（than/as）も一致するか確認"],
+      "pitfalls": ["more/less の方向だけで判断"],
+      "miniExampleEn": "Passage: 'less water' Trap: 'less energy'."
+    },
+    {
+      "id": "Q47",
+      "title": "罠（筆者vs他者）: critics/some argue を筆者主張として選ばない",
+      "gist": "本文は他者意見を紹介して反駁する型が多い。誰の意見かを取り違える罠。",
+      "steps": ["発話主の手掛かり（critics/researchers/author）を確認", "but/however以降を筆者側として要約", "選択肢が“誰の意見”か一致するか確認"],
+      "pitfalls": ["引用っぽい文を筆者主張と誤認"],
+      "miniExampleEn": "Some claim X; however, the author argues Y. Trap: choice states X as author's view."
+    },
+    {
+      "id": "Q48",
+      "title": "罠（本文にない理由付け）: because を勝手に足している選択肢を落とす",
+      "gist": "本文が因果を言っていないのに、選択肢が理由を付け足す罠（根拠捏造）。",
+      "steps": ["本文が因果マーカーを使っているか確認", "選択肢の理由が本文に明示されているか確認", "明示がない理由付けは除外"],
+      "pitfalls": ["“ありそう”で理由を認める"],
+      "miniExampleEn": "Passage: 'Costs fell after training.' Trap adds 'because training improved motivation.'"
+    },
+    {
+      "id": "Q49",
+      "title": "罠（時制の飛躍）: 未来予測を現在事実にする選択肢を落とす",
+      "gist": "本文の推測・予測（may/likely）が、選択肢で現在事実に変わる罠。",
+      "steps": ["本文のモダリティ（may/likely/seem）をマーク", "選択肢が断定/現在事実になっていないか確認", "同じ確信度の候補を残す"],
+      "pitfalls": ["予測を事実として読む"],
+      "miniExampleEn": "Passage: 'is likely to' Trap: 'is'."
+    },
+    {
+      "id": "Q50",
+      "title": "罠（範囲のズレ）: 期間・条件が変わっている選択肢を落とす",
+      "gist": "本文は特定条件（when/if）で成立するのに、選択肢が条件を外す罠。",
+      "steps": ["本文の条件句（if/when/under）を特定", "選択肢が条件を保持しているか確認", "条件が消えた候補を除外"],
+      "pitfalls": ["条件句を付帯情報として捨てる"],
+      "miniExampleEn": "Passage: 'works when feedback is quick' Trap: 'works in all cases'."
+    },
+    {
+      "id": "Q51",
+      "title": "罠（強い感情語）: 本文より強いトーンの選択肢を落とす",
+      "gist": "筆者が慎重なのに、選択肢が extreme/terrible など強いトーンで誇張する罠。",
+      "steps": ["本文の評価語の強さを確認", "選択肢のトーンが強すぎないか確認", "強さが一致する候補を残す"],
+      "pitfalls": ["強い表現がそれっぽく感じて選ぶ"],
+      "miniExampleEn": "Passage: 'may be costly' Trap: 'is disastrous'."
+    },
+    {
+      "id": "Q52",
+      "title": "罠（部分一致）: 一部だけ本文一致、結論が違う選択肢を落とす",
+      "gist": "選択肢の前半だけ正しいが、後半が本文にない主張を足す罠。",
+      "steps": ["選択肢を前半/後半に分ける", "両方が本文で支持されるか確認", "片方しか支持されない候補を除外"],
+      "pitfalls": ["前半一致で満足して後半を見ない"],
+      "miniExampleEn": "Choice: 'Costs fell, so profits doubled.' Passage only states costs fell."
+    },
+    {
+      "id": "Q53",
+      "title": "罠（逆接の読み落とし）: however/but の後を主張として固定",
+      "gist": "逆接後が筆者の主張・修正点になりやすい。前半だけ合う選択肢は罠になりやすい。",
+      "steps": ["however/but をマーク", "後半を主張として一文要約", "選択肢が後半主張を反映しているか確認"],
+      "pitfalls": ["前半の事実だけで判断"],
+      "miniExampleEn": "It is cheap, but it breaks easily. Claim about durability matters."
+    },
+    {
+      "id": "Q54",
+      "title": "罠（例外の混入）: unless/except の扱いミスを防ぐ",
+      "gist": "例外表現は一般化を壊す。選択肢が例外を一般化していないかをチェック。",
+      "steps": ["例外マーカー（unless/except）を特定", "一般化（原則）と例外を分離", "選択肢が例外を拡大していないか確認"],
+      "pitfalls": ["例外を主張として覚える"],
+      "miniExampleEn": "Most plants need sunlight, unless they live under dense canopies."
+    },
+    {
+      "id": "Q55",
+      "title": "罠（比較対象すり替え）: than/as の相手が変わっていないか確認",
+      "gist": "比較対象のすり替えは気づきにくい。Aと比べるのかBと比べるのかを固定。",
+      "steps": ["本文の比較対象（A vs B）を明示", "選択肢が同じA/Bで比較しているか確認", "軸と対象が両方一致する候補を残す"],
+      "pitfalls": ["比較の方向だけで判断"],
+      "miniExampleEn": "More reliable than the older approach (trap compares to a different baseline)."
+    },
+    {
+      "id": "Q56",
+      "title": "罠（未言及）: 'mentioned' は推測禁止で“明示”のみ",
+      "gist": "mentioned/according to は推測で埋めない。本文に明示があるかだけで判定。",
+      "steps": ["キーワードの同義語を作る", "本文で明示箇所を探す", "明示がない候補を NOT mentioned として扱う"],
+      "pitfalls": ["常識で補って“書いてあるはず”とする"],
+      "miniExampleEn": "Passage lists time and cost but never mentions safety."
+    },
+    {
+      "id": "Q57",
+      "title": "罠（語義の近さ）: closest meaning は“その文脈での機能”一致",
+      "gist": "closest meaning は辞書一致より文脈機能一致。置換して論理が保たれるかで判定。",
+      "steps": ["対象語が担う役割（評価/因果/程度）を特定", "候補語で置換して意味が保たれるか確認", "トーンや確信度が変わる候補を除外"],
+      "pitfalls": ["辞書の第一義で選ぶ"],
+      "miniExampleEn": "'stabilize' in context means 'make steady', not 'stop'."
+    },
+    {
+      "id": "Q58",
+      "title": "罠（選択肢の語順）: 文法的に成立しても論理接続が崩れる候補を落とす",
+      "gist": "空所補充は文法OKでも論理NGがある。接続語と段落機能で判定する。",
+      "steps": ["空所の必要機能（対比/因果/具体化）を決める", "候補の接続語が一致するか確認", "段落機能の流れが自然か確認"],
+      "pitfalls": ["文法が合うだけで決める"],
+      "miniExampleEn": "A 'Therefore' sentence placed before the cause is logically wrong."
+    },
+    {
+      "id": "Q59",
+      "title": "罠（正しい言葉の並び替え）: 係り受け（修飾）で切る",
+      "gist": "整序・並べ替えは“修飾がかかる先”で切ると誤りが減る。",
+      "steps": ["修飾語句（that/which/with）を括る", "修飾がかかる名詞の近くに置く", "話題ジャンプがない順序を残す"],
+      "pitfalls": ["単語の意味の近さだけで並べる"],
+      "miniExampleEn": "A clause starting with 'These measures' must follow a mention of measures."
+    },
+    {
+      "id": "Q60",
+      "title": "最終チェック: 正解候補を“本文の言い換え1文”として読み上げる",
+      "gist": "最後に、選んだ選択肢を本文の言い換えとして読み上げ、本文と矛盾しないかを確認する。",
+      "steps": ["選択肢を一文に要約", "本文の対応箇所に戻る", "矛盾（範囲/強さ/因果/話者）がないか最終確認"],
+      "pitfalls": ["時間がなくて本文照合を省く"],
+      "miniExampleEn": "If you can't point to a matching passage line, it's likely a trap."
+    },
+    {
+      "id": "Q61",
+      "title": "NOT/EXCEPT: まず“条件”をメモしてから消去",
+      "gist": "NOT/EXCEPTは『本文に合わない/例外』を探す。先に本文条件（範囲・限定語）を短くメモして、条件違反を消すと速い。",
+      "steps": ["設問が求めるのが NOT/EXCEPT か確認", "本文の条件（いつ/誰/どこ/どの程度）を1行メモ", "各選択肢が条件を破っていないかで消去"],
+      "pitfalls": ["正しいもの探しに切り替わってしまう", "限定語をメモせずに雰囲気で判断"],
+      "miniExampleEn": "If the passage says 'often', an option claiming 'always' is a strong NOT candidate."
+    },
+    {
+      "id": "Q62",
+      "title": "根拠選択（Best Evidence）: 先に答え→根拠は“言い換え一致”で探す",
+      "gist": "根拠問題は『答えの言い換えを最も直接支える文』を選ぶ。キーワード一致より意味一致（関係・限定語一致）で探す。",
+      "steps": ["先に設問本体（主張/推論）に答える", "答え文を短い言い換えにする", "根拠候補から“意味が最も近い”ものを選ぶ"],
+      "pitfalls": ["本文の一部単語が同じだけで根拠と誤認"],
+      "miniExampleEn": "Claim: 'The policy improved fairness.' Evidence must mention fairness improving, not just the policy."
+    },
+    {
+      "id": "Q63",
+      "title": "機能（Function）: その文/段落が“何をしているか”を動詞で言う",
+      "gist": "Functionは内容要約ではなく役割判定。introduce/contrast/illustrate/qualify/define などの動詞で言い切る。",
+      "steps": ["対象文/段落の前後を1文ずつ確認", "対象が主張/例/反論/補足のどれか判定", "動詞ラベル（illustrate等）に落とす"],
+      "pitfalls": ["内容の一部を要約して機能だと思う"],
+      "miniExampleEn": "A sentence starting 'For instance,' functions to illustrate the previous claim."
+    },
+    {
+      "id": "Q64",
+      "title": "構成（Organization）: 段落の並びを“型”で言い換える",
+      "gist": "Organizationは本文全体の設計図を問う。problem-solution / claim-support / compare-contrast などの型で答える。",
+      "steps": ["各段落を1行で機能ラベル化", "全体を型（problem-solution等）に当てはめる", "型と一致しない候補を除外"],
+      "pitfalls": ["細部の話題の順序で迷って型を見失う"],
+      "miniExampleEn": "The text presents a problem, explains causes, then proposes solutions."
+    },
+    {
+      "id": "Q65",
+      "title": "筆者の主張（Author's Claim）: 断定語より“最終一般化”を優先",
+      "gist": "筆者主張は強い語（must/clearly）より、結論段落の一般化を優先。強い語は罠にもなる。",
+      "steps": ["結論段落の一般化を抜く", "主張が“範囲/強さ”で適切か確認", "過度な断定語を含む候補を警戒"],
+      "pitfalls": ["強い語がある選択肢を“主張っぽい”で選ぶ"],
+      "miniExampleEn": "If the author says 'may help', an option with 'will solve' is too strong."
+    },
+    {
+      "id": "Q66",
+      "title": "前提（Assumption）: 文章が成り立つために必要な“橋”を1本に絞る",
+      "gist": "Assumptionは『主張と根拠の間の橋』。橋が一本だけ成立する候補を選ぶ。",
+      "steps": ["根拠→結論のジャンプを見つける", "ジャンプを埋める最小の前提を言語化", "その前提と同じことを言う選択肢を選ぶ"],
+      "pitfalls": ["結論そのものを前提と誤認", "過剰な一般化の前提を選ぶ"],
+      "miniExampleEn": "If a policy reduces errors, assuming 'errors are costly' connects it to saving money."
+    },
+    {
+      "id": "Q67",
+      "title": "反論処理（Counterargument）: 反論→再反論（修正主張）をセットで読む",
+      "gist": "反論の段落は“相手の主張”→“筆者の返し”の二段。設問は返し（修正主張）を狙うことが多い。",
+      "steps": ["反論マーカー（some argue等）を特定", "相手の主張と筆者の返しを分離", "返し側が答えに反映されているか確認"],
+      "pitfalls": ["反論部分だけを筆者の意見と誤認"],
+      "miniExampleEn": "Some claim speed matters most, but the author argues reliability matters more."
+    },
+    {
+      "id": "Q68",
+      "title": "因果（Cause vs Correlation）: because/lead to 以外は“相関”も疑う",
+      "gist": "同時に起きた事実が並ぶだけなら因果とは限らない。本文が“因果語”で結んでいるかを確認する。",
+      "steps": ["本文の因果語（because/therefore/lead to）を確認", "単なる同時発生（while/at the same time）か点検", "因果を言う選択肢は根拠がある場合のみ残す"],
+      "pitfalls": ["並んで書いてある=因果だと決めつけ"],
+      "miniExampleEn": "Sales rose when ads increased; without 'because', causation isn't guaranteed."
+    },
+    {
+      "id": "Q69",
+      "title": "数量・割合（Numbers）: 比較対象と分母を固定",
+      "gist": "数字問題は“何に対する割合か”がズレると誤答。比較対象（A/B）と分母を固定して読む。",
+      "steps": ["数字が示す対象（what）を特定", "分母（out of what）を言語化", "選択肢が同じ分母/比較対象か確認"],
+      "pitfalls": ["数だけ見て分母を落とす"],
+      "miniExampleEn": "20% of participants vs 20% increase are different claims."
+    },
+    {
+      "id": "Q70",
+      "title": "修飾範囲（Modifier Scope）: 限定語がどこまで掛かるか線を引く",
+      "gist": "only/mostly/at least などの限定語は範囲が命。どこまで掛かるかを明示すると誤答が減る。",
+      "steps": ["限定語（only等）をマーク", "限定される対象（語/句/節）を特定", "選択肢が範囲を広げていないか確認"],
+      "pitfalls": ["限定語を読み飛ばして一般化"],
+      "miniExampleEn": "'Only some teams improved' is not 'Teams improved'."
+    },
+    {
+      "id": "Q71",
+      "title": "否定（Negation）: not の“否定スコープ”を先に確定",
+      "gist": "否定はどこを否定しているか（動詞か名詞句か）で意味が変わる。否定スコープを先に確定する。",
+      "steps": ["否定語（not/never）をマーク", "否定される部分（範囲）を括る", "選択肢が否定範囲をずらしていないか確認"],
+      "pitfalls": ["notだけ見て『否定文』で終わる"],
+      "miniExampleEn": "Not all students passed ≠ No students passed."
+    },
+    {
+      "id": "Q72",
+      "title": "最も/最小（Most/Least）: 基準を揃えてから比較",
+      "gist": "Most/Leastは“何について”の比較かを固定。基準がズレた候補は比較不能として落とす。",
+      "steps": ["比較基準（efficiency等）を設問から抽出", "各候補が同じ基準を扱っているか確認", "基準が揃った中で最も/最小を選ぶ"],
+      "pitfalls": ["良さそうな内容をMostとして選ぶ"],
+      "miniExampleEn": "Least supported means 'weakest evidence', not 'least interesting'."
+    },
+    {
+      "id": "Q73",
+      "title": "具体例の扱い: 例は“主張の証拠”であり主張そのものではない",
+      "gist": "例は主張を支える材料。設問が主張を聞いているなら、例を一般化した形で答える。",
+      "steps": ["例（for example等）を特定", "例が支える主張を1文で言う", "例の固有要素を落として一般化"],
+      "pitfalls": ["例の固有名詞や数字を主張として覚える"],
+      "miniExampleEn": "An example about one city supports a broader claim about urban planning."
+    },
+    {
+      "id": "Q74",
+      "title": "未言及の強化版: “近い話題”でも書いてないならNOT mentioned",
+      "gist": "本文が関連話題を扱っていても、その具体点が明示されていなければNOT mentioned。『書けそう』は禁止。",
+      "steps": ["選択肢の主張を名詞句に圧縮", "本文で同義語/言い換えを探す", "見つからなければ未言及として処理"],
+      "pitfalls": ["常識で補って“当然ある”とする"],
+      "miniExampleEn": "The passage discusses cost but never mentions taxes; tax options are NOT mentioned."
+    },
+    {
+      "id": "Q75",
+      "title": "話者区別（Whose View）: 筆者/研究者/批判者をラベル分け",
+      "gist": "本文に複数の立場が出ると、選択肢が“誰の意見か”をすり替える。話者ラベルを付けて防ぐ。",
+      "steps": ["引用・報告表現（researchers say等）をマーク", "立場ごとに主張をメモ", "選択肢が同じ話者の主張か確認"],
+      "pitfalls": ["本文内の意見を全部筆者の意見だと思う"],
+      "miniExampleEn": "Critics warn about risks; the author may present it without agreeing."
+    },
+    {
+      "id": "Q76",
+      "title": "トーン罠: neutral vs cautious を“確信度語”で切る",
+      "gist": "トーンは評価語だけでなく確信度（may/likely）で分かれる。cautiousは確信度が低い。",
+      "steps": ["確信度語（may/likely）を拾う", "断定（must/clearly）との距離を測る", "neutral/cautious/critical を分類"],
+      "pitfalls": ["一つの形容詞だけでトーンを決める"],
+      "miniExampleEn": "Using 'may' and 'suggests' signals cautious tone."
+    },
+    {
+      "id": "Q77",
+      "title": "語彙推測の強化: 反対語/否定で“意味の方向”を決める",
+      "gist": "未知語は定義がなくても、対比（but）や否定（not）で“良い/悪い・増える/減る”の方向が取れる。",
+      "steps": ["対比/否定マーカーを探す", "方向（positive/negative等）を仮置き", "候補の中で方向が一致するものを残す"],
+      "pitfalls": ["方向が逆の候補を選ぶ"],
+      "miniExampleEn": "If it is 'not beneficial but harmful', the unknown word leans negative."
+    },
+    {
+      "id": "Q78",
+      "title": "整序（Sentence Order）: 時系列/因果/一般→具体のどれかを固定",
+      "gist": "文整序は接続語が無いと迷う。時系列・因果・一般→具体のどれで並べるかを先に決める。",
+      "steps": ["候補文の関係（time/cause/example）を判定", "関係が一番強い軸で並べる", "指示語（this/these）の先行詞で微調整"],
+      "pitfalls": ["内容の雰囲気だけで並べる"],
+      "miniExampleEn": "A general claim should come before an example introduced by 'For example'."
+    },
+    {
+      "id": "Q79",
+      "title": "言い換え罠（too narrow）: 具体例だけに縮む候補を落とす",
+      "gist": "本文の主張が一般化なのに、選択肢が一例だけに縮んでいるとtoo narrow。例を主張に格下げしている。",
+      "steps": ["本文主張が一般化か確認", "選択肢が特定の例/条件に限定していないか確認", "一般化を保つ候補を残す"],
+      "pitfalls": ["具体的な候補を“正確そう”で選ぶ"],
+      "miniExampleEn": "If the passage says 'cities', an option saying 'one town' may be too narrow."
+    },
+    {
+      "id": "Q80",
+      "title": "言い換え罠（axis shift）: 比較/評価の“軸”が変わる候補を落とす",
+      "gist": "選択肢が同じ話題でも、評価軸（cost vs safety など）がズレると別主張になる。軸一致を最優先で見る。",
+      "steps": ["本文の評価軸（何を基準にしているか）を一語で言う", "選択肢の軸も一語で言う", "軸が一致する候補だけ残す"],
+      "pitfalls": ["話題が同じ=正しいと誤認"],
+      "miniExampleEn": "Praising speed doesn't support a claim about safety."
+    },
+    {
+      "id": "Q81",
+      "title": "推論（Inference）: “本文が言ったこと”だけで一歩だけ進める",
+      "gist": "Inferenceは“言い換え+一歩”まで。二歩以上（追加の仮定）が必要な選択肢は落とす。",
+      "steps": ["根拠となる2〜3文を特定", "その範囲から言える“最小の結論”を言語化", "追加仮定が要る候補を除外"],
+      "pitfalls": ["常識で二歩進める", "本文の条件を落として一般化"],
+      "miniExampleEn": "If the text says the tool reduced errors in one trial, you can infer it helped in that trial—not that it always works."
+    },
+    {
+      "id": "Q82",
+      "title": "強支持（Strongly Supported）: “ほぼ書いてある”の言い換えだけ残す",
+      "gist": "Strongly supportedは推論ではなく“再述”。本文の同義言い換え以外は疑う。",
+      "steps": ["本文に同じ主張があるか探す", "同義語レベルの言い換えか確認", "強さ/範囲/条件が同一かチェック"],
+      "pitfalls": ["“確からしい”を選ぶ", "条件（when/if）を落とす"],
+      "miniExampleEn": "If the passage says 'often', a choice saying 'always' is not strongly supported."
+    },
+    {
+      "id": "Q83",
+      "title": "主語すり替え（Subject Swap）: 誰が何をするかを固定",
+      "gist": "選択肢は主語をすり替えて“近い話”に見せる。主語・動作・対象の3点セットで照合する。",
+      "steps": ["本文の主語（actor）を明確化", "動作（verb）と対象（object）も特定", "選択肢が同じ3点セットか確認"],
+      "pitfalls": ["内容の方向だけ合うと正答だと思う"],
+      "miniExampleEn": "If researchers propose a method, it doesn't mean the author endorses it."
+    },
+    {
+      "id": "Q84",
+      "title": "目的（Purpose）: “なぜこの一文/例を入れたか”を機能語で答える",
+      "gist": "Purposeは内容ではなく機能（introduce/illustrate/contrast/qualify）で答える。",
+      "steps": ["対象文の直前直後を読む", "機能を1語（例: illustrate）で仮置き", "選択肢の機能語が一致するものを選ぶ"],
+      "pitfalls": ["内容の要約をPurposeと勘違い"],
+      "miniExampleEn": "A short story may serve to illustrate a broader claim, not to provide historical facts."
+    },
+    {
+      "id": "Q85",
+      "title": "詳細目的（Why mention X?）: Xは“主張の部品”として働く",
+      "gist": "Why mentionは、Xが主張/反論/例/条件のどの部品かを特定する問題。",
+      "steps": ["Xが出る段落の役割（主張/反論/例）を判定", "Xが支える文を1つ上に探す", "Xの機能（support/qualify/contrast）に合う候補を選ぶ"],
+      "pitfalls": ["Xそのものの意味説明で止まる"],
+      "miniExampleEn": "Mentioning a failed attempt can highlight why the new approach is necessary."
+    },
+    {
+      "id": "Q86",
+      "title": "段落機能（Function of a Paragraph）: 主張/根拠/反論/含意のどれかに分類",
+      "gist": "段落の機能は4分類で十分。分類ができれば、選択肢は自動的に絞れる。",
+      "steps": ["段落冒頭の役割語（however/therefore等）を見る", "段落の最後の一文で要点を取る", "主張/根拠/反論/含意のどれかに固定"],
+      "pitfalls": ["段落内容を細かく追って機能が曖昧になる"],
+      "miniExampleEn": "A paragraph starting with 'However' often introduces a counterpoint."
+    },
+    {
+      "id": "Q87",
+      "title": "構成（Organization）: 段落ごとに“役割ラベル”を並べる",
+      "gist": "Organizationは“内容”より“並び”。段落ラベル列（背景→問題→解決→含意など）を作る。",
+      "steps": ["各段落に役割ラベルを付ける", "ラベルの並びを短い列で表現", "選択肢が同じ並びか確認"],
+      "pitfalls": ["本文の細部を混ぜて長い要約にする"],
+      "miniExampleEn": "Background → problem → proposed solution is different from problem → examples → conclusion."
+    },
+    {
+      "id": "Q88",
+      "title": "主目的（Primary Purpose）: “筆者が読者にしてほしいこと”で言い換える",
+      "gist": "Primary purposeは『何を説明/主張/批判/提案したいか』。読者行動（understand/evaluate）に落とすとブレない。",
+      "steps": ["結論の主張を1文で言う", "筆者の目的動詞（argue/explain/critique）を決める", "目的動詞が合う候補を選ぶ"],
+      "pitfalls": ["トピック（何の話か）だけで選ぶ"],
+      "miniExampleEn": "The passage may aim to critique a method, not merely describe it."
+    },
+    {
+      "id": "Q89",
+      "title": "要約（Best Summary）: 主要段落だけで“骨格4点”を作る",
+      "gist": "Summaryは細部抜きで骨格（背景/論点/主張/含意）を取る。骨格から外れる細部候補を落とす。",
+      "steps": ["背景/論点/主張/含意の4点をメモ", "選択肢が4点を過不足なく含むか確認", "細部（例や数字）中心の候補を除外"],
+      "pitfalls": ["例や数字を要約に入れてしまう"],
+      "miniExampleEn": "A good summary captures the main claim and reasoning, not every example."
+    },
+    {
+      "id": "Q90",
+      "title": "タイトル（Best Title）: 主張+対象領域を最短で",
+      "gist": "タイトルは“話題”ではなく“主張”。主張（what about it）と対象（about what）を最短で表す。",
+      "steps": ["本文主張を一文で言う", "対象領域（topic）を一語で言う", "主張+対象が最短で入る候補を選ぶ"],
+      "pitfalls": ["広すぎる話題タイトルを選ぶ"],
+      "miniExampleEn": "'Rethinking Urban Noise Policies' is better than 'Cities' if the claim is about policy change."
+    },
+    {
+      "id": "Q91",
+      "title": "引用（Quotation Evidence）: 引用の“機能”が合う箇所を探す",
+      "gist": "Which quote supports…は、内容一致だけでなく機能（主張/例/反論/定義）まで一致させると速い。",
+      "steps": ["選択肢主張を短く言い換え", "本文で同義の言い換えを探す", "その文が主張/例/定義のどれか確認"],
+      "pitfalls": ["単語一致だけで引用を選ぶ"],
+      "miniExampleEn": "A definition quote supports a question asking for meaning, not for a causal claim."
+    },
+    {
+      "id": "Q92",
+      "title": "例外（EXCEPT）: まず“4つは正しい”前提で本文一致を確認",
+      "gist": "EXCEPTは4正解+1例外の発想。1つずつ本文一致を取って、最後に残る不一致を選ぶ。",
+      "steps": ["各選択肢を“本文一致/不一致”で仕分け", "一致の根拠行を見つける", "根拠が取れない候補をEXCEPTにする"],
+      "pitfalls": ["最初から例外っぽさで選ぶ"],
+      "miniExampleEn": "If four statements are directly stated, the remaining one is the EXCEPT even if it sounds plausible."
+    },
+    {
+      "id": "Q93",
+      "title": "比較（Compare Two Things）: 比較軸と差分を別々に取る",
+      "gist": "比較問題は“軸（何で比べるか）”と“差分（どう違うか）”の2点。片方だけ合う候補は罠。",
+      "steps": ["比較対象A/Bを明確化", "比較軸（cost/accuracy等）を特定", "差分（AはX, BはY）を1文にする"],
+      "pitfalls": ["軸がズレた比較（speed vs accuracy）を混ぜる"],
+      "miniExampleEn": "One approach reduces time, the other improves accuracy—mixing them creates a wrong comparison."
+    },
+    {
+      "id": "Q94",
+      "title": "定義（Definition）: その語が“本文内でどう使われているか”だけを見る",
+      "gist": "定義問題は辞書ではない。本文の用例（前後の働き）から意味範囲を特定する。",
+      "steps": ["語が出る文を2文幅で読む", "同格/言い換え（that is等）を探す", "候補の意味範囲が本文用法と一致するか確認"],
+      "pitfalls": ["一般的な意味を当てはめてズレる"],
+      "miniExampleEn": "If 'resilience' is used to mean 'recovering quickly', choices about 'resisting change' may be off."
+    },
+    {
+      "id": "Q95",
+      "title": "態度（Author's Attitude）: 価値判断+確信度の2軸で取る",
+      "gist": "Attitudeは“良い/悪い”（価値判断）と“強い/弱い”（確信度）の2軸で分類すると安定する。",
+      "steps": ["評価語（beneficial/problematic等）を拾う", "確信度語（may/likely/must）を拾う", "2軸の組合せで選択肢を絞る"],
+      "pitfalls": ["評価語だけ見て確信度を落とす"],
+      "miniExampleEn": "Calling a result 'promising' with 'may' is positive but cautious."
+    },
+    {
+      "id": "Q96",
+      "title": "含意（Implication）: 本文の条件を“もし〜なら”に戻してから推論",
+      "gist": "Implicationは条件付き推論が多い。条件（when/if）を明示してから“その場合どうなるか”を一歩だけ出す。",
+      "steps": ["条件節（if/when/unless）を特定", "条件→結果を1文に整形", "条件を保ったまま一歩だけ推論"],
+      "pitfalls": ["条件を落として一般命題にする"],
+      "miniExampleEn": "If the claim is conditional, the implication should remain conditional."
+    },
+    {
+      "id": "Q97",
+      "title": "反証（Weaken）: “一つの前提”を狙って崩す",
+      "gist": "Weakenは全否定ではなく“根拠→結論の橋”を1本切る。橋の前提に刺さる候補が最強。",
+      "steps": ["結論と根拠を分離", "間の前提（橋）を1本言語化", "その前提を疑わせる選択肢を選ぶ"],
+      "pitfalls": ["無関係な反例で満足する"],
+      "miniExampleEn": "If the argument assumes a survey is representative, showing sampling bias weakens it."
+    },
+    {
+      "id": "Q98",
+      "title": "補強（Strengthen）: “他の説明を潰す”か“前提を足す”のどちらか",
+      "gist": "Strengthenは(1)前提補強か(2)代替説明の排除。どちらの型かを先に判定する。",
+      "steps": ["結論と根拠のギャップを見つける", "必要なら前提を足す/代替説明を列挙", "その穴を埋める候補を選ぶ"],
+      "pitfalls": ["結論を言い直すだけの候補を選ぶ"],
+      "miniExampleEn": "Ruling out an alternative cause can strengthen a causal claim."
+    },
+    {
+      "id": "Q99",
+      "title": "両立（Reconcile a Paradox）: 見かけの矛盾を“条件分け”で解く",
+      "gist": "ParadoxはAもBも事実。矛盾は“条件が違う/基準が違う/測定が違う”で解けることが多い。",
+      "steps": ["矛盾する2事実を短く書く", "違いそうな条件（time/group/definition）を探す", "両方が成り立つ説明を選ぶ"],
+      "pitfalls": ["どちらか一方を否定する候補を選ぶ"],
+      "miniExampleEn": "A product can be cheaper per unit but more expensive overall if people buy more of it."
+    },
+    {
+      "id": "Q100",
+      "title": "サポート不足（Unsupported Claim）: 本文の“証拠の型”とズレる候補を落とす",
+      "gist": "本文が例示・観察・実験などの証拠で話しているのに、選択肢が断定的因果や普遍主張に飛ぶとUnsupported。",
+      "steps": ["本文の証拠タイプ（example/experiment/observation）を特定", "選択肢の主張タイプ（因果/普遍/評価）を特定", "証拠→主張の飛躍が大きい候補を除外"],
+      "pitfalls": ["“それっぽい主張”を証拠抜きで採用"],
+      "miniExampleEn": "A single anecdote doesn't support a universal rule."
+    }
+  ]
+}

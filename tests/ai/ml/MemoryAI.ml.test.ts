@@ -61,6 +61,54 @@ describe('MemoryAI ML Integration', () => {
     expect(signal.forgettingRisk).toBeGreaterThanOrEqual(0);
   });
 
+  it('should reduce timeBoost when consolidation is strong', async () => {
+    const testWord: WordData = {
+      word: 'example',
+      meaning: '例',
+    };
+
+    const progress: StorageWordProgress = {
+      word: 'example',
+      correctCount: 20,
+      incorrectCount: 0,
+      consecutiveCorrect: 10,
+      consecutiveIncorrect: 0,
+      lastStudied: Date.now() - 86400000, // 1日前
+      totalResponseTime: 0,
+      averageResponseTime: 0,
+      difficultyScore: 10,
+      masteryLevel: 'learning',
+      responseTimes: [],
+
+      memorizationAttempts: 20,
+      memorizationCorrect: 20,
+      memorizationStillLearning: 0,
+      memorizationStreak: 10,
+
+      translationAttempts: 0,
+      spellingAttempts: 0,
+
+      reviewInterval: 7,
+      easeFactor: 2.7,
+      repetitions: 5,
+    };
+
+    const input: AIAnalysisInput = {
+      word: testWord,
+      progress,
+      currentTab: 'memorization',
+      sessionStats: createSessionStats(),
+      allProgress: { example: progress },
+    };
+
+    const signal = await memoryAI.analyze(input);
+
+    // baseTimeBoost（memorizationタブ・1日前）なら 0.6 のはずだが、
+    // 1日+7日先で保持できそうな語は timeBoost が減衰される
+    expect(signal.timeBoost).toBeGreaterThanOrEqual(0);
+    expect(signal.timeBoost).toBeLessThan(0.6);
+  });
+
   it('should extract features correctly', () => {
     const testWord: WordData = {
       word: 'example',

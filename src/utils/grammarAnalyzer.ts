@@ -3,6 +3,9 @@
  * 英文の単語に基本的な文法タグ（S, V, O, C, M等）を付与する
  */
 
+import type { DependencyToken } from '@/types/passage';
+import { mapDependencyTokensToSVOCMByStartIndex } from '@/utils/dependencySvocm';
+
 export type GrammarTag =
   | 'S'
   | 'V'
@@ -769,6 +772,19 @@ function getPunctuationMeaning(punctuation: string): string {
   return meanings[punctuation] || '句読点';
 }
 
+function _tokenizeWithStartIndices(sentence: string): Array<{ token: string; start: number | null }> {
+  const tokens = sentence.match(/\b[\w']+\b|[.,!?;:\-—–"'()]/g) || [];
+  let cursor = 0;
+  return tokens.map((t) => {
+    const idx = sentence.indexOf(t, cursor);
+    if (idx >= 0) {
+      cursor = idx + t.length;
+      return { token: t, start: idx };
+    }
+    return { token: t, start: null };
+  });
+}
+
 /**
  * 文を分析して文法タグを付与
  */
@@ -878,6 +894,42 @@ export function analyzeSentence(sentence: string): GrammarAnalysisResult[] {
     });
   }
 
+  return results;
+}
+/**
+ * UD依存解析（DependencyToken[]）がある場合に、それを優先してSVOCMタグを付与
+ * - UI側の表示は analyzeSentence() と同じ GrammarAnalysisResult[] 形式を返す
+ * - 句読点は従来通り Unknown 扱い
+ */
+export function analyzeSentenceWithDependency(
+  sentence: string,
+  dependencyTokens: DependencyToken[]
+): GrammarAnalysisResult[] {
+  const roleByStart = mapDependencyTokensToSVOCMByStartIndex(dependencyTokens);
+  const tokenized = _tokenizeWithStartIndices(sentence);
+
+  const results: GrammarAnalysisResult[] = [];
+  for (const { token, start } of tokenized) {
+    if (/^[.,!?;:\-—–"'()]$/.test(token)) {
+      results.push({
+        word: token,
+        tag: 'Unknown',
+        color: '#6b7280',
+        description: getPunctuationMeaning(token),
+      });
+      continue;
+    }
+
+    const mapped = typeof start === 'number' ? roleByStart.get(start) : undefined;
+    const tag = (mapped ?? 'M') as GrammarTag;
+
+    results.push({
+      word: token,
+      tag,
+      color: getTagColor(tag),
+      description: getTagDescription(tag),
+    });
+  }
   return results;
 }
 

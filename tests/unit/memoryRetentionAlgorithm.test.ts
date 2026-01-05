@@ -725,6 +725,63 @@ describe('MemoryRetentionManager', () => {
       expect(dueWords.length).toBe(1000);
     });
   });
+
+  describe('定着評価（1日＋7日 複合）', () => {
+    it('1日先と7日先の保持率を返し、複合スコアはその間に収まる', () => {
+      const now = Date.now();
+
+      manager.recordReview('word', {
+        isCorrect: true,
+        responseTime: 1000,
+        confidence: 5,
+        timestamp: now,
+      });
+
+      const status = manager.getRetentionStatus('word');
+      const evalResult = manager.evaluateConsolidation(status, now, [1, 7], [0.5, 0.5]);
+
+      const r1 = evalResult.retentionAtHorizon[1];
+      const r7 = evalResult.retentionAtHorizon[7];
+      expect(r1).toBeGreaterThan(0);
+      expect(r1).toBeLessThanOrEqual(1);
+      expect(r7).toBeGreaterThan(0);
+      expect(r7).toBeLessThanOrEqual(1);
+      expect(evalResult.compositeRetention).toBeLessThanOrEqual(Math.max(r1, r7));
+      expect(evalResult.compositeRetention).toBeGreaterThanOrEqual(Math.min(r1, r7));
+    });
+
+    it('間隔が長いほど（学習が進むほど）複合スコアが高くなる傾向', () => {
+      const now = Date.now();
+
+      // interval=1（初回）
+      manager.recordReview('word1', {
+        isCorrect: true,
+        responseTime: 1000,
+        confidence: 5,
+        timestamp: now,
+      });
+      const s1 = manager.getRetentionStatus('word1');
+      const e1 = manager.evaluateConsolidation(s1, now).compositeRetention;
+
+      // interval=6（2回目正答）
+      manager.recordReview('word2', {
+        isCorrect: true,
+        responseTime: 1000,
+        confidence: 5,
+        timestamp: now,
+      });
+      manager.recordReview('word2', {
+        isCorrect: true,
+        responseTime: 1000,
+        confidence: 5,
+        timestamp: now + 86400000,
+      });
+      const s2 = manager.getRetentionStatus('word2');
+      const e2 = manager.evaluateConsolidation(s2, now).compositeRetention;
+
+      expect(e2).toBeGreaterThan(e1);
+    });
+  });
 });
 
 describe('isOptimalReviewTime', () => {

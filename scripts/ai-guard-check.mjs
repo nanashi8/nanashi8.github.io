@@ -27,6 +27,56 @@ const __dirname = path.dirname(__filename);
 const AI_FAILURE_HISTORY_PATH = path.join(__dirname, '../.aitk/ai-failure-history.json');
 const FAILURE_PATTERNS_PATH = path.join(__dirname, '../.aitk/failure-patterns.json');
 const INSTRUCTIONS_DIR = path.join(__dirname, '../.aitk/instructions');
+const SPEC_CHECK_RECORD_PATH = process.env.AI_GUARD_SPEC_CHECK_FILE
+  ? path.resolve(process.env.AI_GUARD_SPEC_CHECK_FILE)
+  : path.join(__dirname, '../.aitk/spec-check.json');
+
+const REQUIRED_SPEC_CHECK_INSTRUCTIONS = [
+  'mandatory-spec-check.instructions.md',
+  'meta-ai-priority.instructions.md',
+];
+
+function loadSpecCheckRecord() {
+  if (!fs.existsSync(SPEC_CHECK_RECORD_PATH)) {
+    return null;
+  }
+  try {
+    return JSON.parse(fs.readFileSync(SPEC_CHECK_RECORD_PATH, 'utf-8'));
+  } catch {
+    return null;
+  }
+}
+
+function isSpecCheckFresh(maxAgeHours) {
+  const record = loadSpecCheckRecord();
+  if (!record || !record.recordedAt) {
+    return { ok: false, reason: 'missing' };
+  }
+  const recordedAt = Date.parse(record.recordedAt);
+  if (!Number.isFinite(recordedAt)) {
+    return { ok: false, reason: 'invalid_timestamp' };
+  }
+  const ageHours = (Date.now() - recordedAt) / 36e5;
+  if (ageHours > maxAgeHours) {
+    return { ok: false, reason: 'expired', ageHours };
+  }
+
+  // requiredInstructions があれば、その中身をチェック（後方互換）
+  const declared = Array.isArray(record.requiredInstructions) ? record.requiredInstructions.join('\n') : '';
+  const hasAll = REQUIRED_SPEC_CHECK_INSTRUCTIONS.every(name => declared.includes(name));
+  if (!hasAll) {
+    return { ok: false, reason: 'missing_required_instructions' };
+  }
+
+  return { ok: true, record };
+}
+
+function shouldEnforceSpecCheck(targetFiles) {
+  if (!targetFiles || targetFiles.length === 0) {
+    return true;
+  }
+  return targetFiles.some(f => /\.(ts|tsx|js|jsx|md)$/.test(f) && !f.endsWith('.instructions.md'));
+}
 
 // カラー出力
 const colors = {
@@ -412,6 +462,35 @@ function generateGuardReport(userRequest, targetFiles) {
   // 必須チェックリスト
   report.push(displayCheckList());
 
+  // Specチェックの強制（記録）
+  const maxAgeHours = Number(process.env.AI_SPEC_CHECK_MAX_AGE_HOURS || '24');
+  const enforce = process.env.AI_GUARD_SKIP_SPEC_CHECK !== '1' && shouldEnforceSpecCheck(targetFiles);
+  if (enforce) {
+    const freshness = isSpecCheckFresh(maxAgeHours);
+    if (!freshness.ok) {
+      report.push('');
+      report.push(`${colors.bold}${colors.red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
+      report.push(`${colors.bold}${colors.red}❌ CRITICAL: 変更前の仕様確認（Specチェック）が未記録/期限切れです${colors.reset}`);
+      report.push(`${colors.bold}${colors.red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
+      report.push('');
+      report.push(`${colors.cyan}必要な指示ファイル:${colors.reset}`);
+      report.push(`  - ${path.join(INSTRUCTIONS_DIR, 'mandatory-spec-check.instructions.md')}`);
+      report.push(`  - ${path.join(INSTRUCTIONS_DIR, 'meta-ai-priority.instructions.md')}`);
+      report.push('');
+      report.push(`${colors.cyan}記録（VS Code / 推奨）:${colors.reset}`);
+      report.push(`  ${colors.yellow}コマンドパレット → "Servant: Review Required Instructions"${colors.reset}`);
+      report.push('');
+      report.push(`${colors.cyan}記録コマンド（必須）:${colors.reset}`);
+      report.push(`  ${colors.yellow}npm run guard:spec-check -- --note "${userRequest.replace(/\"/g, '\\"')}"${colors.reset}`);
+      report.push('');
+      report.push(`${colors.cyan}一時的にバイパス（非推奨）:${colors.reset}`);
+      report.push(`  ${colors.yellow}AI_GUARD_SKIP_SPEC_CHECK=1 node scripts/ai-guard-check.mjs "..."${colors.reset}`);
+      report.push('');
+      report.push(`${colors.bold}${colors.red}修正を開始してはいけません（先にSpecチェックを記録してください）${colors.reset}`);
+      report.push('');
+    }
+  }
+
   // 次のアクション
   report.push('');
   report.push(`${colors.bold}${colors.green}📝 次のアクション:${colors.reset}`);
@@ -453,6 +532,16 @@ function main() {
 
   const report = generateGuardReport(userRequest, targetFiles);
   console.log(report);
+
+  // Specチェックが未記録/期限切れの場合は失敗扱いにする（ai-workflow などを止める）
+  const maxAgeHours = Number(process.env.AI_SPEC_CHECK_MAX_AGE_HOURS || '24');
+  const enforce = process.env.AI_GUARD_SKIP_SPEC_CHECK !== '1' && shouldEnforceSpecCheck(targetFiles);
+  if (enforce) {
+    const freshness = isSpecCheckFresh(maxAgeHours);
+    if (!freshness.ok) {
+      process.exit(2);
+    }
+  }
 }
 
 main();

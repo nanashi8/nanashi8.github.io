@@ -6,6 +6,9 @@ export type SessionHistoryItem = {
   timestamp: number;
 };
 
+// 推定した自信度（5段階: 1-5）
+export type AnswerConfidence5 = 1 | 2 | 3 | 4 | 5;
+
 export interface StudySettings {
   maxReviewCount: number; // 要復習上限（デフォルト: 10）
 }
@@ -75,9 +78,14 @@ export interface WordProgress {
   learningHistory?: Array<{
     timestamp: number;
     wasCorrect: boolean;
+    wasStillLearning?: boolean; // 暗記タブの「まだまだ」を区別するため
     responseTime: number;
     userAnswer?: string;
     sessionIndex?: number;
+    mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization';
+    confidence5?: AnswerConfidence5;
+    confidenceScore01?: number; // 0-1
+    confidenceSource?: 'deep' | 'heuristic';
   }>;
 
   // 混同履歴（この単語を誤答として選んだ履歴）

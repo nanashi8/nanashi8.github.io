@@ -149,7 +149,7 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
     // === 従来の分析（Phase 1-3） ===
     const category = this.determineCategory(progress);
     const forgettingRisk = this.calculateForgettingRisk(progress);
-    const timeBoost = this.calculateTimeBoost(progress, currentTab);
+    const baseTimeBoost = this.calculateTimeBoost(progress, currentTab);
     const retentionStrength = this.calculateRetentionStrength(progress);
 
     // === Phase 4: 記憶科学分析 ===
@@ -166,6 +166,15 @@ export class MemoryAI extends MLEnhancedSpecialistAI<MemorySignal> {
 
     // 2️⃣ Ebbinghaus分析
     const retentionResult = this.forgettingCurve.analyzeRetention(progress, daysSince);
+
+    // ✅ 定着評価（1日+7日）でtimeBoostを減衰
+    // - finalPriorityModeではAICoordinatorがMemorySignal.timeBoostを優先度計算に使用する
+    // - 「時間が経った」だけでなく「1日/7日先で保持しそうにない」語を強く押し上げる
+    const retention1d = this.forgettingCurve.analyzeRetention(progress, daysSince + 1).retention;
+    const retention7d = this.forgettingCurve.analyzeRetention(progress, daysSince + 7).retention;
+    const compositeRetention = Math.max(0, Math.min(1, (retention1d + retention7d) / 2));
+    const consolidationFactor = 1 - compositeRetention; // 0..1（低定着ほど1に近い）
+    const timeBoost = Math.max(0, Math.min(1, baseTimeBoost * consolidationFactor));
 
     // 3️⃣ 長期記憶段階分析
     const memoryStageResult = this.longTermStrategy.analyzeMemoryStage(progress, sm2Result);

@@ -70,6 +70,42 @@ describe('AIActionTracker', () => {
     expect(tracker.inferTaskType({
       files: ['src/utils.test.ts']
     })).toBe('test');
+
+    expect(tracker.inferTaskType({
+      files: ['docs/README.md', 'docs/guide.md']
+    })).toBe('docs');
+  });
+
+  it('変更頻度のホットスポットを取得できる', async () => {
+    // file1.ts を多く変更
+    for (let i = 0; i < 6; i++) {
+      tracker.startAction('feature');
+      await tracker.endAction({
+        success: true,
+        compileErrors: 0,
+        violations: 0,
+        changedFiles: ['file1.ts']
+      } as any);
+    }
+
+    // file2.ts は違反付きで変更
+    for (let i = 0; i < 5; i++) {
+      tracker.startAction('bug-fix');
+      await tracker.endAction({
+        success: false,
+        compileErrors: 1,
+        violations: 2,
+        changedFiles: ['file2.ts']
+      } as any);
+    }
+
+    const hotspots = tracker.getFileHotspots({ minCount: 5, limit: 10 });
+    expect(hotspots.some(h => h.file === 'file1.ts')).toBe(true);
+    expect(hotspots.some(h => h.file === 'file2.ts')).toBe(true);
+
+    const violationHotspots = tracker.getFileHotspots({ minCount: 5, onlyWithViolations: true });
+    expect(violationHotspots.some(h => h.file === 'file2.ts')).toBe(true);
+    expect(violationHotspots.some(h => h.file === 'file1.ts')).toBe(false);
   });
 
   it('統計情報を取得できる', async () => {

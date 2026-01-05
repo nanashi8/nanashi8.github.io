@@ -1,0 +1,6 @@
+# Local UD dependency parsing (optional)
+#
+# Install:
+#   python3 -m pip install -r requirements-ud-parse.txt
+
+stanza>=1.7.0

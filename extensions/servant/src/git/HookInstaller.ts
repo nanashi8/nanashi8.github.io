@@ -5,9 +5,12 @@ import { promisify } from 'util';
 import type { Notifier } from '../ui/Notifier';
 
 const writeFile = promisify(fs.writeFile);
-const readFile = promisify(fs.readFile);
 const chmod = promisify(fs.chmod);
 const exists = promisify(fs.exists);
+const rename = promisify(fs.rename);
+const lstat = promisify(fs.lstat);
+const readlink = promisify(fs.readlink);
+const unlink = promisify(fs.unlink);
 
 /**
  * HookInstaller
@@ -37,16 +40,27 @@ export class HookInstaller {
       const hookPath = path.join(hooksDir, 'pre-commit');
       const backupPath = path.join(hooksDir, 'pre-commit.backup');
 
+      // 既に repo 標準のリンク構成（.git/hooks/pre-commit -> scripts/pre-commit-ai-guard.sh）なら
+      // 拡張は上書きしない（リンク先の scripts/* を破壊するリスクがあるため）
+      if (await exists(hookPath)) {
+        const isRepoGuardSymlink = await this.isSymlinkToRepoPreCommitGuard(hooksDir, hookPath);
+        if (isRepoGuardSymlink) {
+          this.outputChannel.appendLine(
+            '[HookInstaller] Detected symlink pre-commit -> scripts/pre-commit-ai-guard.sh; leaving it untouched'
+          );
+          return true;
+        }
+      }
+
       // 既存hookをバックアップ
       if (await exists(hookPath)) {
         this.outputChannel.appendLine('[HookInstaller] Backing up existing pre-commit hook');
-        const existingContent = await readFile(hookPath, 'utf8');
-        await writeFile(backupPath, existingContent, 'utf8');
+        await this.backupHookByRename(hookPath, backupPath);
       }
 
       // 新しいhookを生成
       const hookContent = this.generatePreCommitHook();
-      await writeFile(hookPath, hookContent, 'utf8');
+      await this.safeWriteHookFile(hookPath, hookContent);
 
       // 実行権限を付与 (Unix系のみ)
       if (process.platform !== 'win32') {
@@ -74,10 +88,38 @@ export class HookInstaller {
 
 echo "🔍 Running Servant validation..."
 
+# Prefer repo-local guard script if available (works even when VS Code CLI is not installed)
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null || true)
+GUARD_SCRIPT="$REPO_ROOT/scripts/pre-commit-ai-guard.sh"
+
+if [ -n "$REPO_ROOT" ] && [ -f "$GUARD_SCRIPT" ]; then
+  echo "🛡️  Found repo-local guard: $GUARD_SCRIPT"
+  if [ -x "$GUARD_SCRIPT" ]; then
+    "$GUARD_SCRIPT"
+    GUARD_EXIT=$?
+  else
+    # File exists but isn't executable (e.g., on fresh clones)
+    sh "$GUARD_SCRIPT"
+    GUARD_EXIT=$?
+  fi
+
+  if [ $GUARD_EXIT -ne 0 ]; then
+    exit $GUARD_EXIT
+  fi
+
+  echo "✅ Repo guard passed."
+fi
+
 # VSCodeコマンドを使用して検証を実行
 # 注: VSCodeが起動している必要があります
 
 if ! command -v code >/dev/null 2>&1; then
+  # If repo guard exists and passed, do not block commit just because VS Code CLI is missing.
+  if [ -n "$REPO_ROOT" ] && [ -f "$GUARD_SCRIPT" ]; then
+    echo "ℹ️  VS Code CLI (code) not found; skipping VS Code validation (repo guard already passed)."
+    exit 0
+  fi
+
   echo "❌ VS Code CLI (code) not found."
   echo "💡 Install/enable 'code' command in PATH or run validation manually:"
   echo "   - VS Code Command Palette: 'Servant: Validate Before Commit'"
@@ -114,13 +156,12 @@ exit 0
       // 既存hookをバックアップ
       if (await exists(hookPath)) {
         this.outputChannel.appendLine('[HookInstaller] Backing up existing commit-msg hook');
-        const existingContent = await readFile(hookPath, 'utf8');
-        await writeFile(backupPath, existingContent, 'utf8');
+        await this.backupHookByRename(hookPath, backupPath);
       }
 
       // 新しいhookを生成
       const hookContent = this.generateCommitMsgHook();
-      await writeFile(hookPath, hookContent, 'utf8');
+      await this.safeWriteHookFile(hookPath, hookContent);
 
       // 実行権限を付与
       if (process.platform !== 'win32') {
@@ -180,20 +221,12 @@ exit 0
       // バックアップが存在すれば復元
       if (await exists(backupPath)) {
         this.outputChannel.appendLine(`[HookInstaller] Restoring ${hookName} from backup`);
-        const backupContent = await readFile(backupPath, 'utf8');
-        await writeFile(hookPath, backupContent, 'utf8');
-
-        if (process.platform !== 'win32') {
-          await chmod(hookPath, 0o755);
-        }
-
-        // バックアップファイルを削除
-        await promisify(fs.unlink)(backupPath);
+        await this.restoreHookByRename(hookPath, backupPath);
       } else {
         // バックアップがなければhookを削除
         this.outputChannel.appendLine(`[HookInstaller] Removing ${hookName}`);
         if (await exists(hookPath)) {
-          await promisify(fs.unlink)(hookPath);
+          await unlink(hookPath);
         }
       }
 
@@ -219,12 +252,84 @@ exit 0
         return false;
       }
 
-      const content = await readFile(hookPath, 'utf8');
+       // repo 標準のシンボリックリンク構成を「インストール済み」と見なす
+       if (hookName === 'pre-commit') {
+         const isRepoGuardSymlink = await this.isSymlinkToRepoPreCommitGuard(hooksDir, hookPath);
+         if (isRepoGuardSymlink) {
+           return true;
+         }
+       }
+
+      const content = await promisify(fs.readFile)(hookPath, 'utf8');
       // Servant/Instructions Validatorのシグネチャをチェック（後方互換）
       return content.includes('Servant VSCode Extension') || content.includes('Instructions Validator');
     } catch {
       return false;
     }
+  }
+
+  private async isSymlinkToRepoPreCommitGuard(hooksDir: string, hookPath: string): Promise<boolean> {
+    try {
+      const st = await lstat(hookPath);
+      if (!st.isSymbolicLink()) return false;
+
+      const linkTarget = await readlink(hookPath);
+      const hooksDirReal = hooksDir;
+      const repoRoot = path.resolve(hooksDirReal, '..', '..');
+      const expected = path.join(repoRoot, 'scripts', 'pre-commit-ai-guard.sh');
+      const resolved = path.resolve(path.dirname(hookPath), linkTarget);
+      return path.normalize(resolved) === path.normalize(expected);
+    } catch {
+      return false;
+    }
+  }
+
+  private async backupHookByRename(hookPath: string, backupPath: string): Promise<void> {
+    // 既存のバックアップがあれば上書き（内容より「現物」を残す）
+    if (await exists(backupPath)) {
+      try {
+        await unlink(backupPath);
+      } catch {
+        // ignore
+      }
+    }
+    await rename(hookPath, backupPath);
+  }
+
+  private async restoreHookByRename(hookPath: string, backupPath: string): Promise<void> {
+    if (await exists(hookPath)) {
+      try {
+        const st = await lstat(hookPath);
+        if (st.isSymbolicLink()) {
+          await unlink(hookPath);
+        } else {
+          await unlink(hookPath);
+        }
+      } catch {
+        // ignore
+      }
+    }
+
+    await rename(backupPath, hookPath);
+    if (process.platform !== 'win32') {
+      await chmod(hookPath, 0o755);
+    }
+  }
+
+  private async safeWriteHookFile(hookPath: string, content: string): Promise<void> {
+    // hookPath がシンボリックリンクの場合、リンク先を書き換えないようリンクを解除してから書き込む
+    if (await exists(hookPath)) {
+      try {
+        const st = await lstat(hookPath);
+        if (st.isSymbolicLink()) {
+          await unlink(hookPath);
+        }
+      } catch {
+        // ignore
+      }
+    }
+
+    await writeFile(hookPath, content, 'utf8');
   }
 
   /**

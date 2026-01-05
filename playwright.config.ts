@@ -8,10 +8,14 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
 
+  // tests/ 配下はVitestとPlaywrightが混在しているため、Playwrightは専用サフィックスのみ対象
+  // 例: *.pw.spec.ts / *.pw.spec.tsx
+  testMatch: '**/*.pw.spec.{ts,tsx,js,jsx}',
+
   // タイムアウト設定
-  timeout: 10 * 1000, // 10秒に短縮
+  timeout: 30 * 1000, // 外部URL（本番/beta）にアクセスするため余裕を持たせる
   expect: {
-    timeout: 3000, // 3秒に短縮
+    timeout: 10 * 1000,
   },
 
   // テスト実行設定
@@ -27,6 +31,9 @@ export default defineConfig({
   use: {
     // ベースURL（環境変数で上書き可能）
     baseURL: process.env.BASE_URL || 'http://localhost:5173',
+
+    // 外部URLの初回ロードが遅い環境でも落ちないように
+    navigationTimeout: 30 * 1000,
 
     // トレース設定（失敗時のみ）
     trace: 'on-first-retry',

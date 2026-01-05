@@ -1,0 +1,13 @@
+{
+  "units": [
+    {
+      "id": "history-ancient-example",
+      "label": "（例）歴史：古代（ユーザー定義単元）",
+      "requiredTerms": [
+        "縄文時代",
+        "弥生時代",
+        "古墳時代"
+      ]
+    }
+  ]
+}

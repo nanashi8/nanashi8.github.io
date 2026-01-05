@@ -1,0 +1,301 @@
+/**
+ * 長文読解（ReadingPassageView）のスタイル
+ */
+
+/* ===== 全文表示エリア ===== */
+.clause-parsed-display {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #1f2937;
+}
+
+/* 主節（デフォルト） */
+.main-clause {
+  color: #1f2937;
+}
+
+/* 従属節 (...)  */
+.subordinate-clause {
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+/* 句 <...> */
+.phrase {
+  color: #059669;
+  font-style: italic;
+}
+
+/* 節句分割の記号 / */
+.clause-separator {
+  color: #9ca3af;
+  margin: 0 0.25rem;
+}
+
+/* SVOCM下線スタイル */
+.svocm-s {
+  text-decoration: underline solid #ef4444 4px;
+  text-underline-offset: 3px;
+}
+
+.svocm-v {
+  text-decoration: underline solid #3b82f6 4px;
+  text-underline-offset: 3px;
+}
+
+.svocm-o {
+  text-decoration: underline solid #10b981 4px;
+  text-underline-offset: 3px;
+}
+
+.svocm-c {
+  text-decoration: underline solid #f59e0b 4px;
+  text-underline-offset: 3px;
+}
+
+.svocm-m {
+  text-decoration: underline solid #8b5cf6 4px;
+  text-underline-offset: 3px;
+}
+
+/* SVOCM: 太下線 + 下にS/V/O/C/M表示（横一列＋下行） */
+.svocm-word-unit {
+  display: inline-grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  vertical-align: bottom;
+  margin-right: 0.25rem;
+}
+
+.svocm-plain {
+  /* No underline for non-SVOCM words */
+}
+
+.svocm-label-below {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  margin-top: 2px;
+  min-height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svocm-label-below.svocm-s {
+  color: #ef4444;
+}
+
+.svocm-label-below.svocm-v {
+  color: #3b82f6;
+}
+
+.svocm-label-below.svocm-o {
+  color: #10b981;
+}
+
+.svocm-label-below.svocm-c {
+  color: #f59e0b;
+}
+
+.svocm-label-below.svocm-m {
+  color: #8b5cf6;
+}
+
+/* SVOCM凡例 */
+.svocm-legend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.svocm-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===== PhraseTranslationTab（フレーズ訳）===== */
+.phrase-translation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.phrase-english {
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  color: #1f2937;
+  padding: 0.5rem;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+
+.phrase-japanese {
+  font-size: 1rem;
+  color: #374151;
+  padding: 0.5rem;
+  background-color: #fef3c7;
+  border-radius: 4px;
+}
+
+/* ===== JapaneseTab（日本語訳）===== */
+.japanese-translation-display {
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #1f2937;
+  padding: 1rem;
+  background-color: #fef3c7;
+  border-radius: 4px;
+}
+
+/* ===== VocabularyTab（語句確認）===== */
+.vocabulary-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vocabulary-inline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vocabulary-inline-item .vocabulary-meaning {
+  flex: none;
+}
+
+.vocabulary-sep {
+  color: #9ca3af;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.vocabulary-section {
+  margin-bottom: 1.5rem;
+}
+
+.vocabulary-section h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.vocabulary-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.vocabulary-word {
+  font-family: 'Times New Roman', serif;
+  font-weight: 600;
+  color: #1f2937;
+  margin-right: 0.5rem;
+}
+
+.vocabulary-meaning {
+  color: #6b7280;
+  flex: 1;
+}
+
+.add-to-custom-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-custom-btn:hover {
+  background-color: #2563eb;
+}
+
+.add-to-custom-btn:active {
+  background-color: #1d4ed8;
+}
+
+/* ===== 全文表示エリア ===== */
+.passage-full-text-area {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.passage-text-container {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #1f2937;
+  text-align: justify;
+}
+
+/* クリック可能な文 */
+.sentence-clickable {
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  border-radius: 2px;
+  padding: 2px 4px;
+}
+
+.sentence-clickable:hover {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.sentence-selected {
+  background-color: #fef3c7;
+  color: #92400e;
+  font-weight: 500;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 768px) {
+  .phrase-translation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .passage-text-container {
+    font-size: 1rem;
+  }
+
+  .clause-parsed-display {
+    font-size: 1rem;
+  }
+
+  .explanation-board-compact {
+    padding: 1rem;
+  }
+
+  .passage-full-text-area {
+    padding: 1rem;
+  }
+}
+
+/* ===== ローディング・エラー表示 ===== */
+.reading-passage-view {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}

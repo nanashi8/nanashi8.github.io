@@ -7,7 +7,8 @@
  * - debug: すべてのログ（URL に ?debug=true を追加）
  */
 
-const isDevelopment = import.meta.env.DEV;
+const metaEnv = (import.meta as unknown as { env?: { DEV?: boolean } }).env;
+const isDevelopment = Boolean(metaEnv?.DEV);
 const isDebugMode =
   typeof window !== 'undefined' &&
   new URLSearchParams(window.location.search).get('debug') === 'true';

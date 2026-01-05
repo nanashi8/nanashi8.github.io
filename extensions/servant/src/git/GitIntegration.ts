@@ -1,9 +1,28 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
-import { exec } from 'child_process';
+import * as fs from 'fs';
+import { execFile } from 'child_process';
 import { promisify } from 'util';
 
-const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
+
+/**
+ * ファイルの変更統計
+ */
+export interface FileChangeStats {
+  /** ファイルパス（相対パス） */
+  filePath: string;
+  /** 総コミット数 */
+  totalCommits: number;
+  /** 過去30日のコミット数 */
+  commitsLast30Days: number;
+  /** 過去7日のコミット数 */
+  commitsLast7Days: number;
+  /** 最終コミット日時 */
+  lastCommitDate: Date | null;
+  /** 変更頻度（0-1、高いほど活発） */
+  changeFrequency: number;
+}
 
 /**
  * GitIntegration
@@ -15,6 +34,31 @@ const execAsync = promisify(exec);
  */
 export class GitIntegration {
   private outputChannel: vscode.OutputChannel;
+
+  private resolveGitExecutable(): string {
+    // Prefer explicit path when available (macOS default)
+    const envGit = process.env.GIT_EXECUTABLE;
+    if (envGit && envGit.trim().length > 0) {
+      return envGit;
+    }
+
+    if (process.platform === 'darwin' && fs.existsSync('/usr/bin/git')) {
+      return '/usr/bin/git';
+    }
+
+    return 'git';
+  }
+
+  private execGit(
+    workspaceRoot: string,
+    args: string[],
+    options?: { maxBuffer?: number }
+  ): Promise<{ stdout: string; stderr: string }> {
+    const git = this.resolveGitExecutable();
+    return execFileAsync(git, ['-C', workspaceRoot, ...args], {
+      maxBuffer: options?.maxBuffer,
+    }) as unknown as Promise<{ stdout: string; stderr: string }>;
+  }
 
   constructor(outputChannel: vscode.OutputChannel) {
     this.outputChannel = outputChannel;
@@ -28,18 +72,10 @@ export class GitIntegration {
    */
   async isGitRepository(workspaceRoot: string): Promise<boolean> {
     try {
-      const { stdout, stderr } = await execAsync('git rev-parse --git-dir', {
-        cwd: workspaceRoot
-      });
-
-      if (stderr) {
-        this.outputChannel.appendLine(`[Git] Error checking repository: ${stderr}`);
-        return false;
-      }
-
-      return stdout.trim().length > 0;
-    } catch (error) {
-      this.outputChannel.appendLine(`[Git] Not a git repository: ${error}`);
+      const { stdout } = await this.execGit(workspaceRoot, ['rev-parse', '--is-inside-work-tree']);
+      return stdout.trim() === 'true';
+    } catch (_error) {
+      this.outputChannel.appendLine(`[Git] Not a git repository (root=${workspaceRoot})`);
       return false;
     }
   }
@@ -52,9 +88,7 @@ export class GitIntegration {
    */
   async getHooksDirectory(workspaceRoot: string): Promise<string | null> {
     try {
-      const { stdout } = await execAsync('git rev-parse --git-dir', {
-        cwd: workspaceRoot
-      });
+      const { stdout } = await this.execGit(workspaceRoot, ['rev-parse', '--git-dir']);
 
       const gitDir = stdout.trim();
       const hooksDir = path.isAbsolute(gitDir)
@@ -76,10 +110,13 @@ export class GitIntegration {
    */
   async getStagedFiles(workspaceRoot: string): Promise<string[]> {
     try {
-      // git diff --cached --name-only でstaged filesを取得
-      const { stdout } = await execAsync('git diff --cached --name-only', {
-        cwd: workspaceRoot
-      });
+      const isRepo = await this.isGitRepository(workspaceRoot);
+      if (!isRepo) {
+        return [];
+      }
+
+      // Use --staged for compatibility and to avoid option parsing surprises
+      const { stdout } = await this.execGit(workspaceRoot, ['diff', '--staged', '--name-only']);
 
       if (!stdout.trim()) {
         this.outputChannel.appendLine('[Git] No staged files found');
@@ -128,9 +165,7 @@ export class GitIntegration {
    */
   async getGitRoot(workspaceRoot: string): Promise<string | null> {
     try {
-      const { stdout } = await execAsync('git rev-parse --show-toplevel', {
-        cwd: workspaceRoot
-      });
+      const { stdout } = await this.execGit(workspaceRoot, ['rev-parse', '--show-toplevel']);
 
       return stdout.trim();
     } catch (error) {
@@ -147,9 +182,7 @@ export class GitIntegration {
    */
   async getCurrentBranch(workspaceRoot: string): Promise<string | null> {
     try {
-      const { stdout } = await execAsync('git rev-parse --abbrev-ref HEAD', {
-        cwd: workspaceRoot
-      });
+      const { stdout } = await this.execGit(workspaceRoot, ['rev-parse', '--abbrev-ref', 'HEAD']);
 
       return stdout.trim();
     } catch (error) {
@@ -167,9 +200,7 @@ export class GitIntegration {
   async stageFile(filePath: string, workspaceRoot: string): Promise<boolean> {
     try {
       const relativePath = path.relative(workspaceRoot, filePath);
-      await execAsync(`git add "${relativePath}"`, {
-        cwd: workspaceRoot
-      });
+      await this.execGit(workspaceRoot, ['add', '--', relativePath]);
 
       this.outputChannel.appendLine(`[Git] Staged file: ${relativePath}`);
       return true;
@@ -241,16 +272,17 @@ export class GitIntegration {
    */
   async getWorkingTreeFiles(workspaceRoot: string): Promise<string[]> {
     try {
-      const { stdout } = await execAsync('git status --porcelain', {
-        cwd: workspaceRoot
-      });
+      const { stdout } = await this.execGit(workspaceRoot, ['status', '--porcelain']);
 
       if (!stdout.trim()) {
         return [];
       }
 
       const files = new Set<string>();
-      const lines = stdout.split('\n').map(l => l.trimEnd()).filter(Boolean);
+      const lines = stdout
+        .split('\n')
+        .map((l: string) => l.trimEnd())
+        .filter(Boolean);
 
       for (const line of lines) {
         // 形式: XY <path>  または  R  <old> -> <new>
@@ -271,5 +303,174 @@ export class GitIntegration {
       this.outputChannel.appendLine(`[Git] Error getting working tree files: ${error}`);
       return [];
     }
+  }
+
+  /**
+   * ファイルの変更統計を取得
+   * @param workspaceRoot ワークスペースルート
+   * @param filePath ファイルパス（相対パス）
+   * @returns 変更統計
+   */
+  async getFileChangeStats(workspaceRoot: string, filePath: string): Promise<FileChangeStats> {
+    try {
+      // git log --follow --format=%ad --date=iso -- <filePath>
+      const { stdout } = await this.execGit(
+        workspaceRoot,
+        ['log', '--follow', '--format=%ad', '--date=iso', '--', filePath],
+        { maxBuffer: 1024 * 1024 * 10 }
+      );
+
+      if (!stdout.trim()) {
+        // コミット履歴なし
+        return {
+          filePath,
+          totalCommits: 0,
+          commitsLast30Days: 0,
+          commitsLast7Days: 0,
+          lastCommitDate: null,
+          changeFrequency: 0
+        };
+      }
+
+      const dates = stdout
+        .trim()
+        .split('\n')
+        .map((line: string) => new Date(line.trim()));
+      const now = new Date();
+      const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+      const totalCommits = dates.length;
+      const commitsLast30Days = dates.filter((d: Date) => d >= thirtyDaysAgo).length;
+      const commitsLast7Days = dates.filter((d: Date) => d >= sevenDaysAgo).length;
+      const lastCommitDate = dates[0] || null;
+
+      // 変更頻度を計算（0-1）
+      // 重み: 30日以内 60%, 7日以内 40%
+      const freq30 = totalCommits > 0 ? commitsLast30Days / totalCommits : 0;
+      const freq7 = commitsLast30Days > 0 ? commitsLast7Days / commitsLast30Days : 0;
+      const changeFrequency = Math.min(1.0, freq30 * 0.6 + freq7 * 0.4);
+
+      return {
+        filePath,
+        totalCommits,
+        commitsLast30Days,
+        commitsLast7Days,
+        lastCommitDate,
+        changeFrequency
+      };
+    } catch (error) {
+      this.outputChannel.appendLine(`[Git] Error getting file change stats for ${filePath}: ${error}`);
+      return {
+        filePath,
+        totalCommits: 0,
+        commitsLast30Days: 0,
+        commitsLast7Days: 0,
+        lastCommitDate: null,
+        changeFrequency: 0
+      };
+    }
+  }
+
+  /**
+   * 全ファイルの変更統計を一括取得（効率化版）
+   * @param workspaceRoot ワークスペースルート
+   * @returns ファイルパス → 変更統計のマップ
+   */
+  async getAllFileChangeStats(workspaceRoot: string): Promise<Map<string, FileChangeStats>> {
+    const stats = new Map<string, FileChangeStats>();
+
+    try {
+      this.outputChannel.appendLine('[Git] Collecting file change statistics...');
+
+      // git log --name-only --format="%ad|%H" --date=iso
+      // 全コミット履歴を一度に取得
+      const { stdout } = await this.execGit(
+        workspaceRoot,
+        ['log', '--name-only', '--format=%ad|%H', '--date=iso', '--all'],
+        { maxBuffer: 1024 * 1024 * 50 }
+      );
+
+      if (!stdout.trim()) {
+        this.outputChannel.appendLine('[Git] No commit history found');
+        return stats;
+      }
+
+      const lines = stdout.trim().split('\n');
+      const now = new Date();
+      const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+      // ファイルごとの集計
+      const fileCounts = new Map<string, {
+        total: number;
+        last30: number;
+        last7: number;
+        lastDate: Date | null;
+      }>();
+
+      let currentDate: Date | null = null;
+
+      for (const line of lines) {
+        if (!line.trim()) continue;
+
+        // 日付行（フォーマット: "2026-01-05 12:00:00 +0900|abc123"）
+        if (line.includes('|')) {
+          const dateStr = line.split('|')[0].trim();
+          currentDate = new Date(dateStr);
+          continue;
+        }
+
+        // ファイル名行
+        const filePath = line.trim();
+        if (!filePath || !currentDate) continue;
+
+        // カウント初期化
+        if (!fileCounts.has(filePath)) {
+          fileCounts.set(filePath, {
+            total: 0,
+            last30: 0,
+            last7: 0,
+            lastDate: null
+          });
+        }
+
+        const count = fileCounts.get(filePath)!;
+        count.total++;
+
+        if (currentDate >= thirtyDaysAgo) {
+          count.last30++;
+        }
+        if (currentDate >= sevenDaysAgo) {
+          count.last7++;
+        }
+
+        if (!count.lastDate || currentDate > count.lastDate) {
+          count.lastDate = currentDate;
+        }
+      }
+
+      // 変更頻度を計算
+      for (const [filePath, count] of fileCounts) {
+        const freq30 = count.total > 0 ? count.last30 / count.total : 0;
+        const freq7 = count.last30 > 0 ? count.last7 / count.last30 : 0;
+        const changeFrequency = Math.min(1.0, freq30 * 0.6 + freq7 * 0.4);
+
+        stats.set(filePath, {
+          filePath,
+          totalCommits: count.total,
+          commitsLast30Days: count.last30,
+          commitsLast7Days: count.last7,
+          lastCommitDate: count.lastDate,
+          changeFrequency
+        });
+      }
+
+      this.outputChannel.appendLine(`[Git] Collected stats for ${stats.size} files`);
+    } catch (error) {
+      this.outputChannel.appendLine(`[Git] Error getting all file change stats: ${error}`);
+    }
+
+    return stats;
   }
 }

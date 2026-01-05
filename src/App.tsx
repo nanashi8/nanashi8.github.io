@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { QuestionSet, Question } from './types';
-import { parseCSV, saveQuestionSets, generateId, classifyPhraseType } from './utils';
+import { parseCSV, generateId, classifyPhraseType } from './utils';
 import { useQuizSettings } from './hooks/useQuizSettings';
 import { useQuizFilters } from './hooks/useQuizFilters';
 import { useQuizState } from './hooks/useQuizState';
@@ -83,7 +83,7 @@ import { processSessionEnd, getMotivationalMessage } from './ai/engagement/gamif
 import { QuestionScheduler } from '@/ai/scheduler';
 import TranslationView from './components/TranslationView';
 import SpellingView from './components/SpellingView';
-import ComprehensiveReadingView from './components/ComprehensiveReadingView';
+import ReadingPassageView from './components/ReadingPassageView';
 import GrammarQuizView from './components/GrammarQuizView';
 import MemorizationView from './components/MemorizationView';
 import FloatingPanel from './components/FloatingPanel';
@@ -2132,12 +2132,20 @@ function App() {
 
           {/* 英語 - 長文タブ */}
           {activeSubject === 'english' && activeEnglishTab === 'reading' && (
-            <ComprehensiveReadingView
-              customQuestionSets={customQuestionState.sets}
-              onAddWordToCustomSet={handleAddWordToCustomSet}
-              onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
-              onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
-              onSaveUnknownWords={async (words) => {
+            <ReadingPassageView
+              onAddWordToCustomSet={(word) => {
+                const targetSetId = customQuestionState.sets[0]?.id;
+                if (targetSetId) {
+                  handleAddWordToCustomSet(targetSetId, word);
+                }
+              }}
+            />
+          )}
+
+          {/* LEGACY: 旧 ComprehensiveReadingView（将来削除予定、現在はReadingPassageViewを使用） */}
+          {activeSubject === 'english' && (activeEnglishTab as string) === 'reading_old' && (
+            <div>
+              {/* onSaveUnknownWords のロジックは保留（将来的にReadingPassageView側で実装）
                 // 分からない単語を問題集として保存
                 if (words.length === 0) return;
 
@@ -2173,7 +2181,8 @@ function App() {
 
                 alert(`✅ 問題集「${setName}」を作成しました（${words.length}語）`);
               }}
-            />
+              */}
+            </div>
           )}
 
           {/* 設定（全教科共通） */}

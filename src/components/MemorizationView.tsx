@@ -67,6 +67,15 @@ interface MemorizationViewProps {
   initialIncorrectLimit?: number;
 }
 
+const classicalJapaneseDataSources = [
+  { id: 'all', name: '古文総合' },
+  { id: 'vocabulary', name: '古文単語' },
+  { id: 'knowledge', name: '古文知識' },
+  { id: 'grammar', name: '古文文法' },
+  { id: 'kanbun', name: '漢文総合' },
+  { id: 'kanbun-practice', name: '漢文実践' },
+] as const;
+
 function normalizeRelatedFields(value: unknown): string[] {
   if (Array.isArray(value)) {
     return value.map((v) => String(v).trim()).filter(Boolean);
@@ -102,10 +111,20 @@ function MemorizationView({
   onAddWordToCustomSet,
   onRemoveWordFromCustomSet,
   onOpenCustomSetManagement,
-  initialBatchSize,
-  initialIncorrectLimit,
+  initialBatchSize: _initialBatchSize,
+  initialIncorrectLimit: _initialIncorrectLimit,
 }: MemorizationViewProps) {
   const isSocial = subject === 'social' || subject === 'japanese';
+
+  const classicalSourceStorageKey = 'japanese-classical-source';
+  const [classicalSourceId, setClassicalSourceId] = useState<string>(() => {
+    if (subject !== 'japanese') return 'all';
+    try {
+      return localStorage.getItem(classicalSourceStorageKey) || 'all';
+    } catch {
+      return 'all';
+    }
+  });
 
   // 出題方式（SSOT）: カテゴリースロット方式を使用
   // NOTE: useQuestionRequeue によるバッチ内重複を避けるため、再出題差し込みはこのフラグに同期させる
@@ -133,7 +152,8 @@ function MemorizationView({
   // 🆕 バッチ数設定（LocalStorageから読み込み、ScoreBoardで設定）
   const batchSize = (() => {
     try {
-      const saved = localStorage.getItem('memorization-batch-size');
+      const key = subject === 'japanese' ? 'japanese-memorization-batch-size' : 'memorization-batch-size';
+      const saved = localStorage.getItem(key);
       return saved ? parseInt(saved) : null;
     } catch {
       return null;
@@ -143,7 +163,11 @@ function MemorizationView({
   // 🆕 分からない・まだまだの上限比率（10-50%、ScoreBoardで設定）
   const reviewRatioLimit = (() => {
     try {
-      const saved = localStorage.getItem('memorization-review-ratio-limit');
+      const key =
+        subject === 'japanese'
+          ? 'japanese-memorization-review-ratio-limit'
+          : 'memorization-review-ratio-limit';
+      const saved = localStorage.getItem(key);
       return saved ? parseInt(saved) : 20; // デフォルト20%
     } catch {
       return 20;
@@ -231,7 +255,7 @@ function MemorizationView({
   const [isReviewFocusMode, setIsReviewFocusMode] = useState(false);
 
   // セッション統計（カスタムフック）- 暗記タブ専用
-  const { sessionStats, setSessionStats, resetStats: resetSessionStats } = useSessionStats('memorization');
+  const { sessionStats, setSessionStats, resetStats: _resetSessionStats } = useSessionStats('memorization');
 
   // 回答時刻（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(0);
@@ -402,7 +426,7 @@ function MemorizationView({
       // 暗記モード以外は無視
       if (eventMode !== 'memorization') return;
 
-      if (import.meta.env.DEV) {
+      if (import.meta.env.DEV && localStorage.getItem('debug-verbose') === 'true') {
         console.log(
           `🚨 [MemorizationView] 弱点語検出: ${word} (Position=${position}) → 再スケジューリング準備`
         );
@@ -721,8 +745,8 @@ function MemorizationView({
     selectQuestionsCountRef.current += 1;
     const currentCount = selectQuestionsCountRef.current;
 
-    // 🐛 DEBUG: useEffect実行回数と変更された依存配列を記録
-    if (import.meta.env.DEV) {
+    // 🐛 DEBUG: useEffect実行回数と変更された依存配列を記録（verbose時のみ）
+    if (import.meta.env.DEV && localStorage.getItem('debug-verbose') === 'true') {
       const changes: string[] = [];
 
       if (prevDepsRef.current.selectedDifficulty !== selectedDifficulty) {
@@ -793,7 +817,9 @@ function MemorizationView({
         // バッチ再生成フラグをリセット
         if (needsBatchRegeneration) {
           setNeedsBatchRegeneration(false);
-          console.log('🔄 [バッチ再生成] フラグをリセットしました');
+          if (import.meta.env.DEV && localStorage.getItem('debug-verbose') === 'true') {
+            console.log('🔄 [バッチ再生成] フラグをリセットしました');
+          }
         }
 
         // データソース（問題セットID / 既存source）に基づいて問題を取得
@@ -2660,6 +2686,7 @@ function MemorizationView({
             <div className="w-full max-w-4xl">
               <ScoreBoard
                 mode="memorization"
+                storageKeyPrefix={subject === 'japanese' ? 'japanese' : undefined}
                 sessionCorrect={sessionStats.correct}
                 sessionReview={sessionStats.still_learning}
                 sessionIncorrect={sessionStats.incorrect}
@@ -2708,29 +2735,63 @@ function MemorizationView({
               </div>
 
               <div className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="memorization-datasource"
-                    className="block text-sm font-medium mb-2 text-gray-700"
-                  >
-                    📖 出題元:
-                  </label>
-                  <select
-                    id="memorization-datasource"
-                    value={selectedDataSource}
-                    onChange={(e) => setSelectedDataSource(e.target.value)}
-                    className="w-full px-3 py-2 border rounded-lg"
-                  >
-                    <option value="all">{allDataSourceLabel || '高校受験総合'}</option>
-                    {questionSets
-                      .filter((qs) => qs.id !== 'all')
-                      .map((set) => (
-                        <option key={set.id} value={set.id}>
-                          {set.name}
+                {subject === 'japanese' && (
+                  <div>
+                    <label
+                      htmlFor="japanese-classical-datasource"
+                      className="block text-sm font-medium mb-2 text-gray-700"
+                    >
+                      📖 出題元:
+                    </label>
+                    <select
+                      id="japanese-classical-datasource"
+                      value={classicalSourceId}
+                      onChange={(e) => {
+                        const nextId = e.target.value;
+                        setClassicalSourceId(nextId);
+                        try {
+                          localStorage.setItem(classicalSourceStorageKey, nextId);
+                        } catch {
+                          // ignore
+                        }
+                        window.dispatchEvent(new Event('japanese-classical-source-changed'));
+                      }}
+                      className="w-full px-3 py-2 border rounded-lg"
+                    >
+                      {classicalJapaneseDataSources.map((s) => (
+                        <option key={s.id} value={s.id}>
+                          {s.name}
                         </option>
                       ))}
-                  </select>
-                </div>
+                    </select>
+                  </div>
+                )}
+
+                {subject !== 'japanese' && (
+                  <div>
+                    <label
+                      htmlFor="memorization-datasource"
+                      className="block text-sm font-medium mb-2 text-gray-700"
+                    >
+                      📖 出題元:
+                    </label>
+                    <select
+                      id="memorization-datasource"
+                      value={selectedDataSource}
+                      onChange={(e) => setSelectedDataSource(e.target.value)}
+                      className="w-full px-3 py-2 border rounded-lg"
+                    >
+                      <option value="all">{allDataSourceLabel || '高校受験総合'}</option>
+                      {questionSets
+                        .filter((qs) => qs.id !== 'all')
+                        .map((set) => (
+                          <option key={set.id} value={set.id}>
+                            {set.name}
+                          </option>
+                        ))}
+                    </select>
+                  </div>
+                )}
 
                 {/* 単語・熟語フィルター（英語のみ） */}
                 {subject === 'english' && (
@@ -2816,10 +2877,14 @@ function MemorizationView({
                     onChange={(e) => {
                       const value = e.target.value === '' ? null : parseInt(e.target.value);
                       try {
+                        const key =
+                          subject === 'japanese'
+                            ? 'japanese-memorization-batch-size'
+                            : 'memorization-batch-size';
                         if (value === null) {
-                          localStorage.removeItem('memorization-batch-size');
+                          localStorage.removeItem(key);
                         } else {
-                          localStorage.setItem('memorization-batch-size', String(value));
+                          localStorage.setItem(key, String(value));
                         }
                         window.location.reload();
                       } catch {
@@ -2852,7 +2917,11 @@ function MemorizationView({
                     onChange={(e) => {
                       const value = parseInt(e.target.value);
                       try {
-                        localStorage.setItem('memorization-review-ratio-limit', String(value));
+                        const key =
+                          subject === 'japanese'
+                            ? 'japanese-memorization-review-ratio-limit'
+                            : 'memorization-review-ratio-limit';
+                        localStorage.setItem(key, String(value));
                         window.location.reload();
                       } catch {
                         // ignore storage errors

@@ -1,0 +1,807 @@
+{
+  "version": 1,
+  "language": "ja",
+  "licenseNote": "All examples are original. No direct quotes from exams or websites.",
+  "patterns": [
+    {
+      "id": "S01",
+      "title": "関係代名詞の先行詞を固定する（who/which/that）",
+      "gist": "関係詞節は“どの名詞を説明しているか”を固定すると崩れない。",
+      "steps": ["関係詞を見つける", "直前の名詞から先行詞候補を特定", "関係詞節を先行詞に接続して一文に言い換える"],
+      "pitfalls": ["先行詞を誤って別名詞に結ぶ", "関係詞節を主節と混同"],
+      "exampleEn": "The scientist who studied whales published a new report."
+    },
+    {
+      "id": "S02",
+      "title": "関係詞の“省略”を補う（The book I bought）",
+      "gist": "目的語が省略された関係節は、頭の中で that/which を補うと読みやすい。",
+      "steps": ["名詞の直後に主語+動詞が続く形を検出", "省略された目的語/前置詞を補って意味を通す"],
+      "pitfalls": ["I bought を独立文として読む"],
+      "exampleEn": "The book I bought yesterday is already out of print."
+    },
+    {
+      "id": "S03",
+      "title": "挿入句（, ... ,）は一度外して骨格を作る",
+      "gist": "カンマの挿入は情報追加。まず主語・動詞・目的語だけを取る。",
+      "steps": ["カンマで挟まれた部分を括る", "括った部分を一旦除いて骨格SVを作る", "挿入情報を後付けする"],
+      "pitfalls": ["挿入句を主節と誤認"],
+      "exampleEn": "The plan, despite its high cost, reduced errors."
+    },
+    {
+      "id": "S04",
+      "title": "分詞構文は“同時/原因/譲歩”のどれかに分類",
+      "gist": "分詞構文（-ing/-ed）は関係が曖昧。最小で“同時/原因/譲歩”に分類して読む。",
+      "steps": ["分詞句の主語が主節主語と同じか確認", "自然な関係（同時/原因/譲歩）を選ぶ", "接続詞（while/because/although）に言い換えて確認"],
+      "pitfalls": ["機械的にbecauseで固定"],
+      "exampleEn": "Feeling tired, she left the meeting early."
+    },
+    {
+      "id": "S05",
+      "title": "不定詞の役割を3分類（名詞/形容詞/副詞）",
+      "gist": "to不定詞は多機能。名詞用法/形容詞用法/副詞用法のどれかに決めると迷いが減る。",
+      "steps": ["to+V を検出", "直前が名詞なら形容詞用法候補", "文全体にかかるなら副詞用法候補", "主語・補語位置なら名詞用法"],
+      "pitfalls": ["全部“〜するために”にする"],
+      "exampleEn": "She has a book to read on the train."
+    },
+    {
+      "id": "S06",
+      "title": "同格（A, B）を“=（イコール）”で読む",
+      "gist": "名詞の言い換え（同格）は“同じものを別名で言う”構造。A=Bで固定すると速い。",
+      "steps": ["名詞Aの直後に名詞Bが来る形を検出", "A=B の式にする", "Bの説明語をAに戻して読む"],
+      "pitfalls": ["AとBを別物として読む"],
+      "exampleEn": "Dr. Lee, a specialist in robotics, presented the findings."
+    },
+    {
+      "id": "S07",
+      "title": "比較は“基準”を確認（than/as...as）",
+      "gist": "比較は“何と比べているか”の基準（than以下）を見失うと誤読する。",
+      "steps": ["than/as を検出", "比較対象A/Bを特定", "比較軸（早さ/量/質）を一語で固定"],
+      "pitfalls": ["比較対象を取り違える"],
+      "exampleEn": "This method is more reliable than the older approach."
+    },
+    {
+      "id": "S08",
+      "title": "否定のスコープを括る（not, never, hardly）",
+      "gist": "否定はどこまで否定しているか（スコープ）が得点源。副詞・数量語と一緒に読む。",
+      "steps": ["否定語を検出", "否定される述語・句を括る", "限定語（always/all/often等）が否定内か外か確認"],
+      "pitfalls": ["全体否定と部分否定を混同"],
+      "exampleEn": "Not all students learn at the same pace."
+    },
+    {
+      "id": "S09",
+      "title": "仮定法は“現実と逆”を先に宣言する",
+      "gist": "If I were... は現実と逆。先に『現実は違う』を宣言して読み進める。",
+      "steps": ["if節のwere/had を検出", "現実は逆だとメモ", "主節の助動詞（would/could）で含意を取る"],
+      "pitfalls": ["普通の条件文として読む"],
+      "exampleEn": "If the device were cheaper, more people would buy it."
+    },
+    {
+      "id": "S10",
+      "title": "受動態は“行為者（by）”を探して役割を戻す",
+      "gist": "受動は主語が“される側”。必要なら能動に戻して整理する。",
+      "steps": ["be+pp を検出", "by を探して行為者を特定", "能動に言い換えて意味確認"],
+      "pitfalls": ["主語を行為者として読む"],
+      "exampleEn": "The files were deleted by mistake during an update."
+    },
+    {
+      "id": "S11",
+      "title": "that節/wh節は“名詞句”として扱う（内容）",
+      "gist": "that節は“内容”。主語・目的語・補語のどの位置かを押さえると読める。",
+      "steps": ["that/wh を検出", "文のどこに入っているか（S/O/C）を判定", "『〜ということ』で置換して骨格確認"],
+      "pitfalls": ["that を指示語として読む"],
+      "exampleEn": "The report argues that small changes can save energy."
+    },
+    {
+      "id": "S12",
+      "title": "倒置は“強調のための語順”と理解して戻す",
+      "gist": "否定語や副詞が前に出る倒置は、語順を戻すと意味が安定する。",
+      "steps": ["Never/Rarely/Only then を検出", "主語と動詞の位置を入れ替えて通常語順に戻す"],
+      "pitfalls": ["疑問文と混同"],
+      "exampleEn": "Only after the test did the team notice the flaw."
+    },
+    {
+      "id": "S13",
+      "title": "強調構文（It is/was ... that ...）を普通文に戻す",
+      "gist": "強調構文は“どこを強調しているか”だけが追加情報。普通文に戻して骨格を作る。",
+      "steps": ["It is/was ... that ... を検出", "強調部分を抜き出す", "通常語順の文に戻す"],
+      "pitfalls": ["it を指示語として探す"],
+      "exampleEn": "It was the timing that caused the failure, not the idea itself."
+    },
+    {
+      "id": "S14",
+      "title": "名詞の後置修飾（with/for/of）を“どれを？”で読む",
+      "gist": "名詞+前置詞句は名詞を限定する。『どれを？どんな？』に答える部分として読む。",
+      "steps": ["名詞の直後の前置詞句を検出", "どれを？の質問に答える形で言い換える"],
+      "pitfalls": ["前置詞句を動詞にかけてしまう"],
+      "exampleEn": "A solution with low cost and high impact is rare."
+    },
+    {
+      "id": "S15",
+      "title": "量（many/much/few）と比較（more/less）の結びつきを固定",
+      "gist": "数量語が比較に絡むと誤読が出る。何が増え、何が減るのかを明示する。",
+      "steps": ["数量語と比較語をマーク", "増減対象（何が）を特定", "基準（than/as）を確認"],
+      "pitfalls": ["増減対象を取り違える"],
+      "exampleEn": "The new process uses less water than the old one."
+    },
+    {
+      "id": "S16",
+      "title": "so/such の結果構文は“原因→結果”を固定",
+      "gist": "so...that / such...that は結果の強調。原因側と結果側を分ける。",
+      "steps": ["so/such...that を検出", "原因側（程度）と結果側（that節）を分ける", "因果として1行化"],
+      "pitfalls": ["that節を関係詞節と誤認"],
+      "exampleEn": "The noise was so loud that no one could hear the announcement."
+    },
+    {
+      "id": "S17",
+      "title": "as は用法を決め打ち（理由/同時/比較/役割）",
+      "gist": "as は多義。『理由/同時/比較/〜として』のどれかに先に分類する。",
+      "steps": ["as を検出", "前後関係で用法を推定", "別用法で矛盾しないか確認"],
+      "pitfalls": ["全部“〜しながら”で処理"],
+      "exampleEn": "As the city grew, public transport became more important."
+    },
+    {
+      "id": "S18",
+      "title": "while は“同時”か“対比”かを確定する",
+      "gist": "while は時間だけでなく対比も作る。内容が同じ軸で反対なら対比。",
+      "steps": ["while を検出", "前後が時間順か比較かを判定", "対比なら軸を一語で固定"],
+      "pitfalls": ["時間と決めつける"],
+      "exampleEn": "While the device is fast, it is not very durable."
+    },
+    {
+      "id": "S19",
+      "title": "前置詞は“関係ラベル”として読む（原因/手段/対象）",
+      "gist": "前置詞は訳語ではなく関係。for=目的/対象、by=手段、with=付帯などで整理する。",
+      "steps": ["前置詞句を括る", "関係ラベル（手段/理由/対象等）を付ける", "文全体の因果・対比に接続"],
+      "pitfalls": ["訳語暗記で関係を落とす"],
+      "exampleEn": "The team solved the issue by changing a single setting."
+    },
+    {
+      "id": "S20",
+      "title": "長い主語は“主語の終わり”を探してVに飛ぶ",
+      "gist": "長主語はVが遠い。まず主語がどこで終わるかを見つけてVに着地する。",
+      "steps": ["主語部分を括る（名詞句終端を探す）", "最初の主要動詞を見つける", "主語—動詞だけで一度意味を作る"],
+      "pitfalls": ["主語途中の動詞っぽい語で誤着地"],
+      "exampleEn": "The rapid growth of small online stores has changed local shopping habits."
+    },
+    {
+      "id": "S21",
+      "title": "長い目的語/補語は“何がどうなる”を先に作る",
+      "gist": "補語や目的語が長いと迷う。まず『S+V』を作ってから後ろを埋める。",
+      "steps": ["SとVを特定", "それだけで暫定訳を作る", "残り（O/C/修飾）を追加"],
+      "pitfalls": ["前から順に訳して迷子になる"],
+      "exampleEn": "The study found that the new approach can reduce errors in complex tasks."
+    },
+    {
+      "id": "S22",
+      "title": "並列は“同じ品詞/同じ役割”で括る（A, B, and C）",
+      "gist": "and/or は並列の合図。同じ役割が並ぶので、どこまでが並列かを括る。",
+      "steps": ["and/or を検出", "同じ品詞・同じ役割で並列範囲を括る", "並列全体を一語ラベル化"],
+      "pitfalls": ["並列範囲を誤って意味が崩れる"],
+      "exampleEn": "The policy aims to reduce waste, lower costs, and improve safety."
+    },
+    {
+      "id": "S23",
+      "title": "neither/either は“対応ペア”で読む",
+      "gist": "neither...nor... / either...or... は対応。片方だけ取ると逆になる。",
+      "steps": ["neither/either を検出", "対応する nor/or を探す", "ペア全体で肯否を確定"],
+      "pitfalls": ["片方だけ見て判断"],
+      "exampleEn": "Neither the price nor the design satisfied customers."
+    },
+    {
+      "id": "S24",
+      "title": "can/could/may は“可能/推量/許可”を区別",
+      "gist": "助動詞は意味が複数ある。本文の目的（説明/提案）に合わせて選ぶ。",
+      "steps": ["助動詞を検出", "可能/推量/許可のどれか仮置き", "文脈（提案/予測/規則）で確定"],
+      "pitfalls": ["全部“できる”で固定"],
+      "exampleEn": "The change may reduce noise, but more data is needed."
+    },
+    {
+      "id": "S25",
+      "title": "should は“義務”か“推奨”かを見極める",
+      "gist": "should は必ずしも強制ではない。筆者の提案なら推奨に寄る。",
+      "steps": ["should を検出", "文脈が規則/提案か判定", "義務/推奨として要約"],
+      "pitfalls": ["全部“しなければならない”にする"],
+      "exampleEn": "To avoid errors, teams should review changes before release."
+    },
+    {
+      "id": "S26",
+      "title": "there is/are は“新情報提示”の合図",
+      "gist": "there is/are は話題導入。後ろの名詞が新情報なので、そこを主役として読む。",
+      "steps": ["there is/are を検出", "後ろの名詞を主役として特定", "何がある→それが何を意味する、まで取る"],
+      "pitfalls": ["there を場所と誤読"],
+      "exampleEn": "There is a growing gap between demand and supply."
+    },
+    {
+      "id": "S27",
+      "title": "形式目的語（make it ADJ to...）は真目的語を取る",
+      "gist": "it が目的語の位置にあるとき、真目的語は後ろのto節/that節。そこが意味の中心。",
+      "steps": ["make/find it ADJ to... を検出", "真目的語（to節）を特定", "ADJが何を評価しているか取る"],
+      "pitfalls": ["it を具体物に結ぶ"],
+      "exampleEn": "The new tool makes it easier to track mistakes."
+    },
+    {
+      "id": "S28",
+      "title": "譲歩の despite/in spite of は“名詞版 although”",
+      "gist": "despite は前置詞で名詞を取る。althoughと同じ譲歩なので、主節が結論。",
+      "steps": ["despite/in spite of を検出", "譲歩部分を括る", "主節の主張を結論として固定"],
+      "pitfalls": ["譲歩側を結論として覚える"],
+      "exampleEn": "Despite limited funding, the team completed the project on time."
+    },
+    {
+      "id": "S29",
+      "title": "受け身+by のとき“誰がやった”を必ず補う",
+      "gist": "by がある受動は行為者が明示されている。能動に戻すと読み違いが減る。",
+      "steps": ["受動とby句を検出", "能動文に書き換える", "主語・目的語を再確認"],
+      "pitfalls": ["by句を読み飛ばす"],
+      "exampleEn": "The proposal was rejected by the committee after a short debate."
+    },
+    {
+      "id": "S30",
+      "title": "名詞化（-tion/-ment）を動詞に戻して読む",
+      "gist": "抽象名詞が多い文は重い。名詞化を動詞に戻して因果を作る。",
+      "steps": ["名詞化語尾を検出", "対応する動詞に仮変換", "誰が何をする/されるで骨格化"],
+      "pitfalls": ["名詞を名詞のまま積み上げて意味が止まる"],
+      "exampleEn": "The implementation of the plan improved communication between teams."
+    },
+    {
+      "id": "S31",
+      "title": "関係副詞（where/when/why）を“前の名詞の説明”として固定",
+      "gist": "where/when/why は場所・時・理由を表しつつ、直前の名詞を修飾することが多い。",
+      "steps": ["where/when/why を検出", "直前の名詞を先行詞として固定", "『〜する場所/時/理由』に言い換える"],
+      "pitfalls": ["副詞だからといって文全体にかけてしまう"],
+      "exampleEn": "The lab where the team tested the device is near the harbor."
+    },
+    {
+      "id": "S32",
+      "title": "比較の省略（than usual/than before）を補って読む",
+      "gist": "比較は省略されやすい。何と比べているのか（基準）を補うと意味が安定する。",
+      "steps": ["than を検出", "基準（usual/before/expectedなど）を特定", "暗黙の比較対象を補って要約"],
+      "pitfalls": ["比較対象が不明なまま訳語だけ当てる"],
+      "exampleEn": "Demand rose faster than expected after the announcement."
+    },
+    {
+      "id": "S33",
+      "title": "the比較（the more..., the more...）は“比例関係”で読む",
+      "gist": "the比較は『Aが増えるほどBも増える/減る』の比例。AとBの方向を確定する。",
+      "steps": ["the more/less を検出", "A側とB側を分ける", "増減方向（＋/−）をメモ"],
+      "pitfalls": ["the を冠詞と誤認して止まる"],
+      "exampleEn": "The more feedback students get, the faster they improve."
+    },
+    {
+      "id": "S34",
+      "title": "only/just のスコープを括る（何だけ？）",
+      "gist": "only/just は“限定”。どこまでが限定されるかで意味が変わる。",
+      "steps": ["only/just を検出", "直後の語句を中心に限定範囲を括る", "別の括り方で意味が変わるか確認"],
+      "pitfalls": ["only を強調とだけ捉えて限定を落とす"],
+      "exampleEn": "She only discussed the budget with the manager."
+    },
+    {
+      "id": "S35",
+      "title": "even は“予想外”のマーカーとして読む",
+      "gist": "even は“意外性”。筆者が強調したい例外・極端例を示す。",
+      "steps": ["even を検出", "何が意外なのか（基準）を推測", "主張との関係（例外/強調）をメモ"],
+      "pitfalls": ["訳語『〜でさえ』に引っ張られて論理を落とす"],
+      "exampleEn": "Even small changes in lighting can affect how people feel."
+    },
+    {
+      "id": "S36",
+      "title": "as if/as though は“仮の見え方”として読む",
+      "gist": "as if は“〜のように”。事実ではなく、見え方・比喩・推測を表すことが多い。",
+      "steps": ["as if/as though を検出", "事実主張か比喩かを判定", "比喩なら『〜のように見える』で要約"],
+      "pitfalls": ["as if 節を事実として扱う"],
+      "exampleEn": "He spoke as if he had seen the results himself."
+    },
+    {
+      "id": "S37",
+      "title": "原因の since は“時”と区別する",
+      "gist": "since は“〜以来（時）”と“〜なので（理由）”。前後が因果なら理由。",
+      "steps": ["since を検出", "文脈が時間経過か因果か判定", "理由なら because に言い換えて確認"],
+      "pitfalls": ["全部“〜以来”で固定"],
+      "exampleEn": "Since the roads were closed, deliveries were delayed."
+    },
+    {
+      "id": "S38",
+      "title": "条件の unless は“if not”に置換して読む",
+      "gist": "unless は『もし〜でなければ』。否定が入るので置換するとミスが減る。",
+      "steps": ["unless を検出", "if not に置換", "主節の条件成立/不成立を確認"],
+      "pitfalls": ["unless を if と同じ肯定条件として読む"],
+      "exampleEn": "The program will fail unless the settings are updated."
+    },
+    {
+      "id": "S39",
+      "title": "provided/providing (that) は“条件”として読む",
+      "gist": "provided (that) は“条件付き”。契約・説明文で頻出。",
+      "steps": ["provided/providing を検出", "条件部分を括る", "if に言い換えて意味確認"],
+      "pitfalls": ["provide の動詞意味（提供する）で読んで崩れる"],
+      "exampleEn": "You can reuse the data, provided that you cite your sources."
+    },
+    {
+      "id": "S40",
+      "title": "by the time は“その時点までに完了”を示す",
+      "gist": "by the time は期限。完了（すでに〜している）を含みやすい。",
+      "steps": ["by the time を検出", "期限（いつまでに）を特定", "完了を含む要約にする"],
+      "pitfalls": ["単なる同時として読む"],
+      "exampleEn": "By the time the train arrived, the meeting had already started."
+    },
+    {
+      "id": "S41",
+      "title": "until は“到達点”を示す（継続→終点）",
+      "gist": "until は“〜まで”。動作がその時点まで続くことを示す。",
+      "steps": ["until を検出", "終点（いつまで）を特定", "継続のニュアンスを含めて要約"],
+      "pitfalls": ["終点を条件のように扱う"],
+      "exampleEn": "The system kept running until a safety check failed."
+    },
+    {
+      "id": "S42",
+      "title": "once は“〜するとすぐ/ひとたび〜すれば”の条件",
+      "gist": "once は時間にも条件にもなる。『ひとたび条件が成立したら』に近い。",
+      "steps": ["once を検出", "時間順か条件か判定", "条件なら if に置換して確認"],
+      "pitfalls": ["once を1回だけの意味で固定"],
+      "exampleEn": "Once users understand the rules, they can move quickly."
+    },
+    {
+      "id": "S43",
+      "title": "because of / due to は“名詞版 because”",
+      "gist": "because of / due to は前置詞で名詞を取る原因表現。原因→結果を作る。",
+      "steps": ["because of/due to を検出", "原因（名詞句）を括る", "because節に言い換えて確認"],
+      "pitfalls": ["ただの付帯情報として流す"],
+      "exampleEn": "Flights were canceled due to strong winds."
+    },
+    {
+      "id": "S44",
+      "title": "目的の so that は“結果として〜するように”",
+      "gist": "so that は目的・結果。何のために、または結果どうなったかを分ける。",
+      "steps": ["so that を検出", "目的（狙い）か結果（成り行き）か判定", "目的なら in order to に言い換えて確認"],
+      "pitfalls": ["so を程度副詞として処理して崩れる"],
+      "exampleEn": "They simplified the form so that more people could apply."
+    },
+    {
+      "id": "S45",
+      "title": "結果の so は“前文→結論”の接続",
+      "gist": "so は『だから』。直前内容を原因として、後ろを結論としてまとめる。",
+      "steps": ["so を検出", "前を原因・後ろを結論に分ける", "因果矢印で1行にする"],
+      "pitfalls": ["so を“とても”と誤読"],
+      "exampleEn": "The data was incomplete, so the team repeated the experiment."
+    },
+    {
+      "id": "S46",
+      "title": "wh-名詞節（What S V is ...）を“もの/こと”で受ける",
+      "gist": "What節は名詞節。主語・補語に来ても『〜すること』で受けると骨格が作れる。",
+      "steps": ["What節を検出", "名詞節として括る", "『〜すること/もの』に置換して骨格確認"],
+      "pitfalls": ["疑問文として読む"],
+      "exampleEn": "What matters most is how quickly the team learns from errors."
+    },
+    {
+      "id": "S47",
+      "title": "wh-疑問文埋め込み（I know what...）を疑問文と混同しない",
+      "gist": "what/why/how が節内に入っている場合、疑問ではなく内容（名詞節）になる。",
+      "steps": ["動詞（know/ask/decide等）の後のwh節を検出", "内容節として括る", "『何を/なぜ/どうか』の内容として要約"],
+      "pitfalls": ["語順が通常なので逆に疑問と誤認"],
+      "exampleEn": "The report explains why the demand dropped so suddenly."
+    },
+    {
+      "id": "S48",
+      "title": "仮定法過去完了（If had..., would have...）は“過去の反実”",
+      "gist": "過去完了の仮定法は『過去の事実は逆』。結論も過去の反実。",
+      "steps": ["If + had + pp を検出", "現実は逆だとメモ", "would have + pp で反実の結果を取る"],
+      "pitfalls": ["普通の過去完了として読む"],
+      "exampleEn": "If the warning had arrived earlier, the damage would have been smaller."
+    },
+    {
+      "id": "S49",
+      "title": "must have + pp は“過去の推量”として読む",
+      "gist": "must have は義務ではなく推量（きっと〜だった）。根拠の度合いを保って要約する。",
+      "steps": ["must have + pp を検出", "推量として『きっと』を付けて要約", "根拠文が近くにあるか確認"],
+      "pitfalls": ["義務（〜しなければならなかった）にする"],
+      "exampleEn": "They must have missed the email, because they never replied."
+    },
+    {
+      "id": "S50",
+      "title": "may/might have + pp は“過去の可能性”",
+      "gist": "may/might have は過去の可能性（〜だったかもしれない）。断定しない要約が必要。",
+      "steps": ["may/might have + pp を検出", "可能性として要約", "対立する根拠がないか確認"],
+      "pitfalls": ["断定にしてしまう"],
+      "exampleEn": "The sensor might have failed during the storm."
+    },
+    {
+      "id": "S51",
+      "title": "受動の進行/完了（is being done / has been done）を時制で区別",
+      "gist": "受動は時制が意味を作る。進行（今まさに）と完了（すでに）を区別する。",
+      "steps": ["be being + pp / have been + pp を検出", "進行/完了を判定", "時間語（already/currently等）と整合確認"],
+      "pitfalls": ["全部同じ受動として処理"],
+      "exampleEn": "The bridge has been repaired, so traffic can resume."
+    },
+    {
+      "id": "S52",
+      "title": "get受動（get + pp）は“状態変化”寄り",
+      "gist": "get + pp は“〜されるようになる/〜の状態になる”のニュアンス。出来事感が強い。",
+      "steps": ["get + pp を検出", "状態変化として要約", "原因・きっかけが文中にあるか確認"],
+      "pitfalls": ["be受動と完全同一視してニュアンスを落とす"],
+      "exampleEn": "The files got corrupted after the update."
+    },
+    {
+      "id": "S53",
+      "title": "使役（have/make/let）を3分類して誤読を防ぐ",
+      "gist": "have=依頼/手配、make=強制、let=許可。動詞ごとの力関係を固定すると速い。",
+      "steps": ["have/make/let を検出", "依頼/強制/許可に分類", "目的語（誰に）と行為（何を）を取る"],
+      "pitfalls": ["全部“〜させる”で同一視"],
+      "exampleEn": "The coach made the players repeat the drill until it felt natural."
+    },
+    {
+      "id": "S54",
+      "title": "help (to) V は“程度”が文脈で決まる",
+      "gist": "help は“助ける”だけでなく“〜の助けになる”。結果にどれだけ寄与するかを文脈で読む。",
+      "steps": ["help (to) V を検出", "何がどう助かるか（目的）を特定", "効果の限定語（a bit/significantly等）を確認"],
+      "pitfalls": ["help を人助けの意味だけに固定"],
+      "exampleEn": "Clear labels help users find the right settings quickly."
+    },
+    {
+      "id": "S55",
+      "title": "seem/appear は“断定を避ける”動詞",
+      "gist": "seem/appear は推測・見え方。結論の強さを落として要約する。",
+      "steps": ["seem/appear を検出", "『〜のようだ』で要約", "根拠（according to/data）を探す"],
+      "pitfalls": ["断定に変換してしまう"],
+      "exampleEn": "The new rule seems to reduce delays, at least in small offices."
+    },
+    {
+      "id": "S56",
+      "title": "tend to / be likely to は“傾向/確率”を表す",
+      "gist": "tend to は傾向、be likely to は確率。一般化の強さを守って読む。",
+      "steps": ["tend to / be likely to を検出", "傾向/確率として分類", "限定条件（when/underなど）を確認"],
+      "pitfalls": ["確定未来として訳す"],
+      "exampleEn": "Plants are likely to grow faster when the soil stays warm."
+    },
+    {
+      "id": "S57",
+      "title": "It is said/believed that は“伝聞”で、事実確定ではない",
+      "gist": "受け身の伝聞表現は情報源が曖昧。筆者が距離を取っている可能性がある。",
+      "steps": ["It is said/believed/known that を検出", "伝聞として要約", "筆者の評価語が近くにあるか確認"],
+      "pitfalls": ["断定事実として扱う"],
+      "exampleEn": "It is believed that the species migrated as the climate changed."
+    },
+    {
+      "id": "S58",
+      "title": "分離不定詞/副詞位置は“何を修飾しているか”で決める",
+      "gist": "副詞の位置で意味が変わる。どの動作・どの範囲を修飾しているかを特定する。",
+      "steps": ["副詞（carefully/quickly等）を検出", "修飾対象（動詞/節/形容詞）を判定", "修飾対象を変えると意味が変わるか確認"],
+      "pitfalls": ["副詞を近い語に機械的に付ける"],
+      "exampleEn": "The team decided to carefully review the results before publishing."
+    },
+    {
+      "id": "S59",
+      "title": "as well as は“追加”で、主語の一致に注意",
+      "gist": "as well as は and と違い、主語・動詞の一致や焦点が前要素に残ることが多い。",
+      "steps": ["as well as を検出", "主語の中心がどちらか確認", "追加要素として後ろを扱う"],
+      "pitfalls": ["and と同一視して主語一致を誤る"],
+      "exampleEn": "The manager, as well as the interns, was invited to the briefing."
+    },
+    {
+      "id": "S60",
+      "title": "not only A but also B は“B側が主張の山”になりやすい",
+      "gist": "not only/but also は追加強調。筆者が強調したい“追加要素（B）”に山が来やすい。",
+      "steps": ["not only...but also... を検出", "AとBを並列として括る", "追加・強調がどちらにかかるか確認"],
+      "pitfalls": ["Aだけで要約して追加を落とす"],
+      "exampleEn": "The change not only reduced costs but also improved safety."
+    },
+    {
+      "id": "S61",
+      "title": "否定の部分否定: not all / not always を“全部否定”にしない",
+      "gist": "not all / not always は『全部がそうではない』であり『全く〜ない』ではない。否定の範囲を固定する。",
+      "steps": ["not all/not always を検出", "否定されているのが“全体”か“部分”か判定", "言い換え（some...not / sometimes not）で確認"],
+      "pitfalls": ["not all を no と同一視"],
+      "exampleEn": "Not all solutions work in rural areas, so the plan needs options."
+    },
+    {
+      "id": "S62",
+      "title": "否定の二重構造: not uncommon は“よくある”に近い",
+      "gist": "not uncommon / not impossible などは弱い肯定。強い肯定（common/certain）にしてしまうとズレる。",
+      "steps": ["not + 否定寄り形容詞 を検出", "弱い肯定（わりと/しばしば）に落とす", "強さが文脈と合うか確認"],
+      "pitfalls": ["not uncommon を『珍しくない』のまま意味が取れない"],
+      "exampleEn": "It is not uncommon for commuters to check messages while walking."
+    },
+    {
+      "id": "S63",
+      "title": "譲歩節: although/even if は“結論は後ろ”で読む",
+      "gist": "譲歩は『〜だが、それでも…』。although節で止めず、主張は主節側に置く。",
+      "steps": ["although/even if を検出", "譲歩側（前提）と主張側（結論）を分ける", "結論側を一文で要約"],
+      "pitfalls": ["although節の内容を筆者主張だと思う"],
+      "exampleEn": "Although the tool is fast, it can be unreliable in extreme heat."
+    },
+    {
+      "id": "S64",
+      "title": "条件節: if は“条件→結果”の矢印で固定",
+      "gist": "if 節は条件。主節が結果。矢印で一行化すると、推論・設問の根拠が取りやすい。",
+      "steps": ["if節と主節を分離", "条件→結果 を矢印で書く", "例外条件（unless等）がないか確認"],
+      "pitfalls": ["if節を理由節として訳す"],
+      "exampleEn": "If the budget shrinks, the project will need a simpler design."
+    },
+    {
+      "id": "S65",
+      "title": "仮定法の目印: were to / had + p.p. / would have",
+      "gist": "現実と離れた仮定は時制がずれる。形（were to / had done / would have done）を見たら仮定として読む。",
+      "steps": ["仮定法の形を検出", "現実否定（ありえない/起きていない）を仮置き", "主節の結論（would）を確定"],
+      "pitfalls": ["単なる過去・未来として処理"],
+      "exampleEn": "If the city were to ban cars downtown, shops would need new delivery plans."
+    },
+    {
+      "id": "S66",
+      "title": "因果語の強さ: because/therefore は因果、since は文脈で因果/時",
+      "gist": "since は『〜なので』にも『〜以来』にもなる。形だけで決めず、時間か因果かを文脈で確定する。",
+      "steps": ["since節の動詞時制を確認", "時間（since 2020）か因果（since it was late）か仮置き", "前後関係が自然な方を採用"],
+      "pitfalls": ["since を常に『〜以来』に固定"],
+      "exampleEn": "Since the roads were icy, the event was postponed."
+    },
+    {
+      "id": "S67",
+      "title": "同格/挿入: ダッシュ・カンマは“核→補足”で読む",
+      "gist": "— や , ... , は補足情報を挟むことが多い。核（主節）を先に確定してから補足を載せる。",
+      "steps": ["ダッシュ/挿入カンマを検出", "挿入を一旦抜いて主節を読む", "挿入が何を説明/限定するか戻して確認"],
+      "pitfalls": ["挿入を主語・述語と誤認して骨格を崩す"],
+      "exampleEn": "The committee—after months of debate—approved the revised plan."
+    },
+    {
+      "id": "S68",
+      "title": "同格that: A that S V は“内容説明”のthat",
+      "gist": "that節が名詞の内容を説明する同格の場合、thatは関係代名詞ではない。先行詞の『中身』として読む。",
+      "steps": ["名詞+that節 を検出", "名詞が『考え/事実/提案』系か確認", "A=that節の内容 として要約"],
+      "pitfalls": ["thatを目的語だと思って訳が壊れる"],
+      "exampleEn": "She rejected the idea that the problem could be solved overnight."
+    },
+    {
+      "id": "S69",
+      "title": "関係詞の省略: 名詞の直後に“穴あき文”が来たら疑う",
+      "gist": "名詞の直後にS+Vが続いて、どこかが欠けるなら関係詞省略の可能性が高い。穴（目的語/前置詞目的語）を探す。",
+      "steps": ["名詞+S+V の連結を検出", "節内部の欠落要素を探す", "欠落が先行詞で埋まるか確認"],
+      "pitfalls": ["名詞の後の節を主節と誤認"],
+      "exampleEn": "The report the team submitted highlighted several risks."
+    },
+    {
+      "id": "S70",
+      "title": "前置詞の掛かり先: with/by/for は“どれを修飾？”で決める",
+      "gist": "前置詞句は名詞修飾にも動詞修飾にもなる。どれを説明しているかを一語で言うと迷いが減る。",
+      "steps": ["前置詞句を検出", "直前名詞に掛けると自然か検証", "動詞全体に掛けると自然か検証し、自然な方を採用"],
+      "pitfalls": ["近い名詞に機械的に付ける"],
+      "exampleEn": "She signed the form with a blue pen in the lobby."
+    },
+    {
+      "id": "S71",
+      "title": "強調構文: It is/was ... that を見たら“焦点”を抜く",
+      "gist": "It is/was ... that は強調。焦点（強調された要素）を抜いて、普通文に戻して理解する。",
+      "steps": ["It is/was ... that を検出", "焦点部分（...）を特定", "普通文に戻して骨格確認"],
+      "pitfalls": ["that節を関係詞と混同"],
+      "exampleEn": "It was the final report that changed their decision."
+    },
+    {
+      "id": "S72",
+      "title": "倒置/前置: 否定語や副詞が先頭なら語順変化を疑う",
+      "gist": "Never/Only rarely などが先頭に来ると倒置が起きやすい。主語が後ろに出ても落ち着いてS-Vを回復する。",
+      "steps": ["否定寄り副詞が文頭か確認", "助動詞/動詞が前に出ていないか確認", "主語位置を探してS-Vを復元"],
+      "pitfalls": ["文頭の語を主語だと思い込む"],
+      "exampleEn": "Never have we seen such rapid changes in the market."
+    },
+    {
+      "id": "S73",
+      "title": "比較の落とし穴: than節の省略（do/does）を補う",
+      "gist": "than以下は省略が多い。do/doesの省略や比較対象の省略を補って、何と比べているかを固定する。",
+      "steps": ["than/as を検出", "比較対象A/Bを明示", "than以下の省略（do等）を補って読み下す"],
+      "pitfalls": ["比較対象がズレたまま読む"],
+      "exampleEn": "The new method works better than the old one (does)."
+    },
+    {
+      "id": "S74",
+      "title": "数量表現: more than / less than は“数”か“程度”か",
+      "gist": "more than は『〜より多い』だけでなく『〜以上/単なる〜ではない』の程度強調もある。どちらかを確定する。",
+      "steps": ["more/less than の後ろが数値か確認", "数値なら数量、形容詞/名詞なら程度の可能性を検討", "文脈で自然な方に確定"],
+      "pitfalls": ["more than を常に数量比較にする"],
+      "exampleEn": "The project was more than a success; it changed how the team worked."
+    },
+    {
+      "id": "S75",
+      "title": "分詞構文: まず主節S-Vを確定してから“付帯/原因”を選ぶ",
+      "gist": "-ing/-edで始まる句は主節の補助情報。付帯状況か原因かを文脈で決める。",
+      "steps": ["分詞句を検出", "主節のS-Vを先に確定", "分詞句が原因/付帯/結果のどれか仮置きして通す"],
+      "pitfalls": ["分詞句を主節と誤認"],
+      "exampleEn": "Feeling exhausted, the runner slowed down near the finish line."
+    },
+    {
+      "id": "S76",
+      "title": "to不定詞の三用法: 目的/結果/修飾を切り分け",
+      "gist": "to V は目的だけでなく結果（too...to）や名詞修飾にもなる。どの役割かを先に決める。",
+      "steps": ["to V を検出", "直前が形容詞（easy to）か名詞（plan to）か動詞（went to）か確認", "目的/修飾/結果のどれで自然か確定"],
+      "pitfalls": ["全部目的にして不自然になる"],
+      "exampleEn": "She found a room to study in after the library closed."
+    },
+    {
+      "id": "S77",
+      "title": "目的語の省略: promise/decide などは“何を？”を補う",
+      "gist": "promise/decide/agree などは目的語（to V / that節）が省略されることがある。何を約束/決定したかを補う。",
+      "steps": ["動詞が目的語を取りやすいか確認", "直前文脈から補う内容（to/that）を仮置き", "補った上で意味が通るか確認"],
+      "pitfalls": ["目的語なしで意味が曖昧なまま進む"],
+      "exampleEn": "After the meeting, they agreed and left quickly. (agreed to what?)"
+    },
+    {
+      "id": "S78",
+      "title": "抽象名詞の中身: policy/strategy などは“内容”をthat/toで取りに行く",
+      "gist": "抽象名詞（policy/strategy/goal）は中身が後ろで説明されることが多い。内容（that/to/of）を探す。",
+      "steps": ["抽象名詞を検出", "直後のthat/to/of句を探す", "中身（内容）を一文で言う"],
+      "pitfalls": ["抽象名詞を空語のまま訳す"],
+      "exampleEn": "Their strategy to reduce waste focused on reusing packaging."
+    },
+    {
+      "id": "S79",
+      "title": "評価語の向き: surprisingly/unfortunately は“何を評価？”まで取る",
+      "gist": "評価語は態度を示すが、対象を落とすと誤読する。何が意外/残念なのかまで取る。",
+      "steps": ["評価副詞を検出", "評価対象（直後の節/事実）を特定", "評価語+対象で要約"],
+      "pitfalls": ["評価語だけ覚えて対象を取り違える"],
+      "exampleEn": "Surprisingly, the cheaper option lasted longer than the premium one."
+    },
+    {
+      "id": "S80",
+      "title": "結論の言い換え: in short / overall は“まとめ”として一文にする",
+      "gist": "in short/overall/in sum はまとめ。前の内容を抽象化して一文に落とす場所。",
+      "steps": ["まとめマーカーを検出", "直前の要点を2語で拾う", "まとめ文を一文要約して主張として扱う"],
+      "pitfalls": ["まとめを新情報として読み過ぎる"],
+      "exampleEn": "Overall, small changes in routine can make work more sustainable."
+    },
+    {
+      "id": "S81",
+      "title": "譲歩+主張: Granted/Admittedly 以降は“譲る→主張”の二段",
+      "gist": "Granted/Admittedly は相手側を一度認める合図。その後のbut/however以降が筆者主張になりやすい。",
+      "steps": ["Granted/Admittedly を検出", "譲歩内容を短く取る", "but/however以降の主張を骨格として保存"],
+      "pitfalls": ["譲歩部分を結論だと思う"],
+      "exampleEn": "Admittedly, the rollout was messy, but the new system reduced errors within a month."
+    },
+    {
+      "id": "S82",
+      "title": "“原因の候補”表現: may be due to / can be attributed to を因果断定しない",
+      "gist": "may be due to は“原因候補”。因果の確信度が低いので、断定語に変換しない。",
+      "steps": ["due to/attributed to を検出", "may/can などの確信度を確認", "要約も“可能性”として書く"],
+      "pitfalls": ["due to を見て断定因果にする"],
+      "exampleEn": "The decline may be due to fewer commuters, not to improved service."
+    },
+    {
+      "id": "S83",
+      "title": "目的の強調: so that / in order that は“目的節”を先に訳す",
+      "gist": "so that/in order that は目的。目的節を先に掴むと、主節の行動が何のためかが固定される。",
+      "steps": ["so that/in order that を検出", "目的（達成したい状態）を先に言語化", "主節の行動を目的に結び付ける"],
+      "pitfalls": ["so that を結果として誤読"],
+      "exampleEn": "They simplified the form so that new users could finish it without help."
+    },
+    {
+      "id": "S84",
+      "title": "対比の圧縮: whereas/while は“比較軸”を一語で置く",
+      "gist": "whereas/while の対比は、どの軸で比べているか（speed/accuracyなど）を一語で固定するとズレない。",
+      "steps": ["whereas/while を検出", "AとBを並べて書く", "比較軸を一語で付ける"],
+      "pitfalls": ["AとBのどちらが主張か曖昧にする"],
+      "exampleEn": "The old system favored speed, whereas the new one prioritizes accuracy."
+    },
+    {
+      "id": "S85",
+      "title": "抽象主語の具体化: This/That is why は“何が原因？”を戻す",
+      "gist": "This/That is why は前文全体を受けることが多い。原因（何が起きたから）を具体語に戻す。",
+      "steps": ["This/That is why を検出", "直前1〜2文から原因候補を列挙", "最も自然な原因に確定して言い換える"],
+      "pitfalls": ["this を直前名詞だけに結びつける"],
+      "exampleEn": "The queue doubled after the update. That is why the team added a second support channel."
+    },
+    {
+      "id": "S86",
+      "title": "名詞+現在分詞: a plan involving... は“中身説明”",
+      "gist": "名詞の直後の-ing は、動作ではなく名詞の内容説明（=which involves）になりやすい。",
+      "steps": ["名詞+ing を検出", "which involves に置換して通るか確認", "名詞の中身として要点を取る"],
+      "pitfalls": ["-ing を主節動詞のように扱う"],
+      "exampleEn": "They proposed a plan involving shorter shifts and more frequent breaks."
+    },
+    {
+      "id": "S87",
+      "title": "名詞+過去分詞: data collected... は“後置修飾”で名詞を特定",
+      "gist": "名詞+過去分詞は後置修飾（=which was collected）。どの名詞を限定しているかを固定する。",
+      "steps": ["名詞+過去分詞を検出", "which was/were に置換して意味確認", "修飾される名詞を括ってから読む"],
+      "pitfalls": ["過去分詞を動詞として読んでS-Vを崩す"],
+      "exampleEn": "The data collected during the pilot revealed a consistent pattern."
+    },
+    {
+      "id": "S88",
+      "title": "挿入句: to be sure / in fact は“本筋を止めない”",
+      "gist": "挿入句は情報を追加するが骨格を変えない。まず主節のS-Vを通してから挿入句を読む。",
+      "steps": ["挿入句（to be sure/in fact）を括る", "括ったまま主節S-Vを確定", "挿入句を“補足”として足す"],
+      "pitfalls": ["挿入句で主語や述語を見失う"],
+      "exampleEn": "The proposal, to be sure, has flaws, but it addresses the main risk."
+    },
+    {
+      "id": "S89",
+      "title": "“〜すべきではない”系: should not / ought not は“禁止”ではなく“助言”の場合",
+      "gist": "should not は強い禁止とは限らず助言・推奨の否定の場合がある。文脈の強さを確認する。",
+      "steps": ["should not/ought not を検出", "周辺のトーン（recommend/suggest）を確認", "禁止（must not）か助言かを確定"],
+      "pitfalls": ["should not を常に強制禁止と解釈"],
+      "exampleEn": "Managers should not assume silence means agreement; they should ask for feedback."
+    },
+    {
+      "id": "S90",
+      "title": "二重比較: no more...than / no less...than は“否定+比較”",
+      "gist": "no more...than は『〜と同様に〜ない』など、直訳だと崩れる。比較対象と否定の範囲を先に確定する。",
+      "steps": ["no more/no less を検出", "比較対象A/Bを明示", "否定が掛かる部分を括って意味を再構成"],
+      "pitfalls": ["more だけ見て“増える”と誤読"],
+      "exampleEn": "A logo does no more to improve service than a new paint color does."
+    },
+    {
+      "id": "S91",
+      "title": "強い一般化の警戒: tends to / generally は“傾向”",
+      "gist": "tends to/generally/typically は確率表現。要約でalways/neverに変えると誤りになる。",
+      "steps": ["tends to/generally を検出", "頻度・確率として解釈", "要約も同じ強さ（傾向）で保つ"],
+      "pitfalls": ["傾向語を落として断定する"],
+      "exampleEn": "People generally respond faster when instructions are shorter."
+    },
+    {
+      "id": "S92",
+      "title": "“何が必要か”の型: It takes ... to V は“必要条件”を抜く",
+      "gist": "It takes A to V は必要条件。A（資源/努力/時間）を抜くと意味が決まる。",
+      "steps": ["It takes を検出", "A（何が必要か）を特定", "to V（何のために）を結ぶ"],
+      "pitfalls": ["take を単純に“取る”と訳す"],
+      "exampleEn": "It takes consistent practice to notice small errors in writing."
+    },
+    {
+      "id": "S93",
+      "title": "“避けられない”の型: cannot help -ing は“思わず〜する”",
+      "gist": "cannot help -ing は『思わず〜する』。否定のhelpに引っ張られず意味を固定する。",
+      "steps": ["cannot help -ing を検出", "全体を“inevitable action”として解釈", "主節の意図（want）と区別"],
+      "pitfalls": ["help を助けるで直訳して崩す"],
+      "exampleEn": "After seeing the results, they couldn't help questioning their assumptions."
+    },
+    {
+      "id": "S94",
+      "title": "“むしろ”の型: not A so much as B は“焦点移動”",
+      "gist": "not A so much as B はA否定というよりB強調。Bを主張として保存する。",
+      "steps": ["not A so much as B を検出", "A（捨てる焦点）とB（採用焦点）を分離", "B中心で要約し直す"],
+      "pitfalls": ["AもBも半分ずつだと思う"],
+      "exampleEn": "The issue was not a lack of talent so much as a lack of clear priorities."
+    },
+    {
+      "id": "S95",
+      "title": "“〜だけでなく”の強調: far from は“むしろ逆”",
+      "gist": "far from A は『Aどころか逆』。否定の強さが強いので、弱い否定に落とさない。",
+      "steps": ["far from を検出", "否定対象Aを特定", "続く内容が“逆方向”であることを確認"],
+      "pitfalls": ["far from を“遠い”で直訳"],
+      "exampleEn": "Far from being a quick fix, the policy required careful training."
+    },
+    {
+      "id": "S96",
+      "title": "“〜である限り”の型: so long as / provided that は条件",
+      "gist": "so long as/provided that は条件節。因果や時間と混同せず、条件→結果の形に戻す。",
+      "steps": ["so long as/provided that を検出", "条件部と結果部を分離", "条件→結果の一文に整形"],
+      "pitfalls": ["so long as を時間（長い間）だと誤読"],
+      "exampleEn": "The plan works so long as teams report issues early."
+    },
+    {
+      "id": "S97",
+      "title": "因果の弱化: coincides with / is associated with は“相関”",
+      "gist": "associated with/coincides with は相関。因果（lead to/cause）に変換しない。",
+      "steps": ["associated/coincides を検出", "因果語があるか確認", "要約は“related”として保持"],
+      "pitfalls": ["関連=原因だと決め打ち"],
+      "exampleEn": "Higher stress is associated with poorer sleep, but the direction of causation is unclear."
+    },
+    {
+      "id": "S98",
+      "title": "強い否定の型: by no means は“決して〜ない”",
+      "gist": "by no means は強い否定。部分否定（not always）と混ぜない。",
+      "steps": ["by no means を検出", "否定対象（何が否定か）を括る", "強い否定として解釈して要約"],
+      "pitfalls": ["means を“手段”で訳して迷う"],
+      "exampleEn": "The pilot was by no means perfect, but it revealed the main bottleneck."
+    },
+    {
+      "id": "S99",
+      "title": "要求の婉曲: would like / would prefer は“希望”であって命令ではない",
+      "gist": "would like/prefer は丁寧な希望。must/shouldの強さに引き上げない。",
+      "steps": ["would like/prefer を検出", "話者の意図（request vs command）を判定", "強さを保ったまま要約"],
+      "pitfalls": ["丁寧表現を命令として読む"],
+      "exampleEn": "The author would prefer a gradual change rather than an immediate overhaul."
+    },
+    {
+      "id": "S100",
+      "title": "“〜が鍵だ”の型: what matters is ... は焦点文",
+      "gist": "what matters is ... は焦点提示。前置き情報より、is以降を主張として保存する。",
+      "steps": ["what matters is を検出", "焦点（is以降）を抜く", "普通文に戻して骨格確認"],
+      "pitfalls": ["what節を長く抱えて骨格を見失う"],
+      "exampleEn": "What matters is not the tool itself but how consistently teams use it."
+    }
+  ]
+}

@@ -1,613 +1,140 @@
-# 英語学習Webアプリケーション
+# 英語学習Webアプリ
 
 [![CSS品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
 [![ビルドチェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
 [![文法データ品質](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml)
 [![ドキュメントリンク検証](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml)
-[![対症療法検知](https://img.shields.io/badge/code%20quality-no%20symptomatic%20fixes-brightgreen)](docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md)
 
-TypeScript + React で構築された英語学習アプリケーションです。8個の専門アルゴリズムを統合した適応的な学習システムを実装しています。
+TypeScript + React + Vite で構築された英語学習アプリです。忘却曲線・間隔反復・学習状況シグナルなどを使い、次に何を出題するかを調整します。
 
-🎯 [デモサイト](https://nanashi8.github.io/) | 📚 [ドキュメント](docs/) | 🔧 [アルゴリズム統合ガイド](docs/AI_INTEGRATION_GUIDE.md)
+- デモサイト: https://nanashi8.github.io/
+- ドキュメント: [docs/](docs/)
+- English README: [README.md](README.md)
 
----
+## このリポジトリの読みどころ（私たちの仕事）
 
-## 🚨 開発者向け重要事項
+このリポジトリは、英語学習アプリ本体だけでなく、学習データ・検証・運用ルールまでを同じ場所に置き、長期運用で「壊れやすいところ」を仕組みで守ることを重視しています。
 
-### ⚠️ 【最重要】修正の修正を絶対に行わない
+- 出題の中核は、Position（0-100）ベースで7つの専門ロジックを統合するメタ層: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts), [src/ai/specialists/](src/ai/specialists/)
+- レイアウトは、変更禁止仕様 + レスポンシブ実装パターン + 視覚回帰テストで崩れを検出/予防: [docs/development/UI_IMMUTABLE_SPECIFICATIONS.md](docs/development/UI_IMMUTABLE_SPECIFICATIONS.md), [docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md](docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md), [docs/development/VISUAL_REGRESSION_TESTING.md](docs/development/VISUAL_REGRESSION_TESTING.md)
+- 変更の品質は、型チェック/lint/ドキュメント検証をまとめたゲートと、コミット前ガードで担保（オプトイン）: [package.json](package.json), [scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh)
+- AI支援で作業しても破綻しないよう、指示書体系と作業タイプ別ワークフローを整備: [.aitk/instructions/README.md](.aitk/instructions/README.md), [docs/references/AI_WORKFLOW_INSTRUCTIONS.md](docs/references/AI_WORKFLOW_INSTRUCTIONS.md)
 
-このプロジェクトでは、**「修正の修正」を完全に禁止**しています。
+## クイックスタート
 
-#### 強制装置
+前提:
+
+- Node.js 20（[.nvmrc](.nvmrc) 参照）
 
 ```bash
-# Pre-commitフックのインストール（初回のみ）
-ln -sf ../../scripts/pre-commit-fix-check.sh .git/hooks/pre-commit
-
-# コミット前に自動実行される検証項目：
-# - 修正の修正パターンの検出
-# - 対症療法キーワードの検出
-# - 同一ファイルの短期間再修正の検出
-# - 型定義変更の影響範囲チェック
-# - 条件分岐の積み重ね検出
+npm install
+npm run dev
 ```
 
-#### 修正前の必須チェックリスト
+http://localhost:5173 を開きます。
 
-- [ ] 根本原因を特定したか？
-- [ ] 影響範囲を完全に洗い出したか？
-- [ ] 関連する全ファイルをリストアップしたか？
-- [ ] テストケースを準備したか？
-- [ ] この修正で他の箇所が壊れないか？
+## 特徴（誇張なしの範囲）
 
-**詳細**:
+- 出題順の決定を行うメタスケジューラ（[src/ai/scheduler/](src/ai/scheduler/)）
+- 複数の「専門ロジック」（記憶/認知負荷/予測/エンゲージメント等）を統合（[src/ai/AICoordinator.ts](src/ai/AICoordinator.ts)）
+- 間隔反復・忘却曲線の扱い（[src/ai/specialists/](src/ai/specialists/)）
+- ミス後の短い遅延を挟んだ再出題（短期記憶の影響を減らす目的）
+- `localStorage` を使ったローカル永続化
 
-- [修正の修正禁止ポリシー](.aitk/instructions/no-fix-on-fix.instructions.md)
-- [対症療法禁止ポリシー](docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md)
+補足: 中核のスケジューリングは主にルール/ヒューリスティクスベースです。MLの実験コードも含みますが（[src/ai/ml/](src/ai/ml/)）、アプリ実行に必須ではありません。
 
----
+## AI統合フラグ
 
-## 📖 目次
+開発環境（`npm run dev`）では自動で有効化されます。
 
-- [システム概要](#システム概要)
-- [8-AIシステムアーキテクチャ](#8-aiシステムアーキテクチャ)
-- [主要機能](#主要機能)
-- [技術スタック](#技術スタック)
-- [セットアップ方法](#セットアップ方法)
-- [ドキュメント体系](#ドキュメント体系)
+本番ビルドで有効化したい場合は、ブラウザコンソールで次を実行します:
 
----
-
-## 🎯 システム概要
-
-### コンセプト
-
-個人の学習パターンに適応する出題アルゴリズムを搭載した英語学習システムです。7つの専門アルゴリズムと1つのメタアルゴリズム（QuestionScheduler）による統合的な学習管理を実現しています。
-
-**技術的注記**: このシステムは機械学習ベースのAIではなく、学習心理学（忘却曲線、間隔反復）とルールベースアルゴリズムによる実装です。
-
-### 実装済み機能
-
-#### 優先度ベースの復習システム
-
-- incorrect単語への優先度ボーナス（+50〜90）
-- ランダム間隔再出題機能（2-5問後に再出題）
-- 振動防止機構（1分以内の再出題を抑制）
-
-#### 学習状態の検出と調整
-
-- 疲労シグナル検出（20分以上学習時）
-- 苦戦シグナル検出（誤答率40%以上）
-- 過学習シグナル検出（連続正解10回以上）
-- 飽きシグナル検出（同一難易度の連続）
-
-#### 時間ベースの復習最適化
-
-- DTA（Time-Dependent Adjustment）による忘却曲線対応
-- 最終学習時刻からの経過時間に基づく優先度調整
-- 個人の忘却パターンへの適応
-
----
-
-## 🔧 8-ハイブリッドAIシステムアーキテクチャ
-
-### システム構成
-
-本システムは7つの専門AIと1つのメタAI統合層で構成されています。各AIが独立した評価を行い、メタAI（QuestionScheduler）が最終的な出題順序を決定します。
-
-**🧠 ハイブリッドAI実装**（Phase 4: 開発中）
-
-- **ルールベース層**: 忘却曲線（Ebbinghaus）、SM-2間隔反復アルゴリズム
-- **機械学習層**: TensorFlow.js、ニューラルネットワーク、個人適応型学習
-- **統合方式**: データ量に応じて重み付け調整（ルール 30-70% + ML 30-70%）
-- **学習方式**: オンライン学習（リアルタイム改善）
-
-**現在の状態**:
-
-- ✅ Phase 1-3: ルールベースアルゴリズム（完成）
-- 🔄 Phase 4: ML機能の統合（実装中）
-
-### 動作フロー
-
-1. 各専門アルゴリズムが単語ごとの優先度シグナルを生成
-2. AlgorithmCoordinatorがシグナルを集約
-3. QuestionSchedulerが統合計算で出題順序を決定
-4. 学習結果をフィードバックして各アルゴリズムのパラメータを調整
-
-### 7つの専門AI（実装状況）
-
-| AI                         | 主な機能                       | 実装ファイル                                                                         |
-| -------------------------- | ------------------------------ | ------------------------------------------------------------------------------------ |
-| 🧠 **Memory AI**           | 記憶定着度評価・忘却リスク計算 | [`src/ai/specialists/MemoryAI.ts`](src/ai/specialists/MemoryAI.ts)                   |
-| 💤 **Cognitive Load AI**   | 認知負荷測定・疲労検出         | [`src/ai/specialists/CognitiveLoadAI.ts`](src/ai/specialists/CognitiveLoadAI.ts)     |
-| 🔮 **Error Prediction AI** | 誤答パターン分析・予測         | [`src/ai/specialists/ErrorPredictionAI.ts`](src/ai/specialists/ErrorPredictionAI.ts) |
-| 🎯 **Learning Style AI**   | 学習スタイルプロファイリング   | [`src/ai/specialists/LearningStyleAI.ts`](src/ai/specialists/LearningStyleAI.ts)     |
-| 📚 **Linguistic AI**       | 言語学的難易度評価             | [`src/ai/specialists/LinguisticAI.ts`](src/ai/specialists/LinguisticAI.ts)           |
-| 🌍 **Contextual AI**       | 環境・時間帯要因の分析         | [`src/ai/specialists/ContextualAI.ts`](src/ai/specialists/ContextualAI.ts)           |
-| 🎮 **Gamification AI**     | モチベーション管理             | [`src/ai/specialists/GamificationAI.ts`](src/ai/specialists/GamificationAI.ts)       |
-
-**統合層**: [`src/ai/coordinator/AICoordinator.ts`](src/ai/coordinator/AICoordinator.ts)
-
-### QuestionScheduler - メタAI統合層
-
-ドキュメント-実装整合性スコア 100/100 を達成しています。
-
-#### 実装機能
-
-**4タブ統一出題エンジン**
-
-- 暗記・和訳・スペル・文法の全モードで同一アルゴリズムを使用
-- モード間の学習データ共有と一貫性保証
-
-**5種類のシグナル検出**
-
-- Fatigue（疲労）: 20分以上学習かつ誤答増加
-- Struggling（苦戦）: 誤答率40%以上
-- Overlearning（過学習）: 連続正解10回以上
-- Boredom（飽き）: 同一難易度の連続
-- Optimal（最適）: 良好な学習状態
-
-**DTA（Time-Dependent Adjustment）**
-
-- 最終学習時刻からの経過時間を考慮
-- 個人の忘却パターンに適応する動的調整
-
-**振動防止システム**
-
-- 1分以内に正解した問題の再出題を抑制
-- vibrationScore（0-100）によるリアルタイム監視
-
-**確実性保証機構**
-
-- incorrect単語への優先配置（+50〜90ボーナス）
-- still_learningへの次点配置（+25ボーナス）
-- DTAやシグナルの影響を受けても復習優先を維持
-
----
-
-## 🚀 主要機能
-
-### ランダム間隔再出題（2025年12月実装）
-
-#### 課題
-
-即座の再出題では短期記憶による正解が発生し、真の記憶定着を測定できない。
-
-#### 実装方式
-
-incorrect単語を待機キューに追加し、重み付きランダムで2-5問後に再出題：
-
-```typescript
-// 重み付き分布
-40%: 2問後
-30%: 3問後
-20%: 4問後
-10%: 5問後
-```
-
-#### 効果
-
-- 短期記憶と長期記憶の分離
-- 振動防止システムとの両立
-- 自然な学習リズムの維持
-
-**詳細**: [random-skip-feature.md](docs/features/random-skip-feature.md)
-
-### ドキュメント管理システム
-
-8,800行以上の詳細仕様書を維持し、7.5時間での機能復旧を可能にするドキュメント体系を構築しています。
-
-**Phase 1完了記念**: Position計算の全Magic numbersを[positionConstants.ts](src/ai/utils/positionConstants.ts)に集約（2025-12-23）
-
-| ドキュメント                                                                         | 内容                          |
-| ------------------------------------------------------------------------------------ | ----------------------------- |
-| [完全仕様書](docs/specifications/QUESTION_SCHEDULER_SPEC.md)                         | アルゴリズム詳細（1,669行）   |
-| [型定義リファレンス](docs/references/QUESTION_SCHEDULER_TYPES.md)                    | 11個の型定義（901行）         |
-| [復旧手順書](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)                             | 段階的復旧手順（1,080行）     |
-| [APIリファレンス](docs/references/QUESTION_SCHEDULER_API.md)                         | 実装者向けAPI（594行）        |
-| [完全学習システムロードマップ](docs/development/COMPLETE_LEARNING_SYSTEM_ROADMAP.md) | Phase 1-6実装計画（62.5時間） |
-
-**検証システム**:
-
-- 自動検証スクリプト（30チェック項目、実行時間30秒）
-- GitHub Actions統合
-- 継続的整合性チェック
-
-### ドキュメント品質保証
-
-3層の自動検証システムでドキュメント品質を維持：
-
-#### レベル1: リアルタイム検証
-
-- VS Code統合によるリンク切れの即座の検出
-- フラグメント（#アンカー）検証
-
-#### レベル2: コミット時検証
-
-- Pre-commit Hookによる命名規則チェック
-- 規則違反のコミットをブロック
-
-#### レベル3: PR時検証
-
-- GitHub Actionsによる全リンク検証（684リンク、5秒）
-- 断線数閾値（80箇所）によるマージ制御
-
-**現状**:
-
-- ドキュメント数: 306ファイル
-- 総リンク数: 684
-- 断線リンク: 76（初期値263から71%削減）
-- 検証時間: 5秒
-
-**詳細**: [EFFICIENT_DOC_WORKFLOW.md](docs/processes/EFFICIENT_DOC_WORKFLOW.md)
-
-### AI機能の有効化
-
-開発環境（`npm run dev`）では自動的に有効化されます。本番環境では以下の手順で有効化できます：
-
-```javascript
-// ブラウザコンソール（F12）で実行
+```js
 localStorage.setItem('enable-ai-coordination', 'true');
 location.reload();
 ```
 
-コンソールに以下のようなログが出力されます：
+詳細は [docs/HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md) を参照してください。
 
-```text
-🤖 [MemorizationView] AI統合が有効化されました
-🧠 Memory AI Signal for question_id=123:
-  - forgettingRisk: 120 (優先度調整: +35)
-💤 Cognitive Load AI Signal:
-  - fatigueScore: 0.3 (連続誤答: 3回)
-🤖 Meta AI: Final Priority=260 (HIGH PRIORITY)
-```
-
-**詳細**: [HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md)
-
----
-
-## 🛠️ 技術スタック
-
-### フロントエンド
-
-- **TypeScript**: 完全な型安全性
-- **React 18**: 最新のHooksパターン
-- **Vite**: 超高速ビルド
-- **Tailwind CSS**: ユーティリティファースト
-
-### AI/機械学習
-
-- **7つの専門AI**: 記憶、認知負荷、エラー予測、学習スタイル、言語、文脈、ゲーミフィケーション
-- **QuestionScheduler（メタAI）**: 信号統合・出題順序決定
-
-### データ管理
-
-- **localStorage**: クライアントサイド永続化
-- **CSV形式**: 7列形式のデータ互換性
-
-### 品質保証
-
-- **Vitest**: ユニットテスト（カバレッジ85%+）
-- **Playwright**: E2Eテスト
-- **ESLint + Prettier**: コード品質
-- **Stylelint**: CSS品質
-- **Markdownlint**: ドキュメント品質
-
-### CI/CD
-
-- **GitHub Actions**: 自動テスト・ビルド・デプロイ
-- **GitHub Pages**: 静的サイトホスティング
-- **Pre-commit Hooks**: コミット前検証
-
-### ドキュメント管理
-
-- **Pre-commit Hook**: 命名規則強制（`.husky/check-doc-naming`）
-- **GitHub Actions**: リンク検証（`.github/workflows/link-checker.yml`）
-- **VS Code統合**: リアルタイムMarkdown検証
-- **npmスクリプト**: `docs:analyze`, `docs:check`, `docs:stats`
-
----
-
-## 💻 セットアップ方法
-
-### 環境要件
-
-- Node.js 16以上
-- npm または yarn
-
-### インストール手順
+## よく使うコマンド
 
 ```bash
-# リポジトリのクローン
-git clone https://github.com/nanashi8/nanashi8.github.io.git
-cd nanashi8.github.io
+# ユニットテスト（fast設定）
+npm test
 
-# 依存関係のインストール
-npm install
+# 型チェック + lint + ドキュメント/ルール検証（PR前推奨）
+npm run quality:check
 
-# 開発サーバーの起動（AI機能自動有効化）
-npm run dev
-
-# ブラウザで http://localhost:5173 を開く
-```
-
-### 主要コマンド
-
-```bash
-# ビルド
+# ビルド / プレビュー
 npm run build
-
-# プレビュー
 npm run preview
-
-# テスト実行
-npm run test:unit          # ユニットテスト
-npm run test:smoke         # スモークテスト
-npm run test:all           # 全テスト
-
-# コード品質チェック
-npm run quality:check      # 型チェック + Lint
-npm run quality:strict     # 厳格チェック
-
-# ドキュメント管理
-npm run docs:stats         # 統計表示
-npm run docs:analyze       # リンク分析
-npm run docs:check         # 全チェック
 ```
 
-### ディレクトリ構造
-
-```
-nanashi8.github.io/
-├── src/                    # ソースコード
-│   ├── ai/                 # 8-AIシステム
-│   │   ├── specialists/    # 7つの専門AI
-│   │   ├── coordinator/    # AI統合層
-│   │   └── scheduler/      # QuestionScheduler
-│   ├── components/         # Reactコンポーネント
-│   ├── hooks/              # カスタムフック
-│   ├── storage/            # データ永続化
-│   └── types/              # TypeScript型定義
-├── docs/                   # ドキュメント（306ファイル）
-│   ├── specifications/     # 仕様書
-│   ├── guidelines/         # ガイドライン
-│   ├── how-to/             # ハウツー
-│   ├── references/         # リファレンス
-│   └── processes/          # プロセス
-├── tests/                  # テストコード
-├── scripts/                # 自動化スクリプト
-├── .github/workflows/      # CI/CDパイプライン
-├── .husky/                 # Git Hooks
-└── .aitk/instructions/     # AI開発支援
-```
-
----
-
-## 📚 ドキュメント体系
-
-### 体系の概要
+データ検証やPlaywrightのスモークテストなどは [package.json](package.json) を参照してください。
 
-306ファイル、8,800行以上の仕様書で構成されています。ドキュメント-実装の整合性を保つための自動検証システムを導入しています。
+## 構成
 
-#### QuestionScheduler関連（整合性100/100）
+- [src/](src/) - Reactアプリ本体・出題ロジック
+- [public/data/](public/data/) - 学習データ
+- [docs/](docs/) - 仕様・ガイド・レポート
+- [scripts/](scripts/) - 自動化/検証（Pythonを使うものあり）
+- [tests/](tests/) - テスト（unit/integration/simulation）
+- [extensions/](extensions/) - VS Code拡張など（[extensions/servant/](extensions/servant/)）
 
-| ドキュメント                                                                 | 内容                        |
-| ---------------------------------------------------------------------------- | --------------------------- |
-| [QUESTION_SCHEDULER_SPEC.md](docs/specifications/QUESTION_SCHEDULER_SPEC.md) | アルゴリズム仕様（1,669行） |
-| [QUESTION_SCHEDULER_RECOVERY.md](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md) | 復旧手順書（1,080行）       |
-| [QUESTION_SCHEDULER_TYPES.md](docs/references/QUESTION_SCHEDULER_TYPES.md)   | 型定義（901行）             |
-| [QUESTION_SCHEDULER_API.md](docs/references/QUESTION_SCHEDULER_API.md)       | APIリファレンス（594行）    |
-| [META_AI_INTEGRATION_GUIDE.md](docs/guidelines/META_AI_INTEGRATION_GUIDE.md) | 統合手順                    |
+## コントリビューション / 品質
 
-#### AI統合関連
+- 変更前に [docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md](docs/guidelines/NO_SYMPTOMATIC_FIXES_POLICY.md) を確認してください。
+- PR前に `npm run quality:check` の実行を推奨します。
+- このREADMEは、実装根拠（実ファイル）へのリンクを添えて、開発者とAI支援（GitHub Copilot / GPT-5.2）で協業しながら更新しています。
 
-| ドキュメント                                                   | 内容                   |
-| -------------------------------------------------------------- | ---------------------- |
-| [AI_INTEGRATION_GUIDE.md](docs/AI_INTEGRATION_GUIDE.md)        | 技術詳細・実装手順     |
-| [HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md)                | 使用方法               |
-| [AI_PROJECT_COMPLETE.md](docs/AI_PROJECT_COMPLETE.md)          | Phase 1-4総括（408行） |
-| [random-skip-feature.md](docs/features/random-skip-feature.md) | ランダム再出題機能     |
+## カタログ（ざっくり全体像）
 
-#### ドキュメント管理
+このリポジトリは、Webアプリ本体・学習データ・検証/自動化ツールが同居しています。
 
-| ドキュメント                                                                   | 内容                    |
-| ------------------------------------------------------------------------------ | ----------------------- |
-| [EFFICIENT_DOC_WORKFLOW.md](docs/processes/EFFICIENT_DOC_WORKFLOW.md)          | 効率化ワークフロー      |
-| [DOCUMENT_NAMING_CONVENTION.md](docs/guidelines/DOCUMENT_NAMING_CONVENTION.md) | 命名規則                |
-| [DOCUSAURUS_SETUP_GUIDE.md](docs/how-to/DOCUSAURUS_SETUP_GUIDE.md)             | SSG導入ガイド（検討中） |
-| [LINK_FIX_COMPLETION_REPORT.md](docs/reports/LINK_FIX_COMPLETION_REPORT.md)    | リンク修正実績          |
+- **学習アプリ（TypeScript + React + Vite）**
+  - 「次に何を出すか」を決める入口（メタスケジューラ）: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts)
+  - 複数の専門ロジック/シグナルの統合: [src/ai/AICoordinator.ts](src/ai/AICoordinator.ts)
+  - 記憶・定着の扱い（間隔反復/忘却曲線に近いスコアリング）: [src/strategies/memoryAcquisitionAlgorithm.ts](src/strategies/memoryAcquisitionAlgorithm.ts), [src/strategies/memoryRetentionAlgorithm.ts](src/strategies/memoryRetentionAlgorithm.ts)
+  - 単調さを減らすための混ぜ方（インターリーブ）: [src/ai/specialists/GamificationAI.ts](src/ai/specialists/GamificationAI.ts)
+  - 進捗はローカル保存（localStorageベース）: [src/storage/progress/progressStorage.ts](src/storage/progress/progressStorage.ts)
+  - 基本はルール/ヒューリスティクス中心（ML実験コードも同梱）: [src/ai/ml/](src/ai/ml/)
 
-#### AI開発支援Instructions
+- **学習データ（public/data）**
+  - 単語・文法・読解などのデータと派生ファイル: [public/data/](public/data/)
+  - 変換/検証スクリプト: [scripts/](scripts/) / [tools/](tools/)
+  - データ品質の考え方や参照先は: [docs/guidelines/](docs/guidelines/)
 
-| ドキュメント                                                                                              | 内容                      |
-| --------------------------------------------------------------------------------------------------------- | ------------------------- |
-| [documentation-enforcement.instructions.md](.aitk/instructions/documentation-enforcement.instructions.md) | ドキュメント品質強制      |
-| [meta-ai-priority.instructions.md](.aitk/instructions/meta-ai-priority.instructions.md)                   | QuestionScheduler優先対応 |
-| [efficiency-guard.instructions.md](.aitk/instructions/efficiency-guard.instructions.md)                   | 効率化ガード              |
+- **品質ゲートとテスト**
+  - 型チェック + lint + ドキュメント/ルール検証をまとめて実行: `npm run quality:check`
+  - Playwrightのスモーク/ビジュアルテストやシミュレーションテスト: [tests/](tests/)
 
-### 他プロジェクトとの比較
+- **先進的な取り組み（事例）**
+  アプリ本体・データ・自動化が同居するリポジトリでは、変更の影響が「静かに」広がりやすく、気づいた時には出題・UI・品質が崩れていることがあります。
+  そこでこのプロジェクトでは、AI支援を前提にしつつも推測で壊さないための前提（仕様/ルール/ガード）を整備し、壊れやすい領域から順に仕組み化しています。
 
-| 項目             | 本プロジェクト    | Kubernetes | React         | TypeScript   |
-| ---------------- | ----------------- | ---------- | ------------- | ------------ |
-| 命名規則強制     | ✅ Pre-commit     | ✅ 手動    | ✅ 手動       | ✅ 手動      |
-| リンク検証CI     | ✅ GitHub Actions | ✅ Hugo    | ✅ Docusaurus | ✅ VitePress |
-| リアルタイム検証 | ✅ VS Code        | ❌         | ✅            | ✅           |
-| 自動修正         | ✅ スクリプト     | ❌         | ❌            | ❌           |
-| ドキュメント数   | 306               | ~2000      | ~500          | ~300         |
-| 検証時間         | 5秒               | 3-5分      | 1-2分         | 10-30秒      |
+  - 8個のAIシステム（7つの専門AI + 1つのメタ統合）で「次に何を出すか」を合議で決める構成: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts), [src/ai/specialists/](src/ai/specialists/), [src/ai/meta/](src/ai/meta/)
+  - UI・データ・自動化が同居する前提で、コミット前に「指示/仕様を見てから触る」を促すガード（オプトイン）: [scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh), [scripts/ai-guard-check.mjs](scripts/ai-guard-check.mjs)
+  - UIの変更範囲やデザインルールをドキュメント化し、レビュー/AI支援時の前提を固定する: [docs/development/UI_IMMUTABLE_SPECIFICATIONS.md](docs/development/UI_IMMUTABLE_SPECIFICATIONS.md), [docs/development/UI_DEVELOPMENT_GUIDELINES.md](docs/development/UI_DEVELOPMENT_GUIDELINES.md), [docs/development/DESIGN_SYSTEM_RULES.md](docs/development/DESIGN_SYSTEM_RULES.md)
+  - レイアウト崩れを検出/予防するための基盤（レスポンシブ実装パターン + 視覚回帰テストのガイド/雛形）: [docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md](docs/development/RESPONSIVE_IMPLEMENTATION_GUIDE.md), [docs/development/VISUAL_REGRESSION_TESTING.md](docs/development/VISUAL_REGRESSION_TESTING.md), [tests/smoke.spec.ts](tests/smoke.spec.ts)
+  - 「AI支援で開発する」前提のガバナンス（指示書体系 + 作業タイプ別ワークフロー）: [.aitk/instructions/README.md](.aitk/instructions/README.md), [docs/references/AI_WORKFLOW_INSTRUCTIONS.md](docs/references/AI_WORKFLOW_INSTRUCTIONS.md)
+  - スタイル面の「禁止パターン」を機械的に検出するチェック（例: 特定のクラス/セレクタの検出）: [scripts/check-no-dark-mode.mjs](scripts/check-no-dark-mode.mjs)
 
----
+- **VS Code拡張（任意）**
+  - 指示書（`.instructions.md`）ベースのルール検証と開発フロー支援を行う拡張: [extensions/servant/](extensions/servant/)
+  - リアルタイム検証（Problems表示）と Quick Fix（コードアクション）
+  - Git hook 連携（オプトイン）: `pre-commit` / `commit-msg` を導入でき、`pre-commit` は repo 側ガード（[scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh)）がある場合はそれを優先実行
+  - 仕様/意思決定の作業補助（例）: `Servant: Review Required Instructions`, `Servant: Record Spec Check`, `Servant: Open Working Spec`, `Servant: Append Decision Log`
+  - 便利コマンド: `Servant: 🚀 Quick Fix Commit (DECISIONS追記→コミット)` は [docs/specifications/DECISIONS.md](docs/specifications/DECISIONS.md) に追記しつつ `git add`/`git commit` まで実行
+  - コマンド/設定の全体像は拡張側READMEに集約: [extensions/servant/README.md](extensions/servant/README.md)
 
-## 🎓 学習コンテンツ
+  アプリ実行には必須ではありません。
 
-### 収録データ
+## ライセンス
 
-- 中学英単語: 1,200語（HORIZON準拠）
-- 中学英熟語: 300フレーズ
-- 文法問題: 500問（5択形式）
-- 長文読解: 100パッセージ（方向性として検討中）
+このリポジトリのルートにはライセンスファイルがありません。
 
-### データ形式
+利用条件（概要）:
+- 個人利用・教育機関での利用（教材としての利用を含む）は許可します。
+- 商用利用は不可（応相談。リポジトリオーナーに連絡してください）。
 
-CSV形式（7列）でカスタマイズ可能：
-
-```csv
-単語,意味,カテゴリ,難易度,選択肢1,選択肢2,選択肢3
-apple,りんご,fruit,easy,orange,banana,grape
-```
-
----
-
-## 🤝 コントリビューション
-
-プルリクエストを受け付けています。
-
-### 手順
-
-1. このリポジトリをFork
-2. Feature branchを作成（`git checkout -b feature/your-feature`）
-3. 変更をCommit（`git commit -m 'Add your feature'`）
-4. BranchをPush（`git push origin feature/your-feature`）
-5. Pull Requestを作成
-
-### コーディング規約
-
-- TypeScript: 厳格な型チェック（`strict: true`）
-- ESLint: エラー0、警告0を維持
-- Prettier: 自動フォーマット
-- 命名規則: camelCase（変数・関数）、PascalCase（コンポーネント・型）
-
-### ドキュメント規約
-
-- 命名規則: specifications/ は番号付きkebab-case、guidelines/ はUPPER_SNAKE_CASE
-- リンク: 相対パスで記述
-- Front Matter: YAML形式
-
----
-
-## 📄 ライセンス
-
-MIT License - 詳細は [LICENSE](LICENSE) を参照
-
----
-
-## 📞 連絡先
-
-- GitHub: [@nanashi8](https://github.com/nanashi8)
-- Issues: [GitHub Issues](https://github.com/nanashi8/nanashi8.github.io/issues)
-
----
-
-## 🚧 開発ロードマップ
-
-### Phase 1: Constants抽出 ✅ **完了** (2025-12-23)
-
-**成果**:
-
-- Magic numbers完全削減（20+ → 0）
-- 新規ファイル: [`positionConstants.ts`](src/ai/utils/positionConstants.ts)（200行、8定数群、4ヘルパー関数）
-- 更新ファイル: [`categoryDetermination.ts`](src/ai/utils/categoryDetermination.ts)（全Magic numbers → Constants置き換え）
-- テストカバレッジ: 24テストケース全てパス
-
-**改善効果**:
-
-- 📊 可読性: `if (consecutiveCorrect >= 3)` → `if (consecutiveCorrect >= CONSECUTIVE_THRESHOLDS.MASTERED)`
-- 🔧 保守性: 閾値変更時は1ファイルのみ修正
-- ✅ 品質: 型エラー0、テスト全パス
-
----
-
-### Phase 4: 記憶科学統合 ✅ **完了** (2025-12-24)
-
-**成果**:
-
-- SuperMemo SM-2完全実装（250行）
-- Ebbinghaus忘却曲線実装（280行）
-- 長期記憶移行戦略（4段階、300行）
-- MemoryAI統合強化（Phase 4機能統合）
-- 型拡張: WordProgress（SM-2フィールド）、MemorySignal（Phase 4拡張）
-
-**新規ファイル**:
-
-1. [`SM2Algorithm.ts`](src/ai/specialists/memory/SM2Algorithm.ts) - SuperMemo SM-2完全実装
-2. [`ForgettingCurveModel.ts`](src/ai/specialists/memory/ForgettingCurveModel.ts) - Ebbinghaus忘却曲線
-3. [`LongTermMemoryStrategy.ts`](src/ai/specialists/memory/LongTermMemoryStrategy.ts) - 4段階記憶移行
-
-**更新ファイル**:
-
-- [`MemoryAI.ts`](src/ai/specialists/MemoryAI.ts) - 3モジュール統合、analyze()・proposePosition()強化
-- [`types.ts`](src/ai/types.ts) - MemorySignal型拡張（sm2Data, retention, memoryStage）
-- [`progress/types.ts`](src/storage/progress/types.ts) - WordProgress型拡張（easeFactor, repetitions, memoryStage）
-
-**改善効果**:
-
-- 🧠 記憶科学: SM-2間隔反復アルゴリズム、Ebbinghaus忘却曲線による科学的復習タイミング
-- 📈 予測保持率: 記憶保持率の正確な予測と復習推奨
-- 🎯 段階的学習: WORKING_MEMORY → SHORT_TERM → CONSOLIDATING → LONG_TERM
-- 💯 期待スコア: 72点 → **107点** (上限93点)
-
----
-
-### Phase 5: 感情的サポート ✅ **完了** (2025-12-24)
-
-**目標**: 学習者のモチベーション維持と人間らしいサポート (+25%)
-
-**成果**:
-
-- EmotionalAI実装（310行） - 挫折検出、自信計算、疲労推定
-- ScaffoldingSystem実装（250行） - 段階的ヒント提供（4レベル）
-- UIコンポーネント実装（3ファイル）
-  - EncouragementDisplay（励ましメッセージ）
-  - HintDisplay（段階的ヒント表示）
-  - encouragement.css（アニメーション）
-
-**新規ファイル**:
-
-1. [`EmotionalAI.ts`](src/ai/specialists/EmotionalAI.ts) - 感情状態監視とサポート（310行）
-2. [`ScaffoldingSystem.ts`](src/ai/specialists/scaffolding/ScaffoldingSystem.ts) - 段階的指導（250行）
-3. [`EncouragementDisplay.tsx`](src/components/quiz/EncouragementDisplay.tsx) - 励ましUI（145行）
-4. [`HintDisplay.tsx`](src/components/quiz/HintDisplay.tsx) - ヒントUI（165行）
-5. [`encouragement.css`](src/styles/encouragement.css) - アニメーション（140行）
-
-**実装機能**:
-
-- 💪 挫折検出: 連続不正解（3回以上）、長時間停滞の自動検出
-- 🎯 自信計算: 連続正解（5回以上）、正答率（80%以上）から自信レベル算出
-- 😴 疲労推定: セッション時間（45分超）、問題数（50問超）から疲労度推定
-- 💡 段階的ヒント: 4レベル（なし → 軽い → 中 → 強い）
-  - Level 1: 最初の文字 + 品詞
-  - Level 2: 最初の3文字 + 文字数
-  - Level 3: 伏せ字（1文字おき）+ 例文
-- 💬 励ましメッセージ: 4タイプ（サポート/称賛/マスター/標準）
-- 🔄 Position調整: モチベーション維持のための難易度調整（-15 ~ +5）
-- 🎨 UIアニメーション: フェードイン、スライドダウン、バウンス、パルス
-
-**改善効果**:
-
-- 📚 モチベーション維持: 挫折時の適切なサポートと励まし
-- 🎓 段階的学習: エラー回数に応じた最適なヒント提供
-- ⏰ 疲労管理: 長時間学習時の休憩推奨（5分休憩）
-- ✨ ポジティブ強化: 好調時の適切な称賛とマスター達成祝福
-- 💯 期待スコア: 72点 + 25% = **97点**（上限93点達成）
-
----
-
-### Phase 2-6: 今後の計画
-
-詳細計画書: [`COMPLETE_LEARNING_SYSTEM_ROADMAP.md`](docs/development/COMPLETE_LEARNING_SYSTEM_ROADMAP.md)
-
-| Phase       | 内容                                 | 工数       | スコア向上 | ステータス  |
-| ----------- | ------------------------------------ | ---------- | ---------- | ----------- |
-| Phase 2     | Strategy Pattern導入                 | 12時間     | -          | 📋 計画中   |
-| Phase 3     | AI統合強化                           | 8時間      | -          | 📋 計画中   |
-| **Phase 4** | **記憶科学統合（SM-2, Ebbinghaus）** | **18時間** | **+35%**   | ✅ **完了** |
-| **Phase 5** | **感情的サポート（EmotionalAI）**    | **12時間** | **+25%**   | ✅ **完了** |
-| Phase 6     | 多様な復習方法                       | 10時間     | +15%       | 📋 計画中   |
-
-**達成**: Phase 1 + Phase 4 + Phase 5完了（目標93点を大幅超過達成！） 🎉
-
----
-
-**最終更新**: 2025-12-24  
-**バージョン**: 3.3.0  
-**ステータス**: Active Development - Phase 1・4・5完了、Phase 2・3・6計画中
+VS Code拡張（[extensions/servant/](extensions/servant/)）は個別にライセンスを持ちます: [extensions/servant/LICENSE](extensions/servant/LICENSE)

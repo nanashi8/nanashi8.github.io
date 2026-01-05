@@ -25,6 +25,9 @@
     { "rule": "@typescript-eslint/ban-ts-comment", "severity": "off" }
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
+  "[yaml]": {
+    "editor.codeLens": false
+  },
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",

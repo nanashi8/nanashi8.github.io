@@ -152,3 +152,6 @@ tools/deploy.log
 # Test coverage
 coverage/
 .coverage
+
+# Local spec-check acknowledgement (do not commit)
+.aitk/spec-check.json

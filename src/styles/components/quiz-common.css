@@ -58,6 +58,12 @@
   margin-bottom: 16px;
 }
 
+.filter-group--section {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
 .filter-group label {
   display: block;
   font-size: 0.95rem;

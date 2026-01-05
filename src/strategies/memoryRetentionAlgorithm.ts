@@ -52,6 +52,15 @@ export interface RetentionConfig {
   confidenceWeight: number; // 自信度の重み
 }
 
+export interface ConsolidationEvaluation {
+  /** 評価基準の地平（日） */
+  horizonsDays: [number, number];
+  /** 各地平での推定保持率（0-1） */
+  retentionAtHorizon: { [days: number]: number };
+  /** 複合スコア（0-1） */
+  compositeRetention: number;
+}
+
 export const DEFAULT_RETENTION_CONFIG: RetentionConfig = {
   minEaseFactor: 1.3,
   maxEaseFactor: 2.5,
@@ -254,6 +263,62 @@ export class MemoryRetentionManager {
   }
 
   /**
+   * 指定時刻（future/past）における推定保持率
+   * - 現行の estimateRetentionRate() と同じ減衰モデルだが、評価時刻を明示できる
+   */
+  estimateRetentionRateAtTime(status: RetentionStatus, targetTime: number): number {
+    const daysSinceReview = (targetTime - status.lastReviewDate) / 86400000;
+    const daysUntilReview = (status.nextReviewDate - targetTime) / 86400000;
+
+    if (daysUntilReview >= 0) {
+      const decay = Math.exp(
+        (-this.config.forgettingCurveDecay * Math.max(0, daysSinceReview)) / status.sm2.interval
+      );
+      return Math.max(0.1, Math.min(1.0, decay));
+    }
+
+    const overdueDays = -daysUntilReview;
+    const decay = Math.exp(
+      (-this.config.forgettingCurveDecay * (Math.max(0, daysSinceReview) + overdueDays)) /
+        status.sm2.interval
+    );
+    return Math.max(0.05, Math.min(0.9, decay));
+  }
+
+  /**
+   * 定着評価（1日＋7日 複合）
+   * - 現時点の保持率は用途（期限判定等）が違うため置き換えない
+   * - ここは「1日先・7日先にどれだけ保持できそうか」を評価する
+   */
+  evaluateConsolidation(
+    status: RetentionStatus,
+    currentTime: number = Date.now(),
+    horizonsDays: [number, number] = [1, 7],
+    weights: [number, number] = [0.5, 0.5]
+  ): ConsolidationEvaluation {
+    const [h1, h2] = horizonsDays;
+    const [w1, w2] = weights;
+    const sumW = w1 + w2 || 1;
+
+    const t1 = currentTime + h1 * 86400000;
+    const t2 = currentTime + h2 * 86400000;
+
+    const r1 = this.estimateRetentionRateAtTime(status, t1);
+    const r2 = this.estimateRetentionRateAtTime(status, t2);
+
+    const composite = (r1 * w1 + r2 * w2) / sumW;
+
+    return {
+      horizonsDays,
+      retentionAtHorizon: {
+        [h1]: r1,
+        [h2]: r2,
+      },
+      compositeRetention: composite,
+    };
+  }
+
+  /**
    * リセット
    */
   reset(): void {
@@ -432,12 +497,24 @@ export function calculateReviewEfficiency(
 ): number {
   const stats = manager.getRetentionStatistics(wordList);
 
+  // 定着評価（1日＋7日 複合）を効率の保持率成分に用いる
+  // ※ getRetentionStatistics.averageRetentionRate は「現時点の保持率」用途なので保持
+  let averageCompositeRetention = 0;
+  if (wordList.length > 0) {
+    let sum = 0;
+    for (const word of wordList) {
+      const status = manager.getRetentionStatus(word);
+      sum += manager.evaluateConsolidation(status).compositeRetention;
+    }
+    averageCompositeRetention = sum / wordList.length;
+  }
+
   if (wordList.length === 0) {
     return 0;
   }
 
-  // 効率 = (平均保持率 × 0.4) + (平均間隔/60 × 0.3) + (習得率 × 0.3)
-  const retentionScore = stats.averageRetentionRate * 0.4;
+  // 効率 = (複合保持率(1d+7d) × 0.4) + (平均間隔/60 × 0.3) + (習得率 × 0.3)
+  const retentionScore = averageCompositeRetention * 0.4;
   const intervalScore = Math.min(stats.averageInterval / 60, 1.0) * 0.3;
   const masteryScore = (stats.wellLearnedCount / wordList.length) * 0.3;
 

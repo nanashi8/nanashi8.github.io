@@ -34,6 +34,15 @@ export class Notifier {
     return this.showForced('error', message, { actions });
   }
 
+  /**
+   * “止める”用途の割り込み（モーダル）。
+   * ユーザーが選択/キャンセルするまで入力を要求する。
+   */
+  public blockingCritical(message: string, ...actions: string[]): Thenable<string | undefined> {
+    this.outputChannel?.appendLine(`[Notify][blocking][error] ${message}`);
+    return vscode.window.showErrorMessage(message, { modal: true }, ...actions);
+  }
+
   public modalInfo(message: string): Thenable<void> {
     // モーダルは「ユーザーが明示的に実行したガイダンス」用途のみを想定
     return vscode.window.showInformationMessage(message, { modal: true }).then(() => {});

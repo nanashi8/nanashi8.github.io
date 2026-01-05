@@ -30,6 +30,7 @@ import type {
   DailyPlanInfo,
   Statistics,
   QuestionSetStats,
+  AnswerConfidence5,
 } from './types';
 
 export type {
@@ -1152,7 +1153,8 @@ export async function updateWordProgress(
   responseTime: number, // ミリ秒
   userRating?: number, // 1-10のユーザー評価（オプション）
   _mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization', // モード情報
-  isStillLearning?: boolean // 暗記タブ専用: まだまだ（学習中）フラグ
+  isStillLearning?: boolean, // 暗記タブ専用: まだまだ（学習中）フラグ
+  confidence5Override?: AnswerConfidence5 // 任意: 推定を上書きしたい場合
 ): Promise<void> {
   const progress = await loadProgress();
 
@@ -1339,11 +1341,38 @@ export async function updateWordProgress(
   if (!wordProgress.learningHistory) {
     wordProgress.learningHistory = [];
   }
+
+  // ✅ 5段階の自信度を回答情報から推定（深層学習/フォールバックあり）
+  let confidence5: AnswerConfidence5 | undefined = confidence5Override;
+  let confidenceScore01: number | undefined;
+  let confidenceSource: 'deep' | 'heuristic' | undefined;
+  if (!confidence5) {
+    try {
+      const { estimateConfidence5 } = await import('@/ai/utils/answerConfidence5');
+      const estimated = await estimateConfidence5({
+        progress: wordProgress,
+        wasCorrect: isCorrect,
+        responseTimeMs: responseTime,
+        timestamp: Date.now(),
+      });
+      confidence5 = estimated.confidence5;
+      confidenceScore01 = estimated.score01;
+      confidenceSource = estimated.source;
+    } catch {
+      // 推定に失敗しても学習体験を阻害しない
+    }
+  }
+
   wordProgress.learningHistory.push({
     timestamp: Date.now(),
     wasCorrect: isCorrect,
+    wasStillLearning: Boolean(isStillLearning),
     responseTime,
     sessionIndex: 0, // App.tsxから渡すようにする
+    mode,
+    confidence5,
+    confidenceScore01,
+    confidenceSource,
   });
 
   // 応答時間配列を更新（正解・不正解のみ。「まだまだ」は含まない）
@@ -1497,8 +1526,12 @@ export async function updateWordProgress(
         detail: {
           word,
           isCorrect,
+          isStillLearning: Boolean(isStillLearning),
           responseTime,
           mode,
+          confidence5,
+          confidenceScore01,
+          confidenceSource,
         },
       });
       window.dispatchEvent(evt);

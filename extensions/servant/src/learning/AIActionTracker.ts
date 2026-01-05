@@ -75,6 +75,63 @@ export class AIActionTracker {
   private idleTimer: NodeJS.Timeout | null = null;
   private workflowLearner: IWorkflowLearner | null = null;
 
+  private actionStartedEmitter: {
+    event: vscode.Event<AIAction>;
+    fire: (e: AIAction) => void;
+    dispose: () => void;
+  };
+  private actionEndedEmitter: {
+    event: vscode.Event<AIAction>;
+    fire: (e: AIAction) => void;
+    dispose: () => void;
+  };
+
+  /** アクション開始イベント */
+  public readonly onActionStarted: vscode.Event<AIAction>;
+  /** アクション終了イベント */
+  public readonly onActionEnded: vscode.Event<AIAction>;
+
+  public getFileHotspots(options?: {
+    minCount?: number;
+    limit?: number;
+    onlyWithViolations?: boolean;
+  }): Array<{ file: string; changeCount: number; violationActions: number }> {
+    const minCount = options?.minCount ?? 5;
+    const limit = options?.limit ?? 10;
+    const onlyWithViolations = options?.onlyWithViolations ?? false;
+
+    const changeCounts = new Map<string, number>();
+    const violationActions = new Map<string, number>();
+
+    for (const action of this.log.actions) {
+      const seenInAction = new Set<string>();
+      for (const file of action.changedFiles ?? []) {
+        const key = String(file);
+        changeCounts.set(key, (changeCounts.get(key) || 0) + 1);
+        if (!seenInAction.has(key) && action.violations > 0) {
+          violationActions.set(key, (violationActions.get(key) || 0) + 1);
+        }
+        seenInAction.add(key);
+      }
+    }
+
+    const items = Array.from(changeCounts.entries())
+      .map(([file, count]) => ({
+        file,
+        changeCount: count,
+        violationActions: violationActions.get(file) || 0
+      }))
+      .filter((x) => x.changeCount >= minCount)
+      .filter((x) => (onlyWithViolations ? x.violationActions > 0 : true))
+      .sort((a, b) => {
+        if (b.changeCount !== a.changeCount) return b.changeCount - a.changeCount;
+        return b.violationActions - a.violationActions;
+      })
+      .slice(0, limit);
+
+    return items;
+  }
+
   // 自動終了のアイドル時間（ms）
   private static readonly AUTO_END_IDLE_MS = 2 * 60 * 1000;
   // 自動学習の閾値（ログ件数）
@@ -90,9 +147,55 @@ export class AIActionTracker {
     this.logPath = path.join(workspaceRoot, '.vscode', 'ai-action-log.json');
     this.log = this.loadLog();
 
+    this.actionStartedEmitter = this.createEmitter<AIAction>();
+    this.actionEndedEmitter = this.createEmitter<AIAction>();
+    this.onActionStarted = this.actionStartedEmitter.event;
+    this.onActionEnded = this.actionEndedEmitter.event;
+
     // 現状、Copilotの稼働検出が外部から供給されないケースが多い。
     // ログが一切溜まらないのを避けるため、デフォルトは有効として扱う。
     this.isCopilotActive = true;
+  }
+
+  private createEmitter<T>(): {
+    event: vscode.Event<T>;
+    fire: (e: T) => void;
+    dispose: () => void;
+  } {
+    const ctor = (vscode as unknown as { EventEmitter?: unknown }).EventEmitter;
+    if (typeof ctor === 'function') {
+      try {
+        // VS Code本体ではconstructor、テストではモックが非constructorの場合がある
+        const emitter = new (ctor as new () => vscode.EventEmitter<T>)();
+        return emitter;
+      } catch {
+        // fallthrough
+      }
+    }
+
+    // vitest等のテスト環境向けフォールバック
+    const listeners = new Set<(e: T) => any>();
+    const event: vscode.Event<T> = (listener, thisArgs?, disposables?) => {
+      const wrapped = thisArgs ? (e: T) => listener.call(thisArgs, e) : listener;
+      listeners.add(wrapped);
+      const disposable: vscode.Disposable = { dispose: () => listeners.delete(wrapped) };
+      if (Array.isArray(disposables)) disposables.push(disposable);
+      return disposable;
+    };
+
+    return {
+      event,
+      fire: (e: T) => {
+        for (const l of Array.from(listeners)) {
+          try {
+            l(e);
+          } catch {
+            // ignore
+          }
+        }
+      },
+      dispose: () => listeners.clear()
+    };
   }
 
   /**
@@ -286,6 +389,9 @@ export class AIActionTracker {
     this.changedFilesSinceLastSave.clear();
     console.log(`🤖 [AIActionTracker] Started action: ${id} (${type})`);
 
+    // NOTE: currentAction はミュータブルなので、イベントにはスナップショットを渡す
+    this.actionStartedEmitter.fire({ ...this.currentAction });
+
     return id;
   }
 
@@ -297,6 +403,7 @@ export class AIActionTracker {
     error?: string;
     compileErrors?: number;
     violations?: number;
+    changedFiles?: string[];
   }): Promise<void> {
     if (!this.currentAction) {
       console.warn('[AIActionTracker] No active action to end');
@@ -308,7 +415,7 @@ export class AIActionTracker {
     this.currentAction.error = options.error;
     this.currentAction.compileErrors = options.compileErrors || 0;
     this.currentAction.violations = options.violations || 0;
-    this.currentAction.changedFiles = Array.from(this.changedFilesSinceLastSave);
+    this.currentAction.changedFiles = options.changedFiles ?? Array.from(this.changedFilesSinceLastSave);
 
     // Git diff から行数を取得（簡易版）
     const { linesAdded, linesDeleted } = await this.calculateLineChanges(
@@ -319,6 +426,8 @@ export class AIActionTracker {
 
     this.log.actions.push(this.currentAction);
     await this.saveLog();
+
+    const endedAction: AIAction = { ...this.currentAction };
 
     console.log(`🤖 [AIActionTracker] Ended action: ${this.currentAction.id}`);
     console.log(
@@ -338,6 +447,9 @@ export class AIActionTracker {
 
     // 自動学習: ログが閾値を超えたら学習実行
     await this.autoLearnIfNeeded();
+
+    // NOTE: 学習より後でも良いが、観測は「終了直後」が自然なのでここで通知
+    this.actionEndedEmitter.fire(endedAction);
   }
 
   /**
@@ -408,24 +520,90 @@ export class AIActionTracker {
     branchName?: string;
     files?: string[];
   }): AIAction['type'] {
-    const text = [context.commitMessage || '', context.branchName || '', ...(context.files || [])]
-      .join(' ')
-      .toLowerCase();
+    const commitMessage = (context.commitMessage || '').toLowerCase();
+    const branchName = (context.branchName || '').toLowerCase();
+    const files = (context.files || []).map((f) => String(f));
+    const text = [commitMessage, branchName, ...files].join(' ').toLowerCase();
 
-    if (text.includes('fix') || text.includes('bug')) {
+    const norm = (p: string) => p.replace(/\\/g, '/').toLowerCase();
+    const filePaths = files.map(norm);
+
+    const hasAnyFile = (pred: (p: string) => boolean) => filePaths.some(pred);
+    const countFiles = (pred: (p: string) => boolean) => filePaths.filter(pred).length;
+
+    const isDocsFile = (p: string) =>
+      p.endsWith('.md') ||
+      p.includes('/docs/') ||
+      p.includes('/doc/') ||
+      p.includes('readme');
+
+    const isTestFile = (p: string) =>
+      p.includes('/tests/') ||
+      p.includes('/test/') ||
+      p.includes('__tests__') ||
+      /\.(test|spec)\.(ts|tsx|js|jsx)$/.test(p) ||
+      p.includes('playwright') ||
+      p.includes('vitest');
+
+    // 1) ファイルパスによる強い推定（unknown削減に効く）
+    if (filePaths.length > 0) {
+      const docsCount = countFiles(isDocsFile);
+      const testCount = countFiles(isTestFile);
+      if (docsCount > 0 && docsCount === filePaths.length) return 'docs';
+      if (testCount > 0 && testCount >= Math.ceil(filePaths.length * 0.6)) return 'test';
+      if (hasAnyFile(isDocsFile) && !hasAnyFile((p) => p.startsWith('src/'))) return 'docs';
+    }
+
+    // 2) Conventional Commits/キーワード
+    // bug-fix
+    if (
+      /(^|\s)(fix|hotfix|bugfix|patch)(\(|:|\s)/.test(commitMessage) ||
+      text.includes('fix') ||
+      text.includes('bug') ||
+      text.includes('hotfix')
+    ) {
       return 'bug-fix';
     }
-    if (text.includes('feature') || text.includes('feat')) {
-      return 'feature';
+
+    // docs
+    if (/^docs(\(|:|\s)/.test(commitMessage) || text.includes('doc') || text.includes('readme')) {
+      return 'docs';
     }
-    if (text.includes('refactor')) {
-      return 'refactor';
-    }
-    if (text.includes('test')) {
+
+    // test
+    if (/^test(\(|:|\s)/.test(commitMessage) || text.includes('test') || text.includes('spec')) {
       return 'test';
     }
-    if (text.includes('doc')) {
-      return 'docs';
+
+    // refactor/maintenance
+    if (
+      /^refactor(\(|:|\s)/.test(commitMessage) ||
+      text.includes('refactor') ||
+      text.includes('cleanup') ||
+      text.includes('chore') ||
+      text.includes('build') ||
+      text.includes('ci') ||
+      text.includes('lint') ||
+      text.includes('format') ||
+      text.includes('perf')
+    ) {
+      return 'refactor';
+    }
+
+    // feature
+    if (
+      /(^|\s)(feat|feature)(\(|:|\s)/.test(commitMessage) ||
+      text.includes('feature') ||
+      text.includes('feat') ||
+      text.includes('implement') ||
+      text.includes('add ')
+    ) {
+      return 'feature';
+    }
+
+    // 3) フォールバック: src変更はfeature/refactor寄り（unknown回避）
+    if (hasAnyFile((p) => p.startsWith('src/'))) {
+      return 'feature';
     }
 
     return 'unknown';

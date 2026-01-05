@@ -27,6 +27,7 @@ interface PatternAnalysis {
   failurePatterns: string[];
   successPatterns: string[];
   riskAreas: string[];
+  violationHotspots: string[];
 }
 
 /**
@@ -35,6 +36,8 @@ interface PatternAnalysis {
 export class FeedbackCollector {
   private workspaceRoot: string;
   private feedbackPath: string;
+
+  private static readonly MAX_RISK_AREAS = 15;
 
   constructor(workspaceRoot: string) {
     this.workspaceRoot = workspaceRoot;
@@ -75,8 +78,26 @@ export class FeedbackCollector {
     const patterns = this.analyzePatterns(actions);
     this.addPatternFeedback(patterns, feedback);
 
+    // 出力ノイズ抑制: 重複を除去（順序は維持）
+    feedback.strengths = this.uniquePreserveOrder(feedback.strengths);
+    feedback.weaknesses = this.uniquePreserveOrder(feedback.weaknesses);
+    feedback.improvements = this.uniquePreserveOrder(feedback.improvements);
+    feedback.warnings = this.uniquePreserveOrder(feedback.warnings);
+    feedback.recommendedActions = this.uniquePreserveOrder(feedback.recommendedActions);
+
     console.log('📊 [FeedbackCollector] Feedback generated:', feedback);
     return feedback;
+  }
+
+  private uniquePreserveOrder(items: string[]): string[] {
+    const seen = new Set<string>();
+    const result: string[] = [];
+    for (const item of items) {
+      if (seen.has(item)) continue;
+      seen.add(item);
+      result.push(item);
+    }
+    return result;
   }
 
   /**
@@ -184,6 +205,7 @@ export class FeedbackCollector {
     const failurePatterns: string[] = [];
     const successPatterns: string[] = [];
     const riskAreas: string[] = [];
+    const violationHotspots: string[] = [];
 
     // 失敗パターン抽出
     const failedActions = actions.filter(a => !a.success);
@@ -215,13 +237,36 @@ export class FeedbackCollector {
       }
     }
 
-    for (const [file, count] of fileFrequency) {
-      if (count >= 5) {
-        riskAreas.push(`${file} が頻繁に変更されています（${count}回）`);
+    // 違反が出やすいファイル（違反を伴うアクションで触られたファイル）Top3
+    const violationFileCounts = new Map<string, number>();
+    for (const action of actions) {
+      if (action.violations <= 0) continue;
+      const uniqueFiles = new Set(action.changedFiles || []);
+      for (const file of uniqueFiles) {
+        violationFileCounts.set(file, (violationFileCounts.get(file) || 0) + 1);
       }
     }
 
-    return { failurePatterns, successPatterns, riskAreas };
+    const violationTop = Array.from(violationFileCounts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3);
+    if (violationTop.length > 0) {
+      violationHotspots.push(
+        `違反を伴う変更が多いファイルTop${violationTop.length}: ` +
+          violationTop.map(([file, count]) => `${file}（${count}回）`).join(', ')
+      );
+    }
+
+    const riskAreaItems = Array.from(fileFrequency.entries())
+      .filter(([, count]) => count >= 5)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, FeedbackCollector.MAX_RISK_AREAS);
+
+    for (const [file, count] of riskAreaItems) {
+      riskAreas.push(`${file} が頻繁に変更されています（${count}回）`);
+    }
+
+    return { failurePatterns, successPatterns, riskAreas, violationHotspots };
   }
 
   /**
@@ -256,7 +301,14 @@ export class FeedbackCollector {
     // リスクエリア
     for (const risk of patterns.riskAreas) {
       feedback.warnings.push(`⚠️ ${risk}`);
-      feedback.recommendedActions.push(`頻繁に変更されるファイルをレビューしてください`);
+    }
+    if (patterns.riskAreas.length > 0) {
+      feedback.recommendedActions.push('頻繁に変更されるファイルをレビューしてください');
+    }
+
+    // 違反ホットスポット（次回の改善に直結）
+    for (const v of patterns.violationHotspots) {
+      feedback.improvements.push(v);
     }
   }
 

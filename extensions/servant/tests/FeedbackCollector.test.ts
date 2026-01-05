@@ -132,6 +132,29 @@ describe('FeedbackCollector', () => {
     expect(feedback.warnings.some(w => w.includes('file1.ts'))).toBe(true);
   });
 
+  it('違反が発生しやすいファイルTop3を改善提案として出せる', () => {
+    const actions: AIAction[] = [
+      createMockAction({ success: false, violations: 2, changedFiles: ['a.ts', 'b.ts'] }),
+      createMockAction({ success: false, violations: 1, changedFiles: ['a.ts'] }),
+      createMockAction({ success: true, violations: 0, changedFiles: ['c.ts'] })
+    ];
+
+    const metrics: AIPerformanceMetrics = {
+      taskCompletionRate: 66,
+      violationRate: 15,
+      codeQualityScore: 70,
+      efficiencyScore: 70,
+      overallScore: 70,
+      timestamp: new Date().toISOString(),
+      actionsEvaluated: 3
+    };
+
+    const feedback = collector.collectFeedback(metrics, actions);
+
+    expect(feedback.improvements.some(i => i.includes('違反を伴う変更が多いファイルTop'))).toBe(true);
+    expect(feedback.improvements.some(i => i.includes('a.ts'))).toBe(true);
+  });
+
   it('フィードバックを保存できる', async () => {
     const metrics: AIPerformanceMetrics = {
       taskCompletionRate: 80,

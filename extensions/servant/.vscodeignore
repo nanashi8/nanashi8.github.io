@@ -2,8 +2,21 @@
 src/**
 tests/**
 
+# Bundle output only (exclude stale compiled subfolders)
+dist/**
+!dist/extension.js
+!dist/extension.js.map
+
+# Build tooling
+scripts/**
+
+# Local workspaces / fixtures
+test-workspace-learning/**
+test-workspace-neural/**
+
 # Local debug artifacts
 test-violation.md
+test-diagnostic.mjs
 
 # Tooling / configs
 *.ts
@@ -19,9 +32,12 @@ eslint.config.*
 PHASE*_COMPLETION_REPORT.md
 docs/**
 
+# Exception: README links to this guide; keep it in VSIX
+!docs/AUTOPILOT_DELIBERATION_GUIDE.md
+
 # OS/editor noise
 .DS_Store
 .vscode/**
 
-# Keep node_modules for now (no bundling yet)
-# If/when bundling is added, exclude node_modules/** here.
+# Bundled extension does not need node_modules
+node_modules/**
