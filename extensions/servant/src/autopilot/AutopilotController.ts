@@ -660,40 +660,61 @@ export class AutopilotController {
         };
         this.setStatusReviewRequired({ severity: 'error', reason: 'Specチェック' });
 
-        const selection = await this.notifier.blockingCritical(
-          'Servant Autopilot: 審議が必要（Specチェック）。\n\nSpecチェックが未記録/期限切れです。このまま変更を続けないでください。まず「必須指示書を開く」→「記録」を行ってください。',
-          '必須指示書を開く',
-          '今すぐ記録（メモ入力）',
-          '今回は中止（30分）'
+        // Specチェック警告をOutput Channelに記録（ダイアログは表示しない）
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine('='.repeat(80));
+        this.outputChannel.appendLine('⚠️  Servant Autopilot: Specチェック審議案件');
+        this.outputChannel.appendLine('='.repeat(80));
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine('【状況】');
+        this.outputChannel.appendLine(
+          `  Specチェックが未記録/期限切れです（最大経過時間: ${maxAgeHours}時間）`
         );
-
-        if (selection === '必須指示書を開く') {
-          await vscode.commands.executeCommand('servant.reviewRequiredInstructions');
-        } else if (selection === '今すぐ記録（メモ入力）') {
-          const note = await vscode.window.showInputBox({
-            title: 'Specチェック記録',
-            prompt: '今回の作業内容/確認した指示書（任意）',
-            placeHolder: '例: batch-system + meta-ai 指示を確認 / 修正方針を決めた',
+        this.outputChannel.appendLine(`  理由: ${freshness.reason || '不明'}`);
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine('【必須指示書】');
+        if (required.length > 0) {
+          required.forEach((instr) => {
+            this.outputChannel.appendLine(`  - ${instr.file}`);
+            this.outputChannel.appendLine(`    説明: ${instr.description || 'なし'}`);
           });
-          if (note !== undefined) {
-            recordSpecCheck(this.workspaceRoot, note, { requiredInstructions: required });
-            this.outputChannel.appendLine('[Autopilot] Specチェックを記録しました');
-            this.pendingReview = null;
-            this.setStatusIdle();
-          }
-        } else if (selection === '今回は中止（30分）') {
-          this.pendingReview = null;
-          this.applySnooze(30);
         } else {
-          // キャンセル（×/Esc）は審議継続
-          this.pendingReview = {
-            severity: 'error',
-            reasons: ['Specチェック'],
-            createdAt: Date.now(),
-          };
-          this.setStatusReviewRequired({ severity: 'error', reason: 'Specチェック' });
+          this.outputChannel.appendLine('  （該当なし）');
         }
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine('【対処方法】');
+        this.outputChannel.appendLine(
+          '  1. コマンド「Servant: Review Required Instructions」を実行'
+        );
+        this.outputChannel.appendLine('  2. 必須指示書を確認して「記録」ボタンをクリック');
+        this.outputChannel.appendLine('  3. または、以下のJSONをコピーしてAIに分析を依頼:');
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine(
+          JSON.stringify(
+            {
+              type: 'spec-check-required',
+              timestamp: new Date().toISOString(),
+              workspaceRoot: this.workspaceRoot,
+              maxAgeHours,
+              reason: freshness.reason,
+              requiredInstructions: required.map((r) => ({
+                file: r.file,
+                description: r.description,
+                applyTo: r.applyTo,
+              })),
+            },
+            null,
+            2
+          )
+        );
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine('='.repeat(80));
+        this.outputChannel.appendLine('');
 
+        // Output Channelを表示
+        this.outputChannel.show(true);
+
+        // 閉ループは継続（ブロックしない）
         // Specチェックで止めた場合は、閉ループも回さない
         return;
       }
