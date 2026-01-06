@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-05T13:22:54.230Z
+- generatedAt: 2026-01-05T23:30:36.406Z
 
 ## Single Source of Truth
 
@@ -12,29 +12,33 @@
 ## Signals (Recent, Decayed)
 
 - windowHours: 24
-- candidates: 6
+- candidates: 13
 - startNodeSource: signals
-- extensions/servant/package.json (hot=0.133)
-- extensions/servant/src/extension.ts (hot=0.105)
-- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.098)
-- extensions/servant/tests/HookInstaller.symlinkSafety.test.ts (hot=0.059)
-- extensions/servant/src/git/HookInstaller.ts (hot=0.056)
-- extensions/servant/src/autopilot/AutopilotController.ts (hot=0.048)
+- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.145)
+- extensions/servant/src/neural/WorkflowLearner.ts (hot=0.041)
+- extensions/servant/src/git/GitIntegration.ts (hot=0.03)
+- extensions/servant/package.json (hot=0.016)
+- extensions/servant/src/commands/quickFixCommit.ts (hot=0.004)
+- extensions/servant/dist/extension.js (hot=0.004)
+- extensions/servant/src/extension.ts (hot=0.003)
+- extensions/servant/src/autopilot/SeniorEngineerQualityCheck.ts (hot=0.003)
+- extensions/servant/src/constellation/ConstellationDataGenerator.ts (hot=0.003)
+- src/hooks/useAdaptiveLearning.ts (hot=0.003)
 
 ## Related (Neural Propagation)
 
-- startNode: extensions/servant/package.json
+- startNode: extensions/servant/src/ui/ConstellationViewPanel.ts
 - seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- extensions/servant/package.json (activation=1.000, source=signal, signals=[save:0.13])
-- extensions/servant/src/extension.ts (activation=0.789, source=signal, signals=[save:0.10])
-- extensions/servant/src/ui/ConstellationViewPanel.ts (activation=0.737, source=signal, signals=[save:0.10])
-- extensions/servant/tests/HookInstaller.symlinkSafety.test.ts (activation=0.444, source=signal, signals=[save:0.06])
-- extensions/servant/src/git/HookInstaller.ts (activation=0.421, source=signal, signals=[save:0.06])
+- extensions/servant/src/ui/ConstellationViewPanel.ts (activation=1.000, source=signal, signals=[save:0.14])
+- extensions/servant/src/neural/WorkflowLearner.ts (activation=0.283, source=signal, signals=[save:0.04])
+- extensions/servant/src/git/GitIntegration.ts (activation=0.207, source=signal, signals=[save:0.03])
+- extensions/servant/package.json (activation=0.110, source=signal, signals=[save:0.02])
+- extensions/servant/src/commands/quickFixCommit.ts (activation=0.028, source=signal, signals=[save:0.00])
 
 - (no related files detected)
 
@@ -49,7 +53,7 @@
 
 - ok: true
 - recordedAt: 2026-01-04T23:52:43.428Z
-- ageHours: 13.50
+- ageHours: 23.63
 
 ## Latest SpecCheck Record (Raw)
 

@@ -252,6 +252,26 @@ function cancelSession() {
 function detectFailureReason(feedback, changedFiles) {
   const lowerFeedback = feedback.toLowerCase();
 
+  if (
+    lowerFeedback.includes('importmap') ||
+    lowerFeedback.includes('module-shim') ||
+    lowerFeedback.includes('es-module-shims') ||
+    lowerFeedback.includes('failed to resolve module') ||
+    lowerFeedback.includes('cannot resolve module') ||
+    lowerFeedback.includes('module specifier') ||
+    lowerFeedback.includes('three.js') ||
+    lowerFeedback.includes("from 'three'")
+  ) {
+    return 'importmap/ESM解決の互換性問題（CDN/モジュール解決失敗）';
+  }
+
+  if (
+    (lowerFeedback.includes('初期化中') || lowerFeedback.includes('loading')) &&
+    (lowerFeedback.includes('止ま') || lowerFeedback.includes('まま') || lowerFeedback.includes('stuck'))
+  ) {
+    return '初期化が途中で停止（例外/依存読み込み失敗/発火経路断線）';
+  }
+
   if (lowerFeedback.includes('無限ループ') || lowerFeedback.includes('infinite loop')) {
     return 'useEffect依存配列の設定ミス';
   }
@@ -313,6 +333,22 @@ function extractLearningPoints(session) {
     points.push('バッチ方式の原則理解不足 - batch-system-enforcement.instructions.mdを確認');
   }
 
+  if (
+    feedbacks.some(
+      f =>
+        f.includes('importmap') ||
+        f.includes('es-module-shims') ||
+        f.includes('module-shim') ||
+        f.includes('cdn') ||
+        f.includes('failed to resolve module') ||
+        f.includes('module specifier') ||
+        f.includes("from 'three'") ||
+        f.includes('three')
+    )
+  ) {
+    points.push('public配下HTMLのESM解決は環境差が出る - importmap互換性とCDN依存を疑い、解決不能時のエラー表示を入れる');
+  }
+
   // 解決方法から学習
   if (session.solutionDescription) {
     const solution = session.solutionDescription.toLowerCase();
@@ -323,6 +359,20 @@ function extractLearningPoints(session) {
 
     if (solution.includes('useeffect') || solution.includes('依存配列')) {
       points.push('useEffect依存配列の適切な設定が重要');
+    }
+
+    if (
+      solution.includes('importmap') ||
+      solution.includes('es-module-shims') ||
+      solution.includes('module-shim') ||
+      solution.includes('cdn') ||
+      solution.includes('three')
+    ) {
+      points.push('importmap非対応/不完全環境に備え、es-module-shims等で互換ルートを用意すると初期化の発火経路が安定する');
+    }
+
+    if (solution.includes('エラー表示') || solution.includes('error') || solution.includes('try/catch')) {
+      points.push('初期化失敗時にUIへエラーを表示し、空回り（無反応/ローディング固定）を防ぐ');
     }
   }
 

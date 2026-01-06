@@ -74,8 +74,8 @@ export class GitIntegration {
     try {
       const { stdout } = await this.execGit(workspaceRoot, ['rev-parse', '--is-inside-work-tree']);
       return stdout.trim() === 'true';
-    } catch {
-      this.outputChannel.appendLine(`[Git] Not a git repository (root=${workspaceRoot})`);
+    } catch (error) {
+      this.outputChannel.appendLine(`[Git] Not a git repository: ${error}`);
       return false;
     }
   }
@@ -88,6 +88,12 @@ export class GitIntegration {
    */
   async getHooksDirectory(workspaceRoot: string): Promise<string | null> {
     try {
+      // First check if it's a git repository
+      if (!(await this.isGitRepository(workspaceRoot))) {
+        this.outputChannel.appendLine('[Git] Cannot get hooks directory: not a git repository');
+        return null;
+      }
+
       const { stdout } = await this.execGit(workspaceRoot, ['rev-parse', '--git-dir']);
 
       const gitDir = stdout.trim();

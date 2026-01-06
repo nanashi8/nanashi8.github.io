@@ -52,6 +52,15 @@ export class WorkflowLearner {
     this.workspaceRoot = workspaceRoot;
     this.git = simpleGit(workspaceRoot);
     this.historyPath = path.join(workspaceRoot, '.vscode', 'workflow-history.json');
+
+    // Check if it's actually a git repository
+    this.git.checkIsRepo().then(isRepo => {
+      if (!isRepo) {
+        console.log('[WorkflowLearner] Not a git repository, skipping git-based learning');
+      }
+    }).catch(err => {
+      console.error('[WorkflowLearner] Error checking git repository:', err);
+    });
   }
 
   /**
@@ -92,6 +101,13 @@ export class WorkflowLearner {
     console.log('📚 [Workflow] Learning from Git history...');
 
     try {
+      // Check if it's a git repository first
+      const isRepo = await this.git.checkIsRepo();
+      if (!isRepo) {
+        console.log('⚠️ [Workflow] Not a git repository, skipping git history learning');
+        return;
+      }
+
       // Git履歴を取得（新しい→古い順）
       const log = await this.git.log({ maxCount: limit });
       const entries: GitHistoryEntry[] = [];

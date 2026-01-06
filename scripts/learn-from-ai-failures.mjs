@@ -93,7 +93,14 @@ function extractKeywords(text) {
     /バッチ|batch/gi,
     /無限ループ|infinite loop/gi,
     /型定義|type definition/gi,
-    /仕様書|specification/gi
+    /仕様書|specification/gi,
+    /importmap/gi,
+    /es-module-shims/gi,
+    /module-shim/gi,
+    /cdn/gi,
+    /three(\.js)?/gi,
+    /orbitcontrols/gi,
+    /top-level await/gi
   ];
 
   techPatterns.forEach(pattern => {

@@ -1,6 +1,8 @@
 import { build, context } from 'esbuild';
 import process from 'node:process';
 
+import './copy-three-webview-assets.mjs';
+
 const isWatch = process.argv.includes('--watch');
 
 const common = {

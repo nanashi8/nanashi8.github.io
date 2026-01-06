@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-12-30",
+  "lastUpdated": "2026-01-06",
   "metadata": {
-    "totalFailures": 1,
-    "totalRecoveries": 1,
+    "totalFailures": 2,
+    "totalRecoveries": 2,
     "averageAttemptsToSuccess": 2,
     "mostCommonFailureTypes": [],
     "learningRate": 0.1
@@ -42,6 +42,41 @@
         "頻出失敗: バッチ方式の原則違反",
         "バッチ方式の原則理解不足 - batch-system-enforcement.instructions.mdを確認"
       ]
+    },
+    {
+      "id": "session-1767657702006",
+      "timestamp": "2026-01-06T00:01:42.006Z",
+      "userRequest": "天体儀プロトタイプが『初期化中...』のまま表示されない",
+      "attempts": [
+        {
+          "attemptNumber": 1,
+          "timestamp": "2026-01-06T00:01:46.874Z",
+          "changes": [
+            "public/constellation-3d-demo.html"
+          ],
+          "userFeedback": "『初期化中...』のまま。importmapが効かずESM解決（from 'three'）が失敗して初期化の発火経路が途切れている可能性",
+          "failureReason": "importmap/ESM解決の互換性問題（CDN/モジュール解決失敗）",
+          "success": false
+        },
+        {
+          "attemptNumber": 2,
+          "timestamp": "2026-01-06T00:01:52.054Z",
+          "changes": [],
+          "userFeedback": "Success",
+          "failureReason": null,
+          "success": true,
+          "solutionDescription": "es-module-shims + importmap-shim/module-shim に変更してthreeの解決を安定化。初期化はasync IIFE + try/catchで包み、失敗時はローディング領域にエラー表示"
+        }
+      ],
+      "status": "success",
+      "totalAttempts": 2,
+      "solutionDescription": "es-module-shims + importmap-shim/module-shim に変更してthreeの解決を安定化。初期化はasync IIFE + try/catchで包み、失敗時はローディング領域にエラー表示",
+      "learningPoints": [
+        "頻出失敗: importmap/ESM解決の互換性問題（CDN/モジュール解決失敗）",
+        "public配下HTMLのESM解決は環境差が出る - importmap互換性とCDN依存を疑い、解決不能時のエラー表示を入れる",
+        "importmap非対応/不完全環境に備え、es-module-shims等で互換ルートを用意すると初期化の発火経路が安定する",
+        "初期化失敗時にUIへエラーを表示し、空回り（無反応/ローディング固定）を防ぐ"
+      ]
     }
   ],
   "preventionRules": {
@@ -66,6 +101,18 @@
         "learningPoints": [
           "頻出失敗: バッチ方式の原則違反",
           "バッチ方式の原則理解不足 - batch-system-enforcement.instructions.mdを確認"
+        ]
+      },
+      {
+        "timestamp": "2026-01-06T00:01:52.056Z",
+        "userRequest": "天体儀プロトタイプが『初期化中...』のまま表示されない",
+        "solution": "es-module-shims + importmap-shim/module-shim に変更してthreeの解決を安定化。初期化はasync IIFE + try/catchで包み、失敗時はローディング領域にエラー表示",
+        "attempts": 2,
+        "learningPoints": [
+          "頻出失敗: importmap/ESM解決の互換性問題（CDN/モジュール解決失敗）",
+          "public配下HTMLのESM解決は環境差が出る - importmap互換性とCDN依存を疑い、解決不能時のエラー表示を入れる",
+          "importmap非対応/不完全環境に備え、es-module-shims等で互換ルートを用意すると初期化の発火経路が安定する",
+          "初期化失敗時にUIへエラーを表示し、空回り（無反応/ローディング固定）を防ぐ"
         ]
       }
     ]
