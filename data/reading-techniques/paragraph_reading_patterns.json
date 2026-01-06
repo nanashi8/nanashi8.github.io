@@ -1,0 +1,807 @@
+{
+  "version": 1,
+  "language": "ja",
+  "licenseNote": "All examples are original. No direct quotes from exams or websites.",
+  "patterns": [
+    {
+      "id": "P01",
+      "title": "段落の役割を一言で言う（主張/理由/例/反論/まとめ）",
+      "gist": "各段落は機能を持つ。最初に“この段落は何をしているか”を一言で言えるようにする。",
+      "steps": ["段落冒頭の主張候補を拾う", "後半が理由か例か反論かを判定", "段落機能ラベルを付ける"],
+      "pitfalls": ["全部を同じ重さで読む", "例を主張と取り違える"],
+      "exampleEn": "Many cities want to cut traffic. For that reason, they are expanding bike lanes and improving buses."
+    },
+    {
+      "id": "P02",
+      "title": "トピックセンテンスを探す（多くは冒頭）",
+      "gist": "受験文の多くは、段落の最初の1〜2文に要点（トピック）を置き、残りで具体化する。",
+      "steps": ["最初の2文を要約", "以降が具体化か検証"],
+      "pitfalls": ["最初の比喩や導入をトピックと誤認"],
+      "exampleEn": "Sleep affects memory in two ways. First, it stabilizes what you learned during the day."
+    },
+    {
+      "id": "P03",
+      "title": "段落内の“対比”を見つける（however, but, in contrast）",
+      "gist": "対比マーカーは論点の転換点。前半と後半を“同じ軸で比較”する。",
+      "steps": ["対比語をマーク", "前後の比較軸（利点/欠点など）を一語で言う"],
+      "pitfalls": ["but以降だけ読んで前半を捨てる"],
+      "exampleEn": "The device is cheap, but it breaks easily in cold weather."
+    },
+    {
+      "id": "P04",
+      "title": "因果の矢印を作る（because/therefore/as a result）",
+      "gist": "因果マーカーは『原因→結果』の矢印で整理すると、設問の根拠が取りやすい。",
+      "steps": ["原因側と結果側を分ける", "矢印で1行にする"],
+      "pitfalls": ["because節を背景説明として捨てる"],
+      "exampleEn": "Because the soil was dry, the seeds failed to sprout."
+    },
+    {
+      "id": "P05",
+      "title": "列挙は“項目名”を付ける（first/second/another）",
+      "gist": "列挙は“何を並べているか”を見抜けば、細部は後で拾える。",
+      "steps": ["列挙マーカーを検出", "各項目を1語ラベル化"],
+      "pitfalls": ["項目の例だけを覚えて抽象を落とす"],
+      "exampleEn": "There are three costs: time, money, and attention."
+    },
+    {
+      "id": "P06",
+      "title": "定義・言い換えを取る（that is, in other words）",
+      "gist": "定義/言い換えは、本文の“用語の意味”が確定する場所。",
+      "steps": ["言い換えマーカーをマーク", "用語=説明 を式にする"],
+      "pitfalls": ["難語を辞書読みして本文定義を無視"],
+      "exampleEn": "A habitat, in other words, is a place where an animal can live and find food."
+    },
+    {
+      "id": "P07",
+      "title": "代名詞参照を戻す（this/that/they/it）",
+      "gist": "指示語は“直前の何”を受けるかが得点源。候補を2つ並べて絞る。",
+      "steps": ["指示語を見つける", "直前2文から候補を列挙", "意味が通る1つに確定"],
+      "pitfalls": ["最も近い名詞に機械的に当てる"],
+      "exampleEn": "The committee rejected the plan. This surprised many residents."
+    },
+    {
+      "id": "P08",
+      "title": "例は主張を支える（for example）",
+      "gist": "例はそれ自体が答えではなく、“何を示す例か”が重要。",
+      "steps": ["for example等をマーク", "例が示す一般化を1文で書く"],
+      "pitfalls": ["例の細部に埋まって一般化を落とす"],
+      "exampleEn": "Some animals cooperate. For example, dolphins often hunt in groups."
+    },
+    {
+      "id": "P09",
+      "title": "著者の態度を取る（surprisingly, unfortunately）",
+      "gist": "評価語は著者の立場や含意を示す。設問の“筆者の意見”系に直結する。",
+      "steps": ["評価語をマーク", "評価対象（何が良い/悪いか）を特定"],
+      "pitfalls": ["事実文と同じトーンで読む"],
+      "exampleEn": "Unfortunately, the policy helped large firms more than small ones."
+    },
+    {
+      "id": "P10",
+      "title": "逆接の譲歩（although/even though）を骨格に組み込む",
+      "gist": "譲歩は『予想に反して』を作るので、結論側（主節）が重要になる。",
+      "steps": ["譲歩節を括る", "主節の主張を一行化", "『〜にもかかわらず』の関係を付ける"],
+      "pitfalls": ["譲歩節の内容で結論を上書きする"],
+      "exampleEn": "Although the map looked clear, it led us to the wrong street."
+    },
+    {
+      "id": "P11",
+      "title": "段落間のつながりを“問い”で表す",
+      "gist": "段落が変わると機能が変わる。『前段落の何に答える段落か』を問いで表す。",
+      "steps": ["前段落の結論を一文で書く", "次段落の冒頭が何に答えるかを問いにする"],
+      "pitfalls": ["段落を独立に読んで流れを失う"],
+      "exampleEn": "Paragraph 1 explains a problem. Paragraph 2 begins: \"One solution is to...\""
+    },
+    {
+      "id": "P12",
+      "title": "段落の最後は“まとめ/次への橋渡し”になりやすい",
+      "gist": "段落末は結論の再提示、含意、次段落への導入になりやすい。",
+      "steps": ["段落末の一般化を抜く", "次段落の冒頭と接続する"],
+      "pitfalls": ["段落末を流して次段落で迷子になる"],
+      "exampleEn": "These findings suggest that training matters more than talent alone."
+    },
+    {
+      "id": "P13",
+      "title": "問題提起→解決→評価の三段を意識",
+      "gist": "説明文は『問題→対応→評価/限界』の流れを取りやすい。",
+      "steps": ["どこが問題提起か", "どこが解決策か", "どこが評価/限界か"],
+      "pitfalls": ["解決策だけを追って評価を落とす"],
+      "exampleEn": "The method worked in the lab, but it may fail in real classrooms."
+    },
+    {
+      "id": "P14",
+      "title": "実験説明の型（目的→方法→結果→解釈）",
+      "gist": "科学系パッセージは実験の定型が多い。各パートをラベル化すると速い。",
+      "steps": ["目的を探す", "方法を探す", "結果を探す", "解釈を探す"],
+      "pitfalls": ["方法の細部に埋もれる"],
+      "exampleEn": "To test the idea, the team compared two groups. The first improved, while the second did not."
+    },
+    {
+      "id": "P15",
+      "title": "比較対象の“軸”を固定（better than, unlike）",
+      "gist": "比較は『何の観点で比べているか』を先に固定すると誤読が減る。",
+      "steps": ["比較表現を検出", "軸（speed/cost/safety等）を一語で固定"],
+      "pitfalls": ["別の軸にズレて読む"],
+      "exampleEn": "Unlike buses, trains can avoid road traffic during rush hour."
+    },
+    {
+      "id": "P16",
+      "title": "主張の強さを読む（may/might/must）",
+      "gist": "助動詞や副詞は主張の確信度を示す。設問の“最も適切”選択に効く。",
+      "steps": ["確信度語をマーク", "断定/推量/可能性に分類"],
+      "pitfalls": ["mayを断定に訳す"],
+      "exampleEn": "The results may indicate a trend, but they do not prove it."
+    },
+    {
+      "id": "P17",
+      "title": "指標語で段落機能を即決（in summary, in fact）",
+      "gist": "段落の機能はマーカーで即決できることがある。",
+      "steps": ["段落冒頭のマーカーを確認", "要約/強調/具体化を判定"],
+      "pitfalls": ["マーカーを装飾語として捨てる"],
+      "exampleEn": "In summary, the new rule reduced waste without raising costs."
+    },
+    {
+      "id": "P18",
+      "title": "設問で聞かれやすい場所（定義・対比・結論）",
+      "gist": "受験設問は“定義の文/対比の転換点/段落結論”を狙いやすい。先にそこをマークして読む。",
+      "steps": ["定義（in other words）をマーク", "対比（however）をマーク", "段落末の一般化をマーク"],
+      "pitfalls": ["本文全体を均等に読んで時間切れ"],
+      "exampleEn": "However, this explanation fails to account for one key fact."
+    },
+    {
+      "id": "P19",
+      "title": "反論→再反論の型（some argue..., but...）",
+      "gist": "“反対意見の提示→反駁”は頻出。誰の意見か（著者/他者）を分ける。",
+      "steps": ["他者意見マーカー（some argue等）を検出", "but/however以降を著者側として整理"],
+      "pitfalls": ["他者意見を著者意見と誤認"],
+      "exampleEn": "Some argue that screens harm focus, but recent studies show the effect depends on content."
+    },
+    {
+      "id": "P20",
+      "title": "段落要約を15語以内で作る",
+      "gist": "段落の要点を短く言えると、設問処理が速くなる。",
+      "steps": ["主語+動詞+結論を抜く", "修飾は削る", "15語以内に圧縮"],
+      "pitfalls": ["例を残して主張を落とす"],
+      "exampleEn": "In short: Remote work helps some workers, but it can weaken team communication."
+    },
+    {
+      "id": "P21",
+      "title": "段落内の“主張の位置”を当てる（冒頭/末尾/挟み込み）",
+      "gist": "段落によって主張の置き場所が違う。先に“主張がどこに置かれやすいか”を当てると迷子になりにくい。",
+      "steps": ["冒頭2文を主張候補として読む", "末尾1文を結論候補として読む", "どちらが一般化かで主張位置を確定"],
+      "pitfalls": ["冒頭の導入を主張と誤認", "末尾の余韻表現を結論と誤認"],
+      "exampleEn": "At first, the policy seemed helpful. Over time, however, its hidden costs became clear."
+    },
+    {
+      "id": "P22",
+      "title": "“目的”の文を取る（to/in order to/so that）",
+      "gist": "目的表現は“なぜそれをするのか”を直接言うので、設問の意図・狙いに直結する。",
+      "steps": ["目的マーカーを検出", "行為（何をする）と目的（何のため）を分ける"],
+      "pitfalls": ["to不定詞を単なる未来として読む"],
+      "exampleEn": "To reduce waste, the store began offering refill stations."
+    },
+    {
+      "id": "P23",
+      "title": "“理由の列挙”と“例の列挙”を区別する",
+      "gist": "同じ列挙でも、理由（because-type）と例（for example-type）は役割が違う。理由は主張の骨格、例は支え。",
+      "steps": ["列挙の各項目が“理由”か“例”か判定", "理由だけで主張が成り立つか確認"],
+      "pitfalls": ["例を理由として扱い主張を歪める"],
+      "exampleEn": "The plan failed for three reasons: poor timing, unclear roles, and weak funding."
+    },
+    {
+      "id": "P24",
+      "title": "“範囲限定”を見抜く（in some cases, often, not always）",
+      "gist": "限定語は“いつ/誰に/どの条件で”が効く。断定を避け、範囲を保った要約にする。",
+      "steps": ["限定語（often/sometimesなど）をマーク", "条件句（if/whenなど）を括る", "範囲を保って言い換える"],
+      "pitfalls": ["限定語を落として断定にする"],
+      "exampleEn": "Online classes can work well, especially when students get quick feedback."
+    },
+    {
+      "id": "P25",
+      "title": "“例外”を主張に混ぜない（except/unless）",
+      "gist": "例外は主張の一般化を壊すので、主張本体と例外を別枠で管理する。",
+      "steps": ["例外マーカー（except/unless）を検出", "一般化（原則）と例外を分離してメモ"],
+      "pitfalls": ["例外の方を主張として覚える"],
+      "exampleEn": "Most plants need sunlight, unless they live under dense forest canopies."
+    },
+    {
+      "id": "P26",
+      "title": "“比較”は2つの列を作る（A側/B側）",
+      "gist": "比較は文章を“二列表”にすると整理できる。Aの特徴、Bの特徴、そして比較軸を固定する。",
+      "steps": ["A側の特徴を箇条書き", "B側の特徴を箇条書き", "比較軸（何が違うか）を一語で固定"],
+      "pitfalls": ["Aの内容をBに混ぜる"],
+      "exampleEn": "Traditional cameras capture a moment, while phone cameras also help you share it instantly."
+    },
+    {
+      "id": "P27",
+      "title": "“筆者の結論”と“事実”を分ける（suggest/indicate vs prove）",
+      "gist": "科学系・説明文は“示唆”と“証明”が混ざる。結論の強さを維持して要約する。",
+      "steps": ["結論動詞（suggest/indicateなど）をマーク", "証拠（data/results）と結論を分ける"],
+      "pitfalls": ["suggestをproveとして訳して断定する"],
+      "exampleEn": "The data suggest that exercise improves mood, but the cause is still unclear."
+    },
+    {
+      "id": "P28",
+      "title": "“具体→抽象”の戻りを見逃さない（this means/therefore）",
+      "gist": "具体例のあとに抽象へ戻る一文が要点になりやすい。例よりも“戻り文”を拾う。",
+      "steps": ["具体例範囲を括る", "抽象へ戻る文（this means/therefore等）を抜く"],
+      "pitfalls": ["例の細部だけ覚えて戻り文を落とす"],
+      "exampleEn": "For example, small errors can spread through a system. This means careful checks matter."
+    },
+    {
+      "id": "P29",
+      "title": "“強調”を拾う（indeed/in fact/especially）",
+      "gist": "強調語は“ここが言いたい”のサイン。主張と結びつけて読む。",
+      "steps": ["強調語をマーク", "強調されている内容を一文で言う", "段落主張と接続"],
+      "pitfalls": ["強調を装飾として捨てる"],
+      "exampleEn": "In fact, even a small delay can change the outcome."
+    },
+    {
+      "id": "P30",
+      "title": "“順序説明”は手順番号を付ける（first/next/finally）",
+      "gist": "プロセス説明は“順序”が答えになることがある。手順に番号を振る。",
+      "steps": ["順序語をマーク", "各ステップに1行要約を付けて番号化"],
+      "pitfalls": ["finallyを結論と誤認して順序を崩す"],
+      "exampleEn": "First, the ice warms. Next, it cracks. Finally, the pieces drift apart."
+    },
+    {
+      "id": "P31",
+      "title": "“時間推移”は年表にする（then/later/within a decade）",
+      "gist": "歴史・社会系は時系列の並び替えが問われやすい。年表化すると速い。",
+      "steps": ["時間語を抽出", "出来事を時系列に並べて短い年表を作る"],
+      "pitfalls": ["原因と結果を時間順と混同"],
+      "exampleEn": "In 2010 the city expanded parks. Five years later, health surveys improved."
+    },
+    {
+      "id": "P32",
+      "title": "“分類”はカテゴリ名を決める（types/kinds/categories）",
+      "gist": "分類は“何を何種類に分けたか”が主。カテゴリ名がそのまま解答根拠になる。",
+      "steps": ["分類宣言（types of...）を検出", "各カテゴリ名を抜く", "違いの軸を一語で固定"],
+      "pitfalls": ["カテゴリ例だけ覚えてカテゴリ名を落とす"],
+      "exampleEn": "There are two kinds of memory: short-term storage and long-term knowledge."
+    },
+    {
+      "id": "P33",
+      "title": "“筆者の狙い”を一語で言う（warn/persuade/explain）",
+      "gist": "段落や全体の目的は、動詞で言える。warn/persuade/explain/compareなどに落とす。",
+      "steps": ["段落機能をラベル化", "筆者が読者にさせたいことを動詞で表す"],
+      "pitfalls": ["事実説明を説得文と誤読"],
+      "exampleEn": "The author explains why small habits can compound into major health changes."
+    },
+    {
+      "id": "P34",
+      "title": "“問い→答え”を探す（why/how/what does this imply）",
+      "gist": "本文は暗黙に問いを立て、その答えを続ける。問いを明示すると段落間がつながる。",
+      "steps": ["段落冒頭の問題意識を問いにする", "段落後半の答えを一文で抜く"],
+      "pitfalls": ["問いを作らず情報を羅列で読む"],
+      "exampleEn": "Why do some teams fail? One reason is that goals are unclear."
+    },
+    {
+      "id": "P35",
+      "title": "“含意”は主張＋条件で書く（if...then...）",
+      "gist": "含意（imply/suggest）系は“条件→結論”で式にすると、飛躍が減る。",
+      "steps": ["含意語（imply/suggest）を検出", "前提条件を抽出", "if-thenで1行にする"],
+      "pitfalls": ["含意を断定として覚える"],
+      "exampleEn": "If the trend continues, it suggests that training will become more flexible."
+    },
+    {
+      "id": "P36",
+      "title": "“原因の連鎖”は矢印を複数つなぐ",
+      "gist": "原因が一段ではなく連鎖する場合、A→B→Cの形で書くと設問の根拠が見える。",
+      "steps": ["因果マーカーをすべて拾う", "A→B→Cの連鎖で1行化"],
+      "pitfalls": ["A→Cに飛ばして中間を落とす"],
+      "exampleEn": "A storm damaged roads, which delayed deliveries, which raised food prices."
+    },
+    {
+      "id": "P37",
+      "title": "“観点の切替”を検出（economically, socially, ethically）",
+      "gist": "同じ話題でも観点が変わると評価が変わる。観点ラベルでメモを分ける。",
+      "steps": ["観点マーカー（economically等）を検出", "同じ対象の別評価を並べる"],
+      "pitfalls": ["観点が変わったのに同一評価で読む"],
+      "exampleEn": "Economically, the project was costly. Socially, it brought neighbors together."
+    },
+    {
+      "id": "P38",
+      "title": "“再定義/条件付き定義”を拾う（unless we define...）",
+      "gist": "用語の意味が途中で再定義されることがある。定義が更新されたら古い定義を捨てる。",
+      "steps": ["定義更新の合図（unless we define等）を検出", "新定義を式で書き直す"],
+      "pitfalls": ["最初の定義のまま読み進める"],
+      "exampleEn": "This is not progress unless we define progress as improved well-being, not just growth."
+    },
+    {
+      "id": "P39",
+      "title": "“本文の枠組み”を先に決める（problem-solution / claim-evidence）",
+      "gist": "文章全体の型が決まると、各段落の役割が自動で決まる。まず枠組みを当てる。",
+      "steps": ["1段落目で問題提起か主張かを見る", "中盤が解決/証拠になっているか確認", "末尾が評価/まとめか確認"],
+      "pitfalls": ["全体型を作らず段落を場当たりで読む"],
+      "exampleEn": "The article presents a problem, proposes a solution, and then discusses its limits."
+    },
+    {
+      "id": "P40",
+      "title": "“本文の結論”を一文で固定してから詳細に戻る",
+      "gist": "最後に“結論はこれ”を固定すると、詳細が結論にどう貢献するかで読める。",
+      "steps": ["段落末や結論段落の一般化を抜く", "結論を一文で固定", "各段落を“結論への貢献”として読み直す"],
+      "pitfalls": ["結論を固定せず詳細の記憶勝負にする"],
+      "exampleEn": "Overall, the study shows that simple changes can produce measurable benefits."
+    },
+    {
+      "id": "P41",
+      "title": "主旨問題は“繰り返し語”で取る（同義反復）",
+      "gist": "主旨は別表現で繰り返される。名詞や評価語の反復（同義語）を拾うとブレにくい。",
+      "steps": ["各段落の繰り返し語を2〜3個メモ", "同義語をまとめて1テーマにする", "結論段落と照合"],
+      "pitfalls": ["印象に残った例を主旨にする"],
+      "exampleEn": "The article repeatedly highlights 'trust' and 'transparency' when discussing public policy."
+    },
+    {
+      "id": "P42",
+      "title": "主旨は“範囲”を守る（too broad / too narrow を避ける）",
+      "gist": "選択肢の罠は“広すぎる/狭すぎる”。本文が扱った範囲に合わせる。",
+      "steps": ["本文の対象（誰/何/どの条件）を特定", "選択肢が広げすぎていないか確認", "例に引っ張られて狭めていないか確認"],
+      "pitfalls": ["本文にない一般論へ拡張", "一つの段落だけで主旨を決める"],
+      "exampleEn": "The passage focuses on city water systems, not on all environmental problems."
+    },
+    {
+      "id": "P43",
+      "title": "推論問題は“根拠の文”を2つ以上集める",
+      "gist": "推論は1文だけだと飛躍しやすい。最低2つの根拠を集めてから結論を出す。",
+      "steps": ["問いに関係する根拠文を2つ抜く", "共通して言えることを1行にする", "本文の限定語を残したまま推論する"],
+      "pitfalls": ["1文から即断する", "限定語を落として断定する"],
+      "exampleEn": "Two facts: costs fell after training, and errors also fell. Inference: training likely improved performance."
+    },
+    {
+      "id": "P44",
+      "title": "“not A but B” はBが結論、Aは捨て札",
+      "gist": "否定→置換の構文は、筆者が捨てたい解釈と採用したい解釈を同時に示す。Bを主張として固定。",
+      "steps": ["not...but... を検出", "B側を段落主張に採用", "A側は誤解としてメモ"],
+      "pitfalls": ["A側の内容で要約する"],
+      "exampleEn": "The issue is not a lack of data but a lack of coordination."
+    },
+    {
+      "id": "P45",
+      "title": "語句推測は“定義/言い換え/対比”の3点セットで取る",
+      "gist": "未知語は辞書ではなく本文から推測する。定義、言い換え、対比のどれかがヒントになりやすい。",
+      "steps": ["周辺に in other words / that is / unlike があるか確認", "未知語の役割（名詞/形容詞）を取る", "最も矛盾しない意味に仮置き"],
+      "pitfalls": ["単語単体で推測して文脈を無視"],
+      "exampleEn": "The valley was arid— in other words, it received very little rain."
+    },
+    {
+      "id": "P46",
+      "title": "指示語は“直前の主張”を優先して受ける",
+      "gist": "this/that/these は物より“直前の出来事や主張”を受けることが多い。名詞だけでなく文全体も候補に入れる。",
+      "steps": ["指示語の候補を“名詞候補”と“文候補”で並べる", "どちらが意味・論理に合うかで確定"],
+      "pitfalls": ["最寄り名詞に機械的に結びつける"],
+      "exampleEn": "The team missed the deadline again. This damaged its reputation."
+    },
+    {
+      "id": "P47",
+      "title": "“it” の形式主語/形式目的語を見抜く（It is ... to / It makes ... to）",
+      "gist": "it が“それ”ではなく、後ろのto節/that節を受けることがある。誤って具体物に結ぶと崩れる。",
+      "steps": ["It is ADJ to... を検出", "真主語（to節/that節）を特定", "評価語（ADJ）が何を評価しているか取る"],
+      "pitfalls": ["itを直前名詞に結ぶ"],
+      "exampleEn": "It is hard to predict storms accurately."
+    },
+    {
+      "id": "P48",
+      "title": "挿入文問題は“前後がつながる接着剤”で選ぶ",
+      "gist": "挿入は“前の文と後ろの文が自然につながるか”で決まる。指示語・同義語・因果・対比が接着剤。",
+      "steps": ["空所前後のキーワードを抜く", "接着剤（this/therefore/however等）を探す", "同じ話題が連続する候補を選ぶ"],
+      "pitfalls": ["文単体の意味だけで選ぶ"],
+      "exampleEn": "Sentence A introduces a problem. The inserted sentence should explain why that problem matters."
+    },
+    {
+      "id": "P49",
+      "title": "挿入は“代名詞の先行詞”がある場所に置く",
+      "gist": "挿入候補に this/they/these があるなら、先行詞が直前にある位置が強い。",
+      "steps": ["挿入候補の代名詞をマーク", "先行詞になりうる語が直前にある空所を選ぶ"],
+      "pitfalls": ["先行詞がない位置に置く"],
+      "exampleEn": "These measures... (needs a previous mention of measures)."
+    },
+    {
+      "id": "P50",
+      "title": "段落挿入は“段落機能”が一致する位置に置く",
+      "gist": "挿入段落が“例”なのか“反論”なのかで置き場所が決まる。周囲の段落機能と合わせる。",
+      "steps": ["挿入段落の機能ラベルを付ける（例/反論/結論等）", "同機能が必要になる位置を探す"],
+      "pitfalls": ["内容が面白い位置に置いてしまう"],
+      "exampleEn": "An inserted paragraph that begins 'For example,' usually follows a general claim."
+    },
+    {
+      "id": "P51",
+      "title": "筆者態度は“評価語+対象”のセットで取る",
+      "gist": "筆者の態度は評価語だけではなく、何を評価しているか（対象）までセットで取る。",
+      "steps": ["評価語（fortunate/serious等）をマーク", "評価対象（何が）を特定", "賛成/批判/中立に分類"],
+      "pitfalls": ["評価語だけ覚えて対象を落とす"],
+      "exampleEn": "The author calls the proposal 'short-sighted,' criticizing its focus on quick wins."
+    },
+    {
+      "id": "P52",
+      "title": "筆者の立場は“反対意見”の扱いで決まる",
+      "gist": "他者意見を紹介した直後のbut/however以降が筆者側になりやすい。",
+      "steps": ["他者意見の合図（some claim等）を検出", "but/however以降を筆者側として要約"],
+      "pitfalls": ["他者意見を筆者意見として選ぶ"],
+      "exampleEn": "Some claim the change is risky; however, the author argues it is necessary."
+    },
+    {
+      "id": "P53",
+      "title": "“筆者の目的”は導入の問いと結論の提案で確定",
+      "gist": "導入で何を問題視し、結論で何を提案/強調するかを見ると、目的（explain/argue/warn）が確定する。",
+      "steps": ["導入段落の問題意識を一語化", "結論段落の提案/評価を一語化", "目的動詞を決める"],
+      "pitfalls": ["中盤の具体例で目的を決める"],
+      "exampleEn": "The introduction asks why shortages happen; the conclusion urges better planning."
+    },
+    {
+      "id": "P54",
+      "title": "段落整序は“接続語のペア”を探す（on the one hand / on the other hand）",
+      "gist": "整序問題は接続語のペアが鍵。片方が出たらもう片方の位置を探す。",
+      "steps": ["ペア表現を検出", "片方の直後に対比が来る位置を選ぶ"],
+      "pitfalls": ["内容だけで順番を決める"],
+      "exampleEn": "On the one hand, the plan saves time. On the other hand, it increases risk."
+    },
+    {
+      "id": "P55",
+      "title": "段落整序は“同じ名詞の連鎖”でつなぐ",
+      "gist": "名詞の反復は話題の継続。前段落末の名詞が次段落冒頭に再登場する並びは強い。",
+      "steps": ["段落末のキーワード名詞を抜く", "次段落冒頭で同語/同義語が出る並びを候補にする"],
+      "pitfalls": ["接続を無視してテーマが飛ぶ順番にする"],
+      "exampleEn": "Paragraph A ends with 'trust.' Paragraph B begins with 'This trust...'."
+    },
+    {
+      "id": "P56",
+      "title": "パラフレーズ問題は“同じ関係（因果/対比/譲歩）”を探す",
+      "gist": "言い換えは単語一致より関係一致。因果/対比/譲歩などの関係が同じかを確認する。",
+      "steps": ["元文の関係ラベル（因果/対比/譲歩等）を付ける", "選択肢が同関係を保っているかチェック"],
+      "pitfalls": ["単語が似ているだけで選ぶ"],
+      "exampleEn": "Original: 'Although it rained, we went.' Paraphrase must keep the contrast."
+    },
+    {
+      "id": "P57",
+      "title": "“著者の限定”を保持した言い換えを選ぶ（some/many/rarely）",
+      "gist": "言い換え選択肢の罠は限定語の消失。some/many/rarely などが残っているかを見る。",
+      "steps": ["元文の限定語をマーク", "選択肢に同等の限定があるか確認"],
+      "pitfalls": ["限定語が落ちた断定を選ぶ"],
+      "exampleEn": "Original: 'Many users prefer...' A correct paraphrase should not become 'All users prefer...'."
+    },
+    {
+      "id": "P58",
+      "title": "“グラフ/数値”の段落は結論文を先に抜く",
+      "gist": "数値が多い段落は“何を示すか”の結論文が要点。数値より結論→根拠の順に読む。",
+      "steps": ["indicate/show/suggest を含む文を探す", "それが示す主張を一文で書く", "数値は根拠として必要分だけ拾う"],
+      "pitfalls": ["数値の暗記に時間を使う"],
+      "exampleEn": "The chart shows a steady decline, suggesting the policy reduced waste over time."
+    },
+    {
+      "id": "P59",
+      "title": "“例の結論”は例の最後にある（that is why / this shows）",
+      "gist": "例のあとに来る“だからこそ”が筆者の狙い。例の最後の一般化を拾う。",
+      "steps": ["例の範囲を括る", "例の直後の一般化（this shows等）を抜く"],
+      "pitfalls": ["例の中身だけで止まる"],
+      "exampleEn": "A small mistake caused a big outage. This shows that backups need testing."
+    },
+    {
+      "id": "P60",
+      "title": "“段落の最初と最後”だけで骨格を作ってから通読する",
+      "gist": "時間がないときは段落の最初と最後をつないで骨格を作り、その後に中身を埋める。",
+      "steps": ["各段落の冒頭1文と末尾1文を抜く", "それらをつないで全体骨格を作る", "必要な段落だけ詳細を読む"],
+      "pitfalls": ["骨格なしに最初から最後まで均等に読む"],
+      "exampleEn": "Read topic sentences and concluding sentences first, then fill in details where needed."
+    },
+    {
+      "id": "P61",
+      "title": "結論段落は“要約＋一段上の一般化”のセット",
+      "gist": "結論は、本文の要点を短くまとめた上で、視点を一段上げた一般化（含意/提案）を置くことが多い。",
+      "steps": ["結論段落の要約文を抜く", "直後の一般化（should/need等）を抜く", "2文をセットで主旨にする"],
+      "pitfalls": ["要約だけ拾って提案・含意を落とす"],
+      "exampleEn": "In short, the trial reduced errors. Therefore, the system should be adopted more widely."
+    },
+    {
+      "id": "P62",
+      "title": "導入段落は“問題提起＋範囲設定”を取る",
+      "gist": "導入は“何が問題か”と“どの範囲で話すか（分野/対象）”を固定する場所。ここがズレると全体が崩れる。",
+      "steps": ["導入の問い/違和感を一語化", "対象範囲（who/where/what）をメモ", "結論まで範囲が一貫するか確認"],
+      "pitfalls": ["導入の小話を主張と誤認"],
+      "exampleEn": "Many workplaces struggle with burnout. This article focuses on small teams in remote settings."
+    },
+    {
+      "id": "P63",
+      "title": "段落の分岐: “しかし”が来たら論点が更新される",
+      "gist": "however/but/yet は単なる逆接ではなく“論点の更新”。前半の主張を修正する後半が得点源。",
+      "steps": ["逆接語をマーク", "前半の主張を一文にする", "後半でどう修正されたかを一文にする"],
+      "pitfalls": ["後半だけ見て前半を捨ててしまう"],
+      "exampleEn": "The device is easy to use. However, its battery life limits its usefulness in the field."
+    },
+    {
+      "id": "P64",
+      "title": "譲歩の段落: 先に相手の言い分→次に筆者の結論",
+      "gist": "譲歩は“相手の妥当性”を認めつつ結論を出す。前半の譲歩を筆者結論と誤認しない。",
+      "steps": ["譲歩マーカー（to be sure等）を探す", "譲歩部分と結論部分を分離", "結論部分を主張として固定"],
+      "pitfalls": ["譲歩だけで本文の立場を決める"],
+      "exampleEn": "To be sure, the policy has costs. Still, it prevents far greater losses later."
+    },
+    {
+      "id": "P65",
+      "title": "段落の定義: 用語が出たら“本文定義”を最優先",
+      "gist": "専門語は辞書より本文定義。that is / in other words / means が出たら、そこで意味が確定する。",
+      "steps": ["定義マーカーを検出", "用語=定義 を式にする", "その定義で後続が自然に読めるか確認"],
+      "pitfalls": ["辞書的な意味で読み進めてズレる"],
+      "exampleEn": "Cognitive load, in other words, is the mental effort required to process information."
+    },
+    {
+      "id": "P66",
+      "title": "列挙段落: まず“カテゴリ名”を付けてから中身",
+      "gist": "first/second/another が出たら列挙。各項目に一語ラベル（原因/結果/対策など）を付けると保持できる。",
+      "steps": ["列挙マーカーを探す", "各項目を一語ラベル化", "最後にラベルをまとめて要約"],
+      "pitfalls": ["例だけ覚えて抽象ラベルを落とす"],
+      "exampleEn": "There are three barriers: cost, training time, and unclear responsibility."
+    },
+    {
+      "id": "P67",
+      "title": "因果段落: 原因側と結果側を別箱に入れる",
+      "gist": "because/therefore/as a result が出たら、原因箱と結果箱に分ける。設問根拠が取りやすい。",
+      "steps": ["因果マーカーをマーク", "原因側と結果側を分離", "矢印で一行化して保存"],
+      "pitfalls": ["因果を“ただの順番”として読む"],
+      "exampleEn": "Because the schedule was unclear, tasks overlapped. As a result, productivity fell."
+    },
+    {
+      "id": "P68",
+      "title": "比較段落: 比較軸（何を比べるか）を一語で固定",
+      "gist": "比較は対象だけでなく“軸”が重要。cost/speed/safety など比較軸を固定すると混乱しない。",
+      "steps": ["比較対象A/Bを特定", "比較軸（基準）を一語化", "軸が段落内で変わっていないか確認"],
+      "pitfalls": ["対象は同じでも軸がズレた選択肢を選ぶ"],
+      "exampleEn": "The new approach is cheaper than the old one, but the old one remains safer."
+    },
+    {
+      "id": "P69",
+      "title": "問題→解決: 解決策は“手段＋狙い”のセットで取る",
+      "gist": "solution段落は“何をするか（手段）”と“何を達成するか（狙い）”がセット。片方だけだと誤読する。",
+      "steps": ["提案表現（should/propose）を探す", "手段（do）と狙い（so that）を分ける", "2つを一文で要約"],
+      "pitfalls": ["手段だけ拾って目的を落とす"],
+      "exampleEn": "The company should rotate shifts to reduce fatigue and improve long-term safety."
+    },
+    {
+      "id": "P70",
+      "title": "例段落: 例は“主張の証拠”として主張へ戻す",
+      "gist": "例（for example）は主張の材料。例の固有要素を落として“何を示す例か”へ戻す。",
+      "steps": ["例の範囲を括る", "例が支える主張を一文で言う", "固有名詞/数字を一般化して保存"],
+      "pitfalls": ["例を主張として覚える"],
+      "exampleEn": "One clinic cut wait times by changing forms. This example supports the idea that small process changes matter."
+    },
+    {
+      "id": "P71",
+      "title": "反論段落: “相手の主張”と“筆者の返し”を線で分ける",
+      "gist": "some argue/critics say が出たら相手の主張。but/however以降が筆者の返しになりやすい。",
+      "steps": ["相手の主張マーカーを探す", "相手部分と筆者返し部分を分離", "返しを段落要点にする"],
+      "pitfalls": ["相手の主張を筆者主張と誤認"],
+      "exampleEn": "Critics call the plan expensive, but supporters argue the savings appear over years."
+    },
+    {
+      "id": "P72",
+      "title": "段落内の指示語: this/these は“直前の出来事/主張”も受ける",
+      "gist": "this/these は名詞だけでなく“前文全体”を受けることがある。候補を名詞と文で並べて確定する。",
+      "steps": ["指示語を見つける", "直前2文から候補（名詞/文）を列挙", "意味が通る候補に確定"],
+      "pitfalls": ["最寄り名詞に機械的に結ぶ"],
+      "exampleEn": "The server crashed during the update. This led to a long outage. (This=the crash)"
+    },
+    {
+      "id": "P73",
+      "title": "段落の焦点: 強調語（especially/above all）を“要点マーカー”扱い",
+      "gist": "especially/above all は要点の山。そこを段落要約に入れると設問に強い。",
+      "steps": ["強調語をマーク", "強調されている内容を一文にする", "段落機能（主張/理由等）と合わせて保存"],
+      "pitfalls": ["強調語を読み流して重要度が逆転"],
+      "exampleEn": "The policy helps many groups, especially first-time workers who lack support."
+    },
+    {
+      "id": "P74",
+      "title": "数値段落: 数字は“主張を支える役割”だけ取る",
+      "gist": "数字は覚える対象ではなく根拠。増減・比較の方向と結論（何を示すか）だけ残す。",
+      "steps": ["数字が示す対象を特定", "増減/比較の方向を一語で言う", "筆者の結論文（suggest等）と結ぶ"],
+      "pitfalls": ["数値の暗記で時間を溶かす"],
+      "exampleEn": "Over five years, complaints dropped by half, suggesting clearer rules improved service."
+    },
+    {
+      "id": "P75",
+      "title": "段落間の橋渡し: moreover/therefore で“関係”を明示",
+      "gist": "段落冒頭の接続副詞は段落間関係の合図。追加（moreover）か因果（therefore）かを固定する。",
+      "steps": ["段落冒頭の接続副詞を検出", "追加/因果/対比のラベルを付ける", "前段落との関係が成立するか確認"],
+      "pitfalls": ["接続副詞をただの飾りとして無視"],
+      "exampleEn": "The process is cheaper. Moreover, it reduces training time for new staff."
+    },
+    {
+      "id": "P76",
+      "title": "段落の範囲ズレ: 同じ語でも“指すもの”が変わることがある",
+      "gist": "同じキーワードでも段落が変わると指す対象がズレることがある。定義の更新や対象の切替を疑う。",
+      "steps": ["反復語を見つける", "各段落で何を指すかを短くメモ", "指示対象が変わっていないか確認"],
+      "pitfalls": ["同じ単語なら同じ意味だと決め打ち"],
+      "exampleEn": "In one paragraph 'support' means funding; in another it means emotional help."
+    },
+    {
+      "id": "P77",
+      "title": "段落の評価: 筆者の距離（may/likely）で断定度を調整",
+      "gist": "筆者がmay/likelyを使う段落は慎重。要約で断定語に変えると誤答を招く。",
+      "steps": ["確信度語（may/likely）を探す", "要約も同じ確信度で書く", "断定語（must等）が混入していないか確認"],
+      "pitfalls": ["要約で勝手に断定する"],
+      "exampleEn": "The results may indicate a trend, but the sample is small."
+    },
+    {
+      "id": "P78",
+      "title": "段落の目的: explain/argue/warn/compare のどれかで言い切る",
+      "gist": "段落は何かをするために書かれる。内容ではなく目的動詞で言い切ると構造が見える。",
+      "steps": ["段落の中心文を特定", "それが説明/主張/警告/比較のどれか判断", "目的動詞で一言要約"],
+      "pitfalls": ["内容の細部を並べて目的が言えない"],
+      "exampleEn": "This paragraph warns that quick fixes can create long-term damage."
+    },
+    {
+      "id": "P79",
+      "title": "段落要約: 1文目は“主張”、2文目は“根拠/例”に分ける",
+      "gist": "要約は1文で詰め込みすぎない。主張と根拠（または例）を2文に分けると正確になる。",
+      "steps": ["主張文を一文にする", "根拠/例を一文にする", "2文が同じ話題でつながるか確認"],
+      "pitfalls": ["例だけを要約にしてしまう"],
+      "exampleEn": "Claim: The new schedule reduced delays. Reason: Teams shared a clear checklist each morning."
+    },
+    {
+      "id": "P80",
+      "title": "設問対策: 段落ごとに“根拠になる文”を1つマークしておく",
+      "gist": "後で根拠探しに戻る時間を減らすため、各段落で“核になる根拠文”を1つだけ決めて印を付ける。",
+      "steps": ["段落内の結論/一般化文を探す", "根拠として使える文を1つ選ぶ", "段落機能ラベルとセットで保存"],
+      "pitfalls": ["何でもマークして逆に迷う"],
+      "exampleEn": "Mark: 'This suggests that small routines influence long-term habits.' as the key evidence line."
+    },
+    {
+      "id": "P81",
+      "title": "定義段落: コロン/that is が出たら“定義→適用”の二段構え",
+      "gist": "用語が提示され、直後に説明が続く段落は定義段落。次に“その定義が何に効くか（適用）”が来やすい。",
+      "steps": ["新語（Term）を特定", "定義文（X is.../that is...）を抜く", "定義が後続の主張にどう使われるか確認"],
+      "pitfalls": ["定義だけ覚えて、定義が支える主張を落とす"],
+      "exampleEn": "Micro-frictions: tiny obstacles that slow a routine. These small delays can determine whether people keep a habit."
+    },
+    {
+      "id": "P82",
+      "title": "方法段落: To test this… は“何を変え、何を測ったか”だけ取る",
+      "gist": "研究の方法説明はディテール過多になりがち。操作（変数）と測定（指標）に絞ると設問に強い。",
+      "steps": ["介入/条件（what changed）を特定", "測定（what measured）を特定", "因果を言い切っていないか（may/suggest）も確認"],
+      "pitfalls": ["手順の細部を暗記して要点を失う"],
+      "exampleEn": "To test the idea, the team changed one form field and measured the number of incomplete submissions each week."
+    },
+    {
+      "id": "P83",
+      "title": "限界段落: but/although で“結論の条件付き化”が起きる",
+      "gist": "限界（limitation）は結論を否定ではなく“条件付き”にする。段落の最後で主張の強さが弱まることが多い。",
+      "steps": ["限界マーカー（but/however/although）を探す", "弱める要因（sample/scope/time）を一語で特定", "要約も“条件付き”のまま書く"],
+      "pitfalls": ["限界を読み飛ばして断定で要約する"],
+      "exampleEn": "The program reduced errors, but the trial lasted only two weeks, so long-term effects remain uncertain."
+    },
+    {
+      "id": "P84",
+      "title": "含意段落: This suggests… の後は“誰に何が変わるか”へ落とす",
+      "gist": "含意は抽象的になりやすい。主体（who）と影響（what changes）に落とすと理解が固定される。",
+      "steps": ["含意マーカー（this suggests/therefore）を拾う", "影響を受ける主体を特定", "変化（cost/risk/behavior）を一語で言う"],
+      "pitfalls": ["含意を“いい話”としてぼかす"],
+      "exampleEn": "This suggests managers should simplify reporting, because small barriers can prevent staff from sharing problems."
+    },
+    {
+      "id": "P85",
+      "title": "例外段落: except/aside from は“除外条件”を先に固定",
+      "gist": "例外は範囲の境界線。除外条件を固定してから、残る集合に対する主張だけを取る。",
+      "steps": ["例外語（except/aside from）をマーク", "除外される対象を明示", "主張が“残りの集合”にだけ当たることを確認"],
+      "pitfalls": ["例外条件を落として一般化してしまう"],
+      "exampleEn": "Except for emergency cases, the clinic now schedules visits online to reduce phone congestion."
+    },
+    {
+      "id": "P86",
+      "title": "スコープ限定: in this context/in this study は“適用範囲”を縮める合図",
+      "gist": "スコープ限定は“どの範囲での話か”を狭める。選択肢が範囲を広げると誤答になりやすい。",
+      "steps": ["限定語（in this study/context）を拾う", "範囲（group/place/time）を言語化", "要約でも範囲を保持"],
+      "pitfalls": ["限定語を落として普遍主張にする"],
+      "exampleEn": "In this study of night-shift workers, short breaks improved alertness more than longer lunches."
+    },
+    {
+      "id": "P87",
+      "title": "枠組みの切替: Rather than A, the key is B は“焦点移動”",
+      "gist": "Rather than… は否定ではなく“焦点の移動”。Aに戻らず、Bを段落の中心として保存する。",
+      "steps": ["Rather than の対比A/Bを抽出", "筆者が推す焦点（B）を一文で言う", "Aは“捨てた論点”として扱う"],
+      "pitfalls": ["AとBを混ぜて要約する"],
+      "exampleEn": "Rather than adding more rules, the key is making existing rules easier to follow."
+    },
+    {
+      "id": "P88",
+      "title": "トレードオフ段落: at the cost of / but it also… は“得る/失う”をセットで取る",
+      "gist": "利点と欠点が同段落に出ると、設問は片側だけを誇張した選択肢を混ぜる。得る/失うをセットで覚える。",
+      "steps": ["利点（benefit）を一語ラベル化", "コスト/副作用（cost/trade-off）を一語ラベル化", "選択肢が片側だけ誇張していないか確認"],
+      "pitfalls": ["利点だけで結論を決める"],
+      "exampleEn": "Automation saves time, but it can also hide small mistakes until they become costly."
+    },
+    {
+      "id": "P89",
+      "title": "連鎖段落: first/then/as a result は“因果の鎖”を短い矢印で保存",
+      "gist": "因果が複数段ある段落は、文章で覚えると崩れる。A→B→Cの矢印に落とすと強い。",
+      "steps": ["因果語（as a result/therefore）を拾う", "出来事をA/B/Cに分解", "矢印（A→B→C）として保存"],
+      "pitfalls": ["AとCだけを結んで中間Bを落とす"],
+      "exampleEn": "Delays increased. As a result, customers called more often, which then overwhelmed the support team."
+    },
+    {
+      "id": "P90",
+      "title": "時間対比段落: once/now/today は“昔→今”の対照で主張を作る",
+      "gist": "時間対比は“変化した点”が主張。昔の説明は背景として扱い、今の結論に寄せる。",
+      "steps": ["時間マーカー（once/now/today）を探す", "変化した点を一語で言う", "変化の理由/影響が付くか確認"],
+      "pitfalls": ["昔の背景を主張と取り違える"],
+      "exampleEn": "Once, reports were handwritten; now they are standardized, which makes comparisons across teams easier."
+    },
+    {
+      "id": "P91",
+      "title": "比喩段落: Like… は“何を分かりやすくしたいか”が本体",
+      "gist": "比喩は飾りではなく説明装置。比喩で説明したかった本体概念を一文で言えるようにする。",
+      "steps": ["比喩（like/as if）を特定", "比喩が説明する対象（concept）を特定", "比喩を外しても同じ意味の要約を書く"],
+      "pitfalls": ["比喩の具体物を本体だと誤認"],
+      "exampleEn": "Like a traffic light, the indicator guides decisions by making hidden patterns visible."
+    },
+    {
+      "id": "P92",
+      "title": "思考実験段落: Imagine/suppose は“仮定→結論”のセット",
+      "gist": "Imagine/suppose は現実の主張を支える仮想例。仮定と、そこから導く結論をペアで取る。",
+      "steps": ["仮定（Imagine...）を一文で抜く", "結論（then/you would）を抜く", "現実の主張への接続（so/therefore）を確認"],
+      "pitfalls": ["仮想例を事実だと思う"],
+      "exampleEn": "Imagine a team that never shares errors. Over time, small issues grow into major failures—so transparency matters."
+    },
+    {
+      "id": "P93",
+      "title": "数量語段落: most/some/few は“どの集合”に対する割合か固定",
+      "gist": "数量語は集合がズレると意味が変わる。『何の中のmostか』を固定して読む。",
+      "steps": ["数量語（most/some/few）を拾う", "集合（of what）を言語化", "選択肢が集合をすり替えていないか確認"],
+      "pitfalls": ["mostだけ見て“ほとんど全部”と誤解"],
+      "exampleEn": "Most customers in the pilot group preferred the new form, but that doesn't mean most customers overall will."
+    },
+    {
+      "id": "P94",
+      "title": "関係者段落: for employees/for consumers で“視点の切替”が起きる",
+      "gist": "同じ施策でも、関係者が変わると評価が変わる。for X を見たら視点ラベルを付ける。",
+      "steps": ["for X / to X を見つける", "関係者（stakeholder）をラベル化", "各関係者にとっての利害（benefit/cost）を整理"],
+      "pitfalls": ["一方の視点をもう一方に当てはめる"],
+      "exampleEn": "For employees, the change reduces paperwork; for customers, it shortens waiting time."
+    },
+    {
+      "id": "P95",
+      "title": "複合原因段落: not only A but also B は“原因を2本立て”にする",
+      "gist": "not only…but also は原因/理由が複数ある合図。Aだけでまとめると誤答に刺さる。",
+      "steps": ["not only / but also を検出", "AとBをそれぞれ一語ラベル化", "要約でA+B両方を入れる"],
+      "pitfalls": ["Aだけを主因として固定する"],
+      "exampleEn": "The delays came not only from traffic but also from outdated routing software."
+    },
+    {
+      "id": "P96",
+      "title": "反証段落: This does not mean… は“誤解の否定→正しい範囲”",
+      "gist": "This does not mean は読者の誤解を先に否定し、その後で“正しい範囲”を提示する型。",
+      "steps": ["否定される誤解（does not mean）を抜く", "正しい範囲（rather/only/it means）を抜く", "要約は正しい範囲だけで書く"],
+      "pitfalls": ["否定部分を主張として覚える"],
+      "exampleEn": "This does not mean the policy failed; it means the timeline was too short to see full effects."
+    },
+    {
+      "id": "P97",
+      "title": "研究ギャップ段落: still unclear/unknown は“未解決点”が主役",
+      "gist": "ギャップ段落は『まだ分からないこと』が主張。次に研究提案（future work）が続くことが多い。",
+      "steps": ["不確定語（unclear/unknown）を拾う", "未解決点を一文で言う", "次の提案（need to…）とつなぐ"],
+      "pitfalls": ["既に分かったことだと誤読"],
+      "exampleEn": "It is still unclear whether the benefit persists after six months, so longer studies are needed."
+    },
+    {
+      "id": "P98",
+      "title": "証拠の型: anecdote/study/data が混ざる段落は“証拠の格”を揃える",
+      "gist": "逸話とデータが混ざると、選択肢が“証拠の格”をすり替える。本文が頼っている証拠タイプを固定する。",
+      "steps": ["証拠語（data/study/one story）を拾う", "本文の主証拠（main evidence）を特定", "選択肢が同じ証拠タイプに基づくか確認"],
+      "pitfalls": ["逸話を統計と同じ強さで扱う"],
+      "exampleEn": "One story illustrates the issue, but the dataset shows it happens across many sites."
+    },
+    {
+      "id": "P99",
+      "title": "条件段落: if/unless は“条件を外した一般化”が最大の罠",
+      "gist": "条件付き主張は条件が本体。選択肢が条件を外すと、内容が似ていても誤答になる。",
+      "steps": ["条件語（if/unless）をマーク", "条件→結果を短い形にする", "要約/選択肢で条件が保持されているか確認"],
+      "pitfalls": ["条件を落として断定で覚える"],
+      "exampleEn": "If staff receive feedback quickly, errors decline; without feedback, the effect disappears."
+    },
+    {
+      "id": "P100",
+      "title": "提案段落: should/need to は“提案の根拠”を直前から回収",
+      "gist": "提案は突然出ない。直前の問題点/証拠から提案が自然に出ているかを確認すると正確になる。",
+      "steps": ["提案語（should/need to）を拾う", "提案の理由（because/so）を直前から回収", "提案の範囲（who/when）を固定"],
+      "pitfalls": ["提案だけ覚えて根拠を落とす"],
+      "exampleEn": "Because the delays come from unclear ownership, teams should assign one person to approve changes."
+    }
+  ]
+}

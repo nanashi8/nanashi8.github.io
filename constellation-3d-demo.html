@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Constellation 3D - 回転可能デモ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    #container {
+      width: 100%;
+      height: 100vh;
+    }
+
+    #info {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      max-width: 300px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #info h1 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #info h1::before {
+      content: "⭐";
+      font-size: 20px;
+    }
+
+    .section {
+      margin: 8px 0;
+      padding: 6px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .label-text {
+      color: #999;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .current-file {
+      color: #ff4444;
+      font-weight: 600;
+    }
+
+    .related-files {
+      color: #44ff88;
+      font-size: 11px;
+    }
+
+    #controls {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 11px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #controls div {
+      margin: 4px 0;
+      color: #aaa;
+    }
+
+    #controls kbd {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+      color: #fff;
+    }
+
+    #axis-controls {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #axis-controls h2 {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #ffd700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #axis-controls h2::before {
+      content: "🎯";
+    }
+
+    .axis-toggle {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+      gap: 8px;
+    }
+
+    .axis-toggle input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .axis-toggle label {
+      cursor: pointer;
+      color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .axis-x { color: #ff4444; }
+    .axis-y { color: #44ff44; }
+    .axis-z { color: #4444ff; }
+
+    .vr-note {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #888;
+      font-size: 10px;
+      font-style: italic;
+    }
+
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <div id="loading">🌟 天体儀を初期化中...</div>
+
+  <div id="info">
+    <h1>Neural Constellation 3D</h1>
+    <div class="section">
+      <div class="label-text">編集中</div>
+      <div class="current-file" id="current">ノードをクリックしてください</div>
+    </div>
+    <div class="section">
+      <div class="label-text">関連ファイル</div>
+      <div class="related-files" id="related">-</div>
+    </div>
+  </div>
+
+  <div id="controls">
+    <div><kbd>左ドラッグ</kbd> 回転</div>
+    <div><kbd>ホイール</kbd> ズーム</div>
+    <div><kbd>右ドラッグ</kbd> パン（移動）</div>
+    <div><kbd>クリック</kbd> ファイル選択</div>
+  </div>
+
+  <div id="axis-controls">
+    <h2>3軸表示</h2>
+    <div class="axis-toggle">
+      <input type="checkbox" id="toggle-x" checked>
+      <label for="toggle-x"><span class="axis-x">━</span> X軸（構造）</label>
+    </div>
+    <div class="axis-toggle">
+      <input type="checkbox" id="toggle-y" checked>
+      <label for="toggle-y"><span class="axis-y">━</span> Y軸（階層）</label>
+    </div>
+    <div class="axis-toggle">
+      <input type="checkbox" id="toggle-z" checked>
+      <label for="toggle-z"><span class="axis-z">━</span> Z軸（時系列）</label>
+    </div>
+    <div class="axis-toggle">
+      <input type="checkbox" id="toggle-grid" checked>
+      <label for="toggle-grid">📐 グリッド</label>
+    </div>
+    <div class="axis-toggle">
+      <input type="checkbox" id="toggle-orbits" checked>
+      <label for="toggle-orbits">🔄 軌道線</label>
+    </div>
+    <div class="vr-note">
+      🥽 将来的にVR対応予定<br>
+      （WebXR Device API）
+    </div>
+  </div>
+
+  <script defer src="./vendor/es-module-shims/es-module-shims.js"></script>
+  <script type="importmap-shim">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/addons/"
+      }
+    }
+  </script>
+
+  <script type="module-shim">
+    const loadingEl = document.getElementById('loading');
+    const showInitError = (error) => {
+      const message = error instanceof Error ? error.message : String(error);
+      console.error('[Constellation3D] init failed:', error);
+      if (loadingEl) {
+        loadingEl.textContent = `❌ 天体儀の初期化に失敗: ${message}`;
+        loadingEl.style.display = 'block';
+      }
+    };
+
+    (async () => {
+      try {
+        const THREE = await import('three');
+        const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
+
+    // サンプルデータ
+    const sampleNodes = [
+      { id: 'QuestionScheduler.ts', label: 'QuestionScheduler', priority: 1.0, category: 'AI', connections: 8 },
+      { id: 'MemoryAI.ts', label: 'MemoryAI', priority: 0.9, category: 'AI', connections: 6 },
+      { id: 'GamificationAI.ts', label: 'GamificationAI', priority: 0.85, category: 'AI', connections: 5 },
+      { id: 'AICoordinator.ts', label: 'AICoordinator', priority: 0.8, category: 'AI', connections: 7 },
+      { id: 'Button.tsx', label: 'Button', priority: 0.6, category: 'UI', connections: 3 },
+      { id: 'QuestionCard.tsx', label: 'QuestionCard', priority: 0.7, category: 'UI', connections: 4 },
+      { id: 'progressStorage.ts', label: 'progressStorage', priority: 0.75, category: 'Data', connections: 5 },
+      { id: 'memoryAlgorithm.ts', label: 'memoryAlgorithm', priority: 0.65, category: 'Data', connections: 4 },
+      { id: 'scheduler.test.ts', label: 'scheduler.test', priority: 0.5, category: 'Test', connections: 2 },
+      { id: 'utils.ts', label: 'utils', priority: 0.4, category: 'Util', connections: 8 }
+    ];
+
+      // シーン初期化
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x0a0a0f);
+
+      // カメラ
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      camera.position.set(0, 50, 150);
+
+      // レンダラー
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    document.getElementById('container').appendChild(renderer.domElement);
+
+    // OrbitControls（回転・ズーム・パン）
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true; // 慣性
+    controls.dampingFactor = 0.05;
+    controls.minDistance = 50;
+    controls.maxDistance = 300;
+
+    // 照明
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+    scene.add(ambientLight);
+
+    const pointLight = new THREE.PointLight(0xffd700, 1.5, 200);
+    pointLight.position.set(0, 0, 0);
+    scene.add(pointLight);
+
+    // 3軸ヘルパー（X=赤、Y=緑、Z=青）
+    const axisHelper = new THREE.AxesHelper(80);
+    axisHelper.material.linewidth = 2;
+    scene.add(axisHelper);
+
+    // グリッドヘルパー（XZ平面）
+    const gridHelper = new THREE.GridHelper(200, 20, 0x444444, 0x222222);
+    scene.add(gridHelper);
+
+    // 軌道線（優先度レイヤー）
+    const orbitGroup = new THREE.Group();
+    [40, 70, 100].forEach((radius, i) => {
+      const orbitGeometry = new THREE.RingGeometry(radius - 0.5, radius + 0.5, 64);
+      const orbitMaterial = new THREE.MeshBasicMaterial({
+        color: 0x333333,
+        transparent: true,
+        opacity: 0.2,
+        side: THREE.DoubleSide
+      });
+      const orbit = new THREE.Mesh(orbitGeometry, orbitMaterial);
+      orbit.rotation.x = Math.PI / 2;
+      orbitGroup.add(orbit);
+    });
+    scene.add(orbitGroup);
+
+    // 背景の星（パーティクル）
+    const starsGeometry = new THREE.BufferGeometry();
+    const starsMaterial = new THREE.PointsMaterial({
+      color: 0xffffff,
+      size: 0.7,
+      transparent: true,
+      opacity: 0.8
+    });
+
+    const starsVertices = [];
+    for (let i = 0; i < 1000; i++) {
+      const x = (Math.random() - 0.5) * 500;
+      const y = (Math.random() - 0.5) * 500;
+      const z = (Math.random() - 0.5) * 500;
+      starsVertices.push(x, y, z);
+    }
+
+    starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+    const stars = new THREE.Points(starsGeometry, starsMaterial);
+    scene.add(stars);
+
+    // 中心ゴール（太陽）
+    const goalGeometry = new THREE.SphereGeometry(4, 32, 32);
+    const goalMaterial = new THREE.MeshStandardMaterial({
+      color: 0xffd700,
+      emissive: 0xff8c00,
+      emissiveIntensity: 2,
+      metalness: 0.5,
+      roughness: 0.3
+    });
+    const goal = new THREE.Mesh(goalGeometry, goalMaterial);
+    scene.add(goal);
+
+    // ゴールのグロー効果
+    const goalGlowGeometry = new THREE.SphereGeometry(5, 32, 32);
+    const goalGlowMaterial = new THREE.MeshBasicMaterial({
+      color: 0xff8c00,
+      transparent: true,
+      opacity: 0.3
+    });
+    const goalGlow = new THREE.Mesh(goalGlowGeometry, goalGlowMaterial);
+    scene.add(goalGlow);
+
+    // ノード配置（球面レイアウト）
+    const nodeObjects = [];
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+
+    sampleNodes.forEach((node, i) => {
+      // 球面座標（優先度が高いほど中心に近い）
+      const phi = Math.acos(-1 + (2 * i) / sampleNodes.length);
+      const theta = Math.sqrt(sampleNodes.length * Math.PI) * phi;
+      const radius = 40 + (1 - node.priority) * 60;
+
+      const x = radius * Math.cos(theta) * Math.sin(phi);
+      const y = radius * Math.cos(phi);
+      const z = radius * Math.sin(theta) * Math.sin(phi);
+
+      // ノード（球体）
+      const size = 1.5 + node.priority * 2;
+      const geometry = new THREE.SphereGeometry(size, 16, 16);
+
+      let color;
+      if (node.priority >= 0.8) color = 0x4a9eff; // 青（重要）
+      else if (node.priority >= 0.6) color = 0x8b9eff; // 薄青
+      else color = 0x888888; // 灰色
+
+      const material = new THREE.MeshStandardMaterial({
+        color: color,
+        emissive: color,
+        emissiveIntensity: 0.5,
+        metalness: 0.7,
+        roughness: 0.2
+      });
+
+      const sphere = new THREE.Mesh(geometry, material);
+      sphere.position.set(x, y, z);
+      sphere.userData = node;
+      scene.add(sphere);
+      nodeObjects.push(sphere);
+
+      // ラベル（スプライト）
+      const canvas = document.createElement('canvas');
+      canvas.width = 256;
+      canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+      ctx.fillRect(0, 0, 256, 64);
+      ctx.fillStyle = 'white';
+      ctx.font = '20px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(node.label, 128, 40);
+
+      const texture = new THREE.CanvasTexture(canvas);
+      const spriteMaterial = new THREE.SpriteMaterial({ map: texture, transparent: true });
+      const sprite = new THREE.Sprite(spriteMaterial);
+      sprite.position.set(x, y + size + 3, z);
+      sprite.scale.set(15, 4, 1);
+      scene.add(sprite);
+
+      // 中心への線（優先度高いもののみ）
+      if (node.priority > 0.65) {
+        const lineGeometry = new THREE.BufferGeometry().setFromPoints([
+          new THREE.Vector3(0, 0, 0),
+          new THREE.Vector3(x, y, z)
+        ]);
+        const lineMaterial = new THREE.LineBasicMaterial({
+          color: node.priority > 0.8 ? 0x4a9eff : 0x666666,
+          transparent: true,
+          opacity: node.priority > 0.8 ? 0.6 : 0.3
+        });
+        const line = new THREE.Line(lineGeometry, lineMaterial);
+        scene.add(line);
+      }
+    });
+
+    // エッジ（接続線）の追加 - 結合度による太さを反映
+    const edgeObjects = [];
+    const sampleEdges = [
+      { from: 'QuestionScheduler', to: 'MemoryAI', strength: 0.9 },
+      { from: 'QuestionScheduler', to: 'ConfigLoader', strength: 0.7 },
+      { from: 'MemoryAI', to: 'StrategyFinder', strength: 0.8 },
+      { from: 'ConfigLoader', to: 'StrategyFinder', strength: 0.6 },
+      { from: 'StrategyFinder', to: 'RandomGenerator', strength: 0.5 },
+      { from: 'DataPersistence', to: 'MemoryAI', strength: 0.85 },
+      { from: 'ConfigLoader', to: 'DataPersistence', strength: 0.75 },
+      { from: 'LearningSolver', to: 'StrategyFinder', strength: 0.65 },
+      { from: 'UIDisplay', to: 'QuestionScheduler', strength: 0.7 },
+      { from: 'TimeHandler', to: 'LearningSolver', strength: 0.55 }
+    ];
+
+    sampleEdges.forEach(edge => {
+      const fromNode = sampleNodes.find(n => n.id === edge.from);
+      const toNode = sampleNodes.find(n => n.id === edge.to);
+      if (!fromNode || !toNode) return;
+
+      const fromObj = nodeObjects.find(obj => obj.userData.id === edge.from);
+      const toObj = nodeObjects.find(obj => obj.userData.id === edge.to);
+      if (!fromObj || !toObj) return;
+
+      // 強度に応じた太さ（1-5ピクセル相当）
+      const thickness = Math.max(1, Math.min(5, edge.strength * 5));
+      // 強度に応じた不透明度（0.3-0.9）
+      const opacity = 0.3 + edge.strength * 0.6;
+
+      // 色は強度による
+      let color = 0x4444ff; // 青
+      if (edge.strength >= 0.8) color = 0xff4444; // 赤
+      else if (edge.strength >= 0.6) color = 0xffaa44; // オレンジ
+      else if (edge.strength >= 0.4) color = 0xffff44; // 黄色
+
+      const points = [fromObj.position, toObj.position];
+      const curve = new THREE.LineCurve3(points[0], points[1]);
+      const tubeGeometry = new THREE.TubeGeometry(curve, 1, thickness * 0.15, 8, false);
+      const material = new THREE.MeshBasicMaterial({
+        color: color,
+        transparent: true,
+        opacity: opacity
+      });
+
+      const tube = new THREE.Mesh(tubeGeometry, material);
+      tube.userData = {
+        edge: edge,
+        originalOpacity: opacity,
+        originalThickness: thickness
+      };
+      scene.add(tube);
+      edgeObjects.push(tube);
+    });
+
+    // クリックイベント
+    let selectedNode = null;
+
+    window.addEventListener('click', (event) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+      const intersects = raycaster.intersectObjects(nodeObjects);
+
+      if (intersects.length > 0) {
+        const clicked = intersects[0].object;
+        const node = clicked.userData;
+
+        // 深度計算用の関数
+        function calculateDepths(startId, maxDepth) {
+          const depths = new Map();
+          depths.set(startId, 0);
+          let currentLayer = [startId];
+
+          for (let depth = 1; depth <= maxDepth; depth++) {
+            const nextLayer = [];
+            currentLayer.forEach(nodeId => {
+              sampleEdges.forEach(edge => {
+                if (edge.from === nodeId && !depths.has(edge.to)) {
+                  depths.set(edge.to, depth);
+                  nextLayer.push(edge.to);
+                }
+                if (edge.to === nodeId && !depths.has(edge.from)) {
+                  depths.set(edge.from, depth);
+                  nextLayer.push(edge.from);
+                }
+              });
+            });
+            currentLayer = nextLayer;
+          }
+          return depths;
+        }
+
+        // 既存のハイライトをリセット
+        nodeObjects.forEach(obj => {
+          obj.material.emissiveIntensity = 0.5;
+          obj.material.opacity = 1.0;
+          obj.material.transparent = false;
+          obj.scale.set(1, 1, 1);
+        });
+
+        edgeObjects.forEach(obj => {
+          obj.material.opacity = obj.userData.originalOpacity;
+          obj.scale.set(1, 1, 1);
+        });
+
+        // 深度計算（3次接続まで）
+        const depths = calculateDepths(node.id, 3);
+
+        // 選択ノードのハイライト
+        clicked.material.emissive.setHex(0xffff00); // 黄色
+        clicked.material.emissiveIntensity = 1.2;
+        clicked.scale.set(2.0, 2.0, 2.0);
+
+        selectedNode = node.id;
+
+        // 深度に応じたハイライト
+        nodeObjects.forEach(obj => {
+          const depth = depths.get(obj.userData.id);
+          if (depth !== undefined && depth > 0) {
+            if (depth === 1) {
+              // 第1次接続 - 明るい緑
+              obj.material.emissive.setHex(0x00ff00);
+              obj.material.emissiveIntensity = 0.8;
+              obj.scale.set(1.6, 1.6, 1.6);
+            } else if (depth === 2) {
+              // 第2次接続 - シアン
+              obj.material.emissive.setHex(0x00ffff);
+              obj.material.emissiveIntensity = 0.6;
+              obj.scale.set(1.3, 1.3, 1.3);
+            } else if (depth === 3) {
+              // 第3次接続 - 青
+              obj.material.emissive.setHex(0x4444ff);
+              obj.material.emissiveIntensity = 0.4;
+              obj.scale.set(1.1, 1.1, 1.1);
+            }
+          } else if (obj.userData.id !== node.id) {
+            // 無関係なノード - 非常に薄く
+            obj.material.opacity = 0.15;
+            obj.material.transparent = true;
+          }
+        });
+
+        // エッジのハイライト - 深度を考慮
+        edgeObjects.forEach(obj => {
+          const edge = obj.userData.edge;
+          const fromDepth = depths.get(edge.from) ?? Infinity;
+          const toDepth = depths.get(edge.to) ?? Infinity;
+          const isRelated = depths.has(edge.from) && depths.has(edge.to);
+
+          if (isRelated) {
+            const minDepth = Math.min(fromDepth, toDepth);
+            if (minDepth === 0) {
+              // 選択ノードへの直接接続
+              obj.material.opacity = Math.min(1.0, obj.userData.originalOpacity * 3);
+              obj.scale.set(2.5, 2.5, 2.5);
+            } else if (minDepth === 1) {
+              obj.material.opacity = Math.min(0.9, obj.userData.originalOpacity * 2.5);
+              obj.scale.set(2.0, 2.0, 2.0);
+            } else if (minDepth === 2) {
+              obj.material.opacity = Math.min(0.8, obj.userData.originalOpacity * 2);
+              obj.scale.set(1.5, 1.5, 1.5);
+            } else {
+              obj.material.opacity = Math.min(0.7, obj.userData.originalOpacity * 1.5);
+              obj.scale.set(1.2, 1.2, 1.2);
+            }
+          } else {
+            // 無関係なエッジ - 非常に薄く細く
+            obj.material.opacity = 0.05;
+            obj.scale.set(0.5, 0.5, 0.5);
+          }
+        });
+
+        // 情報パネル更新 - 深度情報を追加
+        const depthCounts = new Map();
+        depths.forEach((depth, nodeId) => {
+          depthCounts.set(depth, (depthCounts.get(depth) || 0) + 1);
+        });
+
+        let depthInfo = '';
+        for (let d = 1; d <= 3; d++) {
+          const count = depthCounts.get(d) || 0;
+          if (count > 0) {
+            depthInfo += `第${d}次: ${count}個<br>`;
+          }
+        }
+
+        document.getElementById('current').innerHTML = `
+          <strong>📌 選択中</strong><br>
+          📄 ${node.label}.ts<br>
+          優先度: ${node.priority.toFixed(3)}<br><br>
+          <strong>🔗 関連ノード:</strong><br>
+          ${depthInfo}
+          合計: ${depths.size - 1}個
+        `;
+
+        const relatedNodes = [];
+        depths.forEach((depth, nodeId) => {
+          if (depth > 0 && depth <= 3) {
+            const n = sampleNodes.find(sn => sn.id === nodeId);
+            if (n) relatedNodes.push(n.label + '.ts');
+          }
+        });
+        document.getElementById('related').textContent = relatedNodes.join(', ');
+      }
+    });
+
+    // 3軸表示オンオフ
+    document.getElementById('toggle-x').addEventListener('change', (e) => {
+      // X軸の表示切り替え（赤色コンポーネント）
+      axisHelper.visible = e.target.checked ||
+        document.getElementById('toggle-y').checked ||
+        document.getElementById('toggle-z').checked;
+    });
+
+    document.getElementById('toggle-y').addEventListener('change', (e) => {
+      // Y軸の表示切り替え（緑色コンポーネント）
+      axisHelper.visible = e.target.checked ||
+        document.getElementById('toggle-x').checked ||
+        document.getElementById('toggle-z').checked;
+    });
+
+    document.getElementById('toggle-z').addEventListener('change', (e) => {
+      // Z軸の表示切り替え（青色コンポーネント）
+      axisHelper.visible = e.target.checked ||
+        document.getElementById('toggle-x').checked ||
+        document.getElementById('toggle-y').checked;
+    });
+
+    document.getElementById('toggle-grid').addEventListener('change', (e) => {
+      gridHelper.visible = e.target.checked;
+    });
+
+    document.getElementById('toggle-orbits').addEventListener('change', (e) => {
+      orbitGroup.visible = e.target.checked;
+    });
+
+    // アニメーションループ
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // ゴールを回転
+      goal.rotation.y += 0.005;
+      goalGlow.rotation.y -= 0.003;
+
+      // 背景の星をゆっくり回転
+      stars.rotation.y += 0.0002;
+
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    // ウィンドウリサイズ対応
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // ローディング完了
+    if (loadingEl) loadingEl.style.display = 'none';
+
+    animate();
+      } catch (error) {
+        showInitError(error);
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,118 +1,362 @@
 [
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "北海道",
+    "reading": "ほっかいどう",
+    "matter": "地理",
+    "question": "日本最北の都道府県は？",
+    "explanation": "日本列島の最北に位置する都道府県。面積は日本最大（約83424km²）。道庁所在地は札幌市。冷涼な気候で稲作、酪農、畑作が盛ん。アイヌ民族の伝統文化が残る。",
+    "relatedMatters": "札幌市|石狩平野|アイヌ文化",
+    "relatedFields": "地理-日本",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "九州|沖縄県"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "東北地方",
+    "reading": "とうほくちほう",
+    "matter": "地理",
+    "question": "青森・岩手・宮城・秋田・山形・福島の6県からなる地方は？",
+    "explanation": "本州北部の地方。夏季のやませによる冷害、冬季の豪雪が特徴。稲作が盛んで、りんご・さくらんぼの生産が多い。三陸海岸はリアス海岸で漁業が盛ん。",
+    "relatedMatters": "やませ|リアス海岸|稲作",
+    "relatedFields": "地理-日本",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "関東地方|九州地方"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "関東地方",
+    "reading": "かんとうちほう",
+    "matter": "地理",
+    "question": "東京都を中心とする日本最大の人口集中地域は？",
+    "explanation": "茨城・栃木・群馬・埼玉・千葉・東京・神奈川の1都6県。日本の政治・経済の中心。関東平野は日本最大の平野。東京湾岸に京浜工業地帯が発達。",
+    "relatedMatters": "関東平野|東京|京浜工業地帯",
+    "relatedFields": "地理-日本",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "関西地方|中部地方"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "中部地方",
+    "reading": "ちゅうぶちほう",
+    "matter": "地理",
+    "question": "本州中央部の9県からなる地方は？",
+    "explanation": "新潟・富山・石川・福井・山梨・長野・岐阜・静岡・愛知の9県。日本アルプス（飛騨・木曽・赤石山脈）が連なる。東海地方（静岡・愛知）は中京工業地帯、北陸は米どころ。",
+    "relatedMatters": "日本アルプス|中京工業地帯|北陸",
+    "relatedFields": "地理-日本",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "関東地方|近畿地方"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "近畿地方",
+    "reading": "きんきちほう",
+    "matter": "地理",
+    "question": "大阪・京都・神戸などの大都市がある地方は？",
+    "explanation": "三重・滋賀・京都・大阪・兵庫・奈良・和歌山の2府5県。古都京都・奈良など歴史的建造物が多い。大阪は商業の中心で、阪神工業地帯が発達。琵琶湖は日本最大の湖。",
+    "relatedMatters": "大阪|京都|琵琶湖",
+    "relatedFields": "地理-日本",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "中国地方|四国地方"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "中国地方",
+    "reading": "ちゅうごくちほう",
+    "matter": "地理",
+    "question": "本州西部の5県からなる地方は？",
+    "explanation": "鳥取・島根・岡山・広島・山口の5県。中国山地が東西に走る。瀬戸内海側は温暖で降水量少ない。広島は平和記念都市。岡山は晴れの国として知られ、果樹栽培が盛ん。",
+    "relatedMatters": "中国山地|瀬戸内海|広島",
+    "relatedFields": "地理-日本",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "近畿地方|四国地方"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "四国地方",
+    "reading": "しこくちほう",
+    "matter": "地理",
+    "question": "香川・愛媛・徳島・高知の4県からなる地方は？",
+    "explanation": "4県からなる島。讃岐山脈・四国山地が走る。瀬戸内海側は温暖少雨、太平洋側は多雨。高知はピーマン・なすの促成栽培、愛媛はみかん生産が盛ん。",
+    "relatedMatters": "四国山地|瀬戸内海|促成栽培",
+    "relatedFields": "地理-日本",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "中国地方|九州地方"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "九州地方",
+    "reading": "きゅうしゅうちほう",
+    "matter": "地理",
+    "question": "福岡・長崎・熊本など7県からなる地方は？",
+    "explanation": "福岡・佐賀・長崎・熊本・大分・宮崎・鹿児島の7県。火山が多く温泉地が点在。北九州工業地帯があり、IC生産も盛ん。畜産・園芸農業が発達。沖縄県は含まない。",
+    "relatedMatters": "北九州工業地帯|火山|温泉",
+    "relatedFields": "地理-日本",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "四国地方|沖縄県"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "沖縄県",
+    "reading": "おきなわけん",
+    "matter": "地理",
+    "question": "日本最南端の都道府県は？",
+    "explanation": "亜熱帯気候の島々からなる県。県庁所在地は那覇市。さとうきびパイナップル栽培が盛ん。琉球王国の歴史と独自の文化。第二次世界大戦の激戦地で、米軍基地が多い。",
+    "relatedMatters": "那覇市|琉球王国|米軍基地",
+    "relatedFields": "地理-日本",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "北海道|九州地方"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "石狩平野",
+    "reading": "いしかりへいや",
+    "matter": "地理",
+    "question": "北海道中西部にある日本最大の稲作地帯は？",
+    "explanation": "北海道中西部の平野。石狩川流域に広がる。泥炭地を開拓し、大規模な稲作が行われる。札幌市があり、北海道の政治・経済の中心。",
+    "relatedMatters": "石狩川|札幌市|稲作",
+    "relatedFields": "地理-日本",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "関東平野|濃尾平野"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "アジア",
+    "reading": "あじあ",
+    "matter": "地理",
+    "question": "世界最大の人口を持つ大州は？",
+    "explanation": "世界の陸地の約30%を占める最大の大州。中国・インドなど人口大国がある。モンスーン気候で稲作が盛ん。イスラム教・ヒンドゥー教・仏教など多様な宗教・文化が共存。",
+    "relatedMatters": "中国|インド|モンスーン",
+    "relatedFields": "地理-世界",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "ヨーロッパ|アフリカ"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "ヨーロッパ",
+    "reading": "よーろっぱ",
+    "matter": "地理",
+    "question": "EU（ヨーロッパ連合）の多くの国がある大州は？",
+    "explanation": "面積は小さいが経済的に発達した大州。地中海性気候、西岸海洋性気候が分布。キリスト教文化圏。EUによる経済統合が進む。工業が発達し、農業も集約的。",
+    "relatedMatters": "EU|地中海|キリスト教",
+    "relatedFields": "地理-世界",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "アジア|アフリカ"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "アフリカ",
+    "reading": "あふりか",
+    "matter": "地理",
+    "question": "サハラ砂漠がある大州は？",
+    "explanation": "世界で2番目に大きい大州。赤道が通り、熱帯気候が広い。サハラ砂漠は世界最大の砂漠。かつて欧州の植民地だった国が多い。カカオコーヒーなどのプランテーション農業が盛ん。",
+    "relatedMatters": "サハラ砂漠|赤道|プランテーション",
+    "relatedFields": "地理-世界",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "ヨーロッパ|南アメリカ"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "北アメリカ",
+    "reading": "きたあめりか",
+    "matter": "地理",
+    "question": "アメリカ合衆国とカナダがある大州は？",
+    "explanation": "世界第3位の面積。アメリカ合衆国は世界最大の経済大国。大平原では大規模な企業的農業。五大湖周辺は工業地帯。カナダは資源・農産物輸出国。",
+    "relatedMatters": "アメリカ合衆国|カナダ|五大湖",
+    "relatedFields": "地理-世界",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "南アメリカ|ヨーロッパ"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "南アメリカ",
+    "reading": "みなみあめりか",
+    "matter": "地理",
+    "question": "アマゾン川流域に熱帯雨林が広がる大州は？",
+    "explanation": "赤道が通り、熱帯気候が広い。アマゾン川は世界最大の流域面積。ブラジルは最大の国でコーヒー・サトウキビ生産が多い。アンデス山脈が南北に走る。鉱産資源が豊富。",
+    "relatedMatters": "アマゾン川|ブラジル|アンデス山脈",
+    "relatedFields": "地理-世界",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "北アメリカ|アフリカ"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "オセアニア",
+    "reading": "おせあにあ",
+    "matter": "地理",
+    "question": "オーストラリアやニュージーランドがある地域は？",
+    "explanation": "太平洋の島々とオーストラリア大陸からなる。オーストラリアは鉱産資源が豊富で、羊の放牧が盛ん。ニュージーランドは酪農が発達。先住民の文化が残る。",
+    "relatedMatters": "オーストラリア|ニュージーランド|太平洋",
+    "relatedFields": "地理-世界",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "アジア|南アメリカ"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "中国",
+    "reading": "ちゅうごく",
+    "matter": "地理",
+    "question": "世界最大の人口を持つ国は？",
+    "explanation": "人口約14億人の世界最大の人口国。面積も世界第3位。1980年代の改革開放政策で急速に経済発展。世界の工場として製造業が発達。チベット・ウイグルなど多民族国家。",
+    "relatedMatters": "人口|改革開放|製造業",
+    "relatedFields": "地理-世界",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "インド|アメリカ"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "インド",
+    "reading": "いんど",
+    "matter": "地理",
+    "question": "IT産業が発達し、人口が中国に次ぐ国は？",
+    "explanation": "人口約14億人で中国に次ぐ世界第2位。IT産業が発達し、バンガロールがIT都市として有名。ヒンドゥー教徒が多数。モンスーンの影響で雨季・乾季がある。",
+    "relatedMatters": "IT産業|ヒンドゥー教|モンスーン",
+    "relatedFields": "地理-世界",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "中国|ブラジル"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "アメリカ合衆国",
+    "reading": "あめりかがっしゅうこく",
+    "matter": "地理",
+    "question": "世界最大の経済大国は？",
+    "explanation": "世界最大のGDPを持つ経済大国。多民族国家で移民が多い。グレートプレーンズで大規模農業、シリコンバレーでIT産業が発達。軍事・文化面でも世界に影響力を持つ。",
+    "relatedMatters": "GDP|多民族|シリコンバレー",
+    "relatedFields": "地理-世界",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "中国|日本"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "ブラジル",
+    "reading": "ぶらじる",
+    "matter": "地理",
+    "question": "南アメリカ最大の国は？",
+    "explanation": "面積・人口ともに南アメリカ最大。ポルトガル語を公用語とする。コーヒー・サトウキビ・大豆の生産が世界有数。アマゾン熱帯雨林の開発が環境問題となっている。",
+    "relatedMatters": "コーヒー|アマゾン|ポルトガル語",
+    "relatedFields": "地理-世界",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "アルゼンチン|インド"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "稲作",
+    "reading": "いなさく",
+    "matter": "地理",
+    "question": "日本で最も重要な農業は？",
+    "explanation": "日本の主食である米を生産する農業。東北地方日本海側、北陸、北海道が主産地。モンスーン気候で降水量が多い東アジアで盛ん。機械化が進み、大規模化も進む。",
+    "relatedMatters": "米|モンスーン|農業",
+    "relatedFields": "地理-産業",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "畑作|酪農"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "畑作",
+    "reading": "はたさく",
+    "matter": "地理",
+    "question": "野菜・麦・いもなどを栽培する農業は？",
+    "explanation": "水田以外の畑で作物を栽培する農業。北海道の十勝平野では大規模な畑作。キャベツ・レタス・じゃがいも・小麦などを生産。機械化・企業化が進んでいる。",
+    "relatedMatters": "十勝平野|野菜|小麦",
+    "relatedFields": "地理-産業",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "稲作|果樹栽培"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "酪農",
+    "reading": "らくのう",
+    "matter": "地理",
+    "question": "乳牛を飼育して牛乳やバターを生産する農業は？",
+    "explanation": "乳牛を飼育し乳製品を生産する農業。北海道が全国生産量の約半分を占める。根釧台地や十勝平野が主産地。冷涼な気候が乳牛飼育に適している。",
+    "relatedMatters": "北海道|乳牛|牛乳",
+    "relatedFields": "地理-産業",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "稲作|養殖業"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "漁業",
+    "reading": "ぎょぎょう",
+    "matter": "地理",
+    "question": "魚や貝などの水産物を獲る産業は？",
+    "explanation": "日本は世界有数の漁業国だったが、漁獲量は減少傾向。三陸沖・北海道沖は好漁場。遠洋漁業は衰退し、沿岸漁業・養殖業が増加。200海里問題で遠洋漁業は制限された。",
+    "relatedMatters": "三陸沖|養殖業|200海里",
+    "relatedFields": "地理-産業",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "農業|林業"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "工業地帯",
+    "reading": "こうぎょうちたい",
+    "matter": "地理",
+    "question": "工場が集中している地域を何と呼ぶか？",
+    "explanation": "工場が多く集まり、工業生産が盛んな地域。日本の四大工業地帯は京浜・中京・阪神・北九州。近年は内陸の工業団地や臨海部の工業地域も発達。",
+    "relatedMatters": "京浜|中京|阪神",
+    "relatedFields": "地理-産業",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "農業地帯|商業地域"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "環境問題",
+    "reading": "かんきょうもんだい",
+    "matter": "地理",
+    "question": "人間活動が原因で起こる自然環境の悪化は？",
+    "explanation": "高度経済成長期に四大公害病（水俣病・イタイイタイ病など）が発生。大気汚染・水質汚濁が深刻化。現在は地球温暖化・オゾン層破壊などグローバルな問題も。",
+    "relatedMatters": "公害|地球温暖化|水質汚濁",
+    "relatedFields": "地理-環境",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "産業発展|都市化"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "地球温暖化",
+    "reading": "ちきゅうおんだんか",
+    "matter": "地理",
+    "question": "二酸化炭素などの温室効果ガスによる気温上昇は？",
+    "explanation": "化石燃料の大量消費により大気中の二酸化炭素が増加し、地球の平均気温が上昇する現象。海面上昇・異常気象の原因となる。京都議定書・パリ協定で対策が協議されている。",
+    "relatedMatters": "二酸化炭素|温室効果ガス|異常気象",
+    "relatedFields": "地理-環境",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "オゾン層|酸性雨"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "リサイクル",
+    "reading": "りさいくる",
+    "matter": "地理",
+    "question": "廃棄物を資源として再利用することは？",
+    "explanation": "ごみや廃棄物を原料として再生利用すること。3R（リデュース・リユース・リサイクル）が提唱されている。容器包装リサイクル法など法整備も進む。循環型社会の実現が目標。",
+    "relatedMatters": "3R|循環型社会|ごみ問題",
+    "relatedFields": "地理-環境",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "環境保全|省エネルギー"
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "持続可能な開発",
+    "reading": "じぞくかのうなかいはつ",
+    "matter": "地理",
+    "question": "将来世代のニーズを損なわない開発は？",
+    "explanation": "環境保護と経済発展を両立させる開発。SDGs（持続可能な開発目標）が国連で採択された。再生可能エネルギー・フェアトレード・エコツーリズムなどが推進されている。",
+    "relatedMatters": "SDGs|再生可能エネルギー|環境保護",
+    "relatedFields": "地理-環境",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "環境問題|経済成長"
+  },
+  {
+    "term": "人口問題",
+    "reading": "じんこうもんだい",
+    "matter": "地理",
+    "question": "人口増加・減少・高齢化など人口に関する問題は？",
+    "explanation": "発展途上国では人口爆発、先進国では少子高齢化が問題。日本は世界最速で高齢化が進行。労働力不足・社会保障費増大が課題。移民受け入れも議論されている。",
+    "relatedMatters": "少子高齢化|人口減少|労働力不足",
+    "relatedFields": "地理-環境",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "社会保障|経済問題"
   }
 ]

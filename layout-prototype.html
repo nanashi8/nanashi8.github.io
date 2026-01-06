@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レイアウトプロトタイプ - 既存レイアウト流用版</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .layout-option { display: none; }
+    .layout-option.active { display: block; }
+    /* 既存アプリと同じタブスタイル */
+    .tab-btn {
+      flex: 1;
+      min-width: 0;
+      padding: 0.75rem 0.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      border-bottom: 4px solid transparent;
+    }
+    .tab-btn.active {
+      background: white;
+      color: #2563eb;
+      border-bottom-color: #2563eb;
+    }
+    .tab-btn:not(.active) {
+      background: #eff6ff;
+      color: #374151;
+    }
+    @media (min-width: 640px) {
+      .tab-btn {
+        padding: 1rem 0.75rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-2 border border-blue-500 max-w-xs">
+    <select id="layoutSelector" aria-label="レイアウト選択" class="border border-gray-300 rounded px-2 py-1 text-xs w-full">
+      <option value="a">案A: 標準型（既存準拠）</option>
+      <option value="b">案B: カード強調型</option>
+      <option value="c">案C: 統計重視型</option>
+      <option value="d">案D: コンパクト型</option>
+      <option value="e">案E: 2カラム型</option>
+      <option value="f">案F: コンテンツ優先型</option>
+      <option value="g">案G: フルスクリーン型</option>
+    </select>
+  </div>
+
+  <!-- 案A: 標準型（既存と完全に同じ構造） -->
+  <div id="layout-a" class="layout-option active">
+    <!-- 教科選択タブ（最上部） -->
+    <div class="flex gap-0 bg-gray-100 shadow-md py-1 sm:py-2">
+      <button class="tab-btn active">
+        <span class="hidden sm:inline">📚 英語</span>
+        <span class="sm:hidden">英語</span>
+      </button>
+      <button class="tab-btn">
+        <span class="hidden sm:inline">📖 国語</span>
+        <span class="sm:hidden">国語</span>
+      </button>
+      <button class="tab-btn">
+        <span class="hidden sm:inline">🌏 社会</span>
+        <span class="sm:hidden">社会</span>
+      </button>
+    </div>
+
+    <!-- 学習メニュー（教科の下） -->
+    <div class="bg-white border-b shadow-sm">
+      <div class="flex gap-0 overflow-x-auto">
+        <button class="flex-1 min-w-0 py-2 px-2 sm:px-3 text-xs sm:text-sm font-semibold bg-green-100 text-green-700 border-b-2 border-green-600">
+          💡 暗記
+        </button>
+        <button class="flex-1 min-w-0 py-2 px-2 sm:px-3 text-xs sm:text-sm text-gray-600 hover:bg-gray-50">
+          📝 和訳
+        </button>
+        <button class="flex-1 min-w-0 py-2 px-2 sm:px-3 text-xs sm:text-sm text-gray-600 hover:bg-gray-50">
+          ✏️ スペル
+        </button>
+        <button class="flex-1 min-w-0 py-2 px-2 sm:px-3 text-xs sm:text-sm text-gray-600 hover:bg-gray-50">
+          📚 文法
+        </button>
+        <button class="flex-1 min-w-0 py-2 px-2 sm:px-3 text-xs sm:text-sm text-gray-600 hover:bg-gray-50">
+          📖 長文
+        </button>
+      </div>
+    </div>
+
+    <!-- コンテンツエリア -->
+    <div class="p-2 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- QuestionCard相当 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-4">
+          <div class="text-center">
+            <div class="mb-3">
+              <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">15 / 50</span>
+            </div>
+            <div class="text-4xl font-bold text-gray-800 mb-4">apple</div>
+            <div class="text-2xl text-gray-600 mb-6">りんご</div>
+            <div class="flex gap-3 justify-center">
+              <button class="px-6 py-3 bg-green-500 text-white rounded-lg font-bold hover:bg-green-600">✓ 覚えた</button>
+              <button class="px-6 py-3 bg-red-500 text-white rounded-lg font-bold hover:bg-red-600">✗ もう一度</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ScoreBoard相当 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 text-white">
+              <div class="text-xs opacity-90">今日</div>
+              <div class="text-2xl font-bold">15</div>
+            </div>
+            <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-lg p-4 text-white">
+              <div class="text-xs opacity-90">正答率</div>
+              <div class="text-2xl font-bold">87%</div>
+            </div>
+            <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg p-4 text-white">
+              <div class="text-xs opacity-90">連続</div>
+              <div class="text-2xl font-bold">5日</div>
+            </div>
+            <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-4 text-white">
+              <div class="text-xs opacity-90">総学習</div>
+              <div class="text-2xl font-bold">127</div>
+            </div>
+          </div>
+          
+          <!-- 学習履歴 -->
+          <div class="space-y-2">
+            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
+              <span class="text-green-600 font-bold">✓</span>
+              <span class="text-sm font-semibold flex-1">apple → りんご</span>
+              <span class="text-xs text-gray-500">2分前</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-red-50 rounded-lg border-l-4 border-red-500">
+              <span class="text-red-600 font-bold">✗</span>
+              <span class="text-sm font-semibold flex-1">beautiful → 美しい</span>
+              <span class="text-xs text-gray-500">5分前</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案B: カード強調型 -->
+  <div id="layout-b" class="layout-option">
+    <!-- 教科選択タブ -->
+    <div class="flex gap-0 bg-gray-100 shadow-md py-1">
+      <button class="tab-btn active"><span class="hidden sm:inline">📚 英語</span><span class="sm:hidden">英語</span></button>
+      <button class="tab-btn"><span class="hidden sm:inline">📖 国語</span><span class="sm:hidden">国語</span></button>
+      <button class="tab-btn"><span class="hidden sm:inline">🌏 社会</span><span class="sm:hidden">社会</span></button>
+    </div>
+    
+    <!-- 学習メニュー -->
+    <div class="bg-white border-b shadow-sm">
+      <div class="flex gap-0 overflow-x-auto">
+        <button class="flex-1 py-2 px-2 text-xs sm:text-sm font-semibold bg-green-100 text-green-700">💡 暗記</button>
+        <button class="flex-1 py-2 px-2 text-xs sm:text-sm text-gray-600">📝 和訳</button>
+        <button class="flex-1 py-2 px-2 text-xs sm:text-sm text-gray-600">✏️ スペル</button>
+        <button class="flex-1 py-2 px-2 text-xs sm:text-sm text-gray-600">📚 文法</button>
+        <button class="flex-1 py-2 px-2 text-xs sm:text-sm text-gray-600">📖 長文</button>
+      </div>
+    </div>
+
+    <div class="p-2 md:p-4 bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
+      <!-- 超大きい学習カード -->
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-16 mb-4">
+          <div class="text-center">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">15/50</span>
+            <div class="text-5xl md:text-7xl font-bold text-gray-800 my-8 md:my-12">apple</div>
+            <div class="text-3xl md:text-5xl text-gray-600 mb-8 md:mb-12">りんご</div>
+            <div class="flex gap-4 md:gap-6">
+              <button class="flex-1 py-5 md:py-6 bg-green-500 text-white rounded-xl font-bold text-lg md:text-xl hover:bg-green-600 shadow-lg">✓ 覚えた</button>
+              <button class="flex-1 py-5 md:py-6 bg-red-500 text-white rounded-xl font-bold text-lg md:text-xl hover:bg-red-600 shadow-lg">✗ もう一度</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- コンパクト統計 -->
+        <div class="grid grid-cols-4 gap-2">
+          <div class="bg-white rounded-lg p-3 text-center shadow">
+            <div class="text-xl font-bold text-blue-600">15</div>
+            <div class="text-xs text-gray-600">今日</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 text-center shadow">
+            <div class="text-xl font-bold text-green-600">87%</div>
+            <div class="text-xs text-gray-600">正答率</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 text-center shadow">
+            <div class="text-xl font-bold text-orange-600">5</div>
+            <div class="text-xs text-gray-600">連続</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 text-center shadow">
+            <div class="text-xl font-bold text-purple-600">127</div>
+            <div class="text-xs text-gray-600">総学習</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案C: 統計重視型 -->
+  <div id="layout-c" class="layout-option">
+    <!-- 教科選択 -->
+    <div class="flex gap-0 bg-gray-100 shadow-md py-1">
+      <button class="tab-btn active"><span class="hidden sm:inline">📚 英語</span><span class="sm:hidden">英語</span></button>
+      <button class="tab-btn"><span class="hidden sm:inline">📖 国語</span><span class="sm:hidden">国語</span></button>
+      <button class="tab-btn"><span class="hidden sm:inline">🌏 社会</span><span class="sm:hidden">社会</span></button>
+    </div>
+    
+    <!-- 学習メニュー -->
+    <div class="bg-white border-b shadow-sm">
+      <div class="flex gap-0 overflow-x-auto">
+        <button class="flex-1 py-2 px-2 text-xs font-semibold bg-green-100 text-green-700">💡 暗記</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">📝 和訳</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">✏️ スペル</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">📚 文法</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">📖 長文</button>
+      </div>
+    </div>
+
+    <div class="p-2 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- コンパクトカード -->
+        <div class="bg-white rounded-lg shadow p-4 mb-4">
+          <div class="flex items-center justify-between">
+            <div class="flex-1 text-center">
+              <div class="text-3xl font-bold text-gray-800 mb-2">apple</div>
+              <div class="text-xl text-gray-600">りんご</div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <button class="px-4 py-2 bg-green-500 text-white rounded font-bold text-sm">✓</button>
+              <button class="px-4 py-2 bg-red-500 text-white rounded font-bold text-sm">✗</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 詳細統計 -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-4">📊 詳細統計</h3>
+          
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <div class="text-sm text-gray-600 mb-1">今日の進捗</div>
+              <div class="text-3xl font-bold text-blue-600 mb-2">15 / 50</div>
+              <div class="bg-blue-200 rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full w-[30%]"></div></div>
+            </div>
+            <div class="p-4 bg-green-50 rounded-lg">
+              <div class="text-sm text-gray-600 mb-1">正答率</div>
+              <div class="text-3xl font-bold text-green-600">87%</div>
+              <div class="text-xs text-green-600 mt-1">↑ 昨日比 +4%</div>
+            </div>
+          </div>
+
+          <!-- 週間グラフ -->
+          <div class="mb-6">
+            <div class="text-sm font-semibold mb-3">週間学習数</div>
+            <div class="grid grid-cols-7 gap-2">
+              <div class="text-center">
+                <div class="bg-blue-300 rounded-t mx-auto h-[60px] w-full"></div>
+                <div class="text-xs mt-1">月</div>
+                <div class="text-xs font-bold">15</div>
+              </div>
+              <div class="text-center">
+                <div class="bg-blue-400 rounded-t mx-auto h-[80px] w-full"></div>
+                <div class="text-xs mt-1">火</div>
+                <div class="text-xs font-bold">22</div>
+              </div>
+              <div class="text-center">
+                <div class="bg-blue-500 rounded-t mx-auto h-[90px] w-full"></div>
+                <div class="text-xs mt-1">水</div>
+                <div class="text-xs font-bold">28</div>
+              </div>
+              <div class="text-center">
+                <div class="bg-blue-400 rounded-t mx-auto h-[70px] w-full"></div>
+                <div class="text-xs mt-1">木</div>
+                <div class="text-xs font-bold">18</div>
+              </div>
+              <div class="text-center">
+                <div class="bg-blue-600 rounded-t mx-auto h-[96px] w-full"></div>
+                <div class="text-xs mt-1 text-blue-600 font-bold">金</div>
+                <div class="text-xs font-bold">32</div>
+              </div>
+              <div class="text-center">
+                <div class="bg-gray-200 rounded-t mx-auto h-[20px] w-full"></div>
+                <div class="text-xs mt-1 text-gray-400">土</div>
+              </div>
+              <div class="text-center">
+                <div class="bg-gray-200 rounded-t mx-auto h-[20px] w-full"></div>
+                <div class="text-xs mt-1 text-gray-400">日</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 学習履歴 -->
+          <div>
+            <div class="text-sm font-semibold mb-3">最近の学習</div>
+            <div class="space-y-2">
+              <div class="flex items-center gap-3 p-2 bg-green-50 rounded border-l-4 border-green-500">
+                <span class="text-green-600">✓</span>
+                <span class="text-sm flex-1">apple → りんご</span>
+                <span class="text-xs text-gray-500">2分前</span>
+              </div>
+              <div class="flex items-center gap-3 p-2 bg-red-50 rounded border-l-4 border-red-500">
+                <span class="text-red-600">✗</span>
+                <span class="text-sm flex-1">beautiful → 美しい</span>
+                <span class="text-xs text-gray-500">5分前</span>
+              </div>
+              <div class="flex items-center gap-3 p-2 bg-green-50 rounded border-l-4 border-green-500">
+                <span class="text-green-600">✓</span>
+                <span class="text-sm flex-1">library → 図書館</span>
+                <span class="text-xs text-gray-500">8分前</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案D: コンパクト型 -->
+  <div id="layout-d" class="layout-option">
+    <!-- 教科選択 -->
+    <div class="flex gap-0 bg-gray-100 shadow-md py-1">
+      <button class="tab-btn active text-xs sm:text-sm">📚 英語</button>
+      <button class="tab-btn text-xs sm:text-sm">📖 国語</button>
+      <button class="tab-btn text-xs sm:text-sm">🌏 社会</button>
+    </div>
+    
+    <!-- 学習メニュー -->
+    <div class="bg-white border-b">
+      <div class="flex gap-0 text-xs">
+        <button class="flex-1 py-1.5 px-1 bg-green-100 text-green-700 font-semibold">暗記</button>
+        <button class="flex-1 py-1.5 px-1 text-gray-600">和訳</button>
+        <button class="flex-1 py-1.5 px-1 text-gray-600">スペル</button>
+        <button class="flex-1 py-1.5 px-1 text-gray-600">文法</button>
+        <button class="flex-1 py-1.5 px-1 text-gray-600">長文</button>
+      </div>
+    </div>
+
+    <div class="p-2">
+      <div class="max-w-4xl mx-auto">
+        <!-- ミニカード -->
+        <div class="bg-white rounded-lg shadow p-4 mb-2">
+          <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs">15/50</span>
+          <div class="text-3xl font-bold text-center my-3">apple</div>
+          <div class="text-lg text-gray-600 text-center mb-3">りんご</div>
+          <div class="grid grid-cols-2 gap-2">
+            <button class="py-2 bg-green-500 text-white rounded font-bold text-sm">✓ 覚えた</button>
+            <button class="py-2 bg-red-500 text-white rounded font-bold text-sm">✗ もう一度</button>
+          </div>
+        </div>
+
+        <!-- ミニ統計 -->
+        <div class="grid grid-cols-4 gap-1">
+          <div class="bg-white rounded p-2 text-center shadow-sm">
+            <div class="text-lg font-bold text-blue-600">15</div>
+            <div class="text-xs text-gray-600">今日</div>
+          </div>
+          <div class="bg-white rounded p-2 text-center shadow-sm">
+            <div class="text-lg font-bold text-green-600">87%</div>
+            <div class="text-xs text-gray-600">正答率</div>
+          </div>
+          <div class="bg-white rounded p-2 text-center shadow-sm">
+            <div class="text-lg font-bold text-orange-600">5</div>
+            <div class="text-xs text-gray-600">連続</div>
+          </div>
+          <div class="bg-white rounded p-2 text-center shadow-sm">
+            <div class="text-lg font-bold text-purple-600">127</div>
+            <div class="text-xs text-gray-600">総数</div>
+          </div>
+        </div>
+
+        <!-- コンパクト履歴 -->
+        <div class="mt-2 bg-white rounded-lg shadow p-3">
+          <div class="text-xs font-semibold mb-2">最近の学習</div>
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 text-xs p-1.5 bg-green-50 rounded">
+              <span class="text-green-600">✓</span>
+              <span class="flex-1">apple → りんご</span>
+              <span class="text-gray-500">2分前</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs p-1.5 bg-red-50 rounded">
+              <span class="text-red-600">✗</span>
+              <span class="flex-1">beautiful → 美しい</span>
+              <span class="text-gray-500">5分前</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案E: 2カラム型 -->
+  <div id="layout-e" class="layout-option">
+    <div class="h-screen flex flex-col">
+      <!-- 教科選択 -->
+      <div class="flex gap-0 bg-gray-100 shadow-md py-1">
+        <button class="tab-btn active"><span class="hidden sm:inline">📚 英語</span><span class="sm:hidden">英語</span></button>
+        <button class="tab-btn"><span class="hidden sm:inline">📖 国語</span><span class="sm:hidden">国語</span></button>
+        <button class="tab-btn"><span class="hidden sm:inline">🌏 社会</span><span class="sm:hidden">社会</span></button>
+      </div>
+      
+      <!-- 学習メニュー -->
+      <div class="bg-white border-b shadow-sm">
+        <div class="flex gap-0 overflow-x-auto">
+          <button class="flex-1 py-2 px-2 text-xs font-semibold bg-green-100 text-green-700">💡 暗記</button>
+          <button class="flex-1 py-2 px-2 text-xs text-gray-600">📝 和訳</button>
+          <button class="flex-1 py-2 px-2 text-xs text-gray-600">✏️ スペル</button>
+          <button class="flex-1 py-2 px-2 text-xs text-gray-600">📚 文法</button>
+          <button class="flex-1 py-2 px-2 text-xs text-gray-600">📖 長文</button>
+        </div>
+      </div>
+
+      <div class="flex-1 flex overflow-hidden">
+        <!-- 左: 学習エリア -->
+        <div class="flex-1 overflow-y-auto bg-gray-50 p-4">
+          <div class="max-w-2xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <div class="text-center">
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">15/50</span>
+                <div class="text-5xl font-bold text-gray-800 my-8">apple</div>
+                <div class="text-3xl text-gray-600 mb-10">りんご</div>
+                <div class="flex gap-4">
+                  <button class="flex-1 py-4 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600">✓ 覚えた</button>
+                  <button class="flex-1 py-4 bg-red-500 text-white rounded-xl font-bold hover:bg-red-600">✗ もう一度</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右: 統計エリア -->
+        <div class="hidden lg:block lg:w-96 bg-white border-l overflow-y-auto p-4">
+          <h3 class="text-lg font-bold mb-4">📊 統計</h3>
+          <div class="space-y-3">
+            <div class="p-3 bg-blue-50 rounded-lg">
+              <div class="text-xs text-gray-600">今日の学習</div>
+              <div class="text-2xl font-bold text-blue-600">15単語</div>
+            </div>
+            <div class="p-3 bg-green-50 rounded-lg">
+              <div class="text-xs text-gray-600">正答率</div>
+              <div class="text-2xl font-bold text-green-600">87%</div>
+            </div>
+            <div class="border-t pt-3">
+              <div class="text-sm font-semibold mb-2">最近の学習</div>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2 p-2 bg-green-50 rounded text-sm">
+                  <span class="text-green-600">✓</span>
+                  <span>apple → りんご</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 bg-red-50 rounded text-sm">
+                  <span class="text-red-600">✗</span>
+                  <span>beautiful → 美しい</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案F: コンテンツ優先型 -->
+  <div id="layout-f" class="layout-option">
+    <!-- 教科選択（上部） -->
+    <div class="flex gap-0 bg-gray-100 shadow-md py-1">
+      <button class="tab-btn active"><span class="hidden sm:inline">📚 英語</span><span class="sm:hidden">英語</span></button>
+      <button class="tab-btn"><span class="hidden sm:inline">📖 国語</span><span class="sm:hidden">国語</span></button>
+      <button class="tab-btn"><span class="hidden sm:inline">🌏 社会</span><span class="sm:hidden">社会</span></button>
+    </div>
+    
+    <!-- 学習メニュー -->
+    <div class="bg-white border-b shadow-sm">
+      <div class="flex gap-0 overflow-x-auto">
+        <button class="flex-1 py-2 px-2 text-xs font-semibold bg-green-100 text-green-700">💡 暗記</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">📝 和訳</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">✏️ スペル</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">📚 文法</button>
+        <button class="flex-1 py-2 px-2 text-xs text-gray-600">📖 長文</button>
+      </div>
+    </div>
+    
+    <div class="p-2 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- コンテンツ最優先 -->
+        <div class="mb-4">
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="text-center">
+              <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">15/50</span>
+              <div class="text-4xl font-bold text-gray-800 my-6">apple</div>
+              <div class="text-2xl text-gray-600 mb-6">りんご</div>
+              <div class="flex gap-3">
+                <button class="flex-1 py-3 bg-green-500 text-white rounded-lg font-bold">✓ 覚えた</button>
+                <button class="flex-1 py-3 bg-red-500 text-white rounded-lg font-bold">✗ もう一度</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 統計 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="grid grid-cols-4 gap-3">
+            <div class="text-center p-3 bg-blue-50 rounded-lg">
+              <div class="text-xl font-bold text-blue-600">15</div>
+              <div class="text-xs">今日</div>
+            </div>
+            <div class="text-center p-3 bg-green-50 rounded-lg">
+              <div class="text-xl font-bold text-green-600">87%</div>
+              <div class="text-xs">正答率</div>
+            </div>
+            <div class="text-center p-3 bg-orange-50 rounded-lg">
+              <div class="text-xl font-bold text-orange-600">5</div>
+              <div class="text-xs">連続</div>
+            </div>
+            <div class="text-center p-3 bg-purple-50 rounded-lg">
+              <div class="text-xl font-bold text-purple-600">127</div>
+              <div class="text-xs">総数</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案G: フルスクリーン型 -->
+  <div id="layout-g" class="layout-option">
+    <div class="h-screen flex flex-col bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <!-- 教科選択 -->
+      <div class="p-1 flex gap-1 bg-white/90 backdrop-blur-sm shadow">
+        <button class="flex-1 py-2 px-1 bg-blue-600 text-white rounded text-xs font-semibold">📚 英語</button>
+        <button class="flex-1 py-2 px-1 bg-gray-100 rounded text-xs">📖 国語</button>
+        <button class="flex-1 py-2 px-1 bg-gray-100 rounded text-xs">🌏 社会</button>
+      </div>
+      
+      <!-- 学習メニュー -->
+      <div class="p-1 flex gap-1 bg-white/80 backdrop-blur-sm border-b">
+        <button class="flex-1 py-1 px-1 bg-green-100 text-green-700 rounded text-xs font-semibold">暗記</button>
+        <button class="flex-1 py-1 px-1 bg-gray-50 rounded text-xs">和訳</button>
+        <button class="flex-1 py-1 px-1 bg-gray-50 rounded text-xs">スペル</button>
+        <button class="flex-1 py-1 px-1 bg-gray-50 rounded text-xs">文法</button>
+        <button class="flex-1 py-1 px-1 bg-gray-50 rounded text-xs">長文</button>
+      </div>
+
+      <!-- フルスクリーンカード -->
+      <div class="flex-1 flex items-center justify-center p-4">
+        <div class="max-w-3xl w-full">
+          <div class="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-12">
+            <div class="text-center">
+              <div class="text-7xl font-bold text-gray-800 mb-12">apple</div>
+              <div class="text-4xl text-gray-600 mb-16">りんご</div>
+              <div class="flex gap-6">
+                <button class="flex-1 py-6 bg-green-500 text-white rounded-2xl font-bold text-xl hover:bg-green-600 shadow-2xl">✓</button>
+                <button class="flex-1 py-6 bg-red-500 text-white rounded-2xl font-bold text-xl hover:bg-red-600 shadow-2xl">✗</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ミニ統計 -->
+      <div class="p-3">
+        <div class="max-w-2xl mx-auto grid grid-cols-4 gap-2">
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-blue-600">15</div>
+            <div class="text-xs">今日</div>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-green-600">87%</div>
+            <div class="text-xs">正答率</div>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-orange-600">5</div>
+            <div class="text-xs">連続</div>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-purple-600">127</div>
+            <div class="text-xs">総数</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const selector = document.getElementById('layoutSelector');
+    selector.addEventListener('change', (e) => {
+      document.querySelectorAll('.layout-option').forEach(layout => {
+        layout.classList.remove('active');
+      });
+      document.getElementById(`layout-${e.target.value}`).classList.add('active');
+    });
+  </script>
+</body>
+</html>

@@ -14,11 +14,24 @@
     <!-- サービスワーカー登録（アップデート検知用） -->
     <script>
       // サービスワーカーの登録とアップデート検知
-      if ('serviceWorker' in navigator) {
+      // 🔧 開発環境ではService Workerをスキップ（Viteとの競合を回避）
+      if ('serviceWorker' in navigator && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
         window.addEventListener('load', async () => {
           try {
             const registration = await navigator.serviceWorker.register('/sw.js', {
               scope: '/'
+            });
+
+            // 新しいSWが有効化され controller が切り替わったら、一度だけリロードして最新版JS/CSSへ揃える
+            // （端末間でUI/コンテンツが違って見える主要因＝古いキャッシュの残留を解消）
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+              try {
+                if (sessionStorage.getItem('_sw_reloaded_once') === '1') return;
+                sessionStorage.setItem('_sw_reloaded_once', '1');
+                setTimeout(() => window.location.reload(), 200);
+              } catch {
+                window.location.reload();
+              }
             });
 
             // アップデートチェック（起動時と5分ごと）
@@ -54,10 +67,10 @@
         sessionStorage.setItem('_lastSession', JSON.stringify(sessionState));
       });
     </script>
-    <script type="module" crossorigin src="/assets/index-0jeQuMXc.js"></script>
+    <script type="module" crossorigin src="/assets/index-C0XiAais.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/react-vendor-C14am9Lm.js">
     <link rel="modulepreload" crossorigin href="/assets/chart-vendor-Eu4deRvW.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-CjwIgPf5.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BxTYxjgn.css">
   </head>
   <body>
     <div id="root"></div>

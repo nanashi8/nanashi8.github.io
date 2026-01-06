@@ -1,158 +1,509 @@
 [
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "縄文時代",
+    "reading": "じょうもんじだい",
+    "matter": "歴史",
+    "question": "土器や石器を使い、狩りや漁を行った時代は？",
+    "explanation": "約1万2000年前から約2300年前まで続いた時代。縄目の文様がある縄文土器が特徴。竪穴住居に住み、狩猟・採集生活を送った。",
+    "relatedMatters": "弥生時代|縄文土器|竪穴住居",
+    "relatedFields": "歴史-古代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "平安時代|室町時代",
+    "year": -1
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "弥生時代",
+    "reading": "やよいじだい",
+    "matter": "歴史",
+    "question": "稲作が始まり、金属器が使われるようになった時代は？",
+    "explanation": "約2300年前から約1700年前まで続いた時代。大陸から稲作と金属器が伝わった。弥生土器を使用し、高床倉庫で米を保管した。身分の差が生まれ、クニができた。",
+    "relatedMatters": "縄文時代|古墳時代|稲作",
+    "relatedFields": "歴史-古代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "江戸時代|明治時代",
+    "year": -300
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "邪馬台国",
+    "reading": "やまたいこく",
+    "matter": "歴史",
+    "question": "卑弥呼が治めた国は？",
+    "explanation": "3世紀頃に存在したと考えられる国。女王卑弥呼が鬼道で人々を治めた。中国の歴史書『魏志倭人伝』に記録されている。場所は近畿説と九州説がある。",
+    "relatedMatters": "卑弥呼|魏志倭人伝|古墳時代",
+    "relatedFields": "歴史-古代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "大和朝廷|平城京",
+    "year": 200
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "古墳時代",
+    "reading": "こふんじだい",
+    "matter": "歴史",
+    "question": "前方後円墳などの大きな墓が造られた時代は？",
+    "explanation": "3世紀後半から7世紀頃の時代。有力者の墓として前方後円墳などの大型古墳が造られた。大和朝廷が勢力を拡大し、日本統一が進んだ。",
+    "relatedMatters": "前方後円墳|大和朝廷|古墳",
+    "relatedFields": "歴史-古代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "奈良時代|平安時代",
+    "year": 300
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "聖徳太子",
+    "reading": "しょうとくたいし",
+    "matter": "歴史",
+    "question": "冠位十二階や十七条の憲法を定めた人物は？",
+    "explanation": "飛鳥時代の政治家。推古天皇の摂政として活躍。冠位十二階で才能ある人材を登用し、十七条の憲法で役人の心得を示した。遣隋使を派遣し、中国の文化を学んだ。",
+    "relatedMatters": "冠位十二階|十七条の憲法|遣隋使",
+    "relatedFields": "歴史-古代",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "織田信長|徳川家康",
+    "year": 574
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "大化の改新",
+    "reading": "たいかのかいしん",
+    "matter": "歴史",
+    "question": "中大兄皇子と中臣鎌足が蘇我氏を倒して始めた政治改革は？",
+    "explanation": "645年に始まった日本初の本格的な政治改革。蘇我氏を倒し、天皇中心の政治を目指した。公地公民制を導入し、戸籍・班田収授法を整備した。",
+    "relatedMatters": "中大兄皇子|中臣鎌足|蘇我氏",
+    "relatedFields": "歴史-古代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "明治維新|江戸幕府",
+    "year": 645
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "奈良時代",
+    "reading": "ならじだい",
+    "matter": "歴史",
+    "question": "平城京に都が置かれた時代は？",
+    "explanation": "710年から794年までの約80年間。平城京（奈良）に都が置かれた。聖武天皇が国分寺や東大寺の大仏を造り、仏教の力で国を治めようとした。『古事記』『日本書紀』が編纂された。",
+    "relatedMatters": "平城京|聖武天皇|東大寺",
+    "relatedFields": "歴史-古代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "平安時代|鎌倉時代",
+    "year": 710
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "平安時代",
+    "reading": "へいあんじだい",
+    "matter": "歴史",
+    "question": "平安京に都が置かれ、貴族文化が栄えた時代は？",
+    "explanation": "794年から1185年までの約400年間。桓武天皇が平安京（京都）に都を移した。藤原氏が摂関政治で権力を握り、国風文化が発展。かな文字が生まれ、『源氏物語』『枕草子』が書かれた。",
+    "relatedMatters": "平安京|藤原氏|国風文化",
+    "relatedFields": "歴史-古代",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "室町時代|江戸時代",
+    "year": 794
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "鎌倉幕府",
+    "reading": "かまくらばくふ",
+    "matter": "歴史",
+    "question": "源頼朝が開いた武家政権は？",
+    "explanation": "1185年に源頼朝が開いた日本初の武家政権。征夷大将軍に任命され、鎌倉に幕府を開いた。守護・地頭を置き、御恩と奉公の関係で武士を統治した。執権北条氏が実権を握った。",
+    "relatedMatters": "源頼朝|執権|御恩と奉公",
+    "relatedFields": "歴史-中世",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "室町幕府|江戸幕府",
+    "year": 1185
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "元寇",
+    "reading": "げんこう",
+    "matter": "歴史",
+    "question": "モンゴル帝国が日本に攻めてきた事件は？",
+    "explanation": "1274年と1281年の2回、元（モンゴル）が日本を攻めた。執権北条時宗が防戦し、暴風雨（神風）もあって撃退した。しかし恩賞が不十分で御家人の生活が苦しくなり、幕府の衰退につながった。",
+    "relatedMatters": "元|北条時宗|神風",
+    "relatedFields": "歴史-中世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "応仁の乱|関ヶ原の戦い",
+    "year": 1274
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "室町幕府",
+    "reading": "むろまちばくふ",
+    "matter": "歴史",
+    "question": "足利尊氏が京都に開いた幕府は？",
+    "explanation": "1336年に足利尊氏が開いた武家政権。京都の室町に幕府を置いた。3代将軍足利義満が南北朝を統一し、金閣を建てた。8代将軍足利義政の時代に応仁の乱が起き、戦国時代へと続いた。",
+    "relatedMatters": "足利尊氏|金閣|応仁の乱",
+    "relatedFields": "歴史-中世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "鎌倉幕府|江戸幕府",
+    "year": 1336
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "応仁の乱",
+    "reading": "おうにんのらん",
+    "matter": "歴史",
+    "question": "京都を戦場にした11年間続いた大乱は？",
+    "explanation": "1467年から1477年まで続いた大規模な内乱。将軍後継問題と守護大名の対立が原因。京都は焼け野原となり、幕府の権威は失墜。下剋上の風潮が広がり、戦国時代の始まりとなった。",
+    "relatedMatters": "足利義政|戦国時代|下剋上",
+    "relatedFields": "歴史-中世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "関ヶ原の戦い|大阪の陣",
+    "year": 1467
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "戦国大名",
+    "reading": "せんごくだいみょう",
+    "matter": "歴史",
+    "question": "戦国時代に各地を支配した武将たちを何と呼ぶか？",
+    "explanation": "15世紀後半から16世紀にかけて、各地で独自の支配を行った大名。分国法を定め、家臣団を組織。領国経営に力を入れた。代表例は武田信玄、上杉謙信、毛利元就など。",
+    "relatedMatters": "武田信玄|上杉謙信|分国法",
+    "relatedFields": "歴史-中世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "江戸幕府|明治政府",
+    "year": 1500
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "織田信長",
+    "reading": "おだのぶなが",
+    "matter": "歴史",
+    "question": "楽市楽座や兵農分離を進め、天下統一を目指した武将は？",
+    "explanation": "戦国時代の武将。1560年桶狭間の戦いで今川義元を破る。楽市楽座で商業を発展させ、兵農分離を進めた。1582年本能寺の変で明智光秀に討たれた。",
+    "relatedMatters": "楽市楽座|本能寺の変|兵農分離",
+    "relatedFields": "歴史-中世",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "豊臣秀吉|徳川家康",
+    "year": 1534
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "豊臣秀吉",
+    "reading": "とよとみひでよし",
+    "matter": "歴史",
+    "question": "太閤検地や刀狩を行い、全国統一を果たした人物は？",
+    "explanation": "織田信長の後継者として天下統一を達成。太閤検地で土地と農民を把握し、刀狩で武士と農民を区別した。朝鮮出兵（文禄・慶長の役）を行うも失敗。",
+    "relatedMatters": "太閤検地|刀狩|朝鮮出兵",
+    "relatedFields": "歴史-中世",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "織田信長|徳川家康",
+    "year": 1537
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "関ヶ原の戦い",
+    "reading": "せきがはらのたたかい",
+    "matter": "歴史",
+    "question": "徳川家康が石田三成を破った天下分け目の戦いは？",
+    "explanation": "1600年に起きた戦い。豊臣秀吉の死後、徳川家康率いる東軍と石田三成率いる西軍が激突。東軍が勝利し、家康が天下の実権を握った。3年後に江戸幕府が開かれた。",
+    "relatedMatters": "徳川家康|石田三成|東軍と西軍",
+    "relatedFields": "歴史-近世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "大阪の陣|応仁の乱",
+    "year": 1600
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "江戸幕府",
+    "reading": "えどばくふ",
+    "matter": "歴史",
+    "question": "徳川家康が開いた武家政権は？",
+    "explanation": "1603年に徳川家康が開いた幕府。江戸（東京）に幕府を置き、約260年間続いた。参勤交代や武家諸法度で大名を統制。士農工商の身分制度を確立し、鎖国政策をとった。",
+    "relatedMatters": "徳川家康|参勤交代|鎖国",
+    "relatedFields": "歴史-近世",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "明治政府|鎌倉幕府",
+    "year": 1603
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "参勤交代",
+    "reading": "さんきんこうたい",
+    "matter": "歴史",
+    "question": "大名を1年おきに江戸と領地を往復させた制度は？",
+    "explanation": "3代将軍徳川家光が制度化。大名を1年おきに江戸に出仕させ、妻子を江戸に住まわせた。大名の経済力を弱め、謀反を防ぐ狙い。街道や宿場町が発展するきっかけとなった。",
+    "relatedMatters": "徳川家光|大名|武家諸法度",
+    "relatedFields": "歴史-近世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "鎖国|五街道",
+    "year": 1635
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "鎖国",
+    "reading": "さこく",
+    "matter": "歴史",
+    "question": "江戸幕府が外国との交流を制限した政策は？",
+    "explanation": "1639年頃に完成した対外政策。キリスト教の広まりを恐れ、ポルトガル船の来航を禁止。長崎の出島でオランダと中国のみと貿易。朝鮮・琉球とも限定的に交流した。",
+    "relatedMatters": "出島|オランダ|キリスト教",
+    "relatedFields": "歴史-近世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "開国|攘夷",
+    "year": 1639
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "徳川綱吉",
+    "reading": "とくがわつなよし",
+    "matter": "歴史",
+    "question": "生類憐みの令を出した5代将軍は？",
+    "explanation": "江戸幕府5代将軍。儒学を奨励し、湯島聖堂を建てた。生類憐みの令で動物愛護を命じるも、行き過ぎた政策で庶民の生活を圧迫。貨幣の質を下げ、経済混乱を招いた。",
+    "relatedMatters": "生類憐みの令|湯島聖堂|元禄文化",
+    "relatedFields": "歴史-近世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "徳川吉宗|徳川家康",
+    "year": 1646
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "享保の改革",
+    "reading": "きょうほうのかいかく",
+    "matter": "歴史",
+    "question": "徳川吉宗が行った幕府の財政立て直し政策は？",
+    "explanation": "8代将軍徳川吉宗が1716年頃から始めた改革。新田開発で年貢を増やし、倹約を奨励。目安箱を設置し、庶民の意見を聞いた。上げ米の制で大名から米を集めた。",
+    "relatedMatters": "徳川吉宗|目安箱|新田開発",
+    "relatedFields": "歴史-近世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "寛政の改革|天保の改革",
+    "year": 1716
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "国学",
+    "reading": "こくがく",
+    "matter": "歴史",
+    "question": "江戸時代に日本の古典を研究する学問は？",
+    "explanation": "江戸時代中期に発展した学問。儒教や仏教の影響を受ける前の、日本古来の精神や文化を研究。本居宣長が『古事記伝』を著し、国学を大成した。尊王攘夷思想に影響を与えた。",
+    "relatedMatters": "本居宣長|古事記伝|蘭学",
+    "relatedFields": "歴史-近世",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "儒学|洋学",
+    "year": 1730
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "ペリー",
+    "reading": "ペリー",
+    "matter": "歴史",
+    "question": "1853年に浦賀に来航したアメリカの軍人は？",
+    "explanation": "アメリカ東インド艦隊司令長官。1853年に4隻の黒船で浦賀に来航し、開国を要求。翌1854年に日米和親条約を結ばせた。これをきっかけに日本は鎖国を終え、開国した。",
+    "relatedMatters": "黒船|日米和親条約|開国",
+    "relatedFields": "歴史-近代",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "ハリス|勝海舟",
+    "year": 1853
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "日米修好通商条約",
+    "reading": "にちべいしゅうこうつうしょうじょうやく",
+    "matter": "歴史",
+    "question": "1858年に大老井伊直弼が結んだ不平等な条約は？",
+    "explanation": "1858年に井伊直弼が勅許なしで調印した通商条約。領事裁判権を認め（治外法権）、関税自主権がない不平等条約。この条約締結が幕府への不満を高め、尊王攘夷運動が激化した。",
+    "relatedMatters": "井伊直弼|治外法権|関税自主権",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "日米和親条約|安政の大獄",
+    "year": 1858
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "明治維新",
+    "reading": "めいじいしん",
+    "matter": "歴史",
+    "question": "江戸幕府を倒し、天皇中心の新政府を樹立した改革は？",
+    "explanation": "1868年の王政復古を経て始まった日本の近代化改革。五箇条の御誓文で新政府の方針を示し、版籍奉還・廃藩置県で中央集権国家を確立。身分制度を廃止し、四民平等を実現した。",
+    "relatedMatters": "王政復古|五箇条の御誓文|廃藩置県",
+    "relatedFields": "歴史-近代",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "大化の改新|明治時代",
+    "year": 1868
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "廃藩置県",
+    "reading": "はいはんちけん",
+    "matter": "歴史",
+    "question": "藩を廃止して県を置き、中央集権国家を確立した政策は？",
+    "explanation": "1871年に実施された改革。全国の藩を廃止して県とし、中央政府が知事を派遣。これにより江戸時代の封建制度が解体され、近代的な中央集権国家が成立した。",
+    "relatedMatters": "版籍奉還|中央集権|明治維新",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "地租改正|殖産興業",
+    "year": 1871
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "文明開化",
+    "reading": "ぶんめいかいか",
+    "matter": "歴史",
+    "question": "明治時代に西洋の文化や技術が広まった現象は？",
+    "explanation": "明治時代初期の欧米文化の受容。洋服・洋食・ガス灯・鉄道など西洋の生活様式が導入された。福沢諭吉『学問のすゝめ』が刊行され、啓蒙思想が広まった。",
+    "relatedMatters": "福沢諭吉|学問のすゝめ|殖産興業",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "富国強兵|鎖国",
+    "year": 1868
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "自由民権運動",
+    "reading": "じゆうみんけんうんどう",
+    "matter": "歴史",
+    "question": "国会開設と憲法制定を求めた政治運動は？",
+    "explanation": "1870年代から80年代の民主化運動。板垣退助らが民撰議院設立の建白書を提出。国会開設を求め、政党（自由党・立憲改進党）を結成。政府は集会条例や保安条例で弾圧した。",
+    "relatedMatters": "板垣退助|国会開設|民撰議院",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "大日本帝国憲法|政党政治",
+    "year": 1874
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "大日本帝国憲法",
+    "reading": "だいにほんていこくけんぽう",
+    "matter": "歴史",
+    "question": "1889年に発布された日本初の憲法は？",
+    "explanation": "明治政府が制定した憲法。伊藤博文らがプロイセン（ドイツ）憲法を参考に作成。天皇主権、帝国議会の設置、国民の権利を「臣民の権利」として限定的に認めた。",
+    "relatedMatters": "伊藤博文|天皇主権|帝国議会",
+    "relatedFields": "歴史-近代",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "日本国憲法|五箇条の御誓文",
+    "year": 1889
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "日清戦争",
+    "reading": "にっしんせんそう",
+    "matter": "歴史",
+    "question": "朝鮮の支配権をめぐり日本と清が戦った戦争は？",
+    "explanation": "1894-95年の戦争。朝鮮をめぐる対立から日本と清が開戦。日本が勝利し、下関条約で台湾を獲得。清から多額の賠償金を得た。しかし三国干渉で遼東半島を返還させられた。",
+    "relatedMatters": "下関条約|三国干渉|台湾",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "日露戦争|日中戦争",
+    "year": 1894
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "日露戦争",
+    "reading": "にちろせんそう",
+    "matter": "歴史",
+    "question": "満州と朝鮮の支配権をめぐり日本とロシアが戦った戦争は？",
+    "explanation": "1904-05年の戦争。ロシアの南下政策に対抗して開戦。旅順攻囲戦、日本海海戦などで勝利。ポーツマス条約で韓国の支配権を認めさせたが、賠償金は得られず、日比谷焼打事件が起きた。",
+    "relatedMatters": "ポーツマス条約|日本海海戦|韓国併合",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "日清戦争|第一次世界大戦",
+    "year": 1904
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "第一次世界大戦",
+    "reading": "だいいちじせかいたいせん",
+    "matter": "歴史",
+    "question": "1914年に始まった世界規模の戦争は？",
+    "explanation": "1914-18年の世界大戦。日英同盟を理由に日本は連合国側で参戦。ドイツの中国権益を奪い、大戦景気で経済発展。戦後のパリ講和会議で国際連盟が成立し、日本は常任理事国となった。",
+    "relatedMatters": "国際連盟|パリ講和会議|大戦景気",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "第二次世界大戦|日露戦争",
+    "year": 1914
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "大正デモクラシー",
+    "reading": "たいしょうデモクラシー",
+    "matter": "歴史",
+    "question": "大正時代に民主主義を求める風潮が高まった運動は？",
+    "explanation": "大正時代（1912-26年）の民主化運動。吉野作造が民本主義を唱え、護憲運動や普通選挙運動が起こった。1925年に普通選挙法が成立し、25歳以上の男子に選挙権が与えられた。",
+    "relatedMatters": "吉野作造|民本主義|普通選挙法",
+    "relatedFields": "歴史-近代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "自由民権運動|政党政治",
+    "year": 1912
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "関東大震災",
+    "reading": "かんとうだいしんさい",
+    "matter": "歴史",
+    "question": "1923年に関東地方を襲った大地震は？",
+    "explanation": "1923年9月1日に発生したマグニチュード7.9の地震。東京・横浜を中心に壊滅的被害。死者・行方不明者約10万5000人。火災が被害を拡大し、朝鮮人虐殺事件も発生した。",
+    "relatedMatters": "震災|東京|火災",
+    "relatedFields": "歴史-現代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "阪神淡路大震災|東日本大震災",
+    "year": 1923
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "満州事変",
+    "reading": "まんしゅうじへん",
+    "matter": "歴史",
+    "question": "1931年に日本軍が満州を占領した事件は？",
+    "explanation": "1931年に関東軍が起こした軍事行動。柳条湖事件を口実に満州全域を占領。翌年、満州国を建国し、清朝最後の皇帝溥儀を執政とした。国際連盟は日本の行動を非難し、日本は脱退した。",
+    "relatedMatters": "関東軍|満州国|国際連盟脱退",
+    "relatedFields": "歴史-現代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "日中戦争|太平洋戦争",
+    "year": 1931
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "太平洋戦争",
+    "reading": "たいへいようせんそう",
+    "matter": "歴史",
+    "question": "1941年に始まった日本とアメリカの戦争は？",
+    "explanation": "1941-45年の戦争。真珠湾攻撃で開戦。当初は優勢だったが、ミッドウェー海戦以降劣勢に。沖縄戦、広島・長崎への原爆投下を経て、1945年8月15日にポツダム宣言を受諾し無条件降伏。",
+    "relatedMatters": "真珠湾攻撃|原爆|ポツダム宣言",
+    "relatedFields": "歴史-現代",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "日中戦争|第二次世界大戦",
+    "year": 1941
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "日本国憲法",
+    "reading": "にほんこくけんぽう",
+    "matter": "歴史",
+    "question": "1946年に公布された現在の憲法は？",
+    "explanation": "1946年11月3日公布、1947年5月3日施行。国民主権、基本的人権の尊重、平和主義の三大原則。第9条で戦争放棄を規定。GHQの指導のもと作成された。",
+    "relatedMatters": "国民主権|平和主義|基本的人権",
+    "relatedFields": "歴史-現代",
+    "difficulty": 1,
+    "source": "junior",
+    "choiceHints": "大日本帝国憲法|民主主義",
+    "year": 1946
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "サンフランシスコ平和条約",
+    "reading": "サンフランシスコへいわじょうやく",
+    "matter": "歴史",
+    "question": "1951年に日本が独立を回復した条約は？",
+    "explanation": "1951年調印、1952年発効。日本は主権を回復し、占領が終了。同時に日米安全保障条約も調印。ソ連や中国は参加せず。賠償問題などは個別に解決することになった。",
+    "relatedMatters": "占領終了|主権回復|日米安保条約",
+    "relatedFields": "歴史-現代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "ポツダム宣言|日米安保条約",
+    "year": 1951
   },
   {
-    "difficulty": null,
-    "source": "junior"
+    "term": "高度経済成長",
+    "reading": "こうどけいざいせいちょう",
+    "matter": "歴史",
+    "question": "1950-70年代に日本経済が急速に発展した時期は？",
+    "explanation": "1950年代半ばから1970年代初めまでの経済発展期。年平均10%以上の成長率。所得倍増計画、東海道新幹線開通、東京オリンピック開催。1968年にGNP世界第2位となった。公害問題も深刻化。",
+    "relatedMatters": "所得倍増計画|東京オリンピック|公害問題",
+    "relatedFields": "歴史-現代",
+    "difficulty": 3,
+    "source": "junior",
+    "choiceHints": "バブル経済|経済成長",
+    "year": 1955
   }
 ]

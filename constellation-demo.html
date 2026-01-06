@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Constellation - デモ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0f 100%);
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header h1::before {
+      content: "⭐";
+      font-size: 24px;
+    }
+
+    #constellation {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* 背景の星 */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: twinkle 3s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    /* 中心ゴール（太陽） */
+    .goal {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffd700 0%, #ff8c00 70%, #ff6600 100%);
+      box-shadow:
+        0 0 30px #ffd700,
+        0 0 60px #ff8c00,
+        0 0 90px rgba(255, 140, 0, 0.5);
+      animation: pulse 2s ease-in-out infinite;
+      z-index: 10;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .goal::after {
+      content: "☀️";
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.85; }
+    }
+
+    /* ファイルノード（惑星） */
+    .node {
+      position: absolute;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .node.high-priority {
+      background: radial-gradient(circle, #4a9eff 0%, #2d5f8f 80%, #1a3a5f 100%);
+      box-shadow:
+        0 0 15px #4a9eff,
+        0 0 25px rgba(74, 158, 255, 0.5);
+    }
+
+    .node.medium-priority {
+      background: radial-gradient(circle, #8b9eff 0%, #4a5f8f 80%, #2a3f5f 100%);
+      box-shadow:
+        0 0 10px #8b9eff,
+        0 0 20px rgba(139, 158, 255, 0.4);
+    }
+
+    .node.low-priority {
+      background: radial-gradient(circle, #888 0%, #555 80%, #333 100%);
+      box-shadow:
+        0 0 5px #888,
+        0 0 10px rgba(136, 136, 136, 0.3);
+    }
+
+    /* 編集中のファイル */
+    .node.current {
+      background: radial-gradient(circle, #ff4444 0%, #cc0000 80%, #990000 100%);
+      box-shadow:
+        0 0 25px #ff4444,
+        0 0 50px #cc0000,
+        0 0 75px rgba(255, 68, 68, 0.5);
+      animation: active-pulse 1.5s ease-in-out infinite;
+      z-index: 100;
+    }
+
+    @keyframes active-pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow:
+          0 0 25px #ff4444,
+          0 0 50px #cc0000;
+      }
+      50% {
+        transform: scale(1.3);
+        box-shadow:
+          0 0 35px #ff4444,
+          0 0 70px #cc0000,
+          0 0 100px rgba(255, 68, 68, 0.6);
+      }
+    }
+
+    /* 関連ファイル */
+    .node.related {
+      background: radial-gradient(circle, #44ff88 0%, #228844 80%, #116622 100%);
+      box-shadow:
+        0 0 20px #44ff88,
+        0 0 40px rgba(68, 255, 136, 0.5);
+      animation: related-glow 1.8s ease-in-out infinite;
+    }
+
+    @keyframes related-glow {
+      0%, 100% {
+        box-shadow: 0 0 20px #44ff88;
+      }
+      50% {
+        box-shadow:
+          0 0 30px #44ff88,
+          0 0 50px rgba(68, 255, 136, 0.6);
+      }
+    }
+
+    .node:hover {
+      transform: scale(1.4) !important;
+      z-index: 50;
+    }
+
+    /* 結合線（軌道） */
+    .edge {
+      position: absolute;
+      transform-origin: 0 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .edge.strong {
+      height: 2px;
+      background: linear-gradient(90deg, rgba(74, 158, 255, 0.6) 0%, transparent 100%);
+    }
+
+    .edge.weak {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(136, 136, 136, 0.3) 0%, transparent 100%);
+    }
+
+    /* ラベル */
+    .label {
+      position: absolute;
+      font-size: 11px;
+      white-space: nowrap;
+      pointer-events: none;
+      text-shadow: 0 0 5px #000, 0 0 10px #000;
+      z-index: 6;
+      opacity: 0.9;
+    }
+
+    /* 情報パネル */
+    #info {
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      min-height: 80px;
+    }
+
+    #info .section {
+      margin-bottom: 8px;
+    }
+
+    #info .label-text {
+      color: #999;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    #info .current-file {
+      color: #ff4444;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    #info .related-files {
+      color: #44ff88;
+      font-size: 12px;
+    }
+
+    #info .goal-info {
+      color: #ffd700;
+      font-size: 12px;
+    }
+
+    /* ツールチップ */
+    .tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      pointer-events: none;
+      z-index: 1000;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      display: none;
+      max-width: 250px;
+    }
+
+    .tooltip.show {
+      display: block;
+    }
+
+    .tooltip .file-name {
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #4a9eff;
+    }
+
+    .tooltip .detail {
+      margin: 3px 0;
+      font-size: 11px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Neural Constellation</h1>
+  </header>
+
+  <div id="constellation"></div>
+
+  <div id="info">
+    <div class="section">
+      <div class="label-text">中心ゴール</div>
+      <div class="goal-info" id="goal-name">QuestionScheduler.ts</div>
+    </div>
+    <div class="section">
+      <div class="label-text">編集中</div>
+      <div class="current-file" id="current">MemoryAI.ts をクリックしてみてください</div>
+    </div>
+    <div class="section">
+      <div class="label-text">関連ファイル（結合度順）</div>
+      <div class="related-files" id="related">-</div>
+    </div>
+  </div>
+
+  <div class="tooltip" id="tooltip">
+    <div class="file-name"></div>
+    <div class="detail priority"></div>
+    <div class="detail connections"></div>
+    <div class="detail modified"></div>
+  </div>
+
+  <script>
+    // サンプルデータ（実際は拡張から取得）
+    const sampleNodes = [
+      { id: 'QuestionScheduler.ts', label: 'QuestionScheduler', priority: 1.0, category: 'AI', size: 24, connections: 8, modified: '1日前' },
+      { id: 'MemoryAI.ts', label: 'MemoryAI', priority: 0.9, category: 'AI', size: 20, connections: 6, modified: '2日前' },
+      { id: 'GamificationAI.ts', label: 'GamificationAI', priority: 0.85, category: 'AI', size: 18, connections: 5, modified: '3日前' },
+      { id: 'AICoordinator.ts', label: 'AICoordinator', priority: 0.8, category: 'AI', size: 18, connections: 7, modified: '1日前' },
+      { id: 'Button.tsx', label: 'Button', priority: 0.6, category: 'UI', size: 14, connections: 3, modified: '5日前' },
+      { id: 'QuestionCard.tsx', label: 'QuestionCard', priority: 0.7, category: 'UI', size: 16, connections: 4, modified: '2日前' },
+      { id: 'progressStorage.ts', label: 'progressStorage', priority: 0.75, category: 'Data', size: 16, connections: 5, modified: '4日前' },
+      { id: 'memoryAlgorithm.ts', label: 'memoryAlgorithm', priority: 0.65, category: 'Data', size: 14, connections: 4, modified: '7日前' },
+      { id: 'scheduler.test.ts', label: 'scheduler.test', priority: 0.5, category: 'Test', size: 12, connections: 2, modified: '3日前' },
+      { id: 'utils.ts', label: 'utils', priority: 0.4, category: 'Util', size: 10, connections: 8, modified: '14日前' }
+    ];
+
+    const container = document.getElementById('constellation');
+    const tooltip = document.getElementById('tooltip');
+    const width = window.innerWidth;
+    const height = window.innerHeight - 200; // ヘッダー・フッター分
+    const centerX = width / 2;
+    const centerY = height / 2;
+
+    let currentNode = null;
+    let relatedNodes = [];
+
+    // 背景の星を生成
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * width + 'px';
+      star.style.top = Math.random() * height + 'px';
+      star.style.animationDelay = Math.random() * 3 + 's';
+      container.appendChild(star);
+    }
+
+    // 中心ゴールを配置
+    const goal = document.createElement('div');
+    goal.className = 'goal';
+    goal.style.left = centerX - 20 + 'px';
+    goal.style.top = centerY - 20 + 'px';
+    goal.title = 'プロジェクトのゴール';
+    container.appendChild(goal);
+
+    // ノードを配置（円形レイアウト）
+    sampleNodes.forEach((node, i) => {
+      const angle = (i / sampleNodes.length) * 2 * Math.PI - Math.PI / 2; // -90度から開始
+      const radius = 100 + (1 - node.priority) * 120; // 優先度高い=中心に近い
+
+      const x = centerX + Math.cos(angle) * radius;
+      const y = centerY + Math.sin(angle) * radius;
+
+      // ノード要素
+      const el = document.createElement('div');
+      el.className = 'node';
+      if (node.priority >= 0.8) el.classList.add('high-priority');
+      else if (node.priority >= 0.6) el.classList.add('medium-priority');
+      else el.classList.add('low-priority');
+
+      el.dataset.id = node.id;
+      el.dataset.priority = node.priority;
+      el.dataset.connections = node.connections;
+      el.dataset.modified = node.modified;
+      el.style.left = x - node.size/2 + 'px';
+      el.style.top = y - node.size/2 + 'px';
+      el.style.width = node.size + 'px';
+      el.style.height = node.size + 'px';
+
+      // クリックイベント
+      el.addEventListener('click', () => {
+        // 既存のハイライトをクリア
+        document.querySelectorAll('.node').forEach(n => {
+          n.classList.remove('current', 'related');
+        });
+
+        // 現在のノードをハイライト
+        el.classList.add('current');
+        currentNode = node.id;
+
+        // 関連ノードをランダムに選択（実際はグラフから取得）
+        const relatedCount = Math.min(3, sampleNodes.length - 1);
+        relatedNodes = sampleNodes
+          .filter(n => n.id !== node.id)
+          .sort(() => Math.random() - 0.5)
+          .slice(0, relatedCount);
+
+        relatedNodes.forEach(rn => {
+          const relEl = document.querySelector(`[data-id="${rn.id}"]`);
+          if (relEl) relEl.classList.add('related');
+        });
+
+        // 情報パネル更新
+        document.getElementById('current').textContent = node.label + '.ts';
+        document.getElementById('related').textContent =
+          relatedNodes.map(rn => rn.label + '.ts').join(', ') || '-';
+      });
+
+      // ホバーイベント
+      el.addEventListener('mouseenter', (e) => {
+        tooltip.querySelector('.file-name').textContent = node.label + '.ts';
+        tooltip.querySelector('.priority').textContent = `優先度: ${Math.round(node.priority * 100)}%`;
+        tooltip.querySelector('.connections').textContent = `結合数: ${node.connections}`;
+        tooltip.querySelector('.modified').textContent = `最終更新: ${node.modified}`;
+
+        tooltip.style.left = e.pageX + 15 + 'px';
+        tooltip.style.top = e.pageY + 15 + 'px';
+        tooltip.classList.add('show');
+      });
+
+      el.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('show');
+      });
+
+      el.addEventListener('mousemove', (e) => {
+        tooltip.style.left = e.pageX + 15 + 'px';
+        tooltip.style.top = e.pageY + 15 + 'px';
+      });
+
+      container.appendChild(el);
+
+      // ラベル
+      const label = document.createElement('div');
+      label.className = 'label';
+      label.textContent = node.label;
+      label.style.left = x + node.size/2 + 8 + 'px';
+      label.style.top = y - 5 + 'px';
+      container.appendChild(label);
+
+      // 中心への線（優先度高いもののみ）
+      if (node.priority > 0.65) {
+        const edge = document.createElement('div');
+        edge.className = 'edge ' + (node.priority > 0.8 ? 'strong' : 'weak');
+
+        const dx = x - centerX;
+        const dy = y - centerY;
+        const length = Math.sqrt(dx*dx + dy*dy) - 20; // ゴールのサイズ分引く
+        const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+        edge.style.left = centerX + 'px';
+        edge.style.top = centerY + 'px';
+        edge.style.width = length + 'px';
+        edge.style.transform = `rotate(${angle}deg)`;
+
+        container.insertBefore(edge, container.firstChild.nextSibling);
+      }
+    });
+
+    // 初期状態で MemoryAI を強調
+    setTimeout(() => {
+      const memoryNode = document.querySelector('[data-id="MemoryAI.ts"]');
+      if (memoryNode) {
+        memoryNode.click();
+      }
+    }, 500);
+  </script>
+</body>
+</html>
