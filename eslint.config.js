@@ -5,7 +5,18 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'node_modules', 'playwright-report', 'test-results', 'coverage', 'scripts/**/*.ts'],
+    ignores: [
+      'dist',
+      'node_modules',
+      'playwright-report',
+      'test-results',
+      'coverage',
+      'scripts/**/*.ts',
+      '**/vendor/**',
+      'public/vendor/**',
+      'extensions/**/media/vendor/**',
+      'extensions/**/dist/**',
+    ],
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -23,7 +34,10 @@ export default tseslint.config(
         { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
       ],
       // 未使用変数は段階的に解消。まずは警告から再有効化
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
       // フックの最適化は後続フェーズ
       'react-hooks/exhaustive-deps': 'off',
       'react-hooks/purity': 'off',
@@ -36,5 +50,5 @@ export default tseslint.config(
       'react-hooks/immutability': 'off',
       'react-hooks/rules-of-hooks': 'error',
     },
-  },
+  }
 );

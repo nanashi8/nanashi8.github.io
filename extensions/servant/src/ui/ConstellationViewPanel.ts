@@ -40,54 +40,54 @@ export class ConstellationViewPanel {
     this._panel.onDidDispose(() => this.dispose(), null, this._disposables);
 
     // Handle messages from the webview
-        this._panel.webview.onDidReceiveMessage(
-            (message) => {
-                switch (message.command) {
-                    case 'openFile':
-                        this._openFile(message.filePath);
-                        return;
-                    case 'showInfo':
-                        this._showNodeInfo(message.nodeId);
-                        return;
-                    case 'refresh':
-                        this._refresh();
-                        return;
-                    case 'webviewError': {
-                        const details = [
-                            message.message ? `message=${message.message}` : '',
-                            message.source ? `source=${message.source}` : '',
-                            typeof message.line === 'number' ? `line=${message.line}` : '',
-                            typeof message.column === 'number' ? `column=${message.column}` : '',
-                        ]
-                            .filter(Boolean)
-                            .join(' ');
-                        console.error(`[Constellation WebView Error] ${details}`);
-                        return;
-                    }
-                    case 'ready': {
-                        this._webviewReady = true;
+    this._panel.webview.onDidReceiveMessage(
+      (message) => {
+        switch (message.command) {
+          case 'openFile':
+            this._openFile(message.filePath);
+            return;
+          case 'showInfo':
+            this._showNodeInfo(message.nodeId);
+            return;
+          case 'refresh':
+            this._refresh();
+            return;
+          case 'webviewError': {
+            const details = [
+              message.message ? `message=${message.message}` : '',
+              message.source ? `source=${message.source}` : '',
+              typeof message.line === 'number' ? `line=${message.line}` : '',
+              typeof message.column === 'number' ? `column=${message.column}` : '',
+            ]
+              .filter(Boolean)
+              .join(' ');
+            console.error(`[Constellation WebView Error] ${details}`);
+            return;
+          }
+          case 'ready': {
+            this._webviewReady = true;
 
-                        if (this._latestData) {
-                            this._panel.webview.postMessage({
-                                command: 'updateData',
-                                data: this._latestData,
-                            });
-                            return;
-                        }
+            if (this._latestData) {
+              this._panel.webview.postMessage({
+                command: 'updateData',
+                data: this._latestData,
+              });
+              return;
+            }
 
-                        if (this._pendingError) {
-                            this._panel.webview.postMessage({
-                                command: 'error',
-                                message: this._pendingError,
-                            });
-                        }
-                        return;
-                    }
-                }
-            },
-            null,
-            this._disposables
-        );
+            if (this._pendingError) {
+              this._panel.webview.postMessage({
+                command: 'error',
+                message: this._pendingError,
+              });
+            }
+            return;
+          }
+        }
+      },
+      null,
+      this._disposables
+    );
   }
 
   /**
@@ -171,7 +171,7 @@ export class ConstellationViewPanel {
     try {
       const uri = vscode.Uri.file(filePath);
       await vscode.window.showTextDocument(uri);
-    } catch (error) {
+    } catch {
       vscode.window.showErrorMessage(`ファイルを開けません: ${filePath}`);
     }
   }
@@ -210,9 +210,9 @@ export class ConstellationViewPanel {
   private async _update(): Promise<void> {
     const webview = this._panel.webview;
 
-        this._webviewReady = false;
-        this._latestData = null;
-        this._pendingError = null;
+    this._webviewReady = false;
+    this._latestData = null;
+    this._pendingError = null;
 
     this._panel.title = '🌟 天体儀ビュー';
     this._panel.webview.html = await this._getHtmlForWebview(webview);
@@ -220,25 +220,25 @@ export class ConstellationViewPanel {
     // Send initial data
     try {
       const data = await this._generator.generate();
-            this._latestData = data;
+      this._latestData = data;
 
-            if (this._webviewReady) {
-                webview.postMessage({
-                    command: 'updateData',
-                    data: data,
-                });
-            }
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : String(error);
+      if (this._webviewReady) {
+        webview.postMessage({
+          command: 'updateData',
+          data: data,
+        });
+      }
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : String(err);
       vscode.window.showErrorMessage(`天体儀データの生成に失敗: ${errorMessage}`);
-            this._pendingError = errorMessage;
+      this._pendingError = errorMessage;
 
-            if (this._webviewReady) {
-                webview.postMessage({
-                    command: 'error',
-                    message: errorMessage,
-                });
-            }
+      if (this._webviewReady) {
+        webview.postMessage({
+          command: 'error',
+          message: errorMessage,
+        });
+      }
     }
   }
 
@@ -246,13 +246,13 @@ export class ConstellationViewPanel {
    * Generate HTML content for the webview
    */
   private async _getHtmlForWebview(webview: vscode.Webview): Promise<string> {
-        // Three.js is vendored into the extension to avoid CDN/network dependency.
-        const threejsUri = webview.asWebviewUri(
-            vscode.Uri.joinPath(this._extensionUri, 'media', 'vendor', 'three', 'three.module.js')
-        );
-        const orbitControlsUri = webview.asWebviewUri(
-            vscode.Uri.joinPath(this._extensionUri, 'media', 'vendor', 'three', 'OrbitControls.js')
-        );
+    // Three.js is vendored into the extension to avoid CDN/network dependency.
+    const threejsUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'vendor', 'three', 'three.module.js')
+    );
+    const orbitControlsUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'vendor', 'three', 'OrbitControls.js')
+    );
 
     const cspSource = webview.cspSource;
 
