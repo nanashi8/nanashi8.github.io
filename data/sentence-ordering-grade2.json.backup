@@ -1,0 +1,4363 @@
+{
+  "grade": 2,
+  "totalQuestions": 200,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "be動詞の過去形",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u0-001",
+          "japanese": "私は昨日幸せでした",
+          "sentence": "I was happy yesterday.",
+          "words": [
+            "I",
+            "was",
+            "happy",
+            "yesterday"
+          ],
+          "correctAnswer": "I was happy yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "I was happy yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I was happy yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-002",
+          "japanese": "あなたは先週忙しかったです",
+          "sentence": "You were busy last week.",
+          "words": [
+            "You",
+            "were",
+            "busy",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "You were busy last week.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "You were busy last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were busy last week.」です。"
+        },
+        {
+          "id": "so-g2-u0-003",
+          "japanese": "彼は昨日病気でした",
+          "sentence": "He was sick yesterday.",
+          "words": [
+            "He",
+            "was",
+            "sick",
+            "yesterday"
+          ],
+          "correctAnswer": "He was sick yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "He was sick yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He was sick yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-004",
+          "japanese": "彼女は昨日家にいました",
+          "sentence": "She was at home yesterday.",
+          "words": [
+            "She",
+            "was",
+            "at",
+            "home",
+            "yesterday"
+          ],
+          "correctAnswer": "She was at home yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "She was at home yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was at home yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-005",
+          "japanese": "それは昨日寒かったです",
+          "sentence": "It was cold yesterday.",
+          "words": [
+            "It",
+            "was",
+            "cold",
+            "yesterday"
+          ],
+          "correctAnswer": "It was cold yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "It was cold yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「It was cold yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-006",
+          "japanese": "私たちは先週東京にいました",
+          "sentence": "We were in Tokyo last week.",
+          "words": [
+            "We",
+            "were",
+            "in",
+            "Tokyo",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "We were in Tokyo last week.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "We were in Tokyo last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were in Tokyo last week.」です。"
+        },
+        {
+          "id": "so-g2-u0-007",
+          "japanese": "彼らは昨日ここにいました",
+          "sentence": "They were here yesterday.",
+          "words": [
+            "They",
+            "were",
+            "here",
+            "yesterday"
+          ],
+          "correctAnswer": "They were here yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "They were here yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were here yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-008",
+          "japanese": "トムは昨日疲れていました",
+          "sentence": "Tom was tired yesterday.",
+          "words": [
+            "Tom",
+            "was",
+            "tired",
+            "yesterday"
+          ],
+          "correctAnswer": "Tom was tired yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "Tom was tired yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom was tired yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-009",
+          "japanese": "メアリーは先週幸せでした",
+          "sentence": "Mary was happy last week.",
+          "words": [
+            "Mary",
+            "was",
+            "happy",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "Mary was happy last week.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "Mary was happy last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary was happy last week.」です。"
+        },
+        {
+          "id": "so-g2-u0-010",
+          "japanese": "私の両親は昨日忙しかったです",
+          "sentence": "My parents were busy yesterday.",
+          "words": [
+            "My",
+            "parents",
+            "were",
+            "busy",
+            "yesterday"
+          ],
+          "correctAnswer": "My parents were busy yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "My parents were busy yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My parents were busy yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-011",
+          "japanese": "その犬は昨日元気でした",
+          "sentence": "The dog was fine yesterday.",
+          "words": [
+            "The",
+            "dog",
+            "was",
+            "fine",
+            "yesterday"
+          ],
+          "correctAnswer": "The dog was fine yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "The dog was fine yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The dog was fine yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-012",
+          "japanese": "あの猫は昨日お腹が空いていました",
+          "sentence": "The cat was hungry yesterday.",
+          "words": [
+            "The",
+            "cat",
+            "was",
+            "hungry",
+            "yesterday"
+          ],
+          "correctAnswer": "The cat was hungry yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "The cat was hungry yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The cat was hungry yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-013",
+          "japanese": "私は昨日学校にいました",
+          "sentence": "I was at school yesterday.",
+          "words": [
+            "I",
+            "was",
+            "at",
+            "school",
+            "yesterday"
+          ],
+          "correctAnswer": "I was at school yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "I was at school yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I was at school yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-014",
+          "japanese": "あなたは先週準備ができていました",
+          "sentence": "You were ready last week.",
+          "words": [
+            "You",
+            "were",
+            "ready",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "You were ready last week.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "You were ready last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were ready last week.」です。"
+        },
+        {
+          "id": "so-g2-u0-015",
+          "japanese": "彼は昨日怒っていました",
+          "sentence": "He was angry yesterday.",
+          "words": [
+            "He",
+            "was",
+            "angry",
+            "yesterday"
+          ],
+          "correctAnswer": "He was angry yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "He was angry yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He was angry yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-016",
+          "japanese": "彼女は先週悲しかったです",
+          "sentence": "She was sad last week.",
+          "words": [
+            "She",
+            "was",
+            "sad",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "She was sad last week.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "She was sad last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was sad last week.」です。"
+        },
+        {
+          "id": "so-g2-u0-017",
+          "japanese": "私たちは昨日公園にいました",
+          "sentence": "We were in the park yesterday.",
+          "words": [
+            "We",
+            "were",
+            "in",
+            "the",
+            "park",
+            "yesterday"
+          ],
+          "correctAnswer": "We were in the park yesterday.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "We were in the park yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were in the park yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-018",
+          "japanese": "彼らは先週友達でした",
+          "sentence": "They were friends last week.",
+          "words": [
+            "They",
+            "were",
+            "friends",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "They were friends last week.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "They were friends last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were friends last week.」です。"
+        },
+        {
+          "id": "so-g2-u0-019",
+          "japanese": "その本は昨日机の上にありました",
+          "sentence": "The book was on the desk yesterday.",
+          "words": [
+            "The",
+            "book",
+            "was",
+            "on",
+            "the",
+            "desk",
+            "yesterday"
+          ],
+          "correctAnswer": "The book was on the desk yesterday.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "The book was on the desk yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The book was on the desk yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u0-020",
+          "japanese": "あなたたちは先週ここにいましたか",
+          "sentence": "You were here last week.",
+          "words": [
+            "You",
+            "were",
+            "here",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "You were here last week.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "You were here last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were here last week.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "title": "過去進行形",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u1-001",
+          "japanese": "私はその時本を読んでいました",
+          "sentence": "I was reading a book then.",
+          "words": [
+            "I",
+            "was",
+            "reading",
+            "a",
+            "book",
+            "then"
+          ],
+          "correctAnswer": "I was reading a book then.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "I was reading a book then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I was reading a book then.」です。"
+        },
+        {
+          "id": "so-g2-u1-002",
+          "japanese": "あなたは昨日英語を勉強していました",
+          "sentence": "You were studying English yesterday.",
+          "words": [
+            "You",
+            "were",
+            "studying",
+            "English",
+            "yesterday"
+          ],
+          "correctAnswer": "You were studying English yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "You were studying English yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were studying English yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-003",
+          "japanese": "彼はその時サッカーをしていました",
+          "sentence": "He was playing soccer at that time.",
+          "words": [
+            "He",
+            "was",
+            "playing",
+            "soccer",
+            "at",
+            "that",
+            "time"
+          ],
+          "correctAnswer": "He was playing soccer at that time.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "He was playing soccer at that time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He was playing soccer at that time.」です。"
+        },
+        {
+          "id": "so-g2-u1-004",
+          "japanese": "彼女は昨日テレビを見ていました",
+          "sentence": "She was watching TV yesterday.",
+          "words": [
+            "She",
+            "was",
+            "watching",
+            "TV",
+            "yesterday"
+          ],
+          "correctAnswer": "She was watching TV yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "She was watching TV yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was watching TV yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-005",
+          "japanese": "私たちはその時歌っていました",
+          "sentence": "We were singing then.",
+          "words": [
+            "We",
+            "were",
+            "singing",
+            "then"
+          ],
+          "correctAnswer": "We were singing then.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "We were singing then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were singing then.」です。"
+        },
+        {
+          "id": "so-g2-u1-006",
+          "japanese": "彼らは昨日走っていました",
+          "sentence": "They were running yesterday.",
+          "words": [
+            "They",
+            "were",
+            "running",
+            "yesterday"
+          ],
+          "correctAnswer": "They were running yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "They were running yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were running yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-007",
+          "japanese": "トムはその時寝ていました",
+          "sentence": "Tom was sleeping at that time.",
+          "words": [
+            "Tom",
+            "was",
+            "sleeping",
+            "at",
+            "that",
+            "time"
+          ],
+          "correctAnswer": "Tom was sleeping at that time.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "Tom was sleeping at that time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom was sleeping at that time.」です。"
+        },
+        {
+          "id": "so-g2-u1-008",
+          "japanese": "メアリーは昨日料理していました",
+          "sentence": "Mary was cooking yesterday.",
+          "words": [
+            "Mary",
+            "was",
+            "cooking",
+            "yesterday"
+          ],
+          "correctAnswer": "Mary was cooking yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "Mary was cooking yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary was cooking yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-009",
+          "japanese": "私は昨日泳いでいました",
+          "sentence": "I was swimming yesterday.",
+          "words": [
+            "I",
+            "was",
+            "swimming",
+            "yesterday"
+          ],
+          "correctAnswer": "I was swimming yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "I was swimming yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I was swimming yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-010",
+          "japanese": "あなたたちはその時踊っていました",
+          "sentence": "You were dancing then.",
+          "words": [
+            "You",
+            "were",
+            "dancing",
+            "then"
+          ],
+          "correctAnswer": "You were dancing then.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "You were dancing then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were dancing then.」です。"
+        },
+        {
+          "id": "so-g2-u1-011",
+          "japanese": "彼は昨日絵を描いていました",
+          "sentence": "He was painting yesterday.",
+          "words": [
+            "He",
+            "was",
+            "painting",
+            "yesterday"
+          ],
+          "correctAnswer": "He was painting yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "He was painting yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He was painting yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-012",
+          "japanese": "彼女はその時音楽を聴いていました",
+          "sentence": "She was listening to music then.",
+          "words": [
+            "She",
+            "was",
+            "listening",
+            "to",
+            "music",
+            "then"
+          ],
+          "correctAnswer": "She was listening to music then.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "She was listening to music then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was listening to music then.」です。"
+        },
+        {
+          "id": "so-g2-u1-013",
+          "japanese": "私たちは昨日買い物していました",
+          "sentence": "We were shopping yesterday.",
+          "words": [
+            "We",
+            "were",
+            "shopping",
+            "yesterday"
+          ],
+          "correctAnswer": "We were shopping yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "We were shopping yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were shopping yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-014",
+          "japanese": "彼らはその時働いていました",
+          "sentence": "They were working at that time.",
+          "words": [
+            "They",
+            "were",
+            "working",
+            "at",
+            "that",
+            "time"
+          ],
+          "correctAnswer": "They were working at that time.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "They were working at that time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were working at that time.」です。"
+        },
+        {
+          "id": "so-g2-u1-015",
+          "japanese": "私の母は昨日掃除していました",
+          "sentence": "My mother was cleaning yesterday.",
+          "words": [
+            "My",
+            "mother",
+            "was",
+            "cleaning",
+            "yesterday"
+          ],
+          "correctAnswer": "My mother was cleaning yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "My mother was cleaning yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My mother was cleaning yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-016",
+          "japanese": "私の兄弟たちはその時遊んでいました",
+          "sentence": "My brothers were playing then.",
+          "words": [
+            "My",
+            "brothers",
+            "were",
+            "playing",
+            "then"
+          ],
+          "correctAnswer": "My brothers were playing then.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "My brothers were playing then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My brothers were playing then.」です。"
+        },
+        {
+          "id": "so-g2-u1-017",
+          "japanese": "犬は昨日吠えていました",
+          "sentence": "The dog was barking yesterday.",
+          "words": [
+            "The",
+            "dog",
+            "was",
+            "barking",
+            "yesterday"
+          ],
+          "correctAnswer": "The dog was barking yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "The dog was barking yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The dog was barking yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-018",
+          "japanese": "鳥たちはその時飛んでいました",
+          "sentence": "The birds were flying then.",
+          "words": [
+            "The",
+            "birds",
+            "were",
+            "flying",
+            "then"
+          ],
+          "correctAnswer": "The birds were flying then.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "The birds were flying then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The birds were flying then.」です。"
+        },
+        {
+          "id": "so-g2-u1-019",
+          "japanese": "私は昨日朝食を食べていました",
+          "sentence": "I was eating breakfast yesterday.",
+          "words": [
+            "I",
+            "was",
+            "eating",
+            "breakfast",
+            "yesterday"
+          ],
+          "correctAnswer": "I was eating breakfast yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "I was eating breakfast yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I was eating breakfast yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u1-020",
+          "japanese": "彼らは昨日笑っていました",
+          "sentence": "They were laughing yesterday.",
+          "words": [
+            "They",
+            "were",
+            "laughing",
+            "yesterday"
+          ],
+          "correctAnswer": "They were laughing yesterday.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "They were laughing yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were laughing yesterday.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "title": "未来形 (will)",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u2-001",
+          "japanese": "私は明日博物館を訪れるでしょう",
+          "sentence": "I will visit the museum tomorrow.",
+          "words": [
+            "I",
+            "will",
+            "visit",
+            "the",
+            "museum",
+            "tomorrow"
+          ],
+          "correctAnswer": "I will visit the museum tomorrow.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "I will visit the museum tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I will visit the museum tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-002",
+          "japanese": "あなたは今日の午後サッカーをするでしょう",
+          "sentence": "You will play soccer this afternoon.",
+          "words": [
+            "You",
+            "will",
+            "play",
+            "soccer",
+            "this",
+            "afternoon"
+          ],
+          "correctAnswer": "You will play soccer this afternoon.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "You will play soccer this afternoon."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You will play soccer this afternoon.」です。"
+        },
+        {
+          "id": "so-g2-u2-003",
+          "japanese": "彼は今夜宿題を終えるでしょう",
+          "sentence": "He will finish homework tonight.",
+          "words": [
+            "He",
+            "will",
+            "finish",
+            "homework",
+            "tonight"
+          ],
+          "correctAnswer": "He will finish homework tonight.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "He will finish homework tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He will finish homework tonight.」です。"
+        },
+        {
+          "id": "so-g2-u2-004",
+          "japanese": "彼女は明日買い物に行くでしょう",
+          "sentence": "She will go shopping tomorrow.",
+          "words": [
+            "She",
+            "will",
+            "go",
+            "shopping",
+            "tomorrow"
+          ],
+          "correctAnswer": "She will go shopping tomorrow.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "She will go shopping tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She will go shopping tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-005",
+          "japanese": "私たちは来週東京を訪れるでしょう",
+          "sentence": "We will visit Tokyo next week.",
+          "words": [
+            "We",
+            "will",
+            "visit",
+            "Tokyo",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "We will visit Tokyo next week.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "We will visit Tokyo next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We will visit Tokyo next week.」です。"
+        },
+        {
+          "id": "so-g2-u2-006",
+          "japanese": "彼らは明日パーティーを開くでしょう",
+          "sentence": "They will have a party tomorrow.",
+          "words": [
+            "They",
+            "will",
+            "have",
+            "a",
+            "party",
+            "tomorrow"
+          ],
+          "correctAnswer": "They will have a party tomorrow.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "They will have a party tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They will have a party tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-007",
+          "japanese": "雨が明日降るでしょう",
+          "sentence": "It will rain tomorrow.",
+          "words": [
+            "It",
+            "will",
+            "rain",
+            "tomorrow"
+          ],
+          "correctAnswer": "It will rain tomorrow.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "It will rain tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「It will rain tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-008",
+          "japanese": "トムは来週彼女に会うでしょう",
+          "sentence": "Tom will meet her next week.",
+          "words": [
+            "Tom",
+            "will",
+            "meet",
+            "her",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "Tom will meet her next week.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "Tom will meet her next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom will meet her next week.」です。"
+        },
+        {
+          "id": "so-g2-u2-009",
+          "japanese": "メアリーは明日早く起きるでしょう",
+          "sentence": "Mary will get up early tomorrow.",
+          "words": [
+            "Mary",
+            "will",
+            "get",
+            "up",
+            "early",
+            "tomorrow"
+          ],
+          "correctAnswer": "Mary will get up early tomorrow.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "Mary will get up early tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary will get up early tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-010",
+          "japanese": "私は今夜手紙を書くでしょう",
+          "sentence": "I will write a letter tonight.",
+          "words": [
+            "I",
+            "will",
+            "write",
+            "a",
+            "letter",
+            "tonight"
+          ],
+          "correctAnswer": "I will write a letter tonight.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "I will write a letter tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I will write a letter tonight.」です。"
+        },
+        {
+          "id": "so-g2-u2-011",
+          "japanese": "あなたは明日試験に合格するでしょう",
+          "sentence": "You will pass the exam tomorrow.",
+          "words": [
+            "You",
+            "will",
+            "pass",
+            "the",
+            "exam",
+            "tomorrow"
+          ],
+          "correctAnswer": "You will pass the exam tomorrow.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "You will pass the exam tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You will pass the exam tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-012",
+          "japanese": "彼は来月新しい車を買うでしょう",
+          "sentence": "He will buy a new car next month.",
+          "words": [
+            "He",
+            "will",
+            "buy",
+            "a",
+            "new",
+            "car",
+            "next",
+            "month"
+          ],
+          "correctAnswer": "He will buy a new car next month.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "He will buy a new car next month."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He will buy a new car next month.」です。"
+        },
+        {
+          "id": "so-g2-u2-013",
+          "japanese": "彼女は明日料理するでしょう",
+          "sentence": "She will cook tomorrow.",
+          "words": [
+            "She",
+            "will",
+            "cook",
+            "tomorrow"
+          ],
+          "correctAnswer": "She will cook tomorrow.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "She will cook tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She will cook tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-014",
+          "japanese": "私たちは来週旅行するでしょう",
+          "sentence": "We will travel next week.",
+          "words": [
+            "We",
+            "will",
+            "travel",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "We will travel next week.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "We will travel next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We will travel next week.」です。"
+        },
+        {
+          "id": "so-g2-u2-015",
+          "japanese": "彼らは明日泳ぐでしょう",
+          "sentence": "They will swim tomorrow.",
+          "words": [
+            "They",
+            "will",
+            "swim",
+            "tomorrow"
+          ],
+          "correctAnswer": "They will swim tomorrow.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "They will swim tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They will swim tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-016",
+          "japanese": "太陽が明日輝くでしょう",
+          "sentence": "The sun will shine tomorrow.",
+          "words": [
+            "The",
+            "sun",
+            "will",
+            "shine",
+            "tomorrow"
+          ],
+          "correctAnswer": "The sun will shine tomorrow.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "The sun will shine tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The sun will shine tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-017",
+          "japanese": "私の父は明日働くでしょう",
+          "sentence": "My father will work tomorrow.",
+          "words": [
+            "My",
+            "father",
+            "will",
+            "work",
+            "tomorrow"
+          ],
+          "correctAnswer": "My father will work tomorrow.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "My father will work tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My father will work tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-018",
+          "japanese": "私の姉妹は来週帰ってくるでしょう",
+          "sentence": "My sister will come back next week.",
+          "words": [
+            "My",
+            "sister",
+            "will",
+            "come",
+            "back",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "My sister will come back next week.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "My sister will come back next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My sister will come back next week.」です。"
+        },
+        {
+          "id": "so-g2-u2-019",
+          "japanese": "犬は明日走るでしょう",
+          "sentence": "The dog will run tomorrow.",
+          "words": [
+            "The",
+            "dog",
+            "will",
+            "run",
+            "tomorrow"
+          ],
+          "correctAnswer": "The dog will run tomorrow.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "The dog will run tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The dog will run tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u2-020",
+          "japanese": "彼らは今夜勉強するでしょう",
+          "sentence": "They will study tonight.",
+          "words": [
+            "They",
+            "will",
+            "study",
+            "tonight"
+          ],
+          "correctAnswer": "They will study tonight.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "They will study tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They will study tonight.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "title": "未来形 (be going to)",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u3-001",
+          "japanese": "私は明日映画を見る予定です",
+          "sentence": "I am going to watch a movie tomorrow.",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "watch",
+            "a",
+            "movie",
+            "tomorrow"
+          ],
+          "correctAnswer": "I am going to watch a movie tomorrow.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "I am going to watch a movie tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I am going to watch a movie tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-002",
+          "japanese": "あなたは今夜勉強する予定です",
+          "sentence": "You are going to study tonight.",
+          "words": [
+            "You",
+            "are",
+            "going",
+            "to",
+            "study",
+            "tonight"
+          ],
+          "correctAnswer": "You are going to study tonight.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "You are going to study tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You are going to study tonight.」です。"
+        },
+        {
+          "id": "so-g2-u3-003",
+          "japanese": "彼は来週旅行する予定です",
+          "sentence": "He is going to travel next week.",
+          "words": [
+            "He",
+            "is",
+            "going",
+            "to",
+            "travel",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "He is going to travel next week.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "He is going to travel next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is going to travel next week.」です。"
+        },
+        {
+          "id": "so-g2-u3-004",
+          "japanese": "彼女は明日買い物する予定です",
+          "sentence": "She is going to shop tomorrow.",
+          "words": [
+            "She",
+            "is",
+            "going",
+            "to",
+            "shop",
+            "tomorrow"
+          ],
+          "correctAnswer": "She is going to shop tomorrow.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "She is going to shop tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She is going to shop tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-005",
+          "japanese": "私たちは今週末パーティーをする予定です",
+          "sentence": "We are going to have a party this weekend.",
+          "words": [
+            "We",
+            "are",
+            "going",
+            "to",
+            "have",
+            "a",
+            "party",
+            "this",
+            "weekend"
+          ],
+          "correctAnswer": "We are going to have a party this weekend.",
+          "wordCount": 9,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "We are going to have a party this weekend."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We are going to have a party this weekend.」です。"
+        },
+        {
+          "id": "so-g2-u3-006",
+          "japanese": "彼らは明日サッカーをする予定です",
+          "sentence": "They are going to play soccer tomorrow.",
+          "words": [
+            "They",
+            "are",
+            "going",
+            "to",
+            "play",
+            "soccer",
+            "tomorrow"
+          ],
+          "correctAnswer": "They are going to play soccer tomorrow.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "They are going to play soccer tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They are going to play soccer tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-007",
+          "japanese": "雨が降る予定です",
+          "sentence": "It is going to rain.",
+          "words": [
+            "It",
+            "is",
+            "going",
+            "to",
+            "rain"
+          ],
+          "correctAnswer": "It is going to rain.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "It is going to rain."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「It is going to rain.」です。"
+        },
+        {
+          "id": "so-g2-u3-008",
+          "japanese": "トムは明日彼女に会う予定です",
+          "sentence": "Tom is going to meet her tomorrow.",
+          "words": [
+            "Tom",
+            "is",
+            "going",
+            "to",
+            "meet",
+            "her",
+            "tomorrow"
+          ],
+          "correctAnswer": "Tom is going to meet her tomorrow.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "Tom is going to meet her tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom is going to meet her tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-009",
+          "japanese": "メアリーは来週料理する予定です",
+          "sentence": "Mary is going to cook next week.",
+          "words": [
+            "Mary",
+            "is",
+            "going",
+            "to",
+            "cook",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "Mary is going to cook next week.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "Mary is going to cook next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary is going to cook next week.」です。"
+        },
+        {
+          "id": "so-g2-u3-010",
+          "japanese": "私は今夜本を読む予定です",
+          "sentence": "I am going to read a book tonight.",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "read",
+            "a",
+            "book",
+            "tonight"
+          ],
+          "correctAnswer": "I am going to read a book tonight.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "I am going to read a book tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I am going to read a book tonight.」です。"
+        },
+        {
+          "id": "so-g2-u3-011",
+          "japanese": "あなたは明日泳ぐ予定です",
+          "sentence": "You are going to swim tomorrow.",
+          "words": [
+            "You",
+            "are",
+            "going",
+            "to",
+            "swim",
+            "tomorrow"
+          ],
+          "correctAnswer": "You are going to swim tomorrow.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "You are going to swim tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You are going to swim tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-012",
+          "japanese": "彼は来月引っ越す予定です",
+          "sentence": "He is going to move next month.",
+          "words": [
+            "He",
+            "is",
+            "going",
+            "to",
+            "move",
+            "next",
+            "month"
+          ],
+          "correctAnswer": "He is going to move next month.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "He is going to move next month."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is going to move next month.」です。"
+        },
+        {
+          "id": "so-g2-u3-013",
+          "japanese": "彼女は明日絵を描く予定です",
+          "sentence": "She is going to paint tomorrow.",
+          "words": [
+            "She",
+            "is",
+            "going",
+            "to",
+            "paint",
+            "tomorrow"
+          ],
+          "correctAnswer": "She is going to paint tomorrow.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "She is going to paint tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She is going to paint tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-014",
+          "japanese": "私たちは来週キャンプする予定です",
+          "sentence": "We are going to camp next week.",
+          "words": [
+            "We",
+            "are",
+            "going",
+            "to",
+            "camp",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "We are going to camp next week.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "We are going to camp next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We are going to camp next week.」です。"
+        },
+        {
+          "id": "so-g2-u3-015",
+          "japanese": "彼らは今夜踊る予定です",
+          "sentence": "They are going to dance tonight.",
+          "words": [
+            "They",
+            "are",
+            "going",
+            "to",
+            "dance",
+            "tonight"
+          ],
+          "correctAnswer": "They are going to dance tonight.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "They are going to dance tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They are going to dance tonight.」です。"
+        },
+        {
+          "id": "so-g2-u3-016",
+          "japanese": "雪が降る予定です",
+          "sentence": "It is going to snow.",
+          "words": [
+            "It",
+            "is",
+            "going",
+            "to",
+            "snow"
+          ],
+          "correctAnswer": "It is going to snow.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "It is going to snow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「It is going to snow.」です。"
+        },
+        {
+          "id": "so-g2-u3-017",
+          "japanese": "私の兄は明日働く予定です",
+          "sentence": "My brother is going to work tomorrow.",
+          "words": [
+            "My",
+            "brother",
+            "is",
+            "going",
+            "to",
+            "work",
+            "tomorrow"
+          ],
+          "correctAnswer": "My brother is going to work tomorrow.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "My brother is going to work tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My brother is going to work tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-018",
+          "japanese": "私の友達は来週訪れる予定です",
+          "sentence": "My friends are going to visit next week.",
+          "words": [
+            "My",
+            "friends",
+            "are",
+            "going",
+            "to",
+            "visit",
+            "next",
+            "week"
+          ],
+          "correctAnswer": "My friends are going to visit next week.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "My friends are going to visit next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My friends are going to visit next week.」です。"
+        },
+        {
+          "id": "so-g2-u3-019",
+          "japanese": "犬は明日走る予定です",
+          "sentence": "The dog is going to run tomorrow.",
+          "words": [
+            "The",
+            "dog",
+            "is",
+            "going",
+            "to",
+            "run",
+            "tomorrow"
+          ],
+          "correctAnswer": "The dog is going to run tomorrow.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "The dog is going to run tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The dog is going to run tomorrow.」です。"
+        },
+        {
+          "id": "so-g2-u3-020",
+          "japanese": "彼らは今夜歌う予定です",
+          "sentence": "They are going to sing tonight.",
+          "words": [
+            "They",
+            "are",
+            "going",
+            "to",
+            "sing",
+            "tonight"
+          ],
+          "correctAnswer": "They are going to sing tonight.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "They are going to sing tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They are going to sing tonight.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "title": "助動詞 (have to)",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u4-001",
+          "japanese": "私は宿題をしなければなりません",
+          "sentence": "I have to do my homework.",
+          "words": [
+            "I",
+            "have",
+            "to",
+            "do",
+            "my",
+            "homework"
+          ],
+          "correctAnswer": "I have to do my homework.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "I have to do my homework."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have to do my homework.」です。"
+        },
+        {
+          "id": "so-g2-u4-002",
+          "japanese": "あなたは早起きしなければなりません",
+          "sentence": "You have to get up early.",
+          "words": [
+            "You",
+            "have",
+            "to",
+            "get",
+            "up",
+            "early"
+          ],
+          "correctAnswer": "You have to get up early.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "You have to get up early."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have to get up early.」です。"
+        },
+        {
+          "id": "so-g2-u4-003",
+          "japanese": "彼は勉強しなければなりません",
+          "sentence": "He has to study.",
+          "words": [
+            "He",
+            "has",
+            "to",
+            "study"
+          ],
+          "correctAnswer": "He has to study.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "He has to study."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has to study.」です。"
+        },
+        {
+          "id": "so-g2-u4-004",
+          "japanese": "彼女は働かなければなりません",
+          "sentence": "She has to work.",
+          "words": [
+            "She",
+            "has",
+            "to",
+            "work"
+          ],
+          "correctAnswer": "She has to work.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "She has to work."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has to work.」です。"
+        },
+        {
+          "id": "so-g2-u4-005",
+          "japanese": "私たちは行かなければなりません",
+          "sentence": "We have to go.",
+          "words": [
+            "We",
+            "have",
+            "to",
+            "go"
+          ],
+          "correctAnswer": "We have to go.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "We have to go."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have to go.」です。"
+        },
+        {
+          "id": "so-g2-u4-006",
+          "japanese": "彼らは待たなければなりません",
+          "sentence": "They have to wait.",
+          "words": [
+            "They",
+            "have",
+            "to",
+            "wait"
+          ],
+          "correctAnswer": "They have to wait.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "They have to wait."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They have to wait.」です。"
+        },
+        {
+          "id": "so-g2-u4-007",
+          "japanese": "トムは練習しなければなりません",
+          "sentence": "Tom has to practice.",
+          "words": [
+            "Tom",
+            "has",
+            "to",
+            "practice"
+          ],
+          "correctAnswer": "Tom has to practice.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "Tom has to practice."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom has to practice.」です。"
+        },
+        {
+          "id": "so-g2-u4-008",
+          "japanese": "メアリーは手伝わなければなりません",
+          "sentence": "Mary has to help.",
+          "words": [
+            "Mary",
+            "has",
+            "to",
+            "help"
+          ],
+          "correctAnswer": "Mary has to help.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "Mary has to help."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary has to help.」です。"
+        },
+        {
+          "id": "so-g2-u4-009",
+          "japanese": "私は掃除しなければなりません",
+          "sentence": "I have to clean.",
+          "words": [
+            "I",
+            "have",
+            "to",
+            "clean"
+          ],
+          "correctAnswer": "I have to clean.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "I have to clean."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have to clean.」です。"
+        },
+        {
+          "id": "so-g2-u4-010",
+          "japanese": "あなたは料理しなければなりません",
+          "sentence": "You have to cook.",
+          "words": [
+            "You",
+            "have",
+            "to",
+            "cook"
+          ],
+          "correctAnswer": "You have to cook.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "You have to cook."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have to cook.」です。"
+        },
+        {
+          "id": "so-g2-u4-011",
+          "japanese": "彼は走らなければなりません",
+          "sentence": "He has to run.",
+          "words": [
+            "He",
+            "has",
+            "to",
+            "run"
+          ],
+          "correctAnswer": "He has to run.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "He has to run."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has to run.」です。"
+        },
+        {
+          "id": "so-g2-u4-012",
+          "japanese": "彼女は書かなければなりません",
+          "sentence": "She has to write.",
+          "words": [
+            "She",
+            "has",
+            "to",
+            "write"
+          ],
+          "correctAnswer": "She has to write.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "She has to write."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has to write.」です。"
+        },
+        {
+          "id": "so-g2-u4-013",
+          "japanese": "私たちは読まなければなりません",
+          "sentence": "We have to read.",
+          "words": [
+            "We",
+            "have",
+            "to",
+            "read"
+          ],
+          "correctAnswer": "We have to read.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "We have to read."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have to read.」です。"
+        },
+        {
+          "id": "so-g2-u4-014",
+          "japanese": "彼らは聞かなければなりません",
+          "sentence": "They have to listen.",
+          "words": [
+            "They",
+            "have",
+            "to",
+            "listen"
+          ],
+          "correctAnswer": "They have to listen.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "They have to listen."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They have to listen.」です。"
+        },
+        {
+          "id": "so-g2-u4-015",
+          "japanese": "犬は食べなければなりません",
+          "sentence": "The dog has to eat.",
+          "words": [
+            "The",
+            "dog",
+            "has",
+            "to",
+            "eat"
+          ],
+          "correctAnswer": "The dog has to eat.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "The dog has to eat."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The dog has to eat.」です。"
+        },
+        {
+          "id": "so-g2-u4-016",
+          "japanese": "私は話さなければなりません",
+          "sentence": "I have to talk.",
+          "words": [
+            "I",
+            "have",
+            "to",
+            "talk"
+          ],
+          "correctAnswer": "I have to talk.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "I have to talk."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have to talk.」です。"
+        },
+        {
+          "id": "so-g2-u4-017",
+          "japanese": "あなたは来なければなりません",
+          "sentence": "You have to come.",
+          "words": [
+            "You",
+            "have",
+            "to",
+            "come"
+          ],
+          "correctAnswer": "You have to come.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "You have to come."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have to come.」です。"
+        },
+        {
+          "id": "so-g2-u4-018",
+          "japanese": "彼は見なければなりません",
+          "sentence": "He has to watch.",
+          "words": [
+            "He",
+            "has",
+            "to",
+            "watch"
+          ],
+          "correctAnswer": "He has to watch.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "He has to watch."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has to watch.」です。"
+        },
+        {
+          "id": "so-g2-u4-019",
+          "japanese": "彼女は学ばなければなりません",
+          "sentence": "She has to learn.",
+          "words": [
+            "She",
+            "has",
+            "to",
+            "learn"
+          ],
+          "correctAnswer": "She has to learn.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "She has to learn."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has to learn.」です。"
+        },
+        {
+          "id": "so-g2-u4-020",
+          "japanese": "私たちは試さなければなりません",
+          "sentence": "We have to try.",
+          "words": [
+            "We",
+            "have",
+            "to",
+            "try"
+          ],
+          "correctAnswer": "We have to try.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "We have to try."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have to try.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "title": "比較級・最上級",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u5-001",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "correctAnswer": "He is taller than me.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He is taller than me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is taller than me.」です。"
+        },
+        {
+          "id": "so-g2-u5-002",
+          "japanese": "この本はあの本より面白いです",
+          "sentence": "This book is more interesting than that one.",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "more",
+            "interesting",
+            "than",
+            "that",
+            "one"
+          ],
+          "correctAnswer": "This book is more interesting than that one.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This book is more interesting than that one."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This book is more interesting than that one.」です。"
+        },
+        {
+          "id": "so-g2-u5-003",
+          "japanese": "彼女はクラスで最も賢いです",
+          "sentence": "She is the smartest in the class.",
+          "words": [
+            "She",
+            "is",
+            "the",
+            "smartest",
+            "in",
+            "the",
+            "class"
+          ],
+          "correctAnswer": "She is the smartest in the class.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She is the smartest in the class."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She is the smartest in the class.」です。"
+        },
+        {
+          "id": "so-g2-u5-004",
+          "japanese": "この花はより美しいです",
+          "sentence": "This flower is more beautiful.",
+          "words": [
+            "This",
+            "flower",
+            "is",
+            "more",
+            "beautiful"
+          ],
+          "correctAnswer": "This flower is more beautiful.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This flower is more beautiful."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This flower is more beautiful.」です。"
+        },
+        {
+          "id": "so-g2-u5-005",
+          "japanese": "今日は昨日より暑いです",
+          "sentence": "Today is hotter than yesterday.",
+          "words": [
+            "Today",
+            "is",
+            "hotter",
+            "than",
+            "yesterday"
+          ],
+          "correctAnswer": "Today is hotter than yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "Today is hotter than yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Today is hotter than yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u5-006",
+          "japanese": "彼は以前より若く見えます",
+          "sentence": "He looks younger than before.",
+          "words": [
+            "He",
+            "looks",
+            "younger",
+            "than",
+            "before"
+          ],
+          "correctAnswer": "He looks younger than before.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He looks younger than before."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He looks younger than before.」です。"
+        },
+        {
+          "id": "so-g2-u5-007",
+          "japanese": "これはより簡単です",
+          "sentence": "This is easier.",
+          "words": [
+            "This",
+            "is",
+            "easier"
+          ],
+          "correctAnswer": "This is easier.",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This is easier."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is easier.」です。"
+        },
+        {
+          "id": "so-g2-u5-008",
+          "japanese": "彼女は最も人気があります",
+          "sentence": "She is the most popular.",
+          "words": [
+            "She",
+            "is",
+            "the",
+            "most",
+            "popular"
+          ],
+          "correctAnswer": "She is the most popular.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She is the most popular."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She is the most popular.」です。"
+        },
+        {
+          "id": "so-g2-u5-009",
+          "japanese": "冬は夏より寒いです",
+          "sentence": "Winter is colder than summer.",
+          "words": [
+            "Winter",
+            "is",
+            "colder",
+            "than",
+            "summer"
+          ],
+          "correctAnswer": "Winter is colder than summer.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "Winter is colder than summer."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Winter is colder than summer.」です。"
+        },
+        {
+          "id": "so-g2-u5-010",
+          "japanese": "これは最も良いです",
+          "sentence": "This is the best.",
+          "words": [
+            "This",
+            "is",
+            "the",
+            "best"
+          ],
+          "correctAnswer": "This is the best.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This is the best."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is the best.」です。"
+        },
+        {
+          "id": "so-g2-u5-011",
+          "japanese": "彼は私より速く走ります",
+          "sentence": "He runs faster than me.",
+          "words": [
+            "He",
+            "runs",
+            "faster",
+            "than",
+            "me"
+          ],
+          "correctAnswer": "He runs faster than me.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He runs faster than me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He runs faster than me.」です。"
+        },
+        {
+          "id": "so-g2-u5-012",
+          "japanese": "彼女は最も親切です",
+          "sentence": "She is the kindest.",
+          "words": [
+            "She",
+            "is",
+            "the",
+            "kindest"
+          ],
+          "correctAnswer": "She is the kindest.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She is the kindest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She is the kindest.」です。"
+        },
+        {
+          "id": "so-g2-u5-013",
+          "japanese": "この部屋はより大きいです",
+          "sentence": "This room is larger.",
+          "words": [
+            "This",
+            "room",
+            "is",
+            "larger"
+          ],
+          "correctAnswer": "This room is larger.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This room is larger."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This room is larger.」です。"
+        },
+        {
+          "id": "so-g2-u5-014",
+          "japanese": "富士山は最も高いです",
+          "sentence": "Mt. Fuji is the highest.",
+          "words": [
+            "Mt",
+            "Fuji",
+            "is",
+            "the",
+            "highest"
+          ],
+          "correctAnswer": "Mt. Fuji is the highest.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "Mt. Fuji is the highest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mt. Fuji is the highest.」です。"
+        },
+        {
+          "id": "so-g2-u5-015",
+          "japanese": "彼はより上手に話します",
+          "sentence": "He speaks better.",
+          "words": [
+            "He",
+            "speaks",
+            "better"
+          ],
+          "correctAnswer": "He speaks better.",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He speaks better."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He speaks better.」です。"
+        },
+        {
+          "id": "so-g2-u5-016",
+          "japanese": "このシャツは最も安いです",
+          "sentence": "This shirt is the cheapest.",
+          "words": [
+            "This",
+            "shirt",
+            "is",
+            "the",
+            "cheapest"
+          ],
+          "correctAnswer": "This shirt is the cheapest.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This shirt is the cheapest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This shirt is the cheapest.」です。"
+        },
+        {
+          "id": "so-g2-u5-017",
+          "japanese": "私の兄は私より強いです",
+          "sentence": "My brother is stronger than me.",
+          "words": [
+            "My",
+            "brother",
+            "is",
+            "stronger",
+            "than",
+            "me"
+          ],
+          "correctAnswer": "My brother is stronger than me.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "My brother is stronger than me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My brother is stronger than me.」です。"
+        },
+        {
+          "id": "so-g2-u5-018",
+          "japanese": "これは最も重要です",
+          "sentence": "This is the most important.",
+          "words": [
+            "This",
+            "is",
+            "the",
+            "most",
+            "important"
+          ],
+          "correctAnswer": "This is the most important.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This is the most important."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is the most important.」です。"
+        },
+        {
+          "id": "so-g2-u5-019",
+          "japanese": "彼女はより遠くに住んでいます",
+          "sentence": "She lives farther.",
+          "words": [
+            "She",
+            "lives",
+            "farther"
+          ],
+          "correctAnswer": "She lives farther.",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She lives farther."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She lives farther.」です。"
+        },
+        {
+          "id": "so-g2-u5-020",
+          "japanese": "私は最も幸せです",
+          "sentence": "I am the happiest.",
+          "words": [
+            "I",
+            "am",
+            "the",
+            "happiest"
+          ],
+          "correctAnswer": "I am the happiest.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "I am the happiest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I am the happiest.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "title": "接続詞",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u6-001",
+          "japanese": "私が家に帰った時、雨が降っていました",
+          "sentence": "When I got home, it was raining.",
+          "words": [
+            "When",
+            "I",
+            "got",
+            "home",
+            "it",
+            "was",
+            "raining"
+          ],
+          "correctAnswer": "When I got home, it was raining.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When I got home, it was raining."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When I got home, it was raining.」です。"
+        },
+        {
+          "id": "so-g2-u6-002",
+          "japanese": "もし明日晴れなら、ピクニックに行きます",
+          "sentence": "If it's sunny tomorrow, we'll go on a picnic.",
+          "words": [
+            "If",
+            "it's",
+            "sunny",
+            "tomorrow",
+            "we'll",
+            "go",
+            "on",
+            "a",
+            "picnic"
+          ],
+          "correctAnswer": "If it's sunny tomorrow, we'll go on a picnic.",
+          "wordCount": 9,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If it's sunny tomorrow, we'll go on a picnic."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If it's sunny tomorrow, we'll go on a picnic.」です。"
+        },
+        {
+          "id": "so-g2-u6-003",
+          "japanese": "私は疲れているので、休みます",
+          "sentence": "I'll rest because I'm tired.",
+          "words": [
+            "I'll",
+            "rest",
+            "because",
+            "I'm",
+            "tired"
+          ],
+          "correctAnswer": "I'll rest because I'm tired.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I'll rest because I'm tired."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I'll rest because I'm tired.」です。"
+        },
+        {
+          "id": "so-g2-u6-004",
+          "japanese": "彼が来た時、私は勉強していました",
+          "sentence": "When he came, I was studying.",
+          "words": [
+            "When",
+            "he",
+            "came",
+            "I",
+            "was",
+            "studying"
+          ],
+          "correctAnswer": "When he came, I was studying.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When he came, I was studying."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When he came, I was studying.」です。"
+        },
+        {
+          "id": "so-g2-u6-005",
+          "japanese": "もしあなたが行くなら、私も行きます",
+          "sentence": "If you go, I'll go too.",
+          "words": [
+            "If",
+            "you",
+            "go",
+            "I'll",
+            "go",
+            "too"
+          ],
+          "correctAnswer": "If you go, I'll go too.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If you go, I'll go too."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If you go, I'll go too.」です。"
+        },
+        {
+          "id": "so-g2-u6-006",
+          "japanese": "雨だったので、家にいました",
+          "sentence": "I stayed home because it was raining.",
+          "words": [
+            "I",
+            "stayed",
+            "home",
+            "because",
+            "it",
+            "was",
+            "raining"
+          ],
+          "correctAnswer": "I stayed home because it was raining.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I stayed home because it was raining."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I stayed home because it was raining.」です。"
+        },
+        {
+          "id": "so-g2-u6-007",
+          "japanese": "彼女が電話した時、私は寝ていました",
+          "sentence": "When she called, I was sleeping.",
+          "words": [
+            "When",
+            "she",
+            "called",
+            "I",
+            "was",
+            "sleeping"
+          ],
+          "correctAnswer": "When she called, I was sleeping.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When she called, I was sleeping."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When she called, I was sleeping.」です。"
+        },
+        {
+          "id": "so-g2-u6-008",
+          "japanese": "もし時間があれば、手伝います",
+          "sentence": "If I have time, I'll help.",
+          "words": [
+            "If",
+            "I",
+            "have",
+            "time",
+            "I'll",
+            "help"
+          ],
+          "correctAnswer": "If I have time, I'll help.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If I have time, I'll help."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If I have time, I'll help.」です。"
+        },
+        {
+          "id": "so-g2-u6-009",
+          "japanese": "忙しいので、行けません",
+          "sentence": "I can't go because I'm busy.",
+          "words": [
+            "I",
+            "can't",
+            "go",
+            "because",
+            "I'm",
+            "busy"
+          ],
+          "correctAnswer": "I can't go because I'm busy.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I can't go because I'm busy."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I can't go because I'm busy.」です。"
+        },
+        {
+          "id": "so-g2-u6-010",
+          "japanese": "朝起きた時、雪が降っていました",
+          "sentence": "When I woke up, it was snowing.",
+          "words": [
+            "When",
+            "I",
+            "woke",
+            "up",
+            "it",
+            "was",
+            "snowing"
+          ],
+          "correctAnswer": "When I woke up, it was snowing.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When I woke up, it was snowing."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When I woke up, it was snowing.」です。"
+        },
+        {
+          "id": "so-g2-u6-011",
+          "japanese": "もし暇なら、一緒に来てください",
+          "sentence": "If you're free, please come with me.",
+          "words": [
+            "If",
+            "you're",
+            "free",
+            "please",
+            "come",
+            "with",
+            "me"
+          ],
+          "correctAnswer": "If you're free, please come with me.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If you're free, please come with me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If you're free, please come with me.」です。"
+        },
+        {
+          "id": "so-g2-u6-012",
+          "japanese": "病気だったので、学校を休みました",
+          "sentence": "I missed school because I was sick.",
+          "words": [
+            "I",
+            "missed",
+            "school",
+            "because",
+            "I",
+            "was",
+            "sick"
+          ],
+          "correctAnswer": "I missed school because I was sick.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I missed school because I was sick."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I missed school because I was sick.」です。"
+        },
+        {
+          "id": "so-g2-u6-013",
+          "japanese": "彼が到着した時、パーティーは始まっていました",
+          "sentence": "When he arrived, the party had started.",
+          "words": [
+            "When",
+            "he",
+            "arrived",
+            "the",
+            "party",
+            "had",
+            "started"
+          ],
+          "correctAnswer": "When he arrived, the party had started.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When he arrived, the party had started."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When he arrived, the party had started.」です。"
+        },
+        {
+          "id": "so-g2-u6-014",
+          "japanese": "もし雨なら、中止します",
+          "sentence": "If it rains, we'll cancel.",
+          "words": [
+            "If",
+            "it",
+            "rains",
+            "we'll",
+            "cancel"
+          ],
+          "correctAnswer": "If it rains, we'll cancel.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If it rains, we'll cancel."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If it rains, we'll cancel.」です。"
+        },
+        {
+          "id": "so-g2-u6-015",
+          "japanese": "お腹が空いているので、食べます",
+          "sentence": "I'll eat because I'm hungry.",
+          "words": [
+            "I'll",
+            "eat",
+            "because",
+            "I'm",
+            "hungry"
+          ],
+          "correctAnswer": "I'll eat because I'm hungry.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I'll eat because I'm hungry."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I'll eat because I'm hungry.」です。"
+        },
+        {
+          "id": "so-g2-u6-016",
+          "japanese": "私が子供の時、ここに住んでいました",
+          "sentence": "When I was a child, I lived here.",
+          "words": [
+            "When",
+            "I",
+            "was",
+            "a",
+            "child",
+            "I",
+            "lived",
+            "here"
+          ],
+          "correctAnswer": "When I was a child, I lived here.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When I was a child, I lived here."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When I was a child, I lived here.」です。"
+        },
+        {
+          "id": "so-g2-u6-017",
+          "japanese": "もし勝てば、嬉しいです",
+          "sentence": "If we win, I'll be happy.",
+          "words": [
+            "If",
+            "we",
+            "win",
+            "I'll",
+            "be",
+            "happy"
+          ],
+          "correctAnswer": "If we win, I'll be happy.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If we win, I'll be happy."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If we win, I'll be happy.」です。"
+        },
+        {
+          "id": "so-g2-u6-018",
+          "japanese": "寒いので、コートを着ます",
+          "sentence": "I'll wear a coat because it's cold.",
+          "words": [
+            "I'll",
+            "wear",
+            "a",
+            "coat",
+            "because",
+            "it's",
+            "cold"
+          ],
+          "correctAnswer": "I'll wear a coat because it's cold.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I'll wear a coat because it's cold."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I'll wear a coat because it's cold.」です。"
+        },
+        {
+          "id": "so-g2-u6-019",
+          "japanese": "彼女が笑った時、みんな笑いました",
+          "sentence": "When she laughed, everyone laughed.",
+          "words": [
+            "When",
+            "she",
+            "laughed",
+            "everyone",
+            "laughed"
+          ],
+          "correctAnswer": "When she laughed, everyone laughed.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When she laughed, everyone laughed."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When she laughed, everyone laughed.」です。"
+        },
+        {
+          "id": "so-g2-u6-020",
+          "japanese": "もし分からなければ、聞いてください",
+          "sentence": "If you don't understand, please ask.",
+          "words": [
+            "If",
+            "you",
+            "don't",
+            "understand",
+            "please",
+            "ask"
+          ],
+          "correctAnswer": "If you don't understand, please ask.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If you don't understand, please ask."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If you don't understand, please ask.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 7",
+      "title": "不定詞",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u7-001",
+          "japanese": "私は泳ぐことが好きです",
+          "sentence": "I like to swim.",
+          "words": [
+            "I",
+            "like",
+            "to",
+            "swim"
+          ],
+          "correctAnswer": "I like to swim.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I like to swim."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I like to swim.」です。"
+        },
+        {
+          "id": "so-g2-u7-002",
+          "japanese": "彼女は歌うことが好きです",
+          "sentence": "She loves to sing.",
+          "words": [
+            "She",
+            "loves",
+            "to",
+            "sing"
+          ],
+          "correctAnswer": "She loves to sing.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She loves to sing."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She loves to sing.」です。"
+        },
+        {
+          "id": "so-g2-u7-003",
+          "japanese": "私は医者になりたいです",
+          "sentence": "I want to be a doctor.",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "be",
+            "a",
+            "doctor"
+          ],
+          "correctAnswer": "I want to be a doctor.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I want to be a doctor."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I want to be a doctor.」です。"
+        },
+        {
+          "id": "so-g2-u7-004",
+          "japanese": "彼は英語を学びたいです",
+          "sentence": "He wants to learn English.",
+          "words": [
+            "He",
+            "wants",
+            "to",
+            "learn",
+            "English"
+          ],
+          "correctAnswer": "He wants to learn English.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "He wants to learn English."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He wants to learn English.」です。"
+        },
+        {
+          "id": "so-g2-u7-005",
+          "japanese": "私たちは旅行することを決めました",
+          "sentence": "We decided to travel.",
+          "words": [
+            "We",
+            "decided",
+            "to",
+            "travel"
+          ],
+          "correctAnswer": "We decided to travel.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "We decided to travel."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We decided to travel.」です。"
+        },
+        {
+          "id": "so-g2-u7-006",
+          "japanese": "彼らは出発する予定です",
+          "sentence": "They plan to leave.",
+          "words": [
+            "They",
+            "plan",
+            "to",
+            "leave"
+          ],
+          "correctAnswer": "They plan to leave.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "They plan to leave."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They plan to leave.」です。"
+        },
+        {
+          "id": "so-g2-u7-007",
+          "japanese": "何か飲むものが欲しいです",
+          "sentence": "I want something to drink.",
+          "words": [
+            "I",
+            "want",
+            "something",
+            "to",
+            "drink"
+          ],
+          "correctAnswer": "I want something to drink.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I want something to drink."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I want something to drink.」です。"
+        },
+        {
+          "id": "so-g2-u7-008",
+          "japanese": "読むべき本があります",
+          "sentence": "I have a book to read.",
+          "words": [
+            "I",
+            "have",
+            "a",
+            "book",
+            "to",
+            "read"
+          ],
+          "correctAnswer": "I have a book to read.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I have a book to read."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have a book to read.」です。"
+        },
+        {
+          "id": "so-g2-u7-009",
+          "japanese": "私は友達に会うために行きました",
+          "sentence": "I went to meet my friend.",
+          "words": [
+            "I",
+            "went",
+            "to",
+            "meet",
+            "my",
+            "friend"
+          ],
+          "correctAnswer": "I went to meet my friend.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I went to meet my friend."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I went to meet my friend.」です。"
+        },
+        {
+          "id": "so-g2-u7-010",
+          "japanese": "彼女は勉強するために図書館に行きました",
+          "sentence": "She went to the library to study.",
+          "words": [
+            "She",
+            "went",
+            "to",
+            "the",
+            "library",
+            "to",
+            "study"
+          ],
+          "correctAnswer": "She went to the library to study.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She went to the library to study."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She went to the library to study.」です。"
+        },
+        {
+          "id": "so-g2-u7-011",
+          "japanese": "私は料理することを学んでいます",
+          "sentence": "I'm learning to cook.",
+          "words": [
+            "I'm",
+            "learning",
+            "to",
+            "cook"
+          ],
+          "correctAnswer": "I'm learning to cook.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I'm learning to cook."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I'm learning to cook.」です。"
+        },
+        {
+          "id": "so-g2-u7-012",
+          "japanese": "彼は泳ぐことを始めました",
+          "sentence": "He started to swim.",
+          "words": [
+            "He",
+            "started",
+            "to",
+            "swim"
+          ],
+          "correctAnswer": "He started to swim.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "He started to swim."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He started to swim.」です。"
+        },
+        {
+          "id": "so-g2-u7-013",
+          "japanese": "私たちは遊ぶことを楽しみました",
+          "sentence": "We enjoyed to play.",
+          "words": [
+            "We",
+            "enjoyed",
+            "to",
+            "play"
+          ],
+          "correctAnswer": "We enjoyed to play.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "We enjoyed to play."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We enjoyed to play.」です。"
+        },
+        {
+          "id": "so-g2-u7-014",
+          "japanese": "彼女は話すことを続けました",
+          "sentence": "She continued to talk.",
+          "words": [
+            "She",
+            "continued",
+            "to",
+            "talk"
+          ],
+          "correctAnswer": "She continued to talk.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She continued to talk."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She continued to talk.」です。"
+        },
+        {
+          "id": "so-g2-u7-015",
+          "japanese": "私はピアノを弾くことができます",
+          "sentence": "I can to play the piano.",
+          "words": [
+            "I",
+            "can",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "correctAnswer": "I can to play the piano.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I can to play the piano."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I can to play the piano.」です。"
+        },
+        {
+          "id": "so-g2-u7-016",
+          "japanese": "彼は走ることが得意です",
+          "sentence": "He is good at to run.",
+          "words": [
+            "He",
+            "is",
+            "good",
+            "at",
+            "to",
+            "run"
+          ],
+          "correctAnswer": "He is good at to run.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "He is good at to run."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is good at to run.」です。"
+        },
+        {
+          "id": "so-g2-u7-017",
+          "japanese": "何か食べるものはありますか",
+          "sentence": "Do you have anything to eat?",
+          "words": [
+            "Do",
+            "you",
+            "have",
+            "anything",
+            "to",
+            "eat?"
+          ],
+          "correctAnswer": "Do you have anything to eat?",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "Do you have anything to eat?"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Do you have anything to eat?」です。"
+        },
+        {
+          "id": "so-g2-u7-018",
+          "japanese": "これは書くためのペンです",
+          "sentence": "This is a pen to write with.",
+          "words": [
+            "This",
+            "is",
+            "a",
+            "pen",
+            "to",
+            "write",
+            "with"
+          ],
+          "correctAnswer": "This is a pen to write with.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "This is a pen to write with."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is a pen to write with.」です。"
+        },
+        {
+          "id": "so-g2-u7-019",
+          "japanese": "私は手伝うために来ました",
+          "sentence": "I came to help.",
+          "words": [
+            "I",
+            "came",
+            "to",
+            "help"
+          ],
+          "correctAnswer": "I came to help.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I came to help."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I came to help.」です。"
+        },
+        {
+          "id": "so-g2-u7-020",
+          "japanese": "彼女は見るために止まりました",
+          "sentence": "She stopped to look.",
+          "words": [
+            "She",
+            "stopped",
+            "to",
+            "look"
+          ],
+          "correctAnswer": "She stopped to look.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She stopped to look."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She stopped to look.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 8",
+      "title": "受動態",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u8-001",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English is spoken around the world.",
+          "words": [
+            "English",
+            "is",
+            "spoken",
+            "around",
+            "the",
+            "world"
+          ],
+          "correctAnswer": "English is spoken around the world.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "English is spoken around the world."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「English is spoken around the world.」です。"
+        },
+        {
+          "id": "so-g2-u8-002",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book is read by many people.",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "correctAnswer": "This book is read by many people.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This book is read by many people."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This book is read by many people.」です。"
+        },
+        {
+          "id": "so-g2-u8-003",
+          "japanese": "その建物は昨年建てられました",
+          "sentence": "The building was built last year.",
+          "words": [
+            "The",
+            "building",
+            "was",
+            "built",
+            "last",
+            "year"
+          ],
+          "correctAnswer": "The building was built last year.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The building was built last year."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The building was built last year.」です。"
+        },
+        {
+          "id": "so-g2-u8-004",
+          "japanese": "この歌は彼女によって歌われました",
+          "sentence": "This song was sung by her.",
+          "words": [
+            "This",
+            "song",
+            "was",
+            "sung",
+            "by",
+            "her"
+          ],
+          "correctAnswer": "This song was sung by her.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This song was sung by her."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This song was sung by her.」です。"
+        },
+        {
+          "id": "so-g2-u8-005",
+          "japanese": "その手紙は私に書かれました",
+          "sentence": "The letter was written to me.",
+          "words": [
+            "The",
+            "letter",
+            "was",
+            "written",
+            "to",
+            "me"
+          ],
+          "correctAnswer": "The letter was written to me.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The letter was written to me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The letter was written to me.」です。"
+        },
+        {
+          "id": "so-g2-u8-006",
+          "japanese": "これらの写真は彼によって撮られました",
+          "sentence": "These pictures were taken by him.",
+          "words": [
+            "These",
+            "pictures",
+            "were",
+            "taken",
+            "by",
+            "him"
+          ],
+          "correctAnswer": "These pictures were taken by him.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These pictures were taken by him."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These pictures were taken by him.」です。"
+        },
+        {
+          "id": "so-g2-u8-007",
+          "japanese": "そのドアは彼女によって開けられました",
+          "sentence": "The door was opened by her.",
+          "words": [
+            "The",
+            "door",
+            "was",
+            "opened",
+            "by",
+            "her"
+          ],
+          "correctAnswer": "The door was opened by her.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The door was opened by her."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The door was opened by her.」です。"
+        },
+        {
+          "id": "so-g2-u8-008",
+          "japanese": "窓は私によって閉められました",
+          "sentence": "The window was closed by me.",
+          "words": [
+            "The",
+            "window",
+            "was",
+            "closed",
+            "by",
+            "me"
+          ],
+          "correctAnswer": "The window was closed by me.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The window was closed by me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The window was closed by me.」です。"
+        },
+        {
+          "id": "so-g2-u8-009",
+          "japanese": "この料理は母によって作られました",
+          "sentence": "This dish was cooked by my mother.",
+          "words": [
+            "This",
+            "dish",
+            "was",
+            "cooked",
+            "by",
+            "my",
+            "mother"
+          ],
+          "correctAnswer": "This dish was cooked by my mother.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This dish was cooked by my mother."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This dish was cooked by my mother.」です。"
+        },
+        {
+          "id": "so-g2-u8-010",
+          "japanese": "その車は昨日洗われました",
+          "sentence": "The car was washed yesterday.",
+          "words": [
+            "The",
+            "car",
+            "was",
+            "washed",
+            "yesterday"
+          ],
+          "correctAnswer": "The car was washed yesterday.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The car was washed yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The car was washed yesterday.」です。"
+        },
+        {
+          "id": "so-g2-u8-011",
+          "japanese": "これらの花は庭で育てられました",
+          "sentence": "These flowers were grown in the garden.",
+          "words": [
+            "These",
+            "flowers",
+            "were",
+            "grown",
+            "in",
+            "the",
+            "garden"
+          ],
+          "correctAnswer": "These flowers were grown in the garden.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These flowers were grown in the garden."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These flowers were grown in the garden.」です。"
+        },
+        {
+          "id": "so-g2-u8-012",
+          "japanese": "その映画は多くの人に見られました",
+          "sentence": "The movie was watched by many people.",
+          "words": [
+            "The",
+            "movie",
+            "was",
+            "watched",
+            "by",
+            "many",
+            "people"
+          ],
+          "correctAnswer": "The movie was watched by many people.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The movie was watched by many people."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The movie was watched by many people.」です。"
+        },
+        {
+          "id": "so-g2-u8-013",
+          "japanese": "この橋は100年前に作られました",
+          "sentence": "This bridge was built 100 years ago.",
+          "words": [
+            "This",
+            "bridge",
+            "was",
+            "built",
+            "100",
+            "years",
+            "ago"
+          ],
+          "correctAnswer": "This bridge was built 100 years ago.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This bridge was built 100 years ago."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This bridge was built 100 years ago.」です。"
+        },
+        {
+          "id": "so-g2-u8-014",
+          "japanese": "その問題は彼によって解かれました",
+          "sentence": "The problem was solved by him.",
+          "words": [
+            "The",
+            "problem",
+            "was",
+            "solved",
+            "by",
+            "him"
+          ],
+          "correctAnswer": "The problem was solved by him.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The problem was solved by him."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The problem was solved by him.」です。"
+        },
+        {
+          "id": "so-g2-u8-015",
+          "japanese": "これらの本は図書館で借りられました",
+          "sentence": "These books were borrowed from the library.",
+          "words": [
+            "These",
+            "books",
+            "were",
+            "borrowed",
+            "from",
+            "the",
+            "library"
+          ],
+          "correctAnswer": "These books were borrowed from the library.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These books were borrowed from the library."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These books were borrowed from the library.」です。"
+        },
+        {
+          "id": "so-g2-u8-016",
+          "japanese": "その木は嵐で倒されました",
+          "sentence": "The tree was blown down by the storm.",
+          "words": [
+            "The",
+            "tree",
+            "was",
+            "blown",
+            "down",
+            "by",
+            "the",
+            "storm"
+          ],
+          "correctAnswer": "The tree was blown down by the storm.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The tree was blown down by the storm."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The tree was blown down by the storm.」です。"
+        },
+        {
+          "id": "so-g2-u8-017",
+          "japanese": "この絵は有名な画家によって描かれました",
+          "sentence": "This picture was painted by a famous artist.",
+          "words": [
+            "This",
+            "picture",
+            "was",
+            "painted",
+            "by",
+            "a",
+            "famous",
+            "artist"
+          ],
+          "correctAnswer": "This picture was painted by a famous artist.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This picture was painted by a famous artist."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This picture was painted by a famous artist.」です。"
+        },
+        {
+          "id": "so-g2-u8-018",
+          "japanese": "その店は午前10時に開けられます",
+          "sentence": "The store is opened at 10 a.m.",
+          "words": [
+            "The",
+            "store",
+            "is",
+            "opened",
+            "at",
+            "10",
+            "am"
+          ],
+          "correctAnswer": "The store is opened at 10 a.m.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The store is opened at 10 a.m."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The store is opened at 10 a.m.」です。"
+        },
+        {
+          "id": "so-g2-u8-019",
+          "japanese": "これらの製品は日本で作られています",
+          "sentence": "These products are made in Japan.",
+          "words": [
+            "These",
+            "products",
+            "are",
+            "made",
+            "in",
+            "Japan"
+          ],
+          "correctAnswer": "These products are made in Japan.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These products are made in Japan."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These products are made in Japan.」です。"
+        },
+        {
+          "id": "so-g2-u8-020",
+          "japanese": "その秘密は誰にも知られていません",
+          "sentence": "The secret is known by nobody.",
+          "words": [
+            "The",
+            "secret",
+            "is",
+            "known",
+            "by",
+            "nobody"
+          ],
+          "correctAnswer": "The secret is known by nobody.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The secret is known by nobody."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The secret is known by nobody.」です。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 9",
+      "title": "現在完了",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u9-001",
+          "japanese": "私は3年間英語を勉強しています",
+          "sentence": "I have studied English for three years.",
+          "words": [
+            "I",
+            "have",
+            "studied",
+            "English",
+            "for",
+            "three",
+            "years"
+          ],
+          "correctAnswer": "I have studied English for three years.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have studied English for three years."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have studied English for three years.」です。"
+        },
+        {
+          "id": "so-g2-u9-002",
+          "japanese": "彼は東京に行ったことがあります",
+          "sentence": "He has been to Tokyo.",
+          "words": [
+            "He",
+            "has",
+            "been",
+            "to",
+            "Tokyo"
+          ],
+          "correctAnswer": "He has been to Tokyo.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has been to Tokyo."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has been to Tokyo.」です。"
+        },
+        {
+          "id": "so-g2-u9-003",
+          "japanese": "彼女はちょうど宿題を終えました",
+          "sentence": "She has just finished her homework.",
+          "words": [
+            "She",
+            "has",
+            "just",
+            "finished",
+            "her",
+            "homework"
+          ],
+          "correctAnswer": "She has just finished her homework.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "She has just finished her homework."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has just finished her homework.」です。"
+        },
+        {
+          "id": "so-g2-u9-004",
+          "japanese": "私たちは彼に会ったことがありません",
+          "sentence": "We have never met him.",
+          "words": [
+            "We",
+            "have",
+            "never",
+            "met",
+            "him"
+          ],
+          "correctAnswer": "We have never met him.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "We have never met him."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have never met him.」です。"
+        },
+        {
+          "id": "so-g2-u9-005",
+          "japanese": "彼らはすでに昼食を食べました",
+          "sentence": "They have already eaten lunch.",
+          "words": [
+            "They",
+            "have",
+            "already",
+            "eaten",
+            "lunch"
+          ],
+          "correctAnswer": "They have already eaten lunch.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "They have already eaten lunch."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They have already eaten lunch.」です。"
+        },
+        {
+          "id": "so-g2-u9-006",
+          "japanese": "トムは2時間ここにいます",
+          "sentence": "Tom has been here for two hours.",
+          "words": [
+            "Tom",
+            "has",
+            "been",
+            "here",
+            "for",
+            "two",
+            "hours"
+          ],
+          "correctAnswer": "Tom has been here for two hours.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "Tom has been here for two hours."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom has been here for two hours.」です。"
+        },
+        {
+          "id": "so-g2-u9-007",
+          "japanese": "メアリーはその映画を見たことがあります",
+          "sentence": "Mary has seen the movie.",
+          "words": [
+            "Mary",
+            "has",
+            "seen",
+            "the",
+            "movie"
+          ],
+          "correctAnswer": "Mary has seen the movie.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "Mary has seen the movie."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary has seen the movie.」です。"
+        },
+        {
+          "id": "so-g2-u9-008",
+          "japanese": "私は鍵を失くしました",
+          "sentence": "I have lost my key.",
+          "words": [
+            "I",
+            "have",
+            "lost",
+            "my",
+            "key"
+          ],
+          "correctAnswer": "I have lost my key.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have lost my key."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have lost my key.」です。"
+        },
+        {
+          "id": "so-g2-u9-009",
+          "japanese": "あなたはその本を読みましたか",
+          "sentence": "You have read the book.",
+          "words": [
+            "You",
+            "have",
+            "read",
+            "the",
+            "book"
+          ],
+          "correctAnswer": "You have read the book.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "You have read the book."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have read the book.」です。"
+        },
+        {
+          "id": "so-g2-u9-010",
+          "japanese": "彼は朝から忙しいです",
+          "sentence": "He has been busy since morning.",
+          "words": [
+            "He",
+            "has",
+            "been",
+            "busy",
+            "since",
+            "morning"
+          ],
+          "correctAnswer": "He has been busy since morning.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has been busy since morning."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has been busy since morning.」です。"
+        },
+        {
+          "id": "so-g2-u9-011",
+          "japanese": "彼女はまだ到着していません",
+          "sentence": "She has not arrived yet.",
+          "words": [
+            "She",
+            "has",
+            "not",
+            "arrived",
+            "yet"
+          ],
+          "correctAnswer": "She has not arrived yet.",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "She has not arrived yet."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has not arrived yet.」です。"
+        },
+        {
+          "id": "so-g2-u9-012",
+          "japanese": "私たちは長い間友達です",
+          "sentence": "We have been friends for a long time.",
+          "words": [
+            "We",
+            "have",
+            "been",
+            "friends",
+            "for",
+            "a",
+            "long",
+            "time"
+          ],
+          "correctAnswer": "We have been friends for a long time.",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "We have been friends for a long time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have been friends for a long time.」です。"
+        },
+        {
+          "id": "so-g2-u9-013",
+          "japanese": "彼らはちょうど出発しました",
+          "sentence": "They have just left.",
+          "words": [
+            "They",
+            "have",
+            "just",
+            "left"
+          ],
+          "correctAnswer": "They have just left.",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "They have just left."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They have just left.」です。"
+        },
+        {
+          "id": "so-g2-u9-014",
+          "japanese": "私は今までに富士山に登ったことがあります",
+          "sentence": "I have climbed Mt. Fuji before.",
+          "words": [
+            "I",
+            "have",
+            "climbed",
+            "Mt",
+            "Fuji",
+            "before"
+          ],
+          "correctAnswer": "I have climbed Mt. Fuji before.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have climbed Mt. Fuji before."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have climbed Mt. Fuji before.」です。"
+        },
+        {
+          "id": "so-g2-u9-015",
+          "japanese": "彼は宿題をまだ終えていません",
+          "sentence": "He has not finished his homework yet.",
+          "words": [
+            "He",
+            "has",
+            "not",
+            "finished",
+            "his",
+            "homework",
+            "yet"
+          ],
+          "correctAnswer": "He has not finished his homework yet.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has not finished his homework yet."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has not finished his homework yet.」です。"
+        },
+        {
+          "id": "so-g2-u9-016",
+          "japanese": "彼女は2012年からここに住んでいます",
+          "sentence": "She has lived here since 2012.",
+          "words": [
+            "She",
+            "has",
+            "lived",
+            "here",
+            "since",
+            "2012"
+          ],
+          "correctAnswer": "She has lived here since 2012.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "She has lived here since 2012."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has lived here since 2012.」です。"
+        },
+        {
+          "id": "so-g2-u9-017",
+          "japanese": "私たちはその歌を何度も聞きました",
+          "sentence": "We have heard the song many times.",
+          "words": [
+            "We",
+            "have",
+            "heard",
+            "the",
+            "song",
+            "many",
+            "times"
+          ],
+          "correctAnswer": "We have heard the song many times.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "We have heard the song many times."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have heard the song many times.」です。"
+        },
+        {
+          "id": "so-g2-u9-018",
+          "japanese": "彼らは新しい家を買いました",
+          "sentence": "They have bought a new house.",
+          "words": [
+            "They",
+            "have",
+            "bought",
+            "a",
+            "new",
+            "house"
+          ],
+          "correctAnswer": "They have bought a new house.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "They have bought a new house."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They have bought a new house.」です。"
+        },
+        {
+          "id": "so-g2-u9-019",
+          "japanese": "私は彼女に手紙を送りました",
+          "sentence": "I have sent her a letter.",
+          "words": [
+            "I",
+            "have",
+            "sent",
+            "her",
+            "a",
+            "letter"
+          ],
+          "correctAnswer": "I have sent her a letter.",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have sent her a letter."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have sent her a letter.」です。"
+        },
+        {
+          "id": "so-g2-u9-020",
+          "japanese": "彼は先週から病気です",
+          "sentence": "He has been sick since last week.",
+          "words": [
+            "He",
+            "has",
+            "been",
+            "sick",
+            "since",
+            "last",
+            "week"
+          ],
+          "correctAnswer": "He has been sick since last week.",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has been sick since last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has been sick since last week.」です。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3466 @@
+{
+  "grade": 2,
+  "totalQuestions": 200,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "be動詞の過去形",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u0-001",
+          "japanese": "私は昨日幸せでした",
+          "sentence": "I ____ happy yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-002",
+          "japanese": "あなたは先週忙しかったです",
+          "sentence": "You ____ busy last week.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-003",
+          "japanese": "彼は昨日病気でした",
+          "sentence": "He ____ sick yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-004",
+          "japanese": "彼女は昨日家にいました",
+          "sentence": "She ____ at home yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-005",
+          "japanese": "それは昨日寒かったです",
+          "sentence": "It ____ cold yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-006",
+          "japanese": "私たちは先週東京にいました",
+          "sentence": "We ____ in Tokyo last week.",
+          "wordCount": 6,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-007",
+          "japanese": "彼らは昨日ここにいました",
+          "sentence": "They ____ here yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-008",
+          "japanese": "トムは昨日疲れていました",
+          "sentence": "Tom ____ tired yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-009",
+          "japanese": "メアリーは先週幸せでした",
+          "sentence": "Mary ____ happy last week.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-010",
+          "japanese": "私の両親は昨日忙しかったです",
+          "sentence": "My parents ____ busy yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-011",
+          "japanese": "その犬は昨日元気でした",
+          "sentence": "The dog ____ fine yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-012",
+          "japanese": "あの猫は昨日お腹が空いていました",
+          "sentence": "The cat ____ hungry yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-013",
+          "japanese": "私は昨日学校にいました",
+          "sentence": "I ____ at school yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-014",
+          "japanese": "あなたは先週準備ができていました",
+          "sentence": "You ____ ready last week.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-015",
+          "japanese": "彼は昨日怒っていました",
+          "sentence": "He ____ angry yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-016",
+          "japanese": "彼女は先週悲しかったです",
+          "sentence": "She ____ sad last week.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-017",
+          "japanese": "私たちは昨日公園にいました",
+          "sentence": "We ____ in the park yesterday.",
+          "wordCount": 6,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-018",
+          "japanese": "彼らは先週友達でした",
+          "sentence": "They ____ friends last week.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-019",
+          "japanese": "その本は昨日机の上にありました",
+          "sentence": "The book ____ on the desk yesterday.",
+          "wordCount": 7,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u0-020",
+          "japanese": "あなたたちは先週ここにいましたか",
+          "sentence": "You ____ here last week.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "are"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "be動詞の過去形",
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "explanation": "空欄には「were」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "title": "過去進行形",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u1-001",
+          "japanese": "私はその時本を読んでいました",
+          "sentence": "I ____ reading a book then.",
+          "wordCount": 6,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-002",
+          "japanese": "あなたは昨日英語を勉強していました",
+          "sentence": "You ____ studying English yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-003",
+          "japanese": "彼はその時サッカーをしていました",
+          "sentence": "He ____ playing soccer at that time.",
+          "wordCount": 7,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-004",
+          "japanese": "彼女は昨日テレビを見ていました",
+          "sentence": "She ____ watching TV yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-005",
+          "japanese": "私たちはその時歌っていました",
+          "sentence": "We ____ singing then.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-006",
+          "japanese": "彼らは昨日走っていました",
+          "sentence": "They ____ running yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-007",
+          "japanese": "トムはその時寝ていました",
+          "sentence": "Tom ____ sleeping at that time.",
+          "wordCount": 6,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-008",
+          "japanese": "メアリーは昨日料理していました",
+          "sentence": "Mary ____ cooking yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-009",
+          "japanese": "私は昨日泳いでいました",
+          "sentence": "I ____ swimming yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-010",
+          "japanese": "あなたたちはその時踊っていました",
+          "sentence": "You ____ dancing then.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-011",
+          "japanese": "彼は昨日絵を描いていました",
+          "sentence": "He ____ painting yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-012",
+          "japanese": "彼女はその時音楽を聴いていました",
+          "sentence": "She ____ listening to music then.",
+          "wordCount": 6,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-013",
+          "japanese": "私たちは昨日買い物していました",
+          "sentence": "We ____ shopping yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-014",
+          "japanese": "彼らはその時働いていました",
+          "sentence": "They ____ working at that time.",
+          "wordCount": 6,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-015",
+          "japanese": "私の母は昨日掃除していました",
+          "sentence": "My mother ____ cleaning yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-016",
+          "japanese": "私の兄弟たちはその時遊んでいました",
+          "sentence": "My brothers ____ playing then.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-017",
+          "japanese": "犬は昨日吠えていました",
+          "sentence": "The dog ____ barking yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-018",
+          "japanese": "鳥たちはその時飛んでいました",
+          "sentence": "The birds ____ flying then.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-019",
+          "japanese": "私は昨日朝食を食べていました",
+          "sentence": "I ____ eating breakfast yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u1-020",
+          "japanese": "彼らは昨日笑っていました",
+          "sentence": "They ____ laughing yesterday.",
+          "wordCount": 4,
+          "choices": [
+            "was",
+            "were",
+            "am",
+            "is"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "explanation": "空欄には「were」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "title": "未来形 (will)",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u2-001",
+          "japanese": "私は明日博物館を訪れるでしょう",
+          "sentence": "I ____ visit the museum tomorrow.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-002",
+          "japanese": "あなたは今日の午後サッカーをするでしょう",
+          "sentence": "You ____ play soccer this afternoon.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-003",
+          "japanese": "彼は今夜宿題を終えるでしょう",
+          "sentence": "He ____ finish homework tonight.",
+          "wordCount": 5,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-004",
+          "japanese": "彼女は明日買い物に行くでしょう",
+          "sentence": "She ____ go shopping tomorrow.",
+          "wordCount": 5,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-005",
+          "japanese": "私たちは来週東京を訪れるでしょう",
+          "sentence": "We ____ visit Tokyo next week.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-006",
+          "japanese": "彼らは明日パーティーを開くでしょう",
+          "sentence": "They ____ have a party tomorrow.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-007",
+          "japanese": "雨が明日降るでしょう",
+          "sentence": "It ____ rain tomorrow.",
+          "wordCount": 4,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-008",
+          "japanese": "トムは来週彼女に会うでしょう",
+          "sentence": "Tom ____ meet her next week.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-009",
+          "japanese": "メアリーは明日早く起きるでしょう",
+          "sentence": "Mary ____ get up early tomorrow.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-010",
+          "japanese": "私は今夜手紙を書くでしょう",
+          "sentence": "I ____ write a letter tonight.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-011",
+          "japanese": "あなたは明日試験に合格するでしょう",
+          "sentence": "You ____ pass the exam tomorrow.",
+          "wordCount": 6,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-012",
+          "japanese": "彼は来月新しい車を買うでしょう",
+          "sentence": "He ____ buy a new car next month.",
+          "wordCount": 8,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-013",
+          "japanese": "彼女は明日料理するでしょう",
+          "sentence": "She ____ cook tomorrow.",
+          "wordCount": 4,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-014",
+          "japanese": "私たちは来週旅行するでしょう",
+          "sentence": "We ____ travel next week.",
+          "wordCount": 5,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-015",
+          "japanese": "彼らは明日泳ぐでしょう",
+          "sentence": "They ____ swim tomorrow.",
+          "wordCount": 4,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-016",
+          "japanese": "太陽が明日輝くでしょう",
+          "sentence": "The sun ____ shine tomorrow.",
+          "wordCount": 5,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-017",
+          "japanese": "私の父は明日働くでしょう",
+          "sentence": "My father ____ work tomorrow.",
+          "wordCount": 5,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-018",
+          "japanese": "私の姉妹は来週帰ってくるでしょう",
+          "sentence": "My sister ____ come back next week.",
+          "wordCount": 7,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-019",
+          "japanese": "犬は明日走るでしょう",
+          "sentence": "The dog ____ run tomorrow.",
+          "wordCount": 5,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        },
+        {
+          "id": "fb-g2-u2-020",
+          "japanese": "彼らは今夜勉強するでしょう",
+          "sentence": "They ____ study tonight.",
+          "wordCount": 4,
+          "choices": [
+            "will",
+            "would",
+            "can",
+            "should"
+          ],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "grammarPoint": "未来形 (will)",
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "explanation": "空欄には「will」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "title": "未来形 (be going to)",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u3-001",
+          "japanese": "私は明日映画を見る予定です",
+          "sentence": "I ____ going to watch a movie tomorrow.",
+          "wordCount": 8,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "am",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「am」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-002",
+          "japanese": "あなたは今夜勉強する予定です",
+          "sentence": "You ____ going to study tonight.",
+          "wordCount": 6,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-003",
+          "japanese": "彼は来週旅行する予定です",
+          "sentence": "He ____ going to travel next week.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-004",
+          "japanese": "彼女は明日買い物する予定です",
+          "sentence": "She ____ going to shop tomorrow.",
+          "wordCount": 6,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-005",
+          "japanese": "私たちは今週末パーティーをする予定です",
+          "sentence": "We ____ going to have a party this weekend.",
+          "wordCount": 9,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-006",
+          "japanese": "彼らは明日サッカーをする予定です",
+          "sentence": "They ____ going to play soccer tomorrow.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-007",
+          "japanese": "雨が降る予定です",
+          "sentence": "It ____ going to rain.",
+          "wordCount": 5,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-008",
+          "japanese": "トムは明日彼女に会う予定です",
+          "sentence": "Tom ____ going to meet her tomorrow.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-009",
+          "japanese": "メアリーは来週料理する予定です",
+          "sentence": "Mary ____ going to cook next week.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-010",
+          "japanese": "私は今夜本を読む予定です",
+          "sentence": "I ____ going to read a book tonight.",
+          "wordCount": 8,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "am",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「am」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-011",
+          "japanese": "あなたは明日泳ぐ予定です",
+          "sentence": "You ____ going to swim tomorrow.",
+          "wordCount": 6,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-012",
+          "japanese": "彼は来月引っ越す予定です",
+          "sentence": "He ____ going to move next month.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-013",
+          "japanese": "彼女は明日絵を描く予定です",
+          "sentence": "She ____ going to paint tomorrow.",
+          "wordCount": 6,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-014",
+          "japanese": "私たちは来週キャンプする予定です",
+          "sentence": "We ____ going to camp next week.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-015",
+          "japanese": "彼らは今夜踊る予定です",
+          "sentence": "They ____ going to dance tonight.",
+          "wordCount": 6,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-016",
+          "japanese": "雪が降る予定です",
+          "sentence": "It ____ going to snow.",
+          "wordCount": 5,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-017",
+          "japanese": "私の兄は明日働く予定です",
+          "sentence": "My brother ____ going to work tomorrow.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-018",
+          "japanese": "私の友達は来週訪れる予定です",
+          "sentence": "My friends ____ going to visit next week.",
+          "wordCount": 8,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-019",
+          "japanese": "犬は明日走る予定です",
+          "sentence": "The dog ____ going to run tomorrow.",
+          "wordCount": 7,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u3-020",
+          "japanese": "彼らは今夜歌う予定です",
+          "sentence": "They ____ going to sing tonight.",
+          "wordCount": 6,
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "was"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "explanation": "空欄には「are」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "title": "助動詞 (have to)",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u4-001",
+          "japanese": "私は宿題をしなければなりません",
+          "sentence": "I ____ to do my homework.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-002",
+          "japanese": "あなたは早起きしなければなりません",
+          "sentence": "You ____ to get up early.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-003",
+          "japanese": "彼は勉強しなければなりません",
+          "sentence": "He ____ to study.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-004",
+          "japanese": "彼女は働かなければなりません",
+          "sentence": "She ____ to work.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-005",
+          "japanese": "私たちは行かなければなりません",
+          "sentence": "We ____ to go.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-006",
+          "japanese": "彼らは待たなければなりません",
+          "sentence": "They ____ to wait.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-007",
+          "japanese": "トムは練習しなければなりません",
+          "sentence": "Tom ____ to practice.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-008",
+          "japanese": "メアリーは手伝わなければなりません",
+          "sentence": "Mary ____ to help.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-009",
+          "japanese": "私は掃除しなければなりません",
+          "sentence": "I ____ to clean.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-010",
+          "japanese": "あなたは料理しなければなりません",
+          "sentence": "You ____ to cook.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-011",
+          "japanese": "彼は走らなければなりません",
+          "sentence": "He ____ to run.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-012",
+          "japanese": "彼女は書かなければなりません",
+          "sentence": "She ____ to write.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-013",
+          "japanese": "私たちは読まなければなりません",
+          "sentence": "We ____ to read.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-014",
+          "japanese": "彼らは聞かなければなりません",
+          "sentence": "They ____ to listen.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-015",
+          "japanese": "犬は食べなければなりません",
+          "sentence": "The dog ____ to eat.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-016",
+          "japanese": "私は話さなければなりません",
+          "sentence": "I ____ to talk.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-017",
+          "japanese": "あなたは来なければなりません",
+          "sentence": "You ____ to come.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-018",
+          "japanese": "彼は見なければなりません",
+          "sentence": "He ____ to watch.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-019",
+          "japanese": "彼女は学ばなければなりません",
+          "sentence": "She ____ to learn.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u4-020",
+          "japanese": "私たちは試さなければなりません",
+          "sentence": "We ____ to try.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "have to",
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "explanation": "空欄には「have」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "title": "比較級・最上級",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u5-001",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 5,
+          "choices": [
+            "taller",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「taller」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-002",
+          "japanese": "この本はあの本より面白いです",
+          "sentence": "This book is more ____ than that one.",
+          "wordCount": 8,
+          "choices": [
+            "interesting",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "interesting",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「interesting」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-003",
+          "japanese": "彼女はクラスで最も賢いです",
+          "sentence": "She is the ____ in the class.",
+          "wordCount": 7,
+          "choices": [
+            "smartest",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "smartest",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「smartest」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-004",
+          "japanese": "この花はより美しいです",
+          "sentence": "This flower is more ____.",
+          "wordCount": 5,
+          "choices": [
+            "beautiful",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "beautiful",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「beautiful」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-005",
+          "japanese": "今日は昨日より暑いです",
+          "sentence": "Today is ____ than yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "hotter",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "hotter",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「hotter」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-006",
+          "japanese": "彼は以前より若く見えます",
+          "sentence": "He looks ____ than before.",
+          "wordCount": 5,
+          "choices": [
+            "younger",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "younger",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「younger」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-007",
+          "japanese": "これはより簡単です",
+          "sentence": "This is ____.",
+          "wordCount": 3,
+          "choices": [
+            "easier",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "easier",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「easier」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-008",
+          "japanese": "彼女は最も人気があります",
+          "sentence": "She is the most ____.",
+          "wordCount": 5,
+          "choices": [
+            "popular",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "popular",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「popular」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-009",
+          "japanese": "冬は夏より寒いです",
+          "sentence": "Winter is ____ than summer.",
+          "wordCount": 5,
+          "choices": [
+            "colder",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "colder",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「colder」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-010",
+          "japanese": "これは最も良いです",
+          "sentence": "This is the ____.",
+          "wordCount": 4,
+          "choices": [
+            "best",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "best",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「best」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-011",
+          "japanese": "彼は私より速く走ります",
+          "sentence": "He runs ____ than me.",
+          "wordCount": 5,
+          "choices": [
+            "faster",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "faster",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「faster」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-012",
+          "japanese": "彼女は最も親切です",
+          "sentence": "She is the ____.",
+          "wordCount": 4,
+          "choices": [
+            "kindest",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "kindest",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「kindest」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-013",
+          "japanese": "この部屋はより大きいです",
+          "sentence": "This room is ____.",
+          "wordCount": 4,
+          "choices": [
+            "larger",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "larger",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「larger」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-014",
+          "japanese": "富士山は最も高いです",
+          "sentence": "Mt. Fuji is the ____.",
+          "wordCount": 5,
+          "choices": [
+            "highest",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "highest",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「highest」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-015",
+          "japanese": "彼はより上手に話します",
+          "sentence": "He speaks ____.",
+          "wordCount": 3,
+          "choices": [
+            "better",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "better",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「better」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-016",
+          "japanese": "このシャツは最も安いです",
+          "sentence": "This shirt is the ____.",
+          "wordCount": 4,
+          "choices": [
+            "cheapest",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "cheapest",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「cheapest」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-017",
+          "japanese": "私の兄は私より強いです",
+          "sentence": "My brother is ____ than me.",
+          "wordCount": 5,
+          "choices": [
+            "stronger",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "stronger",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「stronger」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-018",
+          "japanese": "これは最も重要です",
+          "sentence": "This is the most ____.",
+          "wordCount": 5,
+          "choices": [
+            "important",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "important",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「important」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-019",
+          "japanese": "彼女はより遠くに住んでいます",
+          "sentence": "She lives ____.",
+          "wordCount": 3,
+          "choices": [
+            "farther",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "farther",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「farther」が入ります。"
+        },
+        {
+          "id": "fb-g2-u5-020",
+          "japanese": "私は最も幸せです",
+          "sentence": "I am the ____.",
+          "wordCount": 4,
+          "choices": [
+            "happiest",
+            "good",
+            "bad",
+            "much"
+          ],
+          "correctAnswer": "happiest",
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級・最上級",
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "explanation": "空欄には「happiest」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "title": "接続詞",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u6-001",
+          "japanese": "私が家に帰った時、雨が降っていました",
+          "sentence": "____ I got home, it was raining.",
+          "wordCount": 7,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「When」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-002",
+          "japanese": "もし明日晴れなら、ピクニックに行きます",
+          "sentence": "____ it's sunny tomorrow, we'll go on a picnic.",
+          "wordCount": 9,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「If」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-003",
+          "japanese": "私は疲れているので、休みます",
+          "sentence": "I'll rest ____ I'm tired.",
+          "wordCount": 5,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「because」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-004",
+          "japanese": "彼が来た時、私は勉強していました",
+          "sentence": "____ he came, I was studying.",
+          "wordCount": 6,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「When」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-005",
+          "japanese": "もしあなたが行くなら、私も行きます",
+          "sentence": "____ you go, I'll go too.",
+          "wordCount": 6,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「If」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-006",
+          "japanese": "雨だったので、家にいました",
+          "sentence": "I stayed home ____ it was raining.",
+          "wordCount": 7,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「because」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-007",
+          "japanese": "彼女が電話した時、私は寝ていました",
+          "sentence": "____ she called, I was sleeping.",
+          "wordCount": 6,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「When」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-008",
+          "japanese": "もし時間があれば、手伝います",
+          "sentence": "____ I have time, I'll help.",
+          "wordCount": 6,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「If」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-009",
+          "japanese": "忙しいので、行けません",
+          "sentence": "I can't go ____ I'm busy.",
+          "wordCount": 6,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「because」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-010",
+          "japanese": "朝起きた時、雪が降っていました",
+          "sentence": "____ I woke up, it was snowing.",
+          "wordCount": 7,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「When」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-011",
+          "japanese": "もし暇なら、一緒に来てください",
+          "sentence": "____ you're free, please come with me.",
+          "wordCount": 7,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「If」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-012",
+          "japanese": "病気だったので、学校を休みました",
+          "sentence": "I missed school ____ I was sick.",
+          "wordCount": 7,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「because」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-013",
+          "japanese": "彼が到着した時、パーティーは始まっていました",
+          "sentence": "____ he arrived, the party had started.",
+          "wordCount": 7,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「When」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-014",
+          "japanese": "もし雨なら、中止します",
+          "sentence": "____ it rains, we'll cancel.",
+          "wordCount": 5,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「If」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-015",
+          "japanese": "お腹が空いているので、食べます",
+          "sentence": "I'll eat ____ I'm hungry.",
+          "wordCount": 5,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「because」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-016",
+          "japanese": "私が子供の時、ここに住んでいました",
+          "sentence": "____ I was a child, I lived here.",
+          "wordCount": 8,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「When」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-017",
+          "japanese": "もし勝てば、嬉しいです",
+          "sentence": "____ we win, I'll be happy.",
+          "wordCount": 6,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「If」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-018",
+          "japanese": "寒いので、コートを着ます",
+          "sentence": "I'll wear a coat ____ it's cold.",
+          "wordCount": 7,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「because」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-019",
+          "japanese": "彼女が笑った時、みんな笑いました",
+          "sentence": "____ she laughed, everyone laughed.",
+          "wordCount": 5,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「When」が入ります。"
+        },
+        {
+          "id": "fb-g2-u6-020",
+          "japanese": "もし分からなければ、聞いてください",
+          "sentence": "____ you don't understand, please ask.",
+          "wordCount": 6,
+          "choices": [
+            "When",
+            "If",
+            "because",
+            "but"
+          ],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "grammarPoint": "接続詞",
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "explanation": "空欄には「If」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 7",
+      "title": "不定詞",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u7-001",
+          "japanese": "私は泳ぐことが好きです",
+          "sentence": "I like ____ swim.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-002",
+          "japanese": "彼女は歌うことが好きです",
+          "sentence": "She loves ____ sing.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-003",
+          "japanese": "私は医者になりたいです",
+          "sentence": "I want ____ be a doctor.",
+          "wordCount": 6,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-004",
+          "japanese": "彼は英語を学びたいです",
+          "sentence": "He wants ____ learn English.",
+          "wordCount": 5,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-005",
+          "japanese": "私たちは旅行することを決めました",
+          "sentence": "We decided ____ travel.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-006",
+          "japanese": "彼らは出発する予定です",
+          "sentence": "They plan ____ leave.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-007",
+          "japanese": "何か飲むものが欲しいです",
+          "sentence": "I want something ____ drink.",
+          "wordCount": 5,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-008",
+          "japanese": "読むべき本があります",
+          "sentence": "I have a book ____ read.",
+          "wordCount": 6,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-009",
+          "japanese": "私は友達に会うために行きました",
+          "sentence": "I went ____ meet my friend.",
+          "wordCount": 6,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-010",
+          "japanese": "彼女は勉強するために図書館に行きました",
+          "sentence": "She went to the library ____ study.",
+          "wordCount": 7,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-011",
+          "japanese": "私は料理することを学んでいます",
+          "sentence": "I'm learning ____ cook.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-012",
+          "japanese": "彼は泳ぐことを始めました",
+          "sentence": "He started ____ swim.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-013",
+          "japanese": "私たちは遊ぶことを楽しみました",
+          "sentence": "We enjoyed ____ play.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-014",
+          "japanese": "彼女は話すことを続けました",
+          "sentence": "She continued ____ talk.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-015",
+          "japanese": "私はピアノを弾くことができます",
+          "sentence": "I can ____ play the piano.",
+          "wordCount": 6,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-016",
+          "japanese": "彼は走ることが得意です",
+          "sentence": "He is good at ____ run.",
+          "wordCount": 6,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-017",
+          "japanese": "何か食べるものはありますか",
+          "sentence": "Do you have anything ____ eat?",
+          "wordCount": 6,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-018",
+          "japanese": "これは書くためのペンです",
+          "sentence": "This is a pen ____ write with.",
+          "wordCount": 7,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-019",
+          "japanese": "私は手伝うために来ました",
+          "sentence": "I came ____ help.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        },
+        {
+          "id": "fb-g2-u7-020",
+          "japanese": "彼女は見るために止まりました",
+          "sentence": "She stopped ____ look.",
+          "wordCount": 4,
+          "choices": [
+            "to",
+            "for",
+            "at",
+            "in"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "explanation": "空欄には「to」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 8",
+      "title": "受動態",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u8-001",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken around the world.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-002",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "wordCount": 7,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-003",
+          "japanese": "その建物は昨年建てられました",
+          "sentence": "The building ____ built last year.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-004",
+          "japanese": "この歌は彼女によって歌われました",
+          "sentence": "This song ____ sung by her.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-005",
+          "japanese": "その手紙は私に書かれました",
+          "sentence": "The letter ____ written to me.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-006",
+          "japanese": "これらの写真は彼によって撮られました",
+          "sentence": "These pictures ____ taken by him.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-007",
+          "japanese": "そのドアは彼女によって開けられました",
+          "sentence": "The door ____ opened by her.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-008",
+          "japanese": "窓は私によって閉められました",
+          "sentence": "The window ____ closed by me.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-009",
+          "japanese": "この料理は母によって作られました",
+          "sentence": "This dish ____ cooked by my mother.",
+          "wordCount": 7,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-010",
+          "japanese": "その車は昨日洗われました",
+          "sentence": "The car ____ washed yesterday.",
+          "wordCount": 5,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-011",
+          "japanese": "これらの花は庭で育てられました",
+          "sentence": "These flowers ____ grown in the garden.",
+          "wordCount": 7,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-012",
+          "japanese": "その映画は多くの人に見られました",
+          "sentence": "The movie ____ watched by many people.",
+          "wordCount": 7,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-013",
+          "japanese": "この橋は100年前に作られました",
+          "sentence": "This bridge ____ built 100 years ago.",
+          "wordCount": 7,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-014",
+          "japanese": "その問題は彼によって解かれました",
+          "sentence": "The problem ____ solved by him.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-015",
+          "japanese": "これらの本は図書館で借りられました",
+          "sentence": "These books ____ borrowed from the library.",
+          "wordCount": 7,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「were」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-016",
+          "japanese": "その木は嵐で倒されました",
+          "sentence": "The tree ____ blown down by the storm.",
+          "wordCount": 8,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-017",
+          "japanese": "この絵は有名な画家によって描かれました",
+          "sentence": "This picture ____ painted by a famous artist.",
+          "wordCount": 8,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「was」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-018",
+          "japanese": "その店は午前10時に開けられます",
+          "sentence": "The store ____ opened at 10 a.m.",
+          "wordCount": 7,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「is」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-019",
+          "japanese": "これらの製品は日本で作られています",
+          "sentence": "These products ____ made in Japan.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「are」が入ります。"
+        },
+        {
+          "id": "fb-g2-u8-020",
+          "japanese": "その秘密は誰にも知られていません",
+          "sentence": "The secret ____ known by nobody.",
+          "wordCount": 6,
+          "choices": [
+            "is",
+            "was",
+            "are",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態",
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "explanation": "空欄には「is」が入ります。"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 9",
+      "title": "現在完了",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u9-001",
+          "japanese": "私は3年間英語を勉強しています",
+          "sentence": "I ____ studied English for three years.",
+          "wordCount": 7,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-002",
+          "japanese": "彼は東京に行ったことがあります",
+          "sentence": "He ____ been to Tokyo.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-003",
+          "japanese": "彼女はちょうど宿題を終えました",
+          "sentence": "She ____ just finished her homework.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-004",
+          "japanese": "私たちは彼に会ったことがありません",
+          "sentence": "We ____ never met him.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-005",
+          "japanese": "彼らはすでに昼食を食べました",
+          "sentence": "They ____ already eaten lunch.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-006",
+          "japanese": "トムは2時間ここにいます",
+          "sentence": "Tom ____ been here for two hours.",
+          "wordCount": 7,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-007",
+          "japanese": "メアリーはその映画を見たことがあります",
+          "sentence": "Mary ____ seen the movie.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-008",
+          "japanese": "私は鍵を失くしました",
+          "sentence": "I ____ lost my key.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-009",
+          "japanese": "あなたはその本を読みましたか",
+          "sentence": "You ____ read the book.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-010",
+          "japanese": "彼は朝から忙しいです",
+          "sentence": "He ____ been busy since morning.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-011",
+          "japanese": "彼女はまだ到着していません",
+          "sentence": "She ____ not arrived yet.",
+          "wordCount": 5,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-012",
+          "japanese": "私たちは長い間友達です",
+          "sentence": "We ____ been friends for a long time.",
+          "wordCount": 8,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-013",
+          "japanese": "彼らはちょうど出発しました",
+          "sentence": "They ____ just left.",
+          "wordCount": 4,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-014",
+          "japanese": "私は今までに富士山に登ったことがあります",
+          "sentence": "I ____ climbed Mt. Fuji before.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-015",
+          "japanese": "彼は宿題をまだ終えていません",
+          "sentence": "He ____ not finished his homework yet.",
+          "wordCount": 7,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-016",
+          "japanese": "彼女は2012年からここに住んでいます",
+          "sentence": "She ____ lived here since 2012.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-017",
+          "japanese": "私たちはその歌を何度も聞きました",
+          "sentence": "We ____ heard the song many times.",
+          "wordCount": 7,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-018",
+          "japanese": "彼らは新しい家を買いました",
+          "sentence": "They ____ bought a new house.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-019",
+          "japanese": "私は彼女に手紙を送りました",
+          "sentence": "I ____ sent her a letter.",
+          "wordCount": 6,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「have」が入ります。"
+        },
+        {
+          "id": "fb-g2-u9-020",
+          "japanese": "彼は先週から病気です",
+          "sentence": "He ____ been sick since last week.",
+          "wordCount": 7,
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "grammarPoint": "現在完了",
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "explanation": "空欄には「has」が入ります。"
+        }
+      ]
+    }
+  ]
+}
