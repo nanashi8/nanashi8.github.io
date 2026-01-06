@@ -22,6 +22,18 @@
               scope: '/'
             });
 
+            // 新しいSWが有効化され controller が切り替わったら、一度だけリロードして最新版JS/CSSへ揃える
+            // （端末間でUI/コンテンツが違って見える主要因＝古いキャッシュの残留を解消）
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+              try {
+                if (sessionStorage.getItem('_sw_reloaded_once') === '1') return;
+                sessionStorage.setItem('_sw_reloaded_once', '1');
+                setTimeout(() => window.location.reload(), 200);
+              } catch {
+                window.location.reload();
+              }
+            });
+
             // アップデートチェック（起動時と5分ごと）
             setInterval(() => registration.update().catch(() => {}), 5 * 60 * 1000);
 
