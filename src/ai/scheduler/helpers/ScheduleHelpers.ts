@@ -213,7 +213,7 @@ export class ScheduleHelpers {
    * NOTE: calculatePriorities, loadProgressCache, getWordStatusFromCache,
    * applyAntiVibration, sortAndBalance, postProcess は非常に長いため、
    * 個別のヘルパークラスに分割することを推奨
-   * 
+   *
    * 現時点では、上記3メソッド（buildContext, detectSignals, getRecentAnswers）のみ抽出
    * 残りのメソッドは次のステップで抽出予定
    */
@@ -232,7 +232,7 @@ export class ScheduleHelpers {
 
   /**
    * キャッシュから単語ステータスを取得
-   * 
+   *
    * @param word - 単語
    * @param mode - 学習モード
    * @param progressCache - 進捗キャッシュ
@@ -267,7 +267,7 @@ export class ScheduleHelpers {
 
   /**
    * 振動防止フィルター適用
-   * 
+   *
    * @param questions - 優先度付き問題リスト
    * @param context - スケジューリングコンテキスト
    * @param scheduler - QuestionSchedulerインスタンス

@@ -94,7 +94,7 @@ export class QuestionScheduler {
 
   /**
    * Strategy用の依存関係を取得
-   * 
+   *
    * Strategy PatternにおけるDependency Injection
    */
   private getDependencies() {
@@ -311,44 +311,58 @@ export class QuestionScheduler {
       './strategies/DefaultScheduleStrategy'
     );
     const strategy = new DefaultScheduleStrategy(this.getDependencies());
-    const { questions, sorted } = await strategy.schedule(params);
+    const result = await strategy.schedule({
+      params,
+      startTime,
+      dependencies: this.getDependencies(),
+      progressData: QuestionScheduler.getProgressMapFromParams(params),
+    });
+
+    const questions = result.scheduledQuestions;
+
+    // contextを構築（ランダム飛ばし機能用）
+    const context = this.buildContext(params);
 
     // 🔥 ランダム飛ばし機能: incorrect単語を待機キューに追加
     // トップ問題がincorrectの場合のみ（出題直前に判定）
-    if (sorted.length > 0 && context.recentAnswers.length > 0) {
-      const topQuestion = sorted[0];
-      const recentAnswer = context.recentAnswers.find((a) => a.word === topQuestion.question.word);
+    if (questions.length > 0 && context.recentAnswers.length > 0) {
+      const topQuestion = questions[0];
+      const recentAnswer = context.recentAnswers.find((a) => a.word === topQuestion.word);
 
       if (recentAnswer && !recentAnswer.correct) {
         // 既に待機キューにない場合のみ追加
         const alreadyQueued = this.incorrectSkipQueue.some(
-          (pq) => pq.question.word === topQuestion.question.word
+          (pq) => pq.question.word === topQuestion.word
         );
 
         if (!alreadyQueued) {
-          this.incorrectSkipQueue.push(topQuestion);
+          this.incorrectSkipQueue.push({
+            question: topQuestion,
+            position: 100,
+            status: null,
+          });
           this.skipTarget = this.getRandomSkipCount();
           this.skipCounter = 0;
 
           if (import.meta.env.DEV) {
             console.log(
-              `🔥 [RandomSkip] incorrect待機キューに追加: ${topQuestion.question.word} (${this.skipTarget}問後に再出題)`
+              `🔥 [RandomSkip] incorrect待機キューに追加: ${topQuestion.word} (${this.skipTarget}問後に再出題)`
             );
           }
 
-          // トップ問題を除外して再スケジューリング
+          // トップ問題を除外して返却
           const nextQuestions = questions.slice(1);
           if (nextQuestions.length > 0) {
+            const baseDebug =
+              result.debug ??
+              ({ dtaApplied: 0, antiVibrationApplied: 0, signalsDetected: [] } as const);
+
             return {
+              ...result,
               scheduledQuestions: nextQuestions,
-              vibrationScore,
-              processingTime,
-              signalCount: signals.length,
               debug: {
-                dtaApplied: sorted.filter((pq) => (pq.status?.position ?? 50) < 20).length, // mastered
-                antiVibrationApplied: sorted.filter((pq) => pq.antiVibrationApplied).length,
-                signalsDetected: signals,
-                randomSkipApplied: true, // 🔥 追加
+                ...baseDebug,
+                randomSkipApplied: true,
               },
             };
           }
@@ -356,17 +370,7 @@ export class QuestionScheduler {
       }
     }
 
-    return {
-      scheduledQuestions: questions,
-      vibrationScore,
-      processingTime,
-      signalCount: signals.length,
-      debug: {
-        dtaApplied: sorted.filter((pq) => (pq.status?.position ?? 50) < 20).length, // mastered
-        antiVibrationApplied: sorted.filter((pq) => pq.antiVibrationApplied).length,
-        signalsDetected: signals,
-      },
-    };
+    return result;
   }
 
   /**
@@ -386,7 +390,7 @@ export class QuestionScheduler {
   /**
    * Position計算（7つのAI評価統合）
    * ⚡ パフォーマンス最適化: localStorageを1回だけ読み込む
-   * 
+   *
    * TODO: 工程6で共通ヘルパーに抽出
    */
   public calculatePriorities(
@@ -955,12 +959,12 @@ export class QuestionScheduler {
   /**
    * ソート・バランス調整
    * 注: category = 学習状態（分からない/まだまだ/未学習/定着済）
-   * 
+   *
    * TODO: 工程6で共通ヘルパーに抽出
    */
   /**
    * ソート・バランス調整（ScheduleHelpersに委譲）
-   * 
+   *
    * TODO: 工程6で共通ヘルパーに抽出
    */
   public sortAndBalance(
@@ -1309,7 +1313,7 @@ export class QuestionScheduler {
    *
    * 重要制約: Position階層（70-100 > 60-69 > 40-59 > 20-39 > 0-19）を絶対に保持
    * 各Position範囲内でのみ並べ替えを行い、範囲間の順序は維持する
-   * 
+   *
    * TODO: 工程6で共通ヘルパーに抽出
    */
   public postProcess(questions: PrioritizedQuestion[], context: ScheduleContext): Question[] {
@@ -2077,7 +2081,7 @@ export class QuestionScheduler {
     );
 
     // 0. 振動防止: 直近10語のSetを作成（優先順位を下げる）
-    const recentWords = this.getRecentWords(params.mode as any, 10);
+    const recentWords = this.getRecentWords(params, 10);
     const recentSet = new Set(recentWords);
 
     if (import.meta.env.DEV && recentWords.length > 0) {
@@ -2467,11 +2471,8 @@ export class QuestionScheduler {
   /**
    * 直近出題語を取得
    */
-  private getRecentWords(
-    mode: 'memorization' | 'translation' | 'spelling' | 'grammar',
-    count: number = 10
-  ): string[] {
-    const recentAnswers = this.getRecentAnswers(mode);
+  private getRecentWords(params: ScheduleParams, count: number = 10): string[] {
+    const recentAnswers = ScheduleHelpers.buildContext(params, this).recentAnswers;
     const words: string[] = [];
     const seen = new Set<string>();
     for (const a of recentAnswers) {
