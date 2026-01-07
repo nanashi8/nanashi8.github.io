@@ -958,6 +958,11 @@ export class QuestionScheduler {
    * 
    * TODO: 工程6で共通ヘルパーに抽出
    */
+  /**
+   * ソート・バランス調整（ScheduleHelpersに委譲）
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
+   */
   public sortAndBalance(
     questions: PrioritizedQuestion[],
     _params: ScheduleParams,
