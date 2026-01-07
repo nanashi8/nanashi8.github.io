@@ -8,13 +8,41 @@
 # 3. 関連仕様書の提示
 #
 # インストール方法:
-#   ln -sf ../../scripts/pre-commit-ai-guard.sh .git/hooks/pre-commit
+#   - Husky を使っている場合: .husky/pre-commit からこのスクリプトを呼び出す
+#       sh scripts/pre-commit-ai-guard.sh
+#   - 直接 Git hooks を使う場合: .git/hooks/pre-commit をこのスクリプトへリンク
+#       ln -sf ../../scripts/pre-commit-ai-guard.sh .git/hooks/pre-commit
 
 set -e
+
+# Ensure we run from repo root even when invoked from .git/hooks
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+cd "$REPO_ROOT"
 
 echo ""
 echo "🛡️  サーバント水先案内人: Pre-commit ガードチェック"
 echo ""
+
+echo "🧭 サーバント指示: 実装直後に必ず再評価してください"
+echo "   - 変更を加えた直後にこのガード（ai-guard）を再実行し、通るまで修正を続ける"
+echo "   - 例: sh scripts/pre-commit-ai-guard.sh"
+echo ""
+
+# 0) 品質ガード（ファイルサイズ/複雑度/危険パターン）
+if [ "${AI_GUARD_SKIP_QUALITY:-0}" != "1" ] && [ -f "scripts/pre-commit-quality-guard.sh" ]; then
+  if [ -x "scripts/pre-commit-quality-guard.sh" ]; then
+    QUALITY_GUARD_MODE=staged sh "scripts/pre-commit-quality-guard.sh"
+  else
+    # 実行権限が無い場合でも動かす
+    QUALITY_GUARD_MODE=staged sh "scripts/pre-commit-quality-guard.sh"
+  fi
+fi
+
+# 0.5) 修正ガード（修正の修正/対症療法/短期再修正など）
+if [ "${AI_GUARD_SKIP_FIX_CHECK:-0}" != "1" ] && [ -f "scripts/pre-commit-fix-check.sh" ]; then
+  # pre-commitは非対話で動くケースがあるため、非対話モードで実行
+  FIX_CHECK_NON_INTERACTIVE=${FIX_CHECK_NON_INTERACTIVE:-1} bash "scripts/pre-commit-fix-check.sh"
+fi
 
 # 変更されたファイルを取得
 CHANGED_FILES=${AI_GUARD_CHANGED_FILES:-$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(ts|tsx|js|jsx)$' || true)}

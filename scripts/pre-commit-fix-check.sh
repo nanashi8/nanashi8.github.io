@@ -6,6 +6,10 @@ set -e
 
 echo "🔍 修正の修正パターンをチェック中..."
 
+# pre-commit は非対話で実行されることがある（GUIコミット/ツール実行など）
+# FIX_CHECK_NON_INTERACTIVE=1 の場合はプロンプトを出さず、安全側（中断）に倒す
+NON_INTERACTIVE=${FIX_CHECK_NON_INTERACTIVE:-0}
+
 # カラーコード
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
@@ -45,13 +49,13 @@ if [ -n "$STAGED_FILES" ]; then
     MATCHED_LINES=$(git diff --cached "$file" | grep -E "^\+" | grep -E "$KEYWORDS" || true)
 
     if [ -n "$MATCHED_LINES" ]; then
-      echo -e "${YELLOW}⚠️  WARNING: 対症療法の可能性があるコードが検出されました${NC}"
-      echo -e "${YELLOW}   ファイル: $file${NC}"
+      echo -e "${RED}❌ ERROR: 対症療法（workaround/暫定対応 等）が検出されました（原則禁止）${NC}"
+      echo -e "${RED}   ファイル: $file${NC}"
       echo "$MATCHED_LINES" | while read -r line; do
-        echo -e "${YELLOW}   $line${NC}"
+        echo -e "${RED}   $line${NC}"
       done
       echo ""
-      WARNING_COUNT=$((WARNING_COUNT + 1))
+      ERROR_COUNT=$((ERROR_COUNT + 1))
     fi
   done
 fi
@@ -99,11 +103,10 @@ echo "🔀 条件分岐の追加をチェック中..."
 BRANCH_ADDITIONS=$(git diff --cached | grep -E "^\+.*(else if|else\s*{)" | wc -l | tr -d ' ')
 
 if [ "$BRANCH_ADDITIONS" -ge 3 ]; then
-  echo -e "${YELLOW}⚠️  WARNING: 複数の条件分岐追加が検出されました${NC}"
-  echo "複数の条件分岐を追加する修正は対症療法の可能性があります。"
-  echo "設計を見直してください。"
+  echo -e "${RED}❌ ERROR: 複数の条件分岐追加が検出されました（対症療法の典型／原則禁止）${NC}"
+  echo "複数の条件分岐追加で場当たり的に凌ぐのではなく、設計を見直してください。"
   echo ""
-  WARNING_COUNT=$((WARNING_COUNT + 1))
+  ERROR_COUNT=$((ERROR_COUNT + 1))
 fi
 
 # 6. 修正影響範囲のチェック
@@ -149,6 +152,14 @@ fi
 if [ $WARNING_COUNT -gt 0 ]; then
   echo -e "${YELLOW}⚠️  警告が${WARNING_COUNT}件あります${NC}"
   echo ""
+
+  if [ "$NON_INTERACTIVE" = "1" ]; then
+    echo -e "${RED}❌ 非対話モードのためコミットを中止しました${NC}"
+    echo "根本原因の確認・設計見直し後に再実行してください。"
+    echo "どうしてもコミットする場合は: git commit --no-verify"
+    exit 1
+  fi
+
   echo "このままコミットしますか？ (y/N)"
   read -r response
 
