@@ -837,49 +837,21 @@ export class QuestionScheduler {
    * ⚡ localStorage からプログレスデータを1回だけ読み込む
    */
   /**
-   * 進捗データキャッシュをロード
-   * 
-   * TODO: 工程6で共通ヘルパーに抽出
+   * 進捗データキャッシュをロード（ScheduleHelpersに委譲）
    */
   public loadProgressCache(): any {
-    try {
-      const progress = loadProgressSync();
-      return progress;
-    } catch {
-      return null;
-    }
+    return ScheduleHelpers.loadProgressCache();
   }
 
   /**
-   * ⚡ キャッシュされたデータから語句の学習状況を取得
-   * 
-   * TODO: 工程6で共通ヘルパーに抽出
+   * キャッシュから単語ステータスを取得（ScheduleHelpersに委譲）
    */
   public getWordStatusFromCache(
     word: string,
     mode: LearningMode,
     progressCache: any
   ): WordStatus | null {
-    if (!progressCache || !progressCache.wordProgress) return null;
-
-    const wordProgress = progressCache.wordProgress[word];
-    if (!wordProgress) return null;
-
-    const calculator = new PositionCalculator(mode);
-    const position = calculator.calculate(wordProgress);
-    const stats = calculator.getStats(wordProgress);
-    const category = PositionCalculator.categoryOf(position);
-
-    return {
-      category,
-      position,
-      lastStudied: wordProgress.lastStudied || 0,
-      attempts: stats.attempts,
-      correct: stats.correct,
-      streak: wordProgress.consecutiveCorrect || 0,
-      forgettingRisk: 0,
-      reviewInterval: 1,
-    };
+    return ScheduleHelpers.getWordStatusFromCache(word, mode, progressCache);
   }
 
   /**
@@ -954,19 +926,13 @@ export class QuestionScheduler {
   }
 
   /**
-   * 振動防止フィルター適用
-   * 
-   * TODO: 工程6で共通ヘルパーに抽出
+   * 振動防止フィルター適用（ScheduleHelpersに委譲）
    */
   public applyAntiVibration(
     questions: PrioritizedQuestion[],
     context: ScheduleContext
   ): PrioritizedQuestion[] {
-    return this.antiVibration.filter(questions, {
-      recentAnswers: context.recentAnswers,
-      minInterval: 60000, // 1分
-      consecutiveThreshold: 3, // 3連続正解
-    });
+    return ScheduleHelpers.applyAntiVibration(questions, context, this);
   }
 
   /**

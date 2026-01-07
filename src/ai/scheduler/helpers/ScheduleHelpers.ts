@@ -217,4 +217,72 @@ export class ScheduleHelpers {
    * 現時点では、上記3メソッド（buildContext, detectSignals, getRecentAnswers）のみ抽出
    * 残りのメソッドは次のステップで抽出予定
    */
+
+  /**
+   * 進捗データキャッシュをロード
+   */
+  static loadProgressCache(): any {
+    try {
+      return loadProgressSync();
+    } catch (error) {
+      logger.error('[ScheduleHelpers] loadProgressCache失敗', error);
+      return { wordProgress: {} };
+    }
+  }
+
+  /**
+   * キャッシュから単語ステータスを取得
+   * 
+   * @param word - 単語
+   * @param mode - 学習モード
+   * @param progressCache - 進捗キャッシュ
+   * @returns 単語ステータス
+   */
+  static getWordStatusFromCache(
+    word: string,
+    mode: 'memorization' | 'translation' | 'spelling' | 'grammar',
+    progressCache: any
+  ): any | null {
+    if (!progressCache || !progressCache.wordProgress) return null;
+
+    const wordProgress = progressCache.wordProgress[word];
+    if (!wordProgress) return null;
+
+    const calculator = new PositionCalculator(mode);
+    const position = calculator.calculate(wordProgress);
+    const stats = calculator.getStats(wordProgress);
+    const category = PositionCalculator.categoryOf(position);
+
+    return {
+      category,
+      position,
+      lastStudied: wordProgress.lastStudied || 0,
+      attempts: stats.attempts,
+      correct: stats.correct,
+      streak: wordProgress.consecutiveCorrect || 0,
+      forgettingRisk: 0,
+      reviewInterval: 1,
+    };
+  }
+
+  /**
+   * 振動防止フィルター適用
+   * 
+   * @param questions - 優先度付き問題リスト
+   * @param context - スケジューリングコンテキスト
+   * @param scheduler - QuestionSchedulerインスタンス
+   * @returns フィルター後の問題リスト
+   */
+  static applyAntiVibration(
+    questions: any[],
+    context: ScheduleContext,
+    scheduler: any
+  ): any[] {
+    return scheduler.antiVibration.filter(questions, {
+      recentAnswers: context.recentAnswers,
+      minInterval: 60000, // 1分
+      consecutiveThreshold: 3, // 3連続正解
+    });
+  }
 }
+
