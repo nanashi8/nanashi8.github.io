@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-07T10:13:08.432Z
+- generatedAt: 2026-01-07T20:33:39.302Z
 
 ## Single Source of Truth
 
@@ -14,31 +14,30 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- src/ai/scheduler/QuestionScheduler.ts (hot=0.139)
-- src/ai/scheduler/strategies/DefaultScheduleStrategy.ts (hot=0.089)
-- src/ai/scheduler/helpers/ScheduleHelpers.ts (hot=0.071)
-- src/ai/scheduler/strategies/HybridScheduleStrategy.ts (hot=0.062)
-- src/ai/scheduler/strategies/ScheduleStrategy.ts (hot=0.052)
-- docs/reports/PHASE1_STRATEGY_PATTERN_COMPLETION.md (hot=0.043)
-- CHANGELOG.md (hot=0.043)
-- src/ai/scheduler/strategies/FinalPriorityScheduleStrategy.ts (hot=0.037)
-- scripts/pre-commit-ai-guard.sh (hot=0.035)
-- docs/development/DESIGN_PATTERNS_REFACTORING_INVESTIGATION.md (hot=0.032)
+- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.121)
+- .aitk/instructions/no-fix-on-fix.instructions.md (hot=0.107)
+- extensions/servant/src/extension.ts (hot=0.09)
+- extensions/servant/package.json (hot=0.078)
+- extensions/servant/CHANGELOG.md (hot=0.078)
+- extensions/servant/src/constellation/ConstellationDataGenerator.ts (hot=0.061)
+- extensions/servant/test-quality-guard.ts (hot=0.048)
+- .aitk/instructions/INDEX.md (hot=0.047)
+- .aitk/instructions/mandatory-spec-check.instructions.md (hot=0.047)
+- .aitk/instructions/categories/BUG_FIX.md (hot=0.047)
 
 ## Related (Neural Propagation)
 
-- startNode: src/ai/scheduler/QuestionScheduler.ts
-- seeds: 5
+- startNode: extensions/servant/src/ui/ConstellationViewPanel.ts
+- seeds: 4
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- src/ai/scheduler/QuestionScheduler.ts (activation=1.000, source=signal, signals=[save:0.14])
-- src/ai/scheduler/strategies/DefaultScheduleStrategy.ts (activation=0.640, source=signal, signals=[save:0.09])
-- src/ai/scheduler/helpers/ScheduleHelpers.ts (activation=0.511, source=signal, signals=[save:0.07])
-- src/ai/scheduler/strategies/HybridScheduleStrategy.ts (activation=0.446, source=signal, signals=[save:0.06])
-- src/ai/scheduler/strategies/ScheduleStrategy.ts (activation=0.374, source=signal, signals=[save:0.05])
+- extensions/servant/src/ui/ConstellationViewPanel.ts (activation=1.000, source=signal, signals=[save:0.12])
+- extensions/servant/src/extension.ts (activation=0.744, source=signal, signals=[save:0.09])
+- extensions/servant/package.json (activation=0.645, source=signal, signals=[save:0.08])
+- extensions/servant/CHANGELOG.md (activation=0.645, source=signal, signals=[save:0.08])
 
 - (no related files detected)
 
@@ -53,7 +52,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 58.34
+- ageHours: 68.68
 
 ## Latest SpecCheck Record (Raw)
 

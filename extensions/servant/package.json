@@ -2,7 +2,7 @@
   "name": "servant",
   "displayName": "Servant",
   "description": "プロジェクト内に住むAIサーバント。設計方針を監視し、AI作業時にプロジェクト情報をネットワークで収集・提供して効率化します",
-  "version": "0.3.21",
+  "version": "0.3.28",
   "publisher": "nanashi8",
   "license": "MIT",
   "repository": {
@@ -493,7 +493,8 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src",
-    "package": "vsce package"
+    "package": "vsce package",
+    "package:vsix": "npm version patch --no-git-tag-version && npm run compile && vsce package"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

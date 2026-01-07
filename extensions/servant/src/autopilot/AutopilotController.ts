@@ -15,10 +15,10 @@ import type { NeuralDependencyGraph } from '../neural/NeuralDependencyGraph';
 import { AutoInvestigationEngine } from './AutoInvestigationEngine';
 import { GoalManager } from '../goals/GoalManager';
 import { ConstellationDataGenerator } from '../constellation/ConstellationDataGenerator';
+import { ServantWarningLogger } from '../ui/ServantWarningLogger';
 import {
   computeRequiredInstructionsForFiles,
   isSpecCheckFresh,
-  recordSpecCheck,
 } from '../guard/SpecCheck';
 
 type SuggestionSnapshot = {
@@ -59,6 +59,8 @@ export class AutopilotController {
     { actionId: string; patternIds: string[]; actionSuccess: boolean }
   >();
   private lastPostReviewActionId: string | null = null;
+  private lastSpecCheckPromptTime = 0; // Specチェックプロンプトの最終表示時刻
+  private warningLogger: ServantWarningLogger;
 
   private goalManager: GoalManager | null = null;
   private constellationGenerator: ConstellationDataGenerator | null = null;
@@ -106,6 +108,9 @@ export class AutopilotController {
     this.statusBar.text = 'Servant: Autopilot';
     this.statusBar.tooltip = 'Servant Autopilot（先回り誘導・事後レビュー）';
     this.statusBar.command = 'servant.autopilot.showLastReport';
+
+    // 警告ロガーの初期化
+    this.warningLogger = new ServantWarningLogger(outputChannel);
 
     // 自動調査エンジンの初期化
     this.investigationEngine = new AutoInvestigationEngine(
@@ -660,39 +665,8 @@ export class AutopilotController {
         };
         this.setStatusReviewRequired({ severity: 'error', reason: 'Specチェック' });
 
-        const selection = await this.notifier.blockingCritical(
-          'Servant Autopilot: 審議が必要（Specチェック）。\n\nSpecチェックが未記録/期限切れです。このまま変更を続けないでください。まず「必須指示書を開く」→「記録」を行ってください。',
-          '必須指示書を開く',
-          '今すぐ記録（メモ入力）',
-          '今回は中止（30分）'
-        );
-
-        if (selection === '必須指示書を開く') {
-          await vscode.commands.executeCommand('servant.reviewRequiredInstructions');
-        } else if (selection === '今すぐ記録（メモ入力）') {
-          const note = await vscode.window.showInputBox({
-            title: 'Specチェック記録',
-            prompt: '今回の作業内容/確認した指示書（任意）',
-            placeHolder: '例: batch-system + meta-ai 指示を確認 / 修正方針を決めた',
-          });
-          if (note !== undefined) {
-            recordSpecCheck(this.workspaceRoot, note, { requiredInstructions: required });
-            this.outputChannel.appendLine('[Autopilot] Specチェックを記録しました');
-            this.pendingReview = null;
-            this.setStatusIdle();
-          }
-        } else if (selection === '今回は中止（30分）') {
-          this.pendingReview = null;
-          this.applySnooze(30);
-        } else {
-          // キャンセル（×/Esc）は審議継続
-          this.pendingReview = {
-            severity: 'error',
-            reasons: ['Specチェック'],
-            createdAt: Date.now(),
-          };
-          this.setStatusReviewRequired({ severity: 'error', reason: 'Specチェック' });
-        }
+        // 構造化ログを出力（AI対応用）
+        this.warningLogger.logSpecCheckWarning(required, maxAgeHours);
 
         // Specチェックで止めた場合は、閉ループも回さない
         return;

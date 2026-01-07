@@ -2,6 +2,101 @@
 
 All notable changes to the "Instructions Validator" extension will be documented in this file.
 
+## [Unreleased]
+### 🔕 静かな警告システム（Quiet Warning System）
+
+**コンセプト**: サーバントは静かに見守り、必要に応じてAIが対処
+
+#### Features
+- ✅ **静かな警告**: モーダルダイアログを廃止
+  - ステータスバーで警告を表示
+  - Output Channelに詳細をログ
+  - ユーザーの作業を中断しない
+
+- ✅ **構造化ログ**: AI対応可能な警告形式
+  - JSON形式で警告内容を出力
+  - 対処方法を明記
+  - AIガイダンスを含む
+
+- ✅ **チャット連携**: Copilot Chatで対処可能
+  - Servantの出力を貼り付けるだけ
+  - AIが警告を解析して対処提案
+  - コマンドボタンで即座に実行
+
+- ✅ **ServantWarningLogger**: 警告管理の統一API
+  - Specチェック警告
+  - コード品質警告
+  - Git違反警告
+
+#### Technical
+- `ServantWarningLogger.ts`: 構造化ログシステム
+- `ChatParticipant.ts`: 警告対応機能追加
+- `AutopilotController.ts`: blockingCritical削除
+### � Bug Fixes
+- ✅ Specチェックプロンプトの連続表示を修正
+  - 5分間のクールダウン機能を追加
+  - 記録成功時にクールダウンをリセット
+  - 繰り返し表示される問題を解消
+
+### �🛡️ 失敗防止システム（Failure Prevention System）
+
+**背景**: 2026-01-08の天体儀表示不具合（HTML内の関数重複）を二度と繰り返さないための根本的な対策
+
+#### New Features
+- ✅ **CodeQualityGuard**: リアルタイムコード品質検証
+  - 関数の重複定義を検出（最優先）
+  - HTML/テンプレート内のJavaScript重複検出
+  - 変数スコープ問題の検出（const再代入など）
+  - VS Code問題パネルに自動表示
+  
+- ✅ **保存時自動検証**: ファイル保存時に品質チェック実行
+  - エラー/警告を即座に通知
+  - ステータスバーに検出件数を表示
+  
+- ✅ **修正提案システム**: 検出した問題に対して具体的な修正案を提示
+  - 「どの定義を削除すべきか」を明示
+  - 「宣言タイプを変更すべき」などの提案
+
+#### Technical
+- `CodeQualityGuard.ts`: コア品質検証エンジン
+- `FAILURE_PREVENTION_SYSTEM.md`: 設計ドキュメント
+- extension.ts統合: 保存イベントフック
+
+#### Future Plans
+- Phase 2: 失敗パターンDBとの統合
+- Phase 3: AI協調による予防システム
+- Phase 4: プリコミットフック統合
+
+## [0.3.23] - 2026-01-08
+
+### 🐛 Bug Fixes
+- ✅ 天体儀表示不具合を修正（HTML内の重複コード削除）
+- ✅ `sun` 変数スコープの修正
+- ✅ `animate` 関数の重複定義を削除
+
+### 🔧 Improvements
+- ✅ バージョン自動インクリメント機能追加（`npm run package:vsix`）
+- ✅ VSIX作成フローの改善
+
+## [0.3.22] - 2026-01-08
+
+### ✨ 天体儀（Constellation）機能復元
+
+プロジェクト構造を3D空間で可視化する天体儀の元の構想を実装しました。
+
+#### Features
+- ✅ 中心に太陽（プロジェクトゴール：生徒の学習効率化最大化）を配置
+- ✅ 距離 = 重要度の逆数（中心に近いほど重要）
+- ✅ 高さ（Y軸）= 更新日（新しいほど高い）
+- ✅ エッジの太さ = 結合度（強い結合=太線、弱い結合=細線）
+- ✅ 円筒座標系による均等配置
+- ✅ 実データ連携（NeuralDependencyGraph → ConstellationDataGenerator）
+
+#### Technical
+- Three.js + OrbitControls
+- 実プロジェクトデータを反映
+- WebView - Extension 間のpostMessage通信
+
 ## [0.1.0] - 2025-12-31
 
 ### 🎉 Initial Release

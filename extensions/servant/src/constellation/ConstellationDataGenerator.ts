@@ -174,21 +174,43 @@ export class ConstellationDataGenerator {
   }
 
   /**
-   * 3D座標を計算（球面レイアウト、フィボナッチ螺旋）
+   * 3D座標を計算
+   * - 距離（半径）: 重要度の逆数（近い=重要）
+   * - 高さ（Y軸）: 更新日（新しい=高い）
+   * - 角度: 均等配置（円筒座標）
    */
   private calculatePosition(node: NeuralNode, index: number, total: number): Vector3 {
-    // 優先度が高いほど中心に近い
-    const radius = 40 + (1 - node.priorityScore) * 60; // 40〜100
+    // 距離 = 重要度の逆数（近い=重要）
+    const distance = 15 + (1 - node.priorityScore) * 50; // 15〜65
 
-    // フィボナッチ螺旋で均等配置
-    const phi = Math.acos(-1 + (2 * index) / total);
-    const theta = Math.sqrt(total * Math.PI) * phi;
+    // 角度 = 均等配置（円周を等分）
+    const angle = (index / total) * Math.PI * 2;
 
+    // 高さ = 更新日（新しい=高い）
+    const daysAgo = this.getDaysAgo(node.lastModified);
+    const maxHeight = 30;
+    const height = Math.max(-10, maxHeight - (daysAgo / 10)); // 最大30から減衰
+
+    // 円筒座標 → 直交座標
     return {
-      x: radius * Math.cos(theta) * Math.sin(phi),
-      y: radius * Math.cos(phi),
-      z: radius * Math.sin(theta) * Math.sin(phi),
+      x: distance * Math.cos(angle),
+      y: height,
+      z: distance * Math.sin(angle),
     };
+  }
+
+  /**
+   * 最終更新日から経過日数を計算
+   */
+  private getDaysAgo(lastModified: string): number {
+    try {
+      const lastDate = new Date(lastModified);
+      const now = new Date();
+      const diffMs = now.getTime() - lastDate.getTime();
+      return Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    } catch {
+      return 365; // パース失敗時は1年前扱い
+    }
   }
 
   /**

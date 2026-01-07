@@ -16,6 +16,7 @@ import { GitHistoryAnalyzer } from './learning/GitHistoryAnalyzer';
 import { AIActionTracker } from './learning/AIActionTracker';
 import { AIEvaluator } from './learning/AIEvaluator';
 import { FeedbackCollector } from './learning/FeedbackCollector';
+import { CodeQualityGuard } from './learning/CodeQualityGuard';
 import { NeuralDependencyGraph } from './neural/NeuralDependencyGraph';
 import { NeuralLearningEngine } from './neural/NeuralLearningEngine';
 import { NeuralSignalStore } from './neural/NeuralSignalStore';
@@ -29,6 +30,7 @@ import { ConstellationViewPanel } from './ui/ConstellationViewPanel';
 import { quickFixCommit } from './commands/quickFixCommit';
 import { ServantChatParticipant } from './chat/ChatParticipant';
 import { ProblemsMonitor } from './chat/ProblemsMonitor';
+import { ProblemsIntegrationMonitor } from './chat/ProblemsIntegrationMonitor';
 import {
   recordSpecCheck,
   computeRequiredInstructionsForFiles,
@@ -244,7 +246,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // 保存イベントをターミナルに出す（成長/稼働の可視化用）
   context.subscriptions.push(
-    vscode.workspace.onDidSaveTextDocument((doc) => {
+    vscode.workspace.onDidSaveTextDocument(async (doc) => {
       const fsPath = doc.uri.fsPath;
       const now = Date.now();
 
@@ -264,6 +266,29 @@ export function activate(context: vscode.ExtensionContext) {
         }
       } catch {
         // ignore
+      }
+
+      // コード品質ガードによる検証（リアルタイム失敗検出）
+      if (isEnabled()) {
+        try {
+          const guard = ensureQualityGuard();
+          const issues = await guard.validateOnSave(doc);
+
+          if (issues.length > 0) {
+            const errorCount = issues.filter(i => i.severity === 'error').length;
+            const warningCount = issues.filter(i => i.severity === 'warning').length;
+
+            // 静かに警告：ログのみ（通知なし）
+            outputChannel.appendLine(
+              `[CodeQualityGuard] ${doc.fileName}: ${errorCount} errors, ${warningCount} warnings`
+            );
+
+            updateServantStatusBar(`品質チェック: ${issues.length}件検出`);
+            setTimeout(() => updateServantStatusBar('待機中'), 3000);
+          }
+        } catch (e) {
+          outputChannel.appendLine(`[CodeQualityGuard] Error: ${e}`);
+        }
       }
 
       const terminalEnabled = vscode.workspace
@@ -309,6 +334,19 @@ export function activate(context: vscode.ExtensionContext) {
   const aiEvaluator = new AIEvaluator(workspaceRoot);
   const feedbackCollector = new FeedbackCollector(workspaceRoot);
 
+  // Phase 7.5: コード品質ガード（リアルタイム失敗検出）
+  let qualityGuard: CodeQualityGuard | null = null;
+
+  // 初期化は遅延実行（最初の保存時）
+  const ensureQualityGuard = () => {
+    if (!qualityGuard) {
+      qualityGuard = new CodeQualityGuard(workspaceRoot, notifier);
+      context.subscriptions.push(qualityGuard);
+      outputChannel.appendLine('[Servant] CodeQualityGuard initialized');
+    }
+    return qualityGuard;
+  };
+
   // Phase 9: ニューラルネットワーク的依存関係グラフ
   const neuralGraph = new NeuralDependencyGraph(workspaceRoot);
   const neuralLearning = new NeuralLearningEngine(neuralGraph, workspaceRoot);
@@ -343,6 +381,11 @@ export function activate(context: vscode.ExtensionContext) {
   const problemsMonitor = new ProblemsMonitor(chatParticipant, context);
   problemsMonitor.start();
   context.subscriptions.push(problemsMonitor);
+
+  // 問題パネル統合監視（全ての診断ソースを静かにログ記録）
+  const problemsIntegrationMonitor = new ProblemsIntegrationMonitor(outputChannel, workspaceRoot);
+  problemsIntegrationMonitor.start();
+  context.subscriptions.push(problemsIntegrationMonitor);
 
   // AdaptiveGuard と ChatParticipant の連携
   // 学習完了時に自動的にChatにレポートを送信

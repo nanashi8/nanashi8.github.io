@@ -62,19 +62,21 @@ function validate(fileName, data) {
 
 function main() {
   if (!fs.existsSync(srcDir)) {
-    console.error(`[sync-reading-techniques] Source directory not found: ${srcDir}`);
-    process.exit(1);
+    console.warn(`[sync-reading-techniques] Source directory not found: ${srcDir}`);
+    console.warn(`[sync-reading-techniques] Skipping sync (this is expected in CI environments)`);
+    process.exit(0); // Exit successfully
   }
 
   ensureDir(destDir);
 
+  let syncedCount = 0;
   for (const fileName of files) {
     const from = path.join(srcDir, fileName);
     const to = path.join(destDir, fileName);
 
     if (!fs.existsSync(from)) {
-      console.error(`[sync-reading-techniques] Missing source file: ${from}`);
-      process.exit(1);
+      console.warn(`[sync-reading-techniques] Missing source file: ${from}, skipping`);
+      continue;
     }
 
     const data = readJson(from);
@@ -82,9 +84,14 @@ function main() {
 
     fs.copyFileSync(from, to);
     console.log(`✓ Synced ${fileName}`);
+    syncedCount++;
   }
 
-  console.log(`Done. Output: ${path.relative(repoRoot, destDir)}`);
+  if (syncedCount > 0) {
+    console.log(`Done. Output: ${path.relative(repoRoot, destDir)}`);
+  } else {
+    console.warn(`[sync-reading-techniques] No files synced`);
+  }
 }
 
 main();

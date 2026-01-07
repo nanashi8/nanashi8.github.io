@@ -336,7 +336,7 @@ console.log('🔄 [バッチ方式] 修正内容の説明');
 
 - learning-ai-protection.instructions.md
 - refactoring-safety.instructions.md
-- no-fix-on-fix.instructions.md
+- no-fix-on-fix-policy.instructions.md
 - no-symptomatic-fixes.instructions.md
 
 ---

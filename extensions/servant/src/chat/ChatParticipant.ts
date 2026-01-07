@@ -39,6 +39,12 @@ export class ServantChatParticipant {
   ): Promise<vscode.ChatResult> {
     const prompt = request.prompt.toLowerCase();
 
+    // Servant警告の検出と対応
+    if (prompt.includes('servant') && (prompt.includes('警告') || prompt.includes('warning') || prompt.includes('type:') || prompt.includes('spec-check'))) {
+      await this.handleServantWarning(request.prompt, stream, token);
+      return { metadata: { command: 'handleWarning' } };
+    }
+
     // 学習レポートの承認
     if (prompt.includes('承認') || prompt.includes('approve') || prompt === 'y' || prompt === 'yes') {
       if (this.pendingLearningReport) {
@@ -286,6 +292,93 @@ export class ServantChatParticipant {
     stream.markdown('📄 生成先: `.aitk/instructions/adaptive-learned-patterns.instructions.md`\n');
 
     this.pendingLearningReport = null;
+  }
+
+  /**
+   * Servant警告の処理
+   */
+  private async handleServantWarning(
+    prompt: string,
+    stream: vscode.ChatResponseStream,
+    token: vscode.CancellationToken
+  ): Promise<void> {
+    if (token.isCancellationRequested) return;
+
+    try {
+      // JSON形式の警告を抽出
+      const jsonMatch = prompt.match(/\{[\s\S]*"type"[\s\S]*\}/);
+      if (jsonMatch) {
+        const warning = JSON.parse(jsonMatch[0]);
+
+        stream.markdown(`## 🔍 Servant警告の対応\n\n`);
+        stream.markdown(`**種類**: ${warning.type}\n`);
+        stream.markdown(`**深刻度**: ${warning.severity}\n`);
+        stream.markdown(`**メッセージ**: ${warning.message}\n\n`);
+
+        // 警告タイプ別の対応
+        if (warning.type === 'spec-check-required') {
+          await this.handleSpecCheckWarning(warning, stream);
+        } else if (warning.type === 'code-quality-issues') {
+          await this.handleQualityWarning(warning, stream);
+        } else if (warning.type === 'git-violations') {
+          await this.handleGitWarning(warning, stream);
+        } else {
+          stream.markdown('この警告タイプは未対応です。詳細を確認してください。\n');
+        }
+      } else {
+        stream.markdown('⚠️ 警告情報の形式が不正です。Servantの出力をそのまま貼り付けてください。\n');
+      }
+    } catch (e) {
+      stream.markdown(`❌ エラー: ${e}\n`);
+    }
+  }
+
+  private async handleSpecCheckWarning(warning: any, stream: vscode.ChatResponseStream): Promise<void> {
+    stream.markdown(`### 📋 必須指示書の確認\n\n`);
+    stream.markdown(`以下の指示書を確認してください:\n\n`);
+
+    const required = warning.details?.requiredInstructions || [];
+    required.forEach((inst: string) => {
+      stream.markdown(`- ${inst}\n`);
+    });
+
+    stream.markdown(`\n### ✅ 対処手順\n\n`);
+    stream.markdown(`1. コマンドパレット → **Servant: Review Required Instructions**\n`);
+    stream.markdown(`2. 必須指示書の内容を確認\n`);
+    stream.markdown(`3. ステータスバー **"Servant: 審議"** をクリック\n`);
+    stream.markdown(`4. 確認内容を記録\n\n`);
+
+    stream.button({
+      command: 'servant.reviewRequiredInstructions',
+      title: '📄 必須指示書を開く',
+    });
+  }
+
+  private async handleQualityWarning(warning: any, stream: vscode.ChatResponseStream): Promise<void> {
+    stream.markdown(`### 🔧 コード品質の問題\n\n`);
+    stream.markdown(`**ファイル**: ${warning.details?.file}\n`);
+    stream.markdown(`**エラー**: ${warning.details?.errors}件\n`);
+    stream.markdown(`**警告**: ${warning.details?.warnings}件\n\n`);
+
+    stream.markdown(`### ✅ 対処手順\n\n`);
+    stream.markdown(`1. 問題パネル（Problems）を確認\n`);
+    stream.markdown(`2. 各問題の詳細と修正提案を確認\n`);
+    stream.markdown(`3. 特に **関数の重複定義** や **スコープ問題** に注意\n\n`);
+  }
+
+  private async handleGitWarning(warning: any, stream: vscode.ChatResponseStream): Promise<void> {
+    stream.markdown(`### 📝 Git違反の検出\n\n`);
+    stream.markdown(`**違反件数**: ${warning.details?.totalFiles}件\n\n`);
+
+    const files = warning.details?.files || [];
+    stream.markdown(`**影響ファイル**:\n`);
+    files.slice(0, 5).forEach((file: string) => {
+      stream.markdown(`- ${file}\n`);
+    });
+
+    if (files.length > 5) {
+      stream.markdown(`... 他 ${files.length - 5}件\n`);
+    }
   }
 
   /**

@@ -94,7 +94,7 @@ description: Instructions体系の総合ガイド - すべてのガバナンス�
 1. 📍 START HERE → decision-trees/maintenance-decision.instructions.md
 2. 📋 トラブルシューティング:
    - meta-ai-priority.instructions.md
-   - no-fix-on-fix.instructions.md
+   - no-fix-on-fix-policy.instructions.md
    - no-symptomatic-fixes.instructions.md
 ```
 
@@ -200,7 +200,7 @@ decision-trees/
 優先度: **HIGH**
 
 ```
-├── no-fix-on-fix.instructions.md                   [修正の修正を禁止]
+├── no-fix-on-fix-policy.instructions.md            [修正の修正を禁止]
 ├── no-symptomatic-fixes.instructions.md            [対症療法を禁止]
 └── css-modification-rules.instructions.md          [CSS変更ルール]
 ```

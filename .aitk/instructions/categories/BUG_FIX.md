@@ -54,7 +54,7 @@ category: bug-fix
 
 ### 2. 修正の修正禁止
 
-📄 **[no-fix-on-fix.instructions.md](../no-fix-on-fix.instructions.md)**
+📄 **[no-fix-on-fix-policy.instructions.md](../no-fix-on-fix-policy.instructions.md)**
 
 **修正が失敗した場合**:
 1. 一旦修正を revert
@@ -179,7 +179,7 @@ npm run lint:errors-only
 ## 📚 関連 Individual Instructions 一覧
 
 - [no-symptomatic-fixes.instructions.md](../no-symptomatic-fixes.instructions.md) ⭐ 最優先
-- [no-fix-on-fix.instructions.md](../no-fix-on-fix.instructions.md) ⭐ Critical
+- [no-fix-on-fix-policy.instructions.md](../no-fix-on-fix-policy.instructions.md) ⭐ Critical
 - [meta-ai-priority.instructions.md](../meta-ai-priority.instructions.md)
 - [ai-failure-prevention.instructions.md](../ai-failure-prevention.instructions.md)
 - [error-zero-policy.instructions.md](../error-zero-policy.instructions.md)

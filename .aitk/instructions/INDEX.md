@@ -1,7 +1,5 @@
 ---
 description: 【必ず最初に読む】Instructions体系のエントリーポイント
-priority: entry-point
-enforceBeforeModification: true
 ---
 
 # 🚪 Instructions Entry Point
