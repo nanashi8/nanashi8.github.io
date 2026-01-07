@@ -70,6 +70,16 @@ export interface SchedulerDependencies {
 
   /** バッチ管理（nullの場合はバッチモード無効） */
   batchManager: BatchManager | null;
+
+  /**
+   * QuestionSchedulerインスタンス（Context）
+   * 
+   * Strategy PatternにおけるContextとして機能。
+   * Strategyから共通処理（buildContext, detectSignals等）を呼び出すために必要。
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出し、この依存を削除
+   */
+  scheduler: any; // QuestionScheduler型（循環参照回避のためany）
 }
 
 /**

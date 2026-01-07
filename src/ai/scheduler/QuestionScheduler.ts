@@ -439,8 +439,10 @@ export class QuestionScheduler {
 
   /**
    * セッションコンテキストを構築
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
    */
-  private buildContext(params: ScheduleParams): ScheduleContext {
+  public buildContext(params: ScheduleParams): ScheduleContext {
     const now = new Date();
     const hour = now.getHours();
     const timeOfDay =
@@ -533,8 +535,10 @@ export class QuestionScheduler {
    * - 飽きシグナル: 同じ問題の繰り返し
    * - 過学習シグナル: 連続正解が多すぎる
    * - 苦戦シグナル: 連続不正解
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
    */
-  private detectSignals(context: ScheduleContext): DetectedSignal[] {
+  public detectSignals(context: ScheduleContext): DetectedSignal[] {
     try {
       const signals: DetectedSignal[] = [];
 
@@ -606,8 +610,10 @@ export class QuestionScheduler {
   /**
    * Position計算（7つのAI評価統合）
    * ⚡ パフォーマンス最適化: localStorageを1回だけ読み込む
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
    */
-  private calculatePriorities(
+  public calculatePriorities(
     questions: Question[],
     context: ScheduleContext,
     signals: any[],
@@ -1166,8 +1172,10 @@ export class QuestionScheduler {
 
   /**
    * 振動防止フィルター適用
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
    */
-  private applyAntiVibration(
+  public applyAntiVibration(
     questions: PrioritizedQuestion[],
     context: ScheduleContext
   ): PrioritizedQuestion[] {
@@ -1198,8 +1206,10 @@ export class QuestionScheduler {
   /**
    * ソート・バランス調整
    * 注: category = 学習状態（分からない/まだまだ/未学習/定着済）
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
    */
-  private sortAndBalance(
+  public sortAndBalance(
     questions: PrioritizedQuestion[],
     _params: ScheduleParams,
     _context: ScheduleContext
@@ -1989,8 +1999,10 @@ export class QuestionScheduler {
    *
    * 重要制約: Position階層（70-100 > 60-69 > 40-59 > 20-39 > 0-19）を絶対に保持
    * 各Position範囲内でのみ並べ替えを行い、範囲間の順序は維持する
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
    */
-  private postProcess(questions: PrioritizedQuestion[], context: ScheduleContext): Question[] {
+  public postProcess(questions: PrioritizedQuestion[], context: ScheduleContext): Question[] {
     // 基本的な変換
     // NOTE: 各タブで「再出題差し込み」「Position不整合検知」を共通で扱えるよう、
     // schedule()の返却QuestionにもPositionを付与する（UXは変えず、データのみ追加）。
