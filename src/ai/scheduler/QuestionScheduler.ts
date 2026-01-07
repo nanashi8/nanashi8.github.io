@@ -1060,7 +1060,12 @@ export class QuestionScheduler {
   /**
    * ⚡ localStorage からプログレスデータを1回だけ読み込む
    */
-  private loadProgressCache(): any {
+  /**
+   * 進捗データキャッシュをロード
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
+   */
+  public loadProgressCache(): any {
     try {
       const progress = loadProgressSync();
       return progress;
@@ -1071,8 +1076,10 @@ export class QuestionScheduler {
 
   /**
    * ⚡ キャッシュされたデータから語句の学習状況を取得
+   * 
+   * TODO: 工程6で共通ヘルパーに抽出
    */
-  private getWordStatusFromCache(
+  public getWordStatusFromCache(
     word: string,
     mode: LearningMode,
     progressCache: any
