@@ -91,6 +91,21 @@ export class QuestionScheduler {
     this.slotAllocator = new SlotAllocator(); // 🆕 SlotAllocatorインスタンス
   }
 
+  /**
+   * Strategy用の依存関係を取得
+   * 
+   * Strategy PatternにおけるDependency Injection
+   */
+  private getDependencies() {
+    return {
+      antiVibration: this.antiVibration,
+      aiCoordinator: this.aiCoordinator,
+      slotAllocator: this.slotAllocator,
+      batchManager: this.batchManager,
+      scheduler: this, // QuestionScheduler自身をContextとして渡す
+    };
+  }
+
   private getRandomSkipCount(): number {
     const random = Math.random();
     if (random < 0.4) return 2;
@@ -261,14 +276,33 @@ export class QuestionScheduler {
       }
     }
 
+    // 🎯 Strategy Pattern: モード別スケジューリング戦略選択
     // ハイブリッドモード: 既存AIの順序を尊重
     if (params.hybridMode) {
-      return this.scheduleHybridMode(params, startTime);
+      const HybridScheduleStrategy = await import(
+        './strategies/HybridScheduleStrategy'
+      ).then((m) => m.HybridScheduleStrategy);
+      const strategy = new HybridScheduleStrategy(this.getDependencies());
+      return strategy.schedule({
+        params,
+        startTime,
+        dependencies: this.getDependencies(),
+        progressData: QuestionScheduler.getProgressMapFromParams(params),
+      });
     }
 
     // finalPriorityモード: AICoordinatorのfinalPriorityを主軸にする（variant=C）
     if (params.finalPriorityMode) {
-      return this.scheduleFinalPriorityMode(params, startTime);
+      const FinalPriorityScheduleStrategy = await import(
+        './strategies/FinalPriorityScheduleStrategy'
+      ).then((m) => m.FinalPriorityScheduleStrategy);
+      const strategy = new FinalPriorityScheduleStrategy(this.getDependencies());
+      return strategy.schedule({
+        params,
+        startTime,
+        dependencies: this.getDependencies(),
+        progressData: QuestionScheduler.getProgressMapFromParams(params),
+      });
     }
 
     // 1. コンテキスト構築
@@ -1555,450 +1589,6 @@ export class QuestionScheduler {
     });
 
     return out;
-  }
-
-  /**
-   * ハイブリッドモード: 既存AI優先度を尊重し、振動防止とDTAの微調整のみ適用
-   */
-  private scheduleHybridMode(params: ScheduleParams, startTime: number): ScheduleResult {
-    const context = this.buildContext(params);
-    const signals = this.detectSignals(context);
-
-    // 既存の順序を保持したまま優先度を付与（hybridMode=false に変更してPosition分散を有効化）
-    const prioritized = this.calculatePriorities(params.questions, context, signals, false);
-
-    // 振動防止フィルター適用（最近正解した単語の再出題を防止）
-    const filtered = this.applyAntiVibration(prioritized, context);
-
-    // Position降順ソート（まだまだ・分からないを優先）
-    const sorted = this.sortAndBalance(filtered, params, context);
-
-    // 【確実性保証】ハイブリッドモードでも復習単語を確実に上位に配置
-    const incorrectQuestions = sorted.filter((pq) => pq.position >= 70);
-    const stillLearningQuestions = sorted.filter((pq) => pq.position >= 40 && pq.position < 70);
-    const reviewNeeded = incorrectQuestions.length + stillLearningQuestions.length;
-    const totalQuestions = sorted.length;
-
-    logger.info('[QuestionScheduler Hybrid] 優先単語配置完了', {
-      incorrectWords: incorrectQuestions.slice(0, 5).map((pq) => pq.question.word),
-      stillLearningWords: stillLearningQuestions.slice(0, 5).map((pq) => pq.question.word),
-      incorrectCount: incorrectQuestions.length,
-      stillLearningCount: stillLearningQuestions.length,
-      otherCount: totalQuestions - reviewNeeded,
-      reviewRatio:
-        totalQuestions > 0 ? `${((reviewNeeded / totalQuestions) * 100).toFixed(0)}%` : '0%',
-      top5: sorted.slice(0, 5).map((pq) => `${pq.question.word}(${pq.status?.category})`),
-    });
-
-    // 後処理
-    const questions = this.postProcess(sorted, context);
-
-    // 📊 localStorage保存: postProcess後のTOP30（実際の出題順序）
-    // 重要: sorted配列からPositionを取得（localStorageではなく、メモリ上の値）
-    try {
-      const top30 = questions.slice(0, 30).map((q, _idx) => {
-        // sorted配列から対応するPrioritizedQuestionを検索
-        const pq = sorted.find((pq) => pq.question.word === q.word);
-        return {
-          word: q.word,
-          position: pq?.position || 0, // メモリ上のPosition値
-          category: pq?.status?.category,
-          attempts: pq?.status?.attempts || 0,
-        };
-      });
-      localStorage.setItem(
-        'debug_postProcess_output',
-        JSON.stringify({
-          timestamp: new Date().toISOString(),
-          mode: context.mode,
-          source: 'scheduleHybridMode',
-          top30,
-        })
-      );
-    } catch {
-      // localStorage失敗は無視
-    }
-
-    // 振動スコア計算
-    const vibrationScore = this.antiVibration.calculateVibrationScore(
-      sorted,
-      context.recentAnswers,
-      20
-    );
-
-    const processingTime = performance.now() - startTime;
-
-    logger.info(`[QuestionScheduler Hybrid] スケジューリング完了`, {
-      processingTime: Math.round(processingTime) + 'ms',
-      vibrationScore,
-      incorrectCount: incorrectQuestions.length,
-      stillLearningCount: stillLearningQuestions.length,
-      aiEnabled: this.aiCoordinator,
-      totalCount: questions.length,
-    });
-
-    return {
-      scheduledQuestions: questions,
-      vibrationScore,
-      processingTime,
-      signalCount: signals.length,
-    };
-  }
-
-  /**
-   * finalPriorityモード（variant=C）
-   * AICoordinatorのfinalPriorityを主軸に、Positionは補助的に使用
-   */
-  private async scheduleFinalPriorityMode(
-    params: ScheduleParams,
-    startTime: number
-  ): Promise<ScheduleResult> {
-    const context = this.buildContext(params);
-    const signals = this.detectSignals(context);
-
-    // ⚡ AICoordinator用: 全単語の進捗（specialist AI が allProgress を前提にする）
-    const progressCache = this.loadProgressCache();
-    const allProgress: Record<string, any> = (progressCache?.wordProgress ?? {}) as Record<
-      string,
-      any
-    >;
-
-    // AICoordinator用: currentTab マッピング（AI側の型に合わせる）
-    const currentTab: 'memorization' | 'grammar' | 'comprehensive' =
-      params.mode === 'grammar'
-        ? 'grammar'
-        : params.mode === 'memorization'
-          ? 'memorization'
-          : 'comprehensive';
-
-    // AICoordinator用: SessionStats（AI側の型に合わせる）
-    const totalAttempts =
-      (params.sessionStats.correct || 0) +
-      (params.sessionStats.incorrect || 0) +
-      (params.sessionStats.still_learning || 0) +
-      (params.sessionStats.mastered || 0);
-
-    // 学習段階の分布（AIのモチベーション/文脈推定で利用）
-    let masteredCount = 0;
-    let stillLearningCount = 0;
-    let incorrectCount = 0;
-    let newCount = 0;
-    for (const wp of Object.values(allProgress)) {
-      const calculator = new PositionCalculator(
-        params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
-      );
-      const pos = calculator.calculate(wp);
-      if (pos >= 70) incorrectCount++;
-      else if (pos >= 40) stillLearningCount++;
-      else if (pos >= 20) newCount++;
-      else masteredCount++;
-    }
-
-    const aiSessionStats = {
-      totalAttempts,
-      correctAnswers: params.sessionStats.correct || 0,
-      incorrectAnswers: params.sessionStats.incorrect || 0,
-      stillLearningAnswers: params.sessionStats.still_learning || 0,
-      sessionStartTime: context.sessionStartTime,
-      sessionDuration: (params.sessionStats.duration || 0) as number,
-      consecutiveIncorrect: 0,
-      masteredCount,
-      stillLearningCount,
-      incorrectCount,
-      newCount,
-      consecutiveCorrect: params.sessionStats.consecutiveCorrect || 0,
-    };
-
-    // AICoordinatorが必須
-    if (!this.aiCoordinator) {
-      logger.warn(
-        '[QuestionScheduler FinalPriority] AICoordinatorが未初期化、ハイブリッドモードにフォールバック'
-      );
-      return this.scheduleHybridMode(params, startTime);
-    }
-
-    // 🐛 DEBUG: AIループ前の入力チェック（S_1）
-    let beforeAISpanId: string | undefined;
-    if (import.meta.env.DEV) {
-      const weakWordsInInput = params.questions.filter((q) => {
-        const wp = allProgress[q.word] ?? context.wordProgress[q.word] ?? null;
-        if (!wp) return false;
-        const attempts = wp.memorizationAttempts ?? wp.totalAttempts ?? 0;
-        if (attempts <= 0) return false;
-        const calculator = new PositionCalculator(
-          params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
-        );
-        const pos = calculator.calculate(wp);
-        return pos >= 40;
-      });
-
-      beforeAISpanId = DebugTracer.startSpan('QuestionScheduler.finalPriorityMode.beforeAI', {
-        weakWordsCount: weakWordsInInput.length,
-        totalCount: params.questions.length,
-        weakWords: weakWordsInInput.map((q) => q.word),
-      });
-    }
-
-    // 各問題にAICoordinatorのfinalPriorityを取得
-    const prioritized: PrioritizedQuestion[] = [];
-    for (const question of params.questions) {
-      const wordProgress =
-        allProgress[question.word] ?? context.wordProgress[question.word] ?? null;
-
-      // ✅ finalPriorityModeでも通常モードと同じ「attempts」定義を使う
-      // GamificationAI（まだまだブースト/新規インターリーブ）は pq.attempts を参照するため必須
-      const cachedStatus = this.getWordStatusFromCache(question.word, context.mode, progressCache);
-
-      // Position決定（モード別）
-      const position =
-        cachedStatus?.position ??
-        new PositionCalculator(
-          params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
-        ).calculate(wordProgress);
-
-      // status（モード別attempts/カテゴリを優先）
-      let fallbackAttempts = 0;
-      let fallbackCorrect = 0;
-      if (wordProgress) {
-        switch (params.mode) {
-          case 'memorization':
-            fallbackAttempts = wordProgress.memorizationAttempts || 0;
-            fallbackCorrect = wordProgress.memorizationCorrect || 0;
-            break;
-          case 'translation':
-            fallbackAttempts = wordProgress.translationAttempts || 0;
-            fallbackCorrect = wordProgress.translationCorrect || 0;
-            break;
-          case 'spelling':
-            fallbackAttempts = wordProgress.spellingAttempts || 0;
-            fallbackCorrect = wordProgress.spellingCorrect || 0;
-            break;
-          case 'grammar':
-            fallbackAttempts = wordProgress.grammarAttempts || 0;
-            fallbackCorrect = wordProgress.grammarCorrect || 0;
-            break;
-          default:
-            break;
-        }
-      }
-
-      const status: WordStatus = cachedStatus ?? {
-        category: positionToCategory(position),
-        position,
-        lastStudied: wordProgress?.lastStudied || 0,
-        attempts: fallbackAttempts,
-        correct: fallbackCorrect,
-        streak: wordProgress?.consecutiveCorrect || 0,
-        forgettingRisk: 0,
-        reviewInterval: 1,
-      };
-
-      // AICoordinator分析（非同期）
-      const aiResult = await this.aiCoordinator.analyzeAndCoordinate(
-        {
-          // AIAnalysisInput 仕様に合わせる
-          word: {
-            word: question.word,
-            meaning: question.meaning,
-            reading: question.reading,
-            difficulty: question.difficulty,
-            category: question.category,
-            source: question.source,
-            type: question.type,
-            isPhraseOnly: question.isPhraseOnly,
-          },
-          progress: wordProgress,
-          sessionStats: aiSessionStats,
-          currentTab,
-          allProgress,
-        },
-        position / 100 // basePriority（0-1）
-      );
-
-      prioritized.push({
-        question,
-        position,
-        finalPriority: aiResult.finalPriority, // AIの判定を主因にする
-        status,
-        attempts: status?.attempts ?? 0,
-        timeBoost: 1.0,
-      });
-    }
-
-    // 🐛 DEBUG: AIループ完了後のチェック（S_2）
-    if (import.meta.env.DEV) {
-      // beforeAIスパンを終了
-      if (beforeAISpanId) {
-        const weakWordsAfterLoop = prioritized.filter((pq) => {
-          if (!pq.status) return false;
-          const attempts = pq.status.attempts ?? 0;
-          if (attempts <= 0) return false;
-          return pq.position >= 40;
-        });
-        DebugTracer.endSpan(beforeAISpanId, {
-          weakWordsCount: weakWordsAfterLoop.length,
-          totalCount: prioritized.length,
-          weakWords: weakWordsAfterLoop.map((pq) => pq.question.word),
-        });
-      }
-
-      const weakWordsInPrioritized = prioritized.filter((pq) => {
-        if (!pq.status) return false;
-        const attempts = pq.status.attempts ?? 0;
-        if (attempts <= 0) return false;
-        return pq.position >= 40;
-      });
-
-      const afterAISpanId = DebugTracer.startSpan('QuestionScheduler.finalPriorityMode.afterAI', {
-        weakWordsCount: weakWordsInPrioritized.length,
-        totalCount: prioritized.length,
-        weakWords: weakWordsInPrioritized.map((pq) => pq.question.word),
-      });
-
-      // afterAIスパンもすぐに終了
-      DebugTracer.endSpan(afterAISpanId, {
-        weakWordsCount: weakWordsInPrioritized.length,
-        totalCount: prioritized.length,
-        weakWords: weakWordsInPrioritized.map((pq) => pq.question.word),
-      });
-
-      // トレース終了
-      DebugTracer.endTrace();
-    }
-
-    // 🎮 GamificationAI: まだまだ語をブースト
-    // NOTE: finalPriorityModeでは、Position引き上げだけでは効果がないため、
-    // finalPriorityを直接ブーストして、まだまだ語を最優先にする
-    const gamificationAI = new GamificationAI();
-    const boostedResult = gamificationAI.boostStillLearningQuestions(prioritized);
-    const boostedPrioritized = boostedResult.result;
-
-    // 🔥 まだまだ語のfinalPriorityをブースト（Position 60-69の単語を最優先）
-    for (const pq of boostedPrioritized) {
-      if (pq.position >= 60 && pq.position < 70 && (pq.status?.attempts ?? 0) > 0) {
-        // まだまだ語のfinalPriorityを大幅にブースト（+100.0）
-        // これにより、AIの評価に関係なく、まだまだ語が上位に来る
-        pq.finalPriority = (pq.finalPriority ?? 0) + 100.0;
-      }
-    }
-
-    if (import.meta.env.DEV) {
-      const weakWordsAfterBoost = boostedPrioritized.filter(
-        (pq) => pq.position >= 40 && (pq.status?.attempts ?? 0) > 0
-      );
-      const weakWordsInTop10 = boostedPrioritized
-        .sort((a, b) => (b.finalPriority ?? 0) - (a.finalPriority ?? 0))
-        .slice(0, 10)
-        .filter((pq) => pq.position >= 40 && (pq.status?.attempts ?? 0) > 0);
-
-      console.log('🎮 [finalPriorityMode] GamificationAI ブースト後:', {
-        totalQuestions: boostedPrioritized.length,
-        weakWordsCount: weakWordsAfterBoost.length,
-        weakWordsInTop10: weakWordsInTop10.length,
-        weakWordsTop5: weakWordsInTop10.slice(0, 5).map((pq) => ({
-          word: pq.question.word,
-          position: pq.position,
-          finalPriority: pq.finalPriority ?? 0,
-        })),
-      });
-    }
-
-    // ✅ 新規混入（Position分散 → インターリーブ）
-    // finalPriorityModeでも「分からない連打で新規が一切出ない」を避ける
-    // - Position分散: 新規の一部を40-59へ引き上げ（まだまだ/分からないより下位）
-    // - インターリーブ: [苦手語4問, 新規1問] を混ぜる（新規比率=20%、定着率優先）
-    const { result: adjustedForNew } =
-      gamificationAI.adjustPositionForInterleaving(boostedPrioritized);
-
-    // finalPriority降順ソート（AIの判定 + GamificationAIブーストを最優先）
-    const sorted = [...adjustedForNew].sort(
-      (a, b) => (b.finalPriority ?? 0) - (a.finalPriority ?? 0)
-    );
-
-    // カテゴリ別インターリーブ（苦手語とPosition引き上げ新規語を交互配置）
-    const interleaved = gamificationAI.interleaveByCategory(sorted);
-
-    // 📊 localStorage保存: finalPriorityモードのTOP30（デバッグパネル/コピペ用）
-    try {
-      const top30Final = interleaved.slice(0, 30).map((pq, idx) => ({
-        rank: idx + 1,
-        word: pq.question.word,
-        position: pq.position,
-        finalPriority: pq.finalPriority ?? 0,
-        category: pq.status?.category,
-        attempts: pq.status?.attempts ?? 0,
-      }));
-      writeDebugJSON('debug_finalPriority_output', top30Final, { mode: context.mode });
-
-      const statsPayload = {
-        currentTab,
-        totalQuestions: params.questions.length,
-        allProgressCount: Object.keys(allProgress || {}).length,
-        aiSessionStats,
-        timestamp: new Date().toISOString(),
-        mode: context.mode,
-      };
-      writeDebugJSON('debug_finalPriority_sessionStats', statsPayload, { mode: context.mode });
-    } catch {
-      // localStorage失敗は無視
-    }
-
-    // 後処理
-    const questions = this.postProcess(interleaved, context);
-
-    // 📊 localStorage保存: postProcess後のTOP30（finalPriorityMode）
-    // NOTE: mode別キーも併記して、translation等の30問テストで上書きされないようにする
-    try {
-      const top30 = questions.slice(0, 30).map((q) => {
-        const pq = interleaved.find((pq) => pq.question.word === q.word);
-        return {
-          word: q.word,
-          position: pq?.position || (q as any).position || 0,
-          category: pq?.status?.category,
-          attempts: pq?.status?.attempts || 0,
-          finalPriority: pq?.finalPriority ?? (q as any).finalPriority ?? 0,
-        };
-      });
-
-      const payload = {
-        timestamp: new Date().toISOString(),
-        mode: context.mode,
-        source: 'scheduleFinalPriorityMode',
-        top30,
-      };
-
-      writeDebugJSON('debug_postProcess_output', payload, { mode: context.mode });
-    } catch {
-      // ignore
-    }
-
-    // 振動スコア計算
-    const vibrationScore = this.antiVibration.calculateVibrationScore(
-      interleaved,
-      context.recentAnswers,
-      20
-    );
-
-    const processingTime = performance.now() - startTime;
-
-    logger.info(`[QuestionScheduler FinalPriority] スケジューリング完了`, {
-      processingTime: Math.round(processingTime) + 'ms',
-      vibrationScore,
-      aiEnabled: true,
-      totalCount: questions.length,
-      top5FinalPriority: interleaved.slice(0, 5).map((pq) => ({
-        word: pq.question.word,
-        finalPriority: (pq.finalPriority ?? 0).toFixed(3),
-        position: pq.position,
-      })),
-    });
-
-    return {
-      scheduledQuestions: questions,
-      vibrationScore,
-      processingTime,
-      signalCount: signals.length,
-    };
   }
 
   /**
