@@ -305,115 +305,12 @@ export class QuestionScheduler {
       });
     }
 
-    // 1. コンテキスト構築
-    const context = this.buildContext(params);
-
-    const signals = this.detectSignals(context);
-
-    // 3. 優先度計算（DTA統合 + Position分散）
-    // ⚠️ calculatePriorities()内でapplyInterleavingAdjustment()を呼び出し済み
-    const prioritized = this.calculatePriorities(params.questions, context, signals, false);
-
-    // 4. 振動防止フィルター適用
-    const filtered = this.applyAntiVibration(prioritized, context);
-
-    // 4.5 学習上限（語数上限）← 廃止（バッチモードに移行）
-    // const limited = this.applyLearningLimits(filtered, params, context);
-
-    // 5. ソート・バランス調整
-    const sorted = this.sortAndBalance(filtered, params, context);
-
-    // 6. 後処理
-    const questions = this.postProcess(sorted, context);
-
-    // 📊 localStorage保存: postProcess後のTOP30（実際の出題順序）
-    // NOTE: mode別キーも併記して、translation等の30問テストで上書きされないようにする
-    try {
-      const top30 = questions.slice(0, 30).map((q, _idx) => {
-        const pq = sorted.find((pq) => pq.question.word === q.word);
-        return {
-          word: q.word,
-          position: pq?.position || 0,
-          category: pq?.status?.category,
-          attempts: pq?.status?.attempts || 0,
-        };
-      });
-
-      const payload = {
-        timestamp: new Date().toISOString(),
-        mode: context.mode,
-        source: 'schedule',
-        top30,
-      };
-
-      writeDebugJSON('debug_postProcess_output', payload, { mode: context.mode });
-    } catch {
-      // localStorage失敗は無視
-    }
-
-    // 7. 振動スコア計算
-    const vibrationScore = this.antiVibration.calculateVibrationScore(
-      sorted,
-      context.recentAnswers,
-      20
+    // デフォルトモード: DefaultScheduleStrategyに委譲
+    const { DefaultScheduleStrategy } = await import(
+      './strategies/DefaultScheduleStrategy'
     );
-
-    // 8. 🔒 強制装置: sortAndBalance() → postProcess() の順序整合性検証
-    const sortedTop10Positions = sorted.slice(0, 10).map((pq) => pq.position);
-    const questionsTop10Positions = questions
-      .slice(0, 10)
-      .map((q) => sorted.find((pq) => pq.question.word === q.word)?.position ?? 0);
-
-    // TOP10の順序が一致しているか検証
-    const orderMismatch = !sortedTop10Positions.every(
-      (pos, idx) => pos === questionsTop10Positions[idx]
-    );
-
-    if (orderMismatch && import.meta.env.DEV) {
-      console.error(
-        '🚨 [QuestionScheduler] CRITICAL: postProcess()がsortAndBalance()の順序を破壊しました！',
-        {
-          sortedTop10: sorted
-            .slice(0, 10)
-            .map((pq) => ({ word: pq.question.word, pos: pq.position })),
-          questionsTop10: questions.slice(0, 10).map((q) => ({
-            word: q.word,
-            pos: sorted.find((pq) => pq.question.word === q.word)?.position ?? 0,
-          })),
-        }
-      );
-    }
-
-    const processingTime = performance.now() - startTime;
-
-    const resultDebug = {
-      top10Words: questions.slice(0, 10).map((q) => q.word),
-      top10Positions: sorted
-        .slice(0, 10)
-        .map((pq) => ({ word: pq.question.word, position: pq.position })),
-      orderMismatch,
-    };
-
-    logger.info(`[QuestionScheduler] スケジューリング完了`, {
-      processingTime: Math.round(processingTime) + 'ms',
-      vibrationScore,
-      signalCount: signals.length,
-      resultDebug,
-    });
-
-    // localStorage に結果を保存（デバッグ用）
-    try {
-      const existing = JSON.parse(localStorage.getItem('debug_scheduler_results') || '[]');
-      existing.push({
-        timestamp: new Date().toISOString(),
-        ...resultDebug,
-      });
-      if (existing.length > 10) existing.shift();
-      if (QuestionScheduler.isVerboseDebug)
-        localStorage.setItem('debug_scheduler_results', JSON.stringify(existing));
-    } catch {
-      // ignore
-    }
+    const strategy = new DefaultScheduleStrategy(this.getDependencies());
+    const { questions, sorted } = await strategy.schedule(params);
 
     // 🔥 ランダム飛ばし機能: incorrect単語を待機キューに追加
     // トップ問題がincorrectの場合のみ（出題直前に判定）
