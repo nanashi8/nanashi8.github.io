@@ -27,6 +27,8 @@ import { Notifier } from './ui/Notifier';
 import { AutopilotController } from './autopilot/AutopilotController';
 import { ConstellationViewPanel } from './ui/ConstellationViewPanel';
 import { quickFixCommit } from './commands/quickFixCommit';
+import { ServantChatParticipant } from './chat/ChatParticipant';
+import { ProblemsMonitor } from './chat/ProblemsMonitor';
 import {
   recordSpecCheck,
   computeRequiredInstructionsForFiles,
@@ -75,18 +77,23 @@ export function activate(context: vscode.ExtensionContext) {
   const lastSaveLoggedAtByFile = new Map<string, number>();
   const SAVE_LOG_THROTTLE_MS = 2000;
 
-  // Servant稼働状況（enable/disable）をステータスバーに表示
+  // Servant稼働状況（enable/disable + 活動状況）をステータスバーに表示
   const servantStatusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 110);
   let lastServantEnabled: boolean | null = null;
-  const updateServantStatusBar = () => {
+  let currentActivity = '待機中';
+  const updateServantStatusBar = (activity?: string) => {
+    if (activity) {
+      currentActivity = activity;
+    }
     const enabled = isEnabled();
-    servantStatusBar.text = enabled ? 'Servant: ON' : 'Servant: OFF';
+    servantStatusBar.text = enabled ? `🛡️ Servant: ${currentActivity}` : 'Servant: OFF';
     servantStatusBar.tooltip = enabled
-      ? 'Servantは有効です（設定: servant.enable）'
+      ? `Servantは有効です\n現在: ${currentActivity}\n\nクリックで詳細表示`
       : 'Servantは無効です（設定: servant.enable を true にすると有効化）';
     servantStatusBar.backgroundColor = enabled
       ? undefined
       : new vscode.ThemeColor('statusBarItem.warningBackground');
+    servantStatusBar.command = 'servant.showOutput';
     servantStatusBar.show();
 
     if (lastServantEnabled === null || lastServantEnabled !== enabled) {
@@ -96,6 +103,12 @@ export function activate(context: vscode.ExtensionContext) {
   };
   updateServantStatusBar();
   context.subscriptions.push(servantStatusBar);
+
+  // ステータスバークリックで出力チャネル表示
+  const showOutputCommand = vscode.commands.registerCommand('servant.showOutput', () => {
+    outputChannel.show();
+  });
+  context.subscriptions.push(showOutputCommand);
 
   // 天体儀ステータスバー（🌟アイコン、常時表示）
   // priority を最高レベル（10000）に設定して、右端に確実に表示
@@ -322,6 +335,34 @@ export function activate(context: vscode.ExtensionContext) {
     notifier
   );
 
+  // Chat Participant の初期化（@servant）
+  const chatParticipant = new ServantChatParticipant(context);
+  chatParticipant.register();
+
+  // 問題パネルの監視（自動報告機能）
+  const problemsMonitor = new ProblemsMonitor(chatParticipant, context);
+  problemsMonitor.start();
+  context.subscriptions.push(problemsMonitor);
+
+  // AdaptiveGuard と ChatParticipant の連携
+  // 学習完了時に自動的にChatにレポートを送信
+  adaptiveGuard.setOnLearningComplete(async (patterns) => {
+    await chatParticipant.submitLearningReport(patterns);
+  });
+
+  // 学習レポート承認コマンドの登録
+  context.subscriptions.push(
+    vscode.commands.registerCommand('servant.applyLearningReport', async (patterns) => {
+      try {
+        await adaptiveGuard.updateInstructions(patterns);
+        vscode.window.showInformationMessage('✅ Instructions が更新されました！');
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        vscode.window.showErrorMessage(`❌ Instructions の更新に失敗しました: ${errorMessage}`);
+      }
+    })
+  );
+
   // Autopilot: コマンド暗記ゼロで「事前誘導→事後レビュー」を回す
   const autopilot = new AutopilotController(
     workspaceRoot,
@@ -363,9 +404,11 @@ export function activate(context: vscode.ExtensionContext) {
   registerQuickFixCommands(context, notifier);
 
   const validateActiveEditor = async () => {
+    updateServantStatusBar('手動検証中');
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
       notifier.commandInfo('No active editor');
+      updateServantStatusBar('待機中');
       return;
     }
 
@@ -396,9 +439,11 @@ export function activate(context: vscode.ExtensionContext) {
 
     notifier.commandInfo('Instructions validation completed');
     writeTerminalYellow(`[Servant] Validate done: ${violations.length} issues`);
+    updateServantStatusBar('待機中');
   };
 
   const validateBeforeCommit = async () => {
+    updateServantStatusBar('コミット前検証中');
     outputChannel.appendLine('[Command] Validate before commit triggered');
 
     writeTerminalYellow('[Servant] Validate Before Commit: start');
@@ -540,6 +585,8 @@ export function activate(context: vscode.ExtensionContext) {
     writeTerminalYellow(
       `[Servant] Validate Before Commit: ${result.success ? 'OK' : 'FAIL'} (${result.violations.length} issues)`
     );
+
+    updateServantStatusBar('待機中');
 
     // エラーがあればコマンド失敗として返す（Git hookから使用される）
     if (!result.success) {
@@ -1047,6 +1094,14 @@ export function activate(context: vscode.ExtensionContext) {
     () => quickFixCommit(outputChannel)
   );
 
+  // 📢 Chat連携: 問題パネルの内容をCopilot Chatに報告
+  const reportProblemsCommand = vscode.commands.registerCommand(
+    'servant.chat.reportProblems',
+    async () => {
+      await chatParticipant.sendAutoReport('問題パネルのエラーを確認して修正方法を提案してください');
+    }
+  );
+
   // ファイル変更監視
   const watcher = vscode.workspace.createFileSystemWatcher(
     '**/*.{ts,tsx,js,jsx,md,json}'
@@ -1101,7 +1156,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   watcher.onDidChange(async (uri) => {
     if (isEnabled()) {
+      const fileName = path.basename(uri.fsPath);
+      updateServantStatusBar(`検証中: ${fileName}`);
       await diagnosticsProvider.validate(uri);
+      updateServantStatusBar('待機中');
     }
 
     if (isContextSourceFile(uri)) {
@@ -1111,7 +1169,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   watcher.onDidCreate(async (uri) => {
     if (isEnabled()) {
+      const fileName = path.basename(uri.fsPath);
+      updateServantStatusBar(`検証中: ${fileName}`);
       await diagnosticsProvider.validate(uri);
+      updateServantStatusBar('待機中');
     }
 
     if (isContextSourceFile(uri)) {
@@ -1146,6 +1207,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Phase 7: 新しいコマンドの登録
   const learnFromHistoryCommand = vscode.commands.registerCommand('servant.learnFromHistory', async () => {
+    updateServantStatusBar('Git履歴学習中');
     try {
       outputChannel.appendLine('[Learning] Analyzing Git history...');
       const patterns = await gitAnalyzer.extractFailurePatterns();
@@ -1162,8 +1224,10 @@ export function activate(context: vscode.ExtensionContext) {
       const stats = await gitAnalyzer.getStats();
       notifier.commandInfo(`🧠 Git履歴解析完了: ${stats.totalCommits}コミット, ${patterns.length}パターン抽出`);
       outputChannel.appendLine(`[Learning] Extracted ${patterns.length} patterns`);
+      updateServantStatusBar('待機中');
     } catch (error) {
       notifier.commandError(`Git履歴解析エラー: ${error}`);
+      updateServantStatusBar('待機中');
     }
   });
 
@@ -1904,6 +1968,7 @@ export function activate(context: vscode.ExtensionContext) {
     appendDecisionLogCommand,
     buildAIContextPacketCommand,
     quickFixCommitCommand,
+    reportProblemsCommand,
     learnFromHistoryCommand,
     showHotspotsCommand,
     showAIHotspotsCommand,
