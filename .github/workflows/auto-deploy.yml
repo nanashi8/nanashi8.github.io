@@ -1,11 +1,5 @@
 name: Build and Test (Manual Deploy)
 on:
-  push:
-    branches: ['main']
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
-      - '.github/**'
   workflow_dispatch:
 
 permissions:
