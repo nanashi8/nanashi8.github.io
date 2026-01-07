@@ -9,6 +9,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Phase 1: Strategy Pattern導入とQuestionSchedulerリファクタリング（2026-01-07）
+
+QuestionScheduler巨大ファイル問題の解決（第1段階）を完了し、保守性・拡張性を大幅に向上。
+
+- **Strategy Pattern完全実装**:
+  - 3つのStrategy実装（Default, Hybrid, FinalPriority）
+  - Dependency Injection（8AI依存関係保持）
+  - Dynamic Import（バンドルサイズ削減）
+  - 各Strategyが独立してテスト可能に
+
+- **アーキテクチャ改善**:
+  - QuestionScheduler.ts: 3,217行 → 2,480行（737行削減、23%減）
+  - ScheduleHelpers.ts: 5メソッド抽出（220行）
+  - strategies/: 3ファイル（580行）
+  - 実質的な複雑度: 大幅低減（モード別90-330行）
+
+- **8AI統合の完全保持**:
+  - AICoordinator（7AI統合評価）
+  - GamificationAI（まだまだ語ブースト）
+  - AntiVibrationFilter（振動防止）
+  - SlotAllocator（スロット割り当て）
+  - BatchManager（バッチ管理）
+
+- **品質保証**:
+  - TypeScriptエラー0件
+  - Strategy単体での責任分離（Single Responsibility Principle）
+  - 新モード追加時の既存コード変更不要（Open/Closed Principle）
+
+- **実装詳細**: [Phase 1完了レポート](docs/reports/PHASE1_STRATEGY_PATTERN_COMPLETION.md)
+
 #### テスト品質保証体制（2025-12-20）
 
 包括的なテスト品質保証インフラを構築し、今後の開発におけるテスト品質を保証する仕組みを確立。
