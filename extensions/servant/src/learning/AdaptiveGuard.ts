@@ -150,27 +150,156 @@ export class AdaptiveGuard {
       .filter(p => p.weight >= 0.7)
       .sort((a, b) => b.weight - a.weight);
 
-    if (this.getConfig('learning.autoUpdateInstructions', true)) {
-      await this.updateInstructions(highRiskPatterns);
-    }
+    // レポートを生成して保存（バックアップ用）
+    await this.generateLearningReport(highRiskPatterns);
 
     // カウントリセット
     this.db.currentCycleCount = 0;
     await this.saveDatabase();
 
-    // 通知
-    this.notifier?.autoInfo(
-      `🧠 Servant: 学習完了（${highRiskPatterns.length}個の高リスクパターン検出）`,
-      'adaptive-learning-complete'
-    );
-
     console.log('✅ Adaptive Learning: Learning cycle completed');
+
+    // 外部から設定されたコールバックを呼び出し（ChatParticipantに通知）
+    if (this.onLearningComplete) {
+      await this.onLearningComplete(highRiskPatterns);
+    }
+  }
+
+  private onLearningComplete?: (patterns: FailurePattern[]) => Promise<void>;
+
+  /**
+   * 学習完了時のコールバックを設定
+   */
+  public setOnLearningComplete(callback: (patterns: FailurePattern[]) => Promise<void>): void {
+    this.onLearningComplete = callback;
   }
 
   /**
-   * Instructions を自動更新
+   * 学習レポートを生成（承認待ち）
    */
-  private async updateInstructions(patterns: FailurePattern[]): Promise<void> {
+  private async generateLearningReport(patterns: FailurePattern[]): Promise<void> {
+    const workspaceRoot = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+    if (!workspaceRoot) {
+      return;
+    }
+
+    const reportPath = path.join(workspaceRoot, '.vscode', 'adaptive-learning-report.md');
+    const date = new Date().toISOString();
+
+    let content = `# 🧠 適応学習レポート
+
+**生成日時**: ${date}
+**検出パターン数**: ${patterns.length}個
+**総検証回数**: ${this.db.totalValidations}回
+
+---
+
+## 📊 検出された高リスクパターン
+
+`;
+
+    if (patterns.length === 0) {
+      content += '現時点で高リスクパターンは検出されていません。\n\n';
+    } else {
+      patterns.forEach((pattern, index) => {
+        content += `### ${index + 1}. ${pattern.pattern}\n\n`;
+        content += `- **カテゴリ**: ${pattern.category}\n`;
+        content += `- **発生回数**: ${pattern.occurrences}回\n`;
+        content += `- **リスクスコア**: ${(pattern.weight * 100).toFixed(0)}%\n`;
+        content += `- **復旧成功率**: ${(pattern.successRate * 100).toFixed(0)}%\n\n`;
+
+        if (pattern.description) {
+          content += `**説明**: ${pattern.description}\n\n`;
+        }
+
+        if (pattern.examples.length > 0) {
+          content += `**直近の例**:\n`;
+          pattern.examples.slice(0, 3).forEach(example => {
+            content += `- ${example}\n`;
+          });
+          content += '\n';
+        }
+      });
+    }
+
+    content += `---
+
+## ✅ 承認欄
+
+このレポートの内容を確認し、Instructionsへの反映を承認する場合は、
+以下の行を **APPROVED: y** に変更してください。
+
+\`\`\`
+APPROVED: n
+\`\`\`
+
+保存すると、Servantが自動的にInstructionsファイルを更新します。
+
+---
+
+**レポートパス**: \`${reportPath}\`
+**Instructions生成先**: \`.aitk/instructions/adaptive-learned-patterns.instructions.md\`
+`;
+
+    // ディレクトリ作成
+    const dir = path.dirname(reportPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    // レポート保存
+    fs.writeFileSync(reportPath, content, 'utf-8');
+    console.log(`📝 Learning report generated: ${reportPath}`);
+  }
+
+  /**
+   * レポートの承認状態をチェックして、承認済みならInstructionsを更新
+   */
+  async checkAndApplyReport(): Promise<void> {
+    const workspaceRoot = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+    if (!workspaceRoot) {
+      return;
+    }
+
+    const reportPath = path.join(workspaceRoot, '.vscode', 'adaptive-learning-report.md');
+
+    if (!fs.existsSync(reportPath)) {
+      return;
+    }
+
+    const content = fs.readFileSync(reportPath, 'utf-8');
+
+    // 承認チェック（APPROVED: y を検索）
+    if (!/APPROVED:\s*y/i.test(content)) {
+      return;
+    }
+
+    console.log('✅ Learning report approved. Applying changes...');
+
+    // 高リスクパターンを再取得
+    const highRiskPatterns = this.db.patterns
+      .filter(p => p.weight >= 0.7)
+      .sort((a, b) => b.weight - a.weight);
+
+    // Instructions更新
+    await this.updateInstructions(highRiskPatterns);
+
+    // レポートをアーカイブ（適用済みマーク）
+    const archivePath = reportPath.replace('.md', `.applied-${Date.now()}.md`);
+    fs.renameSync(reportPath, archivePath);
+
+    this.notifier?.commandInfo(
+      `✅ 学習内容をInstructionsに反映しました（${highRiskPatterns.length}パターン）`,
+      'Instructionsを確認'
+    );
+
+    console.log(`✅ Learning applied and report archived: ${archivePath}`);
+  }
+
+  /**
+   * Instructions を自動更新（Chat承認後に呼ばれる）
+   */
+  async updateInstructions(patterns: FailurePattern[]): Promise<void> {
     if (patterns.length === 0) {
       return;
     }

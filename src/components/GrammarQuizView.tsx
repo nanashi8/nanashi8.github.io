@@ -1050,7 +1050,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       status = 'mastered';
     } else if (!isCorrect && wordProgress && wordProgress.incorrectCount >= 2) {
       // 2回以上間違えた場合は要復習
-      status = 'review';
+      status = 'review'
     }
 
     addSessionHistory(

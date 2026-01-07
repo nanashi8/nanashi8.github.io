@@ -2,7 +2,7 @@
   "name": "servant",
   "displayName": "Servant",
   "description": "プロジェクト内に住むAIサーバント。設計方針を監視し、AI作業時にプロジェクト情報をネットワークで収集・提供して効率化します",
-  "version": "0.3.7",
+  "version": "0.3.21",
   "publisher": "nanashi8",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/nanashi8/nanashi8.github.io/tree/main/extensions/servant#readme",
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.90.0"
   },
   "capabilities": {
     "untrustedWorkspaces": {
@@ -44,13 +44,25 @@
     "cache"
   ],
   "activationEvents": [
-    "onStartupFinished",
-    "onCommand:servant.showConstellation",
-    "onCommand:servant.installHooks",
-    "onLanguage:typescript",
-    "onLanguage:javascript",
-    "onLanguage:markdown",
-    "onLanguage:json"
+    "onStartupFinished"
+  ],
+  "chatParticipants": [
+    {
+      "id": "servant.chat",
+      "name": "servant",
+      "description": "プロジェクトサーバント - 問題検知、設計方針監視、AI作業支援",
+      "isSticky": true,
+      "commands": [
+        {
+          "name": "problems",
+          "description": "VSCode問題パネルのエラー/警告を報告"
+        },
+        {
+          "name": "project",
+          "description": "プロジェクト構成情報を表示"
+        }
+      ]
+    }
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -194,6 +206,14 @@
       {
         "command": "servant.quickFixCommit",
         "title": "Servant: 🚀 Quick Fix Commit (DECISIONS追記→コミット)"
+      },
+      {
+        "command": "servant.chat.reportProblems",
+        "title": "Servant: Report Problems to Copilot Chat"
+      },
+      {
+        "command": "servant.applyLearningReport",
+        "title": "Servant: Apply Learning Report (内部用)"
       }
     ],
     "configuration": {
@@ -400,8 +420,8 @@
         },
         "servant.learning.autoUpdateInstructions": {
           "type": "boolean",
-          "default": true,
-          "description": "Automatically update Instructions after learning"
+          "default": false,
+          "description": "Automatically update Instructions after learning (CAUTION: may modify instruction files)"
         },
         "servant.learning.gitHistoryLimit": {
           "type": "number",
@@ -428,6 +448,11 @@
           "default": ".aitk/context/AI_CONTEXT.md",
           "description": "Path to the generated AI context packet (relative to workspace root)"
         },
+        "servant.chat.autoReportProblems": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically notify @servant in Copilot Chat when new errors are detected"
+        },
         "servant.context.enforceBeforeCommit": {
           "type": "boolean",
           "default": true,
@@ -445,7 +470,7 @@
         },
         "servant.context.autoBuildThrottleMs": {
           "type": "number",
-          "default": 15000,
+          "default": 30000,
           "description": "Throttle interval (ms) for automatic AI context packet generation"
         },
         "servant.context.maxAgeMinutes": {

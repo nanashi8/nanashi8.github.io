@@ -7,7 +7,7 @@
     "dev": "npm run copy:constellation-demo-vendors && vite",
     "build": "npm run copy:constellation-demo-vendors && npm run sync:reading-techniques && vite build",
     "preview": "vite preview",
-    "deploy": "npm run quality:strict && npm test && npm run build && gh-pages -d dist",
+    "deploy": "npm run quality:strict && npm test && npm run build && node scripts/deploy-gh-pages.mjs dist",
     "build:beta": "npm run copy:constellation-demo-vendors && npm run sync:reading-techniques && vite build --base=/beta/ --outDir dist-beta",
     "deploy:beta": "npm run build:beta && gh-pages -d dist-beta -a --dest beta -m 'Deploy beta preview'",
     "preview:beta": "npm run build:beta && vite preview --outDir dist-beta --port 4174",
@@ -81,6 +81,8 @@
     "update-specifications": "node scripts/update-specifications.mjs",
     "update-pipelines": "node scripts/update-pipelines.mjs",
     "update-all-docs": "npm run update-instructions && npm run update-specifications && npm run update-pipelines",
+    "generate:classical-japanese-pdf": "tsx scripts/generate-classical-japanese-pdf.ts",
+    "fill:classical-japanese-examples": "tsx scripts/fill-classical-japanese-examples.ts",
     "type-check": "tsc --noEmit"
   },
   "size-limit": [

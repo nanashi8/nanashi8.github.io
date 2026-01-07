@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-05T23:30:36.406Z
+- generatedAt: 2026-01-07T05:08:16.793Z
 
 ## Single Source of Truth
 
@@ -12,37 +12,50 @@
 ## Signals (Recent, Decayed)
 
 - windowHours: 24
-- candidates: 13
+- candidates: 30
 - startNodeSource: signals
-- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.145)
-- extensions/servant/src/neural/WorkflowLearner.ts (hot=0.041)
-- extensions/servant/src/git/GitIntegration.ts (hot=0.03)
-- extensions/servant/package.json (hot=0.016)
-- extensions/servant/src/commands/quickFixCommit.ts (hot=0.004)
-- extensions/servant/dist/extension.js (hot=0.004)
-- extensions/servant/src/extension.ts (hot=0.003)
-- extensions/servant/src/autopilot/SeniorEngineerQualityCheck.ts (hot=0.003)
-- extensions/servant/src/constellation/ConstellationDataGenerator.ts (hot=0.003)
-- src/hooks/useAdaptiveLearning.ts (hot=0.003)
+- scripts/pre-commit-quality-guard.sh (hot=0.083)
+- extensions/servant/src/health/RealtimeHealthMonitor_proposal.ts (hot=0.082)
+- docs/CONSTELLATION_ENHANCEMENT_ROADMAP.md (hot=0.072)
+- docs/PHASE1_DETAILED_DESIGN.md (hot=0.072)
+- docs/PROTOTYPE_VALIDATION_CHECKLIST.md (hot=0.072)
+- docs/IMPLEMENTATION_PLAN_SUMMARY.md (hot=0.072)
+- extensions/servant/src/ui/ConstellationViewPanel_zero.ts (hot=0.046)
+- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.02)
+- extensions/servant/package.json (hot=0.014)
+- extensions/servant/src/extension.ts (hot=0.008)
 
 ## Related (Neural Propagation)
 
-- startNode: extensions/servant/src/ui/ConstellationViewPanel.ts
-- seeds: 5
+- startNode: scripts/pre-commit-quality-guard.sh
+- seeds: 10
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- extensions/servant/src/ui/ConstellationViewPanel.ts (activation=1.000, source=signal, signals=[save:0.14])
-- extensions/servant/src/neural/WorkflowLearner.ts (activation=0.283, source=signal, signals=[save:0.04])
-- extensions/servant/src/git/GitIntegration.ts (activation=0.207, source=signal, signals=[save:0.03])
-- extensions/servant/package.json (activation=0.110, source=signal, signals=[save:0.02])
-- extensions/servant/src/commands/quickFixCommit.ts (activation=0.028, source=signal, signals=[save:0.00])
+- scripts/pre-commit-quality-guard.sh (activation=1.000, source=signal, signals=[save:0.08])
+- extensions/servant/src/health/RealtimeHealthMonitor_proposal.ts (activation=0.988, source=signal, signals=[save:0.08])
+- docs/CONSTELLATION_ENHANCEMENT_ROADMAP.md (activation=0.867, source=signal, signals=[save:0.07])
+- docs/PHASE1_DETAILED_DESIGN.md (activation=0.867, source=signal, signals=[save:0.07])
+- docs/PROTOTYPE_VALIDATION_CHECKLIST.md (activation=0.867, source=signal, signals=[save:0.07])
+- package.json (activation=0.150, source=stagedFiles)
+- public/constellation-3d-demo.html (activation=0.150, source=stagedFiles)
+- scripts/deploy-gh-pages.mjs (activation=0.150, source=stagedFiles)
+- src/ai/scheduler/QuestionScheduler.ts (activation=0.150, source=stagedFiles)
+- src/ai/scheduler/SlotAllocator.ts (activation=0.150, source=stagedFiles)
 
 - (no related files detected)
 
-- (none)
+- package.json
+- public/constellation-3d-demo.html
+- scripts/deploy-gh-pages.mjs
+- src/ai/scheduler/QuestionScheduler.ts
+- src/ai/scheduler/SlotAllocator.ts
+- src/ai/utils/categoryDetermination.ts
+- src/components/RequeuingDebugPanel.tsx
+- src/strategies/learningUtils.ts
+- src/utils/questionPrioritySorter.ts
 
 ## Required Instructions (Enforced)
 
@@ -51,9 +64,9 @@
 
 ## SpecCheck Freshness
 
-- ok: true
-- recordedAt: 2026-01-04T23:52:43.428Z
-- ageHours: 23.63
+- ok: false
+- reason: expired
+- ageHours: 53.26
 
 ## Latest SpecCheck Record (Raw)
 

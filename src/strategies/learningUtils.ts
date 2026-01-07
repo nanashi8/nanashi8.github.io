@@ -6,7 +6,11 @@
 import { logger } from '@/utils/logger';
 import { isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
 import type { WordProgress } from '@/storage/progress/types';
-import { determineWordPosition, positionToCategory } from '@/ai/utils/categoryDetermination';
+import {
+  determineWordPosition,
+  positionToCategory,
+  categoryToPriority,
+} from '@/ai/utils/categoryDetermination';
 
 /**
  * 適応型間隔反復学習：個人の学習速度に最適化（SuperMemo SM-2アルゴリズムベース）
@@ -213,9 +217,7 @@ export function getQuestionStatus(
     // ✅ カテゴリ判定は暗記タブSSOT（Position判定）に統一
     const position = determineWordPosition(wordProgress, mode);
     const category = positionToCategory(position);
-
-    const priority =
-      category === 'incorrect' ? 1 : category === 'still_learning' ? 2 : category === 'new' ? 3 : 5;
+    const priority = categoryToPriority(category);
 
     return {
       category,

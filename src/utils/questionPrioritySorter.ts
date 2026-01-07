@@ -15,7 +15,11 @@ import { calculateTimeBasedPriority } from '@/ai/nodes/TimeBasedPriorityAI';
 import { AdaptiveEducationalAINetwork } from '@/ai/meta/AdaptiveEducationalAINetwork';
 import type { QuestionContext } from '@/ai/meta/types';
 import type { WordCategory } from '@/ai/types';
-import { determineWordPosition, positionToCategory } from '@/ai/utils/categoryDetermination';
+import {
+  determineWordPosition,
+  positionToCategory,
+  categoryToPriority,
+} from '@/ai/utils/categoryDetermination';
 import {
   isIncorrectWordCategory,
   isMasteredWordCategory,
@@ -164,8 +168,7 @@ function getWordStatus(word: string, mode: SortOptions['mode']): WordStatus | nu
 
     const position = determineWordPosition(wordProgress, mode);
     const category = positionToCategory(position);
-    const priority =
-      category === 'incorrect' ? 1 : category === 'still_learning' ? 2 : category === 'new' ? 3 : 5;
+    const priority = categoryToPriority(category);
 
     return {
       category,

@@ -384,3 +384,23 @@ export function positionToCategory(position: WordPosition): WordCategory {
   if (position >= 20) return 'new';
   return 'mastered';
 }
+
+/**
+ * カテゴリーから優先度への変換（SSOT）
+ * @param category 単語のカテゴリー
+ * @returns 優先度（1が最高、5が最低）
+ */
+export function categoryToPriority(category: WordCategory): number {
+  switch (category) {
+    case 'incorrect':
+      return 1;
+    case 'still_learning':
+      return 2;
+    case 'new':
+      return 3;
+    case 'mastered':
+      return 5;
+    default:
+      return 5;
+  }
+}

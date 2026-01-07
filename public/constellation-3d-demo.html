@@ -431,6 +431,60 @@
       }
     });
 
+    // エッジ（接続線）の追加 - 結合度による太さを反映
+    const edgeObjects = [];
+    const sampleEdges = [
+      { from: 'QuestionScheduler', to: 'MemoryAI', strength: 0.9 },
+      { from: 'QuestionScheduler', to: 'ConfigLoader', strength: 0.7 },
+      { from: 'MemoryAI', to: 'StrategyFinder', strength: 0.8 },
+      { from: 'ConfigLoader', to: 'StrategyFinder', strength: 0.6 },
+      { from: 'StrategyFinder', to: 'RandomGenerator', strength: 0.5 },
+      { from: 'DataPersistence', to: 'MemoryAI', strength: 0.85 },
+      { from: 'ConfigLoader', to: 'DataPersistence', strength: 0.75 },
+      { from: 'LearningSolver', to: 'StrategyFinder', strength: 0.65 },
+      { from: 'UIDisplay', to: 'QuestionScheduler', strength: 0.7 },
+      { from: 'TimeHandler', to: 'LearningSolver', strength: 0.55 }
+    ];
+
+    sampleEdges.forEach(edge => {
+      const fromNode = sampleNodes.find(n => n.id === edge.from);
+      const toNode = sampleNodes.find(n => n.id === edge.to);
+      if (!fromNode || !toNode) return;
+
+      const fromObj = nodeObjects.find(obj => obj.userData.id === edge.from);
+      const toObj = nodeObjects.find(obj => obj.userData.id === edge.to);
+      if (!fromObj || !toObj) return;
+
+      // 強度に応じた太さ（1-5ピクセル相当）
+      const thickness = Math.max(1, Math.min(5, edge.strength * 5));
+      // 強度に応じた不透明度（0.3-0.9）
+      const opacity = 0.3 + edge.strength * 0.6;
+
+      // 色は強度による
+      let color = 0x4444ff; // 青
+      if (edge.strength >= 0.8) color = 0xff4444; // 赤
+      else if (edge.strength >= 0.6) color = 0xffaa44; // オレンジ
+      else if (edge.strength >= 0.4) color = 0xffff44; // 黄色
+
+      const points = [fromObj.position, toObj.position];
+      const curve = new THREE.LineCurve3(points[0], points[1]);
+      const tubeGeometry = new THREE.TubeGeometry(curve, 1, thickness * 0.15, 8, false);
+      const material = new THREE.MeshBasicMaterial({
+        color: color,
+        transparent: true,
+        opacity: opacity
+      });
+
+      const tube = new THREE.Mesh(tubeGeometry, material);
+      tube.userData = {
+        edge: edge,
+        originalOpacity: opacity,
+        originalThickness: thickness
+      };
+      scene.add(tube);
+      edgeObjects.push(tube);
+    });
+
     // クリックイベント
     let selectedNode = null;
 
@@ -442,40 +496,145 @@
       const intersects = raycaster.intersectObjects(nodeObjects);
 
       if (intersects.length > 0) {
-        // 既存のハイライトをリセット
-        nodeObjects.forEach(obj => {
-          obj.material.emissiveIntensity = 0.5;
-          obj.scale.set(1, 1, 1);
-        });
-
         const clicked = intersects[0].object;
         const node = clicked.userData;
 
-        // ハイライト
-        clicked.material.emissive.setHex(0xff4444);
-        clicked.material.emissiveIntensity = 2;
-        clicked.scale.set(1.5, 1.5, 1.5);
+        // 深度計算用の関数
+        function calculateDepths(startId, maxDepth) {
+          const depths = new Map();
+          depths.set(startId, 0);
+          let currentLayer = [startId];
+
+          for (let depth = 1; depth <= maxDepth; depth++) {
+            const nextLayer = [];
+            currentLayer.forEach(nodeId => {
+              sampleEdges.forEach(edge => {
+                if (edge.from === nodeId && !depths.has(edge.to)) {
+                  depths.set(edge.to, depth);
+                  nextLayer.push(edge.to);
+                }
+                if (edge.to === nodeId && !depths.has(edge.from)) {
+                  depths.set(edge.from, depth);
+                  nextLayer.push(edge.from);
+                }
+              });
+            });
+            currentLayer = nextLayer;
+          }
+          return depths;
+        }
+
+        // 既存のハイライトをリセット
+        nodeObjects.forEach(obj => {
+          obj.material.emissiveIntensity = 0.5;
+          obj.material.opacity = 1.0;
+          obj.material.transparent = false;
+          obj.scale.set(1, 1, 1);
+        });
+
+        edgeObjects.forEach(obj => {
+          obj.material.opacity = obj.userData.originalOpacity;
+          obj.scale.set(1, 1, 1);
+        });
+
+        // 深度計算（3次接続まで）
+        const depths = calculateDepths(node.id, 3);
+
+        // 選択ノードのハイライト
+        clicked.material.emissive.setHex(0xffff00); // 黄色
+        clicked.material.emissiveIntensity = 1.2;
+        clicked.scale.set(2.0, 2.0, 2.0);
 
         selectedNode = node.id;
 
-        // 関連ノード（ランダム選択）
-        const related = sampleNodes
-          .filter(n => n.id !== node.id)
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 3);
-
-        related.forEach(rn => {
-          const relObj = nodeObjects.find(obj => obj.userData.id === rn.id);
-          if (relObj) {
-            relObj.material.emissive.setHex(0x44ff88);
-            relObj.material.emissiveIntensity = 1.5;
+        // 深度に応じたハイライト
+        nodeObjects.forEach(obj => {
+          const depth = depths.get(obj.userData.id);
+          if (depth !== undefined && depth > 0) {
+            if (depth === 1) {
+              // 第1次接続 - 明るい緑
+              obj.material.emissive.setHex(0x00ff00);
+              obj.material.emissiveIntensity = 0.8;
+              obj.scale.set(1.6, 1.6, 1.6);
+            } else if (depth === 2) {
+              // 第2次接続 - シアン
+              obj.material.emissive.setHex(0x00ffff);
+              obj.material.emissiveIntensity = 0.6;
+              obj.scale.set(1.3, 1.3, 1.3);
+            } else if (depth === 3) {
+              // 第3次接続 - 青
+              obj.material.emissive.setHex(0x4444ff);
+              obj.material.emissiveIntensity = 0.4;
+              obj.scale.set(1.1, 1.1, 1.1);
+            }
+          } else if (obj.userData.id !== node.id) {
+            // 無関係なノード - 非常に薄く
+            obj.material.opacity = 0.15;
+            obj.material.transparent = true;
           }
         });
 
-        // 情報パネル更新
-        document.getElementById('current').textContent = node.label + '.ts';
-        document.getElementById('related').textContent =
-          related.map(rn => rn.label + '.ts').join(', ');
+        // エッジのハイライト - 深度を考慮
+        edgeObjects.forEach(obj => {
+          const edge = obj.userData.edge;
+          const fromDepth = depths.get(edge.from) ?? Infinity;
+          const toDepth = depths.get(edge.to) ?? Infinity;
+          const isRelated = depths.has(edge.from) && depths.has(edge.to);
+
+          if (isRelated) {
+            const minDepth = Math.min(fromDepth, toDepth);
+            if (minDepth === 0) {
+              // 選択ノードへの直接接続
+              obj.material.opacity = Math.min(1.0, obj.userData.originalOpacity * 3);
+              obj.scale.set(2.5, 2.5, 2.5);
+            } else if (minDepth === 1) {
+              obj.material.opacity = Math.min(0.9, obj.userData.originalOpacity * 2.5);
+              obj.scale.set(2.0, 2.0, 2.0);
+            } else if (minDepth === 2) {
+              obj.material.opacity = Math.min(0.8, obj.userData.originalOpacity * 2);
+              obj.scale.set(1.5, 1.5, 1.5);
+            } else {
+              obj.material.opacity = Math.min(0.7, obj.userData.originalOpacity * 1.5);
+              obj.scale.set(1.2, 1.2, 1.2);
+            }
+          } else {
+            // 無関係なエッジ - 非常に薄く細く
+            obj.material.opacity = 0.05;
+            obj.scale.set(0.5, 0.5, 0.5);
+          }
+        });
+
+        // 情報パネル更新 - 深度情報を追加
+        const depthCounts = new Map();
+        depths.forEach((depth, nodeId) => {
+          depthCounts.set(depth, (depthCounts.get(depth) || 0) + 1);
+        });
+
+        let depthInfo = '';
+        for (let d = 1; d <= 3; d++) {
+          const count = depthCounts.get(d) || 0;
+          if (count > 0) {
+            depthInfo += `第${d}次: ${count}個<br>`;
+          }
+        }
+
+        document.getElementById('current').innerHTML = `
+          <strong>📌 選択中</strong><br>
+          📄 ${node.label}.ts<br>
+          優先度: ${node.priority.toFixed(3)}<br><br>
+          <strong>🔗 関連ノード:</strong><br>
+          ${depthInfo}
+          合計: ${depths.size - 1}個
+        `;
+
+        const relatedNodes = [];
+        depths.forEach((depth, nodeId) => {
+          if (depth > 0 && depth <= 3) {
+            const n = sampleNodes.find(sn => sn.id === nodeId);
+            if (n) relatedNodes.push(n.label + '.ts');
+          }
+        });
+        document.getElementById('related').textContent = relatedNodes.join(', ');
       }
     });
 

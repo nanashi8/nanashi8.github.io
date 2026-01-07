@@ -322,16 +322,11 @@ export function RequeuingDebugPanel({
         '| # | 単語 | Position | カテゴリ | 出題回数 | 直近語 |',
         '|---|------|----------|----------|----------|--------|',
         ...top30.map((item: any, i: number) => {
+          const cat = item.category;
           const catEmoji =
-            item.category === 'incorrect'
-              ? '🔴'
-              : item.category === 'still_learning'
-                ? '🟡'
-                : item.category === 'new'
-                  ? '🔵'
-                  : '✅';
+            cat === 'incorrect' ? '🔴' : cat === 'still_learning' ? '🟡' : cat === 'new' ? '🔵' : '✅';
           const recentMarker = item.wasRecent ? '⚠️' : '';
-          return `| ${i + 1} | **${item.word}** | ${item.position.toFixed(0)} | ${catEmoji} ${item.category} | ${categorySlotsValue?.top30AttemptsMap?.[item.word] ?? '?'}回 | ${recentMarker} |`;
+          return `| ${i + 1} | **${item.word}** | ${item.position.toFixed(0)} | ${catEmoji} ${cat} | ${categorySlotsValue?.top30AttemptsMap?.[item.word] ?? '?'}回 | ${recentMarker} |`;
         }),
         '',
         '**統計**:',
@@ -2805,8 +2800,9 @@ _このレポートをコピーしてGitHub Copilot Chatで分析できます_
                 </div>
                 <div className="space-y-2 max-h-60 overflow-y-auto">
                   {snapshots.map((snap: any, idx: number) => {
-                    const isIncorrect = snap.categoryAfter === 'incorrect';
-                    const isStillLearning = snap.categoryAfter === 'still_learning';
+                    const cat = snap.categoryAfter;
+                    const isIncorrect = cat === 'incorrect';
+                    const isStillLearning = cat === 'still_learning';
                     const bgColor = isIncorrect
                       ? 'bg-red-100 border-red-300'
                       : isStillLearning

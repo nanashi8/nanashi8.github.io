@@ -653,8 +653,8 @@ export class SlotAllocator {
 
     // 現在の分からない・まだまだの語数をカウント
     const reviewWordCount = Object.values(progressMap).filter((progress) => {
-      const category = this.classifier.determineCategory(progress, 'memorization');
-      return category === 'incorrect' || category === 'still_learning';
+      const cat = this.classifier.determineCategory(progress, 'memorization');
+      return cat === 'incorrect' || cat === 'still_learning';
     }).length;
 
     const reviewRatio = totalSlots > 0 ? reviewWordCount / totalSlots : 0;

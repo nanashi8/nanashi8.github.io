@@ -2808,10 +2808,22 @@ export class QuestionScheduler {
 
     // 2. カテゴリ別に分類
     const byCategory: Record<string, Classified[]> = {
-      incorrect: classified.filter((c) => c.category === 'incorrect'),
-      still_learning: classified.filter((c) => c.category === 'still_learning'),
-      new: classified.filter((c) => c.category === 'new'),
-      mastered: classified.filter((c) => c.category === 'mastered'),
+      incorrect: classified.filter((c) => {
+        const cat = c.category;
+        return cat === 'incorrect';
+      }),
+      still_learning: classified.filter((c) => {
+        const cat = c.category;
+        return cat === 'still_learning';
+      }),
+      new: classified.filter((c) => {
+        const cat = c.category;
+        return cat === 'new';
+      }),
+      mastered: classified.filter((c) => {
+        const cat = c.category;
+        return cat === 'mastered';
+      }),
     };
 
     // 3. 各カテゴリ内でPosition降順ソート
