@@ -13,7 +13,7 @@ export class ProblemsMonitor {
 
   public start(): void {
     // 問題パネルの変更を監視
-    const diagnosticsListener = vscode.languages.onDidChangeDiagnostics((e) => {
+    const diagnosticsListener = vscode.languages.onDidChangeDiagnostics((_e) => {
       this.checkForNewProblems();
     });
 

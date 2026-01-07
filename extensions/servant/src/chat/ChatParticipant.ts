@@ -163,7 +163,7 @@ export class ServantChatParticipant {
           }
         });
       }
-    } catch (e) {
+    } catch {
       stream.markdown('*package.jsonの読み取りに失敗しました*\n');
     }
   }

@@ -75,7 +75,7 @@ export class RealtimeHealthMonitor {
     return 1 + ifCount + forCount + whileCount + caseCount + catchCount;
   }
 
-  private showRefactoringTips(document: vscode.TextDocument) {
+  private showRefactoringTips(_document: vscode.TextDocument) {
     const tips = [
       '📋 リファクタリング提案:',
       '',

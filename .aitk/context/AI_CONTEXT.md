@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-07T05:08:16.793Z
+- generatedAt: 2026-01-07T10:13:08.432Z
 
 ## Single Source of Truth
 
@@ -14,48 +14,35 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- scripts/pre-commit-quality-guard.sh (hot=0.083)
-- extensions/servant/src/health/RealtimeHealthMonitor_proposal.ts (hot=0.082)
-- docs/CONSTELLATION_ENHANCEMENT_ROADMAP.md (hot=0.072)
-- docs/PHASE1_DETAILED_DESIGN.md (hot=0.072)
-- docs/PROTOTYPE_VALIDATION_CHECKLIST.md (hot=0.072)
-- docs/IMPLEMENTATION_PLAN_SUMMARY.md (hot=0.072)
-- extensions/servant/src/ui/ConstellationViewPanel_zero.ts (hot=0.046)
-- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.02)
-- extensions/servant/package.json (hot=0.014)
-- extensions/servant/src/extension.ts (hot=0.008)
+- src/ai/scheduler/QuestionScheduler.ts (hot=0.139)
+- src/ai/scheduler/strategies/DefaultScheduleStrategy.ts (hot=0.089)
+- src/ai/scheduler/helpers/ScheduleHelpers.ts (hot=0.071)
+- src/ai/scheduler/strategies/HybridScheduleStrategy.ts (hot=0.062)
+- src/ai/scheduler/strategies/ScheduleStrategy.ts (hot=0.052)
+- docs/reports/PHASE1_STRATEGY_PATTERN_COMPLETION.md (hot=0.043)
+- CHANGELOG.md (hot=0.043)
+- src/ai/scheduler/strategies/FinalPriorityScheduleStrategy.ts (hot=0.037)
+- scripts/pre-commit-ai-guard.sh (hot=0.035)
+- docs/development/DESIGN_PATTERNS_REFACTORING_INVESTIGATION.md (hot=0.032)
 
 ## Related (Neural Propagation)
 
-- startNode: scripts/pre-commit-quality-guard.sh
-- seeds: 10
+- startNode: src/ai/scheduler/QuestionScheduler.ts
+- seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- scripts/pre-commit-quality-guard.sh (activation=1.000, source=signal, signals=[save:0.08])
-- extensions/servant/src/health/RealtimeHealthMonitor_proposal.ts (activation=0.988, source=signal, signals=[save:0.08])
-- docs/CONSTELLATION_ENHANCEMENT_ROADMAP.md (activation=0.867, source=signal, signals=[save:0.07])
-- docs/PHASE1_DETAILED_DESIGN.md (activation=0.867, source=signal, signals=[save:0.07])
-- docs/PROTOTYPE_VALIDATION_CHECKLIST.md (activation=0.867, source=signal, signals=[save:0.07])
-- package.json (activation=0.150, source=stagedFiles)
-- public/constellation-3d-demo.html (activation=0.150, source=stagedFiles)
-- scripts/deploy-gh-pages.mjs (activation=0.150, source=stagedFiles)
-- src/ai/scheduler/QuestionScheduler.ts (activation=0.150, source=stagedFiles)
-- src/ai/scheduler/SlotAllocator.ts (activation=0.150, source=stagedFiles)
+- src/ai/scheduler/QuestionScheduler.ts (activation=1.000, source=signal, signals=[save:0.14])
+- src/ai/scheduler/strategies/DefaultScheduleStrategy.ts (activation=0.640, source=signal, signals=[save:0.09])
+- src/ai/scheduler/helpers/ScheduleHelpers.ts (activation=0.511, source=signal, signals=[save:0.07])
+- src/ai/scheduler/strategies/HybridScheduleStrategy.ts (activation=0.446, source=signal, signals=[save:0.06])
+- src/ai/scheduler/strategies/ScheduleStrategy.ts (activation=0.374, source=signal, signals=[save:0.05])
 
 - (no related files detected)
 
-- package.json
-- public/constellation-3d-demo.html
-- scripts/deploy-gh-pages.mjs
-- src/ai/scheduler/QuestionScheduler.ts
-- src/ai/scheduler/SlotAllocator.ts
-- src/ai/utils/categoryDetermination.ts
-- src/components/RequeuingDebugPanel.tsx
-- src/strategies/learningUtils.ts
-- src/utils/questionPrioritySorter.ts
+- (none)
 
 ## Required Instructions (Enforced)
 
@@ -66,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 53.26
+- ageHours: 58.34
 
 ## Latest SpecCheck Record (Raw)
 

@@ -41,7 +41,6 @@ import { logger } from '@/utils/logger';
 import { writeDebugJSON } from '@/utils/debugStorage';
 import { AICoordinator } from '../AICoordinator';
 import type { SessionStats as AISessionStats } from '../types';
-import { positionToCategory } from '../utils/categoryDetermination';
 import { PositionCalculator, type LearningMode } from './PositionCalculator';
 import { MemoryAI } from '@/ai/specialists/MemoryAI';
 import { CognitiveLoadAI } from '@/ai/specialists/CognitiveLoadAI';
@@ -51,7 +50,7 @@ import { ContextualAI } from '@/ai/specialists/ContextualAI';
 import { LearningStyleAI } from '@/ai/specialists/LearningStyleAI';
 import { GamificationAI } from '@/ai/specialists/GamificationAI';
 import { generateContextualSequence } from '@/ai/optimization/contextualLearningAI';
-import { isIncorrectWordCategory, isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
+import { isReviewWordCategory } from '@/ai/utils/wordCategoryPredicates';
 import { DebugTracer } from '@/utils/DebugTracer';
 import {
   getStrengthLookupForScheduling,

@@ -28,9 +28,9 @@ export class ConstellationViewPanel {
 
   public static createOrShow(
     extensionUri: vscode.Uri,
-    graph: NeuralDependencyGraph,
-    goalManager: GoalManager,
-    generator: ConstellationDataGenerator
+    _graph: NeuralDependencyGraph,
+    _goalManager: GoalManager,
+    _generator: ConstellationDataGenerator
   ): void {
     const column = vscode.window.activeTextEditor?.viewColumn;
 
