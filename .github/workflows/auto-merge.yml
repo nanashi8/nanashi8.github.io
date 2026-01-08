@@ -30,14 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]' || contains(github.event.pull_request.labels.*.name, 'auto-merge')
     steps:
-      - name: Wait for checks
-        uses: lewagon/wait-on-check-action@v1.3.1
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          check-name: 'build'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
-
       - name: Auto merge
         uses: pascalgn/automerge-action@v0.16.2
         env:
@@ -50,3 +42,4 @@ jobs:
           MERGE_RETRY_SLEEP: "10000"
           UPDATE_LABELS: ""
           UPDATE_METHOD: "rebase"
+          # automerge-action自体がすべてのチェック完了を自動で待つため、wait-on-checkは不要

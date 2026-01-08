@@ -12,6 +12,11 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
 jobs:
   health-check:
     runs-on: ubuntu-latest

@@ -55,7 +55,7 @@ export { addSessionHistory, getSessionHistory, clearSessionHistory } from './ses
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'english-progress'; // ✅ 統一: QuestionSchedulerも同じキーを使用
 const _MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数（未使用のためプレフィックス）
-const PROGRESS_KEY = 'quiz-app-user-progress';
+const PROGRESS_KEY = 'nanashi8-user-progress';
 const MAX_RESULTS = 9999; // 保存する最大結果数（容量削減）
 const MAX_RESPONSE_TIMES = 3; // 応答時間履歴の最大保存数（容量削減）
 
@@ -2355,7 +2355,7 @@ export async function resetAllProgress(): Promise<void> {
     if (
       key &&
       (key.startsWith('quiz-result-') ||
-        key === 'quiz-app-user-progress' ||
+        key === 'nanashi8-user-progress' ||
         key === 'progress-data' ||
         key.startsWith('session-history-') ||
         key === 'session-history' ||

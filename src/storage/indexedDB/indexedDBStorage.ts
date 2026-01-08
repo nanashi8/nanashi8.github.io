@@ -13,7 +13,9 @@ import {
   STORES,
 } from '@/utils/db-connection-pool';
 
-const DB_NAME = 'QuizAppDB';
+const DB_NAME = 'Nanashi8DB';
+// 旧DB互換性（初回のみマイグレーション）
+const OLD_DB_NAME = 'QuizAppDB';
 // const DB_VERSION = 1;
 
 // Store名の定義（再エクスポート）

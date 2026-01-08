@@ -92,7 +92,7 @@ export async function downloadBackup(): Promise<void> {
     const url = URL.createObjectURL(blob);
 
     const now = new Date();
-    const filename = `quiz-app-backup-${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}.json`;
+    const filename = `nanashi8-backup-${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}.json`;
 
     const a = document.createElement('a');
     a.href = url;

@@ -1,5 +1,5 @@
 {
-  "name": "quiz-app",
+  "name": "nanashi8.github.io",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -52,6 +52,8 @@
     "test:unit:fast": "SKIP_API_TESTS=true vitest --config vitest.config.ts run --no-coverage",
     "test:unit:critical": "SKIP_API_TESTS=true vitest --config vitest.config.ts run tests/integration --no-coverage",
     "test": "npm run test:unit:fast",
+    "test:coverage": "npm run test:unit:coverage",
+    "test:integration": "npm run test:unit:critical",
     "verify:fast": "npm run typecheck && npm run test:unit:fast",
     "test:python": "python3 -m pytest scripts/test_*.py -q --tb=no",
     "test:python:fast": "python3 -m pytest scripts/test_*.py -q --tb=no -x",

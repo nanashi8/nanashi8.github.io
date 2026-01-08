@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-07T20:33:39.302Z
+- generatedAt: 2026-01-08T06:46:23.952Z
 
 ## Single Source of Truth
 
@@ -14,34 +14,37 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.121)
-- .aitk/instructions/no-fix-on-fix.instructions.md (hot=0.107)
-- extensions/servant/src/extension.ts (hot=0.09)
-- extensions/servant/package.json (hot=0.078)
-- extensions/servant/CHANGELOG.md (hot=0.078)
-- extensions/servant/src/constellation/ConstellationDataGenerator.ts (hot=0.061)
-- extensions/servant/test-quality-guard.ts (hot=0.048)
-- .aitk/instructions/INDEX.md (hot=0.047)
-- .aitk/instructions/mandatory-spec-check.instructions.md (hot=0.047)
-- .aitk/instructions/categories/BUG_FIX.md (hot=0.047)
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.12)
+- .github/actions/setup-workspace/action.yml (hot=0.081)
+- .github/workflows/_quality-strategy.yml (hot=0.081)
+- .github/workflows/_deploy-state.yml (hot=0.081)
+- .github/workflows/safe-deployment.yml (hot=0.077)
+- .github/workflows/quality-check.yml (hot=0.075)
+- .github/workflows/deploy.yml (hot=0.067)
+- .github/workflows/scheduled-deploy.yml (hot=0.067)
+- .github/workflows/auto-deploy.yml (hot=0.067)
+- extensions/servant/src/ui/ServantWarningLogger.ts (hot=0.046)
 
 ## Related (Neural Propagation)
 
-- startNode: extensions/servant/src/ui/ConstellationViewPanel.ts
-- seeds: 4
+- startNode: extensions/servant/src/monitoring/ActionsHealthMonitor.ts
+- seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- extensions/servant/src/ui/ConstellationViewPanel.ts (activation=1.000, source=signal, signals=[save:0.12])
-- extensions/servant/src/extension.ts (activation=0.744, source=signal, signals=[save:0.09])
-- extensions/servant/package.json (activation=0.645, source=signal, signals=[save:0.08])
-- extensions/servant/CHANGELOG.md (activation=0.645, source=signal, signals=[save:0.08])
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=1.000, source=signal, signals=[save:0.12])
+- .github/actions/setup-workspace/action.yml (activation=0.675, source=signal, signals=[save:0.08])
+- .github/workflows/_quality-strategy.yml (activation=0.675, source=signal, signals=[save:0.08])
+- .github/workflows/_deploy-state.yml (activation=0.675, source=signal, signals=[save:0.08])
+- .github/workflows/safe-deployment.yml (activation=0.642, source=signal, signals=[save:0.08])
 
 - (no related files detected)
 
-- (none)
+- .github/actions/setup-workspace/action.yml
+- .github/workflows/_deploy-state.yml
+- .github/workflows/_quality-strategy.yml
 
 ## Required Instructions (Enforced)
 
@@ -52,7 +55,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 68.68
+- ageHours: 78.89
 
 ## Latest SpecCheck Record (Raw)
 
