@@ -688,6 +688,10 @@
   color: var(--text-color);
   line-height: 1.6;
   animation: slideIn 0.3s ease;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
 
 /* 難易度評価ボタン（和訳・スペルタブと統一） */
