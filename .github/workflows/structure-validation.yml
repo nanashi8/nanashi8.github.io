@@ -12,16 +12,16 @@ permissions:
 jobs:
   validate-structure:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-    
+
     - name: Validate project structure
       run: |
         echo "🔍 プロジェクト構造を検証中..."
@@ -30,7 +30,7 @@ jobs:
         else
           echo "⚠️ validate_project_structure.py が見つかりません（スキップ）"
         fi
-    
+
     - name: Check for forbidden patterns
       run: |
         echo "🚫 禁止パターン（'2'ファイル等）をチェック中..."
@@ -41,7 +41,7 @@ jobs:
         else
           echo "✅ 禁止パターンなし"
         fi
-    
+
     - name: Validate documentation links
       run: |
         echo "🔗 ドキュメントリンクを検証中..."

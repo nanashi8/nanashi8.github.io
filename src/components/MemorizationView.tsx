@@ -2667,7 +2667,7 @@ function MemorizationView({
                           </span>
                         </div>
                         {cardState.showRelated && (
-                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words">
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
                             {currentQuestion.relatedWords}
                           </div>
                         )}
@@ -3154,7 +3154,7 @@ function MemorizationView({
                         </span>
                       </div>
                       {cardState.showMeaning && (
-                        <div className="flex-1 text-base sm:text-lg text-gray-900 break-words">
+                        <div className="flex-1 text-base sm:text-lg text-gray-900 break-words text-overflow-safe">
                           {currentQuestion.meaning}
                         </div>
                       )}
@@ -3179,7 +3179,7 @@ function MemorizationView({
                             </span>
                           </div>
                           {cardState.showEtymology && (
-                            <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words">
+                            <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
                               {currentQuestion.etymology}
                             </div>
                           )}
@@ -3203,7 +3203,7 @@ function MemorizationView({
                           </span>
                         </div>
                         {cardState.showRelated && (
-                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words">
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
                             {currentQuestion.relatedWords}
                           </div>
                         )}

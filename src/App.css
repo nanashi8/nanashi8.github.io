@@ -13,6 +13,16 @@
 /* ユーティリティ */
 @import './styles/utilities/animations.css';
 
+/* 長文テキスト対策用クラス */
+.text-overflow-safe {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .app {
   background: var(--background, var(--background));
   color: var(--text-color, var(--gray-900));

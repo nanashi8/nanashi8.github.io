@@ -104,6 +104,11 @@
 .detail-text {
   color: var(--gray-900);
   flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
 
 @keyframes slideDown {
