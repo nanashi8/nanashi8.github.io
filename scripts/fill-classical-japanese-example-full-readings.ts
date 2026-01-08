@@ -184,12 +184,41 @@ function isKanbunSource(source: string): boolean {
   return s.includes('漢文');
 }
 
+function extractKundokuFromExplanation(explanation: string, quote: string): string {
+  const raw = (explanation || '').trim();
+  if (!raw) return '';
+
+  const q = (quote || '').trim();
+  const pairs = [...raw.matchAll(/「([^」]+)」→「([^」]+)」/g)].map((m) => ({
+    left: (m[1] ?? '').trim(),
+    right: (m[2] ?? '').trim(),
+  }));
+
+  if (q) {
+    const exact = pairs.find((p) => p.left === q);
+    if (exact?.right) return exact.right;
+  }
+
+  // 見つからなければ最初の書き下し候補
+  return pairs[0]?.right ?? '';
+}
+
+function chooseReadingTargetForKanbun(row: CsvRow, ex: ParsedExample): string {
+  const expl = row['解説'] ?? '';
+  const kundoku = extractKundokuFromExplanation(expl, ex.quote);
+  if (kundoku) return kundoku;
+
+  // フォールバック: これまで通り、書き下し文が入っているケースが多い現代語訳側
+  // （ただし kanbun-practice は現代語訳が入っていることがあるので、ここが最後の手段）
+  return ex.meaning;
+}
+
 function preprocessReadingTargetText(text: string): string {
   const raw = (text || '').trim();
   if (!raw) return '';
   // kuromoji が読めず漢字が残りやすい古文/漢文混じり表現の最小救済
   // 例: 「…旅人也」→「…旅人なり」
-  return raw.replace(/也/g, 'なり');
+  return raw.replace(/非ず/g, 'あらず').replace(/也/g, 'なり');
 }
 
 async function main(): Promise<void> {
@@ -237,7 +266,9 @@ async function main(): Promise<void> {
           continue;
         }
 
-        const readingTarget = isKanbunSource(ex.source) ? ex.meaning : ex.quote;
+        const readingTarget = isKanbunSource(ex.source)
+          ? chooseReadingTargetForKanbun(row, ex)
+          : ex.quote;
         const normalizedTarget = preprocessReadingTargetText(readingTarget);
 
         const nextReading = await toReading(normalizedTarget);
