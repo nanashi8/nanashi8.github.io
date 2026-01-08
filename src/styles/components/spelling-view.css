@@ -423,7 +423,6 @@
 .detail-content {
   flex: 1;
   color: var(--gray-800);
-  word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-word;
   white-space: normal;

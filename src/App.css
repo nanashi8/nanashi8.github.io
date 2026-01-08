@@ -15,7 +15,6 @@
 
 /* 長文テキスト対策用クラス */
 .text-overflow-safe {
-  word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-word;
   white-space: normal;
