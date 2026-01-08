@@ -92,12 +92,12 @@ function parseCSV<T>(csvText: string): T[] {
   const lines: string[] = [];
   let currentLine = '';
   let insideQuotes = false;
-  
+
   // 引用符を考慮して行を分割
   for (let i = 0; i < csvText.length; i++) {
     const char = csvText[i];
     const nextChar = csvText[i + 1];
-    
+
     if (char === '"') {
       if (insideQuotes && nextChar === '"') {
         // エスケープされた引用符（""）
@@ -117,12 +117,12 @@ function parseCSV<T>(csvText: string): T[] {
       currentLine += char;
     }
   }
-  
+
   // 最後の行を追加
   if (currentLine.trim()) {
     lines.push(currentLine);
   }
-  
+
   if (lines.length < 2) return [];
 
   // ヘッダー行を解析
@@ -151,11 +151,11 @@ function parseCSVLine(line: string): string[] {
   const result: string[] = [];
   let currentField = '';
   let insideQuotes = false;
-  
+
   for (let i = 0; i < line.length; i++) {
     const char = line[i];
     const nextChar = line[i + 1];
-    
+
     if (char === '"') {
       if (insideQuotes && nextChar === '"') {
         // エスケープされた引用符（""）→ 1つの引用符として追加
@@ -173,10 +173,10 @@ function parseCSVLine(line: string): string[] {
       currentField += char;
     }
   }
-  
+
   // 最後のフィールドを追加
   result.push(currentField.trim());
-  
+
   return result;
 }
 
@@ -194,6 +194,8 @@ interface SocialStudiesRow {
   時代背景?: string; // 古文
   種別: string;
   source?: string; // 社会科
+  例文1?: string; // 古文
+  例文2?: string; // 古文
 }
 
 /**
@@ -215,21 +217,21 @@ export async function loadSocialStudiesCSV(filename: string): Promise<Question[]
     // ファイル名から適切なディレクトリを判定
     const directory = filename.includes('classical') || filename.includes('kanbun') ? 'classical-japanese' : 'social-studies';
     const url = `/data/${directory}/${filename}`;
-    
+
     console.log('[loadSocialStudiesCSV] データ読み込み開始:', { filename, directory, url });
-    
+
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`データの読み込みに失敗: ${response.status} ${response.statusText} (URL: ${url})`);
     }
 
     const csvText = await response.text();
-    console.log('[loadSocialStudiesCSV] CSV読み込み完了:', { 
-      filename, 
-      length: csvText.length, 
-      firstLine: csvText.split('\n')[0]?.slice(0, 100) 
+    console.log('[loadSocialStudiesCSV] CSV読み込み完了:', {
+      filename,
+      length: csvText.length,
+      firstLine: csvText.split('\n')[0]?.slice(0, 100)
     });
-    
+
     const rows = parseCSV<SocialStudiesRow>(csvText);
     console.log('[loadSocialStudiesCSV] CSV解析完了:', { filename, rowCount: rows.length });
 
@@ -243,8 +245,10 @@ export async function loadSocialStudiesCSV(filename: string): Promise<Question[]
       difficulty: 'intermediate' as const,
       source: normalizeQuestionSource(row.source || ''),
       termType: normalizeTermType(row.種別),
+      example1: row.例文1 || '', // 古文の例文1
+      example2: row.例文2 || '', // 古文の例文2
     }));
-    
+
     console.log('[loadSocialStudiesCSV] Question変換完了:', { filename, questionCount: questions.length });
     return questions;
   } catch (error) {

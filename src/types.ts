@@ -39,6 +39,9 @@ export interface Question {
   grade?: number; // 学年情報（オプショナル、AI分析用）
   // 社会科専用フィールド
   termType?: '人物名' | '出来事' | '地名' | '制度概念' | 'その他'; // 語句の種別（選択肢生成用）
+  // 古文専用フィールド
+  example1?: string; // 例文1（古文の用例）
+  example2?: string; // 例文2（古文の用例）
 }
 
 // バリデーション用のヘルパー関数

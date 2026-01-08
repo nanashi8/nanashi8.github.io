@@ -2674,6 +2674,54 @@ function MemorizationView({
                       </div>
                     </button>
                   )}
+
+                  {/* 例文1 */}
+                  {currentQuestion.example1 && currentQuestion.example1.trim() !== '' && (
+                    <button
+                      onClick={() => toggleCardField('showExample')}
+                      className="w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100:bg-gray-600 transition"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-4">
+                          <span className="font-semibold text-gray-700 w-16 sm:w-24 flex-shrink-0">
+                            例文1
+                          </span>
+                          <span className="text-gray-500 flex-shrink-0">
+                            {cardState.showExample ? '▼' : '▶'}
+                          </span>
+                        </div>
+                        {cardState.showExample && (
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
+                            {currentQuestion.example1}
+                          </div>
+                        )}
+                      </div>
+                    </button>
+                  )}
+
+                  {/* 例文2 */}
+                  {currentQuestion.example2 && currentQuestion.example2.trim() !== '' && (
+                    <button
+                      onClick={() => toggleCardField('showExample')}
+                      className="w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100:bg-gray-600 transition"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-4">
+                          <span className="font-semibold text-gray-700 w-16 sm:w-24 flex-shrink-0">
+                            例文2
+                          </span>
+                          <span className="text-gray-500 flex-shrink-0">
+                            {cardState.showExample ? '▼' : '▶'}
+                          </span>
+                        </div>
+                        {cardState.showExample && (
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
+                            {currentQuestion.example2}
+                          </div>
+                        )}
+                      </div>
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -3205,6 +3253,54 @@ function MemorizationView({
                         {cardState.showRelated && (
                           <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
                             {currentQuestion.relatedWords}
+                          </div>
+                        )}
+                      </div>
+                    </button>
+                  )}
+
+                  {/* 例文1 */}
+                  {currentQuestion.example1 && currentQuestion.example1.trim() !== '' && (
+                    <button
+                      onClick={() => toggleCardField('showExample')}
+                      className="w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100:bg-gray-600 transition"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-4">
+                          <span className="font-semibold text-gray-700 w-16 sm:w-24 flex-shrink-0">
+                            例文1
+                          </span>
+                          <span className="text-gray-500 flex-shrink-0">
+                            {cardState.showExample ? '▼' : '▶'}
+                          </span>
+                        </div>
+                        {cardState.showExample && (
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
+                            {currentQuestion.example1}
+                          </div>
+                        )}
+                      </div>
+                    </button>
+                  )}
+
+                  {/* 例文2 */}
+                  {currentQuestion.example2 && currentQuestion.example2.trim() !== '' && (
+                    <button
+                      onClick={() => toggleCardField('showExample')}
+                      className="w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100:bg-gray-600 transition"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-4">
+                          <span className="font-semibold text-gray-700 w-16 sm:w-24 flex-shrink-0">
+                            例文2
+                          </span>
+                          <span className="text-gray-500 flex-shrink-0">
+                            {cardState.showExample ? '▼' : '▶'}
+                          </span>
+                        </div>
+                        {cardState.showExample && (
+                          <div className="flex-1 text-xs sm:text-sm text-gray-600 break-words text-overflow-safe">
+                            {currentQuestion.example2}
                           </div>
                         )}
                       </div>
