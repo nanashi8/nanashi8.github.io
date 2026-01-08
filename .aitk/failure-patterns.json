@@ -8,24 +8,21 @@
     "convergenceThreshold": 0.95,
     "lastUpdated": "2026-01-08",
     "gitHistoryLearned": true,
-    "gitHistoryLearnedAt": "2026-01-08T00:31:40.665Z"
+    "gitHistoryLearnedAt": "2026-01-08T07:53:02.563Z"
   },
   "failurePatterns": {
     "property-naming-error": {
       "id": "property-naming-error",
       "category": "type-error",
       "severity": "critical",
-      "occurrences": 102,
+      "occurrences": 117,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
       "description": "型定義を確認せずにプロパティ名を推測",
       "detectionPattern": {
         "errorMessage": "Property .* does not exist on type",
-        "files": [
-          "src/**/*.ts",
-          "src/**/*.tsx"
-        ]
+        "files": ["src/**/*.ts", "src/**/*.tsx"]
       },
       "prevention": {
         "checkType": "static-analysis",
@@ -122,9 +119,7 @@
       "description": "リファクタリング時に元のロジックを変更",
       "detectionPattern": {
         "errorMessage": "Test failed.*expected.*received",
-        "files": [
-          "src/**/*.ts"
-        ]
+        "files": ["src/**/*.ts"]
       },
       "prevention": {
         "checkType": "test",
@@ -143,16 +138,14 @@
       "id": "logic-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 2836,
+      "occurrences": 3160,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
       "description": "perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善",
       "detectionPattern": {
         "errorMessage": "perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善",
-        "files": [
-          "src/components/GrammarQuizView.tsx"
-        ]
+        "files": ["src/components/GrammarQuizView.tsx"]
       },
       "prevention": {
         "checkType": "manual",
@@ -171,7 +164,7 @@
       "id": "type-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 235,
+      "occurrences": 260,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
@@ -201,16 +194,14 @@
       "id": "test-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 211,
+      "occurrences": 234,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
       "description": "test: カバレッジ目標達成 - 94.74%",
       "detectionPattern": {
         "errorMessage": "test: カバレッジ目標達成 - 94.74%",
-        "files": [
-          "tests/unit/useAdaptiveLearning.test.ts"
-        ]
+        "files": ["tests/unit/useAdaptiveLearning.test.ts"]
       },
       "prevention": {
         "checkType": "manual",
@@ -267,5 +258,56 @@
       }
     ]
   },
-  "hotspots": []
+  "hotspots": [
+    {
+      "file": "src/components/MemorizationView.tsx",
+      "modificationCount": 4,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/utils/socialStudiesLoader.ts",
+      "modificationCount": 3,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/utils/db-connection-pool.ts",
+      "modificationCount": 2,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/utils.ts",
+      "modificationCount": 2,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/storage/indexedDB/indexedDBStorage.ts",
+      "modificationCount": 2,
+      "riskLevel": "low"
+    },
+    {
+      "file": "extensions/servant/src/monitoring/ActionsHealthMonitor.ts",
+      "modificationCount": 2,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/types.ts",
+      "modificationCount": 1,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/storage/progress/progressStorage.ts",
+      "modificationCount": 1,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/storage/manager/dataExport.ts",
+      "modificationCount": 1,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/components/SocialMemorizationView.tsx",
+      "modificationCount": 1,
+      "riskLevel": "low"
+    }
+  ]
 }

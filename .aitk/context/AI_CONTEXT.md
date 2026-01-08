@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-08T06:46:23.952Z
+- generatedAt: 2026-01-08T16:25:44.988Z
 
 ## Single Source of Truth
 
@@ -14,37 +14,35 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.12)
-- .github/actions/setup-workspace/action.yml (hot=0.081)
-- .github/workflows/_quality-strategy.yml (hot=0.081)
-- .github/workflows/_deploy-state.yml (hot=0.081)
-- .github/workflows/safe-deployment.yml (hot=0.077)
-- .github/workflows/quality-check.yml (hot=0.075)
-- .github/workflows/deploy.yml (hot=0.067)
-- .github/workflows/scheduled-deploy.yml (hot=0.067)
-- .github/workflows/auto-deploy.yml (hot=0.067)
-- extensions/servant/src/ui/ServantWarningLogger.ts (hot=0.046)
+- src/components/MemorizationView.tsx (hot=0.01)
+- src/ai/ml/MLEnhancedSpecialistAI.ts (hot=0.009)
+- src/utils/socialStudiesLoader.ts (hot=0.006)
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.005)
+- src/storage/indexedDB/indexedDBStorage.ts (hot=0.005)
+- src/utils.ts (hot=0.005)
+- src/utils/db-connection-pool.ts (hot=0.005)
+- src/styles/components/choices.css (hot=0.005)
+- src/styles/components/spelling-view.css (hot=0.005)
+- src/App.css (hot=0.005)
 
 ## Related (Neural Propagation)
 
-- startNode: extensions/servant/src/monitoring/ActionsHealthMonitor.ts
+- startNode: src/components/MemorizationView.tsx
 - seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=1.000, source=signal, signals=[save:0.12])
-- .github/actions/setup-workspace/action.yml (activation=0.675, source=signal, signals=[save:0.08])
-- .github/workflows/_quality-strategy.yml (activation=0.675, source=signal, signals=[save:0.08])
-- .github/workflows/_deploy-state.yml (activation=0.675, source=signal, signals=[save:0.08])
-- .github/workflows/safe-deployment.yml (activation=0.642, source=signal, signals=[save:0.08])
+- src/components/MemorizationView.tsx (activation=1.000, source=signal, signals=[save:0.01])
+- src/ai/ml/MLEnhancedSpecialistAI.ts (activation=0.900, source=signal, signals=[save:0.01])
+- src/utils/socialStudiesLoader.ts (activation=0.600, source=signal, signals=[save:0.01])
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=0.500, source=signal, signals=[save:0.01])
+- src/storage/indexedDB/indexedDBStorage.ts (activation=0.500, source=signal, signals=[save:0.01])
 
 - (no related files detected)
 
-- .github/actions/setup-workspace/action.yml
-- .github/workflows/_deploy-state.yml
-- .github/workflows/_quality-strategy.yml
+- src/ai/ml/MLEnhancedSpecialistAI.ts
 
 ## Required Instructions (Enforced)
 
@@ -55,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 78.89
+- ageHours: 88.55
 
 ## Latest SpecCheck Record (Raw)
 
@@ -90,4 +88,3 @@
 
 - This packet is generated locally (no external model).
 - Output path: nanashi8.github.io/.aitk/context/AI_CONTEXT.md
-

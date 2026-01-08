@@ -51,5 +51,9 @@
     "**/node_modules/**": true,
     "**/dist/**": true,
     "**/coverage/**": true
-  }
+  },
+  "yaml.customTags": [
+    "!reference sequence"
+  ],
+  "yaml.validate": false
 }

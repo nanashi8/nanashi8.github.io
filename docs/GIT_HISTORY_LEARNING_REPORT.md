@@ -1,108 +1,116 @@
 # Git履歴学習レポート
 
-**学習日時**: 2026-01-08T00:31:40.666Z
+**学習日時**: 2026-01-08T07:53:02.564Z
 **学習範囲**: 学習AI実装開始以降
 
 ---
 
 ## 📊 学習サマリー
 
-- **解析コミット数**: 437件
-- **抽出パターン数**: 378件
+- **解析コミット数**: 447件
+- **抽出パターン数**: 387件
 - **新規パターン**: 0件
-- **更新パターン**: 378件
-- **ホットスポット**: 0ファイル
+- **更新パターン**: 387件
+- **ホットスポット**: 15ファイル
 
 ---
 
 ## 🔥 ホットスポット（頻繁に修正されるファイル）
 
+1. **src/components/MemorizationView.tsx** - 4回修正
+   - リスクレベル: 低
 
+2. **src/utils/socialStudiesLoader.ts** - 3回修正
+   - リスクレベル: 低
+
+3. **src/utils/db-connection-pool.ts** - 2回修正
+   - リスクレベル: 低
+
+4. **src/utils.ts** - 2回修正
+   - リスクレベル: 低
+
+5. **src/storage/indexedDB/indexedDBStorage.ts** - 2回修正
+   - リスクレベル: 低
+
+6. **extensions/servant/src/monitoring/ActionsHealthMonitor.ts** - 2回修正
+   - リスクレベル: 低
+
+7. **src/types.ts** - 1回修正
+   - リスクレベル: 低
+
+8. **src/storage/progress/progressStorage.ts** - 1回修正
+   - リスクレベル: 低
+
+9. **src/storage/manager/dataExport.ts** - 1回修正
+   - リスクレベル: 低
+
+10. **src/components/SocialMemorizationView.tsx** - 1回修正
+
+- リスクレベル: 低
 
 ---
 
 ## 📋 抽出された失敗パターン
 
-
 ### 1. logic-error
 
-**説明**: chore(actions): deploy系workflow整理（重複起動防止/Node20/タグ検出修正）
+**説明**: fix: faviconとapple-touch-iconの404を解消
 
-
-**影響ファイル**: .github/workflows/auto-deploy.yml, .github/workflows/deploy.yml, .github/workflows/scheduled-deploy.yml
-
+**影響ファイル**: public/apple-touch-icon-precomposed.png, public/apple-touch-icon.png, public/favicon.ico
 
 ### 2. logic-error
 
-**説明**: fix: カテゴリースロット経路の例外フォールバックを修正
+**説明**: fix: swが参照するmanifest.jsonを追加
 
-
-**影響ファイル**: src/ai/scheduler/QuestionScheduler.ts, src/ai/scheduler/helpers/ScheduleHelpers.ts, src/ai/scheduler/strategies/ScheduleStrategy.ts
-
+**影響ファイル**: public/manifest.json
 
 ### 3. logic-error
 
-**説明**: fix: レポートファイルをmarkdownlint対象外に追加
+**説明**: fix: model.json 404とword未定義クラッシュを防止
 
-
-**影響ファイル**: .markdownlintignore
-
+**影響ファイル**: .aitk/.commit-count, src/App.tsx, src/ai/ml/MLEnhancedSpecialistAI.ts, src/components/MemorizationView.tsx
 
 ### 4. logic-error
 
-**説明**: fix: ESLint/Markdownlintの設定を修正
+**説明**: fix(csv): 漢文CSV読み込みエラーを修正（RFC 4180準拠パーサー実装）
 
-
-**影響ファイル**: .aitk/.commit-count, .markdownlintignore, eslint.config.js, extensions/servant/src/ui/ConstellationViewPanel.ts
-
+**影響ファイル**: .aitk/.commit-count, src/utils/socialStudiesLoader.ts
 
 ### 5. logic-error
 
-**説明**: fix(lint): 不要なeslint-disableディレクティブを削除
+**説明**: fix(ui): 国語暗記タブ（スコアボード表示後）にもtext-overflow-safe適用
 
-
-**影響ファイル**: .aitk/.commit-count, extensions/servant/src/commands/quickFixCommit.ts
-
+**影響ファイル**: .aitk/.commit-count, src/components/MemorizationView.tsx
 
 ### 6. logic-error
 
-**説明**: fix(lint): ESLint警告とエラーを修正
+**説明**: fix(css): GrammarQuizViewの解説テキストにも折り返しスタイルを追加
 
+**影響ファイル**: .aitk/.commit-count, src/components/GrammarQuizView.css
 
-**影響ファイル**: .aitk/.commit-count, extensions/servant/src/autopilot/SeniorEngineerQualityCheck.ts, extensions/servant/src/commands/quickFixCommit.ts, extensions/servant/src/constellation/ConstellationDataGenerator.ts, extensions/servant/src/git/GitIntegration.ts, extensions/servant/src/ui/ConstellationViewPanel.ts, src/hooks/useAdaptiveLearning.ts
+### 7. logic-error
 
+**説明**: fix(css): word-wrapをoverflow-wrapに修正（stylelint対応）
 
-### 7. type-error
-
-**説明**: fix: Add 'japanese' to RequeuingDebugPanel subject type
-
-
-**影響ファイル**: src/components/RequeuingDebugPanel.tsx
-
+**影響ファイル**: .aitk/.commit-count
 
 ### 8. logic-error
 
-**説明**: fix: Add 'japanese' to RequeuingDebugPanel subject type
+**説明**: fix(lint): word-wrap→overflow-wrapに変更してstylelintエラー解消
 
-
-**影響ファイル**: src/components/RequeuingDebugPanel.tsx
-
+**影響ファイル**: .aitk/.commit-count, src/App.css, src/styles/components/choices.css, src/styles/components/spelling-view.css
 
 ### 9. logic-error
 
-**説明**: fix: Remove plan tab from all subject scoreboards and fix service worker for dev mode
+**説明**: fix(ui): 長文テキスト（語源・解説、関連語）の枠線はみ出し問題を全モードで修正
 
-
-**影響ファイル**: .husky/pre-commit, docs/plans/CLASSICAL_JAPANESE_EXPANSION_PLAN.md, docs/plans/SOCIAL_STUDIES_EXPANSION_PLAN.md, package.json, public/data/classical-japanese/classical-grammar.csv, public/data/classical-japanese/classical-knowledge.csv, public/data/classical-japanese/classical-vocabulary.csv, public/data/classical-japanese/classical-words.csv, public/data/social-studies/all-social-studies.csv, public/data/social-studies/social-studies-civics-30.csv, public/data/social-studies/social-studies-geography-30.csv, public/data/social-studies/social-studies-history-40.csv, public/data/social-studies/social-studies-sample.csv, public/sw.js, scripts/check-reading-grammar-tags.ts, src/App.tsx, src/ai/scheduler/CategoryClassifier.ts, src/ai/scheduler/PositionCalculator.ts, src/ai/scheduler/QuestionScheduler.ts, src/ai/scheduler/types.ts, src/ai/utils/categoryDetermination.ts, src/components/GrammarQuizView.tsx, src/components/MemorizationView.tsx, src/components/QuestionCard.tsx, src/components/RequeuingDebugPanel.tsx, src/components/ScoreBoard.tsx, src/components/SettingsView.tsx, src/components/SocialMemorizationView.tsx, src/components/SocialStudiesView.tsx, src/components/SocialStudiesView.tsx.old, src/components/SpellingView.tsx, src/components/TranslationView.tsx, src/hooks/useSessionStats.ts, src/strategies/MemorizationStrategy.ts, src/strategies/learningUtils.ts, src/types.ts, src/utils.ts, src/utils/grammarAnalyzer.ts, src/utils/questionPrioritySorter.ts, src/utils/socialStudiesLoader.ts, tests/unit/ai/scheduler/QuestionScheduler.priority.test.ts, tests/unit/grammarAnalyzer.analyzeSentence.test.ts
-
+**影響ファイル**: .aitk/.commit-count, .github/workflows/structure-validation.yml, src/App.css, src/components/MemorizationView.tsx, src/styles/components/choices.css, src/styles/components/spelling-view.css
 
 ### 10. logic-error
 
-**説明**: fix: sessionStats propsを各Viewコンポーネントから削除
+**説明**: fix(lint): 未使用変数の警告解消
 
-
-**影響ファイル**: .aitk/.commit-count, public/layout-prototype.html, src/components/GrammarQuizView.tsx, src/components/ScoreBoard.tsx, src/components/SpellingView.tsx, src/components/TranslationView.tsx
-
+**影響ファイル**: .aitk/.commit-count, src/storage/indexedDB/indexedDBStorage.ts, src/utils.ts, src/utils/db-connection-pool.ts
 
 ---
 
@@ -110,15 +118,16 @@
 
 サーバントは過去の失敗から以下を学習しました：
 
-1. **頻出エラーパターン**: 378件
+1. **頻出エラーパターン**: 387件
 2. **高リスクファイル**: 0ファイル
 3. **成功率向上**: Git履歴から学習したパターンは全て「修正済み」として記録
 
 **次回のアクション**:
+
 - ホットスポットファイルに特に注意
 - 抽出されたパターンをInstructionsに反映
 - CI/CDパイプラインに自動チェックを追加
 
 ---
 
-**生成日時**: 2026-01-08T00:31:40.666Z
+**生成日時**: 2026-01-08T07:53:02.564Z
