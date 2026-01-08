@@ -86,17 +86,52 @@ function normalizeSocialStudiesMeaning(rawMeaning: string, explanation: string):
 }
 
 /**
- * CSV文字列をパースする
+ * RFC 4180準拠のCSVパーサー（引用符内の改行とカンマに対応）
  */
 function parseCSV<T>(csvText: string): T[] {
-  const lines = csvText.split('\n').filter((line) => line.trim());
+  const lines: string[] = [];
+  let currentLine = '';
+  let insideQuotes = false;
+  
+  // 引用符を考慮して行を分割
+  for (let i = 0; i < csvText.length; i++) {
+    const char = csvText[i];
+    const nextChar = csvText[i + 1];
+    
+    if (char === '"') {
+      if (insideQuotes && nextChar === '"') {
+        // エスケープされた引用符（""）
+        currentLine += '"';
+        i++; // 次の引用符をスキップ
+      } else {
+        // 引用符の開始/終了
+        insideQuotes = !insideQuotes;
+      }
+    } else if (char === '\n' && !insideQuotes) {
+      // 引用符外の改行 = 行の終わり
+      if (currentLine.trim()) {
+        lines.push(currentLine);
+      }
+      currentLine = '';
+    } else {
+      currentLine += char;
+    }
+  }
+  
+  // 最後の行を追加
+  if (currentLine.trim()) {
+    lines.push(currentLine);
+  }
+  
   if (lines.length < 2) return [];
 
-  const headers = lines[0].split(',').map((h) => h.trim());
+  // ヘッダー行を解析
+  const headers = parseCSVLine(lines[0]);
   const rows: T[] = [];
 
+  // データ行を解析
   for (let i = 1; i < lines.length; i++) {
-    const values = lines[i].split(',').map((v) => v.trim());
+    const values = parseCSVLine(lines[i]);
     const row: any = {};
 
     headers.forEach((header, index) => {
@@ -107,6 +142,42 @@ function parseCSV<T>(csvText: string): T[] {
   }
 
   return rows;
+}
+
+/**
+ * CSV行を解析（引用符で囲まれたフィールドに対応）
+ */
+function parseCSVLine(line: string): string[] {
+  const result: string[] = [];
+  let currentField = '';
+  let insideQuotes = false;
+  
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    const nextChar = line[i + 1];
+    
+    if (char === '"') {
+      if (insideQuotes && nextChar === '"') {
+        // エスケープされた引用符（""）→ 1つの引用符として追加
+        currentField += '"';
+        i++;
+      } else {
+        // 引用符の開始/終了
+        insideQuotes = !insideQuotes;
+      }
+    } else if (char === ',' && !insideQuotes) {
+      // 引用符外のカンマ = フィールドの区切り
+      result.push(currentField.trim());
+      currentField = '';
+    } else {
+      currentField += char;
+    }
+  }
+  
+  // 最後のフィールドを追加
+  result.push(currentField.trim());
+  
+  return result;
 }
 
 /**
