@@ -1,0 +1,6 @@
+{
+  "name": "中学生英語学習アプリ",
+  "short_name": "英語学習",
+  "start_url": "/",
+  "display": "standalone"
+}
