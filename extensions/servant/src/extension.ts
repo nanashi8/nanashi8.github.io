@@ -31,6 +31,8 @@ import { quickFixCommit } from './commands/quickFixCommit';
 import { ServantChatParticipant } from './chat/ChatParticipant';
 import { ProblemsMonitor } from './chat/ProblemsMonitor';
 import { ProblemsIntegrationMonitor } from './chat/ProblemsIntegrationMonitor';
+import { ServantWarningLogger } from './ui/ServantWarningLogger';
+import { ActionsHealthMonitor } from './monitoring/ActionsHealthMonitor';
 import {
   recordSpecCheck,
   computeRequiredInstructionsForFiles,
@@ -386,6 +388,11 @@ export function activate(context: vscode.ExtensionContext) {
   const problemsIntegrationMonitor = new ProblemsIntegrationMonitor(outputChannel, workspaceRoot);
   problemsIntegrationMonitor.start();
   context.subscriptions.push(problemsIntegrationMonitor);
+
+  // GitHub Actions 健全性監視（週次で重複/無駄をチェック）
+  const warningLogger = new ServantWarningLogger(outputChannel);
+  const actionsHealthMonitor = new ActionsHealthMonitor(workspaceRoot, warningLogger);
+  context.subscriptions.push(actionsHealthMonitor);
 
   // AdaptiveGuard と ChatParticipant の連携
   // 学習完了時に自動的にChatにレポートを送信

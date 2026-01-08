@@ -1,89 +1,32 @@
-name: Build and Test (Manual Deploy)
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Deploy (Manual)
+
+# State Pattern: manual状態のデプロイ
+# 手動トリガーのみ（品質チェックは必要に応じてスキップ可）
+
 on:
   workflow_dispatch:
+    inputs:
+      skip_quality_check:
+        description: '品質チェックをスキップする（緊急対応用）'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
   pages: write
   id-token: write
-  deployments: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
 
 jobs:
-  # 品質チェック
-  quality-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - run: npm ci
-
-      - name: Type check
-        run: npm run typecheck
-
-      - name: Lint check
-        run: npm run lint:errors-only
-
-      - name: CSS lint
-        run: npm run lint:css
-
-  # ビルド（デプロイは手動承認が必要）
-  build:
-    needs: quality-check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Verify build
-        run: |
-          echo "✅ ビルド成功"
-          echo "📦 ビルドサイズ: $(du -sh dist | cut -f1)"
-          ls -lh dist/
-
-      - uses: actions/configure-pages@v4
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-  # 手動承認が必要なデプロイ
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: https://nanashi8.github.io
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  # デプロイ後の通知
-  notify:
-    needs: deploy
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
-      - name: Notify success
-        if: needs.deploy.result == 'success'
-        run: echo "✅ デプロイ成功！"
-
-      - name: Notify failure
-        if: needs.deploy.result == 'failure'
-        run: echo "❌ デプロイ失敗"
+    name: 手動デプロイ
+    uses: ./.github/workflows/_deploy-state.yml
+    with:
+      state: manual
+      skip-quality-check: ${{ github.event.inputs.skip_quality_check == 'true' }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

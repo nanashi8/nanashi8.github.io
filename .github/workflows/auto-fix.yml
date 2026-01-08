@@ -1,7 +1,5 @@
 name: Auto-fix Issues
 on:
-  push:
-    branches: ['main']
   schedule:
     # 毎日深夜2時に自動実行
     - cron: '0 17 * * *' # UTC 17:00 = JST 02:00
@@ -21,7 +19,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
+          cache: 'npm'
 
       - run: npm ci
 
@@ -63,12 +62,12 @@ jobs:
   #         title: "🤖 Auto-update dependencies"
   #         body: |
   #           ## 自動依存関係更新
-  #           
+  #
   #           このPRは自動的に生成されました。
-  #           
+  #
   #           - npm updateを実行
   #           - npm audit fixを実行
-  #           
+  #
   #           問題がなければ自動的にマージされます。
   #         labels: |
   #           dependencies

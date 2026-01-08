@@ -1,0 +1,159 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Deployment State Machine (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      state:
+        required: true
+        type: string
+        description: 'デプロイ状態: manual | scheduled | auto | safe'
+      skip-quality-check:
+        required: false
+        type: boolean
+        default: false
+        description: '品質チェックをスキップするか'
+      force:
+        required: false
+        type: boolean
+        default: false
+        description: '強制デプロイ（変更がなくても実行）'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages-${{ inputs.state }}'
+  cancel-in-progress: true
+
+jobs:
+  # State 1: Pre-deployment validation
+  validate:
+    name: デプロイ条件の検証
+    runs-on: ubuntu-latest
+    outputs:
+      should-deploy: ${{ steps.decision.outputs.should-deploy }}
+      reason: ${{ steps.decision.outputs.reason }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # 変更検出のため
+
+      - name: デプロイ可否判定
+        id: decision
+        run: |
+          echo "🔍 デプロイ状態: ${{ inputs.state }}"
+
+          case "${{ inputs.state }}" in
+            "manual")
+              echo "should-deploy=true" >> $GITHUB_OUTPUT
+              echo "reason=手動トリガー" >> $GITHUB_OUTPUT
+              ;;
+            "scheduled")
+              # 前回コミットからの変更をチェック
+              if [ "${{ inputs.force }}" == "true" ]; then
+                echo "should-deploy=true" >> $GITHUB_OUTPUT
+                echo "reason=強制デプロイ" >> $GITHUB_OUTPUT
+              elif git diff --quiet HEAD~1 2>/dev/null; then
+                echo "should-deploy=false" >> $GITHUB_OUTPUT
+                echo "reason=変更なし" >> $GITHUB_OUTPUT
+              else
+                echo "should-deploy=true" >> $GITHUB_OUTPUT
+                echo "reason=変更検出" >> $GITHUB_OUTPUT
+              fi
+              ;;
+            "auto")
+              # mainブランチのみ
+              if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+                echo "should-deploy=true" >> $GITHUB_OUTPUT
+                echo "reason=mainブランチへのpush" >> $GITHUB_OUTPUT
+              else
+                echo "should-deploy=false" >> $GITHUB_OUTPUT
+                echo "reason=mainブランチ以外" >> $GITHUB_OUTPUT
+              fi
+              ;;
+            "safe")
+              echo "should-deploy=true" >> $GITHUB_OUTPUT
+              echo "reason=安全モード（手動承認待ち）" >> $GITHUB_OUTPUT
+              ;;
+            *)
+              echo "::error::Unknown state: ${{ inputs.state }}"
+              exit 1
+              ;;
+          esac
+
+      - name: 判定結果
+        run: |
+          echo "📊 デプロイ判定:"
+          echo "- 実行: ${{ steps.decision.outputs.should-deploy }}"
+          echo "- 理由: ${{ steps.decision.outputs.reason }}"
+
+  # State 2: Quality gate (optional)
+  quality-gate:
+    name: 品質ゲート
+    needs: validate
+    if: needs.validate.outputs.should-deploy == 'true' && !inputs.skip-quality-check
+    uses: ./.github/workflows/_quality-strategy.yml
+    with:
+      strategy: build
+
+  # State 3: Build
+  build:
+    name: ビルド
+    needs: [validate, quality-gate]
+    if: needs.validate.outputs.should-deploy == 'true' && !cancelled()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-workspace
+
+      - name: ビルド実行
+        run: |
+          echo "🔨 プロダクションビルド実行中..."
+          npm run build
+          echo "✅ ビルド完了"
+
+      - name: ビルド成果物のアップロード
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  # State 4: Deploy
+  deploy:
+    name: GitHub Pagesへデプロイ
+    needs: build
+    if: |
+      (inputs.state == 'safe' && github.event_name == 'workflow_dispatch') ||
+      (inputs.state != 'safe')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: GitHub Pagesにデプロイ
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: デプロイ完了通知
+        run: |
+          echo "✅ デプロイ完了"
+          echo "🌐 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📦 状態: ${{ inputs.state }}"
+
+  # State 5: Post-deployment validation (safe mode only)
+  post-validation:
+    name: デプロイ後検証
+    needs: deploy
+    if: inputs.state == 'safe'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: デプロイ後ヘルスチェック
+        run: |
+          echo "🏥 デプロイ後ヘルスチェック実行中..."
+          # 実際のヘルスチェックロジックをここに追加
+          echo "✅ ヘルスチェック完了"

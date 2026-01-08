@@ -25,6 +25,14 @@ export class ServantWarningLogger {
     this.outputChannel.appendLine('\n' + '='.repeat(70));
     this.outputChannel.appendLine(`${icon} [Servant 警告] ${warning.message}`);
     this.outputChannel.appendLine('='.repeat(70));
+
+    const diagnosticReport = warning.details?.diagnosticReport;
+    if (typeof diagnosticReport === 'string' && diagnosticReport.trim().length > 0) {
+      this.outputChannel.appendLine('🧪 診断結果:');
+      diagnosticReport.split('\n').forEach(line => this.outputChannel.appendLine(line));
+      this.outputChannel.appendLine('-'.repeat(70));
+    }
+
     this.outputChannel.appendLine(JSON.stringify(warning, null, 2));
     this.outputChannel.appendLine('='.repeat(70) + '\n');
 

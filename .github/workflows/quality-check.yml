@@ -1,4 +1,11 @@
-name: 品質保証パイプライン
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: 品質保証パイプライン（Strategy Pattern適用版）
+
+# このワークフローは設計パターンを適用してリファクタリングされています:
+# - Strategy Pattern: 品質チェック戦略を分離
+# - Composite Action: 共通処理を再利用可能に
+# - Matrix Strategy: 並列実行で高速化
 
 on:
   push:
@@ -7,48 +14,26 @@ on:
     branches: [main, develop]
 
 jobs:
-  quality-check:
-    name: 型チェック・リント・テスト
+  # Strategy Pattern: 複数の品質チェック戦略を並列実行
+  quality-checks:
+    strategy:
+      matrix:
+        check: [lint, css, build, test, security]
+      fail-fast: false  # 全チェックを実行してレポート生成
+
+    name: ${{ matrix.check }}
+    uses: ./.github/workflows/_quality-strategy.yml
+    with:
+      strategy: ${{ matrix.check }}
+
+  # テストカバレッジレポート（test戦略成功後に実行）
+  coverage:
+    needs: quality-checks
+    if: always()
     runs-on: ubuntu-latest
-
     steps:
-      - name: チェックアウト
-        uses: actions/checkout@v3
-
-      - name: Node.jsセットアップ
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: 依存関係インストール
-        run: npm ci
-
-      - name: TypeScript型チェック
-        run: |
-          echo "🔍 TypeScript型チェック実行中..."
-          npm run type-check || {
-            echo "::error::TypeScript型エラーが検出されました"
-            echo "::error::src/storage/progress/types.ts を確認してください"
-            exit 1
-          }
-          echo "✅ 型チェック成功"
-
-      - name: ESLint実行
-        run: |
-          echo "🔍 ESLint実行中..."
-          npm run lint || {
-            echo "::error::ESLintエラーが検出されました"
-            echo "::error::npm run lint:fix で自動修正を試行してください"
-            exit 1
-          }
-          echo "✅ リント成功"
-
-      - name: ユニットテスト実行
-        run: |
-          echo "🧪 ユニットテスト実行中..."
-          npm run test:unit
-          echo "✅ ユニットテスト成功"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-workspace
 
       - name: テストカバレッジ生成
         run: |
@@ -63,6 +48,15 @@ jobs:
           name: codecov-umbrella
           fail_ci_if_error: false
 
+  # 統合テスト（オプション）
+  integration-test:
+    needs: quality-checks
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-workspace
+
       - name: 統合テスト実行
         run: |
           echo "🧪 統合テスト実行中..."
@@ -70,6 +64,14 @@ jobs:
             echo "::warning::統合テストが失敗しました"
             exit 0
           }
+
+  # 対症療法検知
+  anti-pattern-check:
+    needs: quality-checks
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
       - name: 🚫 対症療法検知チェック
         run: |
@@ -81,26 +83,22 @@ jobs:
             exit 1
           }
 
-      - name: テスト結果アップロード
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: test-results/
-
-      - name: スクリーンショットアップロード
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-screenshots
-          path: playwright-report/
-
+  # 最終レポート
+  report:
+    needs: [quality-checks, coverage, integration-test, anti-pattern-check]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
       - name: 品質チェック完了通知
-        if: success()
         run: |
-          echo "✅ すべての品質チェックが成功しました"
-          echo "- TypeScript型チェック: 成功"
-          echo "- ESLint: 成功"
-          echo "- ユニットテスト: 成功"
-          echo "- カバレッジレポート: 生成完了"
-          echo "- 対症療法検知: クリーン"
+          echo "✅ 品質チェックパイプライン完了"
+          echo "- ESLint: ${{ needs.quality-checks.result }}"
+          echo "- Stylelint: ${{ needs.quality-checks.result }}"
+          echo "- TypeScript & Build: ${{ needs.quality-checks.result }}"
+          echo "- Unit Test: ${{ needs.quality-checks.result }}"
+          echo "- Security: ${{ needs.quality-checks.result }}"
+          echo "- Coverage: ${{ needs.coverage.result }}"
+          echo "- Integration Test: ${{ needs.integration-test.result }}"
+          echo "- Anti-pattern Check: ${{ needs.anti-pattern-check.result }}"
+
+

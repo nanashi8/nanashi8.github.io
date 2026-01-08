@@ -98,7 +98,7 @@ export class ProblemsIntegrationMonitor {
         problems.push({
           file: relativePath,
           line: diag.range.start.line + 1,
-          column: diag.range.start.column + 1,
+          column: diag.range.start.character + 1,
           severity,
           message: diag.message,
           code: diag.code?.toString(),

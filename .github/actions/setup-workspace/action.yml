@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: 'Setup Workspace'
+description: 'Node.js環境のセットアップ（全ワークフローの共通処理）'
+author: 'nanashi8'
+
+inputs:
+  node-version:
+    description: 'Node.jsのバージョン'
+    required: false
+    default: '20'
+  skip-install:
+    description: 'npm ciをスキップするか'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Node.jsセットアップ
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+
+    - name: 依存関係インストール
+      if: inputs.skip-install != 'true'
+      run: npm ci
+      shell: bash
