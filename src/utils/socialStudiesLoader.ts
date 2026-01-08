@@ -140,27 +140,46 @@ interface QuestionsByType {
  * 社会科・国語CSVを読み込んでQuestion型に変換
  */
 export async function loadSocialStudiesCSV(filename: string): Promise<Question[]> {
-  // ファイル名から適切なディレクトリを判定
-  const directory = filename.includes('classical') ? 'classical-japanese' : 'social-studies';
-  const response = await fetch(`/data/${directory}/${filename}`);
-  if (!response.ok) {
-    throw new Error(`データの読み込みに失敗: ${response.statusText}`);
+  try {
+    // ファイル名から適切なディレクトリを判定
+    const directory = filename.includes('classical') || filename.includes('kanbun') ? 'classical-japanese' : 'social-studies';
+    const url = `/data/${directory}/${filename}`;
+    
+    console.log('[loadSocialStudiesCSV] データ読み込み開始:', { filename, directory, url });
+    
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`データの読み込みに失敗: ${response.status} ${response.statusText} (URL: ${url})`);
+    }
+
+    const csvText = await response.text();
+    console.log('[loadSocialStudiesCSV] CSV読み込み完了:', { 
+      filename, 
+      length: csvText.length, 
+      firstLine: csvText.split('\n')[0]?.slice(0, 100) 
+    });
+    
+    const rows = parseCSV<SocialStudiesRow>(csvText);
+    console.log('[loadSocialStudiesCSV] CSV解析完了:', { filename, rowCount: rows.length });
+
+    const questions = rows.map((row) => ({
+      word: row.語句,
+      reading: row.読み,
+      meaning: normalizeSocialStudiesMeaning(row.意味, row.詳細解説 || row.解説 || ''),
+      etymology: row.詳細解説 || row.解説 || '', // 社会科または古文
+      relatedWords: row.関連事項,
+      relatedFields: row.関連分野 || row.時代背景 || '', // 社会科または古文
+      difficulty: 'intermediate' as const,
+      source: normalizeQuestionSource(row.source || ''),
+      termType: normalizeTermType(row.種別),
+    }));
+    
+    console.log('[loadSocialStudiesCSV] Question変換完了:', { filename, questionCount: questions.length });
+    return questions;
+  } catch (error) {
+    console.error('[loadSocialStudiesCSV] エラー発生:', { filename, error });
+    throw error;
   }
-
-  const csvText = await response.text();
-  const rows = parseCSV<SocialStudiesRow>(csvText);
-
-  return rows.map((row) => ({
-    word: row.語句,
-    reading: row.読み,
-    meaning: normalizeSocialStudiesMeaning(row.意味, row.詳細解説 || row.解説 || ''),
-    etymology: row.詳細解説 || row.解説 || '', // 社会科または古文
-    relatedWords: row.関連事項,
-    relatedFields: row.関連分野 || row.時代背景 || '', // 社会科または古文
-    difficulty: 'intermediate' as const,
-    source: normalizeQuestionSource(row.source || ''),
-    termType: normalizeTermType(row.種別),
-  }));
 }
 
 /**

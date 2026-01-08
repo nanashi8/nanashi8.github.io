@@ -105,6 +105,11 @@ export default function SocialMemorizationView({ dataSource = 'all-social-studie
         setState({ status: 'ready', questions });
       } catch (error) {
         if (cancelled) return;
+        console.error('[SocialMemorizationView] データ読み込みエラー:', {
+          filename: currentFilename,
+          error,
+          stack: error instanceof Error ? error.stack : undefined,
+        });
         const message = error instanceof Error ? error.message : '不明なエラーが発生しました';
         setState({ status: 'error', message });
       }
@@ -133,9 +138,19 @@ export default function SocialMemorizationView({ dataSource = 'all-social-studie
   if (state.status === 'error') {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center text-red-600">
+        <div className="text-center text-red-600 max-w-2xl px-4">
           <p className="text-lg font-semibold mb-2">エラーが発生しました</p>
-          <p>{state.message}</p>
+          <p className="mb-4 break-words">{state.message}</p>
+          <details className="text-left text-sm bg-gray-50 p-4 rounded-lg text-gray-700">
+            <summary className="cursor-pointer font-semibold mb-2">詳細情報</summary>
+            <div className="space-y-2">
+              <p><strong>ファイル名:</strong> {currentFilename}</p>
+              <p><strong>パス:</strong> /data/classical-japanese/{currentFilename}</p>
+              <p className="text-xs text-gray-500">
+                💡 ブラウザの開発者ツール（F12キー）の「Console」タブで詳細なエラーログを確認できます
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     );
