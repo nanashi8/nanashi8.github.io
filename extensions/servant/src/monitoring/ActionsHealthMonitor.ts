@@ -199,7 +199,7 @@ export class ActionsHealthMonitor implements vscode.Disposable {
           hasContentsWrite,
           hasYamlParseError
         });
-      } catch (err) {
+      } catch {
         // YAML parse エラーは無視（別の仕組みで検出される）
       }
     }
