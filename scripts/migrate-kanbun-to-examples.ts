@@ -198,9 +198,15 @@ function migrateKanbunFile(filePath: string, dryRun: boolean): { changed: boolea
     const etymology = (r['etymology'] || '').trim();
     const relatedFields = (r['relatedFields'] || '').trim();
 
+    const exampleReading = reading || '-';
+
     const examples = extractKanbunExamples(etymology);
-    const ex1 = examples[0] ? `${examples[0].quote}（-）＜${examples[0].modern}＞【漢文】` : '';
-    const ex2 = examples[1] ? `${examples[1].quote}（-）＜${examples[1].modern}＞【漢文】` : '';
+    const ex1 = examples[0]
+      ? `${examples[0].quote}（${exampleReading}）＜${examples[0].modern}＞【漢文】`
+      : '';
+    const ex2 = examples[1]
+      ? `${examples[1].quote}（${exampleReading}）＜${examples[1].modern}＞【漢文】`
+      : '';
 
     if (ex1 || ex2) changedRows++;
 

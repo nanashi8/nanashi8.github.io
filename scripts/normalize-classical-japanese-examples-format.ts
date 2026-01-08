@@ -149,8 +149,16 @@ function parseExample(text: string): ParsedExample | null {
   const raw = (text || '').trim();
   if (!raw) return null;
 
-  // 既に新フォーマット（＜...＞）っぽいものはスキップ
-  if (raw.includes('）＜') && /【[^】]+】\s*$/.test(raw)) return null;
+  // 既に新フォーマット: 本文（読み）＜現代語訳＞【出典】
+  const strict = raw.match(/^(.+)（([^（）]+)）＜([^＞]+)＞【([^】]+)】\s*$/);
+  if (strict) {
+    const quote = (strict[1] ?? '').trim();
+    const reading = (strict[2] ?? '').trim();
+    const meaning = (strict[3] ?? '').trim();
+    const source = (strict[4] ?? '').trim();
+    if (!quote || !reading || !meaning || !source) return null;
+    return { quote, reading, meaning, source };
+  }
 
   // 末尾の【出典】
   const sourceMatch = raw.match(/【([^】]+)】\s*$/);
@@ -211,18 +219,18 @@ function normalizeExample(
   const t = (raw || '').trim();
   if (!t) return null;
 
-  // 既に変換済みは触らない
-  if (t.includes('）＜') && /【[^】]+】\s*$/.test(t)) return null;
-
   const parsed = parseExample(t);
   if (!parsed) return null;
 
-  const reading = (parsed.reading || '').trim() || (fallbackReading || '').trim() || '-';
+  const readingFallback = (fallbackReading || '').trim();
+  const reading = readingFallback || (parsed.reading || '').trim() || '-';
   const meaning =
     (parsed.meaning || '').trim() || (fallbackMeaning || '').trim() || '（現代語訳未設定）';
   const source = (parsed.source || '').trim() || (fallbackSource || '').trim() || '-';
 
-  return `${parsed.quote}（${reading}）＜${meaning}＞【${source}】`;
+  const normalized = `${parsed.quote}（${reading}）＜${meaning}＞【${source}】`;
+  if (normalized === t) return null;
+  return normalized;
 }
 
 function normalizeFile(filePath: string, dryRun: boolean): { changed: boolean; msg: string } {
