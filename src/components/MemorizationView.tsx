@@ -639,11 +639,14 @@ function MemorizationView({
 
     let filtered = allQuestions;
 
+    // 不正データ（wordが存在しない等）を除外してクラッシュを防止
+    filtered = filtered.filter((q) => typeof (q as any)?.word === 'string');
+
     // データソース（問題セットID / 既存source）フィルター
     if (selectedDataSource !== 'all') {
       const set = questionSets.find((qs) => qs.id === selectedDataSource);
       if (set) {
-        filtered = set.questions;
+        filtered = set.questions.filter((q) => typeof (q as any)?.word === 'string');
       } else {
         filtered = filtered.filter((q) => (q as any).source === selectedDataSource);
       }
@@ -840,6 +843,9 @@ function MemorizationView({
 
         // 学習設定に基づいてフィルタリング
         let filtered = baseQuestions;
+
+        // 不正データ（wordが存在しない等）を除外してクラッシュを防止
+        filtered = filtered.filter((q) => typeof (q as any)?.word === 'string');
 
         // 難易度フィルター
         if (selectedDifficulty !== 'all') {

@@ -871,11 +871,14 @@ function App() {
   const getFilteredQuestions = (dataSource: DataSource): Question[] => {
     let filtered = allQuestions;
 
+    // 不正データ（wordが存在しない等）を除外してクラッシュを防止
+    filtered = filtered.filter((q) => typeof (q as any)?.word === 'string');
+
     // データソース（問題セットID / 既存source / カスタムセットID）でフィルター
     if (dataSource !== 'all') {
       const set = questionSets.find((qs) => qs.id === dataSource);
       if (set) {
-        filtered = set.questions;
+        filtered = set.questions.filter((q) => typeof (q as any)?.word === 'string');
       } else {
         filtered = filtered.filter((q) => (q as any).source === dataSource);
       }

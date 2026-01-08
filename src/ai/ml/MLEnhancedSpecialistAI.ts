@@ -142,13 +142,14 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
       this.mlState.ready = true;
 
       logger.info(`[${this.name}] ✅ ML initialized successfully`);
-    } catch {
-      // モデルファイルがない場合は静かにフォールバックモデルを生成
-      this.mlState.initialized = false;
-      this.mlState.ready = false;
+    } catch (error) {
+      // モデルファイルがない（404等）場合はフォールバックモデルを生成して継続
+      // 初期化済みにしておかないと、複数回initializeMLが呼ばれた際に毎回404を叩いてしまう
+      logger.warn(`[${this.name}] ⚠️ ML model load failed; fallback model will be used`, error);
 
-      // フォールバック: 簡易モデルを生成
       await this.createFallbackModel();
+      this.mlState.initialized = true;
+      this.mlState.ready = true;
     }
   }
 
