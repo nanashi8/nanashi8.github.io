@@ -6,7 +6,7 @@
  * 重要:
  * - 例文はこのリポジトリ内の classical-knowledge.csv（名文句など）に含まれる引用文から抽出する。
  * - 各行に対して、引用文プールから2つ選び、
- *   `例文（意味）【出典】` 形式で 例文1/例文2 に設定。
+ *   `本文（読み）＜現代語訳＞【出典】` 形式で 例文1/例文2 に設定。
  * - 既に【-】以外の出典が入っている場合は上書きしない（デフォルト）。
  *
  * 使い方:
@@ -279,8 +279,9 @@ function fnv1a(text: string): number {
   return hash >>> 0;
 }
 
-function formatExample(q: Quote): string {
-  return `${q.text}（${q.meaning}）【${q.source}】`;
+function formatExample(q: Quote, reading: string): string {
+  const r = (reading || '').trim() || '-';
+  return `${q.text}（${r}）『${q.meaning}』【${q.source}】`;
 }
 
 function shouldOverwriteExample(existing: string, force: boolean): boolean {
@@ -313,12 +314,14 @@ function applyToFile(
     const q1 = quotes[i1];
     const q2 = quotes[i2];
 
+    const reading = r['読み'] || '';
+
     if (q1 && shouldOverwriteExample(r['例文1'], force)) {
-      r['例文1'] = formatExample(q1);
+      r['例文1'] = formatExample(q1, reading);
       changed = true;
     }
     if (q2 && shouldOverwriteExample(r['例文2'], force)) {
-      r['例文2'] = formatExample(q2);
+      r['例文2'] = formatExample(q2, reading);
       changed = true;
     }
   }

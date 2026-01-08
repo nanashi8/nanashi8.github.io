@@ -49,6 +49,9 @@ Attached*.css
 *.old-vanilla
 *.working
 
+# Data migration backups (do not commit)
+public/data/classical-japanese/*.before-*.csv
+
 # macOS Finder duplicate files
 *\ 2.*
 * 2.json

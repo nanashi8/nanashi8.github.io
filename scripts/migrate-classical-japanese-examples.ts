@@ -5,7 +5,7 @@
  *
  * 変更:
  * - ヘッダ: 時代背景 → 例文1, 種別 → 例文2
- * - 内容: 例文1/例文2 は "例文（意味）【出典】" 形式の雛形を自動投入
+ * - 内容: 例文1/例文2 は "本文（読み）＜現代語訳＞【出典】" 形式の雛形を自動投入
  * - 既存の時代背景/種別は、関連事項に `時代:<...>` / `種別:<...>` として退避
  *
  * 使い方:
@@ -144,12 +144,14 @@ function appendTag(raw: string, tag: string): string {
   return `${base}|${tag}`;
 }
 
-function buildExample(word: string, meaning: string): string {
+function buildExample(word: string, reading: string, meaning: string): string {
   const w = (word || '').trim();
+  const r = (reading || '').trim();
   const m = (meaning || '').trim();
   const head = w ? w : '（例文未設定）';
+  const midReading = r ? r : '-';
   const mid = m ? m : '（意味未設定）';
-  return `${head}（${mid}）【-】`;
+  return `${head}（${midReading}）＜${mid}＞【-】`;
 }
 
 function migrateFile(filePath: string, dryRun: boolean): { changed: boolean; msg: string } {
@@ -180,6 +182,7 @@ function migrateFile(filePath: string, dryRun: boolean): { changed: boolean; msg
 
   const rows: CsvRow[] = parsed.rows.map((r) => {
     const word = r['語句'] || '';
+    const reading = r['読み'] || '';
     const meaning = r['意味'] || '';
 
     const era = (r['時代背景'] || '').trim();
@@ -196,8 +199,8 @@ function migrateFile(filePath: string, dryRun: boolean): { changed: boolean; msg
     }
 
     // 新例文
-    next['例文1'] = buildExample(word, meaning);
-    next['例文2'] = buildExample(word, meaning);
+    next['例文1'] = buildExample(word, reading, meaning);
+    next['例文2'] = buildExample(word, reading, meaning);
 
     // 旧キーは残してもヘッダ外なので書き出されない（ただし誤用防止のため削除）
     delete next['時代背景'];
