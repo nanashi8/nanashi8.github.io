@@ -7,17 +7,12 @@
 
 import * as tf from '@tensorflow/tfjs';
 import type { BaseAISignal, AIAnalysisInput, SpecialistAI } from '../types';
-import type {
-  MLPrediction,
-  MLModelState,
-  MLLearningOutcome,
-  SerializedWeights
-} from './types';
+import type { MLPrediction, MLModelState, MLLearningOutcome, SerializedWeights } from './types';
 import { logger } from '@/utils/logger';
 
-export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
-  implements SpecialistAI<TSignal> {
-
+export abstract class MLEnhancedSpecialistAI<
+  TSignal extends BaseAISignal,
+> implements SpecialistAI<TSignal> {
   abstract readonly id: string;
   abstract readonly name: string;
   abstract readonly icon: string;
@@ -43,6 +38,9 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
 
   // 初期化警告の抑制フラグ
   private static initWarningShown: Set<string> = new Set();
+
+  // 404が出たパスを記録（2回目以降は404を叩かない）
+  private static unavailableModelPaths: Set<string> = new Set();
 
   // 重いログのスパム抑制（コンソールが埋まるのを防ぐ）
   private static slowInferenceLastLogAt: Map<string, number> = new Map();
@@ -114,6 +112,14 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     try {
       const path = modelPath || `/models/${this.id}/model.json`;
 
+      // このパスが過去に404だった場合は、最初からフォールバックに回す（404連発防止）
+      if (MLEnhancedSpecialistAI.unavailableModelPaths.has(path)) {
+        await this.createFallbackModel();
+        this.mlState.initialized = true;
+        this.mlState.ready = true;
+        return;
+      }
+
       // Week 5: キャッシュ確認（パスとID両方を含むキー）
       const cacheKey = `${this.id}_${path}`;
       const cachedModel = MLEnhancedSpecialistAI.modelCache.get(cacheKey);
@@ -145,7 +151,9 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     } catch (error) {
       // モデルファイルがない（404等）場合はフォールバックモデルを生成して継続
       // 初期化済みにしておかないと、複数回initializeMLが呼ばれた際に毎回404を叩いてしまう
-      logger.warn(`[${this.name}] ⚠️ ML model load failed; fallback model will be used`, error);
+      const path = modelPath || `/models/${this.id}/model.json`;
+      MLEnhancedSpecialistAI.unavailableModelPaths.add(path);
+      logger.warn(`[${this.name}] ML model unavailable (${path}); using fallback`, error);
 
       await this.createFallbackModel();
       this.mlState.initialized = true;
@@ -228,15 +236,11 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
       const y = tf.tensor2d([label], [1, outputDim]);
 
       // 1エポックのみ学習（オンライン学習）
-      const history = await this.mlModel.fit(
-        x,
-        y,
-        {
-          epochs: 1,
-          verbose: 0,
-          shuffle: false,
-        }
-      );
+      const history = await this.mlModel.fit(x, y, {
+        epochs: 1,
+        verbose: 0,
+        shuffle: false,
+      });
 
       x.dispose();
       y.dispose();
@@ -310,10 +314,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
    */
   protected canUseML(input: AIAnalysisInput): boolean {
     return (
-      this.mlEnabled &&
-      this.mlState.ready &&
-      this.mlModel !== null &&
-      this.hasEnoughData(input)
+      this.mlEnabled && this.mlState.ready && this.mlModel !== null && this.hasEnoughData(input)
     );
   }
 
@@ -361,7 +362,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
     }, 0);
 
     // エントロピーが低いほど信頼度が高い
-    return 1 - (entropy / values.length);
+    return 1 - entropy / values.length;
   }
 
   /**
@@ -435,7 +436,9 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
       this.mlState.trainingCount = data.metadata.trainingCount;
       this.mlState.accuracy = data.metadata.accuracy;
 
-      logger.info(`[${this.name}] Personal weights loaded (${data.metadata.trainingCount} trainings)`);
+      logger.info(
+        `[${this.name}] Personal weights loaded (${data.metadata.trainingCount} trainings)`
+      );
     } catch (error) {
       logger.warn(`[${this.name}] Failed to load personal weights`, error);
     }
@@ -445,9 +448,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
    * 重みのシリアライズ
    */
   protected async serializeWeights(weights: tf.Tensor[]): Promise<string> {
-    const arrays = await Promise.all(
-      weights.map(async w => Array.from(await w.data()))
-    );
+    const arrays = await Promise.all(weights.map(async (w) => Array.from(await w.data())));
     return btoa(JSON.stringify(arrays));
   }
 
@@ -456,7 +457,7 @@ export abstract class MLEnhancedSpecialistAI<TSignal extends BaseAISignal>
    */
   protected async deserializeWeights(serialized: string): Promise<tf.Tensor[]> {
     const arrays: number[][] = JSON.parse(atob(serialized));
-    return arrays.map(arr => tf.tensor(arr));
+    return arrays.map((arr) => tf.tensor(arr));
   }
 
   /**
