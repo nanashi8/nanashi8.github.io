@@ -353,8 +353,8 @@ export function generateSpellingPuzzle(word: string): {
 import type { QuestionSet, ReadingPassage } from './types';
 
 const QUESTION_SETS_KEY = 'nanashi8_questionSets';
-// 旧キー互換性（初回のみマイグレーション）
-const OLD_QUESTION_SETS_KEY = 'quizApp_questionSets';
+// 旧キー互換性（将来のマイグレーション用）
+const _OLD_QUESTION_SETS_KEY = 'quizApp_questionSets';
 
 /**
  * 問題集リストを localStorage に保存

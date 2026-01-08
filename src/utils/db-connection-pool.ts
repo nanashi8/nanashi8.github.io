@@ -18,8 +18,8 @@ import { logger } from '@/utils/logger';
 import { PerformanceMonitor } from '@/utils/performance-monitor';
 
 const DB_NAME = 'Nanashi8DB';
-// 旧DB互換性（初回のみマイグレーション）
-const OLD_DB_NAME = 'QuizAppDB';
+// 旧DB互換性（将来のマイグレーション用）
+const _OLD_DB_NAME = 'QuizAppDB';
 const DB_VERSION = 1;
 
 // Store名の定義
