@@ -257,7 +257,7 @@ function SlashSplitTab({ passageData, dependencyParse }: { passageData: Complete
     chunks.forEach((chunk, idx) => {
       const text = chunk.text;
       parts.push(text);
-      
+
       // 最後のチャンクでない場合のみ/を追加
       if (idx < chunks.length - 1) {
         // 次のチャンクがピリオドなどの句読点の場合は/を追加しない
@@ -307,7 +307,7 @@ function ParenSplitTab({ passageData, dependencyParse }: { passageData: Complete
       if (seg.type === 'subordinate-clause') {
         const childText = seg.children ? seg.children.map(renderSegment).join(' ') : seg.text;
         return `(${childText})`;
-      } 
+      }
       // 句を<>で囲む
       else if (seg.type === 'phrase') {
         const childText = seg.children ? seg.children.map(renderSegment).join(' ') : seg.text;
