@@ -175,16 +175,6 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
       {/* ExplanationBoard（ボタンのみ） */}
       <div className="mb-6">
         <ExplanationBoard
-          selectedSentence={selectedSentence}
-          phrases={passageData.phrases}
-          keyPhrases={passageData.keyPhrases}
-          annotatedWords={passageData.annotatedWords}
-          dependencyParse={dependencyParse}
-          onAddToCustom={handleAddToCustom}
-          currentPassageId={currentPassageId}
-          availablePassages={availablePassages}
-          onPassageChange={setCurrentPassageId}
-          metadata={metaInfo || undefined}
           passageData={passageData}
           activeTab={activeTab}
           onTabChange={setActiveTab}
