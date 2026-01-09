@@ -83,12 +83,6 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
     loadData();
   }, [currentPassageId]);
 
-  // 文を選択
-  const handleSelectSentence = useCallback((sentence: SentenceData) => {
-    setSelectedSentence(sentence);
-    logger.log(`[ReadingPassageView] 文を選択: ${sentence.id}`);
-  }, []);
-
   // カスタムセットへの追加
   const handleAddToCustom = useCallback(
     (phrase: KeyPhrase) => {
