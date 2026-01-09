@@ -215,7 +215,7 @@ Cmd+Shift+P → "Servant: Check Code Quality"
 ## 📚 関連ドキュメント
 
 - [Servant Autopilot 設定ガイド](../README.md)
-- [AI評価システム](../../docs/AI_INTEGRATION_GUIDE.md)
+- [AI評価システム](../../docs/ai-systems/integration-guide.md)
 - [指示書システム](.aitk/instructions/)
 - [DECISIONS.md](../../DECISIONS.md)
 

@@ -91,5 +91,5 @@ pip install -r requirements.txt
 ## 関連ドキュメント
 
 - [品質保証システム](../quality/QUALITY_SYSTEM.md)
-- [AI統合ガイド](../AI_INTEGRATION_GUIDE.md)
+- [AI統合ガイド](../ai-systems/integration-guide.md)
 - [開発ガイドライン](.aitk/instructions/development-guidelines.instructions.md)

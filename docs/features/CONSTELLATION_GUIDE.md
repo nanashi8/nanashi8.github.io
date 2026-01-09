@@ -287,5 +287,5 @@ Output Channel に表示
 ## 参考
 
 - [実装計画](../plans/CONSTELLATION_IMPLEMENTATION_PLAN.md)
-- [Autopilotガイド](../HOW_TO_ENABLE_AI.md)
+- [Autopilotガイド](../ai-systems/how-to-enable.md)
 - [Neural Dependency Graph](../specifications/NEURAL_DEPENDENCY_GRAPH.md)

@@ -1,0 +1,84 @@
+# Document Component System Configuration
+# DocPartシステムのプロジェクト固有設定
+
+version: '1.0'
+
+# ドキュメントルートディレクトリ
+rootDir: docs
+
+# 出力先ディレクトリ（グラフ、インデックスなど）
+outputDir: docs
+
+# 使用可能なSignal型定義（プロジェクト固有）
+signals:
+  - name: Policy:v1
+    description: 方針・ルール・基準
+  - name: Schema:v1
+    description: データ構造・API定義
+  - name: Scope:v1
+    description: スコープ・範囲・責務
+  - name: Decision:v1
+    description: 意思決定・ADR
+  - name: Checklist:v1
+    description: 手順・チェックリスト
+  - name: Guide:v1
+    description: ガイド・説明・チュートリアル
+  - name: Report:v1
+    description: 実績レポート・分析結果
+
+# ファイルパスから type を推論するルール
+typeInference:
+  patterns:
+    - pattern: 'design/*.md'
+      type: spec
+    - pattern: 'specifications/*.md'
+      type: spec
+    - pattern: 'how-to/*.md'
+      type: guide
+    - pattern: 'reports/*.md'
+      type: report
+    - pattern: 'adr/*.md'
+      type: adr
+    - pattern: '**/ADR_*.md'
+      type: adr
+    - pattern: '**/CHECKLIST_*.md'
+      type: checklist
+  keywords:
+    - keyword: GUIDE
+      type: guide
+    - keyword: REPORT
+      type: report
+    - keyword: SPEC
+      type: spec
+
+# 除外パターン（解析対象外）
+exclude:
+  - 'node_modules/**'
+  - 'dist/**'
+  - 'coverage/**'
+  - '.git/**'
+  - 'archive/**'
+  - 'drafts/**'
+
+# lint オプション
+lint:
+  # 未解決の requires を警告として扱う（エラーにしない）
+  unresolvedAsWarning: true
+  # 孤立部品の検出を有効化
+  detectOrphans: true
+  # 循環依存の検出を有効化
+  detectCycles: true
+
+# graph オプション
+graph:
+  # グラフの方向（TD: 上から下、LR: 左から右）
+  direction: TD
+  # ノードの最大数（大規模プロジェクト対策）
+  maxNodes: 100
+  # 部品typeごとのスタイル
+  styles:
+    spec: 'fill:#e1f5ff,stroke:#0066cc'
+    guide: 'fill:#fff4e1,stroke:#cc8800'
+    report: 'fill:#e8f5e9,stroke:#2e7d32'
+    adr: 'fill:#f3e5f5,stroke:#7b1fa2'
+    checklist: 'fill:#fff3e0,stroke:#e65100'

@@ -343,7 +343,7 @@ if (params.hybridMode) {
 ## 参考資料
 
 ### 関連ドキュメント
-- [14AI統合ガイド](./AI_INTEGRATION_GUIDE.md)
+- [14AI統合ガイド](../ai-systems/integration-guide.md)
 - [統一スケジューラー計画](../plans/UNIFIED_QUESTION_SCHEDULER_PLAN.md)
 - [振動問題分析](../plans/UNIFIED_QUESTION_SCHEDULER_PLAN.md#過去の振動問題分析)
 

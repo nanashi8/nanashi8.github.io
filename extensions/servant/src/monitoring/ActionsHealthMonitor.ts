@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { parseDocument } from 'yaml';
 import { ServantWarningLogger } from '../ui/ServantWarningLogger';
+import { EventBus, ServantEvents, globalEventBus } from '../core/EventBus';
 
 interface WorkflowInfo {
   name: string;
@@ -44,10 +45,17 @@ export class ActionsHealthMonitor implements vscode.Disposable {
   private diagnostics: vscode.DiagnosticCollection;
   private lastCheckTime = 0;
   private readonly CHECK_INTERVAL = 7 * 24 * 60 * 60 * 1000; // 週次
+  private statusUpdateCallback: ((status: string) => void) | null = null;
+  private eventBus: EventBus;
 
-  constructor(workspaceRoot: string, logger: ServantWarningLogger) {
+  constructor(
+    workspaceRoot: string,
+    logger: ServantWarningLogger,
+    eventBus: EventBus = globalEventBus
+  ) {
     this.workspaceRoot = workspaceRoot;
     this.logger = logger;
+    this.eventBus = eventBus;
 
     this.diagnostics = vscode.languages.createDiagnosticCollection('servant-actions-health');
     this.disposables.push(this.diagnostics);
@@ -77,6 +85,29 @@ export class ActionsHealthMonitor implements vscode.Disposable {
     this.disposables.push({ dispose: () => clearInterval(timer) });
   }
 
+  /**
+   * ステータス更新コールバックを設定
+   */
+  public setStatusUpdateCallback(callback: (status: string) => void): void {
+    this.statusUpdateCallback = callback;
+  }
+
+  /**
+   * ステータスを更新
+   */
+  private updateStatus(status: string): void {
+    // EventBus経由で通知
+    this.eventBus.emit(ServantEvents.STATUS_UPDATE, {
+      message: status,
+      icon: status.includes('🔧') ? '🔧' : undefined
+    });
+
+    // 後方互換性のため既存のコールバックも呼び出す
+    if (this.statusUpdateCallback) {
+      this.statusUpdateCallback(status);
+    }
+  }
+
   private scheduleCheck() {
     // 変更から5秒後にチェック（連続変更を束ねる）
     setTimeout(() => this.checkActionsHealth(), 5000);
@@ -84,6 +115,7 @@ export class ActionsHealthMonitor implements vscode.Disposable {
 
   private async checkActionsHealth(): Promise<void> {
     this.lastCheckTime = Date.now();
+    this.updateStatus('🔧 Actions検証中...');
 
     const workflowsDir = path.join(this.workspaceRoot, '.github', 'workflows');
     if (!fs.existsSync(workflowsDir)) {
@@ -96,7 +128,10 @@ export class ActionsHealthMonitor implements vscode.Disposable {
     this.publishDiagnostics(diagnostics);
 
     if (issues.length > 0) {
+      this.updateStatus(`⚠️ Actions問題: ${issues.length}件`);
       this.reportIssues(issues);
+    } else {
+      this.updateStatus('✅ Actions健全');
     }
   }
 

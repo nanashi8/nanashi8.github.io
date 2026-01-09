@@ -54,7 +54,7 @@ localStorage.setItem('enable-ai-coordination', 'true');
 location.reload();
 ```
 
-See [docs/HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md).
+See [docs/ai-systems/how-to-enable.md](docs/ai-systems/how-to-enable.md).
 
 ## Common commands
 

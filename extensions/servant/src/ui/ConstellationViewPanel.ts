@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import { ConstellationDataGenerator } from '../constellation/ConstellationDataGenerator';
 import { NeuralDependencyGraph } from '../neural/NeuralDependencyGraph';
 import { GoalManager } from '../goals/GoalManager';
+import type { ViewState, ViewModeName } from './ViewState';
+import { OverviewState } from './states/OverviewState';
 
 /**
  * 0ベース: 最もシンプルな天体儀表示
@@ -13,6 +15,10 @@ export class ConstellationViewPanel {
   private _disposables: vscode.Disposable[] = [];
   private _graph: NeuralDependencyGraph | null = null;
   private _generator: ConstellationDataGenerator | null = null;
+  
+  // State Pattern統合
+  private _currentViewState: ViewState;
+  private _outputChannel: vscode.OutputChannel;
 
   private constructor(
     panel: vscode.WebviewPanel,
@@ -24,16 +30,21 @@ export class ConstellationViewPanel {
     this._extensionUri = extensionUri;
     this._graph = graph;
     this._generator = generator;
+    
+    // OutputChannel作成
+    this._outputChannel = vscode.window.createOutputChannel('Constellation View');
+    
+    // 初期状態はOverview
+    this._currentViewState = new OverviewState();
+    this._currentViewState.enter(this);
 
     // Set HTML
-    this._panel.webview.html = this._getHtmlForWebview(this._panel.webview);
+    this._panel.webview.html = this._currentViewState.render(this);
 
-    // メッセージハンドラ
+    // メッセージハンドラ（状態に委譲）
     this._panel.webview.onDidReceiveMessage(
-      message => {
-        if (message.command === 'getData') {
-          this._sendData();
-        }
+      async message => {
+        await this._currentViewState.handleMessage(this, message);
       },
       null,
       this._disposables
@@ -81,7 +92,15 @@ export class ConstellationViewPanel {
 
   public dispose(): void {
     ConstellationViewPanel.currentPanel = undefined;
+    
+    // 現在の状態のexit処理
+    if (this._currentViewState) {
+      this._currentViewState.exit(this);
+    }
+    
     this._panel.dispose();
+    this._outputChannel.dispose();
+    
     while (this._disposables.length) {
       const x = this._disposables.pop();
       if (x) {
@@ -89,6 +108,156 @@ export class ConstellationViewPanel {
       }
     }
   }
+  
+  // === State Pattern用ヘルパーメソッド ===
+  
+  /**
+   * 状態遷移
+   */
+  public async transitionToState(newState: ViewState): Promise<void> {
+    const oldStateName = this._currentViewState.name;
+    const newStateName = newState.name;
+    
+    // 遷移可能かチェック
+    if (!this._currentViewState.canTransitionTo(newStateName)) {
+      this.logToOutput(`[Constellation] 状態遷移拒否: ${oldStateName} -> ${newStateName}`);
+      return;
+    }
+    
+    this.logToOutput(`[Constellation] 状態遷移: ${oldStateName} -> ${newStateName}`);
+    
+    // 現在の状態のexit処理
+    await this._currentViewState.exit(this);
+    
+    // 新しい状態に切り替え
+    this._currentViewState = newState;
+    
+    // 新しい状態のenter処理
+    await this._currentViewState.enter(this);
+    
+    // 画面を更新
+    await this.refresh();
+  }
+  
+  /**
+   * 画面を再描画
+   */
+  public async refresh(): Promise<void> {
+    this._panel.webview.html = this._currentViewState.render(this);
+  }
+  
+  /**
+   * 現在の状態名を取得
+   */
+  public getCurrentViewState(): ViewModeName {
+    return this._currentViewState.name;
+  }
+  
+  /**
+   * 状態の説明を取得
+   */
+  public getViewStateDescription(): string {
+    return this._currentViewState.getDescription();
+  }
+  
+  /**
+   * OutputChannelにログ出力
+   */
+  public logToOutput(message: string): void {
+    this._outputChannel.appendLine(message);
+  }
+  
+  /**
+   * Webviewにメッセージ送信
+   */
+  public postMessage(message: any): void {
+    this._panel.webview.postMessage(message);
+  }
+  
+  /**
+   * 天体儀データを取得
+   */
+  public getData(): any {
+    if (this._generator) {
+      return this._generator.generate();
+    }
+    return { nodes: [], edges: [], stats: { totalNodes: 0, totalEdges: 0 } };
+  }
+  
+  /**
+   * 特定ノードのデータを取得
+   */
+  public getNodeData(nodeId: string): any | null {
+    const data = this.getData();
+    if (!data || !data.nodes) {
+      return null;
+    }
+    return data.nodes.find((node: any) => node.id === nodeId) || null;
+  }
+  
+  /**
+   * フィルタリングされたデータを取得
+   */
+  public getFilteredData(filters: Record<string, any>): any {
+    const data = this.getData();
+    if (!data || !data.nodes) {
+      return { nodes: [], edges: [] };
+    }
+    
+    let filteredNodes = data.nodes;
+    
+    // フィルター適用
+    if (filters.type) {
+      filteredNodes = filteredNodes.filter((node: any) => node.type === filters.type);
+    }
+    
+    return {
+      nodes: filteredNodes,
+      edges: data.edges,
+    };
+  }
+  
+  /**
+   * ノードを検索
+   */
+  public searchNodes(query: string): any[] {
+    const data = this.getData();
+    if (!data || !data.nodes || !query) {
+      return [];
+    }
+    
+    const lowerQuery = query.toLowerCase();
+    return data.nodes.filter((node: any) => {
+      const name = (node.name || '').toLowerCase();
+      const path = (node.path || '').toLowerCase();
+      const id = (node.id || '').toLowerCase();
+      
+      return name.includes(lowerQuery) || path.includes(lowerQuery) || id.includes(lowerQuery);
+    });
+  }
+  
+  /**
+   * Three.js URIを取得
+   */
+  public getThreeJsUri(): string {
+    return this._panel.webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'vendor', 'three', 'three.module.js')
+    ).toString();
+  }
+  
+  /**
+   * OrbitControls URIを取得
+   */
+  public getOrbitControlsUri(): string {
+    return this._panel.webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'vendor', 'three', 'OrbitControls.js')
+    ).toString();
+  }
+  
+  /**
+   * レガシーHTML生成メソッド（後方互換性のため残存、非推奨）
+   * @deprecated 新しいState Patternベースのrender()を使用してください
+   */
 
   private _getHtmlForWebview(webview: vscode.Webview): string {
     const threejsUri = webview.asWebviewUri(

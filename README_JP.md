@@ -54,7 +54,7 @@ localStorage.setItem('enable-ai-coordination', 'true');
 location.reload();
 ```
 
-詳細は [docs/HOW_TO_ENABLE_AI.md](docs/HOW_TO_ENABLE_AI.md) を参照してください。
+詳細は [docs/ai-systems/how-to-enable.md](docs/ai-systems/how-to-enable.md) を参照してください。
 
 ## よく使うコマンド
 

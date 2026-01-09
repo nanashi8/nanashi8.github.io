@@ -20,6 +20,9 @@ import {
   computeRequiredInstructionsForFiles,
   isSpecCheckFresh,
 } from '../guard/SpecCheck';
+import { EventBus, ServantEvents, globalEventBus } from '../core/EventBus';
+import type { AutopilotState, AutopilotStateName } from './AutopilotState';
+import { IdleState } from './states/IdleState';
 
 type SuggestionSnapshot = {
   actionId: string;
@@ -44,6 +47,9 @@ export class AutopilotController {
     createdAt: number;
     actionId?: string;
   } | null = null;
+
+  // State Pattern: 現在の状態
+  private currentState: AutopilotState;
 
   private preflightTerminal: vscode.Terminal | null = null;
   private runningPreflight: {
@@ -102,12 +108,16 @@ export class AutopilotController {
     private optimizationEngine: OptimizationEngine,
     private workflowLearner: WorkflowLearner,
     private incrementalValidator: IncrementalValidator,
-    private graph?: NeuralDependencyGraph
+    private graph?: NeuralDependencyGraph,
+    private eventBus: EventBus = globalEventBus
   ) {
     this.statusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
     this.statusBar.text = 'Servant: Autopilot';
     this.statusBar.tooltip = 'Servant Autopilot（先回り誘導・事後レビュー）';
     this.statusBar.command = 'servant.autopilot.showLastReport';
+
+    // State Pattern: 初期状態はIdle
+    this.currentState = new IdleState();
 
     // 警告ロガーの初期化
     this.warningLogger = new ServantWarningLogger(outputChannel);
@@ -1252,5 +1262,138 @@ ${categorySummary}
     lines.push('**注意**: 実装前に、提案内容をレビューして承認してください。');
 
     return lines.join('\n');
+  }
+
+  // ========================================================================
+  // State Pattern Support Methods
+  // ========================================================================
+
+  /**
+   * 状態遷移を実行
+   * @param newState 遷移先の状態
+   */
+  async transitionToState(newState: AutopilotState): Promise<void> {
+    // 遷移可否をチェック
+    if (!this.currentState.canTransitionTo(newState.name)) {
+      const error = new Error(
+        `Invalid state transition: ${this.currentState.name} -> ${newState.name}`
+      );
+      this.outputChannel.appendLine(`[Autopilot] ${error.message}`);
+      throw error;
+    }
+
+    const previousStateName = this.currentState.name;
+    
+    // 現在の状態からの退出処理
+    try {
+      await this.currentState.exit(this);
+    } catch (error) {
+      this.outputChannel.appendLine(`[Autopilot] Error exiting ${previousStateName}: ${error}`);
+    }
+
+    // 状態を更新
+    this.currentState = newState;
+
+    // 新しい状態への入場処理
+    try {
+      await this.currentState.enter(this);
+    } catch (error) {
+      this.outputChannel.appendLine(`[Autopilot] Error entering ${newState.name}: ${error}`);
+      throw error;
+    }
+
+    // EventBusにイベント発行
+    this.eventBus.emit(ServantEvents.AUTOPILOT_STATE_CHANGED, {
+      from: previousStateName,
+      to: newState.name,
+      timestamp: Date.now()
+    });
+
+    this.outputChannel.appendLine(`[Autopilot] State transition: ${previousStateName} -> ${newState.name}`);
+  }
+
+  /**
+   * 現在の状態名を取得
+   */
+  getCurrentStateName(): AutopilotStateName {
+    return this.currentState.name;
+  }
+
+  /**
+   * 現在の状態の説明を取得
+   */
+  getStateDescription(): string {
+    return this.currentState.getDescription();
+  }
+
+  /**
+   * ステータスバーを更新（状態クラスから呼ばれる）
+   */
+  updateStatusBar(text: string): void {
+    this.statusBar.text = `Servant: ${text}`;
+    
+    // EventBusにも通知
+    this.eventBus.emit(ServantEvents.STATUS_UPDATE, {
+      message: text,
+      icon: text.includes('🚀') ? '🚀' : undefined
+    });
+  }
+
+  /**
+   * 出力チャネルにログを記録（状態クラスから呼ばれる）
+   */
+  logToOutput(message: string): void {
+    this.outputChannel.appendLine(message);
+  }
+
+  /**
+   * 設定値を取得（状態クラスから呼ばれる）
+   */
+  getConfig<T>(key: string, defaultValue: T): T {
+    return vscode.workspace.getConfiguration('servant').get<T>(key, defaultValue);
+  }
+
+  /**
+   * 自動操縦タスクを実行（RunningStateから呼ばれる）
+   */
+  async executeAutopilotTask(): Promise<void> {
+    // TODO: 既存の自動操縦ロジックと統合
+    // 現在は仮実装として何もしない
+    this.outputChannel.appendLine('[Autopilot] Executing task... (placeholder)');
+  }
+
+  /**
+   * レビューUIを表示（ReviewingStateから呼ばれる）
+   */
+  async showReviewUI(severity: 'error' | 'warning', reasons: string[]): Promise<void> {
+    this.pendingReview = {
+      severity,
+      reasons,
+      createdAt: Date.now()
+    };
+    await this.openReviewPrompt(this.pendingReview);
+  }
+
+  /**
+   * 自動調査を開始（InvestigatingStateから呼ばれる）
+   */
+  async startAutoInvestigation(): Promise<void> {
+    // TODO: 既存の調査エンジンと統合
+    // 現在は仮実装として何もしない
+    this.outputChannel.appendLine('[Autopilot] Starting investigation... (placeholder)');
+  }
+
+  /**
+   * 完了通知（CompletedStateから呼ばれる）
+   */
+  async notifyCompletion(): Promise<void> {
+    this.notifier.autoInfo('タスクが正常に完了しました。', 'autopilot.completed');
+  }
+
+  /**
+   * 失敗通知（FailedStateから呼ばれる）
+   */
+  async notifyFailure(reason: string): Promise<void> {
+    this.notifier.autoWarning(`タスクが失敗しました: ${reason}`, 'autopilot.failed');
   }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.tools.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["../dist", "../dist-beta", "../node_modules"]
+}

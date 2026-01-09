@@ -181,7 +181,7 @@ npm run test:simulation
 
 #### 2. AI統合品質パイプライン
 
-**ドキュメント**: [AI_INTEGRATION_GUIDE.md](../AI_INTEGRATION_GUIDE.md)
+**ドキュメント**: [integration-guide.md](../ai-systems/integration-guide.md)
 
 **対象範囲**:
 - AICoordinator（7AIシグナル統合）
@@ -542,7 +542,7 @@ mode: 'grammar'
    - 詳細仕様書（1,669行）
    - アルゴリズム完全解説
 
-5. **[AI_INTEGRATION_GUIDE.md](../AI_INTEGRATION_GUIDE.md)**
+5. **[integration-guide.md](../ai-systems/integration-guide.md)**
    - 7AI統合の技術詳細
    - 実装パターン
 

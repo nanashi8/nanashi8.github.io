@@ -41,6 +41,8 @@ import {
   loadSpecCheckRecord,
 } from './guard/SpecCheck';
 import { ScriptsGuardRunner } from './guard/ScriptsGuardRunner';
+import { DocumentGuard } from './guard/DocumentGuard';
+import { globalEventBus, ServantEvents, type EventData } from './core/EventBus';
 
 let outputChannel: vscode.OutputChannel;
 
@@ -51,6 +53,9 @@ export function activate(context: vscode.ExtensionContext) {
   outputChannel = vscode.window.createOutputChannel('Servant');
 
   const notifier = new Notifier(outputChannel);
+
+  // ステータスバー更新コールバックを後で設定（updateServantStatusBar定義後）
+  let notifierStatusCallbackSet = false;
 
   // 統合ターミナルにステータスを表示（任意）
   let servantTerminal: vscode.Terminal | null = null;
@@ -107,6 +112,31 @@ export function activate(context: vscode.ExtensionContext) {
   };
   updateServantStatusBar();
   context.subscriptions.push(servantStatusBar);
+
+  // EventBusリスナー設定（ステータスバー更新を一元化）
+  const eventBusSubscription = globalEventBus.on(
+    ServantEvents.STATUS_UPDATE,
+    (data: EventData[typeof ServantEvents.STATUS_UPDATE]) => {
+      updateServantStatusBar(data.message);
+    }
+  );
+  // EventSubscriptionをvscode.Disposableに変換
+  context.subscriptions.push({
+    dispose: () => eventBusSubscription.unsubscribe()
+  });
+
+  // EventBusのクリーンアップ処理
+  context.subscriptions.push({
+    dispose: () => globalEventBus.clear()
+  });
+
+  // Notifierにステータス更新コールバックを設定（後方互換性のため残す）
+  if (!notifierStatusCallbackSet) {
+    notifier.setStatusUpdateCallback((status) => {
+      updateServantStatusBar(status);
+    });
+    notifierStatusCallbackSet = true;
+  }
 
   // ステータスバークリックで出力チャネル表示
   const showOutputCommand = vscode.commands.registerCommand('servant.showOutput', () => {
@@ -329,7 +359,11 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   // Phase 7: 学習システムの初期化
-  const adaptiveGuard = new AdaptiveGuard(context, notifier);
+  const adaptiveGuard = new AdaptiveGuard(context, notifier, globalEventBus);
+  // 後方互換性のため既存のコールバックも設定
+  adaptiveGuard.setStatusUpdateCallback((status) => {
+    updateServantStatusBar(status);
+  });
   const gitAnalyzer = new GitHistoryAnalyzer(workspaceRoot, notifier);
   const contextDB = new ProjectContextDB(workspaceRoot);
   const aiTracker = new AIActionTracker(workspaceRoot);
@@ -342,7 +376,11 @@ export function activate(context: vscode.ExtensionContext) {
   // 初期化は遅延実行（最初の保存時）
   const ensureQualityGuard = () => {
     if (!qualityGuard) {
-      qualityGuard = new CodeQualityGuard(workspaceRoot, notifier);
+      qualityGuard = new CodeQualityGuard(workspaceRoot, notifier, globalEventBus);
+      // 後方互換性のため既存のコールバックも設定
+      qualityGuard.setStatusUpdateCallback((status) => {
+        updateServantStatusBar(status);
+      });
       context.subscriptions.push(qualityGuard);
       outputChannel.appendLine('[Servant] CodeQualityGuard initialized');
     }
@@ -391,8 +429,52 @@ export function activate(context: vscode.ExtensionContext) {
 
   // GitHub Actions 健全性監視（週次で重複/無駄をチェック）
   const warningLogger = new ServantWarningLogger(outputChannel);
-  const actionsHealthMonitor = new ActionsHealthMonitor(workspaceRoot, warningLogger);
+  const actionsHealthMonitor = new ActionsHealthMonitor(workspaceRoot, warningLogger, globalEventBus);
+  // 後方互換性のため既存のコールバックも設定
+  actionsHealthMonitor.setStatusUpdateCallback((status) => {
+    updateServantStatusBar(status);
+  });
   context.subscriptions.push(actionsHealthMonitor);
+
+  // ドキュメント作成ルール強制（docs/ 配下の新規 Markdown ファイルを監視）
+  const documentGuard = new DocumentGuard(workspaceRoot, globalEventBus);
+  // 後方互換性のため既存のコールバックも設定
+  documentGuard.setStatusUpdateCallback((status) => {
+    updateServantStatusBar(status);
+  });
+  const documentWatcher = documentGuard.startWatching();
+  context.subscriptions.push(documentWatcher);
+  context.subscriptions.push(documentGuard);
+  outputChannel.appendLine('[DocumentGuard] ドキュメント監視を開始しました');
+
+  // 統計情報を定期的に表示（10秒ごと）
+  const statsInterval = setInterval(() => {
+    const stats = documentGuard.getStats();
+    if (stats.monitored > 0) {
+      updateServantStatusBar(`📄 監視中 (${stats.monitored}件 | 違反: ${stats.violations} | 修正: ${stats.autoFixed})`);
+    }
+  }, 10000);
+  context.subscriptions.push({ dispose: () => clearInterval(statsInterval) });
+
+  // DocumentGuard コマンド登録
+  context.subscriptions.push(
+    vscode.commands.registerCommand('servant.validateDocuments', async () => {
+      await documentGuard.validateExistingDocuments();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand('servant.batchAddFrontMatter', async () => {
+      const confirmation = await vscode.window.showWarningMessage(
+        'すべてのドキュメントに Front Matter を追加しますか？',
+        '実行',
+        'キャンセル'
+      );
+      if (confirmation === '実行') {
+        await documentGuard.batchAddFrontMatter();
+      }
+    })
+  );
 
   // AdaptiveGuard と ChatParticipant の連携
   // 学習完了時に自動的にChatにレポートを送信

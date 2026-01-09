@@ -78,6 +78,11 @@
     "docs:analyze:naming": "node scripts/analyze-naming-violations.mjs",
     "docs:check": "npm run docs:analyze && npm run docs:analyze:naming",
     "docs:stats": "echo '📊 Documentation Statistics:' && find docs -name '*.md' | wc -l && echo 'Markdown files' && node scripts/analyze-doc-links.mjs | grep -E '^📁|^🔗|^✅|^❌'",
+    "docpart": "tsx scripts/docpart/cli.ts",
+    "docpart:init": "npm run docpart init",
+    "docpart:lint": "npm run docpart lint",
+    "docpart:graph": "npm run docpart graph",
+    "generate-index": "tsx scripts/generate-docs-index.ts",
     "sync:reading-techniques": "node scripts/sync-reading-techniques.mjs",
     "update-instructions": "node scripts/update-instructions.mjs all",
     "update-specifications": "node scripts/update-specifications.mjs",
@@ -124,6 +129,7 @@
     "@tailwindcss/forms": "^0.5.10",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
+    "@types/minimatch": "^5.1.2",
     "@types/node": "^24.10.4",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
@@ -139,12 +145,14 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
+    "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "jsdom": "^27.3.0",
     "kuroshiro": "^1.2.0",
     "kuroshiro-analyzer-kuromoji": "^1.1.0",
     "lint-staged": "^16.2.7",
     "markdownlint-cli": "^0.46.0",
+    "minimatch": "^10.1.1",
     "postcss": "^8.5.6",
     "prettier": "^3.7.4",
     "size-limit": "^12.0.0",
@@ -156,6 +164,7 @@
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^5.4.21",
-    "vitest": "^4.0.15"
+    "vitest": "^4.0.15",
+    "yaml": "^2.8.2"
   }
 }

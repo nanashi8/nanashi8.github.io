@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-08T16:25:44.988Z
+- generatedAt: 2026-01-09T00:15:24.082Z
 
 ## Single Source of Truth
 
@@ -14,35 +14,35 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- src/components/MemorizationView.tsx (hot=0.01)
-- src/ai/ml/MLEnhancedSpecialistAI.ts (hot=0.009)
-- src/utils/socialStudiesLoader.ts (hot=0.006)
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.005)
-- src/storage/indexedDB/indexedDBStorage.ts (hot=0.005)
-- src/utils.ts (hot=0.005)
-- src/utils/db-connection-pool.ts (hot=0.005)
-- src/styles/components/choices.css (hot=0.005)
-- src/styles/components/spelling-view.css (hot=0.005)
-- src/App.css (hot=0.005)
+- scripts/audit-classical-japanese-examples-quality.ts (hot=0.128)
+- docs/quality/CLASSICAL_JAPANESE_DATA_AUDIT_PLAN.md (hot=0.108)
+- public/data/classical-japanese/classical-grammar.csv (hot=0.106)
+- public/data/classical-japanese/classical-words.csv (hot=0.106)
+- scripts/tsconfig.json (hot=0.106)
+- scripts/fill-classical-japanese-example-full-readings.ts (hot=0.086)
+- scripts/override-classical-japanese-example-readings.ts (hot=0.071)
+- scripts/migrate-kanbun-to-examples.ts (hot=0.029)
+- scripts/fill-classical-japanese-examples.ts (hot=0.028)
+- .gitignore (hot=0.028)
 
 ## Related (Neural Propagation)
 
-- startNode: src/components/MemorizationView.tsx
+- startNode: scripts/audit-classical-japanese-examples-quality.ts
 - seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- src/components/MemorizationView.tsx (activation=1.000, source=signal, signals=[save:0.01])
-- src/ai/ml/MLEnhancedSpecialistAI.ts (activation=0.900, source=signal, signals=[save:0.01])
-- src/utils/socialStudiesLoader.ts (activation=0.600, source=signal, signals=[save:0.01])
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=0.500, source=signal, signals=[save:0.01])
-- src/storage/indexedDB/indexedDBStorage.ts (activation=0.500, source=signal, signals=[save:0.01])
+- scripts/audit-classical-japanese-examples-quality.ts (activation=1.000, source=signal, signals=[save:0.13])
+- docs/quality/CLASSICAL_JAPANESE_DATA_AUDIT_PLAN.md (activation=0.844, source=signal, signals=[save:0.11])
+- public/data/classical-japanese/classical-grammar.csv (activation=0.828, source=signal, signals=[save:0.11])
+- public/data/classical-japanese/classical-words.csv (activation=0.828, source=signal, signals=[save:0.11])
+- scripts/tsconfig.json (activation=0.828, source=signal, signals=[save:0.11])
 
 - (no related files detected)
 
-- src/ai/ml/MLEnhancedSpecialistAI.ts
+- (none)
 
 ## Required Instructions (Enforced)
 
@@ -53,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 88.55
+- ageHours: 96.38
 
 ## Latest SpecCheck Record (Raw)
 
@@ -88,3 +88,4 @@
 
 - This packet is generated locally (no external model).
 - Output path: nanashi8.github.io/.aitk/context/AI_CONTEXT.md
+

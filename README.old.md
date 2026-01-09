@@ -104,9 +104,9 @@ location.reload();
 
 📚 **詳細ドキュメント**:
 
-- [AI統合ガイド](docs/AI_INTEGRATION_GUIDE.md) - 技術詳細・実装手順
-- [有効化ガイド](docs/HOW_TO_ENABLE_AI.md) - ユーザー向け使い方
-- [プロジェクト完了レポート](docs/AI_PROJECT_COMPLETE.md) - Phase 1-4総括（407行）
+- [AI統合ガイド](docs/ai-systems/integration-guide.md) - 技術詳細・実装手順
+- [有効化ガイド](docs/ai-systems/how-to-enable.md) - ユーザー向け使い方
+- [プロジェクト完了レポート](docs/archive/AI_PROJECT_COMPLETE.md) - Phase 1-4総括（407行）
 - [Phase 3完了レポート](../docs/PHASE3_COMPLETION_REPORT.md) - AI統合詳細
 - [最終プロジェクトレポート](../docs/FINAL_PROJECT_REPORT.md) - 全体サマリー
 - [トラブルシューティング](.aitk/instructions/meta-ai-priority.instructions.md) - 問題解決手順
@@ -796,7 +796,7 @@ npm run test:ai-integration
 npm run test -- src/ai/specialists/*.test.ts
 ```
 
-📚 **詳細**: [AI_INTEGRATION_GUIDE.md](docs/AI_INTEGRATION_GUIDE.md)
+📚 **詳細**: [integration-guide.md](docs/ai-systems/integration-guide.md)
 
 **データ品質パイプライン**:
 

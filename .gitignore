@@ -86,7 +86,11 @@ scripts/output/
 **/output/
 
 # Archive and reference directories
-docs/archive/
+# docs/archive/ - 年別アーカイブは追跡する
+docs/archive/deprecated/
+docs/archive/legacy-root-docs/
+docs/archive/specifications/
+docs/archive/summaries/
 docs/references/
 docs/templates/
 docs/private/

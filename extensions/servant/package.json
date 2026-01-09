@@ -214,6 +214,14 @@
       {
         "command": "servant.applyLearningReport",
         "title": "Servant: Apply Learning Report (内部用)"
+      },
+      {
+        "command": "servant.validateDocuments",
+        "title": "Servant: 📄 Validate Documents (ルール遵守チェック)"
+      },
+      {
+        "command": "servant.batchAddFrontMatter",
+        "title": "Servant: 📝 Batch Add Front Matter (一括追加)"
       }
     ],
     "configuration": {

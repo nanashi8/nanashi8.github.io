@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import type { Notifier } from '../ui/Notifier';
+import { EventBus, ServantEvents, globalEventBus } from '../core/EventBus';
 
 /**
  * コード品質問題のカテゴリ
@@ -42,14 +43,44 @@ export class CodeQualityGuard {
   private workspaceRoot: string;
   private notifier: Notifier;
   private diagnosticCollection: vscode.DiagnosticCollection;
+  private statusUpdateCallback: ((status: string) => void) | null = null;
+  private eventBus: EventBus;
 
   // 検出済み問題のキャッシュ（ファイルパス -> 問題リスト）
   private issuesCache = new Map<string, QualityIssue[]>();
 
-  constructor(workspaceRoot: string, notifier: Notifier) {
+  constructor(
+    workspaceRoot: string,
+    notifier: Notifier,
+    eventBus: EventBus = globalEventBus
+  ) {
     this.workspaceRoot = workspaceRoot;
     this.notifier = notifier;
+    this.eventBus = eventBus;
     this.diagnosticCollection = vscode.languages.createDiagnosticCollection('servant-quality');
+  }
+
+  /**
+   * ステータス更新コールバックを設定
+   */
+  public setStatusUpdateCallback(callback: (status: string) => void): void {
+    this.statusUpdateCallback = callback;
+  }
+
+  /**
+   * ステータスを更新
+   */
+  private updateStatus(status: string): void {
+    // EventBus経由で通知
+    this.eventBus.emit(ServantEvents.STATUS_UPDATE, {
+      message: status,
+      icon: status.includes('🔍') ? '🔍' : undefined
+    });
+
+    // 後方互換性のため既存のコールバックも呼び出す
+    if (this.statusUpdateCallback) {
+      this.statusUpdateCallback(status);
+    }
   }
 
   /**
@@ -60,6 +91,7 @@ export class CodeQualityGuard {
       return [];
     }
 
+    this.updateStatus('🔍 品質検証中...');
     const issues: QualityIssue[] = [];
     const content = document.getText();
 
@@ -82,6 +114,18 @@ export class CodeQualityGuard {
 
     // 診断情報を更新
     this.updateDiagnostics(document, issues);
+
+    if (issues.length > 0) {
+      // 品質問題検出イベントを発行
+      this.eventBus.emit(ServantEvents.QUALITY_ISSUE_DETECTED, {
+        file: document.uri.fsPath,
+        issues: issues.length
+      });
+
+      this.updateStatus(`⚠️ 品質問題: ${issues.length}件`);
+    } else {
+      this.updateStatus('✅ 品質OK');
+    }
 
     return issues;
   }

@@ -6,8 +6,25 @@ export type NotificationLevel = 'info' | 'warning' | 'error';
 
 export class Notifier {
   private lastShownAt = new Map<string, number>();
+  private statusUpdateCallback: ((status: string) => void) | null = null;
 
   constructor(private outputChannel?: vscode.OutputChannel) {}
+
+  /**
+   * ステータスバー更新コールバックを設定
+   */
+  public setStatusUpdateCallback(callback: (status: string) => void): void {
+    this.statusUpdateCallback = callback;
+  }
+
+  /**
+   * ステータスバーを更新（静かな通知）
+   */
+  private updateStatus(status: string): void {
+    if (this.statusUpdateCallback) {
+      this.statusUpdateCallback(status);
+    }
+  }
 
   public commandInfo(message: string, ...actions: string[]): Thenable<string | undefined> | undefined {
     return this.show('info', 'command', message, { actions });
@@ -37,9 +54,28 @@ export class Notifier {
   /**
    * “止める”用途の割り込み（モーダル）。
    * ユーザーが選択/キャンセルするまで入力を要求する。
+   *
+   * 注: このメソッドは静かな通知モードでは、ステータスバー＋出力パネルのみに通知します。
+   * 重要な場合のみモーダルを表示します。
    */
   public blockingCritical(message: string, ...actions: string[]): Thenable<string | undefined> {
     this.outputChannel?.appendLine(`[Notify][blocking][error] ${message}`);
+
+    // ステータスバーに表示
+    this.updateStatus(`⚠️ ${message.substring(0, 40)}...`);
+
+    // quiet モードではステータスバーと出力パネルのみ、それ以外は選択可能なダイアログを表示
+    const mode = this.getMode();
+    if (mode === 'quiet') {
+      // 出力パネルに詳細を表示
+      this.outputChannel?.appendLine(`[Notify] アクション: ${actions.join(', ')}`);
+      this.outputChannel?.show(true); // 出力パネルを表示
+
+      // 非モーダルな警告として表示（邪魔にならない）
+      return vscode.window.showWarningMessage(message, ...actions);
+    }
+
+    // standard/strict モードでは従来通りモーダル表示
     return vscode.window.showErrorMessage(message, { modal: true }, ...actions);
   }
 

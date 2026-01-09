@@ -119,8 +119,8 @@ src/ai/
 
 ### ユーザー向け
 
-7. **AI統合ガイド**: [docs/AI_INTEGRATION_GUIDE.md](../../docs/AI_INTEGRATION_GUIDE.md)
-8. **有効化ガイド**: [docs/HOW_TO_ENABLE_AI.md](../../docs/HOW_TO_ENABLE_AI.md)
+7. **AI統合ガイド**: [docs/ai-systems/integration-guide.md](../../docs/ai-systems/integration-guide.md)
+8. **有効化ガイド**: [docs/ai-systems/how-to-enable.md](../../docs/ai-systems/how-to-enable.md)
 
 ## 🔍 デバッグ手順
 

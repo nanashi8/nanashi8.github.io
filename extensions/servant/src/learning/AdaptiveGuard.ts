@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { FailurePattern, FailurePatternsDB, FileHotspot, LearningStats } from './FailurePattern';
 import type { Notifier } from '../ui/Notifier';
+import { EventBus, ServantEvents, globalEventBus } from '../core/EventBus';
 
 /**
  * 適応的ガードシステム
@@ -15,13 +16,43 @@ export class AdaptiveGuard {
   private db: FailurePatternsDB;
   private context: vscode.ExtensionContext;
   private notifier?: Notifier;
+  private statusUpdateCallback: ((status: string) => void) | null = null;
+  private eventBus: EventBus;
 
-  constructor(context: vscode.ExtensionContext, notifier?: Notifier) {
+  constructor(
+    context: vscode.ExtensionContext,
+    notifier?: Notifier,
+    eventBus: EventBus = globalEventBus
+  ) {
     this.context = context;
     this.notifier = notifier;
+    this.eventBus = eventBus;
     const workspaceRoot = vscode.workspace.workspaceFolders?.[0].uri.fsPath || '';
     this.dbPath = path.join(workspaceRoot, '.vscode', 'failure-patterns.json');
     this.db = this.loadDatabase();
+  }
+
+  /**
+   * ステータス更新コールバックを設定
+   */
+  public setStatusUpdateCallback(callback: (status: string) => void): void {
+    this.statusUpdateCallback = callback;
+  }
+
+  /**
+   * ステータスを更新
+   */
+  private updateStatus(status: string): void {
+    // EventBus経由で通知
+    this.eventBus.emit(ServantEvents.STATUS_UPDATE, {
+      message: status,
+      icon: status.includes('🧠') ? '🧠' : undefined
+    });
+
+    // 後方互換性のため既存のコールバックも呼び出す
+    if (this.statusUpdateCallback) {
+      this.statusUpdateCallback(status);
+    }
   }
 
   /**
@@ -143,6 +174,7 @@ export class AdaptiveGuard {
    * 学習を実行
    */
   async triggerLearning(): Promise<void> {
+    this.updateStatus('🧠 学習中...');
     console.log('🧠 Adaptive Learning: Starting learning cycle...');
 
     // 高リスクパターンを抽出（weight >= 0.7）
@@ -157,6 +189,12 @@ export class AdaptiveGuard {
     this.db.currentCycleCount = 0;
     await this.saveDatabase();
 
+    // 学習完了イベントを発行
+    this.eventBus.emit(ServantEvents.LEARNING_COMPLETED, {
+      patterns: highRiskPatterns.length
+    });
+
+    this.updateStatus(`✅ 学習完了 (${highRiskPatterns.length}パターン)`);
     console.log('✅ Adaptive Learning: Learning cycle completed');
 
     // 外部から設定されたコールバックを呼び出し（ChatParticipantに通知）
