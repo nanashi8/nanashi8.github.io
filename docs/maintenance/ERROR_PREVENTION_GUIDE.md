@@ -92,4 +92,4 @@ pip install -r requirements.txt
 
 - [品質保証システム](../quality/QUALITY_SYSTEM.md)
 - [AI統合ガイド](../ai-systems/integration-guide.md)
-- [開発ガイドライン](.aitk/instructions/development-guidelines.instructions.md)
+- [開発ガイドライン](../../.aitk/instructions/development-guidelines.instructions.md)

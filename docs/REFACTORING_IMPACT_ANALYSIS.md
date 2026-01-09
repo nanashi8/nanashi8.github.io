@@ -46,9 +46,9 @@ docs 直下の 23 ファイルを移動すると、**約 100 箇所のリンク�
 
 **リンクパターン**
 ```markdown
-[14AI統合ガイド](./ai-systems/integration-guide.md)
-[14AI統合ガイド](../ai-systems/integration-guide.md)
-[AI評価システム](../../docs/ai-systems/integration-guide.md)
+[14AI統合ガイド] (./ai-systems/integration-guide.md)
+[14AI統合ガイド] (../ai-systems/integration-guide.md)
+[AI評価システム] (../../docs/ai-systems/integration-guide.md)
 ```
 
 ### 2. PHASE1_2_COMPLETION_REPORT.md（8 参照）

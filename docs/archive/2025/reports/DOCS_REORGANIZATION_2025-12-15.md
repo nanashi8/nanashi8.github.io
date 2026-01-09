@@ -191,6 +191,6 @@ docs/
 
 ## 関連ドキュメント
 
-- [プロジェクト構造検証](../design/PROJECT_STRUCTURE_VALIDATION.md)
-- [自己管理プロジェクト](../maintenance/SELF_MANAGING_PROJECT.md)
-- [リファクタリング安全ガイド](../processes/REFACTORING_SAFETY.md)
+- [プロジェクト構造検証](../../../design/PROJECT_STRUCTURE_VALIDATION.md)
+- [自己管理プロジェクト](../../../maintenance/SELF_MANAGING_PROJECT.md)
+- [リファクタリング安全ガイド](../../../processes/REFACTORING_SAFETY.md)

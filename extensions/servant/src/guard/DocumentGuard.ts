@@ -147,6 +147,19 @@ export class DocumentGuard {
    * ファイル監視を開始
    */
   public startWatching(): vscode.Disposable {
+    // 起動バナーを表示
+    const output = this.getOutputChannel();
+    output.appendLine('');
+    output.appendLine('═══════════════════════════════════════════');
+    output.appendLine('📋 Servant - Document Guard - ドキュメント監視開始');
+    output.appendLine('═══════════════════════════════════════════');
+    output.appendLine(`監視対象: ${this.docsPath}`);
+    output.appendLine(`開始時刻: ${new Date().toLocaleString()}`);
+    output.appendLine('');
+    output.appendLine('✓ docs/ 配下の新規Markdownファイルを監視中...');
+    output.appendLine('✓ ルール違反を自動検出します');
+    output.appendLine('');
+
     // docs/ 配下の Markdown ファイル作成を監視
     const pattern = new vscode.RelativePattern(this.docsPath, '**/*.md');
     this.fileWatcher = vscode.workspace.createFileSystemWatcher(pattern);
@@ -171,6 +184,15 @@ export class DocumentGuard {
     }
 
     const relativePath = path.relative(this.docsPath, uri.fsPath);
+
+    // ファイル検出を通知
+    const output = this.getOutputChannel();
+    output.appendLine('');
+    output.appendLine('═══════════════════════════════════════════');
+    output.appendLine('📋 Servant - 新規ファイル検出');
+    output.appendLine('═══════════════════════════════════════════');
+    output.appendLine(`ファイル: ${relativePath}`);
+    output.appendLine('');
     const fileName = path.basename(uri.fsPath);
     const dirName = path.dirname(relativePath);
 
@@ -206,7 +228,7 @@ export class DocumentGuard {
       suggestions.push('📝 Front Matter を自動挿入できます');
     }
 
-    // 違反がある場合は通知
+    // 違反がある場合はOutput Channelに記録
     if (violations.length > 0) {
       this.stats.violations++;
       this.updateStatus(`⚠️ 違反検出 (${this.stats.violations}件)`);
@@ -217,8 +239,14 @@ export class DocumentGuard {
         violations: violations.length
       });
 
-      await this.showViolationNotification(uri, violations, suggestions, hasFrontMatter);
+      // Output Channelに静かに出力
+      await this.logViolationToOutput(uri, violations, suggestions, hasFrontMatter);
     } else {
+      // 準拠している場合も記録
+      const output = this.getOutputChannel();
+      output.appendLine(`   ✅ ルール準拠`);
+      output.appendLine('');
+
       this.updateStatus('✅ 準拠');
       // 2秒後に監視中に戻す
       setTimeout(() => {
@@ -250,51 +278,45 @@ export class DocumentGuard {
   }
 
   /**
-   * ルール違反通知を表示
+   * ルール違反をOutput Channelに記録（通知なし）
    */
-  private async showViolationNotification(
+  private async logViolationToOutput(
     uri: vscode.Uri,
     violations: string[],
     suggestions: string[],
     hasFrontMatter: boolean
   ): Promise<void> {
-    const message = [
-      '⚠️ ドキュメント作成ルール違反を検出',
-      '',
-      ...violations,
-      '',
-      ...suggestions,
-    ].join('\n');
+    const output = this.getOutputChannel();
+    const relativePath = path.relative(this.docsPath, uri.fsPath);
+    const timestamp = new Date().toLocaleTimeString();
 
-    const actions: string[] = [];
+    output.appendLine('');
+    output.appendLine(`[${timestamp}] ⚠️ ドキュメントルール違反: ${relativePath}`);
+    output.appendLine('---');
 
+    violations.forEach(v => output.appendLine(v));
+    output.appendLine('');
+    suggestions.forEach(s => output.appendLine(s));
+    output.appendLine('---');
+
+    // 自動修正の提案をログに記載
     if (!hasFrontMatter) {
-      actions.push('Front Matter を追加');
+      output.appendLine('💡 修正方法: コマンドパレット > "Document Guard: Add Front Matter" で自動追加可能');
     }
-
     if (violations.some(v => v.includes('docs 直下'))) {
-      actions.push('移動する');
+      output.appendLine('💡 修正方法: ファイルを適切なサブディレクトリに移動してください');
     }
+  }
 
-    actions.push('無視');
-    actions.push('ルールを確認');
-
-    const choice = await vscode.window.showWarningMessage(
-      message,
-      ...actions
-    );
-
-    if (choice === 'Front Matter を追加') {
-      await this.insertFrontMatter(uri);
-      this.stats.autoFixed++;
-      this.updateStatus(`✅ 自動修正 (${this.stats.autoFixed}件)`);
-    } else if (choice === '移動する') {
-      await this.moveToRecommendedLocation(uri);
-      this.stats.autoFixed++;
-      this.updateStatus(`✅ 自動修正 (${this.stats.autoFixed}件)`);
-    } else if (choice === 'ルールを確認') {
-      await this.openDocumentationRules();
+  /**
+   * Output Channelの取得（遅延初期化）
+   */
+  private outputChannel: vscode.OutputChannel | null = null;
+  private getOutputChannel(): vscode.OutputChannel {
+    if (!this.outputChannel) {
+      this.outputChannel = vscode.window.createOutputChannel('Document Guard');
     }
+    return this.outputChannel;
   }
 
   /**
@@ -335,7 +357,11 @@ export class DocumentGuard {
     );
 
     await vscode.workspace.applyEdit(edit);
-    await vscode.window.showInformationMessage('✅ Front Matter を追加しました');
+
+    // Output Channelに記録
+    const output = this.getOutputChannel();
+    const relativePath = path.relative(this.docsPath, uri.fsPath);
+    output.appendLine(`✅ Front Matter を追加: ${relativePath}`);
   }
 
   /**
@@ -377,29 +403,29 @@ export class DocumentGuard {
     const recommendedDir = this.suggestDirectory(fileName);
 
     if (!recommendedDir) {
-      await vscode.window.showInformationMessage('推奨配置先が見つかりませんでした');
+      const output = this.getOutputChannel();
+      output.appendLine('⚠️ 推奨配置先が見つかりませんでした');
       return;
     }
 
     const targetDir = path.join(this.docsPath, recommendedDir);
-    const targetPath = path.join(targetDir, fileName);
+    const targetPath = path.join(targetDir, path.basename(uri.fsPath));
 
-    // ディレクトリが存在しない場合は作成
+    // ディレクトリ作成
     if (!fs.existsSync(targetDir)) {
       fs.mkdirSync(targetDir, { recursive: true });
     }
 
-    // ファイルを移動
+    // ファイル移動
     const edit = new vscode.WorkspaceEdit();
     edit.renameFile(uri, vscode.Uri.file(targetPath));
 
-    const success = await vscode.workspace.applyEdit(edit);
+    await vscode.workspace.applyEdit(edit);
 
-    if (success) {
-      await vscode.window.showInformationMessage(
-        `✅ ファイルを docs/${recommendedDir}/ に移動しました`
-      );
-    }
+    // Output Channelに記録
+    const output = this.getOutputChannel();
+    const oldPath = path.relative(this.docsPath, uri.fsPath);
+    output.appendLine(`✅ ファイルを移動: ${oldPath} → ${recommendedDir}/`);
   }
 
   /**
@@ -427,9 +453,14 @@ export class DocumentGuard {
    * コマンド: 既存ドキュメントの検証
    */
   public async validateExistingDocuments(): Promise<void> {
-    const output = vscode.window.createOutputChannel('Document Guard');
+    const output = this.getOutputChannel();
     output.show();
-    output.appendLine('📄 既存ドキュメントを検証中...');
+    output.appendLine('');
+    output.appendLine('═══════════════════════════════════════════');
+    output.appendLine('📋 Servant - 既存ドキュメント検証開始');
+    output.appendLine('═══════════════════════════════════════════');
+    output.appendLine(`検証時刻: ${new Date().toLocaleString()}`);
+    output.appendLine('');
 
     const pattern = new vscode.RelativePattern(this.docsPath, '**/*.md');
     const files = await vscode.workspace.findFiles(pattern, '**/private/**');
@@ -472,12 +503,11 @@ export class DocumentGuard {
     output.appendLine(`Front Matter なし: ${missingFrontMatter}`);
     output.appendLine(`違反総数: ${violations}`);
 
+    // 通知は最小限に（Output Channelのみ）
     if (violations === 0) {
-      await vscode.window.showInformationMessage('✅ すべてのドキュメントがルールに準拠しています');
+      output.appendLine('✅ すべてのドキュメントがルールに準拠しています');
     } else {
-      await vscode.window.showWarningMessage(
-        `⚠️ ${violations} 件のルール違反が見つかりました（詳細は出力パネルを確認）`
-      );
+      output.appendLine(`⚠️ ${violations} 件のルール違反（上記参照）`);
     }
   }
 
@@ -500,9 +530,9 @@ export class DocumentGuard {
       }
     }
 
-    await vscode.window.showInformationMessage(
-      `✅ ${added} 件のファイルに Front Matter を追加しました`
-    );
+    // Output Channelに記録
+    const output = this.getOutputChannel();
+    output.appendLine(`✅ ${added} 件のファイルに Front Matter を追加しました`);
   }
 
   /**
@@ -511,6 +541,9 @@ export class DocumentGuard {
   public dispose(): void {
     if (this.fileWatcher) {
       this.fileWatcher.dispose();
+    }
+    if (this.outputChannel) {
+      this.outputChannel.dispose();
     }
   }
 }

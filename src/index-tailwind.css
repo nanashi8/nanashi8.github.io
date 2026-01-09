@@ -166,6 +166,12 @@
     @apply bg-white rounded-lg shadow-md p-6 mb-6;
   }
 
+  @media (max-width: 768px) {
+    .question-card {
+      @apply border-0 shadow-none bg-transparent;
+    }
+  }
+
   .question-text {
     @apply text-xl font-medium text-gray-900 mb-4;
   }

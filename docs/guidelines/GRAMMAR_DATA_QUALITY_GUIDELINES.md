@@ -288,7 +288,7 @@ python3 scripts/analyze_grammar_data_quality.py
 
 ## 📚 参考資料
 
-- [データスキーマ仕様](GRAMMAR_DATA_SCHEMA.md（ファイル未作成、GRAMMAR_GENERATION_GUIDELINESを参照）)
+- [データスキーマ仕様（現状は作成ガイドラインに統合）](grammar/GRAMMAR_GENERATION_GUIDELINES.md)
 - [バリデーションスクリプト](../../scripts/validate_grammar_advanced.py)
 - [品質レポート](../quality/README.md)
 

@@ -579,7 +579,7 @@ nanashi8.github.io/
 
 ## 🔗 関連リンク
 
-- [メインドキュメント目次](./README.md)
+- [メインドキュメント目次](../README.md)
 - [AI開発ワークフロー](./AI_WORKFLOW_INSTRUCTIONS.md)
 - [品質チェックリスト](../quality/QUALITY_CHECKLIST.md)
 - [デプロイURL](https://nanashi8.github.io/)

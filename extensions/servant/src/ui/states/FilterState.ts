@@ -1,6 +1,6 @@
 /**
  * FilterState - フィルター表示モード
- * 
+ *
  * 特定の条件でノードをフィルタリングして表示。
  */
 
@@ -22,10 +22,10 @@ export class FilterState extends BaseViewState {
 
   render(context: ConstellationViewPanel): string {
     const filteredData = context.getFilteredData(this.filters);
-    
+
     return `
       ${this.getHtmlHeader('🌟 天体儀 - フィルター')}
-      
+
       <div class="header">
         <h1>🎯 フィルター表示</h1>
         <div class="toolbar">
@@ -33,7 +33,7 @@ export class FilterState extends BaseViewState {
           <button onclick="backToOverview()">◀️ 戻る</button>
         </div>
       </div>
-      
+
       <div class="filter-panel">
         <h2>フィルター条件</h2>
         <div class="filter-controls">
@@ -48,7 +48,7 @@ export class FilterState extends BaseViewState {
           </label>
           <button onclick="applyFilter()">適用</button>
         </div>
-        
+
         <h2>結果 (${filteredData.nodes?.length || 0}件)</h2>
         <div class="results">
           <ul>
@@ -60,34 +60,34 @@ export class FilterState extends BaseViewState {
           </ul>
         </div>
       </div>
-      
+
       ${this.getHtmlFooter()}
-      
+
       <script>
         window.applyFilter = function() {
           const typeFilter = document.getElementById('type-filter').value;
-          vscode.postMessage({ 
+          vscode.postMessage({
             command: 'applyFilter',
             filters: { type: typeFilter }
           });
         };
-        
+
         window.clearFilter = function() {
           vscode.postMessage({ command: 'clearFilter' });
         };
-        
+
         window.backToOverview = function() {
           vscode.postMessage({ command: 'showOverview' });
         };
-        
+
         window.selectNode = function(nodeId) {
-          vscode.postMessage({ 
+          vscode.postMessage({
             command: 'showDetail',
             nodeId: nodeId
           });
         };
       </script>
-      
+
       <style>
         .filter-panel {
           padding: 20px;

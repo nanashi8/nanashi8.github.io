@@ -172,6 +172,10 @@
         "title": "Servant: 🌟 Show Constellation View"
       },
       {
+        "command": "servant.openConstellationMenu",
+        "title": "Servant: 🌟 Constellation Menu"
+      },
+      {
         "command": "servant.analyzeArchitecture",
         "title": "Servant: Analyze Project Architecture"
       },

@@ -1,6 +1,6 @@
 /**
  * InvestigatingState - 調査中状態
- * 
+ *
  * エラーの原因を自動調査している状態。
  * complete() で完了、resume() で実行再開できる。
  */

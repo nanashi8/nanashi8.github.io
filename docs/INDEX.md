@@ -42,16 +42,16 @@ tags: [index, navigation]
 
 **⚠️ 以下のファイルはリンク多数につき移動・削除厳禁**
 
-1. [QUESTION_SCHEDULER_SPEC.md](../specifications/QUESTION_SCHEDULER_SPEC.md) - 16 参照
-2. [META_AI_TROUBLESHOOTING.md](../guidelines/META_AI_TROUBLESHOOTING.md) - 12 参照
-3. [QUALITY_SYSTEM.md](../quality/QUALITY_SYSTEM.md) - 10 参照
-4. [15-data-structures.md](./15-data-structures.md) - 10 参照
-5. [15-data-structures.md](../specifications/15-data-structures.md) - 9 参照
-6. [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) - 8 参照
-7. [01-project-overview.md](./01-project-overview.md) - 8 参照
+1. [QUESTION_SCHEDULER_SPEC.md](specifications/QUESTION_SCHEDULER_SPEC.md) - 16 参照
+2. [META_AI_TROUBLESHOOTING.md](guidelines/META_AI_TROUBLESHOOTING.md) - 12 参照
+3. [QUALITY_SYSTEM.md](quality/QUALITY_SYSTEM.md) - 10 参照
+4. [15-data-structures.md](specifications/15-data-structures.md) - 10 参照
+5. [15-data-structures.md](specifications/15-data-structures.md) - 9 参照
+6. [UI_DEVELOPMENT_GUIDELINES.md](development/UI_DEVELOPMENT_GUIDELINES.md) - 8 参照
+7. [01-project-overview.md](specifications/01-project-overview.md) - 8 参照
 8. [integration-guide.md](ai-systems/integration-guide.md) - 7 参照
-9. [18-dark-mode.md](../specifications/18-dark-mode.md) - 7 参照
-10. [QUESTION_SCHEDULER_QA_PIPELINE.md](../quality/QUESTION_SCHEDULER_QA_PIPELINE.md) - 7 参照
+9. [18-dark-mode.md](specifications/18-dark-mode.md) - 7 参照
+10. [QUESTION_SCHEDULER_QA_PIPELINE.md](quality/QUESTION_SCHEDULER_QA_PIPELINE.md) - 7 参照
 
 ---
 
@@ -59,16 +59,16 @@ tags: [index, navigation]
 
 ### ai (64 files)
 
-- [7AI統合システム - クイックスタートガイド](AI_INTEGRATION_GUIDE.md)
-- [AI統合の有効化方法](HOW_TO_ENABLE_AI.md)
-- [メンテナンスAI ガイド](MAINTENANCE_AI_GUIDE.md)
+- [7AI統合システム - クイックスタートガイド](ai-systems/integration-guide.md)
+- [AI統合の有効化方法](ai-systems/how-to-enable.md)
+- [メンテナンスAI ガイド](ai-systems/maintenance-guide.md)
 - [長文読解パッセージ生成システム](archive/READING_PASSAGES_GUIDE.md)
 - [定着率表示改善の実装完了](archive/RETENTION_IMPLEMENTATION_COMPLETE.md)
 - ...他 59 件
 
 ### test (23 files)
 
-- [メンテナンスAI ガイド](MAINTENANCE_AI_GUIDE.md)
+- [メンテナンスAI ガイド](ai-systems/maintenance-guide.md)
 - [文法問題パッセージ対応機能](archive/grammar-passage-feature-v2.md)
 - [適応的学習AI・進捗管理システム仕様書](archive/specifications/10-adaptive-learning-ai.md)
 - [設定画面仕様書](archive/specifications/11-settings-view.md)
@@ -131,11 +131,11 @@ tags: [index, navigation]
 
 ### report (8 files)
 
-- [フォルダ構成整理サマリー](reports/CLEANUP_SUMMARY_2025-12-13.md)
+- [フォルダ構成整理サマリー](archive/2025/reports/CLEANUP_SUMMARY_2025-12-13.md)
 - [データ品質テストカバレッジレポート](reports/DATA_COVERAGE_REPORT.md)
-- [ドキュメント整理レポート 2025-12-15](reports/DOCS_REORGANIZATION_2025-12-15.md)
+- [ドキュメント整理レポート 2025-12-15](archive/2025/reports/DOCS_REORGANIZATION_2025-12-15.md)
 - [Git破損復旧ログ](reports/GIT_RECOVERY_LOG.md)
-- [リンク断線修正完了レポート](reports/LINK_FIX_COMPLETION_REPORT.md)
+- [リンク断線修正完了レポート](archive/2025/reports/LINK_FIX_COMPLETION_REPORT.md)
 - ...他 3 件
 
 ### dark-mode (7 files)
@@ -144,7 +144,7 @@ tags: [index, navigation]
 - [ライト/ダークモード開発ガイド](design/DARK_MODE_GUIDE.md)
 - [デザインシステムルール](development/DESIGN_SYSTEM_RULES.md)
 - [UI開発ガイドライン](development/UI_DEVELOPMENT_GUIDELINES.md)
-- [ルートファイル整理レポート 2025-12-15](reports/ROOT_FILES_CLEANUP_2025-12-15.md)
+- [ルートファイル整理レポート 2025-12-15](archive/2025/reports/ROOT_FILES_CLEANUP_2025-12-15.md)
 - ...他 2 件
 
 ### development (5 files)
@@ -164,9 +164,9 @@ tags: [index, navigation]
 
 ### other (3 files)
 
-- [7AI統合システム - クイックスタートガイド](AI_INTEGRATION_GUIDE.md)
-- [AI統合の有効化方法](HOW_TO_ENABLE_AI.md)
-- [メンテナンスAI ガイド](MAINTENANCE_AI_GUIDE.md)
+- [7AI統合システム - クイックスタートガイド](ai-systems/integration-guide.md)
+- [AI統合の有効化方法](ai-systems/how-to-enable.md)
+- [メンテナンスAI ガイド](ai-systems/maintenance-guide.md)
 
 ### feature (3 files)
 
@@ -200,7 +200,7 @@ tags: [index, navigation]
 ### plan (2 files)
 
 - [ドキュメント整理計画（配線を切らない方式）](DOCUMENTATION_ORGANIZATION_PLAN.md)
-- [断線リンク修正計画](plans/LINK_FIX_PLAN.md)
+- [断線リンク修正計画](archive/2025/plans/LINK_FIX_PLAN.md)
 
 ### refactoring (2 files)
 

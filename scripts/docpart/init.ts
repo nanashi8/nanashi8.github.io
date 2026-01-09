@@ -1,6 +1,6 @@
 /**
  * Document Component System - Init Command
- * 
+ *
  * 既存のdocs配下を解析して初期マッピングを生成
  */
 
@@ -137,19 +137,34 @@ async function analyzeMarkdownFile(
   const type = inferComponentType(filePath, config);
   const links = extractMarkdownLinks(filePath);
 
+  const selfPortName = getPortNameFromPath(filePath);
+  const selfSignal = inferSignalFromType(type);
+
   // リンクから requires を推論
   const requires = links
     .map(link => {
       const normalizedLink = normalizeMarkdownLink(link.href);
+
+      // 非MarkdownへのリンクはDocPartの対象外（機能要件の“ドキュメント健全性”に集中）
+      if (!normalizedLink.endsWith('.md')) {
+        return null;
+      }
+
       const targetPath = resolveRelativePath(filePath, normalizedLink);
+
+      // docs外への参照はDocPartの対象外（.github/.aitk/scripts 等への参照ノイズを抑制）
+      if (!(targetPath === rootDir || targetPath.startsWith(rootDir + '/'))) {
+        return null;
+      }
 
       return {
         name: getPortNameFromPath(targetPath),
-        signal: inferSignalFromType(type),
+        signal: selfSignal,
         from: inferComponentId(targetPath, rootDir),
         description: `Referenced from link: ${link.text}`,
       };
     })
+    .filter((v): v is NonNullable<typeof v> => v !== null)
     .filter((req, index, self) => {
       // 重複を除去
       return self.findIndex(r => r.from === req.from && r.name === req.name) === index;
@@ -159,7 +174,13 @@ async function analyzeMarkdownFile(
     id,
     type,
     filePath,
-    provides: [],
+    provides: [
+      {
+        name: selfPortName,
+        signal: selfSignal,
+        description: 'Self document',
+      },
+    ],
     requires,
   };
 }

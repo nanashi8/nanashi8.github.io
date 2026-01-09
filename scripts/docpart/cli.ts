@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Document Component System - CLI Entry Point
- * 
+ *
  * Usage:
  *   npm run docpart init [--force] [--config=path]
  *   npm run docpart lint [--config=path]

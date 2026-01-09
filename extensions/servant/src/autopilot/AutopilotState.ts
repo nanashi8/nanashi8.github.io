@@ -1,6 +1,6 @@
 /**
  * AutopilotState - 自動操縦システムの状態インターフェース
- * 
+ *
  * State Patternを実装し、状態遷移ロジックを各状態クラスに分離。
  * これにより状態管理の複雑さを解消し、変更頻度を75%削減する。
  */
@@ -10,7 +10,7 @@ import type { AutopilotController } from './AutopilotController';
 /**
  * 自動操縦の状態名
  */
-export type AutopilotStateName = 
+export type AutopilotStateName =
   | 'Idle'           // 待機中（初期状態）
   | 'Running'        // 実行中
   | 'Paused'         // 一時停止
@@ -21,7 +21,7 @@ export type AutopilotStateName =
 
 /**
  * 状態インターフェース
- * 
+ *
  * 各状態クラスはこのインターフェースを実装し、
  * 状態固有の振る舞いと遷移ロジックを提供する。
  */

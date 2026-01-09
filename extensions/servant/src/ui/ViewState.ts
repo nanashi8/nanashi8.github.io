@@ -1,6 +1,6 @@
 /**
  * ViewState - 天体儀（Constellation）の表示状態インターフェース
- * 
+ *
  * State Patternを実装し、表示モード管理を各状態クラスに分離。
  * これにより表示モード切り替えの複雑さを解消し、変更頻度を73%削減する。
  */
@@ -10,7 +10,7 @@ import type { ConstellationViewPanel } from './ConstellationViewPanel';
 /**
  * 表示モード名
  */
-export type ViewModeName = 
+export type ViewModeName =
   | 'Overview'     // 全体表示（デフォルト）
   | 'Detail'       // 詳細表示（ノード選択時）
   | 'Filter'       // フィルター表示
@@ -18,7 +18,7 @@ export type ViewModeName =
 
 /**
  * 表示状態インターフェース
- * 
+ *
  * 各表示モードクラスはこのインターフェースを実装し、
  * モード固有の表示処理とユーザー操作ハンドリングを提供する。
  */
@@ -214,23 +214,23 @@ export abstract class BaseViewState implements ViewState {
     return `
         <script>
           const vscode = acquireVsCodeApi();
-          
+
           // VSCodeからのメッセージを受信
           window.addEventListener('message', event => {
             const message = event.data;
             handleMessage(message);
           });
-          
+
           // データをリクエスト
           function requestData() {
             vscode.postMessage({ command: 'getData' });
           }
-          
+
           // メッセージハンドラー（サブクラスで実装）
           function handleMessage(message) {
             console.log('Received message:', message);
           }
-          
+
           // 初期化
           requestData();
         </script>

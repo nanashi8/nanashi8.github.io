@@ -1,6 +1,6 @@
 /**
  * Document Component System - Dependency Analyzer
- * 
+ *
  * 依存関係の解析とグラフ生成
  */
 
@@ -122,7 +122,7 @@ export function detectCycles(componentMap: ComponentMap): ValidationResult[] {
   const graph = buildDependencyGraph(componentMap);
   const components = componentMapToComponents(componentMap);
   const componentById = new Map(components.map(c => [c.id, c]));
-  
+
   const results: ValidationResult[] = [];
   const visited = new Set<string>();
   const recursionStack = new Set<string>();

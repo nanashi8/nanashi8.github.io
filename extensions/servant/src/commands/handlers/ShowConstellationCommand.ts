@@ -1,5 +1,5 @@
 import { CommandHandler } from '../CommandRegistry';
-import { ConstellationViewPanel } from '../../ui/ConstellationViewPanel';
+import { ConstellationViewPanel, type ConstellationOpenOptions } from '../../ui/ConstellationViewPanel';
 import { NeuralDependencyGraph } from '../../neural/NeuralDependencyGraph';
 import { GoalManager } from '../../goals/GoalManager';
 import { ConstellationDataGenerator } from '../../constellation/ConstellationDataGenerator';
@@ -18,12 +18,13 @@ export class ShowConstellationCommand implements CommandHandler {
     private generator: ConstellationDataGenerator
   ) {}
 
-  execute(): void {
+  execute(openOptions?: ConstellationOpenOptions): void {
     ConstellationViewPanel.createOrShow(
       this.extensionUri,
       this.graph,
       this.goalManager,
-      this.generator
+      this.generator,
+      openOptions
     );
   }
 }

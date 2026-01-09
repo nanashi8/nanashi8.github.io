@@ -350,10 +350,10 @@ A. `--min-score` オプションで合格基準を調整できます。また、
 
 ## 関連ドキュメント
 
-- [長文作成ガイドライン](../docs/guidelines/passage/PASSAGE_CREATION_GUIDELINES.md)
-- [語彙カバレッジ戦略](../docs/guidelines/passage/PASSAGE_CREATION_GUIDELINES.md#9-vocabulary-coverage-strategy)
-- [フレーズ訳品質検証](../docs/quality/PHRASE_TRANSLATION_QUALITY_GUIDE.md)
-- [品質保証システム](../docs/quality/QUALITY_SYSTEM.md)
+- [長文作成ガイドライン](../guidelines/passage/PASSAGE_CREATION_GUIDELINES.md)
+- [語彙カバレッジ戦略](../guidelines/passage/PASSAGE_CREATION_GUIDELINES.md#9-vocabulary-coverage-strategy)
+- [フレーズ訳品質検証](./PHRASE_TRANSLATION_QUALITY_GUIDE.md)
+- [品質保証システム](./QUALITY_SYSTEM.md)
 
 ## 更新履歴
 

@@ -323,7 +323,7 @@ useQuestionRequeue.tsに既に実装済み:
 
 ## 📖 参考資料
 
-- [ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md](../ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md)
+- [ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md](../../ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md)
 - [QuestionScheduler API](../../src/ai/scheduler/QuestionScheduler.ts)
 - [useQuestionRequeue Hook](../../src/hooks/useQuestionRequeue.ts)
 - [BatchManager](../../src/ai/scheduler/BatchManager.ts)

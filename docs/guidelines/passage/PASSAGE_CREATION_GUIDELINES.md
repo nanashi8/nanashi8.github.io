@@ -9,7 +9,7 @@
 3. ✅ Ensure minimum score requirements are met
 4. ✅ Save evaluation results with passage
 
-**Enforcement**: This is enforced by [.aitk/instructions/passage-quality-enforcement.instructions.md](../../../../.aitk/instructions/passage-quality-enforcement.instructions.md)
+**Enforcement**: This is enforced by [.aitk/instructions/passage-addition-workflow.instructions.md](../../../.aitk/instructions/passage-addition-workflow.instructions.md)
 
 **Quality Evaluation Command**:
 ```bash

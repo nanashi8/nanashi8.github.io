@@ -82,8 +82,8 @@ nanashi8.github.io/
 - ドキュメント更新 → [ドキュメント戦略](link)
 
 ### 📚 ドキュメント体系
-- [Instructions README](.aitk/instructions/README.md) - ポリシー・強制装置
-- [Docs INDEX](docs/INDEX.md) - 仕様書・ガイドライン
+- [Instructions README](../.aitk/instructions/README.md) - ポリシー・強制装置
+- [Docs INDEX](INDEX.md) - 仕様書・ガイドライン
 
 ### 🎯 重要リンク集
 - [QuestionScheduler仕様](link)

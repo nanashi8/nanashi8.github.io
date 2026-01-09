@@ -16,7 +16,7 @@ tags: [plan, maintenance, documentation]
 
 ### 1. `.aitk/instructions`への参照 (推定100-150箇所)
 
-**パターン**: `[説明](../.aitk/instructions/~~xxx.instructions.md（ファイル未作成）~~)`  
+**パターン**: `[説明] (../.aitk/instructions/~~xxx.instructions.md（ファイル未作成）~~)`  
 **原因**: docs内からプロジェクトルートの`.aitk`を相対パスで参照  
 **修正方法**:
 
@@ -155,10 +155,10 @@ jobs:
 
 以下のファイルは**絶対に移動・削除禁止**:
 
-- [../specifications/QUESTION_SCHEDULER_SPEC.md](../specifications/QUESTION_SCHEDULER_SPEC.md) - 16回
-- [../guidelines/META_AI_TROUBLESHOOTING.md](../guidelines/META_AI_TROUBLESHOOTING.md) - 12回
-- [../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md](../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md) - 10回
-- [../specifications/15-data-structures.md](../specifications/15-data-structures.md) - 10回
+- [QUESTION_SCHEDULER_SPEC.md](../../../specifications/QUESTION_SCHEDULER_SPEC.md) - 16回
+- [META_AI_TROUBLESHOOTING.md](../../../guidelines/META_AI_TROUBLESHOOTING.md) - 12回
+- [NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md](../../../references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md) - 10回
+- [15-data-structures.md](../../../specifications/15-data-structures.md) - 10回
 
 ## 🔍 検証コマンド
 

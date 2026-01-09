@@ -1,6 +1,6 @@
 /**
  * Document Component System - Lint Command
- * 
+ *
  * マッピングファイルの検証
  */
 

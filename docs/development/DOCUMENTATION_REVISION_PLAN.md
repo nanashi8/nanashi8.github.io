@@ -796,8 +796,8 @@ jobs:
 ### 関連ドキュメント
 
 - [REFACTORING_PLAN.md](./REFACTORING_PLAN.md) - Phase 1-2のリファクタリング計画・実績
-- [.github/DEVELOPMENT_GUIDELINES.md](../.github/DEVELOPMENT_GUIDELINES.md) - 開発ガイドライン
-- [.aitk/instructions/development-guidelines.instructions.md](../.aitk/instructions/development-guidelines.instructions.md) - 開発ガイドライン（instructions版）
+- [.github/DEVELOPMENT_GUIDELINES.md](../../.github/DEVELOPMENT_GUIDELINES.md) - 開発ガイドライン
+- [.aitk/instructions/development-guidelines.instructions.md](../../.aitk/instructions/development-guidelines.instructions.md) - 開発ガイドライン（instructions版）
 
 ### ツール
 

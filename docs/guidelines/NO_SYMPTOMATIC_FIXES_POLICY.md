@@ -24,7 +24,7 @@
 4. 完了
 ```
 
-**詳細**: [no-fix-on-fix.instructions.md](../../.aitk/instructions/no-fix-on-fix.instructions.md)
+**詳細**: [no-fix-on-fix-policy.instructions.md](../../.aitk/instructions/no-fix-on-fix-policy.instructions.md)
 
 **強制ツール**:
 - Pre-commitフック: `scripts/pre-commit-fix-check.sh`

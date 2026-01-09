@@ -1,6 +1,6 @@
 /**
  * DetailState - 詳細表示モード
- * 
+ *
  * 特定のノード（ファイル/モジュール）の詳細情報を表示。
  */
 
@@ -22,21 +22,21 @@ export class DetailState extends BaseViewState {
 
   render(context: ConstellationViewPanel): string {
     const nodeData = context.getNodeData(this.selectedNodeId);
-    
+
     if (!nodeData) {
       return this.renderNotFound(context);
     }
 
     return `
       ${this.getHtmlHeader(`🌟 天体儀 - ${nodeData.name || this.selectedNodeId}`)}
-      
+
       <div class="header">
         <h1>📋 ${nodeData.name || this.selectedNodeId}</h1>
         <div class="toolbar">
           <button onclick="backToOverview()">◀️ 戻る</button>
         </div>
       </div>
-      
+
       <div class="detail-content">
         <h2>基本情報</h2>
         <table>
@@ -57,29 +57,29 @@ export class DetailState extends BaseViewState {
             <td>${nodeData.path || 'N/A'}</td>
           </tr>
         </table>
-        
+
         <h2>依存関係</h2>
         <div>
           <h3>依存先 (${nodeData.dependencies?.length || 0})</h3>
           <ul>
             ${(nodeData.dependencies || []).map((dep: any) => `<li>${dep}</li>`).join('')}
           </ul>
-          
+
           <h3>被依存 (${nodeData.dependents?.length || 0})</h3>
           <ul>
             ${(nodeData.dependents || []).map((dep: any) => `<li>${dep}</li>`).join('')}
           </ul>
         </div>
       </div>
-      
+
       ${this.getHtmlFooter()}
-      
+
       <script>
         window.backToOverview = function() {
           vscode.postMessage({ command: 'showOverview' });
         };
       </script>
-      
+
       <style>
         .detail-content {
           padding: 20px;
@@ -112,20 +112,20 @@ export class DetailState extends BaseViewState {
   private renderNotFound(context: ConstellationViewPanel): string {
     return `
       ${this.getHtmlHeader('🌟 天体儀 - ノードが見つかりません')}
-      
+
       <div class="header">
         <h1>⚠️ ノードが見つかりません</h1>
         <div class="toolbar">
           <button onclick="backToOverview()">◀️ 戻る</button>
         </div>
       </div>
-      
+
       <div class="detail-content">
         <p>ノードID「${this.selectedNodeId}」が見つかりませんでした。</p>
       </div>
-      
+
       ${this.getHtmlFooter()}
-      
+
       <script>
         window.backToOverview = function() {
           vscode.postMessage({ command: 'showOverview' });

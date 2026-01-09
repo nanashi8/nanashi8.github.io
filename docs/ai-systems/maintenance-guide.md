@@ -65,8 +65,8 @@ npm run test:coverage
 
 ## 関連ドキュメント
 
-- [品質パイプライン](./quality/INTEGRATED_QUALITY_PIPELINE.md)
-- [テストガイドライン](./quality/QUESTION_SCHEDULER_QA_PIPELINE.md)
+- [品質パイプライン](../quality/INTEGRATED_QUALITY_PIPELINE.md)
+- [テストガイドライン](../quality/QUESTION_SCHEDULER_QA_PIPELINE.md)
 - [データ検証スクリプト](../scripts/check_passage_consistency.sh)
 
 ## トラブルシューティング

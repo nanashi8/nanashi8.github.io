@@ -373,10 +373,10 @@ npm test -- --coverage
 
 ## 📚 関連ドキュメント
 
-- [API仕様書](./specifications/ADAPTIVE_NETWORK_API_SPECIFICATION.md)
-- [テストケース](./specifications/ADAPTIVE_NETWORK_TEST_CASES.md)
-- [エラーハンドリング戦略](./specifications/ADAPTIVE_NETWORK_ERROR_HANDLING.md)
-- [統合ガイド](./META_AI_INTEGRATION_GUIDE.md)
+- [API仕様書](../../specifications/ADAPTIVE_NETWORK_API_SPECIFICATION.md)
+- [テストケース](../../specifications/ADAPTIVE_NETWORK_TEST_CASES.md)
+- [エラーハンドリング戦略](../../specifications/ADAPTIVE_NETWORK_ERROR_HANDLING.md)
+- [統合ガイド](../../guidelines/META_AI_INTEGRATION_GUIDE.md)
 
 ## 📦 ファイル構成
 

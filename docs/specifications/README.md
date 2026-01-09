@@ -68,6 +68,14 @@
 
 ---
 
+### 🛠️ 開発・運用（序数付き）
+
+- [22-development-setup.md](22-development-setup.md) - 開発環境セットアップ（スタブ）
+- [23-deployment.md](23-deployment.md) - デプロイ（スタブ）
+- [24-testing-strategy.md](24-testing-strategy.md) - テスト戦略（スタブ）
+
+---
+
 ### 📝 変更履歴・レポート
 
 - [25-changelog.md](25-changelog.md) - 変更履歴
@@ -81,6 +89,13 @@
 - [ADAPTIVE_NETWORK_ERROR_HANDLING.md](ADAPTIVE_NETWORK_ERROR_HANDLING.md) - エラーハンドリング仕様
 - [ADAPTIVE_NETWORK_TEST_CASES.md](ADAPTIVE_NETWORK_TEST_CASES.md) - テストケース
 - [ADAPTIVE_LEARNING_API.md](ADAPTIVE_LEARNING_API.md) - 適応型学習API仕様
+
+---
+
+### 🧠 依存関係・安定化（補助仕様）
+
+- [NEURAL_DEPENDENCY_GRAPH.md](NEURAL_DEPENDENCY_GRAPH.md) - Neural Dependency Graph 仕様（スタブ）
+- [anti-vibration-filter.md](anti-vibration-filter.md) - AntiVibrationFilter 仕様（スタブ）
 
 ---
 

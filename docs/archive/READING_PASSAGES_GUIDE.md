@@ -196,9 +196,9 @@ python3 extract_vocabulary.py
 
 ## 関連ドキュメント
 
-- [仕様書](docs/specifications/09-comprehensive-reading-passages.md)
-- [フレーズ生成ワークフロー](docs/PHRASE_GENERATION_WORKFLOW.md)
-- [データ構造](docs/specifications/05-data-structures.md)
+- [仕様書](specifications/09-comprehensive-reading-passages.md)
+- [フレーズ生成ワークフロー](PHRASE_GENERATION_WORKFLOW.md)
+- [データ構造](specifications/05-data-structures.md)
 
 ## ライセンス・著作権
 

@@ -171,5 +171,5 @@ nanashi8.github.io/
 ## 関連ドキュメント
 
 - [ドキュメント整理レポート](./DOCS_REORGANIZATION_2025-12-15.md)
-- [デザインフリーズ宣言](../design/DESIGN_FREEZE.md)
-- [プロジェクト構造検証](../design/PROJECT_STRUCTURE_VALIDATION.md)
+- [デザインフリーズ宣言](../../../design/DESIGN_FREEZE.md)
+- [プロジェクト構造検証](../../../design/PROJECT_STRUCTURE_VALIDATION.md)

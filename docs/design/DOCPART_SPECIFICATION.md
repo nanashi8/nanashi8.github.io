@@ -81,7 +81,7 @@ nanashi8.github.io/
 │   ├── _graph.mmd                 # 依存グラフ（自動生成）
 │   ├── _index.json                # 部品インデックス（自動生成）
 │   ├── auto-learning.md           # 実ファイル（servant/へ移動）
-│   └── AI_GUARD_SYSTEM.md
+│   └── ai-systems/guard-system.md
 │
 ├── scripts/
 │   └── docpart/                   # CLIツール（内部実装）
@@ -123,7 +123,7 @@ signals:
 
 # 部品マッピング（ファイルパス -> 部品定義）
 components:
-  docs/SERVANT_AUTO_LEARNING.md:
+  docs/servant/auto-learning.md:
     id: DOC:SERVANT:AUTO_LEARNING
     type: spec
     version: '1.0.0'
@@ -143,7 +143,7 @@ components:
         from: DOC:AI:GUARD_SYSTEM
         description: 品質ガードのルール定義
 
-  docs/AI_GUARD_SYSTEM.md:
+  docs/ai-systems/guard-system.md:
     id: DOC:AI:GUARD_SYSTEM
     type: spec
     version: '2.1.0'
@@ -153,7 +153,7 @@ components:
         signal: Policy:v1
         description: リアルタイム品質ガードのルール
 
-  docs/HOW_TO_ENABLE_AI.md:
+  docs/ai-systems/how-to-enable.md:
     id: DOC:HOWTO:ENABLE_AI
     type: guide
     version: '1.0.0'
@@ -226,7 +226,7 @@ $ npm run docpart lint
 ✅ IDs: OK (no duplicates)
 ❌ Unresolved requires: 3 issues
 
-  docs/HOW_TO_ENABLE_AI.md
+  docs/ai-systems/how-to-enable.md
     ❌ requires 'guard_rules' (Policy:v1) from 'DOC:AI:GUARD'
        → Component 'DOC:AI:GUARD' not found
        
@@ -345,9 +345,9 @@ docpart:
 ## 🚀 マイグレーション戦略
 
 ### Phase 1: 基幹部品（10〜20ファイル）
-- `SERVANT_AUTO_LEARNING.md`
-- `AI_GUARD_SYSTEM.md`
-- `AI_INTEGRATION_GUIDE.md`
+- `servant/auto-learning.md`
+- `ai-systems/guard-system.md`
+- `ai-systems/integration-guide.md`
 - 他、よく参照されるファイル
 
 ### Phase 2: 残りの主要ファイル（30〜40ファイル）

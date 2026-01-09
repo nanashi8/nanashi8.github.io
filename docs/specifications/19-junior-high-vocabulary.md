@@ -99,8 +99,8 @@ python3 scripts/normalize_categories_to_10.py
 - [15. データ構造仕様書](./15-data-structures.md)
 
 ### カテゴリ仕様（アーカイブ）
-- [archive/specifications/05-data-structures.md](./archive/specifications/05-data-structures.md) - 10カテゴリ定義の詳細
-- [archive/specifications/07-junior-high-entrance-vocabulary.md](./archive/specifications/07-junior-high-entrance-vocabulary.md) - 語彙作成仕様
+- [archive/specifications/05-data-structures.md](../archive/specifications/05-data-structures.md) - 10カテゴリ定義の詳細
+- [archive/specifications/07-junior-high-entrance-vocabulary.md](../archive/specifications/07-junior-high-entrance-vocabulary.md) - 語彙作成仕様
 
 ### 開発ガイドライン
 - [AI_WORKFLOW_INSTRUCTIONS.md](../references/AI_WORKFLOW_INSTRUCTIONS.md) - AI開発ワークフロー

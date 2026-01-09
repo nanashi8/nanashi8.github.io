@@ -1,6 +1,6 @@
 /**
  * Document Component System - Configuration Loader
- * 
+ *
  * .docpartrc.yaml の読み込み
  */
 

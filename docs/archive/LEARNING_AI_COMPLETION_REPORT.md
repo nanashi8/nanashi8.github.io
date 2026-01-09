@@ -208,15 +208,15 @@ npx tsx scripts/visual-random-simulation.ts \
 
 ### 実装ドキュメント
 
-1. **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)**
+1. **[IMPLEMENTATION_SUMMARY.md](2025/reports/IMPLEMENTATION_SUMMARY.md)**
    - Phase 1の詳細設計と実装
    - Seed、連続ミス、時間ブースト
 
-2. **[PHASE2_IMPLEMENTATION_SUMMARY.md](PHASE2_IMPLEMENTATION_SUMMARY.md)**
+2. **[PHASE2_IMPLEMENTATION_SUMMARY.md](summaries/PHASE2_IMPLEMENTATION_SUMMARY.md)**
    - Phase 2の詳細設計と実装
    - ストリーク減衰、信頼度スコア、メタAIログ
 
-3. **[PHASE3_IMPLEMENTATION_SUMMARY.md](PHASE3_IMPLEMENTATION_SUMMARY.md)**
+3. **[PHASE3_IMPLEMENTATION_SUMMARY.md](summaries/PHASE3_IMPLEMENTATION_SUMMARY.md)**
    - Phase 3の詳細設計と実装
    - インタリーブ、難易度スロット、疲労連動
 
@@ -228,10 +228,10 @@ npx tsx scripts/visual-random-simulation.ts \
 
 ### 参考ドキュメント
 
-5. **[ADAPTIVE_LEARNING_API.md](ADAPTIVE_LEARNING_API.md)**
+5. **[ADAPTIVE_LEARNING_API.md](../specifications/ADAPTIVE_LEARNING_API.md)**
    - 既存APIの詳細仕様
 
-6. **[design/adaptive-learning-algorithm-design.md](design/adaptive-learning-algorithm-design.md)**
+6. **[design/adaptive-learning-algorithm-design.md](../design/adaptive-learning-algorithm-design.md)**
    - 認知心理学ベースのアルゴリズム設計
 
 ---

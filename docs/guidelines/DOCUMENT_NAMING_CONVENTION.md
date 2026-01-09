@@ -440,7 +440,7 @@ done
 
 - **強制装置の詳細**: [documentation-enforcement.instructions.md](../../.aitk/instructions/documentation-enforcement.instructions.md) - Pre-commit Hook、VS Code統合、GitHub Actions
 - **ワークフロー全体**: [EFFICIENT_DOC_WORKFLOW.md](../processes/EFFICIENT_DOC_WORKFLOW.md) - 効率化の全体像
-- [LINK_FIX_PLAN.md](../plans/LINK_FIX_PLAN.md) - リンク修正計画
+- [LINK_FIX_PLAN.md](../archive/2025/plans/LINK_FIX_PLAN.md) - リンク修正計画
 - [DOCS_REORGANIZATION_PLAN.md](../processes/DOCS_REORGANIZATION_PLAN.md) - ドキュメント整理計画
 - [INDEX.md](../INDEX.md) - 総合目次
 

@@ -785,6 +785,12 @@
 
 /* レスポンシブ対応 */
 @media (width <= 768px) {
+  .question-card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
   .question-nav-row {
     padding: 6px;
   }

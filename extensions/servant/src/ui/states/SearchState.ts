@@ -1,6 +1,6 @@
 /**
  * SearchState - 検索表示モード
- * 
+ *
  * ノードを検索して表示。
  */
 
@@ -23,29 +23,29 @@ export class SearchState extends BaseViewState {
 
   render(context: ConstellationViewPanel): string {
     const results = context.searchNodes(this.query);
-    
+
     return `
       ${this.getHtmlHeader('🌟 天体儀 - 検索')}
-      
+
       <div class="header">
         <h1>🔍 検索</h1>
         <div class="toolbar">
           <button onclick="backToOverview()">◀️ 戻る</button>
         </div>
       </div>
-      
+
       <div class="search-panel">
         <div class="search-box">
-          <input 
-            type="text" 
-            id="search-input" 
+          <input
+            type="text"
+            id="search-input"
             placeholder="ノード名、パスで検索..."
             value="${this.query}"
             onkeypress="if(event.key==='Enter') executeSearch()"
           />
           <button onclick="executeSearch()">検索</button>
         </div>
-        
+
         <h2>検索結果 (${results.length}件)</h2>
         <div class="results">
           ${results.length === 0 ? `
@@ -67,33 +67,33 @@ export class SearchState extends BaseViewState {
           `}
         </div>
       </div>
-      
+
       ${this.getHtmlFooter()}
-      
+
       <script>
         window.executeSearch = function() {
           const query = document.getElementById('search-input').value;
-          vscode.postMessage({ 
+          vscode.postMessage({
             command: 'search',
             query: query
           });
         };
-        
+
         window.backToOverview = function() {
           vscode.postMessage({ command: 'showOverview' });
         };
-        
+
         window.selectNode = function(nodeId) {
-          vscode.postMessage({ 
+          vscode.postMessage({
             command: 'showDetail',
             nodeId: nodeId
           });
         };
-        
+
         // 初期化時にフォーカス
         document.getElementById('search-input').focus();
       </script>
-      
+
       <style>
         .search-panel {
           padding: 20px;
@@ -178,7 +178,7 @@ export class SearchState extends BaseViewState {
   }
 
   getDescription(): string {
-    return this.query 
+    return this.query
       ? `「${this.query}」を検索しています。`
       : '検索モードです。';
   }

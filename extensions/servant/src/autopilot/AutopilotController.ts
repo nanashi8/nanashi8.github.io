@@ -1283,7 +1283,7 @@ ${categorySummary}
     }
 
     const previousStateName = this.currentState.name;
-    
+
     // 現在の状態からの退出処理
     try {
       await this.currentState.exit(this);
@@ -1331,7 +1331,7 @@ ${categorySummary}
    */
   updateStatusBar(text: string): void {
     this.statusBar.text = `Servant: ${text}`;
-    
+
     // EventBusにも通知
     this.eventBus.emit(ServantEvents.STATUS_UPDATE, {
       message: text,

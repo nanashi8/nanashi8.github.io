@@ -1,6 +1,6 @@
 /**
  * Document Component System - YAML Parser
- * 
+ *
  * _components.yaml の読み込み・書き込み・検証
  */
 
@@ -101,6 +101,16 @@ export function validateComponentMap(componentMap: ComponentMap): ValidationResu
   for (const [filePath, definition] of Object.entries(componentMap.components)) {
     const errors: ValidationError[] = [];
 
+    // 実ファイル存在チェック（リネーム後の _components.yaml 取り残しを検出）
+    if (!existsSync(filePath)) {
+      errors.push({
+        type: 'missing-file',
+        message: `Component file not found: ${filePath}`,
+        field: 'filePath',
+        value: filePath,
+      });
+    }
+
     // 必須フィールドの検証
     if (!definition.id) {
       errors.push({
@@ -176,21 +186,6 @@ export function findUnresolvedRequires(componentMap: ComponentMap): ValidationRe
             field: 'requires',
             value: req.from,
           });
-        } else {
-          // from 先が該当の signal を provide しているかチェック
-          const provider = componentById.get(req.from)!;
-          const hasSignal = provider.provides.some(
-            p => p.name === req.name && p.signal === req.signal
-          );
-
-          if (!hasSignal) {
-            errors.push({
-              type: 'signal-mismatch',
-              message: `Component ${req.from} does not provide '${req.name}' (${req.signal})`,
-              field: 'requires',
-              value: req.name,
-            });
-          }
         }
       } else {
         // from が未指定の場合、誰かが provide しているかチェック

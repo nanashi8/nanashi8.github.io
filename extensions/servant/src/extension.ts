@@ -33,6 +33,7 @@ import { ProblemsMonitor } from './chat/ProblemsMonitor';
 import { ProblemsIntegrationMonitor } from './chat/ProblemsIntegrationMonitor';
 import { ServantWarningLogger } from './ui/ServantWarningLogger';
 import { ActionsHealthMonitor } from './monitoring/ActionsHealthMonitor';
+import type { ViewModeName } from './ui/ViewState';
 import {
   recordSpecCheck,
   computeRequiredInstructionsForFiles,
@@ -148,8 +149,8 @@ export function activate(context: vscode.ExtensionContext) {
   // priority を最高レベル（10000）に設定して、右端に確実に表示
   const constellationStatusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 10000);
   constellationStatusBar.text = '🌟 天体儀';
-  constellationStatusBar.tooltip = 'プロジェクト全体像（天体儀ビュー）を開く';
-  constellationStatusBar.command = 'servant.showConstellation';
+  constellationStatusBar.tooltip = '天体儀メニューを開く';
+  constellationStatusBar.command = 'servant.openConstellationMenu';
   constellationStatusBar.show();
   context.subscriptions.push(constellationStatusBar);
 
@@ -176,6 +177,12 @@ export function activate(context: vscode.ExtensionContext) {
       }
     });
     context.subscriptions.push(showConstellationCommand);
+
+    // メニューコマンドも同じ導線へ
+    const openConstellationMenuCommand = vscode.commands.registerCommand('servant.openConstellationMenu', async () => {
+      await vscode.commands.executeCommand('servant.showConstellation');
+    });
+    context.subscriptions.push(openConstellationMenuCommand);
 
     return;
   }
@@ -1967,7 +1974,9 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   // Phase 6: Constellation天体儀ビューコマンド
-  const showConstellationCommand = vscode.commands.registerCommand('servant.showConstellation', async () => {
+  const showConstellationCommand = vscode.commands.registerCommand(
+    'servant.showConstellation',
+    async (openOptions?: { mode?: ViewModeName; query?: string; filters?: Record<string, any>; nodeId?: string }) => {
     try {
       // グラフの読み込み（または自動構築）
       let loaded = await neuralGraph.loadGraph();
@@ -2018,13 +2027,44 @@ export function activate(context: vscode.ExtensionContext) {
         context.extensionUri,
         neuralGraph,
         goalManager,
-        generator
+        generator,
+        openOptions
       );
 
     } catch (error) {
       notifier.commandError(`天体儀の表示に失敗: ${error}`);
       outputChannel.appendLine(`[Constellation] Error: ${error}`);
     }
+  });
+
+  // 🌟ステータスバー起点のメニュー（QuickPick）
+  const openConstellationMenuCommand = vscode.commands.registerCommand('servant.openConstellationMenu', async () => {
+    const selected = await vscode.window.showQuickPick(
+      [
+        {
+          label: '🌟 天体儀（全体表示）',
+          description: 'プロジェクト全体の3D表示',
+          mode: 'Overview' as ViewModeName,
+        },
+        {
+          label: '🔍 天体儀（検索）',
+          description: 'ノード名/パスで検索',
+          mode: 'Search' as ViewModeName,
+        },
+        {
+          label: '🎯 天体儀（フィルター）',
+          description: 'タイプ等で絞り込み',
+          mode: 'Filter' as ViewModeName,
+        },
+      ],
+      {
+        placeHolder: '天体儀メニュー',
+      }
+    );
+
+    if (!selected) return;
+
+    await vscode.commands.executeCommand('servant.showConstellation', { mode: selected.mode });
   });
 
   // Phase 11: アーキテクチャアドバイザーコマンド
@@ -2123,6 +2163,7 @@ export function activate(context: vscode.ExtensionContext) {
     optimizeCurrentTaskCommand,
     showOptimizationStatsCommand,
     showConstellationCommand,
+    openConstellationMenuCommand,
     analyzeArchitectureCommand,
     editorWatcher,
     codeActionDisposable,

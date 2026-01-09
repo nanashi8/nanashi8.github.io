@@ -8,6 +8,7 @@ import { readFileSync, readdirSync, statSync } from 'fs';
 import { join, relative, dirname, resolve } from 'path';
 
 const DOCS_DIR = 'docs';
+const SKIP_DIRS = new Set(['templates']);
 
 // 全マークダウンファイルを取得
 function getAllMDFiles(dir, files = []) {
@@ -15,6 +16,9 @@ function getAllMDFiles(dir, files = []) {
   for (const item of items) {
     const fullPath = join(dir, item);
     if (statSync(fullPath).isDirectory()) {
+      if (dir === DOCS_DIR && SKIP_DIRS.has(item)) {
+        continue;
+      }
       getAllMDFiles(fullPath, files);
     } else if (item.endsWith('.md')) {
       files.push(fullPath);
@@ -23,13 +27,25 @@ function getAllMDFiles(dir, files = []) {
   return files;
 }
 
+function stripFencedCodeBlocks(content) {
+  return content.replace(/```[\s\S]*?```/g, '');
+}
+
+function normalizeTargetPath(rawTarget) {
+  const trimmed = rawTarget.trim();
+  const noFragment = trimmed.split('#')[0];
+  const noQuery = noFragment.split('?')[0];
+  return noQuery.trim();
+}
+
 // リンク抽出
 function extractLinks(content, filePath) {
   const links = [];
+  const sanitized = stripFencedCodeBlocks(content);
   const regex = /\[([^\]]+)\]\(([^)]+\.md[^)]*)\)/g;
   let match;
 
-  while ((match = regex.exec(content)) !== null) {
+  while ((match = regex.exec(sanitized)) !== null) {
     const [, text, target] = match;
     links.push({ text, target, source: filePath });
   }
@@ -40,8 +56,17 @@ function extractLinks(content, filePath) {
 // リンク解決（相対パス→絶対パス）
 function resolveLink(sourceFile, targetPath) {
   const sourceDir = dirname(sourceFile);
-  const resolved = resolve(sourceDir, targetPath);
-  return resolved;
+  const normalized = normalizeTargetPath(targetPath);
+
+  if (!normalized) {
+    return null;
+  }
+
+  if (normalized.startsWith('/')) {
+    return resolve(process.cwd(), normalized.slice(1));
+  }
+
+  return resolve(sourceDir, normalized);
 }
 
 // 分析実行
@@ -63,6 +88,9 @@ function analyzeLinks() {
 
       // リンク解決
       const resolved = resolveLink(file, link.target);
+      if (!resolved) {
+        continue;
+      }
 
       // 被参照カウント
       if (!linkGraph[resolved]) {

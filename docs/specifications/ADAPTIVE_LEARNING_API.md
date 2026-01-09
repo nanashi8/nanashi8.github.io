@@ -314,8 +314,8 @@ selectNextQuestion([]); // null
 
 詳細なアルゴリズム設計は以下を参照してください：
 
-- [適応型学習AI詳細設計](design/adaptive-learning-design.md) (950行)
-- [アルゴリズム詳細設計](design/adaptive-learning-algorithm-design.md) (1800行)
+- [適応型学習AI詳細設計](../design/adaptive-learning-design.md)
+- [アルゴリズム詳細設計](../design/adaptive-learning-algorithm-design.md)
 
 ## ライセンス
 
