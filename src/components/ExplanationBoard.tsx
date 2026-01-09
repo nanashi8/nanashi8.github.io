@@ -15,7 +15,6 @@ import type {
 } from '@/types/passage';
 import { parseClausesAndPhrases } from '@/utils/clauseParser';
 import { findDependencySentenceByText } from '@/utils/dependencyParseLoader';
-import { flattenClauseSegments, mergeSvocmChunks } from '@/utils/svocmRender';
 
 interface ExplanationBoardProps {
   passageData?: CompletePassageData | null; // 全パッセージデータ
@@ -136,43 +135,36 @@ export function FullTextTab({ passageData }: { passageData: CompletePassageData 
 
 /**
  * タブ2: /分割表示（/のみで分割、文末の/は除去）
+ * ルールベース: 前置詞句、接続詞、従属節で分割
  */
-export function SlashSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
-  // フレーズごとに/で区切る関数
-  const splitIntoChunks = (sentence: SentenceData) => {
-    const depSentence = dependencyParse.sentences.find(s => s.id === sentence.id)
-      || findDependencySentenceByText(dependencyParse, sentence.english);
+export function SlashSplitTab({ passageData }: { passageData: CompletePassageData, dependencyParse?: DependencyParsedPassage }) {
+  
+  // ルールベースで/を挿入する関数
+  const splitIntoChunks = (text: string) => {
+    let result = text;
+    
+    // 接続詞の前に/を挿入
+    result = result.replace(
+      /(\s+)(and|but|or|so|because|if|when|while|although|though|unless|until|since)(\s+)/gi,
+      ' / $2$3'
+    );
 
-    if (!depSentence) {
-      return sentence.english;
-    }
+    // 前置詞句の前に/を挿入（時間・場所表現）
+    result = result.replace(
+      /(\s+)(at|in|on|by|to|from|for|during|after|before)(\s+)(the|a|an|my|your|his|her|their|our|this|that|these|those|[A-Z]|\d)/g,
+      ' / $2$3$4'
+    );
 
-    const clauseParsed = parseClausesAndPhrases(sentence.english, {
-      dependency: depSentence,
-    });
-
-    const tokens = flattenClauseSegments(clauseParsed.segments);
-    const chunks = mergeSvocmChunks(tokens);
-
-    // /のみで分割、文末の/は除去
-    const parts: string[] = [];
-    chunks.forEach((chunk, idx) => {
-      const text = chunk.text;
-      parts.push(text);
-
-      // 最後のチャンクでない場合のみ/を追加
-      if (idx < chunks.length - 1) {
-        // 次のチャンクがピリオドなどの句読点の場合は/を追加しない
-        const nextChunk = chunks[idx + 1];
-        if (!nextChunk.text.trim().match(/^[.!?,;:]$/)) {
-          parts.push(' / ');
-        } else {
-          parts.push('');
-        }
-      }
-    });
-
-    return parts.join('');
+    // 連続する/を1つにまとめる
+    result = result.replace(/\s*\/\s*\/\s*/g, ' / ');
+    
+    // 文頭の/を削除
+    result = result.replace(/^\s*\/\s*/, '');
+    
+    // 文末の/を削除（句読点の前）
+    result = result.replace(/\s*\/\s*([.!?,;:])/, '$1');
+    
+    return result;
   };
 
   return (
@@ -180,7 +172,7 @@ export function SlashSplitTab({ passageData, dependencyParse }: { passageData: C
       <div className="text-base leading-relaxed space-y-3">
         {passageData.sentences.map((sentence) => (
           <div key={sentence.id} className="mb-3">
-            {splitIntoChunks(sentence)}
+            {splitIntoChunks(sentence.english)}
           </div>
         ))}
       </div>
