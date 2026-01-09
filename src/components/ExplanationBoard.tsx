@@ -233,16 +233,16 @@ function FullTextTab({ passageData }: { passageData: CompletePassageData }) {
 }
 
 /**
- * タブ2: /分割表示
+ * タブ2: /分割表示（/のみで分割、文末の/は除去）
  */
 function SlashSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
-  // 文節ごとに/で区切る関数
+  // フレーズごとに/で区切る関数
   const splitIntoChunks = (sentence: SentenceData) => {
     const depSentence = dependencyParse.sentences.find(s => s.id === sentence.id)
       || findDependencySentenceByText(dependencyParse, sentence.english);
 
     if (!depSentence) {
-      return [sentence.english];
+      return sentence.english;
     }
 
     const clauseParsed = parseClausesAndPhrases(sentence.english, {
@@ -252,40 +252,42 @@ function SlashSplitTab({ passageData, dependencyParse }: { passageData: Complete
     const tokens = flattenClauseSegments(clauseParsed.segments);
     const chunks = mergeSvocmChunks(tokens);
 
-    // ピリオドの前の/を除去
+    // /のみで分割、文末の/は除去
     const parts: string[] = [];
     chunks.forEach((chunk, idx) => {
-      const nextChunk = chunks[idx + 1];
-      parts.push(chunk.text);
-      // 次のチャンクがピリオドでない場合のみ/を追加
-      if (nextChunk && !nextChunk.text.trim().match(/^[.!?]$/)) {
-        parts.push(' / ');
-      } else if (nextChunk) {
-        parts.push(' ');
+      const text = chunk.text;
+      parts.push(text);
+      
+      // 最後のチャンクでない場合のみ/を追加
+      if (idx < chunks.length - 1) {
+        // 次のチャンクがピリオドなどの句読点の場合は/を追加しない
+        const nextChunk = chunks[idx + 1];
+        if (!nextChunk.text.trim().match(/^[.!?,;:]$/)) {
+          parts.push(' / ');
+        } else {
+          parts.push('');
+        }
       }
     });
 
-    return parts;
+    return parts.join('');
   };
 
   return (
     <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
       <div className="text-base leading-relaxed space-y-3">
-        {passageData.sentences.map((sentence) => {
-          const parts = splitIntoChunks(sentence);
-          return (
-            <div key={sentence.id} className="mb-3">
-              {parts}
-            </div>
-          );
-        })}
+        {passageData.sentences.map((sentence) => (
+          <div key={sentence.id} className="mb-3">
+            {splitIntoChunks(sentence)}
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
 /**
- * タブ3: ()分割表示（従属節を()で囲む）
+ * タブ3: ()分割表示（<>で句を囲み、()で節を囲む）
  */
 function ParenSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
   const renderWithParens = (sentence: SentenceData) => {
@@ -301,10 +303,17 @@ function ParenSplitTab({ passageData, dependencyParse }: { passageData: Complete
     });
 
     const renderSegment = (seg: ClauseSegment): string => {
+      // 節を()で囲む
       if (seg.type === 'subordinate-clause') {
         const childText = seg.children ? seg.children.map(renderSegment).join(' ') : seg.text;
         return `(${childText})`;
-      } else if (seg.children && seg.children.length > 0) {
+      } 
+      // 句を<>で囲む
+      else if (seg.type === 'phrase') {
+        const childText = seg.children ? seg.children.map(renderSegment).join(' ') : seg.text;
+        return `<${childText}>`;
+      }
+      else if (seg.children && seg.children.length > 0) {
         return seg.children.map(renderSegment).join(' ');
       } else {
         return seg.text;
