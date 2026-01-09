@@ -6,15 +6,11 @@
 
 import type {
   SelectedSentenceDetail,
-  SentenceData,
   KeyPhrase,
   AnnotatedWord,
-  ClauseSegment,
   DependencyParsedPassage,
   CompletePassageData,
 } from '@/types/passage';
-import { parseClausesAndPhrases } from '@/utils/clauseParser';
-import { findDependencySentenceByText } from '@/utils/dependencyParseLoader';
 
 interface ExplanationBoardProps {
   passageData?: CompletePassageData | null; // 全パッセージデータ
@@ -138,11 +134,11 @@ export function FullTextTab({ passageData }: { passageData: CompletePassageData 
  * ルールベース: 前置詞句、接続詞、従属節で分割
  */
 export function SlashSplitTab({ passageData }: { passageData: CompletePassageData, dependencyParse?: DependencyParsedPassage }) {
-  
+
   // ルールベースで/を挿入する関数
   const splitIntoChunks = (text: string) => {
     let result = text;
-    
+
     // 接続詞の前に/を挿入
     result = result.replace(
       /(\s+)(and|but|or|so|because|if|when|while|although|though|unless|until|since)(\s+)/gi,
@@ -157,13 +153,13 @@ export function SlashSplitTab({ passageData }: { passageData: CompletePassageDat
 
     // 連続する/を1つにまとめる
     result = result.replace(/\s*\/\s*\/\s*/g, ' / ');
-    
+
     // 文頭の/を削除
     result = result.replace(/^\s*\/\s*/, '');
-    
+
     // 文末の/を削除（句読点の前）
     result = result.replace(/\s*\/\s*([.!?,;:])/, '$1');
-    
+
     return result;
   };
 
@@ -182,39 +178,65 @@ export function SlashSplitTab({ passageData }: { passageData: CompletePassageDat
 
 /**
  * タブ3: ()分割表示（<>で句を囲み、()で節を囲む）
+ * ルールベース: 前置詞句を<>、従属節を()で囲む
  */
-export function ParenSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
-  const renderWithParens = (sentence: SentenceData) => {
-    const depSentence = dependencyParse.sentences.find(s => s.id === sentence.id)
-      || findDependencySentenceByText(dependencyParse, sentence.english);
+export function ParenSplitTab({ passageData }: { passageData: CompletePassageData, dependencyParse?: DependencyParsedPassage }) {
+  
+  // ルールベースで<>と()を挿入する関数
+  const renderWithParens = (text: string) => {
+    let result = text;
 
-    if (!depSentence) {
-      return sentence.english;
-    }
+    // 1. 従属節を()で囲む
+    // that節
+    result = result.replace(
+      /(that\s+[^,.!?]+?)(\s*[,.!?]|$)/gi,
+      '($1)$2'
+    );
+    
+    // if節
+    result = result.replace(
+      /(if\s+[^,]+?),/gi,
+      '($1),'
+    );
+    
+    // because節
+    result = result.replace(
+      /(because\s+[^,.!?]+?)(\s*[,.!?]|$)/gi,
+      '($1)$2'
+    );
+    
+    // when節
+    result = result.replace(
+      /(when\s+[^,]+?),/gi,
+      '($1),'
+    );
 
-    const clauseParsed = parseClausesAndPhrases(sentence.english, {
-      dependency: depSentence,
-    });
+    // 2. 前置詞句を<>で囲む（前置詞 + 冠詞/所有格/名詞 + 名詞句）
+    const preps = 'at|in|on|by|to|from|for|with|about|of|during|after|before|around|per';
+    const dets = 'the|a|an|my|your|his|her|their|our|its|this|that|these|those';
+    
+    // 前置詞 + 冠詞 + 名詞句（最大5語まで）
+    result = result.replace(
+      new RegExp(`(${preps})\\s+(${dets}|[A-Z]|\\d)[^<>(),.!?]{0,30}?(?=\\s*[,\\s]|$)`, 'gi'),
+      '<$&>'
+    );
+    
+    // 前置詞 + 名詞（冠詞なし）
+    result = result.replace(
+      new RegExp(`(${preps})\\s+([A-Z][a-z]+|[a-z]+ing)(?=\\s|[,.!?]|$)`, 'g'),
+      '<$&>'
+    );
 
-    const renderSegment = (seg: ClauseSegment): string => {
-      // 節を()で囲む
-      if (seg.type === 'subordinate-clause') {
-        const childText = seg.children ? seg.children.map(renderSegment).join(' ') : seg.text;
-        return `(${childText})`;
-      }
-      // 句を<>で囲む
-      else if (seg.type === 'phrase') {
-        const childText = seg.children ? seg.children.map(renderSegment).join(' ') : seg.text;
-        return `<${childText}>`;
-      }
-      else if (seg.children && seg.children.length > 0) {
-        return seg.children.map(renderSegment).join(' ');
-      } else {
-        return seg.text;
-      }
-    };
-
-    return clauseParsed.segments.map(renderSegment).join(' ');
+    // 3. 重複や入れ子を整理
+    // <<>> -> <>
+    result = result.replace(/<+([^<>]+?)>+/g, '<$1>');
+    // (()) -> ()
+    result = result.replace(/\(+([^()]+?)\)+/g, '($1)');
+    
+    // 4. 句読点の前の余分なスペースを削除
+    result = result.replace(/\s+([,.!?])/g, '$1');
+    
+    return result;
   };
 
   return (
@@ -222,7 +244,7 @@ export function ParenSplitTab({ passageData, dependencyParse }: { passageData: C
       <div className="text-base leading-relaxed space-y-3">
         {passageData.sentences.map((sentence) => (
           <div key={sentence.id} className="mb-3">
-            {renderWithParens(sentence)}
+            {renderWithParens(sentence.english)}
           </div>
         ))}
       </div>
