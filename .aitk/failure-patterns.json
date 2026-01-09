@@ -1,16 +1,60 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-12-20",
+  "lastUpdated": "2026-01-09",
   "metadata": {
-    "totalFailures": 3,
-    "totalRecoveries": 3,
+    "totalFailures": 4,
+    "totalRecoveries": 4,
     "learningRate": 0.1,
     "convergenceThreshold": 0.95,
-    "lastUpdated": "2026-01-08",
+    "lastUpdated": "2026-01-09",
     "gitHistoryLearned": true,
     "gitHistoryLearnedAt": "2026-01-08T07:53:02.563Z"
   },
   "failurePatterns": {
+    "markdown-code-span-spaces": {
+      "id": "markdown-code-span-spaces",
+      "category": "markdown-lint",
+      "severity": "low",
+      "occurrences": 1,
+      "lastOccurred": "2026-01-09",
+      "recoveries": 1,
+      "weight": 0.5,
+      "description": "Markdownのコードスパン（バッククォート）内に不要なスペース",
+      "detectionPattern": {
+        "errorMessage": "MD038/no-space-in-code: Spaces inside code span elements",
+        "files": ["**/*.md"]
+      },
+      "prevention": {
+        "checkType": "lint",
+        "command": "npm run lint",
+        "instructionsFile": ".aitk/instructions/markdown-quality.instructions.md",
+        "autoFixable": true
+      },
+      "examples": [
+        {
+          "date": "2026-01-09",
+          "file": "docs/private/vscode-updates/v1.108/agents-and-chat.md",
+          "error": "Quick Open（⌘P）から `agent ` でアクセスできる",
+          "fix": "Quick Open（⌘P）から `agent` でアクセスできる",
+          "note": "バッククォート内の末尾スペースを削除",
+          "testsFailed": 0,
+          "source": "manual-detection"
+        }
+      ],
+      "prevention_checklist": [
+        "バッククォート（`）内の先頭・末尾にスペースを入れない",
+        "コマンド例やコード例を記述する際は、余分なスペースに注意",
+        "VS Codeの問題パネルで保存前にMD038エラーを確認"
+      ],
+      "related_docs": [
+        ".aitk/instructions/markdown-quality.instructions.md",
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/md038.md"
+      ],
+      "impact": "低（品質の問題だが機能には影響なし）",
+      "recovery_time": "1分以内",
+      "automated_detection": true,
+      "automated_fix": true
+    },
     "property-naming-error": {
       "id": "property-naming-error",
       "category": "type-error",
