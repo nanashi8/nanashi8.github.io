@@ -5,12 +5,22 @@
  */
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import type { CompletePassageData, SentenceData, KeyPhrase } from '@/types/passage';
+import type { CompletePassageData, SentenceData, KeyPhrase, SelectedSentenceDetail } from '@/types/passage';
 import { loadCompletePassage } from '@/utils/passageDataLoader';
 import { extractKeyPhrasesFromSentences } from '@/utils/keyPhraseExtractor';
-import { loadDependencyParsedPassage } from '@/utils/dependencyParseLoader';
+import { loadDependencyParsedPassage, findDependencySentenceByText } from '@/utils/dependencyParseLoader';
 import type { DependencyParsedPassage } from '@/types/passage';
-import ExplanationBoard from './ExplanationBoard';
+import { parseClausesAndPhrases } from '@/utils/clauseParser';
+import ExplanationBoard, { 
+  type TabType,
+  FullTextTab,
+  SlashSplitTab,
+  ParenSplitTab,
+  LiteralTranslationTab,
+  SentenceTranslationTab,
+  VocabularyTab,
+  SettingsTab
+} from './ExplanationBoard';
 import { logger } from '@/utils/logger';
 
 interface ReadingPassageViewProps {
@@ -23,6 +33,18 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
   const [selectedSentence, setSelectedSentence] = useState<SentenceData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // アクティブタブをlocalStorageに永続化
+  const [activeTab, setActiveTab] = useState<TabType>(() => {
+    const saved = localStorage.getItem('explanation-board-active-tab');
+    const validTabs: TabType[] = ['full-text', 'slash-split', 'paren-split', 'literal-translation', 'sentence-translation', 'vocabulary', 'settings'];
+    return validTabs.includes(saved as TabType) ? (saved as TabType) : 'full-text';
+  });
+
+  // activeTabの変更をlocalStorageに保存
+  useEffect(() => {
+    localStorage.setItem('explanation-board-active-tab', activeTab);
+  }, [activeTab]);
 
   // パッセージIDリスト（将来的には動的に取得）
   const availablePassages = ['beginner-morning-routine', 'J_2022_5'];
@@ -89,6 +111,25 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
       sentenceCount: passageData.metadata.sentenceCount,
     };
   }, [passageData]);
+  
+  // 選択文の詳細情報を生成（メモ化）
+  const sentenceDetail: SelectedSentenceDetail | null = useMemo(() => {
+    if (!selectedSentence) return null;
+
+    const depSentence =
+      dependencyParse?.sentences?.find(
+        (s) => typeof s.id === 'number' && s.id === selectedSentence.id
+      ) ?? (dependencyParse ? findDependencySentenceByText(dependencyParse, selectedSentence.english) : null);
+
+    return {
+      sentenceData: selectedSentence,
+      clauseParsed: parseClausesAndPhrases(selectedSentence.english, {
+        dependency: depSentence ?? undefined,
+      }),
+      relatedPhrases: passageData?.phrases.filter((p) => selectedSentence.phraseIds?.includes(p.id)) || [],
+      keyPhrases: passageData?.keyPhrases.filter((kp) => kp.positions.includes(selectedSentence.id)) || [],
+    };
+  }, [selectedSentence, passageData, dependencyParse]);
 
   // ローディング中
   if (isLoading) {
@@ -131,7 +172,7 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
 
   return (
     <div className="reading-passage-view">
-      {/* ExplanationBoard（解説ボード） */}
+      {/* ExplanationBoard（ボタンのみ） */}
       <div className="mb-6">
         <ExplanationBoard
           selectedSentence={selectedSentence}
@@ -145,32 +186,63 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
           onPassageChange={setCurrentPassageId}
           metadata={metaInfo || undefined}
           passageData={passageData}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
         />
       </div>
 
-      {/* 全文表示エリア */}
+      {/* タブコンテンツ表示エリア */}
       <div className="passage-full-text-area">
-        <h3 className="text-xl font-bold mb-4">📄 全文</h3>
-        <div className="passage-text-container">
-          {passageData.sentences.map((sentence, index) => (
-            <span
-              key={sentence.id}
-              className={`sentence-clickable ${
-                selectedSentence?.id === sentence.id ? 'sentence-selected' : ''
-              }`}
-              onClick={() => handleSelectSentence(sentence)}
-              title="クリックで選択"
-            >
-              {sentence.english}
-              {index < passageData.sentences.length - 1 && ' '}
-            </span>
-          ))}
-        </div>
+        {/* 設定タブ */}
+        {activeTab === 'settings' && (
+          <SettingsTab
+            currentPassageId={currentPassageId}
+            availablePassages={availablePassages}
+            onPassageChange={setCurrentPassageId}
+            metadata={metaInfo || undefined}
+          />
+        )}
 
-        {/* 選択ガイド */}
-        {!selectedSentence && (
-          <div className="mt-4 text-center text-gray-500 text-sm">
-            💡 文をクリックすると、上の解説ボードに詳細が表示されます
+        {/* タブ1: 全文 */}
+        {activeTab === 'full-text' && passageData && (
+          <FullTextTab passageData={passageData} />
+        )}
+
+        {/* タブ2: /分割 */}
+        {activeTab === 'slash-split' && passageData && dependencyParse && (
+          <SlashSplitTab passageData={passageData} dependencyParse={dependencyParse} />
+        )}
+
+        {/* タブ3: ()分割 */}
+        {activeTab === 'paren-split' && passageData && dependencyParse && (
+          <ParenSplitTab passageData={passageData} dependencyParse={dependencyParse} />
+        )}
+
+        {/* タブ4: 直訳 */}
+        {activeTab === 'literal-translation' && passageData && (
+          <LiteralTranslationTab passageData={passageData} />
+        )}
+
+        {/* タブ5: 一文訳 */}
+        {activeTab === 'sentence-translation' && passageData && (
+          <SentenceTranslationTab passageData={passageData} />
+        )}
+
+        {/* タブ6: 語句確認 */}
+        {activeTab === 'vocabulary' && sentenceDetail && (
+          <VocabularyTab
+            sentenceDetail={sentenceDetail}
+            annotatedWords={passageData.annotatedWords}
+            onAddToCustom={handleAddToCustom}
+          />
+        )}
+        
+        {/* 語句確認タブで文が選択されていない場合 */}
+        {activeTab === 'vocabulary' && !selectedSentence && (
+          <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 text-center">
+            <p className="text-gray-500">
+              💡 文をクリックして選択すると、語句確認が表示されます
+            </p>
           </div>
         )}
       </div>

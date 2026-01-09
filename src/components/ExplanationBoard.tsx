@@ -4,11 +4,9 @@
  * ScoreBoardのレイアウト構造を流用
  */
 
-import { useState, useEffect, useMemo } from 'react';
 import type {
   SelectedSentenceDetail,
   SentenceData,
-  PhraseData,
   KeyPhrase,
   AnnotatedWord,
   ClauseSegment,
@@ -20,79 +18,30 @@ import { findDependencySentenceByText } from '@/utils/dependencyParseLoader';
 import { flattenClauseSegments, mergeSvocmChunks } from '@/utils/svocmRender';
 
 interface ExplanationBoardProps {
-  selectedSentence: SentenceData | null; // 選択された文
-  phrases: PhraseData[]; // フレーズデータ
-  keyPhrases: KeyPhrase[]; // 重要語句
-  annotatedWords: AnnotatedWord[]; // 注釈語句
-  dependencyParse?: DependencyParsedPassage | null; // 依存構造解析（あれば優先利用）
-  onAddToCustom?: (phrase: KeyPhrase) => void; // カスタム問題追加コールバック
-  currentPassageId: string; // 現在のパッセージID
-  availablePassages: string[]; // 利用可能なパッセージ一覧
-  onPassageChange: (passageId: string) => void; // パッセージ変更コールバック
-  metadata?: { wordCount: number; sentenceCount: number }; // メタデータ
-  passageData: CompletePassageData | null; // 全パッセージデータ
+  passageData?: CompletePassageData | null; // 全パッセージデータ
+  activeTab: TabType; // アクティブタブ
+  onTabChange: (tab: TabType) => void; // タブ変更コールバック
 }
 
-type TabType = 'full-text' | 'slash-split' | 'paren-split' | 'literal-translation' | 'sentence-translation' | 'vocabulary' | 'settings';
+export type TabType = 'full-text' | 'slash-split' | 'paren-split' | 'literal-translation' | 'sentence-translation' | 'vocabulary' | 'settings';
 
 function ExplanationBoard({
-  selectedSentence,
-  phrases,
-  keyPhrases,
-  annotatedWords,
-  dependencyParse,
-  onAddToCustom,
-  currentPassageId,
-  availablePassages,
-  onPassageChange,
-  metadata,
-  passageData,
+  passageData: _passageData,
+  activeTab,
+  onTabChange,
 }: ExplanationBoardProps) {
-  // アクティブタブをlocalStorageに永続化
-  const [activeTab, setActiveTab] = useState<TabType>(() => {
-    const saved = localStorage.getItem('explanation-board-active-tab');
-    const validTabs: TabType[] = ['full-text', 'slash-split', 'paren-split', 'literal-translation', 'sentence-translation', 'vocabulary', 'settings'];
-    return validTabs.includes(saved as TabType) ? (saved as TabType) : 'full-text';
-  });
-
-  // activeTabの変更をlocalStorageに保存
-  useEffect(() => {
-    localStorage.setItem('explanation-board-active-tab', activeTab);
-  }, [activeTab]);
-
-  // 選択文の詳細情報を生成（メモ化）
-  const sentenceDetail: SelectedSentenceDetail | null = useMemo(() => {
-    if (!selectedSentence) return null;
-
-    // UDの文突合は旧UIと同等の正規化ロジックを優先
-    // - id が一致するならそれを最優先
-    // - それ以外は findDependencySentenceByText の正規化比較を使用
-    const depSentence =
-      dependencyParse?.sentences?.find(
-        (s) => typeof s.id === 'number' && s.id === selectedSentence.id
-      ) ?? (dependencyParse ? findDependencySentenceByText(dependencyParse, selectedSentence.english) : null);
-
-    return {
-      sentenceData: selectedSentence,
-      clauseParsed: parseClausesAndPhrases(selectedSentence.english, {
-        dependency: depSentence ?? undefined,
-      }),
-      relatedPhrases: phrases.filter((p) => selectedSentence.phraseIds?.includes(p.id)),
-      keyPhrases: keyPhrases.filter((kp) => kp.positions.includes(selectedSentence.id)),
-    };
-  }, [selectedSentence, phrases, keyPhrases, dependencyParse]);
 
   return (
     <div className="score-board-compact">
       {/* タブナビゲーション: 7つのボタン */}
-      <div className="score-board-tabs flex flex-wrap gap-1 sm:gap-2 px-2 sm:px-3 py-2 bg-gradient-to-r from-slate-50 to-slate-100 rounded-t-lg">
+      <div className="score-board-tabs flex flex-wrap gap-1 sm:gap-2 px-2 sm:px-3 py-2 bg-gradient-to-r from-slate-50 to-slate-100 rounded-lg">
         <button
           className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
             activeTab === 'full-text'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('full-text')}
+          onClick={() => onTabChange('full-text')}
           title="全文"
         >
           📖 全文
@@ -103,7 +52,7 @@ function ExplanationBoard({
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('slash-split')}
+          onClick={() => onTabChange('slash-split')}
           title="/分割"
         >
           📐 /分割
@@ -114,7 +63,7 @@ function ExplanationBoard({
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('paren-split')}
+          onClick={() => onTabChange('paren-split')}
           title="()分割"
         >
           🔀 ()分割
@@ -125,7 +74,7 @@ function ExplanationBoard({
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('literal-translation')}
+          onClick={() => onTabChange('literal-translation')}
           title="直訳"
         >
           🔤 直訳
@@ -136,7 +85,7 @@ function ExplanationBoard({
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('sentence-translation')}
+          onClick={() => onTabChange('sentence-translation')}
           title="一文訳"
         >
           🇯🇵 一文訳
@@ -147,7 +96,7 @@ function ExplanationBoard({
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('vocabulary')}
+          onClick={() => onTabChange('vocabulary')}
           title="語句確認"
         >
           📚 語句
@@ -158,58 +107,11 @@ function ExplanationBoard({
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('settings')}
+          onClick={() => onTabChange('settings')}
           title="設定"
         >
           ⚙️ 設定
         </button>
-      </div>
-
-      {/* タブコンテンツ */}
-      <div className="score-board-content">
-        {/* 設定タブ */}
-        {activeTab === 'settings' && (
-          <SettingsTab
-            currentPassageId={currentPassageId}
-            availablePassages={availablePassages}
-            onPassageChange={onPassageChange}
-            metadata={metadata}
-          />
-        )}
-
-        {/* タブ1: 全文 */}
-        {activeTab === 'full-text' && passageData && (
-          <FullTextTab passageData={passageData} />
-        )}
-
-        {/* タブ2: /分割 */}
-        {activeTab === 'slash-split' && passageData && dependencyParse && (
-          <SlashSplitTab passageData={passageData} dependencyParse={dependencyParse} />
-        )}
-
-        {/* タブ3: ()分割 */}
-        {activeTab === 'paren-split' && passageData && dependencyParse && (
-          <ParenSplitTab passageData={passageData} dependencyParse={dependencyParse} />
-        )}
-
-        {/* タブ4: 直訳 */}
-        {activeTab === 'literal-translation' && passageData && (
-          <LiteralTranslationTab passageData={passageData} />
-        )}
-
-        {/* タブ5: 一文訳 */}
-        {activeTab === 'sentence-translation' && passageData && (
-          <SentenceTranslationTab passageData={passageData} />
-        )}
-
-        {/* タブ6: 語句確認 */}
-        {activeTab === 'vocabulary' && sentenceDetail && (
-          <VocabularyTab
-            sentenceDetail={sentenceDetail}
-            annotatedWords={annotatedWords}
-            onAddToCustom={onAddToCustom}
-          />
-        )}
       </div>
     </div>
   );
@@ -218,7 +120,7 @@ function ExplanationBoard({
 /**
  * タブ1: 全文表示
  */
-function FullTextTab({ passageData }: { passageData: CompletePassageData }) {
+export function FullTextTab({ passageData }: { passageData: CompletePassageData }) {
   return (
     <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
       <div className="text-base leading-relaxed space-y-2">
@@ -235,7 +137,7 @@ function FullTextTab({ passageData }: { passageData: CompletePassageData }) {
 /**
  * タブ2: /分割表示（/のみで分割、文末の/は除去）
  */
-function SlashSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
+export function SlashSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
   // フレーズごとに/で区切る関数
   const splitIntoChunks = (sentence: SentenceData) => {
     const depSentence = dependencyParse.sentences.find(s => s.id === sentence.id)
@@ -289,7 +191,7 @@ function SlashSplitTab({ passageData, dependencyParse }: { passageData: Complete
 /**
  * タブ3: ()分割表示（<>で句を囲み、()で節を囲む）
  */
-function ParenSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
+export function ParenSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
   const renderWithParens = (sentence: SentenceData) => {
     const depSentence = dependencyParse.sentences.find(s => s.id === sentence.id)
       || findDependencySentenceByText(dependencyParse, sentence.english);
@@ -339,7 +241,7 @@ function ParenSplitTab({ passageData, dependencyParse }: { passageData: Complete
 /**
  * タブ4: 直訳（フレーズ訳）
  */
-function LiteralTranslationTab({ passageData }: { passageData: CompletePassageData }) {
+export function LiteralTranslationTab({ passageData }: { passageData: CompletePassageData }) {
   return (
     <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
       <div className="space-y-4">
@@ -376,7 +278,7 @@ function LiteralTranslationTab({ passageData }: { passageData: CompletePassageDa
 /**
  * タブ5: 一文訳（日本語訳）
  */
-function SentenceTranslationTab({ passageData }: { passageData: CompletePassageData }) {
+export function SentenceTranslationTab({ passageData }: { passageData: CompletePassageData }) {
   return (
     <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
       <div className="space-y-4">
@@ -394,7 +296,7 @@ function SentenceTranslationTab({ passageData }: { passageData: CompletePassageD
 /**
  * タブ7: 設定
  */
-function SettingsTab({
+export function SettingsTab({
   currentPassageId,
   availablePassages,
   onPassageChange,
@@ -461,7 +363,7 @@ function SettingsTab({
 /**
  * タブ6: 語句確認表示
  */
-function VocabularyTab({
+export function VocabularyTab({
   sentenceDetail,
   annotatedWords,
   onAddToCustom,
