@@ -29,6 +29,7 @@ export class ConstellationViewPanel {
   // State Pattern統合
   private _currentViewState: ViewState;
   private _outputChannel: vscode.OutputChannel;
+  private _webviewReady = false;
 
   private constructor(
     panel: vscode.WebviewPanel,
@@ -47,14 +48,20 @@ export class ConstellationViewPanel {
 
     // 初期状態（デフォルト: Overview）
     this._currentViewState = ConstellationViewPanel.createStateFromOpenOptions(openOptions);
-    this._currentViewState.enter(this);
 
-    // Set HTML
+    // 先にHTMLをセットしてWebviewのロードを開始
     this._panel.webview.html = this._currentViewState.render(this);
 
-    // メッセージハンドラ（状態に委譲）
+    // メッセージハンドラ（状態に委譲 + ready処理）
     this._panel.webview.onDidReceiveMessage(
       async message => {
+        // Webview ready イベントを処理（初期データ送信は ready 後に行う）
+        if (message?.command === 'ready') {
+          this._webviewReady = true;
+          this.logToOutput('[Constellation] Webview ready');
+          await this._currentViewState.enter(this);
+          return;
+        }
         await this._currentViewState.handleMessage(this, message);
       },
       null,
@@ -75,27 +82,9 @@ export class ConstellationViewPanel {
     const column = vscode.window.activeTextEditor?.viewColumn;
 
     if (ConstellationViewPanel.currentPanel) {
-      ConstellationViewPanel.currentPanel._panel.reveal(column);
-
-      // 既に開いている場合も、メニューからの切替要求があれば反映する
-      if (openOptions?.mode) {
-        const targetState = ConstellationViewPanel.createStateFromOpenOptions(openOptions);
-
-        void (async () => {
-          const panel = ConstellationViewPanel.currentPanel;
-          if (!panel) return;
-
-          // Filter/Detail などは Overview 経由でないと遷移拒否されるため、必ず Overview に戻す
-          if (panel.getCurrentViewState() !== 'Overview') {
-            await panel.transitionToState(new OverviewState());
-          }
-
-          if (targetState.name !== 'Overview') {
-            await panel.transitionToState(targetState);
-          }
-        })();
-      }
-      return;
+      // Webviewキャッシュ/二重評価を避けるため、既存パネルは破棄して作り直す
+      ConstellationViewPanel.currentPanel.dispose();
+      ConstellationViewPanel.currentPanel = undefined;
     }
 
     const panel = vscode.window.createWebviewPanel(
@@ -104,7 +93,7 @@ export class ConstellationViewPanel {
       column || vscode.ViewColumn.One,
       {
         enableScripts: true,
-        retainContextWhenHidden: true,
+        retainContextWhenHidden: false,
         localResourceRoots: [
           vscode.Uri.joinPath(extensionUri, 'media'),
         ],
@@ -136,6 +125,10 @@ export class ConstellationViewPanel {
   }
 
   private _sendData(): void {
+    if (!this._webviewReady) {
+      this.logToOutput('[Constellation] Skip sendData: webview not ready');
+      return;
+    }
     if (this._generator) {
       const data = this._generator.generate();
       this._panel.webview.postMessage({ command: 'renderData', data });
@@ -515,7 +508,6 @@ export class ConstellationViewPanel {
             }
 
             // Step 7: アニメーションループ
-            let sun = null; // 太陽への参照を保持
 
             function animate() {
                 requestAnimationFrame(animate);

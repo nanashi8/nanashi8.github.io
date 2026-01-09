@@ -12,8 +12,8 @@ import type {
   KeyPhrase,
   AnnotatedWord,
   ClauseSegment,
-  SVOCMComponent,
   DependencyParsedPassage,
+  CompletePassageData,
 } from '@/types/passage';
 import { parseClausesAndPhrases } from '@/utils/clauseParser';
 import { findDependencySentenceByText } from '@/utils/dependencyParseLoader';
@@ -30,9 +30,10 @@ interface ExplanationBoardProps {
   availablePassages: string[]; // 利用可能なパッセージ一覧
   onPassageChange: (passageId: string) => void; // パッセージ変更コールバック
   metadata?: { wordCount: number; sentenceCount: number }; // メタデータ
+  passageData: CompletePassageData | null; // 全パッセージデータ
 }
 
-type TabType = 'clause' | 'phrase-translation' | 'japanese' | 'vocabulary' | 'settings';
+type TabType = 'full-text' | 'slash-split' | 'paren-split' | 'literal-translation' | 'sentence-translation' | 'vocabulary' | 'settings';
 
 function ExplanationBoard({
   selectedSentence,
@@ -45,12 +46,13 @@ function ExplanationBoard({
   availablePassages,
   onPassageChange,
   metadata,
+  passageData,
 }: ExplanationBoardProps) {
   // アクティブタブをlocalStorageに永続化
   const [activeTab, setActiveTab] = useState<TabType>(() => {
     const saved = localStorage.getItem('explanation-board-active-tab');
-    const validTabs: TabType[] = ['clause', 'phrase-translation', 'japanese', 'vocabulary', 'settings'];
-    return validTabs.includes(saved as TabType) ? (saved as TabType) : 'clause';
+    const validTabs: TabType[] = ['full-text', 'slash-split', 'paren-split', 'literal-translation', 'sentence-translation', 'vocabulary', 'settings'];
+    return validTabs.includes(saved as TabType) ? (saved as TabType) : 'full-text';
   });
 
   // activeTabの変更をlocalStorageに保存
@@ -82,46 +84,65 @@ function ExplanationBoard({
 
   return (
     <div className="score-board-compact">
-      {/* タブナビゲーション: ScoreBoardと同じスタイル */}
-      <div className="score-board-tabs flex gap-2 px-3 py-2 bg-gradient-to-r from-slate-50 to-slate-100 rounded-t-lg">
+      {/* タブナビゲーション: 7つのボタン */}
+      <div className="score-board-tabs flex flex-wrap gap-1 sm:gap-2 px-2 sm:px-3 py-2 bg-gradient-to-r from-slate-50 to-slate-100 rounded-t-lg">
         <button
-          className={`flex-1 min-w-0 truncate py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold rounded-md transition-all duration-200 ${
-            activeTab === 'clause'
+          className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
+            activeTab === 'full-text'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('clause')}
-          title="節句分割"
+          onClick={() => setActiveTab('full-text')}
+          title="全文"
         >
-          <span className="hidden sm:inline">📐 節句分割</span>
-          <span className="sm:hidden">節句</span>
+          📖 全文
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold rounded-md transition-all duration-200 ${
-            activeTab === 'phrase-translation'
+          className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
+            activeTab === 'slash-split'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('phrase-translation')}
-          title="フレーズ訳"
+          onClick={() => setActiveTab('slash-split')}
+          title="/分割"
         >
-          <span className="hidden sm:inline">🔤 フレーズ訳</span>
-          <span className="sm:hidden">訳</span>
+          📐 /分割
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold rounded-md transition-all duration-200 ${
-            activeTab === 'japanese'
+          className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
+            activeTab === 'paren-split'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
           }`}
-          onClick={() => setActiveTab('japanese')}
-          title="日本語訳"
+          onClick={() => setActiveTab('paren-split')}
+          title="()分割"
         >
-          <span className="hidden sm:inline">🇯🇵 日本語訳</span>
-          <span className="sm:hidden">訳</span>
+          🔀 ()分割
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold rounded-md transition-all duration-200 ${
+          className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
+            activeTab === 'literal-translation'
+              ? 'bg-blue-500 text-white shadow-md'
+              : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
+          }`}
+          onClick={() => setActiveTab('literal-translation')}
+          title="直訳"
+        >
+          🔤 直訳
+        </button>
+        <button
+          className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
+            activeTab === 'sentence-translation'
+              ? 'bg-blue-500 text-white shadow-md'
+              : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
+          }`}
+          onClick={() => setActiveTab('sentence-translation')}
+          title="一文訳"
+        >
+          🇯🇵 一文訳
+        </button>
+        <button
+          className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
             activeTab === 'vocabulary'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
@@ -129,11 +150,10 @@ function ExplanationBoard({
           onClick={() => setActiveTab('vocabulary')}
           title="語句確認"
         >
-          <span className="hidden sm:inline">� 語句確認</span>
-          <span className="sm:hidden">語句</span>
+          📚 語句
         </button>
         <button
-          className={`flex-1 min-w-0 truncate py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold rounded-md transition-all duration-200 ${
+          className={`flex-1 min-w-[60px] truncate py-1.5 sm:py-2 px-1 sm:px-2 text-xs font-bold rounded-md transition-all duration-200 ${
             activeTab === 'settings'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-white text-gray-600 hover:bg-blue-100 hover:text-blue-700 shadow-sm'
@@ -141,8 +161,7 @@ function ExplanationBoard({
           onClick={() => setActiveTab('settings')}
           title="設定"
         >
-          <span className="hidden sm:inline">⚙️ 設定</span>
-          <span className="sm:hidden">設定</span>
+          ⚙️ 設定
         </button>
       </div>
 
@@ -158,31 +177,32 @@ function ExplanationBoard({
           />
         )}
 
-        {/* 文が選択されていない場合の表示 */}
-        {activeTab !== 'settings' && !sentenceDetail && (
-          <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
-            <div className="text-center py-8 text-gray-500">
-              👆 下の全文から一文を選択してください
-            </div>
-          </div>
+        {/* タブ1: 全文 */}
+        {activeTab === 'full-text' && passageData && (
+          <FullTextTab passageData={passageData} />
         )}
 
-        {/* タブ1: 節句分割 */}
-        {activeTab === 'clause' && sentenceDetail && (
-          <ClauseTab sentenceDetail={sentenceDetail} />
+        {/* タブ2: /分割 */}
+        {activeTab === 'slash-split' && passageData && dependencyParse && (
+          <SlashSplitTab passageData={passageData} dependencyParse={dependencyParse} />
         )}
 
-        {/* タブ2: フレーズ訳 */}
-        {activeTab === 'phrase-translation' && sentenceDetail && (
-          <PhraseTranslationTab sentenceDetail={sentenceDetail} />
+        {/* タブ3: ()分割 */}
+        {activeTab === 'paren-split' && passageData && dependencyParse && (
+          <ParenSplitTab passageData={passageData} dependencyParse={dependencyParse} />
         )}
 
-        {/* タブ3: 日本語訳 */}
-        {activeTab === 'japanese' && selectedSentence && (
-          <JapaneseTab sentenceData={selectedSentence} />
+        {/* タブ4: 直訳 */}
+        {activeTab === 'literal-translation' && passageData && (
+          <LiteralTranslationTab passageData={passageData} />
         )}
 
-        {/* タブ4: 語句確認 */}
+        {/* タブ5: 一文訳 */}
+        {activeTab === 'sentence-translation' && passageData && (
+          <SentenceTranslationTab passageData={passageData} />
+        )}
+
+        {/* タブ6: 語句確認 */}
         {activeTab === 'vocabulary' && sentenceDetail && (
           <VocabularyTab
             sentenceDetail={sentenceDetail}
@@ -196,7 +216,174 @@ function ExplanationBoard({
 }
 
 /**
- * タブ5: 設定
+ * タブ1: 全文表示
+ */
+function FullTextTab({ passageData }: { passageData: CompletePassageData }) {
+  return (
+    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+      <div className="text-base leading-relaxed space-y-2">
+        {passageData.sentences.map((sentence, _index) => (
+          <div key={sentence.id} className="mb-2">
+            {sentence.english}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * タブ2: /分割表示
+ */
+function SlashSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
+  // 文節ごとに/で区切る関数
+  const splitIntoChunks = (sentence: SentenceData) => {
+    const depSentence = dependencyParse.sentences.find(s => s.id === sentence.id)
+      || findDependencySentenceByText(dependencyParse, sentence.english);
+
+    if (!depSentence) {
+      return [sentence.english];
+    }
+
+    const clauseParsed = parseClausesAndPhrases(sentence.english, {
+      dependency: depSentence,
+    });
+
+    const tokens = flattenClauseSegments(clauseParsed.segments);
+    const chunks = mergeSvocmChunks(tokens);
+
+    // ピリオドの前の/を除去
+    const parts: string[] = [];
+    chunks.forEach((chunk, idx) => {
+      const nextChunk = chunks[idx + 1];
+      parts.push(chunk.text);
+      // 次のチャンクがピリオドでない場合のみ/を追加
+      if (nextChunk && !nextChunk.text.trim().match(/^[.!?]$/)) {
+        parts.push(' / ');
+      } else if (nextChunk) {
+        parts.push(' ');
+      }
+    });
+
+    return parts;
+  };
+
+  return (
+    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+      <div className="text-base leading-relaxed space-y-3">
+        {passageData.sentences.map((sentence) => {
+          const parts = splitIntoChunks(sentence);
+          return (
+            <div key={sentence.id} className="mb-3">
+              {parts}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * タブ3: ()分割表示（従属節を()で囲む）
+ */
+function ParenSplitTab({ passageData, dependencyParse }: { passageData: CompletePassageData, dependencyParse: DependencyParsedPassage }) {
+  const renderWithParens = (sentence: SentenceData) => {
+    const depSentence = dependencyParse.sentences.find(s => s.id === sentence.id)
+      || findDependencySentenceByText(dependencyParse, sentence.english);
+
+    if (!depSentence) {
+      return sentence.english;
+    }
+
+    const clauseParsed = parseClausesAndPhrases(sentence.english, {
+      dependency: depSentence,
+    });
+
+    const renderSegment = (seg: ClauseSegment): string => {
+      if (seg.type === 'subordinate-clause') {
+        const childText = seg.children ? seg.children.map(renderSegment).join(' ') : seg.text;
+        return `(${childText})`;
+      } else if (seg.children && seg.children.length > 0) {
+        return seg.children.map(renderSegment).join(' ');
+      } else {
+        return seg.text;
+      }
+    };
+
+    return clauseParsed.segments.map(renderSegment).join(' ');
+  };
+
+  return (
+    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+      <div className="text-base leading-relaxed space-y-3">
+        {passageData.sentences.map((sentence) => (
+          <div key={sentence.id} className="mb-3">
+            {renderWithParens(sentence)}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * タブ4: 直訳（フレーズ訳）
+ */
+function LiteralTranslationTab({ passageData }: { passageData: CompletePassageData }) {
+  return (
+    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+      <div className="space-y-4">
+        {passageData.sentences.map((sentence) => {
+          const relatedPhrases = passageData.phrases.filter(p => sentence.phraseIds?.includes(p.id));
+
+          if (relatedPhrases.length === 0) {
+            return (
+              <div key={sentence.id} className="mb-4">
+                <div className="text-gray-500 text-sm">フレーズデータがありません</div>
+              </div>
+            );
+          }
+
+          const englishLine = relatedPhrases.map(p => p.english).join(' / ');
+          const japaneseLine = relatedPhrases.map(p => p.japanese).join(' / ');
+
+          return (
+            <div key={sentence.id} className="mb-4">
+              <div className="phrase-translation-grid">
+                <div className="phrase-translation-row">
+                  <div className="phrase-english">{englishLine}</div>
+                  <div className="phrase-japanese">{japaneseLine}</div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * タブ5: 一文訳（日本語訳）
+ */
+function SentenceTranslationTab({ passageData }: { passageData: CompletePassageData }) {
+  return (
+    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+      <div className="space-y-4">
+        {passageData.sentences.map((sentence) => (
+          <div key={sentence.id} className="mb-4">
+            <div className="phrase-english mb-2">{sentence.english}</div>
+            <div className="japanese-translation-display">{sentence.japanese}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * タブ7: 設定
  */
 function SettingsTab({
   currentPassageId,
@@ -253,9 +440,9 @@ function SettingsTab({
       <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-md">
         <h5 className="text-sm font-semibold text-blue-800 mb-2">💡 使い方</h5>
         <ul className="text-xs text-gray-700 space-y-1">
-          <li>• 全文中の文をクリックすると、解説ボードに詳細が表示されます</li>
-          <li>• 節句分割タブでは、文の構造をビジュアル化して確認できます</li>
-          <li>• 語句確認タブから重要語句をカスタム問題セットに追加できます</li>
+          <li>• 各タブで全文の様々な表示形式を確認できます</li>
+          <li>• /分割タブでは、文を文節ごとに区切って表示します</li>
+          <li>• ()分割タブでは、従属節を括弧で囲んで表示します</li>
         </ul>
       </div>
     </div>
@@ -263,150 +450,7 @@ function SettingsTab({
 }
 
 /**
- * タブ1: 節句分割表示（ネスト構造対応）
- */
-function ClauseTab({ sentenceDetail }: { sentenceDetail: SelectedSentenceDetail }) {
-  // SVOCM成分ごとのクラス名を取得
-  const getSVOCMClass = (component: SVOCMComponent | undefined): string => {
-    if (!component) return '';
-    return `svocm-${component.toLowerCase()}`;
-  };
-
-  // SVOCMのまとまり単位で、色付き太実線下線を「伸ばす」表示
-  const renderSentenceWithSvocmUnderline = (segments: ClauseSegment[]): JSX.Element => {
-    const tokens = flattenClauseSegments(segments);
-    const chunks = mergeSvocmChunks(tokens);
-
-    return (
-      <span>
-        {chunks.map((c, i) => {
-          const className = getSVOCMClass(c.component) || 'svocm-plain';
-          return (
-            <span key={i} className={className}>
-              {c.text}
-            </span>
-          );
-        })}
-      </span>
-    );
-  };
-
-  const collectWordsByComponent = (segments: ClauseSegment[]) => {
-    const buckets: Record<SVOCMComponent, Array<{ word: string; component: SVOCMComponent }>> = {
-      S: [],
-      V: [],
-      O: [],
-      C: [],
-      M: [],
-    };
-
-    const visit = (seg: ClauseSegment) => {
-      if (seg.children && seg.children.length > 0) {
-        seg.children.forEach(visit);
-        return;
-      }
-
-      for (const w of seg.words) {
-        if (!w.component) continue;
-        if (/^[.,!?;:()"]$/.test(w.word)) continue;
-        buckets[w.component].push({ word: w.word, component: w.component });
-      }
-    };
-
-    segments.forEach(visit);
-    return buckets;
-  };
-
-  const svocmBuckets = collectWordsByComponent(sentenceDetail.clauseParsed.segments);
-  const hasAnySVOCM = (Object.keys(svocmBuckets) as SVOCMComponent[]).some(
-    (k) => svocmBuckets[k].length > 0
-  );
-
-  return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
-      <div className="clause-display text-lg leading-relaxed">
-        {renderSentenceWithSvocmUnderline(sentenceDetail.clauseParsed.segments)}
-      </div>
-
-      {hasAnySVOCM && (
-        <div className="mt-4 text-sm text-gray-700">
-          <div className="grid grid-cols-1 gap-2">
-            {(Object.keys(svocmBuckets) as SVOCMComponent[]).map((component) => {
-              const words = svocmBuckets[component];
-              if (words.length === 0) return null;
-              return (
-                <div key={component} className="flex flex-wrap gap-2 items-baseline">
-                  <span className="font-bold w-10">{component}:</span>
-                  <span>
-                    {words.map((w, idx) => (
-                      <span key={idx} className={getSVOCMClass(w.component)}>
-                        {w.word}{' '}
-                      </span>
-                    ))}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      <div className="mt-4 text-sm text-gray-600">
-        <p>
-          <span className="font-bold">表記:</span> &lt;&gt; = 句 / () = 従属節
-        </p>
-        <p className="mt-2">
-          <span className="font-bold">下線:</span> <span className="svocm-s">S(主語)</span>{' '}
-          <span className="svocm-v">V(動詞)</span> <span className="svocm-o">O(目的語)</span>{' '}
-          <span className="svocm-c">C(補語)</span> <span className="svocm-m">M(修飾語)</span>
-        </p>
-      </div>
-    </div>
-  );
-}
-
-/**
- * タブ2: フレーズ訳表示
- */
-function PhraseTranslationTab({ sentenceDetail }: { sentenceDetail: SelectedSentenceDetail }) {
-  const englishLine = sentenceDetail.relatedPhrases.map((p) => p.english).join(' / ');
-  const japaneseLine = sentenceDetail.relatedPhrases.map((p) => p.japanese).join(' / ');
-
-  return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
-      {sentenceDetail.relatedPhrases.length > 0 && (
-        <div className="phrase-translation-grid">
-          <div className="phrase-translation-row">
-            <div className="phrase-english">{englishLine}</div>
-            <div className="phrase-japanese">{japaneseLine}</div>
-          </div>
-        </div>
-      )}
-      {sentenceDetail.relatedPhrases.length === 0 && (
-        <p className="text-gray-500 text-center py-4">
-          この文のフレーズデータがありません
-        </p>
-      )}
-    </div>
-  );
-}
-
-/**
- * タブ3: 日本語訳表示
- */
-function JapaneseTab({ sentenceData }: { sentenceData: SentenceData }) {
-  return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
-      <div className="space-y-3">
-        <div className="phrase-english">{sentenceData.english}</div>
-        <div className="japanese-translation-display">{sentenceData.japanese}</div>
-      </div>
-    </div>
-  );
-}
-
-/**
- * タブ4: 語句確認表示
+ * タブ6: 語句確認表示
  */
 function VocabularyTab({
   sentenceDetail,

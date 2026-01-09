@@ -144,6 +144,7 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
           availablePassages={availablePassages}
           onPassageChange={setCurrentPassageId}
           metadata={metaInfo || undefined}
+          passageData={passageData}
         />
       </div>
 

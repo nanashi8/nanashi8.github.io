@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-09T00:15:24.082Z
+- generatedAt: 2026-01-09T16:16:06.229Z
 
 ## Single Source of Truth
 
@@ -14,31 +14,31 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- scripts/audit-classical-japanese-examples-quality.ts (hot=0.128)
-- docs/quality/CLASSICAL_JAPANESE_DATA_AUDIT_PLAN.md (hot=0.108)
-- public/data/classical-japanese/classical-grammar.csv (hot=0.106)
-- public/data/classical-japanese/classical-words.csv (hot=0.106)
-- scripts/tsconfig.json (hot=0.106)
-- scripts/fill-classical-japanese-example-full-readings.ts (hot=0.086)
-- scripts/override-classical-japanese-example-readings.ts (hot=0.071)
-- scripts/migrate-kanbun-to-examples.ts (hot=0.029)
-- scripts/fill-classical-japanese-examples.ts (hot=0.028)
-- .gitignore (hot=0.028)
+- extensions/servant/src/ui/states/OverviewState.ts (hot=0.208)
+- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.125)
+- test-constellation.html (hot=0.043)
+- extensions/servant/src/extension.ts (hot=0.027)
+- scripts/generate_vocabulary_pdf.py (hot=0.018)
+- extensions/servant/src/guard/DocumentGuard.ts (hot=0.007)
+- docs/archive/2025/plans/LINK_FIX_PLAN.md (hot=0.006)
+- docs/INDEX.md (hot=0.005)
+- docs/archive/legacy-root-docs/AI_PROJECT_COMPLETE.md (hot=0.005)
+- docs/guidelines/passage/PASSAGE_CREATION_GUIDELINES.md (hot=0.005)
 
 ## Related (Neural Propagation)
 
-- startNode: scripts/audit-classical-japanese-examples-quality.ts
+- startNode: extensions/servant/src/ui/states/OverviewState.ts
 - seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- scripts/audit-classical-japanese-examples-quality.ts (activation=1.000, source=signal, signals=[save:0.13])
-- docs/quality/CLASSICAL_JAPANESE_DATA_AUDIT_PLAN.md (activation=0.844, source=signal, signals=[save:0.11])
-- public/data/classical-japanese/classical-grammar.csv (activation=0.828, source=signal, signals=[save:0.11])
-- public/data/classical-japanese/classical-words.csv (activation=0.828, source=signal, signals=[save:0.11])
-- scripts/tsconfig.json (activation=0.828, source=signal, signals=[save:0.11])
+- extensions/servant/src/ui/states/OverviewState.ts (activation=1.000, source=signal, signals=[save:0.21])
+- extensions/servant/src/ui/ConstellationViewPanel.ts (activation=0.601, source=signal, signals=[save:0.13])
+- test-constellation.html (activation=0.207, source=signal, signals=[save:0.04])
+- extensions/servant/src/extension.ts (activation=0.130, source=signal, signals=[save:0.03])
+- scripts/generate_vocabulary_pdf.py (activation=0.087, source=signal, signals=[save:0.02])
 
 - (no related files detected)
 
@@ -53,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 96.38
+- ageHours: 112.39
 
 ## Latest SpecCheck Record (Raw)
 

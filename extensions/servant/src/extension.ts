@@ -53,6 +53,16 @@ export function activate(context: vscode.ExtensionContext) {
   // Output Channel作成
   outputChannel = vscode.window.createOutputChannel('Servant');
 
+  // 実行中の拡張機能が「どのビルド/パス」かを確実に識別するためのログ
+  try {
+    const ext = context.extension;
+    const mode = vscode.ExtensionMode?.[context.extensionMode] ?? String(context.extensionMode);
+    outputChannel.appendLine(`[Servant] Extension: ${ext.id} v${ext.packageJSON?.version ?? 'unknown'} (${mode})`);
+    outputChannel.appendLine(`[Servant] ExtensionPath: ${ext.extensionPath}`);
+  } catch {
+    // ignore
+  }
+
   const notifier = new Notifier(outputChannel);
 
   // ステータスバー更新コールバックを後で設定（updateServantStatusBar定義後）
