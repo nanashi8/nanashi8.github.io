@@ -748,9 +748,9 @@ export class AutopilotController {
           this.outputChannel.appendLine('');
           this.outputChannel.appendLine(context);
 
-          // 通知（プロジェクトゴールを表示）
+          // 通知をoutputChannelに統合（ポップアップ通知を削除）
           const goalName = this.goalManager?.getMainGoal()?.name ?? 'プロジェクトのゴール';
-          vscode.window.showInformationMessage(
+          this.outputChannel.appendLine(
             `🌟 サーバント: ${goalName}に向かって作業を進めます`
           );
         }
@@ -1097,7 +1097,8 @@ ${categorySummary}
     try {
       await vscode.env.clipboard.writeText(postReviewPrompt);
       await vscode.commands.executeCommand('workbench.panel.chat.view.copilot.focus');
-      await this.notifier.commandInfo(
+      // 通知をoutputChannelのみに統合（ポップアップ削除）
+      this.outputChannel.appendLine(
         '✅ 事後照会（Copilot/AI向け）のプロンプトをクリップボードにコピーしました。Copilot Chat に貼り付けてください。'
       );
     } catch (e) {
