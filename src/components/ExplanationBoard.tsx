@@ -187,43 +187,55 @@ export function ParenSplitTab({ passageData }: { passageData: CompletePassageDat
     let result = text;
 
     // 1. 従属節を()で囲む
-    // that節
+    // that節（単語境界を考慮）
     result = result.replace(
-      /(that\s+[^,.!?]+?)(\s*[,.!?]|$)/gi,
+      /\b(that\s+[^,.!?()]+?)([,.!?]|\s+and\s+|\s+but\s+|$)/gi,
       '($1)$2'
     );
     
     // if節
     result = result.replace(
-      /(if\s+[^,]+?),/gi,
+      /\b(if\s+[^,()]+?),/gi,
       '($1),'
     );
     
     // because節
     result = result.replace(
-      /(because\s+[^,.!?]+?)(\s*[,.!?]|$)/gi,
+      /\b(because\s+[^,.!?()]+?)([,.!?]|\s+and\s+|\s+but\s+|$)/gi,
       '($1)$2'
     );
     
     // when節
     result = result.replace(
-      /(when\s+[^,]+?),/gi,
+      /\b(when\s+[^,()]+?),/gi,
       '($1),'
     );
 
-    // 2. 前置詞句を<>で囲む（前置詞 + 冠詞/所有格/名詞 + 名詞句）
+    // 2. 前置詞句を<>で囲む（単語境界を考慮）
     const preps = 'at|in|on|by|to|from|for|with|about|of|during|after|before|around|per';
     const dets = 'the|a|an|my|your|his|her|their|our|its|this|that|these|those';
     
-    // 前置詞 + 冠詞 + 名詞句（最大5語まで）
+    // 前置詞 + 冠詞/所有格 + 名詞句（1-4語）
     result = result.replace(
-      new RegExp(`(${preps})\\s+(${dets}|[A-Z]|\\d)[^<>(),.!?]{0,30}?(?=\\s*[,\\s]|$)`, 'gi'),
+      new RegExp(`\\b(${preps})\\s+(${dets})\\s+([a-z]+\\s+){0,2}[a-z]+\\b`, 'gi'),
       '<$&>'
     );
     
-    // 前置詞 + 名詞（冠詞なし）
+    // 前置詞 + 固有名詞/数字
     result = result.replace(
-      new RegExp(`(${preps})\\s+([A-Z][a-z]+|[a-z]+ing)(?=\\s|[,.!?]|$)`, 'g'),
+      new RegExp(`\\b(${preps})\\s+([A-Z][a-z]+|\\d+)\\b`, 'g'),
+      '<$&>'
+    );
+    
+    // 前置詞 + 一般名詞（単数）- 冠詞なしの場合
+    result = result.replace(
+      new RegExp(`\\b(${preps})\\s+(breakfast|lunch|dinner|school|home|work|bed|friends|them|seven|eight|nine|ten|eleven|twelve)\\b`, 'gi'),
+      '<$&>'
+    );
+    
+    // 前置詞 + 数量表現（thirty minutes, two hours など）
+    result = result.replace(
+      /\b(for|in|after|before|during)\s+([a-z]+\s+[a-z]+)\b/gi,
       '<$&>'
     );
 
