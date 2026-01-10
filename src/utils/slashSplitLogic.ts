@@ -93,7 +93,8 @@ export function splitWithSlash(text: string): string {
   // andは必ず/を追加（後ろにスペースがなくてもOK）
   result = result.replace(/\s+and(\s+|$)/gi, ' / and$1');
   result = result.replace(/\s+(but|or)(\s+|$)/gi, ' / $1$2');
-  result = result.replace(/\s+so\s+([A-Z]|that|I|he|she|we|they|it)/gi, ' / so $1');
+  // soの後に主語（大文字始まり、代名詞、that）が来る場合のみ接続詞として/を追加
+  result = result.replace(/\s+so\s+([A-Z]|that\s|I\s|he\s|she\s|we\s|they\s|it\s|you\s|there\s)/g, ' / so $1');
 
   // 8. 前置詞句の前に/（句の境界）
   const preps = 'at|in|on|by|from|for|with|about|of|during|after|before|around|per|near|under|over|through|into|onto|upon|without|within|among|between|behind|beside|below|above|across|along|against|beyond|past|since|until|towards?|throughout|underneath';

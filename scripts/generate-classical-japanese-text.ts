@@ -21,7 +21,13 @@
  *   --out <dir>             出力先（既定: public/data/classical-japanese/print）
  *   --only <deckId>         対象を限定（grammar, vocabulary, knowledge, words, kanbun-practice, kanbun-words）
  *   --format <md|txt|both>  既定: both
- *   --include-examples      例文1/2も出す（既定: 出さない）
+ *   --examples <mode>        例文の出し方（omit | all | frequent-original）
+ *                          - omit: 例文を出さない（既定）
+ *                          - all: 例文1/2をそのまま出す
+ *                          - frequent-original: 受験頻出の古典作品（パブリックドメイン）由来のみ出す
+ *                            ※ knowledge（古典常識）は要約が混ざるため、このモードでは例文を出さない
+ *   --include-examples      互換オプション（指定すると --examples all と同等）
+ *   --name <base>            出力ファイル名のベース（既定: 古文漢文まとめ_直前）
  *   --help
  */
 
@@ -50,6 +56,8 @@ type NormalizedItem = {
 	example1: string;
 	example2: string;
 };
+
+type ExamplesMode = 'omit' | 'all' | 'frequent-original';
 
 function ensureDir(dirPath: string): void {
 	if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
@@ -83,7 +91,9 @@ function printHelp(): void {
 	--out <dir>             出力先（既定: public/data/classical-japanese/print）
 	--only <id>             deckIdのみ生成
 	--format <md|txt|both>  既定: both
-	--include-examples      例文1/2も出す（既定: 出さない）
+	--examples <mode>       例文の出し方（omit | all | frequent-original）
+	--include-examples      互換オプション（--examples all と同等）
+	--name <base>           出力ファイル名のベース（既定: 古文漢文まとめ_直前）
 	--help                  ヘルプ表示
 `);
 }
@@ -247,13 +257,72 @@ function normalizeWhitespace(text: string): string {
 	return (text || '').replace(/\s+/g, ' ').trim();
 }
 
-function renderMd(decks: Deck[], opts: { only?: string; includeExamples: boolean }): string {
+function extractSourceFromExample(example: string): string {
+	const s = (example || '').trim();
+	if (!s) return '';
+	const m = [...s.matchAll(/【([^】]+)】/g)];
+	if (!m.length) return '';
+	return (m[m.length - 1][1] || '').trim();
+}
+
+function isFrequentPublicDomainSource(source: string): boolean {
+	// 高校受験で頻出かつパブリックドメインの定番（原文引用が許容しやすい範囲）
+	// ※ ここは必要に応じて増やせます
+	const allow = new Set([
+		'徒然草',
+		'枕草子',
+		'源氏物語',
+		'伊勢物語',
+		'竹取物語',
+		'土佐日記',
+		'更級日記',
+		'今昔物語集',
+		'方丈記',
+		'平家物語',
+		'奥の細道',
+		'古今和歌集',
+	]);
+
+	if (source === '漢文') return true;
+	return allow.has(source);
+}
+
+function shouldIncludeExamples(deckId: string, mode: ExamplesMode): boolean {
+	if (mode === 'omit') return false;
+	if (mode === 'all') return true;
+	if (mode === 'frequent-original') {
+		// 古典常識は要約文が混ざるため、原文引用として扱わない
+		if (deckId === 'knowledge') return false;
+		return true;
+	}
+	return false;
+}
+
+function filterExampleByMode(example: string, mode: ExamplesMode): string {
+	if (mode === 'all') return normalizeWhitespace(example);
+	if (mode === 'frequent-original') {
+		const src = extractSourceFromExample(example);
+		if (!src) return '';
+		if (!isFrequentPublicDomainSource(src)) return '';
+		return normalizeWhitespace(example);
+	}
+	return '';
+}
+
+function renderMd(decks: Deck[], opts: { only?: string; examples: ExamplesMode }): string {
 	const now = new Date();
 	const header = `# 古文・漢文 直前まとめ（テキスト版）\n\n`;
+	const examplesNote =
+		opts.examples === 'omit'
+			? '例文は載せません（出典厳密性の要求を避けるため）。'
+			: opts.examples === 'frequent-original'
+				? '例文は「受験頻出の古典作品（パブリックドメイン）由来」のみ掲載します。'
+				: '例文1/2をそのまま掲載します。';
+
 	const meta = [
 		`- 生成日: ${now.toISOString().slice(0, 10)}`,
 		`- 入力: public/data/classical-japanese/*.csv`,
-		`- 方針: 直前チェック用に要点のみ。既定では例文を載せません（出典厳密性の要求を避けるため）。`,
+		`- 方針: 直前チェック用に要点のみ。${examplesNote}`,
 	].join('\n');
 
 	const parts: string[] = [header + meta, ''];
@@ -279,10 +348,11 @@ function renderMd(decks: Deck[], opts: { only?: string; includeExamples: boolean
 			const tags = pickTagsForQuickView(it.related);
 			if (tags) parts.push(`  - 目印: ${tags}`);
 
-			if (opts.includeExamples) {
-				const e1 = normalizeWhitespace(it.example1);
-				const e2 = normalizeWhitespace(it.example2);
-				if (e1 || e2) parts.push(`  - 用例: ${[e1, e2].filter(Boolean).join(' / ')}`);
+			if (shouldIncludeExamples(deck.id, opts.examples)) {
+				const e1 = filterExampleByMode(it.example1, opts.examples);
+				const e2 = filterExampleByMode(it.example2, opts.examples);
+				const joined = [e1, e2].filter(Boolean).join(' / ');
+				if (joined) parts.push(`  - 用例: ${joined}`);
 			}
 		}
 
@@ -292,13 +362,19 @@ function renderMd(decks: Deck[], opts: { only?: string; includeExamples: boolean
 	return parts.join('\n');
 }
 
-function renderTxt(decks: Deck[], opts: { only?: string; includeExamples: boolean }): string {
+function renderTxt(decks: Deck[], opts: { only?: string; examples: ExamplesMode }): string {
 	const now = new Date();
 	const lines: string[] = [];
 	lines.push('古文・漢文 直前まとめ（テキスト版）');
 	lines.push(`生成日: ${now.toISOString().slice(0, 10)}`);
 	lines.push('入力: public/data/classical-japanese/*.csv');
-	lines.push('方針: 直前チェック用に要点のみ。既定では例文を載せません。');
+	if (opts.examples === 'omit') {
+		lines.push('方針: 直前チェック用に要点のみ。例文は載せません。');
+	} else if (opts.examples === 'frequent-original') {
+		lines.push('方針: 直前チェック用に要点のみ。例文は「受験頻出の古典作品（パブリックドメイン）由来」のみ掲載。');
+	} else {
+		lines.push('方針: 直前チェック用に要点のみ。例文1/2をそのまま掲載。');
+	}
 	lines.push('');
 
 	for (const deck of decks) {
@@ -322,9 +398,9 @@ function renderTxt(decks: Deck[], opts: { only?: string; includeExamples: boolea
 			if (point) lines.push(`  要点: ${point}`);
 			if (tags) lines.push(`  目印: ${tags}`);
 
-			if (opts.includeExamples) {
-				const e1 = normalizeWhitespace(it.example1);
-				const e2 = normalizeWhitespace(it.example2);
+			if (shouldIncludeExamples(deck.id, opts.examples)) {
+				const e1 = filterExampleByMode(it.example1, opts.examples);
+				const e2 = filterExampleByMode(it.example2, opts.examples);
 				const ex = [e1, e2].filter(Boolean).join(' / ');
 				if (ex) lines.push(`  用例: ${ex}`);
 			}
@@ -352,7 +428,12 @@ function main(): void {
 
 	const only = args.only ? String(args.only) : undefined;
 	const format = args.format ? String(args.format) : 'both';
-	const includeExamples = Boolean(args['include-examples']);
+	const examples: ExamplesMode = args.examples
+		? (String(args.examples) as ExamplesMode)
+		: Boolean(args['include-examples'])
+			? 'all'
+			: 'omit';
+	const baseName = args.name ? String(args.name) : '古文漢文まとめ_直前';
 
 	ensureDir(outDir);
 
@@ -361,11 +442,11 @@ function main(): void {
 	console.log(`output: ${path.relative(process.cwd(), outDir)}`);
 	if (only) console.log(`only: ${only}`);
 	console.log(`format: ${format}`);
-	console.log(`examples: ${includeExamples ? 'include' : 'omit'}`);
+	console.log(`examples: ${examples}`);
 
 	const decks = loadDecks(root);
-	const opts = { only, includeExamples };
-	const base = path.join(outDir, '古文漢文まとめ_直前');
+	const opts = { only, examples };
+	const base = path.join(outDir, baseName);
 
 	if (format === 'md' || format === 'both') {
 		const md = renderMd(decks, opts);
