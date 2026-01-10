@@ -105,8 +105,8 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
     };
   }, [passageData]);
 
-  // 選択文の詳細情報を生成（メモ化）
-  con(isLoading) {
+  // ローディング中
+  if (isLoading) {
     return (
       <div className="reading-passage-view">
         <div className="flex items-center justify-center min-h-[400px]">
