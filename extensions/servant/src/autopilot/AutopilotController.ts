@@ -356,12 +356,73 @@ export class AutopilotController {
     ].join('\n');
   }
 
+  /**
+   * 構造化レポートを Output Channel に出力
+   * ユーザーが「何をレポートしようとしているか」「何をすべきか」を明確にする静的テキスト
+   */
+  private outputReviewReport(review: {
+    severity: 'error' | 'warning';
+    reasons: string[];
+    createdAt: number;
+    actionId?: string;
+  }): void {
+    const timestamp = new Date(review.createdAt).toLocaleString('ja-JP');
+    const reasonText = review.reasons.join(' / ') || '要審議';
+    const severityLabel =
+      review.severity === 'error' ? '❗️エラー' : review.severity === 'warning' ? '⚠️警告' : 'ℹ️情報';
+
+    this.outputChannel.appendLine('');
+    this.outputChannel.appendLine('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    this.outputChannel.appendLine('   Servant Autopilot: 審議レポート（構造化）');
+    this.outputChannel.appendLine('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    this.outputChannel.appendLine(`時刻: ${timestamp}`);
+    this.outputChannel.appendLine(`重大度: ${severityLabel}`);
+    if (review.actionId) {
+      this.outputChannel.appendLine(`アクションID: ${review.actionId}`);
+    }
+    this.outputChannel.appendLine('');
+
+    this.outputChannel.appendLine('【Priority 1: 何をレポートしようとしているか】');
+    this.outputChannel.appendLine(`論点: ${reasonText}`);
+    this.outputChannel.appendLine('');
+    this.outputChannel.appendLine('目的: 以下の3点を事前に決めることで、安全・効率的な実行を保証する');
+    this.outputChannel.appendLine('  1. 何をするか（目的/完了条件）を一言で決める');
+    this.outputChannel.appendLine('  2. 変更順序（最初に触るファイル/最後に触るファイル）を決める');
+    this.outputChannel.appendLine('  3. 影響範囲（壊れそうな箇所）とリスク対策を決める');
+    this.outputChannel.appendLine('');
+
+    this.outputChannel.appendLine('【Priority 2: ユーザーが次に何をすべきか】');
+    this.outputChannel.appendLine('以下のいずれかを選択してください:');
+    this.outputChannel.appendLine('  [A] 承認して開始 → 必須メモを入力し、実行を開始');
+    this.outputChannel.appendLine('  [B] Copilot用テンプレをコピー → AIに審議内容を共有し、手順を提案してもらう');
+    this.outputChannel.appendLine('  [C] 型チェックを実行 → npm run typecheck で事前に問題を確認');
+    this.outputChannel.appendLine('  [D] コミット前検証を実行 → Servantの検証を実行して品質を確保');
+    this.outputChannel.appendLine('  [E] 方針を事前調整 → 設定UIで方針・ルールを変更');
+    this.outputChannel.appendLine('  [F] 今回は中止（30分） → Autopilotを一時停止');
+    this.outputChannel.appendLine('');
+
+    this.outputChannel.appendLine('【Priority 3: Servantが次に何をするか】');
+    this.outputChannel.appendLine('ユーザーの選択を待機中（審議ダイアログで応答を待つ）');
+    this.outputChannel.appendLine('- [A]が選択された場合 → 承認メモを記録し、実行を開始');
+    this.outputChannel.appendLine('- [B]が選択された場合 → テンプレをクリップボードにコピー、審議継続');
+    this.outputChannel.appendLine('- [C]/[D]が選択された場合 → 検証を実行、結果をOutputに表示、審議継続');
+    this.outputChannel.appendLine('- [E]が選択された場合 → 設定UIを開く、審議継続');
+    this.outputChannel.appendLine('- [F]が選択された場合 → Autopilotを30分停止、審議終了');
+    this.outputChannel.appendLine('- ×/Escが押された場合 → ステータスバーに審議中マークを表示、審議継続');
+    this.outputChannel.appendLine('');
+    this.outputChannel.appendLine('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    this.outputChannel.appendLine('');
+  }
+
   private async openReviewPrompt(review: {
     severity: 'error' | 'warning';
     reasons: string[];
     createdAt: number;
     actionId?: string;
   }): Promise<void> {
+    // 構造化レポートをOutput Channelに出力（静的テキストで優先順・内容・次のアクション）
+    this.outputReviewReport(review);
+
     const reasonText = review.reasons.join(' / ') || '要審議';
     this.setStatusReviewRequired({ severity: review.severity, reason: reasonText });
 
