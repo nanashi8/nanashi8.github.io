@@ -16,14 +16,22 @@ import { MaintenanceState } from './MaintenanceState';
  * - 休憩部屋：プロジェクト状態・作業履歴・ドキュメント管理
  * - 執事アバター：将来の姿・表情表示用の領域確保
  * 
- * 天体儀（Constellation 3D）との関係：
- * 天体儀は将来「アイディアツリー」として機能し、
- * 既存機能を3D空間上で可視化し、ドラッグ&ドロップで
- * 新機能を合成するインターフェースとなる。
- * 現在はプロジェクト構造の可視化だが、将来は：
- * - 機能ノードの関係性マップ
- * - AI提案による機能組み合わせ
- * - インタラクティブな機能合成エンジン
+ * 天体儀（Constellation）との関係：
+ * 天体儀は「全宇宙リソース統合エンジン」として機能する。
+ * 
+ * プロジェクト内（地球）だけでなく、太陽系外（インターネット上の全て）まで：
+ * - 🌍 プロジェクト内機能（既存コード、ツール、ユーティリティ）
+ * - 🪐 外部API/サービス（OpenAI、GitHub、Google、AWS等あらゆるAPI）
+ * - 🌌 オープンソース全体（npm、PyPI、GitHub上の全リポジトリ）
+ * - 🔭 観測可能な全リソース（Web上のドキュメント、論文、実装例）
+ * 
+ * これら全ての「未知の組み合わせ」から、新たな創造物を合成：
+ * 例：[プロジェクトのスラッシュ分割] + [OpenAI GPT-4] + [GitHub Copilot API] 
+ *     → 「AI駆動の教材自動生成システム」
+ * 
+ * 天体儀は宇宙全体のリソースマップであり、
+ * 合成エンジンは全宇宙から素材を選択し、
+ * 今まで存在しなかった創造物を生み出す。
  */
 export class OverviewState extends BaseViewState {
   public readonly name: ViewModeName = 'Overview';
@@ -235,7 +243,7 @@ export class OverviewState extends BaseViewState {
         </div>
 
         <div class="toolbar">
-            <button onclick="showConstellationView()" style="background: rgba(255, 215, 0, 0.15); border-color: rgba(255, 215, 0, 0.4); color: #ffd700;">🌟 アイディア合成 (開発中)</button>
+            <button onclick="showConstellationView()" style="background: rgba(255, 215, 0, 0.15); border-color: rgba(255, 215, 0, 0.4); color: #ffd700;">� 全宇宙リソース統合 (開発中)</button>
             <button onclick="toggleAvatarMode()">👤 執事モード切替</button>
         </div>
     </div>
@@ -643,20 +651,23 @@ export class OverviewState extends BaseViewState {
   }
 
   async toggleConstellationView(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput('[Overview] Toggling constellation 3D view (future: Idea Synthesis Engine)');
+    context.logToOutput('[Overview] Universal Resource Integration Engine requested');
     context.postMessage({
       command: 'toggleVisualization',
       enabled: true
     });
     vscode.window.showInformationMessage(
-      '🌟 アイディア合成エンジン（開発中）\n\n' +
-      '将来、この天体儀は「機能ノードのアイディアツリー」となります：\n\n' +
-      '✨ 既存機能を3D空間上で可視化\n' +
-      '🔗 機能間の関係性・依存をマッピング\n' +
-      '🎨 ドラッグ&ドロップで機能を組み合わせ\n' +
-      '🤖 AIが最適な組み合わせを提案\n' +
-      '⚡ 新機能を自動合成・生成\n\n' +
-      '現在は基本的なプロジェクト構造の可視化を提供しています。',
+      '🌌 全宇宙リソース統合エンジン（開発中）\n\n' +
+      '天体儀は、この世の全てから新たな創造物を合成します：\n\n' +
+      '🌍 プロジェクト内機能（既存コード・ツール）\n' +
+      '🪐 外部API/サービス（OpenAI、GitHub、Google等全てのAPI）\n' +
+      '🌌 オープンソース全体（npm、PyPI、GitHub全リポジトリ）\n' +
+      '🔭 観測可能な全リソース（Web上の全ドキュメント・実装例）\n\n' +
+      '💫 未知の組み合わせ：\n' +
+      '例：[あなたのスラッシュ分割] + [OpenAI API] + [GitHub上の優れた実装]\n' +
+      '   → 今まで存在しなかった「AI駆動教材自動生成システム」を合成\n\n' +
+      '太陽系外からでも、観測できれば統合します。\n' +
+      '天体儀は全宇宙のリソースマップです。',
       '了解'
     );
   }

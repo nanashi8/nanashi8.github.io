@@ -17,25 +17,52 @@ export type ConstellationOpenOptions = {
 };
 
 /**
- * ConstellationViewPanel - 天体儀ビューパネル
+ * ConstellationViewPanel - 天体儀（全宇宙リソース統合エンジン）
  * 
  * 現在の役割：
  * - プロジェクト構造の3D可視化
  * - ファイル・依存関係のノード表示
  * 
- * 将来の役割（アイディア合成エンジン）：
- * - 機能ノードのアイディアツリー表示
- * - 機能間の関係性・依存マッピング
- * - ドラッグ&ドロップによる機能合成UI
- * - AI提案による最適な機能組み合わせ
- * - 新機能の自動生成・コード合成
+ * 真の役割（全宇宙リソース統合）：
+ * 天体儀は、プロジェクト内（地球）だけでなく、
+ * 太陽系外（インターネット上の全て）までを統合する：
+ * 
+ * 🌍 プロジェクト内（地球）
+ *    - 既存コード、ツール、ユーティリティ
+ *    - ローカルリソース、独自実装
+ * 
+ * 🪐 太陽系（外部API/サービス）
+ *    - OpenAI、Anthropic、Google AI
+ *    - GitHub、GitLab、npm、PyPI
+ *    - AWS、Azure、GCP等あらゆるクラウドサービス
+ * 
+ * 🌌 銀河系外（オープンソース全体）
+ *    - GitHub上の全リポジトリ（観測可能な全実装）
+ *    - Stack Overflow、Qiita等の全ナレッジ
+ *    - arXiv、論文サイト等の全研究成果
+ * 
+ * 🔭 観測範囲（動的拡大）
+ *    - Web上の全ドキュメント
+ *    - 新規公開されたAPI/ライブラリを自動検出
+ *    - 「観測できれば統合する」原則
+ * 
+ * 合成エンジンの動作：
+ * 1. 全宇宙からリソースを観測・マッピング
+ * 2. 未知の組み合わせを探索（AIによる提案）
+ * 3. ドラッグ&ドロップで素材を選択
+ * 4. 新たな創造物を合成・生成
+ * 
+ * 例：
+ * [あなたのスラッシュ分割] + [OpenAI GPT-4 API] + [GitHub上の優れた実装]
+ * → 今まで存在しなかった「AI駆動教材自動生成システム」
  * 
  * 拡張ポイント：
- * TODO: ノードデータ構造を「機能メタデータ」対応に拡張
- * TODO: ドラッグ&ドロップイベントハンドラ追加
- * TODO: 機能合成ロジック（FunctionComposer）の統合
- * TODO: AI提案エンジン（IdeaSynthesizer）の接続
- * TODO: 合成結果のコード生成パイプライン
+ * TODO: 外部リソース観測システム（ResourceObserver）
+ * TODO: 全宇宙リソースマップ（UniversalResourceGraph）
+ * TODO: 動的API統合エンジン（DynamicIntegrator）
+ * TODO: 未知の組み合わせ探索AI（CombinationExplorer）
+ * TODO: 創造物合成パイプライン（SynthesisPipeline）
+ * TODO: リソース観測範囲の自動拡大（ObservationExpander）
  * 
  * 0ベース: 最もシンプルな天体儀表示
  */
