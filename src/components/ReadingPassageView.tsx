@@ -11,7 +11,7 @@ import { extractKeyPhrasesFromSentences } from '@/utils/keyPhraseExtractor';
 import { loadDependencyParsedPassage, findDependencySentenceByText } from '@/utils/dependencyParseLoader';
 import type { DependencyParsedPassage } from '@/types/passage';
 import { parseClausesAndPhrases } from '@/utils/clauseParser';
-import ExplanationBoard, { 
+import ExplanationBoard, {
   type TabType,
   FullTextTab,
   SlashSplitTab,
@@ -30,10 +30,10 @@ interface ReadingPassageViewProps {
 function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
   const [passageData, setPassageData] = useState<CompletePassageData | null>(null);
   const [dependencyParse, setDependencyParse] = useState<DependencyParsedPassage | null>(null);
-  const [selectedSentence, setSelectedSentence] = useState<SentenceData | null>(null);
+  const [selectedSentence, _setSelectedSentence] = useState<SentenceData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  
+
   // アクティブタブをlocalStorageに永続化
   const [activeTab, setActiveTab] = useState<TabType>(() => {
     const saved = localStorage.getItem('explanation-board-active-tab');
@@ -105,7 +105,7 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
       sentenceCount: passageData.metadata.sentenceCount,
     };
   }, [passageData]);
-  
+
   // 選択文の詳細情報を生成（メモ化）
   const sentenceDetail: SelectedSentenceDetail | null = useMemo(() => {
     if (!selectedSentence) return null;
@@ -220,7 +220,7 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
             onAddToCustom={handleAddToCustom}
           />
         )}
-        
+
         {/* 語句確認タブで文が選択されていない場合 */}
         {activeTab === 'vocabulary' && !selectedSentence && (
           <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 text-center">
