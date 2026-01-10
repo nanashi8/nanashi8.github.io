@@ -9,26 +9,26 @@ import { MaintenanceState } from './MaintenanceState';
 
 /**
  * OverviewState - 執事の居住空間（中央司令室）
- * 
+ *
  * 役割：
  * - 道具部屋：プロジェクトのツール・ガイドドキュメントへの直接アクセス
  * - 控え室：健全診断・検索・フィルター・データ更新の制御
  * - 休憩部屋：プロジェクト状態・作業履歴・ドキュメント管理
  * - 執事アバター：将来の姿・表情表示用の領域確保
- * 
+ *
  * 天体儀（Constellation）との関係：
  * 天体儀は「全宇宙リソース統合エンジン」として機能する。
- * 
+ *
  * プロジェクト内（地球）だけでなく、太陽系外（インターネット上の全て）まで：
  * - 🌍 プロジェクト内機能（既存コード、ツール、ユーティリティ）
  * - 🪐 外部API/サービス（OpenAI、GitHub、Google、AWS等あらゆるAPI）
  * - 🌌 オープンソース全体（npm、PyPI、GitHub上の全リポジトリ）
  * - 🔭 観測可能な全リソース（Web上のドキュメント、論文、実装例）
- * 
+ *
  * これら全ての「未知の組み合わせ」から、新たな創造物を合成：
- * 例：[プロジェクトのスラッシュ分割] + [OpenAI GPT-4] + [GitHub Copilot API] 
+ * 例：[プロジェクトのスラッシュ分割] + [OpenAI GPT-4] + [GitHub Copilot API]
  *     → 「AI駆動の教材自動生成システム」
- * 
+ *
  * 天体儀は宇宙全体のリソースマップであり、
  * 合成エンジンは全宇宙から素材を選択し、
  * 今まで存在しなかった創造物を生み出す。
@@ -205,39 +205,40 @@ export class OverviewState extends BaseViewState {
         <h1>👔 執事の居住空間 - Servant's Quarters</h1>
 
         <div class="rooms-container">
-            <!-- 道具部屋 -->
+            <!-- サーバントの7つ道具（神器の聖域） -->
+            <div class="room" style="border: 2px solid rgba(255, 215, 0, 0.5); background: rgba(255, 215, 0, 0.05);">
+                <h3 style="color: #ffd700;">⚔️ 7つ道具 (Sacred Arsenal)</h3>
+                <div class="room-buttons">
+                    <button onclick="invokeSacredTool(1)" style="border-color: rgba(255, 215, 0, 0.6); color: #ffd700;">🌌 全宇宙リソース統合</button>
+                    <button onclick="invokeSacredTool(2)" style="border-color: rgba(255, 215, 0, 0.6); color: #ffd700;">🧠 適応的学習システム</button>
+                    <button onclick="invokeSacredTool(3)" style="border-color: rgba(255, 215, 0, 0.6); color: #ffd700;">🩺 健全診断システム</button>
+                    <button onclick="invokeSacredTool(4)" style="border-color: rgba(255, 215, 0, 0.6); color: #ffd700;">⚗️ データ生成パイプライン</button>
+                    <button onclick="invokeSacredTool(5)" style="border-color: rgba(255, 215, 0, 0.6); color: #ffd700;">🛡️ 品質保証システム</button>
+                    <button onclick="invokeSacredTool(6)" style="border-color: rgba(150, 150, 150, 0.4); color: #888;">🔮 第6の神器 (未実装)</button>
+                    <button onclick="invokeSacredTool(7)" style="border-color: rgba(150, 150, 150, 0.4); color: #888;">✨ 第7の神器 (未実装)</button>
+                </div>
+            </div>
+
+            <!-- ガイドドキュメント -->
             <div class="room">
-                <h3>🔧 道具部屋 (Tools)</h3>
+                <h3>📚 知識の書庫 (Guides)</h3>
                 <div class="room-buttons">
                     <button onclick="openDoc('DATA_GENERATION_TOOLS_CATALOG')">📚 ツールカタログ</button>
                     <button onclick="openDoc('TESTING_GUIDE')">🧪 テストガイド</button>
-                    <button onclick="openDoc('VOICE_FOR_STUDENTS_GUIDE')">🔊 音声機能ガイド</button>
+                    <button onclick="openDoc('VOICE_FOR_STUDENTS_GUIDE')">🔊 音声機能</button>
                     <button onclick="openDoc('QUESTION_SCHEDULER_RECOVERY')">🔄 スケジューラ復旧</button>
                     <button onclick="openDoc('GENERATE_CLASSICAL_JAPANESE_PDF')">📄 古文PDF生成</button>
-                    <button onclick="openDoc('LOCAL_UD_DEPENDENCY_PARSE')">🌳 構文解析</button>
-                    <button onclick="openDoc('DETECTED_SIGNAL_USAGE_GUIDE')">📡 信号検知ガイド</button>
                 </div>
             </div>
 
             <!-- 控え室 -->
             <div class="room">
-                <h3>🎯 控え室 (Control)</h3>
+                <h3>🎯 制御室 (Control)</h3>
                 <div class="room-buttons">
-                    <button onclick="showMaintenance()">🩺 健全診断</button>
                     <button onclick="showSearch()">🔍 プロジェクト検索</button>
                     <button onclick="showFilter()">🎯 フィルター</button>
                     <button onclick="requestData()">🔄 データ更新</button>
-                </div>
-            </div>
-
-            <!-- 休憩部屋 -->
-            <div class="room">
-                <h3>☕ 休憩部屋 (Rest)</h3>
-                <div class="room-buttons">
-                    <button onclick="openDoc('DOCPART_USAGE')">📝 ドキュメント分割</button>
-                    <button onclick="openDoc('DOCUSAURUS_SETUP_GUIDE')">📖 Docusaurus設定</button>
                     <button onclick="showProjectStatus()">📊 プロジェクト状態</button>
-                    <button onclick="showWorkHistory()">📜 作業履歴</button>
                 </div>
             </div>
         </div>
@@ -460,6 +461,14 @@ export class OverviewState extends BaseViewState {
         });
 
         // グローバル関数
+        window.invokeSacredTool = function(toolNumber) {
+          log('Invoking Sacred Tool #' + toolNumber);
+          vscode.postMessage({
+            command: 'invokeSacredTool',
+            toolNumber: toolNumber
+          });
+        };
+
         window.openDoc = function(docName) {
           log('Opening document: ' + docName);
           vscode.postMessage({
@@ -545,6 +554,9 @@ export class OverviewState extends BaseViewState {
         break;
       case 'toggleAvatarMode':
         await this.toggleAvatarMode(context);
+        break;
+      case 'invokeSacredTool':
+        await this.invokeSacredTool(context, message.toolNumber);
         break;
     }
   }
@@ -672,6 +684,69 @@ export class OverviewState extends BaseViewState {
     );
   }
 
+  async invokeSacredTool(context: ConstellationViewPanel, toolNumber: number): Promise<void> {
+    context.logToOutput(`[Overview] Invoking Sacred Tool #${toolNumber}`);
+    
+    const toolDescriptions: Record<number, { name: string; description: string; action?: () => Promise<void> }> = {
+      1: {
+        name: '🌌 全宇宙リソース統合エンジン',
+        description: 'プロジェクト内から太陽系外まで、観測可能な全リソースを統合し、未知の組み合わせから新たな創造物を合成します。',
+        action: async () => await this.toggleConstellationView(context)
+      },
+      2: {
+        name: '🧠 適応的学習システム',
+        description: 'ユーザーの行動・失敗パターンから学習し、最適な問題・タイミング・難易度を自動調整します。',
+      },
+      3: {
+        name: '🩺 健全診断システム',
+        description: 'プロジェクトの状態を診断し、潜在的な問題を検出。品質ガード・spec鮮度・依存関係を自動チェックします。',
+        action: async () => {
+          context.logToOutput('[Overview] Transitioning to maintenance view');
+          await context.transitionToState(new MaintenanceState());
+        }
+      },
+      4: {
+        name: '⚗️ データ生成パイプライン',
+        description: '教材データを自動生成・検証・変換するパイプライン。英語・古文・社会科等、全科目のデータを統合管理します。',
+      },
+      5: {
+        name: '🛡️ 品質保証システム',
+        description: 'コード品質・データ品質・テストカバレッジを自動監視。CI/CD統合で品質を保証します。',
+      },
+      6: {
+        name: '🔮 第6の神器',
+        description: 'まだ実装されていない、世界を変える神器。あなたのビジョンが具現化するのを待っています。',
+      },
+      7: {
+        name: '✨ 第7の神器',
+        description: '究極の神器。その姿はまだ誰も知りません。これからの世界を変える、最後の鍵となるでしょう。',
+      }
+    };
+
+    const tool = toolDescriptions[toolNumber];
+    if (!tool) {
+      vscode.window.showErrorMessage(`神器 #${toolNumber} が見つかりません`);
+      return;
+    }
+
+    if (toolNumber === 6 || toolNumber === 7) {
+      vscode.window.showInformationMessage(
+        `${tool.name}\n\n${tool.description}\n\n「全てをイメージできていない」— それでいい。\n神器は必要な時に現れます。`,
+        '了解'
+      );
+      return;
+    }
+
+    if (tool.action) {
+      await tool.action();
+    } else {
+      vscode.window.showInformationMessage(
+        `${tool.name}\n\n${tool.description}\n\n実装準備中...`,
+        '了解'
+      );
+    }
+  }
+
   async toggleAvatarMode(context: ConstellationViewPanel): Promise<void> {
     context.logToOutput('[Overview] Avatar mode toggle requested');
     vscode.window.showInformationMessage(
@@ -686,11 +761,11 @@ export class OverviewState extends BaseViewState {
   }
 
   getDescription(): string {
-    return '👔 執事の居住空間 - 道具部屋・控え室・休憩部屋';
+    return '👔 執事の居住空間 - サーバントの7つ道具（神器）';
   }
 
   async enter(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput('[Overview] Entering Servant Quarters (執事の居住空間)');
+    context.logToOutput('[Overview] Entering Servant Quarters with Sacred Arsenal (サーバントの7つ道具)');
     await this.updateData(context);
   }
 
