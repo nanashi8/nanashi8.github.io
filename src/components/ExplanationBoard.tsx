@@ -116,15 +116,27 @@ function ExplanationBoard({
  * タブ1: 全文表示
  */
 export function FullTextTab({ passageData }: { passageData: CompletePassageData }) {
+  // 段落ごとにグループ化
+  const paragraphs: Array<{ sentences: typeof passageData.sentences }> = [];
+  let currentParagraph: typeof passageData.sentences = [];
+
+  passageData.sentences.forEach((sentence, index) => {
+    if (sentence.isParagraphStart && currentParagraph.length > 0) {
+      paragraphs.push({ sentences: currentParagraph });
+      currentParagraph = [];
+    }
+    currentParagraph.push(sentence);
+    if (index === passageData.sentences.length - 1) {
+      paragraphs.push({ sentences: currentParagraph });
+    }
+  });
+
   return (
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
-      <div className="text-base leading-relaxed space-y-2">
-        {passageData.sentences.map((sentence, _index) => (
-          <div
-            key={sentence.id}
-            className={`mb-2 ${sentence.isParagraphStart ? 'indent-8' : ''}`}
-          >
-            {sentence.english}
+      <div className="text-base leading-relaxed space-y-4">
+        {paragraphs.map((para, paraIndex) => (
+          <div key={paraIndex} className={paraIndex > 0 ? 'indent-8' : ''}>
+            {para.sentences.map(s => s.english).join(' ')}
           </div>
         ))}
       </div>
@@ -182,15 +194,27 @@ export function SlashSplitTab({ passageData }: { passageData: CompletePassageDat
     return result;
   };
 
+  // 段落ごとにグループ化
+  const paragraphs: Array<{ sentences: typeof passageData.sentences }> = [];
+  let currentParagraph: typeof passageData.sentences = [];
+
+  passageData.sentences.forEach((sentence, index) => {
+    if (sentence.isParagraphStart && currentParagraph.length > 0) {
+      paragraphs.push({ sentences: currentParagraph });
+      currentParagraph = [];
+    }
+    currentParagraph.push(sentence);
+    if (index === passageData.sentences.length - 1) {
+      paragraphs.push({ sentences: currentParagraph });
+    }
+  });
+
   return (
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
-      <div className="text-base leading-relaxed space-y-3">
-        {passageData.sentences.map((sentence) => (
-          <div
-            key={sentence.id}
-            className={`mb-3 ${sentence.isParagraphStart ? 'indent-8' : ''}`}
-          >
-            {splitIntoChunks(sentence.english)}
+      <div className="text-base leading-relaxed space-y-4">
+        {paragraphs.map((para, paraIndex) => (
+          <div key={paraIndex} className={paraIndex > 0 ? 'indent-8' : ''}>
+            {para.sentences.map(s => splitIntoChunks(s.english)).join(' ')}
           </div>
         ))}
       </div>
@@ -273,15 +297,27 @@ export function ParenSplitTab({ passageData }: { passageData: CompletePassageDat
     return result;
   };
 
+  // 段落ごとにグループ化
+  const paragraphs: Array<{ sentences: typeof passageData.sentences }> = [];
+  let currentParagraph: typeof passageData.sentences = [];
+
+  passageData.sentences.forEach((sentence, index) => {
+    if (sentence.isParagraphStart && currentParagraph.length > 0) {
+      paragraphs.push({ sentences: currentParagraph });
+      currentParagraph = [];
+    }
+    currentParagraph.push(sentence);
+    if (index === passageData.sentences.length - 1) {
+      paragraphs.push({ sentences: currentParagraph });
+    }
+  });
+
   return (
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
-      <div className="text-base leading-relaxed space-y-3">
-        {passageData.sentences.map((sentence) => (
-          <div
-            key={sentence.id}
-            className={`mb-3 ${sentence.isParagraphStart ? 'indent-8' : ''}`}
-          >
-            {renderWithParens(sentence.english)}
+      <div className="text-base leading-relaxed space-y-4">
+        {paragraphs.map((para, paraIndex) => (
+          <div key={paraIndex} className={paraIndex > 0 ? 'indent-8' : ''}>
+            {para.sentences.map(s => renderWithParens(s.english)).join(' ')}
           </div>
         ))}
       </div>
@@ -330,15 +366,32 @@ export function LiteralTranslationTab({ passageData }: { passageData: CompletePa
  * タブ5: 一文訳（日本語訳）
  */
 export function SentenceTranslationTab({ passageData }: { passageData: CompletePassageData }) {
+  // 段落ごとにグループ化
+  const paragraphs: Array<{ sentences: typeof passageData.sentences }> = [];
+  let currentParagraph: typeof passageData.sentences = [];
+
+  passageData.sentences.forEach((sentence, index) => {
+    if (sentence.isParagraphStart && currentParagraph.length > 0) {
+      paragraphs.push({ sentences: currentParagraph });
+      currentParagraph = [];
+    }
+    currentParagraph.push(sentence);
+    if (index === passageData.sentences.length - 1) {
+      paragraphs.push({ sentences: currentParagraph });
+    }
+  });
+
   return (
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
-      <div className="space-y-4">
-        {passageData.sentences.map((sentence) => (
-          <div key={sentence.id} className="mb-4">
-            <div className={`phrase-english mb-2 ${sentence.isParagraphStart ? 'indent-8' : ''}`}>
-              {sentence.english}
+      <div className="space-y-6">
+        {paragraphs.map((para, paraIndex) => (
+          <div key={paraIndex} className="mb-4">
+            <div className={`phrase-english mb-2 ${paraIndex > 0 ? 'indent-8' : ''}`}>
+              {para.sentences.map(s => s.english).join(' ')}
             </div>
-            <div className="japanese-translation-display">{sentence.japanese}</div>
+            <div className="japanese-translation-display">
+              {para.sentences.map(s => s.japanese).join('')}
+            </div>
           </div>
         ))}
       </div>
