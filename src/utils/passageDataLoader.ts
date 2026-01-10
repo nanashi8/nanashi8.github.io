@@ -22,26 +22,26 @@ function splitIntoBlocks(text: string): string[] {
  */
 function detectParagraphStarts(text: string, sentences: Array<{ english: string }>): Set<number> {
   const paragraphStarts = new Set<number>();
-  
+
   // 空白行で段落を分割
   const paragraphs = text
     .split(/\r?\n\s*\r?\n/)
     .map(p => p.replace(/\r?\n/g, ' ').trim())
     .filter(Boolean);
-  
+
   if (paragraphs.length <= 1) {
     // 段落が1つだけなら段落分けなし
     return paragraphStarts;
   }
-  
+
   // 各段落の最初の文を特定
   let sentenceIndex = 0;
   for (const para of paragraphs) {
     if (sentenceIndex >= sentences.length) break;
-    
+
     // この段落の最初の文を見つける
     const paraStart = para.substring(0, 100).toLowerCase().replace(/[^a-z0-9\s]/g, ' ');
-    
+
     for (let i = sentenceIndex; i < sentences.length; i++) {
       const sentStart = sentences[i].english.substring(0, 100).toLowerCase().replace(/[^a-z0-9\s]/g, ' ');
       if (paraStart.includes(sentStart.substring(0, 30)) || sentStart.includes(paraStart.substring(0, 30))) {
@@ -51,7 +51,7 @@ function detectParagraphStarts(text: string, sentences: Array<{ english: string 
       }
     }
   }
-  
+
   return paragraphStarts;
 }
 
@@ -387,7 +387,7 @@ export async function loadCompletePassage(
       isParagraphStart: false,
     };
   });
-  
+
   // passages-originalから段落情報を取得
   let paragraphStarts = new Set<number>();
   try {
@@ -401,7 +401,7 @@ export async function loadCompletePassage(
   } catch {
     // ignore
   }
-  
+
   // 段落開始フラグを適用
   sentences.forEach(s => {
     s.isParagraphStart = paragraphStarts.has(s.id);
