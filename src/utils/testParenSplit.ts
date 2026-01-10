@@ -71,7 +71,7 @@ function renderWithParens(text: string): string {
 }
 
 // テストケース
-const testCases = [
+const parenSplitTestCases = [
   "I wake up at seven every morning.",
   "First, I brush my teeth and wash my face.",
   "Then I eat breakfast with my family.",
@@ -87,7 +87,7 @@ const testCases = [
 ];
 
 console.log("=== ()分割テスト ===\n");
-testCases.forEach((test, idx) => {
+parenSplitTestCases.forEach((test, idx) => {
   const result = renderWithParens(test);
   console.log(`${idx + 1}. 入力: ${test}`);
   console.log(`   出力: ${result}`);

@@ -46,7 +46,7 @@ function splitIntoChunks(text: string): string {
 }
 
 // テストケース
-const testCases = [
+const slashSplitTestCases = [
   "I wake up at seven every morning.",
   "First, I brush my teeth and wash my face.",
   "Then I eat breakfast with my family.",
@@ -62,7 +62,7 @@ const testCases = [
 ];
 
 console.log("=== /分割テスト ===\n");
-testCases.forEach((test, idx) => {
+slashSplitTestCases.forEach((test, idx) => {
   const result = splitIntoChunks(test);
   console.log(`${idx + 1}. 入力: ${test}`);
   console.log(`   出力: ${result}`);
