@@ -11,6 +11,7 @@ import type {
   DependencyParsedPassage,
   CompletePassageData,
 } from '@/types/passage';
+import { splitWithSlash } from '@/utils/slashSplitLogic';
 
 interface ExplanationBoardProps {
   passageData?: CompletePassageData | null; // 全パッセージデータ
@@ -135,7 +136,7 @@ export function FullTextTab({ passageData }: { passageData: CompletePassageData 
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="text-base leading-relaxed space-y-4">
         {paragraphs.map((para, paraIndex) => (
-          <div key={paraIndex} className={paraIndex > 0 ? 'indent-8' : ''}>
+          <div key={paraIndex} className="indent-8">
             {para.sentences.map(s => s.english).join(' ')}
           </div>
         ))}
@@ -149,50 +150,6 @@ export function FullTextTab({ passageData }: { passageData: CompletePassageData 
  * ルールベース: 前置詞句、接続詞、従属節で分割
  */
 export function SlashSplitTab({ passageData }: { passageData: CompletePassageData, dependencyParse?: DependencyParsedPassage }) {
-
-  // ルールベースで/を挿入する関数
-  const splitIntoChunks = (text: string) => {
-    let result = text;
-
-    // 1. 文頭の副詞・前置詞句の後に/を挿入（カンマの後）
-    result = result.replace(
-      /^([A-Z][a-z]+|After [a-z]+|Before [a-z]+|During [a-z]+),\s+/,
-      '$1, / '
-    );
-
-    // 2. 接続詞の前に/を挿入
-    result = result.replace(
-      /\s+(and|but|or|so|because|if|when|while|although|though)\s+/gi,
-      ' / $1 '
-    );
-
-    // 3. 前置詞句の前に/を挿入（ただしhave toなどは除外）
-    const preps = 'at|in|on|by|from|for|with|about|of|during|after|before|around|per';
-    result = result.replace(
-      new RegExp(`\\s+(${preps})\\s+`, 'gi'),
-      ' / $1 '
-    );
-
-    // 4. to不定詞の前に/を挿入（ただしhave to, want to, need toなどは除外）
-    result = result.replace(
-      /(?<!have|want|need|try|going|used)\s+to\s+/gi,
-      ' / to '
-    );
-
-    // 5. 連続する/を1つにまとめる
-    result = result.replace(/\s*\/\s*\/+\s*/g, ' / ');
-
-    // 6. 文頭の/を削除
-    result = result.replace(/^\s*\/\s*/, '');
-
-    // 7. 文末の/を削除（句読点の前）
-    result = result.replace(/\s*\/\s*([.!?,;:])/, '$1');
-
-    // 8. スペースを整理
-    result = result.replace(/\s+/g, ' ').trim();
-
-    return result;
-  };
 
   // 段落ごとにグループ化
   const paragraphs: Array<{ sentences: typeof passageData.sentences }> = [];
@@ -213,8 +170,8 @@ export function SlashSplitTab({ passageData }: { passageData: CompletePassageDat
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="text-base leading-relaxed space-y-4">
         {paragraphs.map((para, paraIndex) => (
-          <div key={paraIndex} className={paraIndex > 0 ? 'indent-8' : ''}>
-            {para.sentences.map(s => splitIntoChunks(s.english)).join(' ')}
+          <div key={paraIndex} className="indent-8">
+            {para.sentences.map(s => splitWithSlash(s.english)).join(' ')}
           </div>
         ))}
       </div>
@@ -316,7 +273,7 @@ export function ParenSplitTab({ passageData }: { passageData: CompletePassageDat
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="text-base leading-relaxed space-y-4">
         {paragraphs.map((para, paraIndex) => (
-          <div key={paraIndex} className={paraIndex > 0 ? 'indent-8' : ''}>
+          <div key={paraIndex} className="indent-8">
             {para.sentences.map(s => renderWithParens(s.english)).join(' ')}
           </div>
         ))}
@@ -364,33 +321,25 @@ export function LiteralTranslationTab({ passageData }: { passageData: CompletePa
 
 /**
  * タブ5: 一文訳（日本語訳）
+ * 一文ごとに英文・日本語訳を交互に表示
  */
 export function SentenceTranslationTab({ passageData }: { passageData: CompletePassageData }) {
-  // 段落ごとにグループ化
-  const paragraphs: Array<{ sentences: typeof passageData.sentences }> = [];
-  let currentParagraph: typeof passageData.sentences = [];
-
-  passageData.sentences.forEach((sentence, index) => {
-    if (sentence.isParagraphStart && currentParagraph.length > 0) {
-      paragraphs.push({ sentences: currentParagraph });
-      currentParagraph = [];
-    }
-    currentParagraph.push(sentence);
-    if (index === passageData.sentences.length - 1) {
-      paragraphs.push({ sentences: currentParagraph });
-    }
-  });
-
   return (
     <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
-      <div className="space-y-6">
-        {paragraphs.map((para, paraIndex) => (
-          <div key={paraIndex} className="mb-4">
-            <div className={`phrase-english mb-2 ${paraIndex > 0 ? 'indent-8' : ''}`}>
-              {para.sentences.map(s => s.english).join(' ')}
+      <div className="space-y-4">
+        {passageData.sentences.map((sentence, index) => (
+          <div key={sentence.id} className="sentence-translation-pair">
+            {/* 段落開始の場合はマージンを追加 */}
+            {sentence.isParagraphStart && index > 0 && (
+              <div className="h-4"></div>
+            )}
+            {/* 英文 */}
+            <div className={`phrase-english mb-2 ${sentence.isParagraphStart ? 'indent-8' : ''}`}>
+              {sentence.english}
             </div>
-            <div className="japanese-translation-display">
-              {para.sentences.map(s => s.japanese).join('')}
+            {/* 日本語訳 */}
+            <div className={`japanese-translation-display ${sentence.isParagraphStart ? 'indent-8' : ''}`}>
+              {sentence.japanese}
             </div>
           </div>
         ))}
@@ -467,7 +416,60 @@ export function SettingsTab({
 }
 
 /**
- * タブ6: 語句確認表示
+ * タブ6: 語句確認表示（長文全体用）
+ */
+export function PassageVocabularyTab({
+  passageData,
+  onAddToCustom,
+}: {
+  passageData: CompletePassageData;
+  onAddToCustom?: (phrase: KeyPhrase) => void;
+}) {
+  // annotatedWordsを表示
+  const items = passageData.annotatedWords || [];
+
+  return (
+    <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
+      {items.length > 0 && (
+        <div className="space-y-2">
+          <h3 className="text-lg font-bold text-gray-800 mb-4">📚 重要語句</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {items.map((word, idx) => (
+              <div key={idx} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                <div className="flex-1">
+                  <div className="font-semibold text-gray-900">{word.word}</div>
+                  <div className="text-sm text-gray-600">{word.meaning}</div>
+                </div>
+                {onAddToCustom && (
+                  <button
+                    className="px-3 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 transition whitespace-nowrap"
+                    onClick={() => onAddToCustom({
+                      phrase: word.word,
+                      meaning: word.meaning,
+                      type: 'annotated',
+                      positions: [],
+                    })}
+                  >
+                    + 追加
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {items.length === 0 && (
+        <div className="text-center py-8">
+          <p className="text-gray-500">このパッセージに注釈語句はありません</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * タブ6: 語句確認表示（文単位用）
  */
 export function VocabularyTab({
   sentenceDetail,

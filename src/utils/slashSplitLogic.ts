@@ -45,19 +45,19 @@ export function splitWithSlash(text: string): string {
 
   // 3. 伝聞・思考動詞+that節
   const reportThinkVerbs = 'know|knows|knew|learn|learned|learnt|think|thinks|thought|hope|hopes|hoped|say|says|said|tell|tells|told|believe|believes|believed|feel|feels|felt|find|finds|found|see|sees|saw|hear|hears|heard|understand|understands|understood|realize|realizes|realized|imagine|imagines|imagined|suppose|supposes|supposed|expect|expects|expected|remember|remembers|remembered|forget|forgets|forgot|wonder|wonders|wondered|guess|guesses|guessed|assume|assumes|assumed';
-  
+
   // that明示の場合
   result = result.replace(
     new RegExp(`\\b(${reportThinkVerbs})\\s+that\\s+`, 'gi'),
     '$1 / that '
   );
-  
+
   // that省略の場合（動詞の後に主語+be動詞/助動詞が来る）
   result = result.replace(
     new RegExp(`\\b(${reportThinkVerbs})\\s+([a-z]+|there|[A-Z][a-z]+|his|her|their|my|your)\\s+(is|are|was|were|can|will|would|should|could|may|might|must|has|have|had|am)\\b`, 'gi'),
     '$1 / $2 $3'
   );
-  
+
   // that省略（所有格+名詞の場合、例: his grandmother）
   result = result.replace(
     new RegExp(`\\b(${reportThinkVerbs})\\s+(his|her|their|my|your|our)\\s+([a-z]+)\\s+(is|are|was|were|can|will|would|should|could)\\b`, 'gi'),
@@ -122,7 +122,7 @@ export function splitWithSlash(text: string): string {
 
   // 13. 文末の/を削除（ピリオドの前）
   result = result.replace(/\s*\/\s*([.!?;:])/, '$1');
-  
+
   // 14. カンマ直前の/を削除（カンマの後だけ/を残す）
   result = result.replace(/\s*\/\s*,/, ',');
 

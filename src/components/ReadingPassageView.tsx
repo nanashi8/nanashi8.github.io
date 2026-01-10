@@ -18,6 +18,7 @@ import ExplanationBoard, {
   ParenSplitTab,
   LiteralTranslationTab,
   SentenceTranslationTab,
+  PassageVocabularyTab,
   VocabularyTab,
   SettingsTab
 } from './ExplanationBoard';
@@ -229,21 +230,11 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
         )}
 
         {/* タブ6: 語句確認 */}
-        {activeTab === 'vocabulary' && sentenceDetail && (
-          <VocabularyTab
-            sentenceDetail={sentenceDetail}
-            annotatedWords={passageData.annotatedWords}
+        {activeTab === 'vocabulary' && passageData && (
+          <PassageVocabularyTab
+            passageData={passageData}
             onAddToCustom={handleAddToCustom}
           />
-        )}
-
-        {/* 語句確認タブで文が選択されていない場合 */}
-        {activeTab === 'vocabulary' && !selectedSentence && (
-          <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 text-center">
-            <p className="text-gray-500">
-              💡 文をクリックして選択すると、語句確認が表示されます
-            </p>
-          </div>
         )}
       </div>
     </div>
