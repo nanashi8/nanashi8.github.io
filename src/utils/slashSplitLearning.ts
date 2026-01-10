@@ -89,7 +89,7 @@ export const learningExamples: SlashSplitExample[] = [
   {
     id: 'J2022_5_13',
     original: 'you know there is a lot of food to eat',
-    expected: 'you know / there is a lot of food / to eat /',
+    expected: 'you know / there is a lot of food / to eat',
     patterns: ['動詞の後（that省略）', 'there is構文の後', 'to不定詞の前']
   },
   {

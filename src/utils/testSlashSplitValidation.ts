@@ -82,7 +82,7 @@ const testCases: TestCase[] = [
   {
     id: 'J2022_5_12',
     input: 'you know there is a lot of food to eat',
-    expected: 'you know / there is a lot of food / to eat /',
+    expected: 'you know / there is a lot of food / to eat',
     description: '動詞（that省略）、there is構文、to不定詞'
   },
   {
