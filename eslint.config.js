@@ -16,6 +16,7 @@ export default tseslint.config(
       'public/vendor/**',
       'extensions/**/media/vendor/**',
       'extensions/**/dist/**',
+      'extensions/servant/**',
     ],
   },
   {
