@@ -5,12 +5,11 @@
  */
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import type { CompletePassageData, SentenceData, KeyPhrase, SelectedSentenceDetail } from '@/types/passage';
+import type { CompletePassageData, KeyPhrase } from '@/types/passage';
 import { loadCompletePassage } from '@/utils/passageDataLoader';
 import { extractKeyPhrasesFromSentences } from '@/utils/keyPhraseExtractor';
-import { loadDependencyParsedPassage, findDependencySentenceByText } from '@/utils/dependencyParseLoader';
+import { loadDependencyParsedPassage } from '@/utils/dependencyParseLoader';
 import type { DependencyParsedPassage } from '@/types/passage';
-import { parseClausesAndPhrases } from '@/utils/clauseParser';
 import ExplanationBoard, {
   type TabType,
   FullTextTab,
