@@ -26,14 +26,16 @@ export class OverviewState extends BaseViewState {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${cspSource} https: data:; style-src ${cspSource} 'unsafe-inline'; script-src ${cspSource} 'unsafe-inline'; font-src ${cspSource} https: data:; connect-src ${cspSource} https:;">
-    <title>天体儀</title>
+    <title>執事の居住空間</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: #000;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #fff;
         }
         #canvas-container {
             width: 100vw;
@@ -45,71 +47,195 @@ export class OverviewState extends BaseViewState {
             top: 10px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(30, 30, 30, 0.95);
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: #fff;
+            background: rgba(20, 20, 35, 0.95);
+            padding: 16px 24px;
+            border-radius: 12px;
             z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(79, 195, 247, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
         }
         .header h1 {
-            margin: 0;
-            font-size: 16px;
+            margin: 0 0 12px 0;
+            font-size: 18px;
             color: #4fc3f7;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
-        .toolbar {
+        .rooms-container {
             display: flex;
-            gap: 10px;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .room {
+            background: rgba(30, 30, 45, 0.8);
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(79, 195, 247, 0.2);
+            min-width: 220px;
+            transition: all 0.3s ease;
+        }
+        .room:hover {
+            background: rgba(40, 40, 60, 0.9);
+            border-color: rgba(79, 195, 247, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(79, 195, 247, 0.2);
+        }
+        .room h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: #4fc3f7;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .room-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
         button {
-            padding: 6px 12px;
-            background: rgba(79, 195, 247, 0.2);
-            border: 1px solid #4fc3f7;
-            border-radius: 4px;
+            padding: 8px 14px;
+            background: rgba(79, 195, 247, 0.15);
+            border: 1px solid rgba(79, 195, 247, 0.4);
+            border-radius: 6px;
             color: #4fc3f7;
-            font-size: 12px;
+            font-size: 11px;
             cursor: pointer;
             transition: all 0.2s;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         button:hover {
-            background: rgba(79, 195, 247, 0.4);
+            background: rgba(79, 195, 247, 0.3);
+            border-color: #4fc3f7;
+            transform: scale(1.02);
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .avatar-space {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 180px;
+            height: 240px;
+            background: rgba(20, 20, 35, 0.9);
+            border: 2px dashed rgba(79, 195, 247, 0.3);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+        .avatar-space .placeholder {
+            font-size: 64px;
+            margin-bottom: 12px;
+            opacity: 0.6;
+        }
+        .avatar-space .label {
+            font-size: 11px;
+            color: rgba(79, 195, 247, 0.7);
+            text-align: center;
+            line-height: 1.4;
         }
         #info {
             position: absolute;
             bottom: 10px;
             left: 10px;
-            background: rgba(30, 30, 30, 0.95);
+            background: rgba(20, 20, 35, 0.95);
             padding: 12px 16px;
             border-radius: 8px;
-            color: #fff;
-            font-size: 12px;
+            font-size: 11px;
             z-index: 1000;
+            border: 1px solid rgba(79, 195, 247, 0.2);
+            max-width: 280px;
         }
         #status {
             color: #4fc3f7;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .toolbar {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(79, 195, 247, 0.2);
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>🌟 プロジェクト構造（天体儀）</h1>
+        <h1>👔 執事の居住空間 - Servant's Quarters</h1>
+        
+        <div class="rooms-container">
+            <!-- 道具部屋 -->
+            <div class="room">
+                <h3>🔧 道具部屋 (Tools)</h3>
+                <div class="room-buttons">
+                    <button onclick="openDoc('DATA_GENERATION_TOOLS_CATALOG')">📚 ツールカタログ</button>
+                    <button onclick="openDoc('TESTING_GUIDE')">🧪 テストガイド</button>
+                    <button onclick="openDoc('VOICE_FOR_STUDENTS_GUIDE')">🔊 音声機能ガイド</button>
+                    <button onclick="openDoc('QUESTION_SCHEDULER_RECOVERY')">🔄 スケジューラ復旧</button>
+                    <button onclick="openDoc('GENERATE_CLASSICAL_JAPANESE_PDF')">📄 古文PDF生成</button>
+                    <button onclick="openDoc('LOCAL_UD_DEPENDENCY_PARSE')">🌳 構文解析</button>
+                    <button onclick="openDoc('DETECTED_SIGNAL_USAGE_GUIDE')">📡 信号検知ガイド</button>
+                </div>
+            </div>
+
+            <!-- 控え室 -->
+            <div class="room">
+                <h3>🎯 控え室 (Control)</h3>
+                <div class="room-buttons">
+                    <button onclick="showMaintenance()">🩺 健全診断</button>
+                    <button onclick="showSearch()">🔍 プロジェクト検索</button>
+                    <button onclick="showFilter()">🎯 フィルター</button>
+                    <button onclick="requestData()">🔄 データ更新</button>
+                </div>
+            </div>
+
+            <!-- 休憩部屋 -->
+            <div class="room">
+                <h3>☕ 休憩部屋 (Rest)</h3>
+                <div class="room-buttons">
+                    <button onclick="openDoc('DOCPART_USAGE')">📝 ドキュメント分割</button>
+                    <button onclick="openDoc('DOCUSAURUS_SETUP_GUIDE')">📖 Docusaurus設定</button>
+                    <button onclick="showProjectStatus()">📊 プロジェクト状態</button>
+                    <button onclick="showWorkHistory()">📜 作業履歴</button>
+                </div>
+            </div>
+        </div>
+
         <div class="toolbar">
-            <button onclick="showSearch()">🔍 検索</button>
-            <button onclick="showFilter()">🎯 フィルター</button>
-          <button onclick="showMaintenance()">🩺 健全診断</button>
-            <button onclick="requestData()">🔄 更新</button>
+            <button onclick="showConstellationView()">🌟 天体儀表示</button>
+            <button onclick="toggleAvatarMode()">👤 執事モード切替</button>
         </div>
     </div>
 
     <div id="canvas-container"></div>
 
+    <!-- 執事アバター表示領域 -->
+    <div class="avatar-space">
+        <div class="placeholder">👔</div>
+        <div class="label">執事の姿・表情<br>（将来実装予定）</div>
+    </div>
+
     <div id="info">
         <div id="status">初期化中...</div>
         <div>ノード数: <span id="node-count">0</span></div>
+        <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(79,195,247,0.2); font-size: 10px; color: rgba(79,195,247,0.6);">
+            執事として完璧なサービスを<br>提供するための司令室
+        </div>
     </div>
 
     <script>
@@ -308,6 +434,14 @@ export class OverviewState extends BaseViewState {
         });
 
         // グローバル関数
+        window.openDoc = function(docName) {
+          log('Opening document: ' + docName);
+          vscode.postMessage({ 
+            command: 'openDocument',
+            docName: docName
+          });
+        };
+
         window.showSearch = function() {
           vscode.postMessage({ command: 'showSearch' });
         };
@@ -322,6 +456,22 @@ export class OverviewState extends BaseViewState {
 
         window.requestData = function() {
           vscode.postMessage({ command: 'getData' });
+        };
+
+        window.showProjectStatus = function() {
+          vscode.postMessage({ command: 'showProjectStatus' });
+        };
+
+        window.showWorkHistory = function() {
+          vscode.postMessage({ command: 'showWorkHistory' });
+        };
+
+        window.showConstellationView = function() {
+          vscode.postMessage({ command: 'toggleConstellationView' });
+        };
+
+        window.toggleAvatarMode = function() {
+          vscode.postMessage({ command: 'toggleAvatarMode' });
         };
 
             // 初期化完了を通知
@@ -355,6 +505,21 @@ export class OverviewState extends BaseViewState {
         context.logToOutput('[Overview] Transitioning to maintenance view');
         await context.transitionToState(new MaintenanceState());
         break;
+      case 'openDocument':
+        await this.openDocument(context, message.docName);
+        break;
+      case 'showProjectStatus':
+        await this.showProjectStatus(context);
+        break;
+      case 'showWorkHistory':
+        await this.showWorkHistory(context);
+        break;
+      case 'toggleConstellationView':
+        await this.toggleConstellationView(context);
+        break;
+      case 'toggleAvatarMode':
+        await this.toggleAvatarMode(context);
+        break;
     }
   }
 
@@ -382,21 +547,115 @@ export class OverviewState extends BaseViewState {
     });
   }
 
+  async openDocument(context: ConstellationViewPanel, docName: string): Promise<void> {
+    const docMap: Record<string, string> = {
+      'DATA_GENERATION_TOOLS_CATALOG': 'docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md',
+      'TESTING_GUIDE': 'docs/how-to/TESTING_GUIDE.md',
+      'VOICE_FOR_STUDENTS_GUIDE': 'docs/how-to/VOICE_FOR_STUDENTS_GUIDE.md',
+      'QUESTION_SCHEDULER_RECOVERY': 'docs/how-to/QUESTION_SCHEDULER_RECOVERY.md',
+      'GENERATE_CLASSICAL_JAPANESE_PDF': 'docs/how-to/GENERATE_CLASSICAL_JAPANESE_PDF.md',
+      'LOCAL_UD_DEPENDENCY_PARSE': 'docs/how-to/LOCAL_UD_DEPENDENCY_PARSE.md',
+      'DETECTED_SIGNAL_USAGE_GUIDE': 'docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md',
+      'DOCPART_USAGE': 'docs/how-to/DOCPART_USAGE.md',
+      'DOCUSAURUS_SETUP_GUIDE': 'docs/how-to/DOCUSAURUS_SETUP_GUIDE.md'
+    };
+
+    const docPath = docMap[docName];
+    if (!docPath) {
+      context.logToOutput(`[Overview] Unknown document: ${docName}`);
+      vscode.window.showWarningMessage(`ドキュメントが見つかりません: ${docName}`);
+      return;
+    }
+
+    const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+    if (!workspaceFolder) {
+      vscode.window.showErrorMessage('ワークスペースが開かれていません');
+      return;
+    }
+
+    const fullPath = vscode.Uri.joinPath(workspaceFolder.uri, docPath);
+    context.logToOutput(`[Overview] Opening document: ${fullPath.fsPath}`);
+    
+    try {
+      const doc = await vscode.workspace.openTextDocument(fullPath);
+      await vscode.window.showTextDocument(doc, { preview: false });
+    } catch (error) {
+      context.logToOutput(`[Overview] Failed to open document: ${error}`);
+      vscode.window.showErrorMessage(`ドキュメントを開けませんでした: ${docPath}`);
+    }
+  }
+
+  async showProjectStatus(context: ConstellationViewPanel): Promise<void> {
+    context.logToOutput('[Overview] Showing project status');
+    
+    const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+    if (!workspaceFolder) {
+      vscode.window.showErrorMessage('ワークスペースが開かれていません');
+      return;
+    }
+
+    // Git status を取得
+    const gitExtension = vscode.extensions.getExtension('vscode.git')?.exports;
+    const api = gitExtension?.getAPI(1);
+    
+    let statusText = '📊 プロジェクト状態\n\n';
+    
+    if (api && api.repositories.length > 0) {
+      const repo = api.repositories[0];
+      const branch = repo.state.HEAD?.name || 'unknown';
+      const changes = repo.state.workingTreeChanges.length;
+      const staged = repo.state.indexChanges.length;
+      
+      statusText += `📌 ブランチ: ${branch}\n`;
+      statusText += `📝 変更ファイル: ${changes}\n`;
+      statusText += `✅ ステージング: ${staged}\n`;
+    }
+    
+    statusText += `\n📂 ワークスペース: ${workspaceFolder.name}`;
+    
+    vscode.window.showInformationMessage(statusText, { modal: false });
+  }
+
+  async showWorkHistory(context: ConstellationViewPanel): Promise<void> {
+    context.logToOutput('[Overview] Showing work history');
+    vscode.window.showInformationMessage(
+      '📜 作業履歴機能は近日実装予定です。\n現在は Git ログで確認できます。',
+      '閉じる'
+    );
+  }
+
+  async toggleConstellationView(context: ConstellationViewPanel): Promise<void> {
+    context.logToOutput('[Overview] Toggling constellation 3D view');
+    context.postMessage({
+      command: 'toggleVisualization',
+      enabled: true
+    });
+    vscode.window.showInformationMessage('🌟 天体儀3D表示を切り替えました');
+  }
+
+  async toggleAvatarMode(context: ConstellationViewPanel): Promise<void> {
+    context.logToOutput('[Overview] Avatar mode toggle requested');
+    vscode.window.showInformationMessage(
+      '👔 執事アバターモード\n\n将来、執事の姿や表情をこの画面に表示する予定です。\n現在はプレースホルダーのみ表示されています。',
+      '了解'
+    );
+  }
+
   async showOverview(context: ConstellationViewPanel): Promise<void> {
     // 既にOverview状態なので何もしない
     context.logToOutput('[Overview] Already in overview state');
   }
 
   getDescription(): string {
-    return '🌟 プロジェクト全体の天体儀表示';
+    return '👔 執事の居住空間 - 道具部屋・控え室・休憩部屋';
   }
 
   async enter(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput('[Overview] Entering overview state');
+    context.logToOutput('[Overview] Entering Servant Quarters (執事の居住空間)');
     await this.updateData(context);
   }
 
   async exit(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput('[Overview] Exiting overview state');
+    context.logToOutput('[Overview] Exiting Servant Quarters');
   }
 }
