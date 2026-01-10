@@ -7,6 +7,7 @@ import { OverviewState } from './states/OverviewState';
 import { SearchState } from './states/SearchState';
 import { FilterState } from './states/FilterState';
 import { DetailState } from './states/DetailState';
+import { MaintenanceState } from './states/MaintenanceState';
 
 export type ConstellationOpenOptions = {
   mode?: ViewModeName;
@@ -118,6 +119,8 @@ export class ConstellationViewPanel {
         return new FilterState(openOptions?.filters ?? {});
       case 'Detail':
         return new DetailState(openOptions?.nodeId ?? '');
+      case 'Maintenance':
+        return new MaintenanceState();
       case 'Overview':
       default:
         return new OverviewState();

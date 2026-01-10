@@ -14,7 +14,8 @@ export type ViewModeName =
   | 'Overview'     // 全体表示（デフォルト）
   | 'Detail'       // 詳細表示（ノード選択時）
   | 'Filter'       // フィルター表示
-  | 'Search';      // 検索表示
+  | 'Search'       // 検索表示
+  | 'Maintenance'; // メンテナンス/健全診断
 
 /**
  * 表示状態インターフェース

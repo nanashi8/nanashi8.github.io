@@ -2047,6 +2047,12 @@ export function activate(context: vscode.ExtensionContext) {
     }
   });
 
+  // Constellationのサブモードとして、メンテナンス（健全診断）を開く
+  const showMaintenanceCommand = vscode.commands.registerCommand('servant.showMaintenance', async () => {
+    await vscode.commands.executeCommand('servant.showConstellation', { mode: 'Maintenance' as ViewModeName });
+  });
+  context.subscriptions.push(showMaintenanceCommand);
+
   // 🌟ステータスバー起点のメニュー（QuickPick）
   const openConstellationMenuCommand = vscode.commands.registerCommand('servant.openConstellationMenu', async () => {
     const selected = await vscode.window.showQuickPick(
@@ -2055,6 +2061,11 @@ export function activate(context: vscode.ExtensionContext) {
           label: '🌟 天体儀（全体表示）',
           description: 'プロジェクト全体の3D表示',
           mode: 'Overview' as ViewModeName,
+        },
+        {
+          label: '🩺 メンテナンス（健全診断）',
+          description: 'プロジェクトの健全性チェックと実行ボタン',
+          mode: 'Maintenance' as ViewModeName,
         },
         {
           label: '🔍 天体儀（検索）',

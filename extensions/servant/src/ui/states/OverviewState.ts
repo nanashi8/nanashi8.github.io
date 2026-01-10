@@ -5,6 +5,7 @@ import { ConstellationViewPanel } from '../ConstellationViewPanel';
 import { DetailState } from './DetailState';
 import { FilterState } from './FilterState';
 import { SearchState } from './SearchState';
+import { MaintenanceState } from './MaintenanceState';
 
 export class OverviewState extends BaseViewState {
   public readonly name: ViewModeName = 'Overview';
@@ -99,6 +100,7 @@ export class OverviewState extends BaseViewState {
         <div class="toolbar">
             <button onclick="showSearch()">🔍 検索</button>
             <button onclick="showFilter()">🎯 フィルター</button>
+          <button onclick="showMaintenance()">🩺 健全診断</button>
             <button onclick="requestData()">🔄 更新</button>
         </div>
     </div>
@@ -314,6 +316,10 @@ export class OverviewState extends BaseViewState {
           vscode.postMessage({ command: 'showFilter' });
         };
 
+        window.showMaintenance = function() {
+          vscode.postMessage({ command: 'showMaintenance' });
+        };
+
         window.requestData = function() {
           vscode.postMessage({ command: 'getData' });
         };
@@ -344,6 +350,10 @@ export class OverviewState extends BaseViewState {
         break;
       case 'showFilter':
         await this.showFilter(context, message.filters || {});
+        break;
+      case 'showMaintenance':
+        context.logToOutput('[Overview] Transitioning to maintenance view');
+        await context.transitionToState(new MaintenanceState());
         break;
     }
   }

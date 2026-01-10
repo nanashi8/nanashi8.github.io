@@ -172,6 +172,10 @@
         "title": "Servant: 🌟 Show Constellation View"
       },
       {
+        "command": "servant.showMaintenance",
+        "title": "Servant: 🩺 Maintenance / Health Check"
+      },
+      {
         "command": "servant.openConstellationMenu",
         "title": "Servant: 🌟 Constellation Menu"
       },
