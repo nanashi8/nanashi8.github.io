@@ -558,6 +558,9 @@ export class OverviewState extends BaseViewState {
       case 'invokeSacredTool':
         await this.invokeSacredTool(context, message.toolNumber);
         break;
+      case 'executeSacredToolAction':
+        await this.executeSacredToolAction(context, message.toolNumber, message.actionId);
+        break;
     }
   }
 
@@ -686,16 +689,30 @@ export class OverviewState extends BaseViewState {
 
   async invokeSacredTool(context: ConstellationViewPanel, toolNumber: number): Promise<void> {
     context.logToOutput(`[Overview] Invoking Sacred Tool #${toolNumber}`);
-    
-    const toolDescriptions: Record<number, { name: string; description: string; action?: () => Promise<void> }> = {
+
+    const toolDescriptions: Record<number, { name: string; description: string; action?: () => Promise<void>; menu?: Array<{ id: string; label: string; description: string }> }> = {
       1: {
         name: '🌌 全宇宙リソース統合エンジン',
         description: 'プロジェクト内から太陽系外まで、観測可能な全リソースを統合し、未知の組み合わせから新たな創造物を合成します。',
-        action: async () => await this.toggleConstellationView(context)
+        action: async () => await this.toggleConstellationView(context),
+        menu: [
+          { id: 'buildNeuralGraph', label: '🧠 ニューラルグラフ構築', description: '依存関係を重み付きグラフ化' },
+          { id: 'showNeuralGraph', label: '📊 グラフ統計表示', description: 'ノード・エッジ統計を表示' },
+          { id: 'propagateForward', label: '🔮 影響伝播計算', description: '現在のファイルから影響範囲を予測' },
+          { id: 'showNeuralLearning', label: '📈 学習統計', description: 'ニューラル学習の進捗' },
+        ]
       },
       2: {
         name: '🧠 適応的学習システム',
         description: 'ユーザーの行動・失敗パターンから学習し、最適な問題・タイミング・難易度を自動調整します。',
+        menu: [
+          { id: 'evaluateAI', label: '🎯 AI自己評価実行', description: '処理履歴からメトリクス算出' },
+          { id: 'showAIStats', label: '📊 AI処理統計', description: '成功率・違反率を表示' },
+          { id: 'showRecentAIActions', label: '📜 直近のAI処理', description: '最新20件の処理履歴' },
+          { id: 'showAITrend', label: '📈 パフォーマンス推移', description: '時系列でスコア変化を表示' },
+          { id: 'learnFromHistory', label: '🔄 Git履歴学習', description: 'コミット履歴からパターン抽出' },
+          { id: 'showLearningStats', label: '📊 学習統計表示', description: '学習サイクル・パターン数' },
+        ]
       },
       3: {
         name: '🩺 健全診断システム',
@@ -737,13 +754,77 @@ export class OverviewState extends BaseViewState {
       return;
     }
 
-    if (tool.action) {
+    if (tool.menu && tool.menu.length > 0) {
+      // サブメニュー表示
+      const items = tool.menu.map(m => ({
+        label: m.label,
+        description: m.description,
+        id: m.id
+      }));
+
+      const selected = await vscode.window.showQuickPick(items, {
+        placeHolder: `${tool.name} - 実行する機能を選択してください`,
+        matchOnDescription: true
+      });
+
+      if (selected) {
+        await this.executeSacredToolAction(context, toolNumber, selected.id);
+      }
+    } else if (tool.action) {
       await tool.action();
     } else {
       vscode.window.showInformationMessage(
         `${tool.name}\n\n${tool.description}\n\n実装準備中...`,
         '了解'
       );
+    }
+  }
+
+  async executeSacredToolAction(context: ConstellationViewPanel, toolNumber: number, actionId: string): Promise<void> {
+    context.logToOutput(`[Overview] Executing Sacred Tool #${toolNumber} action: ${actionId}`);
+
+    try {
+      switch (actionId) {
+        // 神器#1: 全宇宙リソース統合 (ニューラルグラフ)
+        case 'buildNeuralGraph':
+          await vscode.commands.executeCommand('servant.buildNeuralGraph');
+          break;
+        case 'showNeuralGraph':
+          await vscode.commands.executeCommand('servant.showNeuralGraph');
+          break;
+        case 'propagateForward':
+          await vscode.commands.executeCommand('servant.propagateForward');
+          break;
+        case 'showNeuralLearning':
+          await vscode.commands.executeCommand('servant.showNeuralLearningStats');
+          break;
+
+        // 神器#2: 適応的学習システム (AI自己評価)
+        case 'evaluateAI':
+          await vscode.commands.executeCommand('servant.evaluateAI');
+          break;
+        case 'showAIStats':
+          await vscode.commands.executeCommand('servant.showAIStats');
+          break;
+        case 'showRecentAIActions':
+          await vscode.commands.executeCommand('servant.showRecentAIActions');
+          break;
+        case 'showAITrend':
+          await vscode.commands.executeCommand('servant.showAITrend');
+          break;
+        case 'learnFromHistory':
+          await vscode.commands.executeCommand('servant.learnFromHistory');
+          break;
+        case 'showLearningStats':
+          await vscode.commands.executeCommand('servant.showLearningStats');
+          break;
+
+        default:
+          vscode.window.showWarningMessage(`アクション "${actionId}" は未実装です`);
+      }
+    } catch (error) {
+      context.logToOutput(`[Overview] Failed to execute action: ${error}`);
+      vscode.window.showErrorMessage(`実行エラー: ${error}`);
     }
   }
 

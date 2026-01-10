@@ -5,18 +5,23 @@
 
 ---
 
-## 📊 現在地（Phase 7完了）
+## 📊 現在地（Phase 8-11: プロトタイプ実装済み）
 
-### ✅ 実装済みの基盤
+### ✅ 実装済みの基盤（現状のコード）
 - **依存関係マップ**: ファイル間のインポート関係を抽出（`ProjectContextDB`）
 - **違反パターン学習**: 15回サイクルで自動学習、Instructions自動生成（`AdaptiveGuard`）
 - **Git履歴解析**: コミット履歴からホットスポット検出（`GitHistoryAnalyzer`）
-- **AI向けコンテキスト**: タスクに関連するファイル・警告・例を収集
+- **AI処理追跡**: 変更ファイル/差分/違反/エラーをログ化（`AIActionTracker`）
+- **AI自己評価**: メトリクス算出＋履歴保存（`AIEvaluator`）
+- **フィードバック生成**: 強み/弱み/改善提案を生成（`FeedbackCollector`）
+- **ニューラル依存グラフ**: 重み付きグラフ構築（`NeuralDependencyGraph`）
+- **学習伝播/最適化**: 影響伝播・ワークフロー学習・提案（`NeuralLearningEngine` / `OptimizationEngine` / `WorkflowLearner`）
+- **アーキテクチャ分析**: 構造の助言（`ArchitectureAdvisor`）
 
 ### 🔧 技術的制約
 - VSCode拡張の実行環境（Node.js、VSCode API）
 - ローカル処理のみ（クラウドAI連携なし）
-- GitHub Copilot APIは限定的（vscode.lm API使用可能）
+- GitHub Copilot（`vscode.lm` API）連携は現状未接続（自動注入は未実装）
 
 ---
 
