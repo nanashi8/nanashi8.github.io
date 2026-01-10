@@ -16,6 +16,45 @@ function splitIntoBlocks(text: string): string[] {
     .filter(Boolean);
 }
 
+/**
+ * passages-originalから元テキストを読み、段落情報を抽出する
+ * 空白行で区切られた段落の最初の文を特定
+ */
+function detectParagraphStarts(text: string, sentences: Array<{ english: string }>): Set<number> {
+  const paragraphStarts = new Set<number>();
+  
+  // 空白行で段落を分割
+  const paragraphs = text
+    .split(/\r?\n\s*\r?\n/)
+    .map(p => p.replace(/\r?\n/g, ' ').trim())
+    .filter(Boolean);
+  
+  if (paragraphs.length <= 1) {
+    // 段落が1つだけなら段落分けなし
+    return paragraphStarts;
+  }
+  
+  // 各段落の最初の文を特定
+  let sentenceIndex = 0;
+  for (const para of paragraphs) {
+    if (sentenceIndex >= sentences.length) break;
+    
+    // この段落の最初の文を見つける
+    const paraStart = para.substring(0, 100).toLowerCase().replace(/[^a-z0-9\s]/g, ' ');
+    
+    for (let i = sentenceIndex; i < sentences.length; i++) {
+      const sentStart = sentences[i].english.substring(0, 100).toLowerCase().replace(/[^a-z0-9\s]/g, ' ');
+      if (paraStart.includes(sentStart.substring(0, 30)) || sentStart.includes(paraStart.substring(0, 30))) {
+        paragraphStarts.add(i + 1); // sentenceのidは1-based
+        sentenceIndex = i + 1;
+        break;
+      }
+    }
+  }
+  
+  return paragraphStarts;
+}
+
 function estimateWordCount(sentences: string[]): number {
   // ざっくりで良い（表示用）。アスタリスク注釈や記号は除外。
   const joined = sentences.join(' ');
@@ -337,7 +376,7 @@ export async function loadCompletePassage(
   }
 
   // 英語（文単位）はUDパースの text を正とする（句点を含む複文もこの単位で扱う）
-  const sentences = parsed.sentences.map((s, idx) => {
+  const sentences: CompletePassageData['sentences'] = parsed.sentences.map((s, idx) => {
     const id = typeof s.id === 'number' ? s.id : idx + 1;
     const japanese = japaneseBlocks[idx] ?? '';
     return {
@@ -345,7 +384,27 @@ export async function loadCompletePassage(
       english: s.text,
       japanese,
       phraseIds: [] as string[],
+      isParagraphStart: false,
     };
+  });
+  
+  // passages-originalから段落情報を取得
+  let paragraphStarts = new Set<number>();
+  try {
+    const origRes = await fetch(`/data/passages-original/${passageId}.txt`);
+    if (origRes.ok) {
+      const origText = await origRes.text();
+      // 最初の行（パッセージID行）を除去
+      const withoutId = origText.replace(/^[^\n]*\n/, '').trim();
+      paragraphStarts = detectParagraphStarts(withoutId, sentences);
+    }
+  } catch {
+    // ignore
+  }
+  
+  // 段落開始フラグを適用
+  sentences.forEach(s => {
+    s.isParagraphStart = paragraphStarts.has(s.id);
   });
 
   // フレーズ（任意）: phrase-work（英）と phrases（和）が揃っていれば構築

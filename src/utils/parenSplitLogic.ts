@@ -1,8 +1,13 @@
 /**
- * ()分割のテストスクリプト
+ * ()分割ロジック
+ * 従属節を()で、前置詞句を<>で囲む形式で分割
  */
 
-function renderWithParens(text: string): string {
+/**
+ * 英文の従属節を()、前置詞句を<>で囲んで返す
+ * 例: "I walk to school with friends." → "I walk <to school> <with friends>."
+ */
+export function splitWithParentheses(text: string): string {
   let result = text;
 
   // 1. 従属節を()で囲む
@@ -69,34 +74,3 @@ function renderWithParens(text: string): string {
 
   return result;
 }
-
-// テストケース
-const parenSplitTestCases = [
-  "I wake up at seven every morning.",
-  "First, I brush my teeth and wash my face.",
-  "Then I eat breakfast with my family.",
-  "I usually have toast and juice.",
-  "After breakfast, I get my bag ready.",
-  "I check homework and put books inside.",
-  "Finally, I walk to school with friends.",
-  "In our city, we have a good zoo, Smile Zoo.",
-  "We can give food to them.",
-  "It will start at eleven in the morning, and we can enjoy it for thirty minutes.",
-  "Right, but I can't join Night Safari because I have to go home by six.",
-  "So, if we do that, our entrance fee will be three dollars per person.",
-  // 追加テストケース
-  "This is the book that I bought yesterday.",
-  "English is spoken by many people in the world.",
-  "I want to visit Tokyo to see my friend.",
-  "This book is more interesting than that one.",
-  "I don't know how to use this machine.",
-  "I have lived in Tokyo for five years."
-];
-
-console.log("=== ()分割テスト ===\n");
-parenSplitTestCases.forEach((test, idx) => {
-  const result = renderWithParens(test);
-  console.log(`${idx + 1}. 入力: ${test}`);
-  console.log(`   出力: ${result}`);
-  console.log();
-});

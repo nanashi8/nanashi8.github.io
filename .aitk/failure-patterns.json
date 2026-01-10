@@ -8,7 +8,7 @@
     "convergenceThreshold": 0.95,
     "lastUpdated": "2026-01-09",
     "gitHistoryLearned": true,
-    "gitHistoryLearnedAt": "2026-01-08T07:53:02.563Z"
+    "gitHistoryLearnedAt": "2026-01-09T22:53:42.595Z"
   },
   "failurePatterns": {
     "markdown-code-span-spaces": {
@@ -22,7 +22,9 @@
       "description": "Markdownのコードスパン（バッククォート）内に不要なスペース",
       "detectionPattern": {
         "errorMessage": "MD038/no-space-in-code: Spaces inside code span elements",
-        "files": ["**/*.md"]
+        "files": [
+          "**/*.md"
+        ]
       },
       "prevention": {
         "checkType": "lint",
@@ -59,14 +61,17 @@
       "id": "property-naming-error",
       "category": "type-error",
       "severity": "critical",
-      "occurrences": 117,
+      "occurrences": 132,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
       "description": "型定義を確認せずにプロパティ名を推測",
       "detectionPattern": {
         "errorMessage": "Property .* does not exist on type",
-        "files": ["src/**/*.ts", "src/**/*.tsx"]
+        "files": [
+          "src/**/*.ts",
+          "src/**/*.tsx"
+        ]
       },
       "prevention": {
         "checkType": "static-analysis",
@@ -76,70 +81,70 @@
       },
       "examples": [
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "            actualCorrect !== log.progress.correctCount",
           "fix": "        attempts: progress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "**修正前**: `        const totalCorrect = (wp.correctCount`",
           "fix": "**修正後**: `return (progress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "        const totalCorrect = (wp.correctCount",
           "fix": "    return (progress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "      attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount",
           "fix": "        modeAttempts = wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "**修正前**: `    wordProgress.incorrectCount+",
           "fix": "          \"fix\": \"      const transCorrect = wordStat.translationCorrect",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "      const totalAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount",
           "fix": "  wordProgress.memorizationAttempts = (wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "    wordProgress.incorrectCount+",
           "fix": "const correct = progress.memorizationCorrect",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "        } else if (wordProgress.incorrectCount && wordProgress.incorrectCount",
           "fix": "      if (wordProgress?.memorizationAttempts && wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "    if (ctx.attemptCount",
           "fix": " (wordProgress.spellingAttempts || 0) + (wordProgress.grammarAttempts || 0) + (wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-08",
+          "date": "2026-01-09",
           "error": "      wordStat.correctCount",
           "fix": "      const transCorrect = wordStat.translationCorrect",
           "testsFailed": 0,
@@ -163,7 +168,9 @@
       "description": "リファクタリング時に元のロジックを変更",
       "detectionPattern": {
         "errorMessage": "Test failed.*expected.*received",
-        "files": ["src/**/*.ts"]
+        "files": [
+          "src/**/*.ts"
+        ]
       },
       "prevention": {
         "checkType": "test",
@@ -182,14 +189,16 @@
       "id": "logic-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 3160,
+      "occurrences": 3494,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
       "description": "perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善",
       "detectionPattern": {
         "errorMessage": "perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善",
-        "files": ["src/components/GrammarQuizView.tsx"]
+        "files": [
+          "src/components/GrammarQuizView.tsx"
+        ]
       },
       "prevention": {
         "checkType": "manual",
@@ -208,7 +217,7 @@
       "id": "type-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 260,
+      "occurrences": 285,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
@@ -238,14 +247,16 @@
       "id": "test-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 234,
+      "occurrences": 257,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
       "description": "test: カバレッジ目標達成 - 94.74%",
       "detectionPattern": {
         "errorMessage": "test: カバレッジ目標達成 - 94.74%",
-        "files": ["tests/unit/useAdaptiveLearning.test.ts"]
+        "files": [
+          "tests/unit/useAdaptiveLearning.test.ts"
+        ]
       },
       "prevention": {
         "checkType": "manual",
@@ -304,7 +315,22 @@
   },
   "hotspots": [
     {
+      "file": "src/components/ExplanationBoard.tsx",
+      "modificationCount": 5,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/components/ReadingPassageView.tsx",
+      "modificationCount": 4,
+      "riskLevel": "low"
+    },
+    {
       "file": "src/components/MemorizationView.tsx",
+      "modificationCount": 4,
+      "riskLevel": "low"
+    },
+    {
+      "file": "extensions/servant/src/extension.ts",
       "modificationCount": 4,
       "riskLevel": "low"
     },
@@ -314,43 +340,28 @@
       "riskLevel": "low"
     },
     {
-      "file": "src/utils/db-connection-pool.ts",
-      "modificationCount": 2,
+      "file": "extensions/servant/src/ui/states/OverviewState.ts",
+      "modificationCount": 3,
       "riskLevel": "low"
     },
     {
-      "file": "src/utils.ts",
-      "modificationCount": 2,
-      "riskLevel": "low"
-    },
-    {
-      "file": "src/storage/indexedDB/indexedDBStorage.ts",
-      "modificationCount": 2,
+      "file": "extensions/servant/src/ui/ConstellationViewPanel.ts",
+      "modificationCount": 3,
       "riskLevel": "low"
     },
     {
       "file": "extensions/servant/src/monitoring/ActionsHealthMonitor.ts",
+      "modificationCount": 3,
+      "riskLevel": "low"
+    },
+    {
+      "file": "extensions/servant/src/autopilot/AutopilotController.ts",
+      "modificationCount": 3,
+      "riskLevel": "low"
+    },
+    {
+      "file": "src/utils/db-connection-pool.ts",
       "modificationCount": 2,
-      "riskLevel": "low"
-    },
-    {
-      "file": "src/types.ts",
-      "modificationCount": 1,
-      "riskLevel": "low"
-    },
-    {
-      "file": "src/storage/progress/progressStorage.ts",
-      "modificationCount": 1,
-      "riskLevel": "low"
-    },
-    {
-      "file": "src/storage/manager/dataExport.ts",
-      "modificationCount": 1,
-      "riskLevel": "low"
-    },
-    {
-      "file": "src/components/SocialMemorizationView.tsx",
-      "modificationCount": 1,
       "riskLevel": "low"
     }
   ]

@@ -47,7 +47,7 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
   }, [activeTab]);
 
   // パッセージIDリスト（将来的には動的に取得）
-  const availablePassages = ['beginner-morning-routine', 'J_2022_5'];
+  const availablePassages = ['beginner-morning-routine', 'J_2020_4', 'J_2022_5'];
   const [currentPassageId, setCurrentPassageId] = useState(availablePassages[0]);
 
   // パッセージデータの読み込み
@@ -167,7 +167,7 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
   return (
     <div className="reading-passage-view">
       {/* ExplanationBoard（ボタンのみ） */}
-      <div className="mb-6">
+      <div className="mb-3 sm:mb-6">
         <ExplanationBoard
           passageData={passageData}
           activeTab={activeTab}
@@ -196,10 +196,26 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
         {activeTab === 'slash-split' && passageData && dependencyParse && (
           <SlashSplitTab passageData={passageData} dependencyParse={dependencyParse} />
         )}
+        {activeTab === 'slash-split' && passageData && !dependencyParse && (
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 shadow-sm">
+            <p className="text-yellow-800 font-bold mb-2">⚠️ 解析データがありません</p>
+            <p className="text-yellow-700">
+              このパッセージは依存関係解析（UDパース）が未提供のため、/分割表示は利用できません。
+            </p>
+          </div>
+        )}
 
         {/* タブ3: ()分割 */}
         {activeTab === 'paren-split' && passageData && dependencyParse && (
           <ParenSplitTab passageData={passageData} dependencyParse={dependencyParse} />
+        )}
+        {activeTab === 'paren-split' && passageData && !dependencyParse && (
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 shadow-sm">
+            <p className="text-yellow-800 font-bold mb-2">⚠️ 解析データがありません</p>
+            <p className="text-yellow-700">
+              このパッセージは依存関係解析（UDパース）が未提供のため、()分割表示は利用できません。
+            </p>
+          </div>
         )}
 
         {/* タブ4: 直訳 */}

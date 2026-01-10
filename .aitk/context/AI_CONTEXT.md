@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-09T16:16:06.229Z
+- generatedAt: 2026-01-10T07:23:09.396Z
 
 ## Single Source of Truth
 
@@ -14,31 +14,31 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- extensions/servant/src/ui/states/OverviewState.ts (hot=0.208)
-- extensions/servant/src/ui/ConstellationViewPanel.ts (hot=0.125)
-- test-constellation.html (hot=0.043)
-- extensions/servant/src/extension.ts (hot=0.027)
-- scripts/generate_vocabulary_pdf.py (hot=0.018)
-- extensions/servant/src/guard/DocumentGuard.ts (hot=0.007)
-- docs/archive/2025/plans/LINK_FIX_PLAN.md (hot=0.006)
-- docs/INDEX.md (hot=0.005)
-- docs/archive/legacy-root-docs/AI_PROJECT_COMPLETE.md (hot=0.005)
-- docs/guidelines/passage/PASSAGE_CREATION_GUIDELINES.md (hot=0.005)
+- docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md (hot=0.116)
+- src/utils/testVocabularySplit.ts (hot=0.086)
+- src/utils/README.md (hot=0.055)
+- package.json (hot=0.055)
+- docs/development/vocabulary-tab-split-implementation.md (hot=0.055)
+- src/utils/vocabularySplitLogic.ts (hot=0.053)
+- src/utils/slashSplitLogic.ts (hot=0.053)
+- src/utils/generateSplitData.ts (hot=0.052)
+- public/data/passages-sentences/J_2020_4_sentences.txt (hot=0.031)
+- src/utils/parenSplitLogic.ts (hot=0.031)
 
 ## Related (Neural Propagation)
 
-- startNode: extensions/servant/src/ui/states/OverviewState.ts
+- startNode: docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md
 - seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- extensions/servant/src/ui/states/OverviewState.ts (activation=1.000, source=signal, signals=[save:0.21])
-- extensions/servant/src/ui/ConstellationViewPanel.ts (activation=0.601, source=signal, signals=[save:0.13])
-- test-constellation.html (activation=0.207, source=signal, signals=[save:0.04])
-- extensions/servant/src/extension.ts (activation=0.130, source=signal, signals=[save:0.03])
-- scripts/generate_vocabulary_pdf.py (activation=0.087, source=signal, signals=[save:0.02])
+- docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md (activation=1.000, source=signal, signals=[save:0.12])
+- src/utils/testVocabularySplit.ts (activation=0.741, source=signal, signals=[save:0.09])
+- src/utils/README.md (activation=0.474, source=signal, signals=[save:0.06])
+- package.json (activation=0.474, source=signal, signals=[save:0.06])
+- docs/development/vocabulary-tab-split-implementation.md (activation=0.474, source=signal, signals=[save:0.06])
 
 - (no related files detected)
 
@@ -53,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 112.39
+- ageHours: 127.51
 
 ## Latest SpecCheck Record (Raw)
 

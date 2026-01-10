@@ -117,10 +117,13 @@ function ExplanationBoard({
  */
 export function FullTextTab({ passageData }: { passageData: CompletePassageData }) {
   return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+    <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="text-base leading-relaxed space-y-2">
         {passageData.sentences.map((sentence, _index) => (
-          <div key={sentence.id} className="mb-2">
+          <div
+            key={sentence.id}
+            className={`mb-2 ${sentence.isParagraphStart ? 'indent-8' : ''}`}
+          >
             {sentence.english}
           </div>
         ))}
@@ -144,20 +147,20 @@ export function SlashSplitTab({ passageData }: { passageData: CompletePassageDat
       /^([A-Z][a-z]+|After [a-z]+|Before [a-z]+|During [a-z]+),\s+/,
       '$1, / '
     );
-    
+
     // 2. 接続詞の前に/を挿入
     result = result.replace(
       /\s+(and|but|or|so|because|if|when|while|although|though)\s+/gi,
       ' / $1 '
     );
-    
+
     // 3. 前置詞句の前に/を挿入（ただしhave toなどは除外）
     const preps = 'at|in|on|by|from|for|with|about|of|during|after|before|around|per';
     result = result.replace(
       new RegExp(`\\s+(${preps})\\s+`, 'gi'),
       ' / $1 '
     );
-    
+
     // 4. to不定詞の前に/を挿入（ただしhave to, want to, need toなどは除外）
     result = result.replace(
       /(?<!have|want|need|try|going|used)\s+to\s+/gi,
@@ -166,24 +169,27 @@ export function SlashSplitTab({ passageData }: { passageData: CompletePassageDat
 
     // 5. 連続する/を1つにまとめる
     result = result.replace(/\s*\/\s*\/+\s*/g, ' / ');
-    
+
     // 6. 文頭の/を削除
     result = result.replace(/^\s*\/\s*/, '');
-    
+
     // 7. 文末の/を削除（句読点の前）
     result = result.replace(/\s*\/\s*([.!?,;:])/, '$1');
-    
+
     // 8. スペースを整理
     result = result.replace(/\s+/g, ' ').trim();
-    
+
     return result;
   };
 
   return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+    <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="text-base leading-relaxed space-y-3">
         {passageData.sentences.map((sentence) => (
-          <div key={sentence.id} className="mb-3">
+          <div
+            key={sentence.id}
+            className={`mb-3 ${sentence.isParagraphStart ? 'indent-8' : ''}`}
+          >
             {splitIntoChunks(sentence.english)}
           </div>
         ))}
@@ -197,7 +203,7 @@ export function SlashSplitTab({ passageData }: { passageData: CompletePassageDat
  * ルールベース: 前置詞句を<>、従属節を()で囲む
  */
 export function ParenSplitTab({ passageData }: { passageData: CompletePassageData, dependencyParse?: DependencyParsedPassage }) {
-  
+
   // ルールベースで<>と()を挿入する関数
   const renderWithParens = (text: string) => {
     let result = text;
@@ -208,19 +214,19 @@ export function ParenSplitTab({ passageData }: { passageData: CompletePassageDat
       /\b(that\s+[^,.!?()]+?)([,.!?]|\s+and\s+|\s+but\s+|$)/gi,
       '($1)$2'
     );
-    
+
     // if節
     result = result.replace(
       /\b(if\s+[^,()]+?),/gi,
       '($1),'
     );
-    
+
     // because節
     result = result.replace(
       /\b(because\s+[^,.!?()]+?)([,.!?]|\s+and\s+|\s+but\s+|$)/gi,
       '($1)$2'
     );
-    
+
     // when節
     result = result.replace(
       /\b(when\s+[^,()]+?),/gi,
@@ -230,25 +236,25 @@ export function ParenSplitTab({ passageData }: { passageData: CompletePassageDat
     // 2. 前置詞句を<>で囲む（単語境界を考慮）
     const preps = 'at|in|on|by|to|from|for|with|about|of|during|after|before|around|per';
     const dets = 'the|a|an|my|your|his|her|their|our|its|this|that|these|those';
-    
+
     // 前置詞 + 冠詞/所有格 + 名詞句（1-4語）
     result = result.replace(
       new RegExp(`\\b(${preps})\\s+(${dets})\\s+([a-z]+\\s+){0,2}[a-z]+\\b`, 'gi'),
       '<$&>'
     );
-    
+
     // 前置詞 + 固有名詞/数字
     result = result.replace(
       new RegExp(`\\b(${preps})\\s+([A-Z][a-z]+|\\d+)\\b`, 'g'),
       '<$&>'
     );
-    
+
     // 前置詞 + 一般名詞（単数）- 冠詞なしの場合
     result = result.replace(
       new RegExp(`\\b(${preps})\\s+(breakfast|lunch|dinner|school|home|work|bed|friends|them|seven|eight|nine|ten|eleven|twelve)\\b`, 'gi'),
       '<$&>'
     );
-    
+
     // 前置詞 + 数量表現（thirty minutes, two hours など）
     result = result.replace(
       /\b(for|in|after|before|during)\s+([a-z]+\s+[a-z]+)\b/gi,
@@ -260,18 +266,21 @@ export function ParenSplitTab({ passageData }: { passageData: CompletePassageDat
     result = result.replace(/<+([^<>]+?)>+/g, '<$1>');
     // (()) -> ()
     result = result.replace(/\(+([^()]+?)\)+/g, '($1)');
-    
+
     // 4. 句読点の前の余分なスペースを削除
     result = result.replace(/\s+([,.!?])/g, '$1');
-    
+
     return result;
   };
 
   return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+    <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="text-base leading-relaxed space-y-3">
         {passageData.sentences.map((sentence) => (
-          <div key={sentence.id} className="mb-3">
+          <div
+            key={sentence.id}
+            className={`mb-3 ${sentence.isParagraphStart ? 'indent-8' : ''}`}
+          >
             {renderWithParens(sentence.english)}
           </div>
         ))}
@@ -285,7 +294,7 @@ export function ParenSplitTab({ passageData }: { passageData: CompletePassageDat
  */
 export function LiteralTranslationTab({ passageData }: { passageData: CompletePassageData }) {
   return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+    <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="space-y-4">
         {passageData.sentences.map((sentence) => {
           const relatedPhrases = passageData.phrases.filter(p => sentence.phraseIds?.includes(p.id));
@@ -322,11 +331,13 @@ export function LiteralTranslationTab({ passageData }: { passageData: CompletePa
  */
 export function SentenceTranslationTab({ passageData }: { passageData: CompletePassageData }) {
   return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+    <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <div className="space-y-4">
         {passageData.sentences.map((sentence) => (
           <div key={sentence.id} className="mb-4">
-            <div className="phrase-english mb-2">{sentence.english}</div>
+            <div className={`phrase-english mb-2 ${sentence.isParagraphStart ? 'indent-8' : ''}`}>
+              {sentence.english}
+            </div>
             <div className="japanese-translation-display">{sentence.japanese}</div>
           </div>
         ))}
@@ -350,7 +361,7 @@ export function SettingsTab({
   metadata?: { wordCount: number; sentenceCount: number };
 }) {
   return (
-    <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
+    <div className="bg-white p-3 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       <h4 className="text-lg font-bold mb-3">⚙️ 設定</h4>
 
       {/* パッセージ選択 */}
@@ -442,7 +453,7 @@ export function VocabularyTab({
   });
 
   return (
-    <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+    <div className="bg-white p-4 sm:rounded-lg sm:shadow-md sm:border sm:border-gray-200">
       {items.length > 0 && (
         <div className="vocabulary-inline">
           {items.map((it, idx) => (

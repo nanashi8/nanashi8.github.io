@@ -1,0 +1,637 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>英語長文読解 要点チェック（中学受験）</title>
+  <style>
+    @page { size: A4; margin: 12mm; }
+    :root {
+      --fg: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --card: #f9fafb;
+      --accent: #2563eb;
+      --warn: #b45309;
+    }
+    html, body { background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    body { margin: 0; }
+    .wrap { max-width: 980px; margin: 0 auto; }
+    .cover { border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+    h1 { font-size: 22px; margin: 0 0 6px; }
+    .subline { color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .badge2 { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); background: #fff; margin-right: 6px; }
+    .toc { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border); }
+    .toc h2 { font-size: 14px; margin: 0 0 8px; }
+    .toc ul { margin: 0; padding-left: 18px; color: var(--muted); }
+
+    .section { margin-top: 16px; }
+    .section h2 { font-size: 16px; margin: 0 0 8px; }
+    .section .lead { color: var(--muted); font-size: 12px; margin: 0 0 10px; }
+
+    .rulebox { border: 1px solid var(--border); border-radius: 12px; background: var(--card); padding: 12px; }
+    .rulebox h3 { margin: 0 0 8px; font-size: 13px; }
+    .rulebox ul { margin: 0; padding-left: 18px; }
+
+    .card { border: 1px solid var(--border); border-radius: 12px; background: var(--card); padding: 12px; margin: 10px 0; }
+    .card-head { display: flex; align-items: baseline; gap: 8px; }
+    .badge { font-size: 11px; color: var(--accent); border: 1px solid #bfdbfe; background: #eff6ff; padding: 2px 8px; border-radius: 999px; }
+    .card-title { font-size: 13px; font-weight: 700; }
+    .gist { margin-top: 6px; font-size: 12px; color: var(--fg); }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+    .sub { font-size: 11px; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+    ol, ul { margin: 0; padding-left: 18px; font-size: 12px; }
+
+    .example { border: 1px solid var(--border); border-radius: 12px; padding: 12px; margin: 10px 0; }
+    .example-title { font-size: 13px; font-weight: 800; margin: 0 0 6px; }
+    .why { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 11px; background: #0b1020; color: #e5e7eb; padding: 8px; border-radius: 10px; margin: 6px 0; }
+    .label { color: #93c5fd; font-weight: 700; margin-right: 6px; }
+
+    table.gloss { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    table.gloss th, table.gloss td { border: 1px solid var(--border); padding: 6px 8px; font-size: 12px; vertical-align: top; }
+    table.gloss th { background: #f3f4f6; text-align: left; }
+    td.en { width: 58%; }
+    td.jp { width: 42%; }
+
+    .note { font-size: 11px; color: var(--warn); margin-top: 8px; }
+
+    .page-break { page-break-before: always; }
+
+    @media print {
+      .wrap { max-width: none; }
+      .card, .example, .cover, .rulebox { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="cover">
+      <div>
+        <span class="badge2">中学受験</span>
+        <span class="badge2">英語長文</span>
+        <span class="badge2">/分割</span>
+        <span class="badge2">()<>分割</span>
+      </div>
+      <h1>英語長文読解：要点チェック（受験前）</h1>
+      <div class="subline">生成日: 2026-01-10 / reading-techniques: docs/private 由来（要約）</div>
+      <div class="subline">注意: 例文は学習用に言い換えています。元の本文の転載はしていません（引用なし）。</div>
+      <div class="subline">参考データ: J_2020_4_sentences.txt（行数 11）を“構造の参考”として使用。</div>
+
+      <div class="toc">
+        <h2>目次（速習）</h2>
+        <ul>
+          <li>1分：/分割（スラッシュ）で骨格→情報を足す</li>
+          <li>1分：()<>分割で「主節」と「従属節/前置詞句」を分ける</li>
+          <li>実例：フレーズ訳つき（6例）</li>
+          <li>頻出：文内テクニック（10枚）</li>
+          <li>頻出：段落テクニック（4枚）</li>
+          <li>頻出：設問タイプ別（4枚）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>/分割（スラッシュ）の使い方：30秒手順</h2>
+      <p class="lead">1文を「意味のかたまり」に分けて、順番に“足し算”で読む方法です。</p>
+      <div class="rulebox">
+        <h3>手順（覚える形）</h3>
+        <ul>
+          <li>① まず主語(S)と動詞(V)に着地（最短で骨格）</li>
+          <li>② 前置詞句（場所/時間/手段）や接続詞（and/because/if）で / を入れる</li>
+          <li>③ /ごとに「ミニ訳」を作って、最後に合体させる</li>
+        </ul>
+        <div class="note">コツ: /で切る目的は“訳の順番”ではなく“情報を落とさないこと”。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>()<>分割の使い方：30秒手順</h2>
+      <p class="lead">従属節（because/if/that等）を()、前置詞句（at/in/by等）を<>で括って、主節から読む方法です。</p>
+      <div class="rulebox">
+        <h3>手順（覚える形）</h3>
+        <ul>
+          <li>① () を見つけたら「後で読むメモ」にする（まず主節）</li>
+          <li>② &lt;&gt; は「どこで/いつ/どうやって」を表す“追加情報”として処理</li>
+          <li>③ 最後に()や&lt;&gt;を足して、自然な日本語に整える</li>
+        </ul>
+        <div class="note">コツ: because/if を見た瞬間に()で括ると、主節の意味が崩れません。</div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section class="section">
+      <h2>実例：/分割→フレーズ訳（言い換え例）</h2>
+      <p class="lead">短時間で確認できるように、代表構文だけ6例に絞っています。</p>
+      
+  <div class="example">
+    <div class="example-title">例1：場所（前置詞句）を先に固定する</div>
+    <div class="why">最初の場所情報を/で切っておくと、主語と動詞に早く着地できます。</div>
+
+    <div class="mono"><span class="label">例文（言い換え）</span> In our town, we have a nice zoo called Sunny Zoo.</div>
+    <div class="mono"><span class="label">/分割</span> In our town, we have a nice zoo called Sunny Zoo.</div>
+    <div class="mono"><span class="label">()<>分割</span> &lt;In our town&gt;, we have a nice zoo called Sunny Zoo.</div>
+
+    <table class="gloss">
+      <thead><tr><th>チャンク（/の単位）</th><th>フレーズ訳（目安）</th></tr></thead>
+      <tbody><tr><td class="en">In our town, we have a nice zoo called Sunny Zoo.</td><td class="jp"></td></tr></tbody>
+    </table>
+  </div>
+  
+  <div class="example">
+    <div class="example-title">例2：時間・追加情報を/で足す（and）</div>
+    <div class="why">「いつ」「どれくらい」を別チャンクにすると、情報を落としません。</div>
+
+    <div class="mono"><span class="label">例文（言い換え）</span> It will start at eleven in the morning, and we can enjoy it for thirty minutes.</div>
+    <div class="mono"><span class="label">/分割</span> It will start / at eleven / in the morning, / and we can enjoy it / for thirty minutes.</div>
+    <div class="mono"><span class="label">()<>分割</span> It will start &lt;at eleven&gt; &lt;in the morning&gt;, and we can enjoy it &lt;for thirty minutes&gt;.</div>
+
+    <table class="gloss">
+      <thead><tr><th>チャンク（/の単位）</th><th>フレーズ訳（目安）</th></tr></thead>
+      <tbody><tr><td class="en">It will start</td><td class="jp">それは始まる</td></tr><tr><td class="en">at eleven</td><td class="jp"></td></tr><tr><td class="en">in the morning,</td><td class="jp"></td></tr><tr><td class="en">and we can enjoy it</td><td class="jp"></td></tr><tr><td class="en">for thirty minutes.</td><td class="jp">30分間</td></tr></tbody>
+    </table>
+  </div>
+  
+  <div class="example">
+    <div class="example-title">例3：理由（because）を()で“後付け”にする</div>
+    <div class="why">主節（言いたいこと）→理由の順にすると、迷子になりにくいです。</div>
+
+    <div class="mono"><span class="label">例文（言い換え）</span> I can&#39;t join the night tour because I have to go home by six.</div>
+    <div class="mono"><span class="label">/分割</span> I can&#39;t join the night tour / because I have to go home / by six.</div>
+    <div class="mono"><span class="label">()<>分割</span> I can&#39;t join the night tour (because I have to go home by six).</div>
+
+    <table class="gloss">
+      <thead><tr><th>チャンク（/の単位）</th><th>フレーズ訳（目安）</th></tr></thead>
+      <tbody><tr><td class="en">I can&#39;t join the night tour</td><td class="jp">夜のツアーには参加できない</td></tr><tr><td class="en">because I have to go home</td><td class="jp"></td></tr><tr><td class="en">by six.</td><td class="jp">6時までに</td></tr></tbody>
+    </table>
+  </div>
+  
+  <div class="example">
+    <div class="example-title">例4：条件（if）を()で囲んで判断を早くする</div>
+    <div class="why">条件を括ると「結論（料金）」が一気に読めます。</div>
+
+    <div class="mono"><span class="label">例文（言い換え）</span> So, if we show our student cards, the entrance fee will be three dollars per person.</div>
+    <div class="mono"><span class="label">/分割</span> So, / if we show our student cards, the entrance fee will be three dollars / per person.</div>
+    <div class="mono"><span class="label">()<>分割</span> So, (if we show our student cards), the entrance fee will be three dollars per person.</div>
+
+    <table class="gloss">
+      <thead><tr><th>チャンク（/の単位）</th><th>フレーズ訳（目安）</th></tr></thead>
+      <tbody><tr><td class="en">So,</td><td class="jp">それで</td></tr><tr><td class="en">if we show our student cards, the entrance fee will be three dollars</td><td class="jp"></td></tr><tr><td class="en">per person.</td><td class="jp"></td></tr></tbody>
+    </table>
+  </div>
+  
+  <div class="example">
+    <div class="example-title">例5：命令・提案（should/let&#39;s）は“行動”を先に取る</div>
+    <div class="why">やること（take/show）を2つの動作として整理すると速いです。</div>
+
+    <div class="mono"><span class="label">例文（言い換え）</span> We should take our student ID cards to the zoo and show them to the staff.</div>
+    <div class="mono"><span class="label">/分割</span> We should take our student ID cards / to the zoo / and show them / to the staff.</div>
+    <div class="mono"><span class="label">()<>分割</span> We should take our student ID cards &lt;to the zoo and show&gt; them &lt;to the staff&gt;.</div>
+
+    <table class="gloss">
+      <thead><tr><th>チャンク（/の単位）</th><th>フレーズ訳（目安）</th></tr></thead>
+      <tbody><tr><td class="en">We should take our student ID cards</td><td class="jp">私たちは学生証を持っていくべきだ</td></tr><tr><td class="en">to the zoo</td><td class="jp">動物園に</td></tr><tr><td class="en">and show them</td><td class="jp"></td></tr><tr><td class="en">to the staff.</td><td class="jp">係の人に</td></tr></tbody>
+    </table>
+  </div>
+  
+  <div class="example">
+    <div class="example-title">例6：場所の後置修飾（in front of ...）は名詞にくっつける</div>
+    <div class="why">「どの停留所？」を名詞にくっつけると、順番に訳しても崩れません。</div>
+
+    <div class="mono"><span class="label">例文（言い換え）</span> We&#39;ll take a bus at the stop in front of our school at eight.</div>
+    <div class="mono"><span class="label">/分割</span> We&#39;ll take a bus / at the stop / in front / of our school / at eight.</div>
+    <div class="mono"><span class="label">()<>分割</span> We&#39;ll take a bus &lt;at the stop in front&gt; &lt;of our school &lt;at eight&gt;.</div>
+
+    <table class="gloss">
+      <thead><tr><th>チャンク（/の単位）</th><th>フレーズ訳（目安）</th></tr></thead>
+      <tbody><tr><td class="en">We&#39;ll take a bus</td><td class="jp">私たちはバスに乗る</td></tr><tr><td class="en">at the stop</td><td class="jp"></td></tr><tr><td class="en">in front</td><td class="jp"></td></tr><tr><td class="en">of our school</td><td class="jp"></td></tr><tr><td class="en">at eight.</td><td class="jp">8時に</td></tr></tbody>
+    </table>
+  </div>
+  
+    </section>
+
+    <div class="page-break"></div>
+
+    <section class="section">
+      <h2>頻出：文内（1文）テクニック</h2>
+      <p class="lead">「これを見たらこう読む」を型で覚えると、初見でも崩れません。</p>
+      
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S03</div>
+        <div class="card-title">挿入句（, ... ,）は一度外して骨格を作る</div>
+      </div>
+      <div class="gist">カンマの挿入は情報追加。まず主語・動詞・目的語だけを取る。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>カンマで挟まれた部分を括る</li><li>括った部分を一旦除いて骨格SVを作る</li><li>挿入情報を後付けする</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>挿入句を主節と誤認</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S05</div>
+        <div class="card-title">不定詞の役割を3分類（名詞/形容詞/副詞）</div>
+      </div>
+      <div class="gist">to不定詞は多機能。名詞用法/形容詞用法/副詞用法のどれかに決めると迷いが減る。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>to+V を検出</li><li>直前が名詞なら形容詞用法候補</li><li>文全体にかかるなら副詞用法候補</li><li>主語・補語位置なら名詞用法</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>全部“〜するために”にする</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S08</div>
+        <div class="card-title">否定のスコープを括る（not, never, hardly）</div>
+      </div>
+      <div class="gist">否定はどこまで否定しているか（スコープ）が得点源。副詞・数量語と一緒に読む。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>否定語を検出</li><li>否定される述語・句を括る</li><li>限定語（always/all/often等）が否定内か外か確認</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>全体否定と部分否定を混同</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S10</div>
+        <div class="card-title">受動態は“行為者（by）”を探して役割を戻す</div>
+      </div>
+      <div class="gist">受動は主語が“される側”。必要なら能動に戻して整理する。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>be+pp を検出</li><li>by を探して行為者を特定</li><li>能動に言い換えて意味確認</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>主語を行為者として読む</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S11</div>
+        <div class="card-title">that節/wh節は“名詞句”として扱う（内容）</div>
+      </div>
+      <div class="gist">that節は“内容”。主語・目的語・補語のどの位置かを押さえると読める。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>that/wh を検出</li><li>文のどこに入っているか（S/O/C）を判定</li><li>『〜ということ』で置換して骨格確認</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>that を指示語として読む</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S14</div>
+        <div class="card-title">名詞の後置修飾（with/for/of）を“どれを？”で読む</div>
+      </div>
+      <div class="gist">名詞+前置詞句は名詞を限定する。『どれを？どんな？』に答える部分として読む。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>名詞の直後の前置詞句を検出</li><li>どれを？の質問に答える形で言い換える</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>前置詞句を動詞にかけてしまう</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S19</div>
+        <div class="card-title">前置詞は“関係ラベル”として読む（原因/手段/対象）</div>
+      </div>
+      <div class="gist">前置詞は訳語ではなく関係。for=目的/対象、by=手段、with=付帯などで整理する。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>前置詞句を括る</li><li>関係ラベル（手段/理由/対象等）を付ける</li><li>文全体の因果・対比に接続</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>訳語暗記で関係を落とす</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S20</div>
+        <div class="card-title">長い主語は“主語の終わり”を探してVに飛ぶ</div>
+      </div>
+      <div class="gist">長主語はVが遠い。まず主語がどこで終わるかを見つけてVに着地する。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>主語部分を括る（名詞句終端を探す）</li><li>最初の主要動詞を見つける</li><li>主語—動詞だけで一度意味を作る</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>主語途中の動詞っぽい語で誤着地</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S22</div>
+        <div class="card-title">並列は“同じ品詞/同じ役割”で括る（A, B, and C）</div>
+      </div>
+      <div class="gist">and/or は並列の合図。同じ役割が並ぶので、どこまでが並列かを括る。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>and/or を検出</li><li>同じ品詞・同じ役割で並列範囲を括る</li><li>並列全体を一語ラベル化</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>並列範囲を誤って意味が崩れる</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">S04</div>
+        <div class="card-title">分詞構文は“同時/原因/譲歩”のどれかに分類</div>
+      </div>
+      <div class="gist">分詞構文（-ing/-ed）は関係が曖昧。最小で“同時/原因/譲歩”に分類して読む。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>分詞句の主語が主節主語と同じか確認</li><li>自然な関係（同時/原因/譲歩）を選ぶ</li><li>接続詞（while/because/although）に言い換えて確認</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>機械的にbecauseで固定</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    </section>
+
+    <div class="page-break"></div>
+
+    <section class="section">
+      <h2>頻出：段落（パラグラフ）テクニック</h2>
+      <p class="lead">段落は“機能”で読むと、主旨と根拠の位置が見えます。</p>
+      
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">P01</div>
+        <div class="card-title">段落の役割を一言で言う（主張/理由/例/反論/まとめ）</div>
+      </div>
+      <div class="gist">各段落は機能を持つ。最初に“この段落は何をしているか”を一言で言えるようにする。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>段落冒頭の主張候補を拾う</li><li>後半が理由か例か反論かを判定</li><li>段落機能ラベルを付ける</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>全部を同じ重さで読む</li><li>例を主張と取り違える</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">P02</div>
+        <div class="card-title">トピックセンテンスを探す（多くは冒頭）</div>
+      </div>
+      <div class="gist">受験文の多くは、段落の最初の1〜2文に要点（トピック）を置き、残りで具体化する。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>最初の2文を要約</li><li>以降が具体化か検証</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>最初の比喩や導入をトピックと誤認</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">P03</div>
+        <div class="card-title">段落内の“対比”を見つける（however, but, in contrast）</div>
+      </div>
+      <div class="gist">対比マーカーは論点の転換点。前半と後半を“同じ軸で比較”する。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>対比語をマーク</li><li>前後の比較軸（利点/欠点など）を一語で言う</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>but以降だけ読んで前半を捨てる</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">P04</div>
+        <div class="card-title">因果の矢印を作る（because/therefore/as a result）</div>
+      </div>
+      <div class="gist">因果マーカーは『原因→結果』の矢印で整理すると、設問の根拠が取りやすい。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>原因側と結果側を分ける</li><li>矢印で1行にする</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>because節を背景説明として捨てる</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    </section>
+
+    <div class="page-break"></div>
+
+    <section class="section">
+      <h2>頻出：設問タイプ別（解き方）</h2>
+      <p class="lead">本文の読み方と、設問の取り方はセットで覚えるのが最短です。</p>
+      
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">Q01</div>
+        <div class="card-title">主旨（Main Idea）: 反復テーマ+結論段落で確定</div>
+      </div>
+      <div class="gist">主旨は“繰り返されるテーマ”と“結論の一般化”の交点で決まる。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>各段落のキーワードを2語ずつ拾う</li><li>結論段落の一般化を抜く</li><li>広すぎ/狭すぎの選択肢を除外</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>印象的な例で主旨を決める</li><li>1段落だけで主旨を決める</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">Q02</div>
+        <div class="card-title">要旨（Summary）: 構造を残して詳細を落とす</div>
+      </div>
+      <div class="gist">要旨は“骨格（問題→原因→提案など）”を保持し、固有の数字・例を捨てる。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>本文全体の枠組み（problem-solution等）を決める</li><li>各段落を1行要約</li><li>例・数字・固有名詞を削って結合</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>例を残して骨格を落とす</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">Q03</div>
+        <div class="card-title">推論（Inference）: 根拠2つ+限定語を保持</div>
+      </div>
+      <div class="gist">推論は最低2つの根拠から。限定語（some/often）を落とすと誤りになりやすい。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>根拠文を2つ抜く</li><li>共通して言えることを1文にする</li><li>限定語を保ったまま結論にする</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>根拠1つで飛躍</li><li>限定語を落として断定</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-head">
+        <div class="badge">Q04</div>
+        <div class="card-title">指示語（Reference）: 名詞候補+文候補で確定</div>
+      </div>
+      <div class="gist">this/that/these は物だけでなく“直前の主張や出来事”を受けることがある。</div>
+      <div class="cols">
+        <div>
+          <div class="sub">手順</div>
+          <ol>
+            <li>直前2文から候補を列挙（名詞/文）</li><li>意味が通る方を選ぶ</li><li>選んだ候補で文全体が自然か再確認</li>
+          </ol>
+        </div>
+        <div>
+          <div class="sub">落とし穴</div>
+          <ul>
+            <li>最寄り名詞に機械的に結ぶ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    </section>
+  </div>
+</body>
+</html>

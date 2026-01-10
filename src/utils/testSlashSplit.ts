@@ -4,26 +4,26 @@
 
 function splitIntoChunks(text: string): string {
   let result = text;
-  
+
   // 1. 文頭の副詞・前置詞句の後に/を挿入（カンマの後）
   result = result.replace(
     /^([A-Z][a-z]+|After [a-z]+|Before [a-z]+|During [a-z]+),\s+/,
     '$1, / '
   );
-  
+
   // 2. 接続詞の前に/を挿入
   result = result.replace(
     /\s+(and|but|or|so|because|if|when|while|although|though)\s+/gi,
     ' / $1 '
   );
-  
+
   // 3. 前置詞句の前に/を挿入（ただしhave toなどは除外）
   const preps = 'at|in|on|by|from|for|with|about|of|during|after|before|around|per';
   result = result.replace(
     new RegExp(`\\s+(${preps})\\s+`, 'gi'),
     ' / $1 '
   );
-  
+
   // 4. to不定詞の前に/を挿入（ただしhave to, want to, need toなどは除外）
   result = result.replace(
     /(?<!have|want|need|try|going|used)\s+to\s+/gi,
@@ -32,16 +32,16 @@ function splitIntoChunks(text: string): string {
 
   // 5. 連続する/を1つにまとめる
   result = result.replace(/\s*\/\s*\/+\s*/g, ' / ');
-  
+
   // 6. 文頭の/を削除
   result = result.replace(/^\s*\/\s*/, '');
-  
+
   // 7. 文末の/を削除（句読点の前）
   result = result.replace(/\s*\/\s*([.!?,;:])/, '$1');
-  
+
   // 8. スペースを整理
   result = result.replace(/\s+/g, ' ').trim();
-  
+
   return result;
 }
 
@@ -59,6 +59,13 @@ const slashSplitTestCases = [
   "It will start at eleven in the morning, and we can enjoy it for thirty minutes.",
   "Right, but I can't join Night Safari because I have to go home by six.",
   "So, if we do that, our entrance fee will be three dollars per person.",
+  // 追加テストケース
+  "This is the book that I bought yesterday.",
+  "English is spoken by many people in the world.",
+  "I want to visit Tokyo to see my friend.",
+  "This book is more interesting than that one.",
+  "I don't know how to use this machine.",
+  "I have lived in Tokyo for five years."
 ];
 
 console.log("=== /分割テスト ===\n");

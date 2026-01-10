@@ -73,6 +73,7 @@ export interface SentenceData {
   english: string;
   japanese: string;
   phraseIds?: string[];
+  isParagraphStart?: boolean;
 }
 
 /**
