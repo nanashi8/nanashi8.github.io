@@ -19,7 +19,6 @@ import ExplanationBoard, {
   LiteralTranslationTab,
   SentenceTranslationTab,
   PassageVocabularyTab,
-  VocabularyTab,
   SettingsTab
 } from './ExplanationBoard';
 import { logger } from '@/utils/logger';
@@ -31,7 +30,6 @@ interface ReadingPassageViewProps {
 function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
   const [passageData, setPassageData] = useState<CompletePassageData | null>(null);
   const [dependencyParse, setDependencyParse] = useState<DependencyParsedPassage | null>(null);
-  const [selectedSentence, _setSelectedSentence] = useState<SentenceData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -108,26 +106,7 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
   }, [passageData]);
 
   // 選択文の詳細情報を生成（メモ化）
-  const sentenceDetail: SelectedSentenceDetail | null = useMemo(() => {
-    if (!selectedSentence) return null;
-
-    const depSentence =
-      dependencyParse?.sentences?.find(
-        (s) => typeof s.id === 'number' && s.id === selectedSentence.id
-      ) ?? (dependencyParse ? findDependencySentenceByText(dependencyParse, selectedSentence.english) : null);
-
-    return {
-      sentenceData: selectedSentence,
-      clauseParsed: parseClausesAndPhrases(selectedSentence.english, {
-        dependency: depSentence ?? undefined,
-      }),
-      relatedPhrases: passageData?.phrases.filter((p) => selectedSentence.phraseIds?.includes(p.id)) || [],
-      keyPhrases: passageData?.keyPhrases.filter((kp) => kp.positions.includes(selectedSentence.id)) || [],
-    };
-  }, [selectedSentence, passageData, dependencyParse]);
-
-  // ローディング中
-  if (isLoading) {
+  con(isLoading) {
     return (
       <div className="reading-passage-view">
         <div className="flex items-center justify-center min-h-[400px]">
