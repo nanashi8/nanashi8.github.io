@@ -7,6 +7,24 @@ import { FilterState } from './FilterState';
 import { SearchState } from './SearchState';
 import { MaintenanceState } from './MaintenanceState';
 
+/**
+ * OverviewState - 執事の居住空間（中央司令室）
+ * 
+ * 役割：
+ * - 道具部屋：プロジェクトのツール・ガイドドキュメントへの直接アクセス
+ * - 控え室：健全診断・検索・フィルター・データ更新の制御
+ * - 休憩部屋：プロジェクト状態・作業履歴・ドキュメント管理
+ * - 執事アバター：将来の姿・表情表示用の領域確保
+ * 
+ * 天体儀（Constellation 3D）との関係：
+ * 天体儀は将来「アイディアツリー」として機能し、
+ * 既存機能を3D空間上で可視化し、ドラッグ&ドロップで
+ * 新機能を合成するインターフェースとなる。
+ * 現在はプロジェクト構造の可視化だが、将来は：
+ * - 機能ノードの関係性マップ
+ * - AI提案による機能組み合わせ
+ * - インタラクティブな機能合成エンジン
+ */
 export class OverviewState extends BaseViewState {
   public readonly name: ViewModeName = 'Overview';
 
@@ -177,7 +195,7 @@ export class OverviewState extends BaseViewState {
 <body>
     <div class="header">
         <h1>👔 執事の居住空間 - Servant's Quarters</h1>
-        
+
         <div class="rooms-container">
             <!-- 道具部屋 -->
             <div class="room">
@@ -217,7 +235,7 @@ export class OverviewState extends BaseViewState {
         </div>
 
         <div class="toolbar">
-            <button onclick="showConstellationView()">🌟 天体儀表示</button>
+            <button onclick="showConstellationView()" style="background: rgba(255, 215, 0, 0.15); border-color: rgba(255, 215, 0, 0.4); color: #ffd700;">🌟 アイディア合成 (開発中)</button>
             <button onclick="toggleAvatarMode()">👤 執事モード切替</button>
         </div>
     </div>
@@ -436,7 +454,7 @@ export class OverviewState extends BaseViewState {
         // グローバル関数
         window.openDoc = function(docName) {
           log('Opening document: ' + docName);
-          vscode.postMessage({ 
+          vscode.postMessage({
             command: 'openDocument',
             docName: docName
           });
@@ -575,7 +593,7 @@ export class OverviewState extends BaseViewState {
 
     const fullPath = vscode.Uri.joinPath(workspaceFolder.uri, docPath);
     context.logToOutput(`[Overview] Opening document: ${fullPath.fsPath}`);
-    
+
     try {
       const doc = await vscode.workspace.openTextDocument(fullPath);
       await vscode.window.showTextDocument(doc, { preview: false });
@@ -587,7 +605,7 @@ export class OverviewState extends BaseViewState {
 
   async showProjectStatus(context: ConstellationViewPanel): Promise<void> {
     context.logToOutput('[Overview] Showing project status');
-    
+
     const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
     if (!workspaceFolder) {
       vscode.window.showErrorMessage('ワークスペースが開かれていません');
@@ -597,22 +615,22 @@ export class OverviewState extends BaseViewState {
     // Git status を取得
     const gitExtension = vscode.extensions.getExtension('vscode.git')?.exports;
     const api = gitExtension?.getAPI(1);
-    
+
     let statusText = '📊 プロジェクト状態\n\n';
-    
+
     if (api && api.repositories.length > 0) {
       const repo = api.repositories[0];
       const branch = repo.state.HEAD?.name || 'unknown';
       const changes = repo.state.workingTreeChanges.length;
       const staged = repo.state.indexChanges.length;
-      
+
       statusText += `📌 ブランチ: ${branch}\n`;
       statusText += `📝 変更ファイル: ${changes}\n`;
       statusText += `✅ ステージング: ${staged}\n`;
     }
-    
+
     statusText += `\n📂 ワークスペース: ${workspaceFolder.name}`;
-    
+
     vscode.window.showInformationMessage(statusText, { modal: false });
   }
 
@@ -625,12 +643,22 @@ export class OverviewState extends BaseViewState {
   }
 
   async toggleConstellationView(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput('[Overview] Toggling constellation 3D view');
+    context.logToOutput('[Overview] Toggling constellation 3D view (future: Idea Synthesis Engine)');
     context.postMessage({
       command: 'toggleVisualization',
       enabled: true
     });
-    vscode.window.showInformationMessage('🌟 天体儀3D表示を切り替えました');
+    vscode.window.showInformationMessage(
+      '🌟 アイディア合成エンジン（開発中）\n\n' +
+      '将来、この天体儀は「機能ノードのアイディアツリー」となります：\n\n' +
+      '✨ 既存機能を3D空間上で可視化\n' +
+      '🔗 機能間の関係性・依存をマッピング\n' +
+      '🎨 ドラッグ&ドロップで機能を組み合わせ\n' +
+      '🤖 AIが最適な組み合わせを提案\n' +
+      '⚡ 新機能を自動合成・生成\n\n' +
+      '現在は基本的なプロジェクト構造の可視化を提供しています。',
+      '了解'
+    );
   }
 
   async toggleAvatarMode(context: ConstellationViewPanel): Promise<void> {

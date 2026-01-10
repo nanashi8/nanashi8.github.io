@@ -17,6 +17,26 @@ export type ConstellationOpenOptions = {
 };
 
 /**
+ * ConstellationViewPanel - 天体儀ビューパネル
+ * 
+ * 現在の役割：
+ * - プロジェクト構造の3D可視化
+ * - ファイル・依存関係のノード表示
+ * 
+ * 将来の役割（アイディア合成エンジン）：
+ * - 機能ノードのアイディアツリー表示
+ * - 機能間の関係性・依存マッピング
+ * - ドラッグ&ドロップによる機能合成UI
+ * - AI提案による最適な機能組み合わせ
+ * - 新機能の自動生成・コード合成
+ * 
+ * 拡張ポイント：
+ * TODO: ノードデータ構造を「機能メタデータ」対応に拡張
+ * TODO: ドラッグ&ドロップイベントハンドラ追加
+ * TODO: 機能合成ロジック（FunctionComposer）の統合
+ * TODO: AI提案エンジン（IdeaSynthesizer）の接続
+ * TODO: 合成結果のコード生成パイプライン
+ * 
  * 0ベース: 最もシンプルな天体儀表示
  */
 export class ConstellationViewPanel {
