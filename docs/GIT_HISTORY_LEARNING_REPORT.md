@@ -50,7 +50,7 @@
    - リスクレベル: 低
 
 
-9. **test-debug.ts** - 3回修正
+9. **tests/debug/test-debug.ts** - 3回修正
    - リスクレベル: 低
 
 
@@ -108,7 +108,7 @@
 **説明**: 長文読解UI改善: 段落字下げ修正、/分割ロジック統合、一文訳の交互表示、語句タブ追加
 
 
-**影響ファイル**: .aitk/.commit-count, src/components/ExplanationBoard.tsx, src/components/ReadingPassageView.tsx, src/utils/slashSplitLogic.ts, test-debug.ts
+**影響ファイル**: .aitk/.commit-count, src/components/ExplanationBoard.tsx, src/components/ReadingPassageView.tsx, src/utils/slashSplitLogic.ts, tests/debug/test-debug.ts
 
 
 ### 7. logic-error
@@ -124,7 +124,7 @@
 **説明**: /分割ロジック最終調整（正解率94.1%）- soの副詞/接続詞を正確に区別、J2022_5_10完全修正
 
 
-**影響ファイル**: .aitk/.commit-count, scripts/generate-classical-japanese-text.ts, src/utils/slashSplitLogic.ts, test-debug.ts
+**影響ファイル**: .aitk/.commit-count, scripts/generate-classical-japanese-text.ts, src/utils/slashSplitLogic.ts, tests/debug/test-debug.ts
 
 
 ### 9. logic-error

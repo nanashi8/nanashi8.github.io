@@ -355,7 +355,7 @@
       "riskLevel": "low"
     },
     {
-      "file": "test-debug.ts",
+      "file": "tests/debug/test-debug.ts",
       "modificationCount": 3,
       "riskLevel": "low"
     },
