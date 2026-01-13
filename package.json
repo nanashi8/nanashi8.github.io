@@ -74,6 +74,7 @@
     "guard:check-cycle": "cat .aitk/.commit-count 2>/dev/null || echo '0'",
     "guard:reset-cycle": "echo '0' > .aitk/.commit-count",
     "guard:spec-check": "node scripts/record-spec-check.mjs",
+    "guard:check-boundary": "bash scripts/check-project-boundary.sh",
     "docs:analyze": "node scripts/analyze-doc-links.mjs",
     "docs:analyze:naming": "node scripts/analyze-naming-violations.mjs",
     "docs:check": "npm run docs:analyze && npm run docs:analyze:naming",
