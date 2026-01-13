@@ -291,7 +291,7 @@ word,meaning,pronunciation,category,difficulty,example,etymology,usage_notes
    └─ docs/specifications/learning-ai-system-architecture.md
 
 2. CHANGELOG
-   └─ CHANGELOG.md または CHANGELOG_ADAPTIVE_LEARNING.md
+   └─ CHANGELOG.md または docs/features/adaptive-learning/CHANGELOG.md
 
 3. README
    └─ 関連機能の説明を更新
