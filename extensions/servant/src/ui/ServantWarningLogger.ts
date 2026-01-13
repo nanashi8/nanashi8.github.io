@@ -14,12 +14,40 @@ export interface ServantWarning {
 }
 
 export class ServantWarningLogger {
+  // 重複警告抑制のためのcooldown管理
+  private recentWarnings = new Map<string, number>();
+  private readonly COOLDOWN_MS = 60000; // 1分
+
+  // ステータスサマリー情報
+  private stats = {
+    monitored: 0,
+    violations: 0,
+    fixed: 0
+  };
+
   constructor(private outputChannel: vscode.OutputChannel) {}
 
   /**
    * 構造化警告をログに記録
    */
   public logWarning(warning: ServantWarning): void {
+    // 重複チェック
+    const hash = this.hashWarning(warning);
+    const lastLog = this.recentWarnings.get(hash);
+    const now = Date.now();
+
+    if (lastLog && now - lastLog < this.COOLDOWN_MS) {
+      // 抑制: 簡潔な通知のみ
+      const elapsedSeconds = Math.floor((now - lastLog) / 1000);
+      this.outputChannel.appendLine(
+        `[${new Date().toLocaleTimeString()}] 🔕 警告抑制中（${elapsedSeconds}秒前に出力済み）: ${warning.type}`
+      );
+      return;
+    }
+
+    // 新規または期限切れの警告はフル出力
+    this.recentWarnings.set(hash, now);
+
     const icon = warning.severity === 'error' ? '⚠️' : warning.severity === 'warning' ? '⚡' : 'ℹ️';
 
     this.outputChannel.appendLine('\n' + '='.repeat(70));
@@ -115,5 +143,39 @@ export class ServantWarningLogger {
       },
       aiGuidance: '違反内容を確認し、instructions.mdのルールに従って修正してください。',
     });
+  }
+
+  /**
+   * 警告のハッシュ生成（重複チェック用）
+   */
+  private hashWarning(warning: ServantWarning): string {
+    return `${warning.type}:${warning.severity}:${warning.message}`;
+  }
+
+  /**
+   * サマリー情報の表示
+   */
+  public logStatusSummary(): void {
+    this.outputChannel.appendLine('\n' + '═'.repeat(70));
+    this.outputChannel.appendLine('🛡️ Servant ステータスサマリー');
+    this.outputChannel.appendLine('═'.repeat(70));
+    this.outputChannel.appendLine(`監視中: ${this.stats.monitored}件`);
+    this.outputChannel.appendLine(`違反: ${this.stats.violations}件`);
+    this.outputChannel.appendLine(`修正: ${this.stats.fixed}件`);
+    this.outputChannel.appendLine('═'.repeat(70) + '\n');
+  }
+
+  /**
+   * ステータス更新（外部から呼び出される）
+   */
+  public updateStats(monitored: number, violations: number, fixed: number): void {
+    this.stats = { monitored, violations, fixed };
+  }
+
+  /**
+   * cooldownクリア（テスト用/デバッグ用）
+   */
+  public clearCooldown(): void {
+    this.recentWarnings.clear();
   }
 }

@@ -116,6 +116,23 @@ export function activate(context: vscode.ExtensionContext) {
     servantStatusBar.command = 'servant.showOutput';
     servantStatusBar.show();
 
+    // ステータスバーの情報を解析してサマリー表示
+    if (enabled && activity && warningLogger) {
+      const match = activity.match(/監視中\s*\(?(\d+)件.*違反:\s*(\d+).*修正:\s*(\d+)/);
+      if (match) {
+        const monitored = parseInt(match[1], 10);
+        const violations = parseInt(match[2], 10);
+        const fixed = parseInt(match[3], 10);
+        
+        warningLogger.updateStats(monitored, violations, fixed);
+        
+        // 違反または修正がある時だけサマリーを出力（頻繁すぎないように）
+        if (violations > 0 || fixed > 0) {
+          warningLogger.logStatusSummary();
+        }
+      }
+    }
+
     if (lastServantEnabled === null || lastServantEnabled !== enabled) {
       writeTerminalYellow(`[Servant] Status: ${enabled ? 'ON' : 'OFF'} (servant.enable)`);
       lastServantEnabled = enabled;
@@ -152,6 +169,10 @@ export function activate(context: vscode.ExtensionContext) {
   // ステータスバークリックで出力チャネル表示
   const showOutputCommand = vscode.commands.registerCommand('servant.showOutput', () => {
     outputChannel.show();
+    // Outputを開いた時にサマリーを表示
+    if (warningLogger) {
+      warningLogger.logStatusSummary();
+    }
   });
   context.subscriptions.push(showOutputCommand);
 

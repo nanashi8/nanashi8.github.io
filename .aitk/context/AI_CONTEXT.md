@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-13T15:08:52.423Z
+- generatedAt: 2026-01-13T23:32:11.209Z
 
 ## Single Source of Truth
 
@@ -14,29 +14,31 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- docs/research/UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md (hot=0.029)
-- public/data/passages-for-phrase-work/J_2023_5.txt (hot=0.017)
-- scripts/generate-passages-sentences.mjs (hot=0.015)
-- docs/research/CLINICAL_TRIAL_OS_CONCEPT.md (hot=0.014)
-- public/data/passages-translations/J_2023_5_phrases.txt (hot=0.011)
-- public/data/passages-translations/J_2020_4_full.txt (hot=0.007)
-- public/data/passages-translations/J_2020_4_phrases.txt (hot=0.007)
-- public/data/passages-translations/J_2020_5_phrases.txt (hot=0.007)
-- public/data/passages-translations/J_2021_5_phrases.txt (hot=0.007)
-- public/data/passages-translations/J_2024_5_phrases.txt (hot=0.007)
+- extensions/servant/src/ui/ServantWarningLogger.ts (hot=0.017)
+- extensions/servant/src/extension.ts (hot=0.017)
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.017)
+- src/App.tsx (hot=0.013)
+- docs/fixes/VIBRATION_ISSUE_20251229.md (hot=0.013)
+- docs/GIT_HISTORY_LEARNING_REPORT.md (hot=0.013)
+- issues/servant-implementation-guide.md (hot=0.01)
+- .aitk/instructions/project-boundary-guard.instructions.md (hot=0.009)
+- scripts/check-project-boundary.sh (hot=0.009)
+- package.json (hot=0.009)
 
 ## Related (Neural Propagation)
 
-- startNode: docs/research/UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md
-- seeds: 3
+- startNode: extensions/servant/src/ui/ServantWarningLogger.ts
+- seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- docs/research/UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md (activation=1.000, source=signal, signals=[save:0.03])
-- scripts/generate-passages-sentences.mjs (activation=0.517, source=signal, signals=[save:0.01])
-- docs/research/CLINICAL_TRIAL_OS_CONCEPT.md (activation=0.483, source=signal, signals=[save:0.01])
+- extensions/servant/src/ui/ServantWarningLogger.ts (activation=1.000, source=signal, signals=[save:0.02])
+- extensions/servant/src/extension.ts (activation=1.000, source=signal, signals=[save:0.02])
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=1.000, source=signal, signals=[save:0.02])
+- src/App.tsx (activation=0.765, source=signal, signals=[save:0.01])
+- docs/fixes/VIBRATION_ISSUE_20251229.md (activation=0.765, source=signal, signals=[save:0.01])
 
 - (no related files detected)
 
@@ -51,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 207.27
+- ageHours: 215.66
 
 ## Latest SpecCheck Record (Raw)
 

@@ -47,6 +47,10 @@ export class ActionsHealthMonitor implements vscode.Disposable {
   private readonly CHECK_INTERVAL = 7 * 24 * 60 * 60 * 1000; // 週次
   private statusUpdateCallback: ((status: string) => void) | null = null;
   private eventBus: EventBus;
+  
+  // 重複レポート抑制用
+  private lastReportTime = 0;
+  private readonly MIN_REPORT_INTERVAL_MS = 300000; // 5分
 
   constructor(
     workspaceRoot: string,
@@ -444,6 +448,17 @@ export class ActionsHealthMonitor implements vscode.Disposable {
   }
 
   private reportIssues(issues: HealthIssue[]): void {
+    if (issues.length === 0) return;
+
+    // 頻繁すぎるレポートを抑制
+    const now = Date.now();
+    if (now - this.lastReportTime < this.MIN_REPORT_INTERVAL_MS) {
+      const elapsedMinutes = Math.floor((now - this.lastReportTime) / 60000);
+      console.log(`[ActionsHealthMonitor] レポート抑制中（${elapsedMinutes}分前に出力済み）`);
+      return;
+    }
+    this.lastReportTime = now;
+
     const critical = issues.filter(i => i.severity === 'critical');
     const warnings = issues.filter(i => i.severity === 'warning');
     const infos = issues.filter(i => i.severity === 'info');

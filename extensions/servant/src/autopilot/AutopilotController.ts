@@ -70,6 +70,9 @@ export class AutopilotController {
 
   private goalManager: GoalManager | null = null;
   private constellationGenerator: ConstellationDataGenerator | null = null;
+  
+  // 天体儀ビュー表示フラグ（初回のみ表示）
+  private hasShownConstellation = false;
 
   private computePlusScore(action: AIAction): number {
     // 1〜7 の範囲で「結果の分かりやすい目安」を出す（詳細はOutput/ログに残す）
@@ -806,14 +809,24 @@ export class AutopilotController {
       try {
         const context = await this.generateConstellationContext();
         if (context) {
-          this.outputChannel.appendLine('');
-          this.outputChannel.appendLine(context);
+          // 初回のみフル表示、2回目以降は簡潔な通知
+          if (this.hasShownConstellation) {
+            this.outputChannel.appendLine('');
+            this.outputChannel.appendLine(
+              '🌟 天体儀ビュー: 前回表示済み（コマンド "Servant: Show Constellation" で再表示可能）'
+            );
+            this.outputChannel.appendLine('');
+          } else {
+            this.hasShownConstellation = true;
+            this.outputChannel.appendLine('');
+            this.outputChannel.appendLine(context);
 
-          // 通知をoutputChannelに統合（ポップアップ通知を削除）
-          const goalName = this.goalManager?.getMainGoal()?.name ?? 'プロジェクトのゴール';
-          this.outputChannel.appendLine(
-            `🌟 サーバント: ${goalName}に向かって作業を進めます`
-          );
+            // 通知をoutputChannelに統合（ポップアップ通知を削除）
+            const goalName = this.goalManager?.getMainGoal()?.name ?? 'プロジェクトのゴール';
+            this.outputChannel.appendLine(
+              `🌟 サーバント: ${goalName}に向かって作業を進めます`
+            );
+          }
         }
       } catch (error) {
         this.outputChannel.appendLine(
@@ -1457,5 +1470,29 @@ ${categorySummary}
    */
   async notifyFailure(reason: string): Promise<void> {
     this.notifier.autoWarning(`タスクが失敗しました: ${reason}`, 'autopilot.failed');
+  }
+
+  /**
+   * 天体儀ビューを強制表示（コマンド用）
+   */
+  public async forceShowConstellation(): Promise<void> {
+    if (!this.constellationGenerator) {
+      this.outputChannel.appendLine('⚠️ 天体儀システムが初期化されていません');
+      return;
+    }
+
+    try {
+      const context = await this.generateConstellationContext();
+      if (context) {
+        this.outputChannel.show();
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine(context);
+        this.outputChannel.appendLine('🌟 天体儀ビューを表示しました');
+      }
+    } catch (error) {
+      this.outputChannel.appendLine(
+        `❌ [Autopilot] Constellation display error: ${error}`
+      );
+    }
   }
 }
