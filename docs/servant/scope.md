@@ -306,7 +306,7 @@ git push
 
 ## 📚 参考資料
 
-- [適応的ガードシステム全体像](../ADAPTIVE_GUARD_SYSTEM.md)
+- [適応的ガードシステム全体像](../ai-systems/ADAPTIVE_GUARD_SYSTEM.md)
 - [失敗パターンデータベース](../.aitk/failure-patterns.json)
 - [Instructions自動更新スクリプト](../scripts/update-instructions.mjs)
 - [仕様書自動更新スクリプト](../scripts/update-specifications.mjs)
