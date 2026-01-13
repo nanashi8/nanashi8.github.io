@@ -117,7 +117,7 @@ jobs:
           echo "✅ ビルド完了"
 
       - name: ビルド成果物のアップロード
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
