@@ -4,6 +4,12 @@ echo "🔍 Pre-commit チェック開始..."
 echo "⚠️  【重要】すべてのエラー・警告を完全に解消する必要があります"
 echo ""
 
+# 0. passages-originalディレクトリ監視（最優先 - データ消失防止）
+if [ -f "scripts/guard-passages-original.sh" ]; then
+  bash "scripts/guard-passages-original.sh" || exit $?
+  echo ""
+fi
+
 # 入口を ai-guard に統一（品質ガード + fix-check + 主要危険パターン）
 if [ -f "scripts/pre-commit-ai-guard.sh" ]; then
   echo "🛡️  サーバント: ai-guard を実行中..."
