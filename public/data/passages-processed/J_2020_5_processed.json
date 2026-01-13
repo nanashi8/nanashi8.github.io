@@ -1,0 +1,212 @@
+[
+  {
+    "id": "J_2020_5_1",
+    "original": "Asami is a student at Kita Junior High School in Japan.",
+    "slashSplit": "Asami is a student / at Kita Junior High School / in Japan.",
+    "parenSplit": "Asami is a student <at Kita> Junior High School <in Japan>.",
+    "vocabularySplit": "+ Asami / + is / + a / + student / + at Kita Junior High School / + in Japan / ."
+  },
+  {
+    "id": "J_2020_5_2",
+    "original": "Her school has a sister school, ABC Junior High School, in Canada.",
+    "slashSplit": "Her school has a sister school, / ABC Junior High School, / in Canada.",
+    "parenSplit": "Her school has a sister school, ABC Junior High School, <in Canada>.",
+    "vocabularySplit": "+ Her / + school / + has / + a / + sister / + school / , / + ABC / + Junior / + High / + School / , / + in Canada / ."
+  },
+  {
+    "id": "J_2020_5_3",
+    "original": "Both schools have student exchange program.",
+    "slashSplit": "Both schools have student exchange program.",
+    "parenSplit": "Both schools have student exchange program.",
+    "vocabularySplit": "+ Both / + schools / + have / + student / + exchange / + program / ."
+  },
+  {
+    "id": "J_2020_5_4",
+    "original": "In the program, some students at Kita Junior High School visit ABC Junior High School every fall, and some students at ABC Junior High School visit Kita Junior High School every spring.",
+    "slashSplit": "In the program, / some students / at Kita Junior High School visit ABC Junior High School every fall, / and some students / at ABC Junior High School visit Kita Junior High School every spring.",
+    "parenSplit": "<In the program>, some students <at Kita> Junior High School visit ABC Junior High School every fall, and some students at ABC Junior High School visit Kita Junior High School every spring.",
+    "vocabularySplit": "+ In the program / , / + some / + students / + at Kita Junior High School visit ABC Junior High School every fall / , / + and / + some / + students / + at ABC Junior High School visit Kita Junior High School every spring / ."
+  },
+  {
+    "id": "J_2020_5_5",
+    "original": "Last spring, some students at ABC Junior High School visited Kita Junior High School on April 13.",
+    "slashSplit": "Last spring, / some students / at ABC Junior High School visited Kita Junior High School / on April 13.",
+    "parenSplit": "Last spring, some students at ABC Junior High School visited Kita Junior High School <on April> 13.",
+    "vocabularySplit": "+ Last / + spring / , / + some / + students / + at ABC Junior High School visited Kita Junior High School / + on April 13 / ."
+  },
+  {
+    "id": "J_2020_5_6",
+    "original": "Asami became good friends with one of the students at her sister school.",
+    "slashSplit": "Asami became good friends / with one / of the students / at her sister school.",
+    "parenSplit": "Asami became good friends with one <of the students at her> sister school.",
+    "vocabularySplit": "+ Asami / + became / + good / + friends / + with one / + of / + the / + students / + at her sister school / ."
+  },
+  {
+    "id": "J_2020_5_7",
+    "original": "His name was Jack.",
+    "slashSplit": "His name was Jack.",
+    "parenSplit": "His name was Jack.",
+    "vocabularySplit": "+ His / + name / + was / + Jack / ."
+  },
+  {
+    "id": "J_2020_5_8",
+    "original": "Asami didn't speak English well, so Jack couldn't understand what she wanted to say when she talked to him in English.",
+    "slashSplit": "Asami didn't speak English well, / so Jack couldn't understand what she wanted / to say when she talked / to him / in English.",
+    "parenSplit": "Asami didn't speak English well, so Jack couldn't understand what she wanted to say when she talked to him <in English>.",
+    "vocabularySplit": "+ Asami / + didn't / + speak / + English / + well / , / + so / + Jack / + couldn't / + understand / + what / + she / + wanted / + to / + say / + when / + she / + talked / + to / + him / + in English / ."
+  },
+  {
+    "id": "J_2020_5_9",
+    "original": "She couldn't understand his English, either.",
+    "slashSplit": "She couldn't understand his English, / either.",
+    "parenSplit": "She couldn't understand his English, either.",
+    "vocabularySplit": "+ She / + couldn't / + understand / + his / + English / , / + either / ."
+  },
+  {
+    "id": "J_2020_5_10",
+    "original": "So, they often said to each other, \"What?",
+    "slashSplit": "So, / they often said / to each other, \"What?",
+    "parenSplit": "So, they often said to each other, \"What?",
+    "vocabularySplit": "+ So / , / + they / + often / + said / + to / + each / + other / , / + \"What / ?"
+  },
+  {
+    "id": "J_2020_5_11",
+    "original": "Can you say that again?",
+    "slashSplit": "Can you say / that again?",
+    "parenSplit": "Can you say (that again)?",
+    "vocabularySplit": "+ Can / + you / + say / + that / + again / ?"
+  },
+  {
+    "id": "J_2020_5_12",
+    "original": "\" They sometimes used gestures and drew pictures.",
+    "slashSplit": "\" They sometimes used gestures / and drew pictures.",
+    "parenSplit": "\" They sometimes used gestures and drew pictures.",
+    "vocabularySplit": "+ \" / + They / + sometimes / + used / + gestures / + and / + drew / + pictures / ."
+  },
+  {
+    "id": "J_2020_5_13",
+    "original": "In this way, they talked about a lot of things like their favorite sport, soccer.",
+    "slashSplit": "In this way, / they talked / about a lot of things like their favorite sport, / soccer.",
+    "parenSplit": "<In this way>, they talked <about a lot of things> like their favorite sport, soccer.",
+    "vocabularySplit": "+ In this way / , / + they / + talked / + about / + a lot of / + things / + like / + their / + favorite / + sport / , / + soccer / ."
+  },
+  {
+    "id": "J_2020_5_14",
+    "original": "They like the same soccer player, and they were happy to learn that.",
+    "slashSplit": "They like the same soccer player, / and they were happy / to learn that.",
+    "parenSplit": "They like the same soccer player, and they were happy to learn that.",
+    "vocabularySplit": "+ They / + like / + the / + same / + soccer / + player / , / + and / + they / + were / + happy / + to / + learn / + that / ."
+  },
+  {
+    "id": "J_2020_5_15",
+    "original": "Jack and the other students from ABC Junior High School stayed in Japan for only two weeks, but Asami communicated with Jack a lot and had a good time with him.",
+    "slashSplit": "Jack / and the other students / from ABC Junior High School stayed / in Japan / for only two weeks, / but Asami communicated / with Jack a lot / and had a good time / with him.",
+    "parenSplit": "Jack and the other students from ABC Junior High School stayed <in Japan> <for only two> weeks, but Asami communicated <with Jack> a lot and had a good time with him.",
+    "vocabularySplit": "+ Jack / + and / + the / + other / + students / + from / + ABC / + Junior / + High / + School / + stayed / + in Japan / + for only two weeks / , / + but / + Asami / + communicated / + with Jack a lot / + and / + had / + a / + good / + time / + with him / ."
+  },
+  {
+    "id": "J_2020_5_16",
+    "original": "Last fall, Asami participated in the student exchange program.",
+    "slashSplit": "Last fall, / Asami participated / in the student exchange program.",
+    "parenSplit": "Last fall, Asami participated <in the student> exchange program>.",
+    "vocabularySplit": "+ Last / + fall / , / + Asami / + participated / + in the student exchange program / ."
+  },
+  {
+    "id": "J_2020_5_17",
+    "original": "Asami and other students visited ABC Junior High School on October 1.",
+    "slashSplit": "Asami / and other students visited ABC Junior High School / on October 1.",
+    "parenSplit": "Asami and other students visited ABC Junior High School <on October> 1.",
+    "vocabularySplit": "+ Asami / + and / + other / + students / + visited / + ABC / + Junior / + High / + School / + on October 1 / ."
+  },
+  {
+    "id": "J_2020_5_18",
+    "original": "Asami saw Jack there.",
+    "slashSplit": "Asami saw Jack there.",
+    "parenSplit": "Asami saw Jack there.",
+    "vocabularySplit": "+ Asami / + saw / + Jack / + there / ."
+  },
+  {
+    "id": "J_2020_5_19",
+    "original": "Jack came to Asami and said, \"Hi, Asami!",
+    "slashSplit": "Jack came / to Asami / and said, / \"Hi, Asami!",
+    "parenSplit": "Jack came <to Asami> and said, \"Hi, Asami!",
+    "vocabularySplit": "+ Jack / + came / + to Asami / + and / + said / , / + \"Hi / , / + Asami / !"
+  },
+  {
+    "id": "J_2020_5_20",
+    "original": "I can study with you again, and I'm happy about that!",
+    "slashSplit": "I can study / with you again, / and I'm happy / about that!",
+    "parenSplit": "I can study with you again, and I'm happy about that!",
+    "vocabularySplit": "+ I / + can / + study / + with you again / , / + and / + I'm / + happy / + about that / !"
+  },
+  {
+    "id": "J_2020_5_21",
+    "original": "\" Asami smiled and said,\"Me, too!",
+    "slashSplit": "\" Asami smiled / and said,\"Me, / too!",
+    "parenSplit": "\" Asami smiled and said,\"Me, too!",
+    "vocabularySplit": "+ \" / + Asami / + smiled / + and / + said / , / + \"Me / , / + too / !"
+  },
+  {
+    "id": "J_2020_5_22",
+    "original": "\" After that, the students of both schools went to  the cafeteria for lunch.",
+    "slashSplit": "\" / After that, / the students / of both schools went / to the cafeteria / for lunch.",
+    "parenSplit": "\" After that, the students of both schools went <to  the cafeteria <for lunch>.",
+    "vocabularySplit": "+ \" / + After that / , / + the / + students / + of both schools went / + to / + the / + cafeteria / + for lunch / ."
+  },
+  {
+    "id": "J_2020_5_23",
+    "original": "During the lunchtime, Asami became friends with another student, Emma.",
+    "slashSplit": "During the lunchtime, / Asami became friends / with another student, Emma.",
+    "parenSplit": "<During the lunchtime>, Asami became friends with another student, Emma.",
+    "vocabularySplit": "+ During the lunchtime / , / + Asami / + became / + friends / + with another student / , / + Emma / ."
+  },
+  {
+    "id": "J_2020_5_24",
+    "original": "Both of them are interested in movies, and they talked about their favorite ones.",
+    "slashSplit": "__IDIOM_17__ them are interested / in movies, / and they talked / about their favorite ones.",
+    "parenSplit": "Both <of them> are interested in movies, and they talked <about their favorite ones>.",
+    "vocabularySplit": "+ Both / + of / + them / + are / + interested / + in movies / , / + and / + they / + talked / + about their favorite ones / ."
+  },
+  {
+    "id": "J_2020_5_25",
+    "original": "Asami sometimes used gesture at that time, too.",
+    "slashSplit": "Asami sometimes used gesture / at / that time, / too.",
+    "parenSplit": "Asami sometimes used gesture at (that time), too.",
+    "vocabularySplit": "+ Asami / + sometimes / + used / + gesture / + at that time / , / + too / ."
+  },
+  {
+    "id": "J_2020_5_26",
+    "original": "Asami and Emma enjoyed their conversation.",
+    "slashSplit": "Asami / and Emma enjoyed their conversation.",
+    "parenSplit": "Asami and Emma enjoyed their conversation.",
+    "vocabularySplit": "+ Asami / + and / + Emma / + enjoyed / + their / + conversation / ."
+  },
+  {
+    "id": "J_2020_5_27",
+    "original": "After lunch, the students from Kita Junior High School sang two English songs for the students.",
+    "slashSplit": "After lunch, / the students / from Kita Junior High School sang two English songs / for the students.",
+    "parenSplit": "<After lunch>, the students <from Kita> Junior High School sang two English songs <for the students>.",
+    "vocabularySplit": "+ After lunch / , / + the / + students / + from Kita Junior High School sang two English songs / + for the students / ."
+  },
+  {
+    "id": "J_2020_5_28",
+    "original": "The students at ABC Junior High School enjoyed the wonderful songs.",
+    "slashSplit": "The students / at ABC Junior High School enjoyed the wonderful songs.",
+    "parenSplit": "The students at ABC Junior High School enjoyed the wonderful songs.",
+    "vocabularySplit": "+ The / + students / + at ABC Junior High School enjoyed the wonderful songs / ."
+  },
+  {
+    "id": "J_2020_5_29",
+    "original": "Then, they danced to traditional Canadian music for the students from Kita Junior High School.",
+    "slashSplit": "Then, / they danced / to traditional Canadian music / for the students / from Kita Junior High School.",
+    "parenSplit": "Then, they danced to traditional Canadian music <for the students> <from Kita> Junior High School.",
+    "vocabularySplit": "+ Then / , / + they / + danced / + to / + traditional / + Canadian / + music / + for / + the / + students / + from Kita Junior High School / ."
+  },
+  {
+    "id": "J_2020_5_30",
+    "original": "The dance and music were interesting, and Asami enjoyed them a lot.",
+    "slashSplit": "The dance / and music were interesting, / and Asami enjoyed them a lot.",
+    "parenSplit": "The dance and music were interesting, and Asami enjoyed them a lot.",
+    "vocabularySplit": "+ The / + dance / + and / + music / + were / + interesting / , / + and / + Asami / + enjoyed / + them / + a / + lot / ."
+  }
+]

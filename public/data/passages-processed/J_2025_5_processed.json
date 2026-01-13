@@ -1,0 +1,233 @@
+[
+  {
+    "id": "J_2025_5_1",
+    "original": "At the start of 2025, new houses and buildings in Tokyo will need to be special.",
+    "slashSplit": "At the start / of 2025, / new houses / and buildings / in Tokyo will need to / be special.",
+    "parenSplit": "<At the start of> 2025, new houses and buildings <in Tokyo> will need to be special.",
+    "vocabularySplit": "+ At the start / + of 2025 / , / + new / + houses / + and / + buildings / + in Tokyo will need / + to / + be / + special / ."
+  },
+  {
+    "id": "J_2025_5_2",
+    "original": "Do you know what this is?",
+    "slashSplit": "Do you know what this is?",
+    "parenSplit": "Do you know what this is?",
+    "vocabularySplit": "+ Do / + you / + know / + what / + this / + is / ?"
+  },
+  {
+    "id": "J_2025_5_3",
+    "original": "they need to have solar panels to make energy.",
+    "slashSplit": "they need to have solar panels / to make energy.",
+    "parenSplit": "they need to have solar panels to make energy.",
+    "vocabularySplit": "+ they / + need / + to / + have / + solar / + panels / + to / + make / + energy / ."
+  },
+  {
+    "id": "J_2025_5_4",
+    "original": "This new law was made to reduce the amount of CO2 and help to slow down global warming.",
+    "slashSplit": "This new law was made / to reduce the amount / of CO2 / and help / to slow down global warming.",
+    "parenSplit": "This new law was made to reduce the amount of CO2 and help to slow down global warming.",
+    "vocabularySplit": "+ This / + new / + law / + was / + made / + to / + reduce / + the / + amount / + of CO2 / + and / + help / + to / + slow / + down / + global / + warming / ."
+  },
+  {
+    "id": "J_2025_5_5",
+    "original": "Today, I want to talk about the good points and bad points of this new law, and about energy in Japan.",
+    "slashSplit": "Today, / I want to talk / about the good points / and bad points / of this new law, / and / about energy / in Japan.",
+    "parenSplit": "Today, I want to talk <about the good points and> bad points <of this new law>, and about energy <in Japan>.",
+    "vocabularySplit": "+ Today / , / + I / + want to / + talk / + about the good points / + and / + bad / + points / + of this new law / , / + and / + about / + energy / + in Japan / ."
+  },
+  {
+    "id": "J_2025_5_6",
+    "original": "Japan uses two kinds of energy.",
+    "slashSplit": "Japan uses two kinds / of energy.",
+    "parenSplit": "Japan uses two kinds of energy.",
+    "vocabularySplit": "+ Japan / + uses / + two / + kinds / + of energy / ."
+  },
+  {
+    "id": "J_2025_5_7",
+    "original": "Non-renewable energy, such as oil and gas, is lost after it is used.",
+    "slashSplit": "Non-renewable energy, / such as oil / and gas, / is lost / after it / is used.",
+    "parenSplit": "Non-renewable energy, such as oil and gas, is lost <after it is> used.",
+    "vocabularySplit": "+ Non-renewable / + energy / , / + such as / + oil / + and / + gas / , / + is / + lost / + after it is used / ."
+  },
+  {
+    "id": "J_2025_5_8",
+    "original": "They also increase CO2 in the environment.",
+    "slashSplit": "They also increase CO2 / in the environment.",
+    "parenSplit": "They also increase CO2 <in the environment>.",
+    "vocabularySplit": "+ They / + also / + increase / + CO2 / + in the environment / ."
+  },
+  {
+    "id": "J_2025_5_9",
+    "original": "The other kind is renewable energy.",
+    "slashSplit": "The other kind is renewable energy.",
+    "parenSplit": "The other kind is renewable energy.",
+    "vocabularySplit": "+ The / + other / + kind / + is / + renewable / + energy / ."
+  },
+  {
+    "id": "J_2025_5_10",
+    "original": "This includes wind power, hydropower, and solar power.",
+    "slashSplit": "This includes wind power, / hydropower, / and solar power.",
+    "parenSplit": "This includes wind power, hydropower, and solar power.",
+    "vocabularySplit": "+ This / + includes / + wind / + power / , / + hydropower / , / + and / + solar / + power / ."
+  },
+  {
+    "id": "J_2025_5_11",
+    "original": "These can be used again and again, so they help to reduce the amount of CO2 in the air.",
+    "slashSplit": "These can be used again / and again, / so they help / to reduce the amount / of CO2 / in the air.",
+    "parenSplit": "These can be used again and again, so they help to reduce the amount of CO2 <in the air>.",
+    "vocabularySplit": "+ These / + can / + be / + used / + again / + and / + again / , / + so / + they / + help / + to / + reduce / + the / + amount / + of / + CO2 / + in the air / ."
+  },
+  {
+    "id": "J_2025_5_12",
+    "original": "Japan has many mountains and rivers, so hydropower is important.",
+    "slashSplit": "Japan has many mountains / and rivers, / so hydropower is important.",
+    "parenSplit": "Japan has many mountains and rivers, so hydropower is important.",
+    "vocabularySplit": "+ Japan / + has / + many / + mountains / + and / + rivers / , / + so / + hydropower / + is / + important / ."
+  },
+  {
+    "id": "J_2025_5_13",
+    "original": "However, most places that can make hydropower are already developed.",
+    "slashSplit": "However, / most places that can make hydropower are already developed.",
+    "parenSplit": "However, most places (that can make hydropower are already developed).",
+    "vocabularySplit": "+ However / , / + most / + places / + that / + can / + make / + hydropower / + are / + already / + developed / ."
+  },
+  {
+    "id": "J_2025_5_14",
+    "original": "So, solar power is becoming more important.",
+    "slashSplit": "So, / solar power is becoming more important.",
+    "parenSplit": "So, solar power is becoming more important.",
+    "vocabularySplit": "+ So / , / + solar / + power / + is / + becoming / + more / + important / ."
+  },
+  {
+    "id": "J_2025_5_15",
+    "original": "Please look at the table.",
+    "slashSplit": "Please look / at the table.",
+    "parenSplit": "Please look <at the table>.",
+    "vocabularySplit": "+ Please / + look / + at the table / ."
+  },
+  {
+    "id": "J_2025_5_16",
+    "original": "You can see that the percentage of hydropower is almost the same every year, but the percentage of solar power is increasing.",
+    "slashSplit": "You can see / that the percentage / of hydropower / is almost the same every year, / but the percentage / of solar power / is increasing.",
+    "parenSplit": "You can see (that the percentage of hydropower is almost the same every year), but the percentage of solar power is increasing.",
+    "vocabularySplit": "+ You / + can / + see / + that / + the / + percentage / + of hydropower is almost the same / + every year / , / + but / + the / + percentage / + of solar power is increasing / ."
+  },
+  {
+    "id": "J_2025_5_17",
+    "original": "In 2020, the percentage of solar power was about as large as the percentage of hydropower and wind power combined.",
+    "slashSplit": "In 2020, / the percentage / of solar power / was / about as large as the percentage / of hydropower / and wind power combined.",
+    "parenSplit": "In 2020, the percentage of solar power was about as large as the percentage of hydropower and wind power combined.",
+    "vocabularySplit": "+ In 2020 / , / + the / + percentage / + of / + solar / + power / + was / + about as large as the percentage / + of hydropower / + and / + wind / + power / + combined / ."
+  },
+  {
+    "id": "J_2025_5_18",
+    "original": "Another interesting thing about solar power in Japan is the technology.",
+    "slashSplit": "Another interesting thing / about solar power / in Japan / is the technology.",
+    "parenSplit": "Another interesting thing about solar power <in Japan> is the technology.",
+    "vocabularySplit": "+ Another / + interesting / + thing / + about / + solar / + power / + in Japan is the technology / ."
+  },
+  {
+    "id": "J_2025_5_19",
+    "original": "In other countries, large, open spaces are used to build solar farms, but Japan does not have such spaces.",
+    "slashSplit": "In other countries, / large, / open spaces are used to build solar farms, / but Japan does not have such spaces.",
+    "parenSplit": "<In other countries>, large, open spaces are used to build solar farms, but Japan does not have such spaces.",
+    "vocabularySplit": "+ In other countries / , / + large / , / + open / + spaces / + are / + used / + to / + build / + solar / + farms / , / + but / + Japan / + does / + not / + have / + such / + spaces / ."
+  },
+  {
+    "id": "J_2025_5_20",
+    "original": "So, Japan has developed new technology to solve this problem.",
+    "slashSplit": "So, / Japan has developed new technology / to solve this problem.",
+    "parenSplit": "So, Japan has developed new technology to solve this problem.",
+    "vocabularySplit": "+ So / , / + Japan / + has / + developed / + new / + technology / + to / + solve / + this / + problem / ."
+  },
+  {
+    "id": "J_2025_5_21",
+    "original": "For example, farmers build many new solar farms on water.",
+    "slashSplit": "For example, / farmers build many new solar farms / on water.",
+    "parenSplit": "For example, farmers build many new solar farms on water.",
+    "vocabularySplit": "+ For example / , / + farmers / + build / + many / + new / + solar / + farms / + on water / ."
+  },
+  {
+    "id": "J_2025_5_22",
+    "original": "These solar farms float over the water that they use to grow rice.",
+    "slashSplit": "These solar farms float / over the water / that they use / to grow rice.",
+    "parenSplit": "These solar farms float over the water (that they use to grow rice).",
+    "vocabularySplit": "+ These / + solar / + farms / + float / + over / + the / + water / + that / + they / + use / + to / + grow / + rice / ."
+  },
+  {
+    "id": "J_2025_5_23",
+    "original": "In this way, they lose less water to evaporation in the hot summer and can make money by creating energy.",
+    "slashSplit": "In this way, / they lose less water / to evaporation / in the hot summer / and can make money / by creating energy.",
+    "parenSplit": "<In this way>, they lose less water to evaporation <in the hot> summer and> can make money by creating energy.",
+    "vocabularySplit": "+ In this way / , / + they / + lose / + less / + water / + to / + evaporation / + in the hot summer / + and / + can / + make / + money / + by creating energy / ."
+  },
+  {
+    "id": "J_2025_5_24",
+    "original": "For these reasons, Tokyo passed the new law about solar panels on new houses.",
+    "slashSplit": "For these reasons, / Tokyo passed the new law / about solar panels / on new houses.",
+    "parenSplit": "<For these reasons>, Tokyo passed the new law about solar panels on new houses.",
+    "vocabularySplit": "+ For these reasons / , / + Tokyo / + passed / + the / + new / + law / + about / + solar / + panels / + on new houses / ."
+  },
+  {
+    "id": "J_2025_5_25",
+    "original": "Some people are not happy with the new law because they say that solar panels are too expensive to buy.",
+    "slashSplit": "Some people are not happy / with the new law because they say / that solar panels are too expensive / to buy.",
+    "parenSplit": "Some people are not happy <with the new law because> they say (that solar panels are too expensive to buy).",
+    "vocabularySplit": "+ Some / + people / + are / + not / + happy / + with the new law / + because / + they / + say / + that / + solar / + panels / + are / + too / + expensive / + to buy / ."
+  },
+  {
+    "id": "J_2025_5_26",
+    "original": "Other people say that, because Tokyo has many tall building, the solar panels will not get much light.",
+    "slashSplit": "Other people say that, / because Tokyo has many tall building, / the solar panels will not get much light.",
+    "parenSplit": "Other people say that, (because Tokyo has many tall building), the solar panels will not get much light.",
+    "vocabularySplit": "+ Other / + people / + say / + that / , / + because / + Tokyo / + has / + many / + tall / + building / , / + the / + solar / + panels / + will / + not / + get / + much / + light / ."
+  },
+  {
+    "id": "J_2025_5_27",
+    "original": "On the other hand, the government says that solar panels will help to create many new jobs.",
+    "slashSplit": "On the other hand, / the government says / that solar panels will help / to create many new jobs.",
+    "parenSplit": "<On the other hand>, the government says (that solar panels will help to create many new jobs).",
+    "vocabularySplit": "+ On the other hand / , / + the / + government / + says / + that / + solar / + panels / + will / + help / + to / + create / + many / + new / + jobs / ."
+  },
+  {
+    "id": "J_2025_5_28",
+    "original": "This is because solar panels must be checked every year.",
+    "slashSplit": "This is because solar panels must be checked every year.",
+    "parenSplit": "This is (because solar panels must be checked every year).",
+    "vocabularySplit": "+ This / + is / + because / + solar / + panels / + must / + be / + checked / + every year / ."
+  },
+  {
+    "id": "J_2025_5_29",
+    "original": "It also says that, if each house can save a little energy, it will improve the environment.",
+    "slashSplit": "It also says that, / if each house can save a little energy, / it will improve the environment.",
+    "parenSplit": "It also says that, (if each house can save a little energy), it will improve the environment.",
+    "vocabularySplit": "+ It / + also / + says / + that / , / + if / + each / + house / + can / + save / + a / + little / + energy / , / + it / + will / + improve / + the / + environment / ."
+  },
+  {
+    "id": "J_2025_5_30",
+    "original": "I think so, too.",
+    "slashSplit": "I think so, / too.",
+    "parenSplit": "I think so, too.",
+    "vocabularySplit": "+ I / + think / + so / , / + too / ."
+  },
+  {
+    "id": "J_2025_5_31",
+    "original": "There are many different ideas to help to reduce CO2.",
+    "slashSplit": "There are many different ideas / to help / to reduce CO2.",
+    "parenSplit": "There are many different ideas to help to reduce CO2.",
+    "vocabularySplit": "+ There / + are / + many / + different / + ideas / + to help / + to / + reduce / + CO2 / ."
+  },
+  {
+    "id": "J_2025_5_32",
+    "original": "We need to  work together to make a nice world.",
+    "slashSplit": "We need to work together / to make a nice world.",
+    "parenSplit": "We need <to  work> together to make a nice world.",
+    "vocabularySplit": "+ We / + need / + to / + work / + together / + to / + make / + a / + nice / + world / ."
+  },
+  {
+    "id": "J_2025_5_33",
+    "original": "Thank you for listening.",
+    "slashSplit": "Thank you / for listening.",
+    "parenSplit": "Thank you for listening.",
+    "vocabularySplit": "+ Thank / + you / + for listening / ."
+  }
+]

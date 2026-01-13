@@ -1,0 +1,156 @@
+[
+  {
+    "id": "J_2024_5_1",
+    "original": "Since old times, Japanese people have experienced natural disasters many times.",
+    "slashSplit": "Since old times, / Japanese people have experienced natural disasters many times.",
+    "parenSplit": "Since old times, Japanese people have experienced natural disasters many times.",
+    "vocabularySplit": "+ Since / + old / + times / , / + Japanese / + people / + have / + experienced / + natural / + disasters / + many / + times / ."
+  },
+  {
+    "id": "J_2024_5_2",
+    "original": "They cannot be stopped because they come from nature.",
+    "slashSplit": "They cannot be stopped because they come / from nature.",
+    "parenSplit": "They cannot be stopped (because they come from nature).",
+    "vocabularySplit": "+ They / + cannot / + be / + stopped / + because / + they / + come / + from nature / ."
+  },
+  {
+    "id": "J_2024_5_3",
+    "original": "When a typhoon is coming, weather reports show us which course the typhoon can take.",
+    "slashSplit": "When a typhoon is coming, / weather reports show us which course the typhoon can take.",
+    "parenSplit": "(When a typhoon is coming), weather reports show us which course the typhoon can take.",
+    "vocabularySplit": "+ When / + a / + typhoon / + is / + coming / , / + weather / + reports / + show / + us / + which / + course / + the / + typhoon / + can / + take / ."
+  },
+  {
+    "id": "J_2024_5_4",
+    "original": "However, we cannot stop the typhoon.",
+    "slashSplit": "However, / we cannot stop the typhoon.",
+    "parenSplit": "However, we cannot stop the typhoon.",
+    "vocabularySplit": "+ However / , / + we / + cannot / + stop / + the / + typhoon / ."
+  },
+  {
+    "id": "J_2024_5_5",
+    "original": "Also we cannot tell when and where the next earthquake will happen.",
+    "slashSplit": "Also we cannot tell when / and where the next earthquake will happen.",
+    "parenSplit": "Also we cannot tell when and where the next earthquake will happen.",
+    "vocabularySplit": "+ Also / + we / + cannot / + tell / + when / + and / + where / + the / + next / + earthquake / + will / + happen / ."
+  },
+  {
+    "id": "J_2024_5_6",
+    "original": "Even the highest technology cannot help us avoid all these natural disasters.",
+    "slashSplit": "Even the highest technology cannot help us avoid all these natural disasters.",
+    "parenSplit": "Even the highest technology cannot help us avoid all these natural disasters.",
+    "vocabularySplit": "+ Even / + the / + highest / + technology / + cannot / + help / + us / + avoid / + all / + these / + natural / + disasters / ."
+  },
+  {
+    "id": "J_2024_5_7",
+    "original": "Then what should we do to prepare for natural disasters?",
+    "slashSplit": "Then what should we do / to prepare / for natural disasters?",
+    "parenSplit": "Then what should we do to prepare <for natural disasters>?",
+    "vocabularySplit": "+ Then / + what / + should / + we / + do / + to prepare / + for natural disasters / ?"
+  },
+  {
+    "id": "J_2024_5_8",
+    "original": "First, we need to get the right information about them.",
+    "slashSplit": "First, / we need to get the right information / about them.",
+    "parenSplit": "First, we need to get the right information <about them>.",
+    "vocabularySplit": "+ First / , / + we / + need / + to / + get / + the / + right / + information / + about them / ."
+  },
+  {
+    "id": "J_2024_5_9",
+    "original": "Look at the graph.",
+    "slashSplit": "Look / at the graph.",
+    "parenSplit": "Look <at the graph>.",
+    "vocabularySplit": "+ Look / + at the graph / ."
+  },
+  {
+    "id": "J_2024_5_10",
+    "original": "It shows the ways people want to use to get disaster information.",
+    "slashSplit": "It shows the ways people want to use / to get disaster information.",
+    "parenSplit": "It shows the ways people want to use to get disaster information.",
+    "vocabularySplit": "+ It / + shows / + the / + ways / + people / + want to / + use / + to / + get / + disaster / + information / ."
+  },
+  {
+    "id": "J_2024_5_11",
+    "original": "According to the graph, many people want to use TV and radio for disaster information.",
+    "slashSplit": "According / to the graph, / many people want to use TV / and radio / for disaster information.",
+    "parenSplit": "According <to the graph>, many people want to use TV and radio <for disaster information>.",
+    "vocabularySplit": "+ According / + to / + the / + graph / , / + many / + people / + want to / + use / + TV / + and / + radio / + for disaster information / ."
+  },
+  {
+    "id": "J_2024_5_12",
+    "original": "More than 80 percent of people chooose TV, and about 48 percent of people choose radio as a useful source.",
+    "slashSplit": "More than 80 percent / of people chooose TV, / and / about 48 percent / of people choose radio as a useful source.",
+    "parenSplit": "More than 80 percent of people chooose TV, and <about 48> percent of people choose radio as a useful source.",
+    "vocabularySplit": "+ More / + than / + 80 / + percent / + of people chooose TV / , / + and / + about 48 percent / + of people choose radio as a useful source / ."
+  },
+  {
+    "id": "J_2024_5_13",
+    "original": "On the other hand, the graph shows that many people are trying to get the information on the Internet.",
+    "slashSplit": "On the other hand, / the graph shows that many people are trying / to get the information / on the Internet.",
+    "parenSplit": "<On the other hand>, the graph shows (that many people are trying to get the information <on the Internet>).",
+    "vocabularySplit": "+ On the other hand / , / + the / + graph / + shows / + that / + many / + people / + are / + trying / + to / + get / + the / + information / + on the Internet / ."
+  },
+  {
+    "id": "J_2024_5_14",
+    "original": "More than 35 percent of people of people think that social media give them useful information.",
+    "slashSplit": "More than 35 percent / of people / of people think / that social media give them useful information.",
+    "parenSplit": "More than 35 percent of people of people think (that social media give them useful information).",
+    "vocabularySplit": "+ More / + than / + 35 / + percent / + of people / + of people think that social media give them useful information / ."
+  },
+  {
+    "id": "J_2024_5_15",
+    "original": "It is also important for us to think of the things we can do now.",
+    "slashSplit": "It is also important / for us / to think / of the things we can do now.",
+    "parenSplit": "It is also important <for us to> think <of the things we can> do now.",
+    "vocabularySplit": "+ It / + is / + also / + important / + for / + us / + to think / + of the things we can do now / ."
+  },
+  {
+    "id": "J_2024_5_16",
+    "original": "Actually, we can do a lot of things to prepare for natural disasters.",
+    "slashSplit": "Actually, / we can do a lot of things / to prepare / for natural disasters.",
+    "parenSplit": "Actually, we can do a lot of things to prepare <for natural disasters>.",
+    "vocabularySplit": "+ Actually / , / + we / + can / + do / + a lot of / + things / + to prepare / + for natural disasters / ."
+  },
+  {
+    "id": "J_2024_5_17",
+    "original": "For example, many cities have made evacuation maps which show where to go in natural disasters such as big earthquakes.",
+    "slashSplit": "For example, / many cities have made evacuation maps which show where / to go / in natural disasters such as big earthquakes.",
+    "parenSplit": "For example, many cities have made evacuation maps which show where to go <in natural disasters> such as big earthquakes.",
+    "vocabularySplit": "+ For example / , / + many / + cities / + have / + made / + evacuation / + maps / + which / + show / + where to / + go / + in natural disasters / + such as / + big / + earthquakes / ."
+  },
+  {
+    "id": "J_2024_5_18",
+    "original": "If we share the maps with our family or our neighbors, we can better.",
+    "slashSplit": "If we share the maps / with our family / or our neighbors, / we can better.",
+    "parenSplit": "(If we share the maps <with our family or our> neighbors), we can better.",
+    "vocabularySplit": "+ If / + we / + share / + the / + maps / + with our family / + or / + our / + neighbors / , / + we / + can / + better / ."
+  },
+  {
+    "id": "J_2024_5_19",
+    "original": "Since old times, evacuation maps and drills have saved many people from natural disasters.",
+    "slashSplit": "Since old times, / evacuation maps / and drills have saved many people / from natural disasters.",
+    "parenSplit": "Since old times, evacuation maps and drills have saved many people from natural disasters.",
+    "vocabularySplit": "+ Since / + old / + times / , / + evacuation / + maps / + and / + drills / + have / + saved / + many / + people / + from natural disasters / ."
+  },
+  {
+    "id": "J_2024_5_20",
+    "original": "Nobody can know when and where a natural disaster will happen.",
+    "slashSplit": "Nobody can know when / and where a natural disaster will happen.",
+    "parenSplit": "Nobody can know when and where a natural disaster will happen.",
+    "vocabularySplit": "+ Nobody / + can / + know / + when / + and / + where / + a / + natural / + disaster / + will / + happen / ."
+  },
+  {
+    "id": "J_2024_5_21",
+    "original": "Today, we experience many big natural disasters, but we are too busy with our daily lives to think about them every day.",
+    "slashSplit": "Today, / we experience many big natural disasters, / but we are too busy / with our daily lives / to think / about them every day.",
+    "parenSplit": "Today, we experience many big natural disasters, but we are too busy <with our daily lives to> think <about them> every day.",
+    "vocabularySplit": "+ Today / , / + we / + experience / + many / + big / + natural / + disasters / , / + but / + we / + are / + too / + busy / + with / + our / + daily / + lives / + to think / + about them / + every day / ."
+  },
+  {
+    "id": "J_2024_5_22",
+    "original": "However, it is important to get the right information and skills to prepare for natural disasters.",
+    "slashSplit": "However, / it is important / to get the right information / and skills / to prepare / for natural disasters.",
+    "parenSplit": "However, it is important to get the right information and skills to prepare <for natural disasters>.",
+    "vocabularySplit": "+ However / , / + it / + is / + important / + to / + get / + the / + right / + information / + and / + skills / + to prepare / + for natural disasters / ."
+  }
+]

@@ -1,0 +1,387 @@
+[
+  {
+    "id": "J_2021_5_1",
+    "original": "Nightingale was born in a rich family in the U.",
+    "slashSplit": "Nightingale was born / in a rich family / in the U.",
+    "parenSplit": "Nightingale was born <in a rich> family in> the U.",
+    "vocabularySplit": "+ Nightingale / + was / + born / + in a rich family / + in the U / ."
+  },
+  {
+    "id": "J_2021_5_2",
+    "original": "K.",
+    "slashSplit": "K.",
+    "parenSplit": "K.",
+    "vocabularySplit": "+ K / ."
+  },
+  {
+    "id": "J_2021_5_3",
+    "original": "in 1820.",
+    "slashSplit": "in 1820.",
+    "parenSplit": "<in 1820>.",
+    "vocabularySplit": "+ in 1820 / ."
+  },
+  {
+    "id": "J_2021_5_4",
+    "original": "Her family lived a wealthy life, but she felt guilty about that because she knew there were many poor people.",
+    "slashSplit": "Her family lived a wealthy life, / but she felt guilty / about that because she knew / there were many poor people.",
+    "parenSplit": "Her family lived a wealthy life, but she felt guilty about (that because she knew there were many poor people).",
+    "vocabularySplit": "+ Her / + family / + lived / + a / + wealthy / + life / , / + but / + she / + felt / + guilty / + about that / + because / + she / + knew / + there / + were / + many / + poor / + people / ."
+  },
+  {
+    "id": "J_2021_5_5",
+    "original": "She often thought.",
+    "slashSplit": "She often thought.",
+    "parenSplit": "She often thought.",
+    "vocabularySplit": "+ She / + often / + thought / ."
+  },
+  {
+    "id": "J_2021_5_6",
+    "original": "\"I can live a wealthy life, but there are many poor people who can't even see a doctor when they get sick.",
+    "slashSplit": "\"I can live a wealthy life, / but there are many poor people who can't even see a doctor when they get sick.",
+    "parenSplit": "\"I can live a wealthy life, but there are many poor people who can't even see a doctor when they get sick.",
+    "vocabularySplit": "+ \"I / + can / + live / + a / + wealthy / + life / , / + but / + there / + are / + many / + poor / + people / + who / + can't / + even / + see / + a / + doctor / + when / + they / + get / + sick / ."
+  },
+  {
+    "id": "J_2021_5_7",
+    "original": "\" She didn't think it was good for her to live a wealthy life.",
+    "slashSplit": "\" She didn't think / it was good / for her / to live a wealthy life.",
+    "parenSplit": "\" She didn't think it was good <for her to> live a> wealthy life.",
+    "vocabularySplit": "+ \" / + She / + didn't / + think / + it / + was / + good / + for her / + to / + live / + a / + wealthy / + life / ."
+  },
+  {
+    "id": "J_2021_5_8",
+    "original": "She always thought about what she could do for the poor people.",
+    "slashSplit": "She always thought / about what she could do / for the poor people.",
+    "parenSplit": "She always thought about what she could do <for the poor> people>.",
+    "vocabularySplit": "+ She / + always / + thought / + about / + what / + she / + could / + do / + for the poor people / ."
+  },
+  {
+    "id": "J_2021_5_9",
+    "original": "Her family often enjoyed attending parties, but she thought studying was more interesting than attending them.",
+    "slashSplit": "Her family often enjoyed attending parties, / but she thought / studying was more interesting than attending them.",
+    "parenSplit": "Her family often enjoyed attending parties, but she thought studying was more interesting than attending them.",
+    "vocabularySplit": "+ Her / + family / + often / + enjoyed / + attending / + parties / , / + but / + she / + thought / + studying / + was / + more / + interesting / + than attending them / ."
+  },
+  {
+    "id": "J_2021_5_10",
+    "original": "Actually, she enjoyed studying a lot.",
+    "slashSplit": "Actually, / she enjoyed studying a lot.",
+    "parenSplit": "Actually, she enjoyed studying a lot.",
+    "vocabularySplit": "+ Actually / , / + she / + enjoyed / + studying / + a / + lot / ."
+  },
+  {
+    "id": "J_2021_5_11",
+    "original": "When Nightingale was twenty-four years old, she decided something and told her parents.",
+    "slashSplit": "When Nightingale was twenty-four years old, / she decided something / and told her parents.",
+    "parenSplit": "(When Nightingale was twenty-four years old), she decided something and told her parents.",
+    "vocabularySplit": "+ When / + Nightingale / + was / + twenty-four / + years / + old / , / + she / + decided / + something / + and / + told / + her / + parents / ."
+  },
+  {
+    "id": "J_2021_5_12",
+    "original": "She said to them.",
+    "slashSplit": "She said / to them.",
+    "parenSplit": "She said <to them>.",
+    "vocabularySplit": "+ She / + said / + to them / ."
+  },
+  {
+    "id": "J_2021_5_13",
+    "original": "\"I want to be a nurse and help people in need.",
+    "slashSplit": "\"I want to be a nurse / and help people / in need.",
+    "parenSplit": "\"I want to be a nurse and help people in need.",
+    "vocabularySplit": "+ \"I / + want to / + be / + a / + nurse / + and / + help / + people / + in need / ."
+  },
+  {
+    "id": "J_2021_5_14",
+    "original": "\" At that time, nursing was not a good job.",
+    "slashSplit": "\" / At / that time, / nursing was not a good job.",
+    "parenSplit": "\" At (that time), nursing was not a good job.",
+    "vocabularySplit": "+ \" / + At that time / , / + nursing / + was / + not / + a / + good / + job / ."
+  },
+  {
+    "id": "J_2021_5_15",
+    "original": "___ Women in the lower classes worked as nurses.",
+    "slashSplit": "___ Women / in the lower classes worked as nurses.",
+    "parenSplit": "___ Women <in the lower> classes worked> as nurses.",
+    "vocabularySplit": "+ ___ / + Women / + in the lower classes worked as nurses / ."
+  },
+  {
+    "id": "J_2021_5_16",
+    "original": "So, Nightingale's parents didn't agree with her.",
+    "slashSplit": "So, / Nightingale's parents didn't agree / with her.",
+    "parenSplit": "So, Nightingale's parents didn't agree with her.",
+    "vocabularySplit": "+ So / , / + Nightingale's / + parents / + didn't / + agree / + with her / ."
+  },
+  {
+    "id": "J_2021_5_17",
+    "original": "However, she continued to study hard to be a nurse.",
+    "slashSplit": "However, / she continued / to study hard to / be a nurse.",
+    "parenSplit": "However, she continued to study hard to be a nurse.",
+    "vocabularySplit": "+ However / , / + she / + continued / + to / + study / + hard / + to / + be / + a / + nurse / ."
+  },
+  {
+    "id": "J_2021_5_18",
+    "original": "When Nightingale was thirty years old, she finally became a nurse.",
+    "slashSplit": "When Nightingale was thirty years old, / she finally became a nurse.",
+    "parenSplit": "(When Nightingale was thirty years old), she finally became a nurse.",
+    "vocabularySplit": "+ When / + Nightingale / + was / + thirty years old / , / + she / + finally / + became / + a / + nurse / ."
+  },
+  {
+    "id": "J_2021_5_19",
+    "original": "Her father finally acknowledged her great effort.",
+    "slashSplit": "Her father finally acknowledged her great effort.",
+    "parenSplit": "Her father finally acknowledged her great effort.",
+    "vocabularySplit": "+ Her / + father / + finally / + acknowledged / + her / + great / + effort / ."
+  },
+  {
+    "id": "J_2021_5_20",
+    "original": "At that time, hospitals were very dirty, and sick people could not receive medical treatment there.",
+    "slashSplit": "At / that time, / hospitals were very dirty, / and sick people could not receive medical treatment there.",
+    "parenSplit": "At (that time), hospitals were very dirty, and sick people could not receive medical treatment there.",
+    "vocabularySplit": "+ At that time / , / + hospitals / + were / + very / + dirty / , / + and / + sick / + people / + could / + not / + receive / + medical / + treatment / + there / ."
+  },
+  {
+    "id": "J_2021_5_21",
+    "original": "Nightingale tried to change this bad situation.",
+    "slashSplit": "Nightingale tried / to change this bad situation.",
+    "parenSplit": "Nightingale tried to change this bad situation.",
+    "vocabularySplit": "+ Nightingale / + tried / + to / + change / + this / + bad / + situation / ."
+  },
+  {
+    "id": "J_2021_5_22",
+    "original": "She rebuilt hospitals and changed the way of taking care of sick people.",
+    "slashSplit": "She rebuilt hospitals / and changed the way / of taking care / of sick people.",
+    "parenSplit": "She rebuilt hospitals and changed the way of taking care of sick people.",
+    "vocabularySplit": "+ She / + rebuilt / + hospitals / + and / + changed / + the / + way / + of taking care / + of sick people / ."
+  },
+  {
+    "id": "J_2021_5_23",
+    "original": "One year later, the war started on the Crimean Peninsula, and many soldiers in the U.",
+    "slashSplit": "One year later, / the war started / on the Crimean Peninsula, / and many soldiers / in the U.",
+    "parenSplit": "One year later, the war started <on the Crimean Peninsula>, and many soldiers <in the U>.",
+    "vocabularySplit": "+ One / + year / + later / , / + the / + war / + started / + on the Crimean Peninsula / , / + and / + many / + soldiers / + in the U / ."
+  },
+  {
+    "id": "J_2021_5_24",
+    "original": "K.",
+    "slashSplit": "K.",
+    "parenSplit": "K.",
+    "vocabularySplit": "+ K / ."
+  },
+  {
+    "id": "J_2021_5_25",
+    "original": "were taken there.",
+    "slashSplit": "were taken there.",
+    "parenSplit": "were taken there.",
+    "vocabularySplit": "+ were / + taken / + there / ."
+  },
+  {
+    "id": "J_2021_5_26",
+    "original": "In hospitals, many soldiers didn't receive adequate medical treatment, so they died there.",
+    "slashSplit": "In hospitals, / many soldiers didn't receive adequate medical treatment, / so they died there.",
+    "parenSplit": "In hospitals, many soldiers didn't receive adequate medical treatment, so they died there.",
+    "vocabularySplit": "+ In hospitals / , / + many / + soldiers / + didn't / + receive / + adequate / + medical / + treatment / , / + so / + they / + died / + there / ."
+  },
+  {
+    "id": "J_2021_5_27",
+    "original": "Nightingale learned of the bad situation by reading a newspaper and decided to go there with other nurses.",
+    "slashSplit": "Nightingale learned / of the bad situation / by reading a newspaper / and decided / to go there / with other nurses.",
+    "parenSplit": "Nightingale learned <of the bad situation by> reading a newspaper and decided to go there with other nurses.",
+    "vocabularySplit": "+ Nightingale / + learned / + of / + the / + bad / + situation / + by reading a newspaper / + and / + decided / + to / + go / + there / + with other nurses / ."
+  },
+  {
+    "id": "J_2021_5_28",
+    "original": "___ She bought some nice food for the soldiers with her own money.",
+    "slashSplit": "___ She bought some nice food / for the soldiers / with her own money.",
+    "parenSplit": "___ She bought some nice food <for the soldiers> with her> own money.",
+    "vocabularySplit": "+ ___ / + She / + bought / + some / + nice / + food / + for the soldiers / + with her own money / ."
+  },
+  {
+    "id": "J_2021_5_29",
+    "original": "When Nightingale and other nurses arrived at the hospital on the Crimean Peninsula, they were very surprised.",
+    "slashSplit": "When Nightingale / and other nurses arrived / at the hospital / on the Crimean Peninsula, / they were very surprised.",
+    "parenSplit": "(When Nightingale and other nurses arrived <at the hospital on the> Crimean Peninsula), they were very surprised.",
+    "vocabularySplit": "+ When / + Nightingale / + and / + other / + nurses / + arrived / + at the hospital / + on the Crimean Peninsula / , / + they / + were / + very / + surprised / ."
+  },
+  {
+    "id": "J_2021_5_30",
+    "original": "The hospital was very dirty, and there were only a few beds at the hospital, so many injured soldiers were lying on the floor.",
+    "slashSplit": "The hospital was very dirty, / and there were only a few beds / at the hospital, / so many injured soldiers were lying / on the floor.",
+    "parenSplit": "The hospital was very dirty, and there were only a few beds <at the hospital>, so many injured soldiers were lying <on the floor>.",
+    "vocabularySplit": "+ The / + hospital / + was / + very / + dirty / , / + and / + there / + were / + only / + a / + few / + beds / + at the hospital / , / + so / + many / + injured / + soldiers / + were / + lying / + on the floor / ."
+  },
+  {
+    "id": "J_2021_5_31",
+    "original": "So, she and other nurses cleaned the hospital.",
+    "slashSplit": "So, / she / and other nurses cleaned the hospital.",
+    "parenSplit": "So, she and other nurses cleaned the hospital.",
+    "vocabularySplit": "+ So / , / + she / + and / + other / + nurses / + cleaned / + the / + hospital / ."
+  },
+  {
+    "id": "J_2021_5_32",
+    "original": "After that, they took good care of the injured soldiers.",
+    "slashSplit": "After that, / they took good care / of the injured soldiers.",
+    "parenSplit": "After that, they took good care <of the injured soldiers>.",
+    "vocabularySplit": "+ After that / , / + they / + took / + good / + care / + of the injured soldiers / ."
+  },
+  {
+    "id": "J_2021_5_33",
+    "original": "At first, the doctors of the hospital didn't think the nurses could help them and the injured soldiers.",
+    "slashSplit": "At first, / the doctors / of the hospital didn't think the nurses could help them / and the injured soldiers.",
+    "parenSplit": "At first, the doctors <of the hospital didn>'t think the nurses could help them and the injured soldiers.",
+    "vocabularySplit": "+ At first / , / + the / + doctors / + of the hospital didn't think the nurses could help them / + and / + the / + injured / + soldiers / ."
+  },
+  {
+    "id": "J_2021_5_34",
+    "original": "However, they soon changed their minds.",
+    "slashSplit": "However, / they soon changed their minds.",
+    "parenSplit": "However, they soon changed their minds.",
+    "vocabularySplit": "+ However / , / + they / + soon / + changed / + their / + minds / ."
+  },
+  {
+    "id": "J_2021_5_35",
+    "original": "They acknowledged the great work of the nurses because many soldiers were helped a lot.",
+    "slashSplit": "They acknowledged the great work / of the nurses because many soldiers / were helped a lot.",
+    "parenSplit": "They acknowledged the great work <of the nurses> (because many soldiers were helped a lot).",
+    "vocabularySplit": "+ They / + acknowledged / + the / + great / + work / + of the nurses / + because / + many / + soldiers / + were / + helped / + a / + lot / ."
+  },
+  {
+    "id": "J_2021_5_36",
+    "original": "After the war, Nightingale was sad because many soldiers died in the war.",
+    "slashSplit": "After the war, / Nightingale was sad because many soldiers died / in the war.",
+    "parenSplit": "<After the war>, Nightingale was sad (because many soldiers died <in the war>).",
+    "vocabularySplit": "+ After the war / , / + Nightingale / + was / + sad / + because / + many / + soldiers / + died / + in the war / ."
+  },
+  {
+    "id": "J_2021_5_37",
+    "original": "She often thought, \"How many people was I able to help?",
+    "slashSplit": "She often thought, / \"How many people was I able to help?",
+    "parenSplit": "She often thought, \"How many people was I able to help?",
+    "vocabularySplit": "+ She / + often / + thought / , / + \"How / + many / + people / + was / + I / + able / + to help / ?"
+  },
+  {
+    "id": "J_2021_5_38",
+    "original": "\" People in the U.",
+    "slashSplit": "\" People / in the U.",
+    "parenSplit": "\" People <in the U>.",
+    "vocabularySplit": "+ \" / + People / + in the U / ."
+  },
+  {
+    "id": "J_2021_5_39",
+    "original": "K.",
+    "slashSplit": "K.",
+    "parenSplit": "K.",
+    "vocabularySplit": "+ K / ."
+  },
+  {
+    "id": "J_2021_5_40",
+    "original": "learned of Nightingale's great work on the Crimean Peninsula and looked forward to seeing her.",
+    "slashSplit": "learned / of Nightingale's great work / on the Crimean Peninsula / and looked forward / to seeing her.",
+    "parenSplit": "learned <of Nightingale>'s great work <on the Crimean Peninsula and> looked forward to seeing her.",
+    "vocabularySplit": "+ learned / + of / + Nightingale's / + great / + work / + on the Crimean Peninsula / + and / + looked / + forward / + to / + seeing / + her / ."
+  },
+  {
+    "id": "J_2021_5_41",
+    "original": "___ She didn't think she did anything important.",
+    "slashSplit": "___ She didn't think she did anything important.",
+    "parenSplit": "___ She didn't think she did anything important.",
+    "vocabularySplit": "+ ___ / + She / + didn't / + think / + she / + did / + anything / + important / ."
+  },
+  {
+    "id": "J_2021_5_42",
+    "original": "So, she thought they overestimated her, and she didn't like that.",
+    "slashSplit": "So, / she thought they overestimated her, / and she didn't like that.",
+    "parenSplit": "So, she thought they overestimated her, and she didn't like that.",
+    "vocabularySplit": "+ So / , / + she / + thought / + they / + overestimated / + her / , / + and / + she / + didn't / + like / + that / ."
+  },
+  {
+    "id": "J_2021_5_43",
+    "original": "She went back to the U.",
+    "slashSplit": "She went back / to the U.",
+    "parenSplit": "She went back <to the U>.",
+    "vocabularySplit": "+ She / + went / + back / + to / + the / + U / ."
+  },
+  {
+    "id": "J_2021_5_44",
+    "original": "K.",
+    "slashSplit": "K.",
+    "parenSplit": "K.",
+    "vocabularySplit": "+ K / ."
+  },
+  {
+    "id": "J_2021_5_45",
+    "original": "secretly.",
+    "slashSplit": "secretly.",
+    "parenSplit": "secretly.",
+    "vocabularySplit": "+ secretly / ."
+  },
+  {
+    "id": "J_2021_5_46",
+    "original": "Nightingale hoped that everyone could receive medical treatment when he or she was sick.",
+    "slashSplit": "Nightingale hoped / that everyone could receive medical treatment when he / or she was sick.",
+    "parenSplit": "Nightingale hoped (that everyone could receive medical treatment when he or she was sick).",
+    "vocabularySplit": "+ Nightingale / + hoped / + that / + everyone / + could / + receive / + medical / + treatment / + when / + he / + or / + she / + was / + sick / ."
+  },
+  {
+    "id": "J_2021_5_47",
+    "original": "She appealed to her country.",
+    "slashSplit": "She appealed / to her country.",
+    "parenSplit": "She appealed <to her country>.",
+    "vocabularySplit": "+ She / + appealed / + to / + her / + country / ."
+  },
+  {
+    "id": "J_2021_5_48",
+    "original": "Many people agreed with her ideas and donated a lot of money to her.",
+    "slashSplit": "Many people agreed / with her ideas / and donated a lot of money / to her.",
+    "parenSplit": "Many people agreed <with her ideas and donated> a lot of money to her.",
+    "vocabularySplit": "+ Many / + people / + agreed / + with her ideas / + and / + donated / + a lot of / + money / + to her / ."
+  },
+  {
+    "id": "J_2021_5_49",
+    "original": "Then, she established a school in London.",
+    "slashSplit": "Then, / she established a school / in London.",
+    "parenSplit": "Then, she established a school <in London>.",
+    "vocabularySplit": "+ Then / , / + she / + established / + a / + school / + in London / ."
+  },
+  {
+    "id": "J_2021_5_50",
+    "original": "The students of the school studied hard, and from the school they became good nurses.",
+    "slashSplit": "The students / of the school studied hard, / and / from the school they became good nurses.",
+    "parenSplit": "The students <of the school studied hard>, and <from the school they became> good nurses.",
+    "vocabularySplit": "+ The / + students / + of the school studied hard / , / + and / + from the school they became good nurses / ."
+  },
+  {
+    "id": "J_2021_5_51",
+    "original": "So, people around the world started to understand that nursing was an important job helping people.",
+    "slashSplit": "So, / people / around the world started / to understand / that nursing was an important job helping people.",
+    "parenSplit": "So, people <around the world started to> understand (that nursing was an important job helping people).",
+    "vocabularySplit": "+ So / , / + people / + around the world started / + to / + understand / + that / + nursing / + was / + an / + important / + job / + helping / + people / ."
+  },
+  {
+    "id": "J_2021_5_52",
+    "original": "Nightingale died in 1910.",
+    "slashSplit": "Nightingale died / in 1910.",
+    "parenSplit": "Nightingale died <in 1910>.",
+    "vocabularySplit": "+ Nightingale / + died / + in 1910 / ."
+  },
+  {
+    "id": "J_2021_5_53",
+    "original": "She worked hard for so many people in her life.",
+    "slashSplit": "She worked hard / for so many people / in her life.",
+    "parenSplit": "She worked hard <for so many> people <in her life>.",
+    "vocabularySplit": "+ She / + worked / + hard / + for / + so / + many / + people / + in her life / ."
+  },
+  {
+    "id": "J_2021_5_54",
+    "original": "thanks to her, the job of nursing was acknowledged all over the world.",
+    "slashSplit": "thanks / to her, / the job / of nursing / was acknowledged all / over the world.",
+    "parenSplit": "thanks to her, the job of nursing was acknowledged all over the world.",
+    "vocabularySplit": "+ thanks / + to her / , / + the / + job / + of nursing was acknowledged all over the world / ."
+  },
+  {
+    "id": "J_2021_5_55",
+    "original": "We must not forget her great work.",
+    "slashSplit": "We must not forget her great work.",
+    "parenSplit": "We must not forget her great work.",
+    "vocabularySplit": "+ We / + must / + not / + forget / + her / + great / + work / ."
+  }
+]

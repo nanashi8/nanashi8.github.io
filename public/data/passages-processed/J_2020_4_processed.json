@@ -2,7 +2,7 @@
   {
     "id": "J_2020_4_1",
     "original": "In our city, we have a good zoo, Smile Zoo.",
-    "slashSplit": "In our city, we have a good zoo, Smile Zoo.",
+    "slashSplit": "In our city, / we have a good zoo, Smile Zoo.",
     "parenSplit": "<In our city>, we have a good zoo, Smile Zoo.",
     "vocabularySplit": "+ In our city / , / + we / + have / + a / + good / + zoo / , / + Smile / + Zoo / ."
   },
@@ -114,7 +114,7 @@
   {
     "id": "J_2020_4_17",
     "original": "Right, but I can't join Night Safari because I have to go home by six.",
-    "slashSplit": "Right, / but I can't join Night Safari / because I have to go home / by six.",
+    "slashSplit": "Right, / but I can't join Night Safari because I have to go home / by six.",
     "parenSplit": "Right, but I can't join Night Safari (because I have to go home by six).",
     "vocabularySplit": "+ Right / , / + but / + I / + can't / + join / + Night / + Safari / + because / + I / + have to / + go home / + by six / ."
   },
@@ -163,7 +163,7 @@
   {
     "id": "J_2020_4_24",
     "original": "So, if we do that, our entrance fee will be three dollars per person.",
-    "slashSplit": "So, / if we do that, our entrance fee will be three dollars / per person.",
+    "slashSplit": "So, / if we do that, / our entrance fee will be three dollars / per person.",
     "parenSplit": "So, (if we do that), our entrance fee will be three dollars per person.",
     "vocabularySplit": "+ So / , / + if / + we / + do / + that / , / + our / + entrance / + fee / + will / + be / + three dollars / + per person / ."
   },
@@ -177,7 +177,7 @@
   {
     "id": "J_2020_4_26",
     "original": "By the way, I have a question.",
-    "slashSplit": "By the way, I have a question.",
+    "slashSplit": "By the way, / I have a question.",
     "parenSplit": "<By the way>, I have a question.",
     "vocabularySplit": "+ By the way / , / + I / + have / + a / + question / ."
   },

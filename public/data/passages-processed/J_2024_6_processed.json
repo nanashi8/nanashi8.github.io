@@ -1,0 +1,170 @@
+[
+  {
+    "id": "J_2024_6_1",
+    "original": "Yuka, have you decided how you're going to spend your summer vacation?",
+    "slashSplit": "Yuka, / have you decided how you're going to spend your summer vacation?",
+    "parenSplit": "Yuka, have you decided how you're going to spend your summer vacation?",
+    "vocabularySplit": "+ Yuka / , / + have / + you / + decided / + how / + you're / + going / + to / + spend / + your / + summer / + vacation / ?"
+  },
+  {
+    "id": "J_2024_6_2",
+    "original": "Not yet, Sam.",
+    "slashSplit": "Not yet, / Sam.",
+    "parenSplit": "Not yet, Sam.",
+    "vocabularySplit": "+ Not / + yet / , / + Sam / ."
+  },
+  {
+    "id": "J_2024_6_3",
+    "original": "I'm planning to travel abroad.",
+    "slashSplit": "I'm planning / to travel abroad.",
+    "parenSplit": "I'm planning to travel abroad.",
+    "vocabularySplit": "+ I'm / + planning / + to / + travel / + abroad / ."
+  },
+  {
+    "id": "J_2024_6_4",
+    "original": "I want to go to Paris or Rome, but I can't decide which city to choose.",
+    "slashSplit": "I want to go / to Paris / or Rome, / but I can't decide which city / to choose.",
+    "parenSplit": "I want to go <to Paris> or Rome, but I can't decide which city to choose.",
+    "vocabularySplit": "+ I / + want to / + go / + to Paris / + or / + Rome / , / + but / + I / + can't / + decide / + which / + city / + to choose / ."
+  },
+  {
+    "id": "J_2024_6_5",
+    "original": "Both cities are great to visit.",
+    "slashSplit": "Both cities are great / to visit.",
+    "parenSplit": "Both cities are great to visit.",
+    "vocabularySplit": "+ Both / + cities / + are / + great / + to visit / ."
+  },
+  {
+    "id": "J_2024_6_6",
+    "original": "Will it be your first trip to Europe?",
+    "slashSplit": "Will it be your first trip / to Europe?",
+    "parenSplit": "Will it be your first trip <to Europe>?",
+    "vocabularySplit": "+ Will / + it / + be / + your / + first / + trip / + to Europe / ?"
+  },
+  {
+    "id": "J_2024_6_7",
+    "original": "Yes, I've visited Australia before, but I've never traveled to Europe.",
+    "slashSplit": "Yes, / I've visited Australia before, / but I've never traveled / to Europe.",
+    "parenSplit": "Yes, I've visited Australia before, but I've never traveled <to Europe>.",
+    "vocabularySplit": "+ Yes / , / + I've / + visited / + Australia / + before / , / + but / + I've / + never / + traveled / + to Europe / ."
+  },
+  {
+    "id": "J_2024_6_8",
+    "original": "Traveling to Europe is expensive.",
+    "slashSplit": "Traveling / to Europe / is expensive.",
+    "parenSplit": "Traveling <to Europe> is expensive.",
+    "vocabularySplit": "+ Traveling / + to / + Europe / + is / + expensive / ."
+  },
+  {
+    "id": "J_2024_6_9",
+    "original": "But this summer, I will go there.",
+    "slashSplit": "But this summer, / I will go there.",
+    "parenSplit": "But this summer, I will go there.",
+    "vocabularySplit": "+ But / + this / + summer / , / + I / + will / + go / + there / ."
+  },
+  {
+    "id": "J_2024_6_10",
+    "original": "I see.",
+    "slashSplit": "I see.",
+    "parenSplit": "I see.",
+    "vocabularySplit": "+ I / + see / ."
+  },
+  {
+    "id": "J_2024_6_11",
+    "original": "What do you want to do during your trip?",
+    "slashSplit": "What do you want to do / during your trip?",
+    "parenSplit": "What do you want to do <during your trip>?",
+    "vocabularySplit": "+ What / + do / + you / + want to / + do / + during your trip / ?"
+  },
+  {
+    "id": "J_2024_6_12",
+    "original": "Well...",
+    "slashSplit": "Well...",
+    "parenSplit": "Well...",
+    "vocabularySplit": "+ Well / . / . / ."
+  },
+  {
+    "id": "J_2024_6_13",
+    "original": "I'm interested in history, so I want to visit some historical sites.",
+    "slashSplit": "I'm interested / in history, / so I want to visit some historical sites.",
+    "parenSplit": "I'm interested in history, so I want to visit some historical sites.",
+    "vocabularySplit": "+ I'm / + interested / + in history / , / + so / + I / + want to / + visit / + some / + historical / + sites / ."
+  },
+  {
+    "id": "J_2024_6_14",
+    "original": "I want to try local foods, too.",
+    "slashSplit": "I want to try local foods, / too.",
+    "parenSplit": "I want to try local foods, too.",
+    "vocabularySplit": "+ I / + want to / + try / + local / + foods / , / + too / ."
+  },
+  {
+    "id": "J_2024_6_15",
+    "original": "Are you staying for about two weeks?",
+    "slashSplit": "Are you staying / for about two weeks?",
+    "parenSplit": "Are you staying <for about two> weeks?",
+    "vocabularySplit": "+ Are / + you / + staying / + for about two weeks / ?"
+  },
+  {
+    "id": "J_2024_6_16",
+    "original": "No, for one week.",
+    "slashSplit": "No, / for one week.",
+    "parenSplit": "No, <for one week>.",
+    "vocabularySplit": "+ No / , / + for one week / ."
+  },
+  {
+    "id": "J_2024_6_17",
+    "original": "I wish I could visit the two cities during my trip.",
+    "slashSplit": "I wish I could visit the two cities / during my trip.",
+    "parenSplit": "I wish I could visit the two cities <during my trip>.",
+    "vocabularySplit": "+ I / + wish / + I / + could / + visit / + the / + two / + cities / + during my trip / ."
+  },
+  {
+    "id": "J_2024_6_18",
+    "original": "It may be possible, Yuka.",
+    "slashSplit": "It may be possible, / Yuka.",
+    "parenSplit": "It may be possible, Yuka.",
+    "vocabularySplit": "+ It / + may / + be / + possible / , / + Yuka / ."
+  },
+  {
+    "id": "J_2024_6_19",
+    "original": "I just checked the Internet and found a plan.",
+    "slashSplit": "I just checked the Internet / and found a plan.",
+    "parenSplit": "I just checked the Internet and found a plan.",
+    "vocabularySplit": "+ I / + just / + checked / + the / + Internet / + and / + found / + a / + plan / ."
+  },
+  {
+    "id": "J_2024_6_20",
+    "original": "In this plan, you can visit both cities.",
+    "slashSplit": "In this plan, / you can visit both cities.",
+    "parenSplit": "<In this plan>, you can visit both cities.",
+    "vocabularySplit": "+ In this plan / , / + you / + can / + visit / + both / + cities / ."
+  },
+  {
+    "id": "J_2024_6_21",
+    "original": "Look.",
+    "slashSplit": "Look.",
+    "parenSplit": "Look.",
+    "vocabularySplit": "+ Look / ."
+  },
+  {
+    "id": "J_2024_6_22",
+    "original": "That sounds great.",
+    "slashSplit": "That sounds great.",
+    "parenSplit": "(That sounds great).",
+    "vocabularySplit": "+ That / + sounds / + great / ."
+  },
+  {
+    "id": "J_2024_6_23",
+    "original": "The travel fee is just 10,000 yen higher than my original plan.",
+    "slashSplit": "The travel fee is just 10,000 yen higher than my original plan.",
+    "parenSplit": "The travel fee is just 10,000 yen higher than my original plan.",
+    "vocabularySplit": "+ The / + travel / + fee / + is / + just / + 10 / , / + 000 / + yen / + higher / + than my original plan / ."
+  },
+  {
+    "id": "J_2024_6_24",
+    "original": "If I make my travel plan longer, I can enjoy traveling in the two cities.",
+    "slashSplit": "If I make my travel plan longer, I can enjoy traveling / in the two cities.",
+    "parenSplit": "(If I make my travel plan longer), I can enjoy traveling <in the two> cities>.",
+    "vocabularySplit": "+ If / + I / + make / + my / + travel / + plan / + longer / , / + I / + can / + enjoy / + traveling / + in the two cities / ."
+  }
+]
