@@ -22,7 +22,7 @@ jobs:
       fail-fast: false  # 全チェックを実行してレポート生成
 
     name: ${{ matrix.check }}
-    uses: nanashi8/nanashi8.github.io/.github/workflows/quality-strategy.yml@main
+    uses: ./.github/workflows/quality-strategy.yml
     with:
       strategy: ${{ matrix.check }}
 

@@ -96,7 +96,7 @@ jobs:
     name: 品質ゲート
     needs: validate
     if: needs.validate.outputs.should-deploy == 'true' && !inputs.skip-quality-check
-    uses: nanashi8/nanashi8.github.io/.github/workflows/quality-strategy.yml@main
+    uses: ./.github/workflows/quality-strategy.yml
     with:
       strategy: build
 
