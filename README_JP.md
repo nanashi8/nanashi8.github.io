@@ -1,7 +1,7 @@
 # 英語学習Webアプリ
 
-[![CSS品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
-[![ビルドチェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
+[![品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml)
+[![デプロイ](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml)
 [![文法データ品質](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml)
 [![ドキュメントリンク検証](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml)
 
@@ -111,7 +111,6 @@ npm run preview
 - **先進的な取り組み（事例）**
   アプリ本体・データ・自動化が同居するリポジトリでは、変更の影響が「静かに」広がりやすく、気づいた時には出題・UI・品質が崩れていることがあります。
   そこでこのプロジェクトでは、AI支援を前提にしつつも推測で壊さないための前提（仕様/ルール/ガード）を整備し、壊れやすい領域から順に仕組み化しています。
-
   - 8個のAIシステム（7つの専門AI + 1つのメタ統合）で「次に何を出すか」を合議で決める構成: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts), [src/ai/specialists/](src/ai/specialists/), [src/ai/meta/](src/ai/meta/)
   - UI・データ・自動化が同居する前提で、コミット前に「指示/仕様を見てから触る」を促すガード（オプトイン）: [scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh), [scripts/ai-guard-check.mjs](scripts/ai-guard-check.mjs)
   - UIの変更範囲やデザインルールをドキュメント化し、レビュー/AI支援時の前提を固定する: [docs/development/UI_IMMUTABLE_SPECIFICATIONS.md](docs/development/UI_IMMUTABLE_SPECIFICATIONS.md), [docs/development/UI_DEVELOPMENT_GUIDELINES.md](docs/development/UI_DEVELOPMENT_GUIDELINES.md), [docs/development/DESIGN_SYSTEM_RULES.md](docs/development/DESIGN_SYSTEM_RULES.md)
@@ -134,6 +133,7 @@ npm run preview
 このリポジトリのルートにはライセンスファイルがありません。
 
 利用条件（概要）:
+
 - 個人利用・教育機関での利用（教材としての利用を含む）は許可します。
 - 商用利用は不可（応相談。リポジトリオーナーに連絡してください）。
 

@@ -84,28 +84,30 @@ GitHubイシュー自動作成 🆕
   ↓
 デプロイ (main branch)
 ```
-  ↓
+
+↓
 git add
-  ↓
+↓
 git commit
-  ↓
+↓
 Pre-commit Hook 🛡️
-  ├─ TypeScript型チェック (5秒)
-  ├─ CSS Lint (3秒)
-  └─ ビルドチェック (2秒)
-  ↓
+├─ TypeScript型チェック (5秒)
+├─ CSS Lint (3秒)
+└─ ビルドチェック (2秒)
+↓
 コミット成功
-  ↓
+↓
 git push
-  ↓
+↓
 GitHub Actions CI 🤖
-  ├─ TypeScript型チェック
-  ├─ CSS Lint
-  ├─ ビルドチェック
-  └─ Playwright E2Eテスト
-  ↓
+├─ TypeScript型チェック
+├─ CSS Lint
+├─ ビルドチェック
+└─ Playwright E2Eテスト
+↓
 デプロイ (main branch)
-```
+
+````
 
 ### 実行タイミング
 
@@ -131,15 +133,17 @@ npm run typecheck
 
 # 内容
 tsc --noEmit
-```
+````
 
 **検出対象**:
+
 - 型の不一致
 - 未定義変数の参照
 - nullableチェック漏れ
 - 関数の引数/戻り値の型エラー
 
 **成果**:
+
 - 2025年12月2日時点: **0エラー**
 - 導入前: 11エラー → 段階的修正で解決
 
@@ -156,12 +160,14 @@ eslint .
 ```
 
 **検出対象**:
+
 - React Hooks依存配列の不備
 - useEffect無限ループリスク
 - 未使用変数
 - コーディング規約違反
 
 **現状**:
+
 - 2025年12月2日時点: **56 problems** (warnings)
 - 修正必要項目:
   - `Date.now()` の純粋性警告
@@ -181,6 +187,7 @@ stylelint "src/**/*.css"
 ```
 
 **設定** (`.stylelintrc.json`):
+
 ```json
 {
   "extends": "stylelint-config-standard",
@@ -194,6 +201,7 @@ stylelint "src/**/*.css"
 ```
 
 **検出対象**:
+
 - 重複セレクタ（警告）
 - 不正なCSS構文
 - 色表記の不統一
@@ -212,12 +220,14 @@ vite build
 ```
 
 **検出対象**:
+
 - モジュール解決エラー
 - バンドルエラー
 - 依存関係の問題
 - デッドコードの検出
 
 **成果**:
+
 - ビルド時間: 約2秒
 - バンドルサイズ: 116KB (CSS)
 
@@ -288,6 +298,7 @@ fi
 ```
 
 **使用方法**:
+
 ```bash
 ./scripts/smart-test.sh
 ```
@@ -336,11 +347,12 @@ fi
    - 未使用importの検出
 
 1. **コメントアウトコード**
-    - 削除忘れコードの検出
+   - 削除忘れコードの検出
 
 ### 実行方法
 
 #### ローカル実行
+
 ```bash
 npm run health-check
 ```
@@ -355,10 +367,10 @@ npm run health-check
 ```yaml
 on:
   schedule:
-    - cron: '0 0 * * 1'  # 毎週月曜 UTC 0:00
-  workflow_dispatch:     # 手動実行可能
+    - cron: '0 0 * * 1' # 毎週月曜 UTC 0:00
+  workflow_dispatch: # 手動実行可能
   pull_request:
-    branches: [ main ]
+    branches: [main]
 ```
 
 ### 診断結果の処理
@@ -387,11 +399,11 @@ on:
 
 ### 優先度ガイド
 
-| 優先度 | 問題の種類 | 対応期限 |
-|-------|-----------|---------|
-| 🔴 高 | 型定義重複、セキュリティリスク | 即座に対応 |
-| 🟡 中 | ファイル肥大化、パフォーマンス問題 | 1-2週間以内 |
-| 🟢 低 | 命名規則、コードスタイル | 次回リファクタリング時 |
+| 優先度 | 問題の種類                         | 対応期限               |
+| ------ | ---------------------------------- | ---------------------- |
+| 🔴 高  | 型定義重複、セキュリティリスク     | 即座に対応             |
+| 🟡 中  | ファイル肥大化、パフォーマンス問題 | 1-2週間以内            |
+| 🟢 低  | 命名規則、コードスタイル           | 次回リファクタリング時 |
 
 ### メンテナンスサイクル
 
@@ -422,6 +434,7 @@ on:
 **ドキュメント**: [docs/quality/HEALTH_CHECK_REPORT.md](HEALTH_CHECK_REPORT.md)
 
 **内容**:
+
 - 検出された問題の詳細
 - 影響度分析
 - 推奨対応策
@@ -521,22 +534,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Node.js セットアップ
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: 依存関係インストール
         run: npm ci
-      
+
       - name: TypeScript型チェック
         run: npm run typecheck
-      
+
       - name: ビルド
         run: npm run build
 ```
@@ -555,19 +568,19 @@ on:
 jobs:
   css-lint:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Node.js セットアップ
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: 依存関係インストール
         run: npm ci
-      
+
       - name: CSSリント
         run: npm run lint:css
 ```
@@ -586,25 +599,25 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Node.js セットアップ
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: 依存関係インストール
         run: npm ci
-      
+
       - name: Playwright インストール
         run: npx playwright install --with-deps
-      
+
       - name: E2Eテスト実行
         run: npm run test:e2e
-      
+
       - name: テストレポートアップロード
         if: always()
         uses: actions/upload-artifact@v3
@@ -618,8 +631,8 @@ jobs:
 `README.md` にステータスバッジを追加:
 
 ```markdown
-[![CSS品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
-[![ビルドチェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
+[![品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml)
+[![デプロイ](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml)
 ```
 
 ---
@@ -648,15 +661,15 @@ jobs:
 
 #### 現在の状態 (2025-12-02)
 
-| 項目 | 現在値 | 目標値 | 状態 |
-|-----|-------|-------|------|
-| TypeScriptエラー | 0 | 0 | ✅ |
-| ESLint problems | 56 | 0 | ⚠️ |
-| CSSリントエラー | 0 | 0 | ✅ |
-| CSS総行数 | 12,255 | - | - |
-| CSS重複ルール | 0 | 0 | ✅ |
-| ビルド時間 | 2.4秒 | <5秒 | ✅ |
-| CSSバンドルサイズ | 116KB | <150KB | ✅ |
+| 項目              | 現在値 | 目標値 | 状態 |
+| ----------------- | ------ | ------ | ---- |
+| TypeScriptエラー  | 0      | 0      | ✅   |
+| ESLint problems   | 56     | 0      | ⚠️   |
+| CSSリントエラー   | 0      | 0      | ✅   |
+| CSS総行数         | 12,255 | -      | -    |
+| CSS重複ルール     | 0      | 0      | ✅   |
+| ビルド時間        | 2.4秒  | <5秒   | ✅   |
+| CSSバンドルサイズ | 116KB  | <150KB | ✅   |
 
 ---
 
@@ -712,8 +725,8 @@ npm install
 ```json
 {
   "compilerOptions": {
-    "skipLibCheck": true,  // ライブラリの型チェックをスキップ
-    "incremental": true     // インクリメンタルビルド有効化
+    "skipLibCheck": true, // ライブラリの型チェックをスキップ
+    "incremental": true // インクリメンタルビルド有効化
   }
 }
 ```
@@ -801,4 +814,5 @@ npm install
 ---
 
 **改訂履歴**:
+
 - 2025-12-02: 初版作成（パイプライン構築完了後）

@@ -1,7 +1,7 @@
 # English Learning Web App
 
-[![CSS Quality Check](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
-[![Build Check](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
+[![Quality Check](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml)
+[![Deploy](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml)
 [![Grammar Data Quality](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml)
 [![Document Link Validation](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/link-checker.yml)
 
@@ -111,7 +111,6 @@ This repo mixes a web app, learning datasets, and tooling around them.
 - **Advanced initiatives (examples)**
   In a repo that mixes app code, datasets, and automation, regressions can spread “quietly” across scheduling, UI, and data. This project tries to make those breakages easier to detect and harder to introduce.
   The pattern is: document constraints, add guardrails, and keep claims grounded in concrete files so AI-assisted edits stay reviewable.
-
   - “8 AI systems” architecture (7 specialist AIs + 1 meta integrator) for deciding “what to ask next” via coordinated signals: [src/ai/scheduler/QuestionScheduler.ts](src/ai/scheduler/QuestionScheduler.ts), [src/ai/specialists/](src/ai/specialists/), [src/ai/meta/](src/ai/meta/)
   - Optional pre-commit guard that nudges changes to start from instruction/spec checks (useful in a repo mixing app + data + tooling): [scripts/pre-commit-ai-guard.sh](scripts/pre-commit-ai-guard.sh), [scripts/ai-guard-check.mjs](scripts/ai-guard-check.mjs)
   - UI constraints and design rules are documented to keep review/AI-assisted edits consistent over time: [docs/development/UI_IMMUTABLE_SPECIFICATIONS.md](docs/development/UI_IMMUTABLE_SPECIFICATIONS.md), [docs/development/UI_DEVELOPMENT_GUIDELINES.md](docs/development/UI_DEVELOPMENT_GUIDELINES.md), [docs/development/DESIGN_SYSTEM_RULES.md](docs/development/DESIGN_SYSTEM_RULES.md)
@@ -134,6 +133,7 @@ This repo mixes a web app, learning datasets, and tooling around them.
 This repository does not include a top-level license file at the root.
 
 Permission notes (summary):
+
 - Non-commercial use (including personal and educational use as teaching/learning materials) is permitted.
 - Commercial use is not permitted without prior permission (contact the repository owner to discuss terms).
 

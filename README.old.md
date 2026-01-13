@@ -1,7 +1,7 @@
 # 英語学習アプリ
 
-[![CSS品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
-[![ビルドチェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
+[![品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/quality-check.yml)
+[![デプロイ](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/deploy.yml)
 [![文法データ品質](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml)
 [![QuestionScheduler品質](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/validate-question-scheduler-docs.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/validate-question-scheduler-docs.yml)
 
