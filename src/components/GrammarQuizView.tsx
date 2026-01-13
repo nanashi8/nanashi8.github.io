@@ -454,7 +454,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           }
 
           try {
-            const res = await fetch(`/data/grammar/grammar_grade${g}_unit${unitIdx}.json`);
+            const res = await fetch(`/data/grammar/grade${g}/unit${unitIdx}.json`);
             if (res.ok) {
               const data = await res.json();
 
@@ -855,7 +855,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       // 新しいgrammar_grade{N}_unit{X}.json形式から単元一覧を読み込む
       for (let unitIdx = 0; unitIdx < 10; unitIdx++) {
         try {
-          const res = await fetch(`/data/grammar/grammar_grade${gradeNum}_unit${unitIdx}.json`);
+          const res = await fetch(`/data/grammar/grade${gradeNum}/unit${unitIdx}.json`);
           if (res.ok) {
             const data = await res.json();
 

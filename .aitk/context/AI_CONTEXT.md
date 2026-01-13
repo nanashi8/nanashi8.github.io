@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-10T07:23:09.396Z
+- generatedAt: 2026-01-13T15:08:52.423Z
 
 ## Single Source of Truth
 
@@ -14,31 +14,29 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md (hot=0.116)
-- src/utils/testVocabularySplit.ts (hot=0.086)
-- src/utils/README.md (hot=0.055)
-- package.json (hot=0.055)
-- docs/development/vocabulary-tab-split-implementation.md (hot=0.055)
-- src/utils/vocabularySplitLogic.ts (hot=0.053)
-- src/utils/slashSplitLogic.ts (hot=0.053)
-- src/utils/generateSplitData.ts (hot=0.052)
-- public/data/passages-sentences/J_2020_4_sentences.txt (hot=0.031)
-- src/utils/parenSplitLogic.ts (hot=0.031)
+- docs/research/UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md (hot=0.029)
+- public/data/passages-for-phrase-work/J_2023_5.txt (hot=0.017)
+- scripts/generate-passages-sentences.mjs (hot=0.015)
+- docs/research/CLINICAL_TRIAL_OS_CONCEPT.md (hot=0.014)
+- public/data/passages-translations/J_2023_5_phrases.txt (hot=0.011)
+- public/data/passages-translations/J_2020_4_full.txt (hot=0.007)
+- public/data/passages-translations/J_2020_4_phrases.txt (hot=0.007)
+- public/data/passages-translations/J_2020_5_phrases.txt (hot=0.007)
+- public/data/passages-translations/J_2021_5_phrases.txt (hot=0.007)
+- public/data/passages-translations/J_2024_5_phrases.txt (hot=0.007)
 
 ## Related (Neural Propagation)
 
-- startNode: docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md
-- seeds: 5
+- startNode: docs/research/UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md
+- seeds: 3
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md (activation=1.000, source=signal, signals=[save:0.12])
-- src/utils/testVocabularySplit.ts (activation=0.741, source=signal, signals=[save:0.09])
-- src/utils/README.md (activation=0.474, source=signal, signals=[save:0.06])
-- package.json (activation=0.474, source=signal, signals=[save:0.06])
-- docs/development/vocabulary-tab-split-implementation.md (activation=0.474, source=signal, signals=[save:0.06])
+- docs/research/UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md (activation=1.000, source=signal, signals=[save:0.03])
+- scripts/generate-passages-sentences.mjs (activation=0.517, source=signal, signals=[save:0.01])
+- docs/research/CLINICAL_TRIAL_OS_CONCEPT.md (activation=0.483, source=signal, signals=[save:0.01])
 
 - (no related files detected)
 
@@ -53,7 +51,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 127.51
+- ageHours: 207.27
 
 ## Latest SpecCheck Record (Raw)
 

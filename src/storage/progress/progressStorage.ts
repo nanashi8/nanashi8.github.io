@@ -3215,7 +3215,7 @@ export async function getGrammarUnitStatsWithTitles(): Promise<
         const unitNum = match[2];
 
         try {
-          const res = await fetch(`/data/grammar/grammar_grade${grade}_unit${unitNum}.json`);
+          const res = await fetch(`/data/grammar/grade${grade}/unit${unitNum}.json`);
           if (res.ok) {
             const data = await res.json();
             // enabled === false の単元は除外
