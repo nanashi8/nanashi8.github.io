@@ -32,35 +32,64 @@
 
 コードを変更する前に、必ず [開発ガイドライン](.github/DEVELOPMENT_GUIDELINES.md) をお読みください。
 
+### VS Code / ワークスペース（重要）
+
+GitHub Actions のワークフロー編集時に VS Code の Problems が大量発生する場合、**開いているフォルダが「リポジトリ本体」ではない**ことが原因になりがちです。
+
+- ✅ 推奨: [nanashi8.github.io.code-workspace](../nanashi8.github.io.code-workspace) を開く（フォルダは `nanashi8.github.io/` を指す）
+- ✅ 代替: `nanashi8.github.io/` フォルダを直接開く
+- ❌ 非推奨: その親フォルダ（`nanashi8-github-io-git/`）を開く
+  - 親フォルダ直下に `.github/workflows/` が紛れ込むと、Actions 拡張の解析対象が汚染され、
+    `Unable to find reusable workflow` / `Unable to resolve action` のような誤検知が出ます。
+
+#### Reusable workflow の参照ルール
+
+同一リポジトリ内で reusable workflow を呼ぶ場合は、**ローカルパス参照**を標準にしてください。
+
+```yaml
+# ✅ 同一repo内の reusable workflow
+uses: ./.github/workflows/deploy-state.yml
+
+# ❌ 同一repoなのに remote 参照（VS Code 側で解決できずProblemsになりやすい）
+uses: nanashi8/nanashi8.github.io/.github/workflows/deploy-state.yml@main
+```
+
+#### GitHub へのサインイン
+
+VS Code の GitHub 関連拡張が action / workflow を解決できない場合があります。必要に応じて、VS Code の Accounts から GitHub にサインインしてください。
+
 特に重要なポイント：
 
 ### 🚫 禁止事項
 
 1. **progress.results への直接記録**
+
    ```typescript
    // ❌ 禁止
    progress.results.push({...});
-   
+
    // ✅ 正しい
    await updateWordProgress(word, isCorrect, responseTime, undefined, mode);
    ```
 
 2. **二重記録**
+
    ```typescript
    // ❌ 禁止（二重記録）
    await updateWordProgress(...);
    await addQuizResult({...});
-   
+
    // ✅ 正しい（updateWordProgressのみ）
    await updateWordProgress(...);
    ```
 
 3. **ScoreBoard更新忘れ**
+
    ```typescript
    // ❌ 禁止
    await updateWordProgress(...);
    // setLastAnswerTime を忘れている
-   
+
    // ✅ 正しい
    await updateWordProgress(...);
    setLastAnswerTime(Date.now());
@@ -69,21 +98,24 @@
 ### ✅ 必須事項
 
 1. **対症療法検知チェック**
+
    ```bash
    ./scripts/check-symptomatic-fixes.sh
    ```
 
 2. **TypeScriptエラーがないこと**
+
    ```bash
    npm run typecheck
    ```
 
 3. **ビルドが成功すること**
+
    ```bash
    npm run build
    ```
 
-3. **ガイドラインチェックに合格すること**
+4. **ガイドラインチェックに合格すること**
    ```bash
    ./scripts/check-guidelines.sh
    ```

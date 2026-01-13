@@ -162,3 +162,4 @@ coverage/
 
 # Local spec-check acknowledgement (do not commit)
 .aitk/spec-check.json
+.aitk/.commit-count

@@ -8,13 +8,13 @@
 
 ### 現在のワークフロー分類:
 
-| カテゴリ | ワークフロー数 | 主な問題 |
-|---------|--------------|---------|
-| **デプロイ系** | 4 | 重複したビルドロジック、責務の混在 |
-| **品質チェック系** | 8 | 並列実行可能なのに直列実行 |
-| **自動修復系** | 5 | トリガー条件が複雑 |
-| **監視系** | 3 | スケジュール管理が分散 |
-| **その他** | 6 | - |
+| カテゴリ           | ワークフロー数 | 主な問題                           |
+| ------------------ | -------------- | ---------------------------------- |
+| **デプロイ系**     | 4              | 重複したビルドロジック、責務の混在 |
+| **品質チェック系** | 8              | 並列実行可能なのに直列実行         |
+| **自動修復系**     | 5              | トリガー条件が複雑                 |
+| **監視系**         | 3              | スケジュール管理が分散             |
+| **その他**         | 6              | -                                  |
 
 ### 重複コードの例:
 
@@ -37,7 +37,7 @@
 **実装方法**: Reusable Workflow + Matrix Strategy
 
 ```yaml
-# .github/workflows/_quality-strategy.yml (再利用可能ワークフロー)
+# .github/workflows/quality-strategy.yml (再利用可能ワークフロー)
 name: Quality Check Strategy
 
 on:
@@ -62,14 +62,14 @@ jobs:
       result: ${{ steps.execute.outputs.result }}
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ inputs.node-version }}
           cache: 'npm'
-      
+
       - run: npm ci
-      
+
       - name: Execute Strategy
         id: execute
         run: |
@@ -109,12 +109,13 @@ jobs:
       matrix:
         check: [lint, test, build, security]
       fail-fast: false
-    uses: ./.github/workflows/_quality-strategy.yml
+    uses: ./.github/workflows/quality-strategy.yml
     with:
       strategy: ${{ matrix.check }}
 ```
 
 **効果:**
+
 - ✅ 共通処理の重複削減
 - ✅ 新しい品質チェックの追加が容易
 - ✅ 並列実行で高速化
@@ -128,7 +129,7 @@ jobs:
 **実装方法**: Reusable Workflow + Inputs
 
 ```yaml
-# .github/workflows/_deploy-state.yml (再利用可能ワークフロー)
+# .github/workflows/deploy-state.yml (再利用可能ワークフロー)
 name: Deployment State Machine
 
 on:
@@ -155,7 +156,7 @@ jobs:
       should-deploy: ${{ steps.decision.outputs.should-deploy }}
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Check deployment conditions
         id: decision
         run: |
@@ -188,7 +189,7 @@ jobs:
   quality-gate:
     needs: validate
     if: needs.validate.outputs.should-deploy == 'true' && !inputs.skip-quality-check
-    uses: ./.github/workflows/_quality-strategy.yml
+    uses: ./.github/workflows/quality-strategy.yml
     with:
       strategy: build
 
@@ -199,15 +200,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - run: npm ci
       - run: npm run build
-      
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -235,27 +236,25 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: ./.github/workflows/deploy-state.yml
     with:
       state: manual
       skip-quality-check: true
 
 ---
-
 # .github/workflows/deploy-scheduled.yml
 name: Deploy (Scheduled)
 on:
   schedule:
-    - cron: '0 17 * * *'  # 毎日JST 2:00
+    - cron: '0 17 * * *' # 毎日JST 2:00
 
 jobs:
   deploy:
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: ./.github/workflows/deploy-state.yml
     with:
       state: scheduled
 
 ---
-
 # .github/workflows/deploy-auto.yml
 name: Deploy (Auto on Push)
 on:
@@ -264,12 +263,11 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: ./.github/workflows/deploy-state.yml
     with:
       state: auto
 
 ---
-
 # .github/workflows/deploy-safe.yml
 name: Deploy (Safe Mode)
 on:
@@ -277,12 +275,13 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: ./.github/workflows/deploy-state.yml
     with:
       state: safe
 ```
 
 **効果:**
+
 - ✅ 4つのデプロイワークフローの重複削減 (297行 → 約80行)
 - ✅ デプロイロジックの一元管理
 - ✅ 状態遷移が明確
@@ -315,13 +314,13 @@ runs:
   steps:
     - uses: actions/checkout@v4
       shell: bash
-    
+
     - uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
         cache: 'npm'
       shell: bash
-    
+
     - name: Install dependencies
       if: inputs.skip-install != 'true'
       run: npm ci
@@ -373,7 +372,7 @@ jobs:
             required: false
           - check: bundle-size
             required: false
-    uses: ./.github/workflows/_quality-strategy.yml
+    uses: ./.github/workflows/quality-strategy.yml
     with:
       strategy: ${{ matrix.check }}
     continue-on-error: ${{ !matrix.required }}
@@ -391,13 +390,13 @@ jobs:
 
 ## 📈 リファクタリング効果（試算）
 
-| 項目 | Before | After | 削減率 |
-|------|--------|-------|--------|
-| **ワークフローファイル数** | 26個 | 14個 | 46%削減 |
-| **総行数** | ~2,500行 | ~1,200行 | 52%削減 |
-| **重複コード** | 多数 | ほぼ0 | 90%削減 |
-| **保守性** | 低 | 高 | +80% |
-| **CI実行時間** | 約15分 | 約8分 | 47%短縮 |
+| 項目                       | Before   | After    | 削減率  |
+| -------------------------- | -------- | -------- | ------- |
+| **ワークフローファイル数** | 26個     | 14個     | 46%削減 |
+| **総行数**                 | ~2,500行 | ~1,200行 | 52%削減 |
+| **重複コード**             | 多数     | ほぼ0    | 90%削減 |
+| **保守性**                 | 低       | 高       | +80%    |
+| **CI実行時間**             | 約15分   | 約8分    | 47%短縮 |
 
 ---
 
@@ -410,15 +409,17 @@ jobs:
    - `report-status`
 
 2. ✅ Reusable Workflow作成
-   - `_quality-strategy.yml`
-   - `_deploy-state.yml`
+
+- `quality-strategy.yml`
+- `deploy-state.yml`
 
 ### Phase 2: 品質チェック系統合（2-3日）
 
 1. Strategy Patternで統合:
-   - `quality-check.yml` → `_quality-strategy.yml` 呼び出しに変更
-   - `test-quality-gate.yml` → 統合
-   - `test-coverage-report.yml` → 統合
+
+- `quality-check.yml` → `quality-strategy.yml` 呼び出しに変更
+- `test-quality-gate.yml` → 統合
+- `test-coverage-report.yml` → 統合
 
 ### Phase 3: デプロイ系統合（2-3日）
 
