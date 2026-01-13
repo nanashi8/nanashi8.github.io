@@ -522,6 +522,6 @@ afterEach(() => {
 
 ## 関連ドキュメント
 
-- [AI統合テストガイド](../../ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md)
+- [AI統合テストガイド](../testing/ADAPTIVE_AI_INTEGRATION_GUIDE.md)
 - [品質保証システム](../QUALITY_ASSURANCE_SYSTEM_REPORT.md)
 - [開発ガイドライン](./../guidelines/README.md)

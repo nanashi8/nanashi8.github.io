@@ -397,7 +397,7 @@ sessionStats: {
 
 - `docs/features/adaptive-learning/CHANGELOG.md`: 適応型学習AIの変更履歴
 - `docs/AI_WARNING_SYSTEM.md`: AI警告システム
-- `ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md`: AI統合テストガイド
+- `docs/testing/ADAPTIVE_AI_INTEGRATION_GUIDE.md`: AI統合テストガイド
 
 ## まとめ
 
