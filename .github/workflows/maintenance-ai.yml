@@ -43,7 +43,7 @@ jobs:
       - name: 依存関係インストール
         run: |
           npm ci
-          pip install -r requirements.txt || echo "requirements.txtなし"
+          pip install -r config/requirements.txt || echo "config/requirements.txtなし"
 
       - name: 定期メンテナンスAI実行
         id: maintenance

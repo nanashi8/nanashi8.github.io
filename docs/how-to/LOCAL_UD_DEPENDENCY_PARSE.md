@@ -12,7 +12,7 @@
 
 ## 1) 依存ライブラリの準備
 
-- `python3 -m pip install -r requirements-ud-parse.txt`
+- `python3 -m pip install -r config/requirements-ud-parse.txt`
 
 初回実行時に stanza の英語モデルがローカルにダウンロードされます（以降はオフラインでも動作）。
 
