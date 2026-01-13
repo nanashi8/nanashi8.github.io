@@ -23,7 +23,7 @@ permissions:
 jobs:
   deploy:
     name: スケジュールデプロイ
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: nanashi8/nanashi8.github.io/.github/workflows/deploy-state.yml@main
     with:
       state: scheduled
       skip-quality-check: false

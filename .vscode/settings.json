@@ -55,5 +55,8 @@
   "yaml.customTags": [
     "!reference sequence"
   ],
-  "yaml.validate": false
+  "yaml.validate": false,
+
+  "github-actions.remote-name": "origin",
+  "github-actions.use-enterprise": false
 }

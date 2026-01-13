@@ -22,7 +22,7 @@ permissions:
 jobs:
   deploy:
     name: 手動デプロイ
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: nanashi8/nanashi8.github.io/.github/workflows/deploy-state.yml@main
     with:
       state: manual
       skip-quality-check: ${{ github.event.inputs.skip_quality_check == 'true' }}

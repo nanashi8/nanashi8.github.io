@@ -17,7 +17,7 @@ permissions:
 jobs:
   deploy:
     name: 自動デプロイ
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: nanashi8/nanashi8.github.io/.github/workflows/deploy-state.yml@main
     with:
       state: auto
       skip-quality-check: false  # 品質チェックを実施

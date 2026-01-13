@@ -16,7 +16,7 @@ permissions:
 jobs:
   deploy:
     name: 安全モードデプロイ
-    uses: ./.github/workflows/_deploy-state.yml
+    uses: nanashi8/nanashi8.github.io/.github/workflows/deploy-state.yml@main
     with:
       state: safe
       skip-quality-check: false
