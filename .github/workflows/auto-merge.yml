@@ -6,9 +6,6 @@ name: Auto-merge
       - opened
       - synchronize
       - reopened
-  check_suite:
-    types:
-      - completed
 
 permissions:
   contents: write
