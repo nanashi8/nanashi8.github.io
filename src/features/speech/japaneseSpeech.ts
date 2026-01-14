@@ -233,6 +233,8 @@ export function saveJapaneseSpeechSettings(settings: {
   gender?: 'male' | 'female';
   selectedVoiceName?: string;
 }): void {
+  // Note: These are non-sensitive UI preferences (speech rate, voice gender, voice name)
+  // stored in localStorage for user convenience. No personal or sensitive data is stored.
   if (settings.rate !== undefined) {
     localStorage.setItem('japaneseSpeechRate', settings.rate.toString());
   }

@@ -2,10 +2,35 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 import { GitIntegration } from '../git/GitIntegration';
-import { exec } from 'child_process';
+import { execFile } from 'child_process';
 import { promisify } from 'util';
 
-const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
+
+async function runGit(args: string[], cwd: string): Promise<{ stdout: string; stderr: string }> {
+  const { stdout, stderr } = await execFileAsync('git', args, {
+    cwd,
+    maxBuffer: 10 * 1024 * 1024,
+  });
+  return { stdout: String(stdout ?? ''), stderr: String(stderr ?? '') };
+}
+
+async function appendDecisionsEntry(decisionsPath: string, entry: string): Promise<void> {
+  await fs.promises.mkdir(path.dirname(decisionsPath), { recursive: true });
+
+  // TOCTOU対策: exists→write の二段階を避け、排他的作成で初回のみヘッダを付与
+  try {
+    const handle = await fs.promises.open(decisionsPath, 'ax');
+    try {
+      await handle.writeFile(`# 決定ログ\n${entry}`, 'utf8');
+    } finally {
+      await handle.close();
+    }
+  } catch (e: any) {
+    if (e?.code !== 'EEXIST') throw e;
+    await fs.promises.appendFile(decisionsPath, entry, 'utf8');
+  }
+}
 
 /**
  * クイック修正コマンド：DECISIONS追記 → git add → git commit
@@ -24,16 +49,9 @@ export async function quickFixCommit(outputChannel: vscode.OutputChannel): Promi
     const stagedFiles = await gitIntegration.getStagedFiles(workspaceRoot);
 
     // unstaged変更も含める（git status --short）
-    // NOTE: execAsyncは現在未使用だが、将来的にgit status取得に使用予定
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { exec } = require('child_process');
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { promisify } = require('util');
-    const _execAsync = promisify(exec);
-
     let unstagedFiles: string[] = [];
     try {
-      const { stdout } = await execAsync('git status --short', { cwd: workspaceRoot });
+      const { stdout } = await runGit(['status', '--short'], workspaceRoot);
       unstagedFiles = stdout
         .trim()
         .split('\n')
@@ -80,24 +98,17 @@ export async function quickFixCommit(outputChannel: vscode.OutputChannel): Promi
 
     const entry = `\n## ${dateStr}: ${description}\n\n### 変更内容\n${fileList}${moreFiles}\n\n### 理由\n${description}\n\n---\n`;
 
-    if (fs.existsSync(decisionsPath)) {
-      fs.appendFileSync(decisionsPath, entry, 'utf8');
-    } else {
-      fs.mkdirSync(path.dirname(decisionsPath), { recursive: true });
-      fs.writeFileSync(decisionsPath, `# 決定ログ\n${entry}`, 'utf8');
-    }
+    await appendDecisionsEntry(decisionsPath, entry);
 
     outputChannel.appendLine(`[QuickFix] DECISIONS.md に追記しました`);
 
     // ステップ4: git add .
-    await execAsync('git add .', { cwd: workspaceRoot });
+    await runGit(['add', '.'], workspaceRoot);
     outputChannel.appendLine(`[QuickFix] git add 完了`);
 
     // ステップ5: git commit
     const commitMessage = `fix: ${description}`;
-    await execAsync(`git commit -m "${commitMessage.replace(/"/g, '\\"')}"`, {
-      cwd: workspaceRoot,
-    });
+    await runGit(['commit', '-m', commitMessage], workspaceRoot);
     outputChannel.appendLine(`[QuickFix] git commit 完了: ${commitMessage}`);
 
     vscode.window.showInformationMessage(`✅ コミット完了: ${commitMessage}`);

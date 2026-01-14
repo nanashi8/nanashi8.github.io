@@ -224,9 +224,8 @@ function App() {
 
   // テスト用モジュール（開発環境のみ）
   useEffect(() => {
-    // 開発環境かどうかをチェック（本番では無効化）
-    const isDevelopment = !window.location.hostname.includes('github.io');
-    if (isDevelopment) {
+    // 開発環境のみ有効化（本番ビルドでは無効）
+    if (import.meta.env.DEV) {
       import('./tests/scoreBoardTests')
         .then(() => {
           logger.log('✅ スコアボードテストモジュールを読み込みました');
@@ -1642,7 +1641,7 @@ function App() {
       // セッション終了を検出（最終問題の後）
       if (!reviewFocusMode && nextIndex >= currentQuestions.length) {
         // 開発時のみKPIサマリを出力
-        if (!window.location.hostname.includes('github.io')) {
+        if (import.meta.env.DEV) {
           try {
             const summary = sessionKpi.summarize();
             logger.log('🧪 KPI Summary (translation):', summary);

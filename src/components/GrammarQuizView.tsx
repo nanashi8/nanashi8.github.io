@@ -791,7 +791,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       } else {
         // 末尾の場合はそのまま終了状態を維持（本番UIは最終画面のまま）
         // 開発時のみKPIサマリを出力
-        if (!window.location.hostname.includes('github.io')) {
+        if (import.meta.env.DEV) {
           try {
             const summary = sessionKpi.summarize();
             logger.log('🧪 KPI Summary (grammar):', summary);

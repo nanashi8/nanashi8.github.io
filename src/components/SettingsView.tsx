@@ -76,6 +76,7 @@ function SettingsView({
   });
 
   // 音声性別変更時にlocalStorageに保存
+  // Note: This is a non-sensitive UI preference (voice gender: 'female' or 'male')
   const handleVoiceGenderChange = (gender: 'female' | 'male') => {
     setVoiceGender(gender);
     localStorage.setItem('voiceGender', gender);

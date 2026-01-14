@@ -464,10 +464,37 @@ function MemorizationView({
     minOffset: number;
   } | null>(null);
 
+  const randomUint32 = useCallback((): number => {
+    const a = new Uint32Array(1);
+    crypto.getRandomValues(a);
+    return a[0] ?? 0;
+  }, []);
+
+  const randomFloat01 = useCallback((): number => {
+    // [0, 1)
+    return randomUint32() / 0x1_0000_0000;
+  }, [randomUint32]);
+
+  const randomInt = useCallback(
+    (maxExclusive: number): number => {
+      if (!Number.isFinite(maxExclusive) || maxExclusive <= 0) return 0;
+
+      // Rejection sampling to avoid modulo bias
+      const range = 0x1_0000_0000;
+      const limit = range - (range % maxExclusive);
+      let x = randomUint32();
+      while (x >= limit) {
+        x = randomUint32();
+      }
+      return x % maxExclusive;
+    },
+    [randomUint32]
+  );
+
   const ensureRequeueSlots = useCallback((currentIndex: number, questionsLength: number) => {
     const lookahead = 30;
     const minOffset = 3;
-    const ratio = requeueSlotsMetaRef.current?.ratio ?? 0.15 + Math.random() * (0.3 - 0.15);
+    const ratio = requeueSlotsMetaRef.current?.ratio ?? 0.15 + randomFloat01() * (0.3 - 0.15);
 
     const windowEnd = Math.min(currentIndex + lookahead, questionsLength);
     const candidateStart = Math.min(currentIndex + minOffset, windowEnd);
@@ -485,13 +512,13 @@ function MemorizationView({
 
     const picked = new Set<number>();
     while (picked.size < targetCount) {
-      const idx = candidates[Math.floor(Math.random() * candidates.length)];
+      const idx = candidates[randomInt(candidates.length)];
       picked.add(idx);
     }
 
     requeueSlotsRef.current = Array.from(picked).sort((a, b) => a - b);
     requeueSlotsMetaRef.current = { ratio, lookahead, minOffset };
-  }, []);
+  }, [randomFloat01, randomInt]);
 
   const claimRequeueSlotIndex = useCallback(
     (currentIndex: number, questionsLength: number): number | null => {

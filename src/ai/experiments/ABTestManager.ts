@@ -107,7 +107,11 @@ export class ABTestManager {
     let userId = localStorage.getItem(storageKey);
 
     if (!userId) {
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      const token =
+        typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
+          ? crypto.randomUUID().replace(/-/g, '').slice(0, 9)
+          : `${Date.now()}`.slice(-9);
+      userId = `user_${Date.now()}_${token}`;
       localStorage.setItem(storageKey, userId);
     }
 

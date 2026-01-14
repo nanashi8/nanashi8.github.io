@@ -6,9 +6,9 @@
     "totalRecoveries": 4,
     "learningRate": 0.1,
     "convergenceThreshold": 0.95,
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "gitHistoryLearned": true,
-    "gitHistoryLearnedAt": "2026-01-13T18:10:12.707Z"
+    "gitHistoryLearnedAt": "2026-01-14T12:23:53.844Z"
   },
   "failurePatterns": {
     "markdown-code-span-spaces": {
@@ -61,7 +61,7 @@
       "id": "property-naming-error",
       "category": "type-error",
       "severity": "critical",
-      "occurrences": 162,
+      "occurrences": 177,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
@@ -81,70 +81,70 @@
       },
       "examples": [
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "            actualCorrect !== log.progress.correctCount",
           "fix": "        attempts: progress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "**修正前**: `        const totalCorrect = (wp.correctCount`",
           "fix": "**修正後**: `return (progress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "        const totalCorrect = (wp.correctCount",
           "fix": "    return (progress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "      attempts: (wordProgress.correctCount || 0) + (wordProgress.incorrectCount",
           "fix": "        modeAttempts = wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "**修正前**: `    wordProgress.incorrectCount+",
           "fix": "          \"fix\": \"      const transCorrect = wordStat.translationCorrect",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "      const totalAttempts = (wordProgress.correctCount || 0) + (wordProgress.incorrectCount",
           "fix": "  wordProgress.memorizationAttempts = (wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "    wordProgress.incorrectCount+",
           "fix": "const correct = progress.memorizationCorrect",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "        } else if (wordProgress.incorrectCount && wordProgress.incorrectCount",
           "fix": "      if (wordProgress?.memorizationAttempts && wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "    if (ctx.attemptCount",
           "fix": " (wordProgress.spellingAttempts || 0) + (wordProgress.grammarAttempts || 0) + (wordProgress.memorizationAttempts",
           "testsFailed": 0,
           "source": "git-history"
         },
         {
-          "date": "2026-01-13",
+          "date": "2026-01-14",
           "error": "      wordStat.correctCount",
           "fix": "      const transCorrect = wordStat.translationCorrect",
           "testsFailed": 0,
@@ -189,7 +189,7 @@
       "id": "logic-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 4191,
+      "occurrences": 4542,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
@@ -217,7 +217,7 @@
       "id": "type-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 335,
+      "occurrences": 360,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
@@ -247,7 +247,7 @@
       "id": "test-error",
       "category": "unknown",
       "severity": "medium",
-      "occurrences": 310,
+      "occurrences": 337,
       "lastOccurred": "2025-12-20",
       "recoveries": 1,
       "weight": 1,
@@ -336,6 +336,21 @@
     },
     {
       "file": "extensions/servant/src/extension.ts",
+      "modificationCount": 7,
+      "riskLevel": "medium"
+    },
+    {
+      "file": "extensions/servant/src/autopilot/AutopilotController.ts",
+      "modificationCount": 6,
+      "riskLevel": "medium"
+    },
+    {
+      "file": "src/components/MemorizationView.tsx",
+      "modificationCount": 5,
+      "riskLevel": "low"
+    },
+    {
+      "file": "extensions/servant/src/monitoring/ActionsHealthMonitor.ts",
       "modificationCount": 5,
       "riskLevel": "low"
     },
@@ -345,22 +360,7 @@
       "riskLevel": "low"
     },
     {
-      "file": "src/components/MemorizationView.tsx",
-      "modificationCount": 4,
-      "riskLevel": "low"
-    },
-    {
-      "file": "extensions/servant/src/autopilot/AutopilotController.ts",
-      "modificationCount": 4,
-      "riskLevel": "low"
-    },
-    {
       "file": "test-debug.ts",
-      "modificationCount": 3,
-      "riskLevel": "low"
-    },
-    {
-      "file": "src/utils/testSlashSplit.ts",
       "modificationCount": 3,
       "riskLevel": "low"
     }

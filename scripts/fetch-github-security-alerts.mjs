@@ -12,6 +12,7 @@ function parseArgs(argv) {
     include: 'dependabot,code-scanning,secret-scanning',
     raw: true,
     transport: 'auto', // auto | gh | token
+    severity: undefined, // code-scanning filter: high|medium|low|note|warning|error
   };
 
   for (let i = 0; i < argv.length; i++) {
@@ -22,12 +23,14 @@ function parseArgs(argv) {
     else if (a === '--include') args.include = argv[++i];
     else if (a === '--no-raw') args.raw = false;
     else if (a === '--transport') args.transport = argv[++i];
+    else if (a === '--severity') args.severity = argv[++i];
     else if (a === '-h' || a === '--help') args.help = true;
     else if (a && a.startsWith('--repo=')) args.repo = a.split('=', 2)[1];
     else if (a && a.startsWith('--state=')) args.state = a.split('=', 2)[1];
     else if (a && a.startsWith('--out=')) args.out = a.split('=', 2)[1];
     else if (a && a.startsWith('--include=')) args.include = a.split('=', 2)[1];
     else if (a && a.startsWith('--transport=')) args.transport = a.split('=', 2)[1];
+    else if (a && a.startsWith('--severity=')) args.severity = a.split('=', 2)[1];
     else {
       // ignore unknown args for forward-compat
     }
@@ -37,8 +40,8 @@ function parseArgs(argv) {
 }
 
 function printHelp() {
-   
-  console.log(`\nUsage:\n  npm run security:alerts -- [options]\n\nOptions:\n  --repo <owner/name>           Target repo (default: inferred from git origin)\n  --state <open|fixed|dismissed|all>  Alert state (default: open)\n  --include <csv>               dependabot,code-scanning,secret-scanning (default: all)\n  --out <path>                  Write JSON output (default: scripts/output/github-security-alerts-<date>.json)\n  --no-raw                      Only write summary (no raw alert arrays)\n  --transport <auto|gh|token>   Use gh CLI or token (default: auto)\n\nAuth:\n  Preferred: GitHub CLI (gh) logged in.\n  Alternative: set GITHUB_TOKEN (or GH_TOKEN) with appropriate read permissions.\n`);
+
+  console.log(`\nUsage:\n  npm run security:alerts -- [options]\n\nOptions:\n  --repo <owner/name>           Target repo (default: inferred from git origin)\n  --state <open|fixed|dismissed|all>  Alert state (default: open)\n  --include <csv>               dependabot,code-scanning,secret-scanning (default: all)\n  --severity <level>            Filter code-scanning by severity (high|medium|low|note|warning|error)\n  --out <path>                  Write JSON output (default: scripts/output/github-security-alerts-<date>.json)\n  --no-raw                      Only write summary (no raw alert arrays)\n  --transport <auto|gh|token>   Use gh CLI or token (default: auto)\n\nAuth:\n  Preferred: GitHub CLI (gh) logged in.\n  Alternative: set GITHUB_TOKEN (or GH_TOKEN) with appropriate read permissions.\n`);
 }
 
 function run(cmd, args, opts = {}) {
@@ -222,6 +225,8 @@ function summarizeCodeScanning(alerts) {
   const byRuleSeverity = {};
   const byTool = {};
   const byPath = {};
+  const byRuleId = {};
+  const byRuleName = {};
 
   for (const a of alerts) {
     const level = (
@@ -240,12 +245,19 @@ function summarizeCodeScanning(alerts) {
 
     const path = a?.most_recent_instance?.location?.path || 'unknown';
     inc(byPath, path);
+
+    const ruleId = a?.rule?.id || 'unknown';
+    inc(byRuleId, ruleId);
+    const ruleName = a?.rule?.name || 'unknown';
+    inc(byRuleName, ruleName);
   }
 
   return {
     count: alerts.length,
     bySecuritySeverityLevel,
     byRuleSeverity,
+    topRuleIds: topNCountMap(byRuleId, 25),
+    topRuleNames: topNCountMap(byRuleName, 25),
     topTools: topNCountMap(byTool, 10),
     topPaths: topNCountMap(byPath, 20),
   };
@@ -275,6 +287,7 @@ async function main() {
   }
 
   const state = args.state;
+  const severityFilter = (args.severity || '').trim().toLowerCase() || undefined;
   const includeSet = new Set(
     (args.include || '')
       .split(',')
@@ -361,7 +374,14 @@ async function main() {
   if (includeSet.has('code-scanning')) {
     try {
       const path = `/repos/${owner}/${name}/code-scanning/alerts?state=${encodeURIComponent(state)}&per_page=100`;
-      const alerts = await getAlerts('code-scanning', path);
+      let alerts = await getAlerts('code-scanning', path);
+      if (severityFilter) {
+        alerts = alerts.filter((a) => {
+          const ruleSeverity = (a?.rule?.severity || '').toLowerCase();
+          const securityLevel = (a?.rule?.security_severity_level || a?.security_severity_level || '').toLowerCase();
+          return ruleSeverity === severityFilter || securityLevel === severityFilter;
+        });
+      }
       result.summary.codeScanning = summarizeCodeScanning(alerts);
       if (args.raw) result.raw.codeScanning = alerts;
     } catch (e) {
@@ -384,40 +404,44 @@ async function main() {
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, JSON.stringify(result, null, 2), 'utf8');
 
-   
+
   console.log(`\n✅ GitHub security alerts fetched (${repo})`);
-   
+
   console.log(`- transport: ${transport}`);
-   
+
   console.log(`- state: ${state}`);
-   
+  if (severityFilter) {
+
+    console.log(`- severity: ${severityFilter}`);
+  }
+
   console.log(`- output: ${outPath}`);
 
   if (result.summary.dependabot) {
-     
+
     console.log(`- dependabot: ${result.summary.dependabot.count}`);
   }
   if (result.summary.codeScanning) {
-     
+
     console.log(`- code-scanning: ${result.summary.codeScanning.count}`);
   }
   if (result.summary.secretScanning) {
-     
+
     console.log(`- secret-scanning: ${result.summary.secretScanning.count}`);
   }
 
   if (result.errors.length) {
-     
+
     console.log(`\n⚠️ Some endpoints failed:`);
     for (const err of result.errors) {
-       
+
       console.log(`- ${err.kind}: ${err.message}`);
     }
   }
 }
 
 main().catch((e) => {
-   
+
   console.error(`\n❌ Failed: ${e?.message || e}`);
   process.exit(1);
 });

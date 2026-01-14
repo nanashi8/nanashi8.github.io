@@ -595,7 +595,7 @@ function SpellingView({
     }
     // セッション終了（最終問題の後）を検出してKPIサマリを出力（開発時のみ）
     if (nextIndex >= spellingState.questions.length) {
-      if (!window.location.hostname.includes('github.io')) {
+      if (import.meta.env.DEV) {
         try {
           const summary = sessionKpi.summarize();
           logger.log('🧪 KPI Summary (spelling):', summary);
