@@ -163,7 +163,9 @@ async function loadBeginnerMorningRoutine(passageId: string): Promise<CompletePa
   ]);
 
   if (!phraseRes.ok) {
-    throw new Error(`フレーズ学習データが見つかりません: ${passageId}`);
+    logger.warn(`フレーズ学習データが見つかりません: ${passageId} - 依存解析データから構築します`);
+    // フレーズ学習データがない場合は通常のフローへフォールバック
+    return loadCompletePassageFromDependencyParse(passageId);
   }
 
   const phraseJson = (await phraseRes.json()) as PhraseLearningJson;
@@ -327,6 +329,65 @@ function extractAnnotatedWordsFromGlossary(
     seen.add(key);
     return true;
   });
+}
+
+/**
+ * 依存解析データから完全なパッセージデータを構築する（フレーズ学習データがない場合）
+ */
+async function loadCompletePassageFromDependencyParse(passageId: string): Promise<CompletePassageData> {
+  const parsed = await loadDependencyParsedPassage(passageId);
+
+  // 依存解析データが無い場合は空で返す
+  if (!parsed || !parsed.sentences || parsed.sentences.length === 0) {
+    logger.warn(`[passageDataLoader] No dependency parse found for ${passageId}`);
+    return {
+      passageId,
+      sentences: [],
+      phrases: [],
+      keyPhrases: [],
+      annotatedWords: [],
+      metadata: {
+        wordCount: 0,
+        sentenceCount: 0,
+      },
+    };
+  }
+
+  // 日本語（文単位）
+  let japaneseBlocks: string[] = [];
+  try {
+    const res = await fetch(`/data/passages-translations/${passageId}_sentences.txt`);
+    if (res.ok) {
+      japaneseBlocks = splitIntoBlocks(await res.text());
+    }
+  } catch {
+    // ignore
+  }
+
+  // 英語（文単位）はUDパースの text を正とする
+  const sentences: CompletePassageData['sentences'] = parsed.sentences.map((s, idx) => {
+    const id = typeof s.id === 'number' ? s.id : idx + 1;
+    const japanese = japaneseBlocks[idx] ?? '';
+    return {
+      id,
+      english: s.text,
+      japanese,
+      phraseIds: [] as string[],
+      isParagraphStart: false,
+    };
+  });
+
+  const wordCount = estimateWordCount(sentences.map((s) => s.english));
+  const sentenceCount = sentences.length;
+
+  return {
+    passageId,
+    sentences,
+    phrases: [],
+    keyPhrases: [],
+    annotatedWords: [],
+    metadata: { wordCount, sentenceCount },
+  };
 }
 
 /**

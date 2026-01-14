@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-14T00:54:29.746Z
+- generatedAt: 2026-01-14T11:34:54.759Z
 
 ## Single Source of Truth
 
@@ -14,31 +14,31 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- extensions/servant/package.json (hot=0.096)
-- extensions/servant/CHANGELOG.md (hot=0.065)
-- extensions/servant/src/extension.ts (hot=0.061)
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.049)
-- extensions/servant/src/ui/ServantWarningLogger.ts (hot=0.047)
-- docs/maintenance/DOTFOLDER_REORGANIZATION_PLAN.md (hot=0.042)
-- docs/maintenance/GITIGNORE_UPDATES.md (hot=0.042)
-- scripts/migrate-dotfolders.sh (hot=0.042)
-- extensions/servant/src/autopilot/AutopilotController.ts (hot=0.029)
-- .aitk/instructions/project-boundary-guard.instructions.md (hot=0.029)
+- docs/archive/README-2024-archive.md (hot=0.034)
+- extensions/servant/src/ui/states/MaintenanceState.ts (hot=0.028)
+- docs/guidelines/AI_COLLABORATION_WORKFLOW.md (hot=0.026)
+- scripts/ORGANIZATION.md (hot=0.025)
+- .husky/README.md (hot=0.025)
+- tools/npm-audit-summary.mjs (hot=0.023)
+- docs/research/README.md (hot=0.02)
+- scripts/generate-docs-index.ts (hot=0.02)
+- docs/research/NATIVE_CODING_REFINEMENT_WORKFLOW.md (hot=0.018)
+- extensions/servant/package.json (hot=0.016)
 
 ## Related (Neural Propagation)
 
-- startNode: extensions/servant/package.json
+- startNode: docs/archive/README-2024-archive.md
 - seeds: 5
 - affectedFiles: 0
-- computationTimeMs: 0
+- computationTimeMs: 1
 
 ### Seeds
 
-- extensions/servant/package.json (activation=1.000, source=signal, signals=[save:0.10])
-- extensions/servant/CHANGELOG.md (activation=0.677, source=signal, signals=[save:0.07])
-- extensions/servant/src/extension.ts (activation=0.635, source=signal, signals=[save:0.06])
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=0.510, source=signal, signals=[save:0.05])
-- extensions/servant/src/ui/ServantWarningLogger.ts (activation=0.490, source=signal, signals=[save:0.05])
+- docs/archive/README-2024-archive.md (activation=1.000, source=signal, signals=[save:0.03])
+- extensions/servant/src/ui/states/MaintenanceState.ts (activation=0.824, source=signal, signals=[save:0.03])
+- docs/guidelines/AI_COLLABORATION_WORKFLOW.md (activation=0.765, source=signal, signals=[save:0.03])
+- scripts/ORGANIZATION.md (activation=0.735, source=signal, signals=[save:0.03])
+- .husky/README.md (activation=0.735, source=signal, signals=[save:0.03])
 
 - (no related files detected)
 
@@ -53,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 217.03
+- ageHours: 227.70
 
 ## Latest SpecCheck Record (Raw)
 
