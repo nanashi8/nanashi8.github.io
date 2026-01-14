@@ -190,12 +190,17 @@ export class CodeQualityGuard {
 
     matches.forEach(htmlString => {
       // HTML内のscriptタグを抽出
-      const scriptPattern = /<script[^>]*>([\s\S]*?)<\/script>/g;
+      // Note: これは実際のHTMLパースではなく、コード内のHTML文字列の静的解析です
+      // セキュリティ上の懸念を軽減するため、より厳格なパターンを使用
+      const scriptPattern = /<script(?:\s+[^>]*)?>(.+?)<\/script>/gs;
       const scriptContents: string[] = [];
       let scriptMatch;
 
       while ((scriptMatch = scriptPattern.exec(htmlString)) !== null) {
-        scriptContents.push(scriptMatch[1]);
+        // scriptMatch[1]が存在し、文字列である場合のみ追加
+        if (scriptMatch[1] && typeof scriptMatch[1] === 'string') {
+          scriptContents.push(scriptMatch[1]);
+        }
       }
 
       // 各scriptブロックで関数を抽出
