@@ -1,5 +1,5 @@
 version: "1.0"
-updated: 2026-01-09T05:14:30.238Z
+updated: 2026-01-14T14:57:45.717Z
 signals:
   - name: Policy:v1
     description: 方針・ルール・基準
@@ -23,6 +23,13 @@ components:
       - name: _copilot_work_management
         signal: Guide:v1
         description: Self document
+  docs/GIT_HISTORY_LEARNING_REPORT.md:
+    id: DOC:GIT_HISTORY_LEARNING_REPORT
+    type: report
+    provides:
+      - name: git_history_learning_report
+        signal: Report:v1
+        description: Self document
   docs/INDEX.md:
     id: DOC:INDEX
     type: guide
@@ -31,22 +38,46 @@ components:
         signal: Guide:v1
         description: Self document
     requires:
+      - name: question_scheduler_spec
+        signal: Guide:v1
+        from: DOC:SPECIFICATIONS:QUESTION_SCHEDULER_SPEC
+        description: "Referenced from link: QUESTION_SCHEDULER_SPEC.md"
       - name: 15_data_structures
         signal: Guide:v1
-        from: DOC:15_DATA_STRUCTURES
+        from: DOC:SPECIFICATIONS:15_DATA_STRUCTURES
         description: "Referenced from link: 15-data-structures.md"
-      - name: ui_development_guidelines
-        signal: Guide:v1
-        from: DOC:UI_DEVELOPMENT_GUIDELINES
-        description: "Referenced from link: UI_DEVELOPMENT_GUIDELINES.md"
-      - name: 01_project_overview
-        signal: Guide:v1
-        from: DOC:01_PROJECT_OVERVIEW
-        description: "Referenced from link: 01-project-overview.md"
       - name: integration_guide
         signal: Guide:v1
         from: DOC:AI_SYSTEMS:INTEGRATION_GUIDE
         description: "Referenced from link: integration-guide.md"
+      - name: ui_development_guidelines
+        signal: Guide:v1
+        from: DOC:DEVELOPMENT:UI_DEVELOPMENT_GUIDELINES
+        description: "Referenced from link: UI_DEVELOPMENT_GUIDELINES.md"
+      - name: quality_system
+        signal: Guide:v1
+        from: DOC:QUALITY:QUALITY_SYSTEM
+        description: "Referenced from link: QUALITY_SYSTEM.md"
+      - name: meta_ai_troubleshooting
+        signal: Guide:v1
+        from: DOC:GUIDELINES:META_AI_TROUBLESHOOTING
+        description: "Referenced from link: META_AI_TROUBLESHOOTING.md"
+      - name: 01_project_overview
+        signal: Guide:v1
+        from: DOC:SPECIFICATIONS:01_PROJECT_OVERVIEW
+        description: "Referenced from link: 01-project-overview.md"
+      - name: ai_workflow_instructions
+        signal: Guide:v1
+        from: DOC:REFERENCES:AI_WORKFLOW_INSTRUCTIONS
+        description: "Referenced from link: AI_WORKFLOW_INSTRUCTIONS.md"
+      - name: 19_junior_high_vocabulary
+        signal: Guide:v1
+        from: DOC:SPECIFICATIONS:19_JUNIOR_HIGH_VOCABULARY
+        description: "Referenced from link: 19-junior-high-vocabulary.md"
+      - name: question_scheduler_qa_pipeline
+        signal: Guide:v1
+        from: DOC:QUALITY:QUESTION_SCHEDULER_QA_PIPELINE
+        description: "Referenced from link: QUESTION_SCHEDULER_QA_PIPELINE.md"
       - name: how_to_enable
         signal: Guide:v1
         from: DOC:AI_SYSTEMS:HOW_TO_ENABLE
@@ -55,30 +86,22 @@ components:
         signal: Guide:v1
         from: DOC:AI_SYSTEMS:MAINTENANCE_GUIDE
         description: "Referenced from link: メンテナンスAI ガイド"
-      - name: reading_passages_guide
+      - name: docs_reorganization_2025_12_15
         signal: Guide:v1
-        from: DOC:ARCHIVE:READING_PASSAGES_GUIDE
-        description: "Referenced from link: 長文読解パッセージ生成システム"
-      - name: retention_implementation_complete
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS_REORGANIZATION_2025_12_15
+        description: "Referenced from link: ドキュメント整理レポート 2025-12-15"
+      - name: root_files_cleanup_2025_12_15
         signal: Guide:v1
-        from: DOC:ARCHIVE:RETENTION_IMPLEMENTATION_COMPLETE
-        description: "Referenced from link: 定着率表示改善の実装完了"
+        from: DOC:ARCHIVE:2025:REPORTS:ROOT_FILES_CLEANUP_2025_12_15
+        description: "Referenced from link: ルートファイル整理レポート 2025-12-15"
+      - name: cleanup_summary_2025_12_13
+        signal: Guide:v1
+        from: DOC:ARCHIVE:2025:REPORTS:CLEANUP_SUMMARY_2025_12_13
+        description: "Referenced from link: フォルダ構成整理サマリー"
       - name: grammar_passage_feature_v2
         signal: Guide:v1
         from: DOC:ARCHIVE:GRAMMAR_PASSAGE_FEATURE_V2
         description: "Referenced from link: 文法問題パッセージ対応機能"
-      - name: 10_adaptive_learning_ai
-        signal: Guide:v1
-        from: DOC:ARCHIVE:SPECIFICATIONS:10_ADAPTIVE_LEARNING_AI
-        description: "Referenced from link: 適応的学習AI・進捗管理システム仕様書"
-      - name: 11_settings_view
-        signal: Guide:v1
-        from: DOC:ARCHIVE:SPECIFICATIONS:11_SETTINGS_VIEW
-        description: "Referenced from link: 設定画面仕様書"
-      - name: adaptive_network_implementation_summary
-        signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:ADAPTIVE_NETWORK_IMPLEMENTATION_SUMMARY
-        description: "Referenced from link: 適応的教育AIネットワーク - 実装完了サマリー"
       - name: phrase_generation_workflow
         signal: Guide:v1
         from: DOC:ARCHIVE:PHRASE_GENERATION_WORKFLOW
@@ -87,6 +110,14 @@ components:
         signal: Guide:v1
         from: DOC:ARCHIVE:PIPELINE_REFACTORING_LOG
         description: "Referenced from link: パイプラインリファクタリングログ"
+      - name: reading_passages_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:READING_PASSAGES_GUIDE
+        description: "Referenced from link: 長文読解パッセージ生成システム"
+      - name: retention_implementation_complete
+        signal: Guide:v1
+        from: DOC:ARCHIVE:RETENTION_IMPLEMENTATION_COMPLETE
+        description: "Referenced from link: 定着率表示改善の実装完了"
       - name: 00_overview
         signal: Guide:v1
         from: DOC:ARCHIVE:SPECIFICATIONS:00_OVERVIEW
@@ -111,10 +142,6 @@ components:
         signal: Guide:v1
         from: DOC:DESIGN:DATA_MODEL
         description: "Referenced from link: データモデル定義書"
-      - name: 01_project_overview
-        signal: Guide:v1
-        from: DOC:SPECIFICATIONS:01_PROJECT_OVERVIEW
-        description: "Referenced from link: 01. プロジェクト概要"
       - name: 02_translation_quiz
         signal: Guide:v1
         from: DOC:SPECIFICATIONS:02_TRANSLATION_QUIZ
@@ -131,30 +158,42 @@ components:
         signal: Guide:v1
         from: DOC:SPECIFICATIONS:16_STORAGE_STRATEGY
         description: "Referenced from link: 16. ストレージ戦略"
+      - name: 10_adaptive_learning_ai
+        signal: Guide:v1
+        from: DOC:ARCHIVE:SPECIFICATIONS:10_ADAPTIVE_LEARNING_AI
+        description: "Referenced from link: 適応的学習AI・進捗管理システム仕様書"
+      - name: 11_settings_view
+        signal: Guide:v1
+        from: DOC:ARCHIVE:SPECIFICATIONS:11_SETTINGS_VIEW
+        description: "Referenced from link: 設定画面仕様書"
       - name: readme
         signal: Guide:v1
         from: DOC:ARCHIVE:SPECIFICATIONS:README
         description: "Referenced from link: 英単語クイズアプリ - 仕様書"
-      - name: documentation_operations
+      - name: adaptive_network_implementation_summary
         signal: Guide:v1
-        from: DOC:DOCUMENTATION_OPERATIONS
-        description: "Referenced from link: ドキュメント運用ルール"
-      - name: documentation_organization_plan
+        from: DOC:ARCHIVE:SUMMARIES:ADAPTIVE_NETWORK_IMPLEMENTATION_SUMMARY
+        description: "Referenced from link: 適応的教育AIネットワーク - 実装完了サマリー"
+      - name: link_fix_plan
         signal: Guide:v1
-        from: DOC:DOCUMENTATION_ORGANIZATION_PLAN
-        description: "Referenced from link: ドキュメント整理計画（配線を切らない方式）"
-      - name: refactoring_impact_analysis
+        from: DOC:ARCHIVE:2025:PLANS:LINK_FIX_PLAN
+        description: "Referenced from link: 断線リンク修正計画"
+      - name: link_fix_completion_report
         signal: Guide:v1
-        from: DOC:REFACTORING_IMPACT_ANALYSIS
-        description: "Referenced from link: docs/ リファクタリング影響調査結果"
-      - name: refactoring_proposal
-        signal: Guide:v1
-        from: DOC:REFACTORING_PROPOSAL
-        description: "Referenced from link: docs/ 構造リファクタリング提案"
+        from: DOC:ARCHIVE:2025:REPORTS:LINK_FIX_COMPLETION_REPORT
+        description: "Referenced from link: リンク断線修正完了レポート"
       - name: document_naming_convention
         signal: Guide:v1
         from: DOC:GUIDELINES:DOCUMENT_NAMING_CONVENTION
         description: "Referenced from link: ドキュメント命名規則"
+      - name: documentation_organization_plan
+        signal: Guide:v1
+        from: DOC:PLANS:DOCUMENTATION_ORGANIZATION_PLAN
+        description: "Referenced from link: ドキュメント整理計画（配線を切らない方式）"
+      - name: refactoring_proposal
+        signal: Guide:v1
+        from: DOC:PLANS:REFACTORING_PROPOSAL
+        description: "Referenced from link: docs/ 構造リファクタリング提案"
       - name: ai_grammar_question_creation
         signal: Guide:v1
         from: DOC:GUIDELINES:AI_GRAMMAR_QUESTION_CREATION
@@ -175,38 +214,30 @@ components:
         signal: Guide:v1
         from: DOC:GUIDELINES:DURABILITY_TESTING_GUIDE
         description: "Referenced from link: 耐久テストガイド（VS Code / CLI）"
-      - name: cleanup_summary_2025_12_13
-        signal: Guide:v1
-        from: DOC:REPORTS:CLEANUP_SUMMARY_2025_12_13
-        description: "Referenced from link: フォルダ構成整理サマリー"
       - name: data_coverage_report
         signal: Guide:v1
         from: DOC:REPORTS:DATA_COVERAGE_REPORT
         description: "Referenced from link: データ品質テストカバレッジレポート"
-      - name: docs_reorganization_2025_12_15
-        signal: Guide:v1
-        from: DOC:REPORTS:DOCS_REORGANIZATION_2025_12_15
-        description: "Referenced from link: ドキュメント整理レポート 2025-12-15"
-      - name: git_recovery_log
-        signal: Guide:v1
-        from: DOC:REPORTS:GIT_RECOVERY_LOG
-        description: "Referenced from link: Git破損復旧ログ"
-      - name: link_fix_completion_report
-        signal: Guide:v1
-        from: DOC:REPORTS:LINK_FIX_COMPLETION_REPORT
-        description: "Referenced from link: リンク断線修正完了レポート"
       - name: design_system_rules
         signal: Guide:v1
         from: DOC:DEVELOPMENT:DESIGN_SYSTEM_RULES
         description: "Referenced from link: デザインシステムルール"
-      - name: ui_development_guidelines
+      - name: command_registry_example
         signal: Guide:v1
-        from: DOC:DEVELOPMENT:UI_DEVELOPMENT_GUIDELINES
-        description: "Referenced from link: UI開発ガイドライン"
-      - name: root_files_cleanup_2025_12_15
+        from: DOC:DEVELOPMENT:COMMAND_REGISTRY_EXAMPLE
+        description: "Referenced from link: Command Registry Integration Example"
+      - name: design_patterns_analysis
         signal: Guide:v1
-        from: DOC:REPORTS:ROOT_FILES_CLEANUP_2025_12_15
-        description: "Referenced from link: ルートファイル整理レポート 2025-12-15"
+        from: DOC:DEVELOPMENT:DESIGN_PATTERNS_ANALYSIS
+        description: "Referenced from link: 適切なデザインパターン分析"
+      - name: refactoring_summary
+        signal: Guide:v1
+        from: DOC:DEVELOPMENT:REFACTORING_SUMMARY
+        description: "Referenced from link: Servant Refactoring Implementation Summary"
+      - name: servant_refactoring_plan
+        signal: Guide:v1
+        from: DOC:DEVELOPMENT:SERVANT_REFACTORING_PLAN
+        description: "Referenced from link: Servant Extension Refactoring Plan"
       - name: smart_testing
         signal: Guide:v1
         from: DOC:DEVELOPMENT:SMART_TESTING
@@ -267,10 +298,6 @@ components:
         signal: Guide:v1
         from: DOC:REFERENCES:SEED_AND_REPRODUCIBILITY
         description: "Referenced from link: Seedと再現性ガイド"
-      - name: link_fix_plan
-        signal: Guide:v1
-        from: DOC:PLANS:LINK_FIX_PLAN
-        description: "Referenced from link: 断線リンク修正計画"
   docs/README.md:
     id: DOC:README
     type: guide
@@ -503,6 +530,37 @@ components:
         signal: Guide:v1
         from: DOC:SPECIFICATIONS:26_FINAL_REPORT
         description: "Referenced from link: 26-実装完了レポート"
+  docs/ai-systems/ADAPTIVE_GUARD_SYSTEM.md:
+    id: DOC:AI_SYSTEMS:ADAPTIVE_GUARD_SYSTEM
+    type: guide
+    provides:
+      - name: adaptive_guard_system
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: adaptive_guard_system_instructions
+        signal: Guide:v1
+        from: DOC:AI_SYSTEMS:_AITK:INSTRUCTIONS:ADAPTIVE_GUARD_SYSTEM_INSTRUCTIONS
+        description: "Referenced from link: .aitk/instructions/adaptive-guard-system.instructions.md"
+      - name: ai_code_quality_checklist_instructions
+        signal: Guide:v1
+        from: DOC:AI_SYSTEMS:_AITK:INSTRUCTIONS:AI_CODE_QUALITY_CHECKLIST_INSTRUCTIONS
+        description: "Referenced from link: AI実装チェックリスト"
+      - name: refactoring_safety_guide_instructions
+        signal: Guide:v1
+        from: DOC:AI_SYSTEMS:_AITK:INSTRUCTIONS:REFACTORING_SAFETY_GUIDE_INSTRUCTIONS
+        description: "Referenced from link: リファクタリングガイド"
+      - name: property_naming_convention_instructions
+        signal: Guide:v1
+        from: DOC:AI_SYSTEMS:_AITK:INSTRUCTIONS:PROPERTY_NAMING_CONVENTION_INSTRUCTIONS
+        description: "Referenced from link: プロパティ命名規則"
+  docs/ai-systems/GIT_HISTORY_LEARNING.md:
+    id: DOC:AI_SYSTEMS:GIT_HISTORY_LEARNING
+    type: guide
+    provides:
+      - name: git_history_learning
+        signal: Guide:v1
+        description: Self document
   docs/ai-systems/README.md:
     id: DOC:AI_SYSTEMS:README
     type: guide
@@ -586,11 +644,6 @@ components:
       - name: integration_guide
         signal: Guide:v1
         description: Self document
-    requires:
-      - name: architecture
-        signal: Guide:v1
-        from: DOC:SRC:AI:ARCHITECTURE
-        description: "Referenced from link: アーキテクチャ設計書"
   docs/ai-systems/maintenance-guide.md:
     id: DOC:AI_SYSTEMS:MAINTENANCE_GUIDE
     type: guide
@@ -601,11 +654,11 @@ components:
     requires:
       - name: integrated_quality_pipeline
         signal: Guide:v1
-        from: DOC:AI_SYSTEMS:QUALITY:INTEGRATED_QUALITY_PIPELINE
+        from: DOC:QUALITY:INTEGRATED_QUALITY_PIPELINE
         description: "Referenced from link: 品質パイプライン"
       - name: question_scheduler_qa_pipeline
         signal: Guide:v1
-        from: DOC:AI_SYSTEMS:QUALITY:QUESTION_SCHEDULER_QA_PIPELINE
+        from: DOC:QUALITY:QUESTION_SCHEDULER_QA_PIPELINE
         description: "Referenced from link: テストガイドライン"
   docs/ai-systems/warning-system.md:
     id: DOC:AI_SYSTEMS:WARNING_SYSTEM
@@ -619,6 +672,37 @@ components:
     type: guide
     provides:
       - name: existing_ai_integration_analysis
+        signal: Guide:v1
+        description: Self document
+  docs/archive/2025/plans/LINK_FIX_PLAN.md:
+    id: DOC:ARCHIVE:2025:PLANS:LINK_FIX_PLAN
+    type: guide
+    provides:
+      - name: link_fix_plan
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: question_scheduler_spec
+        signal: Guide:v1
+        from: DOC:SPECIFICATIONS:QUESTION_SCHEDULER_SPEC
+        description: "Referenced from link: QUESTION_SCHEDULER_SPEC.md"
+      - name: meta_ai_troubleshooting
+        signal: Guide:v1
+        from: DOC:GUIDELINES:META_AI_TROUBLESHOOTING
+        description: "Referenced from link: META_AI_TROUBLESHOOTING.md"
+      - name: new_horizon_official_unit_structure
+        signal: Guide:v1
+        from: DOC:REFERENCES:NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE
+        description: "Referenced from link: NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md"
+      - name: 15_data_structures
+        signal: Guide:v1
+        from: DOC:SPECIFICATIONS:15_DATA_STRUCTURES
+        description: "Referenced from link: 15-data-structures.md"
+  docs/archive/2025/plans/STRATEGY_PATTERN_IMPLEMENTATION_PLAN.md:
+    id: DOC:ARCHIVE:2025:PLANS:STRATEGY_PATTERN_IMPLEMENTATION_PLAN
+    type: guide
+    provides:
+      - name: strategy_pattern_implementation_plan
         signal: Guide:v1
         description: Self document
   docs/archive/2025/reports/CLEANUP_SUMMARY_2025-12-13.md:
@@ -638,15 +722,15 @@ components:
     requires:
       - name: project_structure_validation
         signal: Guide:v1
-        from: DOC:ARCHIVE:2025:DESIGN:PROJECT_STRUCTURE_VALIDATION
+        from: DOC:DESIGN:PROJECT_STRUCTURE_VALIDATION
         description: "Referenced from link: プロジェクト構造検証"
       - name: self_managing_project
         signal: Guide:v1
-        from: DOC:ARCHIVE:2025:MAINTENANCE:SELF_MANAGING_PROJECT
+        from: DOC:MAINTENANCE:SELF_MANAGING_PROJECT
         description: "Referenced from link: 自己管理プロジェクト"
       - name: refactoring_safety
         signal: Guide:v1
-        from: DOC:ARCHIVE:2025:PROCESSES:REFACTORING_SAFETY
+        from: DOC:PROCESSES:REFACTORING_SAFETY
         description: "Referenced from link: リファクタリング安全ガイド"
   docs/archive/2025/reports/IMPLEMENTATION_SUMMARY.md:
     id: DOC:ARCHIVE:2025:REPORTS:IMPLEMENTATION_SUMMARY
@@ -662,6 +746,13 @@ components:
       - name: learning_ai_dataflow_verification
         signal: Guide:v1
         description: Self document
+  docs/archive/2025/reports/LEARNING_AI_TEST_REPORT.md:
+    id: DOC:ARCHIVE:2025:REPORTS:LEARNING_AI_TEST_REPORT
+    type: report
+    provides:
+      - name: learning_ai_test_report
+        signal: Report:v1
+        description: Self document
   docs/archive/2025/reports/LINK_FIX_COMPLETION_REPORT.md:
     id: DOC:ARCHIVE:2025:REPORTS:LINK_FIX_COMPLETION_REPORT
     type: report
@@ -676,6 +767,53 @@ components:
       - name: multiple_correct_detection_report
         signal: Report:v1
         description: Self document
+  docs/archive/2025/reports/PHASE1_COMPLETION_REPORT.md:
+    id: DOC:ARCHIVE:2025:REPORTS:PHASE1_COMPLETION_REPORT
+    type: report
+    provides:
+      - name: phase1_completion_report
+        signal: Report:v1
+        description: Self document
+  docs/archive/2025/reports/PHASE2_IMPLEMENTATION_SUMMARY.md:
+    id: DOC:ARCHIVE:2025:REPORTS:PHASE2_IMPLEMENTATION_SUMMARY
+    type: guide
+    provides:
+      - name: phase2_implementation_summary
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: implementation_summary
+        signal: Guide:v1
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS:ARCHIVE:2025:REPORTS:IMPLEMENTATION_SUMMARY
+        description: "Referenced from link: /docs/archive/2025/reports/IMPLEMENTATION_SUMMARY.md"
+      - name: phase_1_4_final_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS:ARCHIVE:2025:REPORTS:PHASE_1_4_FINAL_REPORT
+        description: "Referenced from link: /docs/archive/2025/reports/PHASE_1_4_FINAL_REPORT.md"
+      - name: question_scheduler_spec
+        signal: Guide:v1
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS:SPECIFICATIONS:QUESTION_SCHEDULER_SPEC
+        description: "Referenced from link: /docs/specifications/QUESTION_SCHEDULER_SPEC.md"
+  docs/archive/2025/reports/PHASE3_IMPLEMENTATION_SUMMARY.md:
+    id: DOC:ARCHIVE:2025:REPORTS:PHASE3_IMPLEMENTATION_SUMMARY
+    type: guide
+    provides:
+      - name: phase3_implementation_summary
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: implementation_summary
+        signal: Guide:v1
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS:ARCHIVE:2025:REPORTS:IMPLEMENTATION_SUMMARY
+        description: "Referenced from link: /docs/archive/2025/reports/IMPLEMENTATION_SUMMARY.md"
+      - name: phase_1_4_final_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS:ARCHIVE:2025:REPORTS:PHASE_1_4_FINAL_REPORT
+        description: "Referenced from link: /docs/archive/2025/reports/PHASE_1_4_FINAL_REPORT.md"
+      - name: question_scheduler_spec
+        signal: Guide:v1
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS:SPECIFICATIONS:QUESTION_SCHEDULER_SPEC
+        description: "Referenced from link: /docs/specifications/QUESTION_SCHEDULER_SPEC.md"
   docs/archive/2025/reports/PHASE6_COMPLETION_REPORT.md:
     id: DOC:ARCHIVE:2025:REPORTS:PHASE6_COMPLETION_REPORT
     type: report
@@ -703,6 +841,13 @@ components:
     provides:
       - name: phase_1_5_validation_report
         signal: Report:v1
+        description: Self document
+  docs/archive/2025/reports/PHASE_2_PROJECT_SERVANT_TESTS_COMPLETE.md:
+    id: DOC:ARCHIVE:2025:REPORTS:PHASE_2_PROJECT_SERVANT_TESTS_COMPLETE
+    type: guide
+    provides:
+      - name: phase_2_project_servant_tests_complete
+        signal: Guide:v1
         description: Self document
   docs/archive/2025/reports/PHASE_4_5_COMPLETION_REPORT.md:
     id: DOC:ARCHIVE:2025:REPORTS:PHASE_4_5_COMPLETION_REPORT
@@ -739,11 +884,11 @@ components:
         description: "Referenced from link: ドキュメント整理レポート"
       - name: design_freeze
         signal: Guide:v1
-        from: DOC:ARCHIVE:2025:DESIGN:DESIGN_FREEZE
+        from: DOC:DESIGN:DESIGN_FREEZE
         description: "Referenced from link: デザインフリーズ宣言"
       - name: project_structure_validation
         signal: Guide:v1
-        from: DOC:ARCHIVE:2025:DESIGN:PROJECT_STRUCTURE_VALIDATION
+        from: DOC:DESIGN:PROJECT_STRUCTURE_VALIDATION
         description: "Referenced from link: プロジェクト構造検証"
   docs/archive/2025/reports/multiple-correct-detection-report-v2.md:
     id: DOC:ARCHIVE:2025:REPORTS:MULTIPLE_CORRECT_DETECTION_REPORT_V2
@@ -773,6 +918,38 @@ components:
       - name: final_achievement_report
         signal: Report:v1
         description: Self document
+  docs/archive/FINAL_PROJECT_REPORT.md:
+    id: DOC:ARCHIVE:FINAL_PROJECT_REPORT
+    type: report
+    provides:
+      - name: final_project_report
+        signal: Report:v1
+        description: Self document
+    requires:
+      - name: ai_project_complete
+        signal: Report:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:AI_PROJECT_COMPLETE
+        description: "Referenced from link: /docs/archive/AI_PROJECT_COMPLETE.md"
+      - name: phase_1_4_final_report
+        signal: Report:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE_1_4_FINAL_REPORT
+        description: "Referenced from link: /docs/archive/2025/reports/PHASE_1_4_FINAL_REPORT.md"
+      - name: phase_5_completion_report
+        signal: Report:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE_5_COMPLETION_REPORT
+        description: "Referenced from link: /docs/archive/2025/reports/PHASE_5_COMPLETION_REPORT.md"
+      - name: phase_6_completion_report
+        signal: Report:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE_6_COMPLETION_REPORT
+        description: "Referenced from link: /docs/archive/2025/reports/PHASE_6_COMPLETION_REPORT.md"
+      - name: integration_guide
+        signal: Report:v1
+        from: DOC:ARCHIVE:DOCS:AI_SYSTEMS:INTEGRATION_GUIDE
+        description: "Referenced from link: /docs/ai-systems/integration-guide.md"
+      - name: question_scheduler_spec
+        signal: Report:v1
+        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:QUESTION_SCHEDULER_SPEC
+        description: "Referenced from link: /docs/specifications/QUESTION_SCHEDULER_SPEC.md"
   docs/archive/INTERMEDIATE_ADVANCED_REWRITE_PLAN.md:
     id: DOC:ARCHIVE:INTERMEDIATE_ADVANCED_REWRITE_PLAN
     type: guide
@@ -790,15 +967,15 @@ components:
     requires:
       - name: implementation_summary
         signal: Report:v1
-        from: DOC:ARCHIVE:IMPLEMENTATION_SUMMARY
+        from: DOC:ARCHIVE:2025:REPORTS:IMPLEMENTATION_SUMMARY
         description: "Referenced from link: IMPLEMENTATION_SUMMARY.md"
       - name: phase2_implementation_summary
         signal: Report:v1
-        from: DOC:ARCHIVE:PHASE2_IMPLEMENTATION_SUMMARY
+        from: DOC:ARCHIVE:SUMMARIES:PHASE2_IMPLEMENTATION_SUMMARY
         description: "Referenced from link: PHASE2_IMPLEMENTATION_SUMMARY.md"
       - name: phase3_implementation_summary
         signal: Report:v1
-        from: DOC:ARCHIVE:PHASE3_IMPLEMENTATION_SUMMARY
+        from: DOC:ARCHIVE:SUMMARIES:PHASE3_IMPLEMENTATION_SUMMARY
         description: "Referenced from link: PHASE3_IMPLEMENTATION_SUMMARY.md"
       - name: learning_ai_improvement_plan
         signal: Report:v1
@@ -806,11 +983,11 @@ components:
         description: "Referenced from link: LEARNING_AI_IMPROVEMENT_PLAN.md"
       - name: adaptive_learning_api
         signal: Report:v1
-        from: DOC:ARCHIVE:ADAPTIVE_LEARNING_API
+        from: DOC:SPECIFICATIONS:ADAPTIVE_LEARNING_API
         description: "Referenced from link: ADAPTIVE_LEARNING_API.md"
       - name: adaptive_learning_algorithm_design
         signal: Report:v1
-        from: DOC:ARCHIVE:DESIGN:ADAPTIVE_LEARNING_ALGORITHM_DESIGN
+        from: DOC:DESIGN:ADAPTIVE_LEARNING_ALGORITHM_DESIGN
         description: "Referenced from link: design/adaptive-learning-algorithm-design.md"
       - name: scoring_algorithm_future
         signal: Report:v1
@@ -895,15 +1072,15 @@ components:
     requires:
       - name: 09_comprehensive_reading_passages
         signal: Guide:v1
-        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:09_COMPREHENSIVE_READING_PASSAGES
+        from: DOC:ARCHIVE:SPECIFICATIONS:09_COMPREHENSIVE_READING_PASSAGES
         description: "Referenced from link: 仕様書"
       - name: phrase_generation_workflow
         signal: Guide:v1
-        from: DOC:ARCHIVE:DOCS:PHRASE_GENERATION_WORKFLOW
+        from: DOC:ARCHIVE:PHRASE_GENERATION_WORKFLOW
         description: "Referenced from link: フレーズ生成ワークフロー"
       - name: 05_data_structures
         signal: Guide:v1
-        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:05_DATA_STRUCTURES
+        from: DOC:ARCHIVE:SPECIFICATIONS:05_DATA_STRUCTURES
         description: "Referenced from link: データ構造"
   docs/archive/READING_STEP_BY_STEP_GUIDE.md:
     id: DOC:ARCHIVE:READING_STEP_BY_STEP_GUIDE
@@ -912,6 +1089,222 @@ components:
       - name: reading_step_by_step_guide
         signal: Guide:v1
         description: Self document
+  docs/archive/README-2024-archive.md:
+    id: DOC:ARCHIVE:README_2024_ARCHIVE
+    type: guide
+    provides:
+      - name: readme_2024_archive
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: integration_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:AI_SYSTEMS:INTEGRATION_GUIDE
+        description: "Referenced from link: AI統合ガイド"
+      - name: how_to_enable
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:AI_SYSTEMS:HOW_TO_ENABLE
+        description: "Referenced from link: 有効化ガイド"
+      - name: ai_project_complete
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:AI_PROJECT_COMPLETE
+        description: "Referenced from link: プロジェクト完了レポート"
+      - name: phase3_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:EXTENSIONS:SERVANT:DOCS:PHASE3_COMPLETION_REPORT
+        description: "Referenced from link: Phase 3完了レポート"
+      - name: final_project_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:FINAL_PROJECT_REPORT
+        description: "Referenced from link: 最終プロジェクトレポート"
+      - name: meta_ai_priority_instructions
+        signal: Guide:v1
+        from: DOC:ARCHIVE:_AITK:INSTRUCTIONS:META_AI_PRIORITY_INSTRUCTIONS
+        description: "Referenced from link: トラブルシューティング"
+      - name: question_scheduler_spec
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:QUESTION_SCHEDULER_SPEC
+        description: "Referenced from link: 完全仕様書"
+      - name: question_scheduler_types
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:REFERENCES:QUESTION_SCHEDULER_TYPES
+        description: "Referenced from link: 型定義リファレンス"
+      - name: question_scheduler_recovery
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:HOW_TO:QUESTION_SCHEDULER_RECOVERY
+        description: "Referenced from link: 復旧手順書"
+      - name: question_scheduler_api
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:REFERENCES:QUESTION_SCHEDULER_API
+        description: "Referenced from link: APIリファレンス"
+      - name: meta_ai_integration_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:GUIDELINES:META_AI_INTEGRATION_GUIDE
+        description: "Referenced from link: 統合ガイド"
+      - name: detected_signal_usage_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:HOW_TO:DETECTED_SIGNAL_USAGE_GUIDE
+        description: "Referenced from link: シグナル活用"
+      - name: learning_ai_system_architecture
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:LEARNING_AI_SYSTEM_ARCHITECTURE
+        description: "Referenced from link: 学習AIシステム"
+      - name: responsibility_separation_plan
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:PLANS:RESPONSIBILITY_SEPARATION_PLAN
+        description: "Referenced from link: 責任分離計画書"
+      - name: phase_1_4_final_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE_1_4_FINAL_REPORT
+        description: "Referenced from link: Phase 1-4総括"
+      - name: phase_5_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE_5_COMPLETION_REPORT
+        description: "Referenced from link: Phase 5完了"
+      - name: phase_6_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE_6_COMPLETION_REPORT
+        description: "Referenced from link: Phase 6完了"
+      - name: ""
+        signal: Guide:v1
+        from: "DOC:ARCHIVE:TESTS:UNIT:"
+        description: "Referenced from link: `tests/unit/`"
+      - name: vocabulary_phrase_notation_rules
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:VOCABULARY_PHRASE_NOTATION_RULES
+        description: "Referenced from link: `docs/specifications/VOCABULARY_PHRASE_NOTATION_RULES.md`"
+      - name: test_quality_instructions
+        signal: Guide:v1
+        from: DOC:ARCHIVE:_AITK:INSTRUCTIONS:TEST_QUALITY_INSTRUCTIONS
+        description: "Referenced from link: .aitk/instructions/test-quality.instructions.md"
+      - name: test_specifications
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:TEST_SPECIFICATIONS
+        description: "Referenced from link: docs/specifications/TEST_SPECIFICATIONS.md"
+      - name: test_maintenance_process
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:PROCESSES:TEST_MAINTENANCE_PROCESS
+        description: "Referenced from link: docs/processes/TEST_MAINTENANCE_PROCESS.md"
+      - name: question_scheduler_qa_pipeline
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:QUESTION_SCHEDULER_QA_PIPELINE
+        description: "Referenced from link: QUESTION_SCHEDULER_QA_PIPELINE.md"
+      - name: integrated_quality_pipeline
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:INTEGRATED_QUALITY_PIPELINE
+        description: "Referenced from link: INTEGRATED_QUALITY_PIPELINE.md"
+      - name: ai_maintenance_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:MAINTENANCE:AI_MAINTENANCE_GUIDE
+        description: "Referenced from link: AI_MAINTENANCE_GUIDE.md"
+      - name: meta_ai_troubleshooting
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:GUIDELINES:META_AI_TROUBLESHOOTING
+        description: "Referenced from link: META_AI_TROUBLESHOOTING.md"
+      - name: adaptive_learning_api
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:ADAPTIVE_LEARNING_API
+        description: "Referenced from link: 適応型学習API仕様"
+      - name: adaptive_learning_algorithm_design
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:DESIGN:ADAPTIVE_LEARNING_ALGORITHM_DESIGN
+        description: "Referenced from link: アルゴリズム詳細設計"
+      - name: implementation_summary
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:IMPLEMENTATION_SUMMARY
+        description: "Referenced from link: Phase 1 実装サマリー"
+      - name: phase2_implementation_summary
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE2_IMPLEMENTATION_SUMMARY
+        description: "Referenced from link: Phase 2 実装サマリー"
+      - name: phase3_implementation_summary
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:2025:REPORTS:PHASE3_IMPLEMENTATION_SUMMARY
+        description: "Referenced from link: Phase 3 実装サマリー"
+      - name: learning_ai_improvement_plan
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:LEARNING_AI_IMPROVEMENT_PLAN
+        description: "Referenced from link: 学習AI改善計画"
+      - name: development_guidelines
+        signal: Guide:v1
+        from: DOC:ARCHIVE:_GITHUB:DEVELOPMENT_GUIDELINES
+        description: "Referenced from link: 開発ガイドライン"
+      - name: contributing
+        signal: Guide:v1
+        from: DOC:ARCHIVE:_GITHUB:CONTRIBUTING
+        description: "Referenced from link: コントリビューションガイド"
+      - name: progress_tracking_patterns_instructions
+        signal: Guide:v1
+        from: DOC:ARCHIVE:_AITK:INSTRUCTIONS:PROGRESS_TRACKING_PATTERNS_INSTRUCTIONS
+        description: "Referenced from link: 進捗記録パターン"
+      - name: automation_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:PROCESSES:AUTOMATION_GUIDE
+        description: "Referenced from link: 自動化システムガイド"
+      - name: grammar_data_quality_guidelines
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:GUIDELINES:GRAMMAR_DATA_QUALITY_GUIDELINES
+        description: "Referenced from link: 文法データ品質ガイドライン"
+      - name: content_quality_testing
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:CONTENT_QUALITY_TESTING
+        description: "Referenced from link: コンテンツ品質テスト実装ガイド"
+      - name: content_quality_principles
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:CONTENT_QUALITY_PRINCIPLES
+        description: "Referenced from link: 品質原則ガイド"
+      - name: phase_1_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:PHASE_1_COMPLETION_REPORT
+        description: "Referenced from link: 完了レポート"
+      - name: phase_2_step1_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:PHASE_2_STEP1_COMPLETION_REPORT
+        description: "Referenced from link: 完了レポート"
+      - name: phase_2_step2_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:PHASE_2_STEP2_COMPLETION_REPORT
+        description: "Referenced from link: 完了レポート"
+      - name: phase_2_step3_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:PHASE_2_STEP3_COMPLETION_REPORT
+        description: "Referenced from link: 完了レポート"
+      - name: 19_junior_high_vocabulary
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:SPECIFICATIONS:19_JUNIOR_HIGH_VOCABULARY
+        description: "Referenced from link: /docs/specifications/19-junior-high-vocabulary.md"
+      - name: css_development_guidelines
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:DEVELOPMENT:CSS_DEVELOPMENT_GUIDELINES
+        description: "Referenced from link: CSS開発ガイドライン"
+      - name: typescript_development_guidelines
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:DEVELOPMENT:TYPESCRIPT_DEVELOPMENT_GUIDELINES
+        description: "Referenced from link: TypeScript/React開発ガイドライン"
+      - name: quality_system
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:QUALITY_SYSTEM
+        description: "Referenced from link: 品質保証システム"
+      - name: ui_development_guidelines
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:DEVELOPMENT:UI_DEVELOPMENT_GUIDELINES
+        description: "Referenced from link: UI開発ガイドライン"
+      - name: reading_passages_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:ARCHIVE:READING_PASSAGES_GUIDE
+        description: "Referenced from link: 長文読解パッセージガイド"
+      - name: vs_code_simple_browser_guide
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:REFERENCES:VS_CODE_SIMPLE_BROWSER_GUIDE
+        description: "Referenced from link: VS Code Simple Browser ガイド"
+      - name: development_guidelines_instructions
+        signal: Guide:v1
+        from: DOC:ARCHIVE:_AITK:INSTRUCTIONS:DEVELOPMENT_GUIDELINES_INSTRUCTIONS
+        description: "Referenced from link: 開発指示書"
+      - name: health_check_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:DOCS:QUALITY:HEALTH_CHECK_REPORT
+        description: "Referenced from link: /docs/quality/HEALTH_CHECK_REPORT.md"
   docs/archive/RETENTION_COMPARISON_EXAMPLES.md:
     id: DOC:ARCHIVE:RETENTION_COMPARISON_EXAMPLES
     type: guide
@@ -933,6 +1326,13 @@ components:
       - name: retention_rate_improvement_proposal
         signal: Guide:v1
         description: Self document
+  docs/archive/SCORING_ALGORITHM_FUTURE.md:
+    id: DOC:ARCHIVE:SCORING_ALGORITHM_FUTURE
+    type: guide
+    provides:
+      - name: scoring_algorithm_future
+        signal: Guide:v1
+        description: Self document
   docs/archive/deprecated/DEPLOYMENT_GUIDE_OLD.md:
     id: DOC:ARCHIVE:DEPRECATED:DEPLOYMENT_GUIDE_OLD
     type: guide
@@ -947,6 +1347,149 @@ components:
       - name: grammar_passage_feature_v2
         signal: Guide:v1
         description: Self document
+  docs/archive/issues-old/113.md:
+    id: DOC:ARCHIVE:ISSUES_OLD:113
+    type: guide
+    provides:
+      - name: "113"
+        signal: Guide:v1
+        description: Self document
+  docs/archive/issues-old/archive/1.md:
+    id: DOC:ARCHIVE:ISSUES_OLD:ARCHIVE:1
+    type: guide
+    provides:
+      - name: "1"
+        signal: Guide:v1
+        description: Self document
+  docs/archive/issues-old/archive/2025-12-03-04-43-28.md:
+    id: DOC:ARCHIVE:ISSUES_OLD:ARCHIVE:2025_12_03_04_43_28
+    type: guide
+    provides:
+      - name: 2025_12_03_04_43_28
+        signal: Guide:v1
+        description: Self document
+  docs/archive/issues-old/feature_request_cad_like_editing.md:
+    id: DOC:ARCHIVE:ISSUES_OLD:FEATURE_REQUEST_CAD_LIKE_EDITING
+    type: guide
+    provides:
+      - name: feature_request_cad_like_editing
+        signal: Guide:v1
+        description: Self document
+  docs/archive/issues-old/ローカルAIとGitHubの連携機能の提案.md:
+    id: DOC:ARCHIVE:ISSUES_OLD:____AI_GITHUB________
+    type: guide
+    provides:
+      - name: ____ai_github________
+        signal: Guide:v1
+        description: Self document
+  docs/archive/legacy-root-docs/AI_PROJECT_COMPLETE.md:
+    id: DOC:ARCHIVE:LEGACY_ROOT_DOCS:AI_PROJECT_COMPLETE
+    type: guide
+    provides:
+      - name: ai_project_complete
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: integration_guide
+        signal: Guide:v1
+        from: DOC:AI_SYSTEMS:INTEGRATION_GUIDE
+        description: "Referenced from link: integration-guide.md"
+      - name: phase1_2_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:DOCS:REPORTS:PHASE1_2_COMPLETION_REPORT
+        description: "Referenced from link: PHASE1_2_COMPLETION_REPORT.md"
+      - name: phase3_completion_report
+        signal: Guide:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:PHASE3_COMPLETION_REPORT
+        description: "Referenced from link: PHASE3_COMPLETION_REPORT.md"
+      - name: how_to_enable
+        signal: Guide:v1
+        from: DOC:AI_SYSTEMS:HOW_TO_ENABLE
+        description: "Referenced from link: how-to-enable.md"
+      - name: architecture
+        signal: Guide:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:SRC:AI:ARCHITECTURE
+        description: "Referenced from link: /src/ai/architecture.md"
+      - name: ai_project_complete
+        signal: Guide:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:AI_PROJECT_COMPLETE
+        description: "Referenced from link: AI_PROJECT_COMPLETE.md"
+  docs/archive/legacy-root-docs/FINAL_PROJECT_REPORT.md:
+    id: DOC:ARCHIVE:LEGACY_ROOT_DOCS:FINAL_PROJECT_REPORT
+    type: report
+    provides:
+      - name: final_project_report
+        signal: Report:v1
+        description: Self document
+    requires:
+      - name: integration_guide
+        signal: Report:v1
+        from: DOC:AI_SYSTEMS:INTEGRATION_GUIDE
+        description: "Referenced from link: integration-guide.md"
+      - name: phase1_2_completion_report
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:DOCS:REPORTS:PHASE1_2_COMPLETION_REPORT
+        description: "Referenced from link: PHASE1_2_COMPLETION_REPORT.md"
+      - name: phase3_completion_report
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:PHASE3_COMPLETION_REPORT
+        description: "Referenced from link: PHASE3_COMPLETION_REPORT.md"
+      - name: how_to_enable
+        signal: Report:v1
+        from: DOC:AI_SYSTEMS:HOW_TO_ENABLE
+        description: "Referenced from link: how-to-enable.md"
+      - name: ai_project_complete
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:AI_PROJECT_COMPLETE
+        description: "Referenced from link: AI_PROJECT_COMPLETE.md"
+      - name: architecture
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:SRC:AI:ARCHITECTURE
+        description: "Referenced from link: /src/ai/architecture.md"
+  docs/archive/legacy-root-docs/INTEGRATED_QUALITY_PIPELINE.md:
+    id: DOC:ARCHIVE:LEGACY_ROOT_DOCS:INTEGRATED_QUALITY_PIPELINE
+    type: guide
+    provides:
+      - name: integrated_quality_pipeline
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: grammar_generation_guidelines
+        signal: Guide:v1
+        from: DOC:GUIDELINES:GRAMMAR:GRAMMAR_GENERATION_GUIDELINES
+        description: "Referenced from link: GRAMMAR_GENERATION_GUIDELINES.md"
+      - name: quality_automation_guide
+        signal: Guide:v1
+        from: DOC:QUALITY:QUALITY_AUTOMATION_GUIDE
+        description: "Referenced from link: QUALITY_AUTOMATION_GUIDE.md"
+      - name: grammar_quality_pipeline
+        signal: Guide:v1
+        from: DOC:GUIDELINES:GRAMMAR:GRAMMAR_QUALITY_PIPELINE
+        description: "Referenced from link: GRAMMAR_QUALITY_PIPELINE.md"
+  docs/archive/legacy-root-docs/PHASE3_COMPLETION_REPORT.md:
+    id: DOC:ARCHIVE:LEGACY_ROOT_DOCS:PHASE3_COMPLETION_REPORT
+    type: report
+    provides:
+      - name: phase3_completion_report
+        signal: Report:v1
+        description: Self document
+    requires:
+      - name: integration_guide
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:DOCS:AI_SYSTEMS:INTEGRATION_GUIDE
+        description: "Referenced from link: integration-guide.md"
+      - name: phase1_2_completion_report
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:DOCS:REPORTS:PHASE1_2_COMPLETION_REPORT
+        description: "Referenced from link: PHASE1_2_COMPLETION_REPORT.md"
+      - name: how_to_enable
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:DOCS:AI_SYSTEMS:HOW_TO_ENABLE
+        description: "Referenced from link: how-to-enable.md"
+      - name: architecture
+        signal: Report:v1
+        from: DOC:ARCHIVE:LEGACY_ROOT_DOCS:SRC:AI:ARCHITECTURE
+        description: "Referenced from link: /src/ai/architecture.md"
   docs/archive/specifications/00-overview.md:
     id: DOC:ARCHIVE:SPECIFICATIONS:00_OVERVIEW
     type: guide
@@ -1137,19 +1680,19 @@ components:
     requires:
       - name: adaptive_network_api_specification
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SPECIFICATIONS:ADAPTIVE_NETWORK_API_SPECIFICATION
+        from: DOC:SPECIFICATIONS:ADAPTIVE_NETWORK_API_SPECIFICATION
         description: "Referenced from link: API仕様書"
       - name: adaptive_network_test_cases
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SPECIFICATIONS:ADAPTIVE_NETWORK_TEST_CASES
+        from: DOC:SPECIFICATIONS:ADAPTIVE_NETWORK_TEST_CASES
         description: "Referenced from link: テストケース"
       - name: adaptive_network_error_handling
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SPECIFICATIONS:ADAPTIVE_NETWORK_ERROR_HANDLING
+        from: DOC:SPECIFICATIONS:ADAPTIVE_NETWORK_ERROR_HANDLING
         description: "Referenced from link: エラーハンドリング戦略"
       - name: meta_ai_integration_guide
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:META_AI_INTEGRATION_GUIDE
+        from: DOC:GUIDELINES:META_AI_INTEGRATION_GUIDE
         description: "Referenced from link: 統合ガイド"
   docs/archive/summaries/ADAPTIVE_NETWORK_INTEGRATION_COMPLETE.md:
     id: DOC:ARCHIVE:SUMMARIES:ADAPTIVE_NETWORK_INTEGRATION_COMPLETE
@@ -1175,19 +1718,19 @@ components:
     requires:
       - name: learning_ai_improvement_plan
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:LEARNING_AI_IMPROVEMENT_PLAN
+        from: DOC:ARCHIVE:LEARNING_AI_IMPROVEMENT_PLAN
         description: "Referenced from link: LEARNING_AI_IMPROVEMENT_PLAN.md"
       - name: seed_and_reproducibility
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SEED_AND_REPRODUCIBILITY
+        from: DOC:REFERENCES:SEED_AND_REPRODUCIBILITY
         description: "Referenced from link: SEED_AND_REPRODUCIBILITY.md"
       - name: scenario_visualization_guide
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SCENARIO_VISUALIZATION_GUIDE
+        from: DOC:GUIDELINES:SCENARIO_VISUALIZATION_GUIDE
         description: "Referenced from link: SCENARIO_VISUALIZATION_GUIDE.md"
       - name: scoring_algorithm_future
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SCORING_ALGORITHM_FUTURE
+        from: DOC:ARCHIVE:SCORING_ALGORITHM_FUTURE
         description: "Referenced from link: SCORING_ALGORITHM_FUTURE.md"
   docs/archive/summaries/PHASE3_IMPLEMENTATION_SUMMARY.md:
     id: DOC:ARCHIVE:SUMMARIES:PHASE3_IMPLEMENTATION_SUMMARY
@@ -1199,7 +1742,7 @@ components:
     requires:
       - name: learning_ai_improvement_plan
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:LEARNING_AI_IMPROVEMENT_PLAN
+        from: DOC:ARCHIVE:LEARNING_AI_IMPROVEMENT_PLAN
         description: "Referenced from link: LEARNING_AI_IMPROVEMENT_PLAN.md"
       - name: phase2_implementation_summary
         signal: Guide:v1
@@ -1207,15 +1750,15 @@ components:
         description: "Referenced from link: PHASE2_IMPLEMENTATION_SUMMARY.md"
       - name: seed_and_reproducibility
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SEED_AND_REPRODUCIBILITY
+        from: DOC:REFERENCES:SEED_AND_REPRODUCIBILITY
         description: "Referenced from link: SEED_AND_REPRODUCIBILITY.md"
       - name: scenario_visualization_guide
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SCENARIO_VISUALIZATION_GUIDE
+        from: DOC:GUIDELINES:SCENARIO_VISUALIZATION_GUIDE
         description: "Referenced from link: SCENARIO_VISUALIZATION_GUIDE.md"
       - name: scoring_algorithm_future
         signal: Guide:v1
-        from: DOC:ARCHIVE:SUMMARIES:SCORING_ALGORITHM_FUTURE
+        from: DOC:ARCHIVE:SCORING_ALGORITHM_FUTURE
         description: "Referenced from link: SCORING_ALGORITHM_FUTURE.md"
   docs/design/ACQUISITION_ALGORITHM.md:
     id: DOC:DESIGN:ACQUISITION_ALGORITHM
@@ -1257,11 +1800,6 @@ components:
       - name: dark_mode_guide
         signal: Policy:v1
         description: Self document
-    requires:
-      - name: _copilot_instructions
-        signal: Policy:v1
-        from: DOC:_COPILOT_INSTRUCTIONS
-        description: "Referenced from link: .copilot-instructions.md"
   docs/design/DATA_MODEL.md:
     id: DOC:DESIGN:DATA_MODEL
     type: spec
@@ -1281,6 +1819,13 @@ components:
     type: spec
     provides:
       - name: docpart_specification
+        signal: Policy:v1
+        description: Self document
+  docs/design/DTA_SIMULATION_DESIGN.md:
+    id: DOC:DESIGN:DTA_SIMULATION_DESIGN
+    type: spec
+    provides:
+      - name: dta_simulation_design
         signal: Policy:v1
         description: Self document
   docs/design/INDUSTRY_STANDARDS_ADOPTION_PLAN.md:
@@ -1308,6 +1853,13 @@ components:
     type: spec
     provides:
       - name: learning_phase_architecture
+        signal: Policy:v1
+        description: Self document
+  docs/design/PHASE1_DETAILED_DESIGN.md:
+    id: DOC:DESIGN:PHASE1_DETAILED_DESIGN
+    type: spec
+    provides:
+      - name: phase1_detailed_design
         signal: Policy:v1
         description: Self document
   docs/design/PHASE_DETECTION_ALGORITHM.md:
@@ -1350,14 +1902,20 @@ components:
         signal: Policy:v1
         from: DOC:QUALITY:QUALITY_SYSTEM
         description: "Referenced from link: 品質システム"
-      - name: project_structure_instructions
+  docs/design/adaptive-learning-algorithm-design.md:
+    id: DOC:DESIGN:ADAPTIVE_LEARNING_ALGORITHM_DESIGN
+    type: spec
+    provides:
+      - name: adaptive_learning_algorithm_design
         signal: Policy:v1
-        from: DOC:_AITK:INSTRUCTIONS:PROJECT_STRUCTURE_INSTRUCTIONS
-        description: "Referenced from link: プロジェクト構造検証指示"
-      - name: development_guidelines_instructions
+        description: Self document
+  docs/design/adaptive-learning-design.md:
+    id: DOC:DESIGN:ADAPTIVE_LEARNING_DESIGN
+    type: spec
+    provides:
+      - name: adaptive_learning_design
         signal: Policy:v1
-        from: DOC:_AITK:INSTRUCTIONS:DEVELOPMENT_GUIDELINES_INSTRUCTIONS
-        description: "Referenced from link: 開発ガイドライン"
+        description: Self document
   docs/design/color-mapping.md:
     id: DOC:DESIGN:COLOR_MAPPING
     type: spec
@@ -1400,10 +1958,10 @@ components:
         signal: Guide:v1
         description: Self document
     requires:
-      - name: adaptive_ai_integration_test_guide
+      - name: adaptive_ai_integration_guide
         signal: Guide:v1
-        from: DOC:ADAPTIVE_AI_INTEGRATION_TEST_GUIDE
-        description: "Referenced from link: ADAPTIVE_AI_INTEGRATION_TEST_GUIDE.md"
+        from: DOC:TESTING:ADAPTIVE_AI_INTEGRATION_GUIDE
+        description: "Referenced from link: ADAPTIVE_AI_INTEGRATION_GUIDE.md"
   docs/development/COMMAND_REGISTRY_EXAMPLE.md:
     id: DOC:DEVELOPMENT:COMMAND_REGISTRY_EXAMPLE
     type: guide
@@ -1521,14 +2079,6 @@ components:
         signal: Guide:v1
         from: DOC:DEVELOPMENT:REFACTORING_PLAN
         description: "Referenced from link: REFACTORING_PLAN.md"
-      - name: development_guidelines
-        signal: Guide:v1
-        from: DOC:_GITHUB:DEVELOPMENT_GUIDELINES
-        description: "Referenced from link: .github/DEVELOPMENT_GUIDELINES.md"
-      - name: development_guidelines_instructions
-        signal: Guide:v1
-        from: DOC:_AITK:INSTRUCTIONS:DEVELOPMENT_GUIDELINES_INSTRUCTIONS
-        description: "Referenced from link: .aitk/instructions/development-guidelines.instructions.md"
   docs/development/EXPLANATION_COMPLETION_SUMMARY.md:
     id: DOC:DEVELOPMENT:EXPLANATION_COMPLETION_SUMMARY
     type: guide
@@ -1580,6 +2130,34 @@ components:
       - name: github_actions_refactoring_plan
         signal: Guide:v1
         description: Self document
+  docs/development/INTEGRATION_TEST_REPORT.md:
+    id: DOC:DEVELOPMENT:INTEGRATION_TEST_REPORT
+    type: report
+    provides:
+      - name: integration_test_report
+        signal: Report:v1
+        description: Self document
+    requires:
+      - name: dda_implementation
+        signal: Report:v1
+        from: DOC:REFERENCES:DDA_IMPLEMENTATION
+        description: "Referenced from link: DDA実装ガイド"
+      - name: dda_use_cases
+        signal: Report:v1
+        from: DOC:REFERENCES:DDA_USE_CASES
+        description: "Referenced from link: DDA活用事例"
+      - name: unified_scheduler_implementation_complete
+        signal: Report:v1
+        from: DOC:DEVELOPMENT:UNIFIED_SCHEDULER_IMPLEMENTATION_COMPLETE
+        description: "Referenced from link: 統一スケジューラー実装完了レポート"
+      - name: integration_guide
+        signal: Report:v1
+        from: DOC:AI_SYSTEMS:INTEGRATION_GUIDE
+        description: "Referenced from link: 14AI統合ガイド"
+      - name: unified_question_scheduler_plan
+        signal: Report:v1
+        from: DOC:PLANS:UNIFIED_QUESTION_SCHEDULER_PLAN
+        description: "Referenced from link: 統一スケジューラー計画"
   docs/development/PHASE1_STRATEGY_PATTERN_IMPLEMENTATION_PLAN.md:
     id: DOC:DEVELOPMENT:PHASE1_STRATEGY_PATTERN_IMPLEMENTATION_PLAN
     type: guide
@@ -1824,6 +2402,57 @@ components:
         signal: Guide:v1
         from: DOC:DEVELOPMENT:DEPLOYMENT
         description: "Referenced from link: 23. デプロイ手順"
+  docs/development/vocabulary-tab-split-implementation.md:
+    id: DOC:DEVELOPMENT:VOCABULARY_TAB_SPLIT_IMPLEMENTATION
+    type: guide
+    provides:
+      - name: vocabulary_tab_split_implementation
+        signal: Guide:v1
+        description: Self document
+  docs/features/adaptive-learning/CHANGELOG.md:
+    id: DOC:FEATURES:ADAPTIVE_LEARNING:CHANGELOG
+    type: guide
+    provides:
+      - name: changelog
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: readme
+        signal: Guide:v1
+        from: DOC:FEATURES:ADAPTIVE_LEARNING:README
+        description: "Referenced from link: README.md"
+      - name: adaptive_learning_api
+        signal: Guide:v1
+        from: DOC:FEATURES:ADAPTIVE_LEARNING:DOCS:SPECIFICATIONS:ADAPTIVE_LEARNING_API
+        description: "Referenced from link: API仕様書"
+      - name: adaptive_learning_design
+        signal: Guide:v1
+        from: DOC:FEATURES:ADAPTIVE_LEARNING:DOCS:DESIGN:ADAPTIVE_LEARNING_DESIGN
+        description: "Referenced from link: 詳細設計書"
+      - name: adaptive_learning_algorithm_design
+        signal: Guide:v1
+        from: DOC:FEATURES:ADAPTIVE_LEARNING:DOCS:DESIGN:ADAPTIVE_LEARNING_ALGORITHM_DESIGN
+        description: "Referenced from link: アルゴリズム設計"
+  docs/features/constellation-guide.md:
+    id: DOC:FEATURES:CONSTELLATION_GUIDE
+    type: guide
+    provides:
+      - name: constellation_guide
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: constellation_implementation_plan
+        signal: Guide:v1
+        from: DOC:PLANS:CONSTELLATION_IMPLEMENTATION_PLAN
+        description: "Referenced from link: 実装計画"
+      - name: how_to_enable
+        signal: Guide:v1
+        from: DOC:AI_SYSTEMS:HOW_TO_ENABLE
+        description: "Referenced from link: Autopilotガイド"
+      - name: neural_dependency_graph
+        signal: Guide:v1
+        from: DOC:SPECIFICATIONS:NEURAL_DEPENDENCY_GRAPH
+        description: "Referenced from link: Neural Dependency Graph"
   docs/features/dynamic-threshold-system.md:
     id: DOC:FEATURES:DYNAMIC_THRESHOLD_SYSTEM
     type: guide
@@ -1862,8 +2491,12 @@ components:
     requires:
       - name: ai_project_complete
         signal: Guide:v1
-        from: DOC:AI_PROJECT_COMPLETE
+        from: DOC:ARCHIVE:AI_PROJECT_COMPLETE
         description: "Referenced from link: AI_PROJECT_COMPLETE.md"
+      - name: adaptive_ai_integration_guide
+        signal: Guide:v1
+        from: DOC:TESTING:ADAPTIVE_AI_INTEGRATION_GUIDE
+        description: "Referenced from link: ADAPTIVE_AI_INTEGRATION_GUIDE.md"
       - name: anti_vibration_filter
         signal: Guide:v1
         from: DOC:SPECIFICATIONS:ANTI_VIBRATION_FILTER
@@ -1896,6 +2529,30 @@ components:
       - name: memorization_category_bug_fix
         signal: Guide:v1
         description: Self document
+  docs/guidelines/AI_COLLABORATION_WORKFLOW.md:
+    id: DOC:GUIDELINES:AI_COLLABORATION_WORKFLOW
+    type: guide
+    provides:
+      - name: ai_collaboration_workflow
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: readme
+        signal: Guide:v1
+        from: DOC:SCRIPTS:README
+        description: "Referenced from link: scripts/README.md"
+      - name: organization
+        signal: Guide:v1
+        from: DOC:SCRIPTS:ORGANIZATION
+        description: "Referenced from link: scripts/ORGANIZATION.md"
+      - name: readme
+        signal: Guide:v1
+        from: DOC:_HUSKY:README
+        description: "Referenced from link: .husky/README.md"
+      - name: quality_system
+        signal: Guide:v1
+        from: DOC:QUALITY:QUALITY_SYSTEM
+        description: "Referenced from link: docs/quality/QUALITY_SYSTEM.md"
   docs/guidelines/AI_GRAMMAR_QUESTION_CREATION.md:
     id: DOC:GUIDELINES:AI_GRAMMAR_QUESTION_CREATION
     type: guide
@@ -1971,7 +2628,7 @@ components:
         description: "Referenced from link: EFFICIENT_DOC_WORKFLOW.md"
       - name: link_fix_plan
         signal: Guide:v1
-        from: DOC:PLANS:LINK_FIX_PLAN
+        from: DOC:ARCHIVE:2025:PLANS:LINK_FIX_PLAN
         description: "Referenced from link: LINK_FIX_PLAN.md"
       - name: docs_reorganization_plan
         signal: Guide:v1
@@ -1996,10 +2653,10 @@ components:
         signal: Guide:v1
         description: Self document
     requires:
-      - name: grammar_data_schema_md_________grammar_generation_guidelines____
+      - name: grammar_generation_guidelines
         signal: Guide:v1
-        from: DOC:GUIDELINES:GRAMMAR_DATA_SCHEMA_MD_________GRAMMAR_GENERATION_GUIDELINES____
-        description: "Referenced from link: データスキーマ仕様"
+        from: DOC:GUIDELINES:GRAMMAR:GRAMMAR_GENERATION_GUIDELINES
+        description: "Referenced from link: データスキーマ仕様（現状は作成ガイドラインに統合）"
       - name: readme
         signal: Guide:v1
         from: DOC:QUALITY:README
@@ -2140,6 +2797,13 @@ components:
     provides:
       - name: scenario_visualization_guide
         signal: Guide:v1
+        description: Self document
+  docs/guidelines/TEST_SPECIFICATION_TEMPLATE.md:
+    id: DOC:GUIDELINES:TEST_SPECIFICATION_TEMPLATE
+    type: spec
+    provides:
+      - name: test_specification_template
+        signal: Policy:v1
         description: Self document
   docs/guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md:
     id: DOC:GUIDELINES:GRAMMAR:GRAMMAR_GENERATION_GUIDELINES
@@ -2332,6 +2996,13 @@ components:
         signal: Guide:v1
         from: DOC:SPECIFICATIONS:21_READING_PASSAGES
         description: "Referenced from link: ../../specifications/21-reading-passages.md"
+  docs/how-to/DATA_GENERATION_TOOLS_CATALOG.md:
+    id: DOC:HOW_TO:DATA_GENERATION_TOOLS_CATALOG
+    type: guide
+    provides:
+      - name: data_generation_tools_catalog
+        signal: Guide:v1
+        description: Self document
   docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md:
     id: DOC:HOW_TO:DETECTED_SIGNAL_USAGE_GUIDE
     type: guide
@@ -2393,6 +3064,13 @@ components:
       - name: local_ud_dependency_parse
         signal: Guide:v1
         description: Self document
+  docs/how-to/ML_OPERATION_GUIDE.md:
+    id: DOC:HOW_TO:ML_OPERATION_GUIDE
+    type: guide
+    provides:
+      - name: ml_operation_guide
+        signal: Guide:v1
+        description: Self document
   docs/how-to/QUESTION_SCHEDULER_RECOVERY.md:
     id: DOC:HOW_TO:QUESTION_SCHEDULER_RECOVERY
     type: guide
@@ -2437,9 +3115,13 @@ components:
         signal: Guide:v1
         description: Self document
     requires:
+      - name: adaptive_ai_integration_guide
+        signal: Guide:v1
+        from: DOC:TESTING:ADAPTIVE_AI_INTEGRATION_GUIDE
+        description: "Referenced from link: AI統合テストガイド"
       - name: quality_assurance_system_report
         signal: Guide:v1
-        from: DOC:QUALITY_ASSURANCE_SYSTEM_REPORT
+        from: DOC:REPORTS:QUALITY_ASSURANCE_SYSTEM_REPORT
         description: "Referenced from link: 品質保証システム"
       - name: readme
         signal: Guide:v1
@@ -2484,6 +3166,13 @@ components:
         signal: Guide:v1
         from: DOC:HOW_TO:QUESTION_SCHEDULER_RECOVERY
         description: "Referenced from link: QUESTION_SCHEDULER_RECOVERY.md"
+  docs/maintenance/DOTFOLDER_REORGANIZATION_PLAN.md:
+    id: DOC:MAINTENANCE:DOTFOLDER_REORGANIZATION_PLAN
+    type: guide
+    provides:
+      - name: dotfolder_reorganization_plan
+        signal: Guide:v1
+        description: Self document
   docs/maintenance/ERROR_PREVENTION_GUIDE.md:
     id: DOC:MAINTENANCE:ERROR_PREVENTION_GUIDE
     type: guide
@@ -2500,10 +3189,13 @@ components:
         signal: Guide:v1
         from: DOC:AI_SYSTEMS:INTEGRATION_GUIDE
         description: "Referenced from link: AI統合ガイド"
-      - name: development_guidelines_instructions
+  docs/maintenance/GITIGNORE_UPDATES.md:
+    id: DOC:MAINTENANCE:GITIGNORE_UPDATES
+    type: guide
+    provides:
+      - name: gitignore_updates
         signal: Guide:v1
-        from: DOC:MAINTENANCE:_AITK:INSTRUCTIONS:DEVELOPMENT_GUIDELINES_INSTRUCTIONS
-        description: "Referenced from link: 開発ガイドライン"
+        description: Self document
   docs/maintenance/MAINTENANCE_AI_GUIDE.md:
     id: DOC:MAINTENANCE:MAINTENANCE_AI_GUIDE
     type: guide
@@ -2590,6 +3282,10 @@ components:
         signal: Guide:v1
         description: Self document
     requires:
+      - name: changelog
+        signal: Guide:v1
+        from: DOC:FEATURES:ADAPTIVE_LEARNING:CHANGELOG
+        description: "Referenced from link: CHANGELOG.md"
       - name: adaptive_learning_api
         signal: Guide:v1
         from: DOC:SPECIFICATIONS:ADAPTIVE_LEARNING_API
@@ -2676,6 +3372,26 @@ components:
         signal: Guide:v1
         from: DOC:GUIDELINES:GRAMMAR_QUESTION_VALIDATION
         description: "Referenced from link: ../guidelines/GRAMMAR_QUESTION_VALIDATION.md"
+  docs/plans/DOCUMENTATION_ORGANIZATION_PLAN.md:
+    id: DOC:PLANS:DOCUMENTATION_ORGANIZATION_PLAN
+    type: guide
+    provides:
+      - name: documentation_organization_plan
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: integration_guide
+        signal: Guide:v1
+        from: DOC:PLANS:AI_SYSTEMS:INTEGRATION_GUIDE
+        description: "Referenced from link: integration-guide.md"
+      - name: phase1_2_completion_report
+        signal: Guide:v1
+        from: DOC:PLANS:PHASE1_2_COMPLETION_REPORT
+        description: "Referenced from link: PHASE1_2_COMPLETION_REPORT.md"
+      - name: link
+        signal: Guide:v1
+        from: DOC:PLANS:LINK
+        description: "Referenced from link: 新しいドキュメント"
   docs/plans/EXPERIMENT_PLAN.md:
     id: DOC:PLANS:EXPERIMENT_PLAN
     type: guide
@@ -2683,6 +3399,26 @@ components:
       - name: experiment_plan
         signal: Guide:v1
         description: Self document
+  docs/plans/GOVERNANCE_INTEGRATION_PLAN.md:
+    id: DOC:PLANS:GOVERNANCE_INTEGRATION_PLAN
+    type: guide
+    provides:
+      - name: governance_integration_plan
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: link
+        signal: Guide:v1
+        from: DOC:PLANS:LINK
+        description: "Referenced from link: 修正前チェックリスト"
+      - name: readme
+        signal: Guide:v1
+        from: DOC:_AITK:INSTRUCTIONS:README
+        description: "Referenced from link: Instructions README"
+      - name: index
+        signal: Guide:v1
+        from: DOC:PLANS:INDEX
+        description: "Referenced from link: Docs INDEX"
   docs/plans/GRAMMAR_MULTIPLE_CORRECT_ANSWERS_VERIFICATION_PLAN.md:
     id: DOC:PLANS:GRAMMAR_MULTIPLE_CORRECT_ANSWERS_VERIFICATION_PLAN
     type: guide
@@ -2702,6 +3438,26 @@ components:
       - name: implementation_checklist
         signal: Guide:v1
         description: Self document
+  docs/plans/IMPLEMENTATION_PLAN_SUMMARY.md:
+    id: DOC:PLANS:IMPLEMENTATION_PLAN_SUMMARY
+    type: guide
+    provides:
+      - name: implementation_plan_summary
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: constellation_enhancement_roadmap
+        signal: Guide:v1
+        from: DOC:ROADMAP:CONSTELLATION_ENHANCEMENT_ROADMAP
+        description: "Referenced from link: CONSTELLATION_ENHANCEMENT_ROADMAP.md"
+      - name: phase1_detailed_design
+        signal: Guide:v1
+        from: DOC:DESIGN:PHASE1_DETAILED_DESIGN
+        description: "Referenced from link: PHASE1_DETAILED_DESIGN.md"
+      - name: prototype_validation_checklist
+        signal: Guide:v1
+        from: DOC:QUALITY:PROTOTYPE_VALIDATION_CHECKLIST
+        description: "Referenced from link: PROTOTYPE_VALIDATION_CHECKLIST.md"
   docs/plans/MEMORIZATION_MULTI_SUBJECT_INTEGRATION_PLAN.md:
     id: DOC:PLANS:MEMORIZATION_MULTI_SUBJECT_INTEGRATION_PLAN
     type: guide
@@ -2793,11 +3549,11 @@ components:
     requires:
       - name: docs_reorganization_2025_12_15
         signal: Guide:v1
-        from: DOC:PROCESSES:DOCS_REORGANIZATION_2025_12_15
+        from: DOC:ARCHIVE:2025:REPORTS:DOCS_REORGANIZATION_2025_12_15
         description: "Referenced from link: ドキュメント整理レポート 2025-12-15"
       - name: root_files_cleanup_2025_12_15
         signal: Guide:v1
-        from: DOC:PROCESSES:ROOT_FILES_CLEANUP_2025_12_15
+        from: DOC:ARCHIVE:2025:REPORTS:ROOT_FILES_CLEANUP_2025_12_15
         description: "Referenced from link: ルートファイル整理レポート 2025-12-15"
       - name: refactoring_safety
         signal: Guide:v1
@@ -2909,6 +3665,13 @@ components:
         signal: Guide:v1
         from: DOC:PLANS:IMPLEMENTATION_CHECKLIST
         description: "Referenced from link: 実装チェックリスト"
+  docs/plans/REFACTORING_PROPOSAL.md:
+    id: DOC:PLANS:REFACTORING_PROPOSAL
+    type: guide
+    provides:
+      - name: refactoring_proposal
+        signal: Guide:v1
+        description: Self document
   docs/plans/RESPONSIBILITY_SEPARATION_PLAN.md:
     id: DOC:PLANS:RESPONSIBILITY_SEPARATION_PLAN
     type: guide
@@ -2973,6 +3736,76 @@ components:
     type: guide
     provides:
       - name: vscode_extension_implementation_plan
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_01_Machine Learning Course_explained_simple_expanded_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_01_MACHINE_LEARNING_COURSE_EXPLAINED_SIMPLE_EXPANDED_JA
+    type: guide
+    provides:
+      - name: cs229_01_machine_learning_course_explained_simple_expanded_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_01_Machine Learning Course_explained_simple_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_01_MACHINE_LEARNING_COURSE_EXPLAINED_SIMPLE_JA
+    type: guide
+    provides:
+      - name: cs229_01_machine_learning_course_explained_simple_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_01_Machine Learning Course_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_01_MACHINE_LEARNING_COURSE_JA
+    type: guide
+    provides:
+      - name: cs229_01_machine_learning_course_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_02_Linear Regression and Gradient Descent_explained_simple_expanded_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_02_LINEAR_REGRESSION_AND_GRADIENT_DESCENT_EXPLAINED_SIMPLE_EXPANDED_JA
+    type: guide
+    provides:
+      - name: cs229_02_linear_regression_and_gradient_descent_explained_simple_expanded_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_02_Linear Regression and Gradient Descent_explained_simple_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_02_LINEAR_REGRESSION_AND_GRADIENT_DESCENT_EXPLAINED_SIMPLE_JA
+    type: guide
+    provides:
+      - name: cs229_02_linear_regression_and_gradient_descent_explained_simple_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_02_Linear Regression and Gradient Descent_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_02_LINEAR_REGRESSION_AND_GRADIENT_DESCENT_JA
+    type: guide
+    provides:
+      - name: cs229_02_linear_regression_and_gradient_descent_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_03_Locally Weighted & Logistic Regression_explained_simple_expanded_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_03_LOCALLY_WEIGHTED___LOGISTIC_REGRESSION_EXPLAINED_SIMPLE_EXPANDED_JA
+    type: guide
+    provides:
+      - name: cs229_03_locally_weighted___logistic_regression_explained_simple_expanded_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_03_Locally Weighted & Logistic Regression_explained_simple_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_03_LOCALLY_WEIGHTED___LOGISTIC_REGRESSION_EXPLAINED_SIMPLE_JA
+    type: guide
+    provides:
+      - name: cs229_03_locally_weighted___logistic_regression_explained_simple_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_03_Locally Weighted & Logistic Regression_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_03_LOCALLY_WEIGHTED___LOGISTIC_REGRESSION_JA
+    type: guide
+    provides:
+      - name: cs229_03_locally_weighted___logistic_regression_ja
+        signal: Guide:v1
+        description: Self document
+  docs/private/CS229_Machine_Learning/CS229_04_Perceptron & Generalized Linear Model_explained_simple_expanded_ja.md:
+    id: DOC:PRIVATE:CS229_MACHINE_LEARNING:CS229_04_PERCEPTRON___GENERALIZED_LINEAR_MODEL_EXPLAINED_SIMPLE_EXPANDED_JA
+    type: guide
+    provides:
+      - name: cs229_04_perceptron___generalized_linear_model_explained_simple_expanded_ja
         signal: Guide:v1
         description: Self document
   docs/private/CS229_Machine_Learning/CS229_04_Perceptron & Generalized Linear Model_explained_simple_ja.md:
@@ -3549,6 +4382,26 @@ components:
       - name: automation_guide
         signal: Guide:v1
         description: Self document
+  docs/processes/COMMUNICATION_METHODS.md:
+    id: DOC:PROCESSES:COMMUNICATION_METHODS
+    type: guide
+    provides:
+      - name: communication_methods
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: ai_workflow_instructions
+        signal: Guide:v1
+        from: DOC:REFERENCES:AI_WORKFLOW_INSTRUCTIONS
+        description: "Referenced from link: AI_WORKFLOW_INSTRUCTIONS.md"
+      - name: no_symptomatic_fixes_policy
+        signal: Guide:v1
+        from: DOC:GUIDELINES:NO_SYMPTOMATIC_FIXES_POLICY
+        description: "Referenced from link: NO_SYMPTOMATIC_FIXES_POLICY.md"
+      - name: quality_system
+        signal: Guide:v1
+        from: DOC:QUALITY:QUALITY_SYSTEM
+        description: "Referenced from link: QUALITY_SYSTEM.md"
   docs/processes/CONTENT_AUTHORING_WORKFLOW.md:
     id: DOC:PROCESSES:CONTENT_AUTHORING_WORKFLOW
     type: guide
@@ -3727,6 +4580,34 @@ components:
         signal: Guide:v1
         from: DOC:PROCESSES:REFERENCE:GRAMMAR:QUALITY_GUIDELINES
         description: "Referenced from link: 文法品質ガイドライン"
+  docs/processes/DOCUMENTATION_OPERATIONS.md:
+    id: DOC:PROCESSES:DOCUMENTATION_OPERATIONS
+    type: guide
+    provides:
+      - name: documentation_operations
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: readme
+        signal: Guide:v1
+        from: DOC:PROCESSES:README
+        description: "Referenced from link: README.md"
+      - name: index
+        signal: Guide:v1
+        from: DOC:INDEX
+        description: "Referenced from link: INDEX.md"
+      - name: link
+        signal: Guide:v1
+        from: DOC:PROCESSES:LINK
+        description: "Referenced from link: 新しいドキュメント"
+      - name: documentation_organization_plan
+        signal: Guide:v1
+        from: DOC:PLANS:DOCUMENTATION_ORGANIZATION_PLAN
+        description: "Referenced from link: DOCUMENTATION_ORGANIZATION_PLAN.md"
+      - name: refactoring_impact_analysis
+        signal: Guide:v1
+        from: DOC:REPORTS:REFACTORING_IMPACT_ANALYSIS
+        description: "Referenced from link: REFACTORING_IMPACT_ANALYSIS.md"
   docs/processes/EFFICIENT_DOC_WORKFLOW.md:
     id: DOC:PROCESSES:EFFICIENT_DOC_WORKFLOW
     type: guide
@@ -3749,7 +4630,7 @@ components:
         description: "Referenced from link: DOCS_REORGANIZATION_PLAN.md"
       - name: link_fix_completion_report
         signal: Guide:v1
-        from: DOC:REPORTS:LINK_FIX_COMPLETION_REPORT
+        from: DOC:ARCHIVE:2025:REPORTS:LINK_FIX_COMPLETION_REPORT
         description: "Referenced from link: LINK_FIX_COMPLETION_REPORT.md"
   docs/processes/EMERGENCY_RECOVERY.md:
     id: DOC:PROCESSES:EMERGENCY_RECOVERY
@@ -3763,6 +4644,26 @@ components:
         signal: Guide:v1
         from: DOC:DEVELOPMENT:REFACTORING_PLAN
         description: "Referenced from link: REFACTORING_PLAN.md"
+  docs/processes/EXAMPLE_SELECTION_METHOD.md:
+    id: DOC:PROCESSES:EXAMPLE_SELECTION_METHOD
+    type: guide
+    provides:
+      - name: example_selection_method
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: readme
+        signal: Guide:v1
+        from: DOC:PROCESSES:README
+        description: "Referenced from link: 開発プロセス"
+      - name: ai_workflow_instructions
+        signal: Guide:v1
+        from: DOC:REFERENCES:AI_WORKFLOW_INSTRUCTIONS
+        description: "Referenced from link: AI開発ガイドライン"
+      - name: communication_methods
+        signal: Guide:v1
+        from: DOC:PROCESSES:COMMUNICATION_METHODS
+        description: "Referenced from link: コミュニケーション手法"
   docs/processes/EXPLANATION_QUALITY_GUIDE.md:
     id: DOC:PROCESSES:EXPLANATION_QUALITY_GUIDE
     type: guide
@@ -3849,9 +4750,9 @@ components:
         signal: Guide:v1
         description: Self document
     requires:
-      - name: __refactoring_plan_md___________
+      - name: refactoring_plan
         signal: Guide:v1
-        from: DOC:PROCESSES:__REFACTORING_PLAN_MD___________
+        from: DOC:DEVELOPMENT:REFACTORING_PLAN
         description: "Referenced from link: REFACTORING_PLAN.md"
       - name: emergency_recovery
         signal: Guide:v1
@@ -3993,15 +4894,15 @@ components:
     requires:
       - name: passage_creation_guidelines
         signal: Guide:v1
-        from: DOC:DOCS:GUIDELINES:PASSAGE:PASSAGE_CREATION_GUIDELINES
+        from: DOC:GUIDELINES:PASSAGE:PASSAGE_CREATION_GUIDELINES
         description: "Referenced from link: 長文作成ガイドライン"
       - name: phrase_translation_quality_guide
         signal: Guide:v1
-        from: DOC:DOCS:QUALITY:PHRASE_TRANSLATION_QUALITY_GUIDE
+        from: DOC:QUALITY:PHRASE_TRANSLATION_QUALITY_GUIDE
         description: "Referenced from link: フレーズ訳品質検証"
       - name: quality_system
         signal: Guide:v1
-        from: DOC:DOCS:QUALITY:QUALITY_SYSTEM
+        from: DOC:QUALITY:QUALITY_SYSTEM
         description: "Referenced from link: 品質保証システム"
   docs/quality/PHASE_1_COMPLETION_REPORT.md:
     id: DOC:QUALITY:PHASE_1_COMPLETION_REPORT
@@ -4082,6 +4983,13 @@ components:
     type: guide
     provides:
       - name: problem_creation_process_audit
+        signal: Guide:v1
+        description: Self document
+  docs/quality/PROTOTYPE_VALIDATION_CHECKLIST.md:
+    id: DOC:QUALITY:PROTOTYPE_VALIDATION_CHECKLIST
+    type: guide
+    provides:
+      - name: prototype_validation_checklist
         signal: Guide:v1
         description: Self document
   docs/quality/QUALITY_AUTOMATION_GUIDE.md:
@@ -4652,6 +5560,13 @@ components:
       - name: gpt5_mini_prompts
         signal: Guide:v1
         description: Self document
+  docs/references/HIGH_SCHOOL_EXAM_PRIORITY_TERMS.md:
+    id: DOC:REFERENCES:HIGH_SCHOOL_EXAM_PRIORITY_TERMS
+    type: guide
+    provides:
+      - name: high_school_exam_priority_terms
+        signal: Guide:v1
+        description: Self document
   docs/references/NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE.md:
     id: DOC:REFERENCES:NEW_HORIZON_OFFICIAL_UNIT_STRUCTURE
     type: guide
@@ -4869,7 +5784,7 @@ components:
         description: "Referenced from link: final-report.md"
       - name: readme
         signal: Guide:v1
-        from: DOC:REFERENCES:README
+        from: DOC:README
         description: "Referenced from link: メインドキュメント目次"
   docs/references/SCIENTIFIC_BASIS.md:
     id: DOC:REFERENCES:SCIENTIFIC_BASIS
@@ -4890,6 +5805,13 @@ components:
     type: guide
     provides:
       - name: seed_and_reproducibility
+        signal: Guide:v1
+        description: Self document
+  docs/references/TOKYO_SHOSEKI_UNITS_RESEARCH.md:
+    id: DOC:REFERENCES:TOKYO_SHOSEKI_UNITS_RESEARCH
+    type: guide
+    provides:
+      - name: tokyo_shoseki_units_research
         signal: Guide:v1
         description: Self document
   docs/references/VITE_REFERENCE.md:
@@ -4994,6 +5916,13 @@ components:
       - name: failure_analysis_requeue_duplicate
         signal: Report:v1
         description: Self document
+  docs/reports/GIT_HISTORY_LEARNING_REPORT.md:
+    id: DOC:REPORTS:GIT_HISTORY_LEARNING_REPORT
+    type: report
+    provides:
+      - name: git_history_learning_report
+        signal: Report:v1
+        description: Self document
   docs/reports/GIT_RECOVERY_LOG.md:
     id: DOC:REPORTS:GIT_RECOVERY_LOG
     type: report
@@ -5006,6 +5935,13 @@ components:
     type: report
     provides:
       - name: grammar_placeholder_issues
+        signal: Report:v1
+        description: Self document
+  docs/reports/PHASE1_2_COMPLETION_REPORT.md:
+    id: DOC:REPORTS:PHASE1_2_COMPLETION_REPORT
+    type: report
+    provides:
+      - name: phase1_2_completion_report
         signal: Report:v1
         description: Self document
   docs/reports/PHASE1_STRATEGY_PATTERN_COMPLETION.md:
@@ -5022,11 +5958,62 @@ components:
       - name: placeholder_units_disabled
         signal: Report:v1
         description: Self document
+  docs/reports/PROJECT_BOUNDARY_VIOLATION_REPORT.md:
+    id: DOC:REPORTS:PROJECT_BOUNDARY_VIOLATION_REPORT
+    type: report
+    provides:
+      - name: project_boundary_violation_report
+        signal: Report:v1
+        description: Self document
+    requires:
+      - name: project_boundary_guard_instructions
+        signal: Report:v1
+        from: DOC:REPORTS:_AITK:INSTRUCTIONS:PROJECT_BOUNDARY_GUARD_INSTRUCTIONS
+        description: "Referenced from link: .aitk/instructions/project-boundary-guard.instructions.md"
+      - name: project_structure_instructions
+        signal: Report:v1
+        from: DOC:REPORTS:_AITK:INSTRUCTIONS:PROJECT_STRUCTURE_INSTRUCTIONS
+        description: "Referenced from link: .aitk/instructions/project-structure.instructions.md"
   docs/reports/PYTHON_TEST_IMPLEMENTATION_SUMMARY.md:
     id: DOC:REPORTS:PYTHON_TEST_IMPLEMENTATION_SUMMARY
     type: report
     provides:
       - name: python_test_implementation_summary
+        signal: Report:v1
+        description: Self document
+  docs/reports/QUALITY_ASSURANCE_SYSTEM_REPORT.md:
+    id: DOC:REPORTS:QUALITY_ASSURANCE_SYSTEM_REPORT
+    type: report
+    provides:
+      - name: quality_assurance_system_report
+        signal: Report:v1
+        description: Self document
+    requires:
+      - name: ai_code_quality_checklist_instructions
+        signal: Report:v1
+        from: DOC:REPORTS:_AITK:INSTRUCTIONS:AI_CODE_QUALITY_CHECKLIST_INSTRUCTIONS
+        description: "Referenced from link: AI実装時の品質保証チェックリスト"
+      - name: refactoring_safety_guide_instructions
+        signal: Report:v1
+        from: DOC:REPORTS:_AITK:INSTRUCTIONS:REFACTORING_SAFETY_GUIDE_INSTRUCTIONS
+        description: "Referenced from link: リファクタリング安全実行ガイド"
+      - name: property_naming_convention_instructions
+        signal: Report:v1
+        from: DOC:REPORTS:_AITK:INSTRUCTIONS:PROPERTY_NAMING_CONVENTION_INSTRUCTIONS
+        description: "Referenced from link: プロパティ命名規則ガイド"
+      - name: ai_self_check_prompts_instructions
+        signal: Report:v1
+        from: DOC:REPORTS:_AITK:INSTRUCTIONS:AI_SELF_CHECK_PROMPTS_INSTRUCTIONS
+        description: "Referenced from link: AI自己チェックプロンプト"
+      - name: ci_cd_enhancement_plan
+        signal: Report:v1
+        from: DOC:GUIDELINES:CI_CD_ENHANCEMENT_PLAN
+        description: "Referenced from link: CI/CD強化計画書"
+  docs/reports/READING_HINTS_IMPLEMENTATION_REPORT.md:
+    id: DOC:REPORTS:READING_HINTS_IMPLEMENTATION_REPORT
+    type: report
+    provides:
+      - name: reading_hints_implementation_report
         signal: Report:v1
         description: Self document
   docs/reports/READING_PASSAGE_RENEWAL_COMPLETE.md:
@@ -5041,6 +6028,13 @@ components:
         signal: Report:v1
         from: DOC:REPORTS:___
         description: "Referenced from link: （("
+  docs/reports/REFACTORING_IMPACT_ANALYSIS.md:
+    id: DOC:REPORTS:REFACTORING_IMPACT_ANALYSIS
+    type: report
+    provides:
+      - name: refactoring_impact_analysis
+        signal: Report:v1
+        description: Self document
   docs/reports/SOCIAL_STUDIES_COVERAGE_IMPROVEMENT_REPORT.md:
     id: DOC:REPORTS:SOCIAL_STUDIES_COVERAGE_IMPROVEMENT_REPORT
     type: report
@@ -5074,6 +6068,263 @@ components:
     type: guide
     provides:
       - name: adaptive_learning_research_2024
+        signal: Guide:v1
+        description: Self document
+  docs/research/CLINICAL_TRIAL_OS_CONCEPT.md:
+    id: DOC:RESEARCH:CLINICAL_TRIAL_OS_CONCEPT
+    type: guide
+    provides:
+      - name: clinical_trial_os_concept
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: udd_significance_concept
+        signal: Guide:v1
+        from: DOC:RESEARCH:UDD_SIGNIFICANCE_CONCEPT
+        description: "Referenced from link: UDD_SIGNIFICANCE_CONCEPT.md"
+  docs/research/JAPANESE_CENTRIC_DOMESTIC_AI_NATIVE_CODING_VISION.md:
+    id: DOC:RESEARCH:JAPANESE_CENTRIC_DOMESTIC_AI_NATIVE_CODING_VISION
+    type: guide
+    provides:
+      - name: japanese_centric_domestic_ai_native_coding_vision
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: udd_significance_concept
+        signal: Guide:v1
+        from: DOC:RESEARCH:UDD_SIGNIFICANCE_CONCEPT
+        description: "Referenced from link: UDD_SIGNIFICANCE_CONCEPT.md"
+      - name: native_coding_refinement_workflow
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_REFINEMENT_WORKFLOW
+        description: "Referenced from link: NATIVE_CODING_REFINEMENT_WORKFLOW.md"
+      - name: native_coding_evaluation_benchmark
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_EVALUATION_BENCHMARK
+        description: "Referenced from link: NATIVE_CODING_EVALUATION_BENCHMARK.md"
+      - name: native_coding_audit_governance_spec
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_AUDIT_GOVERNANCE_SPEC
+        description: "Referenced from link: NATIVE_CODING_AUDIT_GOVERNANCE_SPEC.md"
+  docs/research/NATIVE_CODING_AUDIT_GOVERNANCE_SPEC.md:
+    id: DOC:RESEARCH:NATIVE_CODING_AUDIT_GOVERNANCE_SPEC
+    type: spec
+    provides:
+      - name: native_coding_audit_governance_spec
+        signal: Policy:v1
+        description: Self document
+  docs/research/NATIVE_CODING_BENCHMARK_TASKS_2026-01.md:
+    id: DOC:RESEARCH:NATIVE_CODING_BENCHMARK_TASKS_2026_01
+    type: guide
+    provides:
+      - name: native_coding_benchmark_tasks_2026_01
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: native_coding_evaluation_benchmark
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_EVALUATION_BENCHMARK
+        description: "Referenced from link: NATIVE_CODING_EVALUATION_BENCHMARK.md"
+      - name: native_coding_refinement_workflow
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_REFINEMENT_WORKFLOW
+        description: "Referenced from link: NATIVE_CODING_REFINEMENT_WORKFLOW.md"
+      - name: native_coding_audit_governance_spec
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_AUDIT_GOVERNANCE_SPEC
+        description: "Referenced from link: NATIVE_CODING_AUDIT_GOVERNANCE_SPEC.md"
+      - name: ui_immutable_specifications
+        signal: Guide:v1
+        from: DOC:DEVELOPMENT:UI_IMMUTABLE_SPECIFICATIONS
+        description: "Referenced from link: docs/development/UI_IMMUTABLE_SPECIFICATIONS.md"
+  docs/research/NATIVE_CODING_EVALUATION_BENCHMARK.md:
+    id: DOC:RESEARCH:NATIVE_CODING_EVALUATION_BENCHMARK
+    type: guide
+    provides:
+      - name: native_coding_evaluation_benchmark
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: native_coding_benchmark_tasks_2026_01
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_BENCHMARK_TASKS_2026_01
+        description: "Referenced from link: NATIVE_CODING_BENCHMARK_TASKS_2026-01.md"
+  docs/research/NATIVE_CODING_PILOT_TASK_DEFINITION_NC_01.md:
+    id: DOC:RESEARCH:NATIVE_CODING_PILOT_TASK_DEFINITION_NC_01
+    type: guide
+    provides:
+      - name: native_coding_pilot_task_definition_nc_01
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: native_coding_benchmark_tasks_2026_01
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_BENCHMARK_TASKS_2026_01
+        description: "Referenced from link: NATIVE_CODING_BENCHMARK_TASKS_2026-01.md"
+      - name: native_coding_refinement_workflow
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_REFINEMENT_WORKFLOW
+        description: "Referenced from link: NATIVE_CODING_REFINEMENT_WORKFLOW.md"
+      - name: ui_immutable_specifications
+        signal: Guide:v1
+        from: DOC:DEVELOPMENT:UI_IMMUTABLE_SPECIFICATIONS
+        description: "Referenced from link: docs/development/UI_IMMUTABLE_SPECIFICATIONS.md"
+  docs/research/NATIVE_CODING_REFINEMENT_WORKFLOW.md:
+    id: DOC:RESEARCH:NATIVE_CODING_REFINEMENT_WORKFLOW
+    type: guide
+    provides:
+      - name: native_coding_refinement_workflow
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: native_coding_pilot_task_definition_nc_01
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_PILOT_TASK_DEFINITION_NC_01
+        description: "Referenced from link: NATIVE_CODING_PILOT_TASK_DEFINITION_NC_01.md"
+  docs/research/NATIVE_LANGUAGE_CODING_AND_JAPANESE_POTENTIAL_CONCEPT.md:
+    id: DOC:RESEARCH:NATIVE_LANGUAGE_CODING_AND_JAPANESE_POTENTIAL_CONCEPT
+    type: guide
+    provides:
+      - name: native_language_coding_and_japanese_potential_concept
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: japanese_centric_domestic_ai_native_coding_vision
+        signal: Guide:v1
+        from: DOC:RESEARCH:JAPANESE_CENTRIC_DOMESTIC_AI_NATIVE_CODING_VISION
+        description: "Referenced from link: JAPANESE_CENTRIC_DOMESTIC_AI_NATIVE_CODING_VISION.md"
+      - name: native_coding_refinement_workflow
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_REFINEMENT_WORKFLOW
+        description: "Referenced from link: NATIVE_CODING_REFINEMENT_WORKFLOW.md"
+      - name: native_coding_evaluation_benchmark
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_EVALUATION_BENCHMARK
+        description: "Referenced from link: NATIVE_CODING_EVALUATION_BENCHMARK.md"
+      - name: native_coding_audit_governance_spec
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_AUDIT_GOVERNANCE_SPEC
+        description: "Referenced from link: NATIVE_CODING_AUDIT_GOVERNANCE_SPEC.md"
+      - name: native_coding_benchmark_tasks_2026_01
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_BENCHMARK_TASKS_2026_01
+        description: "Referenced from link: NATIVE_CODING_BENCHMARK_TASKS_2026-01.md"
+  docs/research/README.md:
+    id: DOC:RESEARCH:README
+    type: guide
+    provides:
+      - name: readme
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: japanese_centric_domestic_ai_native_coding_vision
+        signal: Guide:v1
+        from: DOC:RESEARCH:JAPANESE_CENTRIC_DOMESTIC_AI_NATIVE_CODING_VISION
+        description: "Referenced from link: JAPANESE_CENTRIC_DOMESTIC_AI_NATIVE_CODING_VISION.md"
+      - name: native_language_coding_and_japanese_potential_concept
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_LANGUAGE_CODING_AND_JAPANESE_POTENTIAL_CONCEPT
+        description: "Referenced from link: NATIVE_LANGUAGE_CODING_AND_JAPANESE_POTENTIAL_CONCEPT.md"
+      - name: native_coding_refinement_workflow
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_REFINEMENT_WORKFLOW
+        description: "Referenced from link: NATIVE_CODING_REFINEMENT_WORKFLOW.md"
+      - name: native_coding_evaluation_benchmark
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_EVALUATION_BENCHMARK
+        description: "Referenced from link: NATIVE_CODING_EVALUATION_BENCHMARK.md"
+      - name: native_coding_benchmark_tasks_2026_01
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_BENCHMARK_TASKS_2026_01
+        description: "Referenced from link: NATIVE_CODING_BENCHMARK_TASKS_2026-01.md"
+      - name: native_coding_audit_governance_spec
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_AUDIT_GOVERNANCE_SPEC
+        description: "Referenced from link: NATIVE_CODING_AUDIT_GOVERNANCE_SPEC.md"
+      - name: native_coding_pilot_task_definition_nc_01
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_PILOT_TASK_DEFINITION_NC_01
+        description: "Referenced from link: NATIVE_CODING_PILOT_TASK_DEFINITION_NC_01.md"
+      - name: udd_significance_concept
+        signal: Guide:v1
+        from: DOC:RESEARCH:UDD_SIGNIFICANCE_CONCEPT
+        description: "Referenced from link: UDD_SIGNIFICANCE_CONCEPT.md"
+      - name: udd_metabolic_monitoring_validation_summary_jp
+        signal: Guide:v1
+        from: DOC:RESEARCH:UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP
+        description: "Referenced from link: UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md"
+      - name: clinical_trial_os_concept
+        signal: Guide:v1
+        from: DOC:RESEARCH:CLINICAL_TRIAL_OS_CONCEPT
+        description: "Referenced from link: CLINICAL_TRIAL_OS_CONCEPT.md"
+      - name: adaptive_learning_research_2024
+        signal: Guide:v1
+        from: DOC:RESEARCH:ADAPTIVE_LEARNING_RESEARCH_2024
+        description: "Referenced from link: ADAPTIVE_LEARNING_RESEARCH_2024.md"
+  docs/research/UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md:
+    id: DOC:RESEARCH:UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP
+    type: guide
+    provides:
+      - name: udd_metabolic_monitoring_validation_summary_jp
+        signal: Guide:v1
+        description: Self document
+  docs/research/UDD_SIGNIFICANCE_CONCEPT.md:
+    id: DOC:RESEARCH:UDD_SIGNIFICANCE_CONCEPT
+    type: guide
+    provides:
+      - name: udd_significance_concept
+        signal: Guide:v1
+        description: Self document
+    requires:
+      - name: clinical_trial_os_concept
+        signal: Guide:v1
+        from: DOC:RESEARCH:CLINICAL_TRIAL_OS_CONCEPT
+        description: "Referenced from link: CLINICAL_TRIAL_OS_CONCEPT.md"
+      - name: udd_metabolic_monitoring_validation_summary_jp
+        signal: Guide:v1
+        from: DOC:RESEARCH:UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP
+        description: "Referenced from link: UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md"
+      - name: quality_system
+        signal: Guide:v1
+        from: DOC:QUALITY:QUALITY_SYSTEM
+        description: "Referenced from link: QUALITY_SYSTEM.md"
+      - name: no_symptomatic_fixes_policy
+        signal: Guide:v1
+        from: DOC:GUIDELINES:NO_SYMPTOMATIC_FIXES_POLICY
+        description: "Referenced from link: NO_SYMPTOMATIC_FIXES_POLICY.md"
+      - name: ui_immutable_specifications
+        signal: Guide:v1
+        from: DOC:DEVELOPMENT:UI_IMMUTABLE_SPECIFICATIONS
+        description: "Referenced from link: UI_IMMUTABLE_SPECIFICATIONS.md"
+      - name: project_boundary_violation_report
+        signal: Guide:v1
+        from: DOC:REPORTS:PROJECT_BOUNDARY_VIOLATION_REPORT
+        description: "Referenced from link: PROJECT_BOUNDARY_VIOLATION_REPORT.md"
+      - name: integrated_quality_pipeline
+        signal: Guide:v1
+        from: DOC:QUALITY:INTEGRATED_QUALITY_PIPELINE
+        description: "Referenced from link: INTEGRATED_QUALITY_PIPELINE.md"
+      - name: ai_workflow_instructions
+        signal: Guide:v1
+        from: DOC:REFERENCES:AI_WORKFLOW_INSTRUCTIONS
+        description: "Referenced from link: AI_WORKFLOW_INSTRUCTIONS.md"
+      - name: native_language_coding_and_japanese_potential_concept
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_LANGUAGE_CODING_AND_JAPANESE_POTENTIAL_CONCEPT
+        description: "Referenced from link: NATIVE_LANGUAGE_CODING_AND_JAPANESE_POTENTIAL_CONCEPT.md"
+      - name: native_coding_refinement_workflow
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_REFINEMENT_WORKFLOW
+        description: "Referenced from link: NATIVE_CODING_REFINEMENT_WORKFLOW.md"
+      - name: native_coding_audit_governance_spec
+        signal: Guide:v1
+        from: DOC:RESEARCH:NATIVE_CODING_AUDIT_GOVERNANCE_SPEC
+        description: "Referenced from link: NATIVE_CODING_AUDIT_GOVERNANCE_SPEC.md"
+  docs/roadmap/CONSTELLATION_ENHANCEMENT_ROADMAP.md:
+    id: DOC:ROADMAP:CONSTELLATION_ENHANCEMENT_ROADMAP
+    type: guide
+    provides:
+      - name: constellation_enhancement_roadmap
         signal: Guide:v1
         description: Self document
   docs/roadmap/PLATFORM_ROADMAP.md:
@@ -5128,6 +6379,13 @@ components:
     type: guide
     provides:
       - name: servant_neural_network_roadmap
+        signal: Guide:v1
+        description: Self document
+  docs/security/SECURITY_STATUS.md:
+    id: DOC:SECURITY:SECURITY_STATUS
+    type: guide
+    provides:
+      - name: security_status
         signal: Guide:v1
         description: Self document
   docs/servant/README.md:
@@ -5187,7 +6445,7 @@ components:
     requires:
       - name: adaptive_guard_system
         signal: Guide:v1
-        from: DOC:SERVANT:ADAPTIVE_GUARD_SYSTEM
+        from: DOC:AI_SYSTEMS:ADAPTIVE_GUARD_SYSTEM
         description: "Referenced from link: 適応的ガードシステム全体像"
   docs/specifications/01-project-overview.md:
     id: DOC:SPECIFICATIONS:01_PROJECT_OVERVIEW
@@ -5635,11 +6893,11 @@ components:
         description: "Referenced from link: 15. データ構造仕様書"
       - name: 05_data_structures
         signal: Policy:v1
-        from: DOC:SPECIFICATIONS:ARCHIVE:SPECIFICATIONS:05_DATA_STRUCTURES
+        from: DOC:ARCHIVE:SPECIFICATIONS:05_DATA_STRUCTURES
         description: "Referenced from link: archive/specifications/05-data-structures.md"
       - name: 07_junior_high_entrance_vocabulary
         signal: Policy:v1
-        from: DOC:SPECIFICATIONS:ARCHIVE:SPECIFICATIONS:07_JUNIOR_HIGH_ENTRANCE_VOCABULARY
+        from: DOC:ARCHIVE:SPECIFICATIONS:07_JUNIOR_HIGH_ENTRANCE_VOCABULARY
         description: "Referenced from link: archive/specifications/07-junior-high-entrance-vocabulary.md"
       - name: ai_workflow_instructions
         signal: Policy:v1
@@ -5697,6 +6955,27 @@ components:
         signal: Policy:v1
         from: DOC:SPECIFICATIONS:19_JUNIOR_HIGH_VOCABULARY
         description: "Referenced from link: 19. 中学語彙データセット"
+  docs/specifications/22-development-setup.md:
+    id: DOC:SPECIFICATIONS:22_DEVELOPMENT_SETUP
+    type: spec
+    provides:
+      - name: 22_development_setup
+        signal: Policy:v1
+        description: Self document
+  docs/specifications/23-deployment.md:
+    id: DOC:SPECIFICATIONS:23_DEPLOYMENT
+    type: spec
+    provides:
+      - name: 23_deployment
+        signal: Policy:v1
+        description: Self document
+  docs/specifications/24-testing-strategy.md:
+    id: DOC:SPECIFICATIONS:24_TESTING_STRATEGY
+    type: spec
+    provides:
+      - name: 24_testing_strategy
+        signal: Policy:v1
+        description: Self document
   docs/specifications/25-changelog.md:
     id: DOC:SPECIFICATIONS:25_CHANGELOG
     type: spec
@@ -5734,11 +7013,11 @@ components:
     requires:
       - name: adaptive_learning_design
         signal: Policy:v1
-        from: DOC:SPECIFICATIONS:DESIGN:ADAPTIVE_LEARNING_DESIGN
+        from: DOC:DESIGN:ADAPTIVE_LEARNING_DESIGN
         description: "Referenced from link: 適応型学習AI詳細設計"
       - name: adaptive_learning_algorithm_design
         signal: Policy:v1
-        from: DOC:SPECIFICATIONS:DESIGN:ADAPTIVE_LEARNING_ALGORITHM_DESIGN
+        from: DOC:DESIGN:ADAPTIVE_LEARNING_ALGORITHM_DESIGN
         description: "Referenced from link: アルゴリズム詳細設計"
   docs/specifications/ADAPTIVE_NETWORK_API_SPECIFICATION.md:
     id: DOC:SPECIFICATIONS:ADAPTIVE_NETWORK_API_SPECIFICATION
@@ -5761,6 +7040,13 @@ components:
       - name: adaptive_network_test_cases
         signal: Policy:v1
         description: Self document
+  docs/specifications/ANTI_VIBRATION_FILTER.md:
+    id: DOC:SPECIFICATIONS:ANTI_VIBRATION_FILTER
+    type: spec
+    provides:
+      - name: anti_vibration_filter
+        signal: Policy:v1
+        description: Self document
   docs/specifications/CATEGORY_SLOT_SYSTEM_SPECIFICATION.md:
     id: DOC:SPECIFICATIONS:CATEGORY_SLOT_SYSTEM_SPECIFICATION
     type: spec
@@ -5780,6 +7066,13 @@ components:
     type: spec
     provides:
       - name: learning_ai_system_architecture
+        signal: Policy:v1
+        description: Self document
+  docs/specifications/NEURAL_DEPENDENCY_GRAPH.md:
+    id: DOC:SPECIFICATIONS:NEURAL_DEPENDENCY_GRAPH
+    type: spec
+    provides:
+      - name: neural_dependency_graph
         signal: Policy:v1
         description: Self document
   docs/specifications/QUESTION_ANSWER_FLOW.md:
@@ -5896,6 +7189,18 @@ components:
         signal: Policy:v1
         from: DOC:SPECIFICATIONS:21_READING_PASSAGES
         description: "Referenced from link: 21-reading-passages.md"
+      - name: 22_development_setup
+        signal: Policy:v1
+        from: DOC:SPECIFICATIONS:22_DEVELOPMENT_SETUP
+        description: "Referenced from link: 22-development-setup.md"
+      - name: 23_deployment
+        signal: Policy:v1
+        from: DOC:SPECIFICATIONS:23_DEPLOYMENT
+        description: "Referenced from link: 23-deployment.md"
+      - name: 24_testing_strategy
+        signal: Policy:v1
+        from: DOC:SPECIFICATIONS:24_TESTING_STRATEGY
+        description: "Referenced from link: 24-testing-strategy.md"
       - name: 25_changelog
         signal: Policy:v1
         from: DOC:SPECIFICATIONS:25_CHANGELOG
@@ -5920,6 +7225,14 @@ components:
         signal: Policy:v1
         from: DOC:SPECIFICATIONS:ADAPTIVE_LEARNING_API
         description: "Referenced from link: ADAPTIVE_LEARNING_API.md"
+      - name: neural_dependency_graph
+        signal: Policy:v1
+        from: DOC:SPECIFICATIONS:NEURAL_DEPENDENCY_GRAPH
+        description: "Referenced from link: NEURAL_DEPENDENCY_GRAPH.md"
+      - name: anti_vibration_filter
+        signal: Policy:v1
+        from: DOC:SPECIFICATIONS:ANTI_VIBRATION_FILTER
+        description: "Referenced from link: ANTI_VIBRATION_FILTER.md"
       - name: meta_ai_troubleshooting
         signal: Policy:v1
         from: DOC:GUIDELINES:META_AI_TROUBLESHOOTING
@@ -6004,6 +7317,13 @@ components:
     type: guide
     provides:
       - name: document_template
+        signal: Guide:v1
+        description: Self document
+  docs/testing/ADAPTIVE_AI_INTEGRATION_GUIDE.md:
+    id: DOC:TESTING:ADAPTIVE_AI_INTEGRATION_GUIDE
+    type: guide
+    provides:
+      - name: adaptive_ai_integration_guide
         signal: Guide:v1
         description: Self document
   docs/testing/READING_PASSAGE_TEST_CHECKLIST.md:
