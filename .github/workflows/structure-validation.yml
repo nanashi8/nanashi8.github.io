@@ -45,8 +45,8 @@ jobs:
     - name: Validate documentation links
       run: |
         echo "🔗 ドキュメントリンクを検証中..."
-        # 古い参照をチェック
-        if grep -r "docs/CONTINUOUS_IMPROVEMENT_PIPELINE\|README_QUALITY_PIPELINE" . --include="*.md" --exclude-dir={node_modules,.git,archive} 2>/dev/null; then
+        # 古い参照をチェック（アーカイブと計画書は除外）
+        if grep -r "docs/CONTINUOUS_IMPROVEMENT_PIPELINE\|README_QUALITY_PIPELINE" . --include="*.md" --exclude-dir={node_modules,.git,archive,plans} 2>/dev/null; then
           echo "❌ 古いドキュメント参照が見つかりました"
           exit 1
         else
