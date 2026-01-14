@@ -31,6 +31,14 @@
 - **対応**: 15件のCodeQLアラートを解消する可能性
 - **コミット**: 6921089
 
+#### 4. Clear-text storage (2箇所) - 文書化完了 ✅
+
+- **ファイル**: `src/features/speech/japaneseSpeech.ts:240`, `src/components/SettingsView.tsx:81`
+- **問題**: CodeQLが音声設定のlocalStorage保存を機密情報として誤検知
+- **対応**: 説明コメントを追加（音声性別・速度・名前はUI設定であり機密情報ではない）
+- **コミット**: 6bc7017
+- **CodeQL Alert**: #230, #14
+
 ## 未対応（対応困難）
 
 ### 外部ライブラリの脆弱性
