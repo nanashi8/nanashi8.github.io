@@ -32,6 +32,7 @@ export function getOrCreateAnonymousUserId(): string {
 export function createSessionId(): string {
   const userId = getOrCreateAnonymousUserId();
   const timestamp = Date.now();
-  const rand = Math.random().toString(36).substring(2, 11);
+  // セキュアな乱数生成（CodeQL推奨）
+  const rand = crypto.randomUUID().substring(0, 9);
   return `${userId}-${timestamp}-${rand}`;
 }

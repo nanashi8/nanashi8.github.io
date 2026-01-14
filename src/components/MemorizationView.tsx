@@ -234,8 +234,8 @@ function MemorizationView({
     [questions, useCategorySlots]
   );
 
-  // セッション管理
-  const [sessionId] = useState(() => `session-${Date.now()}`);
+  // セッション管理（セキュアな乱数生成）
+  const [sessionId] = useState(() => `session-${Date.now()}-${crypto.randomUUID().substring(0, 8)}`);
   const [consecutiveViews, setConsecutiveViews] = useState(0);
 
   // A/Bテストセッション管理
