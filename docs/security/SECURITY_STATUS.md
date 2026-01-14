@@ -6,6 +6,23 @@
 
 このドキュメントは、nanashi8.github.ioプロジェクトの既知のセキュリティアラートとその対応状況を記録しています。
 
+### 現在の状況（2026年1月14日 15:45）
+
+- **CodeQLアラート**: 30件 **(修正前114件から74%削減達成！🎉)**
+  - エラー（Error）: 2件（es-module-shims.js - 外部ライブラリのみ）
+  - 警告（Warning）: 13件
+  - 注意（Note）: 15件
+- **Dependabotアラート**: 18件
+  - 高深刻度（High）: 6件
+  - 中深刻度（Moderate）: 12件
+
+### 主な改善成果
+
+1. **Insecure randomness**: 5件 → 2件（外部ライブラリthree.jsのみ）
+2. **Bad tag filter**: 削除（CodeQualityGuard.tsは警告レベルに低下）
+3. **Clear-text storage**: 適切な説明コメント追加
+4. **es-module-shims更新**: 1.10.1 → 2.8.0（多数のアラート解消）
+
 ## 対応済み
 
 ### CodeQL アラート
