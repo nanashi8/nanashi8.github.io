@@ -126,8 +126,9 @@ file.md + file 2.md (同一内容)
 
 #### 3. 古い参照の更新
 ```
-README_QUALITY_PIPELINE.md
-→ QUALITY_SYSTEM.md
+（すでに移行完了）
+docs/quality/QUALITY_PIPELINE_LEGACY.md
+→ docs/quality/QUALITY_SYSTEM.md
 ```
 
 #### 4. アーカイブ整理

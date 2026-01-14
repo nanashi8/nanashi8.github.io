@@ -273,9 +273,9 @@ UI/デザインシステム:  100%準拠     = ✅
 ## 📞 サポート
 
 ### ドキュメント
-- `docs/CONTINUOUS_IMPROVEMENT_PIPELINE.md` - 完全ガイド
-- `docs/QUALITY_AUTOMATION_GUIDE.md` - 品質保証詳細
-- `docs/PASSAGE_CREATION_GUIDELINES.md` - コンテンツ作成ガイド
+- `docs/quality/QUALITY_SYSTEM.md` - 品質システムガイド
+- `docs/processes/` - プロセスドキュメント
+- `docs/guidelines/` - ガイドライン集
 
 ### コマンド一覧
 
