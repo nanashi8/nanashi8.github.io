@@ -42,14 +42,14 @@ async function main() {
 
   const passageId = 'beginner-morning-routine';
   const data = await loadCompletePassage(passageId);
-  
+
   // フレーズ学習データがない場合、依存解析データから構築される
   // その場合、フレーズ単位で分割されているため、チェックをスキップ
   if (data.phrases.length === 0) {
     console.log(`✅ フレーズ学習データが存在しないため、チェックをスキップします (${passageId})`);
     return;
   }
-  
+
   const got = data.sentences.map((s) => s.english);
 
   const expectedFirst = 'I wake up at seven every morning.';

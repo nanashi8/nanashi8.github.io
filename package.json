@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "security:alerts": "node scripts/fetch-github-security-alerts.mjs",
     "copy:constellation-demo-vendors": "node scripts/copy-constellation-demo-vendors.mjs",
     "dev": "npm run copy:constellation-demo-vendors && vite",
     "build": "npm run copy:constellation-demo-vendors && npm run sync:reading-techniques && vite build",
