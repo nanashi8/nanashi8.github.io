@@ -104,12 +104,12 @@ location.reload();
 
 📚 **詳細ドキュメント**:
 
-- [AI統合ガイド](docs/ai-systems/integration-guide.md) - 技術詳細・実装手順
-- [有効化ガイド](docs/ai-systems/how-to-enable.md) - ユーザー向け使い方
-- [プロジェクト完了レポート](docs/archive/AI_PROJECT_COMPLETE.md) - Phase 1-4総括（407行）
-- [Phase 3完了レポート](../docs/PHASE3_COMPLETION_REPORT.md) - AI統合詳細
-- [最終プロジェクトレポート](../docs/FINAL_PROJECT_REPORT.md) - 全体サマリー
-- [トラブルシューティング](.aitk/instructions/meta-ai-priority.instructions.md) - 問題解決手順
+- [AI統合ガイド](/docs/ai-systems/integration-guide.md) - 技術詳細・実装手順
+- [有効化ガイド](/docs/ai-systems/how-to-enable.md) - ユーザー向け使い方
+- [プロジェクト完了レポート](/docs/archive/AI_PROJECT_COMPLETE.md) - Phase 1-4総括（407行）
+- [Phase 3完了レポート](/extensions/servant/docs/PHASE3_COMPLETION_REPORT.md) - AI統合詳細
+- [最終プロジェクトレポート](/docs/archive/FINAL_PROJECT_REPORT.md) - 全体サマリー
+- [トラブルシューティング](/.aitk/instructions/meta-ai-priority.instructions.md) - 問題解決手順
 
 ### 🎯 QuestionScheduler - メタAI統合層
 
@@ -187,13 +187,13 @@ location.reload();
 
 | ドキュメント                                                             | 行数    | 目的                   |
 | ------------------------------------------------------------------------ | ------- | ---------------------- |
-| [完全仕様書](docs/specifications/QUESTION_SCHEDULER_SPEC.md)             | 1,669行 | アルゴリズム完全解説   |
-| [型定義リファレンス](docs/references/QUESTION_SCHEDULER_TYPES.md)        | 901行   | 11個の型定義           |
-| [復旧手順書](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)                 | 1,080行 | 7.5時間で復旧可能      |
-| [APIリファレンス](docs/references/QUESTION_SCHEDULER_API.md)             | 594行   | 実装者向けガイド       |
-| [統合ガイド](docs/guidelines/META_AI_INTEGRATION_GUIDE.md)               | v3.0    | 4タブ統合手順          |
-| [シグナル活用](docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md)               | 653行   | UI/UXパターン          |
-| [学習AIシステム](docs/specifications/learning-ai-system-architecture.md) | 9,050行 | カテゴリー判定統一基準 |
+| [完全仕様書](/docs/specifications/QUESTION_SCHEDULER_SPEC.md)             | 1,669行 | アルゴリズム完全解説   |
+| [型定義リファレンス](/docs/references/QUESTION_SCHEDULER_TYPES.md)        | 901行   | 11個の型定義           |
+| [復旧手順書](/docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)                 | 1,080行 | 7.5時間で復旧可能      |
+| [APIリファレンス](/docs/references/QUESTION_SCHEDULER_API.md)             | 594行   | 実装者向けガイド       |
+| [統合ガイド](/docs/guidelines/META_AI_INTEGRATION_GUIDE.md)               | v3.0    | 4タブ統合手順          |
+| [シグナル活用](/docs/how-to/DETECTED_SIGNAL_USAGE_GUIDE.md)               | 653行   | UI/UXパターン          |
+| [学習AIシステム](/docs/specifications/LEARNING_AI_SYSTEM_ARCHITECTURE.md) | 9,050行 | カテゴリー判定統一基準 |
 
 **検証システム**:
 
@@ -339,15 +339,15 @@ console.log('Test results:', summary);
 - **依存関係の逆転**: 低レベルモジュールが高レベルモジュールに依存しない
 - **テスト容易性**: モジュール単位でテスト可能な構造
 
-**参考**: [責任分離計画書](docs/plans/RESPONSIBILITY_SEPARATION_PLAN.md)
+**参考**: [責任分離計画書](/docs/plans/RESPONSIBILITY_SEPARATION_PLAN.md)
 
 ---
 
 **完了レポート**:
 
-- [Phase 1-4総括](docs/reports/PHASE_1_4_FINAL_REPORT.md) - 整合性89点達成
-- [Phase 5完了](docs/reports/PHASE_5_COMPLETION_REPORT.md) - 100点達成
-- [Phase 6完了](docs/reports/PHASE_6_COMPLETION_REPORT.md) - CI/CD統合
+- [Phase 1-4総括](/docs/archive/2025/reports/PHASE_1_4_FINAL_REPORT.md) - 整合性89点達成
+- [Phase 5完了](/docs/archive/2025/reports/PHASE_5_COMPLETION_REPORT.md) - 100点達成
+- [Phase 6完了](/docs/archive/2025/reports/PHASE_6_COMPLETION_REPORT.md) - CI/CD統合
 
 ---
 
@@ -494,7 +494,7 @@ console.log('Test results:', summary);
 
 #### 英熟語表記ルールの統一
 
-**ドキュメント**: [`docs/specifications/vocabulary-phrase-notation-rules.md`](docs/specifications/vocabulary-phrase-notation-rules.md)
+**ドキュメント**: [`docs/specifications/VOCABULARY_PHRASE_NOTATION_RULES.md`](/docs/specifications/VOCABULARY_PHRASE_NOTATION_RULES.md)
 
 **ルール**:
 
@@ -665,7 +665,7 @@ npx tsx scripts/visual-random-simulation.ts \
 
 #### 1. Instructions Layer（AI開発ガイドライン）
 
-[.aitk/instructions/test-quality.instructions.md](.aitk/instructions/test-quality.instructions.md)
+[.aitk/instructions/test-quality.instructions.md](/.aitk/instructions/test-quality.instructions.md)
 
 - **自動参照**: AI開発時に必ず参照される必須ガイドライン
 - **実装変更チェックリスト**: 変更前・変更中・変更後・検証の4段階
@@ -675,7 +675,7 @@ npx tsx scripts/visual-random-simulation.ts \
 
 #### 2. Specifications Layer（品質基準）
 
-[docs/specifications/TEST_SPECIFICATIONS.md](docs/specifications/TEST_SPECIFICATIONS.md)
+[docs/specifications/TEST_SPECIFICATIONS.md](/docs/specifications/TEST_SPECIFICATIONS.md)
 
 - **必須メトリクス**: カバレッジ >= 80%、合格率 >= 95%、フレーキー率 < 1%
 - **Critical Path 100%**: 6つの重要モジュールは必ず100%カバレッジ
@@ -686,7 +686,7 @@ npx tsx scripts/visual-random-simulation.ts \
 
 #### 3. Process Layer（継続的メンテナンス）
 
-[docs/processes/TEST_MAINTENANCE_PROCESS.md](docs/processes/TEST_MAINTENANCE_PROCESS.md)
+[docs/processes/TEST_MAINTENANCE_PROCESS.md](/docs/processes/TEST_MAINTENANCE_PROCESS.md)
 
 - **日次プロセス**: 開発開始時（全テスト実行）、コミット前（関連テスト + lint）
 - **週次プロセス（毎週金曜）**: 全テスト3回実行、フレーキー検出、カバレッジ確認
@@ -734,7 +734,7 @@ npx tsx scripts/visual-random-simulation.ts \
 
 ### 品質保証の仕組み
 
-**開発時**: AI開発時に [test-quality.instructions.md](.aitk/instructions/test-quality.instructions.md) が自動参照される
+**開発時**: AI開発時に [test-quality.instructions.md](/.aitk/instructions/test-quality.instructions.md) が自動参照される
 
 **PR作成時**: [test-quality-gate.yml](.github/workflows/test-quality-gate.yml) が自動実行
 
@@ -743,7 +743,7 @@ npx tsx scripts/visual-random-simulation.ts \
 - フレーキーテスト検出（3回実行、md5ハッシュ比較）
 - PRに自動コメント投稿
 
-**週次**: 毎週金曜日に [TEST_MAINTENANCE_PROCESS.md](docs/processes/TEST_MAINTENANCE_PROCESS.md) に従いチェック
+**週次**: 毎週金曜日に [TEST_MAINTENANCE_PROCESS.md](/docs/processes/TEST_MAINTENANCE_PROCESS.md) に従いチェック
 
 **月次**: 最終金曜日にメトリクス推移分析とレポート作成
 
@@ -784,7 +784,7 @@ npm run test -- QuestionScheduler.test.ts
 npm run test:integration
 ```
 
-📚 **詳細**: [QUESTION_SCHEDULER_QA_PIPELINE.md](docs/quality/QUESTION_SCHEDULER_QA_PIPELINE.md)
+📚 **詳細**: [QUESTION_SCHEDULER_QA_PIPELINE.md](/docs/quality/QUESTION_SCHEDULER_QA_PIPELINE.md)
 
 **AI統合品質パイプライン**:
 
@@ -796,7 +796,7 @@ npm run test:ai-integration
 npm run test -- src/ai/specialists/*.test.ts
 ```
 
-📚 **詳細**: [integration-guide.md](docs/ai-systems/integration-guide.md)
+📚 **詳細**: [integration-guide.md](/docs/ai-systems/integration-guide.md)
 
 **データ品質パイプライン**:
 
@@ -805,7 +805,7 @@ npm run test -- src/ai/specialists/*.test.ts
 python3 scripts/validate_all_content.py
 ```
 
-📚 **詳細**: [INTEGRATED_QUALITY_PIPELINE.md](docs/quality/INTEGRATED_QUALITY_PIPELINE.md)
+📚 **詳細**: [INTEGRATED_QUALITY_PIPELINE.md](/docs/quality/INTEGRATED_QUALITY_PIPELINE.md)
 
 #### 3. デバッグログの確認（3分）
 
@@ -829,7 +829,7 @@ AI統合が有効の場合:
 
 #### 包括ガイド（必読）
 
-**[AI_MAINTENANCE_GUIDE.md](docs/maintenance/AI_MAINTENANCE_GUIDE.md)** - 学習AIシステム包括的メンテナンスガイド
+**[AI_MAINTENANCE_GUIDE.md](/docs/maintenance/AI_MAINTENANCE_GUIDE.md)** - 学習AIシステム包括的メンテナンスガイド
 
 - 問題分類マトリクス
 - 診断フローチャート
@@ -839,17 +839,17 @@ AI統合が有効の場合:
 
 #### トラブルシューティング
 
-1. **[meta-ai-priority.instructions.md](.aitk/instructions/meta-ai-priority.instructions.md)** - トラブルシューティング優先指示
+1. **[meta-ai-priority.instructions.md](/.aitk/instructions/meta-ai-priority.instructions.md)** - トラブルシューティング優先指示
    - よくある問題と解決策（P0/P1）
    - デバッグコマンド集
 
-2. **[META_AI_TROUBLESHOOTING.md](docs/guidelines/META_AI_TROUBLESHOOTING.md)** - 症状別診断手順
+2. **[META_AI_TROUBLESHOOTING.md](/docs/guidelines/META_AI_TROUBLESHOOTING.md)** - 症状別診断手順
    - デバッグログの読み方
    - 確実性保証メカニズムの検証
 
 #### 緊急復旧
 
-**[QUESTION_SCHEDULER_RECOVERY.md](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)** - 7.5時間復旧手順
+**[QUESTION_SCHEDULER_RECOVERY.md](/docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)** - 7.5時間復旧手順
 
 - 緊急度判定チェックリスト
 - バックアップ・ロールバック方法
@@ -858,7 +858,7 @@ AI統合が有効の場合:
 
 #### 品質保証パイプライン
 
-**[QUESTION_SCHEDULER_QA_PIPELINE.md](docs/quality/QUESTION_SCHEDULER_QA_PIPELINE.md)**
+**[QUESTION_SCHEDULER_QA_PIPELINE.md](/docs/quality/QUESTION_SCHEDULER_QA_PIPELINE.md)**
 
 - テストケース一覧
 - パイプライン実行手順
@@ -868,19 +868,19 @@ AI統合が有効の場合:
 
 **問題が全く出題されない場合**:
 
-1. → [QUESTION_SCHEDULER_RECOVERY.md](docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)
+1. → [QUESTION_SCHEDULER_RECOVERY.md](/docs/how-to/QUESTION_SCHEDULER_RECOVERY.md)
 2. → 緊急度判定を実施
 3. → 復旧チェックリストに従う
 
 **復習単語が出題されない場合**:
 
-1. → [META_AI_TROUBLESHOOTING.md](docs/guidelines/META_AI_TROUBLESHOOTING.md)
+1. → [META_AI_TROUBLESHOOTING.md](/docs/guidelines/META_AI_TROUBLESHOOTING.md)
 2. → Step 1: デバッグログの確認
 3. → "復習単語が出題されない"セクション
 
 **その他の不具合**:
 
-1. → [AI_MAINTENANCE_GUIDE.md](docs/maintenance/AI_MAINTENANCE_GUIDE.md)
+1. → [AI_MAINTENANCE_GUIDE.md](/docs/maintenance/AI_MAINTENANCE_GUIDE.md)
 2. → 問題分類マトリクスで症状を特定
 3. → 該当するメンテナンス手順を実施
 
@@ -921,18 +921,18 @@ AI統合が有効の場合:
 
 #### QuestionScheduler（メタAI統合層）
 
-- [完全仕様書](docs/specifications/QUESTION_SCHEDULER_SPEC.md) - 1,669行の詳細解説
-- [APIリファレンス](docs/references/QUESTION_SCHEDULER_API.md) - 実装者向けガイド
-- [統合ガイド](docs/guidelines/META_AI_INTEGRATION_GUIDE.md) - 4タブへの統合方法
+- [完全仕様書](/docs/specifications/QUESTION_SCHEDULER_SPEC.md) - 1,669行の詳細解説
+- [APIリファレンス](/docs/references/QUESTION_SCHEDULER_API.md) - 実装者向けガイド
+- [統合ガイド](/docs/guidelines/META_AI_INTEGRATION_GUIDE.md) - 4タブへの統合方法
 
 #### 記憶AI（適応型学習）
 
-- [適応型学習API仕様](docs/adaptive-learning-api.md)
-- [アルゴリズム詳細設計](docs/design/adaptive-learning-algorithm-design.md)
-- [Phase 1 実装サマリー](docs/IMPLEMENTATION_SUMMARY.md) - Seed、連続ミス加点、時間ブースト緩和
-- [Phase 2 実装サマリー](docs/PHASE2_IMPLEMENTATION_SUMMARY.md) - ストリーク減衰、信頼度スコア、メタAIログ
-- [Phase 3 実装サマリー](docs/PHASE3_IMPLEMENTATION_SUMMARY.md) - インタリーブ、難易度スロット、疲労連動
-- [学習AI改善計画](docs/LEARNING_AI_IMPROVEMENT_PLAN.md) - 全体ロードマップと進捗状況
+- [適応型学習API仕様](/docs/specifications/ADAPTIVE_LEARNING_API.md)
+- [アルゴリズム詳細設計](/docs/design/adaptive-learning-algorithm-design.md)
+- [Phase 1 実装サマリー](/docs/archive/2025/reports/IMPLEMENTATION_SUMMARY.md) - Seed、連続ミス加点、時間ブースト緩和
+- [Phase 2 実装サマリー](/docs/archive/2025/reports/PHASE2_IMPLEMENTATION_SUMMARY.md) - ストリーク減衰、信頼度スコア、メタAIログ
+- [Phase 3 実装サマリー](/docs/archive/2025/reports/PHASE3_IMPLEMENTATION_SUMMARY.md) - インタリーブ、難易度スロット、疲労連動
+- [学習AI改善計画](/docs/archive/LEARNING_AI_IMPROVEMENT_PLAN.md) - 全体ロードマップと進捗状況
 
 ## 開発
 
@@ -978,14 +978,14 @@ bash scripts/validate-question-scheduler-docs.sh
 
 ### 開発ドキュメント
 
-- [開発ガイドライン](.github/DEVELOPMENT_GUIDELINES.md) - **必読** 二重記録などの問題を防ぐための重要なガイド
-- [コントリビューションガイド](.github/CONTRIBUTING.md) - Pull Requestを送る前に確認
-- [進捗記録パターン](.aitk/instructions/progress-tracking-patterns.instructions.md) - 実装パターンのクイックリファレンス
-- [自動化システムガイド](docs/processes/AUTOMATION_GUIDE.md) - **AI自律実行** 自動承認・自動デプロイの仕組み
+- [開発ガイドライン](/.github/DEVELOPMENT_GUIDELINES.md) - **必読** 二重記録などの問題を防ぐための重要なガイド
+- [コントリビューションガイド](/.github/CONTRIBUTING.md) - Pull Requestを送る前に確認
+- [進捗記録パターン](/.aitk/instructions/progress-tracking-patterns.instructions.md) - 実装パターンのクイックリファレンス
+- [自動化システムガイド](/docs/processes/AUTOMATION_GUIDE.md) - **AI自律実行** 自動承認・自動デプロイの仕組み
 
 ### データ品質ガイドライン
 
-- [文法データ品質ガイドライン](docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md) - 文法問題データの品質基準と検証手順
+- [文法データ品質ガイドライン](/docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md) - 文法問題データの品質基準と検証手順
   - 日本語フィールドは必ず英文の翻訳であること
   - 文法用語（「過去形」「現在進行形」など）は使用禁止
   - 自動検証ツールと品質メトリクス
@@ -994,31 +994,31 @@ bash scripts/validate-question-scheduler-docs.sh
 
 **誤検出率 0%** を達成した包括的なコンテンツ品質保証システム:
 
-- **[コンテンツ品質テスト実装ガイド](docs/quality/CONTENT_QUALITY_TESTING.md)** - テストシステムの全容
-- **[品質原則ガイド](docs/quality/CONTENT_QUALITY_PRINCIPLES.md)** - 質 > スピード、質 > 量、質 > 効率
+- **[コンテンツ品質テスト実装ガイド](/docs/quality/CONTENT_QUALITY_TESTING.md)** - テストシステムの全容
+- **[品質原則ガイド](/docs/quality/CONTENT_QUALITY_PRINCIPLES.md)** - 質 > スピード、質 > 量、質 > 効率
 
 #### 品質改善実績
 
-**Phase 1 完了** ✅ - [完了レポート](docs/quality/PHASE_1_COMPLETION_REPORT.md)
+**Phase 1 完了** ✅ - [完了レポート](/docs/quality/PHASE_1_COMPLETION_REPORT.md)
 
 - verbForm/fillInBlank: **367問**改善
 - カバレッジ: 5% → 13% (+160%)
 - テスト: 26/26 (100% パス)
 
-**Phase 2 Step 1 完了** ✅ - [完了レポート](docs/quality/PHASE_2_STEP1_COMPLETION_REPORT.md)
+**Phase 2 Step 1 完了** ✅ - [完了レポート](/docs/quality/PHASE_2_STEP1_COMPLETION_REPORT.md)
 
 - sentenceOrdering: **4,600問**改善
 - カバレッジ: 13% → 18%+ (+38%)
 - 実装時間: 0.5時間 (Phase 1の1/7)
 
-**Phase 2 Step 2 完了** ✅ - [完了レポート](docs/quality/PHASE_2_STEP2_COMPLETION_REPORT.md)
+**Phase 2 Step 2 完了** ✅ - [完了レポート](/docs/quality/PHASE_2_STEP2_COMPLETION_REPORT.md)
 
 - Pronunciation/Accent: **120問**検証
 - 新規テスト: **30項目**作成
 - データ正規化: **29問**
 - 実装時間: 0.5時間
 
-**Phase 2 Step 3 完了** ✅ - [完了レポート](docs/quality/PHASE_2_STEP3_COMPLETION_REPORT.md)
+**Phase 2 Step 3 完了** ✅ - [完了レポート](/docs/quality/PHASE_2_STEP3_COMPLETION_REPORT.md)
 
 - Vocabulary: **4,549エントリー**高度検証
 - 新規テスト: **21項目**追加
@@ -1097,7 +1097,7 @@ apple,アˊップル,りんご,古英語の "æppel" が語源。,"fruit(フル�
 1. 時間・数量
 1. 科学・技術
 
-詳細: [docs/19-junior-high-vocabulary.md](docs/19-junior-high-vocabulary.md)
+詳細: [/docs/specifications/19-junior-high-vocabulary.md](/docs/specifications/19-junior-high-vocabulary.md)
 
 ## デプロイ
 
@@ -1119,19 +1119,19 @@ npm run build
 
 ### 必読ガイドライン（2025-12-02更新）
 
-- **[CSS開発ガイドライン](docs/CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名規約、CSS変数使用、重複禁止ルール
-- **[TypeScript/React開発ガイドライン](docs/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - コンポーネント設計、型定義、状態管理
-- **[品質保証システム](docs/quality/QUALITY_SYSTEM.md)** - テスト戦略、Git Hooks、CI/CD、品質基準、データ品質検証
+- **[CSS開発ガイドライン](/docs/development/CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名規約、CSS変数使用、重複禁止ルール
+- **[TypeScript/React開発ガイドライン](/docs/development/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - コンポーネント設計、型定義、状態管理
+- **[品質保証システム](/docs/quality/QUALITY_SYSTEM.md)** - テスト戦略、Git Hooks、CI/CD、品質基準、データ品質検証
 
 ### その他ドキュメント
 
-- [UI開発ガイドライン](docs/UI_DEVELOPMENT_GUIDELINES.md) - UI変更時の必須要件とベストプラクティス
-- [長文読解パッセージガイド](docs/READING_PASSAGES_GUIDE.md) - パッセージ生成システムの概要
-- [VS Code Simple Browser ガイド](docs/VS_CODE_SIMPLE_BROWSER_GUIDE.md) - 開発環境での表示確認方法
+- [UI開発ガイドライン](/docs/development/UI_DEVELOPMENT_GUIDELINES.md) - UI変更時の必須要件とベストプラクティス
+- [長文読解パッセージガイド](/docs/archive/READING_PASSAGES_GUIDE.md) - パッセージ生成システムの概要
+- [VS Code Simple Browser ガイド](/docs/references/VS_CODE_SIMPLE_BROWSER_GUIDE.md) - 開発環境での表示確認方法
 
 ### AI開発アシスタント向け
 
-- [開発指示書](.aitk/instructions/development-guidelines.instructions.md) - GitHub Copilot等AI支援用の統合ガイド
+- [開発指示書](/.aitk/instructions/development-guidelines.instructions.md) - GitHub Copilot等AI支援用の統合ガイド
 
 ## コード品質管理
 
@@ -1155,7 +1155,7 @@ npm run health-check
 - 大きすぎるファイルの検出
 - import文の整理状況
 
-詳細レポート: [docs/quality/HEALTH_CHECK_REPORT.md](docs/quality/HEALTH_CHECK_REPORT.md)
+詳細レポート: [/docs/quality/HEALTH_CHECK_REPORT.md](/docs/quality/HEALTH_CHECK_REPORT.md)
 
 **推奨サイクル:**
 

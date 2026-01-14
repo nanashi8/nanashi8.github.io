@@ -16,4 +16,4 @@ status: draft
 
 ## 関連
 
-- Constellation: ../features/CONSTELLATION_GUIDE.md
+- Constellation: ../features/constellation-guide.md

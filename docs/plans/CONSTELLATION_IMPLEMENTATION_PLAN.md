@@ -733,7 +733,7 @@ export class ConstellationViewProvider implements vscode.WebviewViewProvider {
 ## 📦 Phase 8: ドキュメント・テスト（2〜3時間）
 
 ### 成果物
-- [x] `docs/features/CONSTELLATION_GUIDE.md`（ユーザーガイド）
+- [x] `docs/features/constellation-guide.md`（ユーザーガイド）
 - [x] `docs/development/CONSTELLATION_API.md`（開発者向けAPI）
 - [x] `extensions/servant/src/constellation/__tests__/`（ユニットテスト）
 - [x] README に天体儀機能の説明追加

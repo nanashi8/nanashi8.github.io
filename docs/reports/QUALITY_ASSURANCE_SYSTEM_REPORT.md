@@ -339,11 +339,11 @@ DUPLICATES=$(grep -rn "effectiveCorrect.*stillLearning.*0\.5" src/ | wc -l)
 
 ## 📚 参考資料
 
-- [AI実装時の品質保証チェックリスト](../.aitk/instructions/ai-code-quality-checklist.instructions.md)
-- [リファクタリング安全実行ガイド](../.aitk/instructions/refactoring-safety-guide.instructions.md)
-- [プロパティ命名規則ガイド](../.aitk/instructions/property-naming-convention.instructions.md)
-- [AI自己チェックプロンプト](../.aitk/instructions/ai-self-check-prompts.instructions.md)
-- [CI/CD強化計画書](./guidelines/CI_CD_ENHANCEMENT_PLAN.md)
+- [AI実装時の品質保証チェックリスト](/.aitk/instructions/ai-code-quality-checklist.instructions.md)
+- [リファクタリング安全実行ガイド](/.aitk/instructions/refactoring-safety-guide.instructions.md)
+- [プロパティ命名規則ガイド](/.aitk/instructions/property-naming-convention.instructions.md)
+- [AI自己チェックプロンプト](/.aitk/instructions/ai-self-check-prompts.instructions.md)
+- [CI/CD強化計画書](../guidelines/CI_CD_ENHANCEMENT_PLAN.md)
 
 ---
 

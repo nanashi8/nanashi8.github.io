@@ -50,7 +50,7 @@
 
 ### ドキュメント ✅
 - **ファイル**: 
-  - `docs/features/CONSTELLATION_GUIDE.md` - ユーザーガイド
+  - `docs/features/constellation-guide.md` - ユーザーガイド
   - `docs/plans/CONSTELLATION_IMPLEMENTATION_PLAN.md` - 実装計画
 
 ### デモファイル ✅
@@ -116,7 +116,7 @@ GitHub Copilot Chatでコード編集を開始
   - ConstellationDataGenerator.ts: 約300行
   - constellation-demo.html: 約400行
   - constellation-3d-demo.html: 約450行
-  - CONSTELLATION_GUIDE.md: 約350行
+  - constellation-guide.md: 約350行
 
 - **修正ファイル**: 3個
   - NeuralDependencyGraph.ts: 約70行追加
@@ -193,7 +193,7 @@ GitHub Copilot Chatでコード編集を開始
 
 ## 参考資料
 - [実装計画](../plans/CONSTELLATION_IMPLEMENTATION_PLAN.md)
-- [ユーザーガイド](../features/CONSTELLATION_GUIDE.md)
+- [ユーザーガイド](../features/constellation-guide.md)
 - [2D天体儀デモ](../../public/constellation-demo.html)
 - [3D天体儀デモ](../../public/constellation-3d-demo.html)
 

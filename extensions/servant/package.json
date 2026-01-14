@@ -2,7 +2,7 @@
   "name": "servant",
   "displayName": "Servant",
   "description": "プロジェクト内に住むAIサーバント。設計方針を監視し、AI作業時にプロジェクト情報をネットワークで収集・提供して効率化します",
-  "version": "0.4.0",
+  "version": "0.4.3",
   "publisher": "nanashi8",
   "license": "MIT",
   "repository": {
@@ -230,11 +230,128 @@
       {
         "command": "servant.batchAddFrontMatter",
         "title": "Servant: 📝 Batch Add Front Matter (一括追加)"
+      },
+      {
+        "command": "servant.showWarningLog",
+        "title": "Servant: Show Warning Log"
+      },
+      {
+        "command": "servant.evaluateWorkspaceReadiness",
+        "title": "Servant: 📋 Evaluate Workspace Readiness (Owner Checklist)"
       }
     ],
     "configuration": {
       "title": "Servant",
       "properties": {
+        "servant.evaluation.outputPath": {
+          "type": "string",
+          "default": ".aitk/evaluation/WORKSPACE_EVALUATION.md",
+          "description": "Workspace評価書（Owner checklist）の出力先。相対パスはワークスペースルート基準"
+        },
+        "servant.warnings.outputMode": {
+          "type": "string",
+          "enum": [
+            "summary",
+            "detailed"
+          ],
+          "default": "summary",
+          "description": "Servantの警告をOutputにどれだけ詳しく出すか（summary=短く、detailed=従来通りの全文/JSON）"
+        },
+        "servant.warnings.startupOutputMode": {
+          "type": "string",
+          "enum": [
+            "summary",
+            "detailed"
+          ],
+          "default": "summary",
+          "description": "起動直後（startupQuietPeriodMsの間）の警告出力モード（summary推奨）。通常時は warnings.outputMode を使用します"
+        },
+        "servant.logging.startupQuietPeriodMs": {
+          "type": "number",
+          "default": 15000,
+          "minimum": 0,
+          "description": "起動直後のログ抑制期間（ミリ秒）。この期間は、警告がsummaryに寄り、天体儀ビュー等の自動出力が短くなります"
+        },
+        "servant.logging.startupInfo": {
+          "type": "boolean",
+          "default": false,
+          "description": "起動時の拡張機能情報（Extension/Pathなど）をOutputに表示する"
+        },
+        "servant.logging.workspaceInfo": {
+          "type": "boolean",
+          "default": false,
+          "description": "ワークスペースルート情報（Workspace rootなど）をOutputに表示する"
+        },
+        "servant.logging.activationInfo": {
+          "type": "boolean",
+          "default": false,
+          "description": "Activation/初期化の進捗ログ（index/hook installなど）をOutputに表示する"
+        },
+        "servant.logging.guardInfo": {
+          "type": "boolean",
+          "default": false,
+          "description": "DocumentGuardなど監視開始ログをOutputに表示する"
+        },
+        "servant.logging.codeQualityGuardInfo": {
+          "type": "boolean",
+          "default": false,
+          "description": "CodeQualityGuardの初期化ログをOutputに表示する"
+        },
+        "servant.logging.gitInfo": {
+          "type": "boolean",
+          "default": false,
+          "description": "Git統合の情報ログ（staged files 0件など）をOutputに表示する"
+        },
+        "servant.autopilot.logInit": {
+          "type": "boolean",
+          "default": false,
+          "description": "Autopilot（Constellationなど）の初期化ログをOutputに表示する"
+        },
+        "servant.autopilot.preflightVerbosity": {
+          "type": "string",
+          "enum": [
+            "off",
+            "summary",
+            "full"
+          ],
+          "default": "summary",
+          "description": "Autopilotの事前誘導をOutputにどれだけ出すか（off/summary/full）"
+        },
+        "servant.autopilot.closedLoopVerbosity": {
+          "type": "string",
+          "enum": [
+            "off",
+            "summary",
+            "full"
+          ],
+          "default": "summary",
+          "description": "Autopilotの閉ループ再計画（save→validate→replan）をOutputにどれだけ出すか（off/summary/full）"
+        },
+        "servant.autopilot.constellationVerbosity": {
+          "type": "string",
+          "enum": [
+            "off",
+            "summary",
+            "full"
+          ],
+          "default": "off",
+          "description": "Autopilotの天体儀ビュー（Constellationコンテキスト）をOutputに表示するか（off/summary/full）"
+        },
+        "servant.autopilot.constellationMaxLines": {
+          "type": "number",
+          "default": 12,
+          "minimum": 1,
+          "description": "Autopilotが自動出力する天体儀ビュー（full）の最大行数。全文はコマンドで表示できます"
+        },
+        "servant.actionsHealth.reportVerbosity": {
+          "type": "string",
+          "enum": [
+            "summary",
+            "full"
+          ],
+          "default": "summary",
+          "description": "GitHub Actions健康診断のレポート詳細度（summary=短文、full=従来の詳細レポート）"
+        },
         "servant.enable": {
           "type": "boolean",
           "default": true,

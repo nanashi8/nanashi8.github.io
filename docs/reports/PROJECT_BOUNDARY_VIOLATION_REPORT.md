@@ -190,8 +190,8 @@ npm run guard:check-boundary || echo "⚠️ 境界チェック失敗"
 ---
 
 **関連ドキュメント**:
-- [.aitk/instructions/project-boundary-guard.instructions.md](../.aitk/instructions/project-boundary-guard.instructions.md)
-- [.aitk/instructions/project-structure.instructions.md](../.aitk/instructions/project-structure.instructions.md)
+- [.aitk/instructions/project-boundary-guard.instructions.md](/.aitk/instructions/project-boundary-guard.instructions.md)
+- [.aitk/instructions/project-structure.instructions.md](/.aitk/instructions/project-structure.instructions.md)
 - [scripts/check-project-boundary.sh](../../scripts/check-project-boundary.sh)
 
 **次回レビュー**: 2026-02-14（1ヶ月後）

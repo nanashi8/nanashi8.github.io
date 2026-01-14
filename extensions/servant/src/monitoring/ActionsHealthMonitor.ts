@@ -47,7 +47,7 @@ export class ActionsHealthMonitor implements vscode.Disposable {
   private readonly CHECK_INTERVAL = 7 * 24 * 60 * 60 * 1000; // 週次
   private statusUpdateCallback: ((status: string) => void) | null = null;
   private eventBus: EventBus;
-  
+
   // 重複レポート抑制用
   private lastReportTime = 0;
   private readonly MIN_REPORT_INTERVAL_MS = 300000; // 5分
@@ -465,6 +465,10 @@ export class ActionsHealthMonitor implements vscode.Disposable {
 
     const remediation = this.buildRemediationPlan(issues);
 
+    const reportVerbosity = vscode.workspace
+      .getConfiguration('servant')
+      .get<'summary' | 'full'>('actionsHealth.reportVerbosity', 'summary');
+
     const formatFileList = (files: string[], max = 5): string => {
       if (files.length <= max) return files.join(', ');
       const head = files.slice(0, max).join(', ');
@@ -476,8 +480,22 @@ export class ActionsHealthMonitor implements vscode.Disposable {
       lines.push('【GitHub Actions 健康診断】');
       lines.push(`結果: 要対応（検出 ${issues.length}件）`);
       lines.push(`内訳: Critical ${critical.length} / Warning ${warnings.length} / Info ${infos.length}`);
-      lines.push('');
 
+      if (reportVerbosity === 'summary') {
+        const top = remediation.slice(0, 3);
+        if (top.length > 0) {
+          lines.push('');
+          lines.push('上位所見（抜粋）:');
+          for (const item of top) {
+            lines.push(`- ${item.priority}: ${item.title}${item.files.length > 0 ? `（${formatFileList(item.files)}）` : ''}`);
+          }
+        }
+        lines.push('');
+        lines.push('詳細: コマンドパレット → "Servant: Show Warning Log"');
+        return lines.join('\n').trimEnd();
+      }
+
+      lines.push('');
       if (remediation.length > 0) {
         const sectionTitle: Record<RemediationItem['priority'], string> = {
           P0: 'P0（必須・今すぐ）',
@@ -529,6 +547,9 @@ export class ActionsHealthMonitor implements vscode.Disposable {
 
     const summary = `GitHub Actions 健康診断: 要対応（${issues.length}件）`;
 
+    const maxIssues = reportVerbosity === 'summary' ? 10 : issues.length;
+    const maxRemediation = reportVerbosity === 'summary' ? 6 : remediation.length;
+
     this.logger.logWarning({
       type: 'actions-health',
       severity: critical.length > 0 ? 'error' : warnings.length > 0 ? 'warning' : 'info',
@@ -540,8 +561,8 @@ export class ActionsHealthMonitor implements vscode.Disposable {
         warnings: warnings.length,
         infos: infos.length,
         diagnosticReport,
-        remediation,
-        issues: issues.map(i => ({
+        remediation: remediation.slice(0, maxRemediation),
+        issues: issues.slice(0, maxIssues).map(i => ({
           severity: i.severity,
           category: i.category,
           message: i.message,

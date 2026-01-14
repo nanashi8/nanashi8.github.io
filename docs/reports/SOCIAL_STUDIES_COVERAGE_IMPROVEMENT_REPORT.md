@@ -74,7 +74,7 @@
 
 #### 成果物
 - `docs/references/tokyo-shoseki-units.json` - 単元別必須語句リスト
-- `docs/references/tokyo-shoseki-units-research.md` - 単元構成の調査資料
+- `docs/references/TOKYO_SHOSEKI_UNITS_RESEARCH.md` - 単元構成の調査資料
 
 ### Phase 2.2: 初期カバレッジ算出
 
@@ -294,8 +294,8 @@
 ### 主要ドキュメント
 - `docs/plans/SOCIAL_STUDIES_QUALITY_COVERAGE_PLAN.md` - 包括的改訂計画書
 - `docs/references/tokyo-shoseki-units.json` - 単元別必須語句リスト
-- `docs/references/tokyo-shoseki-units-research.md` - 単元構成の調査資料
-- `docs/references/high-school-exam-priority-terms.md` - 受験頻出語句リスト
+- `docs/references/TOKYO_SHOSEKI_UNITS_RESEARCH.md` - 単元構成の調査資料
+- `docs/references/HIGH_SCHOOL_EXAM_PRIORITY_TERMS.md` - 受験頻出語句リスト
 
 ### データファイル
 - `public/data/social-studies/all-social-studies.csv` - メインデータ（1,702行）

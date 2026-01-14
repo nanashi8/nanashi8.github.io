@@ -192,7 +192,7 @@ node scripts/update-instructions.mjs all
 
 ### 5. 自動生成ファイル
 
-- **[.aitk/instructions/adaptive-guard-system.instructions.md](../.aitk/instructions/adaptive-guard-system.instructions.md)**
+- **[.aitk/instructions/adaptive-guard-system.instructions.md](/.aitk/instructions/adaptive-guard-system.instructions.md)**
   - **自動生成**される適応的Instructions
   - 高リスクパターン一覧
   - 必須チェックリスト
@@ -416,10 +416,10 @@ AIは直接学習できないが、**サーバントが代わりに学習し、A
 ## 📚 参考資料
 
 - [失敗パターンデータベース](../.aitk/failure-patterns.json)
-- [適応的Instructions](../.aitk/instructions/adaptive-guard-system.instructions.md)（自動生成）
-- [AI実装チェックリスト](../.aitk/instructions/ai-code-quality-checklist.instructions.md)
-- [リファクタリングガイド](../.aitk/instructions/refactoring-safety-guide.instructions.md)
-- [プロパティ命名規則](../.aitk/instructions/property-naming-convention.instructions.md)
+- [適応的Instructions](/.aitk/instructions/adaptive-guard-system.instructions.md)（自動生成）
+- [AI実装チェックリスト](/.aitk/instructions/ai-code-quality-checklist.instructions.md)
+- [リファクタリングガイド](/.aitk/instructions/refactoring-safety-guide.instructions.md)
+- [プロパティ命名規則](/.aitk/instructions/property-naming-convention.instructions.md)
 
 ---
 

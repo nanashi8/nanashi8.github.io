@@ -9,7 +9,7 @@ tags: [documentation, operations, guidelines]
 # ドキュメント運用ルール
 
 このファイルは **docs/ ディレクトリへの新規ファイル追加・編集時のルール** を定めます。  
-（ドキュメントの目次・索引は [README.md](README.md) または [INDEX.md](INDEX.md) を参照）
+（ドキュメントの目次・索引は [README.md](README.md) または [INDEX.md](../INDEX.md) を参照）
 
 ---
 
@@ -139,9 +139,9 @@ grep -r "filename.md" docs --include="*.md" | wc -l
 ## 関連ドキュメント
 
 - [README.md](README.md) - Diátaxis ベースのドキュメント索引
-- [INDEX.md](INDEX.md) - 自動生成される目次
-- [DOCUMENTATION_ORGANIZATION_PLAN.md](DOCUMENTATION_ORGANIZATION_PLAN.md) - 整理計画（配線を切らない方式）
-- [REFACTORING_IMPACT_ANALYSIS.md](REFACTORING_IMPACT_ANALYSIS.md) - リファクタリング影響分析
+- [INDEX.md](../INDEX.md) - 自動生成される目次
+- [DOCUMENTATION_ORGANIZATION_PLAN.md](../plans/DOCUMENTATION_ORGANIZATION_PLAN.md) - 整理計画（配線を切らない方式）
+- [REFACTORING_IMPACT_ANALYSIS.md](../reports/REFACTORING_IMPACT_ANALYSIS.md) - リファクタリング影響分析
 
 ---
 

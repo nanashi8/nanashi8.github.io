@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-13T23:32:11.209Z
+- generatedAt: 2026-01-14T00:54:29.746Z
 
 ## Single Source of Truth
 
@@ -14,31 +14,31 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- extensions/servant/src/ui/ServantWarningLogger.ts (hot=0.017)
-- extensions/servant/src/extension.ts (hot=0.017)
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.017)
-- src/App.tsx (hot=0.013)
-- docs/fixes/VIBRATION_ISSUE_20251229.md (hot=0.013)
-- docs/GIT_HISTORY_LEARNING_REPORT.md (hot=0.013)
-- issues/servant-implementation-guide.md (hot=0.01)
-- .aitk/instructions/project-boundary-guard.instructions.md (hot=0.009)
-- scripts/check-project-boundary.sh (hot=0.009)
-- package.json (hot=0.009)
+- extensions/servant/package.json (hot=0.096)
+- extensions/servant/CHANGELOG.md (hot=0.065)
+- extensions/servant/src/extension.ts (hot=0.061)
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (hot=0.049)
+- extensions/servant/src/ui/ServantWarningLogger.ts (hot=0.047)
+- docs/maintenance/DOTFOLDER_REORGANIZATION_PLAN.md (hot=0.042)
+- docs/maintenance/GITIGNORE_UPDATES.md (hot=0.042)
+- scripts/migrate-dotfolders.sh (hot=0.042)
+- extensions/servant/src/autopilot/AutopilotController.ts (hot=0.029)
+- .aitk/instructions/project-boundary-guard.instructions.md (hot=0.029)
 
 ## Related (Neural Propagation)
 
-- startNode: extensions/servant/src/ui/ServantWarningLogger.ts
+- startNode: extensions/servant/package.json
 - seeds: 5
 - affectedFiles: 0
 - computationTimeMs: 0
 
 ### Seeds
 
-- extensions/servant/src/ui/ServantWarningLogger.ts (activation=1.000, source=signal, signals=[save:0.02])
-- extensions/servant/src/extension.ts (activation=1.000, source=signal, signals=[save:0.02])
-- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=1.000, source=signal, signals=[save:0.02])
-- src/App.tsx (activation=0.765, source=signal, signals=[save:0.01])
-- docs/fixes/VIBRATION_ISSUE_20251229.md (activation=0.765, source=signal, signals=[save:0.01])
+- extensions/servant/package.json (activation=1.000, source=signal, signals=[save:0.10])
+- extensions/servant/CHANGELOG.md (activation=0.677, source=signal, signals=[save:0.07])
+- extensions/servant/src/extension.ts (activation=0.635, source=signal, signals=[save:0.06])
+- extensions/servant/src/monitoring/ActionsHealthMonitor.ts (activation=0.510, source=signal, signals=[save:0.05])
+- extensions/servant/src/ui/ServantWarningLogger.ts (activation=0.490, source=signal, signals=[save:0.05])
 
 - (no related files detected)
 
@@ -53,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 215.66
+- ageHours: 217.03
 
 ## Latest SpecCheck Record (Raw)
 

@@ -229,7 +229,7 @@ vscode.postMessage({
 ## 関連ドキュメント
 
 - [実装計画](../plans/CONSTELLATION_IMPLEMENTATION_PLAN.md)
-- [ユーザーガイド](../features/CONSTELLATION_GUIDE.md)
+- [ユーザーガイド](../features/constellation-guide.md)
 - [実装完了報告](./CONSTELLATION_IMPLEMENTATION_REPORT.md)
 - [2D天体儀デモ](../../public/constellation-demo.html)
 - [3D天体儀デモ](../../public/constellation-3d-demo.html)

@@ -1,40 +1,42 @@
 ---
 title: ドキュメント総合目次
 created: 2025-12-21
-updated: 2026-01-09
+updated: 2026-01-14
 status: implemented
 tags: [index, navigation]
 ---
 
 # ドキュメント総合目次
 
-**総ファイル数**: 374（自動集計）  
-**最終更新**: 2026-01-09（自動生成）
+**総ファイル数**: 424（自動集計）
+**最終更新**: 2026-01-14（自動生成）
 
 ---
 
 ## 📊 ディレクトリ別ファイル数
 
-- **archive/** (44)
+- **archive/** (74)
+- **specifications/** (43)
+- **development/** (41)
 - **plans/** (39)
-- **specifications/** (38)
-- **development/** (34)
-- **reports/** (34)
+- **quality/** (34)
 - **guidelines/** (33)
-- **quality/** (33)
-- **./** (28)
 - **references/** (27)
-- **design/** (15)
-- **processes/** (15)
-- **maintenance/** (10)
-- **features/** (7)
-- **how-to/** (7)
+- **reports/** (24)
+- **design/** (20)
+- **processes/** (18)
+- **maintenance/** (12)
+- **research/** (11)
+- **ai-systems/** (10)
+- **how-to/** (10)
+- **features/** (8)
+- **roadmap/** (4)
+- **templates/** (4)
+- **./** (3)
 - **fixes/** (3)
-- **roadmap/** (3)
+- **servant/** (3)
+- **testing/** (2)
 - **analysis/** (1)
-- **research/** (1)
-- **templates/** (1)
-- **testing/** (1)
 
 ---
 
@@ -42,16 +44,16 @@ tags: [index, navigation]
 
 **⚠️ 以下のファイルはリンク多数につき移動・削除厳禁**
 
-1. [QUESTION_SCHEDULER_SPEC.md](specifications/QUESTION_SCHEDULER_SPEC.md) - 16 参照
-2. [META_AI_TROUBLESHOOTING.md](guidelines/META_AI_TROUBLESHOOTING.md) - 12 参照
-3. [QUALITY_SYSTEM.md](quality/QUALITY_SYSTEM.md) - 10 参照
-4. [15-data-structures.md](specifications/15-data-structures.md) - 10 参照
-5. [15-data-structures.md](specifications/15-data-structures.md) - 9 参照
-6. [UI_DEVELOPMENT_GUIDELINES.md](development/UI_DEVELOPMENT_GUIDELINES.md) - 8 参照
-7. [01-project-overview.md](specifications/01-project-overview.md) - 8 参照
-8. [integration-guide.md](ai-systems/integration-guide.md) - 7 参照
-9. [18-dark-mode.md](specifications/18-dark-mode.md) - 7 参照
-10. [QUESTION_SCHEDULER_QA_PIPELINE.md](quality/QUESTION_SCHEDULER_QA_PIPELINE.md) - 7 参照
+1. [QUESTION_SCHEDULER_SPEC.md](specifications/QUESTION_SCHEDULER_SPEC.md) - 22 参照
+2. [15-data-structures.md](specifications/15-data-structures.md) - 19 参照
+3. [integration-guide.md](ai-systems/integration-guide.md) - 17 参照
+4. [UI_DEVELOPMENT_GUIDELINES.md](development/UI_DEVELOPMENT_GUIDELINES.md) - 16 参照
+5. [QUALITY_SYSTEM.md](quality/QUALITY_SYSTEM.md) - 16 参照
+6. [META_AI_TROUBLESHOOTING.md](guidelines/META_AI_TROUBLESHOOTING.md) - 15 参照
+7. [01-project-overview.md](specifications/01-project-overview.md) - 14 参照
+8. [AI_WORKFLOW_INSTRUCTIONS.md](references/AI_WORKFLOW_INSTRUCTIONS.md) - 13 参照
+9. [19-junior-high-vocabulary.md](specifications/19-junior-high-vocabulary.md) - 12 参照
+10. [QUESTION_SCHEDULER_QA_PIPELINE.md](quality/QUESTION_SCHEDULER_QA_PIPELINE.md) - 11 参照
 
 ---
 
@@ -59,20 +61,20 @@ tags: [index, navigation]
 
 ### ai (64 files)
 
-- [7AI統合システム - クイックスタートガイド](ai-systems/integration-guide.md)
 - [AI統合の有効化方法](ai-systems/how-to-enable.md)
+- [7AI統合システム - クイックスタートガイド](ai-systems/integration-guide.md)
 - [メンテナンスAI ガイド](ai-systems/maintenance-guide.md)
-- [長文読解パッセージ生成システム](archive/READING_PASSAGES_GUIDE.md)
-- [定着率表示改善の実装完了](archive/RETENTION_IMPLEMENTATION_COMPLETE.md)
+- [ドキュメント整理レポート 2025-12-15](archive/2025/reports/DOCS_REORGANIZATION_2025-12-15.md)
+- [ルートファイル整理レポート 2025-12-15](archive/2025/reports/ROOT_FILES_CLEANUP_2025-12-15.md)
 - ...他 59 件
 
 ### test (23 files)
 
 - [メンテナンスAI ガイド](ai-systems/maintenance-guide.md)
+- [フォルダ構成整理サマリー](archive/2025/reports/CLEANUP_SUMMARY_2025-12-13.md)
+- [ドキュメント整理レポート 2025-12-15](archive/2025/reports/DOCS_REORGANIZATION_2025-12-15.md)
+- [ルートファイル整理レポート 2025-12-15](archive/2025/reports/ROOT_FILES_CLEANUP_2025-12-15.md)
 - [文法問題パッセージ対応機能](archive/grammar-passage-feature-v2.md)
-- [適応的学習AI・進捗管理システム仕様書](archive/specifications/10-adaptive-learning-ai.md)
-- [設定画面仕様書](archive/specifications/11-settings-view.md)
-- [適応的教育AIネットワーク - 実装完了サマリー](archive/summaries/ADAPTIVE_NETWORK_IMPLEMENTATION_SUMMARY.md)
 - ...他 18 件
 
 ### archive (16 files)
@@ -113,11 +115,11 @@ tags: [index, navigation]
 
 ### documentation (9 files)
 
-- [ドキュメント運用ルール](DOCUMENTATION_OPERATIONS.md)
-- [ドキュメント整理計画（配線を切らない方式）](DOCUMENTATION_ORGANIZATION_PLAN.md)
-- [docs/ リファクタリング影響調査結果](REFACTORING_IMPACT_ANALYSIS.md)
-- [docs/ 構造リファクタリング提案](REFACTORING_PROPOSAL.md)
+- [断線リンク修正計画](archive/2025/plans/LINK_FIX_PLAN.md)
+- [リンク断線修正完了レポート](archive/2025/reports/LINK_FIX_COMPLETION_REPORT.md)
 - [ドキュメント命名規則](guidelines/DOCUMENT_NAMING_CONVENTION.md)
+- [ドキュメント整理計画（配線を切らない方式）](plans/DOCUMENTATION_ORGANIZATION_PLAN.md)
+- [docs/ 構造リファクタリング提案](plans/REFACTORING_PROPOSAL.md)
 - ...他 4 件
 
 ### guideline (9 files)
@@ -132,20 +134,29 @@ tags: [index, navigation]
 ### report (8 files)
 
 - [フォルダ構成整理サマリー](archive/2025/reports/CLEANUP_SUMMARY_2025-12-13.md)
-- [データ品質テストカバレッジレポート](reports/DATA_COVERAGE_REPORT.md)
 - [ドキュメント整理レポート 2025-12-15](archive/2025/reports/DOCS_REORGANIZATION_2025-12-15.md)
-- [Git破損復旧ログ](reports/GIT_RECOVERY_LOG.md)
 - [リンク断線修正完了レポート](archive/2025/reports/LINK_FIX_COMPLETION_REPORT.md)
+- [ルートファイル整理レポート 2025-12-15](archive/2025/reports/ROOT_FILES_CLEANUP_2025-12-15.md)
+- [データ品質テストカバレッジレポート](reports/DATA_COVERAGE_REPORT.md)
 - ...他 3 件
 
 ### dark-mode (7 files)
 
+- [ルートファイル整理レポート 2025-12-15](archive/2025/reports/ROOT_FILES_CLEANUP_2025-12-15.md)
 - [設定画面仕様書](archive/specifications/11-settings-view.md)
 - [ライト/ダークモード開発ガイド](design/DARK_MODE_GUIDE.md)
 - [デザインシステムルール](development/DESIGN_SYSTEM_RULES.md)
 - [UI開発ガイドライン](development/UI_DEVELOPMENT_GUIDELINES.md)
-- [ルートファイル整理レポート 2025-12-15](archive/2025/reports/ROOT_FILES_CLEANUP_2025-12-15.md)
 - ...他 2 件
+
+### refactoring (6 files)
+
+- [Command Registry Integration Example](development/COMMAND_REGISTRY_EXAMPLE.md)
+- [適切なデザインパターン分析](development/DESIGN_PATTERNS_ANALYSIS.md)
+- [Servant Refactoring Implementation Summary](development/REFACTORING_SUMMARY.md)
+- [Servant Extension Refactoring Plan](development/SERVANT_REFACTORING_PLAN.md)
+- [docs/ 構造リファクタリング提案](plans/REFACTORING_PROPOSAL.md)
+- ...他 1 件
 
 ### development (5 files)
 
@@ -164,8 +175,8 @@ tags: [index, navigation]
 
 ### other (3 files)
 
-- [7AI統合システム - クイックスタートガイド](ai-systems/integration-guide.md)
 - [AI統合の有効化方法](ai-systems/how-to-enable.md)
+- [7AI統合システム - クイックスタートガイド](ai-systems/integration-guide.md)
 - [メンテナンスAI ガイド](ai-systems/maintenance-guide.md)
 
 ### feature (3 files)
@@ -173,6 +184,12 @@ tags: [index, navigation]
 - [文法問題パッセージ対応機能](archive/grammar-passage-feature-v2.md)
 - [重要構文追加実装計画](features/grammar-construction-implementation-plan.md)
 - [ランダム飛ばし機能 (Random Skip Feature)](features/random-skip-feature.md)
+
+### servant (3 files)
+
+- [Command Registry Integration Example](development/COMMAND_REGISTRY_EXAMPLE.md)
+- [Servant Refactoring Implementation Summary](development/REFACTORING_SUMMARY.md)
+- [Servant Extension Refactoring Plan](development/SERVANT_REFACTORING_PLAN.md)
 
 ### process (3 files)
 
@@ -192,26 +209,16 @@ tags: [index, navigation]
 - [GitHub CLI (gh) セットアップガイド](references/GITHUB_CLI_SETUP.md)
 - [Seedと再現性ガイド](references/SEED_AND_REPRODUCIBILITY.md)
 
-### guidelines (2 files)
-
-- [ドキュメント運用ルール](DOCUMENTATION_OPERATIONS.md)
-- [ドキュメント命名規則](guidelines/DOCUMENT_NAMING_CONVENTION.md)
-
 ### plan (2 files)
 
-- [ドキュメント整理計画（配線を切らない方式）](DOCUMENTATION_ORGANIZATION_PLAN.md)
 - [断線リンク修正計画](archive/2025/plans/LINK_FIX_PLAN.md)
-
-### refactoring (2 files)
-
-- [docs/ リファクタリング影響調査結果](REFACTORING_IMPACT_ANALYSIS.md)
-- [docs/ 構造リファクタリング提案](REFACTORING_PROPOSAL.md)
+- [ドキュメント整理計画（配線を切らない方式）](plans/DOCUMENTATION_ORGANIZATION_PLAN.md)
 
 ---
 
 ## ⚙️ 自動生成情報
 
-- **生成日時**: 2026-01-09
+- **生成日時**: 2026-01-14
 - **スクリプト**: `scripts/generate-docs-index.ts`
 - **実行コマンド**: `npm run generate-index`
 

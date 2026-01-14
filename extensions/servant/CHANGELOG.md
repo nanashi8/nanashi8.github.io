@@ -3,6 +3,26 @@
 All notable changes to the "Instructions Validator" extension will be documented in this file.
 
 ## [Unreleased]
+
+## [0.4.3] - 2026-01-14
+
+### 🔕 Improvements
+- ✅ Workspace root / Activation / CodeQualityGuard / Git などの情報ログを設定で抑制可能化（デフォルトOFF）
+- ✅ Autopilot の「事前誘導」「閉ループ再計画」「天体儀ビュー」を off/summary/full で制御（デフォルトは要約/非表示）
+
+## [0.4.2] - 2026-01-14
+
+### 🔕 Improvements
+- ✅ GitHub Actions健康診断のレポート本文をデフォルトで短文化（詳細は"Servant: Show Warning Log"へ）
+- ✅ 設定 `servant.actionsHealth.reportVerbosity` で full/summary を切り替え可能
+
+## [0.4.1] - 2026-01-14
+
+### 🔕 Improvements
+- ✅ 警告出力をデフォルトで簡略化（長文レポート/JSONは表示しない）
+- ✅ "Servant: Show Warning Log" で警告詳細（診断レポート/JSON）を閲覧可能
+- ✅ 起動ログ/監視開始ログ/Autopilot初期化ログを設定で抑制可能
+
 ### 🔕 静かな警告システム（Quiet Warning System）
 
 **コンセプト**: サーバントは静かに見守り、必要に応じてAIが対処

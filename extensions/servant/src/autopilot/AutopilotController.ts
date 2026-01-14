@@ -33,6 +33,8 @@ type SuggestionSnapshot = {
 
 type AutopilotPromptMode = 'auto' | 'always' | 'never';
 
+type AutopilotOutputVerbosity = 'off' | 'summary' | 'full';
+
 export class AutopilotController {
   private statusBar: vscode.StatusBarItem;
   private suggestionByActionId = new Map<string, SuggestionSnapshot>();
@@ -68,11 +70,46 @@ export class AutopilotController {
   private lastSpecCheckPromptTime = 0; // Specチェックプロンプトの最終表示時刻
   private warningLogger: ServantWarningLogger;
 
+  // 起動直後はログを短く抑える
+  private startupUntil = 0;
+
   private goalManager: GoalManager | null = null;
   private constellationGenerator: ConstellationDataGenerator | null = null;
-  
+
   // 天体儀ビュー表示フラグ（初回のみ表示）
   private hasShownConstellation = false;
+
+  public setStartupWindowMs(ms: number): void {
+    const safeMs = Number.isFinite(ms) && ms > 0 ? ms : 0;
+    this.startupUntil = safeMs > 0 ? Date.now() + safeMs : 0;
+    this.warningLogger.setStartupWindowMs(safeMs);
+  }
+
+  private isInStartupWindow(): boolean {
+    return this.startupUntil > 0 && Date.now() < this.startupUntil;
+  }
+
+  private limitLines(text: string, maxLines: number): string {
+    const lines = text.replace(/\r\n/g, '\n').split('\n');
+    const n = Number.isFinite(maxLines) && maxLines > 0 ? Math.floor(maxLines) : 0;
+    if (n <= 0) return '';
+    if (lines.length <= n) return text.trimEnd();
+    const head = lines.slice(0, n).join('\n').trimEnd();
+    return `${head}\n…（省略。全文はコマンド "Servant: 🌟 Show Constellation View" で表示）`;
+  }
+
+  private getOutputVerbosity(
+    key:
+      | 'autopilot.preflightVerbosity'
+      | 'autopilot.closedLoopVerbosity'
+      | 'autopilot.constellationVerbosity',
+    defaultValue: AutopilotOutputVerbosity
+  ): AutopilotOutputVerbosity {
+    const v = vscode.workspace
+      .getConfiguration('servant')
+      .get<AutopilotOutputVerbosity>(key, defaultValue);
+    return v === 'off' || v === 'summary' || v === 'full' ? v : defaultValue;
+  }
 
   private computePlusScore(action: AIAction): number {
     // 1〜7 の範囲で「結果の分かりやすい目安」を出す（詳細はOutput/ログに残す）
@@ -136,8 +173,14 @@ export class AutopilotController {
     if (this.graph) {
       this.goalManager = new GoalManager(workspaceRoot);
       this.constellationGenerator = new ConstellationDataGenerator(this.graph, this.goalManager);
-      this.outputChannel.appendLine('🌟 [Autopilot] Constellation system initialized');
+      const logInit = vscode.workspace
+        .getConfiguration('servant')
+        .get<boolean>('autopilot.logInit', false);
+      if (logInit) {
+        this.outputChannel.appendLine('🌟 [Autopilot] Constellation system initialized');
+      }
     }
+    this.startupUntil = 0; // 起動直後のログ抑制（Outputを短く）
   }
 
   public start(context: vscode.ExtensionContext): void {
@@ -714,6 +757,11 @@ export class AutopilotController {
     const proactiveSpecCheckEnabled = config.get<boolean>('autopilot.proactiveSpecCheck', true);
     const closedLoopEnabled = config.get<boolean>('autopilot.closedLoopReplanOnSave', false);
 
+    const closedLoopVerbosity = this.getOutputVerbosity(
+      'autopilot.closedLoopVerbosity',
+      'summary'
+    );
+
     if (!proactiveSpecCheckEnabled && !closedLoopEnabled) return;
 
     // 1) Specチェック（軽いガード）
@@ -775,21 +823,30 @@ export class AutopilotController {
       try {
         const suggestion = await this.optimizationEngine.optimize(nextTaskState);
 
-        this.outputChannel.appendLine('');
-        this.outputChannel.appendLine(
-          '=== Servant Autopilot: 閉ループ再計画（save→validate→replan） ==='
-        );
-        this.outputChannel.appendLine(
-          `Trigger: save + violations (errors=${errorCount}, warnings=${warningCount})`
-        );
-        this.outputChannel.appendLine(`File: ${rel}`);
-        this.outputChannel.appendLine('--- 次に変更すべきファイル (Top 3) ---');
-        suggestion.recommendedOrder.slice(0, 3).forEach((file, index) => {
-          const risk = suggestion.risks.find((r) => r.file === file);
-          const mark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
-          this.outputChannel.appendLine(`${index + 1}. ${file}${mark}`);
-          if (risk) this.outputChannel.appendLine(`   理由: ${risk.reason}`);
-        });
+        if (closedLoopVerbosity !== 'off') {
+          const top = suggestion.recommendedOrder[0];
+          if (closedLoopVerbosity === 'summary') {
+            this.outputChannel.appendLine(
+              `🧭 [Autopilot] 閉ループ再計画: ${rel} (E=${errorCount}, W=${warningCount}) → 次: ${top ?? '—'}`
+            );
+          } else {
+            this.outputChannel.appendLine('');
+            this.outputChannel.appendLine(
+              '=== Servant Autopilot: 閉ループ再計画（save→validate→replan） ==='
+            );
+            this.outputChannel.appendLine(
+              `Trigger: save + violations (errors=${errorCount}, warnings=${warningCount})`
+            );
+            this.outputChannel.appendLine(`File: ${rel}`);
+            this.outputChannel.appendLine('--- 次に変更すべきファイル (Top 3) ---');
+            suggestion.recommendedOrder.slice(0, 3).forEach((file, index) => {
+              const risk = suggestion.risks.find((r) => r.file === file);
+              const mark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
+              this.outputChannel.appendLine(`${index + 1}. ${file}${mark}`);
+              if (risk) this.outputChannel.appendLine(`   理由: ${risk.reason}`);
+            });
+          }
+        }
 
         this.activeTaskState = nextTaskState;
         this.lastReplanAt = now;
@@ -804,28 +861,55 @@ export class AutopilotController {
 
     this.setStatusAnalyzing(action.id);
 
+    const preflightVerbosity = this.getOutputVerbosity(
+      'autopilot.preflightVerbosity',
+      'summary'
+    );
+    const constellationVerbosity = this.getOutputVerbosity(
+      'autopilot.constellationVerbosity',
+      'off'
+    );
+
     // Constellation（天体儀）コンテキストを生成・出力
     if (this.constellationGenerator) {
       try {
         const context = await this.generateConstellationContext();
         if (context) {
-          // 初回のみフル表示、2回目以降は簡潔な通知
-          if (this.hasShownConstellation) {
-            this.outputChannel.appendLine('');
-            this.outputChannel.appendLine(
-              '🌟 天体儀ビュー: 前回表示済み（コマンド "Servant: Show Constellation" で再表示可能）'
-            );
-            this.outputChannel.appendLine('');
-          } else {
-            this.hasShownConstellation = true;
-            this.outputChannel.appendLine('');
-            this.outputChannel.appendLine(context);
+          if (constellationVerbosity !== 'off') {
+            if (this.isInStartupWindow()) {
+              const goalName = this.goalManager?.getMainGoal()?.name ?? 'プロジェクトのゴール';
+              this.outputChannel.appendLine(
+                `🌟 [Autopilot] 天体儀ビュー生成済み: ${goalName}（起動時は省略。Servant: 🌟 Show Constellation View）`
+              );
+            } else {
 
-            // 通知をoutputChannelに統合（ポップアップ通知を削除）
-            const goalName = this.goalManager?.getMainGoal()?.name ?? 'プロジェクトのゴール';
-            this.outputChannel.appendLine(
-              `🌟 サーバント: ${goalName}に向かって作業を進めます`
-            );
+              // 初回のみフル表示、2回目以降は簡潔な通知
+              if (this.hasShownConstellation) {
+                if (constellationVerbosity === 'full') {
+                  this.outputChannel.appendLine('');
+                  this.outputChannel.appendLine(
+                    '🌟 天体儀ビュー: 前回表示済み（コマンド "Servant: 🌟 Show Constellation View" で再表示可能）'
+                  );
+                  this.outputChannel.appendLine('');
+                }
+              } else {
+                this.hasShownConstellation = true;
+
+                const goalName = this.goalManager?.getMainGoal()?.name ?? 'プロジェクトのゴール';
+
+                if (constellationVerbosity === 'full') {
+                  const maxLines = vscode.workspace
+                    .getConfiguration('servant')
+                    .get<number>('autopilot.constellationMaxLines', 12);
+                  this.outputChannel.appendLine('');
+                  this.outputChannel.appendLine(this.limitLines(context, maxLines));
+                } else {
+                  this.outputChannel.appendLine(
+                    `🌟 [Autopilot] 天体儀ビュー生成済み: ${goalName}（Servant: 🌟 Show Constellation View）`
+                  );
+                }
+              }
+            }
           }
         }
       } catch (error) {
@@ -883,30 +967,43 @@ export class AutopilotController {
     const largeWorkThresholdFiles = this.getLargeWorkThresholdFiles();
     const isLargeWork = taskState.modifiedFiles.length >= largeWorkThresholdFiles;
 
-    // Outputに“最善の入口”を常に書く（通知は最小）
-    this.outputChannel.appendLine('');
-    this.outputChannel.appendLine('=== Servant Autopilot: 事前誘導（最善手順の提案） ===');
-    this.outputChannel.appendLine(`アクション: ${action.type} (${action.id})`);
-    this.outputChannel.appendLine(
-      `推定タスク: ${workflow.classification.taskType} (信頼度: ${(workflow.classification.confidence * 100).toFixed(0)}%)`
-    );
-    this.outputChannel.appendLine(`推奨ワークフロー: ${workflow.recommendation}`);
-    this.outputChannel.appendLine(
-      `作業量: 変更対象 ${taskState.modifiedFiles.length} ファイル${isLargeWork ? '（大作業）' : ''}`
-    );
-    this.outputChannel.appendLine('--- 推奨手順 ---');
-    workflow.steps.forEach((s) => this.outputChannel.appendLine(s));
-    this.outputChannel.appendLine('--- 次に変更すべきファイル (Top 5) ---');
-    suggestion.recommendedOrder.slice(0, 5).forEach((file, index) => {
-      const risk = suggestion.risks.find((r) => r.file === file);
-      const mark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
-      this.outputChannel.appendLine(`${index + 1}. ${file}${mark}`);
-      if (risk) this.outputChannel.appendLine(`   理由: ${risk.reason}`);
-    });
-    this.outputChannel.appendLine('--- 次のアクション ---');
-    suggestion.nextActions.forEach((a) => this.outputChannel.appendLine(`- ${a}`));
-
     const hasHighRisk = suggestion.risks.some((r) => r.riskLevel === 'high');
+
+    // Outputに“最善の入口”を出す（デフォルトは要約）
+    if (preflightVerbosity !== 'off') {
+      const riskLabel = hasHighRisk ? '高リスク' : '通常';
+      const sizeLabel = isLargeWork ? '大作業' : '小〜中';
+      const topStep = workflow.steps[0] ?? '';
+      const topFile = suggestion.recommendedOrder[0] ?? '';
+
+      if (preflightVerbosity === 'summary') {
+        this.outputChannel.appendLine(
+          `🧭 [Autopilot] ${action.type}: ${riskLabel}/${sizeLabel}（変更 ${taskState.modifiedFiles.length}） 次: ${topStep || topFile || '—'}`
+        );
+      } else {
+        this.outputChannel.appendLine('');
+        this.outputChannel.appendLine('=== Servant Autopilot: 事前誘導（最善手順の提案） ===');
+        this.outputChannel.appendLine(`アクション: ${action.type} (${action.id})`);
+        this.outputChannel.appendLine(
+          `推定タスク: ${workflow.classification.taskType} (信頼度: ${(workflow.classification.confidence * 100).toFixed(0)}%)`
+        );
+        this.outputChannel.appendLine(`推奨ワークフロー: ${workflow.recommendation}`);
+        this.outputChannel.appendLine(
+          `作業量: 変更対象 ${taskState.modifiedFiles.length} ファイル${isLargeWork ? '（大作業）' : ''}`
+        );
+        this.outputChannel.appendLine('--- 推奨手順 ---');
+        workflow.steps.forEach((s) => this.outputChannel.appendLine(s));
+        this.outputChannel.appendLine('--- 次に変更すべきファイル (Top 5) ---');
+        suggestion.recommendedOrder.slice(0, 5).forEach((file, index) => {
+          const risk = suggestion.risks.find((r) => r.file === file);
+          const mark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
+          this.outputChannel.appendLine(`${index + 1}. ${file}${mark}`);
+          if (risk) this.outputChannel.appendLine(`   理由: ${risk.reason}`);
+        });
+        this.outputChannel.appendLine('--- 次のアクション ---');
+        suggestion.nextActions.forEach((a) => this.outputChannel.appendLine(`- ${a}`));
+      }
+    }
 
     this.suggestionByActionId.set(action.id, {
       actionId: action.id,

@@ -33,6 +33,7 @@ import { ProblemsMonitor } from './chat/ProblemsMonitor';
 import { ProblemsIntegrationMonitor } from './chat/ProblemsIntegrationMonitor';
 import { ServantWarningLogger } from './ui/ServantWarningLogger';
 import { ActionsHealthMonitor } from './monitoring/ActionsHealthMonitor';
+import { WorkspaceReadinessEvaluator } from './evaluation/WorkspaceReadinessEvaluator';
 import type { ViewModeName } from './ui/ViewState';
 import {
   recordSpecCheck,
@@ -53,17 +54,29 @@ export function activate(context: vscode.ExtensionContext) {
   // Output Channel作成
   outputChannel = vscode.window.createOutputChannel('Servant');
 
+  // 警告ロガー（後半で初期化。TDZ回避のため先に宣言）
+  let warningLogger: ServantWarningLogger | undefined;
+
   // 実行中の拡張機能が「どのビルド/パス」かを確実に識別するためのログ
   try {
     const ext = context.extension;
     const mode = vscode.ExtensionMode?.[context.extensionMode] ?? String(context.extensionMode);
-    outputChannel.appendLine(`[Servant] Extension: ${ext.id} v${ext.packageJSON?.version ?? 'unknown'} (${mode})`);
-    outputChannel.appendLine(`[Servant] ExtensionPath: ${ext.extensionPath}`);
+    const startupInfoEnabled = vscode.workspace
+      .getConfiguration('servant')
+      .get<boolean>('logging.startupInfo', context.extensionMode !== vscode.ExtensionMode.Production);
+    if (startupInfoEnabled) {
+      outputChannel.appendLine(`[Servant] Extension: ${ext.id} v${ext.packageJSON?.version ?? 'unknown'} (${mode})`);
+      outputChannel.appendLine(`[Servant] ExtensionPath: ${ext.extensionPath}`);
+    }
   } catch {
     // ignore
   }
 
   const notifier = new Notifier(outputChannel);
+
+  const startupQuietPeriodMs = vscode.workspace
+    .getConfiguration('servant')
+    .get<number>('logging.startupQuietPeriodMs', 15000);
 
   // ステータスバー更新コールバックを後で設定（updateServantStatusBar定義後）
   let notifierStatusCallbackSet = false;
@@ -123,9 +136,9 @@ export function activate(context: vscode.ExtensionContext) {
         const monitored = parseInt(match[1], 10);
         const violations = parseInt(match[2], 10);
         const fixed = parseInt(match[3], 10);
-        
+
         warningLogger.updateStats(monitored, violations, fixed);
-        
+
         // 違反または修正がある時だけサマリーを出力（頻繁すぎないように）
         if (violations > 0 || fixed > 0) {
           warningLogger.logStatusSummary();
@@ -309,9 +322,16 @@ export function activate(context: vscode.ExtensionContext) {
     }
   }
 
-  outputChannel.appendLine(`[Servant] Workspace root: ${workspaceRoot}`);
-  if (workspaceRoot !== workspaceRootRaw) {
-    outputChannel.appendLine(`[Servant] Workspace root adjusted: ${workspaceRootRaw} -> ${workspaceRoot}`);
+  const workspaceInfoEnabled = vscode.workspace
+    .getConfiguration('servant')
+    .get<boolean>('logging.workspaceInfo', false);
+  if (workspaceInfoEnabled) {
+    outputChannel.appendLine(`[Servant] Workspace root: ${workspaceRoot}`);
+    if (workspaceRoot !== workspaceRootRaw) {
+      outputChannel.appendLine(
+        `[Servant] Workspace root adjusted: ${workspaceRootRaw} -> ${workspaceRoot}`
+      );
+    }
   }
 
   // 保存イベントをターミナルに出す（成長/稼働の可視化用）
@@ -420,7 +440,12 @@ export function activate(context: vscode.ExtensionContext) {
         updateServantStatusBar(status);
       });
       context.subscriptions.push(qualityGuard);
-      outputChannel.appendLine('[Servant] CodeQualityGuard initialized');
+      const codeQualityGuardInfoEnabled = vscode.workspace
+        .getConfiguration('servant')
+        .get<boolean>('logging.codeQualityGuardInfo', false);
+      if (codeQualityGuardInfoEnabled) {
+        outputChannel.appendLine('[Servant] CodeQualityGuard initialized');
+      }
     }
     return qualityGuard;
   };
@@ -466,13 +491,25 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(problemsIntegrationMonitor);
 
   // GitHub Actions 健全性監視（週次で重複/無駄をチェック）
-  const warningLogger = new ServantWarningLogger(outputChannel);
+  warningLogger = new ServantWarningLogger(outputChannel);
+  warningLogger.setStartupWindowMs(startupQuietPeriodMs);
   const actionsHealthMonitor = new ActionsHealthMonitor(workspaceRoot, warningLogger, globalEventBus);
   // 後方互換性のため既存のコールバックも設定
   actionsHealthMonitor.setStatusUpdateCallback((status) => {
     updateServantStatusBar(status);
   });
   context.subscriptions.push(actionsHealthMonitor);
+
+  // 警告ログ表示（短文化した出力の詳細確認用）
+  context.subscriptions.push(
+    vscode.commands.registerCommand('servant.showWarningLog', async () => {
+      if (!warningLogger) {
+        await vscode.window.showInformationMessage('Servant: 警告ログはまだありません');
+        return;
+      }
+      await warningLogger.showWarningLog();
+    })
+  );
 
   // ドキュメント作成ルール強制（docs/ 配下の新規 Markdown ファイルを監視）
   const documentGuard = new DocumentGuard(workspaceRoot, globalEventBus);
@@ -483,7 +520,12 @@ export function activate(context: vscode.ExtensionContext) {
   const documentWatcher = documentGuard.startWatching();
   context.subscriptions.push(documentWatcher);
   context.subscriptions.push(documentGuard);
-  outputChannel.appendLine('[DocumentGuard] ドキュメント監視を開始しました');
+  const guardInfoEnabled = vscode.workspace
+    .getConfiguration('servant')
+    .get<boolean>('logging.guardInfo', false);
+  if (guardInfoEnabled) {
+    outputChannel.appendLine('[DocumentGuard] ドキュメント監視を開始しました');
+  }
 
   // 統計情報を定期的に表示（10秒ごと）
   const statsInterval = setInterval(() => {
@@ -548,6 +590,7 @@ export function activate(context: vscode.ExtensionContext) {
     incrementalValidator,
     neuralGraph  // Constellation用にグラフを渡す
   );
+  autopilot.setStartupWindowMs(startupQuietPeriodMs);
   autopilot.start(context);
 
   // Diagnostics Providerの初期化
@@ -1183,6 +1226,68 @@ export function activate(context: vscode.ExtensionContext) {
     await buildAIContextPacket({ openEditor: true, notify: true });
   };
 
+  const evaluateWorkspaceReadinessCommand = vscode.commands.registerCommand(
+    'servant.evaluateWorkspaceReadiness',
+    async () => {
+      try {
+        const config = vscode.workspace.getConfiguration('servant');
+        const maxAgeMinutes = config.get<number>('context.maxAgeMinutes', 120);
+        const outputRelOrAbs = (config.get<string>('evaluation.outputPath', '.aitk/evaluation/WORKSPACE_EVALUATION.md') ?? '').trim();
+        const outputAbs = path.isAbsolute(outputRelOrAbs) ? outputRelOrAbs : path.join(workspaceRoot, outputRelOrAbs);
+
+        const evaluator = new WorkspaceReadinessEvaluator(workspaceRoot);
+        const report = evaluator.evaluate({ contextPacketMaxAgeMinutes: maxAgeMinutes });
+        const md = evaluator.toMarkdown(report);
+
+        const dir = path.dirname(outputAbs);
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        fs.writeFileSync(outputAbs, md + '\n', 'utf-8');
+
+        outputChannel.clear();
+        outputChannel.appendLine('=== Servant Workspace Evaluation (Owner Checklist) ===');
+        outputChannel.appendLine(`score: ${report.score}/${report.maxScore}`);
+        outputChannel.appendLine(`output: ${vscode.workspace.asRelativePath(outputAbs)}`);
+        outputChannel.appendLine('');
+
+        const errors = report.items.filter((i) => i.status === 'error');
+        const warns = report.items.filter((i) => i.status === 'warn');
+        if (errors.length > 0) {
+          outputChannel.appendLine(`🚨 errors: ${errors.length}`);
+          for (const e of errors.slice(0, 8)) {
+            outputChannel.appendLine(`- ${e.label}`);
+            if (e.ownerActions?.length) outputChannel.appendLine(`  actions: ${e.ownerActions.join(' / ')}`);
+          }
+          outputChannel.appendLine('');
+        }
+        if (warns.length > 0) {
+          outputChannel.appendLine(`⚠️ warnings: ${warns.length}`);
+          for (const w of warns.slice(0, 8)) {
+            outputChannel.appendLine(`- ${w.label}`);
+            if (w.ownerActions?.length) outputChannel.appendLine(`  actions: ${w.ownerActions.join(' / ')}`);
+          }
+          outputChannel.appendLine('');
+        }
+        outputChannel.appendLine('詳細は評価書を参照してください（WORKSPACE_EVALUATION.md）。');
+        outputChannel.show();
+
+        const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(outputAbs));
+        await vscode.window.showTextDocument(doc, { preview: false, preserveFocus: true });
+
+        if (errors.length > 0) {
+          notifier.commandWarning(
+            `🚨 Workspace評価: ${report.score}/${report.maxScore}（error ${errors.length}件）`,
+          );
+        } else {
+          notifier.commandInfo(`✅ Workspace評価: ${report.score}/${report.maxScore}`);
+        }
+      } catch (error) {
+        notifier.commandError(`Workspace評価エラー: ${error}`);
+      }
+    }
+  );
+
   const installHooks = async () => {
     const isGitRepo = await gitIntegration.isGitRepository(workspaceRoot);
     if (!isGitRepo) {
@@ -1205,6 +1310,9 @@ export function activate(context: vscode.ExtensionContext) {
   };
 
   const uninstallHooks = async () => {
+
+      // Evaluation command
+      context.subscriptions.push(evaluateWorkspaceReadinessCommand);
     const hooksDir = await gitIntegration.getHooksDirectory(workspaceRoot);
     if (!hooksDir) {
       notifier.commandError('Failed to locate .git/hooks directory');
@@ -2226,9 +2334,16 @@ export function activate(context: vscode.ExtensionContext) {
     const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
     if (learningEnabled) {
       try {
-        outputChannel.appendLine('[Activation] Building project index...');
+        const activationInfoEnabled = vscode.workspace
+          .getConfiguration('servant')
+          .get<boolean>('logging.activationInfo', false);
+        if (activationInfoEnabled) {
+          outputChannel.appendLine('[Activation] Building project index...');
+        }
         await contextDB.indexProject();
-        outputChannel.appendLine('[Activation] Project index ready');
+        if (activationInfoEnabled) {
+          outputChannel.appendLine('[Activation] Project index ready');
+        }
       } catch (error) {
         outputChannel.appendLine(`[Activation] Index failed: ${error}`);
       }
@@ -2239,15 +2354,20 @@ export function activate(context: vscode.ExtensionContext) {
     const autoInstall = config.get<boolean>('preCommit.autoInstall', true);
 
     if (autoInstall) {
+      const activationInfoEnabled = config.get<boolean>('logging.activationInfo', false);
       const isGitRepo = await gitIntegration.isGitRepository(workspaceRoot);
       if (isGitRepo) {
         const hooksDir = await gitIntegration.getHooksDirectory(workspaceRoot);
         if (hooksDir) {
           const isInstalled = await hookInstaller.isHookInstalled(hooksDir, 'pre-commit');
           if (!isInstalled) {
-            outputChannel.appendLine('[Activation] Auto-installing Git hooks...');
+            if (activationInfoEnabled) {
+              outputChannel.appendLine('[Activation] Auto-installing Git hooks...');
+            }
             await hookInstaller.installAllHooks(hooksDir);
-            outputChannel.appendLine('[Activation] Git hooks installed');
+            if (activationInfoEnabled) {
+              outputChannel.appendLine('[Activation] Git hooks installed');
+            }
           }
         }
       }

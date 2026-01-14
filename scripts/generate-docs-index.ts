@@ -21,6 +21,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const DOCS_DIR = path.resolve(__dirname, '../docs');
+const REPO_ROOT = path.resolve(DOCS_DIR, '..');
 const INDEX_FILE = path.join(DOCS_DIR, 'INDEX.md');
 
 interface DocFile {
@@ -126,6 +127,35 @@ function aggregateByDirectory(files: DocFile[]): DirectoryStats[] {
 function countReferences(files: DocFile[]): FileReference[] {
   const refMap = new Map<string, number>();
 
+  const toPosixPath = (p: string): string => p.split(path.sep).join('/');
+
+  const normalizeLinkedDocPath = (sourceFileAbsPath: string, linkedPathRaw: string): string | null => {
+    const linkedPath = linkedPathRaw.trim();
+
+    // Ignore obvious non-file links
+    if (!linkedPath || linkedPath.startsWith('#')) return null;
+
+    let targetAbsPath: string;
+
+    // Repo-root absolute links (e.g. /docs/..., /.github/...)
+    if (linkedPath.startsWith('/')) {
+      targetAbsPath = path.resolve(REPO_ROOT, `.${linkedPath}`);
+    } else {
+      // Relative to the source markdown file
+      targetAbsPath = path.resolve(path.dirname(sourceFileAbsPath), linkedPath);
+    }
+
+    // Only count references to existing docs/*.md
+    const docsPrefix = `${DOCS_DIR}${path.sep}`;
+    if (!(targetAbsPath + path.sep).startsWith(docsPrefix)) return null;
+    if (!targetAbsPath.endsWith('.md')) return null;
+    if (!fs.existsSync(targetAbsPath)) return null;
+    const stat = fs.statSync(targetAbsPath);
+    if (!stat.isFile()) return null;
+
+    return toPosixPath(path.relative(DOCS_DIR, targetAbsPath));
+  };
+
   for (const file of files) {
     const content = fs.readFileSync(file.path, 'utf-8');
 
@@ -134,7 +164,10 @@ function countReferences(files: DocFile[]): FileReference[] {
     let match;
 
     while ((match = linkRegex.exec(content)) !== null) {
-      const linkedFile = match[1];
+      const linkedFileRaw = match[1];
+      const linkedFile = normalizeLinkedDocPath(file.path, linkedFileRaw);
+      if (!linkedFile) continue;
+
       const count = refMap.get(linkedFile) || 0;
       refMap.set(linkedFile, count + 1);
     }

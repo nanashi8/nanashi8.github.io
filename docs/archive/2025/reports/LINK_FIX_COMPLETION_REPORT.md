@@ -134,7 +134,7 @@ QUESTION_SCHEDULER_RECOVERY.md → ../how-to/QUESTION_SCHEDULER_RECOVERY.md
 - 22-development-setup.md（ファイル未作成）
 - 23-deployment.md（ファイル未作成）
 - 24-testing-strategy.md（ファイル未作成）
-- anti-vibration-filter.md（ファイル未作成）
+- ANTI_VIBRATION_FILTER.md（命名規則に合わせて作成）
 - REFACTORING_PLAN.md（ファイル未作成）
 
 **修正方法**: リンクを削除マーク `~~ファイル名（ファイル未作成）~~` に変更

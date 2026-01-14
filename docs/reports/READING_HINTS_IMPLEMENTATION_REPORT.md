@@ -102,7 +102,7 @@ npm run type-check
 
 ### ドキュメント
 - `docs/features/reading-techniques-hints.md` (機能説明書)
-- `docs/reports/reading-hints-implementation-report.md` (本レポート)
+- `docs/reports/READING_HINTS_IMPLEMENTATION_REPORT.md` (本レポート)
 
 ---
 

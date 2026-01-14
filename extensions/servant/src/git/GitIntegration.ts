@@ -34,6 +34,15 @@ export interface FileChangeStats {
  */
 export class GitIntegration {
   private outputChannel: vscode.OutputChannel;
+  private isGitInfoEnabled(): boolean {
+    return vscode.workspace.getConfiguration('servant').get<boolean>('logging.gitInfo', false);
+  }
+
+  private logInfo(message: string): void {
+    if (this.isGitInfoEnabled()) {
+      this.outputChannel.appendLine(message);
+    }
+  }
 
   private resolveGitExecutable(): string {
     // Prefer explicit path when available (macOS default)
@@ -90,7 +99,7 @@ export class GitIntegration {
     try {
       // First check if it's a git repository
       if (!(await this.isGitRepository(workspaceRoot))) {
-        this.outputChannel.appendLine('[Git] Cannot get hooks directory: not a git repository');
+        this.logInfo('[Git] Cannot get hooks directory: not a git repository');
         return null;
       }
 
@@ -125,7 +134,7 @@ export class GitIntegration {
       const { stdout } = await this.execGit(workspaceRoot, ['diff', '--staged', '--name-only']);
 
       if (!stdout.trim()) {
-        this.outputChannel.appendLine('[Git] No staged files found');
+        this.logInfo('[Git] No staged files found');
         return [];
       }
 
@@ -137,6 +146,7 @@ export class GitIntegration {
       const absolutePaths = relativePaths.map((p) => path.join(workspaceRoot, p));
 
       this.outputChannel.appendLine(`[Git] Found ${absolutePaths.length} staged files`);
+      this.logInfo(`[Git] Found ${absolutePaths.length} staged files`);
       return absolutePaths;
     } catch (error) {
       this.outputChannel.appendLine(`[Git] Error getting staged files: ${error}`);
@@ -270,6 +280,7 @@ export class GitIntegration {
     }
 
     this.outputChannel.appendLine(`[Git] Found ${stagedFiles.length} staged files via SCM API`);
+    this.logInfo(`[Git] Found ${stagedFiles.length} staged files via SCM API`);
     return stagedFiles;
   }
 

@@ -304,6 +304,23 @@
         "violations": 0,
         "critical": 0
       }
+    },
+    {
+      "timestamp": "2026-01-14T16:53:03.427869",
+      "type": "specification_compliance",
+      "result": {
+        "violations": 0,
+        "critical": 0
+      }
+    },
+    {
+      "timestamp": "2026-01-14T16:53:15.265858",
+      "type": "problem_panel",
+      "result": {
+        "errors": 0,
+        "warnings": 0,
+        "analyzed": false
+      }
     }
   ],
   "improvements": [

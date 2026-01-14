@@ -13,10 +13,19 @@ export interface ServantWarning {
   aiGuidance?: string;
 }
 
+type WarningOutputMode = 'summary' | 'detailed';
+
 export class ServantWarningLogger {
   // 重複警告抑制のためのcooldown管理
   private recentWarnings = new Map<string, number>();
   private readonly COOLDOWN_MS = 60000; // 1分
+
+  // 起動直後は強制的に静かにする（showOutputMode とは別）
+  private startupUntil = 0;
+
+  // 警告履歴（Show Warning Log 用）
+  private warningHistory: ServantWarning[] = [];
+  private readonly HISTORY_LIMIT = 100;
 
   // ステータスサマリー情報
   private stats = {
@@ -27,29 +36,142 @@ export class ServantWarningLogger {
 
   constructor(private outputChannel: vscode.OutputChannel) {}
 
+  public setStartupWindowMs(ms: number): void {
+    const safeMs = Number.isFinite(ms) && ms > 0 ? ms : 0;
+    this.startupUntil = safeMs > 0 ? Date.now() + safeMs : 0;
+  }
+
+  private isInStartupWindow(): boolean {
+    return this.startupUntil > 0 && Date.now() < this.startupUntil;
+  }
+
+  private getOutputMode(): WarningOutputMode {
+    const config = vscode.workspace.getConfiguration('servant');
+
+    const modeKey = this.isInStartupWindow()
+      ? 'warnings.startupOutputMode'
+      : 'warnings.outputMode';
+
+    const mode = config.get<WarningOutputMode>(modeKey, 'summary');
+    return mode === 'detailed' ? 'detailed' : 'summary';
+  }
+
+  private pushHistory(warning: ServantWarning): void {
+    this.warningHistory.unshift(warning);
+    if (this.warningHistory.length > this.HISTORY_LIMIT) {
+      this.warningHistory.length = this.HISTORY_LIMIT;
+    }
+  }
+
+  private formatCompactDetails(warning: ServantWarning): string | undefined {
+    const d = warning.details;
+    if (!d || typeof d !== 'object') return undefined;
+
+    // よく使うカウンタ類を1行に圧縮（例: Actions Health）
+    const parts: string[] = [];
+    if (typeof d.totalIssues === 'number') parts.push(`Total ${d.totalIssues}`);
+    if (typeof d.critical === 'number') parts.push(`Critical ${d.critical}`);
+    if (typeof d.warnings === 'number') parts.push(`Warning ${d.warnings}`);
+    if (typeof d.infos === 'number') parts.push(`Info ${d.infos}`);
+    if (parts.length === 0) return undefined;
+    return parts.join(' / ');
+  }
+
+  public async showWarningLog(): Promise<void> {
+    if (this.warningHistory.length === 0) {
+      await vscode.window.showInformationMessage('Servant: 警告ログはまだありません');
+      return;
+    }
+
+    const icon = (s: ServantWarning['severity']) => (s === 'error' ? '⚠️' : s === 'warning' ? '⚡' : 'ℹ️');
+    const items = this.warningHistory.map((w) => {
+      const time = (() => {
+        try {
+          return new Date(w.timestamp).toLocaleString('ja-JP');
+        } catch {
+          return w.timestamp;
+        }
+      })();
+      const compact = this.formatCompactDetails(w);
+      return {
+        label: `${icon(w.severity)} ${w.message}`,
+        description: `${time}  type=${w.type}${compact ? `  (${compact})` : ''}`,
+        warning: w,
+      } as const;
+    });
+
+    const picked = await vscode.window.showQuickPick(items, {
+      title: 'Servant: Warning Log',
+      matchOnDescription: true,
+      ignoreFocusOut: true,
+    });
+    if (!picked) return;
+
+    const w = picked.warning;
+    const diagnosticReport = typeof w.details?.diagnosticReport === 'string' ? w.details.diagnosticReport : undefined;
+
+    const contentLines: string[] = [];
+    contentLines.push('# Servant Warning Log');
+    contentLines.push('');
+    contentLines.push(`- timestamp: ${w.timestamp}`);
+    contentLines.push(`- severity: ${w.severity}`);
+    contentLines.push(`- type: ${w.type}`);
+    contentLines.push(`- message: ${w.message}`);
+    contentLines.push('');
+
+    if (diagnosticReport && diagnosticReport.trim().length > 0) {
+      contentLines.push('## Diagnostic Report');
+      contentLines.push('```text');
+      contentLines.push(diagnosticReport.trimEnd());
+      contentLines.push('```');
+      contentLines.push('');
+    }
+
+    contentLines.push('## JSON');
+    contentLines.push('```json');
+    contentLines.push(JSON.stringify(w, null, 2));
+    contentLines.push('```');
+    contentLines.push('');
+
+    const doc = await vscode.workspace.openTextDocument({
+      content: contentLines.join('\n'),
+      language: 'markdown',
+    });
+    await vscode.window.showTextDocument(doc, { preview: false });
+  }
+
   /**
    * 構造化警告をログに記録
    */
   public logWarning(warning: ServantWarning): void {
+    const mode = this.getOutputMode();
+
     // 重複チェック
     const hash = this.hashWarning(warning);
     const lastLog = this.recentWarnings.get(hash);
     const now = Date.now();
 
     if (lastLog && now - lastLog < this.COOLDOWN_MS) {
-      // 抑制: 簡潔な通知のみ
-      const elapsedSeconds = Math.floor((now - lastLog) / 1000);
-      this.outputChannel.appendLine(
-        `[${new Date().toLocaleTimeString()}] 🔕 警告抑制中（${elapsedSeconds}秒前に出力済み）: ${warning.type}`
-      );
+      // 抑制: 起動直後/通常ともに無音（起動直後の連打でログが埋まるのを防ぐ）
       return;
     }
 
     // 新規または期限切れの警告はフル出力
     this.recentWarnings.set(hash, now);
 
+    // 履歴へ保存（Show Warning Log 用）
+    this.pushHistory(warning);
+
     const icon = warning.severity === 'error' ? '⚠️' : warning.severity === 'warning' ? '⚡' : 'ℹ️';
 
+    if (mode === 'summary') {
+      const compact = this.formatCompactDetails(warning);
+      this.outputChannel.appendLine(`${icon} [Servant 警告] ${warning.message}${compact ? ` (${compact})` : ''}`);
+      this.outputChannel.appendLine('  詳細: コマンドパレット → "Servant: Show Warning Log"');
+      return;
+    }
+
+    // detailed: これまで通りフル出力
     this.outputChannel.appendLine('\n' + '='.repeat(70));
     this.outputChannel.appendLine(`${icon} [Servant 警告] ${warning.message}`);
     this.outputChannel.appendLine('='.repeat(70));

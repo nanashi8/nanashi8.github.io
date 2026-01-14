@@ -296,9 +296,9 @@ v0.3.23 → v0.3.24: 圧縮・キャッシュ効果測定
 ## 📞 参考資料
 
 ### 作成ドキュメント
-- 📄 [CONSTELLATION_ENHANCEMENT_ROADMAP.md](./CONSTELLATION_ENHANCEMENT_ROADMAP.md)
-- 📄 [PHASE1_DETAILED_DESIGN.md](./PHASE1_DETAILED_DESIGN.md)
-- 📄 [PROTOTYPE_VALIDATION_CHECKLIST.md](./PROTOTYPE_VALIDATION_CHECKLIST.md)
+- 📄 [CONSTELLATION_ENHANCEMENT_ROADMAP.md](../roadmap/CONSTELLATION_ENHANCEMENT_ROADMAP.md)
+- 📄 [PHASE1_DETAILED_DESIGN.md](../design/PHASE1_DETAILED_DESIGN.md)
+- 📄 [PROTOTYPE_VALIDATION_CHECKLIST.md](../quality/PROTOTYPE_VALIDATION_CHECKLIST.md)
 
 ### 関連コード
 - 📝 [extensions/servant/src/ui/ConstellationViewPanel.ts](../../extensions/servant/src/ui/ConstellationViewPanel.ts)

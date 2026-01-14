@@ -242,9 +242,9 @@ Q: エラーメッセージはどれが良い？
 
 ## 関連ドキュメント
 
-- [開発プロセス](./INDEX.md)
-- [AI開発ガイドライン](../guidelines/AI_DEVELOPMENT.md)
-- [コミュニケーション手法](./COMMUNICATION_METHODS.md)
+- [開発プロセス](README.md)
+- [AI開発ガイドライン](../references/AI_WORKFLOW_INSTRUCTIONS.md)
+- [コミュニケーション手法](COMMUNICATION_METHODS.md)
 
 ## 更新履歴
 

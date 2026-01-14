@@ -212,6 +212,7 @@ export class MaintenanceState extends BaseViewState {
 
     <div class="sectionTitle">メンテナンス実行</div>
     <div class="toolbar" style="justify-content:flex-start; margin-top: 8px;">
+      <button onclick="runCommand('servant.evaluateWorkspaceReadiness')">📋 Workspace評価書</button>
       <button onclick="runCommand('servant.validateBeforeCommit')">🛡️ Validate Before Commit</button>
       <button onclick="runCommand('servant.validate')">🧾 Validate Instructions</button>
       <button onclick="runCommand('servant.recordSpecCheck')">📝 Record Spec Check</button>

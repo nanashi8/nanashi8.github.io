@@ -62,10 +62,10 @@
 
 ### 📚 ドキュメント
 
-- [README.md](README.md): 適応型学習AIセクション追加
-- [API仕様書](docs/adaptive-learning-api.md): useAdaptiveLearningフックの完全仕様
-- [詳細設計書](docs/design/adaptive-learning-design.md): 950行の設計ドキュメント
-- [アルゴリズム設計](docs/design/adaptive-learning-algorithm-design.md): 1800行の詳細設計
+- [README.md](/README.md): 適応型学習AIセクション追加
+- [API仕様書](/docs/specifications/ADAPTIVE_LEARNING_API.md): useAdaptiveLearningフックの完全仕様
+- [詳細設計書](/docs/design/adaptive-learning-design.md): 950行の設計ドキュメント
+- [アルゴリズム設計](/docs/design/adaptive-learning-algorithm-design.md): 1800行の詳細設計
 
 ### 🔧 技術詳細
 

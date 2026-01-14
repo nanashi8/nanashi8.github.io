@@ -95,7 +95,7 @@
 ### 🧠 依存関係・安定化（補助仕様）
 
 - [NEURAL_DEPENDENCY_GRAPH.md](NEURAL_DEPENDENCY_GRAPH.md) - Neural Dependency Graph 仕様（スタブ）
-- [anti-vibration-filter.md](anti-vibration-filter.md) - AntiVibrationFilter 仕様（スタブ）
+- [ANTI_VIBRATION_FILTER.md](ANTI_VIBRATION_FILTER.md) - AntiVibrationFilter 仕様（スタブ）
 
 ---
 
