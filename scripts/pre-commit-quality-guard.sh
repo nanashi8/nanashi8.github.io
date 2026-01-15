@@ -64,6 +64,26 @@ echo ""
 SIZE_WARNING_COUNT=0
 SIZE_ERROR_COUNT=0
 
+# 既に巨大な“レガシーファイル”を触った場合に、変更を一切コミットできなくなる問題を避ける。
+# - HEAD時点で >=1000 行のファイルは「増分が大きすぎる場合のみ」エラー
+# - 新規ファイル / 閾値跨ぎ（<1000 → >=1000）は従来通りエラー
+LEGACY_MAX_GROWTH_LINES=${QUALITY_GUARD_LEGACY_MAX_GROWTH_LINES:-300}
+
+has_head_commit() {
+  git rev-parse --verify HEAD >/dev/null 2>&1
+}
+
+head_line_count() {
+  # prints line count of file in HEAD, or empty if not found
+  file="$1"
+  if ! has_head_commit; then
+    return 0
+  fi
+  if git cat-file -e "HEAD:$file" >/dev/null 2>&1; then
+    git show "HEAD:$file" | wc -l | tr -d ' '
+  fi
+}
+
 for file in $CHANGED_FILES; do
   if [ ! -f "$file" ]; then
     continue
@@ -71,9 +91,29 @@ for file in $CHANGED_FILES; do
 
   LINE_COUNT=$(wc -l < "$file" | tr -d ' ')
 
+  HEAD_LINES=$(head_line_count "$file")
+  if [ -n "$HEAD_LINES" ]; then
+    # shellcheck disable=SC2004
+    GROWTH=$((LINE_COUNT - HEAD_LINES))
+  else
+    GROWTH=0
+  fi
+
   if [ "$LINE_COUNT" -ge 1000 ]; then
-    echo "❌ $file: ${LINE_COUNT}行 （上限1000行超過）"
-    SIZE_ERROR_COUNT=$((SIZE_ERROR_COUNT + 1))
+    if [ -n "$HEAD_LINES" ] && [ "$HEAD_LINES" -ge 1000 ]; then
+      # 既に巨大: “増分”が許容を超えた場合のみブロック
+      if [ "$GROWTH" -gt "$LEGACY_MAX_GROWTH_LINES" ]; then
+        echo "❌ $file: ${LINE_COUNT}行（HEAD: ${HEAD_LINES}行 / +${GROWTH}行） （レガシー増分上限${LEGACY_MAX_GROWTH_LINES}行超過）"
+        SIZE_ERROR_COUNT=$((SIZE_ERROR_COUNT + 1))
+      else
+        echo "⚠️  $file: ${LINE_COUNT}行（HEAD: ${HEAD_LINES}行 / +${GROWTH}行） （レガシーファイル: 分割推奨）"
+        SIZE_WARNING_COUNT=$((SIZE_WARNING_COUNT + 1))
+      fi
+    else
+      # 新規 or 閾値跨ぎ
+      echo "❌ $file: ${LINE_COUNT}行 （上限1000行超過）"
+      SIZE_ERROR_COUNT=$((SIZE_ERROR_COUNT + 1))
+    fi
   elif [ "$LINE_COUNT" -ge 500 ]; then
     echo "⚠️  $file: ${LINE_COUNT}行 （推奨500行超過）"
     SIZE_WARNING_COUNT=$((SIZE_WARNING_COUNT + 1))
@@ -112,6 +152,29 @@ echo ""
 
 COMPLEXITY_ERROR_COUNT=0
 
+# レガシー複雑度の扱い
+# - HEAD時点で既に上限（50）を超えている場合、増分が大きい時だけブロック
+LEGACY_MAX_COMPLEXITY_GROWTH=${QUALITY_GUARD_LEGACY_MAX_COMPLEXITY_GROWTH:-25}
+
+head_complexity() {
+  file="$1"
+  if ! has_head_commit; then
+    return 0
+  fi
+  if ! git cat-file -e "HEAD:$file" >/dev/null 2>&1; then
+    return 0
+  fi
+
+  IF_COUNT=$(git show "HEAD:$file" | grep -c '\bif\b' 2>/dev/null || true)
+  FOR_COUNT=$(git show "HEAD:$file" | grep -c '\bfor\b' 2>/dev/null || true)
+  WHILE_COUNT=$(git show "HEAD:$file" | grep -c '\bwhile\b' 2>/dev/null || true)
+  CASE_COUNT=$(git show "HEAD:$file" | grep -c '\bcase\b' 2>/dev/null || true)
+  CATCH_COUNT=$(git show "HEAD:$file" | grep -c '\bcatch\b' 2>/dev/null || true)
+
+  COMPLEXITY=$((1 + IF_COUNT + FOR_COUNT + WHILE_COUNT + CASE_COUNT + CATCH_COUNT))
+  echo "$COMPLEXITY"
+}
+
 for file in $CHANGED_FILES; do
   if [ ! -f "$file" ]; then
     continue
@@ -127,9 +190,25 @@ for file in $CHANGED_FILES; do
 
   COMPLEXITY=$((1 + IF_COUNT + FOR_COUNT + WHILE_COUNT + CASE_COUNT + CATCH_COUNT))
 
+  HEAD_COMPLEXITY=$(head_complexity "$file")
+  if [ -n "$HEAD_COMPLEXITY" ]; then
+    COMPLEXITY_GROWTH=$((COMPLEXITY - HEAD_COMPLEXITY))
+  else
+    COMPLEXITY_GROWTH=0
+  fi
+
   if [ "$COMPLEXITY" -ge 50 ]; then
-    echo "❌ $file: 複雑度 ${COMPLEXITY} （上限50超過）"
-    COMPLEXITY_ERROR_COUNT=$((COMPLEXITY_ERROR_COUNT + 1))
+    if [ -n "$HEAD_COMPLEXITY" ] && [ "$HEAD_COMPLEXITY" -ge 50 ]; then
+      if [ "$COMPLEXITY_GROWTH" -gt "$LEGACY_MAX_COMPLEXITY_GROWTH" ]; then
+        echo "❌ $file: 複雑度 ${COMPLEXITY}（HEAD: ${HEAD_COMPLEXITY} / +${COMPLEXITY_GROWTH}） （レガシー増分上限${LEGACY_MAX_COMPLEXITY_GROWTH}超過）"
+        COMPLEXITY_ERROR_COUNT=$((COMPLEXITY_ERROR_COUNT + 1))
+      else
+        echo "⚠️  $file: 複雑度 ${COMPLEXITY}（HEAD: ${HEAD_COMPLEXITY} / +${COMPLEXITY_GROWTH}） （レガシーファイル: 分割推奨）"
+      fi
+    else
+      echo "❌ $file: 複雑度 ${COMPLEXITY} （上限50超過）"
+      COMPLEXITY_ERROR_COUNT=$((COMPLEXITY_ERROR_COUNT + 1))
+    fi
   elif [ "$COMPLEXITY" -ge 30 ]; then
     echo "⚠️  $file: 複雑度 ${COMPLEXITY} （推奨30超過）"
   fi
