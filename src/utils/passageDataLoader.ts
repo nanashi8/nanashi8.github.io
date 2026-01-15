@@ -7,6 +7,10 @@ import type { CompletePassageData, DependencyParsedPassage } from '@/types/passa
 import { loadDependencyParsedPassage } from '@/utils/dependencyParseLoader';
 import { logger } from '@/utils/logger';
 
+const PASSAGE_FILE_BASE_BY_ID: Record<string, string> = {
+  'beginner-morning-routine': 'beginner_50_Morning-Routine',
+};
+
 const PHRASE_WORK_MARKER = '< < < ASTERISK > > >';
 
 function splitIntoBlocks(text: string): string[] {
@@ -115,6 +119,69 @@ function splitJapaneseParagraphIntoSentences(text: string): string[] {
   return out;
 }
 
+function resolvePassageFileBase(passageId: string): string {
+  return PASSAGE_FILE_BASE_BY_ID[passageId] ?? passageId;
+}
+
+async function loadJapaneseSentenceBlocks(
+  passageId: string
+): Promise<string[]> {
+  const fileBase = resolvePassageFileBase(passageId);
+
+  // 1) 文単位ファイル（存在する場合）
+  try {
+    const res = await fetch(`/data/passages/2_passages-sentences/${fileBase}_sentences.txt`);
+    if (res.ok) {
+      const text = await res.text();
+      // 日本語文が含まれている場合のみ採用
+      if (/[ぁ-んァ-ン一-龯]/.test(text)) {
+        return splitIntoBlocks(text);
+      }
+    }
+  } catch {
+    // ignore
+  }
+
+  // 2) 全訳ファイルから文分割
+  try {
+    const fullCandidates = [
+      `/data/passages/4_passages-translations/${fileBase}_full.txt`,
+      `/data/passages/4_passages-translations/${fileBase}.txt`,
+    ];
+    for (const path of fullCandidates) {
+      const res = await fetch(path);
+      if (!res.ok) continue;
+      const text = await res.text();
+      if (!/[ぁ-んァ-ン一-龯]/.test(text)) continue;
+      return splitJapaneseParagraphIntoSentences(text);
+    }
+  } catch {
+    // ignore
+  }
+
+  return [];
+}
+
+function buildSentenceJapaneseFromPhrases(
+  sentences: CompletePassageData['sentences'],
+  phrases: CompletePassageData['phrases']
+): CompletePassageData['sentences'] {
+  if (phrases.length === 0) return sentences;
+
+  const japaneseById = new Map(phrases.map((p) => [p.id, p.japanese]));
+  return sentences.map((s) => {
+    if (s.japanese && s.japanese.trim().length > 0) return s;
+    if (!s.phraseIds || s.phraseIds.length === 0) return s;
+    const joined = s.phraseIds
+      .map((id) => japaneseById.get(id) ?? '')
+      .join('')
+      .replace(/\//g, '')
+      .replace(/\n?\n/g, '')
+      .trim();
+    return { ...s, japanese: joined };
+  });
+}
+
 function numberWordToDigit(word: string): string | null {
   const w = word.toLowerCase();
   const map: Record<string, string> = {
@@ -157,9 +224,11 @@ async function loadBeginnerMorningRoutine(passageId: string): Promise<CompletePa
     phrases: Array<{ id: number; english: string; japanese: string }>;
   };
 
+  const fileBase = resolvePassageFileBase(passageId);
+
   const [phraseRes, jaRes] = await Promise.all([
-    fetch(`/data/passages-phrase-learning/${passageId}.json`),
-    fetch(`/data/passages-translations/${passageId}-ja.txt`),
+    fetch(`/data/passages/6_passages-phrase-learning/${fileBase}.json`),
+    fetch(`/data/passages/4_passages-translations/${fileBase}.txt`),
   ]);
 
   if (!phraseRes.ok) {
@@ -354,15 +423,7 @@ async function loadCompletePassageFromDependencyParse(passageId: string): Promis
   }
 
   // 日本語（文単位）
-  let japaneseBlocks: string[] = [];
-  try {
-    const res = await fetch(`/data/passages-translations/${passageId}_sentences.txt`);
-    if (res.ok) {
-      japaneseBlocks = splitIntoBlocks(await res.text());
-    }
-  } catch {
-    // ignore
-  }
+  const japaneseBlocks = await loadJapaneseSentenceBlocks(passageId);
 
   // 英語（文単位）はUDパースの text を正とする
   const sentences: CompletePassageData['sentences'] = parsed.sentences.map((s, idx) => {
@@ -402,10 +463,6 @@ export async function loadCompletePassage(
 ): Promise<CompletePassageData> {
   logger.log(`[passageDataLoader] Loading passage: ${passageId}`);
 
-  if (passageId === 'beginner-morning-routine') {
-    return loadBeginnerMorningRoutine(passageId);
-  }
-
   const parsed =
     dependencyParsedPassage ?? (await loadDependencyParsedPassage(passageId));
 
@@ -426,15 +483,7 @@ export async function loadCompletePassage(
   }
 
   // 日本語（文単位）
-  let japaneseBlocks: string[] = [];
-  try {
-    const res = await fetch(`/data/passages-translations/${passageId}_sentences.txt`);
-    if (res.ok) {
-      japaneseBlocks = splitIntoBlocks(await res.text());
-    }
-  } catch {
-    // ignore
-  }
+  const japaneseBlocks = await loadJapaneseSentenceBlocks(passageId);
 
   // 英語（文単位）はUDパースの text を正とする（句点を含む複文もこの単位で扱う）
   const sentences: CompletePassageData['sentences'] = parsed.sentences.map((s, idx) => {
@@ -452,7 +501,8 @@ export async function loadCompletePassage(
   // passages-originalから段落情報を取得
   let paragraphStarts = new Set<number>();
   try {
-    const origRes = await fetch(`/data/passages-original/${passageId}.txt`);
+    const fileBase = resolvePassageFileBase(passageId);
+    const origRes = await fetch(`/data/passages/1_passages-original/${fileBase}.txt`);
     if (origRes.ok) {
       const origText = await origRes.text();
       // 最初の行（パッセージID行）を除去
@@ -474,9 +524,10 @@ export async function loadCompletePassage(
   let annotatedWords: CompletePassageData['annotatedWords'] = [];
 
   try {
+    const fileBase = resolvePassageFileBase(passageId);
     const [enRes, jaRes] = await Promise.all([
-      fetch(`/data/passages-for-phrase-work/${passageId}.txt`),
-      fetch(`/data/passages-translations/${passageId}_phrases.txt`),
+      fetch(`/data/passages/3_passages-for-phrase-work/${fileBase}.txt`),
+      fetch(`/data/passages/5_passages-for-phrase-work-ja/${fileBase}.txt`),
     ]);
 
     if (enRes.ok) {
@@ -527,12 +578,14 @@ export async function loadCompletePassage(
     }
   }
 
-  const wordCount = estimateWordCount(sentences.map((s) => s.english));
-  const sentenceCount = sentences.length;
+  const finalizedSentences = buildSentenceJapaneseFromPhrases(sentences, phrases);
+
+  const wordCount = estimateWordCount(finalizedSentences.map((s) => s.english));
+  const sentenceCount = finalizedSentences.length;
 
   return {
     passageId,
-    sentences,
+    sentences: finalizedSentences,
     phrases,
     keyPhrases: [],
     annotatedWords,
@@ -541,4 +594,19 @@ export async function loadCompletePassage(
       sentenceCount,
     },
   };
+}
+
+/**
+ * 完全なパッセージデータを安全に読み込む（例外時は依存解析ベースへフォールバック）
+ */
+export async function loadCompletePassageSafely(
+  passageId: string,
+  dependencyParsedPassage?: DependencyParsedPassage | null
+): Promise<CompletePassageData> {
+  try {
+    return await loadCompletePassage(passageId, dependencyParsedPassage);
+  } catch (err) {
+    logger.error(`[passageDataLoader] Failed to load passage: ${passageId}`, err);
+    return loadCompletePassageFromDependencyParse(passageId);
+  }
 }
