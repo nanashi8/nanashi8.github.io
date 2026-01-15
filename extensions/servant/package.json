@@ -2,7 +2,7 @@
   "name": "servant",
   "displayName": "Servant",
   "description": "プロジェクト内に住むAIサーバント。設計方針を監視し、AI作業時にプロジェクト情報をネットワークで収集・提供して効率化します",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "publisher": "nanashi8",
   "license": "MIT",
   "repository": {
@@ -265,6 +265,11 @@
           ],
           "default": "summary",
           "description": "起動直後（startupQuietPeriodMsの間）の警告出力モード（summary推奨）。通常時は warnings.outputMode を使用します"
+        },
+        "servant.warnings.autoReportToChat": {
+          "type": "boolean",
+          "default": true,
+          "description": "警告を要約してCopilot Chat連携用に自動準備（クリップボードへコピーしChatを開く）する"
         },
         "servant.logging.startupQuietPeriodMs": {
           "type": "number",

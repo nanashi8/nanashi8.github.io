@@ -77,6 +77,30 @@ export class ServantWarningLogger {
     return parts.join(' / ');
   }
 
+  private buildSummaryLine(warning: ServantWarning): string {
+    const compact = this.formatCompactDetails(warning);
+    const type = warning.type ? `type=${warning.type}` : undefined;
+    const parts = [warning.message, type, compact].filter(Boolean);
+    return parts.join(' | ');
+  }
+
+  private async autoReportToChat(warning: ServantWarning, summaryLine: string): Promise<void> {
+    const config = vscode.workspace.getConfiguration('servant');
+    const enabled = config.get<boolean>('warnings.autoReportToChat', true);
+    if (!enabled) return;
+
+    if (warning.severity === 'info') return;
+
+    const payload = `@servant 警告要約: ${summaryLine}`;
+    await vscode.env.clipboard.writeText(payload);
+
+    try {
+      await vscode.commands.executeCommand('workbench.action.chat.open');
+    } catch {
+      // ignore
+    }
+  }
+
   public async showWarningLog(): Promise<void> {
     if (this.warningHistory.length === 0) {
       await vscode.window.showInformationMessage('Servant: 警告ログはまだありません');
@@ -163,11 +187,11 @@ export class ServantWarningLogger {
     this.pushHistory(warning);
 
     const icon = warning.severity === 'error' ? '⚠️' : warning.severity === 'warning' ? '⚡' : 'ℹ️';
+    const summaryLine = this.buildSummaryLine(warning);
 
     if (mode === 'summary') {
-      const compact = this.formatCompactDetails(warning);
-      this.outputChannel.appendLine(`${icon} [Servant 警告] ${warning.message}${compact ? ` (${compact})` : ''}`);
-      this.outputChannel.appendLine('  詳細: コマンドパレット → "Servant: Show Warning Log"');
+      this.outputChannel.appendLine(`${icon} [Servant 警告] ${summaryLine} | 詳細: "Servant: Show Warning Log"`);
+      void this.autoReportToChat(warning, summaryLine);
       return;
     }
 
@@ -199,6 +223,8 @@ export class ServantWarningLogger {
     }
 
     this.outputChannel.appendLine('\n📋 この出力をCopilot Chatに貼り付けて対処を依頼できます\n');
+
+    void this.autoReportToChat(warning, summaryLine);
   }
 
   /**
