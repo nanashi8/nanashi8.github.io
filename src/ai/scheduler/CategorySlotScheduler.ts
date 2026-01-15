@@ -23,7 +23,7 @@ export class CategorySlotScheduler {
       isVerboseDebug: boolean;
     }
   ): Promise<ScheduleResult> {
-    const { progressMap, recentWords, isVerboseDebug } = ctx;
+    const { progressMap, recentWords } = ctx;
     const calculator = new PositionCalculator(
       params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
     );
