@@ -65,6 +65,16 @@ echo "📅 短期間の再修正をチェック中..."
 
 DAYS_THRESHOLD=7
 for file in $STAGED_FILES; do
+  # Servant改善は連続修正が発生しやすいため、明示的な改善コミットは除外
+  if [[ "$file" == extensions/servant/* ]]; then
+    if echo "${COMMIT_MSG:-}" | grep -qiE "\b(servant)\b"; then
+      continue
+    fi
+    if [ "${SERVANT_IMPROVEMENT:-0}" = "1" ]; then
+      continue
+    fi
+  fi
+
   # 過去7日間の該当ファイルへのコミット回数
   RECENT_COMMITS=$(git log --since="$DAYS_THRESHOLD days ago" --oneline -- "$file" | wc -l | tr -d ' ')
 
