@@ -219,7 +219,7 @@ function splitBeginnerPhraseIfNeeded(englishRaw: string): Array<{ english: strin
   return [{ english, japanese: '' }];
 }
 
-async function loadBeginnerMorningRoutine(passageId: string): Promise<CompletePassageData> {
+async function _loadBeginnerMorningRoutine(passageId: string): Promise<CompletePassageData> {
   type PhraseLearningJson = {
     phrases: Array<{ id: number; english: string; japanese: string }>;
   };
