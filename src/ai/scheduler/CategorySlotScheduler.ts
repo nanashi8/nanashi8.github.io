@@ -79,16 +79,21 @@ export class CategorySlotScheduler {
       return { question: q, position, category };
     });
 
-    // 2. カテゴリ別に分類
-    const byCategory: Record<string, Classified[]> = {
-      incorrect: classified.filter((c) => c.category === 'incorrect'),
-      still_learning: classified.filter((c) => c.category === 'still_learning'),
-      new: classified.filter((c) => c.category === 'new'),
-      mastered: classified.filter((c) => c.category === 'mastered'),
+    // 2. カテゴリ別に分類（SSOT: determineWordPosition を前提に分類済み）
+    const byCategory: Record<Classified['category'], Classified[]> = {
+      incorrect: [],
+      still_learning: [],
+      new: [],
+      mastered: [],
     };
 
+    classified.forEach((item) => {
+      byCategory[item.category].push(item);
+    });
+
     // 3. 各カテゴリ内でPosition降順ソート
-    Object.keys(byCategory).forEach((cat) => {
+    const categoryKeys = Object.keys(byCategory) as Array<keyof typeof byCategory>;
+    categoryKeys.forEach((cat) => {
       byCategory[cat].sort((a, b) => b.position - a.position);
     });
 

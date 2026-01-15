@@ -211,4 +211,49 @@ describe('Utils - generateChoicesWithQuestions', () => {
       }
     });
   });
+
+  it('ABC順に固定されない（シャッフルが同順でも回避）', () => {
+    const originalRandom = Math.random;
+    Math.random = () => 0.99;
+
+    try {
+      const orderedQuestions: Question[] = [
+        {
+          word: 'q1',
+          meaning: 'A',
+          reading: '',
+          etymology: '',
+          relatedWords: '',
+          relatedFields: '',
+          difficulty: '',
+        },
+        {
+          word: 'q2',
+          meaning: 'B',
+          reading: '',
+          etymology: '',
+          relatedWords: '',
+          relatedFields: '',
+          difficulty: '',
+        },
+        {
+          word: 'q3',
+          meaning: 'C',
+          reading: '',
+          etymology: '',
+          relatedWords: '',
+          relatedFields: '',
+          difficulty: '',
+        },
+      ];
+
+      const choices = generateChoicesWithQuestions(orderedQuestions[0], orderedQuestions, 0);
+      const firstThree = choices.slice(0, 3).map((c) => c.text);
+      const sorted = [...firstThree].sort((a, b) => a.localeCompare(b));
+
+      expect(firstThree).not.toEqual(sorted);
+    } finally {
+      Math.random = originalRandom;
+    }
+  });
 });

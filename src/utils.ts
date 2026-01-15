@@ -290,6 +290,14 @@ export function generateChoicesWithQuestions(
     { text: currentQuestion.meaning, question: currentQuestion },
     ...wrongQuestions.map((q) => ({ text: q.meaning, question: q })),
   ]);
+  const firstThreeTexts = firstThreeChoices.map((choice) => choice.text);
+  const sortedTexts = [...firstThreeTexts].sort((a, b) => a.localeCompare(b));
+  const isAlphabetical = firstThreeTexts.every((text, index) => text === sortedTexts[index]);
+
+  if (isAlphabetical && firstThreeChoices.length > 1) {
+    const rotated = [...firstThreeChoices.slice(1), firstThreeChoices[0]];
+    return [...rotated, { text: '分からない', question: null }];
+  }
 
   return [...firstThreeChoices, { text: '分からない', question: null }];
 }
