@@ -62,12 +62,14 @@ import { getABTestManager } from '@/ai/experiments/ABTestManager';
 import { BatchManager } from './BatchManager';
 import { SlotAllocator } from './SlotAllocator';
 import { SlotConfigManager } from './SlotConfigManager';
+import { CategorySlotScheduler } from './CategorySlotScheduler';
 
 export class QuestionScheduler {
   private antiVibration: AntiVibrationFilter;
   private recentAnswersCache: Map<string, RecentAnswer[]> = new Map();
   public readonly aiCoordinator: AICoordinator;
   private slotAllocator: SlotAllocator; // 🆕 カテゴリーベーススロットシステム
+  private categorySlotScheduler: CategorySlotScheduler;
   private batchManager: BatchManager | null = null; // ⚡ BatchManagerキャッシュ
   private lastProgressDataFetch: number = 0; // ⚡ 最終取得時刻
   private cachedProgressData: Record<string, any> | null = null; // ⚡ キャッシュ
@@ -89,6 +91,7 @@ export class QuestionScheduler {
     this.antiVibration = new AntiVibrationFilter();
     this.aiCoordinator = new AICoordinator({ debugMode: import.meta.env.DEV });
     this.slotAllocator = new SlotAllocator(); // 🆕 SlotAllocatorインスタンス
+    this.categorySlotScheduler = new CategorySlotScheduler();
   }
 
   /**
@@ -279,9 +282,9 @@ export class QuestionScheduler {
     // 🎯 Strategy Pattern: モード別スケジューリング戦略選択
     // ハイブリッドモード: 既存AIの順序を尊重
     if (params.hybridMode) {
-      const HybridScheduleStrategy = await import(
-        './strategies/HybridScheduleStrategy'
-      ).then((m) => m.HybridScheduleStrategy);
+      const HybridScheduleStrategy = await import('./strategies/HybridScheduleStrategy').then(
+        (m) => m.HybridScheduleStrategy
+      );
       const strategy = new HybridScheduleStrategy(this.getDependencies());
       return strategy.schedule({
         params,
@@ -293,9 +296,10 @@ export class QuestionScheduler {
 
     // finalPriorityモード: AICoordinatorのfinalPriorityを主軸にする（variant=C）
     if (params.finalPriorityMode) {
-      const FinalPriorityScheduleStrategy = await import(
-        './strategies/FinalPriorityScheduleStrategy'
-      ).then((m) => m.FinalPriorityScheduleStrategy);
+      const FinalPriorityScheduleStrategy =
+        await import('./strategies/FinalPriorityScheduleStrategy').then(
+          (m) => m.FinalPriorityScheduleStrategy
+        );
       const strategy = new FinalPriorityScheduleStrategy(this.getDependencies());
       return strategy.schedule({
         params,
@@ -306,9 +310,7 @@ export class QuestionScheduler {
     }
 
     // デフォルトモード: DefaultScheduleStrategyに委譲
-    const { DefaultScheduleStrategy } = await import(
-      './strategies/DefaultScheduleStrategy'
-    );
+    const { DefaultScheduleStrategy } = await import('./strategies/DefaultScheduleStrategy');
     const strategy = new DefaultScheduleStrategy(this.getDependencies());
     const result = await strategy.schedule({
       params,
@@ -2075,6 +2077,13 @@ export class QuestionScheduler {
     startTime: number
   ): Promise<ScheduleResult> {
     const progressMap = QuestionScheduler.getProgressMapFromParams(params);
+    const recentWordsForSlots = this.getRecentWords(params, 10);
+    return this.categorySlotScheduler.schedule(params, startTime, {
+      progressMap,
+      recentWords: recentWordsForSlots,
+      isVerboseDebug: QuestionScheduler.isVerboseDebug,
+    });
+
     const calculator = new PositionCalculator(
       params.mode as 'memorization' | 'translation' | 'spelling' | 'grammar'
     );
@@ -2159,9 +2168,8 @@ export class QuestionScheduler {
     // 4. スロット割当（🆕 バッチサイズ設定対応）
     // - バッチサイズ設定がある場合: その値を使用
     // - 設定なしの場合: 従来通り最大100語
-    const totalSlots = params.batchSize
-      ? Math.min(params.questions.length, params.batchSize)
-      : Math.min(params.questions.length, 100);
+    const normalizedBatchSize = Number(params.batchSize ?? 100);
+    const totalSlots = Math.min(params.questions.length, normalizedBatchSize);
 
     const incorrectCount = byCategory.incorrect.length;
     const stillCount = byCategory.still_learning.length;
@@ -2193,7 +2201,10 @@ export class QuestionScheduler {
 
     // それでも余る場合（例: 未出題が不足）には、在庫があるカテゴリに再配分
     if (remaining > 0) {
-      const addTo = (key: 'incorrect' | 'still_learning' | 'mastered' | 'new', available: number) => {
+      const addTo = (
+        key: 'incorrect' | 'still_learning' | 'mastered' | 'new',
+        available: number
+      ) => {
         if (remaining <= 0) return;
         const canAdd = Math.max(0, available - slots[key]);
         if (canAdd <= 0) return;
