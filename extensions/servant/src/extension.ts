@@ -4,7 +4,10 @@ import * as fs from 'fs';
 import { InstructionsLoader } from './loader/InstructionsLoader';
 import { DecisionTreeLoader } from './loader/DecisionTreeLoader';
 import { InstructionsDiagnosticsProvider } from './providers/InstructionsDiagnosticsProvider';
-import { InstructionsCodeActionProvider, registerQuickFixCommands } from './providers/InstructionsCodeActionProvider';
+import {
+  InstructionsCodeActionProvider,
+  registerQuickFixCommands,
+} from './providers/InstructionsCodeActionProvider';
 import { RuleEngine } from './engine/RuleEngine';
 import { PreCommitValidator } from './git/PreCommitValidator';
 import { GitIntegration } from './git/GitIntegration';
@@ -63,9 +66,14 @@ export function activate(context: vscode.ExtensionContext) {
     const mode = vscode.ExtensionMode?.[context.extensionMode] ?? String(context.extensionMode);
     const startupInfoEnabled = vscode.workspace
       .getConfiguration('servant')
-      .get<boolean>('logging.startupInfo', context.extensionMode !== vscode.ExtensionMode.Production);
+      .get<boolean>(
+        'logging.startupInfo',
+        context.extensionMode !== vscode.ExtensionMode.Production
+      );
     if (startupInfoEnabled) {
-      outputChannel.appendLine(`[Servant] Extension: ${ext.id} v${ext.packageJSON?.version ?? 'unknown'} (${mode})`);
+      outputChannel.appendLine(
+        `[Servant] Extension: ${ext.id} v${ext.packageJSON?.version ?? 'unknown'} (${mode})`
+      );
       outputChannel.appendLine(`[Servant] ExtensionPath: ${ext.extensionPath}`);
     }
   } catch {
@@ -163,12 +171,12 @@ export function activate(context: vscode.ExtensionContext) {
   );
   // EventSubscriptionをvscode.Disposableに変換
   context.subscriptions.push({
-    dispose: () => eventBusSubscription.unsubscribe()
+    dispose: () => eventBusSubscription.unsubscribe(),
   });
 
   // EventBusのクリーンアップ処理
   context.subscriptions.push({
-    dispose: () => globalEventBus.clear()
+    dispose: () => globalEventBus.clear(),
   });
 
   // Notifierにステータス更新コールバックを設定（後方互換性のため残す）
@@ -191,7 +199,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   // 天体儀ステータスバー（🌟アイコン、常時表示）
   // priority を最高レベル（10000）に設定して、右端に確実に表示
-  const constellationStatusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 10000);
+  const constellationStatusBar = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Right,
+    10000
+  );
   constellationStatusBar.text = '🌟 天体儀';
   constellationStatusBar.tooltip = '天体儀メニューを開く';
   constellationStatusBar.command = 'servant.openConstellationMenu';
@@ -204,28 +215,35 @@ export function activate(context: vscode.ExtensionContext) {
     outputChannel.appendLine('[Servant] Workspace is not trusted (Restricted Mode).');
 
     servantStatusBar.text = 'Servant: TRUST';
-    servantStatusBar.tooltip = 'ワークスペースが未信頼のため、Servantのフル機能は無効です。信頼すると有効化されます。';
+    servantStatusBar.tooltip =
+      'ワークスペースが未信頼のため、Servantのフル機能は無効です。信頼すると有効化されます。';
     servantStatusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.warningBackground');
     servantStatusBar.show();
 
     constellationStatusBar.tooltip = 'ワークスペースを信頼すると天体儀が有効になります';
 
     // 🌟クリックで信頼導線を出す（この時点では他コマンドは登録しない）
-    const showConstellationCommand = vscode.commands.registerCommand('servant.showConstellation', async () => {
-      const choice = await vscode.window.showWarningMessage(
-        '天体儀を表示するには、このワークスペースを信頼する必要があります。',
-        'ワークスペースを信頼'
-      );
-      if (choice === 'ワークスペースを信頼') {
-        await vscode.commands.executeCommand('workbench.action.manageWorkspaceTrust');
+    const showConstellationCommand = vscode.commands.registerCommand(
+      'servant.showConstellation',
+      async () => {
+        const choice = await vscode.window.showWarningMessage(
+          '天体儀を表示するには、このワークスペースを信頼する必要があります。',
+          'ワークスペースを信頼'
+        );
+        if (choice === 'ワークスペースを信頼') {
+          await vscode.commands.executeCommand('workbench.action.manageWorkspaceTrust');
+        }
       }
-    });
+    );
     context.subscriptions.push(showConstellationCommand);
 
     // メニューコマンドも同じ導線へ
-    const openConstellationMenuCommand = vscode.commands.registerCommand('servant.openConstellationMenu', async () => {
-      await vscode.commands.executeCommand('servant.showConstellation');
-    });
+    const openConstellationMenuCommand = vscode.commands.registerCommand(
+      'servant.openConstellationMenu',
+      async () => {
+        await vscode.commands.executeCommand('servant.showConstellation');
+      }
+    );
     context.subscriptions.push(openConstellationMenuCommand);
 
     return;
@@ -365,8 +383,8 @@ export function activate(context: vscode.ExtensionContext) {
           const issues = await guard.validateOnSave(doc);
 
           if (issues.length > 0) {
-            const errorCount = issues.filter(i => i.severity === 'error').length;
-            const warningCount = issues.filter(i => i.severity === 'warning').length;
+            const errorCount = issues.filter((i) => i.severity === 'error').length;
+            const warningCount = issues.filter((i) => i.severity === 'warning').length;
 
             // 静かに警告：ログのみ（通知なし）
             outputChannel.appendLine(
@@ -493,7 +511,11 @@ export function activate(context: vscode.ExtensionContext) {
   // GitHub Actions 健全性監視（週次で重複/無駄をチェック）
   warningLogger = new ServantWarningLogger(outputChannel);
   warningLogger.setStartupWindowMs(startupQuietPeriodMs);
-  const actionsHealthMonitor = new ActionsHealthMonitor(workspaceRoot, warningLogger, globalEventBus);
+  const actionsHealthMonitor = new ActionsHealthMonitor(
+    workspaceRoot,
+    warningLogger,
+    globalEventBus
+  );
   // 後方互換性のため既存のコールバックも設定
   actionsHealthMonitor.setStatusUpdateCallback((status) => {
     updateServantStatusBar(status);
@@ -531,7 +553,9 @@ export function activate(context: vscode.ExtensionContext) {
   const statsInterval = setInterval(() => {
     const stats = documentGuard.getStats();
     if (stats.monitored > 0) {
-      updateServantStatusBar(`📄 監視中 (${stats.monitored}件 | 違反: ${stats.violations} | 修正: ${stats.autoFixed})`);
+      updateServantStatusBar(
+        `📄 監視中 (${stats.monitored}件 | 違反: ${stats.violations} | 修正: ${stats.autoFixed})`
+      );
     }
   }, 10000);
   context.subscriptions.push({ dispose: () => clearInterval(statsInterval) });
@@ -588,7 +612,7 @@ export function activate(context: vscode.ExtensionContext) {
     optimizationEngine,
     workflowLearner,
     incrementalValidator,
-    neuralGraph  // Constellation用にグラフを渡す
+    neuralGraph // Constellation用にグラフを渡す
   );
   autopilot.setStartupWindowMs(startupQuietPeriodMs);
   autopilot.start(context);
@@ -605,11 +629,11 @@ export function activate(context: vscode.ExtensionContext) {
       { scheme: 'file', language: 'javascript' },
       { scheme: 'file', language: 'javascriptreact' },
       { scheme: 'file', language: 'markdown' },
-      { scheme: 'file', language: 'json' }
+      { scheme: 'file', language: 'json' },
     ],
     codeActionProvider,
     {
-      providedCodeActionKinds: [vscode.CodeActionKind.QuickFix]
+      providedCodeActionKinds: [vscode.CodeActionKind.QuickFix],
     }
   );
 
@@ -629,7 +653,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     const violations = await diagnosticsProvider.validate(editor.document.uri);
 
-    const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
+    const learningEnabled = vscode.workspace
+      .getConfiguration('servant')
+      .get<boolean>('learning.enabled', true);
     if (learningEnabled) {
       const filePath = editor.document.uri.fsPath;
       const relPath = path.isAbsolute(filePath) ? path.relative(workspaceRoot, filePath) : filePath;
@@ -644,7 +670,7 @@ export function activate(context: vscode.ExtensionContext) {
             rule: v.ruleId || 'unknown',
             category: 'diagnostics',
             filePath: relPath,
-            message: v.message
+            message: v.message,
           });
         }
       }
@@ -683,23 +709,27 @@ export function activate(context: vscode.ExtensionContext) {
       if (!guardResult.success) {
         if (aiTracker.hasActiveAction()) {
           const errorCount = guardResult.violations.filter((v) => v.severity === 'error').length;
-          const warningCount = guardResult.violations.filter((v) => v.severity === 'warning').length;
+          const warningCount = guardResult.violations.filter(
+            (v) => v.severity === 'warning'
+          ).length;
           await aiTracker.endAction({
             success: false,
             error: 'Repo guard failed',
             compileErrors: errorCount,
-            violations: warningCount
+            violations: warningCount,
           });
         }
 
-        const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
+        const learningEnabled = vscode.workspace
+          .getConfiguration('servant')
+          .get<boolean>('learning.enabled', true);
         if (learningEnabled) {
           for (const v of guardResult.violations) {
             await adaptiveGuard.recordViolation({
               rule: 'repo-guard',
               category: 'preCommit',
               filePath: v.file ?? 'scripts/pre-commit-ai-guard.sh',
-              message: v.message
+              message: v.message,
             });
           }
         }
@@ -715,17 +745,19 @@ export function activate(context: vscode.ExtensionContext) {
 
     // AIActionTracker: pre-commit結果で現在アクションを確定終了（ログ学習の実信号にする）
     if (aiTracker.hasActiveAction()) {
-      const errorCount = result.violations.filter(v => v.severity === 'error').length;
-      const warningCount = result.violations.filter(v => v.severity === 'warning').length;
+      const errorCount = result.violations.filter((v) => v.severity === 'error').length;
+      const warningCount = result.violations.filter((v) => v.severity === 'warning').length;
       await aiTracker.endAction({
         success: result.success,
         error: result.success ? undefined : 'Pre-commit validation failed',
         compileErrors: errorCount,
-        violations: warningCount
+        violations: warningCount,
       });
     }
 
-    const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
+    const learningEnabled = vscode.workspace
+      .getConfiguration('servant')
+      .get<boolean>('learning.enabled', true);
     if (learningEnabled) {
       if (result.violations.length === 0) {
         await adaptiveGuard.recordRecovery('pre-commit');
@@ -736,7 +768,7 @@ export function activate(context: vscode.ExtensionContext) {
             rule: 'pre-commit',
             category: 'preCommit',
             filePath: relPath,
-            message: v.message
+            message: v.message,
           });
         }
       }
@@ -748,25 +780,36 @@ export function activate(context: vscode.ExtensionContext) {
           // 1) グラフをロード（無ければ自動構築）
           let loaded = await neuralGraph.loadGraph();
           if (!loaded) {
-            outputChannel.appendLine('[NeuralLearning] Neural graph not found. Building automatically...');
+            outputChannel.appendLine(
+              '[NeuralLearning] Neural graph not found. Building automatically...'
+            );
             await neuralGraph.buildGraph();
 
             // Constellationデータ生成（ゴール・優先度・変更頻度）
-            const goalManager = new (await import('./goals/GoalManager.js')).GoalManager(workspaceRoot);
+            const goalManager = new (await import('./goals/GoalManager.js')).GoalManager(
+              workspaceRoot
+            );
             await neuralGraph.updateChangeFrequencies(gitIntegration);
             neuralGraph.computePriorityScores(goalManager);
             await neuralGraph.saveGraph();
 
             loaded = true;
-            outputChannel.appendLine('[NeuralLearning] Neural graph build complete (with Constellation data)');
+            outputChannel.appendLine(
+              '[NeuralLearning] Neural graph build complete (with Constellation data)'
+            );
           }
 
           if (loaded) {
             // 2) file別に集約して逆伝播
-            const byFile = new Map<string, { errors: number; warnings: number; messages: string[] }>();
+            const byFile = new Map<
+              string,
+              { errors: number; warnings: number; messages: string[] }
+            >();
             for (const v of result.violations) {
               const absOrRel = v.file;
-              const rel = path.isAbsolute(absOrRel) ? path.relative(workspaceRoot, absOrRel) : absOrRel;
+              const rel = path.isAbsolute(absOrRel)
+                ? path.relative(workspaceRoot, absOrRel)
+                : absOrRel;
               const normalized = rel.replace(/\\/g, '/');
               if (!normalized || normalized.startsWith('..')) continue;
 
@@ -782,7 +825,7 @@ export function activate(context: vscode.ExtensionContext) {
                 failureFile,
                 error: agg.messages.join(' / ') || 'Pre-commit validation failed',
                 violations: agg.warnings,
-                compileErrors: agg.errors
+                compileErrors: agg.errors,
               });
             }
           }
@@ -811,7 +854,7 @@ export function activate(context: vscode.ExtensionContext) {
     const note = await vscode.window.showInputBox({
       title: 'Record Spec Check',
       prompt: '今回の作業内容（任意）を入力してください',
-      placeHolder: '例: UD解析の接続点テスト追加 / QuestionScheduler調査'
+      placeHolder: '例: UD解析の接続点テスト追加 / QuestionScheduler調査',
     });
 
     // キャンセルは何もしない
@@ -845,8 +888,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     const note = await vscode.window.showInputBox({
       title: 'Review Required Instructions',
-      prompt: '確認した指示書/作業内容（任意）を入力してください（stagedがある場合はその対象に対する記録になります）',
-      placeHolder: '例: ReadingPassageViewの追加に伴う指示書確認'
+      prompt:
+        '確認した指示書/作業内容（任意）を入力してください（stagedがある場合はその対象に対する記録になります）',
+      placeHolder: '例: ReadingPassageViewの追加に伴う指示書確認',
     });
 
     if (note === undefined) {
@@ -860,14 +904,24 @@ export function activate(context: vscode.ExtensionContext) {
   const getSpecBookPaths = () => {
     const config = vscode.workspace.getConfiguration('servant');
 
-    const specRelOrAbs = (config.get<string>('specBook.specPath', 'docs/specifications/WORKING_SPEC.md') ?? '').trim();
-    const decisionsRelOrAbs = (config.get<string>('specBook.decisionsPath', 'docs/specifications/DECISIONS.md') ?? '').trim();
+    const specRelOrAbs = (
+      config.get<string>('specBook.specPath', 'docs/specifications/WORKING_SPEC.md') ?? ''
+    ).trim();
+    const decisionsRelOrAbs = (
+      config.get<string>('specBook.decisionsPath', 'docs/specifications/DECISIONS.md') ?? ''
+    ).trim();
 
-    const effectiveSpec = specRelOrAbs.length > 0 ? specRelOrAbs : 'docs/specifications/WORKING_SPEC.md';
-    const effectiveDecisions = decisionsRelOrAbs.length > 0 ? decisionsRelOrAbs : 'docs/specifications/DECISIONS.md';
+    const effectiveSpec =
+      specRelOrAbs.length > 0 ? specRelOrAbs : 'docs/specifications/WORKING_SPEC.md';
+    const effectiveDecisions =
+      decisionsRelOrAbs.length > 0 ? decisionsRelOrAbs : 'docs/specifications/DECISIONS.md';
 
-    const specAbs = path.isAbsolute(effectiveSpec) ? effectiveSpec : path.join(workspaceRoot, effectiveSpec);
-    const decisionsAbs = path.isAbsolute(effectiveDecisions) ? effectiveDecisions : path.join(workspaceRoot, effectiveDecisions);
+    const specAbs = path.isAbsolute(effectiveSpec)
+      ? effectiveSpec
+      : path.join(workspaceRoot, effectiveSpec);
+    const decisionsAbs = path.isAbsolute(effectiveDecisions)
+      ? effectiveDecisions
+      : path.join(workspaceRoot, effectiveDecisions);
 
     return { specAbs, decisionsAbs };
   };
@@ -909,14 +963,14 @@ export function activate(context: vscode.ExtensionContext) {
         '\n',
         '- ここは仕様の変更理由・矛盾解消・運用決定のログです。\n',
         '- 形式: `- YYYY-MM-DDTHH:mm:ss.sssZ: 決定内容`\n',
-        '\n'
+        '\n',
       ].join('')
     );
 
     const note = await vscode.window.showInputBox({
       title: 'Append Decision Log',
       prompt: '決定した内容（1行）を入力してください',
-      placeHolder: '例: Working Specは docs/specifications/WORKING_SPEC.md を正とする'
+      placeHolder: '例: Working Specは docs/specifications/WORKING_SPEC.md を正とする',
     });
 
     if (note === undefined) {
@@ -943,7 +997,7 @@ export function activate(context: vscode.ExtensionContext) {
         type: 'decision:append',
         target: vscode.workspace.asRelativePath(decisionsAbs).replace(/\\/g, '/'),
         strength: 0.9,
-        meta: { note: trimmed }
+        meta: { note: trimmed },
       });
     } catch {
       // ignore
@@ -959,8 +1013,12 @@ export function activate(context: vscode.ExtensionContext) {
     const notify = options?.notify ?? false;
 
     const config = vscode.workspace.getConfiguration('servant');
-    const outputRelOrAbs = (config.get<string>('context.outputPath', '.aitk/context/AI_CONTEXT.md') ?? '').trim();
-    const outputAbs = path.isAbsolute(outputRelOrAbs) ? outputRelOrAbs : path.join(workspaceRoot, outputRelOrAbs);
+    const outputRelOrAbs = (
+      config.get<string>('context.outputPath', '.aitk/context/AI_CONTEXT.md') ?? ''
+    ).trim();
+    const outputAbs = path.isAbsolute(outputRelOrAbs)
+      ? outputRelOrAbs
+      : path.join(workspaceRoot, outputRelOrAbs);
 
     const { specAbs, decisionsAbs } = getSpecBookPaths();
 
@@ -978,7 +1036,7 @@ export function activate(context: vscode.ExtensionContext) {
         timestamp: new Date().toISOString(),
         type: 'context:build',
         strength: 0.6,
-        meta: { stagedCount: stagedFiles.length }
+        meta: { stagedCount: stagedFiles.length },
       });
     } catch {
       // ignore
@@ -1068,7 +1126,12 @@ export function activate(context: vscode.ExtensionContext) {
         await neuralGraph.buildGraph();
 
         // 発火モデル: hotTargets + startNode を seed として伝播
-        const seeds: Array<{ file: string; activation: number; source: string; signalTypes?: string }> = [];
+        const seeds: Array<{
+          file: string;
+          activation: number;
+          source: string;
+          signalTypes?: string;
+        }> = [];
         // NOTE: 上位hot targetが存在しない/削除済みの場合、正規化が潰れてseedが弱くなる。
         // 実在ファイルだけで maxHot を計算して分解能を保つ。
         const existingHotScores: number[] = [];
@@ -1093,7 +1156,7 @@ export function activate(context: vscode.ExtensionContext) {
             file: h.target.replace(/\\/g, '/'),
             activation: Math.max(0, Math.min(1, normalized)),
             source: 'signal',
-            signalTypes: typeSummary
+            signalTypes: typeSummary,
           });
         }
 
@@ -1138,7 +1201,9 @@ export function activate(context: vscode.ExtensionContext) {
         lines.push('');
         for (const s of seeds) {
           const extra = s.signalTypes ? `, signals=[${s.signalTypes}]` : '';
-          lines.push(`- ${s.file} (activation=${s.activation.toFixed(3)}, source=${s.source}${extra})`);
+          lines.push(
+            `- ${s.file} (activation=${s.activation.toFixed(3)}, source=${s.source}${extra})`
+          );
         }
         lines.push('');
 
@@ -1182,8 +1247,12 @@ export function activate(context: vscode.ExtensionContext) {
     } else {
       lines.push(`- ok: false`);
       lines.push(`- reason: ${freshness.reason}`);
-      if (freshness.ageHours !== undefined) lines.push(`- ageHours: ${freshness.ageHours.toFixed(2)}`);
-      if (freshness.reason === 'missing_required_instructions' && freshness.missingInstructions?.length) {
+      if (freshness.ageHours !== undefined)
+        lines.push(`- ageHours: ${freshness.ageHours.toFixed(2)}`);
+      if (
+        freshness.reason === 'missing_required_instructions' &&
+        freshness.missingInstructions?.length
+      ) {
         lines.push('');
         lines.push('### Missing Instructions');
         lines.push('');
@@ -1232,8 +1301,13 @@ export function activate(context: vscode.ExtensionContext) {
       try {
         const config = vscode.workspace.getConfiguration('servant');
         const maxAgeMinutes = config.get<number>('context.maxAgeMinutes', 120);
-        const outputRelOrAbs = (config.get<string>('evaluation.outputPath', '.aitk/evaluation/WORKSPACE_EVALUATION.md') ?? '').trim();
-        const outputAbs = path.isAbsolute(outputRelOrAbs) ? outputRelOrAbs : path.join(workspaceRoot, outputRelOrAbs);
+        const outputRelOrAbs = (
+          config.get<string>('evaluation.outputPath', '.aitk/evaluation/WORKSPACE_EVALUATION.md') ??
+          ''
+        ).trim();
+        const outputAbs = path.isAbsolute(outputRelOrAbs)
+          ? outputRelOrAbs
+          : path.join(workspaceRoot, outputRelOrAbs);
 
         const evaluator = new WorkspaceReadinessEvaluator(workspaceRoot);
         const report = evaluator.evaluate({ contextPacketMaxAgeMinutes: maxAgeMinutes });
@@ -1257,7 +1331,8 @@ export function activate(context: vscode.ExtensionContext) {
           outputChannel.appendLine(`🚨 errors: ${errors.length}`);
           for (const e of errors.slice(0, 8)) {
             outputChannel.appendLine(`- ${e.label}`);
-            if (e.ownerActions?.length) outputChannel.appendLine(`  actions: ${e.ownerActions.join(' / ')}`);
+            if (e.ownerActions?.length)
+              outputChannel.appendLine(`  actions: ${e.ownerActions.join(' / ')}`);
           }
           outputChannel.appendLine('');
         }
@@ -1265,7 +1340,8 @@ export function activate(context: vscode.ExtensionContext) {
           outputChannel.appendLine(`⚠️ warnings: ${warns.length}`);
           for (const w of warns.slice(0, 8)) {
             outputChannel.appendLine(`- ${w.label}`);
-            if (w.ownerActions?.length) outputChannel.appendLine(`  actions: ${w.ownerActions.join(' / ')}`);
+            if (w.ownerActions?.length)
+              outputChannel.appendLine(`  actions: ${w.ownerActions.join(' / ')}`);
           }
           outputChannel.appendLine('');
         }
@@ -1277,7 +1353,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         if (errors.length > 0) {
           notifier.commandWarning(
-            `🚨 Workspace評価: ${report.score}/${report.maxScore}（error ${errors.length}件）`,
+            `🚨 Workspace評価: ${report.score}/${report.maxScore}（error ${errors.length}件）`
           );
         } else {
           notifier.commandInfo(`✅ Workspace評価: ${report.score}/${report.maxScore}`);
@@ -1310,9 +1386,8 @@ export function activate(context: vscode.ExtensionContext) {
   };
 
   const uninstallHooks = async () => {
-
-      // Evaluation command
-      context.subscriptions.push(evaluateWorkspaceReadinessCommand);
+    // Evaluation command
+    context.subscriptions.push(evaluateWorkspaceReadinessCommand);
     const hooksDir = await gitIntegration.getHooksDirectory(workspaceRoot);
     if (!hooksDir) {
       notifier.commandError('Failed to locate .git/hooks directory');
@@ -1329,15 +1404,30 @@ export function activate(context: vscode.ExtensionContext) {
 
   // コマンド登録: 手動検証（servant + 互換エイリアス）
   const validateCommand = vscode.commands.registerCommand('servant.validate', validateActiveEditor);
-  const validateCommandLegacy = vscode.commands.registerCommand('instructionsValidator.validate', validateActiveEditor);
+  const validateCommandLegacy = vscode.commands.registerCommand(
+    'instructionsValidator.validate',
+    validateActiveEditor
+  );
 
   // コマンド登録: pre-commit検証（servant + 互換エイリアス）
-  const validateBeforeCommitCommand = vscode.commands.registerCommand('servant.validateBeforeCommit', validateBeforeCommit);
-  const validateBeforeCommitCommandLegacy = vscode.commands.registerCommand('instructionsValidator.validateBeforeCommit', validateBeforeCommit);
+  const validateBeforeCommitCommand = vscode.commands.registerCommand(
+    'servant.validateBeforeCommit',
+    validateBeforeCommit
+  );
+  const validateBeforeCommitCommandLegacy = vscode.commands.registerCommand(
+    'instructionsValidator.validateBeforeCommit',
+    validateBeforeCommit
+  );
 
   // コマンド登録: Specチェック記録
-  const recordSpecCheckCommand = vscode.commands.registerCommand('servant.recordSpecCheck', recordSpecCheckCommandImpl);
-  const recordSpecCheckCommandLegacy = vscode.commands.registerCommand('instructionsValidator.recordSpecCheck', recordSpecCheckCommandImpl);
+  const recordSpecCheckCommand = vscode.commands.registerCommand(
+    'servant.recordSpecCheck',
+    recordSpecCheckCommandImpl
+  );
+  const recordSpecCheckCommandLegacy = vscode.commands.registerCommand(
+    'instructionsValidator.recordSpecCheck',
+    recordSpecCheckCommandImpl
+  );
 
   // コマンド登録: 必須指示書の照会 + Specチェック記録
   const reviewRequiredInstructionsCommand = vscode.commands.registerCommand(
@@ -1347,14 +1437,26 @@ export function activate(context: vscode.ExtensionContext) {
 
   // コマンド登録: Git hooks インストール（servant + 互換エイリアス）
   const installHooksCommand = vscode.commands.registerCommand('servant.installHooks', installHooks);
-  const installHooksCommandLegacy = vscode.commands.registerCommand('instructionsValidator.installHooks', installHooks);
+  const installHooksCommandLegacy = vscode.commands.registerCommand(
+    'instructionsValidator.installHooks',
+    installHooks
+  );
 
   // コマンド登録: Git hooks アンインストール（servant + 互換エイリアス）
-  const uninstallHooksCommand = vscode.commands.registerCommand('servant.uninstallHooks', uninstallHooks);
-  const uninstallHooksCommandLegacy = vscode.commands.registerCommand('instructionsValidator.uninstallHooks', uninstallHooks);
+  const uninstallHooksCommand = vscode.commands.registerCommand(
+    'servant.uninstallHooks',
+    uninstallHooks
+  );
+  const uninstallHooksCommandLegacy = vscode.commands.registerCommand(
+    'instructionsValidator.uninstallHooks',
+    uninstallHooks
+  );
 
   // コマンド登録: 強制仕様書/決定ログ（正の場所）
-  const openSpecBookCommand = vscode.commands.registerCommand('servant.specBook.open', openSpecBookCommandImpl);
+  const openSpecBookCommand = vscode.commands.registerCommand(
+    'servant.specBook.open',
+    openSpecBookCommandImpl
+  );
   const appendDecisionLogCommand = vscode.commands.registerCommand(
     'servant.specBook.appendDecision',
     appendDecisionLogCommandImpl
@@ -1367,36 +1469,178 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   // 🚀 ワンクリック修正コマンド
-  const quickFixCommitCommand = vscode.commands.registerCommand(
-    'servant.quickFixCommit',
-    () => quickFixCommit(outputChannel)
+  const quickFixCommitCommand = vscode.commands.registerCommand('servant.quickFixCommit', () =>
+    quickFixCommit(outputChannel)
   );
 
   // 📢 Chat連携: 問題パネルの内容をCopilot Chatに報告
   const reportProblemsCommand = vscode.commands.registerCommand(
     'servant.chat.reportProblems',
     async () => {
-      await chatParticipant.sendAutoReport('問題パネルのエラーを確認して修正方法を提案してください');
+      await chatParticipant.sendAutoReport(
+        '問題パネルのエラーを確認して修正方法を提案してください'
+      );
     }
   );
 
   // ファイル変更監視
-  const watcher = vscode.workspace.createFileSystemWatcher(
-    '**/*.{ts,tsx,js,jsx,md,json}'
-  );
+  const watcher = vscode.workspace.createFileSystemWatcher('**/*.{ts,tsx,js,jsx,md,json}');
+  context.subscriptions.push(watcher);
+
+  // ファイル変更→validate の暴走を防ぐため、デバウンス + 排他（最後の状態だけ検証）で実行する
+  const normalizeRelPath = (uri: vscode.Uri): string => {
+    const rel = vscode.workspace.asRelativePath(uri).replace(/\\/g, '/');
+    return rel;
+  };
+
+  const shouldAutoValidate = (uri: vscode.Uri): boolean => {
+    const rel = normalizeRelPath(uri);
+    if (!rel) return false;
+
+    const cfg = vscode.workspace.getConfiguration('servant');
+    const excludePrefixes = cfg.get<string[]>('validation.autoValidateExcludePrefixes', [
+      '.git/',
+      '.aitk/',
+      '.vscode/',
+      'node_modules/',
+      'dist/',
+      'dist-beta/',
+      'coverage/',
+      'playwright-report/',
+      'extensions/servant/dist/',
+      'extensions/servant/out/',
+    ]);
+
+    const normalizedPrefixes = (excludePrefixes ?? [])
+      .map((p) =>
+        String(p ?? '')
+          .trim()
+          .replace(/\\/g, '/')
+      )
+      .filter((p) => p.length > 0)
+      .map((p) => (p.endsWith('/') ? p : `${p}/`));
+
+    for (const prefix of normalizedPrefixes) {
+      if (rel === prefix.slice(0, -1) || rel.startsWith(prefix)) return false;
+    }
+    return true;
+  };
+
+  const pendingValidateByPath = new Map<string, vscode.Uri>();
+  let validateDebounceTimer: NodeJS.Timeout | null = null;
+  let validateLoopPromise: Promise<void> | null = null;
+  let isDeactivating = false;
+
+  const runValidationLoop = (): void => {
+    if (isDeactivating) return;
+    if (validateLoopPromise) return;
+
+    validateLoopPromise = (async () => {
+      while (pendingValidateByPath.size > 0) {
+        if (isDeactivating) break;
+        const batch = Array.from(pendingValidateByPath.values());
+        pendingValidateByPath.clear();
+
+        if (isEnabled()) {
+          const first = path.basename(batch[0].fsPath);
+          const label = batch.length === 1 ? first : `${first} (+${batch.length - 1})`;
+          updateServantStatusBar(`検証中: ${label}`);
+        }
+
+        for (const uri of batch) {
+          if (isDeactivating) break;
+          if (!isEnabled()) break;
+          try {
+            await diagnosticsProvider.validate(uri);
+          } catch (e) {
+            console.error('[Servant] validate failed:', e);
+          }
+        }
+      }
+    })()
+      .catch((e) => {
+        console.error('[Servant] validation loop failed:', e);
+      })
+      .finally(() => {
+        validateLoopPromise = null;
+
+        // ループ終了直前に新しい変更が来ていた場合は「待機中」に戻さず続行する
+        if (pendingValidateByPath.size > 0) {
+          runValidationLoop();
+          return;
+        }
+        if (isEnabled()) {
+          updateServantStatusBar('待機中');
+        }
+      });
+  };
+
+  const requestAutoValidate = (uri: vscode.Uri): void => {
+    if (isDeactivating) return;
+    const cfg = vscode.workspace.getConfiguration('servant');
+    const enabled = cfg.get<boolean>('validation.autoValidateOnChange', true);
+    if (!enabled) return;
+    if (!isEnabled()) return;
+    if (!shouldAutoValidate(uri)) return;
+
+    pendingValidateByPath.set(uri.fsPath, uri);
+
+    const debounceMs = cfg.get<number>('validation.autoValidateDebounceMs', 350);
+    if (validateDebounceTimer) {
+      clearTimeout(validateDebounceTimer);
+      validateDebounceTimer = null;
+    }
+    validateDebounceTimer = setTimeout(
+      () => {
+        validateDebounceTimer = null;
+        runValidationLoop();
+      },
+      Math.max(0, debounceMs)
+    );
+  };
+
+  // 予期せぬ終了不能（タイマー保持）を避けるため、明示的にクリーンアップ
+  context.subscriptions.push({
+    dispose: () => {
+      isDeactivating = true;
+      if (validateDebounceTimer) {
+        clearTimeout(validateDebounceTimer);
+        validateDebounceTimer = null;
+      }
+      pendingValidateByPath.clear();
+    },
+  });
 
   // AI_CONTEXT 自動配達（起動時/仕様変更時）
   let instructionsLoaded = false;
   let contextBuildTimer: NodeJS.Timeout | null = null;
   let lastContextBuildAt = 0;
 
+  // context build のタイマーも終了時に明示的に止める
+  context.subscriptions.push({
+    dispose: () => {
+      if (contextBuildTimer) {
+        clearTimeout(contextBuildTimer);
+        contextBuildTimer = null;
+      }
+    },
+  });
+
   const isContextSourceFile = (uri: vscode.Uri): boolean => {
     const rel = vscode.workspace.asRelativePath(uri).replace(/\\/g, '/');
     const cfg = vscode.workspace.getConfiguration('servant');
-    const specPath = (cfg.get<string>('specBook.specPath', 'docs/specifications/WORKING_SPEC.md') ?? '').replace(/\\/g, '/');
-    const decisionsPath = (cfg.get<string>('specBook.decisionsPath', 'docs/specifications/DECISIONS.md') ?? '').replace(/\\/g, '/');
+    const specPath = (
+      cfg.get<string>('specBook.specPath', 'docs/specifications/WORKING_SPEC.md') ?? ''
+    ).replace(/\\/g, '/');
+    const decisionsPath = (
+      cfg.get<string>('specBook.decisionsPath', 'docs/specifications/DECISIONS.md') ?? ''
+    ).replace(/\\/g, '/');
 
     if (!rel) return false;
+
+    // buildAIContextPacket が生成する .aitk/context 配下の変更で自己ループしないように、
+    // 生成物ディレクトリだけは「仕様変更トリガー」から除外する（ここは“入力”だけを見る）
+    if (rel.startsWith('.aitk/context/')) return false;
     if (rel === specPath || rel === decisionsPath) return true;
     if (rel.startsWith('.aitk/instructions/')) return true;
     if (rel === '.aitk/failure-patterns.json') return true;
@@ -1432,26 +1676,16 @@ export function activate(context: vscode.ExtensionContext) {
     }, waitMs);
   };
 
-  watcher.onDidChange(async (uri) => {
-    if (isEnabled()) {
-      const fileName = path.basename(uri.fsPath);
-      updateServantStatusBar(`検証中: ${fileName}`);
-      await diagnosticsProvider.validate(uri);
-      updateServantStatusBar('待機中');
-    }
+  watcher.onDidChange((uri) => {
+    requestAutoValidate(uri);
 
     if (isContextSourceFile(uri)) {
       scheduleAutoContextBuild('spec-change');
     }
   });
 
-  watcher.onDidCreate(async (uri) => {
-    if (isEnabled()) {
-      const fileName = path.basename(uri.fsPath);
-      updateServantStatusBar(`検証中: ${fileName}`);
-      await diagnosticsProvider.validate(uri);
-      updateServantStatusBar('待機中');
-    }
+  watcher.onDidCreate((uri) => {
+    requestAutoValidate(uri);
 
     if (isContextSourceFile(uri)) {
       scheduleAutoContextBuild('spec-change');
@@ -1459,7 +1693,7 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   // 設定変更監視
-  const configWatcher = vscode.workspace.onDidChangeConfiguration(e => {
+  const configWatcher = vscode.workspace.onDidChangeConfiguration((e) => {
     if (e.affectsConfiguration('servant') || e.affectsConfiguration('instructionsValidator')) {
       updateServantStatusBar();
 
@@ -1471,7 +1705,9 @@ export function activate(context: vscode.ExtensionContext) {
           .getConfiguration('servant')
           .get<boolean>('terminalStatus.enabled', false);
         if (terminalEnabled) {
-          writeTerminalYellow(`[Servant] Terminal status enabled. Current: ${enabledNow ? 'ON' : 'OFF'}`);
+          writeTerminalYellow(
+            `[Servant] Terminal status enabled. Current: ${enabledNow ? 'ON' : 'OFF'}`
+          );
         }
       }
 
@@ -1484,30 +1720,35 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   // Phase 7: 新しいコマンドの登録
-  const learnFromHistoryCommand = vscode.commands.registerCommand('servant.learnFromHistory', async () => {
-    updateServantStatusBar('Git履歴学習中');
-    try {
-      outputChannel.appendLine('[Learning] Analyzing Git history...');
-      const patterns = await gitAnalyzer.extractFailurePatterns();
+  const learnFromHistoryCommand = vscode.commands.registerCommand(
+    'servant.learnFromHistory',
+    async () => {
+      updateServantStatusBar('Git履歴学習中');
+      try {
+        outputChannel.appendLine('[Learning] Analyzing Git history...');
+        const patterns = await gitAnalyzer.extractFailurePatterns();
 
-      for (const pattern of patterns) {
-        await adaptiveGuard.recordViolation({
-          rule: pattern.pattern,
-          category: pattern.category,
-          filePath: pattern.affectedFiles?.[0] || '',
-          message: pattern.description || ''
-        });
+        for (const pattern of patterns) {
+          await adaptiveGuard.recordViolation({
+            rule: pattern.pattern,
+            category: pattern.category,
+            filePath: pattern.affectedFiles?.[0] || '',
+            message: pattern.description || '',
+          });
+        }
+
+        const stats = await gitAnalyzer.getStats();
+        notifier.commandInfo(
+          `🧠 Git履歴解析完了: ${stats.totalCommits}コミット, ${patterns.length}パターン抽出`
+        );
+        outputChannel.appendLine(`[Learning] Extracted ${patterns.length} patterns`);
+        updateServantStatusBar('待機中');
+      } catch (error) {
+        notifier.commandError(`Git履歴解析エラー: ${error}`);
+        updateServantStatusBar('待機中');
       }
-
-      const stats = await gitAnalyzer.getStats();
-      notifier.commandInfo(`🧠 Git履歴解析完了: ${stats.totalCommits}コミット, ${patterns.length}パターン抽出`);
-      outputChannel.appendLine(`[Learning] Extracted ${patterns.length} patterns`);
-      updateServantStatusBar('待機中');
-    } catch (error) {
-      notifier.commandError(`Git履歴解析エラー: ${error}`);
-      updateServantStatusBar('待機中');
     }
-  });
+  );
 
   const showHotspotsCommand = vscode.commands.registerCommand('servant.showHotspots', async () => {
     try {
@@ -1518,15 +1759,15 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      const items = hotspots.slice(0, 10).map(h => ({
+      const items = hotspots.slice(0, 10).map((h) => ({
         label: `$(warning) ${h.file}`,
         description: `リスク: ${h.riskScore}, 違反: ${h.violationCount}回`,
-        detail: h.topPatterns.map(p => `${p.pattern} (${p.count}回)`).join(', '),
-        hotspot: h
+        detail: h.topPatterns.map((p) => `${p.pattern} (${p.count}回)`).join(', '),
+        hotspot: h,
       }));
 
       const selected = await vscode.window.showQuickPick(items, {
-        placeHolder: '問題頻発ファイル（ホットスポット）'
+        placeHolder: '問題頻発ファイル（ホットスポット）',
       });
 
       if (selected) {
@@ -1538,64 +1779,75 @@ export function activate(context: vscode.ExtensionContext) {
     }
   });
 
-  const showAIHotspotsCommand = vscode.commands.registerCommand('servant.showAIHotspots', async () => {
-    try {
-      const hotspots = aiTracker.getFileHotspots({ minCount: 2, limit: 15 });
+  const showAIHotspotsCommand = vscode.commands.registerCommand(
+    'servant.showAIHotspots',
+    async () => {
+      try {
+        const hotspots = aiTracker.getFileHotspots({ minCount: 2, limit: 15 });
 
-      if (hotspots.length === 0) {
-        notifier.commandInfo('AIアクション由来のホットスポットは検出されませんでした');
-        return;
+        if (hotspots.length === 0) {
+          notifier.commandInfo('AIアクション由来のホットスポットは検出されませんでした');
+          return;
+        }
+
+        const items = hotspots.map((h) => ({
+          label: `$(warning) ${h.file}`,
+          description: `変更: ${h.changeCount}回, 違反あり: ${h.violationActions}回`,
+          hotspot: h,
+        }));
+
+        const selected = await vscode.window.showQuickPick(items, {
+          placeHolder: 'AIアクションログ由来の重点レビュー対象（ホットスポット）',
+        });
+
+        if (selected) {
+          const targetPath = path.isAbsolute(selected.hotspot.file)
+            ? selected.hotspot.file
+            : path.join(workspaceRoot, selected.hotspot.file);
+          const uri = vscode.Uri.file(targetPath);
+          await vscode.window.showTextDocument(uri);
+        }
+      } catch (error) {
+        notifier.commandError(`AIホットスポット表示エラー: ${error}`);
       }
+    }
+  );
 
-      const items = hotspots.map(h => ({
-        label: `$(warning) ${h.file}`,
-        description: `変更: ${h.changeCount}回, 違反あり: ${h.violationActions}回`,
-        hotspot: h
-      }));
+  const showLearningStatsCommand = vscode.commands.registerCommand(
+    'servant.showLearningStats',
+    () => {
+      const stats = adaptiveGuard.getStats();
 
-      const selected = await vscode.window.showQuickPick(items, {
-        placeHolder: 'AIアクションログ由来の重点レビュー対象（ホットスポット）'
-      });
+      outputChannel.clear();
+      outputChannel.appendLine('=== Servant Learning Statistics ===');
+      outputChannel.appendLine(`総パターン数: ${stats.totalPatterns}`);
+      outputChannel.appendLine(`高リスクパターン: ${stats.highRiskPatterns}`);
+      outputChannel.appendLine(`平均復旧成功率: ${(stats.averageSuccessRate * 100).toFixed(1)}%`);
+      outputChannel.appendLine(`次回学習まで: ${stats.validationsUntilNextLearning}回`);
+      outputChannel.appendLine(`総学習サイクル: ${stats.totalLearningCycles}回`);
+      outputChannel.appendLine(`最終学習日時: ${stats.lastLearningDate || 'N/A'}`);
+      outputChannel.show();
 
-      if (selected) {
-        const targetPath = path.isAbsolute(selected.hotspot.file)
-          ? selected.hotspot.file
-          : path.join(workspaceRoot, selected.hotspot.file);
-        const uri = vscode.Uri.file(targetPath);
-        await vscode.window.showTextDocument(uri);
+      notifier.commandInfo(
+        `学習統計: ${stats.totalPatterns}パターン, ${stats.highRiskPatterns}個が高リスク`
+      );
+    }
+  );
+
+  const resetLearningCommand = vscode.commands.registerCommand(
+    'servant.resetLearning',
+    async () => {
+      const confirm = await vscode.window.showWarningMessage(
+        '学習データをリセットしますか？',
+        { modal: true },
+        'はい'
+      );
+
+      if (confirm === 'はい') {
+        await adaptiveGuard.resetLearning();
       }
-    } catch (error) {
-      notifier.commandError(`AIホットスポット表示エラー: ${error}`);
     }
-  });
-
-  const showLearningStatsCommand = vscode.commands.registerCommand('servant.showLearningStats', () => {
-    const stats = adaptiveGuard.getStats();
-
-    outputChannel.clear();
-    outputChannel.appendLine('=== Servant Learning Statistics ===');
-    outputChannel.appendLine(`総パターン数: ${stats.totalPatterns}`);
-    outputChannel.appendLine(`高リスクパターン: ${stats.highRiskPatterns}`);
-    outputChannel.appendLine(`平均復旧成功率: ${(stats.averageSuccessRate * 100).toFixed(1)}%`);
-    outputChannel.appendLine(`次回学習まで: ${stats.validationsUntilNextLearning}回`);
-    outputChannel.appendLine(`総学習サイクル: ${stats.totalLearningCycles}回`);
-    outputChannel.appendLine(`最終学習日時: ${stats.lastLearningDate || 'N/A'}`);
-    outputChannel.show();
-
-    notifier.commandInfo(`学習統計: ${stats.totalPatterns}パターン, ${stats.highRiskPatterns}個が高リスク`);
-  });
-
-  const resetLearningCommand = vscode.commands.registerCommand('servant.resetLearning', async () => {
-    const confirm = await vscode.window.showWarningMessage(
-      '学習データをリセットしますか？',
-      { modal: true },
-      'はい'
-    );
-
-    if (confirm === 'はい') {
-      await adaptiveGuard.resetLearning();
-    }
-  });
+  );
 
   const indexProjectCommand = vscode.commands.registerCommand('servant.indexProject', async () => {
     try {
@@ -1650,48 +1902,63 @@ export function activate(context: vscode.ExtensionContext) {
     });
     outputChannel.show();
 
-    notifier.commandInfo(`AI統計: ${stats.totalActions}アクション, 成功率 ${(stats.successRate * 100).toFixed(0)}%`);
-  });
-
-  const showRecentAIActionsCommand = vscode.commands.registerCommand('servant.showRecentAIActions', () => {
-    const actions = aiTracker.getRecentActions(20);
-
-    if (actions.length === 0) {
-      notifier.commandInfo('AI処理の履歴がありません');
-      return;
-    }
-
-    outputChannel.clear();
-    outputChannel.appendLine('=== Recent AI Actions ===');
-    actions.forEach((action, index) => {
-      const duration = action.endTime
-        ? ((new Date(action.endTime).getTime() - new Date(action.startTime).getTime()) / 1000).toFixed(1)
-        : 'N/A';
-      const status = action.success ? '✅' : '❌';
-
-      outputChannel.appendLine(`${index + 1}. ${status} ${action.type} (${duration}s)`);
-      outputChannel.appendLine(`   Files: ${action.changedFiles.length}, +${action.linesAdded}/-${action.linesDeleted}`);
-      outputChannel.appendLine(`   Violations: ${action.violations}, Errors: ${action.compileErrors}`);
-      if (action.error) {
-        outputChannel.appendLine(`   Error: ${action.error}`);
-      }
-      outputChannel.appendLine('');
-    });
-    outputChannel.show();
-  });
-
-  const resetAITrackingCommand = vscode.commands.registerCommand('servant.resetAITracking', async () => {
-    const confirm = await vscode.window.showWarningMessage(
-      'AI処理追跡データをリセットしますか？',
-      { modal: true },
-      'はい'
+    notifier.commandInfo(
+      `AI統計: ${stats.totalActions}アクション, 成功率 ${(stats.successRate * 100).toFixed(0)}%`
     );
-
-    if (confirm === 'はい') {
-      await aiTracker.reset();
-      notifier.commandInfo('AI処理追跡データをリセットしました');
-    }
   });
+
+  const showRecentAIActionsCommand = vscode.commands.registerCommand(
+    'servant.showRecentAIActions',
+    () => {
+      const actions = aiTracker.getRecentActions(20);
+
+      if (actions.length === 0) {
+        notifier.commandInfo('AI処理の履歴がありません');
+        return;
+      }
+
+      outputChannel.clear();
+      outputChannel.appendLine('=== Recent AI Actions ===');
+      actions.forEach((action, index) => {
+        const duration = action.endTime
+          ? (
+              (new Date(action.endTime).getTime() - new Date(action.startTime).getTime()) /
+              1000
+            ).toFixed(1)
+          : 'N/A';
+        const status = action.success ? '✅' : '❌';
+
+        outputChannel.appendLine(`${index + 1}. ${status} ${action.type} (${duration}s)`);
+        outputChannel.appendLine(
+          `   Files: ${action.changedFiles.length}, +${action.linesAdded}/-${action.linesDeleted}`
+        );
+        outputChannel.appendLine(
+          `   Violations: ${action.violations}, Errors: ${action.compileErrors}`
+        );
+        if (action.error) {
+          outputChannel.appendLine(`   Error: ${action.error}`);
+        }
+        outputChannel.appendLine('');
+      });
+      outputChannel.show();
+    }
+  );
+
+  const resetAITrackingCommand = vscode.commands.registerCommand(
+    'servant.resetAITracking',
+    async () => {
+      const confirm = await vscode.window.showWarningMessage(
+        'AI処理追跡データをリセットしますか？',
+        { modal: true },
+        'はい'
+      );
+
+      if (confirm === 'はい') {
+        await aiTracker.reset();
+        notifier.commandInfo('AI処理追跡データをリセットしました');
+      }
+    }
+  );
 
   // Phase 8.2: AI自己評価コマンド
   const evaluateAICommand = vscode.commands.registerCommand('servant.evaluateAI', async () => {
@@ -1727,41 +1994,43 @@ export function activate(context: vscode.ExtensionContext) {
     if (feedback.strengths.length > 0) {
       outputChannel.appendLine('');
       outputChannel.appendLine('✅ 強み:');
-      feedback.strengths.forEach(s => outputChannel.appendLine(`  - ${s}`));
+      feedback.strengths.forEach((s) => outputChannel.appendLine(`  - ${s}`));
     }
 
     if (feedback.weaknesses.length > 0) {
       outputChannel.appendLine('');
       outputChannel.appendLine('⚠️  弱点:');
-      feedback.weaknesses.forEach(w => outputChannel.appendLine(`  - ${w}`));
+      feedback.weaknesses.forEach((w) => outputChannel.appendLine(`  - ${w}`));
     }
 
     if (feedback.improvements.length > 0) {
       outputChannel.appendLine('');
       outputChannel.appendLine('💡 改善提案:');
-      feedback.improvements.forEach(i => outputChannel.appendLine(`  - ${i}`));
+      feedback.improvements.forEach((i) => outputChannel.appendLine(`  - ${i}`));
     }
 
     if (feedback.warnings.length > 0) {
       outputChannel.appendLine('');
       outputChannel.appendLine('🚨 警告:');
-      feedback.warnings.forEach(w => outputChannel.appendLine(`  - ${w}`));
+      feedback.warnings.forEach((w) => outputChannel.appendLine(`  - ${w}`));
     }
 
     if (feedback.recommendedActions.length > 0) {
       outputChannel.appendLine('');
       outputChannel.appendLine('🎯 推奨アクション:');
-      feedback.recommendedActions.forEach(a => outputChannel.appendLine(`  - ${a}`));
+      feedback.recommendedActions.forEach((a) => outputChannel.appendLine(`  - ${a}`));
     }
 
     outputChannel.show();
 
     // スコアに応じた通知
     if (metrics.overallScore < 50) {
-      (notifier.commandWarning(
-        `⚠️ AI総合スコアが低下しています（${metrics.overallScore}/100）。改善が必要です。`,
-        'フィードバックを表示'
-      ) ?? Promise.resolve(undefined)).then(selection => {
+      (
+        notifier.commandWarning(
+          `⚠️ AI総合スコアが低下しています（${metrics.overallScore}/100）。改善が必要です。`,
+          'フィードバックを表示'
+        ) ?? Promise.resolve(undefined)
+      ).then((selection) => {
         if (selection) {
           outputChannel.show();
         }
@@ -1783,87 +2052,105 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  const autopilotAdjustCommand = vscode.commands.registerCommand('servant.autopilot.adjust', async () => {
-    const config = vscode.workspace.getConfiguration('servant');
+  const autopilotAdjustCommand = vscode.commands.registerCommand(
+    'servant.autopilot.adjust',
+    async () => {
+      const config = vscode.workspace.getConfiguration('servant');
 
-    const promptModePick = await vscode.window.showQuickPick(
-      [
+      const promptModePick = await vscode.window.showQuickPick(
+        [
+          {
+            label: '自動（高リスク/大作業だけ強め）',
+            description: '普段は静か、必要時だけ強めに確認',
+            value: 'auto' as const,
+          },
+          {
+            label: '常に強め（毎回確認）',
+            description: '開始時に必ず確認を出す',
+            value: 'always' as const,
+          },
+          {
+            label: '強め通知しない（Output中心）',
+            description: 'Output/ステータスバーのみ。モーダル確認なし',
+            value: 'never' as const,
+          },
+        ],
         {
-          label: '自動（高リスク/大作業だけ強め）',
-          description: '普段は静か、必要時だけ強めに確認',
-          value: 'auto' as const
-        },
-        {
-          label: '常に強め（毎回確認）',
-          description: '開始時に必ず確認を出す',
-          value: 'always' as const
-        },
-        {
-          label: '強め通知しない（Output中心）',
-          description: 'Output/ステータスバーのみ。モーダル確認なし',
-          value: 'never' as const
+          title: 'Servant Autopilot: 事前調整',
+          placeHolder: '強め通知の方針を選んでください',
         }
-      ],
-      {
+      );
+
+      if (!promptModePick) return;
+      await config.update(
+        'autopilot.promptMode',
+        promptModePick.value,
+        vscode.ConfigurationTarget.Workspace
+      );
+
+      const revealPick = await vscode.window.showQuickPick(
+        [
+          { label: '常にOutputを表示する（おすすめ）', value: true },
+          { label: 'Outputは表示しない（必要時に自分で開く）', value: false },
+        ],
+        {
+          title: 'Servant Autopilot: 事前調整',
+          placeHolder: '作業開始時にOutputを自動で開きますか？',
+        }
+      );
+
+      if (!revealPick) return;
+      await config.update(
+        'autopilot.revealOutputOnStart',
+        revealPick.value,
+        vscode.ConfigurationTarget.Workspace
+      );
+
+      const currentThreshold = config.get<number>('autopilot.largeWorkThresholdFiles', 20);
+      const thresholdInput = await vscode.window.showInputBox({
         title: 'Servant Autopilot: 事前調整',
-        placeHolder: '強め通知の方針を選んでください'
-      }
-    );
+        prompt: '「大作業」と判定する変更ファイル数（この数以上で強めになります）',
+        value: String(currentThreshold),
+        validateInput: (value) => {
+          if (value.trim() === '') return '数値を入力してください';
+          const n = Number(value);
+          if (!Number.isFinite(n) || n <= 0) return '1以上の数値を入力してください';
+          if (!Number.isInteger(n)) return '整数を入力してください';
+          return undefined;
+        },
+      });
 
-    if (!promptModePick) return;
-    await config.update('autopilot.promptMode', promptModePick.value, vscode.ConfigurationTarget.Workspace);
+      if (thresholdInput === undefined) return;
+      await config.update(
+        'autopilot.largeWorkThresholdFiles',
+        Number(thresholdInput),
+        vscode.ConfigurationTarget.Workspace
+      );
 
-    const revealPick = await vscode.window.showQuickPick(
-      [
-        { label: '常にOutputを表示する（おすすめ）', value: true },
-        { label: 'Outputは表示しない（必要時に自分で開く）', value: false }
-      ],
-      {
-        title: 'Servant Autopilot: 事前調整',
-        placeHolder: '作業開始時にOutputを自動で開きますか？'
-      }
-    );
-
-    if (!revealPick) return;
-    await config.update('autopilot.revealOutputOnStart', revealPick.value, vscode.ConfigurationTarget.Workspace);
-
-    const currentThreshold = config.get<number>('autopilot.largeWorkThresholdFiles', 20);
-    const thresholdInput = await vscode.window.showInputBox({
-      title: 'Servant Autopilot: 事前調整',
-      prompt: '「大作業」と判定する変更ファイル数（この数以上で強めになります）',
-      value: String(currentThreshold),
-      validateInput: (value) => {
-        if (value.trim() === '') return '数値を入力してください';
-        const n = Number(value);
-        if (!Number.isFinite(n) || n <= 0) return '1以上の数値を入力してください';
-        if (!Number.isInteger(n)) return '整数を入力してください';
-        return undefined;
-      }
-    });
-
-    if (thresholdInput === undefined) return;
-    await config.update(
-      'autopilot.largeWorkThresholdFiles',
-      Number(thresholdInput),
-      vscode.ConfigurationTarget.Workspace
-    );
-
-    notifier.commandInfo('✅ Autopilotの事前調整を更新しました');
-  });
+      notifier.commandInfo('✅ Autopilotの事前調整を更新しました');
+    }
+  );
 
   // Phase 9: ニューラルグラフコマンド
-  const buildNeuralGraphCommand = vscode.commands.registerCommand('servant.buildNeuralGraph', async () => {
-    try {
-      outputChannel.appendLine('[Neural] Building dependency graph...');
-      await neuralGraph.buildGraph();
+  const buildNeuralGraphCommand = vscode.commands.registerCommand(
+    'servant.buildNeuralGraph',
+    async () => {
+      try {
+        outputChannel.appendLine('[Neural] Building dependency graph...');
+        await neuralGraph.buildGraph();
 
-      const stats = neuralGraph.getStats();
-      notifier.commandInfo(`🧠 グラフ構築完了: ${stats.totalNodes}ノード, ${stats.totalEdges}エッジ`);
-      outputChannel.appendLine(`[Neural] Graph built: ${stats.totalNodes} nodes, ${stats.totalEdges} edges`);
-    } catch (error) {
-      notifier.commandError(`グラフ構築エラー: ${error}`);
+        const stats = neuralGraph.getStats();
+        notifier.commandInfo(
+          `🧠 グラフ構築完了: ${stats.totalNodes}ノード, ${stats.totalEdges}エッジ`
+        );
+        outputChannel.appendLine(
+          `[Neural] Graph built: ${stats.totalNodes} nodes, ${stats.totalEdges} edges`
+        );
+      } catch (error) {
+        notifier.commandError(`グラフ構築エラー: ${error}`);
+      }
     }
-  });
+  );
 
   const showNeuralGraphCommand = vscode.commands.registerCommand('servant.showNeuralGraph', () => {
     const stats = neuralGraph.getStats();
@@ -1890,60 +2177,66 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   // Phase 9.2: ニューラル学習コマンド
-  const propagateForwardCommand = vscode.commands.registerCommand('servant.propagateForward', async () => {
-    const editor = vscode.window.activeTextEditor;
-    if (!editor) {
-      notifier.commandError('アクティブなエディタがありません');
-      return;
+  const propagateForwardCommand = vscode.commands.registerCommand(
+    'servant.propagateForward',
+    async () => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) {
+        notifier.commandError('アクティブなエディタがありません');
+        return;
+      }
+
+      const filePath = vscode.workspace.asRelativePath(editor.document.uri);
+      const result = neuralLearning.propagateForward(filePath);
+
+      outputChannel.clear();
+      outputChannel.appendLine('=== Forward Propagation Result ===');
+      outputChannel.appendLine(`起点ファイル: ${filePath}`);
+      outputChannel.appendLine(`計算時間: ${result.computationTime}ms`);
+      outputChannel.appendLine('');
+      outputChannel.appendLine(`影響を受けるファイル: ${result.affectedFiles.size}件`);
+
+      // 上位10件を表示
+      const sorted = Array.from(result.affectedFiles.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10);
+
+      outputChannel.appendLine('');
+      outputChannel.appendLine('--- 影響度ランキング (Top 10) ---');
+      sorted.forEach(([file, activation], index) => {
+        outputChannel.appendLine(`${index + 1}. ${file} (活性: ${activation.toFixed(3)})`);
+      });
+
+      outputChannel.show();
+      notifier.commandInfo(`🧠 ${result.affectedFiles.size}件のファイルが影響を受けます`);
     }
+  );
 
-    const filePath = vscode.workspace.asRelativePath(editor.document.uri);
-    const result = neuralLearning.propagateForward(filePath);
+  const showNeuralLearningStatsCommand = vscode.commands.registerCommand(
+    'servant.showNeuralLearningStats',
+    () => {
+      const stats = neuralLearning.getStats();
 
-    outputChannel.clear();
-    outputChannel.appendLine('=== Forward Propagation Result ===');
-    outputChannel.appendLine(`起点ファイル: ${filePath}`);
-    outputChannel.appendLine(`計算時間: ${result.computationTime}ms`);
-    outputChannel.appendLine('');
-    outputChannel.appendLine(`影響を受けるファイル: ${result.affectedFiles.size}件`);
+      outputChannel.clear();
+      outputChannel.appendLine('=== Neural Learning Statistics ===');
+      outputChannel.appendLine('');
+      outputChannel.appendLine(`現在のエポック: ${stats.currentEpoch}`);
+      outputChannel.appendLine(`フィードバック数: ${stats.feedbackCount}/10`);
+      outputChannel.appendLine(`学習率: ${stats.learningRate}`);
+      outputChannel.appendLine(`収束スコア: ${stats.convergence}/100`);
+      outputChannel.appendLine('');
 
-    // 上位10件を表示
-    const sorted = Array.from(result.affectedFiles.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10);
+      if (stats.convergence >= 80) {
+        outputChannel.appendLine('✅ 学習が収束しています');
+      } else if (stats.convergence >= 50) {
+        outputChannel.appendLine('🟡 学習が進行中です');
+      } else {
+        outputChannel.appendLine('🔴 学習が不安定です');
+      }
 
-    outputChannel.appendLine('');
-    outputChannel.appendLine('--- 影響度ランキング (Top 10) ---');
-    sorted.forEach(([file, activation], index) => {
-      outputChannel.appendLine(`${index + 1}. ${file} (活性: ${activation.toFixed(3)})`);
-    });
-
-    outputChannel.show();
-    notifier.commandInfo(`🧠 ${result.affectedFiles.size}件のファイルが影響を受けます`);
-  });
-
-  const showNeuralLearningStatsCommand = vscode.commands.registerCommand('servant.showNeuralLearningStats', () => {
-    const stats = neuralLearning.getStats();
-
-    outputChannel.clear();
-    outputChannel.appendLine('=== Neural Learning Statistics ===');
-    outputChannel.appendLine('');
-    outputChannel.appendLine(`現在のエポック: ${stats.currentEpoch}`);
-    outputChannel.appendLine(`フィードバック数: ${stats.feedbackCount}/10`);
-    outputChannel.appendLine(`学習率: ${stats.learningRate}`);
-    outputChannel.appendLine(`収束スコア: ${stats.convergence}/100`);
-    outputChannel.appendLine('');
-
-    if (stats.convergence >= 80) {
-      outputChannel.appendLine('✅ 学習が収束しています');
-    } else if (stats.convergence >= 50) {
-      outputChannel.appendLine('🟡 学習が進行中です');
-    } else {
-      outputChannel.appendLine('🔴 学習が不安定です');
+      outputChannel.show();
     }
-
-    outputChannel.show();
-  });
+  );
 
   // Phase 10: 最適化エンジンとワークフロー学習
   const learnFromGitCommand = vscode.commands.registerCommand('servant.learnFromGit', async () => {
@@ -1954,7 +2247,10 @@ export function activate(context: vscode.ExtensionContext) {
       await workflowLearner.learnFromGitHistory(100);
 
       // AIActionTrackerの実運用ログからも学習（成功/時間/違反が実測値）
-      const learnedFromAI = await workflowLearner.learnFromAIActions(aiTracker.getAllActions(), 200);
+      const learnedFromAI = await workflowLearner.learnFromAIActions(
+        aiTracker.getAllActions(),
+        200
+      );
 
       const stats = optimizationEngine.getStats();
       notifier.commandInfo(
@@ -1965,114 +2261,126 @@ export function activate(context: vscode.ExtensionContext) {
     }
   });
 
-  const optimizeCurrentTaskCommand = vscode.commands.registerCommand('servant.optimizeCurrentTask', async () => {
-    const editor = vscode.window.activeTextEditor;
-    if (!editor) {
-      notifier.commandError('アクティブなエディタがありません');
-      return;
-    }
+  const optimizeCurrentTaskCommand = vscode.commands.registerCommand(
+    'servant.optimizeCurrentTask',
+    async () => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) {
+        notifier.commandError('アクティブなエディタがありません');
+        return;
+      }
 
-    const currentFile = editor.document.uri.fsPath;
-    const relPath = path.relative(workspaceRoot, currentFile);
+      const currentFile = editor.document.uri.fsPath;
+      const relPath = path.relative(workspaceRoot, currentFile);
 
-    // staged → working tree → fallback(アクティブファイル) の順で対象ファイル集合を決める
-    let targetAbsFiles = await gitIntegration.getStagedFilesFromSCM();
-    if (targetAbsFiles.length === 0) {
-      targetAbsFiles = await gitIntegration.getStagedFiles(workspaceRoot);
-    }
-    if (targetAbsFiles.length === 0) {
-      targetAbsFiles = await gitIntegration.getWorkingTreeFiles(workspaceRoot);
-    }
+      // staged → working tree → fallback(アクティブファイル) の順で対象ファイル集合を決める
+      let targetAbsFiles = await gitIntegration.getStagedFilesFromSCM();
+      if (targetAbsFiles.length === 0) {
+        targetAbsFiles = await gitIntegration.getStagedFiles(workspaceRoot);
+      }
+      if (targetAbsFiles.length === 0) {
+        targetAbsFiles = await gitIntegration.getWorkingTreeFiles(workspaceRoot);
+      }
 
-    const targetRelFiles = targetAbsFiles
-      .map(p => path.relative(workspaceRoot, p))
-      .filter(p => p && !p.startsWith('..'));
+      const targetRelFiles = targetAbsFiles
+        .map((p) => path.relative(workspaceRoot, p))
+        .filter((p) => p && !p.startsWith('..'));
 
-    const modifiedFiles = targetRelFiles.length > 0 ? targetRelFiles : [relPath];
-    if (!modifiedFiles.includes(relPath)) {
-      modifiedFiles.unshift(relPath);
-    }
+      const modifiedFiles = targetRelFiles.length > 0 ? targetRelFiles : [relPath];
+      if (!modifiedFiles.includes(relPath)) {
+        modifiedFiles.unshift(relPath);
+      }
 
-    // タスク状態を作成
-    const taskState: TaskState = {
-      taskType: 'unknown',
-      currentFile: relPath,
-      modifiedFiles,
-      startTime: new Date()
-    };
+      // タスク状態を作成
+      const taskState: TaskState = {
+        taskType: 'unknown',
+        currentFile: relPath,
+        modifiedFiles,
+        startTime: new Date(),
+      };
 
-    try {
-      await optimizationEngine.loadPatterns();
+      try {
+        await optimizationEngine.loadPatterns();
 
-      const suggestion = await optimizationEngine.optimize(taskState);
-      const workflow = await workflowLearner.suggestWorkflow(taskState);
+        const suggestion = await optimizationEngine.optimize(taskState);
+        const workflow = await workflowLearner.suggestWorkflow(taskState);
 
-      outputChannel.clear();
-      outputChannel.appendLine('=== タスク最適化提案 ===');
-      outputChannel.appendLine('');
-      outputChannel.appendLine(`タスク種別: ${workflow.classification.taskType} (信頼度: ${(workflow.classification.confidence * 100).toFixed(0)}%)`);
-      outputChannel.appendLine(`推奨ワークフロー: ${workflow.recommendation}`);
-      outputChannel.appendLine('');
-      outputChannel.appendLine('--- 推奨手順 ---');
-      workflow.steps.forEach(step => {
-        outputChannel.appendLine(step);
-      });
-      outputChannel.appendLine('');
-      outputChannel.appendLine('--- 次に変更すべきファイル (Top 5) ---');
-      suggestion.recommendedOrder.slice(0, 5).forEach((file, index) => {
-        const risk = suggestion.risks.find(r => r.file === file);
-        const riskMark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
-        outputChannel.appendLine(`${index + 1}. ${file}${riskMark}`);
-        if (risk) {
-          outputChannel.appendLine(`   理由: ${risk.reason}`);
-        }
-      });
-      outputChannel.appendLine('');
-      outputChannel.appendLine('--- 予測 ---');
-      outputChannel.appendLine(`成功率: ${(suggestion.predictedSuccessRate * 100).toFixed(1)}%`);
-      outputChannel.appendLine(`予測時間: ${Math.round(suggestion.predictedTime / 60)}分`);
+        outputChannel.clear();
+        outputChannel.appendLine('=== タスク最適化提案 ===');
+        outputChannel.appendLine('');
+        outputChannel.appendLine(
+          `タスク種別: ${workflow.classification.taskType} (信頼度: ${(workflow.classification.confidence * 100).toFixed(0)}%)`
+        );
+        outputChannel.appendLine(`推奨ワークフロー: ${workflow.recommendation}`);
+        outputChannel.appendLine('');
+        outputChannel.appendLine('--- 推奨手順 ---');
+        workflow.steps.forEach((step) => {
+          outputChannel.appendLine(step);
+        });
+        outputChannel.appendLine('');
+        outputChannel.appendLine('--- 次に変更すべきファイル (Top 5) ---');
+        suggestion.recommendedOrder.slice(0, 5).forEach((file, index) => {
+          const risk = suggestion.risks.find((r) => r.file === file);
+          const riskMark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
+          outputChannel.appendLine(`${index + 1}. ${file}${riskMark}`);
+          if (risk) {
+            outputChannel.appendLine(`   理由: ${risk.reason}`);
+          }
+        });
+        outputChannel.appendLine('');
+        outputChannel.appendLine('--- 予測 ---');
+        outputChannel.appendLine(`成功率: ${(suggestion.predictedSuccessRate * 100).toFixed(1)}%`);
+        outputChannel.appendLine(`予測時間: ${Math.round(suggestion.predictedTime / 60)}分`);
 
-      outputChannel.show();
-      notifier.commandInfo('🎯 最適化提案を表示しました');
-    } catch (error) {
-      notifier.commandError(`❌ 最適化失敗: ${error}`);
-    }
-  });
-
-  const showOptimizationStatsCommand = vscode.commands.registerCommand('servant.showOptimizationStats', () => {
-    const optimizationStats = optimizationEngine.getStats();
-    const workflowStats = workflowLearner.getStats();
-
-    outputChannel.clear();
-    outputChannel.appendLine('=== Optimization & Workflow Statistics ===');
-    outputChannel.appendLine('');
-    outputChannel.appendLine('--- 最適化エンジン ---');
-    outputChannel.appendLine(`学習済みパターン: ${optimizationStats.totalPatterns}個`);
-    outputChannel.appendLine(`平均成功率: ${(optimizationStats.avgSuccessRate * 100).toFixed(1)}%`);
-
-    if (optimizationStats.bestPattern) {
-      outputChannel.appendLine('');
-      outputChannel.appendLine('最高パターン:');
-      outputChannel.appendLine(`  種別: ${optimizationStats.bestPattern.taskType}`);
-      outputChannel.appendLine(`  成功率: ${(optimizationStats.bestPattern.successRate * 100).toFixed(1)}%`);
-      outputChannel.appendLine(`  使用回数: ${optimizationStats.bestPattern.usageCount}回`);
-    }
-
-    outputChannel.appendLine('');
-    outputChannel.appendLine('--- ワークフロー学習 ---');
-    outputChannel.appendLine(`分析コミット数: ${workflowStats.totalCommits}件`);
-    outputChannel.appendLine(`平均成功率: ${(workflowStats.avgSuccessRate * 100).toFixed(1)}%`);
-
-    if (Object.keys(workflowStats.taskTypeDistribution).length > 0) {
-      outputChannel.appendLine('');
-      outputChannel.appendLine('タスク種別分布:');
-      for (const [type, count] of Object.entries(workflowStats.taskTypeDistribution)) {
-        outputChannel.appendLine(`  ${type}: ${count}件`);
+        outputChannel.show();
+        notifier.commandInfo('🎯 最適化提案を表示しました');
+      } catch (error) {
+        notifier.commandError(`❌ 最適化失敗: ${error}`);
       }
     }
+  );
 
-    outputChannel.show();
-  });
+  const showOptimizationStatsCommand = vscode.commands.registerCommand(
+    'servant.showOptimizationStats',
+    () => {
+      const optimizationStats = optimizationEngine.getStats();
+      const workflowStats = workflowLearner.getStats();
+
+      outputChannel.clear();
+      outputChannel.appendLine('=== Optimization & Workflow Statistics ===');
+      outputChannel.appendLine('');
+      outputChannel.appendLine('--- 最適化エンジン ---');
+      outputChannel.appendLine(`学習済みパターン: ${optimizationStats.totalPatterns}個`);
+      outputChannel.appendLine(
+        `平均成功率: ${(optimizationStats.avgSuccessRate * 100).toFixed(1)}%`
+      );
+
+      if (optimizationStats.bestPattern) {
+        outputChannel.appendLine('');
+        outputChannel.appendLine('最高パターン:');
+        outputChannel.appendLine(`  種別: ${optimizationStats.bestPattern.taskType}`);
+        outputChannel.appendLine(
+          `  成功率: ${(optimizationStats.bestPattern.successRate * 100).toFixed(1)}%`
+        );
+        outputChannel.appendLine(`  使用回数: ${optimizationStats.bestPattern.usageCount}回`);
+      }
+
+      outputChannel.appendLine('');
+      outputChannel.appendLine('--- ワークフロー学習 ---');
+      outputChannel.appendLine(`分析コミット数: ${workflowStats.totalCommits}件`);
+      outputChannel.appendLine(`平均成功率: ${(workflowStats.avgSuccessRate * 100).toFixed(1)}%`);
+
+      if (Object.keys(workflowStats.taskTypeDistribution).length > 0) {
+        outputChannel.appendLine('');
+        outputChannel.appendLine('タスク種別分布:');
+        for (const [type, count] of Object.entries(workflowStats.taskTypeDistribution)) {
+          outputChannel.appendLine(`  ${type}: ${count}件`);
+        }
+      }
+
+      outputChannel.show();
+    }
+  );
 
   const showAITrendCommand = vscode.commands.registerCommand('servant.showAITrend', () => {
     const trend = aiEvaluator.getTrend(10);
@@ -2089,7 +2397,9 @@ export function activate(context: vscode.ExtensionContext) {
     trend.forEach((m, index) => {
       const date = new Date(m.timestamp).toLocaleString('ja-JP');
       outputChannel.appendLine(`${index + 1}. ${date}`);
-      outputChannel.appendLine(`   総合: ${m.overallScore}/100, 完了率: ${m.taskCompletionRate}%, 品質: ${m.codeQualityScore}/100`);
+      outputChannel.appendLine(
+        `   総合: ${m.overallScore}/100, 完了率: ${m.taskCompletionRate}%, 品質: ${m.codeQualityScore}/100`
+      );
     });
 
     outputChannel.appendLine('');
@@ -2115,159 +2425,193 @@ export function activate(context: vscode.ExtensionContext) {
   // Phase 6: Constellation天体儀ビューコマンド
   const showConstellationCommand = vscode.commands.registerCommand(
     'servant.showConstellation',
-    async (openOptions?: { mode?: ViewModeName; query?: string; filters?: Record<string, any>; nodeId?: string }) => {
-    try {
-      // グラフの読み込み（または自動構築）
-      let loaded = await neuralGraph.loadGraph();
-      if (!loaded) {
-        const answer = await vscode.window.showInformationMessage(
-          '🌟 天体儀データがまだありません。プロジェクトをスキャンしますか？',
-          'スキャンする',
-          'キャンセル'
-        );
+    async (openOptions?: {
+      mode?: ViewModeName;
+      query?: string;
+      filters?: Record<string, any>;
+      nodeId?: string;
+    }) => {
+      try {
+        // グラフの読み込み（または自動構築）
+        let loaded = await neuralGraph.loadGraph();
+        if (!loaded) {
+          const answer = await vscode.window.showInformationMessage(
+            '🌟 天体儀データがまだありません。プロジェクトをスキャンしますか？',
+            'スキャンする',
+            'キャンセル'
+          );
 
-        if (answer !== 'スキャンする') {
-          return;
+          if (answer !== 'スキャンする') {
+            return;
+          }
+
+          await vscode.window.withProgress(
+            {
+              location: vscode.ProgressLocation.Notification,
+              title: '🌟 天体儀データを生成中...',
+              cancellable: false,
+            },
+            async (progress) => {
+              progress.report({ increment: 30, message: 'プロジェクトをスキャン中...' });
+              await neuralGraph.buildGraph();
+
+              progress.report({ increment: 30, message: 'ゴール距離を計算中...' });
+              const { GoalManager } = await import('./goals/GoalManager.js');
+              const goalManager = new GoalManager(workspaceRoot);
+
+              progress.report({ increment: 20, message: '変更頻度を分析中...' });
+              await neuralGraph.updateChangeFrequencies(gitIntegration);
+
+              progress.report({ increment: 20, message: '優先度スコアを計算中...' });
+              neuralGraph.computePriorityScores(goalManager);
+              await neuralGraph.saveGraph();
+            }
+          );
+
+          loaded = true;
+          notifier.commandInfo('✅ 天体儀データを生成しました');
         }
 
-        await vscode.window.withProgress({
-          location: vscode.ProgressLocation.Notification,
-          title: '🌟 天体儀データを生成中...',
-          cancellable: false
-        }, async (progress) => {
-          progress.report({ increment: 30, message: 'プロジェクトをスキャン中...' });
-          await neuralGraph.buildGraph();
+        // ConstellationDataGenerator とGoalManagerを初期化
+        const { GoalManager } = await import('./goals/GoalManager.js');
+        const { ConstellationDataGenerator } =
+          await import('./constellation/ConstellationDataGenerator.js');
 
-          progress.report({ increment: 30, message: 'ゴール距離を計算中...' });
-          const { GoalManager } = await import('./goals/GoalManager.js');
-          const goalManager = new GoalManager(workspaceRoot);
+        const goalManager = new GoalManager(workspaceRoot);
+        const generator = new ConstellationDataGenerator(neuralGraph, goalManager);
 
-          progress.report({ increment: 20, message: '変更頻度を分析中...' });
-          await neuralGraph.updateChangeFrequencies(gitIntegration);
-
-          progress.report({ increment: 20, message: '優先度スコアを計算中...' });
-          neuralGraph.computePriorityScores(goalManager);
-          await neuralGraph.saveGraph();
-        });
-
-        loaded = true;
-        notifier.commandInfo('✅ 天体儀データを生成しました');
+        // WebView Panelを開く
+        ConstellationViewPanel.createOrShow(
+          context.extensionUri,
+          neuralGraph,
+          goalManager,
+          generator,
+          openOptions
+        );
+      } catch (error) {
+        notifier.commandError(`天体儀の表示に失敗: ${error}`);
+        outputChannel.appendLine(`[Constellation] Error: ${error}`);
       }
-
-      // ConstellationDataGenerator とGoalManagerを初期化
-      const { GoalManager } = await import('./goals/GoalManager.js');
-      const { ConstellationDataGenerator } = await import('./constellation/ConstellationDataGenerator.js');
-
-      const goalManager = new GoalManager(workspaceRoot);
-      const generator = new ConstellationDataGenerator(neuralGraph, goalManager);
-
-      // WebView Panelを開く
-      ConstellationViewPanel.createOrShow(
-        context.extensionUri,
-        neuralGraph,
-        goalManager,
-        generator,
-        openOptions
-      );
-
-    } catch (error) {
-      notifier.commandError(`天体儀の表示に失敗: ${error}`);
-      outputChannel.appendLine(`[Constellation] Error: ${error}`);
     }
-  });
+  );
 
   // Constellationのサブモードとして、メンテナンス（健全診断）を開く
-  const showMaintenanceCommand = vscode.commands.registerCommand('servant.showMaintenance', async () => {
-    await vscode.commands.executeCommand('servant.showConstellation', { mode: 'Maintenance' as ViewModeName });
-  });
+  const showMaintenanceCommand = vscode.commands.registerCommand(
+    'servant.showMaintenance',
+    async () => {
+      await vscode.commands.executeCommand('servant.showConstellation', {
+        mode: 'Maintenance' as ViewModeName,
+      });
+    }
+  );
   context.subscriptions.push(showMaintenanceCommand);
 
   // 🌟ステータスバー起点のメニュー（QuickPick）
-  const openConstellationMenuCommand = vscode.commands.registerCommand('servant.openConstellationMenu', async () => {
-    const selected = await vscode.window.showQuickPick(
-      [
+  const openConstellationMenuCommand = vscode.commands.registerCommand(
+    'servant.openConstellationMenu',
+    async () => {
+      const selected = await vscode.window.showQuickPick(
+        [
+          {
+            label: '🌟 天体儀（全体表示）',
+            description: 'プロジェクト全体の3D表示',
+            mode: 'Overview' as ViewModeName,
+          },
+          {
+            label: '🩺 メンテナンス（健全診断）',
+            description: 'プロジェクトの健全性チェックと実行ボタン',
+            mode: 'Maintenance' as ViewModeName,
+          },
+          {
+            label: '🔍 天体儀（検索）',
+            description: 'ノード名/パスで検索',
+            mode: 'Search' as ViewModeName,
+          },
+          {
+            label: '🎯 天体儀（フィルター）',
+            description: 'タイプ等で絞り込み',
+            mode: 'Filter' as ViewModeName,
+          },
+        ],
         {
-          label: '🌟 天体儀（全体表示）',
-          description: 'プロジェクト全体の3D表示',
-          mode: 'Overview' as ViewModeName,
-        },
-        {
-          label: '🩺 メンテナンス（健全診断）',
-          description: 'プロジェクトの健全性チェックと実行ボタン',
-          mode: 'Maintenance' as ViewModeName,
-        },
-        {
-          label: '🔍 天体儀（検索）',
-          description: 'ノード名/パスで検索',
-          mode: 'Search' as ViewModeName,
-        },
-        {
-          label: '🎯 天体儀（フィルター）',
-          description: 'タイプ等で絞り込み',
-          mode: 'Filter' as ViewModeName,
-        },
-      ],
-      {
-        placeHolder: '天体儀メニュー',
-      }
-    );
+          placeHolder: '天体儀メニュー',
+        }
+      );
 
-    if (!selected) return;
+      if (!selected) return;
 
-    await vscode.commands.executeCommand('servant.showConstellation', { mode: selected.mode });
-  });
+      await vscode.commands.executeCommand('servant.showConstellation', { mode: selected.mode });
+    }
+  );
 
   // Phase 11: アーキテクチャアドバイザーコマンド
-  const analyzeArchitectureCommand = vscode.commands.registerCommand('servant.analyzeArchitecture', async () => {
-    vscode.window.withProgress({
-      location: vscode.ProgressLocation.Notification,
-      title: 'プロジェクトアーキテクチャを分析中...',
-      cancellable: false
-    }, async (progress) => {
-      try {
-        progress.report({ increment: 30, message: 'プロジェクト構造を分析...' });
-        const analysis = await architectureAdvisor.analyzeProject();
+  const analyzeArchitectureCommand = vscode.commands.registerCommand(
+    'servant.analyzeArchitecture',
+    async () => {
+      vscode.window.withProgress(
+        {
+          location: vscode.ProgressLocation.Notification,
+          title: 'プロジェクトアーキテクチャを分析中...',
+          cancellable: false,
+        },
+        async (progress) => {
+          try {
+            progress.report({ increment: 30, message: 'プロジェクト構造を分析...' });
+            const analysis = await architectureAdvisor.analyzeProject();
 
-        progress.report({ increment: 40, message: '問題を検出中...' });
-        const report = await architectureAdvisor.suggestRefactoring();
+            progress.report({ increment: 40, message: '問題を検出中...' });
+            const report = await architectureAdvisor.suggestRefactoring();
 
-        outputChannel.clear();
-        outputChannel.appendLine('=== プロジェクト分析 ===');
-        outputChannel.appendLine('');
-        outputChannel.appendLine(`📁 総ファイル数: ${analysis.totalFiles}`);
-        outputChannel.appendLine(`💻 コードファイル: ${analysis.codeFiles}`);
-        outputChannel.appendLine(`🧪 テストファイル: ${analysis.testFiles}`);
-        outputChannel.appendLine(`📚 ドキュメント: ${analysis.docFiles}`);
-        outputChannel.appendLine(`📊 平均ファイルサイズ: ${analysis.avgFileSize}行`);
-        outputChannel.appendLine(`📈 最大ファイルサイズ: ${analysis.maxFileSize}行`);
-        outputChannel.appendLine(`✅ テストカバレッジ: ${analysis.hasTestCoverage ? 'あり' : 'なし'}`);
-        outputChannel.appendLine(`🔄 CI/CD: ${analysis.hasCIPipeline ? 'あり' : 'なし'}`);
-        outputChannel.appendLine(`📖 ドキュメントスコア: ${analysis.documentationScore}/100`);
-        outputChannel.appendLine('');
-        outputChannel.appendLine('=== 業界標準チェック ===');
-        outputChannel.appendLine(`🔒 セキュリティ設定: ${analysis.hasSecurityConfig ? '✅' : '❌'}`);
-        outputChannel.appendLine(`♿ アクセシビリティ: ${analysis.hasA11yConfig ? '✅' : '❌'}`);
-        outputChannel.appendLine(`📊 エラートラッキング: ${analysis.hasErrorTracking ? '✅' : '❌'}`);
-        outputChannel.appendLine(`⚡ パフォーマンス監視: ${analysis.hasPerformanceMonitoring ? '✅' : '❌'}`);
-        outputChannel.appendLine('');
-        outputChannel.appendLine(report);
-        outputChannel.show();
-
-        (notifier.commandInfo('✅ アーキテクチャ分析完了！', 'レポートを表示') ??
-          Promise.resolve(undefined)
-        ).then((selection) => {
-          if (selection) {
+            outputChannel.clear();
+            outputChannel.appendLine('=== プロジェクト分析 ===');
+            outputChannel.appendLine('');
+            outputChannel.appendLine(`📁 総ファイル数: ${analysis.totalFiles}`);
+            outputChannel.appendLine(`💻 コードファイル: ${analysis.codeFiles}`);
+            outputChannel.appendLine(`🧪 テストファイル: ${analysis.testFiles}`);
+            outputChannel.appendLine(`📚 ドキュメント: ${analysis.docFiles}`);
+            outputChannel.appendLine(`📊 平均ファイルサイズ: ${analysis.avgFileSize}行`);
+            outputChannel.appendLine(`📈 最大ファイルサイズ: ${analysis.maxFileSize}行`);
+            outputChannel.appendLine(
+              `✅ テストカバレッジ: ${analysis.hasTestCoverage ? 'あり' : 'なし'}`
+            );
+            outputChannel.appendLine(`🔄 CI/CD: ${analysis.hasCIPipeline ? 'あり' : 'なし'}`);
+            outputChannel.appendLine(`📖 ドキュメントスコア: ${analysis.documentationScore}/100`);
+            outputChannel.appendLine('');
+            outputChannel.appendLine('=== 業界標準チェック ===');
+            outputChannel.appendLine(
+              `🔒 セキュリティ設定: ${analysis.hasSecurityConfig ? '✅' : '❌'}`
+            );
+            outputChannel.appendLine(
+              `♿ アクセシビリティ: ${analysis.hasA11yConfig ? '✅' : '❌'}`
+            );
+            outputChannel.appendLine(
+              `📊 エラートラッキング: ${analysis.hasErrorTracking ? '✅' : '❌'}`
+            );
+            outputChannel.appendLine(
+              `⚡ パフォーマンス監視: ${analysis.hasPerformanceMonitoring ? '✅' : '❌'}`
+            );
+            outputChannel.appendLine('');
+            outputChannel.appendLine(report);
             outputChannel.show();
+
+            (
+              notifier.commandInfo('✅ アーキテクチャ分析完了！', 'レポートを表示') ??
+              Promise.resolve(undefined)
+            ).then((selection) => {
+              if (selection) {
+                outputChannel.show();
+              }
+            });
+          } catch (error) {
+            notifier.commandError(`分析エラー: ${error}`);
           }
-        });
-      } catch (error) {
-        notifier.commandError(`分析エラー: ${error}`);
-      }
-    });
-  });
+        }
+      );
+    }
+  );
 
   // エディタ切り替え時の検証
-  const editorWatcher = vscode.window.onDidChangeActiveTextEditor(editor => {
+  const editorWatcher = vscode.window.onDidChangeActiveTextEditor((editor) => {
     if (editor && isEnabled()) {
       diagnosticsProvider.validate(editor.document.uri);
     }
@@ -2322,60 +2666,61 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   // 初期ロード
-  Promise.all([
-    loader.load(),
-    treeLoader.load()
-  ]).then(async () => {
-    instructionsLoaded = true;
-    // 起動時にAI_CONTEXTを自動生成（ベストエフォート・無通知・エディタを開かない）
-    scheduleAutoContextBuild('startup');
+  Promise.all([loader.load(), treeLoader.load()])
+    .then(async () => {
+      instructionsLoaded = true;
+      // 起動時にAI_CONTEXTを自動生成（ベストエフォート・無通知・エディタを開かない）
+      scheduleAutoContextBuild('startup');
 
-    // Phase 7: プロジェクトインデックス自動構築
-    const learningEnabled = vscode.workspace.getConfiguration('servant').get<boolean>('learning.enabled', true);
-    if (learningEnabled) {
-      try {
-        const activationInfoEnabled = vscode.workspace
-          .getConfiguration('servant')
-          .get<boolean>('logging.activationInfo', false);
-        if (activationInfoEnabled) {
-          outputChannel.appendLine('[Activation] Building project index...');
+      // Phase 7: プロジェクトインデックス自動構築
+      const learningEnabled = vscode.workspace
+        .getConfiguration('servant')
+        .get<boolean>('learning.enabled', true);
+      if (learningEnabled) {
+        try {
+          const activationInfoEnabled = vscode.workspace
+            .getConfiguration('servant')
+            .get<boolean>('logging.activationInfo', false);
+          if (activationInfoEnabled) {
+            outputChannel.appendLine('[Activation] Building project index...');
+          }
+          await contextDB.indexProject();
+          if (activationInfoEnabled) {
+            outputChannel.appendLine('[Activation] Project index ready');
+          }
+        } catch (error) {
+          outputChannel.appendLine(`[Activation] Index failed: ${error}`);
         }
-        await contextDB.indexProject();
-        if (activationInfoEnabled) {
-          outputChannel.appendLine('[Activation] Project index ready');
-        }
-      } catch (error) {
-        outputChannel.appendLine(`[Activation] Index failed: ${error}`);
       }
-    }
 
-    // Git hooksの自動インストール（初回のみ）
-    const config = vscode.workspace.getConfiguration('servant');
-    const autoInstall = config.get<boolean>('preCommit.autoInstall', true);
+      // Git hooksの自動インストール（初回のみ）
+      const config = vscode.workspace.getConfiguration('servant');
+      const autoInstall = config.get<boolean>('preCommit.autoInstall', true);
 
-    if (autoInstall) {
-      const activationInfoEnabled = config.get<boolean>('logging.activationInfo', false);
-      const isGitRepo = await gitIntegration.isGitRepository(workspaceRoot);
-      if (isGitRepo) {
-        const hooksDir = await gitIntegration.getHooksDirectory(workspaceRoot);
-        if (hooksDir) {
-          const isInstalled = await hookInstaller.isHookInstalled(hooksDir, 'pre-commit');
-          if (!isInstalled) {
-            if (activationInfoEnabled) {
-              outputChannel.appendLine('[Activation] Auto-installing Git hooks...');
-            }
-            await hookInstaller.installAllHooks(hooksDir);
-            if (activationInfoEnabled) {
-              outputChannel.appendLine('[Activation] Git hooks installed');
+      if (autoInstall) {
+        const activationInfoEnabled = config.get<boolean>('logging.activationInfo', false);
+        const isGitRepo = await gitIntegration.isGitRepository(workspaceRoot);
+        if (isGitRepo) {
+          const hooksDir = await gitIntegration.getHooksDirectory(workspaceRoot);
+          if (hooksDir) {
+            const isInstalled = await hookInstaller.isHookInstalled(hooksDir, 'pre-commit');
+            if (!isInstalled) {
+              if (activationInfoEnabled) {
+                outputChannel.appendLine('[Activation] Auto-installing Git hooks...');
+              }
+              await hookInstaller.installAllHooks(hooksDir);
+              if (activationInfoEnabled) {
+                outputChannel.appendLine('[Activation] Git hooks installed');
+              }
             }
           }
         }
       }
-    }
-  }).catch(err => {
-    console.error('Failed to load instructions/trees:', err);
-    notifier.critical(`Servant: ${err.message}`);
-  });
+    })
+    .catch((err) => {
+      console.error('Failed to load instructions/trees:', err);
+      notifier.critical(`Servant: ${err.message}`);
+    });
 }
 
 export function deactivate() {

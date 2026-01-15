@@ -441,6 +441,36 @@
           "default": true,
           "description": "Enable incremental validation (only validate changed files)"
         },
+        "servant.validation.autoValidateOnChange": {
+          "type": "boolean",
+          "default": true,
+          "description": "Run lightweight auto-validation on file change/create (debounced and coalesced)"
+        },
+        "servant.validation.autoValidateDebounceMs": {
+          "type": "number",
+          "default": 350,
+          "minimum": 0,
+          "description": "Debounce interval (ms) for auto-validation triggered by file changes"
+        },
+        "servant.validation.autoValidateExcludePrefixes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            ".git",
+            ".aitk",
+            ".vscode",
+            "node_modules",
+            "dist",
+            "dist-beta",
+            "coverage",
+            "playwright-report",
+            "extensions/servant/dist",
+            "extensions/servant/out"
+          ],
+          "description": "Workspace-relative path prefixes to exclude from auto-validation (e.g. generated outputs). Trailing slash is optional."
+        },
         "servant.autopilot.enabled": {
           "type": "boolean",
           "default": true,
