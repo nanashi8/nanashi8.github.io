@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-16T14:02:34.951Z
+- generatedAt: 2026-01-18T01:35:47.385Z
 
 ## Single Source of Truth
 
@@ -12,33 +12,33 @@
 ## Signals (Recent, Decayed)
 
 - windowHours: 24
-- candidates: 30
+- candidates: 17
 - startNodeSource: signals
-- docs/research/README.md (hot=0.012)
-- docs/research/MICRO_MACRO_UDD_QC_COMPATIBILITY.md (hot=0.011)
-- docs/research/MICRO_MACRO_UDD_ARCHITECTURE.md (hot=0.01)
-- docs/research/UDD_CROSS_DOMAIN_CLOSED_LOOP_EXAMPLES.md (hot=0.01)
-- docs/research/UDD_SIGNIFICANCE_CONCEPT.md (hot=0.008)
-- extensions/servant/src/autopilot/AutopilotController.ts (hot=0.006)
-- extensions/servant/src/extension.ts (hot=0.003)
-- docs/quality/pattern-learning/INDEX.md (hot=0.002)
-- docs/quality/pattern-learning/J_2020_5.md (hot=0.001)
-- docs/quality/pattern-learning/J_2021_5.md (hot=0.001)
+- extensions/servant/src/ui/ServantWarningLogger.ts (hot=0.007)
+- extensions/servant/src/extension.ts (hot=0.006)
+- extensions/servant/src/autopilot/AutopilotController.ts (hot=0.005)
+- extensions/servant/package.json (hot=0.002)
+- extensions/servant/src/autopilot/states/IdleState.ts (hot=0.001)
+- extensions/servant/src/autopilot/states/RunningState.ts (hot=0.001)
+- extensions/servant/src/autopilot/states/PausedState.ts (hot=0.001)
+- extensions/servant/src/autopilot/states/ReviewingState.ts (hot=0.001)
+- extensions/servant/src/autopilot/states/InvestigatingState.ts (hot=0.001)
+- extensions/servant/src/autopilot/states/CompletedState.ts (hot=0.001)
 
 ## Related (Neural Propagation)
 
-- startNode: docs/research/README.md
+- startNode: extensions/servant/src/ui/ServantWarningLogger.ts
 - seeds: 5
 - affectedFiles: 0
-- computationTimeMs: 0
+- computationTimeMs: 1
 
 ### Seeds
 
-- docs/research/README.md (activation=1.000, source=signal, signals=[save:0.01])
-- docs/research/MICRO_MACRO_UDD_QC_COMPATIBILITY.md (activation=0.917, source=signal, signals=[save:0.01])
-- docs/research/MICRO_MACRO_UDD_ARCHITECTURE.md (activation=0.833, source=signal, signals=[save:0.01])
-- docs/research/UDD_CROSS_DOMAIN_CLOSED_LOOP_EXAMPLES.md (activation=0.833, source=signal, signals=[save:0.01])
-- docs/research/UDD_SIGNIFICANCE_CONCEPT.md (activation=0.667, source=signal, signals=[save:0.01])
+- extensions/servant/src/ui/ServantWarningLogger.ts (activation=1.000, source=signal, signals=[save:0.01])
+- extensions/servant/src/extension.ts (activation=0.857, source=signal, signals=[save:0.01])
+- extensions/servant/src/autopilot/AutopilotController.ts (activation=0.714, source=signal, signals=[save:0.01])
+- extensions/servant/package.json (activation=0.286, source=signal, signals=[save:0.00])
+- extensions/servant/src/autopilot/states/IdleState.ts (activation=0.143, source=signal, signals=[save:0.00])
 
 - (no related files detected)
 
@@ -53,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 278.16
+- ageHours: 313.72
 
 ## Latest SpecCheck Record (Raw)
 
@@ -88,4 +88,3 @@
 
 - This packet is generated locally (no external model).
 - Output path: nanashi8.github.io/.aitk/context/AI_CONTEXT.md
-

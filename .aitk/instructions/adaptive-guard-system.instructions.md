@@ -1,6 +1,6 @@
 ---
 description: 適応的ガードシステム - 自動生成された失敗パターンガイド
-generated: 2026-01-14T12:23:53.893Z
+generated: 2026-01-18T01:34:17.560Z
 version: 1.0.0
 ---
 
@@ -9,7 +9,7 @@ version: 1.0.0
 このファイルは**自動生成**されます。失敗パターンデータベースから学習し、
 最新の失敗パターンと対策を反映します。
 
-**最終更新**: 2026-01-14
+**最終更新**: 2026-01-18
 **総失敗回数**: 4
 **総復旧回数**: 4
 **現在の成功率**: 50.0%
@@ -22,12 +22,11 @@ version: 1.0.0
 以下のパターンは、過去の失敗から学習した重要度の高い項目です。
 重みが高いほど、注意が必要です。
 
-
 ### 1. property-naming-error ⚠️ 重要度: 1.00
 
 **カテゴリー**: type-error
 **重要度**: critical
-**発生回数**: 177
+**発生回数**: 192
 **復旧回数**: 1
 **成功率**: 50.0%
 
@@ -35,10 +34,12 @@ version: 1.0.0
 型定義を確認せずにプロパティ名を推測
 
 **検出方法**:
+
 - エラーパターン: `Property .* does not exist on type`
-- 対象ファイル: src/**/*.ts, src/**/*.tsx
+- 対象ファイル: src/**/\*.ts, src/**/\*.tsx
 
 **予防策**:
+
 - チェック方法: static-analysis
 - コマンド: `npm run type-check`
 - ガイド: [property-naming-convention.instructions.md](.aitk/instructions/property-naming-convention.instructions.md)
@@ -46,32 +47,28 @@ version: 1.0.0
 
 **最近の事例**:
 
-- **日時**: 2026-01-14
+- **日時**: 2026-01-18
   - エラー: `        } else if (wordProgress.incorrectCount && wordProgress.incorrectCount`
-  - 修正:       if (wordProgress?.memorizationAttempts && wordProgress.memorizationAttempts
+  - 修正: if (wordProgress?.memorizationAttempts && wordProgress.memorizationAttempts
   - 失敗テスト数: 0
 
-
-- **日時**: 2026-01-14
+- **日時**: 2026-01-18
   - エラー: `    if (ctx.attemptCount`
-  - 修正:  (wordProgress.spellingAttempts || 0) + (wordProgress.grammarAttempts || 0) + (wordProgress.memorizationAttempts
+  - 修正: (wordProgress.spellingAttempts || 0) + (wordProgress.grammarAttempts || 0) + (wordProgress.memorizationAttempts
   - 失敗テスト数: 0
 
-
-- **日時**: 2026-01-14
+- **日時**: 2026-01-18
   - エラー: `      wordStat.correctCount`
-  - 修正:       const transCorrect = wordStat.translationCorrect
+  - 修正: const transCorrect = wordStat.translationCorrect
   - 失敗テスト数: 0
-
 
 ---
-
 
 ### 2. logic-error ⚠️ 重要度: 1.00
 
 **カテゴリー**: unknown
 **重要度**: medium
-**発生回数**: 4542
+**発生回数**: 4905
 **復旧回数**: 1
 **成功率**: 100.0%
 
@@ -79,25 +76,23 @@ version: 1.0.0
 perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善
 
 **検出方法**:
+
 - エラーパターン: `perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善`
 - 対象ファイル: src/components/GrammarQuizView.tsx
 
 **予防策**:
-- チェック方法: manual
 
+- チェック方法: manual
 
 - 自動修正: 不可
 
-
-
 ---
-
 
 ### 3. type-error ⚠️ 重要度: 1.00
 
 **カテゴリー**: unknown
 **重要度**: medium
-**発生回数**: 360
+**発生回数**: 385
 **復旧回数**: 1
 **成功率**: 100.0%
 
@@ -105,25 +100,23 @@ perf(grammar): handleStartQuizの無限ループを修正してパフォーマ�
 fix: TypeScriptエラー修正(TimeBasedStats, NetworkConfig, Question型)
 
 **検出方法**:
+
 - エラーパターン: `fix: TypeScriptエラー修正(TimeBasedStats, NetworkConfig, Question型)`
 - 対象ファイル: src/ai/nodes/TimeBasedPriorityAI.ts, src/utils/questionPrioritySorter.ts, tests/unit/learningAI.test.ts
 
 **予防策**:
-- チェック方法: manual
 
+- チェック方法: manual
 
 - 自動修正: 不可
 
-
-
 ---
-
 
 ### 4. test-error ⚠️ 重要度: 1.00
 
 **カテゴリー**: unknown
 **重要度**: medium
-**発生回数**: 337
+**発生回数**: 364
 **復旧回数**: 1
 **成功率**: 100.0%
 
@@ -131,19 +124,17 @@ fix: TypeScriptエラー修正(TimeBasedStats, NetworkConfig, Question型)
 test: カバレッジ目標達成 - 94.74%
 
 **検出方法**:
+
 - エラーパターン: `test: カバレッジ目標達成 - 94.74%`
 - 対象ファイル: tests/unit/useAdaptiveLearning.test.ts
 
 **予防策**:
-- チェック方法: manual
 
+- チェック方法: manual
 
 - 自動修正: 不可
 
-
-
 ---
-
 
 ### 5. refactoring-logic-change ⚠️ 重要度: 0.80
 
@@ -157,19 +148,18 @@ test: カバレッジ目標達成 - 94.74%
 リファクタリング時に元のロジックを変更
 
 **検出方法**:
+
 - エラーパターン: `Test failed.*expected.*received`
-- 対象ファイル: src/**/*.ts
+- 対象ファイル: src/\*_/_.ts
 
 **予防策**:
+
 - チェック方法: test
 - コマンド: `npm run test:unit`
 - ガイド: [refactoring-safety-guide.instructions.md](.aitk/instructions/refactoring-safety-guide.instructions.md)
 - 自動修正: 不可
 
-
-
 ---
-
 
 ## 📊 収斂状態
 
@@ -183,27 +173,24 @@ test: カバレッジ目標達成 - 94.74%
 
 ## 🛡️ 自動ガード層の状態
 
-
 ### pre-commit
+
 - 状態: ✅ 有効
 - 重み: 1.00
 - チェック項目: type-check, lint, dark-mode-check, specification-compliance
 
-
-
 ### ci-cd
+
 - 状態: ✅ 有効
 - 重み: 0.90
 - チェック項目: property-naming, logic-duplication, unit-tests, integration-tests
 
-
-
 ### instructions
+
 - 状態: ✅ 有効
 - 重み: 0.70
 
 - 優先度: critical
-
 
 ## 🎓 学習アルゴリズム
 
@@ -234,36 +221,24 @@ test: カバレッジ目標達成 - 94.74%
 
 以下は、高リスクパターンから自動生成された必須チェックリストです：
 
-
 1. **property-naming-error** (重み: 1.00)
    - [ ] 型定義を確認せずにプロパティ名を推測
    - [ ] `npm run type-check` を実行
    - [ ] [property-naming-convention.instructions.md](.aitk/instructions/property-naming-convention.instructions.md) を確認
 
-
 2. **logic-error** (重み: 1.00)
    - [ ] perf(grammar): handleStartQuizの無限ループを修正してパフォーマンス改善
-   
-   
-
 
 3. **type-error** (重み: 1.00)
    - [ ] fix: TypeScriptエラー修正(TimeBasedStats, NetworkConfig, Question型)
-   
-   
-
 
 4. **test-error** (重み: 1.00)
    - [ ] test: カバレッジ目標達成 - 94.74%
-   
-   
-
 
 5. **refactoring-logic-change** (重み: 0.80)
    - [ ] リファクタリング時に元のロジックを変更
    - [ ] `npm run test:unit` を実行
    - [ ] [refactoring-safety-guide.instructions.md](.aitk/instructions/refactoring-safety-guide.instructions.md) を確認
-
 
 ---
 
