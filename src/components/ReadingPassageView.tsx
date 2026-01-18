@@ -45,7 +45,17 @@ function ReadingPassageView({ onAddWordToCustomSet }: ReadingPassageViewProps) {
   }, [activeTab]);
 
   // パッセージIDリスト（将来的には動的に取得）
-  const availablePassages = ['beginner-morning-routine', 'J_2022_5'];
+  const availablePassages = [
+    'beginner-morning-routine',
+    'J_2020_4',
+    'J_2020_5',
+    'J_2021_5',
+    'J_2022_5',
+    'J_2023_5',
+    'J_2024_5',
+    'J_2024_6',
+    'J_2025_5',
+  ];
   const [currentPassageId, setCurrentPassageId] = useState(availablePassages[0]);
 
   // パッセージデータの読み込み

@@ -123,6 +123,78 @@ function splitJapaneseParagraphIntoSentences(text: string): string[] {
   return out;
 }
 
+function splitEnglishParagraphIntoSentences(text: string): string[] {
+  const compact = text.replace(/\r?\n/g, ' ').replace(/\s+/g, ' ').trim();
+  if (!compact) return [];
+
+  const parts = compact.split(/(?<=[.!?]["']?)\s+(?=[A-Z0-9"'])/);
+  return parts.map((p) => p.trim()).filter(Boolean);
+}
+
+async function loadCompletePassageFromOriginalText(passageId: string): Promise<CompletePassageData> {
+  const fileBase = resolvePassageFileBase(passageId);
+  const originalCandidates = [
+    `/data/passages/1_passages-original/${fileBase}.txt`,
+    `/data/passages-original/${fileBase}.txt`,
+  ];
+
+  const originalText = await fetchFirstOkText(originalCandidates);
+  if (!originalText) {
+    logger.warn(`[passageDataLoader] No original passage found for ${passageId}`);
+    return {
+      passageId,
+      sentences: [],
+      phrases: [],
+      keyPhrases: [],
+      annotatedWords: [],
+      metadata: {
+        wordCount: 0,
+        sentenceCount: 0,
+      },
+    };
+  }
+
+  const withoutId = originalText.replace(/^[^\n]*\n/, '').trim();
+  const paragraphs = withoutId
+    .split(/\r?\n\s*\r?\n/g)
+    .map((p) => p.replace(/\r?\n/g, ' ').trim())
+    .filter(Boolean);
+
+  const japaneseBlocks = await loadJapaneseSentenceBlocks(passageId);
+
+  const sentences: CompletePassageData['sentences'] = [];
+  let sentenceIndex = 0;
+
+  paragraphs.forEach((paragraph) => {
+    const englishSentences = splitEnglishParagraphIntoSentences(paragraph);
+    englishSentences.forEach((english, idx) => {
+      sentenceIndex++;
+      sentences.push({
+        id: sentenceIndex,
+        english,
+        japanese: japaneseBlocks[sentenceIndex - 1] ?? '',
+        phraseIds: [],
+        isParagraphStart: idx === 0,
+      });
+    });
+  });
+
+  const wordCount = estimateWordCount(sentences.map((s) => s.english));
+  const sentenceCount = sentences.length;
+
+  return {
+    passageId,
+    sentences,
+    phrases: [],
+    keyPhrases: [],
+    annotatedWords: [],
+    metadata: {
+      wordCount,
+      sentenceCount,
+    },
+  };
+}
+
 function resolvePassageFileBase(passageId: string): string {
   return PASSAGE_FILE_BASE_BY_ID[passageId] ?? passageId;
 }
@@ -502,20 +574,10 @@ export async function loadCompletePassage(
   const parsed =
     dependencyParsedPassage ?? (await loadDependencyParsedPassage(passageId));
 
-  // 依存解析データが無い場合は空で返す（UI側でエラーメッセージ表示）
+  // 依存解析データが無い場合は passages-original から組み立てる
   if (!parsed || !parsed.sentences || parsed.sentences.length === 0) {
     logger.warn(`[passageDataLoader] No dependency parse found for ${passageId}`);
-    return {
-      passageId,
-      sentences: [],
-      phrases: [],
-      keyPhrases: [],
-      annotatedWords: [],
-      metadata: {
-        wordCount: 0,
-        sentenceCount: 0,
-      },
-    };
+    return loadCompletePassageFromOriginalText(passageId);
   }
 
   // 日本語（文単位）
