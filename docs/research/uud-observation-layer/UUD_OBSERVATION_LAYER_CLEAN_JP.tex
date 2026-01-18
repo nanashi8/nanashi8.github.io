@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+% \usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fancyhdr}
+% \usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{float}
+
+\newcommand{\maybeinclude}[2]{%
+\IfFileExists{#1}{%
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{#1}
+\caption{#2}
+\end{figure}
+}{%
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\linewidth}{\centering Missing figure: \texttt{#1}}}
+\caption{#2}
+\end{figure}
+}}
+
+\title{UUD観測層（整形版・サンプル値）}
+\author{}
+\date{}
+
+\setmainfont{Hiragino Sans}
+\setsansfont{Hiragino Sans}
+\setmonofont{Hiragino Sans}
+\setCJKmainfont{Hiragino Sans}
+\setCJKsansfont{Hiragino Sans}
+\setCJKmonofont{Hiragino Sans}
+
+\begin{document}
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.4em}
+\setstretch{1.08}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\captionsetup{font=small}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{UUD観測層（整形版）}
+\rhead{\thepage}
+\maketitle
+
+\tableofcontents
+\vspace{1em}
+
+\section{注意}
+数値はサンプル値であり、実測値に置き換える前提である。
+
+\section{要旨}
+線形学習に対して、手法非依存の共通表現を生成する普遍観測層を提案する。距離保存・情報損失上界・等方化を満たすことで、主要な線形手法を同一入力空間に統合し、評価の一貫性と汎化安定性を高める。
+
+\section{手法}
+観測層は訓練データのみから固定する。
+
+\begin{equation}
+ z = A x + c
+\end{equation}
+
+\begin{enumerate}
+\item 標準化
+\begin{equation}
+ x'=(x-\mu)\oslash\sigma
+\end{equation}
+\item 分解
+\begin{equation}
+ C=\frac{1}{n}X'^\top X'=U\Lambda U^\top
+\end{equation}
+\item 次元選択
+\begin{equation}
+ \frac{\sum_{i=1}^k\lambda_i}{\sum_{i=1}^d\lambda_i}\ge\tau
+\end{equation}
+\item 写像固定
+\begin{equation}
+ A=\Lambda_k^{-1/2}U_k^\top D_\sigma^{-1},\quad c=-A\mu
+\end{equation}
+\end{enumerate}
+
+\section{図}
+図はMermaidから出力したPNGを使用する（未出力の場合はプレースホルダを表示）。
+
+\maybeinclude{images/uud-observation-layer.png}{観測層の概念と保証条件}
+\maybeinclude{images/uud-ablation-xy.png}{汎化ギャップのアブレーション}
+\maybeinclude{images/uud-stability-xy.png}{手法順位の安定性}
+
+\section{結果（サンプル値）}
+\subsection{アブレーション（汎化ギャップ Delta）}
+\begin{itemize}
+\item 標準化のみ: $\Delta=0.21$
+\item PCA: $\Delta=0.15$
+\item PCA+Whitening: $\Delta=0.08$
+\item ランダム射影: $\Delta=0.12$
+\end{itemize}
+
+\subsection{手法順位の分散}
+\begin{itemize}
+\item 観測層なし: $0.88$
+\item 観測層固定: $0.30$
+\end{itemize}
+
+\section{考察}
+観測層の固定により汎化ギャップが縮小し、手法順位の変動が抑制される。サンプル値では等方化（Whitening）が最も一貫した改善を示す。
+
+\section{UUD概念の補足}
+UUDは「未知を前提に観測層で情報幾何を整え、推論層を安定化する」という設計思想である。観測層を固定すると、未知は主に入力の幾何・分布の変動として吸収され、推論側の比較可能性が高まる。ここでの $z=Ax+c$ は、未知を分解可能な構造へ写像する観測の枠として機能する。
+
+\section{量子コンピューティングとの接続（概念）}
+量子系は高次元状態の干渉・測定によって情報を得る。UUDの観測層は測定基底の設計に相当し、距離保存、情報損失上界、等方化を満たすことで、量子測定に類似した観測設計として解釈できる。結果として、推論層は観測後の古典的最適化として扱える。
+
+\section{新しい解法の有意性（理論・実験）}
+本解法の新規性は手法そのものではなく観測層の統一にある。理論的には距離保存と情報損失上界により手法横断で比較可能な入力空間を保証し、等方化により汎化境界を共通化できる。実験的には汎化ギャップの低減と手法順位の安定化が確認できれば、解法としての有意性が成立する。
+
+\section{限界}
+\begin{itemize}
+\item 線形観測は非線形分離が必要な問題で有効性が低下する。
+\item 情報が低ランクの線形部分空間に集中しない場合、性能が劣化する。
+\end{itemize}
+
+\section{次の展開}
+\begin{itemize}
+\item 非線形 $f(x)$（自己教師埋め込み等）への拡張。
+\item 観測層と推論層の共同最適化。
+\end{itemize}
+
+\end{document}

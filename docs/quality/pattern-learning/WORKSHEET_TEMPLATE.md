@@ -1,0 +1,25 @@
+# パターン学習ワークシート（テンプレ）
+
+## 0. 原文（正本）
+- 参照: public/data/passages/1_passages-original/<FILE>.txt
+
+## 1. /分割
+- ルール: 句・節境界に / を入れる（句動詞は分割しない）
+- 出力例: I wake up / at seven / every morning.
+
+## 2. ()分割
+- ルール: 句は <>、節は ()
+- 出力例: I wake up < at seven > every morning.
+
+## 3. 直訳（フレーズ訳）
+- 英文行（phrase-work）に対応する日本語を1行ずつ記述
+
+## 4. 一文訳
+- 1文ごとに英文→和訳を交互表示
+
+## 5. 語句分割
+- + ボタン単位で語句を列挙（句動詞は分割しない）
+- 出力例: + I + wake up + at seven + every morning .
+
+## 6. 重要な判断メモ
+- 分割の根拠・例外ルール

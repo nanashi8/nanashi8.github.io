@@ -1,6 +1,6 @@
 # AI CONTEXT PACKET
 
-- generatedAt: 2026-01-14T11:34:54.759Z
+- generatedAt: 2026-01-16T14:02:34.951Z
 
 ## Single Source of Truth
 
@@ -14,31 +14,31 @@
 - windowHours: 24
 - candidates: 30
 - startNodeSource: signals
-- docs/archive/README-2024-archive.md (hot=0.034)
-- extensions/servant/src/ui/states/MaintenanceState.ts (hot=0.028)
-- docs/guidelines/AI_COLLABORATION_WORKFLOW.md (hot=0.026)
-- scripts/ORGANIZATION.md (hot=0.025)
-- .husky/README.md (hot=0.025)
-- tools/npm-audit-summary.mjs (hot=0.023)
-- docs/research/README.md (hot=0.02)
-- scripts/generate-docs-index.ts (hot=0.02)
-- docs/research/NATIVE_CODING_REFINEMENT_WORKFLOW.md (hot=0.018)
-- extensions/servant/package.json (hot=0.016)
+- docs/research/README.md (hot=0.012)
+- docs/research/MICRO_MACRO_UDD_QC_COMPATIBILITY.md (hot=0.011)
+- docs/research/MICRO_MACRO_UDD_ARCHITECTURE.md (hot=0.01)
+- docs/research/UDD_CROSS_DOMAIN_CLOSED_LOOP_EXAMPLES.md (hot=0.01)
+- docs/research/UDD_SIGNIFICANCE_CONCEPT.md (hot=0.008)
+- extensions/servant/src/autopilot/AutopilotController.ts (hot=0.006)
+- extensions/servant/src/extension.ts (hot=0.003)
+- docs/quality/pattern-learning/INDEX.md (hot=0.002)
+- docs/quality/pattern-learning/J_2020_5.md (hot=0.001)
+- docs/quality/pattern-learning/J_2021_5.md (hot=0.001)
 
 ## Related (Neural Propagation)
 
-- startNode: docs/archive/README-2024-archive.md
+- startNode: docs/research/README.md
 - seeds: 5
 - affectedFiles: 0
-- computationTimeMs: 1
+- computationTimeMs: 0
 
 ### Seeds
 
-- docs/archive/README-2024-archive.md (activation=1.000, source=signal, signals=[save:0.03])
-- extensions/servant/src/ui/states/MaintenanceState.ts (activation=0.824, source=signal, signals=[save:0.03])
-- docs/guidelines/AI_COLLABORATION_WORKFLOW.md (activation=0.765, source=signal, signals=[save:0.03])
-- scripts/ORGANIZATION.md (activation=0.735, source=signal, signals=[save:0.03])
-- .husky/README.md (activation=0.735, source=signal, signals=[save:0.03])
+- docs/research/README.md (activation=1.000, source=signal, signals=[save:0.01])
+- docs/research/MICRO_MACRO_UDD_QC_COMPATIBILITY.md (activation=0.917, source=signal, signals=[save:0.01])
+- docs/research/MICRO_MACRO_UDD_ARCHITECTURE.md (activation=0.833, source=signal, signals=[save:0.01])
+- docs/research/UDD_CROSS_DOMAIN_CLOSED_LOOP_EXAMPLES.md (activation=0.833, source=signal, signals=[save:0.01])
+- docs/research/UDD_SIGNIFICANCE_CONCEPT.md (activation=0.667, source=signal, signals=[save:0.01])
 
 - (no related files detected)
 
@@ -53,7 +53,7 @@
 
 - ok: false
 - reason: expired
-- ageHours: 227.70
+- ageHours: 278.16
 
 ## Latest SpecCheck Record (Raw)
 

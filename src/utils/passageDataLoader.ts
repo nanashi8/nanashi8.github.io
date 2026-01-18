@@ -11,6 +11,10 @@ const PASSAGE_FILE_BASE_BY_ID: Record<string, string> = {
   'beginner-morning-routine': 'beginner_50_Morning-Routine',
 };
 
+const PASSAGE_SENTENCE_FILE_BASE_BY_ID: Record<string, string> = {
+  'beginner-morning-routine': 'beginner-morning-routine',
+};
+
 const PHRASE_WORK_MARKER = '< < < ASTERISK > > >';
 
 function splitIntoBlocks(text: string): string[] {
@@ -127,10 +131,11 @@ async function loadJapaneseSentenceBlocks(
   passageId: string
 ): Promise<string[]> {
   const fileBase = resolvePassageFileBase(passageId);
+  const sentenceFileBase = PASSAGE_SENTENCE_FILE_BASE_BY_ID[passageId] ?? fileBase;
 
   // 1) 文単位ファイル（存在する場合）
   try {
-    const res = await fetch(`/data/passages/2_passages-sentences/${fileBase}_sentences.txt`);
+    const res = await fetch(`/data/passages/2_passages-sentences/${sentenceFileBase}_sentences.txt`);
     if (res.ok) {
       const text = await res.text();
       // 日本語文が含まれている場合のみ採用

@@ -169,7 +169,7 @@
       },
       {
         "command": "servant.showConstellation",
-        "title": "Servant: 🌟 Show Constellation View"
+        "title": "Servant: 🌟 プロジェクト概要を表示"
       },
       {
         "command": "servant.showMaintenance",
@@ -177,7 +177,7 @@
       },
       {
         "command": "servant.openConstellationMenu",
-        "title": "Servant: 🌟 Constellation Menu"
+        "title": "Servant: 🌟 概要メニュー"
       },
       {
         "command": "servant.analyzeArchitecture",
@@ -185,19 +185,19 @@
       },
       {
         "command": "servant.autopilot.showLastReport",
-        "title": "Servant: Show Autopilot Last Report"
+        "title": "Servant: 自動サポートの最新レポートを表示"
       },
       {
         "command": "servant.autopilot.adjust",
-        "title": "Servant: Adjust Autopilot Preflight"
+        "title": "Servant: 事前チェックの調整"
       },
       {
         "command": "servant.autopilot.review",
-        "title": "Servant: Review Autopilot (Deliberation)"
+        "title": "Servant: 確認が必要な項目を表示"
       },
       {
         "command": "servant.autopilot.ingestPostReviewFromClipboard",
-        "title": "Servant: Ingest Autopilot Post-Review (from Clipboard)"
+        "title": "Servant: 事後確認の取り込み（クリップボード）"
       },
       {
         "command": "servant.specBook.open",
@@ -275,7 +275,7 @@
           "type": "number",
           "default": 15000,
           "minimum": 0,
-          "description": "起動直後のログ抑制期間（ミリ秒）。この期間は、警告がsummaryに寄り、天体儀ビュー等の自動出力が短くなります"
+          "description": "起動直後のログ抑制期間（ミリ秒）。この期間は、警告がsummaryに寄り、プロジェクト概要などの自動出力が短くなります"
         },
         "servant.logging.startupInfo": {
           "type": "boolean",
@@ -310,7 +310,7 @@
         "servant.autopilot.logInit": {
           "type": "boolean",
           "default": false,
-          "description": "Autopilot（Constellationなど）の初期化ログをOutputに表示する"
+          "description": "自動サポート（プロジェクト概要など）の初期化ログをOutputに表示する"
         },
         "servant.autopilot.preflightVerbosity": {
           "type": "string",
@@ -320,7 +320,7 @@
             "full"
           ],
           "default": "summary",
-          "description": "Autopilotの事前誘導をOutputにどれだけ出すか（off/summary/full）"
+          "description": "自動サポートの事前チェック案内をOutputにどれだけ出すか（off/summary/full）"
         },
         "servant.autopilot.closedLoopVerbosity": {
           "type": "string",
@@ -330,7 +330,7 @@
             "full"
           ],
           "default": "summary",
-          "description": "Autopilotの閉ループ再計画（save→validate→replan）をOutputにどれだけ出すか（off/summary/full）"
+          "description": "自動サポートの再計画（保存→検証→提案）をOutputにどれだけ出すか（off/summary/full）"
         },
         "servant.autopilot.constellationVerbosity": {
           "type": "string",
@@ -340,13 +340,13 @@
             "full"
           ],
           "default": "off",
-          "description": "Autopilotの天体儀ビュー（Constellationコンテキスト）をOutputに表示するか（off/summary/full）"
+          "description": "自動サポートのプロジェクト概要をOutputに表示するか（off/summary/full）"
         },
         "servant.autopilot.constellationMaxLines": {
           "type": "number",
           "default": 12,
           "minimum": 1,
-          "description": "Autopilotが自動出力する天体儀ビュー（full）の最大行数。全文はコマンドで表示できます"
+          "description": "自動サポートが自動出力するプロジェクト概要（full）の最大行数。全文はコマンドで表示できます"
         },
         "servant.actionsHealth.reportVerbosity": {
           "type": "string",
@@ -479,22 +479,22 @@
         "servant.autopilot.enabled": {
           "type": "boolean",
           "default": true,
-          "description": "Enable Servant Autopilot (proactive guidance + post-review prompts)"
+          "description": "自動サポートを有効にする（事前案内 + 事後確認プロンプト）"
         },
         "servant.autopilot.autoOptimizeOnStart": {
           "type": "boolean",
           "default": true,
-          "description": "Automatically generate best-next-step suggestions when work starts"
+          "description": "作業開始時に次の一手の提案を自動生成する"
         },
         "servant.autopilot.proactiveSpecCheck": {
           "type": "boolean",
           "default": true,
-          "description": "Proactively remind spec-check freshness while editing (without running heavy checks)"
+          "description": "編集中に必須設定の鮮度を軽く確認する（重い検証は実行しない）"
         },
         "servant.autopilot.askPostReview": {
           "type": "boolean",
           "default": true,
-          "description": "Ask short post-review questions to improve next attempts"
+          "description": "次回に活かすための短い事後確認を行う"
         },
         "servant.autopilot.promptMode": {
           "type": "string",
@@ -504,27 +504,27 @@
             "never"
           ],
           "default": "auto",
-          "description": "How strongly Autopilot prompts before work (auto=non-blocking on high risk/large work; always=requires approval)"
+          "description": "作業前の確認の出し方（auto=高リスク/大きな作業のみ軽く表示、always=必ず確認）"
         },
         "servant.autopilot.revealOutputOnStart": {
           "type": "boolean",
           "default": true,
-          "description": "Always reveal Output panel on work start (preserve focus)"
+          "description": "作業開始時にOutputを表示する（フォーカスは維持）"
         },
         "servant.autopilot.largeWorkThresholdFiles": {
           "type": "number",
           "default": 20,
-          "description": "Treat work as large when modified files count reaches this threshold"
+          "description": "変更ファイル数がこの値以上なら大きな作業として扱う"
         },
         "servant.autopilot.closedLoopReplanOnSave": {
           "type": "boolean",
           "default": true,
-          "description": "Enable closed-loop replanning on save (save → incremental validate → replan suggestions)"
+          "description": "保存時の自動再計画を有効にする（保存 → 増分検証 → 提案）"
         },
         "servant.autopilot.closedLoopThrottleMs": {
           "type": "number",
           "default": 8000,
-          "description": "Throttle interval (ms) for closed-loop replanning on save"
+          "description": "保存時の自動再計画の最小間隔（ミリ秒）"
         },
         "servant.performance.largeFileThreshold": {
           "type": "number",

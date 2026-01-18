@@ -16,7 +16,7 @@ export class FilterState extends BaseViewState {
   }
 
   async enter(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput(`[Constellation] フィルター表示モードに入りました`);
+    context.logToOutput(`[概要] フィルター表示モードに入りました`);
     await context.refresh();
   }
 
@@ -24,7 +24,7 @@ export class FilterState extends BaseViewState {
     const filteredData = context.getFilteredData(this.filters);
 
     return `
-      ${this.getHtmlHeader('🌟 天体儀 - フィルター')}
+      ${this.getHtmlHeader('🌟 概要 - フィルター')}
 
       <div class="header">
         <h1>🎯 フィルター表示</h1>

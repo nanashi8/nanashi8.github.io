@@ -21,7 +21,7 @@ export class RunningState extends BaseAutopilotState {
   async enter(context: AutopilotController): Promise<void> {
     // ステータスバーを更新
     context.updateStatusBar('🚀 実行中');
-    context.logToOutput('[Autopilot] 実行状態に入りました');
+    context.logToOutput('[自動サポート] 実行を開始しました');
 
     // 定期実行を開始
     const interval = context.getConfig('autopilot.interval', 60000);
@@ -29,7 +29,7 @@ export class RunningState extends BaseAutopilotState {
       try {
         await this.executeTask(context);
       } catch (error) {
-        context.logToOutput(`[Autopilot] タスク実行エラー: ${error}`);
+        context.logToOutput(`[自動サポート] 作業中に問題が発生しました: ${error}`);
         // エラーが発生した場合は自動的にFailed状態へ遷移
         await this.fail(context, String(error));
       }
@@ -42,7 +42,7 @@ export class RunningState extends BaseAutopilotState {
       clearInterval(this.intervalId);
       this.intervalId = undefined;
     }
-    context.logToOutput('[Autopilot] 実行状態から出ました');
+    context.logToOutput('[自動サポート] 実行を停止しました');
   }
 
   async pause(context: AutopilotController): Promise<void> {
@@ -79,6 +79,6 @@ export class RunningState extends BaseAutopilotState {
   }
 
   getDescription(): string {
-    return '自動操縦が実行中です。定期的にタスクを実行しています。';
+    return '自動サポートが実行中です。定期的に作業を進めています。';
   }
 }

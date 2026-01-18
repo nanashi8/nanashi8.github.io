@@ -16,7 +16,7 @@ export class InvestigatingState extends BaseAutopilotState {
 
   async enter(context: AutopilotController): Promise<void> {
     context.updateStatusBar('🔍 調査中');
-    context.logToOutput('[Autopilot] 調査状態に入りました');
+    context.logToOutput('[自動サポート] 調査を開始しました');
 
     // 自動調査エンジンを起動
     await context.startAutoInvestigation();
@@ -40,6 +40,6 @@ export class InvestigatingState extends BaseAutopilotState {
   }
 
   getDescription(): string {
-    return 'エラーの原因を自動調査中です。';
+    return '問題の原因を自動で調べています。';
   }
 }

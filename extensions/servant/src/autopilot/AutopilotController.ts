@@ -95,7 +95,7 @@ export class AutopilotController {
     if (n <= 0) return '';
     if (lines.length <= n) return text.trimEnd();
     const head = lines.slice(0, n).join('\n').trimEnd();
-    return `${head}\n…（省略。全文はコマンド "Servant: 🌟 Show Constellation View" で表示）`;
+    return `${head}\n…（省略。全文はコマンド "Servant: 🌟 プロジェクト概要を表示" で表示）`;
   }
 
   private getOutputVerbosity(
@@ -152,8 +152,8 @@ export class AutopilotController {
     private eventBus: EventBus = globalEventBus
   ) {
     this.statusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
-    this.statusBar.text = 'Servant: Autopilot';
-    this.statusBar.tooltip = 'Servant Autopilot（先回り誘導・事後レビュー）';
+    this.statusBar.text = '🧭 Servant: 自動サポート';
+    this.statusBar.tooltip = '自動サポート（作業の提案と確認）';
     this.statusBar.command = 'servant.autopilot.showLastReport';
 
     // State Pattern: 初期状態はIdle
@@ -177,7 +177,7 @@ export class AutopilotController {
         .getConfiguration('servant')
         .get<boolean>('autopilot.logInit', false);
       if (logInit) {
-        this.outputChannel.appendLine('🌟 [Autopilot] Constellation system initialized');
+        this.outputChannel.appendLine('🌟 プロジェクト概要の準備ができました');
       }
     }
     this.startupUntil = 0; // 起動直後のログ抑制（Outputを短く）
@@ -192,7 +192,7 @@ export class AutopilotController {
     this.statusBar.show();
     this.setStatusIdle();
 
-    // 「審議（承認待ち）」をステータスバーから再表示できるようにする
+    // 「確認（保留）」をステータスバーから再表示できるようにする
     this.disposables.push(
       vscode.commands.registerCommand('servant.autopilot.review', async () => {
         if (!this.pendingReview) {
@@ -216,7 +216,7 @@ export class AutopilotController {
     this.disposables.push(
       this.aiTracker.onActionStarted((action) => {
         this.onActionStarted(action).catch((e) => {
-          this.outputChannel.appendLine(`[Autopilot] onActionStarted error: ${String(e)}`);
+          this.outputChannel.appendLine(`⚠️ 自動サポートの開始処理でエラー: ${String(e)}`);
         });
       })
     );
@@ -224,7 +224,7 @@ export class AutopilotController {
     this.disposables.push(
       this.aiTracker.onActionEnded((action) => {
         this.onActionEnded(action).catch((e) => {
-          this.outputChannel.appendLine(`[Autopilot] onActionEnded error: ${String(e)}`);
+          this.outputChannel.appendLine(`⚠️ 自動サポートの終了処理でエラー: ${String(e)}`);
         });
       })
     );
@@ -233,7 +233,7 @@ export class AutopilotController {
     this.disposables.push(
       vscode.workspace.onDidSaveTextDocument((doc) => {
         this.onSaved(doc).catch((e) => {
-          this.outputChannel.appendLine(`[Autopilot] onSaved error: ${String(e)}`);
+          this.outputChannel.appendLine(`⚠️ 保存時の自動サポート処理でエラー: ${String(e)}`);
         });
       })
     );
@@ -263,14 +263,14 @@ export class AutopilotController {
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
       fs.appendFileSync(file, `${JSON.stringify(entry)}\n`, 'utf-8');
     } catch (e) {
-      this.outputChannel.appendLine(`⚠️ [Autopilot] interaction log write failed: ${String(e)}`);
+      this.outputChannel.appendLine(`⚠️ 自動サポートのログ保存に失敗しました: ${String(e)}`);
     }
   }
 
   private async ingestPostReviewFromClipboard(): Promise<void> {
     const actionId = this.lastPostReviewActionId;
     if (!actionId) {
-      this.notifier.commandInfo('取り込む対象がありません（直近の事後照会が未生成です）');
+      this.notifier.commandInfo('取り込む対象がありません（直近の事後確認が未生成です）');
       return;
     }
 
@@ -320,9 +320,9 @@ export class AutopilotController {
 
     this.outputChannel.appendLine('');
     this.outputChannel.appendLine(
-      `✅ [Autopilot] 事後照会の返答を取り込みました: action=${ctx.actionId} suggestionAccepted=${acceptedRaw}`
+      `✅ 事後確認の返答を取り込みました: action=${ctx.actionId} suggestionAccepted=${acceptedRaw}`
     );
-    this.notifier.commandInfo('✅ 事後照会の返答を取り込みました（学習/記録に反映）');
+    this.notifier.commandInfo('✅ 事後確認の返答を取り込みました（学習と記録に反映）');
   }
 
   public dispose(): void {
@@ -343,8 +343,8 @@ export class AutopilotController {
       return;
     }
     this.statusBar.backgroundColor = undefined;
-    this.statusBar.text = 'Servant: Autopilot';
-    this.statusBar.tooltip = 'Autopilot待機中（クリックで最新レポート）';
+    this.statusBar.text = '🧭 Servant: 自動サポート';
+    this.statusBar.tooltip = '自動サポート待機中（クリックで最新レポート）';
     this.statusBar.command = 'servant.autopilot.showLastReport';
   }
 
@@ -354,16 +354,18 @@ export class AutopilotController {
       return;
     }
     this.statusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.prominentBackground');
-    this.statusBar.text = 'Servant: Autopilot (ANALYZE)';
-    this.statusBar.tooltip = `提案/リスクを計算中… (${actionId})`;
+    this.statusBar.text = '🧭 Servant: 分析中';
+    this.statusBar.tooltip = `提案とリスクを確認中… (${actionId})`;
   }
 
   private setStatusSnoozed(): void {
     const minutesLeft = Math.max(0, Math.ceil((this.snoozedUntil - Date.now()) / (60 * 1000)));
     this.statusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.warningBackground');
-    this.statusBar.text = 'Servant: Autopilot (SNOOZED)';
+    this.statusBar.text = '🧭 Servant: 一時停止';
     this.statusBar.tooltip =
-      minutesLeft > 0 ? `Autopilotは一時停止中（残り約${minutesLeft}分）` : 'Autopilotは一時停止中';
+      minutesLeft > 0
+        ? `自動サポートは一時停止中（残り約${minutesLeft}分）`
+        : '自動サポートは一時停止中';
     this.statusBar.command = 'servant.autopilot.showLastReport';
   }
 
@@ -373,8 +375,8 @@ export class AutopilotController {
         ? 'statusBarItem.errorBackground'
         : 'statusBarItem.warningBackground'
     );
-    this.statusBar.text = 'Servant: Autopilot (REVIEW REQUIRED)';
-    this.statusBar.tooltip = `審議（承認）が必要: ${opts.reason}（クリックで審議を開く）`;
+    this.statusBar.text = '⚠️ Servant: 要確認';
+    this.statusBar.tooltip = `確認が必要: ${opts.reason}（クリックで確認を開く）`;
     this.statusBar.command = 'servant.autopilot.review';
   }
 
@@ -384,16 +386,16 @@ export class AutopilotController {
     createdAt: number;
     actionId?: string;
   }): string {
-    const reasonText = review.reasons.join(' / ') || '要審議';
+    const reasonText = review.reasons.join(' / ') || '要確認';
     const timestamp = new Date(review.createdAt).toLocaleString('ja-JP');
     const actionLine = review.actionId ? review.actionId : '(なし)';
 
     return [
-      'Servant Autopilot: 審議（Copilot用）',
-      `論点: ${reasonText}`,
-      `Severity: ${review.severity} / ActionId: ${actionLine} / 時刻: ${timestamp}`,
+      'Servant 自動サポート: 確認依頼（Copilot用）',
+      `要点: ${reasonText}`,
+      `重要度: ${review.severity} / ActionId: ${actionLine} / 時刻: ${timestamp}`,
       '',
-      '依頼: 最短で安全に進める手順を3〜7ステップで。必要な最小検証セットも。',
+      '依頼: 安全に進めるための手順を3〜7ステップで。最低限の確認項目も。',
       '',
       '補足（空でOK）:',
       '- 目的/完了条件: ',
@@ -413,13 +415,13 @@ export class AutopilotController {
     actionId?: string;
   }): void {
     const timestamp = new Date(review.createdAt).toLocaleString('ja-JP');
-    const reasonText = review.reasons.join(' / ') || '要審議';
+    const reasonText = review.reasons.join(' / ') || '要確認';
     const severityLabel =
       review.severity === 'error' ? '❗️エラー' : review.severity === 'warning' ? '⚠️警告' : 'ℹ️情報';
 
     this.outputChannel.appendLine('');
     this.outputChannel.appendLine('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    this.outputChannel.appendLine('   Servant Autopilot: 審議レポート（構造化）');
+    this.outputChannel.appendLine('   Servant 自動サポート: 確認レポート');
     this.outputChannel.appendLine('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     this.outputChannel.appendLine(`時刻: ${timestamp}`);
     this.outputChannel.appendLine(`重大度: ${severityLabel}`);
@@ -428,33 +430,33 @@ export class AutopilotController {
     }
     this.outputChannel.appendLine('');
 
-    this.outputChannel.appendLine('【Priority 1: 何をレポートしようとしているか】');
-    this.outputChannel.appendLine(`論点: ${reasonText}`);
+    this.outputChannel.appendLine('【まず確認すること】');
+    this.outputChannel.appendLine(`要点: ${reasonText}`);
     this.outputChannel.appendLine('');
-    this.outputChannel.appendLine('目的: 以下の3点を事前に決めることで、安全・効率的な実行を保証する');
-    this.outputChannel.appendLine('  1. 何をするか（目的/完了条件）を一言で決める');
-    this.outputChannel.appendLine('  2. 変更順序（最初に触るファイル/最後に触るファイル）を決める');
-    this.outputChannel.appendLine('  3. 影響範囲（壊れそうな箇所）とリスク対策を決める');
-    this.outputChannel.appendLine('');
-
-    this.outputChannel.appendLine('【Priority 2: ユーザーが次に何をすべきか】');
-    this.outputChannel.appendLine('以下のいずれかを選択してください:');
-    this.outputChannel.appendLine('  [A] 承認して開始 → 必須メモを入力し、実行を開始');
-    this.outputChannel.appendLine('  [B] Copilot用テンプレをコピー → AIに審議内容を共有し、手順を提案してもらう');
-    this.outputChannel.appendLine('  [C] 型チェックを実行 → npm run typecheck で事前に問題を確認');
-    this.outputChannel.appendLine('  [D] コミット前検証を実行 → Servantの検証を実行して品質を確保');
-    this.outputChannel.appendLine('  [E] 方針を事前調整 → 設定UIで方針・ルールを変更');
-    this.outputChannel.appendLine('  [F] 今回は中止（30分） → Autopilotを一時停止');
+    this.outputChannel.appendLine('目的: 事前に以下を決めて、安全に進めるための確認です');
+    this.outputChannel.appendLine('  1. 目的/完了条件を一言で決める');
+    this.outputChannel.appendLine('  2. 変更の順序（最初/最後に触るファイル）を決める');
+    this.outputChannel.appendLine('  3. 影響範囲とリスク対策を決める');
     this.outputChannel.appendLine('');
 
-    this.outputChannel.appendLine('【Priority 3: Servantが次に何をするか】');
-    this.outputChannel.appendLine('ユーザーの選択を待機中（審議ダイアログで応答を待つ）');
-    this.outputChannel.appendLine('- [A]が選択された場合 → 承認メモを記録し、実行を開始');
-    this.outputChannel.appendLine('- [B]が選択された場合 → テンプレをクリップボードにコピー、審議継続');
-    this.outputChannel.appendLine('- [C]/[D]が選択された場合 → 検証を実行、結果をOutputに表示、審議継続');
-    this.outputChannel.appendLine('- [E]が選択された場合 → 設定UIを開く、審議継続');
-    this.outputChannel.appendLine('- [F]が選択された場合 → Autopilotを30分停止、審議終了');
-    this.outputChannel.appendLine('- ×/Escが押された場合 → ステータスバーに審議中マークを表示、審議継続');
+    this.outputChannel.appendLine('【次にやること】');
+    this.outputChannel.appendLine('以下から選択してください:');
+    this.outputChannel.appendLine('  [A] 確認して開始 → 必須メモを入力し、作業を開始');
+    this.outputChannel.appendLine('  [B] Copilot用テンプレをコピー → AIに共有して手順提案をもらう');
+    this.outputChannel.appendLine('  [C] 型チェックを実行 → npm run typecheck で事前確認');
+    this.outputChannel.appendLine('  [D] コミット前検証を実行 → Servantの検証で品質確認');
+    this.outputChannel.appendLine('  [E] 方針を調整 → 設定UIでルールを変更');
+    this.outputChannel.appendLine('  [F] 今回は中止（30分） → 自動サポートを一時停止');
+    this.outputChannel.appendLine('');
+
+    this.outputChannel.appendLine('【Servantが次にすること】');
+    this.outputChannel.appendLine('ユーザーの選択を待機中（確認ダイアログで応答を待つ）');
+    this.outputChannel.appendLine('- [A]が選択された場合 → メモを記録し、作業を開始');
+    this.outputChannel.appendLine('- [B]が選択された場合 → テンプレをクリップボードにコピー、確認を継続');
+    this.outputChannel.appendLine('- [C]/[D]が選択された場合 → 検証を実行、結果をOutputに表示');
+    this.outputChannel.appendLine('- [E]が選択された場合 → 設定UIを開く');
+    this.outputChannel.appendLine('- [F]が選択された場合 → 自動サポートを30分停止');
+    this.outputChannel.appendLine('- ×/Escが押された場合 → ステータスバーに「要確認」を表示');
     this.outputChannel.appendLine('');
     this.outputChannel.appendLine('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     this.outputChannel.appendLine('');
@@ -469,11 +471,11 @@ export class AutopilotController {
     // 構造化レポートをOutput Channelに出力（静的テキストで優先順・内容・次のアクション）
     this.outputReviewReport(review);
 
-    const reasonText = review.reasons.join(' / ') || '要審議';
+    const reasonText = review.reasons.join(' / ') || '要確認';
     this.setStatusReviewRequired({ severity: review.severity, reason: reasonText });
 
-    // “審議”は承認（または中止）まで止める
-    // Output確認が必要な場合は「Outputを開いて審議を続ける」で一旦閉じて再表示する
+    // “確認”は完了（または中止）まで止める
+    // Output確認が必要な場合は「Outputを開いて確認を続ける」で一旦閉じて再表示する
     let keepAsking = true;
     while (keepAsking) {
       const actionLine = review.actionId
@@ -483,32 +485,32 @@ export class AutopilotController {
 
       const selection = await this.notifier.blockingCritical(
         [
-          'Servant Autopilot: 審議（承認）',
+          'Servant 自動サポート: 確認',
           '',
-          `論点: ${reasonText}`,
+          `要点: ${reasonText}`,
           actionLine,
           `時刻: ${timestamp}`,
           '',
-          '要求（承認条件）:',
-          '- 何をするか（目的/完了条件）を一言で決める',
-          '- 変更順序（最初に触るファイル/最後に触るファイル）を決める',
-          '- 影響範囲（壊れそうな箇所）とリスク対策を決める',
+          '確認ポイント:',
+          '- 目的/完了条件を一言で決める',
+          '- 変更の順序（最初/最後に触るファイル）を決める',
+          '- 影響範囲とリスク対策を決める',
           '',
-          'ヒント: 既に提案は Output に出ています（必要なら開いて確認）。',
+          'ヒント: 提案は Output に出ています（必要なら開いて確認）。',
         ].join('\n'),
-        '承認して開始',
+        '確認して開始',
         'Copilot用テンプレをコピー',
         '型チェックを実行（npm run typecheck）',
         'コミット前検証を実行（Servant）',
         '方針を事前調整…',
-        'Outputを開いて審議を続ける',
+        'Outputを開いて確認を続ける',
         '今回は中止（30分）'
       );
 
-      if (selection === '承認して開始') {
+      if (selection === '確認して開始') {
         const memo = await vscode.window.showInputBox({
-          title: '審議メモ（必須）',
-          prompt: '承認の根拠（方針/順序/リスク対策）を短く残してください',
+          title: '確認メモ（必須）',
+          prompt: '確認の根拠（方針/順序/リスク対策）を短く残してください',
           placeHolder: '例: 影響範囲をgrepで確認→1ファイルずつ修正→最後にtypecheck',
           validateInput: (value) => {
             const v = value.trim();
@@ -518,7 +520,7 @@ export class AutopilotController {
           },
         });
 
-        // キャンセルした場合は審議継続
+        // キャンセルした場合は確認継続
         if (memo === undefined) {
           this.pendingReview = review;
           this.setStatusReviewRequired({ severity: review.severity, reason: reasonText });
@@ -527,10 +529,10 @@ export class AutopilotController {
         }
 
         this.outputChannel.appendLine('');
-        this.outputChannel.appendLine('=== Servant Autopilot: 審議ログ ===');
-        this.outputChannel.appendLine(`論点: ${reasonText}`);
+        this.outputChannel.appendLine('=== Servant 自動サポート: 確認ログ ===');
+        this.outputChannel.appendLine(`要点: ${reasonText}`);
         if (review.actionId) this.outputChannel.appendLine(`Action: ${review.actionId}`);
-        this.outputChannel.appendLine(`決定: 承認して開始`);
+        this.outputChannel.appendLine(`決定: 確認して開始`);
         this.outputChannel.appendLine(`メモ: ${memo.trim()}`);
 
         this.pendingReview = null;
@@ -543,7 +545,7 @@ export class AutopilotController {
         const template = this.buildCopilotDeliberationTemplate(review);
         await vscode.env.clipboard.writeText(template);
         this.outputChannel.appendLine(
-          '[Autopilot] Copilot用テンプレをクリップボードへコピーしました'
+          '✅ Copilot用テンプレをクリップボードへコピーしました'
         );
         this.notifier.commandInfo(
           'Copilot用テンプレをコピーしました（チャットに貼り付けてください）'
@@ -553,17 +555,17 @@ export class AutopilotController {
 
       if (selection === '方針を事前調整…') {
         await vscode.commands.executeCommand('servant.autopilot.adjust');
-        // 調整後も審議は継続（同じ理由で再提示）
+        // 調整後も確認は継続（同じ理由で再提示）
         continue;
       }
 
       if (selection === '型チェックを実行（npm run typecheck）') {
         const ts = new Date().toLocaleString('ja-JP');
         this.outputChannel.appendLine('');
-        this.outputChannel.appendLine(`[Autopilot] Preflight started (${ts}): npm run typecheck`);
+        this.outputChannel.appendLine(`🔍 事前チェック開始 (${ts}): npm run typecheck`);
         if (review.actionId)
           this.outputChannel.appendLine(
-            `[Autopilot] Context: action=${review.actionId} / deliberation=${reasonText}`
+            `参考情報: action=${review.actionId} / reason=${reasonText}`
           );
         this.runPreflightCommand('npm run typecheck');
         continue;
@@ -573,17 +575,17 @@ export class AutopilotController {
         const ts = new Date().toLocaleString('ja-JP');
         this.outputChannel.appendLine('');
         this.outputChannel.appendLine(
-          `[Autopilot] Preflight started (${ts}): Servant Validate Before Commit`
+          `🔍 事前チェック開始 (${ts}): Servant Validate Before Commit`
         );
         if (review.actionId)
           this.outputChannel.appendLine(
-            `[Autopilot] Context: action=${review.actionId} / deliberation=${reasonText}`
+            `参考情報: action=${review.actionId} / reason=${reasonText}`
           );
         await vscode.commands.executeCommand('servant.validateBeforeCommit');
         continue;
       }
 
-      if (selection === 'Outputを開いて審議を続ける') {
+      if (selection === 'Outputを開いて確認を続ける') {
         this.outputChannel.show(true);
         continue;
       }
@@ -595,7 +597,7 @@ export class AutopilotController {
         return;
       }
 
-      // ×/Esc は審議継続（ステータスバーから再提示）
+      // ×/Esc は確認継続（ステータスバーから再提示）
       this.pendingReview = review;
       this.setStatusReviewRequired({ severity: review.severity, reason: reasonText });
       keepAsking = false;
@@ -608,9 +610,9 @@ export class AutopilotController {
     // 例外時のみターミナル実行へフォールバック。
     if (this.runningPreflight) {
       this.outputChannel.appendLine(
-        `[Autopilot] Preflight is already running: ${this.runningPreflight.command}`
+        `⚠️ 事前チェックが実行中です: ${this.runningPreflight.command}`
       );
-      this.notifier.commandWarning(`Preflightが実行中です: ${this.runningPreflight.command}`);
+      this.notifier.commandWarning(`事前チェックが実行中です: ${this.runningPreflight.command}`);
       return;
     }
 
@@ -623,7 +625,7 @@ export class AutopilotController {
     this.runningPreflight = { command, startedAt, child };
 
     this.outputChannel.show(true);
-    this.outputChannel.appendLine(`[Autopilot] Preflight running: ${command}`);
+    this.outputChannel.appendLine(`🔍 事前チェック実行中: ${command}`);
 
     child.stdout?.on('data', (chunk) => {
       this.outputChannel.append(String(chunk));
@@ -641,34 +643,34 @@ export class AutopilotController {
       if (signal) {
         this.outputChannel.appendLine('');
         this.outputChannel.appendLine(
-          `[Autopilot] Preflight aborted (signal=${signal}) after ${ms}ms: ${command}`
+          `⚠️ 事前チェックが中断されました（signal=${signal}, ${ms}ms）: ${command}`
         );
-        this.notifier.commandError(`Preflightが中断されました: ${command}`);
+        this.notifier.commandError(`事前チェックが中断されました: ${command}`);
         return;
       }
 
       const exitCode = typeof code === 'number' ? code : -1;
       this.outputChannel.appendLine('');
       this.outputChannel.appendLine(
-        `[Autopilot] Preflight finished (exit=${exitCode}) in ${ms}ms: ${command}`
+        `✅ 事前チェック完了（exit=${exitCode}, ${ms}ms）: ${command}`
       );
 
       if (exitCode === 0) {
-        this.notifier.commandInfo(`Preflight成功: ${command}`);
+        this.notifier.commandInfo(`事前チェック成功: ${command}`);
       } else {
-        this.notifier.commandError(`Preflight失敗(Exit ${exitCode}): ${command}`);
+        this.notifier.commandError(`事前チェック失敗(Exit ${exitCode}): ${command}`);
       }
     });
 
     child.on('error', (err) => {
       this.outputChannel.appendLine('');
-      this.outputChannel.appendLine(`[Autopilot] Preflight spawn error: ${String(err)}`);
+      this.outputChannel.appendLine(`❌ 事前チェックの起動に失敗しました: ${String(err)}`);
       this.runningPreflight = null;
 
       // フォールバック: どうしても実行できない場合はターミナル送信
       if (!this.preflightTerminal) {
         this.preflightTerminal = vscode.window.createTerminal({
-          name: 'Servant: Preflight',
+          name: 'Servant: 事前チェック',
           cwd: this.workspaceRoot,
         });
       }
@@ -685,7 +687,7 @@ export class AutopilotController {
     const timestamp = new Date().toLocaleString('ja-JP');
 
     const lines: string[] = [];
-    lines.push('Servant Autopilot: 事後照会（Copilot/AI向け）');
+    lines.push('Servant 自動サポート: 事後確認（Copilot/AI向け）');
     lines.push(`時刻: ${timestamp}`);
     lines.push(`Action: ${action.id} (${action.type})`);
     lines.push(
@@ -694,7 +696,7 @@ export class AutopilotController {
     lines.push('');
 
     if (suggestion) {
-      lines.push('【参考: 直前の提案（事前誘導）】');
+      lines.push('【参考: 直前の提案（作業のヒント）】');
       lines.push(`- 提案サマリ: ${suggestion.summary}`);
       lines.push(`- patternIds: ${suggestion.patternIds.join(', ')}`);
       lines.push('');
@@ -720,7 +722,7 @@ export class AutopilotController {
 
     lines.push('');
     lines.push(
-      '取り込み: Copilotの回答(JSON)をコピーした後、コマンド「Servant: Ingest Autopilot Post-Review (from Clipboard)」を実行してください。'
+      '取り込み: Copilotの回答(JSON)をコピーした後、コマンド「Servant: 事後確認の取り込み（クリップボード）」を実行してください。'
     );
 
     return lines.join('\n');
@@ -779,7 +781,7 @@ export class AutopilotController {
 
       const freshness = isSpecCheckFresh(this.workspaceRoot, maxAgeHours, required);
       if (!freshness.ok) {
-        // Specチェックは“審議（承認待ち）”として可視化する（ただし承認ボタンは出さず、記録を促す）
+        // Specチェックは「確認（保留）」として可視化する（ただし承認ボタンは出さず、記録を促す）
         this.pendingReview = {
           severity: 'error',
           reasons: ['Specチェック'],
@@ -827,18 +829,18 @@ export class AutopilotController {
           const top = suggestion.recommendedOrder[0];
           if (closedLoopVerbosity === 'summary') {
             this.outputChannel.appendLine(
-              `🧭 [Autopilot] 閉ループ再計画: ${rel} (E=${errorCount}, W=${warningCount}) → 次: ${top ?? '—'}`
+              `🧭 自動サポート: 再計画 ${rel}（エラー ${errorCount}, 警告 ${warningCount}）→ 次: ${top ?? '—'}`
             );
           } else {
             this.outputChannel.appendLine('');
             this.outputChannel.appendLine(
-              '=== Servant Autopilot: 閉ループ再計画（save→validate→replan） ==='
+              '=== Servant 自動サポート: 再計画（保存→検証→再計画） ==='
             );
             this.outputChannel.appendLine(
-              `Trigger: save + violations (errors=${errorCount}, warnings=${warningCount})`
+              `きっかけ: 保存 + 問題検出（エラー ${errorCount} / 警告 ${warningCount}）`
             );
-            this.outputChannel.appendLine(`File: ${rel}`);
-            this.outputChannel.appendLine('--- 次に変更すべきファイル (Top 3) ---');
+            this.outputChannel.appendLine(`対象ファイル: ${rel}`);
+            this.outputChannel.appendLine('--- 次に変更するファイル (Top 3) ---');
             suggestion.recommendedOrder.slice(0, 3).forEach((file, index) => {
               const risk = suggestion.risks.find((r) => r.file === file);
               const mark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
@@ -851,7 +853,7 @@ export class AutopilotController {
         this.activeTaskState = nextTaskState;
         this.lastReplanAt = now;
       } catch (e) {
-        this.outputChannel.appendLine(`[Autopilot] Closed-loop replan error: ${String(e)}`);
+        this.outputChannel.appendLine(`⚠️ 再計画でエラーが発生しました: ${String(e)}`);
       }
     }
   }
@@ -879,7 +881,7 @@ export class AutopilotController {
             if (this.isInStartupWindow()) {
               const goalName = this.goalManager?.getMainGoal()?.name ?? 'プロジェクトのゴール';
               this.outputChannel.appendLine(
-                `🌟 [Autopilot] 天体儀ビュー生成済み: ${goalName}（起動時は省略。Servant: 🌟 Show Constellation View）`
+                `🌟 プロジェクト概要の準備完了: ${goalName}（起動時は省略。Servant: 🌟 プロジェクト概要を表示）`
               );
             } else {
 
@@ -888,7 +890,7 @@ export class AutopilotController {
                 if (constellationVerbosity === 'full') {
                   this.outputChannel.appendLine('');
                   this.outputChannel.appendLine(
-                    '🌟 天体儀ビュー: 前回表示済み（コマンド "Servant: 🌟 Show Constellation View" で再表示可能）'
+                    '🌟 プロジェクト概要: 前回表示済み（コマンド「Servant: 🌟 プロジェクト概要を表示」で再表示可能）'
                   );
                   this.outputChannel.appendLine('');
                 }
@@ -905,7 +907,7 @@ export class AutopilotController {
                   this.outputChannel.appendLine(this.limitLines(context, maxLines));
                 } else {
                   this.outputChannel.appendLine(
-                    `🌟 [Autopilot] 天体儀ビュー生成済み: ${goalName}（Servant: 🌟 Show Constellation View）`
+                    `🌟 プロジェクト概要の準備完了: ${goalName}（Servant: 🌟 プロジェクト概要を表示）`
                   );
                 }
               }
@@ -914,7 +916,7 @@ export class AutopilotController {
         }
       } catch (error) {
         this.outputChannel.appendLine(
-          `⚠️ [Autopilot] Constellation context generation failed: ${error}`
+          `⚠️ プロジェクト概要の生成に失敗しました: ${error}`
         );
       }
     }
@@ -978,22 +980,22 @@ export class AutopilotController {
 
       if (preflightVerbosity === 'summary') {
         this.outputChannel.appendLine(
-          `🧭 [Autopilot] ${action.type}: ${riskLabel}/${sizeLabel}（変更 ${taskState.modifiedFiles.length}） 次: ${topStep || topFile || '—'}`
+          `🧭 自動サポート: ${action.type} / ${riskLabel} / ${sizeLabel}（変更 ${taskState.modifiedFiles.length}） 次: ${topStep || topFile || '—'}`
         );
       } else {
         this.outputChannel.appendLine('');
-        this.outputChannel.appendLine('=== Servant Autopilot: 事前誘導（最善手順の提案） ===');
-        this.outputChannel.appendLine(`アクション: ${action.type} (${action.id})`);
+        this.outputChannel.appendLine('=== Servant 自動サポート: 作業のヒント ===');
+        this.outputChannel.appendLine(`作業内容: ${action.type} (${action.id})`);
         this.outputChannel.appendLine(
-          `推定タスク: ${workflow.classification.taskType} (信頼度: ${(workflow.classification.confidence * 100).toFixed(0)}%)`
+          `推定タスク: ${workflow.classification.taskType}（信頼度: ${(workflow.classification.confidence * 100).toFixed(0)}%）`
         );
-        this.outputChannel.appendLine(`推奨ワークフロー: ${workflow.recommendation}`);
+        this.outputChannel.appendLine(`おすすめの進め方: ${workflow.recommendation}`);
         this.outputChannel.appendLine(
-          `作業量: 変更対象 ${taskState.modifiedFiles.length} ファイル${isLargeWork ? '（大作業）' : ''}`
+          `作業量: 変更対象 ${taskState.modifiedFiles.length} ファイル${isLargeWork ? '（大きめ）' : ''}`
         );
-        this.outputChannel.appendLine('--- 推奨手順 ---');
+        this.outputChannel.appendLine('--- おすすめ手順 ---');
         workflow.steps.forEach((s) => this.outputChannel.appendLine(s));
-        this.outputChannel.appendLine('--- 次に変更すべきファイル (Top 5) ---');
+        this.outputChannel.appendLine('--- 次に変更するファイル (Top 5) ---');
         suggestion.recommendedOrder.slice(0, 5).forEach((file, index) => {
           const risk = suggestion.risks.find((r) => r.file === file);
           const mark = risk ? ` [${risk.riskLevel.toUpperCase()}]` : '';
@@ -1016,20 +1018,20 @@ export class AutopilotController {
 
     if (hasHighRisk && isLargeWork) {
       this.statusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.errorBackground');
-      this.statusBar.text = 'Servant: Autopilot (RISK/LARGE)';
-      this.statusBar.tooltip = '高リスク + 大作業。方針を固めてから進めてください。';
+      this.statusBar.text = '🧭 Servant: 要確認';
+      this.statusBar.tooltip = '高リスク + 大きな変更。方針を決めてから進めてください。';
     } else if (hasHighRisk) {
       this.statusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.errorBackground');
-      this.statusBar.text = 'Servant: Autopilot (RISK)';
-      this.statusBar.tooltip = '高リスク。方針を固めてから進めてください。';
+      this.statusBar.text = '🧭 Servant: 要確認';
+      this.statusBar.tooltip = '高リスク。方針を決めてから進めてください。';
     } else if (isLargeWork) {
       this.statusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.warningBackground');
-      this.statusBar.text = 'Servant: Autopilot (LARGE)';
-      this.statusBar.tooltip = '大作業。作業を分割/順序確定してから進めてください。';
+      this.statusBar.text = '🧭 Servant: 要確認';
+      this.statusBar.tooltip = '変更が多めです。作業を分割して順序を決めてください。';
     } else {
       this.statusBar.backgroundColor = undefined;
-      this.statusBar.text = 'Servant: Autopilot (OK)';
-      this.statusBar.tooltip = '提案をOutputに出力済み。';
+      this.statusBar.text = '🧭 Servant: 自動サポート';
+      this.statusBar.tooltip = '作業のヒントをOutputに出力しました。';
     }
 
     if (this.shouldRevealOutputOnStart()) {
@@ -1054,26 +1056,26 @@ export class AutopilotController {
       };
 
       if (shouldBlockForApproval) {
-        // 審議（承認）が終わるまで作業開始を止める（promptMode=always のみ）
+        // 確認が終わるまで作業開始を止める（promptMode=always のみ）
         await this.openReviewPrompt(this.pendingReview);
-        // 承認されていなければ、ここで打ち切る
+        // 確認が完了していなければ、ここで打ち切る
         if (this.pendingReview) {
           this.outputChannel.appendLine('');
           this.outputChannel.appendLine(
-            `🛑 [Autopilot] 審議中のため開始を停止しました ${reasonText}`
+            `🛑 確認中のため開始を停止しました ${reasonText}`
           );
           return;
         }
       } else {
-        // promptMode=auto は非ブロッキング: 審議モーダルは出さず、ステータスバーから任意で開けるようにする
-        const reasonLabel = reasons.join(' / ') || '要審議';
+        // promptMode=auto は非ブロッキング: 確認ダイアログは出さず、ステータスバーから任意で開けるようにする
+        const reasonLabel = reasons.join(' / ') || '要確認';
         this.setStatusReviewRequired({
           severity: this.pendingReview.severity,
           reason: reasonLabel,
         });
         this.outputChannel.appendLine('');
         this.outputChannel.appendLine(
-          `[Autopilot] ⚠️ 審議（承認）ダイアログは省略しました: ${reasonText}（必要ならステータスバーから審議を開けます）`
+          `⚠️ 確認ダイアログは省略しました: ${reasonText}（必要ならステータスバーから開けます）`
         );
       }
     }
@@ -1130,9 +1132,9 @@ export class AutopilotController {
         .join('\n');
 
       return `
-═══════════════════════════════════════════════════════════
-🌟 プロジェクトの全体像（天体儀ビュー）
-═══════════════════════════════════════════════════════════
+    ═══════════════════════════════════════════════════════════
+    🌟 プロジェクト概要
+    ═══════════════════════════════════════════════════════════
 
 ## 🎯 プロジェクトのゴール
 **${goal.name}**
@@ -1157,7 +1159,7 @@ ${categorySummary}
 `;
     } catch (error) {
       this.outputChannel.appendLine(
-        `❌ [Autopilot] Constellation context generation error: ${error}`
+        `❌ プロジェクト概要の生成に失敗しました: ${error}`
       );
       return null;
     }
@@ -1194,15 +1196,15 @@ ${categorySummary}
       // 失敗/エラー時も、まずは短い評価をOutputへ残す（UIより先に“記録”）
       this.outputChannel.appendLine('');
       this.outputChannel.appendLine(
-        `🧾 [Autopilot] Quick grade: ${plusText} (${plusScore}/7) / action=${action.id} (${action.type})`
+        `🧾 簡易評価: ${plusText} (${plusScore}/7) / action=${action.id} (${action.type})`
       );
 
       this.statusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.errorBackground');
-      this.statusBar.text = 'Servant: Autopilot (FAIL)';
-      this.statusBar.tooltip = '失敗/エラー検出。振り返り推奨。';
+      this.statusBar.text = '🧭 Servant: 要確認';
+      this.statusBar.tooltip = '失敗/エラーが検出されました。振り返り推奨。';
 
       const selection = await this.notifier.critical(
-        'Servant Autopilot: 失敗/エラーが検出されました。このまま終えると次回も再発しやすいです。今すぐ振り返りを残してください。',
+        '自動サポート: 失敗/エラーが見つかりました。次回に備えて振り返りを残しましょう。',
         '振り返りする',
         'Outputでレポートを見る',
         '今回はスキップ'
@@ -1220,7 +1222,7 @@ ${categorySummary}
       // 追加質問なしで自動調査を実行（失敗時の自己修正ループ）
       this.outputChannel.appendLine('');
       this.outputChannel.appendLine(
-        '🤖 [Autopilot] 失敗/エラーのため、自動調査（上級SE視点）を実行します...'
+        '🤖 失敗/エラーのため、自動調査を実行します...'
       );
       try {
         const snapshot = this.postReviewContextByActionId.get(action.id);
@@ -1230,19 +1232,19 @@ ${categorySummary}
           trigger: 'failure-or-error',
         });
       } catch (e) {
-        this.outputChannel.appendLine(`❌ [Autopilot] 自動調査に失敗しました: ${String(e)}`);
+        this.outputChannel.appendLine(`❌ 自動調査に失敗しました: ${String(e)}`);
       }
     } else {
       // 成功時は静かにOutputへ（通知は出さない）
       this.outputChannel.appendLine('');
       this.outputChannel.appendLine(
-        `✅ [Autopilot] Action ended successfully: ${action.id} (${action.type}) / 結果: ${plusText} (${plusScore}/7)`
+        `✅ 作業が完了しました: ${action.id} (${action.type}) / 結果: ${plusText} (${plusScore}/7)`
       );
     }
 
     if (!askPost) return;
 
-    // 事後照会は「ユーザーに質問」ではなく、「Copilot/AI向けプロンプト」を出す
+    // 事後確認は「ユーザーに質問」ではなく、「Copilot/AI向けプロンプト」を出す
     const suggestion = this.suggestionByActionId.get(action.id);
     if (suggestion) {
       // AI返答の取り込みで学習に反映できるよう、最低限のコンテキストを保持しておく
@@ -1270,26 +1272,26 @@ ${categorySummary}
       await vscode.commands.executeCommand('workbench.panel.chat.view.copilot.focus');
       // 通知をoutputChannelのみに統合（ポップアップ削除）
       this.outputChannel.appendLine(
-        '✅ 事後照会（Copilot/AI向け）のプロンプトをクリップボードにコピーしました。Copilot Chat に貼り付けてください。'
+        '✅ 事後確認（Copilot/AI向け）のプロンプトをクリップボードにコピーしました。Copilot Chat に貼り付けてください。'
       );
     } catch (e) {
       this.outputChannel.appendLine(
-        `❌ 事後照会プロンプトのコピー/Chat起動に失敗しました: ${String(e)}`
+        `❌ 事後確認プロンプトのコピー/Chat起動に失敗しました: ${String(e)}`
       );
     }
 
     this.outputChannel.appendLine('');
-    this.outputChannel.appendLine('=== Servant Autopilot: 事後照会（Copilot/AI向け） ===');
+    this.outputChannel.appendLine('=== Servant 自動サポート: 事後確認（Copilot/AI向け） ===');
     this.outputChannel.appendLine(postReviewPrompt);
 
     // 最後に“促し”をOutputへ残す（次回の自分/AIへの導線）
     this.outputChannel.appendLine('');
-    this.outputChannel.appendLine('=== Servant Autopilot: 事後レビュー（次回に活かす） ===');
+    this.outputChannel.appendLine('=== Servant 自動サポート: 事後ふりかえり（次回に活かす） ===');
     this.outputChannel.appendLine(`Action: ${action.id} (${action.type})`);
     this.outputChannel.appendLine(
       `Result: ${action.success ? 'SUCCESS' : 'FAIL'} | errors=${action.compileErrors} | warnings=${action.violations}`
     );
-    this.outputChannel.appendLine(`Quick grade: ${plusText} (${plusScore}/7)`);
+    this.outputChannel.appendLine(`簡易評価: ${plusText} (${plusScore}/7)`);
     this.outputChannel.appendLine('Suggestion accepted: unknown');
 
     // レポートは保存済み。必要ならユーザーがステータスバーから開ける。
@@ -1450,7 +1452,7 @@ ${categorySummary}
       const error = new Error(
         `Invalid state transition: ${this.currentState.name} -> ${newState.name}`
       );
-      this.outputChannel.appendLine(`[Autopilot] ${error.message}`);
+      this.outputChannel.appendLine(`⚠️ 自動サポートの状態遷移に失敗しました: ${error.message}`);
       throw error;
     }
 
@@ -1460,7 +1462,7 @@ ${categorySummary}
     try {
       await this.currentState.exit(this);
     } catch (error) {
-      this.outputChannel.appendLine(`[Autopilot] Error exiting ${previousStateName}: ${error}`);
+      this.outputChannel.appendLine(`⚠️ 状態終了時にエラー: ${previousStateName} / ${error}`);
     }
 
     // 状態を更新
@@ -1470,7 +1472,7 @@ ${categorySummary}
     try {
       await this.currentState.enter(this);
     } catch (error) {
-      this.outputChannel.appendLine(`[Autopilot] Error entering ${newState.name}: ${error}`);
+      this.outputChannel.appendLine(`⚠️ 状態開始時にエラー: ${newState.name} / ${error}`);
       throw error;
     }
 
@@ -1481,7 +1483,7 @@ ${categorySummary}
       timestamp: Date.now()
     });
 
-    this.outputChannel.appendLine(`[Autopilot] State transition: ${previousStateName} -> ${newState.name}`);
+    this.outputChannel.appendLine(`🧭 状態遷移: ${previousStateName} → ${newState.name}`);
   }
 
   /**
@@ -1531,7 +1533,7 @@ ${categorySummary}
   async executeAutopilotTask(): Promise<void> {
     // TODO: 既存の自動操縦ロジックと統合
     // 現在は仮実装として何もしない
-    this.outputChannel.appendLine('[Autopilot] Executing task... (placeholder)');
+    this.outputChannel.appendLine('🧭 自動サポートのタスクを実行中...（準備中）');
   }
 
   /**
@@ -1552,21 +1554,21 @@ ${categorySummary}
   async startAutoInvestigation(): Promise<void> {
     // TODO: 既存の調査エンジンと統合
     // 現在は仮実装として何もしない
-    this.outputChannel.appendLine('[Autopilot] Starting investigation... (placeholder)');
+    this.outputChannel.appendLine('🔍 自動調査を開始します...（準備中）');
   }
 
   /**
    * 完了通知（CompletedStateから呼ばれる）
    */
   async notifyCompletion(): Promise<void> {
-    this.notifier.autoInfo('タスクが正常に完了しました。', 'autopilot.completed');
+    this.notifier.autoInfo('作業が完了しました。', 'autopilot.completed');
   }
 
   /**
    * 失敗通知（FailedStateから呼ばれる）
    */
   async notifyFailure(reason: string): Promise<void> {
-    this.notifier.autoWarning(`タスクが失敗しました: ${reason}`, 'autopilot.failed');
+    this.notifier.autoWarning(`作業に問題が起きました: ${reason}`, 'autopilot.failed');
   }
 
   /**
@@ -1574,7 +1576,7 @@ ${categorySummary}
    */
   public async forceShowConstellation(): Promise<void> {
     if (!this.constellationGenerator) {
-      this.outputChannel.appendLine('⚠️ 天体儀システムが初期化されていません');
+      this.outputChannel.appendLine('⚠️ プロジェクト概要がまだ準備できていません');
       return;
     }
 
@@ -1584,11 +1586,11 @@ ${categorySummary}
         this.outputChannel.show();
         this.outputChannel.appendLine('');
         this.outputChannel.appendLine(context);
-        this.outputChannel.appendLine('🌟 天体儀ビューを表示しました');
+        this.outputChannel.appendLine('🌟 プロジェクト概要を表示しました');
       }
     } catch (error) {
       this.outputChannel.appendLine(
-        `❌ [Autopilot] Constellation display error: ${error}`
+        `❌ プロジェクト概要の表示に失敗しました: ${error}`
       );
     }
   }

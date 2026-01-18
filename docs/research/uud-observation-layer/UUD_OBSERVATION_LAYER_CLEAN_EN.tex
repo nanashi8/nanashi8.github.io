@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+% \usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fancyhdr}
+% \usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{float}
+
+\newcommand{\maybeinclude}[2]{%
+\IfFileExists{#1}{%
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{#1}
+\caption{#2}
+\end{figure}
+}{%
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\linewidth}{\centering Missing figure: \texttt{#1}}}
+\caption{#2}
+\end{figure}
+}}
+
+\title{UUD Observation Layer (Clean Draft, Sample Values)}
+\author{}
+\date{}
+
+\begin{document}
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.4em}
+\setstretch{1.08}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\captionsetup{font=small}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{UUD Observation Layer (Clean Draft)}
+\rhead{\thepage}
+\maketitle
+
+\tableofcontents
+\vspace{1em}
+
+\section{Note}
+Values are samples and should be replaced with measured results.
+
+\section{Abstract}
+We propose a universal observation layer that produces a method-agnostic representation for linear learning. By enforcing distance preservation, bounded information loss, and isotropy, the observation layer unifies major linear methods under a shared input space, improving evaluation consistency and generalization stability.
+
+\section{Method}
+The observation layer is fixed from training data only.
+
+\begin{equation}
+ z = A x + c
+\end{equation}
+
+\begin{enumerate}
+\item Standardize
+\begin{equation}
+ x'=(x-\mu)\oslash\sigma
+\end{equation}
+\item Decompose
+\begin{equation}
+ C=\frac{1}{n}X'^\top X'=U\Lambda U^\top
+\end{equation}
+\item Dimension selection
+\begin{equation}
+ \frac{\sum_{i=1}^k\lambda_i}{\sum_{i=1}^d\lambda_i}\ge\tau
+\end{equation}
+\item Fix mapping
+\begin{equation}
+ A=\Lambda_k^{-1/2}U_k^\top D_\sigma^{-1},\quad c=-A\mu
+\end{equation}
+\end{enumerate}
+
+\section{Figures}
+Figures use PNG outputs from Mermaid (placeholders shown if missing).
+
+\maybeinclude{images/uud-observation-layer.png}{Observation layer concept and guarantees}
+\maybeinclude{images/uud-ablation-xy.png}{Ablation on generalization gap}
+\maybeinclude{images/uud-stability-xy.png}{Method rank stability}
+
+\section{Results (Sample Values)}
+\subsection{Ablation (Generalization Gap Delta)}
+\begin{itemize}
+\item Standardize: $\Delta=0.21$
+\item PCA: $\Delta=0.15$
+\item PCA+Whitening: $\Delta=0.08$
+\item Random Projection: $\Delta=0.12$
+\end{itemize}
+
+\subsection{Method Rank Variance}
+\begin{itemize}
+\item No observation layer: $0.88$
+\item Observation fixed: $0.30$
+\end{itemize}
+
+\section{Discussion}
+Fixing the observation layer reduces generalization gap and stabilizes model ranking. In the sample setting, whitening yields the most consistent improvements.
+
+\section{Limitations}
+\begin{itemize}
+\item Linear observation fails on intrinsically nonlinear separability.
+\item If information is not concentrated in a low-rank linear subspace, performance degrades.
+\end{itemize}
+
+\section{Next Steps}
+\begin{itemize}
+\item Nonlinear $f(x)$ via self-supervised embeddings.
+\item Joint optimization of observation and inference layers.
+\end{itemize}
+
+\end{document}

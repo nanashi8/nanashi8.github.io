@@ -14,7 +14,7 @@ export class CompletedState extends BaseAutopilotState {
 
   async enter(context: AutopilotController): Promise<void> {
     context.updateStatusBar('✅ 完了');
-    context.logToOutput('[Autopilot] 完了状態に入りました');
+    context.logToOutput('[自動サポート] 完了しました');
 
     // 完了通知
     await context.notifyCompletion();
@@ -29,6 +29,6 @@ export class CompletedState extends BaseAutopilotState {
   }
 
   getDescription(): string {
-    return 'タスクが正常に完了しました。';
+    return '作業が完了しました。';
   }
 }

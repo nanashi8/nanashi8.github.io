@@ -33,6 +33,17 @@
 
 - UDDの有意性（性能論ではなく品質システムとして整理）
   - [UDD_SIGNIFICANCE_CONCEPT.md](UDD_SIGNIFICANCE_CONCEPT.md)
+- UUD観測層（サンプル値の結果サマリ）
+  - [uud-observation-layer/UUD_OBSERVATION_LAYER_RESULTS.md](uud-observation-layer/UUD_OBSERVATION_LAYER_RESULTS.md)
+- UUD観測層（論文ドラフト: サンプル値）
+  - [uud-observation-layer/UUD_OBSERVATION_LAYER_PAPER_DRAFT.md](uud-observation-layer/UUD_OBSERVATION_LAYER_PAPER_DRAFT.md)
+  - 日本語版: [uud-observation-layer/UUD_OBSERVATION_LAYER_PAPER_DRAFT_JP.md](uud-observation-layer/UUD_OBSERVATION_LAYER_PAPER_DRAFT_JP.md)
+- ミクロマクロ理論 × UDD（既存研究との対応・統合アーキテクチャ）
+  - [MICRO_MACRO_UDD_ARCHITECTURE.md](MICRO_MACRO_UDD_ARCHITECTURE.md)
+  - 付録：QC（量子コンピューティング）との相性
+    - [MICRO_MACRO_UDD_QC_COMPATIBILITY.md](MICRO_MACRO_UDD_QC_COMPATIBILITY.md)
+- UDDが刺さる分野（閉ループ研究：未知→検証→更新→次の一手）の横断例
+  - [UDD_CROSS_DOMAIN_CLOSED_LOOP_EXAMPLES.md](UDD_CROSS_DOMAIN_CLOSED_LOOP_EXAMPLES.md)
 - 参考（既存のUDD関連まとめ）
   - [UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md](UDD_METABOLIC_MONITORING_VALIDATION_SUMMARY_JP.md)
   - [CLINICAL_TRIAL_OS_CONCEPT.md](CLINICAL_TRIAL_OS_CONCEPT.md)

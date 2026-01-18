@@ -15,7 +15,7 @@ export class IdleState extends BaseAutopilotState {
   async enter(context: AutopilotController): Promise<void> {
     // ステータスバーを更新
     context.updateStatusBar('⏸️ 待機中');
-    context.logToOutput('[Autopilot] 待機状態に入りました');
+    context.logToOutput('[自動サポート] 待機中です');
   }
 
   async start(context: AutopilotController): Promise<void> {
@@ -28,6 +28,6 @@ export class IdleState extends BaseAutopilotState {
   }
 
   getDescription(): string {
-    return '自動操縦は待機中です。開始するには start() を呼び出してください。';
+    return '自動サポートは待機中です。開始するときは「開始」を選んでください。';
   }
 }

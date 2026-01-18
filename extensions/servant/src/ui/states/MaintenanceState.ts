@@ -221,7 +221,7 @@ export class MaintenanceState extends BaseViewState {
 
     <div class="hint">
       実行ログは主に Output（Servant）に出ます。必要に応じて上のボタンで開いてください。<br />
-      ここは「紹介画面（天体儀）」から辿れる簡易メンテナンス画面です。
+      ここは「紹介画面（プロジェクト概要）」から辿れる簡易メンテナンス画面です。
     </div>
   </div>
 

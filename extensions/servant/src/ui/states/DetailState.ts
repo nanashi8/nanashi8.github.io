@@ -16,7 +16,7 @@ export class DetailState extends BaseViewState {
   }
 
   async enter(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput(`[Constellation] 詳細表示モードに入りました (Node: ${this.selectedNodeId})`);
+    context.logToOutput(`[概要] 詳細表示モードに入りました (Node: ${this.selectedNodeId})`);
     await context.refresh();
   }
 
@@ -28,7 +28,7 @@ export class DetailState extends BaseViewState {
     }
 
     return `
-      ${this.getHtmlHeader(`🌟 天体儀 - ${nodeData.name || this.selectedNodeId}`)}
+      ${this.getHtmlHeader(`🌟 概要 - ${nodeData.name || this.selectedNodeId}`)}
 
       <div class="header">
         <h1>📋 ${nodeData.name || this.selectedNodeId}</h1>
@@ -111,7 +111,7 @@ export class DetailState extends BaseViewState {
 
   private renderNotFound(context: ConstellationViewPanel): string {
     return `
-      ${this.getHtmlHeader('🌟 天体儀 - ノードが見つかりません')}
+      ${this.getHtmlHeader('🌟 概要 - ノードが見つかりません')}
 
       <div class="header">
         <h1>⚠️ ノードが見つかりません</h1>

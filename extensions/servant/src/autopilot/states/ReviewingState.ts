@@ -24,10 +24,10 @@ export class ReviewingState extends BaseAutopilotState {
 
   async enter(context: AutopilotController): Promise<void> {
     const icon = this.severity === 'error' ? '❌' : '⚠️';
-    context.updateStatusBar(`${icon} レビュー中`);
-    context.logToOutput(`[Autopilot] レビュー状態に入りました (${this.severity}): ${this.reasons.join(', ')}`);
+    context.updateStatusBar(`${icon} 確認中`);
+    context.logToOutput(`[自動サポート] 確認が必要です (${this.severity}): ${this.reasons.join(', ')}`);
 
-    // レビューUIを表示
+    // 確認UIを表示
     await context.showReviewUI(this.severity, this.reasons);
   }
 
@@ -49,7 +49,7 @@ export class ReviewingState extends BaseAutopilotState {
   }
 
   getDescription(): string {
-    return `レビューが必要です (${this.severity}): ${this.reasons.join(', ')}`;
+    return `確認が必要です (${this.severity}): ${this.reasons.join(', ')}`;
   }
 
   getSeverity(): 'error' | 'warning' {

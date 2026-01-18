@@ -1,0 +1,27 @@
+%% UUD Observation Layer Concept
+flowchart LR
+  X["Input data x"] --> Z["Observation layer z = A x + c"]
+  Z --> M1["Linear Regression"]
+  Z --> M2["Logistic Regression"]
+  Z --> M3["Ridge / Lasso / Elastic Net"]
+  Z --> M4["LDA"]
+  Z --> M5["Linear SVM"]
+  M1 --> Y["Output y"]
+  M2 --> Y
+  M3 --> Y
+  M4 --> Y
+  M5 --> Y
+
+  subgraph Obs["UUD Observation Layer"]
+    Z
+  end
+
+  subgraph Guarantees["Guarantees"]
+    G1["Distance preservation"]
+    G2["Information loss bound"]
+    G3["Isotropy (whitening)"]
+  end
+
+  Z -.-> G1
+  Z -.-> G2
+  Z -.-> G3

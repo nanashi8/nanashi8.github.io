@@ -673,7 +673,7 @@ export class OverviewState extends BaseViewState {
     });
     vscode.window.showInformationMessage(
       '🌌 全宇宙リソース統合エンジン（開発中）\n\n' +
-      '天体儀は、この世の全てから新たな創造物を合成します：\n\n' +
+      'プロジェクト概要は、この世の全てから新たな創造物を合成します：\n\n' +
       '🌍 プロジェクト内機能（既存コード・ツール）\n' +
       '🪐 外部API/サービス（OpenAI、GitHub、Google等全てのAPI）\n' +
       '🌌 オープンソース全体（npm、PyPI、GitHub全リポジトリ）\n' +
@@ -682,7 +682,7 @@ export class OverviewState extends BaseViewState {
       '例：[あなたのスラッシュ分割] + [OpenAI API] + [GitHub上の優れた実装]\n' +
       '   → 今まで存在しなかった「AI駆動教材自動生成システム」を合成\n\n' +
       '太陽系外からでも、観測できれば統合します。\n' +
-      '天体儀は全宇宙のリソースマップです。',
+      'プロジェクト概要は全宇宙のリソースマップです。',
       '了解'
     );
   }

@@ -15,7 +15,7 @@ export class PausedState extends BaseAutopilotState {
 
   async enter(context: AutopilotController): Promise<void> {
     context.updateStatusBar('⏸️ 一時停止');
-    context.logToOutput('[Autopilot] 一時停止状態に入りました');
+    context.logToOutput('[自動サポート] 一時停止しました');
   }
 
   async resume(context: AutopilotController): Promise<void> {
@@ -31,6 +31,6 @@ export class PausedState extends BaseAutopilotState {
   }
 
   getDescription(): string {
-    return '自動操縦は一時停止中です。resume() で再開できます。';
+    return '自動サポートは一時停止中です。再開を選ぶと続きます。';
   }
 }

@@ -7,6 +7,18 @@ import { ReadingPassage, ReadingSegment } from '../types';
 import { getPassageList, loadPassage, loadOriginalPassage } from './passageLoader';
 import { logger } from '@/utils/logger';
 
+const PASSAGE_FILE_BASE_BY_ID: Record<string, string> = {
+  'beginner-morning-routine': 'beginner_50_Morning-Routine',
+};
+
+function resolvePassageFileBase(passageId: string): string {
+  if (PASSAGE_FILE_BASE_BY_ID[passageId]) return PASSAGE_FILE_BASE_BY_ID[passageId];
+  const metadata = getPassageList().find((p) => p.id === passageId);
+  if (!metadata) return passageId;
+  const fileName = metadata.filePath.split('/').pop() || '';
+  return fileName.replace(/\.txt$/, '') || passageId;
+}
+
 // 補助関数: 単語の基本形を取得（簡易版）
 function getLemma(word: string): string {
   const cleaned = word.toLowerCase().trim();
@@ -100,34 +112,22 @@ function _splitLongSentence(sentence: string): string[] {
  */
 async function loadFullTranslation(passageId: string): Promise<string> {
   try {
-    // passageIdに対応する全訳ファイルパスを構築
-    // 例: beginner-morning-routine -> /data/passages/passages-translations/beginner_50_Morning-Routine-ja.txt
-    // 旧形式: advanced-environmental-issues -> /data/passages-translations/advanced-environmental-issues-ja.txt
+    const fileBase = resolvePassageFileBase(passageId);
+    const candidates = [
+      `/data/passages/4_passages-translations/${fileBase}_full.txt`,
+      `/data/passages/4_passages-translations/${fileBase}.txt`,
+      `/data/passages/passages-translations/${passageId}-ja.txt`,
+      `/data/passages-translations/${passageId}-ja.txt`,
+    ];
 
-    // 新形式のパスを試す (passages/passages-translations/)
-    let translationFilePath = `/data/passages/passages-translations/${passageId}-ja.txt`;
-
-    console.log(`[全訳] Attempting to load: ${translationFilePath} for passageId: ${passageId}`);
-
-    let response = await fetch(translationFilePath);
-
-    // 新形式が見つからない場合は旧形式を試す
-    if (!response.ok) {
-      translationFilePath = `/data/passages-translations/${passageId}-ja.txt`;
-      console.log(`[全訳] Trying old path: ${translationFilePath}`);
-      response = await fetch(translationFilePath);
+    for (const translationFilePath of candidates) {
+      const response = await fetch(translationFilePath);
+      if (!response.ok) continue;
+      const content = await response.text();
+      return content;
     }
 
-    if (!response.ok) {
-      console.log(`[全訳] File not found (${response.status}): ${translationFilePath}`);
-      return '';
-    }
-
-    const content = await response.text();
-    console.log(
-      `[全訳] Successfully loaded ${content.length} characters from ${translationFilePath}`
-    );
-    return content;
+    return '';
   } catch (_error) {
     console.error(`[全訳] Error loading full translation for ${passageId}:`, _error);
     return '';
@@ -141,16 +141,8 @@ async function loadFullTranslation(passageId: string): Promise<string> {
  */
 async function loadJapanesePhrases(passageId: string): Promise<string[]> {
   try {
-    // passageIdからファイルパスの一部を取得
-    const metadata = getPassageList().find((p) => p.id === passageId);
-    if (!metadata) return [];
-
-    // ファイル名を取得
-    const fileName = metadata.filePath.split('/').pop() || '';
-
-    // passages-for-phrase-work-jaのパスを構築
-    // 例: beginner_50_Morning-Routine.txt -> /data/passages-for-phrase-work-ja/beginner_50_Morning-Routine-ja.txt
-    const jaFilePath = `/data/passages-for-phrase-work-ja/${fileName.replace(/\.txt$/, '-ja.txt')}`;
+    const fileBase = resolvePassageFileBase(passageId);
+    const jaFilePath = `/data/passages/5_passages-for-phrase-work-ja/${fileBase}.txt`;
 
     const response = await fetch(jaFilePath);
     if (!response.ok) {
@@ -430,12 +422,24 @@ export async function convertPassageToReadingFormat(
  */
 export async function loadPhraseLearningJSON(passageId: string): Promise<ReadingPassage | null> {
   try {
-    const response = await fetch(`/data/passages-phrase-learning/${passageId}.json`);
-    if (!response.ok) {
-      logger.log(`No phrase learning JSON found for ${passageId}, will use .txt conversion`);
-      return null; // ファイルが存在しない場合はnullを返す
+    const fileBase = resolvePassageFileBase(passageId);
+    const candidates = [
+      `/data/passages/6_passages-phrase-learning/${fileBase}.json`,
+      `/data/passages-phrase-learning/${passageId}.json`,
+    ];
+
+    let response: Response | null = null;
+    for (const path of candidates) {
+      const res = await fetch(path);
+      if (!res.ok) continue;
+      response = res;
+      break;
     }
 
+    if (!response) {
+      logger.log(`No phrase learning JSON found for ${passageId}, will use .txt conversion`);
+      return null;
+    }
     const data = await response.json();
     logger.log(
       `Loaded phrase learning JSON for ${passageId}, phrases: ${data.phrases?.length || 0}`

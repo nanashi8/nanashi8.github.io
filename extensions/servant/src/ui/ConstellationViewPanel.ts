@@ -92,7 +92,7 @@ export class ConstellationViewPanel {
     this._generator = generator;
 
     // OutputChannel作成
-    this._outputChannel = vscode.window.createOutputChannel('Constellation View');
+    this._outputChannel = vscode.window.createOutputChannel('プロジェクト概要');
 
     // 初期状態（デフォルト: Overview）
     this._currentViewState = ConstellationViewPanel.createStateFromOpenOptions(openOptions);
@@ -106,7 +106,7 @@ export class ConstellationViewPanel {
         // Webview ready イベントを処理（初期データ送信は ready 後に行う）
         if (message?.command === 'ready') {
           this._webviewReady = true;
-          this.logToOutput('[Constellation] Webview ready');
+          this.logToOutput('[概要] Webview ready');
           await this._currentViewState.enter(this);
           return;
         }
@@ -137,7 +137,7 @@ export class ConstellationViewPanel {
 
     const panel = vscode.window.createWebviewPanel(
       'constellationView',
-      '🌟 天体儀（プロジェクト構造）',
+      '🌟 プロジェクト概要（構造）',
       column || vscode.ViewColumn.One,
       {
         enableScripts: true,
@@ -176,7 +176,7 @@ export class ConstellationViewPanel {
 
   private _sendData(): void {
     if (!this._webviewReady) {
-      this.logToOutput('[Constellation] Skip sendData: webview not ready');
+      this.logToOutput('[概要] Skip sendData: webview not ready');
       return;
     }
     if (this._generator) {
@@ -215,11 +215,11 @@ export class ConstellationViewPanel {
 
     // 遷移可能かチェック
     if (!this._currentViewState.canTransitionTo(newStateName)) {
-      this.logToOutput(`[Constellation] 状態遷移拒否: ${oldStateName} -> ${newStateName}`);
+      this.logToOutput(`[概要] 状態遷移拒否: ${oldStateName} -> ${newStateName}`);
       return;
     }
 
-    this.logToOutput(`[Constellation] 状態遷移: ${oldStateName} -> ${newStateName}`);
+    this.logToOutput(`[概要] 状態遷移: ${oldStateName} -> ${newStateName}`);
 
     // 現在の状態のexit処理
     await this._currentViewState.exit(this);
@@ -369,7 +369,7 @@ export class ConstellationViewPanel {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${cspSource} 'unsafe-inline'; script-src ${cspSource} 'unsafe-inline';">
-    <title>天体儀 0ベース</title>
+    <title>概要 0ベース</title>
     <style>
         body {
             margin: 0;
@@ -395,7 +395,7 @@ export class ConstellationViewPanel {
 </head>
 <body>
     <div id="info">
-        🌟 天体儀テスト（0ベース）<br>
+        🌟 概要テスト（0ベース）<br>
         Status: <span id="status">初期化中...</span>
     </div>
 
@@ -463,7 +463,7 @@ export class ConstellationViewPanel {
             vscode.postMessage({ command: 'getData' });
 
             function renderConstellation(data) {
-                statusEl.textContent = '天体儀構築中...';
+                statusEl.textContent = '概要を準備中...';
 
                 // 中心の太陽（プロジェクトゴール）
                 const sunGeometry = new THREE.SphereGeometry(3, 32, 32);

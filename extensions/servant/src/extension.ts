@@ -145,10 +145,10 @@ export function activate(context: vscode.ExtensionContext) {
         const violations = parseInt(match[2], 10);
         const fixed = parseInt(match[3], 10);
 
-        warningLogger.updateStats(monitored, violations, fixed);
+        const changed = warningLogger.updateStats(monitored, violations, fixed);
 
-        // 違反または修正がある時だけサマリーを出力（頻繁すぎないように）
-        if (violations > 0 || fixed > 0) {
+        // 変化があり、かつ違反または修正がある時だけサマリーを出力
+        if (changed && (violations > 0 || fixed > 0)) {
           warningLogger.logStatusSummary();
         }
       }
@@ -192,19 +192,19 @@ export function activate(context: vscode.ExtensionContext) {
     outputChannel.show();
     // Outputを開いた時にサマリーを表示
     if (warningLogger) {
-      warningLogger.logStatusSummary();
+      warningLogger.logStatusSummaryForce();
     }
   });
   context.subscriptions.push(showOutputCommand);
 
-  // 天体儀ステータスバー（🌟アイコン、常時表示）
+  // 概要ステータスバー（🌟アイコン、常時表示）
   // priority を最高レベル（10000）に設定して、右端に確実に表示
   const constellationStatusBar = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Right,
     10000
   );
-  constellationStatusBar.text = '🌟 天体儀';
-  constellationStatusBar.tooltip = '天体儀メニューを開く';
+  constellationStatusBar.text = '🌟 概要';
+  constellationStatusBar.tooltip = '概要メニューを開く';
   constellationStatusBar.command = 'servant.openConstellationMenu';
   constellationStatusBar.show();
   context.subscriptions.push(constellationStatusBar);
@@ -220,14 +220,14 @@ export function activate(context: vscode.ExtensionContext) {
     servantStatusBar.backgroundColor = new vscode.ThemeColor('statusBarItem.warningBackground');
     servantStatusBar.show();
 
-    constellationStatusBar.tooltip = 'ワークスペースを信頼すると天体儀が有効になります';
+    constellationStatusBar.tooltip = 'ワークスペースを信頼するとプロジェクト概要が有効になります';
 
     // 🌟クリックで信頼導線を出す（この時点では他コマンドは登録しない）
     const showConstellationCommand = vscode.commands.registerCommand(
       'servant.showConstellation',
       async () => {
         const choice = await vscode.window.showWarningMessage(
-          '天体儀を表示するには、このワークスペースを信頼する必要があります。',
+          'プロジェクト概要を表示するには、このワークスペースを信頼する必要があります。',
           'ワークスペースを信頼'
         );
         if (choice === 'ワークスペースを信頼') {
@@ -2045,7 +2045,7 @@ export function activate(context: vscode.ExtensionContext) {
     async () => {
       const latest = feedbackCollector.getLatestFeedback();
       if (!latest) {
-        notifier.commandInfo('Autopilotレポートがまだありません');
+        notifier.commandInfo('自動サポートのレポートがまだありません');
         return;
       }
       feedbackCollector.showFeedback(latest, outputChannel);
@@ -2076,7 +2076,7 @@ export function activate(context: vscode.ExtensionContext) {
           },
         ],
         {
-          title: 'Servant Autopilot: 事前調整',
+          title: 'Servant 自動サポート: 事前調整',
           placeHolder: '強め通知の方針を選んでください',
         }
       );
@@ -2094,7 +2094,7 @@ export function activate(context: vscode.ExtensionContext) {
           { label: 'Outputは表示しない（必要時に自分で開く）', value: false },
         ],
         {
-          title: 'Servant Autopilot: 事前調整',
+          title: 'Servant 自動サポート: 事前調整',
           placeHolder: '作業開始時にOutputを自動で開きますか？',
         }
       );
@@ -2108,7 +2108,7 @@ export function activate(context: vscode.ExtensionContext) {
 
       const currentThreshold = config.get<number>('autopilot.largeWorkThresholdFiles', 20);
       const thresholdInput = await vscode.window.showInputBox({
-        title: 'Servant Autopilot: 事前調整',
+        title: 'Servant 自動サポート: 事前調整',
         prompt: '「大作業」と判定する変更ファイル数（この数以上で強めになります）',
         value: String(currentThreshold),
         validateInput: (value) => {
@@ -2127,7 +2127,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.ConfigurationTarget.Workspace
       );
 
-      notifier.commandInfo('✅ Autopilotの事前調整を更新しました');
+      notifier.commandInfo('✅ 自動サポートの事前調整を更新しました');
     }
   );
 
@@ -2422,7 +2422,7 @@ export function activate(context: vscode.ExtensionContext) {
     outputChannel.show();
   });
 
-  // Phase 6: Constellation天体儀ビューコマンド
+  // Phase 6: Constellationビューコマンド
   const showConstellationCommand = vscode.commands.registerCommand(
     'servant.showConstellation',
     async (openOptions?: {
@@ -2436,7 +2436,7 @@ export function activate(context: vscode.ExtensionContext) {
         let loaded = await neuralGraph.loadGraph();
         if (!loaded) {
           const answer = await vscode.window.showInformationMessage(
-            '🌟 天体儀データがまだありません。プロジェクトをスキャンしますか？',
+            '🌟 プロジェクト概要データがまだありません。プロジェクトをスキャンしますか？',
             'スキャンする',
             'キャンセル'
           );
@@ -2448,7 +2448,7 @@ export function activate(context: vscode.ExtensionContext) {
           await vscode.window.withProgress(
             {
               location: vscode.ProgressLocation.Notification,
-              title: '🌟 天体儀データを生成中...',
+              title: '🌟 プロジェクト概要データを生成中...',
               cancellable: false,
             },
             async (progress) => {
@@ -2469,7 +2469,7 @@ export function activate(context: vscode.ExtensionContext) {
           );
 
           loaded = true;
-          notifier.commandInfo('✅ 天体儀データを生成しました');
+          notifier.commandInfo('✅ プロジェクト概要データを生成しました');
         }
 
         // ConstellationDataGenerator とGoalManagerを初期化
@@ -2489,8 +2489,8 @@ export function activate(context: vscode.ExtensionContext) {
           openOptions
         );
       } catch (error) {
-        notifier.commandError(`天体儀の表示に失敗: ${error}`);
-        outputChannel.appendLine(`[Constellation] Error: ${error}`);
+        notifier.commandError(`プロジェクト概要の表示に失敗: ${error}`);
+        outputChannel.appendLine(`[概要] エラー: ${error}`);
       }
     }
   );
@@ -2513,7 +2513,7 @@ export function activate(context: vscode.ExtensionContext) {
       const selected = await vscode.window.showQuickPick(
         [
           {
-            label: '🌟 天体儀（全体表示）',
+            label: '🌟 概要（全体表示）',
             description: 'プロジェクト全体の3D表示',
             mode: 'Overview' as ViewModeName,
           },
@@ -2523,18 +2523,18 @@ export function activate(context: vscode.ExtensionContext) {
             mode: 'Maintenance' as ViewModeName,
           },
           {
-            label: '🔍 天体儀（検索）',
+            label: '🔍 概要（検索）',
             description: 'ノード名/パスで検索',
             mode: 'Search' as ViewModeName,
           },
           {
-            label: '🎯 天体儀（フィルター）',
+            label: '🎯 概要（フィルター）',
             description: 'タイプ等で絞り込み',
             mode: 'Filter' as ViewModeName,
           },
         ],
         {
-          placeHolder: '天体儀メニュー',
+          placeHolder: '概要メニュー',
         }
       );
 

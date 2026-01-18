@@ -34,6 +34,11 @@ export class ServantWarningLogger {
     fixed: 0
   };
 
+  // サマリーの重複出力抑制
+  private readonly SUMMARY_COOLDOWN_MS = 60000; // 1分
+  private lastSummaryKey: string | null = null;
+  private lastSummaryTime = 0;
+
   constructor(private outputChannel: vscode.OutputChannel) {}
 
   public setStartupWindowMs(ms: number): void {
@@ -304,6 +309,14 @@ export class ServantWarningLogger {
    * サマリー情報の表示
    */
   public logStatusSummary(): void {
+    const summaryKey = `${this.stats.monitored}:${this.stats.violations}:${this.stats.fixed}`;
+    const now = Date.now();
+    if (this.lastSummaryKey === summaryKey && now - this.lastSummaryTime < this.SUMMARY_COOLDOWN_MS) {
+      return;
+    }
+    this.lastSummaryKey = summaryKey;
+    this.lastSummaryTime = now;
+
     this.outputChannel.appendLine('\n' + '═'.repeat(70));
     this.outputChannel.appendLine('🛡️ Servant ステータスサマリー');
     this.outputChannel.appendLine('═'.repeat(70));
@@ -316,8 +329,22 @@ export class ServantWarningLogger {
   /**
    * ステータス更新（外部から呼び出される）
    */
-  public updateStats(monitored: number, violations: number, fixed: number): void {
+  public updateStats(monitored: number, violations: number, fixed: number): boolean {
+    const changed =
+      this.stats.monitored !== monitored ||
+      this.stats.violations !== violations ||
+      this.stats.fixed !== fixed;
     this.stats = { monitored, violations, fixed };
+    return changed;
+  }
+
+  /**
+   * サマリーを強制的に表示する（重複抑制を無視）
+   */
+  public logStatusSummaryForce(): void {
+    this.lastSummaryKey = null;
+    this.lastSummaryTime = 0;
+    this.logStatusSummary();
   }
 
   /**

@@ -17,8 +17,8 @@ export class FailedState extends BaseAutopilotState {
   }
 
   async enter(context: AutopilotController): Promise<void> {
-    context.updateStatusBar('❌ 失敗');
-    context.logToOutput(`[Autopilot] 失敗状態に入りました: ${this.reason}`);
+    context.updateStatusBar('❌ 問題発生');
+    context.logToOutput(`[自動サポート] 問題が発生しました: ${this.reason}`);
 
     // 失敗通知
     await context.notifyFailure(this.reason);
@@ -33,7 +33,7 @@ export class FailedState extends BaseAutopilotState {
   }
 
   getDescription(): string {
-    return `タスクが失敗しました: ${this.reason}`;
+    return `作業に問題が起きました: ${this.reason}`;
   }
 
   getReason(): string {

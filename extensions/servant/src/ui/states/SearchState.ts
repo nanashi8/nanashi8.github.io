@@ -17,7 +17,7 @@ export class SearchState extends BaseViewState {
   }
 
   async enter(context: ConstellationViewPanel): Promise<void> {
-    context.logToOutput(`[Constellation] 検索表示モードに入りました`);
+    context.logToOutput(`[概要] 検索表示モードに入りました`);
     await context.refresh();
   }
 
@@ -25,7 +25,7 @@ export class SearchState extends BaseViewState {
     const results = context.searchNodes(this.query);
 
     return `
-      ${this.getHtmlHeader('🌟 天体儀 - 検索')}
+      ${this.getHtmlHeader('🌟 概要 - 検索')}
 
       <div class="header">
         <h1>🔍 検索</h1>
