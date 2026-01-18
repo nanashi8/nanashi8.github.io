@@ -127,6 +127,32 @@ function resolvePassageFileBase(passageId: string): string {
   return PASSAGE_FILE_BASE_BY_ID[passageId] ?? passageId;
 }
 
+async function fetchFirstOkText(paths: string[]): Promise<string | null> {
+  for (const path of paths) {
+    try {
+      const res = await fetch(path);
+      if (!res.ok) continue;
+      return await res.text();
+    } catch {
+      // ignore
+    }
+  }
+  return null;
+}
+
+async function fetchFirstOkJson<T>(paths: string[]): Promise<T | null> {
+  for (const path of paths) {
+    try {
+      const res = await fetch(path);
+      if (!res.ok) continue;
+      return (await res.json()) as T;
+    } catch {
+      // ignore
+    }
+  }
+  return null;
+}
+
 async function loadJapaneseSentenceBlocks(
   passageId: string
 ): Promise<string[]> {
@@ -134,34 +160,25 @@ async function loadJapaneseSentenceBlocks(
   const sentenceFileBase = PASSAGE_SENTENCE_FILE_BASE_BY_ID[passageId] ?? fileBase;
 
   // 1) 文単位ファイル（存在する場合）
-  try {
-    const res = await fetch(`/data/passages/2_passages-sentences/${sentenceFileBase}_sentences.txt`);
-    if (res.ok) {
-      const text = await res.text();
-      // 日本語文が含まれている場合のみ採用
-      if (/[ぁ-んァ-ン一-龯]/.test(text)) {
-        return splitIntoBlocks(text);
-      }
-    }
-  } catch {
-    // ignore
+  const sentenceCandidates = [
+    `/data/passages-translations/${sentenceFileBase}_sentences.txt`,
+    `/data/passages/2_passages-sentences/${sentenceFileBase}_sentences.txt`,
+  ];
+  const sentenceText = await fetchFirstOkText(sentenceCandidates);
+  if (sentenceText && /[ぁ-んァ-ン一-龯]/.test(sentenceText)) {
+    return splitIntoBlocks(sentenceText);
   }
 
   // 2) 全訳ファイルから文分割
-  try {
-    const fullCandidates = [
-      `/data/passages/4_passages-translations/${fileBase}_full.txt`,
-      `/data/passages/4_passages-translations/${fileBase}.txt`,
-    ];
-    for (const path of fullCandidates) {
-      const res = await fetch(path);
-      if (!res.ok) continue;
-      const text = await res.text();
-      if (!/[ぁ-んァ-ン一-龯]/.test(text)) continue;
-      return splitJapaneseParagraphIntoSentences(text);
-    }
-  } catch {
-    // ignore
+  const fullCandidates = [
+    `/data/passages-translations/${fileBase}_full.txt`,
+    `/data/passages-translations/${fileBase}.txt`,
+    `/data/passages/4_passages-translations/${fileBase}_full.txt`,
+    `/data/passages/4_passages-translations/${fileBase}.txt`,
+  ];
+  const fullText = await fetchFirstOkText(fullCandidates);
+  if (fullText && /[ぁ-んァ-ン一-龯]/.test(fullText)) {
+    return splitJapaneseParagraphIntoSentences(fullText);
   }
 
   return [];
@@ -231,24 +248,34 @@ async function _loadBeginnerMorningRoutine(passageId: string): Promise<CompleteP
 
   const fileBase = resolvePassageFileBase(passageId);
 
-  const [phraseRes, jaRes] = await Promise.all([
-    fetch(`/data/passages/6_passages-phrase-learning/${fileBase}.json`),
-    fetch(`/data/passages/4_passages-translations/${fileBase}.txt`),
-  ]);
-
-  if (!phraseRes.ok) {
+  const phraseCandidates = [
+    `/data/passages-phrase-learning/${passageId}.json`,
+    `/data/passages-phrase-learning/${fileBase}.json`,
+    `/data/passages/6_passages-phrase-learning/${fileBase}.json`,
+  ];
+  const phraseJson = await fetchFirstOkJson<PhraseLearningJson>(phraseCandidates);
+  if (!phraseJson) {
     logger.warn(`フレーズ学習データが見つかりません: ${passageId} - 依存解析データから構築します`);
     // フレーズ学習データがない場合は通常のフローへフォールバック
     return loadCompletePassageFromDependencyParse(passageId);
   }
 
-  const phraseJson = (await phraseRes.json()) as PhraseLearningJson;
-  const phraseItems = Array.isArray(phraseJson.phrases) ? phraseJson.phrases : [];
+  const phraseItemsRaw = Array.isArray(phraseJson.phrases) ? phraseJson.phrases : [];
+  const phraseItems = phraseItemsRaw.filter((item) => {
+    const text = (item.english ?? '').trim();
+    if (!text) return false;
+    return !/^Title:\s.+\nLevel:\s.+\nWord Count:\s*\d+/i.test(text);
+  });
   if (phraseItems.length === 0) {
     throw new Error(`フレーズ学習データが空です: ${passageId}`);
   }
 
-  const jaText = jaRes.ok ? await jaRes.text() : '';
+  const translationCandidates = [
+    `/data/passages-translations/${passageId}-ja.txt`,
+    `/data/passages-translations/${fileBase}.txt`,
+    `/data/passages/4_passages-translations/${fileBase}.txt`,
+  ];
+  const jaText = (await fetchFirstOkText(translationCandidates)) ?? '';
   const jaSentences = splitJapaneseParagraphIntoSentences(jaText);
 
   const phrases: CompletePassageData['phrases'] = [];
@@ -468,6 +495,10 @@ export async function loadCompletePassage(
 ): Promise<CompletePassageData> {
   logger.log(`[passageDataLoader] Loading passage: ${passageId}`);
 
+  if (passageId === 'beginner-morning-routine') {
+    return _loadBeginnerMorningRoutine(passageId);
+  }
+
   const parsed =
     dependencyParsedPassage ?? (await loadDependencyParsedPassage(passageId));
 
@@ -530,14 +561,18 @@ export async function loadCompletePassage(
 
   try {
     const fileBase = resolvePassageFileBase(passageId);
-    const [enRes, jaRes] = await Promise.all([
-      fetch(`/data/passages/3_passages-for-phrase-work/${fileBase}.txt`),
-      fetch(`/data/passages/5_passages-for-phrase-work-ja/${fileBase}.txt`),
-    ]);
+    const phraseWorkCandidates = [
+      `/data/passages-for-phrase-work/${fileBase}.txt`,
+      `/data/passages/3_passages-for-phrase-work/${fileBase}.txt`,
+    ];
+    const phraseJaCandidates = [
+      `/data/passages-translations/${fileBase}_phrases.txt`,
+      `/data/passages/5_passages-for-phrase-work-ja/${fileBase}.txt`,
+    ];
 
-    if (enRes.ok) {
-      const raw = await enRes.text();
-      const { body, glossary } = splitPhraseWorkBodyAndGlossary(raw);
+    const phraseWorkText = await fetchFirstOkText(phraseWorkCandidates);
+    if (phraseWorkText) {
+      const { body, glossary } = splitPhraseWorkBodyAndGlossary(phraseWorkText);
       // 注釈語句は末尾のグロッサリーからのみ抽出
       annotatedWords = extractAnnotatedWordsFromGlossary(glossary);
 
@@ -550,8 +585,9 @@ export async function loadCompletePassage(
         .filter(Boolean);
     }
 
-    if (jaRes.ok) {
-      phraseJaLines = (await jaRes.text())
+    const phraseJaText = await fetchFirstOkText(phraseJaCandidates);
+    if (phraseJaText) {
+      phraseJaLines = phraseJaText
         .split(/\r?\n/)
         .map((l) => l.trim())
         .filter(Boolean);

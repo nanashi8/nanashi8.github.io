@@ -62,7 +62,7 @@ describe('DBConnectionPool', () => {
     it('初回呼び出しで新規接続を作成する', async () => {
       const db = await initDB();
 
-      expect(global.indexedDB.open).toHaveBeenCalledWith('QuizAppDB', 1);
+      expect(global.indexedDB.open).toHaveBeenCalledWith('Nanashi8DB', 1);
       expect(db).toBe(mockDB);
     });
 

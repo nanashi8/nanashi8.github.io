@@ -1,0 +1,42 @@
+{
+  "grade": 1,
+  "totalQuestions": 3,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "be動詞の基本",
+      "fillInBlank": [
+        {
+          "id": "fb-g1-u0-001",
+          "japanese": "彼は学生です。",
+          "sentence": "He ____ a student.",
+          "choices": ["is", "am", "are", "be"],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "正解は is です。主語がheなのでisを使います。",
+          "hint": "he/she/itはis"
+        },
+        {
+          "id": "fb-g1-u0-002",
+          "japanese": "彼らは幸せです。",
+          "sentence": "They ____ happy.",
+          "choices": ["are", "is", "am", "be"],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "正解は are です。複数主語theyにはareを使います。",
+          "hint": "theyはare"
+        },
+        {
+          "id": "fb-g1-u0-003",
+          "japanese": "彼女は日本出身です。",
+          "sentence": "She ____ from Japan.",
+          "choices": ["is", "am", "are", "be"],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "正解は is です。Sheは三人称単数なのでisです。",
+          "hint": "Sheはis"
+        }
+      ]
+    }
+  ]
+}

@@ -706,6 +706,7 @@ export function importProgress(jsonData: string): boolean {
 export function clearProgress(): void {
   if (confirm('すべての成績データを削除しますか？この操作は取り消せません。')) {
     localStorage.removeItem(PROGRESS_KEY);
+    localStorage.removeItem('quiz-app-user-progress');
     alert('成績データをクリアしました。');
   }
 }

@@ -1,0 +1,61 @@
+{
+  "totalQuestions": 5,
+  "categories": [
+    {
+      "category": "basic-vowels",
+      "grammarPoint": "基本の母音と発音記号",
+      "questions": [
+        {
+          "id": "pron-basic-001",
+          "japanese": "take の発音はどれですか。",
+          "word": "take",
+          "choices": ["[teɪk]", "[tæk]", "[tɪk]", "[tʌk]"],
+          "correctAnswer": "[teɪk]",
+          "difficulty": "beginner",
+          "explanation": "正解は [teɪk] です。/eɪ/ の長母音に注意します。",
+          "hint": "長母音/eɪ/を確認"
+        },
+        {
+          "id": "pron-basic-002",
+          "japanese": "ship の発音はどれですか。",
+          "word": "ship",
+          "choices": ["[ʃɪp]", "[ʃiːp]", "[ʃep]", "[ʃʌp]"],
+          "correctAnswer": "[ʃɪp]",
+          "difficulty": "beginner",
+          "explanation": "正解は [ʃɪp] です。短母音 /ɪ/ を意識します。",
+          "hint": "短母音/ɪ/"
+        },
+        {
+          "id": "pron-basic-003",
+          "japanese": "photo の発音はどれですか。",
+          "word": "photo",
+          "choices": ["[ˈfoʊtoʊ]", "[ˈfɒtə]", "[ˈfʊtoʊ]", "[ˈfətoʊ]"],
+          "correctAnswer": "[ˈfoʊtoʊ]",
+          "difficulty": "beginner",
+          "explanation": "正解は [ˈfoʊtoʊ] です。/oʊ/ の音に注意します。",
+          "hint": "/oʊ/ の音"
+        },
+        {
+          "id": "pron-basic-004",
+          "japanese": "music の発音はどれですか。",
+          "word": "music",
+          "choices": ["[ˈmjuːzɪk]", "[ˈmuːzɪk]", "[ˈmʌzɪk]", "[ˈmɪzɪk]"],
+          "correctAnswer": "[ˈmjuːzɪk]",
+          "difficulty": "beginner",
+          "explanation": "正解は [ˈmjuːzɪk] です。/juː/ の音を意識します。",
+          "hint": "/juː/ の音"
+        },
+        {
+          "id": "pron-basic-005",
+          "japanese": "beach の発音はどれですか。",
+          "word": "beach",
+          "choices": ["[biːtʃ]", "[bɪtʃ]", "[beɪtʃ]", "[bʌtʃ]"],
+          "correctAnswer": "[biːtʃ]",
+          "difficulty": "beginner",
+          "explanation": "正解は [biːtʃ] です。/iː/ の長母音に注意します。",
+          "hint": "長母音/iː/"
+        }
+      ]
+    }
+  ]
+}

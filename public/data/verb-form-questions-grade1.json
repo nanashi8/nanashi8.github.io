@@ -1,0 +1,62 @@
+{
+  "grade": 1,
+  "totalQuestions": 5,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "一般動詞の現在形",
+      "verbForm": [
+        {
+          "id": "vf-g1-u0-001",
+          "japanese": "彼は毎日サッカーをします。",
+          "sentence": "He ____ soccer every day.",
+          "choices": ["plays", "play", "played", "playing"],
+          "correctAnswer": "plays",
+          "difficulty": "beginner",
+          "explanation": "正解は plays です。三単現のsを付けます。",
+          "hint": "三単現のs"
+        },
+        {
+          "id": "vf-g1-u0-002",
+          "japanese": "彼女はバスで学校に行きます。",
+          "sentence": "She ____ to school by bus.",
+          "choices": ["goes", "go", "went", "going"],
+          "correctAnswer": "goes",
+          "difficulty": "beginner",
+          "explanation": "正解は goes です。三単現ではgoにesを付けます。",
+          "hint": "goの三単現"
+        },
+        {
+          "id": "vf-g1-u0-003",
+          "japanese": "彼らは放課後に英語を勉強します。",
+          "sentence": "They ____ English after school.",
+          "choices": ["study", "studies", "studied", "studying"],
+          "correctAnswer": "study",
+          "difficulty": "beginner",
+          "explanation": "正解は study です。主語がtheyなので原形です。",
+          "hint": "複数主語は原形"
+        },
+        {
+          "id": "vf-g1-u0-004",
+          "japanese": "私の兄は夜にテレビを見ます。",
+          "sentence": "My brother ____ TV at night.",
+          "choices": ["watches", "watch", "watched", "watching"],
+          "correctAnswer": "watches",
+          "difficulty": "beginner",
+          "explanation": "正解は watches です。三単現でesを付けます。",
+          "hint": "watchの三単現"
+        },
+        {
+          "id": "vf-g1-u0-005",
+          "japanese": "その犬は速く走ります。",
+          "sentence": "The dog ____ fast.",
+          "choices": ["runs", "run", "ran", "running"],
+          "correctAnswer": "runs",
+          "difficulty": "beginner",
+          "explanation": "正解は runs です。三単現のsを付けます。",
+          "hint": "runの三単現"
+        }
+      ]
+    }
+  ]
+}

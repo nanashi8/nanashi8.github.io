@@ -1,15 +1,43 @@
 {
   "grade": 3,
+  "totalQuestions": 3,
   "units": [
-    {"unit": "Unit 0", "title": "アルファベット・基本表現"},
-    {"unit": "Unit 1", "title": "受動態（発展）"},
-    {"unit": "Unit 2", "title": "一般動詞"},
-    {"unit": "Unit 3", "title": "複数形・代名詞"},
-    {"unit": "Unit 4", "title": "疑問詞（what/who/when）"},
-    {"unit": "Unit 5", "title": "三単現のs"},
-    {"unit": "Unit 6", "title": "命令文・canの文"},
-    {"unit": "Unit 7", "title": "疑問詞（where/how）"},
-    {"unit": "Unit 8", "title": "現在進行形"},
-    {"unit": "Unit 9", "title": "過去形"}
+    {
+      "unit": "Unit 0",
+      "title": "現在完了の語順",
+      "sentenceOrdering": [
+        {
+          "id": "so-g3-u0-001",
+          "japanese": "彼はすでに宿題を終えています。",
+          "words": ["He", "has", "already", "finished", "his", "homework"],
+          "correctAnswer": "He has already finished his homework.",
+          "difficulty": "advanced",
+          "explanation": "正解は He has already finished his homework. です。alreadyの位置に注意します。",
+          "hint": "has + already + 過去分詞",
+          "passage": "He studies every night. He has already finished his homework. Now he can relax and read a book.",
+          "passageJapanese": "彼は毎晩勉強します。彼はすでに宿題を終えています。今は本を読んで休めます。"
+        },
+        {
+          "id": "so-g3-u0-002",
+          "japanese": "彼らは10年間ここに住んでいます。",
+          "words": ["They", "have", "lived", "here", "for", "ten", "years"],
+          "correctAnswer": "They have lived here for ten years.",
+          "difficulty": "advanced",
+          "explanation": "正解は They have lived here for ten years. です。for + 期間の語順です。",
+          "hint": "have lived + for",
+          "passage": "They moved here long ago. They have lived here for ten years. Many neighbors know them.",
+          "passageJapanese": "彼らはずいぶん前にここへ引っ越しました。彼らは10年間ここに住んでいます。近所の人もよく知っています。"
+        },
+        {
+          "id": "so-g3-u0-003",
+          "japanese": "私はその本をすでに読み終えました。",
+          "words": ["I", "have", "already", "read", "the", "book"],
+          "correctAnswer": "I have already read the book.",
+          "difficulty": "advanced",
+          "explanation": "正解は I have already read the book. です。現在完了の語順を確認します。",
+          "hint": "have + already + 過去分詞"
+        }
+      ]
+    }
   ]
 }

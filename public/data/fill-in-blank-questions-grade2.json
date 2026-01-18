@@ -1,0 +1,54 @@
+{
+  "grade": 2,
+  "totalQuestions": 4,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "過去形の基本",
+      "fillInBlank": [
+        {
+          "id": "fb-g2-u0-001",
+          "japanese": "彼は昨日公園に行きました。",
+          "sentence": "He ____ to the park yesterday.",
+          "choices": ["went", "goes", "go", "going"],
+          "correctAnswer": "went",
+          "difficulty": "intermediate",
+          "explanation": "正解は went です。yesterdayがあるので過去形を使います。",
+          "hint": "goの過去形"
+        },
+        {
+          "id": "fb-g2-u0-002",
+          "japanese": "彼女は昨夜宿題をしました。",
+          "sentence": "She ____ her homework last night.",
+          "choices": ["did", "does", "do", "doing"],
+          "correctAnswer": "did",
+          "difficulty": "intermediate",
+          "explanation": "正解は did です。last nightは過去を示します。",
+          "hint": "doの過去形"
+        },
+        {
+          "id": "fb-g2-u0-003",
+          "japanese": "私たちは先週末に映画を見ました。",
+          "sentence": "We ____ a movie last weekend.",
+          "choices": ["watched", "watch", "watches", "watching"],
+          "correctAnswer": "watched",
+          "difficulty": "intermediate",
+          "explanation": "正解は watched です。過去の出来事なので-ed形を使います。",
+          "hint": "watchの過去形",
+          "passage": "Last weekend, we stayed home because it rained. We ____ a movie last weekend. It was fun for my family.",
+          "passageJapanese": "先週末は雨だったので家にいました。先週末、私たちは映画を見ました。家族で楽しかったです。"
+        },
+        {
+          "id": "fb-g2-u0-004",
+          "japanese": "今朝バスは遅れて到着しました。",
+          "sentence": "The bus ____ late this morning.",
+          "choices": ["arrived", "arrive", "arrives", "arriving"],
+          "correctAnswer": "arrived",
+          "difficulty": "intermediate",
+          "explanation": "正解は arrived です。this morningは過去を表す文脈です。",
+          "hint": "arriveの過去形"
+        }
+      ]
+    }
+  ]
+}

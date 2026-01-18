@@ -1,0 +1,56 @@
+{
+  "grade": 3,
+  "totalQuestions": 4,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "仮定法",
+      "verbForm": [
+        {
+          "id": "vf-g3-u0-001",
+          "japanese": "もし私があなたなら、謝ります。",
+          "sentence": "If I ____ you, I would apologize.",
+          "choices": ["were", "was", "am", "be"],
+          "correctAnswer": "were",
+          "difficulty": "advanced",
+          "explanation": "正解は were です。仮定法では主語に関係なくwereを使います。",
+          "hint": "仮定法はwere",
+          "passage": "This is only a suggestion. If I ____ you, I would apologize. It might help.",
+          "passageJapanese": "これはあくまで提案です。もし私があなたなら、謝ります。助けになるかもしれません。"
+        },
+        {
+          "id": "vf-g3-u0-002",
+          "japanese": "彼女が今ここにいればいいのに。",
+          "sentence": "I wish she ____ here now.",
+          "choices": ["were", "was", "is", "are"],
+          "correctAnswer": "were",
+          "difficulty": "advanced",
+          "explanation": "正解は were です。I wish + 仮定法過去を使います。",
+          "hint": "I wish + were",
+          "passage": "She is far away today. I wish she ____ here now. I want to talk to her.",
+          "passageJapanese": "彼女は今日は遠くにいます。彼女が今ここにいればいいのに。話したいです。"
+        },
+        {
+          "id": "vf-g3-u0-003",
+          "japanese": "彼がもっと一生懸命働けば、成功するでしょう。",
+          "sentence": "If he ____ harder, he would succeed.",
+          "choices": ["worked", "work", "works", "working"],
+          "correctAnswer": "worked",
+          "difficulty": "advanced",
+          "explanation": "正解は worked です。仮定法過去で過去形を使います。",
+          "hint": "仮定法過去"
+        },
+        {
+          "id": "vf-g3-u0-004",
+          "japanese": "晴れていれば、彼らは行くでしょう。",
+          "sentence": "They would go if it ____ sunny.",
+          "choices": ["were", "was", "is", "be"],
+          "correctAnswer": "were",
+          "difficulty": "advanced",
+          "explanation": "正解は were です。仮定法ではwereを用います。",
+          "hint": "if節はwere"
+        }
+      ]
+    }
+  ]
+}

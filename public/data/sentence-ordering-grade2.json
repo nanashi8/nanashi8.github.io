@@ -1,15 +1,50 @@
 {
   "grade": 2,
+  "totalQuestions": 4,
   "units": [
-    {"unit": "Unit 0", "title": "be動詞の過去形"},
-    {"unit": "Unit 1", "title": "過去進行形"},
-    {"unit": "Unit 2", "title": "未来形 (will)"},
-    {"unit": "Unit 3", "title": "未来形 (be going to)"},
-    {"unit": "Unit 4", "title": "助動詞 (have to)"},
-    {"unit": "Unit 5", "title": "比較級・最上級"},
-    {"unit": "Unit 6", "title": "接続詞"},
-    {"unit": "Unit 7", "title": "不定詞"},
-    {"unit": "Unit 8", "title": "受動態"},
-    {"unit": "Unit 9", "title": "現在完了"}
+    {
+      "unit": "Unit 0",
+      "title": "過去形の語順",
+      "sentenceOrdering": [
+        {
+          "id": "so-g2-u0-001",
+          "japanese": "彼は昨日映画を見ました。",
+          "words": ["He", "watched", "a", "movie", "yesterday"],
+          "correctAnswer": "He watched a movie yesterday.",
+          "difficulty": "intermediate",
+          "explanation": "正解は He watched a movie yesterday. です。過去形と副詞の位置を確認します。",
+          "hint": "主語 + 過去形 + 目的語 + 副詞"
+        },
+        {
+          "id": "so-g2-u0-002",
+          "japanese": "私は先週末に公園へ行きました。",
+          "words": ["I", "went", "to", "the", "park", "last", "weekend"],
+          "correctAnswer": "I went to the park last weekend.",
+          "difficulty": "intermediate",
+          "explanation": "正解は I went to the park last weekend. です。過去形wentを使います。",
+          "hint": "goの過去形はwent",
+          "passage": "Last weekend, I had free time after school. I went to the park last weekend. It was sunny and fun.",
+          "passageJapanese": "先週末は放課後に時間がありました。私は先週末に公園へ行きました。晴れていて楽しかったです。"
+        },
+        {
+          "id": "so-g2-u0-003",
+          "japanese": "彼女はその本を買いました。",
+          "words": ["She", "bought", "the", "book"],
+          "correctAnswer": "She bought the book.",
+          "difficulty": "intermediate",
+          "explanation": "正解は She bought the book. です。buyの過去形はboughtです。",
+          "hint": "buyの過去形"
+        },
+        {
+          "id": "so-g2-u0-004",
+          "japanese": "私たちはバスで学校に行きました。",
+          "words": ["We", "went", "to", "school", "by", "bus"],
+          "correctAnswer": "We went to school by bus.",
+          "difficulty": "intermediate",
+          "explanation": "正解は We went to school by bus. です。前置詞byを使います。",
+          "hint": "by bus"
+        }
+      ]
+    }
   ]
 }

@@ -1,0 +1,56 @@
+{
+  "grade": 3,
+  "totalQuestions": 4,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "現在完了",
+      "fillInBlank": [
+        {
+          "id": "fb-g3-u0-001",
+          "japanese": "彼はすでにレポートを終えています。",
+          "sentence": "He ____ already finished his report.",
+          "choices": ["has", "have", "had", "having"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "正解は has です。主語がheなのでhasを使います。",
+          "hint": "三人称単数 + has",
+          "passage": "He is very busy today. He ____ already finished his report. He can relax now and will go home early.",
+          "passageJapanese": "彼は今日はとても忙しいです。彼はすでにレポートを終えているので、今は休めます。早く帰る予定です。"
+        },
+        {
+          "id": "fb-g3-u0-002",
+          "japanese": "彼らは10年間ここに住んでいます。",
+          "sentence": "They ____ lived here for ten years.",
+          "choices": ["have", "has", "had", "having"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "正解は have です。主語がtheyなのでhaveを使います。",
+          "hint": "複数主語はhave",
+          "passage": "They moved here long ago. They ____ lived here for ten years. Their neighbors know them well.",
+          "passageJapanese": "彼らはずいぶん前にここへ引っ越しました。彼らは10年間ここに住んでいます。近所の人もよく知っています。"
+        },
+        {
+          "id": "fb-g3-u0-003",
+          "japanese": "私はその映画を見たことがありません。",
+          "sentence": "I ____ never seen that movie.",
+          "choices": ["have", "has", "had", "having"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "正解は have です。Iはhaveを使います。",
+          "hint": "I + have"
+        },
+        {
+          "id": "fb-g3-u0-004",
+          "japanese": "彼女はちょうど到着したところです。",
+          "sentence": "She ____ just arrived.",
+          "choices": ["has", "have", "had", "having"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "正解は has です。sheは三人称単数なのでhasです。",
+          "hint": "she + has"
+        }
+      ]
+    }
+  ]
+}

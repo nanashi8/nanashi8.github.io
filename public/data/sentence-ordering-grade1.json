@@ -1,15 +1,30 @@
 {
   "grade": 1,
+  "totalQuestions": 2,
   "units": [
-    {"unit": "Unit 0", "title": "アルファベット・基本表現"},
-    {"unit": "Unit 1", "title": "be動詞（am/is/are）"},
-    {"unit": "Unit 2", "title": "一般動詞"},
-    {"unit": "Unit 3", "title": "複数形・代名詞"},
-    {"unit": "Unit 4", "title": "疑問詞（what/who/when）"},
-    {"unit": "Unit 5", "title": "三単現のs"},
-    {"unit": "Unit 6", "title": "命令文・canの文"},
-    {"unit": "Unit 7", "title": "疑問詞（where/how）"},
-    {"unit": "Unit 8", "title": "現在進行形"},
-    {"unit": "Unit 9", "title": "過去形"}
+    {
+      "unit": "Unit 0",
+      "title": "基本語順",
+      "sentenceOrdering": [
+        {
+          "id": "so-g1-u0-001",
+          "japanese": "私は毎日歩きます。",
+          "words": ["I", "walk", "every", "day"],
+          "correctAnswer": "I walk every day.",
+          "difficulty": "beginner",
+          "explanation": "正解は I walk every day. です。主語 + 動詞 + 副詞の語順を確認します。",
+          "hint": "主語 + 動詞 + 副詞"
+        },
+        {
+          "id": "so-g1-u0-002",
+          "japanese": "彼女は英語を勉強します。",
+          "words": ["She", "studies", "English"],
+          "correctAnswer": "She studies English.",
+          "difficulty": "beginner",
+          "explanation": "正解は She studies English. です。三単現のsにも注意します。",
+          "hint": "She + studies + English"
+        }
+      ]
+    }
   ]
 }

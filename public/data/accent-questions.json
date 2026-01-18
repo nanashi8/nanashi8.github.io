@@ -1,0 +1,61 @@
+{
+  "totalQuestions": 5,
+  "categories": [
+    {
+      "category": "basic-stress",
+      "grammarPoint": "強勢位置の基本",
+      "questions": [
+        {
+          "id": "acc-basic-001",
+          "japanese": "banana のアクセントはどこですか。",
+          "word": "banana",
+          "choices": ["bəˈnænə", "ˈbænənə", "bənaˈnə"],
+          "correctAnswer": "bəˈnænə",
+          "difficulty": "beginner",
+          "explanation": "正解は bəˈnænə です。第2音節に強勢があります。",
+          "hint": "第2音節にˈが来る"
+        },
+        {
+          "id": "acc-basic-002",
+          "japanese": "teacher のアクセントはどこですか。",
+          "word": "teacher",
+          "choices": ["ˈtiːtʃər", "tiːˈtʃər", "təˈtʃər"],
+          "correctAnswer": "ˈtiːtʃər",
+          "difficulty": "beginner",
+          "explanation": "正解は ˈtiːtʃər です。第1音節に強勢があります。",
+          "hint": "第1音節にˈ"
+        },
+        {
+          "id": "acc-basic-003",
+          "japanese": "computer のアクセントはどこですか。",
+          "word": "computer",
+          "choices": ["kəmˈpjuːtər", "ˈkɒmpjuːtər", "kəmˈpjuːtə"],
+          "correctAnswer": "kəmˈpjuːtər",
+          "difficulty": "beginner",
+          "explanation": "正解は kəmˈpjuːtər です。第2音節に強勢があります。",
+          "hint": "第2音節にˈ"
+        },
+        {
+          "id": "acc-basic-004",
+          "japanese": "family のアクセントはどこですか。",
+          "word": "family",
+          "choices": ["ˈfæməli", "fəˈmɪli", "fæˈmɪli"],
+          "correctAnswer": "ˈfæməli",
+          "difficulty": "beginner",
+          "explanation": "正解は ˈfæməli です。第1音節に強勢があります。",
+          "hint": "第1音節にˈ"
+        },
+        {
+          "id": "acc-basic-005",
+          "japanese": "important のアクセントはどこですか。",
+          "word": "important",
+          "choices": ["ɪmˈpɔːrtənt", "ˈɪmpɔːrtənt", "ɪmpɔːˈtænt"],
+          "correctAnswer": "ɪmˈpɔːrtənt",
+          "difficulty": "beginner",
+          "explanation": "正解は ɪmˈpɔːrtənt です。第2音節に強勢があります。",
+          "hint": "第2音節にˈ"
+        }
+      ]
+    }
+  ]
+}

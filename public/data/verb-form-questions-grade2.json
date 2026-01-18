@@ -1,0 +1,54 @@
+{
+  "grade": 2,
+  "totalQuestions": 4,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "助動詞の基本",
+      "verbForm": [
+        {
+          "id": "vf-g2-u0-001",
+          "japanese": "あなたは宿題を終えなければなりません。",
+          "sentence": "You ____ finish your homework.",
+          "choices": ["must", "musts", "musted", "musting"],
+          "correctAnswer": "must",
+          "difficulty": "intermediate",
+          "explanation": "正解は must です。義務を表す助動詞です。",
+          "hint": "義務を表す助動詞"
+        },
+        {
+          "id": "vf-g2-u0-002",
+          "japanese": "私たちは今出発しなければなりません。",
+          "sentence": "We ____ leave now.",
+          "choices": ["have to", "has to", "had to", "having to"],
+          "correctAnswer": "have to",
+          "difficulty": "intermediate",
+          "explanation": "正解は have to です。主語がweなのでhave toを使います。",
+          "hint": "we + have to"
+        },
+        {
+          "id": "vf-g2-u0-003",
+          "japanese": "彼は今日医者に診てもらうべきです。",
+          "sentence": "He ____ see the doctor today.",
+          "choices": ["should", "shoulds", "shoulded", "shoulding"],
+          "correctAnswer": "should",
+          "difficulty": "intermediate",
+          "explanation": "正解は should です。助言を表す助動詞です。",
+          "hint": "助言を表す助動詞",
+          "passage": "He has a bad cold today. He ____ see the doctor today. His mother is worried about him.",
+          "passageJapanese": "彼は今日はひどい風邪です。彼は今日医者に診てもらうべきです。お母さんは心配しています。"
+        },
+        {
+          "id": "vf-g2-u0-004",
+          "japanese": "図書館では静かにしなければなりません。",
+          "sentence": "They ____ be quiet in the library.",
+          "choices": ["must", "musts", "musted", "musting"],
+          "correctAnswer": "must",
+          "difficulty": "intermediate",
+          "explanation": "正解は must です。規則や義務を表します。",
+          "hint": "must = 義務"
+        }
+      ]
+    }
+  ]
+}
